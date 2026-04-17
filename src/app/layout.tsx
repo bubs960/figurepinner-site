@@ -65,7 +65,7 @@ export default function RootLayout({
   children: ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
       <html lang="en" suppressHydrationWarning>
         <head>
           {/* Google Fonts — preconnect first for perf */}
