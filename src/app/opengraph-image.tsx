@@ -64,6 +64,7 @@ export default function OGImage() {
           </div>
           <div
             style={{
+              display: 'flex',
               fontSize: 52,
               fontWeight: 900,
               color: '#EEEEF5',
@@ -71,7 +72,7 @@ export default function OGImage() {
               textTransform: 'uppercase',
             }}
           >
-            Figure<span style={{ color: '#0066FF' }}>Pinner</span>
+            <span>Figure</span><span style={{ color: '#0066FF' }}>Pinner</span>
           </div>
         </div>
 
