@@ -7,7 +7,7 @@ import type { CSSProperties, ReactNode } from 'react'
 
 export const runtime = 'edge'
 
-const CWS_URL = 'https://chrome.google.com/webstore/detail/figurepinner/TODO'
+const CWS_URL = 'https://chromewebstore.google.com/detail/figurepinner-%E2%80%94-action-fig/okacelmjpogkmeejifeiemmnghlldbod'
 const SIGNUP_URL = '/sign-up'
 
 export default function HomePage() {
@@ -200,7 +200,7 @@ export default function HomePage() {
         <StatItem num="20K+" numColor="var(--blue)" label="Figures in Database" />
         <StatItem num="96%" numColor="var(--green)" label="Price Coverage" />
         <StatItem num="200K" numColor="var(--orange)" label="Items Processed / Day" />
-        <StatItem num="15" numColor="var(--blue)" label="Genres Covered" />
+        <StatItem num="17" numColor="var(--blue)" label="Genres Covered" />
         <StatItem num="<200ms" numColor="var(--green)" label="Price Lookup Speed" last />
       </div>
 
@@ -357,12 +357,12 @@ export default function HomePage() {
         <div style={sectionInnerStyle}>
           <div style={{ textAlign: 'center', marginBottom: 0 }}>
             <div style={eyebrowStyle('var(--blue)')}>Library</div>
-            <h2 style={sectionTitleStyle}>20,000+ Figures.<br />15 Genres.</h2>
+            <h2 style={sectionTitleStyle}>20,000+ Figures.<br />17 Genres.</h2>
             <p style={{ ...sectionSubStyle, margin: '0 auto' }}>From Macho Man to Star Wars to Studio Series Transformers — if it&apos;s an action figure, it&apos;s probably in here.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10, marginTop: 40 }}>
             {GENRES.map((g) => (
-              <a key={g.name} href="#" style={genreCardStyle}>
+              <a key={g.name} href={`/${g.slug}`} style={genreCardStyle}>
                 <div style={{ fontSize: 28, marginBottom: 8 }}>{g.emoji}</div>
                 <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>{g.name}</div>
                 <div style={{ fontSize: 11, color: 'var(--muted)' }}>{g.count}</div>
@@ -432,8 +432,14 @@ export default function HomePage() {
           Figure<span style={{ color: 'var(--blue)' }}>Pinner</span>
         </div>
         <div style={{ display: 'flex', gap: 24 }}>
-          {['Privacy', 'Terms', 'Chrome Extension', 'Contact', 'Affiliate Disclosure'].map((link) => (
-            <a key={link} href="#" style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none' }}>{link}</a>
+          {[
+            { label: 'Privacy',              href: '/privacy' },
+            { label: 'Terms',                href: '/terms' },
+            { label: 'Chrome Extension',     href: CWS_URL },
+            { label: 'Contact',              href: 'mailto:hello@figurepinner.com' },
+            { label: 'Affiliate Disclosure', href: '/privacy#affiliate' },
+          ].map(({ label, href }) => (
+            <a key={label} href={href} style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none' }}>{label}</a>
           ))}
         </div>
         <div style={{ fontSize: 11, color: 'var(--dim)' }}>© 2026 Bubs960 Collectibles · FigurePinner</div>
@@ -649,16 +655,21 @@ function Testimonial({ text, name, handle, avatar, avatarGradient }: { text: str
 // ─── Data ─────────────────────────────────────────────────────────────────
 
 const GENRES = [
-  { emoji: '🤼', name: 'WWE Wrestling', count: '4,200+ figures' },
-  { emoji: '🕷️', name: 'Marvel Legends', count: '3,800+ figures' },
-  { emoji: '⚔️', name: 'Star Wars Black', count: '2,600+ figures' },
-  { emoji: '🔴', name: 'Transformers', count: '2,100+ figures' },
-  { emoji: '🦸', name: 'DC Multiverse', count: '1,900+ figures' },
-  { emoji: '💚', name: 'GI Joe', count: '1,400+ figures' },
-  { emoji: '⚡', name: 'Power Rangers', count: '1,200+ figures' },
-  { emoji: '🐢', name: 'TMNT', count: '900+ figures' },
-  { emoji: '🗡️', name: 'MOTU', count: '800+ figures' },
-  { emoji: '👻', name: 'Ghostbusters', count: '600+ figures' },
-  { emoji: '🎩', name: 'Indiana Jones', count: '400+ figures' },
-  { emoji: '🧙', name: 'D&D', count: '350+ figures' },
+  { emoji: '🤼', name: 'Wrestling',          slug: 'wrestling',                    count: '8,000+ figures' },
+  { emoji: '🦸', name: 'Marvel',             slug: 'marvel',                       count: '3,800+ figures' },
+  { emoji: '⚔️', name: 'Star Wars',          slug: 'star-wars',                    count: '2,600+ figures' },
+  { emoji: '🦇', name: 'DC',                 slug: 'dc',                           count: '1,900+ figures' },
+  { emoji: '🤖', name: 'Transformers',       slug: 'transformers',                 count: '2,100+ figures' },
+  { emoji: '🪖', name: 'G.I. Joe',           slug: 'gijoe',                        count: '1,400+ figures' },
+  { emoji: '⚡', name: 'MOTU',               slug: 'masters-of-the-universe',      count: '800+ figures'   },
+  { emoji: '🐢', name: 'TMNT',               slug: 'teenage-mutant-ninja-turtles', count: '900+ figures'   },
+  { emoji: '🦕', name: 'Power Rangers',      slug: 'power-rangers',                count: '1,200+ figures' },
+  { emoji: '🎩', name: 'Indiana Jones',      slug: 'indiana-jones',                count: '400+ figures'   },
+  { emoji: '👻', name: 'Ghostbusters',       slug: 'ghostbusters',                 count: '600+ figures'   },
+  { emoji: '🗡️', name: 'Mythic Legions',     slug: 'mythic-legions',               count: '500+ figures'   },
+  { emoji: '🐱', name: 'Thundercats',        slug: 'thundercats',                  count: '200+ figures'   },
+  { emoji: '🎖️', name: 'Action Force',       slug: 'action-force',                 count: '150+ figures'   },
+  { emoji: '🐉', name: 'D&D',               slug: 'dungeons-dragons',             count: '350+ figures'   },
+  { emoji: '🎬', name: 'Horror & Film',      slug: 'neca',                         count: '700+ figures'   },
+  { emoji: '🦇', name: 'Spawn',              slug: 'spawn',                        count: '300+ figures'   },
 ]
