@@ -1,12 +1,9 @@
+$schema = "./node_modules/wrangler/config-schema.json"
 name = "figurepinner-site"
-compatibility_date = "2024-09-23"
-compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
+compatibility_date = "2025-09-15"
+compatibility_flags = ["nodejs_compat", "enable_nodejs_process_v2"]
 
-pages_build_output_dir = ".vercel/output/static"
-
-# No KV, D1, or R2 bindings needed for Phase 1 (landing page only).
-# Phase 2+: add Clerk JWT verification worker bindings here.
-
-[env.production]
-# Production-specific settings can override above when deploying to the
-# "production" environment via: wrangler pages deploy --env production
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"

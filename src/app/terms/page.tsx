@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 
-export const runtime = 'edge'
-
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'FigurePinner Terms of Service — rules for using the site and Chrome extension.',

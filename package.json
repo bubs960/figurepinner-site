@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages@1",
-    "pages:deploy": "wrangler pages deploy .vercel/output/static --project-name=figurepinner-site"
+    "pages:build": "npx @opennextjs/cloudflare build",
+    "pages:deploy": "npx @opennextjs/cloudflare build && wrangler pages deploy .open-next/assets --project-name=figurepinner-site"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.0.0",
@@ -17,6 +17,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.1",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",

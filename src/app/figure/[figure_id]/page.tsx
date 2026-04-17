@@ -3,8 +3,6 @@ import { getFigureById, deriveName, type KBFigure as LocalKBFigure } from '@/dat
 import FigureImage from '@/app/components/FigureImage'
 import AdSlot from '@/app/components/AdSlot'
 
-export const runtime = 'edge'
-
 // All figure pages are edge-rendered on first request and cached by Cloudflare CDN.
 // This avoids pre-building 18K+ static files at build time (Cloudflare Pages 20K limit).
 // SEO works fine — Googlebot triggers edge render and receives full HTML.

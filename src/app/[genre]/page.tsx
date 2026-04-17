@@ -3,8 +3,6 @@ import { notFound } from 'next/navigation'
 import { getFiguresByFandom, deriveName, figureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 
-export const runtime = 'edge'
-
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 const GENRE_META: Record<string, { label: string; emoji: string; description: string }> = {

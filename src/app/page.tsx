@@ -5,8 +5,6 @@
 
 import type { CSSProperties, ReactNode } from 'react'
 
-export const runtime = 'edge'
-
 const CWS_URL = 'https://chromewebstore.google.com/detail/figurepinner-%E2%80%94-action-fig/okacelmjpogkmeejifeiemmnghlldbod'
 const SIGNUP_URL = '/sign-up'
 

@@ -17,7 +17,6 @@
 import { redirect, notFound } from 'next/navigation'
 import { getFiguresByFandom, getAllFandoms, type KBFigure } from '@/data/kb'
 
-export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 
 function normalizeSlug(s: string) {

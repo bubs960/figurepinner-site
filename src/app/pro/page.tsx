@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 
-export const runtime = 'edge'
-
 export const metadata: Metadata = {
   title: 'FigurePinner Pro — Serious Collectors Only',
   description: 'Get deal alerts, full price history, and unlimited want list tracking for $6.99/month.',
