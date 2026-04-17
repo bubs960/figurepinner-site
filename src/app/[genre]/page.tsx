@@ -99,13 +99,11 @@ export default async function GenrePage(
   const byLine = groupByLine(figures)
   const totalFigures = figures.length
 
-  // Full counts before capping (for display)
-  const fullCounts = new Map(
-    getFiguresByFandom(genre).reduce((acc, f) => {
-      acc.set(f.product_line, (acc.get(f.product_line) ?? 0) + 1)
-      return acc
-    }, new Map<string, number>())
-  )
+  // Full counts before capping (for display) — reuse already-fetched figures array
+  const fullCounts = figures.reduce((acc, f) => {
+    acc.set(f.product_line, (acc.get(f.product_line) ?? 0) + 1)
+    return acc
+  }, new Map<string, number>())
 
   // Unique lines sorted by total count desc (biggest lines first)
   const sortedLines = [...byLine.entries()].sort(
