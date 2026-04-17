@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================================================
+   FIGUREPINNER DESIGN SYSTEM — Global CSS
+   Source of truth: DESIGN-RUNBOOK.html
+   ============================================================ */
+
+:root {
+  /* --- Background layers --- */
+  --bg: #09090F;        /* page background */
+  --s1: #111318;        /* cards, sidebar, topbar */
+  --s2: #181B23;        /* inputs, nested cards */
+  --s3: #1F2330;        /* hover states, code blocks */
+
+  /* --- Borders --- */
+  --border: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.12);
+
+  /* --- Brand colors --- */
+  --blue: #0066FF;      /* primary CTA, active states */
+  --blue2: #0052CC;     /* blue hover/pressed */
+  --blue-glow: rgba(0, 102, 255, 0.15);
+
+  --orange: #FF5F00;    /* wanted, affiliate CTAs, urgency */
+  --orange2: #CC4C00;   /* orange hover */
+  --orange-glow: rgba(255, 95, 0, 0.15);
+
+  --green: #00C870;     /* owned, complete, good deal */
+  --green2: #00A05A;    /* green hover */
+  --green-glow: rgba(0, 200, 112, 0.12);
+
+  --red: #FF3B30;       /* errors, danger */
+  --yellow: #FFB800;    /* warning, caution */
+
+  /* --- Text --- */
+  --text: #EEEEF5;      /* primary text */
+  --muted: #666E8A;     /* secondary text */
+  --dim: #3A3D52;       /* tertiary/disabled */
+
+  /* --- Radius --- */
+  --r: 10px;            /* default card radius */
+  --rlg: 16px;          /* large card radius */
+  --rf: 9999px;         /* pill radius */
+  --rsm: 6px;           /* small radius (badges, tags) */
+
+  /* --- Spacing scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* --- Typography --- */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-ui: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;  /* alias for --font-ui, used in page-level styles */
+
+  /* --- Shadows --- */
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-modal: 0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-blue: 0 4px 20px rgba(0, 102, 255, 0.25);
+
+  /* --- Transitions --- */
+  --transition: 150ms ease;
+  --transition-slow: 300ms ease;
+
+  /* --- App layout (used in app shell, not landing) --- */
+  --sidebar-w: 220px;
+  --topbar-h: 56px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: #4d94ff;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dim);
+  border-radius: var(--rf);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.text-muted  { color: var(--muted); }
+.text-dim    { color: var(--dim); }
+.text-blue   { color: var(--blue); }
+.text-orange { color: var(--orange); }
+.text-green  { color: var(--green); }
+.text-red    { color: var(--red); }
+
+.font-display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.02em; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================================
+   COMPONENT BASE CLASSES
+   ============================================================ */
+
+.card {
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: var(--space-6);
+}
+
+.card-lg {
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: var(--rlg);
+  padding: var(--space-8);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 10px 20px;
+  border-radius: var(--rf);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: var(--shadow-blue);
+}
+
+.btn-primary:hover {
+  background: var(--blue2);
+  color: #fff;
+}
+
+.btn-orange {
+  background: var(--orange);
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background: var(--orange2);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  background: var(--s2);
+  color: var(--text);
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: var(--rsm);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-blue   { background: var(--blue-glow);   color: var(--blue);   }
+.badge-orange { background: var(--orange-glow);  color: var(--orange); }
+.badge-green  { background: var(--green-glow);   color: var(--green);  }
+
+/* ============================================================
+   FOCUS / ACCESSIBILITY
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+
+::selection {
+  background: rgba(0, 102, 255, 0.3);
+  color: var(--text);
+}
