@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { getAllFandoms, getFiguresByFandom, deriveName, figureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 
-export const runtime = 'edge'
 export const dynamicParams = false  // only pre-built genre slugs are valid
 
 // ── Static generation ─────────────────────────────────────────────────────────
