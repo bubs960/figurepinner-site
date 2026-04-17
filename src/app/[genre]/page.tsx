@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllFandoms, getFiguresByFandom, deriveName, figureUrl, type KBFigure } from '@/data/kb'
+import AdSlot from '@/app/components/AdSlot'
 
 export const runtime = 'edge'
 export const dynamicParams = false  // only pre-built genre slugs are valid
@@ -176,6 +177,11 @@ export default async function GenrePage(
           ))}
         </div>
       )}
+
+      {/* Ad slot — leaderboard below hero, before figures */}
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '1rem 1.5rem 0' }}>
+        <AdSlot slot="leaderboard" />
+      </div>
 
       {/* Main content */}
       <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>

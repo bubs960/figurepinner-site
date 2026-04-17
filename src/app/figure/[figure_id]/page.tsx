@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getFigureById, deriveName, type KBFigure as LocalKBFigure } from '@/data/kb'
 import FigureImage from '@/app/components/FigureImage'
+import AdSlot from '@/app/components/AdSlot'
 
 export const runtime = 'edge'
 
@@ -192,6 +193,11 @@ export default async function FigureDetailPage({ params }: PageProps) {
             <a href="/pro" style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '600', textDecoration: 'none' }}>
               Unlock with Pro — $6.99/mo
             </a>
+          </div>
+
+          {/* Ad slot — 300×250 rectangle, shown between price data and sales history */}
+          <div style={{ margin: '1.5rem 0', display: 'flex', justifyContent: 'center' }}>
+            <AdSlot slot="rectangle" />
           </div>
 
           {/* Recent sold history (free — show last 3) */}
