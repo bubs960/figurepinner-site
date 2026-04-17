@@ -54,6 +54,9 @@ export async function generateMetadata(
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
+// Cap figures shown per product line — prevents massive HTML on large genres (wrestling = 8K+)
+const MAX_PER_LINE = 48
+
 function groupByLine(figures: KBFigure[]): Map<string, KBFigure[]> {
   const map = new Map<string, KBFigure[]>()
   for (const f of figures) {
@@ -61,14 +64,15 @@ function groupByLine(figures: KBFigure[]): Map<string, KBFigure[]> {
     if (!map.has(key)) map.set(key, [])
     map.get(key)!.push(f)
   }
-  // Sort each group by release_wave asc then character alpha
-  for (const [, group] of map) {
+  // Sort each group by release_wave desc (newest first) then character alpha, cap at MAX_PER_LINE
+  for (const [key, group] of map) {
     group.sort((a, b) => {
       const wA = parseInt(a.release_wave) || 0
       const wB = parseInt(b.release_wave) || 0
-      if (wA !== wB) return wA - wB
+      if (wA !== wB) return wB - wA  // newest wave first
       return a.character_canonical.localeCompare(b.character_canonical)
     })
+    map.set(key, group.slice(0, MAX_PER_LINE))
   }
   return map
 }
@@ -95,8 +99,18 @@ export default async function GenrePage(
   const byLine = groupByLine(figures)
   const totalFigures = figures.length
 
-  // Unique lines sorted by size desc (biggest lines first)
-  const sortedLines = [...byLine.entries()].sort((a, b) => b[1].length - a[1].length)
+  // Full counts before capping (for display)
+  const fullCounts = new Map(
+    getFiguresByFandom(genre).reduce((acc, f) => {
+      acc.set(f.product_line, (acc.get(f.product_line) ?? 0) + 1)
+      return acc
+    }, new Map<string, number>())
+  )
+
+  // Unique lines sorted by total count desc (biggest lines first)
+  const sortedLines = [...byLine.entries()].sort(
+    (a, b) => (fullCounts.get(b[0]) ?? 0) - (fullCounts.get(a[0]) ?? 0)
+  )
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
@@ -189,17 +203,31 @@ export default async function GenrePage(
           <section key={line} id={`line-${line}`} style={{ marginBottom: '3rem' }}>
 
             {/* Line header */}
-            <div style={{
-              display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
-              marginBottom: '1rem', gap: '1rem',
-            }}>
-              <h2 style={{ fontSize: '1.125rem', fontWeight: '700', color: 'var(--text)' }}>
-                {formatLineName(line)}
-              </h2>
-              <span style={{ fontSize: '0.75rem', color: 'var(--muted)', flexShrink: 0 }}>
-                {lineFigures.length} figure{lineFigures.length !== 1 ? 's' : ''}
-              </span>
-            </div>
+            {(() => {
+              const total = fullCounts.get(line) ?? lineFigures.length
+              const capped = total > lineFigures.length
+              return (
+                <div style={{
+                  display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
+                  marginBottom: '1rem', gap: '1rem',
+                }}>
+                  <h2 style={{ fontSize: '1.125rem', fontWeight: '700', color: 'var(--text)' }}>
+                    {formatLineName(line)}
+                  </h2>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--muted)', flexShrink: 0 }}>
+                    {capped
+                      ? `${lineFigures.length} of ${total} figures`
+                      : `${lineFigures.length} figure${lineFigures.length !== 1 ? 's' : ''}`
+                    }
+                    {capped && (
+                      <a href="/app" style={{ marginLeft: '0.5rem', color: 'var(--blue)', textDecoration: 'none', fontSize: '0.7rem' }}>
+                        Search all →
+                      </a>
+                    )}
+                  </span>
+                </div>
+              )
+            })()}
 
             {/* Figure grid */}
             <div style={{
