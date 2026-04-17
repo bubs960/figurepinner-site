@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getAllFigures, getFigureById, deriveName, type KBFigure as LocalKBFigure } from '@/data/kb'
+import FigureImage from '@/app/components/FigureImage'
 
 export const runtime = 'edge'
 
@@ -149,7 +150,7 @@ export default async function FigureDetailPage({ params }: PageProps) {
       }}>
         <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--text)', textDecoration: 'none' }}>FP</a>
         <Chevron />
-        <a href={`/?genre=${figure.genre}`} style={{ color: 'var(--muted)', textDecoration: 'none', textTransform: 'capitalize' }}>{figure.genre.replace(/-/g, ' ')}</a>
+        <a href={`/${figure.genre}`} style={{ color: 'var(--muted)', textDecoration: 'none', textTransform: 'capitalize' }}>{figure.genre.replace(/-/g, ' ')}</a>
         <Chevron />
         <span style={{ color: 'var(--text)' }}>{figure.name}</span>
       </nav>
@@ -225,7 +226,7 @@ export default async function FigureDetailPage({ params }: PageProps) {
         <div style={{ position: 'sticky', top: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
 
           {/* Figure image */}
-          <FigureImage url={figure.canonical_image_url} name={figure.name} />
+          <FigureImage url={figure.canonical_image_url} name={figure.name} genre={figure.genre} />
 
           {/* Buy card */}
           <div style={{ background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px', padding: '1.25rem' }}>
@@ -271,31 +272,6 @@ export default async function FigureDetailPage({ params }: PageProps) {
 }
 
 // ── Sub-components ────────────────────────────────────────────────────────────
-
-function FigureImage({ url, name }: { url: string | null; name: string }) {
-  if (!url) {
-    return (
-      <div style={{
-        background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
-        aspectRatio: '1', display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: '3rem', color: 'var(--muted)',
-      }}>
-        🤼
-      </div>
-    )
-  }
-  return (
-    <div style={{ background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', aspectRatio: '1' }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={url}
-        alt={name}
-        style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }}
-        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-      />
-    </div>
-  )
-}
 
 function PriceStat({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
   return (
