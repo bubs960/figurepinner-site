@@ -1,23 +1,16 @@
 import type { Metadata } from 'next'
-import { getAllFigures, getFigureById, deriveName, type KBFigure as LocalKBFigure } from '@/data/kb'
+import { getFigureById, deriveName, type KBFigure as LocalKBFigure } from '@/data/kb'
 import FigureImage from '@/app/components/FigureImage'
 
 export const runtime = 'edge'
 
-// Allow figures added after the last build to be rendered on-demand
-// (ISR-style fallback: generate at request time, then cache at the edge)
-export const dynamicParams = true
+// All figure pages are edge-rendered on first request and cached by Cloudflare CDN.
+// This avoids pre-building 18K+ static files at build time (Cloudflare Pages 20K limit).
+// SEO works fine — Googlebot triggers edge render and receives full HTML.
+export const dynamic = 'force-dynamic'
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? ''
 const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? ''
-
-// ── Static generation ─────────────────────────────────────────────────────────
-// Runs at build time only. Generates one static page per figure in the KB.
-// To update: copy new figures-reference-v2.js → src/data/, git push → Cloudflare rebuilds.
-export async function generateStaticParams() {
-  const figures = getAllFigures()
-  return figures.map(f => ({ figure_id: f.figure_id }))
-}
 
 // ── Types — mapped to actual API contract ────────────────────────────────────
 
