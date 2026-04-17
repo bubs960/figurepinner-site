@@ -3,6 +3,8 @@ import type { ReactNode } from 'react'
 import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 
+export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: {
     default: 'FigurePinner — Action Figure Price Intelligence',
