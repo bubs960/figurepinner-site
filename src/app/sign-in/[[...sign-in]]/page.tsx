@@ -1,6 +1,8 @@
 import { SignIn } from '@clerk/nextjs'
 import type { Metadata } from 'next'
 
+export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: 'Sign In',
   description: 'Sign in to your FigurePinner account.',

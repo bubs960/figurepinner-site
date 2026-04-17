@@ -1,4 +1,5 @@
 // Custom 404 — shown for any unmatched route
+export const runtime = 'edge'
 
 export default function NotFound() {
   return (

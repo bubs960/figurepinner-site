@@ -1,15 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllFandoms, getFiguresByFandom, deriveName, figureUrl, type KBFigure } from '@/data/kb'
+import { getFiguresByFandom, deriveName, figureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 
-export const dynamicParams = false  // only pre-built genre slugs are valid
-
-// ── Static generation ─────────────────────────────────────────────────────────
-
-export async function generateStaticParams() {
-  return getAllFandoms().map(fandom => ({ genre: fandom }))
-}
+export const runtime = 'edge'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 

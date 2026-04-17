@@ -1,6 +1,8 @@
 import { SignUp } from '@clerk/nextjs'
 import type { Metadata } from 'next'
 
+export const runtime = 'edge'
+
 export const metadata: Metadata = {
   title: 'Create Account',
   description: 'Create your free FigurePinner account.',
