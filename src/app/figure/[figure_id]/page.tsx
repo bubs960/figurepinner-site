@@ -38,7 +38,6 @@ type PriceData = {
   avgFS: number | null
   fsCount: number
   minFS: number | null
-  image_url?: string | null
   soldHistory: {
     price: number
     title: string
@@ -124,7 +123,7 @@ export default async function FigureDetailPage({ params }: PageProps) {
     series: local.release_wave,
     genre: local.fandom,
     year: null,
-    canonical_image_url: local.canonical_image_url ?? price?.image_url ?? null,
+    canonical_image_url: local.canonical_image_url ?? null,
   }
 
   const avg = price?.avgSold ?? null
@@ -437,9 +436,9 @@ export default async function FigureDetailPage({ params }: PageProps) {
                 <DetailRow label="Line" value={figure.line} />
                 {figure.series && <DetailRow label="Series" value={figure.series} />}
                 <DetailRow label="Genre" value={figure.genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} />
-                {local?.pack_size > 1 && <DetailRow label="Pack" value={`${local.pack_size}-pack`} />}
-                {local?.exclusive_to && <DetailRow label="Exclusive" value={local.exclusive_to} />}
-                {local?.scale && <DetailRow label="Scale" value={local.scale} />}
+                {Number(local.pack_size) > 1 && <DetailRow label="Pack" value={`${local.pack_size}-pack`} />}
+                {local.exclusive_to && local.exclusive_to !== 'None' && <DetailRow label="Exclusive" value={local.exclusive_to} />}
+                {local.scale && <DetailRow label="Scale" value={local.scale} />}
               </div>
             </div>
           </div>
