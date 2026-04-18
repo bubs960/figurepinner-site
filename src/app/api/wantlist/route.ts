@@ -3,10 +3,8 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
 
-type Env = { DB: D1Database }
-
 async function getDB() {
-  const { env } = await getCloudflareContext<Env>()
+  const { env } = await getCloudflareContext()
   return env.DB
 }
 
