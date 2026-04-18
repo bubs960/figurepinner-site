@@ -3,7 +3,7 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
 
-async function getDB(): Promise<D1Database> {
+async function getDB() {
   const { env } = await getCloudflareContext()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (env as any).DB as D1Database

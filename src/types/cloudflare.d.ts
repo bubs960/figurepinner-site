@@ -1,14 +1,5 @@
-// Minimal Cloudflare Workers type stubs so Next.js TypeScript build passes.
+// Global Cloudflare Workers type stubs — no export, keeps these in global scope.
 // Full types: npm install -D @cloudflare/workers-types
-
-// export {} makes this a module, enabling interface augmentation instead of replacement
-export {}
-
-declare module '@opennextjs/cloudflare' {
-  interface CloudflareEnv {
-    DB: D1Database
-  }
-}
 
 interface D1PreparedStatement {
   bind(...values: unknown[]): D1PreparedStatement
