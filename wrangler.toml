@@ -6,3 +6,8 @@ compatibility_flags = ["nodejs_compat", "enable_nodejs_process_v2"]
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "figurepinner-userdata"
+database_id = "dd036916-a729-4999-b5ca-8f5287800b23"

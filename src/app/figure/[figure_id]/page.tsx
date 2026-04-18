@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getFigureById, deriveName, type KBFigure as LocalKBFigure } from '@/data/kb'
 import FigureImage from '@/app/components/FigureImage'
+import FigureActions from '@/app/components/FigureActions'
 import AdSlot from '@/app/components/AdSlot'
 
 // All figure pages are edge-rendered on first request and cached by Cloudflare CDN.
@@ -245,22 +246,13 @@ export default async function FigureDetailPage({ params }: PageProps) {
               Opens eBay sold listings · Affiliate link
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <a href="/app/wantlist" style={{
-                display: 'block', textAlign: 'center', border: '1px solid var(--border)',
-                color: 'var(--text)', padding: '0.625rem', borderRadius: '6px',
-                fontSize: '0.8rem', fontWeight: '500', textDecoration: 'none',
-              }}>
-                + Add to Want List
-              </a>
-              <a href="/app/alerts" style={{
-                display: 'block', textAlign: 'center', border: '1px solid var(--border)',
-                color: 'var(--text)', padding: '0.625rem', borderRadius: '6px',
-                fontSize: '0.8rem', fontWeight: '500', textDecoration: 'none',
-              }}>
-                🔔 Set Price Alert
-              </a>
-            </div>
+            <FigureActions
+              figure_id={figure.figure_id}
+              name={figure.name}
+              brand={figure.brand}
+              line={figure.line}
+              genre={figure.genre}
+            />
           </div>
         </div>
       </div>

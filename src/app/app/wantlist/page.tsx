@@ -1,23 +1,43 @@
-import type { Metadata } from 'next'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Want List',
-  robots: { index: false, follow: false },
+import { useState, useEffect } from 'react'
+
+type WantItem = {
+  id: string
+  figure_id: string
+  name: string
+  brand: string | null
+  line: string | null
+  genre: string | null
+  target_price: number
+  added_at: string
 }
-
-const IS_PRO = false // TODO: derive from Clerk user metadata once billing is wired
-
-const PLACEHOLDER_WANTS = [
-  { id: '1', name: 'Ultimate Warrior Defining Moments', line: 'Mattel Elite', genre: 'wrestling', slug: 'ultimate-warrior-defining-moments', avg_price: 145, target_price: 110, delta: -24 },
-  { id: '2', name: 'Hulk Hogan Elite Wave 1', line: 'Mattel Elite', genre: 'wrestling', slug: 'hulk-hogan-elite-wave-1', avg_price: 89, target_price: 75, delta: -15 },
-  { id: '3', name: 'Andre the Giant Elite', line: 'Mattel Elite', genre: 'wrestling', slug: 'andre-the-giant-elite', avg_price: 62, target_price: 62, delta: 0 },
-  { id: '4', name: 'Jake the Snake Roberts Elite', line: 'Mattel Elite', genre: 'wrestling', slug: 'jake-the-snake-elite', avg_price: 38, target_price: 50, delta: 24 },
-]
 
 const FREE_LIMIT = 10
 
 export default function WantlistPage() {
-  const atLimit = !IS_PRO && PLACEHOLDER_WANTS.length >= FREE_LIMIT
+  const [items, setItems] = useState<WantItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const [deleting, setDeleting] = useState<string | null>(null)
+
+  // IS_PRO — hardcoded false until Clerk publicMetadata billing is wired
+  const IS_PRO = false
+  const atLimit = !IS_PRO && items.length >= FREE_LIMIT
+
+  useEffect(() => {
+    fetch('/api/wantlist')
+      .then(r => r.json())
+      .then((d: { items: WantItem[] }) => setItems(d.items ?? []))
+      .catch(() => setItems([]))
+      .finally(() => setLoading(false))
+  }, [])
+
+  async function removeItem(id: string) {
+    setDeleting(id)
+    await fetch(`/api/wantlist/${id}`, { method: 'DELETE' })
+    setItems(prev => prev.filter(i => i.id !== id))
+    setDeleting(null)
+  }
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -29,7 +49,7 @@ export default function WantlistPage() {
             WANT LIST
           </h1>
           <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-            {PLACEHOLDER_WANTS.length}{!IS_PRO ? ` / ${FREE_LIMIT}` : ''} figures
+            {loading ? '—' : `${items.length}${!IS_PRO ? ` / ${FREE_LIMIT}` : ''} figures`}
           </p>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -40,6 +60,7 @@ export default function WantlistPage() {
           )}
           <button
             disabled={atLimit}
+            title="Search for a figure and click Add to Want List"
             style={{
               background: atLimit ? 'var(--s2)' : 'var(--blue)',
               color: atLimit ? 'var(--muted)' : '#fff',
@@ -72,66 +93,64 @@ export default function WantlistPage() {
         </div>
       )}
 
-      {/* Empty state */}
-      {PLACEHOLDER_WANTS.length === 0 ? (
+      {/* Content */}
+      {loading ? (
+        <LoadingState />
+      ) : items.length === 0 ? (
         <EmptyState />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-          {/* Column headers */}
           <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 100px 100px 90px 36px',
+            display: 'grid', gridTemplateColumns: '1fr 110px 36px',
             padding: '0.5rem 1rem', gap: '1rem',
             fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.08em',
             color: 'var(--muted)', textTransform: 'uppercase',
           }}>
             <span>Figure</span>
-            <span style={{ textAlign: 'right' }}>Target</span>
-            <span style={{ textAlign: 'right' }}>Avg Now</span>
-            <span style={{ textAlign: 'right' }}>Delta</span>
+            <span style={{ textAlign: 'right' }}>Target Price</span>
             <span />
           </div>
 
-          {PLACEHOLDER_WANTS.map(item => {
-            const below = item.avg_price <= item.target_price
-            return (
-              <div key={item.id} style={{
-                display: 'grid', gridTemplateColumns: '1fr 100px 100px 90px 36px',
-                padding: '0.875rem 1rem', gap: '1rem',
-                background: 'var(--s1)', border: `1px solid ${below ? 'rgba(0,200,112,0.2)' : 'var(--border)'}`,
-                borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
-              }}>
-                <div>
-                  <a
-                    href={`/${item.genre}/mattel-elite/${item.slug}`}
-                    style={{ color: 'var(--text)', textDecoration: 'none', fontWeight: '500' }}
-                  >
-                    {item.name}
-                  </a>
+          {items.map(item => (
+            <div key={item.id} style={{
+              display: 'grid', gridTemplateColumns: '1fr 110px 36px',
+              padding: '0.875rem 1rem', gap: '1rem',
+              background: 'var(--s1)', border: '1px solid var(--border)',
+              borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
+            }}>
+              <div>
+                <a
+                  href={`/figure/${item.figure_id}`}
+                  style={{ color: 'var(--text)', textDecoration: 'none', fontWeight: '500' }}
+                >
+                  {item.name}
+                </a>
+                {item.line && (
                   <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{item.line}</div>
-                </div>
-                <span style={{ textAlign: 'right', color: 'var(--muted)' }}>${item.target_price}</span>
-                <span style={{ textAlign: 'right', fontWeight: '600' }}>${item.avg_price}</span>
-                <span style={{
-                  textAlign: 'right', fontWeight: '700',
-                  color: below ? 'var(--green)' : item.delta > 0 ? '#FF4444' : 'var(--muted)',
-                }}>
-                  {below ? '✓ At target' : item.delta > 0 ? `+$${item.delta}` : `$${item.delta}`}
-                </span>
-                <button style={{
+                )}
+              </div>
+              <span style={{ textAlign: 'right', color: 'var(--muted)' }}>
+                {item.target_price ? `$${item.target_price}` : '—'}
+              </span>
+              <button
+                onClick={() => removeItem(item.id)}
+                disabled={deleting === item.id}
+                style={{
                   background: 'none', border: '1px solid var(--border)', borderRadius: '5px',
                   color: 'var(--muted)', cursor: 'pointer', padding: '4px 6px',
                   fontSize: '0.75rem', fontFamily: 'var(--font-ui)',
-                }}>
-                  ···
-                </button>
-              </div>
-            )
-          })}
+                  opacity: deleting === item.id ? 0.4 : 1,
+                }}
+              >
+                ✕
+              </button>
+            </div>
+          ))}
         </div>
       )}
 
-      {/* Pro upsell for alerts */}
-      {!IS_PRO && PLACEHOLDER_WANTS.length > 0 && (
+      {/* Pro upsell */}
+      {!IS_PRO && items.length > 0 && (
         <div style={{
           marginTop: '1.5rem', padding: '1.25rem', background: 'var(--s1)',
           border: '1px solid var(--border)', borderRadius: '10px',
@@ -150,6 +169,23 @@ export default function WantlistPage() {
           </a>
         </div>
       )}
+
+      <p style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--dim, #3A3D52)' }}>
+        To add figures: search for a figure, open its detail page, and click &ldquo;Add to Want List&rdquo;.
+      </p>
+    </div>
+  )
+}
+
+function LoadingState() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+      {[1, 2, 3].map(i => (
+        <div key={i} style={{
+          height: '60px', background: 'var(--s1)', border: '1px solid var(--border)',
+          borderRadius: '8px', opacity: 0.5,
+        }} />
+      ))}
     </div>
   )
 }
@@ -164,16 +200,9 @@ function EmptyState() {
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
         WANT LIST IS EMPTY
       </h2>
-      <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.5rem', maxWidth: '360px', margin: '0 auto 1.5rem' }}>
-        Add figures you&apos;re hunting. We&apos;ll track the price and alert you when it drops.
+      <p style={{ color: 'var(--muted)', fontSize: '0.9rem', maxWidth: '360px', margin: '0 auto' }}>
+        Search for a figure and open its detail page to add it to your want list.
       </p>
-      <button style={{
-        background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-        padding: '0.625rem 1.5rem', borderRadius: '7px', fontSize: '0.875rem',
-        fontWeight: '600', fontFamily: 'var(--font-ui)',
-      }}>
-        + Add First Figure
-      </button>
     </div>
   )
 }
