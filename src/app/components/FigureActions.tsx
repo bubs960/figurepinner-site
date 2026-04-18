@@ -12,10 +12,13 @@ type Props = {
 
 type Status = 'idle' | 'loading' | 'done' | 'error'
 
+const CONDITIONS = ['Loose', 'Near Mint', 'MOC', 'Opened', 'Damaged']
+
 export default function FigureActions({ figure_id, name, brand, line, genre }: Props) {
   const [vaultStatus, setVaultStatus] = useState<Status>('idle')
   const [wantStatus, setWantStatus] = useState<Status>('idle')
   const [paidInput, setPaidInput] = useState('')
+  const [conditionInput, setConditionInput] = useState('Loose')
   const [targetInput, setTargetInput] = useState('')
   const [showVaultForm, setShowVaultForm] = useState(false)
   const [showWantForm, setShowWantForm] = useState(false)
@@ -32,8 +35,8 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
           brand,
           line,
           genre,
-          paid: paidInput ? parseInt(paidInput) : 0,
-          condition: 'Loose',
+          paid: paidInput ? parseFloat(paidInput) : 0,
+          condition: conditionInput,
         }),
       })
       if (res.ok) {
@@ -61,7 +64,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
           brand,
           line,
           genre,
-          target_price: targetInput ? parseInt(targetInput) : 0,
+          target_price: targetInput ? parseFloat(targetInput) : 0,
         }),
       })
       if (res.ok) {
@@ -86,33 +89,51 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
           ✓ Added to Collection
         </div>
       ) : showVaultForm ? (
-        <div style={{ border: '1px solid var(--border)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>What did you pay? (optional)</label>
+        <div style={{ border: '1px solid var(--border)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <input
-              type="number"
-              placeholder="$0"
-              value={paidInput}
-              onChange={e => setPaidInput(e.target.value)}
-              style={{
-                flex: 1, background: 'var(--s2)', border: '1px solid var(--border)',
-                borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
-                fontSize: '0.875rem', outline: 'none',
-              }}
-            />
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+              <label style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>What did you pay?</label>
+              <input
+                type="number"
+                placeholder="$0"
+                value={paidInput}
+                onChange={e => setPaidInput(e.target.value)}
+                style={{
+                  width: '100%', background: 'var(--s2)', border: '1px solid var(--border)',
+                  borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
+                  fontSize: '0.875rem', outline: 'none', boxSizing: 'border-box',
+                }}
+              />
+            </div>
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+              <label style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>Condition</label>
+              <select
+                value={conditionInput}
+                onChange={e => setConditionInput(e.target.value)}
+                style={{
+                  width: '100%', background: 'var(--s2)', border: '1px solid var(--border)',
+                  borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
+                  fontSize: '0.875rem', outline: 'none', boxSizing: 'border-box',
+                }}
+              >
+                {CONDITIONS.map(c => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
             <button
               onClick={addToVault}
               disabled={vaultStatus === 'loading'}
               style={{
-                background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-                padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
+                flex: 1, background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
+                padding: '0.5rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
               }}
             >
-              {vaultStatus === 'loading' ? '...' : 'Add'}
+              {vaultStatus === 'loading' ? '…' : 'Add to Collection'}
             </button>
             <button
               onClick={() => setShowVaultForm(false)}
-              style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.375rem 0.5rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
+              style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.5rem 0.625rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
             >
               ✕
             </button>
@@ -160,7 +181,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
                 padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
               }}
             >
-              {wantStatus === 'loading' ? '...' : 'Add'}
+              {wantStatus === 'loading' ? '…' : 'Add to Want List'}
             </button>
             <button
               onClick={() => setShowWantForm(false)}

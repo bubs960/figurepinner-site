@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react'
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? ''
-
 // Matches actual /api/v1/search response shape
 type SearchResult = {
   figure_id?: string   // P0 gap — engineer adding
@@ -14,6 +12,15 @@ type SearchResult = {
   genre: string
   year: number | null
   image?: string | null
+}
+
+const GENRE_EMOJI: Record<string, string> = {
+  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
+  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
+  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
+  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
+  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
+  'neca': '🎬', 'spawn': '🦇',
 }
 
 export default function HeroSearch() {
@@ -34,7 +41,7 @@ export default function HeroSearch() {
     debounceRef.current = setTimeout(async () => {
       setLoading(true)
       try {
-        const res = await fetch(`${API_BASE}/api/v1/search?q=${encodeURIComponent(query)}&limit=8`)
+        const res = await fetch(`/api/v1/search?q=${encodeURIComponent(query)}&limit=8`)
         if (res.ok) {
           const data = await res.json() as { figures: SearchResult[] }
           setResults(data.figures ?? [])
@@ -136,8 +143,8 @@ export default function HeroSearch() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '12px 16px',
+                gap: 12,
+                padding: '11px 16px',
                 color: 'var(--text)',
                 textDecoration: 'none',
                 borderBottom: i < results.length - 1 ? '1px solid var(--border)' : 'none',
@@ -147,16 +154,32 @@ export default function HeroSearch() {
               onMouseEnter={e => (e.currentTarget.style.background = 'var(--s2)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, flex: 1 }}>
-                {r.image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={r.image} alt="" style={{ width: 28, height: 28, objectFit: 'contain', borderRadius: 3, background: 'var(--s2)', flexShrink: 0 }} />
-                )}
-                <div>
-                  <div style={{ fontWeight: 500 }}>{highlightMatch(r.name, query)}</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: 2 }}>{r.brand} {r.line}</div>
+              {/* Image or emoji placeholder */}
+              <div style={{
+                width: 36, height: 36, borderRadius: 6, flexShrink: 0,
+                background: 'var(--s2)', border: '1px solid var(--border)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '1.1rem', overflow: 'hidden',
+              }}>
+                {r.image
+                  ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={r.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  )
+                  : (GENRE_EMOJI[r.genre] ?? '🤼')
+                }
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {highlightMatch(r.name, query)}
+                </div>
+                <div style={{ fontSize: '0.72rem', color: 'var(--muted)', marginTop: 2 }}>
+                  {r.brand} {r.line}{r.series ? ` · Series ${r.series}` : ''}
                 </div>
               </div>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--dim)', flexShrink: 0 }}>
+                <path d="M2 6h8M6 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
           ))}
           <a

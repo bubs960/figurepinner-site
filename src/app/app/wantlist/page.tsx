@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useUser } from '@clerk/nextjs'
 
 type WantItem = {
   id: string
@@ -15,13 +16,22 @@ type WantItem = {
 
 const FREE_LIMIT = 10
 
+const GENRE_EMOJI: Record<string, string> = {
+  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
+  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
+  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
+  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
+  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
+  'neca': '🎬', 'spawn': '🦇',
+}
+
 export default function WantlistPage() {
   const [items, setItems] = useState<WantItem[]>([])
   const [loading, setLoading] = useState(true)
   const [deleting, setDeleting] = useState<string | null>(null)
 
-  // IS_PRO — hardcoded false until Clerk publicMetadata billing is wired
-  const IS_PRO = false
+  const { user, isLoaded } = useUser()
+  const IS_PRO = isLoaded ? ((user?.publicMetadata?.isPro as boolean) ?? false) : false
   const atLimit = !IS_PRO && items.length >= FREE_LIMIT
 
   useEffect(() => {
@@ -39,6 +49,15 @@ export default function WantlistPage() {
     setDeleting(null)
   }
 
+  async function updateTargetPrice(id: string, target_price: number) {
+    await fetch(`/api/wantlist/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ target_price }),
+    })
+    setItems(prev => prev.map(i => i.id === id ? { ...i, target_price } : i))
+  }
+
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
 
@@ -49,7 +68,7 @@ export default function WantlistPage() {
             WANT LIST
           </h1>
           <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-            {loading ? '—' : `${items.length}${!IS_PRO ? ` / ${FREE_LIMIT}` : ''} figures`}
+            {loading ? '—' : `${items.length}${!IS_PRO ? ` / ${FREE_LIMIT}` : ''} figure${items.length !== 1 ? 's' : ''}`}
           </p>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -101,7 +120,7 @@ export default function WantlistPage() {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
           <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 110px 36px',
+            display: 'grid', gridTemplateColumns: '1fr 130px 36px',
             padding: '0.5rem 1rem', gap: '1rem',
             fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.08em',
             color: 'var(--muted)', textTransform: 'uppercase',
@@ -112,39 +131,13 @@ export default function WantlistPage() {
           </div>
 
           {items.map(item => (
-            <div key={item.id} style={{
-              display: 'grid', gridTemplateColumns: '1fr 110px 36px',
-              padding: '0.875rem 1rem', gap: '1rem',
-              background: 'var(--s1)', border: '1px solid var(--border)',
-              borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
-            }}>
-              <div>
-                <a
-                  href={`/figure/${item.figure_id}`}
-                  style={{ color: 'var(--text)', textDecoration: 'none', fontWeight: '500' }}
-                >
-                  {item.name}
-                </a>
-                {item.line && (
-                  <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{item.line}</div>
-                )}
-              </div>
-              <span style={{ textAlign: 'right', color: 'var(--muted)' }}>
-                {item.target_price ? `$${item.target_price}` : '—'}
-              </span>
-              <button
-                onClick={() => removeItem(item.id)}
-                disabled={deleting === item.id}
-                style={{
-                  background: 'none', border: '1px solid var(--border)', borderRadius: '5px',
-                  color: 'var(--muted)', cursor: 'pointer', padding: '4px 6px',
-                  fontSize: '0.75rem', fontFamily: 'var(--font-ui)',
-                  opacity: deleting === item.id ? 0.4 : 1,
-                }}
-              >
-                ✕
-              </button>
-            </div>
+            <WantRow
+              key={item.id}
+              item={item}
+              deleting={deleting === item.id}
+              onRemove={() => removeItem(item.id)}
+              onUpdatePrice={(price) => updateTargetPrice(item.id, price)}
+            />
           ))}
         </div>
       )}
@@ -171,8 +164,100 @@ export default function WantlistPage() {
       )}
 
       <p style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--dim, #3A3D52)' }}>
-        To add figures: search for a figure, open its detail page, and click &ldquo;Add to Want List&rdquo;.
+        Search for a figure and click &ldquo;Add to Want List&rdquo; from its detail page.
+        Click a target price to edit it inline.
       </p>
+    </div>
+  )
+}
+
+function WantRow({
+  item, deleting, onRemove, onUpdatePrice,
+}: {
+  item: WantItem
+  deleting: boolean
+  onRemove: () => void
+  onUpdatePrice: (price: number) => void
+}) {
+  const [editing, setEditing] = useState(false)
+  const [value, setValue] = useState(String(item.target_price ?? ''))
+
+  function commit() {
+    setEditing(false)
+    const num = parseFloat(value)
+    if (!isNaN(num) && num !== item.target_price) {
+      onUpdatePrice(num)
+    }
+  }
+
+  return (
+    <div style={{
+      display: 'grid', gridTemplateColumns: '1fr 130px 36px',
+      padding: '0.875rem 1rem', gap: '1rem',
+      background: 'var(--s1)', border: '1px solid var(--border)',
+      borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', minWidth: 0 }}>
+        <span style={{ fontSize: '1rem', flexShrink: 0 }} title={item.genre ?? undefined}>
+          {GENRE_EMOJI[item.genre ?? ''] ?? '🤼'}
+        </span>
+        <div style={{ minWidth: 0 }}>
+          <a
+            href={`/figure/${item.figure_id}`}
+            style={{ color: 'var(--text)', textDecoration: 'none', fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'block' }}
+          >
+            {item.name}
+          </a>
+          {item.line && (
+            <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{item.line}</div>
+          )}
+        </div>
+      </div>
+
+      {editing ? (
+        <input
+          type="number"
+          value={value}
+          min="0"
+          step="0.01"
+          autoFocus
+          onChange={e => setValue(e.target.value)}
+          onBlur={commit}
+          onKeyDown={e => { if (e.key === 'Enter') commit(); if (e.key === 'Escape') { setEditing(false); setValue(String(item.target_price ?? '')) } }}
+          style={{
+            background: 'var(--s2)', border: '1px solid var(--blue)',
+            borderRadius: '5px', color: 'var(--text)', fontSize: '0.85rem',
+            padding: '3px 6px', fontFamily: 'var(--font-body)',
+            width: '100%', textAlign: 'right', outline: 'none',
+          }}
+        />
+      ) : (
+        <button
+          onClick={() => { setEditing(true); setValue(String(item.target_price ?? '')) }}
+          title="Click to edit target price"
+          style={{
+            textAlign: 'right', color: item.target_price ? 'var(--text)' : 'var(--muted)',
+            fontWeight: item.target_price ? '600' : '400',
+            background: 'none', border: 'none', cursor: 'pointer',
+            padding: '2px 0', fontSize: '0.875rem', fontFamily: 'var(--font-body)', width: '100%',
+          }}
+        >
+          {item.target_price ? `$${item.target_price}` : '—'}
+        </button>
+      )}
+
+      <button
+        onClick={onRemove}
+        disabled={deleting}
+        style={{
+          background: 'none', border: '1px solid var(--border)', borderRadius: '5px',
+          color: 'var(--muted)', cursor: 'pointer', padding: '4px 6px',
+          fontSize: '0.75rem', fontFamily: 'var(--font-ui)',
+          opacity: deleting ? 0.4 : 1,
+        }}
+      >
+        ✕
+      </button>
     </div>
   )
 }
@@ -200,9 +285,15 @@ function EmptyState() {
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
         WANT LIST IS EMPTY
       </h2>
-      <p style={{ color: 'var(--muted)', fontSize: '0.9rem', maxWidth: '360px', margin: '0 auto' }}>
+      <p style={{ color: 'var(--muted)', fontSize: '0.9rem', maxWidth: '360px', margin: '0 auto 1.5rem' }}>
         Search for a figure and open its detail page to add it to your want list.
       </p>
+      <a href="/app" style={{
+        display: 'inline-block', background: 'var(--blue)', color: '#fff', textDecoration: 'none',
+        padding: '0.625rem 1.5rem', borderRadius: '7px', fontSize: '0.875rem', fontWeight: '600',
+      }}>
+        Search Figures
+      </a>
     </div>
   )
 }

@@ -1,21 +1,62 @@
-import type { Metadata } from 'next'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Deal Alerts',
-  robots: { index: false, follow: false },
+import { useState, useEffect } from 'react'
+import { useUser } from '@clerk/nextjs'
+
+const GENRE_EMOJI: Record<string, string> = {
+  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
+  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
+  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
+  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
+  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
+  'neca': '🎬', 'spawn': '🦇',
 }
 
-const IS_PRO = false // TODO: derive from Clerk user metadata once billing is wired
-
-const PLACEHOLDER_ALERTS = [
-  { id: '1', name: 'Ultimate Warrior Defining Moments', line: 'Mattel Elite', target: 110, current: 145, triggered: false, created: '2026-03-12' },
-  { id: '2', name: 'CM Punk Elite Return', line: 'Mattel Elite', target: 55, current: 52, triggered: true, created: '2026-02-28' },
-]
+type AlertItem = {
+  id: string
+  figure_id: string
+  name: string
+  brand: string | null
+  line: string | null
+  genre: string | null
+  target_price: number
+  is_active: number
+  created_at: string
+}
 
 export default function AlertsPage() {
-  if (!IS_PRO) {
-    return <ProGate />
+  const { user, isLoaded } = useUser()
+  const IS_PRO = isLoaded ? ((user?.publicMetadata?.isPro as boolean) ?? false) : false
+  const [items, setItems] = useState<AlertItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const [deleting, setDeleting] = useState<string | null>(null)
+  const [showModal, setShowModal] = useState(false)
+
+  useEffect(() => {
+    if (!isLoaded) return
+    if (!IS_PRO) { setLoading(false); return }
+    fetch('/api/alerts')
+      .then(r => r.json())
+      .then((d: { items: AlertItem[] }) => setItems(d.items ?? []))
+      .catch(() => setItems([]))
+      .finally(() => setLoading(false))
+  }, [isLoaded, IS_PRO])
+
+  async function removeAlert(id: string) {
+    setDeleting(id)
+    await fetch(`/api/alerts/${id}`, { method: 'DELETE' })
+    setItems(prev => prev.filter(i => i.id !== id))
+    setDeleting(null)
   }
+
+  function onAlertCreated(item: AlertItem) {
+    setItems(prev => [item, ...prev])
+    setShowModal(false)
+  }
+
+  // Wait for Clerk to load before deciding gate vs content
+  if (!isLoaded) return <LoadingShimmer />
+  if (!IS_PRO) return <ProGate />
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -25,79 +66,244 @@ export default function AlertsPage() {
             DEAL ALERTS
           </h1>
           <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-            {PLACEHOLDER_ALERTS.length} active alerts
+            {loading ? '—' : `${items.length} active alert${items.length !== 1 ? 's' : ''}`}
           </p>
         </div>
-        <button style={{
-          background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-          padding: '0.625rem 1.25rem', borderRadius: '7px', fontSize: '0.875rem',
-          fontWeight: '600', fontFamily: 'var(--font-ui)',
-        }}>
+        <button
+          onClick={() => setShowModal(true)}
+          style={{
+            background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
+            padding: '0.625rem 1.25rem', borderRadius: '7px', fontSize: '0.875rem',
+            fontWeight: '600', fontFamily: 'var(--font-ui)',
+          }}
+        >
           + New Alert
         </button>
       </div>
 
-      {PLACEHOLDER_ALERTS.length === 0 ? (
-        <EmptyState />
+      {loading ? (
+        <LoadingState />
+      ) : items.length === 0 ? (
+        <EmptyState onNew={() => setShowModal(true)} />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
           <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 90px 90px 100px 36px',
+            display: 'grid', gridTemplateColumns: '1fr 110px 36px',
             padding: '0.5rem 1rem', gap: '1rem',
             fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.08em',
             color: 'var(--muted)', textTransform: 'uppercase',
           }}>
             <span>Figure</span>
-            <span style={{ textAlign: 'right' }}>Target</span>
-            <span style={{ textAlign: 'right' }}>Avg Now</span>
-            <span style={{ textAlign: 'center' }}>Status</span>
+            <span style={{ textAlign: 'right' }}>Target Price</span>
             <span />
           </div>
 
-          {PLACEHOLDER_ALERTS.map(alert => (
+          {items.map(alert => (
             <div key={alert.id} style={{
-              display: 'grid', gridTemplateColumns: '1fr 90px 90px 100px 36px',
+              display: 'grid', gridTemplateColumns: '1fr 110px 36px',
               padding: '0.875rem 1rem', gap: '1rem',
               background: 'var(--s1)',
-              border: `1px solid ${alert.triggered ? 'rgba(0,200,112,0.3)' : 'var(--border)'}`,
+              border: '1px solid var(--border)',
               borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
             }}>
-              <div>
-                <div style={{ fontWeight: '500', color: 'var(--text)' }}>{alert.name}</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{alert.line}</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', minWidth: 0 }}>
+                <span style={{ fontSize: '1rem', flexShrink: 0 }}>{GENRE_EMOJI[alert.genre ?? ''] ?? '🔔'}</span>
+                <div style={{ minWidth: 0 }}>
+                  <a
+                    href={`/figure/${alert.figure_id}`}
+                    style={{ color: 'var(--text)', textDecoration: 'none', fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'block' }}
+                  >
+                    {alert.name}
+                  </a>
+                  {alert.line && (
+                    <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{alert.line}</div>
+                  )}
+                </div>
               </div>
-              <span style={{ textAlign: 'right', color: 'var(--muted)' }}>${alert.target}</span>
-              <span style={{ textAlign: 'right', fontWeight: '600' }}>${alert.current}</span>
-              <div style={{ textAlign: 'center' }}>
-                {alert.triggered ? (
-                  <span style={{
-                    display: 'inline-block', padding: '3px 10px', borderRadius: '100px',
-                    background: 'rgba(0,200,112,0.12)', color: 'var(--green)',
-                    fontSize: '0.75rem', fontWeight: '700',
-                  }}>
-                    ✓ Triggered
-                  </span>
-                ) : (
-                  <span style={{
-                    display: 'inline-block', padding: '3px 10px', borderRadius: '100px',
-                    background: 'rgba(255,255,255,0.06)', color: 'var(--muted)',
-                    fontSize: '0.75rem', fontWeight: '600',
-                  }}>
-                    Watching
-                  </span>
-                )}
-              </div>
-              <button style={{
-                background: 'none', border: '1px solid var(--border)', borderRadius: '5px',
-                color: 'var(--muted)', cursor: 'pointer', padding: '4px 6px',
-                fontSize: '0.75rem', fontFamily: 'var(--font-ui)',
-              }}>
-                ···
+              <span style={{ textAlign: 'right', color: alert.target_price ? 'var(--text)' : 'var(--muted)', fontWeight: alert.target_price ? '600' : '400' }}>
+                {alert.target_price ? `$${alert.target_price}` : '—'}
+              </span>
+              <button
+                onClick={() => removeAlert(alert.id)}
+                disabled={deleting === alert.id}
+                style={{
+                  background: 'none', border: '1px solid var(--border)', borderRadius: '5px',
+                  color: 'var(--muted)', cursor: 'pointer', padding: '4px 6px',
+                  fontSize: '0.75rem', fontFamily: 'var(--font-ui)',
+                  opacity: deleting === alert.id ? 0.4 : 1,
+                }}
+              >
+                ✕
               </button>
             </div>
           ))}
         </div>
       )}
+
+      {showModal && (
+        <NewAlertModal
+          onClose={() => setShowModal(false)}
+          onCreated={onAlertCreated}
+        />
+      )}
+    </div>
+  )
+}
+
+function NewAlertModal({
+  onClose,
+  onCreated,
+}: {
+  onClose: () => void
+  onCreated: (item: AlertItem) => void
+}) {
+  const [name, setName] = useState('')
+  const [figureId, setFigureId] = useState('')
+  const [line, setLine] = useState('')
+  const [targetPrice, setTargetPrice] = useState('')
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!name.trim()) { setError('Figure name is required'); return }
+    setSaving(true)
+    setError('')
+    try {
+      const res = await fetch('/api/alerts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          figure_id: figureId.trim() || `manual-${Date.now()}`,
+          name: name.trim(),
+          line: line.trim() || undefined,
+          target_price: targetPrice ? parseFloat(targetPrice) : 0,
+        }),
+      })
+      if (res.status === 401) { window.location.href = '/sign-in'; return }
+      if (!res.ok) { setError('Failed to create alert'); return }
+      const { id } = await res.json() as { id: string }
+      onCreated({
+        id,
+        figure_id: figureId.trim() || `manual-${Date.now()}`,
+        name: name.trim(),
+        brand: null,
+        line: line.trim() || null,
+        genre: null,
+        target_price: targetPrice ? parseFloat(targetPrice) : 0,
+        is_active: 1,
+        created_at: new Date().toISOString(),
+      })
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.65)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      zIndex: 100, padding: '1rem',
+    }}
+      onClick={e => { if (e.target === e.currentTarget) onClose() }}
+    >
+      <div style={{
+        background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
+        padding: '2rem', width: '100%', maxWidth: '440px',
+      }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', marginBottom: '1.5rem' }}>
+          NEW DEAL ALERT
+        </h2>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <Field label="Figure Name *">
+            <input
+              type="text"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              placeholder="e.g. Ultimate Warrior Defining Moments"
+              style={inputStyle}
+              autoFocus
+            />
+          </Field>
+          <Field label="Line / Series">
+            <input
+              type="text"
+              value={line}
+              onChange={e => setLine(e.target.value)}
+              placeholder="e.g. Mattel Elite"
+              style={inputStyle}
+            />
+          </Field>
+          <Field label="Target Price ($)">
+            <input
+              type="number"
+              value={targetPrice}
+              onChange={e => setTargetPrice(e.target.value)}
+              placeholder="0"
+              min="0"
+              step="0.01"
+              style={inputStyle}
+            />
+          </Field>
+          {error && <p style={{ color: '#FF4444', fontSize: '0.8rem', margin: 0 }}>{error}</p>}
+          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
+            <button
+              type="button"
+              onClick={onClose}
+              style={{
+                flex: 1, background: 'transparent', border: '1px solid var(--border)',
+                color: 'var(--muted)', cursor: 'pointer', padding: '0.625rem',
+                borderRadius: '7px', fontSize: '0.875rem', fontFamily: 'var(--font-ui)',
+              }}
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              disabled={saving}
+              style={{
+                flex: 1, background: 'var(--blue)', border: 'none', color: '#fff',
+                cursor: saving ? 'not-allowed' : 'pointer', padding: '0.625rem',
+                borderRadius: '7px', fontSize: '0.875rem', fontWeight: '600',
+                fontFamily: 'var(--font-ui)', opacity: saving ? 0.7 : 1,
+              }}
+            >
+              {saving ? 'Saving…' : 'Create Alert'}
+            </button>
+          </div>
+        </form>
+        <p style={{ color: 'var(--muted)', fontSize: '0.75rem', marginTop: '1rem', textAlign: 'center' }}>
+          Tip: Find a figure in search first, then add it to your Want List to auto-fill alerts.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+const inputStyle: React.CSSProperties = {
+  width: '100%', background: 'var(--s2)', border: '1px solid var(--border)',
+  borderRadius: '7px', padding: '0.625rem 0.875rem', color: 'var(--text)',
+  fontSize: '0.9rem', fontFamily: 'var(--font-body)', outline: 'none',
+  boxSizing: 'border-box',
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
+      <label style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.06em' }}>
+        {label}
+      </label>
+      {children}
+    </div>
+  )
+}
+
+function LoadingShimmer() {
+  return (
+    <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2px' }}>
+      {[1, 2, 3].map(i => (
+        <div key={i} style={{ height: '60px', background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '8px', opacity: 0.5 }} />
+      ))}
     </div>
   )
 }
@@ -142,7 +348,7 @@ function ProGate() {
   )
 }
 
-function EmptyState() {
+function EmptyState({ onNew }: { onNew: () => void }) {
   return (
     <div style={{
       textAlign: 'center', padding: '4rem 2rem',
@@ -155,13 +361,29 @@ function EmptyState() {
       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.5rem', maxWidth: '320px', margin: '0 auto 1.5rem' }}>
         Set a price alert on any figure and we&apos;ll notify you when it drops.
       </p>
-      <button style={{
-        background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-        padding: '0.625rem 1.5rem', borderRadius: '7px', fontSize: '0.875rem',
-        fontWeight: '600', fontFamily: 'var(--font-ui)',
-      }}>
+      <button
+        onClick={onNew}
+        style={{
+          background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
+          padding: '0.625rem 1.5rem', borderRadius: '7px', fontSize: '0.875rem',
+          fontWeight: '600', fontFamily: 'var(--font-ui)',
+        }}
+      >
         + Create Alert
       </button>
+    </div>
+  )
+}
+
+function LoadingState() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+      {[1, 2, 3].map(i => (
+        <div key={i} style={{
+          height: '60px', background: 'var(--s1)', border: '1px solid var(--border)',
+          borderRadius: '8px', opacity: 0.5,
+        }} />
+      ))}
     </div>
   )
 }

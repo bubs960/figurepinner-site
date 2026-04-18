@@ -87,7 +87,7 @@ export default function HomePage() {
           <TrustSep />
           <span>200K items/day</span>
           <TrustSep />
-          <span>15 genres</span>
+          <span>17 genres</span>
           <TrustSep />
           <span>Free forever</span>
         </div>
@@ -429,8 +429,9 @@ export default function HomePage() {
         <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', letterSpacing: '.06em' }}>
           Figure<span style={{ color: 'var(--blue)' }}>Pinner</span>
         </div>
-        <div style={{ display: 'flex', gap: 24 }}>
+        <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
           {[
+            { label: 'About',                href: '/about' },
             { label: 'Privacy',              href: '/privacy' },
             { label: 'Terms',                href: '/terms' },
             { label: 'Chrome Extension',     href: CWS_URL },

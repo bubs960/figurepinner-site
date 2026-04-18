@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ProUpgradeButton from '../components/ProUpgradeButton'
 
 export const metadata: Metadata = {
   title: 'FigurePinner Pro — Serious Collectors Only',
@@ -65,20 +66,15 @@ export default function ProPage() {
         <p style={{ color: 'var(--muted)', fontSize: '1.1rem', lineHeight: 1.6, margin: '0 0 2.5rem' }}>
           Deal alerts, price history, and unlimited tracking — everything you need to buy at the right price and never miss a flip.
         </p>
-        <a href="/sign-up?plan=pro" style={{
-          display: 'inline-block', background: 'var(--blue)', color: '#fff',
-          padding: '0.875rem 2.5rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: '700',
-          textDecoration: 'none', letterSpacing: '0.02em',
-        }}>
-          Start Free Trial — $6.99/mo
-        </a>
+        <ProUpgradeButton size="lg" />
         <p style={{ color: 'var(--muted)', fontSize: '0.8rem', marginTop: '0.75rem' }}>
           Cancel anytime. No credit card to start.
         </p>
       </section>
 
       {/* Pricing table */}
-      <section style={{ maxWidth: '860px', margin: '0 auto', padding: '2rem 1rem 5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+      <style>{`@media (max-width: 640px) { .fp-pro-grid { grid-template-columns: 1fr !important; } }`}</style>
+      <section className="fp-pro-grid" style={{ maxWidth: '860px', margin: '0 auto', padding: '2rem 1rem 5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
 
         {/* Free card */}
         <div style={{
@@ -118,13 +114,9 @@ export default function ProPage() {
           <div style={{ fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.1em', color: 'var(--blue)', marginBottom: '0.5rem' }}>PRO</div>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', letterSpacing: '0.03em', marginBottom: '0.25rem' }}>$6.99</div>
           <div style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '1.75rem' }}>per month, cancel anytime</div>
-          <a href="/sign-up?plan=pro" style={{
-            display: 'block', textAlign: 'center', background: 'var(--blue)',
-            color: '#fff', padding: '0.625rem', borderRadius: '6px', fontSize: '0.875rem',
-            fontWeight: '700', textDecoration: 'none', marginBottom: '1.75rem',
-          }}>
-            Start Free Trial
-          </a>
+          <div style={{ marginBottom: '1.75rem', display: 'flex', justifyContent: 'center' }}>
+            <ProUpgradeButton size="sm" />
+          </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
             {PRO_FEATURES.map(f => (
               <div key={f.label} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: f.highlight ? 'var(--text)' : 'var(--muted)' }}>

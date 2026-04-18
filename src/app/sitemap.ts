@@ -11,32 +11,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
 
   // ── Static pages ────────────────────────────────────────────────────────
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: base,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${base}/pro`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${base}/privacy`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.2,
-    },
-    {
-      url: `${base}/terms`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.2,
-    },
+  // To add a new page: append an entry to this array.
+  // changeFrequency: 'always'|'hourly'|'daily'|'weekly'|'monthly'|'yearly'|'never'
+  // priority: 0.0 – 1.0 (1.0 = most important)
+  const STATIC_PAGES: Array<{
+    path: string
+    changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
+    priority: number
+  }> = [
+    { path: '',          changeFrequency: 'weekly',  priority: 1.0 },
+    { path: '/pro',      changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/about',    changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/privacy',  changeFrequency: 'yearly',  priority: 0.2 },
+    { path: '/terms',    changeFrequency: 'yearly',  priority: 0.2 },
   ]
+
+  const staticPages: MetadataRoute.Sitemap = STATIC_PAGES.map(({ path, changeFrequency, priority }) => ({
+    url: `${base}${path}`,
+    lastModified: now,
+    changeFrequency,
+    priority,
+  }))
 
   // ── Genre landing pages ──────────────────────────────────────────────────
   const fandoms = getAllFandoms()

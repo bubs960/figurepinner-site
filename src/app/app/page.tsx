@@ -1,10 +1,9 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 // Client component — runtime is inherited from the edge layout
-
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? ''
 
 // Matches actual API response from /api/v1/search
 // figure_id and image are P0 gaps being added by engineer — optional until then
@@ -19,20 +18,35 @@ type SearchResult = {
   image?: string | null    // added by engineer (P0) — canonical_image_url
 }
 
-// Recent searches — stored in memory only (localStorage not available on edge/SSR)
-const PLACEHOLDER_RECENT = [
-  { id: '1', name: 'Rey Mysterio Elite 100', line: 'Mattel Elite', genre: 'wrestling', slug: 'rey-mysterio-elite-100', avg_price: 34 },
-  { id: '2', name: 'Roman Reigns Acknowledge Me', line: 'Mattel Elite', genre: 'wrestling', slug: 'roman-reigns-acknowledge-me', avg_price: 28 },
-  { id: '3', name: 'CM Punk Elite Return', line: 'Mattel Elite', genre: 'wrestling', slug: 'cm-punk-elite-return', avg_price: 67 },
-]
+type WantItem = {
+  id: string
+  figure_id: string
+  name: string
+  brand: string | null
+  line: string | null
+  genre: string | null
+  target_price: number
+  added_at: string
+}
 
 export default function AppHome() {
+  const searchParams = useSearchParams()
+  const [upgradeBanner, setUpgradeBanner] = useState(() => searchParams.get('upgraded') === '1')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
+  const [recentItems, setRecentItems] = useState<WantItem[]>([])
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // Load recent want list items on mount
+  useEffect(() => {
+    fetch('/api/wantlist')
+      .then(r => r.ok ? r.json() : { items: [] })
+      .then((d: { items: WantItem[] }) => setRecentItems((d.items ?? []).slice(0, 5)))
+      .catch(() => setRecentItems([]))
+  }, [])
 
   useEffect(() => {
     if (query.length < 2) {
@@ -44,7 +58,8 @@ export default function AppHome() {
     debounceRef.current = setTimeout(async () => {
       setLoading(true)
       try {
-        const res = await fetch(`${API_BASE}/api/v1/search?q=${encodeURIComponent(query)}&limit=8`)
+        // Always call local proxy — server-to-server avoids CORS on external API worker
+        const res = await fetch(`/api/v1/search?q=${encodeURIComponent(query)}&limit=8`)
         if (res.ok) {
           const data = await res.json() as { figures: SearchResult[] }
           setResults(data.figures ?? [])
@@ -61,6 +76,31 @@ export default function AppHome() {
 
   return (
     <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+      {/* Pro upgrade success banner */}
+      {upgradeBanner && (
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          background: 'rgba(0,200,100,0.1)', border: '1px solid rgba(0,200,100,0.3)',
+          borderRadius: '10px', padding: '0.875rem 1.25rem', marginBottom: '1.5rem', gap: '1rem',
+        }}>
+          <div>
+            <span style={{ fontSize: '1rem', marginRight: '0.5rem' }}>🎉</span>
+            <span style={{ fontWeight: '600', color: 'var(--text)' }}>Welcome to Pro!</span>
+            {' '}
+            <span style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
+              Deal alerts and price history are now unlocked.
+            </span>
+          </div>
+          <button
+            onClick={() => setUpgradeBanner(false)}
+            style={{ background: 'none', border: 'none', color: 'var(--muted)', cursor: 'pointer', fontSize: '1rem', flexShrink: 0 }}
+            aria-label="Dismiss"
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {/* Search */}
       <div style={{ marginBottom: '2.5rem' }}>
@@ -132,23 +172,41 @@ export default function AppHome() {
                     padding: '0.75rem 1rem',
                     color: 'var(--text)',
                     textDecoration: 'none',
-                    borderBottom: '1px solid var(--border)',
+                    borderBottom: i < results.length - 1 ? '1px solid var(--border)' : 'none',
                     fontSize: '0.9rem',
                     transition: 'background 0.1s',
                   }}
                   onMouseEnter={e => (e.currentTarget.style.background = 'var(--s1)')}
                   onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', flex: 1 }}>
-                    {r.image && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={r.image} alt="" style={{ width: 32, height: 32, objectFit: 'contain', borderRadius: 4, background: 'var(--s2)', flexShrink: 0 }} />
-                    )}
-                    <div>
-                      <div style={{ fontWeight: '500' }}>{r.name}</div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{r.brand} {r.line}{r.series ? ` · Series ${r.series}` : ''}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1, minWidth: 0 }}>
+                    {/* Image or genre-emoji placeholder */}
+                    <div style={{
+                      width: 36, height: 36, borderRadius: 6,
+                      background: 'var(--s1)', border: '1px solid var(--border)',
+                      flexShrink: 0, overflow: 'hidden',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: '1.1rem',
+                    }}>
+                      {r.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={r.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      ) : (
+                        GENRE_EMOJI[r.genre] ?? '🤼'
+                      )}
+                    </div>
+                    <div style={{ minWidth: 0 }}>
+                      <div style={{ fontWeight: '500', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {r.name}
+                      </div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>
+                        {r.brand} {r.line}{r.series ? ` · Series ${r.series}` : ''}
+                      </div>
                     </div>
                   </div>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--dim)', flexShrink: 0, marginLeft: '0.5rem' }}>
+                    <path d="M2 6h8M6 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </a>
               ))}
             </div>
@@ -156,39 +214,50 @@ export default function AppHome() {
         </div>
       </div>
 
-      {/* Recent Searches */}
-      <section style={{ marginBottom: '2.5rem' }}>
-        <SectionHeader label="Recently Viewed" />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-          {PLACEHOLDER_RECENT.map(r => (
-            <a
-              key={r.id}
-              href={`/${r.genre}/mattel-elite/${r.slug}`}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '0.75rem 1rem',
-                background: 'var(--s1)',
-                border: '1px solid var(--border)',
-                borderRadius: '8px',
-                color: 'var(--text)',
-                textDecoration: 'none',
-                fontSize: '0.9rem',
-                transition: 'border-color 0.15s',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--blue)')}
-              onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
-            >
-              <div>
-                <div style={{ fontWeight: '500' }}>{r.name}</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{r.line}</div>
-              </div>
-              <div style={{ color: 'var(--green)', fontWeight: '600' }}>${r.avg_price}</div>
+      {/* Want List Quick View */}
+      {recentItems.length > 0 && (
+        <section style={{ marginBottom: '2.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.625rem' }}>
+            <SectionHeader label="Your Want List" />
+            <a href="/app/wantlist" style={{ fontSize: '0.75rem', color: 'var(--blue)', textDecoration: 'none' }}>
+              View all →
             </a>
-          ))}
-        </div>
-      </section>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+            {recentItems.map(r => (
+              <a
+                key={r.id}
+                href={`/figure/${r.figure_id}`}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '0.75rem 1rem',
+                  background: 'var(--s1)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  color: 'var(--text)',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  transition: 'border-color 0.15s',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--blue)')}
+                onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
+              >
+                <div>
+                  <div style={{ fontWeight: '500' }}>{r.name}</div>
+                  {r.line && <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{r.line}</div>}
+                </div>
+                {r.target_price > 0 && (
+                  <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>
+                    target <span style={{ color: 'var(--text)', fontWeight: '600' }}>${r.target_price}</span>
+                  </div>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Quick links */}
       <section>
@@ -252,6 +321,15 @@ function SpinnerIcon() {
       <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.5" strokeDasharray="20 18" strokeLinecap="round" />
     </svg>
   )
+}
+
+const GENRE_EMOJI: Record<string, string> = {
+  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
+  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
+  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
+  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
+  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
+  'neca': '🎬', 'spawn': '🦇',
 }
 
 // Fandom slugs match KB `genre` field exactly — 17 genres as of v11.2.0

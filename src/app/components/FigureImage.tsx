@@ -29,33 +29,40 @@ type Props = {
   url: string | null
   name: string
   genre?: string
+  /** When true, renders without the outer card wrapper (parent supplies the container) */
+  bare?: boolean
 }
 
-export default function FigureImage({ url, name, genre }: Props) {
+export default function FigureImage({ url, name, genre, bare }: Props) {
   const [errored, setErrored] = useState(false)
   const emoji = (genre && GENRE_EMOJI[genre]) ?? '🤼'
 
-  if (!url || errored) {
-    return (
-      <div style={{
-        background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
-        aspectRatio: '1', display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: '3rem', color: 'var(--muted)',
-      }}>
-        {emoji}
-      </div>
-    )
-  }
+  const inner = (!url || errored) ? (
+    <div style={{
+      width: '100%', height: '100%',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontSize: '3rem', color: 'var(--muted)',
+    }}>
+      {emoji}
+    </div>
+  ) : (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={url}
+      alt={name}
+      style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }}
+      onError={() => setErrored(true)}
+    />
+  )
+
+  if (bare) return inner
 
   return (
-    <div style={{ background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden', aspectRatio: '1' }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={url}
-        alt={name}
-        style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }}
-        onError={() => setErrored(true)}
-      />
+    <div style={{
+      background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
+      overflow: 'hidden', aspectRatio: '1',
+    }}>
+      {inner}
     </div>
   )
 }

@@ -138,7 +138,11 @@ export default function PrivacyPage() {
         textAlign: 'center',
       }}>
         <p style={{ fontSize: '0.75rem', color: 'var(--dim)' }}>
-          © 2024 FigurePinner · <a href="/" style={{ color: 'var(--dim)' }}>Home</a> · <a href="/pro" style={{ color: 'var(--dim)' }}>Pro</a>
+          © {new Date().getFullYear()} FigurePinner ·{' '}
+          <a href="/" style={{ color: 'var(--dim)' }}>Home</a> ·{' '}
+          <a href="/about" style={{ color: 'var(--dim)' }}>About</a> ·{' '}
+          <a href="/terms" style={{ color: 'var(--dim)' }}>Terms</a> ·{' '}
+          <a href="/pro" style={{ color: 'var(--dim)' }}>Pro</a>
         </p>
       </footer>
     </div>
