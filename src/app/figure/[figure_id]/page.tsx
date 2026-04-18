@@ -74,27 +74,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${displayName}${avg ? ` — $${avg.toFixed(0)} avg` : ''} | FigurePinner`,
       description: `Real sold prices for ${displayName}. ${price?.soldCount ?? 0} eBay comps.`,
-      images: (local.canonical_image_url ?? price?.image_url)
-        ? [{ url: (local.canonical_image_url ?? price?.image_url)!, width: 400, height: 400, alt: displayName }]
+      images: local.canonical_image_url
+        ? [{ url: local.canonical_image_url, width: 400, height: 400, alt: displayName }]
         : [],
     },
   }
 }
 
 // ── Data fetching ─────────────────────────────────────────────────────────────
-async function fetchFigureData(figure_id: string): Promise<{ figure: KBFigure | null; price: PriceData | null }> {
-  // Price data comes from the API worker (has eBay sold data) — server-side, no CORS issue
-  // Figure data uses local KB route (faster, always available)
-  const priceRes = await fetch(
-    `${API_BASE}/api/v1/figure-price?figureId=${encodeURIComponent(figure_id)}`,
-    { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
-  ).catch(() => null)
+async function fetchFigureData(figure_id: string): Promise<{ figure: KBFigure | null; price: PriceData | null; imageUrl: string | null }> {
+  // Fetch price + image in parallel — both from the API worker, server-side, no CORS issue
+  const [priceRes, figureRes] = await Promise.all([
+    fetch(
+      `${API_BASE}/api/v1/figure-price?figureId=${encodeURIComponent(figure_id)}`,
+      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+    ).catch(() => null),
+    fetch(
+      `${API_BASE}/api/v1/figure/${encodeURIComponent(figure_id)}`,
+      { next: { revalidate: 86400 }, signal: AbortSignal.timeout(4000) }
+    ).catch(() => null),
+  ])
 
   const price = priceRes?.ok
     ? await priceRes.json() as PriceData
     : null
 
-  return { figure: null, price }
+  const figureApiData = figureRes?.ok
+    ? await figureRes.json() as { figure_id: string; canonical_image_url: string | null }
+    : null
+
+  return { figure: null, price, imageUrl: figureApiData?.canonical_image_url ?? null }
 }
 
 function buildEbayUrl(figure: KBFigure): string {
@@ -110,11 +119,11 @@ export default async function FigureDetailPage({ params }: PageProps) {
   const local = getFigureById(figure_id)
   if (!local) return <NotFoundState />
 
-  // API data — best-effort, may be null if Worker is down or endpoints not yet deployed
-  const { figure: apiData, price } = await fetchFigureData(figure_id)
+  // API data — best-effort, may be null if Worker is down
+  const { figure: apiData, price, imageUrl } = await fetchFigureData(figure_id)
 
   // Merge: API data wins if present, KB data fills gaps
-  // image: local KB first, then fall back to D1 image returned by figure-price endpoint
+  // image: API image endpoint first (has real URLs from master KB), then local KB fallback
   const figure: KBFigure = apiData ?? {
     figure_id: local.figure_id,
     name: deriveName(local),
@@ -123,7 +132,7 @@ export default async function FigureDetailPage({ params }: PageProps) {
     series: local.release_wave,
     genre: local.fandom,
     year: null,
-    canonical_image_url: local.canonical_image_url ?? null,
+    canonical_image_url: imageUrl ?? local.canonical_image_url ?? null,
   }
 
   const avg = price?.avgSold ?? null
