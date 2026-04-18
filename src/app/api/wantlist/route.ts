@@ -3,9 +3,10 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
 
-async function getDB() {
+async function getDB(): Promise<D1Database> {
   const { env } = await getCloudflareContext()
-  return env.DB
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (env as any).DB as D1Database
 }
 
 // GET /api/wantlist — fetch all wantlist items for authenticated user

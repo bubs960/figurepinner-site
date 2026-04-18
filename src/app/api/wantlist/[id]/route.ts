@@ -2,9 +2,10 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 
-async function getDB() {
+async function getDB(): Promise<D1Database> {
   const { env } = await getCloudflareContext()
-  return env.DB
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (env as any).DB as D1Database
 }
 
 // DELETE /api/wantlist/[id] — remove item from wantlist (must belong to user)
