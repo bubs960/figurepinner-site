@@ -2,17 +2,17 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getAllFigures, deriveName } from '@/data/kb'
 
 /**
- * Search proxy — always uses local KB scan so results always include
- * figure_id (for detail page links) and canonical_image_url.
+ * GET /api/v1/search?q=<query>&limit=<n>
  *
- * Falls back gracefully: if KB import fails for any reason, returns empty.
+ * Searches local KB (figures-reference-v2.js) and returns ranked results.
+ * Returns figure_id, image (canonical_image_url), and slug fields so the
+ * client can build deep links and show thumbnails without a second request.
  *
- * Note: the API worker's public search omits figure_id and image intentionally
- * ("iceberg" strategy), so we search locally and get complete results.
+ * Falls back to empty array if KB import fails — never throws.
  */
 export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
-  const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') ?? '8'), 20)
+  const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') ?? '8'), 60)
 
   if (q.length < 2) {
     return NextResponse.json({ figures: [] })
@@ -47,14 +47,18 @@ export async function GET(req: NextRequest) {
       .sort((a, b) => b.score - a.score)
       .slice(0, limit)
       .map(({ f }) => ({
-        figure_id: f.figure_id,
-        name: deriveName(f),
-        brand: f.manufacturer.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        line: f.product_line.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        series: f.release_wave,
-        genre: f.fandom,
-        year: null,
-        image: f.canonical_image_url ?? null,
+        figure_id:          f.figure_id,
+        name:               deriveName(f),
+        brand:              f.manufacturer.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        line:               f.product_line.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        series:             f.release_wave,
+        genre:              f.fandom,
+        year:               null,
+        image:              f.canonical_image_url ?? null,
+        // Raw slugs — used by the client to build keyword-rich pretty URLs
+        fandom_slug:        f.fandom,
+        line_slug:          f.product_line,
+        character_slug:     f.character_canonical,
       }))
 
     return NextResponse.json({ figures: results })

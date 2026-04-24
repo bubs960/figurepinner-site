@@ -1,0 +1,32 @@
+# Cloudflare Worker — FigurePinner Deal Alert Checker
+#
+# Deploy: npx wrangler deploy --config wrangler.alerts.toml
+#
+# Required secrets (set via Cloudflare dashboard or wrangler secret put):
+#   RESEND_API_KEY       — from resend.com (free tier: 3,000 emails/month)
+#   CLERK_SECRET_KEY     — from Clerk dashboard → API Keys
+#
+# Required env vars (add to [vars] below or set as secrets):
+#   FIGUREPINNER_API_URL — your worker URL, e.g. https://figurepinner-site.bubs960.workers.dev
+#   FROM_EMAIL           — verified sender in Resend, e.g. alerts@figurepinner.com
+
+name = "figurepinner-alerts"
+main = "workers/alert-checker.ts"
+compatibility_date = "2025-09-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Cron: run at 8am UTC daily (3am ET / midnight PT)
+[triggers]
+crons = ["0 8 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "figurepinner-userdata"
+database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
+
+[vars]
+FIGUREPINNER_API_URL = "https://figurepinner-api.bubs960.workers.dev"
+FROM_EMAIL = "alerts@figurepinner.com"
+APP_URL = "https://figurepinner.com"
+# UNSUBSCRIBE_SECRET — set via: npx wrangler secret put UNSUBSCRIBE_SECRET --config wrangler.alerts.toml
+# Use the same value in Cloudflare dashboard env vars for the main site (UNSUBSCRIBE_SECRET)

@@ -41,21 +41,42 @@ export async function PATCH(
 
   const { id } = await params
   const body = await req.json() as { target_price?: number; is_active?: boolean }
+
+  if (body.target_price === undefined && body.is_active === undefined) {
+    return NextResponse.json({ error: 'target_price or is_active is required' }, { status: 400 })
+  }
+
   const db = await getDB()
 
-  if (body.target_price !== undefined) {
-    await db
-      .prepare('UPDATE alerts SET target_price = ? WHERE id = ? AND user_id = ?')
-      .bind(body.target_price, id, userId)
-      .run()
+  // Pre-check ownership — prevents phantom 200 on non-existent IDs
+  const { results } = await db
+    .prepare(`SELECT id FROM alerts WHERE id = ? AND user_id = ?`)
+    .bind(id, userId)
+    .all()
+
+  if (results.length === 0) {
+    return NextResponse.json({ error: 'Not found' }, { status: 404 })
   }
 
-  if (body.is_active !== undefined) {
-    await db
-      .prepare('UPDATE alerts SET is_active = ? WHERE id = ? AND user_id = ?')
-      .bind(body.is_active ? 1 : 0, id, userId)
-      .run()
+  // Single UPDATE with dynamic SET clause — avoids partial-apply risk
+  const setClauses: string[] = []
+  const bindings: (string | number)[] = []
+
+  if (body.target_price !== undefined) {
+    setClauses.push('target_price = ?')
+    bindings.push(body.target_price)
   }
+  if (body.is_active !== undefined) {
+    setClauses.push('is_active = ?')
+    bindings.push(body.is_active ? 1 : 0)
+  }
+
+  bindings.push(id, userId)
+
+  await db
+    .prepare(`UPDATE alerts SET ${setClauses.join(', ')} WHERE id = ? AND user_id = ?`)
+    .bind(...bindings)
+    .run()
 
   return NextResponse.json({ ok: true })
 }

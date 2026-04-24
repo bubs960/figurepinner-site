@@ -72,6 +72,31 @@
   /* --- App layout (used in app shell, not landing) --- */
   --sidebar-w: 220px;
   --topbar-h: 56px;
+
+  /* ── FigurePinner Design Tokens v2 (figure detail page) ── */
+  --fp-bg:            #0A0D1C;
+  --fp-surface-0:     #14182D;
+  --fp-surface-1:     #1C2141;
+  --fp-surface-2:     #262C54;
+  --fp-border:        #2D3358;
+  --fp-border-bright: #424882;
+  --fp-text:          #F5F6FA;
+  --fp-muted:         #A2A7C0;
+  --fp-dim:           #6B7085;
+  --fp-accent:        #5B8DEF;
+  --fp-accent-warm:   #F0A04B;
+  --fp-accent-rare:   #C4A86A;
+  --fp-success:       #42D392;
+  --fp-danger:        #E5484D;
+  --fp-ebay:          #E53238;
+  --fp-font-display:  "Bebas Neue", system-ui, sans-serif;
+  --fp-font-body:     "Inter", system-ui, sans-serif;
+  --fp-radius-sm:     8px;
+  --fp-radius:        12px;
+  --fp-radius-lg:     16px;
+  --fp-bg-gradient:
+    radial-gradient(1200px 800px at 20% -10%, rgba(91,141,239,0.08), transparent 60%),
+    radial-gradient(900px 600px at 110% 30%, rgba(240,160,75,0.05), transparent 60%);
 }
 
 /* ============================================================

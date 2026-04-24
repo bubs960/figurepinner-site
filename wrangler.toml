@@ -11,3 +11,11 @@ binding = "ASSETS"
 binding = "DB"
 database_name = "figurepinner-userdata"
 database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
+
+[[routes]]
+pattern = "figurepinner.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.figurepinner.com"
+custom_domain = true

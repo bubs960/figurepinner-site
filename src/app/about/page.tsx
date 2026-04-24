@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About FigurePinner — Real Prices for Action Figure Collectors',
   description: 'FigurePinner is a price intelligence tool for action figure collectors. Track real eBay sold prices, set deal alerts, and know exactly what your collection is worth.',
+  alternates: { canonical: 'https://figurepinner.com/about' },
   openGraph: {
     title: 'About FigurePinner',
     description: 'Real eBay sold prices for 18,000+ action figures. Built by a collector, for collectors.',
@@ -28,7 +29,7 @@ export default function AboutPage() {
           FIGUREPINNER
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="/app" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
+          <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
           <a href="/pro" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Pro</a>
         </div>
       </nav>

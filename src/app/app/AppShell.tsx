@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { UserButton } from '@clerk/nextjs'
+import { UserButton, useUser } from '@clerk/nextjs'
 
 // Nav items
 const NAV = [
@@ -16,6 +16,8 @@ const NAV = [
 
 export default function AppShell({ children }: { children: ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const { user, isLoaded } = useUser()
+  const isPro = isLoaded ? ((user?.publicMetadata?.isPro as boolean) ?? false) : false
 
   // Close sidebar on route change (mobile)
   const pathname = usePathname()
@@ -88,10 +90,10 @@ export default function AppShell({ children }: { children: ReactNode }) {
       />
 
       <div className="fp-shell">
-        <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+        <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} isPro={isPro} />
 
         <div className="fp-main">
-          <TopBar onHamburger={() => setSidebarOpen(o => !o)} />
+          <TopBar onHamburger={() => setSidebarOpen(o => !o)} isPro={isPro} />
           <main className="fp-content">
             {children}
           </main>
@@ -104,7 +106,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
   )
 }
 
-function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
+function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void; isPro: boolean }) {
   const pathname = usePathname()
 
   return (
@@ -164,24 +166,31 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
         })}
       </nav>
 
-      {/* Pro upsell */}
-      <div style={{ padding: '0.75rem 1rem', margin: '0 0.5rem 0.75rem', background: 'var(--s2)', borderRadius: '8px', border: '1px solid var(--border)' }}>
-        <div style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--blue)', marginBottom: '0.25rem' }}>FREE PLAN</div>
-        <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.625rem' }}>Upgrade for deal alerts + price history</div>
-        <a href="/pro" style={{
-          display: 'block',
-          textAlign: 'center',
-          padding: '0.375rem',
-          background: 'var(--blue)',
-          color: '#fff',
-          borderRadius: '5px',
-          fontSize: '0.75rem',
-          fontWeight: '600',
-          textDecoration: 'none',
-        }}>
-          Go Pro — $6.99/mo
-        </a>
-      </div>
+      {/* Plan indicator / Pro upsell */}
+      {isPro ? (
+        <div style={{ padding: '0.75rem 1rem', margin: '0 0.5rem 0.75rem', background: 'var(--s2)', borderRadius: '8px', border: '1px solid rgba(0,102,255,0.3)' }}>
+          <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--blue)', marginBottom: '0.125rem' }}>✦ PRO</div>
+          <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>Unlimited vault, alerts, and history</div>
+        </div>
+      ) : (
+        <div style={{ padding: '0.75rem 1rem', margin: '0 0.5rem 0.75rem', background: 'var(--s2)', borderRadius: '8px', border: '1px solid var(--border)' }}>
+          <div style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--blue)', marginBottom: '0.25rem' }}>FREE PLAN</div>
+          <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.625rem' }}>Upgrade for unlimited vault + full price history</div>
+          <a href="/pro" style={{
+            display: 'block',
+            textAlign: 'center',
+            padding: '0.375rem',
+            background: 'var(--blue)',
+            color: '#fff',
+            borderRadius: '5px',
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            textDecoration: 'none',
+          }}>
+            Go Pro — $3.99/mo
+          </a>
+        </div>
+      )}
 
       {/* We Buy Collections CTA */}
       <a
@@ -225,15 +234,17 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   )
 }
 
-function TopBar({ onHamburger }: { onHamburger: () => void }) {
+function TopBar({ onHamburger, isPro }: { onHamburger: () => void; isPro: boolean }) {
   return (
     <header className="fp-topbar">
       <button className="fp-hamburger" onClick={onHamburger} aria-label="Open menu">
         <HamburgerIcon />
       </button>
-      <a href="/pro" style={{ fontSize: '0.8rem', color: 'var(--blue)', textDecoration: 'none', fontWeight: '500' }}>
-        Upgrade to Pro
-      </a>
+      {!isPro && (
+        <a href="/pro" style={{ fontSize: '0.8rem', color: 'var(--blue)', textDecoration: 'none', fontWeight: '500' }}>
+          Upgrade to Pro
+        </a>
+      )}
       <UserButton afterSignOutUrl="/" />
     </header>
   )

@@ -5,17 +5,18 @@ import { useSearchParams } from 'next/navigation'
 
 // Client component — runtime is inherited from the edge layout
 
-// Matches actual API response from /api/v1/search
-// figure_id and image are P0 gaps being added by engineer — optional until then
 type SearchResult = {
-  figure_id?: string       // added by engineer (P0) — used for detail page URL
+  figure_id?: string
   name: string
   brand: string
   line: string
   series: string
   genre: string
   year: number | null
-  image?: string | null    // added by engineer (P0) — canonical_image_url
+  image?: string | null
+  fandom_slug?: string
+  line_slug?: string
+  character_slug?: string
 }
 
 type WantItem = {
@@ -89,7 +90,7 @@ export default function AppHome() {
             <span style={{ fontWeight: '600', color: 'var(--text)' }}>Welcome to Pro!</span>
             {' '}
             <span style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-              Deal alerts and price history are now unlocked.
+              Unlimited vault, full price history, deal alerts, and CSV export are now unlocked.
             </span>
           </div>
           <button
@@ -164,7 +165,13 @@ export default function AppHome() {
               {results.map((r, i) => (
                 <a
                   key={r.figure_id ?? i}
-                  href={r.figure_id ? `/figure/${r.figure_id}` : `/app?q=${encodeURIComponent(r.name)}`}
+                  href={
+                    (r.fandom_slug && r.line_slug && r.character_slug)
+                      ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
+                      : r.figure_id
+                        ? `/figure/${r.figure_id}`
+                        : `/search?q=${encodeURIComponent(r.name)}`
+                  }
                   style={{
                     display: 'flex',
                     alignItems: 'center',

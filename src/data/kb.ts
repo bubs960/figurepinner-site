@@ -66,16 +66,46 @@ export function deriveName(f: KBFigure): string {
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ')
   const wave = f.release_wave ? ` Series ${f.release_wave}` : ''
-  const variant = f.character_variant ? ` (${f.character_variant})` : ''
+  const variant = (f.character_variant && f.character_variant !== 'None') ? ` (${f.character_variant})` : ''
   return `${char}${variant} (${line}${wave})`
 }
 
 /**
  * Build the pretty URL path segment for a figure.
  * Format: /figure/<figure_id>  (stable, used for all internal links)
- * Pretty alias: /<fandom>/<manufacturer>-<product_line>/<character_canonical>
- *   is handled by the [fandom]/[line]/[character] route which redirects to /figure/:id
+ * Pretty alias: /<fandom>/<product_line>/<character_canonical>  (canonical SEO URL)
  */
 export function figureUrl(f: KBFigure): string {
   return `/figure/${f.figure_id}`
+}
+
+/**
+ * Keyword-rich SEO canonical URL for a figure.
+ * Used in sitemaps and <link rel="canonical"> tags.
+ * Format: /<fandom>/<product_line>/<character_canonical>
+ */
+export function prettyFigureUrl(f: KBFigure): string {
+  return `/${f.fandom}/${f.product_line}/${f.character_canonical}`
+}
+
+/**
+ * All figures for a fandom + product_line combination.
+ * lineSlug can be:
+ *   "elite"       → matches product_line="elite"
+ *   "wwe-elite"   → matches manufacturer="wwe" + product_line="elite"
+ */
+export function getFiguresByLine(fandom: string, lineSlug: string): KBFigure[] {
+  const norm = lineSlug.toLowerCase().trim()
+  return FIGURES_V2.filter((f: KBFigure) => {
+    if (f.fandom !== fandom) return false
+    const pl  = f.product_line.toLowerCase()
+    const mfr = f.manufacturer.toLowerCase()
+    return pl === norm || `${mfr}-${pl}` === norm
+  })
+}
+
+/** All unique product_line values for a fandom */
+export function getLinesByFandom(fandom: string): string[] {
+  const figures = getFiguresByFandom(fandom)
+  return [...new Set(figures.map(f => f.product_line))]
 }

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 
 // Matches actual /api/v1/search response shape
 type SearchResult = {
-  figure_id?: string   // P0 gap — engineer adding
+  figure_id?: string
   name: string
   brand: string
   line: string
@@ -12,6 +12,9 @@ type SearchResult = {
   genre: string
   year: number | null
   image?: string | null
+  fandom_slug?: string
+  line_slug?: string
+  character_slug?: string
 }
 
 const GENRE_EMOJI: Record<string, string> = {
@@ -70,7 +73,7 @@ export default function HeroSearch() {
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === 'Escape') setOpen(false)
     if (e.key === 'Enter' && query.trim()) {
-      window.location.href = `/app?q=${encodeURIComponent(query)}`
+      window.location.href = `/search?q=${encodeURIComponent(query)}`
     }
   }
 
@@ -138,7 +141,13 @@ export default function HeroSearch() {
           {results.map((r, i) => (
             <a
               key={r.figure_id ?? i}
-              href={r.figure_id ? `/figure/${r.figure_id}` : `/app?q=${encodeURIComponent(r.name)}`}
+              href={
+                (r.fandom_slug && r.line_slug && r.character_slug)
+                  ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
+                  : r.figure_id
+                    ? `/figure/${r.figure_id}`
+                    : `/search?q=${encodeURIComponent(r.name)}`
+              }
               role="option"
               style={{
                 display: 'flex',
@@ -183,7 +192,7 @@ export default function HeroSearch() {
             </a>
           ))}
           <a
-            href={`/app?q=${encodeURIComponent(query)}`}
+            href={`/search?q=${encodeURIComponent(query)}`}
             style={{
               display: 'block',
               padding: '10px 16px',

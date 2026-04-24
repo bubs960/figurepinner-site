@@ -1,8 +1,9 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { auth, clerkClient } from '@clerk/nextjs/server'
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY
-const STRIPE_PRO_PRICE_ID = process.env.STRIPE_PRO_PRICE_ID ?? ''
+const STRIPE_PRO_MONTHLY_PRICE_ID = process.env.STRIPE_PRO_MONTHLY_PRICE_ID ?? process.env.STRIPE_PRO_PRICE_ID ?? ''
+const STRIPE_PRO_ANNUAL_PRICE_ID = process.env.STRIPE_PRO_ANNUAL_PRICE_ID ?? ''
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://figurepinner.com'
 
 /**
@@ -10,12 +11,17 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://figurepinner.com'
  * Creates a Stripe Checkout Session for the Pro plan.
  * Returns { url } — redirect the user to it.
  *
+ * Body: { billing: 'annual' | 'monthly' }  (defaults to 'annual')
+ *
  * Required env vars (set in Cloudflare dashboard):
- *   STRIPE_SECRET_KEY     — from Stripe Dashboard > API Keys
- *   STRIPE_PRO_PRICE_ID   — from Stripe Dashboard > Products > Pro > Price ID
- *   NEXT_PUBLIC_APP_URL   — https://figurepinner.com
+ *   STRIPE_SECRET_KEY             — from Stripe Dashboard > API Keys
+ *   STRIPE_PRO_MONTHLY_PRICE_ID   — $3.99/mo Stripe Price ID
+ *   STRIPE_PRO_ANNUAL_PRICE_ID    — $29.99/yr Stripe Price ID
+ *   NEXT_PUBLIC_APP_URL           — https://figurepinner.com
+ *
+ * Legacy: STRIPE_PRO_PRICE_ID fallback still supported for monthly.
  */
-export async function POST() {
+export async function POST(req: NextRequest) {
   const { userId } = await auth()
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -24,6 +30,21 @@ export async function POST() {
   if (!STRIPE_SECRET_KEY) {
     return NextResponse.json(
       { error: 'Stripe not configured — add STRIPE_SECRET_KEY to environment' },
+      { status: 503 }
+    )
+  }
+
+  let billing: 'annual' | 'monthly' = 'annual'
+  try {
+    const body = await req.json() as { billing?: string }
+    if (body.billing === 'monthly') billing = 'monthly'
+  } catch { /* default to annual */ }
+
+  // Select price ID based on billing interval
+  const priceId = billing === 'annual' ? STRIPE_PRO_ANNUAL_PRICE_ID : STRIPE_PRO_MONTHLY_PRICE_ID
+  if (!priceId) {
+    return NextResponse.json(
+      { error: `No Stripe price configured for ${billing} billing. Add STRIPE_PRO_${billing.toUpperCase()}_PRICE_ID.` },
       { status: 503 }
     )
   }
@@ -40,12 +61,14 @@ export async function POST() {
   const params: Record<string, string> = {
     'payment_method_types[]': 'card',
     mode: 'subscription',
-    'line_items[0][price]': STRIPE_PRO_PRICE_ID,
+    'line_items[0][price]': priceId,
     'line_items[0][quantity]': '1',
     success_url: `${APP_URL}/app?upgraded=1`,
     cancel_url: `${APP_URL}/pro`,
     'subscription_data[metadata][userId]': userId,
+    'subscription_data[metadata][billing]': billing,
     'metadata[userId]': userId,
+    'metadata[billing]': billing,
   }
   if (customerEmail) params['customer_email'] = customerEmail
 

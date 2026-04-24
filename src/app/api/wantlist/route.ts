@@ -16,7 +16,7 @@ export async function GET() {
 
   const db = await getDB()
   const { results } = await db
-    .prepare('SELECT * FROM wantlist_items WHERE user_id = ? ORDER BY added_at DESC')
+    .prepare("SELECT * FROM wantlist_items WHERE user_id = ? AND status = 'active' ORDER BY added_at DESC")
     .bind(userId)
     .all()
 
@@ -42,12 +42,25 @@ export async function POST(req: NextRequest) {
   }
 
   const db = await getDB()
-  const id = randomUUID()
 
+  // Prevent duplicates — same check as v1 route
+  const { results: existing } = await db
+    .prepare(`SELECT id FROM wantlist_items WHERE user_id = ? AND figure_id = ? AND status = 'active'`)
+    .bind(userId, body.figure_id)
+    .all()
+
+  if (existing.length > 0) {
+    return NextResponse.json(
+      { error: 'already_in_wantlist', message: 'This figure is already in your want list.' },
+      { status: 409 },
+    )
+  }
+
+  const id = randomUUID()
   await db
     .prepare(`
-      INSERT INTO wantlist_items (id, user_id, figure_id, name, brand, line, genre, target_price)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO wantlist_items (id, user_id, figure_id, name, brand, line, genre, target_price, status)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active')
     `)
     .bind(
       id,

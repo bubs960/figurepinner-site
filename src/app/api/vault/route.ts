@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
+import { isUserPro, FREE_LIMITS } from '@/lib/proStatus'
 
 async function getDB() {
   const { env } = await getCloudflareContext()
@@ -16,7 +17,7 @@ export async function GET() {
 
   const db = await getDB()
   const { results } = await db
-    .prepare('SELECT * FROM vault_items WHERE user_id = ? ORDER BY added_at DESC')
+    .prepare("SELECT * FROM vault_items WHERE user_id = ? AND status = 'active' ORDER BY added_at DESC")
     .bind(userId)
     .all()
 
@@ -43,23 +44,66 @@ export async function POST(req: NextRequest) {
   }
 
   const db = await getDB()
-  const id = randomUUID()
 
+  // ── Free-tier gate ─────────────────────────────────────────────────────────
+  const pro = await isUserPro()
+  if (!pro) {
+    const { results: existing } = await db
+      .prepare("SELECT COUNT(*) as count FROM vault_items WHERE user_id = ? AND status = 'active'")
+      .bind(userId)
+      .all()
+    const count = (existing[0] as { count: number } | undefined)?.count ?? 0
+
+    if (count >= FREE_LIMITS.VAULT) {
+      return NextResponse.json(
+        {
+          error: 'vault_limit_reached',
+          message: `Free vault holds ${FREE_LIMITS.VAULT} figures. Upgrade to Pro for unlimited storage.`,
+          limit: FREE_LIMITS.VAULT,
+          current: count,
+          upgrade_url: '/pro',
+        },
+        { status: 402 },
+      )
+    }
+
+    // Warn when approaching the limit (80% = 20 figures)
+    const nearLimit = count >= Math.floor(FREE_LIMITS.VAULT * 0.8)
+    const id = randomUUID()
+    await db
+      .prepare(`
+        INSERT INTO vault_items (id, user_id, figure_id, name, brand, line, genre, paid, condition, status)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
+      `)
+      .bind(
+        id, userId, body.figure_id, body.name,
+        body.brand ?? null, body.line ?? null, body.genre ?? null,
+        body.paid ?? 0, body.condition ?? 'Loose',
+      )
+      .run()
+
+    return NextResponse.json({
+      id,
+      ...(nearLimit ? {
+        warning: 'vault_near_limit',
+        message: `${FREE_LIMITS.VAULT - count - 1} vault spots remaining on Free. Upgrade to Pro for unlimited.`,
+        remaining: FREE_LIMITS.VAULT - count - 1,
+        upgrade_url: '/pro',
+      } : {}),
+    }, { status: 201 })
+  }
+  // ── Pro user — no limits ───────────────────────────────────────────────────
+
+  const id = randomUUID()
   await db
     .prepare(`
-      INSERT INTO vault_items (id, user_id, figure_id, name, brand, line, genre, paid, condition)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO vault_items (id, user_id, figure_id, name, brand, line, genre, paid, condition, status)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
     `)
     .bind(
-      id,
-      userId,
-      body.figure_id,
-      body.name,
-      body.brand ?? null,
-      body.line ?? null,
-      body.genre ?? null,
-      body.paid ?? 0,
-      body.condition ?? 'Loose',
+      id, userId, body.figure_id, body.name,
+      body.brand ?? null, body.line ?? null, body.genre ?? null,
+      body.paid ?? 0, body.condition ?? 'Loose',
     )
     .run()
 

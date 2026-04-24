@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'FigurePinner Terms of Service — rules for using the site and Chrome extension.',
   robots: { index: true, follow: false },
+  alternates: { canonical: 'https://figurepinner.com/terms' },
 }
 
 export default function TermsPage() {

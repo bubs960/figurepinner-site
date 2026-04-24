@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
+import { isUserPro, FREE_LIMITS } from '@/lib/proStatus'
 
 async function getDB() {
   const { env } = await getCloudflareContext()
@@ -42,21 +43,53 @@ export async function POST(req: NextRequest) {
   }
 
   const db = await getDB()
-  const id = randomUUID()
 
+  // ── Free-tier gate ─────────────────────────────────────────────────────────
+  const pro = await isUserPro()
+  if (!pro) {
+    const { results: existing } = await db
+      .prepare('SELECT COUNT(*) as count FROM alerts WHERE user_id = ?')
+      .bind(userId)
+      .all()
+    const count = (existing[0] as { count: number } | undefined)?.count ?? 0
+
+    if (count >= FREE_LIMITS.ALERTS) {
+      return NextResponse.json(
+        {
+          error: 'alerts_limit_reached',
+          message: `Free accounts support ${FREE_LIMITS.ALERTS} price alerts. Upgrade to Pro for unlimited.`,
+          limit: FREE_LIMITS.ALERTS,
+          current: count,
+          upgrade_url: '/pro',
+        },
+        { status: 402 },
+      )
+    }
+  }
+  // ── End gate ───────────────────────────────────────────────────────────────
+
+  // Prevent duplicate active alerts for the same figure
+  const { results: dup } = await db
+    .prepare(`SELECT id FROM alerts WHERE user_id = ? AND figure_id = ? AND is_active = 1`)
+    .bind(userId, body.figure_id)
+    .all()
+
+  if (dup.length > 0) {
+    return NextResponse.json(
+      { error: 'already_watching', message: 'You already have an active alert for this figure.' },
+      { status: 409 },
+    )
+  }
+
+  const id = randomUUID()
   await db
     .prepare(`
       INSERT INTO alerts (id, user_id, figure_id, name, brand, line, genre, target_price)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `)
     .bind(
-      id,
-      userId,
-      body.figure_id,
-      body.name,
-      body.brand ?? null,
-      body.line ?? null,
-      body.genre ?? null,
+      id, userId, body.figure_id, body.name,
+      body.brand ?? null, body.line ?? null, body.genre ?? null,
       body.target_price ?? 0,
     )
     .run()

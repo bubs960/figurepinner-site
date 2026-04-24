@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "TODO_APPLE_TEAM_ID.com.bubs960.figurepinner"
+        ],
+        "components": [
+          {
+            "/": "/open/*",
+            "comment": "Deep link to figure detail pages. Path: /open/<figure_id>"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "TODO_APPLE_TEAM_ID.com.bubs960.figurepinner"
+    ]
+  }
+}

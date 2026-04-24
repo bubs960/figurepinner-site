@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Security headers
+  // Security + deep-link headers
   async headers() {
     return [
       {
@@ -34,6 +34,22 @@ const nextConfig: NextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        ],
+      },
+      // Apple App Site Association — must be served as application/json with no redirect
+      {
+        source: '/.well-known/apple-app-site-association',
+        headers: [
+          { key: 'Content-Type', value: 'application/json' },
+          { key: 'Cache-Control', value: 'public, max-age=3600' },
+        ],
+      },
+      // Android assetlinks — same requirements
+      {
+        source: '/.well-known/assetlinks.json',
+        headers: [
+          { key: 'Content-Type', value: 'application/json' },
+          { key: 'Cache-Control', value: 'public, max-age=3600' },
         ],
       },
     ]

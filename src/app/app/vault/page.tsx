@@ -1,6 +1,9 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useUser } from '@clerk/nextjs'
+
+const VAULT_FREE_LIMIT = 25
 
 type VaultItem = {
   id: string
@@ -29,6 +32,9 @@ export default function VaultPage() {
   const [items, setItems] = useState<VaultItem[]>([])
   const [loading, setLoading] = useState(true)
   const [deleting, setDeleting] = useState<string | null>(null)
+
+  const { user, isLoaded } = useUser()
+  const IS_PRO = isLoaded ? ((user?.publicMetadata?.isPro as boolean) ?? false) : false
 
   useEffect(() => {
     fetch('/api/vault')
@@ -66,19 +72,38 @@ export default function VaultPage() {
             MY COLLECTION
           </h1>
           <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-            {loading ? '—' : `${items.length} figure${items.length !== 1 ? 's' : ''} tracked`}
+            {loading ? '—' : IS_PRO
+              ? `${items.length} figure${items.length !== 1 ? 's' : ''} tracked`
+              : `${items.length} of ${VAULT_FREE_LIMIT} free slots used`}
           </p>
         </div>
-        <button
-          style={{
-            background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-            padding: '0.625rem 1.25rem', borderRadius: '7px', fontSize: '0.875rem',
-            fontWeight: '600', fontFamily: 'var(--font-ui)', opacity: 0.5,
-          }}
-          title="Search for a figure and click Add to Collection"
-        >
-          + Add Figure
-        </button>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          {/* CSV Export — Pro only */}
+          {IS_PRO && items.length > 0 && (
+            <a
+              href="/api/vault/export"
+              download
+              style={{
+                background: 'none', color: 'var(--muted)', border: '1px solid var(--border)',
+                padding: '0.625rem 1rem', borderRadius: '7px', fontSize: '0.8rem',
+                fontWeight: '500', textDecoration: 'none', fontFamily: 'var(--font-ui)',
+              }}
+              title="Export your collection to CSV"
+            >
+              ↓ Export CSV
+            </a>
+          )}
+          <button
+            style={{
+              background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
+              padding: '0.625rem 1.25rem', borderRadius: '7px', fontSize: '0.875rem',
+              fontWeight: '600', fontFamily: 'var(--font-ui)', opacity: 0.5,
+            }}
+            title="Search for a figure and click Add to Collection"
+          >
+            + Add Figure
+          </button>
+        </div>
       </div>
 
       {/* Summary stats */}
@@ -90,6 +115,35 @@ export default function VaultPage() {
             label="AVG PAID"
             value={items.length ? `$${Math.round(totalPaid / items.length)}` : '—'}
           />
+        </div>
+      )}
+
+      {/* Free-tier capacity indicator */}
+      {!loading && !IS_PRO && items.length >= Math.floor(VAULT_FREE_LIMIT * 0.8) && (
+        <div style={{
+          marginBottom: '1.5rem', padding: '1rem 1.25rem',
+          background: items.length >= VAULT_FREE_LIMIT ? 'rgba(255,68,68,0.06)' : 'rgba(255,184,0,0.06)',
+          border: `1px solid ${items.length >= VAULT_FREE_LIMIT ? 'rgba(255,68,68,0.3)' : 'rgba(255,184,0,0.3)'}`,
+          borderRadius: '10px',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap',
+        }}>
+          <div>
+            <div style={{ fontWeight: '600', fontSize: '0.875rem', marginBottom: '0.25rem' }}>
+              {items.length >= VAULT_FREE_LIMIT
+                ? `Vault full — ${VAULT_FREE_LIMIT}/${VAULT_FREE_LIMIT} figures`
+                : `${VAULT_FREE_LIMIT - items.length} of ${VAULT_FREE_LIMIT} vault slots remaining`}
+            </div>
+            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>
+              Upgrade to Pro for unlimited collection storage.
+            </div>
+          </div>
+          <a href="/pro" style={{
+            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
+            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.875rem',
+            fontWeight: '700', flexShrink: 0,
+          }}>
+            Upgrade to Pro
+          </a>
         </div>
       )}
 
@@ -122,6 +176,27 @@ export default function VaultPage() {
               onUpdate={(patch) => updateItem(item.id, patch)}
             />
           ))}
+        </div>
+      )}
+
+      {/* CSV export upsell for free users with data */}
+      {!IS_PRO && items.length > 0 && (
+        <div style={{
+          marginTop: '1.5rem', padding: '1.25rem', background: 'var(--s1)',
+          border: '1px solid var(--border)', borderRadius: '10px',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap',
+        }}>
+          <div>
+            <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>📊 Export your collection</div>
+            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>Pro members can export their full vault to CSV or Excel.</div>
+          </div>
+          <a href="/pro" style={{
+            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
+            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.875rem',
+            fontWeight: '700', flexShrink: 0,
+          }}>
+            Unlock Export
+          </a>
         </div>
       )}
 

@@ -3,7 +3,13 @@
 // Phase 1: Static marketing page only. No API calls. No auth gates.
 // All links to Chrome Web Store and /sign-up are placeholders until Phase 2.
 
+import type { Metadata } from 'next'
 import type { CSSProperties, ReactNode } from 'react'
+import GenreTaxonomy from './_components/GenreTaxonomy'
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://figurepinner.com' },
+}
 
 const CWS_URL = 'https://chromewebstore.google.com/detail/figurepinner-%E2%80%94-action-fig/okacelmjpogkmeejifeiemmnghlldbod'
 const SIGNUP_URL = '/sign-up'
@@ -29,7 +35,7 @@ export default function HomePage() {
           <a href="#pricing" style={navLinkStyle}>Free</a>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <a href={SIGNUP_URL} style={btnNavGhostStyle}>Log In</a>
+          <a href="/sign-in" style={btnNavGhostStyle}>Log In</a>
           <a href={CWS_URL} target="_blank" rel="noopener noreferrer" style={btnNavPrimaryStyle}>
             <ArrowIcon /> Install Free
           </a>
@@ -350,23 +356,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── GENRES ─── */}
+      {/* ─── GENRES / LIBRARY ─── */}
       <div id="library" style={{ padding: '100px 0', background: 'var(--s1)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div style={sectionInnerStyle}>
-          <div style={{ textAlign: 'center', marginBottom: 0 }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div style={eyebrowStyle('var(--blue)')}>Library</div>
             <h2 style={sectionTitleStyle}>20,000+ Figures.<br />17 Genres.</h2>
-            <p style={{ ...sectionSubStyle, margin: '0 auto' }}>From Macho Man to Star Wars to Studio Series Transformers — if it&apos;s an action figure, it&apos;s probably in here.</p>
+            <p style={{ ...sectionSubStyle, margin: '0 auto' }}>Pick a genre. Drill into the lines. Find exactly what you collect.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(140px,1fr))', gap: 10, marginTop: 40 }}>
-            {GENRES.map((g) => (
-              <a key={g.name} href={`/${g.slug}`} style={genreCardStyle}>
-                <div style={{ fontSize: 28, marginBottom: 8 }}>{g.emoji}</div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>{g.name}</div>
-                <div style={{ fontSize: 11, color: 'var(--muted)' }}>{g.count}</div>
-              </a>
-            ))}
-          </div>
+          <GenreTaxonomy />
         </div>
       </div>
 
@@ -517,10 +515,6 @@ const sectionSubStyle: CSSProperties = {
   fontSize: 16, color: 'var(--muted)', lineHeight: 1.7, maxWidth: 520,
 }
 
-const genreCardStyle: CSSProperties = {
-  background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 10,
-  padding: 16, textAlign: 'center', cursor: 'pointer', textDecoration: 'none', display: 'block',
-}
 
 function eyebrowStyle(color: string): CSSProperties {
   return { fontSize: 10, fontWeight: 800, letterSpacing: '.16em', textTransform: 'uppercase', color, marginBottom: 12 }
@@ -651,24 +645,3 @@ function Testimonial({ text, name, handle, avatar, avatarGradient }: { text: str
   )
 }
 
-// ─── Data ─────────────────────────────────────────────────────────────────
-
-const GENRES = [
-  { emoji: '🤼', name: 'Wrestling',          slug: 'wrestling',                    count: '8,000+ figures' },
-  { emoji: '🦸', name: 'Marvel',             slug: 'marvel',                       count: '3,800+ figures' },
-  { emoji: '⚔️', name: 'Star Wars',          slug: 'star-wars',                    count: '2,600+ figures' },
-  { emoji: '🦇', name: 'DC',                 slug: 'dc',                           count: '1,900+ figures' },
-  { emoji: '🤖', name: 'Transformers',       slug: 'transformers',                 count: '2,100+ figures' },
-  { emoji: '🪖', name: 'G.I. Joe',           slug: 'gijoe',                        count: '1,400+ figures' },
-  { emoji: '⚡', name: 'MOTU',               slug: 'masters-of-the-universe',      count: '800+ figures'   },
-  { emoji: '🐢', name: 'TMNT',               slug: 'teenage-mutant-ninja-turtles', count: '900+ figures'   },
-  { emoji: '🦕', name: 'Power Rangers',      slug: 'power-rangers',                count: '1,200+ figures' },
-  { emoji: '🎩', name: 'Indiana Jones',      slug: 'indiana-jones',                count: '400+ figures'   },
-  { emoji: '👻', name: 'Ghostbusters',       slug: 'ghostbusters',                 count: '600+ figures'   },
-  { emoji: '🗡️', name: 'Mythic Legions',     slug: 'mythic-legions',               count: '500+ figures'   },
-  { emoji: '🐱', name: 'Thundercats',        slug: 'thundercats',                  count: '200+ figures'   },
-  { emoji: '🎖️', name: 'Action Force',       slug: 'action-force',                 count: '150+ figures'   },
-  { emoji: '🐉', name: 'D&D',               slug: 'dungeons-dragons',             count: '350+ figures'   },
-  { emoji: '🎬', name: 'Horror & Film',      slug: 'neca',                         count: '700+ figures'   },
-  { emoji: '🦇', name: 'Spawn',              slug: 'spawn',                        count: '300+ figures'   },
-]

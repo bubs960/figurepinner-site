@@ -34,13 +34,12 @@ export default function AlertsPage() {
 
   useEffect(() => {
     if (!isLoaded) return
-    if (!IS_PRO) { setLoading(false); return }
     fetch('/api/alerts')
       .then(r => r.json())
       .then((d: { items: AlertItem[] }) => setItems(d.items ?? []))
       .catch(() => setItems([]))
       .finally(() => setLoading(false))
-  }, [isLoaded, IS_PRO])
+  }, [isLoaded])
 
   async function removeAlert(id: string) {
     setDeleting(id)
@@ -54,32 +53,59 @@ export default function AlertsPage() {
     setShowModal(false)
   }
 
-  // Wait for Clerk to load before deciding gate vs content
+  // Wait for Clerk to load
   if (!isLoaded) return <LoadingShimmer />
-  if (!IS_PRO) return <ProGate />
+
+  const FREE_ALERT_LIMIT = 3
+  const atFreeLimit = !IS_PRO && items.length >= FREE_ALERT_LIMIT
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '1.75rem', flexWrap: 'wrap', gap: '1rem' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
         <div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', letterSpacing: '0.04em', color: 'var(--text)', marginBottom: '0.25rem' }}>
             DEAL ALERTS
           </h1>
           <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-            {loading ? '—' : `${items.length} active alert${items.length !== 1 ? 's' : ''}`}
+            {loading ? '—' : `${items.length} active alert${items.length !== 1 ? 's' : ''}${!IS_PRO ? ` of ${FREE_ALERT_LIMIT} free` : ''}`}
           </p>
         </div>
         <button
           onClick={() => setShowModal(true)}
+          disabled={atFreeLimit}
+          title={atFreeLimit ? `Free limit is ${FREE_ALERT_LIMIT} alerts — upgrade to Pro for unlimited` : undefined}
           style={{
-            background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
+            background: atFreeLimit ? 'var(--s2)' : 'var(--blue)',
+            color: atFreeLimit ? 'var(--muted)' : '#fff',
+            border: 'none', cursor: atFreeLimit ? 'not-allowed' : 'pointer',
             padding: '0.625rem 1.25rem', borderRadius: '7px', fontSize: '0.875rem',
             fontWeight: '600', fontFamily: 'var(--font-ui)',
+            opacity: atFreeLimit ? 0.6 : 1,
           }}
         >
           + New Alert
         </button>
       </div>
+
+      {/* Free tier usage banner */}
+      {!IS_PRO && (
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          background: atFreeLimit ? 'rgba(0,102,255,0.08)' : 'rgba(255,184,0,0.06)',
+          border: `1px solid ${atFreeLimit ? 'rgba(0,102,255,0.25)' : 'rgba(255,184,0,0.25)'}`,
+          borderRadius: '8px', padding: '0.75rem 1rem', marginBottom: '1.25rem', gap: '1rem',
+        }}>
+          <span style={{ fontSize: '0.8rem', color: 'var(--text)' }}>
+            {atFreeLimit
+              ? `You've used all ${FREE_ALERT_LIMIT} free alerts.`
+              : `${FREE_ALERT_LIMIT - items.length} free alert${FREE_ALERT_LIMIT - items.length === 1 ? '' : 's'} remaining.`
+            }
+          </span>
+          <a href="/pro" style={{ fontSize: '0.78rem', color: 'var(--blue)', fontWeight: '700', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            Unlimited with Pro →
+          </a>
+        </div>
+      )}
 
       {loading ? (
         <LoadingState />
@@ -340,7 +366,7 @@ function ProGate() {
           padding: '0.875rem', borderRadius: '8px', fontSize: '1rem',
           fontWeight: '700', textDecoration: 'none', marginBottom: '0.625rem',
         }}>
-          Unlock Alerts — $6.99/mo
+          Unlimited Alerts — $3.99/mo or $29.99/yr
         </a>
         <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Cancel anytime. Includes all Pro features.</p>
       </div>

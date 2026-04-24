@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'FigurePinner Privacy Policy — how we collect, use, and protect your information.',
   robots: { index: true, follow: false },
+  alternates: { canonical: 'https://figurepinner.com/privacy' },
 }
 
 export default function PrivacyPage() {

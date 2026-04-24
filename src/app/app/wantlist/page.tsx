@@ -14,7 +14,8 @@ type WantItem = {
   added_at: string
 }
 
-const FREE_LIMIT = 10
+// Wantlist is unlimited for all users per pricing doc — no cap
+// Vault has a 25-figure free limit; alerts have a 3-alert free limit
 
 const GENRE_EMOJI: Record<string, string> = {
   'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
@@ -32,7 +33,6 @@ export default function WantlistPage() {
 
   const { user, isLoaded } = useUser()
   const IS_PRO = isLoaded ? ((user?.publicMetadata?.isPro as boolean) ?? false) : false
-  const atLimit = !IS_PRO && items.length >= FREE_LIMIT
 
   useEffect(() => {
     fetch('/api/wantlist')
@@ -68,49 +68,23 @@ export default function WantlistPage() {
             WANT LIST
           </h1>
           <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-            {loading ? '—' : `${items.length}${!IS_PRO ? ` / ${FREE_LIMIT}` : ''} figure${items.length !== 1 ? 's' : ''}`}
+            {loading ? '—' : `${items.length} figure${items.length !== 1 ? 's' : ''} tracked`}
           </p>
         </div>
-        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-          {!IS_PRO && (
-            <a href="/pro" style={{ fontSize: '0.8rem', color: 'var(--blue)', textDecoration: 'none', fontWeight: '500' }}>
-              Upgrade for unlimited →
-            </a>
-          )}
-          <button
-            disabled={atLimit}
-            title="Search for a figure and click Add to Want List"
-            style={{
-              background: atLimit ? 'var(--s2)' : 'var(--blue)',
-              color: atLimit ? 'var(--muted)' : '#fff',
-              border: 'none', cursor: atLimit ? 'not-allowed' : 'pointer',
-              padding: '0.625rem 1.25rem', borderRadius: '7px',
-              fontSize: '0.875rem', fontWeight: '600', fontFamily: 'var(--font-ui)',
-            }}
-          >
-            + Add Figure
-          </button>
-        </div>
+        <button
+          disabled
+          title="Search for a figure and click Add to Want List from its detail page"
+          style={{
+            background: 'var(--s2)', color: 'var(--muted)',
+            border: 'none', cursor: 'not-allowed',
+            padding: '0.625rem 1.25rem', borderRadius: '7px',
+            fontSize: '0.875rem', fontWeight: '600', fontFamily: 'var(--font-ui)',
+            opacity: 0.5,
+          }}
+        >
+          + Add Figure
+        </button>
       </div>
-
-      {/* Free tier limit warning */}
-      {atLimit && (
-        <div style={{
-          background: 'rgba(255,95,0,0.08)', border: '1px solid rgba(255,95,0,0.25)',
-          borderRadius: '8px', padding: '0.875rem 1rem', marginBottom: '1.5rem',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
-        }}>
-          <span style={{ fontSize: '0.875rem', color: 'var(--text)' }}>
-            You&apos;ve hit the {FREE_LIMIT}-figure free limit.
-          </span>
-          <a href="/pro" style={{
-            background: 'var(--orange)', color: '#fff', textDecoration: 'none',
-            padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', flexShrink: 0,
-          }}>
-            Go Pro — $6.99/mo
-          </a>
-        </div>
-      )}
 
       {/* Content */}
       {loading ? (

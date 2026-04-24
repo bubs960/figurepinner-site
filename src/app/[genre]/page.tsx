@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getFiguresByFandom, deriveName, figureUrl, type KBFigure } from '@/data/kb'
+import { getFiguresByFandom, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
+import GenreLineAccordion, { type LineData } from './_components/GenreLineAccordion'
 
 // ── Genre config ──────────────────────────────────────────────────────────────
 
@@ -145,6 +146,9 @@ export async function generateMetadata(
   return {
     title: `${meta.label} Action Figure Prices | FigurePinner`,
     description: meta.description,
+    alternates: {
+      canonical: `https://figurepinner.com/${genre}`,
+    },
     openGraph: {
       title: `${meta.label} Action Figure Prices | FigurePinner`,
       description: meta.description,
@@ -155,29 +159,63 @@ export async function generateMetadata(
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-const MAX_PER_LINE = 48
+const MAX_PER_LINE = 60
 
-function groupByLine(figures: KBFigure[]): Map<string, KBFigure[]> {
-  const map = new Map<string, KBFigure[]>()
+function formatLineName(slug: string): string {
+  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+}
+
+function cardName(f: KBFigure): string {
+  const base = f.character_canonical
+    .split('-')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+  const variant = (f.character_variant && f.character_variant !== 'None')
+    ? ` (${f.character_variant})`
+    : ''
+  return `${base}${variant}`
+}
+
+/** Build serialized LineData[] from raw KB figures — server-only. */
+function buildLineData(figures: KBFigure[]): { lines: LineData[]; totalCount: number } {
+  // 1. Group by product_line
+  const groups = new Map<string, KBFigure[]>()
   for (const f of figures) {
-    const key = f.product_line
-    if (!map.has(key)) map.set(key, [])
-    map.get(key)!.push(f)
+    if (!groups.has(f.product_line)) groups.set(f.product_line, [])
+    groups.get(f.product_line)!.push(f)
   }
-  for (const [key, group] of map) {
+
+  // 2. Sort within each line: newest wave first, then alpha
+  for (const [, group] of groups) {
     group.sort((a, b) => {
-      const wA = parseInt(a.release_wave) || 0
-      const wB = parseInt(b.release_wave) || 0
+      const wA = parseInt(a.release_wave ?? '') || 0
+      const wB = parseInt(b.release_wave ?? '') || 0
       if (wA !== wB) return wB - wA
       return a.character_canonical.localeCompare(b.character_canonical)
     })
-    map.set(key, group.slice(0, MAX_PER_LINE))
   }
-  return map
-}
 
-function formatLineName(line: string): string {
-  return line.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+  // 3. Sort lines by total count descending
+  const sorted = [...groups.entries()].sort((a, b) => b[1].length - a[1].length)
+
+  // 4. Serialize — cap at MAX_PER_LINE, keep totalCount for "see all" link
+  const lines: LineData[] = sorted.map(([slug, group]) => ({
+    slug,
+    displayName: formatLineName(slug),
+    totalCount:  group.length,
+    figureCount: Math.min(group.length, MAX_PER_LINE),
+    figures:     group.slice(0, MAX_PER_LINE).map(f => ({
+      figure_id:    f.figure_id,
+      href:         figureUrl(f),
+      canonicalUrl: prettyFigureUrl(f),
+      name:         cardName(f),
+      series:       f.release_wave ?? null,
+      exclusive:    f.exclusive_to ?? null,
+      imageUrl:     f.canonical_image_url ?? null,
+    })),
+  }))
+
+  return { lines, totalCount: figures.length }
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -192,18 +230,8 @@ export default async function GenrePage(
   const figures = getFiguresByFandom(genre)
   if (!figures.length) notFound()
 
-  const byLine = groupByLine(figures)
-  const totalFigures = figures.length
-  const totalLines = byLine.size
-
-  const fullCounts = figures.reduce((acc, f) => {
-    acc.set(f.product_line, (acc.get(f.product_line) ?? 0) + 1)
-    return acc
-  }, new Map<string, number>())
-
-  const sortedLines = [...byLine.entries()].sort(
-    (a, b) => (fullCounts.get(b[0]) ?? 0) - (fullCounts.get(a[0]) ?? 0)
-  )
+  const { lines, totalCount: totalFigures } = buildLineData(figures)
+  const totalLines = lines.length
 
   // JSON-LD structured data
   const jsonLd = {
@@ -213,12 +241,12 @@ export default async function GenrePage(
     description: meta.description,
     url: `https://figurepinner.com/${genre}`,
     numberOfItems: totalFigures,
-    itemListElement: sortedLines.slice(0, 5).flatMap(([, lineFigures]) =>
-      lineFigures.slice(0, 10).map((f, i) => ({
+    itemListElement: lines.slice(0, 5).flatMap(line =>
+      line.figures.slice(0, 10).map((f, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://figurepinner.com/figure/${f.figure_id}`,
-        name: deriveName(f),
+        url: `https://figurepinner.com${f.canonicalUrl}`,
+        name: f.name,
       }))
     ),
   }
@@ -231,11 +259,9 @@ export default async function GenrePage(
       <style>{`
         :root { --genre-accent: ${meta.accent}; }
         .genre-tag { background: color-mix(in srgb, ${meta.accent} 15%, var(--s2)); border-color: color-mix(in srgb, ${meta.accent} 30%, var(--border)); color: ${meta.accent}; }
-        .fig-card:hover { border-color: ${meta.accent}; background: color-mix(in srgb, ${meta.accent} 5%, var(--s1)); }
         @media (max-width: 640px) {
           .genre-hero-grid { grid-template-columns: 1fr !important; }
           .genre-stats-bar { flex-direction: column !important; }
-          .genre-fig-grid { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>
 
@@ -251,7 +277,7 @@ export default async function GenrePage(
           FIGUREPINNER
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="/app" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
+          <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
           <a href="/pro" style={{
             padding: '5px 12px', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: '600',
             background: 'var(--blue)', color: '#fff', textDecoration: 'none',
@@ -293,7 +319,7 @@ export default async function GenrePage(
               marginBottom: '0.75rem',
               lineHeight: '1.05',
             }}>
-              {meta.emoji} {meta.label.toUpperCase()} FIGURE PRICES
+              {meta.label.toUpperCase()} FIGURE PRICES
             </h1>
             <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', maxWidth: '600px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               {meta.description}
@@ -321,83 +347,14 @@ export default async function GenrePage(
         </div>
       </header>
 
-      {/* Line jump nav — only shown if many lines */}
-      {sortedLines.length > 3 && (
-        <div style={{
-          maxWidth: '1100px', margin: '0 auto', padding: '1rem 1.5rem',
-          borderBottom: '1px solid var(--border)',
-          display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center',
-        }}>
-          <span style={{ fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.1em', color: 'var(--dim)', textTransform: 'uppercase', marginRight: '0.25rem' }}>
-            Jump to:
-          </span>
-          {sortedLines.slice(0, 14).map(([line]) => (
-            <a
-              key={line}
-              href={`#line-${line}`}
-              style={{
-                fontSize: '0.75rem', padding: '3px 10px',
-                background: 'var(--s2)', border: '1px solid var(--border)',
-                borderRadius: '100px', color: 'var(--muted)', textDecoration: 'none',
-              }}
-            >
-              {formatLineName(line)}
-            </a>
-          ))}
-        </div>
-      )}
-
       {/* Ad */}
       <div style={{ display: 'flex', justifyContent: 'center', padding: '1.25rem 1.5rem 0' }}>
         <AdSlot slot="leaderboard" />
       </div>
 
-      {/* Figure listings */}
-      <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem 1.5rem 5rem' }}>
-        {sortedLines.map(([line, lineFigures]) => {
-          const total = fullCounts.get(line) ?? lineFigures.length
-          const capped = total > lineFigures.length
-
-          return (
-            <section key={line} id={`line-${line}`} style={{ marginBottom: '3.5rem' }}>
-
-              {/* Section header */}
-              <div style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                marginBottom: '1rem', gap: '1rem',
-                paddingBottom: '0.75rem', borderBottom: '1px solid var(--border)',
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                  <div style={{ width: '3px', height: '1.125rem', background: meta.accent, borderRadius: '2px', flexShrink: 0 }} />
-                  <h2 style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text)', letterSpacing: '0.02em' }}>
-                    {formatLineName(line)}
-                  </h2>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--dim)' }}>
-                    {capped ? `${lineFigures.length} of ${total}` : `${lineFigures.length}`} figures
-                  </span>
-                  {capped && (
-                    <a href="/app" style={{
-                      fontSize: '0.75rem', color: meta.accent, textDecoration: 'none', fontWeight: '500',
-                    }}>
-                      See all →
-                    </a>
-                  )}
-                </div>
-              </div>
-
-              {/* Grid */}
-              <div className="genre-fig-grid" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))',
-                gap: '0.5rem',
-              }}>
-                {lineFigures.map(f => <FigureCard key={f.figure_id} figure={f} accent={meta.accent} />)}
-              </div>
-            </section>
-          )
-        })}
+      {/* Line accordion */}
+      <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '1.5rem 1.5rem 5rem' }}>
+        <GenreLineAccordion lines={lines} accent={meta.accent} genre={genre} />
 
         {/* CTA */}
         <div style={{
@@ -415,7 +372,6 @@ export default async function GenrePage(
             position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
             width: '200px', height: '2px', background: meta.accent, borderRadius: '0 0 4px 4px',
           }} />
-          <div style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>{meta.emoji}</div>
           <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.625rem' }}>
             TRACK YOUR {meta.label.toUpperCase()} COLLECTION
           </h3>
@@ -447,11 +403,11 @@ export default async function GenrePage(
       <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
         <nav style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
           {[
-            { href: '/wrestling', label: '🤼 Wrestling' },
-            { href: '/marvel', label: '🦸 Marvel' },
-            { href: '/star-wars', label: '⚔️ Star Wars' },
-            { href: '/dc', label: '🦇 DC' },
-            { href: '/transformers', label: '🤖 Transformers' },
+            { href: '/wrestling', label: 'Wrestling' },
+            { href: '/marvel', label: 'Marvel' },
+            { href: '/star-wars', label: 'Star Wars' },
+            { href: '/dc', label: 'DC' },
+            { href: '/transformers', label: 'Transformers' },
           ].map(({ href, label }) => (
             <a key={href} href={href} style={{ fontSize: '0.75rem', color: 'var(--dim)', textDecoration: 'none' }}>{label}</a>
           ))}
@@ -477,70 +433,5 @@ function StatBadge({ value, label, accent }: { value: string; label: string; acc
       </span>
       <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{label}</span>
     </div>
-  )
-}
-
-function FigureCard({ figure, accent }: { figure: KBFigure; accent: string }) {
-  const name = deriveName(figure)
-  const url = figureUrl(figure)
-  const hasImage = !!figure.canonical_image_url
-
-  return (
-    <a
-      href={url}
-      className="fig-card"
-      style={{
-        display: 'flex', alignItems: 'center', gap: '0.625rem',
-        padding: '0.625rem 0.75rem',
-        background: 'var(--s1)', border: '1px solid var(--border)',
-        borderRadius: '8px', textDecoration: 'none',
-        color: 'var(--text)', fontSize: '0.8125rem',
-        transition: 'border-color 0.15s, background 0.15s',
-        minWidth: 0,
-      }}
-    >
-      {hasImage ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={figure.canonical_image_url!}
-          alt=""
-          width={36}
-          height={36}
-          style={{ width: 36, height: 36, objectFit: 'contain', borderRadius: 4, flexShrink: 0, background: 'var(--s2)' }}
-          loading="lazy"
-        />
-      ) : (
-        <div style={{
-          width: 36, height: 36, borderRadius: 4, flexShrink: 0,
-          background: 'var(--s2)', display: 'flex', alignItems: 'center', justifyContent: 'center',
-          border: '1px solid var(--border)',
-        }}>
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke={accent} strokeWidth="1.5" opacity="0.5">
-            <rect x="2" y="2" width="12" height="12" rx="2" />
-            <circle cx="8" cy="6" r="1.5" />
-            <path d="M4 12c0-2.2 1.8-4 4-4s4 1.8 4 4" />
-          </svg>
-        </div>
-      )}
-      <div style={{ minWidth: 0 }}>
-        <div style={{
-          fontWeight: '500', lineHeight: '1.3',
-          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-          fontSize: '0.8125rem',
-        }}>
-          {name}
-        </div>
-        {figure.exclusive_to && (
-          <div style={{ fontSize: '0.68rem', color: accent, marginTop: '1px', opacity: 0.85 }}>
-            {figure.exclusive_to}
-          </div>
-        )}
-        {figure.release_wave && (
-          <div style={{ fontSize: '0.68rem', color: 'var(--dim)', marginTop: '1px' }}>
-            Series {figure.release_wave}
-          </div>
-        )}
-      </div>
-    </a>
   )
 }
