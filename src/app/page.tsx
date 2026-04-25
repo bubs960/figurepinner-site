@@ -28,16 +28,16 @@ export default function HomePage() {
         <a style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', letterSpacing: '.06em', textDecoration: 'none', color: 'var(--text)' }} href="/">
           Figure<span style={{ color: 'var(--blue)' }}>Pinner</span>
         </a>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
+        <div className="fp-nav-links" style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
           <a href="#companion" style={navLinkStyle}>Whatnot Companion</a>
           <a href="#wantlist" style={navLinkStyle}>Wantlist</a>
           <a href="#library" style={navLinkStyle}>Library</a>
           <a href="#pricing" style={navLinkStyle}>Free</a>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <a href="/sign-in" style={btnNavGhostStyle}>Log In</a>
+        <div className="fp-nav-cta" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <a className="fp-nav-login" href="/sign-in" style={btnNavGhostStyle}>Log In</a>
           <a href={CWS_URL} target="_blank" rel="noopener noreferrer" style={btnNavPrimaryStyle}>
-            <ArrowIcon /> Install Free
+            <ArrowIcon /> <span className="fp-nav-cta-text">Install Free</span>
           </a>
         </div>
       </nav>
@@ -66,8 +66,8 @@ export default function HomePage() {
           fontFamily: 'var(--font-display)', fontSize: 'clamp(3.5rem,9vw,7rem)',
           letterSpacing: '.02em', lineHeight: 1, marginBottom: 12, maxWidth: 900,
         }}>
-          Hunt Smarter.<br />
-          <span style={{ color: 'var(--blue)' }}>Collect More.</span>
+          Hunt <span style={{ color: '#E63946' }}>Smarter.</span><br />
+          Collect <span style={{ color: '#FFB800' }}>More.</span>
         </h1>
 
         <p style={{
@@ -89,7 +89,7 @@ export default function HomePage() {
         <div style={{ fontSize: 11, color: 'var(--dim)', display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'center', marginBottom: 60, flexWrap: 'wrap' }}>
           <span>20,000+ figures</span>
           <TrustSep />
-          <span>96% price coverage</span>
+          <span>96% wrestling coverage</span>
           <TrustSep />
           <span>200K items/day</span>
           <TrustSep />
@@ -114,7 +114,7 @@ export default function HomePage() {
               figurepinner.com/companion
             </div>
             <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 6, fontSize: 11, color: 'var(--green)', fontWeight: 700 }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--green)', display: 'inline-block' }} />96% Live
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--green)', display: 'inline-block' }} />Wrestling 96%
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export default function HomePage() {
               <div style={{ background: 'var(--s2)', border: '1px solid rgba(0,102,255,0.25)', borderRadius: 12, padding: 16, marginBottom: 14 }}>
                 <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--text)', marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
                   Quick Price Check
-                  <span style={{ background: 'rgba(0,200,112,0.08)', border: '1px solid rgba(0,200,112,0.25)', borderRadius: 9999, padding: '2px 8px', fontSize: 10, fontWeight: 800, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--green)' }}>96% Coverage</span>
+                  <span style={{ background: 'rgba(0,200,112,0.08)', border: '1px solid rgba(0,200,112,0.25)', borderRadius: 9999, padding: '2px 8px', fontSize: 10, fontWeight: 800, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--green)' }}>Wrestling 96%</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 8, padding: '10px 14px', marginBottom: 12, fontSize: 13, color: 'var(--muted)' }}>
                   <span style={{ fontSize: 14 }}>🔍</span>
@@ -202,7 +202,7 @@ export default function HomePage() {
       {/* ─── STATS BAR ─── */}
       <div style={{ background: 'var(--s1)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '20px 24px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
         <StatItem num="20K+" numColor="var(--blue)" label="Figures in Database" />
-        <StatItem num="96%" numColor="var(--green)" label="Price Coverage" />
+        <StatItem num="96%" numColor="var(--green)" label="Wrestling Coverage" />
         <StatItem num="200K" numColor="var(--orange)" label="Items Processed / Day" />
         <StatItem num="17" numColor="var(--blue)" label="Genres Covered" />
         <StatItem num="<200ms" numColor="var(--green)" label="Price Lookup Speed" last />
@@ -219,7 +219,7 @@ export default function HomePage() {
             </p>
             <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 12 }}>
               <FeatureBullet icon="⚡" bg="rgba(0,200,112,0.08)" border="rgba(0,200,112,0.25)" title="Ctrl+K anywhere" desc="Works on Whatnot, eBay, anywhere in your browser. One shortcut." />
-              <FeatureBullet icon="💾" bg="rgba(0,102,255,0.1)" border="rgba(0,102,255,0.25)" title="Live D1 database" desc="96% of figures have real sold price data, updated every 6 hours from eBay." />
+              <FeatureBullet icon="💾" bg="rgba(0,102,255,0.1)" border="rgba(0,102,255,0.25)" title="Live D1 database" desc="96% of wrestling figures have real sold price data, with the rest of the 17 genres expanding fast." />
               <FeatureBullet icon="🎯" bg="rgba(255,95,0,0.08)" border="rgba(255,95,0,0.25)" title="Bid with confidence" desc="Last sold price, 90-day average, and deal threshold shown instantly." />
             </div>
           </div>
@@ -368,34 +368,39 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ─── TESTIMONIALS ─── */}
+      {/* ─── WHY WE BUILT IT ─── */}
+      {/* Replaced placeholder testimonials with real product story until we
+          have real Chrome Web Store reviews to quote. Add real testimonials
+          back when we have 3+ verifiable quotes from extension users. */}
       <section style={sectionStyle}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={eyebrowStyle('var(--blue)')}>Community</div>
-          <h2 style={sectionTitleStyle}>Collectors Trust<br />Real Data.</h2>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, marginTop: 48 }}>
-          <Testimonial
-            text='"Had this open during a Whatnot stream and saved $28 on a Marvel Legends figure because I knew what it actually sold for. The Ctrl+K shortcut is stupid fast."'
-            name="JakeMarcellino"
-            handle="WWE collector · 12 complete sets"
-            avatar="J"
-            avatarGradient="linear-gradient(135deg,var(--blue),#0052CC)"
-          />
-          <Testimonial
-            text='"The completion ring thing is dangerous. I finished my second Ultimate Edition set just because the "1 away" banner kept staring at me. Worth it."'
-            name="KingOfKayfabe"
-            handle="Mattel specialist · Series Slayer ×3"
-            avatar="K"
-            avatarGradient="linear-gradient(135deg,var(--orange),#CC4400)"
-          />
-          <Testimonial
-            text='"Been flipping figures for 4 years. This is the first tool that actually shows sold comps instead of retail. 96% coverage is real — I&apos;ve only hit a miss twice."'
-            name="RetroPlasticHunter"
-            handle="Flipper & collector · Vault Commander"
-            avatar="R"
-            avatarGradient="linear-gradient(135deg,var(--green),#009950)"
-          />
+        <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
+          <div style={eyebrowStyle('var(--blue)')}>Why We Built This</div>
+          <h2 style={sectionTitleStyle}>Made by a Collector.<br />Funded by Affiliates.</h2>
+          <p style={{ ...sectionSubStyle, margin: '24px auto 0', maxWidth: 600 }}>
+            Every other figure-pricing tool either charges a monthly fee or buries the data behind ads.
+            FigurePinner stays free because we earn a small commission when you find the figure you&apos;re missing —
+            so we&apos;re built to surface honest sold-prices, not to upsell you.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, marginTop: 48, textAlign: 'left' }}>
+            <ValueCard
+              icon="🎯"
+              title="Real Sold Prices"
+              desc="Every price is an actual eBay completed sale — not list price, not estimate, not retail markup."
+              accent="var(--blue)"
+            />
+            <ValueCard
+              icon="🆓"
+              title="Free Forever"
+              desc="No subscription. No paywall. No ads. The Chrome extension and the web app are free to use, always."
+              accent="var(--green)"
+            />
+            <ValueCard
+              icon="🤝"
+              title="Aligned Incentives"
+              desc="We earn when you find what you want. So we surface real deals, not whatever pays the highest commission."
+              accent="var(--orange)"
+            />
+          </div>
         </div>
       </section>
 
@@ -451,10 +456,13 @@ export default function HomePage() {
           #companion > div, #wantlist .section-inner { grid-template-columns: 1fr !important; }
           .steps-grid { grid-template-columns: 1fr 1fr !important; }
           .testimonials-grid { grid-template-columns: 1fr !important; }
+          .fp-nav-links { display: none !important; }
         }
         @media(max-width:640px){
           .mockup-sidebar, .mock-right-col { display: none !important; }
           .mockup-grid { grid-template-columns: 1fr !important; height: auto !important; }
+          .fp-nav-login { display: none !important; }
+          .fp-nav-cta-text { display: none !important; }
         }
       `}</style>
     </>
@@ -627,20 +635,12 @@ function StepCard({ num, numColor, icon, title, desc, connector }: { num: string
   )
 }
 
-function Testimonial({ text, name, handle, avatar, avatarGradient }: { text: string; name: string; handle: string; avatar: string; avatarGradient: string }) {
+function ValueCard({ icon, title, desc, accent }: { icon: string; title: string; desc: string; accent: string }) {
   return (
-    <div style={{ background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 16, padding: 20 }}>
-      <div style={{ color: 'var(--orange)', fontSize: 14, marginBottom: 10, letterSpacing: 2 }}>★★★★★</div>
-      <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 14, fontStyle: 'italic' }}>{text}</p>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div style={{ width: 32, height: 32, borderRadius: 8, background: avatarGradient, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 800, color: '#fff', flexShrink: 0 }}>
-          {avatar}
-        </div>
-        <div>
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text)' }}>{name}</div>
-          <div style={{ fontSize: 11, color: 'var(--muted)' }}>{handle}</div>
-        </div>
-      </div>
+    <div style={{ background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 16, padding: 24 }}>
+      <div style={{ fontSize: 28, marginBottom: 12 }}>{icon}</div>
+      <div style={{ fontSize: 15, fontWeight: 800, color: accent, marginBottom: 8, letterSpacing: '.02em' }}>{title}</div>
+      <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.6 }}>{desc}</div>
     </div>
   )
 }

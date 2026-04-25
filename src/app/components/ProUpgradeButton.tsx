@@ -8,11 +8,25 @@ interface Props {
   billing?: 'annual' | 'monthly'
 }
 
+// Feature flag — flip to 'true' in .env.production once Stripe secrets are
+// set on the worker (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, both price IDs)
+// AND a real Stripe checkout session has been smoke-tested.
+// While false, the button shows "Pro Launching Soon" and routes interested
+// users to the homepage / waitlist form instead of triggering /api/stripe/checkout
+// (which would 500 with no secrets).
+const STRIPE_ENABLED = process.env.NEXT_PUBLIC_STRIPE_ENABLED === 'true'
+
 export default function ProUpgradeButton({ size = 'lg', billing = 'annual' }: Props) {
   const [loading, setLoading] = useState(false)
   const { isSignedIn } = useUser()
 
   async function handleUpgrade() {
+    // Pre-launch state: route to homepage waitlist instead of broken checkout
+    if (!STRIPE_ENABLED) {
+      window.location.href = '/?utm_source=pro_page&utm_content=upgrade_btn'
+      return
+    }
+
     if (!isSignedIn) {
       window.location.href = '/sign-up?redirect_url=/pro'
       return
@@ -38,9 +52,13 @@ export default function ProUpgradeButton({ size = 'lg', billing = 'annual' }: Pr
     }
   }
 
-  const label = billing === 'annual'
+  const liveLabel = billing === 'annual'
     ? 'Upgrade to Pro — $29.99/yr'
     : 'Upgrade to Pro — $3.99/mo'
+
+  const label = STRIPE_ENABLED
+    ? (loading ? 'Redirecting…' : liveLabel)
+    : 'Join Pro Waitlist →'
 
   const pad = size === 'lg' ? '0.875rem 2.5rem' : '0.5rem 1.25rem'
   const fs = size === 'lg' ? '1.05rem' : '0.875rem'
@@ -49,6 +67,7 @@ export default function ProUpgradeButton({ size = 'lg', billing = 'annual' }: Pr
     <button
       onClick={handleUpgrade}
       disabled={loading}
+      title={STRIPE_ENABLED ? undefined : 'Pro launches soon — join the waitlist for early access'}
       style={{
         display: 'inline-block',
         background: loading ? 'var(--fp-surface-1, var(--s2))' : 'var(--fp-accent, var(--blue))',
@@ -66,7 +85,7 @@ export default function ProUpgradeButton({ size = 'lg', billing = 'annual' }: Pr
         width: size === 'lg' ? 'auto' : '100%',
       }}
     >
-      {loading ? 'Redirecting…' : label}
+      {label}
     </button>
   )
 }

@@ -12,6 +12,10 @@ binding = "DB"
 database_name = "figurepinner-userdata"
 database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
 
+[[kv_namespaces]]
+binding = "PRO_KV"
+id = "e1858bb16a4f41f5b81afe8cf53519f5"  # FP_KV — shared, prefixed with "pro:"
+
 [[routes]]
 pattern = "figurepinner.com"
 custom_domain = true

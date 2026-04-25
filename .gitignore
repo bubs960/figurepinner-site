@@ -20,10 +20,20 @@
 
 # env files (never commit secrets)
 .env
+.env.*
 .env.local
 .env.development.local
 .env.test.local
+.env.production
 .env.production.local
+
+# explicit secret files (catch-all so a mis-named secret file can't leak)
+*secrets*.txt
+*secrets*.json
+alerts-secrets.txt
+*.pem
+*.key
+credentials.json
 
 # vercel
 .vercel

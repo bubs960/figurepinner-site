@@ -107,3 +107,24 @@ export function buildChartPath(
 
   return { linePath, areaPath }
 }
+
+/**
+ * Plain-English data-quality state derived from the count of recent eBay
+ * sold comps. Drives the user-visible badge — keeps users honest about how
+ * much trust to place in the price.
+ *
+ * Thresholds chosen empirically:
+ *   reliable: enough comps that the median is statistically meaningful
+ *   limited:  enough to direction-check but not to bid against
+ *   sparse:   1-3 comps — anchor-point only, treat as anecdote
+ *   none:     0 comps — no data at all, surface affiliate search instead
+ */
+export type DataQualityState = 'reliable' | 'limited' | 'sparse' | 'none'
+
+export function dataQualityState(soldCount: number): DataQualityState {
+  if (soldCount >= 10) return 'reliable'
+  if (soldCount >= 4)  return 'limited'
+  if (soldCount >= 1)  return 'sparse'
+  return 'none'
+}
+

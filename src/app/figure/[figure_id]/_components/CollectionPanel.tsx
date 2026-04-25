@@ -72,13 +72,14 @@ export default function CollectionPanel({
             marginBottom: '0.375rem',
           }}
         >
-          Find on eBay
+          Find It on eBay
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
-        <div style={{ fontSize: '0.65rem', color: 'var(--fp-dim)', textAlign: 'center', marginBottom: '1rem' }}>
-          Affiliate link · No extra cost to you
+        <div style={{ fontSize: '0.7rem', color: 'var(--fp-muted)', textAlign: 'center', marginBottom: '1rem', lineHeight: 1.5 }}>
+          <strong style={{ color: 'var(--fp-text)', fontWeight: 600 }}>Free for you</strong>
+          {' · '}We earn a small commission from eBay
         </div>
 
         {/* Own / Want buttons */}

@@ -51,13 +51,14 @@ export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProp
           fontSize: '0.875rem', fontWeight: '700', textDecoration: 'none',
         }}
       >
-        Search eBay
+        Find It on eBay
         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </a>
-      <div style={{ fontSize: '0.62rem', color: 'var(--fp-dim)' }}>
-        Affiliate link · No extra cost to you
+      <div style={{ fontSize: '0.7rem', color: 'var(--fp-muted)', maxWidth: '32ch', lineHeight: 1.5 }}>
+        <strong style={{ color: 'var(--fp-text)', fontWeight: 600 }}>Free for you</strong>
+        {' · '}We earn a small commission from eBay
       </div>
     </div>
   )

@@ -21,7 +21,7 @@ export default function ProPage() {
         </a>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <a href="/app" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.875rem' }}>Dashboard</a>
-          <a href="/sign-up" style={{
+          <a href="#pricing" style={{
             background: 'var(--blue)', color: '#fff', textDecoration: 'none',
             padding: '0.5rem 1rem', borderRadius: '6px', fontSize: '0.875rem', fontWeight: '600',
           }}>Get Pro</a>
@@ -54,8 +54,47 @@ export default function ProPage() {
         </p>
       </section>
 
+      {/* ── How We're Free ──
+          Explains the dual model so users don't experience Pro as the only
+          revenue path. Builds trust by being explicit about the affiliate-
+          funded free tier. Keep matter-of-fact tone — collectors are
+          allergic to begging. */}
+      <section style={{
+        maxWidth: 720, margin: '0 auto 2.5rem', padding: '2.25rem 1.5rem',
+        background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 16,
+      }}>
+        <div style={{
+          display: 'inline-block',
+          fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase',
+          color: 'var(--green)', marginBottom: 12,
+        }}>
+          How We&apos;re Free
+        </div>
+        <h2 style={{
+          fontFamily: 'var(--font-display)', fontSize: '1.75rem', letterSpacing: '0.03em',
+          marginBottom: 14, lineHeight: 1.15,
+        }}>
+          Free is real. Pro is for power users.
+        </h2>
+        <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: 12 }}>
+          The free tier covers what most collectors need: 25 vault slots, 3 price alerts,
+          unlimited figure lookups, and the Chrome extension. We pay for it through
+          eBay&apos;s affiliate program — when you click <em style={{ color: 'var(--text)', fontStyle: 'normal', fontWeight: 600 }}>&ldquo;Find It on eBay&rdquo;</em> and
+          buy something, we earn a small commission. You pay the same eBay price
+          either way. No ads, no subscription required.
+        </p>
+        <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: 0 }}>
+          Pro exists for collectors and flippers who&apos;ve outgrown the free tier —
+          unlimited vault, deal alerts, full price history, CSV export. If the
+          extension is enough for you, stay free. Forever. We&apos;re not going to
+          paywall the basics.
+        </p>
+      </section>
+
       {/* Pricing cards — client component for annual/monthly toggle */}
-      <ProPricingCards />
+      <div id="pricing" style={{ scrollMarginTop: '4rem' }}>
+        <ProPricingCards />
+      </div>
 
       {/* Feature comparison table */}
       <section style={{ maxWidth: '760px', margin: '0 auto', padding: '0 1rem 5rem' }}>

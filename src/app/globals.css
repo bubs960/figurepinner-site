@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Fonts loaded via <link rel="stylesheet"> in src/app/layout.tsx — do NOT add @import here, it duplicates the request and blocks render. */
 
 /* ============================================================
    FIGUREPINNER DESIGN SYSTEM — Global CSS
@@ -74,29 +74,32 @@
   --topbar-h: 56px;
 
   /* ── FigurePinner Design Tokens v2 (figure detail page) ── */
-  --fp-bg:            #0A0D1C;
-  --fp-surface-0:     #14182D;
-  --fp-surface-1:     #1C2141;
-  --fp-surface-2:     #262C54;
-  --fp-border:        #2D3358;
-  --fp-border-bright: #424882;
-  --fp-text:          #F5F6FA;
-  --fp-muted:         #A2A7C0;
-  --fp-dim:           #6B7085;
-  --fp-accent:        #5B8DEF;
-  --fp-accent-warm:   #F0A04B;
-  --fp-accent-rare:   #C4A86A;
-  --fp-success:       #42D392;
-  --fp-danger:        #E5484D;
-  --fp-ebay:          #E53238;
+  /* ── Figure-detail tokens (aliased to main system) ──────────────────────
+     Originally a separate palette. Now aliased so figure pages match the
+     rest of the app visually. Component code still uses var(--fp-*) names;
+     remove this aliasing block + sed-replace references when ready for a
+     full migration. */
+  --fp-bg:            var(--bg);
+  --fp-surface-0:     var(--s1);
+  --fp-surface-1:     var(--s2);
+  --fp-surface-2:     var(--s3);
+  --fp-border:        var(--border);
+  --fp-border-bright: var(--border-hover);
+  --fp-text:          var(--text);
+  --fp-muted:         var(--muted);
+  --fp-dim:           var(--dim);
+  --fp-accent:        var(--blue);
+  --fp-accent-warm:   var(--orange);
+  --fp-accent-rare:   var(--yellow);    /* aliased: --yellow #FFB800 */
+  --fp-success:       var(--green);
+  --fp-danger:        #E5484D;          /* keep until --danger is in main system */
+  --fp-ebay:          #E53238;          /* eBay brand red, intentionally distinct */
   --fp-font-display:  "Bebas Neue", system-ui, sans-serif;
   --fp-font-body:     "Inter", system-ui, sans-serif;
   --fp-radius-sm:     8px;
   --fp-radius:        12px;
   --fp-radius-lg:     16px;
-  --fp-bg-gradient:
-    radial-gradient(1200px 800px at 20% -10%, rgba(91,141,239,0.08), transparent 60%),
-    radial-gradient(900px 600px at 110% 30%, rgba(240,160,75,0.05), transparent 60%);
+  --fp-bg-gradient:   none;
 }
 
 /* ============================================================
@@ -311,6 +314,11 @@ a:hover {
    ============================================================ */
 
 ::selection {
+  background: rgba(0, 102, 255, 0.3);
+  color: var(--text);
+}
+
+::-moz-selection {
   background: rgba(0, 102, 255, 0.3);
   color: var(--text);
 }

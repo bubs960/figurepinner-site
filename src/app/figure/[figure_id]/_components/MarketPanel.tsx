@@ -232,15 +232,34 @@ export default function MarketPanel({ pricing, isPro, ebaySearchUrl, figureName 
             </div>
           )}
 
-          <div style={{ marginTop: '0.625rem', textAlign: 'right' }}>
+          {/* Find It on eBay — primary affiliate CTA. Honest microcopy underneath
+              tells users WHY it's free. Trust > stealth. */}
+          <div style={{
+            marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--fp-border)',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem',
+          }}>
             <a
               href={ebaySearchUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              style={{ fontSize: '0.75rem', color: 'var(--fp-accent)', textDecoration: 'none' }}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                background: 'var(--fp-ebay)', color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: 'var(--fp-radius-sm)',
+                fontSize: '0.95rem', fontWeight: '700', textDecoration: 'none',
+                minWidth: 220, justifyContent: 'center',
+              }}
             >
-              See live eBay listings for {figureName} →
+              Find It on eBay
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
+            <div style={{ fontSize: '0.7rem', color: 'var(--fp-muted)', lineHeight: 1.5, textAlign: 'center' }}>
+              <strong style={{ color: 'var(--fp-text)', fontWeight: 600 }}>Free for you</strong>
+              {' · '}We earn a small commission from eBay
+            </div>
           </div>
         </div>
       )}

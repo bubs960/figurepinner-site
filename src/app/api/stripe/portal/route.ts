@@ -14,6 +14,17 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://figurepinner.com'
  * Clerk publicMetadata (written by webhook on checkout.session.completed).
  */
 export async function POST() {
+  // Pre-launch guard: portal makes no sense without active subscriptions.
+  if (!STRIPE_SECRET_KEY) {
+    return NextResponse.json(
+      {
+        error: 'stripe_not_configured',
+        message: 'Pro tier launches soon. No active subscriptions to manage yet.',
+      },
+      { status: 503 },
+    )
+  }
+
   const { userId } = await auth()
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

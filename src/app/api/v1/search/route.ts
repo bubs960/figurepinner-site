@@ -14,8 +14,14 @@ export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
   const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') ?? '8'), 60)
 
+  // Edge cache headers — search is read-only over a static KB, fine to share
+  // across users. 5 min fresh, 1 hour stale-while-revalidate.
+  const CACHE_HEADERS = {
+    'Cache-Control': 'public, max-age=300, s-maxage=600, stale-while-revalidate=3600',
+  }
+
   if (q.length < 2) {
-    return NextResponse.json({ figures: [] })
+    return NextResponse.json({ figures: [] }, { headers: CACHE_HEADERS })
   }
 
   const tokens = q.toLowerCase().split(/\s+/).filter(Boolean)
@@ -61,9 +67,9 @@ export async function GET(req: NextRequest) {
         character_slug:     f.character_canonical,
       }))
 
-    return NextResponse.json({ figures: results })
+    return NextResponse.json({ figures: results }, { headers: CACHE_HEADERS })
   } catch {
-    return NextResponse.json({ figures: [] })
+    return NextResponse.json({ figures: [] }, { headers: CACHE_HEADERS })
   }
 }
 

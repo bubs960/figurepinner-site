@@ -22,6 +22,19 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://figurepinner.com'
  * Legacy: STRIPE_PRO_PRICE_ID fallback still supported for monthly.
  */
 export async function POST(req: NextRequest) {
+  // Pre-launch guard: if Stripe isn't wired yet (secret empty), don't crash —
+  // return a clean 503 the client can render as "Pro coming soon".
+  if (!STRIPE_SECRET_KEY) {
+    return NextResponse.json(
+      {
+        error: 'stripe_not_configured',
+        message: 'Pro tier launches soon. Join the waitlist at figurepinner.com to be notified.',
+        waitlist_url: '/',
+      },
+      { status: 503 },
+    )
+  }
+
   const { userId } = await auth()
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

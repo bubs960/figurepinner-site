@@ -64,6 +64,14 @@ async function verifyStripeSignature(body: string, sig: string, secret: string):
 }
 
 export async function POST(req: NextRequest) {
+  // Pre-launch guard: the webhook only matters when Stripe is sending events.
+  if (!STRIPE_WEBHOOK_SECRET) {
+    return NextResponse.json(
+      { error: 'webhook_not_configured' },
+      { status: 503 },
+    )
+  }
+
   const body = await req.text()
   const sig = req.headers.get('stripe-signature') ?? ''
 

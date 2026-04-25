@@ -67,6 +67,7 @@ export default function SearchInterface({ initialQuery }: Props) {
   const [loading, setLoading]         = useState(false)
   const [searched, setSearched]       = useState(false)   // true after first fetch
   const [activeGenre, setActiveGenre] = useState<GenreSlug | null>(null)
+  const [focused, setFocused]         = useState(false)
   const inputRef  = useRef<HTMLInputElement>(null)
   const debounce  = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -133,6 +134,16 @@ export default function SearchInterface({ initialQuery }: Props) {
     }
   }
 
+  // ── Form submit (Enter): bypass the debounce and run search immediately
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (debounce.current) clearTimeout(debounce.current)
+    const trimmed = query.trim()
+    const url = trimmed ? `/search?q=${encodeURIComponent(trimmed)}` : '/search'
+    window.history.replaceState(null, '', url)
+    runSearch(trimmed)
+  }
+
   return (
     <div style={{ padding: 'clamp(1.5rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem)' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
@@ -155,45 +166,51 @@ export default function SearchInterface({ initialQuery }: Props) {
         </div>
 
         {/* ── Search input ── */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          background: 'var(--s1)',
-          border: '1px solid var(--border)',
-          borderRadius: 12,
-          padding: '0 16px',
-          gap: 10,
-          marginBottom: '1.25rem',
-          boxShadow: '0 0 0 0px transparent',
-          transition: 'border-color 0.15s, box-shadow 0.15s',
-        }}
-          onFocus={() => {}}
-        >
-          <SearchIcon />
-          <input
-            ref={inputRef}
-            type="text"
-            placeholder="Search by name, character, or series…"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            onKeyDown={handleKey}
-            aria-label="Search figures"
-            style={{
-              flex: 1,
-              background: 'transparent',
-              border: 'none',
-              outline: 'none',
-              color: 'var(--text)',
-              fontSize: '1.0625rem',
-              padding: '16px 0',
-              fontFamily: 'var(--font-ui)',
-            }}
-          />
-          {loading && <SpinnerIcon />}
-          {!loading && query.length > 0 && (
-            <ClearButton onClick={() => { setQuery(''); setResults([]); setSearched(false) }} />
-          )}
-        </div>
+        <form onSubmit={handleSubmit} role="search" aria-label="Search figures">
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            background: 'var(--s1)',
+            border: `1px solid ${focused ? 'var(--blue)' : 'var(--border)'}`,
+            borderRadius: 12,
+            padding: '0 16px',
+            gap: 10,
+            marginBottom: '1.25rem',
+            boxShadow: focused ? '0 0 0 3px rgba(0,102,255,0.12)' : '0 0 0 0px transparent',
+            transition: 'border-color 0.15s, box-shadow 0.15s',
+            position: 'relative',
+          }}>
+            <SearchIcon />
+            <input
+              ref={inputRef}
+              type="search"
+              name="q"
+              placeholder="Search by name, character, or series…"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              onKeyDown={handleKey}
+              onFocus={() => setFocused(true)}
+              onBlur={() => setFocused(false)}
+              aria-label="Search figures"
+              style={{
+                flex: 1,
+                background: 'transparent',
+                border: 'none',
+                outline: 'none',
+                color: 'var(--text)',
+                fontSize: '1.0625rem',
+                padding: '16px 0',
+                fontFamily: 'var(--font-ui)',
+              }}
+            />
+            {loading && <SpinnerIcon />}
+            {!loading && query.length > 0 && (
+              <ClearButton onClick={() => { setQuery(''); setResults([]); setSearched(false); inputRef.current?.focus() }} />
+            )}
+            {/* Hidden submit button so Enter triggers form onSubmit */}
+            <button type="submit" aria-label="Run search" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}>Search</button>
+          </div>
+        </form>
 
         {/* ── Genre filter pills (only show when there are results to filter) ── */}
         {availableGenres.length > 1 && (
@@ -360,7 +377,7 @@ function FigureResultCard({ result: r, query }: { result: SearchResult; query: s
       }}>
         {r.image
           // eslint-disable-next-line @next/next/no-img-element
-          ? <img src={r.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" />
+          ? <img src={r.image} alt="" width={52} height={52} style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" decoding="async" />
           : (genre?.emoji ?? '🤼')
         }
       </div>
@@ -496,14 +513,15 @@ function SuggestChip({ text }: { text: string }) {
 
 function highlightMatch(text: string, query: string): React.ReactNode {
   if (!query) return text
-  const idx = text.toLowerCase().indexOf(query.toLowerCase())
-  if (idx === -1) return text
-  return (
-    <>
-      {text.slice(0, idx)}
-      <strong style={{ color: 'var(--blue)', fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</strong>
-      {text.slice(idx + query.length)}
-    </>
+  const trimmed = query.trim()
+  if (!trimmed) return text
+  // Escape regex specials so user input like "(Hollywood)" doesn't break the regex
+  const escaped = trimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const parts = text.split(new RegExp(`(${escaped})`, 'gi'))
+  return parts.map((part, i) =>
+    part.toLowerCase() === trimmed.toLowerCase()
+      ? <strong key={i} style={{ color: 'var(--blue)', fontWeight: 700 }}>{part}</strong>
+      : <span key={i}>{part}</span>
   )
 }
 

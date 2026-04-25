@@ -18,6 +18,44 @@ async function getDB() {
   return (env as any).DB as D1Database
 }
 
+// ── Shared insert helper ──────────────────────────────────────────────────
+// Matches the pattern in /api/vault and /api/v1/vault. One place for the
+// INSERT means schema changes are a one-edit fix per file.
+
+interface WantlistItemBody {
+  figure_id: string
+  name: string
+  brand?: string
+  line?: string
+  genre?: string
+  target_price?: number
+}
+
+async function insertWantlistItem(
+  db: D1Database,
+  userId: string,
+  body: WantlistItemBody,
+): Promise<string> {
+  const id = randomUUID()
+  await db
+    .prepare(`
+      INSERT INTO wantlist_items (id, user_id, figure_id, name, brand, line, genre, target_price, status)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active')
+    `)
+    .bind(
+      id,
+      userId,
+      body.figure_id,
+      body.name,
+      body.brand ?? null,
+      body.line ?? null,
+      body.genre ?? null,
+      body.target_price ?? 0,
+    )
+    .run()
+  return id
+}
+
 export async function GET() {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -40,14 +78,7 @@ export async function POST(req: NextRequest) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
-  const body = await req.json() as {
-    figure_id: string
-    name: string
-    brand?: string
-    line?: string
-    genre?: string
-    target_price?: number
-  }
+  const body = (await req.json()) as WantlistItemBody
 
   if (!body.figure_id || !body.name) {
     return NextResponse.json({ error: 'figure_id and name are required' }, { status: 400 })
@@ -55,7 +86,7 @@ export async function POST(req: NextRequest) {
 
   const db = await getDB()
 
-  // Check for duplicate — don't add the same figure twice
+  // Dedup — don't add the same figure twice
   const { results: existing } = await db
     .prepare(`
       SELECT id FROM wantlist_items
@@ -71,18 +102,6 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const id = randomUUID()
-  await db
-    .prepare(`
-      INSERT INTO wantlist_items (id, user_id, figure_id, name, brand, line, genre, target_price, status)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active')
-    `)
-    .bind(
-      id, userId, body.figure_id, body.name,
-      body.brand ?? null, body.line ?? null, body.genre ?? null,
-      body.target_price ?? 0,
-    )
-    .run()
-
+  const id = await insertWantlistItem(db, userId, body)
   return NextResponse.json({ id }, { status: 201 })
 }

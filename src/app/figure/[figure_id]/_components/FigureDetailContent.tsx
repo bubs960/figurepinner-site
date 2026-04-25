@@ -17,7 +17,8 @@ import CtaRail from './CtaRail'
 import EmptyState from './EmptyState'
 import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
-import { buildEbaySearchUrl, computeTrend, compCountToConfidence, prettifySlug } from '../_lib/figureFormatters'
+import { buildEbaySearchUrl, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
+import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
@@ -297,6 +298,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: '1.5rem', alignItems: 'start', marginBottom: '2rem' }}
         >
           <div>
+            {/* Per-figure data quality badge — sets honest expectations
+                BEFORE the user sees the price. Powers our move from opaque
+                coverage gating toward per-figure transparency. */}
+            <div style={{ marginBottom: '1rem' }}>
+              <DataQualityBadge
+                state={dataQualityState(price?.soldCount ?? 0)}
+                compCount={price?.soldCount ?? 0}
+                compact={hasPricing}
+              />
+            </div>
+
             {hasPricing ? (
               <MarketPanel
                 pricing={marketPricing}

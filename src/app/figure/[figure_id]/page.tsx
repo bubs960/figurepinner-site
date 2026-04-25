@@ -3,7 +3,10 @@ import { getFigureById, deriveName, prettyFigureUrl } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 
-export const dynamic = 'force-dynamic'
+// ISR — figure detail re-fetched at most once per hour per figure_id.
+// Public, immutable-per-figure data; user-specific bits (vault status etc.)
+// are loaded client-side inside FigureDetailContent so caching is safe.
+export const revalidate = 3600
 
 const BASE = 'https://figurepinner.com'
 
