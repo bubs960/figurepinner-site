@@ -1,6 +1,8 @@
 // CtaRail.tsx — Zone 8: Three bottom CTA cards
 // Server component
 
+import Link from 'next/link'
+
 interface CtaRailProps {
   genre: string
   brand: string
@@ -17,8 +19,14 @@ interface CtaCard {
 }
 
 export default function CtaRail({ genre, brand, line }: CtaRailProps) {
-  const genreSlug = genre.toLowerCase().replace(/\s+/g, '-')
+  const genreSlug = (genre ?? '').toLowerCase().replace(/\s+/g, '-')
 
+  // 2026-04-30 unlock: third card retired its "Upgrade to Pro" pitch.
+  // Pro is being rebuilt as a seller tier; collector workflows are uncapped
+  // and free. Replaced with a soft pointer to the coming-soon seller page
+  // for users who happen to be in seller mode. The "Track" card now points
+  // at /sign-up because the value prop ("Own it, want it, track it") is
+  // genuinely free, not gated.
   const cards: CtaCard[] = [
     {
       label: 'Browse',
@@ -31,17 +39,17 @@ export default function CtaRail({ genre, brand, line }: CtaRailProps) {
     {
       label: 'Track',
       headline: 'Build Your Collection',
-      body: 'Own it, want it, track it. Your collection in one place.',
-      href: '/pro',
-      cta: 'Get Started Free →',
+      body: 'Own it, want it, track it. Unlimited vault, alerts, and price history. Free, forever.',
+      href: '/sign-up',
+      cta: 'Sign Up Free →',
       accentVar: 'var(--fp-accent-warm)',
     },
     {
       label: 'Pro',
-      headline: 'Full Market Access',
-      body: 'Unlock 90-day price history, all comps, and flip alerts.',
+      headline: 'Selling? Pro Is Coming.',
+      body: 'Listing automation, Whatnot show prep, title optimizer powered by 1M+ comps. For sellers.',
       href: '/pro',
-      cta: 'Upgrade to Pro →',
+      cta: 'Join Pro Waitlist →',
       accentVar: 'var(--fp-accent-rare)',
     },
   ]
@@ -57,7 +65,7 @@ export default function CtaRail({ genre, brand, line }: CtaRailProps) {
       overflow: 'hidden',
     }}>
       {cards.map((card) => (
-        <a
+        <Link
           key={card.label}
           href={card.href}
           style={{ textDecoration: 'none' }}
@@ -96,7 +104,7 @@ export default function CtaRail({ genre, brand, line }: CtaRailProps) {
               {card.cta}
             </div>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   )
