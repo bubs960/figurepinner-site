@@ -77,6 +77,7 @@ export default function SearchInterface({ initialQuery }: Props) {
   const [sparklines, setSparklines]   = useState<Record<string, { points: number[]; trend: 'up'|'down'|'flat' }>>({})
   const inputRef  = useRef<HTMLInputElement>(null)
   const debounce  = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const sparklineAbort = useRef<AbortController | null>(null)
 
   async function handleTrack(r: SearchResult) {
     if (!r.figure_id) return
@@ -129,7 +130,8 @@ export default function SearchInterface({ initialQuery }: Props) {
         const data = await res.json() as { results: SearchResult[] }
         setResults(data.results ?? [])
         setSearched(true)
-        setActiveGenre(null)   // reset genre filter on new search
+        setActiveGenre(null)      // reset genre filter on new search
+        setShowAllGenres(false)   // collapse genre pills on new search
       }
     } catch {
       // silent fail
@@ -157,15 +159,17 @@ export default function SearchInterface({ initialQuery }: Props) {
     if (initialQuery.length >= 2) runSearch(initialQuery)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── Fetch sparklines when results change
+  // ── Fetch sparklines when results change (AbortController prevents stale overwrites on rapid search)
   useEffect(() => {
+    sparklineAbort.current?.abort()
     const ids = results.map(r => r.figure_id).filter(Boolean) as string[]
     if (!ids.length) { setSparklines({}); return }
-    const idsParam = ids.slice(0, 48).join(',')
-    fetch(`/api/sparklines?ids=${encodeURIComponent(idsParam)}`)
+    const ctrl = new AbortController()
+    sparklineAbort.current = ctrl
+    fetch(`/api/sparklines?ids=${encodeURIComponent(ids.slice(0, 48).join(','))}`, { signal: ctrl.signal })
       .then(r => r.ok ? r.json() : {})
       .then(data => setSparklines(data as Record<string, { points: number[]; trend: 'up'|'down'|'flat' }>))
-      .catch(() => {})
+      .catch(e => { if (e?.name !== 'AbortError') console.warn('sparklines:', e) })
   }, [results])
 
   // ── Genre filter
@@ -306,6 +310,7 @@ export default function SearchInterface({ initialQuery }: Props) {
                   fontWeight: 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
+                  transition: 'all 0.12s',
                 }}
               >
                 +{hiddenGenreCount} more

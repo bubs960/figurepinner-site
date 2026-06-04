@@ -26,11 +26,12 @@ interface SearchResult {
 type ScanState = 'idle' | 'scanning' | 'found' | 'searching' | 'results' | 'not-found' | 'unsupported' | 'error'
 
 export default function ScanPage() {
-  const videoRef   = useRef<HTMLVideoElement>(null)
-  const canvasRef  = useRef<HTMLCanvasElement>(null)
-  const streamRef  = useRef<MediaStream | null>(null)
-  const rafRef     = useRef<number>(0)
+  const videoRef    = useRef<HTMLVideoElement>(null)
+  const canvasRef   = useRef<HTMLCanvasElement>(null)
+  const streamRef   = useRef<MediaStream | null>(null)
+  const rafRef      = useRef<number>(0)
   const detectorRef = useRef<BarcodeDetector | null>(null)
+  const scanLocked  = useRef(false)
 
   const [state, setState]     = useState<ScanState>('idle')
   const [upc, setUpc]         = useState('')
@@ -106,11 +107,12 @@ export default function ScanPage() {
       })
 
       const scan = async () => {
-        if (!videoRef.current || !detectorRef.current) return
+        if (!videoRef.current || !detectorRef.current || scanLocked.current) return
         if (videoRef.current.readyState >= 2) {
           try {
             const codes = await detectorRef.current.detect(videoRef.current)
-            if (codes.length > 0) {
+            if (codes.length > 0 && !scanLocked.current) {
+              scanLocked.current = true
               await lookupUpc(codes[0].rawValue)
               return
             }
@@ -134,6 +136,7 @@ export default function ScanPage() {
 
   const reset = () => {
     stopCamera()
+    scanLocked.current = false
     setUpc('')
     setManualUpc('')
     setProductTitle('')

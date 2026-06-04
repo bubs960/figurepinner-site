@@ -1,11 +1,8 @@
 import { NextResponse } from 'next/server'
+import { getCloudflareContext } from '@opennextjs/cloudflare'
 
 export const runtime = 'edge'
 export const revalidate = 3600
-
-interface Env {
-  LISTINGS_DB: D1Database
-}
 
 export interface DealResult {
   figure_id: string
@@ -52,14 +49,14 @@ ORDER BY drop_pct DESC
 LIMIT 50
 `
 
-export async function GET(req: Request) {
-  const env = (process as unknown as { env: Env }).env
-  if (!env?.LISTINGS_DB) {
-    return NextResponse.json({ error: 'LISTINGS_DB not bound' }, { status: 503 })
-  }
-
+export async function GET() {
   try {
-    const { results } = await env.LISTINGS_DB.prepare(SQL).all<DealResult>()
+    const { env } = await getCloudflareContext()
+    const db = (env as Record<string, unknown>).LISTINGS_DB as D1Database | undefined
+    if (!db) {
+      return NextResponse.json({ error: 'LISTINGS_DB not bound' }, { status: 503 })
+    }
+    const { results } = await db.prepare(SQL).all<DealResult>()
     return NextResponse.json(
       { deals: results ?? [], generated_at: new Date().toISOString() },
       { headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=3600' } }
