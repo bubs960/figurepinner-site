@@ -5,8 +5,10 @@
  * so both get the same content; canonical URL is controlled by generateMetadata.
  */
 
-import { currentUser } from '@clerk/nextjs/server'
-import { getFigureById, getFiguresByFandom, deriveName, figureUrl } from '@/data/kb'
+import { getFigureById, getFiguresByFandom, deriveName, figureUrl, canonicalFigureUrl, SERVED_GENRE_SLUGS } from '@/data/kb'
+import NavLogo from '@/app/_components/NavLogo'
+import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
+import ProBadge from './ProBadge'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
 import ValueStrip from './ValueStrip'
@@ -17,14 +19,16 @@ import CtaRail from './CtaRail'
 import EmptyState from './EmptyState'
 import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
+import MobileActionBar from './MobileActionBar'
 import { buildEbaySearchUrl, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
+import { seoImageUrl, composeImageSlug } from '../_lib/imageTransform'
 import { getSellerListings } from '@/data/bubs-inventory'
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? ''
+const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? ''
 
 // ── API types ──────────────────────────────────────────────────────────────────
@@ -35,6 +39,8 @@ type PriceData = {
   medianSold?: number | null
   minSold?: number | null
   maxSold?: number | null
+  p25Sold?: number | null
+  p75Sold?: number | null
   soldCount: number
   avgFS: number | null
   fsCount: number
@@ -48,29 +54,75 @@ type PriceData = {
   }>
 }
 
+// ── IQR helpers ────────────────────────────────────────────────────────────────
+
+function _percentileFromSorted(sorted: number[], p: number): number {
+  if (sorted.length === 1) return sorted[0]
+  const idx = (p / 100) * (sorted.length - 1)
+  const lo = Math.floor(idx)
+  const hi = Math.ceil(idx)
+  if (lo === hi) return sorted[lo]
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * (idx - lo)
+}
+
+function _iqrFromPrices(prices: number[]): { p25: number; p75: number } | null {
+  const valid = prices.filter(p => p > 0)
+  if (valid.length < 4) return null
+  const sorted = [...valid].sort((a, b) => a - b)
+  return {
+    p25: _percentileFromSorted(sorted, 25),
+    p75: _percentileFromSorted(sorted, 75),
+  }
+}
+
 // ── Data fetching ──────────────────────────────────────────────────────────────
 
-export async function fetchFigurePageData(figure_id: string): Promise<{ price: PriceData | null; imageUrl: string | null }> {
-  const [priceRes, figureRes] = await Promise.all([
-    fetch(
-      `${API_BASE}/api/v1/figure-price?figureId=${encodeURIComponent(figure_id)}`,
-      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
-    ).catch(() => null),
-    fetch(
-      `${API_BASE}/api/v1/figure/${encodeURIComponent(figure_id)}`,
-      { next: { revalidate: 86400 }, signal: AbortSignal.timeout(4000) }
-    ).catch(() => null),
-  ])
+// R2 snapshot shape (snake_case from aggregation-cron)
+type R2Snapshot = {
+  figure_id: string
+  avg_sold: number | null
+  median_sold: number | null
+  min_sold: number | null
+  max_sold: number | null
+  sold_count: number
+  avg_fs: number | null
+  fs_count: number
+  min_fs: number | null
+  recent: Array<{ price: number; title: string; condition: string; sold_date: string; listing_format: string }>
+}
 
-  const price = priceRes?.ok
-    ? await priceRes.json() as PriceData
-    : null
+export async function fetchFigurePageData(figure_id: string, _v1?: string): Promise<{ price: PriceData | null; imageUrl: string | null }> {
+  // Phase 2a (2026-05-11): /api/v1/figure-price retired (410). Pricing now
+  // served from R2 snapshots written hourly by the aggregation cron.
+  // /api/v1/figure/:fid also retired (410) — imageUrl falls back to
+  // local KB canonical_image_url in the caller (FigureDetailContent line ~94).
+  const res = await fetch(
+    `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
+    { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+  ).catch(() => null)
 
-  const figureApiData = figureRes?.ok
-    ? await figureRes.json() as { figure_id: string; canonical_image_url: string | null }
-    : null
+  if (!res?.ok) return { price: null, imageUrl: null }
 
-  return { price, imageUrl: figureApiData?.canonical_image_url ?? null }
+  const snap = await res.json() as R2Snapshot
+  const recentPrices = (snap.recent ?? []).map((s: { price: number }) => s.price)
+  const iqr = _iqrFromPrices(recentPrices)
+
+  const price: PriceData = {
+    figureId:    figure_id,
+    avgSold:     snap.avg_sold,
+    medianSold:  snap.median_sold,
+    minSold:     snap.min_sold,
+    maxSold:     snap.max_sold,
+    p25Sold:     iqr?.p25 ?? null,
+    p75Sold:     iqr?.p75 ?? null,
+    soldCount:   snap.sold_count,
+    avgFS:       snap.avg_fs,
+    fsCount:     snap.fs_count,
+    minFS:       snap.min_fs,
+    soldHistory: snap.recent ?? [],
+  }
+
+  return { price, imageUrl: null }
 }
 
 // ── Main component ─────────────────────────────────────────────────────────────
@@ -97,11 +149,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const ebayUrl = buildEbaySearchUrl(brand, line, local.release_wave, displayName, EBAY_CAMPAIGN_ID)
 
-  // ── Pro gate ────────────────────────────────────────────────────────────────
-
-  const user  = await currentUser()
-  const isPro = user?.publicMetadata?.isPro === true
-
   // ── ValueStrip props ────────────────────────────────────────────────────────
 
   const valuePricing = price && price.soldCount > 0 ? {
@@ -109,6 +156,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     trend_90d_pct: computeTrend(price.soldHistory),
     low:           price.minSold ?? null,
     high:          price.maxSold ?? null,
+    p25:           price.p25Sold ?? null,
+    p75:           price.p75Sold ?? null,
     confidence:    compCountToConfidence(price.soldCount),
     comp_count:    price.soldCount,
   } : null
@@ -176,30 +225,55 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   // ── JSON-LD ─────────────────────────────────────────────────────────────────
 
+  // SEO-friendly image URL for structured data. Google uses the URL path
+  // as a ranking signal in Image Search, so /api/img/cm-punk-elite-series-124
+  // outperforms /api/img?u=encoded-hash.
+  const imageSlug = composeImageSlug({ character: local.character_canonical, line: local.product_line, series: seriesNum, brand })
+  const seoImage = imageUrlFinal ? seoImageUrl(imageUrlFinal, imageSlug) : undefined
+
+  // priceValidUntil: 30 days from render — eBay comps refresh hourly, 30d is conservative
+  const priceValidUntil = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name:        displayName,
     description: `${displayName} action figure by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
     brand:       { '@type': 'Brand', name: brand },
-    image:       imageUrlFinal ?? undefined,
+    image:       seoImage,
     category:    prettifySlug(genre),
     offers: valuePricing?.median != null ? {
-      '@type':        'Offer',
-      price:          valuePricing.median.toFixed(2),
-      priceCurrency:  'USD',
-      availability:   'https://schema.org/InStock',
-      url:            ebayUrl,
-      seller:         { '@type': 'Organization', name: 'eBay' },
-      description:    `Based on ${price!.soldCount} recent eBay sold listings`,
+      '@type':         'Offer',
+      price:           valuePricing.median.toFixed(2),
+      priceCurrency:   'USD',
+      itemCondition:   'https://schema.org/UsedCondition',
+      availability:    'https://schema.org/InStock',
+      priceValidUntil: priceValidUntil,
+      url:             ebayUrl,
+      seller:          { '@type': 'Organization', name: 'eBay' },
+      description:     `Based on ${price!.soldCount} recent eBay sold listings`,
     } : undefined,
   }
+
+  // P1: BreadcrumbList — 4-level for served genres, 2-level otherwise
+  const isServedGenre = SERVED_GENRE_SLUGS.includes(genre ?? '')
+  const canonicalUrl  = canonicalFigureUrl(local)
+  const breadcrumbs = isServedGenre ? [
+    { name: 'Home',               url: 'https://figurepinner.com/' },
+    { name: prettifySlug(genre),  url: `https://figurepinner.com/${genre}` },
+    { name: line,                 url: `https://figurepinner.com/${genre}/${local.product_line}` },
+    { name: displayName,          url: `https://figurepinner.com${canonicalUrl}` },
+  ] : [
+    { name: 'Home',         url: 'https://figurepinner.com/' },
+    { name: displayName,    url: `https://figurepinner.com/figure/${local.figure_id}` },
+  ]
 
   const hasPricing = marketPricing != null
 
   return (
     <div style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbJsonLd crumbs={breadcrumbs} />
 
       {/* Responsive overrides */}
       <style>{`
@@ -217,16 +291,13 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       {/* ── Nav ──────────────────────────────────────────────────────────────── */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(10,13,28,0.92)', backdropFilter: 'blur(12px)',
+        background: 'var(--nav-bg-translucent)', backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--fp-border)',
         padding: '0 1.5rem', height: '52px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--fp-dim)', overflow: 'hidden' }}>
-          <a href="/" style={{
-            fontFamily: 'var(--fp-font-display)', fontSize: '1.1rem',
-            color: 'var(--fp-text)', textDecoration: 'none', letterSpacing: '0.06em', flexShrink: 0,
-          }}>FP</a>
+          <NavLogo size="sm" />
           <Chevron />
           <a href={`/${genre}`} style={{ color: 'var(--fp-muted)', textDecoration: 'none', flexShrink: 0 }}>
             {prettifySlug(genre)}
@@ -236,18 +307,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             {displayName}
           </span>
         </div>
-        {isPro ? (
-          <span style={{
-            padding: '5px 14px', borderRadius: 'var(--fp-radius-sm)', fontSize: '0.78rem', fontWeight: '700',
-            background: 'rgba(0,200,112,0.12)', color: '#00C870',
-            border: '1px solid rgba(0,200,112,0.3)', flexShrink: 0, marginLeft: '1rem',
-          }}>Pro ✓</span>
-        ) : (
-          <a href="/pro" style={{
-            padding: '5px 14px', borderRadius: 'var(--fp-radius-sm)', fontSize: '0.78rem', fontWeight: '700',
-            background: 'var(--fp-accent)', color: '#fff', textDecoration: 'none', flexShrink: 0, marginLeft: '1rem',
-          }}>Pro</a>
-        )}
+        <ProBadge />
       </nav>
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
@@ -282,10 +342,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           <LoreBand loreInput={loreInput} />
         </div>
 
-        {/* Ad slot */}
-        <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
-          <AdSlot slot="rectangle" />
-        </div>
+        {/* Ad slot — wrapperStyle passed so outer margin also collapses when unfilled */}
+        <AdSlot slot="rectangle" wrapperStyle={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }} />
 
         {/* Seller listing */}
         {sellerListings.length > 0 && (
@@ -312,7 +370,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             {hasPricing ? (
               <MarketPanel
                 pricing={marketPricing}
-                isPro={isPro}
+                isPro={false}
                 ebaySearchUrl={ebayUrl}
                 figureName={displayName}
               />
@@ -335,10 +393,26 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               series={seriesNum}
               packSize={Number(local.pack_size) || 1}
               exclusiveTo={local.exclusive_to ?? null}
-              isPro={isPro}
+              isPro={false}
             />
           </div>
         </div>
+
+        {/* Zone 5b — About This Figure (indexed content, dwell-time driver) */}
+        <AboutSection
+          name={displayName}
+          brand={brand}
+          line={line}
+          seriesNum={seriesNum}
+          releaseYear={releaseYear}
+          scale={local.scale}
+          packSize={Number(local.pack_size) || 1}
+          exclusiveTo={local.exclusive_to}
+          characterNotes={getCharacterNotes(local.character_canonical)?.notes ?? null}
+          median={valuePricing?.median ?? null}
+          soldCount={price?.soldCount ?? 0}
+          genre={genre}
+        />
 
         {/* Zone 6 — Series companions */}
         <RelatedRow
@@ -350,7 +424,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         <RelatedRow
           label={`More ${characterH1} Figures`}
           figures={characterVariants}
-          accentColor="var(--fp-accent-warm)"
+          accentColor="var(--hunting)"
         />
 
         {/* Zone 8 — CTA rail */}
@@ -368,11 +442,102 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           <a href="/privacy" style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>Privacy</a>
         </p>
       </footer>
+
+      {/* ── Mobile sticky action bar ────────────────────────────────────────── */}
+      <MobileActionBar
+        trackHref="/sign-up"
+        ebaySearchUrl={ebayUrl}
+        figureName={displayName}
+        isSignedIn={false}
+      />
     </div>
   )
 }
 
 // ── Micro components ───────────────────────────────────────────────────────────
+
+function AboutSection({
+  name, brand, line, seriesNum, releaseYear, scale, packSize,
+  exclusiveTo, characterNotes, median, soldCount, genre,
+}: {
+  name: string; brand: string; line: string; seriesNum: number | null
+  releaseYear: number | null; scale: string | null; packSize: number
+  exclusiveTo: string | null; characterNotes: string | null
+  median: number | null; soldCount: number; genre: string
+}) {
+  const cleanScale  = scale && scale !== 'None' ? scale : null
+  const cleanExcl   = exclusiveTo && exclusiveTo !== 'None' && exclusiveTo !== '' ? exclusiveTo : null
+  const multiPack   = packSize > 1
+
+  const intro = [
+    `${name} is an action figure by ${brand}`,
+    cleanScale ? ` in the ${cleanScale} scale` : '',
+    `, part of the ${line} line`,
+    seriesNum  ? ` (Series ${seriesNum})` : '',
+    releaseYear ? `, first released in ${releaseYear}` : '',
+    '.',
+  ].join('')
+
+  return (
+    <details style={{
+      margin: '1.5rem 0',
+      border: '1px solid var(--fp-border)',
+      borderRadius: 10,
+      overflow: 'hidden',
+    }}>
+      <summary style={{
+        padding: '0.875rem 1.25rem',
+        cursor: 'pointer',
+        fontWeight: 700,
+        fontSize: '0.85rem',
+        background: 'var(--fp-surface-0)',
+        userSelect: 'none',
+        listStyle: 'none',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}>
+        About This Figure
+        <span style={{ fontSize: '0.75rem', color: 'var(--fp-dim)', fontWeight: 400 }}>▼</span>
+      </summary>
+
+      <div style={{ padding: '1rem 1.25rem 1.25rem', fontSize: '0.875rem', lineHeight: 1.65, color: 'var(--fp-text)', background: 'var(--fp-bg)' }}>
+        <p style={{ margin: '0 0 0.75rem' }}>{intro}</p>
+
+        {multiPack && (
+          <p style={{ margin: '0 0 0.75rem' }}>
+            This is a {packSize}-figure pack set.
+          </p>
+        )}
+
+        {cleanExcl && (
+          <p style={{ margin: '0 0 0.75rem' }}>
+            Exclusive to {cleanExcl}.
+          </p>
+        )}
+
+        {characterNotes && (
+          <p style={{ margin: '0 0 0.75rem', color: 'var(--fp-muted)' }}>{characterNotes}</p>
+        )}
+
+        {median != null && soldCount > 0 && (
+          <p style={{ margin: '0 0 0.75rem' }}>
+            <strong>Current market value:</strong> ~${median.toFixed(0)} average based on {soldCount} recent
+            eBay sold listings. Prices vary by condition — carded (MOC) figures typically command
+            a significant premium over loose figures in this line.
+          </p>
+        )}
+
+        <p style={{ margin: 0, fontSize: '0.78rem', color: 'var(--fp-dim)' }}>
+          Pricing data sourced from eBay completed listings.{' '}
+          <a href={`/${genre}`} style={{ color: 'var(--fp-accent)', textDecoration: 'none' }}>
+            Browse all {prettifySlug(genre)} figures →
+          </a>
+        </p>
+      </div>
+    </details>
+  )
+}
 
 function Chevron() {
   return <span style={{ color: 'var(--fp-border)', margin: '0 0.1rem', flexShrink: 0 }}>›</span>
@@ -386,12 +551,12 @@ function NotFoundState() {
       color: 'var(--fp-text)',
     }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--fp-font-display)', fontSize: '3rem', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>
-          404
+          <div style={{ fontFamily: 'var(--fp-font-display)', fontSize: '3rem', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>
+            404
+          </div>
+          <p style={{ color: 'var(--fp-muted)', marginBottom: '1.5rem' }}>Figure not found.</p>
+          <a href="/" style={{ color: 'var(--fp-accent)', textDecoration: 'none', fontWeight: '600' }}>← Back to search</a>
         </div>
-        <p style={{ color: 'var(--fp-muted)', marginBottom: '1.5rem' }}>Figure not found.</p>
-        <a href="/" style={{ color: 'var(--fp-accent)', textDecoration: 'none', fontWeight: '600' }}>← Back to search</a>
-      </div>
-    </main>
+      </main>
   )
 }

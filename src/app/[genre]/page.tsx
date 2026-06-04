@@ -1,138 +1,35 @@
 import type { Metadata } from 'next'
+import { seoImageUrl, composeImageSlug } from '@/app/figure/[figure_id]/_lib/imageTransform'
+import Link from 'next/link'
+import NavLogo from '@/app/_components/NavLogo'
 import { notFound } from 'next/navigation'
-import { getFiguresByFandom, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { getFiguresByFandom, figureUrl, prettyFigureUrl, SERVED_GENRE_SLUGS, type KBFigure } from '@/data/kb'
+
+const BASE = 'https://figurepinner.com'
 import AdSlot from '@/app/components/AdSlot'
 import GenreLineAccordion, { type LineData } from './_components/GenreLineAccordion'
+import GenreNewsRail from './_components/GenreNewsRail'
+import GenreFaq from './_components/GenreFaq'
+import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
+import RelatedGuides from '@/app/_components/RelatedGuides'
 
-// ── Genre config ──────────────────────────────────────────────────────────────
+// ISR — genre landing re-renders at most once per hour. Public KB-driven content,
+// no user-specific bits. Without this, every genre page hit triggered an SSR
+// D1 query (INC-014 root contributor).
+export const revalidate = 3600
 
-const GENRE_META: Record<string, {
-  label: string
-  emoji: string
-  description: string
-  accent: string       // CSS color for genre-specific accent
-  highlights: string[] // 3 notable product lines or facts
-}> = {
-  'wrestling': {
-    label: 'Wrestling',
-    emoji: '🤼',
-    description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 8,000+ figures.',
-    accent: '#e53238',
-    highlights: ['Mattel Elite', 'Jakks Pacific', 'Hasbro WWF'],
-  },
-  'marvel': {
-    label: 'Marvel',
-    emoji: '🦸',
-    description: 'Marvel Legends, Spider-Man, and Marvel action figure prices. Track Hasbro and ToyBiz values across your collection.',
-    accent: '#e23636',
-    highlights: ['Marvel Legends', 'ToyBiz Classics', 'Spider-Man'],
-  },
-  'star-wars': {
-    label: 'Star Wars',
-    emoji: '⚔️',
-    description: 'Star Wars action figure prices. Black Series, Vintage Collection, Power of the Force values with real eBay sold data.',
-    accent: '#3d7bca',
-    highlights: ['Black Series', 'Vintage Collection', 'Power of the Force'],
-  },
-  'dc': {
-    label: 'DC',
-    emoji: '🦇',
-    description: 'DC action figure prices. McFarlane, DC Direct, DC Universe Classics values with real eBay sold data.',
-    accent: '#3a6fbf',
-    highlights: ['McFarlane Toys', 'DC Universe Classics', 'DC Direct'],
-  },
-  'transformers': {
-    label: 'Transformers',
-    emoji: '🤖',
-    description: 'Transformers action figure prices. Masterpiece, Studio Series, Generations values with real eBay sold data.',
-    accent: '#c44f0e',
-    highlights: ['Masterpiece', 'Studio Series', 'Generations'],
-  },
-  'gijoe': {
-    label: 'G.I. Joe',
-    emoji: '🪖',
-    description: 'G.I. Joe action figure prices. Classified Series, vintage values with real eBay sold data.',
-    accent: '#2e7d32',
-    highlights: ['Classified Series', 'A Real American Hero', 'Sigma 6'],
-  },
-  'masters-of-the-universe': {
-    label: 'Masters of the Universe',
-    emoji: '⚡',
-    description: 'Masters of the Universe action figure prices. Origins, Masterverse, vintage MOTU values.',
-    accent: '#b8860b',
-    highlights: ['Masterverse', 'Origins', 'Vintage MOTU'],
-  },
-  'teenage-mutant-ninja-turtles': {
-    label: 'TMNT',
-    emoji: '🐢',
-    description: 'Teenage Mutant Ninja Turtles action figure prices. NECA, Playmates, Super7 values with real eBay sold data.',
-    accent: '#2e7d32',
-    highlights: ['NECA Ultimate', 'Playmates Vintage', 'Super7 ReAction'],
-  },
-  'power-rangers': {
-    label: 'Power Rangers',
-    emoji: '🦕',
-    description: 'Power Rangers action figure prices. Lightning Collection, vintage values with real eBay sold data.',
-    accent: '#d32f2f',
-    highlights: ['Lightning Collection', 'Vintage Bandai', 'Legacy'],
-  },
-  'indiana-jones': {
-    label: 'Indiana Jones',
-    emoji: '🎩',
-    description: 'Indiana Jones action figure prices. Adventure Series values with real eBay sold data.',
-    accent: '#8d6e63',
-    highlights: ['Adventure Series', 'Vintage Kenner'],
-  },
-  'ghostbusters': {
-    label: 'Ghostbusters',
-    emoji: '👻',
-    description: 'Ghostbusters action figure prices. Plasma Series, vintage values with real eBay sold data.',
-    accent: '#5e35b1',
-    highlights: ['Plasma Series', 'Kenner Real Ghostbusters', 'Afterlife'],
-  },
-  'mythic-legions': {
-    label: 'Mythic Legions',
-    emoji: '🗡️',
-    description: 'Mythic Legions action figure prices. Four Horsemen values with real eBay sold data.',
-    accent: '#7b5e3a',
-    highlights: ['Four Horsemen', 'Advent of Decay', 'Necronominus'],
-  },
-  'thundercats': {
-    label: 'Thundercats',
-    emoji: '🐱',
-    description: 'Thundercats action figure prices. Super7, LJN vintage values with real eBay sold data.',
-    accent: '#f57c00',
-    highlights: ['Super7 Ultimates', 'LJN Vintage', 'Bandai'],
-  },
-  'action-force': {
-    label: 'Action Force',
-    emoji: '🎖️',
-    description: 'Action Force action figure prices. Values with real eBay sold data.',
-    accent: '#455a64',
-    highlights: ['Action Force'],
-  },
-  'dungeons-dragons': {
-    label: 'Dungeons & Dragons',
-    emoji: '🐉',
-    description: 'Dungeons & Dragons action figure prices. Golden Archive, vintage values with real eBay sold data.',
-    accent: '#6a1b9a',
-    highlights: ['Golden Archive', 'LJN Vintage', 'Hasbro'],
-  },
-  'neca': {
-    label: 'Horror & Film',
-    emoji: '🎬',
-    description: 'NECA Horror & Film action figure prices. Ultimate figures, vintage values with real eBay sold data.',
-    accent: '#b71c1c',
-    highlights: ['NECA Ultimate', 'Retro', 'Toony Terrors'],
-  },
-  'spawn': {
-    label: 'Spawn',
-    emoji: '🦇',
-    description: 'Spawn action figure prices. McFarlane Toys Spawn series values with real eBay sold data.',
-    accent: '#37474f',
-    highlights: ['McFarlane Series 1–35', 'Deluxe', 'Ultra-Action'],
-  },
+// generateStaticParams — required for Next.js 15 to classify this route as ISR
+// (not fully-dynamic SSR). Without this export the route is absent from the
+// prerender-manifest and the KV incremental cache never populates it, causing
+// `cache-control: private, no-store` on every request regardless of `revalidate`.
+// All 16 served genres are pre-built at deploy time; new slugs get on-demand ISR
+// via dynamicParams = true (the default).
+export function generateStaticParams() {
+  return SERVED_GENRE_SLUGS.map(genre => ({ genre }))
 }
+
+// ── Genre config (see ./_lib/genre-meta.ts) ────────────────────────────────
+import { GENRE_META } from './_lib/genre-meta'
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
@@ -143,17 +40,30 @@ export async function generateMetadata(
   const meta = GENRE_META[genre]
   if (!meta) return {}
 
+  // Pick a hero figure for OG image — first with a photo, fallback to first overall.
+  // OG generator produces 1200×630 and handles no-photo figures with a branded fallback.
+  const figures = getFiguresByFandom(genre)
+  const hero = figures.find(f => f.canonical_image_url) ?? figures[0] ?? null
+  const ogImage = hero ? `${BASE}/figure/${hero.figure_id}/opengraph-image` : undefined
+
   return {
-    title: `${meta.label} Action Figure Prices | FigurePinner`,
+    title: `${meta.label} Action Figure Prices`,
     description: meta.description,
     alternates: {
-      canonical: `https://figurepinner.com/${genre}`,
+      canonical: `${BASE}/${genre}`,
     },
     openGraph: {
-      title: `${meta.label} Action Figure Prices | FigurePinner`,
+      title: `${meta.label} Action Figure Prices`,
       description: meta.description,
-      url: `https://figurepinner.com/${genre}`,
+      url: `${BASE}/${genre}`,
+      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: `${meta.label} action figures` }] }),
     },
+    ...(ogImage && {
+      twitter: {
+        card: 'summary_large_image' as const,
+        images: [ogImage],
+      },
+    }),
   }
 }
 
@@ -211,7 +121,7 @@ function buildLineData(figures: KBFigure[]): { lines: LineData[]; totalCount: nu
       name:         cardName(f),
       series:       f.release_wave ?? null,
       exclusive:    f.exclusive_to ?? null,
-      imageUrl:     f.canonical_image_url ?? null,
+      imageUrl:     f.canonical_image_url ? seoImageUrl(f.canonical_image_url, composeImageSlug({ character: f.character_canonical, line: f.product_line, series: parseInt(f.release_wave ?? '') || null, brand: f.manufacturer })) : null,
     })),
   }))
 
@@ -233,27 +143,40 @@ export default async function GenrePage(
   const { lines, totalCount: totalFigures } = buildLineData(figures)
   const totalLines = lines.length
 
-  // JSON-LD structured data
+  // JSON-LD: CollectionPage wrapping ItemList (P4 — CollectionPage enables richer SERP classification)
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
+    '@type': 'CollectionPage',
     name: `${meta.label} Action Figure Prices`,
     description: meta.description,
     url: `https://figurepinner.com/${genre}`,
-    numberOfItems: totalFigures,
-    itemListElement: lines.slice(0, 5).flatMap(line =>
-      line.figures.slice(0, 10).map((f, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        url: `https://figurepinner.com${f.canonicalUrl}`,
-        name: f.name,
-      }))
-    ),
+    mainEntity: {
+      '@type': 'ItemList',
+      name: `${meta.label} Action Figures`,
+      numberOfItems: totalFigures,
+      itemListElement: lines.slice(0, 5).flatMap((line, li) =>
+        line.figures.slice(0, 10).map((f, fi) => ({
+          '@type': 'ListItem',
+          position: li * 10 + fi + 1,
+          item: {
+            '@type': 'Product',
+            name: f.name,
+            url: `https://figurepinner.com${f.canonicalUrl}`,
+          },
+        }))
+      ),
+    },
   }
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: 'Home', url: 'https://figurepinner.com/' },
+          { name: meta.label, url: `https://figurepinner.com/${genre}` },
+        ]}
+      />
 
       {/* Genre accent color override */}
       <style>{`
@@ -262,25 +185,24 @@ export default async function GenrePage(
         @media (max-width: 640px) {
           .genre-hero-grid { grid-template-columns: 1fr !important; }
           .genre-stats-bar { flex-direction: column !important; }
+          .genre-hero-collage { display: none !important; }
         }
       `}</style>
 
       {/* Nav */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
+        background: 'var(--nav-bg-translucent)', backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--border)',
         padding: '0 1.5rem', height: '52px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
-        <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
-          FIGUREPINNER
-        </a>
+        <NavLogo />
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
+          <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--nav-text)', textDecoration: 'none' }}>Search</a>
           <a href="/pro" style={{
             padding: '5px 12px', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: '600',
-            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
+            background: 'var(--gold)', color: '#111115', textDecoration: 'none',
           }}>Try Pro</a>
         </div>
       </nav>
@@ -344,17 +266,96 @@ export default async function GenrePage(
               </a>
             </div>
           </div>
+
+          {/* Hero figure collage — top 4 imaged figures, 2×2 grid.
+              Hidden at mobile (≤640px) via .genre-hero-collage media query.
+              Server-rendered: uses the figures array already in scope. */}
+          {(() => {
+            const heroFigs = figures
+              .filter(f => f.canonical_image_url && f.canonical_image_url.startsWith('https://') && f.canonical_image_url.trim() !== 'None')
+              .slice(0, 4)
+            if (heroFigs.length < 2) return null
+            return (
+              <div className="genre-hero-collage" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', width: '202px', flexShrink: 0 }}>
+                {heroFigs.map(f => (
+                  <a
+                    key={f.figure_id}
+                    href={figureUrl(f)}
+                    style={{
+                      display: 'block', width: '98px', height: '98px',
+                      borderRadius: '8px', overflow: 'hidden',
+                      border: '1px solid var(--border)', background: 'var(--s2)',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={seoImageUrl(f.canonical_image_url!, composeImageSlug({ character: f.character_canonical, line: f.product_line, series: parseInt(f.release_wave ?? '') || null, brand: f.manufacturer }))}
+                      alt={`${f.character_canonical.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} action figure`}
+                      loading="lazy"
+                      decoding="async"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain', padding: 4 }}
+                    />
+                  </a>
+                ))}
+              </div>
+            )
+          })()}
         </div>
       </header>
 
-      {/* Ad */}
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '1.25rem 1.5rem 0' }}>
-        <AdSlot slot="leaderboard" />
-      </div>
+      {/* Genre news rail — renders nothing when no events exist */}
+      <GenreNewsRail genre={genre} />
+
+      {/* Ticket CTA — only rendered when ticketCta is configured (e.g. MOTU film) */}
+      {meta.ticketCta && (
+        <div style={{ maxWidth: '1100px', margin: '1.25rem auto 0', padding: '0 1.5rem' }}>
+          <a
+            href={meta.ticketCta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: '0.875rem 1.25rem',
+              background: 'color-mix(in srgb, var(--genre-accent) 12%, var(--s1))',
+              border: '1px solid color-mix(in srgb, var(--genre-accent) 35%, var(--border))',
+              borderRadius: '10px',
+              textDecoration: 'none',
+              gap: '1rem',
+              flexWrap: 'wrap',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              {meta.ticketCta.badge && (
+                <span style={{
+                  padding: '2px 8px', borderRadius: '100px', fontSize: '0.7rem', fontWeight: 700,
+                  background: meta.accent, color: '#fff', letterSpacing: '0.03em',
+                }}>
+                  {meta.ticketCta.badge}
+                </span>
+              )}
+              <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text)' }}>
+                {meta.ticketCta.label}
+              </span>
+            </div>
+            <span style={{
+              fontSize: '0.8125rem', fontWeight: 700, color: meta.accent,
+              whiteSpace: 'nowrap',
+            }}>
+              {meta.ticketCta.cta}
+            </span>
+          </a>
+        </div>
+      )}
 
       {/* Line accordion */}
       <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '1.5rem 1.5rem 5rem' }}>
         <GenreLineAccordion lines={lines} accent={meta.accent} genre={genre} />
+
+        {/* Ad — after content, before CTA (mirrors most-valuable + character page pattern) */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '1.25rem 0' }}>
+          <AdSlot slot="leaderboard" />
+        </div>
 
         {/* CTA */}
         <div style={{
@@ -397,6 +398,16 @@ export default async function GenrePage(
             </a>
           </div>
         </div>
+        {/* Related guides — internal linking to long-form content */}
+        <RelatedGuides
+          categorySlug={genre}
+          accent={meta.accent}
+          heading="COLLECTOR GUIDES"
+          caption="Deep dives on values, grading, and strategy."
+        />
+
+        {/* FAQ section — visible Q&A + FAQPage JSON-LD for AI engines */}
+        <GenreFaq genre={genre} accent={meta.accent} />
       </main>
 
       {/* Footer */}
