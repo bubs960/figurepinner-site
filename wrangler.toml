@@ -3,6 +3,16 @@ main = ".open-next/worker.js"
 compatibility_date = "2025-09-15"
 compatibility_flags = ["nodejs_compat", "enable_nodejs_process_v2"]
 
+# Explicit account_id bypasses the wrangler "fetch user accounts" step which
+# can fail intermittently (Cloudflare auth service blips). Added 2026-05-11 PM
+# after a failed deploy on auth code 10000 — the OAuth login was valid but the
+# account-lookup substep was the failing call.
+account_id = "9b94d79e0038f311a605168af9aaafe9"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
@@ -12,9 +22,46 @@ binding = "DB"
 database_name = "figurepinner-userdata"
 database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
 
+# Re-enabled 2026-06-04 for /deals page (ISR 1hr, D1 only queried once/hour).
+# Originally disabled 2026-05-11 (INC-014) to isolate deploy-cascade cost driver.
+# Caching layer now ships; D1 reads are ISR-gated, not per-request.
+[[d1_databases]]
+binding = "LISTINGS_DB"
+database_name = "figurepinner-listings"
+database_id = "52555867-3526-4d7a-8fc1-ca553b499645"
+
 [[kv_namespaces]]
 binding = "PRO_KV"
 id = "e1858bb16a4f41f5b81afe8cf53519f5"  # FP_KV — shared, prefixed with "pro:"
+
+# OpenNext incremental cache binding (added 2026-05-21).
+# - Binding name is FORCED to NEXT_INC_CACHE_KV by @opennextjs/cloudflare's
+#   kv-incremental-cache module; do not rename.
+# - Points to the same namespace as PRO_KV. Cache keys are prefixed with
+#   "isr-cache" via NEXT_INC_CACHE_KV_PREFIX below, so they don't collide
+#   with the "pro:" keys PRO_KV uses.
+# - Without this binding, every route render falls through to the worker
+#   uncached (the cause of the sitewide no-cache headers). See
+#   Bridge/WEB-NIGHTTIME-SPIKE-INVESTIGATION-2026-05-20.md.
+[[kv_namespaces]]
+binding = "NEXT_INC_CACHE_KV"
+id = "e1858bb16a4f41f5b81afe8cf53519f5"  # same namespace as PRO_KV, prefixed with "isr-cache:"
+
+# OpenNext ISR background revalidation queue (added 2026-05-26).
+# Without this, stale-while-revalidate serves the stale page but the
+# background refresh throws "FatalError: Dummy queue is not implemented"
+# and the page only refreshes on the NEXT request after TTL expiry.
+# With this binding, stale pages refresh proactively in the background
+# while still serving the cached version to the user — true SWR behavior.
+# Requires: `wrangler queues create figurepinner-isr-revalidate` (one-time)
+[[queues.producers]]
+queue = "figurepinner-isr-revalidate"
+binding = "NEXT_CACHE_REVALIDATION_QUEUE"
+
+[[queues.consumers]]
+queue = "figurepinner-isr-revalidate"
+max_batch_size = 10
+max_batch_timeout = 5
 
 [[routes]]
 pattern = "figurepinner.com"
@@ -23,3 +70,94 @@ custom_domain = true
 [[routes]]
 pattern = "www.figurepinner.com"
 custom_domain = true
+
+# Non-secret vars. Secrets (RESEND_API_KEY, CLERK_SECRET_KEY,
+# STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, CLERK_WEBHOOK_SECRET)
+# are set via `wrangler secret put` and live encrypted on CF infra.
+# Anything here is committable plaintext — sender addresses, public IDs.
+[vars]
+FROM_EMAIL = "hello@figurepinner.com"
+NEXT_PUBLIC_ADSENSE_CLIENT = "ca-pub-1062337951127266"
+
+# Salt for per-IP rate-limit bucket keys. Any 16+ char string.
+# Rotating this invalidates all current rate-limit buckets (useful if a
+# scraper reverse-engineers the bucket pattern). Not a secret — safe to commit.
+# Added 2026-05-25 (was falling back to hardcoded 'fp-default-salt-rotate-me').
+RATE_LIMIT_SALT = "fp-rl-2026-figurepinner"
+
+# OpenNext incremental cache prefix (added 2026-05-21).
+# Namespaces ISR cache entries under "isr-cache:*" inside the shared PRO_KV
+# namespace so they don't collide with pro:* keys.
+NEXT_INC_CACHE_KV_PREFIX = "isr-cache"
+
+# Clerk URL config (added 2026-05-21).
+# Mirrors the Clerk dashboard Component Paths setting (Configure > Developers >
+# Paths) which was switched 2026-05-20 from Account Portal subdomain to
+# application domain. Dashboard component paths are being deprecated by Clerk
+# — code-side config is the forward-compat path. All four are public; safe to
+# commit.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL = "/sign-in"
+NEXT_PUBLIC_CLERK_SIGN_UP_URL = "/sign-up"
+NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL = "/app"
+NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL = "/app"
+
+# ── Workers AI binding ──────────────────────────────────────────────────────
+# Enables the worker to call Cloudflare-hosted vision models — CLIP for image
+# embeddings used in the KB image similarity search pipeline. Free tier
+# covers our anticipated volume; no setup required beyond enabling.
+[ai]
+binding = "AI"
+
+# ── Analytics Engine binding ────────────────────────────────────────────────
+# Free with Workers Paid. Used by /api/v1/identify-public (and any other route
+# that calls src/lib/analytics.ts) to track event counters: identify_call,
+# identify_cache_hit, identify_cache_miss, identify_gemini_ok,
+# identify_gemini_fail. The data informs the Gemini-cache-optimization decision
+# (INC-014 follow-up — added 2026-05-11). Query via the CF Analytics Engine
+# SQL API.
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "figurepinner_identify"
+
+# ── Vectorize binding (image embedding storage + nearest-neighbor search) ───
+# Stores 512-dimensional CLIP embeddings for every KB figure with a
+# canonical_image_url. Query path: compute embedding of user-uploaded photo,
+# find nearest neighbors in this index, return top candidates. Replaces the
+# Gemini API dependency for most identification calls.
+#
+# Index was created via:
+#   npx wrangler vectorize create figure-embeddings --dimensions=512 --metric=cosine
+[[vectorize]]
+binding = "FIGURE_EMBEDDINGS"
+index_name = "figure-embeddings-v2"
+
+# ── Cron binding — REMOVED 2026-05-11 PM, EXPLICIT-EMPTY FORCE 2026-05-13 PM ─
+# Was: */5 * * * * triggering /api/cron/process-jobs for IMPORT_AF411,
+# BATCH_DESCRIBE, VECTORIZE_INDEX async jobs.
+#
+# Why removed: the async_jobs table (migrations/0005_create_async_jobs.sql)
+# was never applied to figurepinner-userdata. The cron has been silently
+# erroring with SQLITE_ERROR "no such table: async_jobs" on every 5-min
+# fire — 288 invocations/day pushing errors to Sentry. The job handlers
+# (handleImportAF411, handleBatchDescribe, handleVectorizeIndex) were also
+# all stubs that returned fake progress without doing real work.
+#
+# Routes retired in same change:
+#   src/app/api/cron/process-jobs/route.ts  → 410 Gone stub
+#   src/app/api/v1/jobs/route.ts            → 410 Gone stub
+#   src/lib/asyncJobQueue.ts                → no longer imported (tree-shaken)
+#
+# Migration 0005 left in place as a historical record but inert (table
+# still doesn't exist, never will under this design).
+#
+# 2026-05-13 PM: wrangler tail captured the cron STILL firing every 5 min
+# with "Handler does not export a scheduled() function". Commenting the
+# block out doesn't clear Cloudflare's server-side cron registration —
+# need an EXPLICIT empty crons array to force the removal on next deploy.
+# That's what the [triggers] block below does. Once next deploy lands and
+# logs confirm zero cron invocations, this block can be deleted entirely.
+[triggers]
+crons = []
+#
+# If async jobs become a real product need later, design fresh with current
+# product constraints — don't revive this scaffold.
