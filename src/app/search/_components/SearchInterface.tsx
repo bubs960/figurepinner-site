@@ -74,7 +74,7 @@ export default function SearchInterface({ initialQuery }: Props) {
   const [showAllGenres, setShowAllGenres] = useState(false)
   const [focused, setFocused]         = useState(false)
   const [trackRecord, setTrackRecord] = useState<Record<string, 'idle'|'loading'|'added'|'exists'|'error'>>({})
-  const [sparklines, setSparklines]   = useState<Record<string, { points: number[]; trend: 'up'|'down'|'flat' }>>({})
+  const [sparklines, setSparklines]   = useState<Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number }>>({})
   const inputRef  = useRef<HTMLInputElement>(null)
   const debounce  = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sparklineAbort = useRef<AbortController | null>(null)
@@ -168,7 +168,7 @@ export default function SearchInterface({ initialQuery }: Props) {
     sparklineAbort.current = ctrl
     fetch(`/api/sparklines?ids=${encodeURIComponent(ids.slice(0, 48).join(','))}`, { signal: ctrl.signal })
       .then(r => r.ok ? r.json() : {})
-      .then(data => setSparklines(data as Record<string, { points: number[]; trend: 'up'|'down'|'flat' }>))
+      .then(data => setSparklines(data as Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number }>))
       .catch(e => { if (e?.name !== 'AbortError') console.warn('sparklines:', e) })
   }, [results])
 
@@ -465,7 +465,7 @@ function FigureResultCard({
 }: {
   result: SearchResult
   query: string
-  sparkline?: { points: number[]; trend: 'up' | 'down' | 'flat' }
+  sparkline?: { points: number[]; trend: 'up' | 'down' | 'flat'; median: number|null; soldCount: number }
   trackState: 'idle' | 'loading' | 'added' | 'exists' | 'error'
   onTrack: () => void
 }) {
@@ -536,10 +536,26 @@ function FigureResultCard({
           }}>
             {highlightMatch(r.name, query)}
           </div>
+
+          {/* Price — shown as soon as sparkline data loads (~90% of figures) */}
+          {sparkline?.median != null && sparkline.median > 0 && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: 3 }}>
+              <span style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--text)' }}>
+                ${sparkline.median.toFixed(0)}
+              </span>
+              <span style={{ fontSize: '0.68rem', color: 'var(--muted)' }}>
+                avg · {sparkline.soldCount} sales
+              </span>
+              {sparkline.points.length >= 2 && (
+                <Sparkline points={sparkline.points} trend={sparkline.trend} width={40} height={14} />
+              )}
+            </div>
+          )}
+
           <div style={{ fontSize: '0.72rem', color: 'var(--muted)', lineHeight: 1.4 }}>
             {r.brand} · {r.line}{r.series ? ` · Ser. ${r.series}` : ''}{r.year ? ` · ${r.year}` : ''}
           </div>
-          <div style={{ marginTop: 4, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ marginTop: 4 }}>
             <span style={{
               fontSize: '0.6rem', fontWeight: 700,
               padding: '0.1rem 0.4rem', borderRadius: '9999px',
@@ -549,9 +565,6 @@ function FigureResultCard({
             }}>
               {genre?.name ?? r.genre}
             </span>
-            {sparkline && (
-              <Sparkline points={sparkline.points} trend={sparkline.trend} width={52} height={16} />
-            )}
           </div>
         </div>
       </a>
