@@ -117,7 +117,7 @@ const STYLES = `
 .cs-root, .cs-root *, .cs-root *::before, .cs-root *::after { box-sizing: border-box; margin: 0; padding: 0; }
 .cs-root {
   --cs-bg: #09090F; --cs-surface: #111318; --cs-border: #1E2130;
-  --cs-blue: #0066FF; --cs-text: #EEEEF5; --cs-muted: #c9d0e0; --cs-dim: #9aa3b9; --cs-green: #00C870;
+  --cs-blue: #0066FF; --cs-text: #EEEEF5; --cs-muted: #c9d0e0; --cs-dim: #c9d0e0; --cs-green: #00C870;
   position: fixed; inset: 0; z-index: 9999;
   background: var(--cs-bg); color: var(--cs-text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

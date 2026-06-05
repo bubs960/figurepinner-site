@@ -12,7 +12,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useUser } from '@clerk/nextjs'
-import { matchCharacterHub } from '@/data/characterHubs'
 import Sparkline from '@/app/components/Sparkline'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -326,45 +325,6 @@ export default function SearchInterface({ initialQuery }: Props) {
 
         {filtered.length > 0 && (
           <>
-            {/* Character hub cross-link — surfaced when the query matches a
-                registered /character/[slug] page. Helps users searching by
-                character name jump to the cross-line aggregation page
-                instead of scrolling through every variant. */}
-            {(() => {
-              const charHub = matchCharacterHub(query)
-              return charHub ? (
-                <a
-                  href={`/character/${charHub.slug}`}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.875rem',
-                    background: 'rgba(0,102,255,0.08)',
-                    border: '1px solid rgba(0,102,255,0.3)',
-                    borderRadius: 12,
-                    padding: '12px 16px',
-                    marginBottom: '1rem',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                >
-                  <div style={{ fontSize: 22 }}>{charHub.emoji ?? '👤'}</div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{
-                      fontSize: 11, fontWeight: 800, letterSpacing: '.08em',
-                      textTransform: 'uppercase', color: 'var(--blue)',
-                      marginBottom: 2,
-                    }}>
-                      Character Hub
-                    </div>
-                    <div style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }}>
-                      Browse all {charHub.displayName} variants across every line
-                    </div>
-                  </div>
-                  <div style={{ color: 'var(--blue)', fontSize: '1.1rem', fontWeight: 700 }}>→</div>
-                </a>
-              ) : null
-            })()}
 
             <div style={{
               fontSize: '0.75rem',
