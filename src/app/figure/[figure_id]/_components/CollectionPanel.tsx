@@ -101,8 +101,8 @@ export default function CollectionPanel({
         padding: '1rem',
       }}>
         <div style={{
-          fontSize: '0.6rem', fontWeight: '700', letterSpacing: '0.1em',
-          color: 'var(--fp-dim)', textTransform: 'uppercase', marginBottom: '0.75rem',
+          fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
+          color: 'var(--fp-muted)', textTransform: 'uppercase', marginBottom: '0.75rem',
         }}>
           Details
         </div>

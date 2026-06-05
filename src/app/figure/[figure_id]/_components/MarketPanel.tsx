@@ -65,12 +65,12 @@ export default function MarketPanel({ pricing, isPro: _isPro, ebaySearchUrl: _eb
         borderBottom: '1px solid var(--fp-border)',
       }}>
         <div style={{
-          fontSize: '0.68rem', fontWeight: '700', letterSpacing: '0.1em',
-          color: 'var(--fp-dim)', textTransform: 'uppercase',
+          fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
+          color: 'var(--fp-muted)', textTransform: 'uppercase',
         }}>
           Recent eBay Sales
         </div>
-        <div style={{ fontSize: '0.7rem', color: 'var(--fp-dim)' }}>
+        <div style={{ fontSize: '0.78rem', color: 'var(--fp-muted)' }}>
           {pricing.comp_count} sold
         </div>
       </div>
@@ -102,7 +102,7 @@ function AvgPill({ label, prices, color }: { label: string; prices: number[]; co
       borderRadius: 'var(--fp-radius-sm)',
     }}>
       <span style={{
-        fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.08em',
+        fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.06em',
         textTransform: 'uppercase', color,
       }}>
         {label}

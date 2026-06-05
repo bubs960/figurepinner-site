@@ -121,8 +121,8 @@ function Cell({
       display: 'flex', flexDirection: 'column', gap: '0.25rem',
     }}>
       <div style={{
-        fontSize: '0.6rem', fontWeight: '700', letterSpacing: '0.1em',
-        color: 'var(--fp-dim)', textTransform: 'uppercase',
+        fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.08em',
+        color: 'var(--fp-muted)', textTransform: 'uppercase',
       }}>
         {label}
       </div>
@@ -139,7 +139,7 @@ function Cell({
       )}
       {extra}
       {sub && (
-        <div style={{ fontSize: '0.68rem', color: 'var(--fp-dim)' }}>{sub}</div>
+        <div style={{ fontSize: '0.78rem', color: 'var(--fp-muted)' }}>{sub}</div>
       )}
     </div>
   )

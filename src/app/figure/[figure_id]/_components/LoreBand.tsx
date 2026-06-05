@@ -21,7 +21,7 @@ export default function LoreBand({ loreInput }: LoreBandProps) {
       maxWidth: '70ch',
     }}>
       <div style={{
-        fontSize: '0.6rem', fontWeight: '700', letterSpacing: '0.12em',
+        fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.1em',
         color: 'var(--fp-accent-warm)', textTransform: 'uppercase',
         marginBottom: '0.875rem',
       }}>

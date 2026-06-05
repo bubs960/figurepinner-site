@@ -29,10 +29,10 @@ export default function SellerCard({ listings }: SellerCardProps) {
           flexShrink: 0,
         }} />
         <span style={{
-          fontSize: '0.62rem',
+          fontSize: '0.78rem',
           fontWeight: 700,
-          letterSpacing: '0.1em',
-          color: 'var(--fp-dim)',
+          letterSpacing: '0.08em',
+          color: 'var(--fp-muted)',
           textTransform: 'uppercase',
         }}>
           Available In Store
@@ -43,7 +43,7 @@ export default function SellerCard({ listings }: SellerCardProps) {
           alignItems: 'center',
           gap: '0.3rem',
           marginLeft: 'auto',
-          fontSize: '0.6rem',
+          fontSize: '0.78rem',
           fontWeight: 700,
           color: '#00C870',
           letterSpacing: '0.06em',
@@ -102,7 +102,7 @@ export default function SellerCard({ listings }: SellerCardProps) {
               </span>
               {listing.badge && (
                 <span style={{
-                  fontSize: '0.6rem',
+                  fontSize: '0.78rem',
                   fontWeight: 800,
                   padding: '0.125rem 0.5rem',
                   borderRadius: '9999px',
@@ -149,7 +149,7 @@ export default function SellerCard({ listings }: SellerCardProps) {
 
               {/* Condition pill */}
               <span style={{
-                fontSize: '0.625rem',
+                fontSize: '0.78rem',
                 fontWeight: 700,
                 padding: '0.1875rem 0.5rem',
                 borderRadius: '9999px',
@@ -199,8 +199,8 @@ export default function SellerCard({ listings }: SellerCardProps) {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            fontSize: '0.68rem',
-            color: 'var(--fp-dim)',
+            fontSize: '0.78rem',
+            color: 'var(--fp-muted)',
             textDecoration: 'none',
           }}
         >

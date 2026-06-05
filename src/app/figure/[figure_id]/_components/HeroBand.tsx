@@ -101,7 +101,7 @@ export default function HeroBand({
             border: `1px solid ${rarity.color}`,
             borderRadius: 'var(--fp-radius-sm)',
             padding: '3px 10px',
-            fontSize: '0.65rem', fontWeight: '700', letterSpacing: '0.1em',
+            fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
             color: rarity.color, textTransform: 'uppercase',
           }}>
             {rarity.label}
@@ -119,7 +119,7 @@ export default function HeroBand({
             border: '1px solid rgba(91,141,239,0.3)',
             borderRadius: 'var(--fp-radius-sm)',
             padding: '3px 10px',
-            fontSize: '0.68rem', fontWeight: '700', letterSpacing: '0.08em',
+            fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
             color: 'var(--fp-accent)', textTransform: 'uppercase',
           }}>
             {brand}
@@ -132,7 +132,7 @@ export default function HeroBand({
               border: '1px solid rgba(240,160,75,0.25)',
               borderRadius: 'var(--fp-radius-sm)',
               padding: '3px 10px',
-              fontSize: '0.68rem', fontWeight: '600', letterSpacing: '0.06em',
+              fontSize: '0.78rem', fontWeight: '600', letterSpacing: '0.06em',
               color: 'var(--fp-accent-warm)',
             }}>
               {eraLabel}

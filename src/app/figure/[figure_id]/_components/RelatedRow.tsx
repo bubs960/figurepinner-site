@@ -29,12 +29,12 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--fp-acc
       }}>
         <div style={{ width: '3px', height: '1rem', background: accentColor, borderRadius: '2px', flexShrink: 0 }} />
         <span style={{
-          fontSize: '0.62rem', fontWeight: '700', letterSpacing: '0.1em',
-          color: 'var(--fp-dim)', textTransform: 'uppercase',
+          fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
+          color: 'var(--fp-muted)', textTransform: 'uppercase',
         }}>
           {label}
         </span>
-        <span style={{ fontSize: '0.68rem', color: 'var(--fp-dim)', marginLeft: 'auto' }}>
+        <span style={{ fontSize: '0.78rem', color: 'var(--fp-muted)', marginLeft: 'auto' }}>
           {figures.length} figure{figures.length !== 1 ? 's' : ''}
         </span>
       </div>
@@ -97,7 +97,7 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--fp-acc
 
             {/* Name */}
             <span style={{
-              fontSize: '0.68rem',
+              fontSize: '0.78rem',
               color: 'var(--fp-muted)',
               textAlign: 'center',
               lineHeight: '1.3',
