@@ -29,7 +29,7 @@ import { seoImageUrl, composeImageSlug } from '../_lib/imageTransform'
 import { getSellerListings } from '@/data/bubs-inventory'
 
 const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
-const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? ''
+const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? '5339147406'
 
 // ── API types ──────────────────────────────────────────────────────────────────
 
