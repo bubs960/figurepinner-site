@@ -52,9 +52,9 @@ const COPY: Record<DataQualityState, {
     label: 'No Sold Data Yet',
     caveat: 'No recent comps in our system. Search eBay sold listings directly.',
     bg: 'rgba(120, 120, 138, 0.10)',
-    fg: 'var(--fp-muted)',
+    fg: 'var(--fp-text)',
     border: 'rgba(120, 120, 138, 0.25)',
-    dot: 'var(--fp-muted)',
+    dot: 'var(--fp-text)',
   },
 }
 

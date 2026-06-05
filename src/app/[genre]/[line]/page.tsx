@@ -252,7 +252,7 @@ export default async function LineHubPage(
                   width: 56, height: 56, borderRadius: 8, flexShrink: 0,
                   background: 'var(--s1)', border: '1px solid var(--border)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '0.75rem', fontWeight: 700, color: 'var(--dim)',
+                  fontSize: '0.75rem', fontWeight: 700, color: 'var(--muted)',
                 }}>
                   +{(totalCount - sampleImages.length).toLocaleString()}
                 </div>
@@ -271,7 +271,7 @@ export default async function LineHubPage(
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 800, color: accent }}>
                   {s.value}
                 </div>
-                <div style={{ fontSize: '0.72rem', color: 'var(--dim)', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '0.72rem', color: 'var(--muted)', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   {s.label}
                 </div>
               </div>
@@ -442,7 +442,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
           {charName}
         </div>
         {variant && (
-          <div style={{ fontSize: '0.68rem', color: 'var(--dim)', marginTop: 1 }}>
+          <div style={{ fontSize: '0.68rem', color: 'var(--muted)', marginTop: 1 }}>
             {variant}
           </div>
         )}

@@ -122,7 +122,7 @@ export default function HomePage() {
           <div style={{ padding: 24, display: 'grid', gridTemplateColumns: '200px 1fr 220px', gap: 16, height: 440, overflow: 'hidden' }}>
             {/* Sidebar */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--dim)', padding: '0 12px 8px' }}>Main</div>
+              <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text)', padding: '0 12px 8px' }}>Main</div>
               <div style={{ padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 500, color: 'var(--blue)', background: 'rgba(0,102,255,0.1)', display: 'flex', alignItems: 'center', gap: 8 }}>⚡ Companion</div>
               <div style={{ padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 500, color: 'var(--orange)', background: 'rgba(255,95,0,0.08)', display: 'flex', alignItems: 'center', gap: 8 }}>
                 ★ Wantlist
@@ -130,7 +130,7 @@ export default function HomePage() {
               </div>
               <div style={{ padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 500, color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: 8 }}>▦ Vault</div>
               <div style={{ padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 500, color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: 8 }}>🏷 Deals</div>
-              <div style={{ marginTop: 12, fontSize: 10, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--dim)', padding: '0 12px 8px' }}>Discover</div>
+              <div style={{ marginTop: 12, fontSize: 10, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text)', padding: '0 12px 8px' }}>Discover</div>
               <div style={{ padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 500, color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: 8 }}>📚 Library</div>
               <div style={{ padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 500, color: 'var(--muted)', display: 'flex', alignItems: 'center', gap: 8 }}>🔍 Browse</div>
             </div>
@@ -179,7 +179,7 @@ export default function HomePage() {
             {/* Right column */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div style={{ background: 'var(--s2)', border: '1px solid var(--border)', borderRadius: 10, padding: 12 }}>
-                <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--dim)', marginBottom: 10 }}>Wantlist Progress</div>
+                <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text)', marginBottom: 10 }}>Wantlist Progress</div>
                 <WantlistRow pct={83} pctLabel="83%" color="var(--green)" name="Ultimate Edition" sub="🔥 1 away" subColor="var(--orange)" />
                 <WantlistRow pct={50} pctLabel="50%" color="var(--blue)" name="Marvel Legends Retro" sub="4/8 figures" />
                 <WantlistRow pct={17} pctLabel="17%" color="var(--orange)" name="Transformers SS86" sub="1/6 figures" noMargin />

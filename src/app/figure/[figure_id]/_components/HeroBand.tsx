@@ -142,7 +142,7 @@ export default function HeroBand({
 
         {/* Line meta */}
         <div style={{
-          fontSize: '0.8rem', color: 'var(--fp-muted)', marginBottom: '0.875rem',
+          fontSize: '0.8rem', color: 'var(--fp-text)', marginBottom: '0.875rem',
           letterSpacing: '0.02em',
         }}>
           {metaParts.join(' · ')}
@@ -161,7 +161,7 @@ export default function HeroBand({
         </h1>
 
         {/* Genre label */}
-        <div style={{ fontSize: '0.8rem', color: 'var(--fp-dim)' }}>
+        <div style={{ fontSize: '0.8rem', color: 'var(--fp-text)' }}>
           <span style={{ marginRight: '0.375rem' }}>{emoji}</span>
           {genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
         </div>

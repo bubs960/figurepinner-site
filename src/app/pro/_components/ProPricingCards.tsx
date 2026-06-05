@@ -63,7 +63,7 @@ export default function ProPricingCards() {
         <div style={{
           background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px', padding: '2rem',
         }}>
-          <div style={{ fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.1em', color: 'var(--muted)', marginBottom: '0.5rem' }}>FREE</div>
+          <div style={{ fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.1em', color: 'var(--fp-text)', marginBottom: '0.5rem' }}>FREE</div>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', letterSpacing: '0.03em', marginBottom: '0.25rem' }}>$0</div>
           <div style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '1.75rem' }}>Forever free. No card needed.</div>
           <a href="/sign-up" style={{
@@ -75,8 +75,8 @@ export default function ProPricingCards() {
           </a>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
             {FREE_FEATURES.map(f => (
-              <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--muted)' }}>
-                <CheckIcon color="var(--muted)" /> {f}
+              <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--fp-text)' }}>
+                <CheckIcon color="var(--fp-text)" /> {f}
               </div>
             ))}
           </div>
@@ -99,13 +99,13 @@ export default function ProPricingCards() {
           {billing === 'annual' ? (
             <>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', letterSpacing: '0.03em', marginBottom: '0.25rem' }}>$29.99</div>
-              <div style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '0.25rem' }}>per year — less than one figure</div>
+              <div style={{ color: 'var(--fp-text)', fontSize: '0.875rem', marginBottom: '0.25rem' }}>per year — less than one figure</div>
               <div style={{ color: 'var(--green)', fontSize: '0.8rem', fontWeight: '600', marginBottom: '1.5rem' }}>Save 37% vs monthly</div>
             </>
           ) : (
             <>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', letterSpacing: '0.03em', marginBottom: '0.25rem' }}>$3.99</div>
-              <div style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '1.5rem' }}>per month, cancel anytime</div>
+              <div style={{ color: 'var(--fp-text)', fontSize: '0.875rem', marginBottom: '1.5rem' }}>per month, cancel anytime</div>
             </>
           )}
 
@@ -115,7 +115,7 @@ export default function ProPricingCards() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
             {PRO_FEATURES.map(f => (
-              <div key={f.label} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: f.highlight ? 'var(--text)' : 'var(--muted)' }}>
+              <div key={f.label} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: f.highlight ? 'var(--text)' : 'var(--fp-text)' }}>
                 <CheckIcon color={f.highlight ? 'var(--green)' : 'var(--muted)'} /> {f.label}
               </div>
             ))}

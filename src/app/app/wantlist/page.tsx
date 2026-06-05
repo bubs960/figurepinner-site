@@ -67,7 +67,7 @@ export default function WantlistPage() {
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', letterSpacing: '0.04em', color: 'var(--text)', marginBottom: '0.25rem' }}>
             WANT LIST
           </h1>
-          <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
+          <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>
             {loading ? '—' : `${items.length} figure${items.length !== 1 ? 's' : ''} tracked`}
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function WantlistPage() {
             display: 'grid', gridTemplateColumns: '1fr 130px 36px',
             padding: '0.5rem 1rem', gap: '1rem',
             fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.08em',
-            color: 'var(--muted)', textTransform: 'uppercase',
+            color: 'var(--text)', textTransform: 'uppercase',
           }}>
             <span>Figure</span>
             <span style={{ textAlign: 'right' }}>Target Price</span>
@@ -210,7 +210,7 @@ function WantRow({
           onClick={() => { setEditing(true); setValue(String(item.target_price ?? '')) }}
           title="Click to edit target price"
           style={{
-            textAlign: 'right', color: item.target_price ? 'var(--text)' : 'var(--muted)',
+            textAlign: 'right', color: item.target_price ? 'var(--text)' : 'var(--text)',
             fontWeight: item.target_price ? '600' : '400',
             background: 'none', border: 'none', cursor: 'pointer',
             padding: '2px 0', fontSize: '0.875rem', fontFamily: 'var(--font-body)', width: '100%',

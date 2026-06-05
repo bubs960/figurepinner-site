@@ -111,7 +111,7 @@ export default function AboutPage() {
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', letterSpacing: '0.04em', color: 'var(--blue)', marginBottom: '0.25rem' }}>
                   {value}
                 </div>
-                <div style={{ fontSize: '0.8125rem', color: 'var(--muted)' }}>{label}</div>
+                <div style={{ fontSize: '0.8125rem', color: 'var(--fp-text)' }}>{label}</div>
               </div>
             ))}
           </div>
@@ -278,7 +278,7 @@ function ContactRow({
       background: 'var(--s1)', border: '1px solid var(--border)',
       borderRadius: '8px', fontSize: '0.875rem',
     }}>
-      <span style={{ color: 'var(--dim)', flexShrink: 0, width: '140px' }}>{label}</span>
+      <span style={{ color: 'var(--fp-text)', flexShrink: 0, width: '140px' }}>{label}</span>
       <a
         href={href}
         target={external ? '_blank' : undefined}

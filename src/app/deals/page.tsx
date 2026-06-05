@@ -139,10 +139,10 @@ export default async function DealsPage() {
                     }}>
                       {deal.name}
                     </div>
-                    <div style={{ fontSize: '0.72rem', color: 'var(--fp-dim)' }}>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--fp-text)' }}>
                       {prettify(deal.brand)} · {prettify(deal.line)} · {prettify(deal.fandom)}
                     </div>
-                    <div style={{ fontSize: '0.72rem', color: 'var(--fp-dim)', marginTop: 2 }}>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--fp-text)', marginTop: 2 }}>
                       {deal.cnt_recent} recent sale{deal.cnt_recent !== 1 ? 's' : ''}
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export default async function DealsPage() {
                       ${deal.avg_recent.toFixed(0)}
                     </div>
                     <div style={{
-                      fontSize: '0.72rem', color: 'var(--fp-dim)',
+                      fontSize: '0.72rem', color: 'var(--fp-text)',
                       textDecoration: 'line-through',
                     }}>
                       avg ${deal.avg_base.toFixed(0)}

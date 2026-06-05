@@ -260,7 +260,7 @@ export default function ScanPage() {
             background: 'var(--fp-surface-0)', border: '1px solid var(--fp-border)',
             borderRadius: 10, padding: '1rem', marginBottom: '1.5rem', textAlign: 'center',
           }}>
-            <div style={{ fontSize: '0.7rem', color: 'var(--fp-dim)', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.25rem' }}>
+            <div style={{ fontSize: '0.7rem', color: 'var(--fp-text)', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.25rem' }}>
               Barcode detected
             </div>
             <div style={{ fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>{upc}</div>
@@ -367,7 +367,7 @@ export default function ScanPage() {
           <form onSubmit={handleManualSubmit}>
             <div style={{
               fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em',
-              textTransform: 'uppercase', color: 'var(--fp-dim)',
+              textTransform: 'uppercase', color: 'var(--fp-text)',
               marginBottom: '0.5rem',
             }}>
               Or enter barcode manually

@@ -203,7 +203,7 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
           background: 'transparent',
           border: '1px solid var(--border)',
           borderRadius: '8px',
-          color: 'var(--muted)',
+          color: 'var(--text)',
           textDecoration: 'none',
           fontSize: '0.7rem',
           lineHeight: '1.4',

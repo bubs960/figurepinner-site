@@ -105,7 +105,7 @@ export default function GenreLineAccordion({ lines, accent, genre }: Props) {
               </span>
 
               {/* Figure count */}
-              <span style={{ fontSize: '0.75rem', color: 'var(--dim)', flexShrink: 0 }}>
+              <span style={{ fontSize: '0.75rem', color: 'var(--muted)', flexShrink: 0 }}>
                 {line.totalCount > line.figureCount
                   ? `${line.totalCount.toLocaleString()}+ figures`
                   : `${line.figureCount.toLocaleString()} figures`
@@ -250,7 +250,7 @@ function FigureCard({ figure, accent }: { figure: FigureRow; accent: string }) {
           </div>
         )}
         {figure.series && (
-          <div style={{ fontSize: '0.68rem', color: 'var(--dim)', marginTop: 1 }}>
+          <div style={{ fontSize: '0.68rem', color: 'var(--muted)', marginTop: 1 }}>
             Series {figure.series}
           </div>
         )}

@@ -66,7 +66,7 @@ export default function AlertsPage() {
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', letterSpacing: '0.04em', color: 'var(--text)', marginBottom: '0.25rem' }}>
             DEAL ALERTS
           </h1>
-          <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
+          <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>
             {loading ? '—' : `${items.length} active alert${items.length !== 1 ? 's' : ''}${!IS_PRO ? ` of ${FREE_ALERT_LIMIT} free` : ''}`}
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function AlertsPage() {
             display: 'grid', gridTemplateColumns: '1fr 110px 36px',
             padding: '0.5rem 1rem', gap: '1rem',
             fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.08em',
-            color: 'var(--muted)', textTransform: 'uppercase',
+            color: 'var(--text)', textTransform: 'uppercase',
           }}>
             <span>Figure</span>
             <span style={{ textAlign: 'right' }}>Target Price</span>
@@ -316,7 +316,7 @@ const inputStyle: React.CSSProperties = {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
-      <label style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--muted)', letterSpacing: '0.06em' }}>
+      <label style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--text)', letterSpacing: '0.06em' }}>
         {label}
       </label>
       {children}

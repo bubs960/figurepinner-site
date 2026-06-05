@@ -72,9 +72,9 @@ export default function VaultPage() {
             MY COLLECTION
           </h1>
           {loading ? (
-            <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>—</p>
+            <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>—</p>
           ) : IS_PRO ? (
-            <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
+            <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>
               {items.length} figure{items.length !== 1 ? 's' : ''} tracked
             </p>
           ) : (
@@ -163,7 +163,7 @@ export default function VaultPage() {
             display: 'grid', gridTemplateColumns: '1fr 140px 100px 36px',
             padding: '0.5rem 1rem', gap: '1rem',
             fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.08em',
-            color: 'var(--muted)', textTransform: 'uppercase',
+            color: 'var(--text)', textTransform: 'uppercase',
           }}>
             <span>Figure</span>
             <span>Condition</span>
@@ -287,7 +287,7 @@ function VaultRow({
             display: 'inline-block', padding: '2px 8px', borderRadius: '4px',
             fontSize: '0.75rem', fontWeight: '600', width: 'fit-content',
             background: item.condition === 'MOC' ? 'rgba(0,200,112,0.12)' : 'rgba(255,255,255,0.06)',
-            color: item.condition === 'MOC' ? 'var(--green)' : 'var(--muted)',
+            color: item.condition === 'MOC' ? 'var(--green)' : 'var(--text)',
             border: 'none', cursor: 'pointer',
           }}
         >
@@ -319,7 +319,7 @@ function VaultRow({
           onClick={() => { setEditingPaid(true); setPaidValue(String(item.paid ?? '')) }}
           title="Click to edit price"
           style={{
-            textAlign: 'right', color: 'var(--muted)', background: 'none', border: 'none',
+            textAlign: 'right', color: 'var(--text)', background: 'none', border: 'none',
             cursor: 'pointer', padding: '2px 0', fontSize: '0.875rem',
             fontFamily: 'var(--font-body)', width: '100%',
           }}
@@ -350,7 +350,7 @@ function SummaryCard({ label, value, highlight }: { label: string; value: string
       background: 'var(--s1)', border: `1px solid ${highlight ? 'var(--blue)' : 'var(--border)'}`,
       borderRadius: '10px', padding: '1rem 1.25rem',
     }}>
-      <div style={{ fontSize: '0.65rem', fontWeight: '700', letterSpacing: '0.1em', color: 'var(--muted)', marginBottom: '0.375rem' }}>
+      <div style={{ fontSize: '0.65rem', fontWeight: '700', letterSpacing: '0.1em', color: 'var(--text)', marginBottom: '0.375rem' }}>
         {label}
       </div>
       <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', letterSpacing: '0.02em', color: 'var(--text)' }}>

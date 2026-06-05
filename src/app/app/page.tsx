@@ -211,7 +211,7 @@ export default function AppHome() {
                       </div>
                     </div>
                   </div>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--dim)', flexShrink: 0, marginLeft: '0.5rem' }}>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--muted)', flexShrink: 0, marginLeft: '0.5rem' }}>
                     <path d="M2 6h8M6 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
@@ -303,7 +303,7 @@ function SectionHeader({ label }: { label: string }) {
       fontSize: '0.75rem',
       fontWeight: '600',
       letterSpacing: '0.08em',
-      color: 'var(--muted)',
+      color: 'var(--text)',
       textTransform: 'uppercase',
       marginBottom: '0.625rem',
     }}>

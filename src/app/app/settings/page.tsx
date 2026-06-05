@@ -222,7 +222,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
     <div style={{ marginBottom: '2.5rem' }}>
       <div style={{
         fontSize: '0.7rem', fontWeight: '700', letterSpacing: '0.1em',
-        color: 'var(--muted)', textTransform: 'uppercase', marginBottom: '0.875rem',
+        color: 'var(--text)', textTransform: 'uppercase', marginBottom: '0.875rem',
         paddingBottom: '0.5rem', borderBottom: '1px solid var(--border)',
       }}>
         {title}

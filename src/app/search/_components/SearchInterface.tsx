@@ -368,7 +368,7 @@ export default function SearchInterface({ initialQuery }: Props) {
 
             <div style={{
               fontSize: '0.75rem',
-              color: 'var(--dim)',
+              color: 'var(--muted)',
               marginBottom: '0.875rem',
               fontWeight: 500,
             }}>
@@ -397,7 +397,7 @@ export default function SearchInterface({ initialQuery }: Props) {
 
             {results.length >= 48 && (
               <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-                <p style={{ fontSize: '0.8125rem', color: 'var(--dim)' }}>
+                <p style={{ fontSize: '0.8125rem', color: 'var(--muted)' }}>
                   Showing top 48 results — try a more specific search to narrow down
                 </p>
               </div>
@@ -661,7 +661,7 @@ function EmptyState({ query }: { query: string }) {
         <div key={group.label} style={{ marginBottom: '1.5rem' }}>
           <div style={{
             fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.1em',
-            textTransform: 'uppercase', color: 'var(--dim)',
+            textTransform: 'uppercase', color: 'var(--muted)',
             marginBottom: '0.5rem', textAlign: 'center',
           }}>
             {group.label}
@@ -722,7 +722,7 @@ function IdlePrompt() {
         <div key={group.label} style={{ marginBottom: '1.75rem' }}>
           <div style={{
             fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.1em',
-            textTransform: 'uppercase', color: 'var(--dim)',
+            textTransform: 'uppercase', color: 'var(--muted)',
             marginBottom: '0.625rem', textAlign: 'center',
           }}>
             {group.label}
@@ -746,7 +746,7 @@ function IdlePrompt() {
       <div style={{ marginTop: '2.5rem', borderTop: '1px solid var(--border)', paddingTop: '2rem' }}>
         <div style={{
           fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.1em',
-          textTransform: 'uppercase', color: 'var(--dim)',
+          textTransform: 'uppercase', color: 'var(--muted)',
           marginBottom: '1rem', textAlign: 'center',
         }}>
           Or browse by genre
