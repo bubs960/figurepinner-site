@@ -429,6 +429,18 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
         {/* Zone 8 — CTA rail */}
         <CtaRail genre={genre} brand={brand} line={line} />
+
+        {/* Sell nudge — not affiliate, just UX */}
+        <div style={{ textAlign: 'center', padding: '1rem 0 0' }}>
+          <a
+            href="https://www.ebay.com/sell"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: '0.75rem', color: 'var(--fp-dim)', textDecoration: 'none' }}
+          >
+            Have one of these? Sell it on eBay →
+          </a>
+        </div>
       </main>
 
       {/* ── Footer ───────────────────────────────────────────────────────────── */}
