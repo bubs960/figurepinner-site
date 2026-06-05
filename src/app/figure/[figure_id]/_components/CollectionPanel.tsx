@@ -102,7 +102,7 @@ export default function CollectionPanel({
       }}>
         <div style={{
           fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-          color: 'var(--fp-muted)', textTransform: 'uppercase', marginBottom: '0.75rem',
+          color: 'var(--fp-text)', textTransform: 'uppercase', marginBottom: '0.75rem',
         }}>
           Details
         </div>
@@ -125,8 +125,8 @@ function Row({ label, value }: { label: string; value: string }) {
       display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
       gap: '0.5rem', fontSize: '0.8rem',
     }}>
-      <span style={{ color: 'var(--fp-dim)', flexShrink: 0 }}>{label}</span>
-      <span style={{ color: 'var(--fp-muted)', textAlign: 'right' }}>{value}</span>
+      <span style={{ color: 'var(--fp-muted)', flexShrink: 0 }}>{label}</span>
+      <span style={{ color: 'var(--fp-text)', textAlign: 'right' }}>{value}</span>
     </div>
   )
 }

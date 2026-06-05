@@ -122,7 +122,7 @@ function Cell({
     }}>
       <div style={{
         fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.08em',
-        color: 'var(--fp-muted)', textTransform: 'uppercase',
+        color: 'var(--fp-text)', textTransform: 'uppercase',
       }}>
         {label}
       </div>

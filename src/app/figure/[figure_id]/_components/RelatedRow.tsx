@@ -30,7 +30,7 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--fp-acc
         <div style={{ width: '3px', height: '1rem', background: accentColor, borderRadius: '2px', flexShrink: 0 }} />
         <span style={{
           fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-          color: 'var(--fp-muted)', textTransform: 'uppercase',
+          color: 'var(--fp-text)', textTransform: 'uppercase',
         }}>
           {label}
         </span>

@@ -66,7 +66,7 @@ export default function MarketPanel({ pricing, isPro: _isPro, ebaySearchUrl: _eb
       }}>
         <div style={{
           fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-          color: 'var(--fp-muted)', textTransform: 'uppercase',
+          color: 'var(--fp-text)', textTransform: 'uppercase',
         }}>
           Recent eBay Sales
         </div>
