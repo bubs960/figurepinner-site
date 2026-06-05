@@ -39,6 +39,27 @@ const isAllowedThroughComingSoon = createRouteMatcher([
 // Authenticated dashboard routes
 const isProtectedRoute = createRouteMatcher(['/app(.*)', '/admin(.*)'])
 
+// ──────────────────────────────────────────────────────────────────────────────
+// API NO-CACHE HEADERS
+// ──────────────────────────────────────────────────────────────────────────────
+// Scrapers from low-value geos (Vietnam, Iraq, Bangladesh, etc) were hitting
+// /api/* endpoints at high volume — see CF traffic analytics 2026-06-05.
+// CF Pages was happily edge-caching successful API responses, meaning each
+// scraper's first request populated the cache and every subsequent scraper
+// got a cheap CDN hit. Setting no-store at every CF tier forces each request
+// to go back to the worker (which can then be WAF-challenged).
+//
+// `Cache-Control` covers browsers + most CDNs.
+// `CDN-Cache-Control` is the multi-tier directive.
+// `Cloudflare-CDN-Cache-Control` is CF-specific override (wins on CF).
+function setNoCacheOnApi(): NextResponse {
+  const res = NextResponse.next()
+  res.headers.set('Cache-Control', 'private, no-store, no-cache, must-revalidate')
+  res.headers.set('CDN-Cache-Control', 'no-store')
+  res.headers.set('Cloudflare-CDN-Cache-Control', 'no-store')
+  return res
+}
+
 export default clerkMiddleware(async (auth, req) => {
   const url = req.nextUrl
 
@@ -73,6 +94,14 @@ export default clerkMiddleware(async (auth, req) => {
   // ─── Standard Clerk protection for /app/* ──────────────────────────────────
   if (isProtectedRoute(req)) {
     await auth.protect()
+  }
+
+  // ─── No-cache headers on all /api/* responses ──────────────────────────────
+  // Must come after auth/coming-soon gates so a rejected request isn't
+  // accidentally served cached. The /api/* paths in the matcher config (below)
+  // ensure this branch only fires for real API routes.
+  if (url.pathname.startsWith('/api/')) {
+    return setNoCacheOnApi()
   }
 })
 
