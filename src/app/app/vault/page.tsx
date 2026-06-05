@@ -204,7 +204,7 @@ export default function VaultPage() {
         </div>
       )}
 
-      <p style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--dim, #3A3D52)' }}>
+      <p style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--dim)' }}>
         Search for a figure and click &ldquo;Add to Collection&rdquo; from its detail page.
         Click any value to edit it inline.
       </p>

@@ -149,7 +149,7 @@ export default function SettingsPage() {
               colorInputBackground: '#111318',
               colorInputText: '#EEEEF5',
               colorText: '#EEEEF5',
-              colorTextSecondary: '#666E8A',
+              colorTextSecondary: '#c9d0e0',
               colorPrimary: '#0066FF',
               colorDanger: '#FF4444',
               borderRadius: '8px',

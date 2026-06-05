@@ -17,7 +17,7 @@ export default function NotFound() {
         <a href="/" style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: '1.25rem', letterSpacing: '0.04em', color: '#EEEEF5', textDecoration: 'none' }}>
           FIGUREPINNER
         </a>
-        <a href="/app" style={{ fontSize: '0.875rem', color: '#666E8A', textDecoration: 'none' }}>Search figures →</a>
+        <a href="/app" style={{ fontSize: '0.875rem', color: '#c9d0e0', textDecoration: 'none' }}>Search figures →</a>
       </nav>
 
       {/* Content */}
@@ -39,7 +39,7 @@ export default function NotFound() {
         <h1 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.75rem' }}>
           Figure Not Found
         </h1>
-        <p style={{ color: '#666E8A', maxWidth: '400px', marginBottom: '2.5rem', fontSize: '0.9375rem' }}>
+        <p style={{ color: '#c9d0e0', maxWidth: '400px', marginBottom: '2.5rem', fontSize: '0.9375rem' }}>
           This figure may have been retired, moved, or never existed — kind of like a Chase variant nobody admits to owning.
         </p>
 
@@ -53,14 +53,14 @@ export default function NotFound() {
           <a href="/" style={{
             padding: '10px 20px', background: '#111318', border: '1px solid #1E2130',
             borderRadius: '9999px', fontSize: '0.875rem', fontWeight: '600',
-            color: '#666E8A', textDecoration: 'none',
+            color: '#c9d0e0', textDecoration: 'none',
           }}>
             Back to Home
           </a>
         </div>
 
         <div style={{ marginTop: '3rem' }}>
-          <p style={{ fontSize: '0.75rem', color: '#3A3D52', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.875rem' }}>
+          <p style={{ fontSize: '0.75rem', color: '#9aa3b9', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.875rem' }}>
             Browse by genre
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -73,7 +73,7 @@ export default function NotFound() {
             ].map(({ label, href }) => (
               <a key={href} href={href} style={{
                 padding: '5px 12px', background: '#111318', border: '1px solid #1E2130',
-                borderRadius: '9999px', fontSize: '0.8125rem', color: '#666E8A', textDecoration: 'none',
+                borderRadius: '9999px', fontSize: '0.8125rem', color: '#c9d0e0', textDecoration: 'none',
               }}>
                 {label}
               </a>

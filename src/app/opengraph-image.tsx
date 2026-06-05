@@ -80,7 +80,7 @@ export default function OGImage() {
         <div
           style={{
             fontSize: 28,
-            color: '#666E8A',
+            color: '#c9d0e0',
             marginBottom: 48,
             letterSpacing: '0.02em',
           }}
@@ -113,7 +113,7 @@ export default function OGImage() {
               <div style={{ fontSize: 40, fontWeight: 900, color, letterSpacing: '0.04em' }}>
                 {num}
               </div>
-              <div style={{ fontSize: 16, color: '#3A3D52', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              <div style={{ fontSize: 16, color: '#9aa3b9', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 {label}
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function OGImage() {
             position: 'absolute',
             bottom: 32,
             fontSize: 18,
-            color: '#3A3D52',
+            color: '#9aa3b9',
             letterSpacing: '0.06em',
           }}
         >
