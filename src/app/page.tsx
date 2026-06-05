@@ -440,8 +440,10 @@ export default function HomePage() {
             { label: 'Chrome Extension',     href: CWS_URL },
             { label: 'Contact',              href: 'mailto:hello@figurepinner.com' },
             { label: 'Affiliate Disclosure', href: '/privacy#affiliate' },
+            { label: 'Part of GrailPulse',   href: 'https://grailpulse.com' },
           ].map(({ label, href }) => (
-            <a key={label} href={href} style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none' }}>{label}</a>
+            <a key={label} href={href} style={{ fontSize: 12, color: 'var(--muted)', textDecoration: 'none' }}
+               {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a>
           ))}
         </div>
         <div style={{ fontSize: 11, color: 'var(--dim)' }}>© 2026 Bubs960 Collectibles · FigurePinner</div>

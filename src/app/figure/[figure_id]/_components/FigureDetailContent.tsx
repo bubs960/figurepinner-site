@@ -451,7 +451,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             More {prettifySlug(genre)} figures
           </a>{' '}·{' '}
           <a href="/about"   style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>About</a>{' '}·{' '}
-          <a href="/privacy" style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>Privacy</a>
+          <a href="/privacy" style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>Privacy</a>{' '}·{' '}
+          <a href="https://grailpulse.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>Part of GrailPulse</a>
         </p>
       </footer>
 
