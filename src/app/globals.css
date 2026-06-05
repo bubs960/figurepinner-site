@@ -34,8 +34,8 @@
 
   /* --- Text --- */
   --text: #EEEEF5;      /* primary text */
-  --muted: #7B84A8;     /* secondary text — WCAG AA 5.3:1 on --bg */
-  --dim: #3A3D52;       /* tertiary/disabled */
+  --muted: #c9d0e0;     /* secondary text — high contrast, readable */
+  --dim: #9aa3b9;       /* tertiary — still passes WCAG AA, visible */
 
   /* --- Radius --- */
   --r: 10px;            /* default card radius */
