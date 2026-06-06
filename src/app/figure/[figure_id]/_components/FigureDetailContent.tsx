@@ -5,7 +5,6 @@
  * so both get the same content; canonical URL is controlled by generateMetadata.
  */
 
-import { currentUser } from '@clerk/nextjs/server'
 import { getFigureById, getFiguresByFandom, deriveName, figureUrl } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
@@ -24,7 +23,7 @@ import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? ''
+const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
 const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? ''
 
 // ── API types ──────────────────────────────────────────────────────────────────
@@ -35,6 +34,8 @@ type PriceData = {
   medianSold?: number | null
   minSold?: number | null
   maxSold?: number | null
+  p25Sold?: number | null
+  p75Sold?: number | null
   soldCount: number
   avgFS: number | null
   fsCount: number
@@ -50,27 +51,47 @@ type PriceData = {
 
 // ── Data fetching ──────────────────────────────────────────────────────────────
 
+const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
+
+type R2Snapshot = {
+  figure_id: string; avg_sold: number | null; median_sold: number | null
+  min_sold: number | null; max_sold: number | null; sold_count: number
+  avg_fs: number | null; fs_count: number; min_fs: number | null
+  recent: Array<{ price: number; title: string; condition: string; sold_date: string; listing_format: string }>
+}
+
+function _pctile(sorted: number[], p: number): number {
+  if (sorted.length === 1) return sorted[0]
+  const idx = (p / 100) * (sorted.length - 1)
+  const lo = Math.floor(idx), hi = Math.ceil(idx)
+  return lo === hi ? sorted[lo] : sorted[lo] + (sorted[hi] - sorted[lo]) * (idx - lo)
+}
+
+function _iqr(prices: number[]): { p25: number; p75: number } | null {
+  const v = prices.filter(p => p > 0)
+  if (v.length < 4) return null
+  const s = [...v].sort((a, b) => a - b)
+  return { p25: _pctile(s, 25), p75: _pctile(s, 75) }
+}
+
 export async function fetchFigurePageData(figure_id: string): Promise<{ price: PriceData | null; imageUrl: string | null }> {
-  const [priceRes, figureRes] = await Promise.all([
-    fetch(
-      `${API_BASE}/api/v1/figure-price?figureId=${encodeURIComponent(figure_id)}`,
-      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
-    ).catch(() => null),
-    fetch(
-      `${API_BASE}/api/v1/figure/${encodeURIComponent(figure_id)}`,
-      { next: { revalidate: 86400 }, signal: AbortSignal.timeout(4000) }
-    ).catch(() => null),
-  ])
-
-  const price = priceRes?.ok
-    ? await priceRes.json() as PriceData
-    : null
-
-  const figureApiData = figureRes?.ok
-    ? await figureRes.json() as { figure_id: string; canonical_image_url: string | null }
-    : null
-
-  return { price, imageUrl: figureApiData?.canonical_image_url ?? null }
+  const res = await fetch(
+    `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
+    { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+  ).catch(() => null)
+  if (!res?.ok) return { price: null, imageUrl: null }
+  const snap = await res.json() as R2Snapshot
+  const iqr = _iqr((snap.recent ?? []).map((s: { price: number }) => s.price))
+  return {
+    price: {
+      figureId: figure_id, avgSold: snap.avg_sold, medianSold: snap.median_sold,
+      minSold: snap.min_sold, maxSold: snap.max_sold,
+      p25Sold: iqr?.p25 ?? null, p75Sold: iqr?.p75 ?? null,
+      soldCount: snap.sold_count, avgFS: snap.avg_fs, fsCount: snap.fs_count,
+      minFS: snap.min_fs, soldHistory: snap.recent ?? [],
+    },
+    imageUrl: null,
+  }
 }
 
 // ── Main component ─────────────────────────────────────────────────────────────
@@ -98,9 +119,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const ebayUrl = buildEbaySearchUrl(brand, line, local.release_wave, displayName, EBAY_CAMPAIGN_ID)
 
   // ── Pro gate ────────────────────────────────────────────────────────────────
-
-  const user  = await currentUser()
-  const isPro = user?.publicMetadata?.isPro === true
 
   // ── ValueStrip props ────────────────────────────────────────────────────────
 
@@ -236,18 +254,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             {displayName}
           </span>
         </div>
-        {isPro ? (
-          <span style={{
-            padding: '5px 14px', borderRadius: 'var(--fp-radius-sm)', fontSize: '0.78rem', fontWeight: '700',
-            background: 'rgba(0,200,112,0.12)', color: '#00C870',
-            border: '1px solid rgba(0,200,112,0.3)', flexShrink: 0, marginLeft: '1rem',
-          }}>Pro ✓</span>
-        ) : (
-          <a href="/pro" style={{
-            padding: '5px 14px', borderRadius: 'var(--fp-radius-sm)', fontSize: '0.78rem', fontWeight: '700',
-            background: 'var(--fp-accent)', color: '#fff', textDecoration: 'none', flexShrink: 0, marginLeft: '1rem',
-          }}>Pro</a>
-        )}
       </nav>
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
@@ -312,7 +318,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             {hasPricing ? (
               <MarketPanel
                 pricing={marketPricing}
-                isPro={isPro}
                 ebaySearchUrl={ebayUrl}
                 figureName={displayName}
               />
@@ -335,7 +340,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               series={seriesNum}
               packSize={Number(local.pack_size) || 1}
               exclusiveTo={local.exclusive_to ?? null}
-              isPro={isPro}
             />
           </div>
         </div>

@@ -17,12 +17,11 @@ interface CollectionPanelProps {
   series: number | null
   packSize: number
   exclusiveTo: string | null
-  isPro: boolean
 }
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, compCount, scale, series, packSize, exclusiveTo, isPro,
+  median, compCount, scale, series, packSize, exclusiveTo,
 }: CollectionPanelProps) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -89,7 +88,6 @@ export default function CollectionPanel({
           brand={brand}
           line={line}
           genre={genre}
-          isPro={isPro}
         />
       </div>
 

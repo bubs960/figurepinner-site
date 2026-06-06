@@ -15,7 +15,7 @@ import { notFound } from 'next/navigation'
 import { getFiguresByLine, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 // ─── Genre config (accent colors) ─────────────────────────────────────────────
 
@@ -179,12 +179,12 @@ export default async function LineHubPage(
           maxWidth: 1100, margin: '0 auto',
           height: 52,
           display: 'flex', alignItems: 'center', gap: '0.375rem',
-          fontSize: '0.8rem', color: 'var(--dim)',
+          fontSize: '0.8rem', color: '#EEEEF5',
           overflow: 'hidden',
         }}>
           <a href="/" style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--text)', textDecoration: 'none', flexShrink: 0 }}>FP</a>
           <span style={{ opacity: 0.4, flexShrink: 0 }}>›</span>
-          <a href={`/${genre}`} style={{ color: 'var(--muted)', textDecoration: 'none', flexShrink: 0 }}>{genreName}</a>
+          <a href={`/${genre}`} style={{ color: '#EEEEF5', textDecoration: 'none', flexShrink: 0 }}>{genreName}</a>
           <span style={{ opacity: 0.4, flexShrink: 0 }}>›</span>
           <span style={{ color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{lineName}</span>
         </div>
@@ -221,7 +221,7 @@ export default async function LineHubPage(
             {lineName} Price Guide
           </h1>
 
-          <p style={{ fontSize: '1rem', color: 'var(--muted)', margin: '0 0 1.5rem', maxWidth: 540 }}>
+          <p style={{ fontSize: '1rem', color: '#EEEEF5', margin: '0 0 1.5rem', maxWidth: 540 }}>
             Real eBay sold prices for {totalCount.toLocaleString()} {lineName} figures across{' '}
             {waves.length} series. {uniqueChars} unique characters.
           </p>
@@ -252,7 +252,7 @@ export default async function LineHubPage(
                   width: 56, height: 56, borderRadius: 8, flexShrink: 0,
                   background: 'var(--s1)', border: '1px solid var(--border)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '0.75rem', fontWeight: 700, color: 'var(--muted)',
+                  fontSize: '0.75rem', fontWeight: 700, color: '#EEEEF5',
                 }}>
                   +{(totalCount - sampleImages.length).toLocaleString()}
                 </div>
@@ -271,7 +271,7 @@ export default async function LineHubPage(
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 800, color: accent }}>
                   {s.value}
                 </div>
-                <div style={{ fontSize: '0.72rem', color: 'var(--muted)', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '0.72rem', color: '#EEEEF5', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   {s.label}
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default async function LineHubPage(
                 }}>
                   {lineName} {label}
                 </h2>
-                <span style={{ fontSize: '0.72rem', color: 'var(--dim)', marginLeft: 'auto', fontWeight: 500 }}>
+                <span style={{ fontSize: '0.72rem', color: '#EEEEF5', marginLeft: 'auto', fontWeight: 500 }}>
                   {waveFigs.length} figure{waveFigs.length !== 1 ? 's' : ''}
                 </span>
               </div>
@@ -349,7 +349,7 @@ export default async function LineHubPage(
             >
               Track {lineName} Prices Free →
             </a>
-            <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: 'var(--dim)' }}>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#EEEEF5' }}>
               Chrome extension · No account required
             </p>
           </div>
@@ -358,7 +358,7 @@ export default async function LineHubPage(
         {/* Affiliate disclosure */}
         <p style={{
           marginTop: '2rem', textAlign: 'center',
-          fontSize: '0.68rem', color: 'var(--dim)',
+          fontSize: '0.68rem', color: '#EEEEF5',
         }}>
           FigurePinner may earn a commission from eBay purchases. Prices are based on recent sold listings.
         </p>
@@ -366,12 +366,12 @@ export default async function LineHubPage(
 
       {/* Footer */}
       <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: 0 }}>
+        <p style={{ fontSize: '0.75rem', color: '#EEEEF5', margin: 0 }}>
           © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href={`/${genre}`} style={{ color: 'var(--dim)', textDecoration: 'none' }}>
+          <a href={`/${genre}`} style={{ color: '#EEEEF5', textDecoration: 'none' }}>
             All {genreName} figures
           </a>{' '}·{' '}
-          <a href="/privacy" style={{ color: 'var(--dim)', textDecoration: 'none' }}>Privacy</a>
+          <a href="/privacy" style={{ color: '#EEEEF5', textDecoration: 'none' }}>Privacy</a>
         </p>
       </footer>
     </div>
@@ -442,7 +442,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
           {charName}
         </div>
         {variant && (
-          <div style={{ fontSize: '0.68rem', color: 'var(--muted)', marginTop: 1 }}>
+          <div style={{ fontSize: '0.68rem', color: '#EEEEF5', marginTop: 1 }}>
             {variant}
           </div>
         )}

@@ -8,7 +8,6 @@ type Props = {
   brand: string
   line: string
   genre: string
-  isPro?: boolean
 }
 
 type Status = 'idle' | 'loading' | 'done' | 'error'
@@ -30,7 +29,7 @@ type WarnPayload = {
   upgrade_url?: string
 }
 
-export default function FigureActions({ figure_id, name, brand, line, genre, isPro = false }: Props) {
+export default function FigureActions({ figure_id, name, brand, line, genre }: Props) {
   const [vaultStatus, setVaultStatus] = useState<Status>('idle')
   const [wantStatus, setWantStatus] = useState<Status>('idle')
   const [alertStatus, setAlertStatus] = useState<Status>('idle')
@@ -387,7 +386,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre, isP
             fontSize: '0.8rem', fontWeight: '600', cursor: 'pointer',
           }}
         >
-          🔔 Set Deal Alert{!isPro ? ' (free: 3 max)' : ''}
+          🔔 Set Deal Alert
         </button>
       )}
 

@@ -24,7 +24,6 @@ interface Pricing {
 
 interface MarketPanelProps {
   pricing: Pricing | null
-  isPro: boolean
   ebaySearchUrl: string
   figureName: string
 }
@@ -44,7 +43,7 @@ function avg(arr: number[]): number {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function MarketPanel({ pricing, isPro: _isPro, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName }: MarketPanelProps) {
+export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName }: MarketPanelProps) {
   if (!pricing || pricing.comp_count < 1) return null
 
   const comps = pricing.recent_comps

@@ -18,7 +18,7 @@ import { getFiguresByFandom, getAllFandoms, deriveName, type KBFigure } from '@/
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 const BASE = 'https://figurepinner.com'
 
