@@ -12,6 +12,7 @@
  */
 
 import { useState, useEffect } from 'react'
+import { thumb } from '@/lib/imageUrl'
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 
@@ -212,7 +213,7 @@ function FigureCard({ figure, accent }: { figure: FigureRow; accent: string }) {
       {figure.imageUrl ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={figure.imageUrl}
+          src={thumb(figure.imageUrl, 96) ?? undefined}
           alt=""
           width={36}
           height={36}

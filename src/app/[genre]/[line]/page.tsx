@@ -14,6 +14,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getFiguresByLine, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
+import { thumb } from '@/lib/imageUrl'
 
 export const dynamic = 'force-dynamic'
 
@@ -233,7 +234,7 @@ export default async function LineHubPage(
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   key={i}
-                  src={url}
+                  src={thumb(url, 120) ?? undefined}
                   alt=""
                   width={56}
                   height={56}
@@ -411,7 +412,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
       {f.canonical_image_url ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={f.canonical_image_url}
+          src={thumb(f.canonical_image_url, 96) ?? undefined}
           alt=""
           width={40}
           height={40}

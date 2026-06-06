@@ -13,6 +13,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useUser } from '@clerk/nextjs'
 import Sparkline from '@/app/components/Sparkline'
+import { thumb } from '@/lib/imageUrl'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -483,7 +484,7 @@ function FigureResultCard({
         }}>
           {r.image
             // eslint-disable-next-line @next/next/no-img-element
-            ? <img src={r.image} alt="" width={88} height={88} style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" decoding="async" />
+            ? <img src={thumb(r.image, 176) ?? undefined} alt="" width={88} height={88} style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" decoding="async" />
             : <FigurePlaceholder name={r.name} accent={accent} />
           }
         </div>

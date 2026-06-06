@@ -4,6 +4,7 @@
 // Imported by /figure/[figure_id]/page.tsx (server component).
 
 import { useState } from 'react'
+import { thumb } from '@/lib/imageUrl'
 
 const GENRE_EMOJI: Record<string, string> = {
   'wrestling':                    '🤼',
@@ -48,7 +49,7 @@ export default function FigureImage({ url, name, genre, bare }: Props) {
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={url}
+      src={thumb(url, 600) ?? url}
       alt={name}
       style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem' }}
       onError={() => setErrored(true)}
