@@ -12,7 +12,6 @@
 
 import { NextResponse, type NextRequest } from 'next/server'
 
-export const runtime = 'edge'
 
 // ── Retailer config ─────────────────────────────────────────────────────────
 

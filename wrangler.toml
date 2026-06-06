@@ -58,10 +58,10 @@ id = "e1858bb16a4f41f5b81afe8cf53519f5"  # same namespace as PRO_KV, prefixed wi
 queue = "figurepinner-isr-revalidate"
 binding = "NEXT_CACHE_REVALIDATION_QUEUE"
 
-[[queues.consumers]]
-queue = "figurepinner-isr-revalidate"
-max_batch_size = 10
-max_batch_timeout = 5
+# [[queues.consumers]]
+# queue = "figurepinner-isr-revalidate"
+# max_batch_size = 10
+# max_batch_timeout = 5
 
 [[routes]]
 pattern = "figurepinner.com"

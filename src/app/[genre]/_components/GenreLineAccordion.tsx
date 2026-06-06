@@ -41,6 +41,15 @@ interface Props {
 
 // ─── Component ─────────────────────────────────────────────────────────────────
 
+
+  // Injected hover styles for figure cards
+  const hoverStyles = `
+    .fp-fig-card { transition: background 0.15s, border-color 0.15s, transform 0.15s; }
+    .fp-fig-card:hover { background: var(--card-lift) !important; border-color: rgba(255,255,255,0.18) !important; transform: translateY(-2px); }
+    .fp-fig-card:hover img { transform: scale(1.05); }
+    .fp-fig-card img { transition: transform 0.2s; }
+    .fp-series-header { border-left: 3px solid var(--accent-color, #e53238); padding-left: 0.75rem; }
+  `
 export default function GenreLineAccordion({ lines, accent, genre }: Props) {
   const [openSlug, setOpenSlug] = useState<string>(lines[0]?.slug ?? '')
 
@@ -105,7 +114,7 @@ export default function GenreLineAccordion({ lines, accent, genre }: Props) {
               </span>
 
               {/* Figure count */}
-              <span style={{ fontSize: '0.75rem', color: 'var(--muted)', flexShrink: 0 }}>
+              <span style={{ fontSize: '0.75rem', color: '#EEEEF5', flexShrink: 0 }}>
                 {line.totalCount > line.figureCount
                   ? `${line.totalCount.toLocaleString()}+ figures`
                   : `${line.figureCount.toLocaleString()} figures`
@@ -250,7 +259,7 @@ function FigureCard({ figure, accent }: { figure: FigureRow; accent: string }) {
           </div>
         )}
         {figure.series && (
-          <div style={{ fontSize: '0.68rem', color: 'var(--muted)', marginTop: 1 }}>
+          <div style={{ fontSize: '0.68rem', color: '#EEEEF5', marginTop: 1 }}>
             Series {figure.series}
           </div>
         )}

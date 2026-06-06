@@ -113,7 +113,7 @@ export default function OGImage() {
               <div style={{ fontSize: 40, fontWeight: 900, color, letterSpacing: '0.04em' }}>
                 {num}
               </div>
-              <div style={{ fontSize: 16, color: '#c9d0e0', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              <div style={{ fontSize: 16, color: '#EEEEF5', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                 {label}
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function OGImage() {
             position: 'absolute',
             bottom: 32,
             fontSize: 18,
-            color: '#c9d0e0',
+            color: '#EEEEF5',
             letterSpacing: '0.06em',
           }}
         >

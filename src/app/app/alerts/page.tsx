@@ -25,8 +25,7 @@ type AlertItem = {
 }
 
 export default function AlertsPage() {
-  const { user, isLoaded } = useUser()
-  const IS_PRO = isLoaded ? ((user?.publicMetadata?.isPro as boolean) ?? false) : false
+  const { isLoaded } = useUser()
   const [items, setItems] = useState<AlertItem[]>([])
   const [loading, setLoading] = useState(true)
   const [deleting, setDeleting] = useState<string | null>(null)
@@ -56,8 +55,7 @@ export default function AlertsPage() {
   // Wait for Clerk to load
   if (!isLoaded) return <LoadingShimmer />
 
-  const FREE_ALERT_LIMIT = 3
-  const atFreeLimit = !IS_PRO && items.length >= FREE_ALERT_LIMIT
+  const atFreeLimit = false
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -67,13 +65,12 @@ export default function AlertsPage() {
             DEAL ALERTS
           </h1>
           <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>
-            {loading ? '—' : `${items.length} active alert${items.length !== 1 ? 's' : ''}${!IS_PRO ? ` of ${FREE_ALERT_LIMIT} free` : ''}`}
+            {loading ? '—' : `${items.length} active alert${items.length !== 1 ? 's' : ''}`}
           </p>
         </div>
         <button
           onClick={() => setShowModal(true)}
           disabled={atFreeLimit}
-          title={atFreeLimit ? `Free limit is ${FREE_ALERT_LIMIT} alerts — upgrade to Pro for unlimited` : undefined}
           style={{
             background: atFreeLimit ? 'var(--s2)' : 'var(--blue)',
             color: atFreeLimit ? 'var(--muted)' : '#fff',
@@ -87,25 +84,6 @@ export default function AlertsPage() {
         </button>
       </div>
 
-      {/* Free tier usage banner */}
-      {!IS_PRO && (
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          background: atFreeLimit ? 'rgba(0,102,255,0.08)' : 'rgba(255,184,0,0.06)',
-          border: `1px solid ${atFreeLimit ? 'rgba(0,102,255,0.25)' : 'rgba(255,184,0,0.25)'}`,
-          borderRadius: '8px', padding: '0.75rem 1rem', marginBottom: '1.25rem', gap: '1rem',
-        }}>
-          <span style={{ fontSize: '0.8rem', color: 'var(--text)' }}>
-            {atFreeLimit
-              ? `You've used all ${FREE_ALERT_LIMIT} free alerts.`
-              : `${FREE_ALERT_LIMIT - items.length} free alert${FREE_ALERT_LIMIT - items.length === 1 ? '' : 's'} remaining.`
-            }
-          </span>
-          <a href="/pro" style={{ fontSize: '0.78rem', color: 'var(--blue)', fontWeight: '700', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            Unlimited with Pro →
-          </a>
-        </div>
-      )}
 
       {loading ? (
         <LoadingState />

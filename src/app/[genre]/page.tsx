@@ -134,6 +134,26 @@ const GENRE_META: Record<string, {
   },
 }
 
+// URL slug → KB fandom slug mapping (URL slugs are pretty; KB slugs are canonical)
+const SLUG_TO_FANDOM: Record<string, string> = {
+  'teenage-mutant-ninja-turtles': 'tmnt',
+  'gijoe': 'gi-joe',
+  'marvel': 'marvel-comics',
+  'dungeons-and-dragons': 'dungeons-dragons',
+}
+
+function getFandom(slug: string): string {
+  return SLUG_TO_FANDOM[slug] ?? slug
+}
+
+
+export const revalidate = 3600
+
+export function generateStaticParams() {
+  return Object.keys(GENRE_META).map(genre => ({ genre }))
+}
+
+
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export async function generateMetadata(
@@ -227,7 +247,7 @@ export default async function GenrePage(
   const meta = GENRE_META[genre]
   if (!meta) notFound()
 
-  const figures = getFiguresByFandom(genre)
+  const figures = getFiguresByFandom(getFandom(genre))
   if (!figures.length) notFound()
 
   const { lines, totalCount: totalFigures } = buildLineData(figures)
@@ -277,7 +297,7 @@ export default async function GenrePage(
           FIGUREPINNER
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
+          <a href="/search" style={{ fontSize: '0.875rem', color: '#EEEEF5', textDecoration: 'none' }}>Search</a>
           <a href="/pro" style={{
             padding: '5px 12px', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: '600',
             background: 'var(--blue)', color: '#fff', textDecoration: 'none',
@@ -289,11 +309,11 @@ export default async function GenrePage(
       <div style={{
         maxWidth: '1100px', margin: '0 auto', padding: '0.875rem 1.5rem',
         display: 'flex', alignItems: 'center', gap: '0.375rem',
-        fontSize: '0.8125rem', color: 'var(--dim)',
+        fontSize: '0.8125rem', color: '#EEEEF5',
       }}>
-        <a href="/" style={{ color: 'var(--dim)', textDecoration: 'none' }}>Home</a>
+        <a href="/" style={{ color: '#EEEEF5', textDecoration: 'none' }}>Home</a>
         <span>›</span>
-        <span style={{ color: 'var(--muted)' }}>{meta.label}</span>
+        <span style={{ color: '#EEEEF5' }}>{meta.label}</span>
       </div>
 
       {/* Hero */}
@@ -321,7 +341,7 @@ export default async function GenrePage(
             }}>
               {meta.label.toUpperCase()} FIGURE PRICES
             </h1>
-            <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', maxWidth: '600px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '0.9375rem', color: '#EEEEF5', maxWidth: '600px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               {meta.description}
             </p>
 
@@ -375,7 +395,7 @@ export default async function GenrePage(
           <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.625rem' }}>
             TRACK YOUR {meta.label.toUpperCase()} COLLECTION
           </h3>
-          <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginBottom: '1.5rem', maxWidth: '460px', margin: '0 auto 1.5rem' }}>
+          <p style={{ fontSize: '0.9rem', color: '#EEEEF5', marginBottom: '1.5rem', maxWidth: '460px', margin: '0 auto 1.5rem' }}>
             Search real eBay sold prices, set deal alerts when figures drop below your target price,
             and track your collection value with FigurePinner.
           </p>
@@ -389,7 +409,7 @@ export default async function GenrePage(
             </a>
             <a href="/pro" style={{
               display: 'inline-block', padding: '10px 22px',
-              background: 'transparent', color: 'var(--muted)',
+              background: 'transparent', color: '#EEEEF5',
               border: '1px solid var(--border)',
               borderRadius: '8px', fontWeight: '600', fontSize: '0.875rem', textDecoration: 'none',
             }}>
@@ -409,14 +429,14 @@ export default async function GenrePage(
             { href: '/dc', label: 'DC' },
             { href: '/transformers', label: 'Transformers' },
           ].map(({ href, label }) => (
-            <a key={href} href={href} style={{ fontSize: '0.75rem', color: 'var(--dim)', textDecoration: 'none' }}>{label}</a>
+            <a key={href} href={href} style={{ fontSize: '0.75rem', color: '#EEEEF5', textDecoration: 'none' }}>{label}</a>
           ))}
         </nav>
-        <p style={{ fontSize: '0.75rem', color: 'var(--dim)' }}>
+        <p style={{ fontSize: '0.75rem', color: '#EEEEF5' }}>
           © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href="/about" style={{ color: 'var(--dim)' }}>About</a> ·{' '}
-          <a href="/privacy" style={{ color: 'var(--dim)' }}>Privacy</a> ·{' '}
-          <a href="/terms" style={{ color: 'var(--dim)' }}>Terms</a>
+          <a href="/about" style={{ color: '#EEEEF5' }}>About</a> ·{' '}
+          <a href="/privacy" style={{ color: '#EEEEF5' }}>Privacy</a> ·{' '}
+          <a href="/terms" style={{ color: '#EEEEF5' }}>Terms</a>
         </p>
       </footer>
     </div>
@@ -431,7 +451,7 @@ function StatBadge({ value, label, accent }: { value: string; label: string; acc
       <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: accent }}>
         {value}
       </span>
-      <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{label}</span>
+      <span style={{ fontSize: '0.75rem', color: '#EEEEF5' }}>{label}</span>
     </div>
   )
 }

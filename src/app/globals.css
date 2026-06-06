@@ -8,7 +8,9 @@
 :root {
   /* --- Background layers --- */
   --bg: #09090F;        /* page background */
-  --s1: #111318;        /* cards, sidebar, topbar */
+  --s1: #141420;
+  --card-lift: #1a1a2e;      /* hover lift for figure cards */
+  --hero-gradient: linear-gradient(180deg, #1a0a2e 0%, #09090F 60%); /* hero bg */        /* cards, sidebar, topbar — lifted for depth */
   --s2: #181B23;        /* inputs, nested cards */
   --s3: #1F2330;        /* hover states, code blocks */
 
@@ -35,7 +37,7 @@
   /* --- Text --- */
   --text: #EEEEF5;      /* primary text */
   --muted: #EEEEF5;     /* secondary text — white, no grey on dark ever */
-  --dim: #c9d0e0;       /* tertiary — light, passes WCAG AA on dark bg */
+  --dim: #EEEEF5;       /* tertiary — white on dark, no grey ever */
 
   /* --- Radius --- */
   --r: 10px;            /* default card radius */
@@ -321,4 +323,25 @@ a:hover {
 ::-moz-selection {
   background: rgba(0, 102, 255, 0.3);
   color: var(--text);
+}
+
+/* ── Option C — Depth & hover lift ────────────────────────────────────── */
+.fp-fig-card {
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.fp-fig-card:hover {
+  background: var(--card-lift) !important;
+  border-color: rgba(255,255,255,0.18) !important;
+  transform: translateY(-2px);
+}
+.fp-fig-card img {
+  transition: transform 0.2s ease;
+}
+.fp-fig-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ── Card glow on hover ───────────────────────────────────────────────── */
+.fp-fig-card:hover {
+  box-shadow: 0 4px 24px rgba(228, 50, 56, 0.15), 0 0 0 1px rgba(228,50,56,0.2) !important;
 }

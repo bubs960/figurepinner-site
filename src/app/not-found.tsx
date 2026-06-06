@@ -30,7 +30,7 @@ export default function NotFound() {
           fontFamily: 'Bebas Neue, sans-serif',
           fontSize: 'clamp(6rem, 20vw, 12rem)',
           letterSpacing: '0.04em', lineHeight: 1,
-          color: 'var(--dim)', marginBottom: '1rem',
+          color: '#1E2130', marginBottom: '1rem',
           userSelect: 'none',
         }}>
           404
@@ -60,7 +60,7 @@ export default function NotFound() {
         </div>
 
         <div style={{ marginTop: '3rem' }}>
-          <p style={{ fontSize: '0.75rem', color: 'var(--dim)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.875rem' }}>
+          <p style={{ fontSize: '0.75rem', color: '#EEEEF5', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.875rem' }}>
             Browse by genre
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>

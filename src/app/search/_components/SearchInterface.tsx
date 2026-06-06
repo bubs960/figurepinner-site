@@ -448,7 +448,7 @@ function FigureResultCard({
         padding: '0.75rem 1rem',
         background: trackState === 'added' ? 'rgba(30,170,63,0.05)' : 'var(--s1)',
         border: `1px solid ${trackState === 'added' ? 'rgba(30,170,63,0.35)' : 'var(--border)'}`,
-        borderRadius: 10,
+        borderRadius: 16,
         transition: 'border-color 0.12s, background 0.12s',
         cursor: 'pointer',
       }}
@@ -475,15 +475,16 @@ function FigureResultCard({
       >
         {/* Thumbnail */}
         <div style={{
-          width: 64, height: 64, borderRadius: 8, flexShrink: 0,
-          background: 'var(--s2)', border: '1px solid var(--border)',
+          width: 88, height: 88, borderRadius: 14, flexShrink: 0,
+          background: r.image ? 'var(--s2)' : 'transparent',
+          border: r.image ? '1px solid var(--border)' : 'none',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          overflow: 'hidden', fontSize: '1.3rem',
+          overflow: 'hidden',
         }}>
           {r.image
             // eslint-disable-next-line @next/next/no-img-element
-            ? <img src={r.image} alt="" width={64} height={64} style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" decoding="async" />
-            : (genre?.emoji ?? '🤼')
+            ? <img src={r.image} alt="" width={88} height={88} style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" decoding="async" />
+            : <FigurePlaceholder name={r.name} accent={accent} />
           }
         </div>
 
@@ -811,6 +812,47 @@ function highlightMatch(text: string, query: string): React.ReactNode {
       ? <strong key={i} style={{ color: 'var(--gold)', fontWeight: 700 }}>{part}</strong>
       : <span key={i}>{part}</span>
   )
+}
+
+// Original branded placeholder for figures with no photo. Replaces the generic
+// genre emoji with an accent-tinted tile carrying the figure's monogram and a
+// small pin mark, so every "no image" card feels on-brand and distinct.
+function FigurePlaceholder({ name, accent }: { name: string; accent: string }) {
+  const initials = figureMonogram(name)
+  const tile: React.CSSProperties = {
+    width: 88, height: 88, borderRadius: 14, flexShrink: 0,
+    position: 'relative', overflow: 'hidden',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    background: 'linear-gradient(150deg, ' + accent + ' 0%, ' + accent + '9e 100%)',
+  }
+  const sheen: React.CSSProperties = {
+    position: 'absolute', top: -14, left: -14, width: 56, height: 56,
+    borderRadius: '50%', background: '#ffffff', opacity: 0.08,
+  }
+  const mono: React.CSSProperties = {
+    fontFamily: 'var(--font-display), system-ui, sans-serif',
+    fontSize: '1.9rem', fontWeight: 800, color: '#ffffff',
+    opacity: 0.96, letterSpacing: '0.01em', lineHeight: 1,
+  }
+  const pin: React.CSSProperties = {
+    position: 'absolute', right: 7, bottom: 6,
+    fontSize: '0.7rem', color: '#ffffff', opacity: 0.8, lineHeight: 1,
+  }
+  return (
+    <div aria-label={name} style={tile}>
+      <span style={sheen} />
+      <span style={mono}>{initials}</span>
+      <span style={pin}>{'✦'}</span>
+    </div>
+  )
+}
+
+/** 1-2 letter monogram from a figure name (first letters of first two words). */
+function figureMonogram(name: string): string {
+  const words = name.replace(/[^a-zA-Z0-9 ]/g, '').split(/\s+/).filter(Boolean)
+  if (words.length === 0) return '?'
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase()
+  return (words[0][0] + words[1][0]).toUpperCase()
 }
 
 function SearchIcon() {

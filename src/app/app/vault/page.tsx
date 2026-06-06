@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useUser } from '@clerk/nextjs'
 
-const VAULT_FREE_LIMIT = 25
 
 type VaultItem = {
   id: string
@@ -73,12 +72,10 @@ export default function VaultPage() {
           </h1>
           {loading ? (
             <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>—</p>
-          ) : IS_PRO ? (
+          ) : (
             <p style={{ color: 'var(--text)', fontSize: '0.875rem' }}>
               {items.length} figure{items.length !== 1 ? 's' : ''} tracked
             </p>
-          ) : (
-            <FreeTierUsageMeter count={items.length} limit={VAULT_FREE_LIMIT} />
           )}
         </div>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
@@ -122,34 +119,6 @@ export default function VaultPage() {
         </div>
       )}
 
-      {/* Free-tier capacity indicator */}
-      {!loading && !IS_PRO && items.length >= Math.floor(VAULT_FREE_LIMIT * 0.8) && (
-        <div style={{
-          marginBottom: '1.5rem', padding: '1rem 1.25rem',
-          background: items.length >= VAULT_FREE_LIMIT ? 'rgba(255,68,68,0.06)' : 'rgba(255,184,0,0.06)',
-          border: `1px solid ${items.length >= VAULT_FREE_LIMIT ? 'rgba(255,68,68,0.3)' : 'rgba(255,184,0,0.3)'}`,
-          borderRadius: '10px',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap',
-        }}>
-          <div>
-            <div style={{ fontWeight: '600', fontSize: '0.875rem', marginBottom: '0.25rem' }}>
-              {items.length >= VAULT_FREE_LIMIT
-                ? `Vault full — ${VAULT_FREE_LIMIT}/${VAULT_FREE_LIMIT} figures`
-                : `${VAULT_FREE_LIMIT - items.length} of ${VAULT_FREE_LIMIT} vault slots remaining`}
-            </div>
-            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>
-              Upgrade to Pro for unlimited collection storage.
-            </div>
-          </div>
-          <a href="/pro" style={{
-            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.875rem',
-            fontWeight: '700', flexShrink: 0,
-          }}>
-            Upgrade to Pro
-          </a>
-        </div>
-      )}
 
       {/* Content */}
       {loading ? (
@@ -395,79 +364,3 @@ function EmptyState() {
     </div>
   )
 }
-
-// ─── Free-tier usage indicator ────────────────────────────────────────────────
-// Shows "X of N used" with a colored progress bar (green → yellow → red) and a
-// passive upsell when the user is at 80%+ of their free vault. Pro users never
-// see this — they hit the simple "X figures tracked" branch above.
-function FreeTierUsageMeter({ count, limit }: { count: number; limit: number }) {
-  const pct = Math.min(100, Math.round((count / limit) * 100))
-  const remaining = Math.max(0, limit - count)
-  const tone =
-    pct >= 100 ? 'red' :
-    pct >= 80  ? 'orange' :
-    pct >= 60  ? 'yellow' :
-                 'green'
-
-  const COLOR: Record<string, string> = {
-    green:  'var(--green)',
-    yellow: '#FFB800',
-    orange: 'var(--orange)',
-    red:    '#E53935',
-  }
-  const fillColor = COLOR[tone]
-
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, maxWidth: 360 }}>
-      <p style={{ color: 'var(--muted)', fontSize: '0.875rem', margin: 0 }}>
-        <span style={{ color: 'var(--text)', fontWeight: 600 }}>{count}</span>
-        {' of '}
-        <span style={{ color: 'var(--text)', fontWeight: 600 }}>{limit}</span>
-        {' free vault slots used'}
-        {remaining > 0 && pct < 100 && (
-          <span style={{ color: tone === 'green' ? 'var(--muted)' : fillColor, marginLeft: 6, fontWeight: 600 }}>
-            · {remaining} left
-          </span>
-        )}
-      </p>
-      <div
-        role="progressbar"
-        aria-valuenow={count}
-        aria-valuemin={0}
-        aria-valuemax={limit}
-        aria-label={`${count} of ${limit} vault slots used`}
-        style={{
-          height: 6, borderRadius: 4,
-          background: 'var(--s2)', border: '1px solid var(--border)',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          style={{
-            width: `${pct}%`,
-            height: '100%',
-            background: fillColor,
-            transition: 'width 0.4s ease, background 0.3s ease',
-          }}
-        />
-      </div>
-      {pct >= 80 && (
-        <a
-          href="/pro"
-          style={{
-            display: 'inline-flex', alignItems: 'center', gap: 6,
-            fontSize: '0.75rem', fontWeight: 600,
-            color: pct >= 100 ? '#E53935' : 'var(--orange)',
-            textDecoration: 'none',
-            marginTop: 2,
-          }}
-        >
-          {pct >= 100
-            ? 'Vault full — Upgrade to Pro for unlimited →'
-            : `Approaching limit — Upgrade to Pro →`}
-        </a>
-      )}
-    </div>
-  )
-}
-

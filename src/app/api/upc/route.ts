@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-export const runtime = 'edge'
 
 // Proxy UPCitemdb free trial — avoids CORS from browser, keeps key server-side.
 // Free tier: 100 lookups/day, no API key required.

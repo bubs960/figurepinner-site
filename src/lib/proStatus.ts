@@ -131,8 +131,8 @@ export async function isUserPro(): Promise<boolean> {
 
 /** Free-tier limits — single source of truth */
 export const FREE_LIMITS = {
-  VAULT: 25,
-  ALERTS: 3,
+  VAULT: 1_000_000,
+  ALERTS: 1_000_000,
   LIST_IT_MONTHLY: 5,
   SEARCHES_MONTHLY: 100,
 } as const

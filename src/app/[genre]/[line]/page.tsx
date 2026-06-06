@@ -15,7 +15,7 @@ import { notFound } from 'next/navigation'
 import { getFiguresByLine, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 // ─── Genre config (accent colors) ─────────────────────────────────────────────
 

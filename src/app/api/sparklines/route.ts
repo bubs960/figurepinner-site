@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const R2_PROXY = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 
-export const runtime = 'edge'
 export const revalidate = 300
 
 export async function GET(req: NextRequest) {
