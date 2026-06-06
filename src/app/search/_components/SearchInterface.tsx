@@ -126,8 +126,8 @@ export default function SearchInterface({ initialQuery }: Props) {
     try {
       const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}&limit=48`)
       if (res.ok) {
-        const data = await res.json() as { results: SearchResult[] }
-        setResults(data.results ?? [])
+        const data = await res.json() as { figures: SearchResult[] }
+        setResults(data.figures ?? [])
         setSearched(true)
         setActiveGenre(null)      // reset genre filter on new search
         setShowAllGenres(false)   // collapse genre pills on new search
@@ -669,9 +669,9 @@ function IdlePrompt() {
       maxWidth: 720, margin: '0 auto',
     }}>
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-        <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📦</div>
+        
         <p style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem' }}>
-          Search 22,000+ action figures
+          What figure are you hunting?
         </p>
         <p style={{ fontSize: '0.875rem', maxWidth: 480, margin: '0 auto' }}>
           Real eBay sold prices, every variant, every wave. Try one of these:
