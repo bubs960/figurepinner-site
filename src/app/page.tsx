@@ -1,10 +1,28 @@
 import type { Metadata } from 'next'
 import GenreTaxonomy from './_components/GenreTaxonomy'
+import { TOTAL_FIGURES_LABEL, fandomCountForUISlug, plusLabel } from '@/data/kb-stats'
 
 export const metadata: Metadata = {
-  title: 'FigurePinner — Action Figure Price Guide',
-  description: 'Real eBay sold prices for 21,906+ action figures. Know what any figure is worth before you bid, buy, or sell.',
+  title: { absolute: 'FigurePinner — Action Figure Price Guide' },
+  description: `Real sold-price data for ${TOTAL_FIGURES_LABEL} action figures. Know what any figure is worth before you bid, buy, or sell.`,
   alternates: { canonical: 'https://figurepinner.com' },
+}
+
+// Genre slugs shown on the homepage (D&D removed — see GenreTaxonomy note).
+// Counts are computed from the KB at build time so they never drift.
+const HOME_GENRE_SLUGS = [
+  'wrestling', 'marvel', 'star-wars', 'dc', 'transformers', 'gijoe',
+  'masters-of-the-universe', 'teenage-mutant-ninja-turtles', 'power-rangers',
+  'neca', 'indiana-jones', 'ghostbusters', 'mythic-legions', 'thundercats',
+  'action-force', 'spawn',
+]
+
+function genreCounts(): Record<string, string> {
+  const out: Record<string, string> = {}
+  for (const slug of HOME_GENRE_SLUGS) {
+    out[slug] = plusLabel(fandomCountForUISlug(slug))
+  }
+  return out
 }
 
 const W = '#EEEEF5'
@@ -14,6 +32,7 @@ const BORDER = 'rgba(255,255,255,0.08)'
 const RED = '#e53238'
 
 export default function HomePage() {
+  const counts = genreCounts()
   return (
     <div style={{ background: BG, minHeight: '100vh', color: W, fontFamily: 'var(--font-body, system-ui)' }}>
 
@@ -30,7 +49,7 @@ export default function HomePage() {
         </a>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           <a href="/guides" style={{ color: W, textDecoration: 'none', fontSize: '0.875rem' }}>Price Guide</a>
-          <a href="/news" style={{ color: W, textDecoration: 'none', fontSize: '0.875rem' }}>News</a>
+          {/* /news hidden from nav until it has published content (W6). Page still live at /news. */}
           <a href="/app/wantlist" style={{ color: W, textDecoration: 'none', fontSize: '0.875rem' }}>Wantlist</a>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -67,8 +86,8 @@ export default function HomePage() {
         </h1>
 
         <p style={{ fontSize: '1.1rem', color: W, lineHeight: 1.7, margin: '0 auto 1rem', maxWidth: '540px', opacity: 0.85 }}>
-          Real eBay sold prices for 21,906+ action figures across 17 genres.
-          Not estimates. Not asking prices. What figures actually sold for — yesterday.
+          Real sold-price data for {TOTAL_FIGURES_LABEL} action figures across {HOME_GENRE_SLUGS.length} genres.
+          Not estimates. Not asking prices. What figures actually sold for.
         </p>
         <p style={{ fontSize: '0.95rem', color: W, lineHeight: 1.7, margin: '0 auto 2.5rem', maxWidth: '500px', opacity: 0.65 }}>
           See how close you are to finishing a wave. Track your grails. Know before you bid.
@@ -91,7 +110,7 @@ export default function HomePage() {
       {/* VALUE PROPS — tight, no icons */}
       <section style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem 3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
         {[
-          { title: 'Real sold prices', body: 'Every number is a completed eBay sale. Median, last sold, 90-day average. No guessing.' },
+          { title: 'Real sold prices', body: 'Every number is a real comp — a completed sale. Median, recent range, and trend. No guessing.' },
           { title: 'Track your vault', body: 'Add figures to your collection. See your total value. Know how close you are to a complete wave.' },
           { title: 'Hunt smarter', body: 'Get alerts when a figure you want drops below market. Never overpay at a live show again.' },
         ].map(({ title, body }) => (
@@ -107,7 +126,7 @@ export default function HomePage() {
         <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: W, opacity: 0.4, textAlign: 'center', marginBottom: '1.5rem' }}>
           Browse by genre
         </p>
-        <GenreTaxonomy />
+        <GenreTaxonomy counts={counts} />
       </section>
 
       {/* SIGN UP CTA */}
@@ -119,15 +138,7 @@ export default function HomePage() {
         <a href="/sign-up" style={{ background: W, color: BG, padding: '0.9rem 2.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1rem' }}>Create free account →</a>
       </section>
 
-      {/* FOOTER */}
-      <footer style={{ borderTop: `1px solid ${BORDER}`, padding: '1.5rem', textAlign: 'center' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
-          {[['Price Guide', '/guides'], ['News', '/news'], ['Wantlist', '/app/wantlist'], ['About', '/about'], ['Privacy', '/privacy'], ['Terms', '/terms']].map(([label, href]) => (
-            <a key={href} href={href} style={{ color: W, textDecoration: 'none', fontSize: '0.8rem', opacity: 0.5 }}>{label}</a>
-          ))}
-        </div>
-        <p style={{ fontSize: '0.75rem', color: W, margin: 0, opacity: 0.35 }}>© 2026 Bubs960 Collectibles · FigurePinner</p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }

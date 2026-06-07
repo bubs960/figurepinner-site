@@ -1,5 +1,7 @@
 'use client'
 
+import { useUser } from '@clerk/nextjs'
+
 /**
  * AdSlot — placeholder for Google AdSense units.
  *
@@ -15,6 +17,14 @@
  *   1. Set NEXT_PUBLIC_ADSENSE_CLIENT = "ca-pub-XXXXXXXXXX" in Cloudflare env vars
  *   2. Add the AdSense <script> tag to src/app/layout.tsx
  *   3. Uncomment the <ins> block below and remove the placeholder div
+ *
+ * Pro = ad-free. This is a client component, so the host page stays ISR-cached
+ * (the Pro check runs in the browser via useUser, no server auth() call that
+ * would force the page dynamic). For Pro users we render a zero-height nothing —
+ * no ad, no reserved gap. We fail toward ad-free: while Clerk is still loading
+ * we hide the ad, so a Pro user never sees an ad flash before it's removed.
+ * (When AdSense is live, free users get a fixed-height reserved box so enabling
+ * ads doesn't cause layout shift — see the active render path below.)
  */
 
 type SlotConfig = {
@@ -39,8 +49,15 @@ type Props = {
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? ''
 
 export default function AdSlot({ slot, className }: Props) {
+  const { isLoaded, user } = useUser()
   const config = SLOT_CONFIG[slot]
   if (!config) return null
+
+  // Pro = ad-free. Hide for confirmed Pro users, AND while auth is still loading
+  // (fail toward ad-free so a Pro user never sees a flash of an ad). Signed-out
+  // and free users fall through to the normal ad/placeholder render.
+  const isPro = isLoaded && user?.publicMetadata?.isPro === true
+  if (!isLoaded || isPro) return null
 
   // AdSense not yet configured — show placeholder
   if (!ADSENSE_CLIENT || ADSENSE_CLIENT === '') {
@@ -71,16 +88,24 @@ export default function AdSlot({ slot, className }: Props) {
     )
   }
 
-  // AdSense approved — render real unit
-  // Uncomment after adding your AdSense pub ID and slot IDs above
+  // AdSense approved — render real unit.
+  // Uncomment after adding your AdSense pub ID and slot IDs above.
+  // NOTE: the <ins> is wrapped in a fixed-height box so the reserved space
+  // exists even before the ad fills — prevents layout shift (CLS) when ads load.
+  // Pro users already returned null above, so this path is free-tier only.
   /*
   return (
-    <ins
-      className={`adsbygoogle${className ? ` ${className}` : ''}`}
-      style={{ display: 'inline-block', width: config.width, height: config.height }}
-      data-ad-client={ADSENSE_CLIENT}
-      data-ad-slot={config.adSlotId}
-    />
+    <div
+      className={className}
+      style={{ width: config.width, height: config.height, maxWidth: '100%' }}
+    >
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'inline-block', width: config.width, height: config.height }}
+        data-ad-client={ADSENSE_CLIENT}
+        data-ad-slot={config.adSlotId}
+      />
+    </div>
   )
   */
 

@@ -93,7 +93,7 @@ export default function HeroSearch() {
         <SearchIcon />
         <input
           type="text"
-          placeholder="Search 20,000+ figures by name or character…"
+          placeholder="Search 18,000+ figures by name or character…"
           value={query}
           onChange={e => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && results.length && setOpen(true)}

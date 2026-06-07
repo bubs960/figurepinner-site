@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { getFiguresByFandom, getLinesByFandom } from '@/data/kb'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { ARTICLES } from './_data/articles'
 
 /**
  * /guides — Price Guide hub.
@@ -66,13 +68,13 @@ const TOTAL_FIGURES = STATS.reduce((s, g) => s + g.figures, 0)
 const TOTAL_GUIDES = STATS.reduce((s, g) => s + g.guides, 0) + GENRES.length // line guides + genre guides
 
 export const metadata: Metadata = {
-  title: 'Action Figure Price Guides — Every Genre & Line | FigurePinner',
+  title: 'Action Figure Price Guides — Every Genre & Line',
   description:
-    'Browse FigurePinner price guides across 17 genres and 100+ figure lines — wrestling, Marvel, Star Wars, Transformers and more. Real eBay sold prices for every figure.',
+    `Browse FigurePinner price guides across 16 genres and 100+ figure lines — wrestling, Marvel, Star Wars, Transformers and more. Real eBay sold prices for every figure.`,
   alternates: { canonical: 'https://figurepinner.com/guides' },
   openGraph: {
     title: 'Action Figure Price Guides | FigurePinner',
-    description: 'Every genre, every line — real eBay sold prices for 18,000+ action figures.',
+    description: `Every genre, every line — real eBay sold prices for ${TOTAL_FIGURES_LABEL} action figures.`,
     url: 'https://figurepinner.com/guides',
   },
 }
@@ -205,17 +207,42 @@ export default function GuidesPage() {
           </p>
           <a href="/search" className="btn btn-primary">Search figures →</a>
         </div>
+
+        {/* Collector Guides — editorial long-form articles */}
+        <section style={{ marginTop: '3.5rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', letterSpacing: '0.03em', color: 'var(--text)', margin: '0 0 0.5rem' }}>
+            Collector Guides
+          </h2>
+          <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: '0 0 1.25rem' }}>
+            How to price, authenticate, and collect smarter — written by collectors, backed by real sold data.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+            {ARTICLES.map((a) => (
+              <a
+                key={a.slug}
+                href={`/guides/${a.slug}`}
+                style={{
+                  display: 'block', padding: '1.25rem',
+                  background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 14,
+                  textDecoration: 'none',
+                }}
+              >
+                <div style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--fp-accent-warm)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                  Guide · {a.readingMinutes} min
+                </div>
+                <div style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text)', lineHeight: 1.3, marginBottom: '0.4rem' }}>
+                  {a.title}
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.5 }}>
+                  {a.dek}
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
       </main>
 
-      {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', color: 'var(--dim)' }}>
-          © {new Date().getFullYear()} Bubs960 Collectibles · FigurePinner ·{' '}
-          <a href="/privacy" style={{ color: 'var(--dim)' }}>Privacy</a> ·{' '}
-          <a href="/terms" style={{ color: 'var(--dim)' }}>Terms</a> ·{' '}
-          <a href="/pro" style={{ color: 'var(--dim)' }}>Pro</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }

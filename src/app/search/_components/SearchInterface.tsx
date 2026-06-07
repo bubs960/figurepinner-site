@@ -13,7 +13,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useUser } from '@clerk/nextjs'
 import Sparkline from '@/app/components/Sparkline'
-import { thumb } from '@/lib/imageUrl'
+import FigureThumb from '@/app/components/FigureThumb'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -62,9 +62,12 @@ const GENRE_MAP = Object.fromEntries(GENRES.map(g => [g.slug, g])) as Record<str
 
 interface Props {
   initialQuery: string
+  /** Build-time KB figure count label, e.g. "18,000+". Passed by the server
+   *  page so the client bundle never imports the KB. */
+  totalLabel?: string
 }
 
-export default function SearchInterface({ initialQuery }: Props) {
+export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }: Props) {
   const { isSignedIn, isLoaded } = useUser()
   const [query, setQuery]             = useState(initialQuery)
   const [results, setResults]         = useState<SearchResult[]>([])
@@ -72,6 +75,12 @@ export default function SearchInterface({ initialQuery }: Props) {
   const [searched, setSearched]       = useState(false)   // true after first fetch
   const [activeGenre, setActiveGenre] = useState<GenreSlug | null>(null)
   const [showAllGenres, setShowAllGenres] = useState(false)
+  const [activeLine, setActiveLine]   = useState<string | null>(null)   // facet: product line (prettified label)
+  const [activeBrand, setActiveBrand] = useState<string | null>(null)   // facet: manufacturer (prettified label)
+  const [sortMode, setSortMode]       = useState<'relevance' | 'az'>('relevance')
+  const [capped, setCapped]           = useState(false)                  // true when matches exceeded the API pool ceiling
+  const PAGE_SIZE = 48
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)            // load-more: how many filtered results to render
   const [focused, setFocused]         = useState(false)
   const [trackRecord, setTrackRecord] = useState<Record<string, 'idle'|'loading'|'added'|'exists'|'error'>>({})
   const [sparklines, setSparklines]   = useState<Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number }>>({})
@@ -125,13 +134,19 @@ export default function SearchInterface({ initialQuery }: Props) {
     }
     setLoading(true)
     try {
-      const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}&limit=48`)
+      // No limit param → API returns the full ranked pool (up to its ceiling);
+      // the client reveals it in PAGE_SIZE batches via the load-more button.
+      const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}`)
       if (res.ok) {
-        const data = await res.json() as { figures: SearchResult[] }
+        const data = await res.json() as { figures: SearchResult[]; total?: number; capped?: boolean }
         setResults(data.figures ?? [])
+        setCapped(Boolean(data.capped))
         setSearched(true)
-        setActiveGenre(null)      // reset genre filter on new search
-        setShowAllGenres(false)   // collapse genre pills on new search
+        setActiveGenre(null)        // reset all facets on new search
+        setActiveLine(null)
+        setActiveBrand(null)
+        setShowAllGenres(false)     // collapse genre pills on new search
+        setVisibleCount(PAGE_SIZE)  // reset pagination on new search
       }
     } catch {
       // silent fail
@@ -181,16 +196,61 @@ export default function SearchInterface({ initialQuery }: Props) {
   const visibleGenres = showAllGenres ? availableGenres : availableGenres.slice(0, GENRE_PILL_LIMIT)
   const hiddenGenreCount = availableGenres.length - GENRE_PILL_LIMIT
 
-  const filtered = activeGenre
-    ? results.filter(r => r.genre === activeGenre)
-    : results
+  // ── Facets compose left-to-right: genre → line → brand. Each facet's option
+  //    list is derived from the set already narrowed by the facets above it, so
+  //    you never see a line/brand that would yield zero results. (counts shown)
+  const afterGenre = activeGenre ? results.filter(r => r.genre === activeGenre) : results
 
-  // ── Key handler (Esc clears)
+  // Reset a downstream facet if the upstream change made it invalid.
+  useEffect(() => {
+    if (activeLine && !afterGenre.some(r => r.line === activeLine)) setActiveLine(null)
+  }, [activeGenre]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const afterLine = activeLine ? afterGenre.filter(r => r.line === activeLine) : afterGenre
+
+  useEffect(() => {
+    if (activeBrand && !afterLine.some(r => r.brand === activeBrand)) setActiveBrand(null)
+  }, [activeGenre, activeLine]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const afterBrand = activeBrand ? afterLine.filter(r => r.brand === activeBrand) : afterLine
+
+  // Sort the final set. 'relevance' keeps API order (already score-sorted);
+  // 'az' sorts by display name. Sort is non-mutating (spread first).
+  const filtered = sortMode === 'az'
+    ? [...afterBrand].sort((a, b) => a.name.localeCompare(b.name))
+    : afterBrand
+
+  // Distinct line/brand options for the facet dropdowns, with counts, ranked
+  // by frequency so the most common appear first.
+  const lineOptions = facetOptions(afterGenre, r => r.line)
+  const brandOptions = facetOptions(afterLine, r => r.brand)
+
+  // Reset pagination whenever the filtered set changes shape via a facet/sort.
+  useEffect(() => { setVisibleCount(PAGE_SIZE) }, [activeGenre, activeLine, activeBrand, sortMode])
+
+  const paged = filtered.slice(0, visibleCount)
+  const hasMore = filtered.length > visibleCount
+
+  // ── Key handler (Esc clears; Enter runs search immediately)
   function handleKey(e: React.KeyboardEvent) {
     if (e.key === 'Escape') {
       setQuery('')
       setResults([])
       setSearched(false)
+      return
+    }
+    // Enter: run the search now and stop any native form submit/navigation.
+    // (Previously Enter fell through to the form's hidden submit button; on a
+    //  type="search" input some browsers also fired a native clear, which blew
+    //  the results away and bounced the page back to the idle prompt.)
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      if (debounce.current) clearTimeout(debounce.current)
+      const trimmed = query.trim()
+      const url = trimmed ? `/search?q=${encodeURIComponent(trimmed)}` : '/search'
+      window.history.replaceState(null, '', url)
+      if (trimmed.length >= 2) runSearch(trimmed)
+      return
     }
   }
 
@@ -221,7 +281,7 @@ export default function SearchInterface({ initialQuery }: Props) {
             Search Figures
           </h1>
           <p style={{ fontSize: '0.9rem', color: 'var(--muted)', margin: 0 }}>
-            22,000+ figures across wrestling, Marvel, Star Wars, and more
+            {totalLabel} figures across wrestling, Marvel, Star Wars, and more
           </p>
         </div>
 
@@ -243,8 +303,9 @@ export default function SearchInterface({ initialQuery }: Props) {
             <SearchIcon />
             <input
               ref={inputRef}
-              type="search"
+              type="text"
               name="q"
+              autoComplete="off"
               placeholder="Search any character, brand, line, or series — try ‘macho man’ or ‘wwe elite 11’"
               value={query}
               onChange={e => setQuery(e.target.value)}
@@ -319,6 +380,58 @@ export default function SearchInterface({ initialQuery }: Props) {
           </div>
         )}
 
+        {/* ── Facet + sort row: line / brand dropdowns + A-Z toggle.
+            Only shown once there are results and there's something to refine
+            (more than one line or brand in the current set). ── */}
+        {searched && results.length > 0 && (lineOptions.length > 1 || brandOptions.length > 1) && (
+          <div style={{
+            display: 'flex',
+            gap: '0.5rem',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            marginBottom: '1.25rem',
+          }}>
+            {lineOptions.length > 1 && (
+              <FacetSelect
+                label="Line"
+                value={activeLine}
+                options={lineOptions}
+                onChange={setActiveLine}
+              />
+            )}
+            {brandOptions.length > 1 && (
+              <FacetSelect
+                label="Brand"
+                value={activeBrand}
+                options={brandOptions}
+                onChange={setActiveBrand}
+              />
+            )}
+            <div style={{ flex: 1 }} />
+            <SortToggle mode={sortMode} onChange={setSortMode} />
+            {(activeLine || activeBrand || activeGenre || sortMode !== 'relevance') && (
+              <button
+                onClick={() => {
+                  setActiveLine(null); setActiveBrand(null); setActiveGenre(null); setSortMode('relevance')
+                }}
+                style={{
+                  padding: '0.3125rem 0.75rem',
+                  borderRadius: 8,
+                  border: '1px solid var(--border)',
+                  background: 'transparent',
+                  color: 'var(--muted)',
+                  fontSize: '0.78125rem',
+                  fontWeight: 500,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Clear filters
+              </button>
+            )}
+          </div>
+        )}
+
         {/* ── Results ── */}
         {searched && !loading && filtered.length === 0 && (
           <EmptyState query={query} />
@@ -334,8 +447,10 @@ export default function SearchInterface({ initialQuery }: Props) {
               fontWeight: 500,
             }}>
               {filtered.length === results.length
-                ? `${results.length} result${results.length !== 1 ? 's' : ''} for "${query}"`
-                : `${filtered.length} of ${results.length} results · filtered to ${GENRE_MAP[activeGenre!]?.name}`
+                ? `${results.length}${capped ? '+' : ''} result${results.length !== 1 ? 's' : ''} for "${query}"`
+                : `${filtered.length} of ${results.length} results${
+                    hasMore ? ` · showing ${paged.length}` : ''
+                  }`
               }
             </div>
 
@@ -344,7 +459,7 @@ export default function SearchInterface({ initialQuery }: Props) {
               gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
               gap: '0.625rem',
             }}>
-              {filtered.map((r, i) => (
+              {paged.map((r, i) => (
                 <FigureResultCard
                 key={r.figure_id ?? i}
                 result={r}
@@ -356,10 +471,43 @@ export default function SearchInterface({ initialQuery }: Props) {
               ))}
             </div>
 
-            {results.length >= 48 && (
+            {/* ── Load more — reveals the next batch of already-fetched results.
+                Replaces the old "top 48, narrow your search" dead-end. ── */}
+            {hasMore && (
+              <div style={{ marginTop: '1.75rem', textAlign: 'center' }}>
+                <button
+                  onClick={() => setVisibleCount(c => c + PAGE_SIZE)}
+                  style={{
+                    padding: '0.625rem 1.5rem',
+                    borderRadius: 10,
+                    border: '1px solid var(--border)',
+                    background: 'var(--s1)',
+                    color: 'var(--text)',
+                    fontSize: '0.875rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    transition: 'border-color 0.12s, background 0.12s',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = 'var(--gold)'
+                    e.currentTarget.style.background = 'var(--s2)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'var(--border)'
+                    e.currentTarget.style.background = 'var(--s1)'
+                  }}
+                >
+                  Show more ({filtered.length - paged.length} more)
+                </button>
+              </div>
+            )}
+
+            {/* When the API pool itself was capped, tell the user the long tail
+                exists but they should narrow rather than expect every match. */}
+            {!hasMore && capped && (
               <div style={{ marginTop: '2rem', textAlign: 'center' }}>
                 <p style={{ fontSize: '0.8125rem', color: 'var(--muted)' }}>
-                  Showing top 48 results — try a more specific search to narrow down
+                  That&rsquo;s a lot of matches — try adding a line, brand, or series to narrow down
                 </p>
               </div>
             )}
@@ -421,6 +569,71 @@ function FilterPill({
   )
 }
 
+function FacetSelect({
+  label, value, options, onChange,
+}: {
+  label: string
+  value: string | null
+  options: Array<{ value: string; count: number }>
+  onChange: (v: string | null) => void
+}) {
+  return (
+    <label style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
+      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+        {label}
+      </span>
+      <select
+        value={value ?? ''}
+        onChange={e => onChange(e.target.value || null)}
+        aria-label={`Filter by ${label.toLowerCase()}`}
+        style={{
+          padding: '0.3125rem 0.5rem',
+          borderRadius: 8,
+          border: `1px solid ${value ? 'var(--gold)' : 'var(--border)'}`,
+          background: 'var(--s1)',
+          color: value ? 'var(--text)' : 'var(--muted)',
+          fontSize: '0.78125rem',
+          fontWeight: value ? 700 : 500,
+          fontFamily: 'var(--font-ui)',
+          cursor: 'pointer',
+          maxWidth: 200,
+        }}
+      >
+        <option value="">All {label.toLowerCase()}s</option>
+        {options.map(o => (
+          <option key={o.value} value={o.value}>{o.value} ({o.count})</option>
+        ))}
+      </select>
+    </label>
+  )
+}
+
+function SortToggle({ mode, onChange }: { mode: 'relevance' | 'az'; onChange: (m: 'relevance' | 'az') => void }) {
+  return (
+    <div style={{ display: 'inline-flex', border: '1px solid var(--border)', borderRadius: 8, overflow: 'hidden' }}>
+      {(['relevance', 'az'] as const).map(m => (
+        <button
+          key={m}
+          onClick={() => onChange(m)}
+          aria-pressed={mode === m}
+          style={{
+            padding: '0.3125rem 0.625rem',
+            border: 'none',
+            background: mode === m ? 'var(--s2)' : 'transparent',
+            color: mode === m ? 'var(--text)' : 'var(--muted)',
+            fontSize: '0.72rem',
+            fontWeight: mode === m ? 700 : 500,
+            cursor: 'pointer',
+            fontFamily: 'var(--font-ui)',
+          }}
+        >
+          {m === 'relevance' ? 'Best match' : 'A–Z'}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 function FigureResultCard({
   result: r, query, sparkline, trackState, onTrack,
 }: {
@@ -475,19 +688,7 @@ function FigureResultCard({
         }}
       >
         {/* Thumbnail */}
-        <div style={{
-          width: 88, height: 88, borderRadius: 14, flexShrink: 0,
-          background: r.image ? 'var(--s2)' : 'transparent',
-          border: r.image ? '1px solid var(--border)' : 'none',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          overflow: 'hidden',
-        }}>
-          {r.image
-            // eslint-disable-next-line @next/next/no-img-element
-            ? <img src={thumb(r.image, 176) ?? undefined} alt="" width={88} height={88} style={{ width: '100%', height: '100%', objectFit: 'contain' }} loading="lazy" decoding="async" />
-            : <FigurePlaceholder name={r.name} accent={accent} />
-          }
-        </div>
+        <FigureThumb image={r.image} size={88} radius={14} fallback={{ kind: 'monogram', name: r.name, accent }} />
 
         {/* Info */}
         <div style={{ flex: 1, minWidth: 0 }}>
@@ -786,6 +987,22 @@ function SuggestChip({ text }: { text: string }) {
 
 // ─── Utility ──────────────────────────────────────────────────────────────────
 
+/** Distinct values of a field across results, with counts, ranked by frequency. */
+function facetOptions(
+  results: SearchResult[],
+  pick: (r: SearchResult) => string | undefined,
+): Array<{ value: string; count: number }> {
+  const counts = new Map<string, number>()
+  for (const r of results) {
+    const v = pick(r)
+    if (!v) continue
+    counts.set(v, (counts.get(v) ?? 0) + 1)
+  }
+  return [...counts.entries()]
+    .map(([value, count]) => ({ value, count }))
+    .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value))
+}
+
 function highlightMatch(text: string, query: string): React.ReactNode {
   if (!query) return text
   const trimmed = query.trim()
@@ -813,47 +1030,6 @@ function highlightMatch(text: string, query: string): React.ReactNode {
       ? <strong key={i} style={{ color: 'var(--gold)', fontWeight: 700 }}>{part}</strong>
       : <span key={i}>{part}</span>
   )
-}
-
-// Original branded placeholder for figures with no photo. Replaces the generic
-// genre emoji with an accent-tinted tile carrying the figure's monogram and a
-// small pin mark, so every "no image" card feels on-brand and distinct.
-function FigurePlaceholder({ name, accent }: { name: string; accent: string }) {
-  const initials = figureMonogram(name)
-  const tile: React.CSSProperties = {
-    width: 88, height: 88, borderRadius: 14, flexShrink: 0,
-    position: 'relative', overflow: 'hidden',
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
-    background: 'linear-gradient(150deg, ' + accent + ' 0%, ' + accent + '9e 100%)',
-  }
-  const sheen: React.CSSProperties = {
-    position: 'absolute', top: -14, left: -14, width: 56, height: 56,
-    borderRadius: '50%', background: '#ffffff', opacity: 0.08,
-  }
-  const mono: React.CSSProperties = {
-    fontFamily: 'var(--font-display), system-ui, sans-serif',
-    fontSize: '1.9rem', fontWeight: 800, color: '#ffffff',
-    opacity: 0.96, letterSpacing: '0.01em', lineHeight: 1,
-  }
-  const pin: React.CSSProperties = {
-    position: 'absolute', right: 7, bottom: 6,
-    fontSize: '0.7rem', color: '#ffffff', opacity: 0.8, lineHeight: 1,
-  }
-  return (
-    <div aria-label={name} style={tile}>
-      <span style={sheen} />
-      <span style={mono}>{initials}</span>
-      <span style={pin}>{'✦'}</span>
-    </div>
-  )
-}
-
-/** 1-2 letter monogram from a figure name (first letters of first two words). */
-function figureMonogram(name: string): string {
-  const words = name.replace(/[^a-zA-Z0-9 ]/g, '').split(/\s+/).filter(Boolean)
-  if (words.length === 0) return '?'
-  if (words.length === 1) return words[0].slice(0, 2).toUpperCase()
-  return (words[0][0] + words[1][0]).toUpperCase()
 }
 
 function SearchIcon() {

@@ -129,7 +129,7 @@ export default function AppHome() {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search 20,000+ figures by name, line, or character…"
+              placeholder="Search 18,000+ figures by name, line, or character…"
               value={query}
               onChange={e => setQuery(e.target.value)}
               onFocus={() => query.length >= 2 && setOpen(true)}

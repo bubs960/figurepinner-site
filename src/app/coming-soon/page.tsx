@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FigurePinner — Action Figure Price Intelligence',
+  title: { absolute: 'FigurePinner — Action Figure Price Intelligence' },
   description:
     'Wrestling pricing data already at 96% — building the same depth across all 17 genres. Full web app launches when we hit 60% coverage across the board. Install the free Chrome extension while you wait.',
   alternates: { canonical: 'https://figurepinner.com' },

@@ -330,7 +330,7 @@ function ProGate() {
           {[
             'Email alert within minutes of price drop',
             'Unlimited alerts across all genres',
-            'Works on any figure in our 20K+ database',
+            'Works on any figure in our 18K+ database',
             'Pause or delete alerts anytime',
           ].map(f => (
             <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', fontSize: '0.875rem' }}>

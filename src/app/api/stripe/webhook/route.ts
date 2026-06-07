@@ -1,7 +1,60 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { clerkClient } from '@clerk/nextjs/server'
+import { invalidateProCache } from '@/lib/proStatus'
 
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET ?? ''
+const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY ?? ''
+
+/**
+ * Resolve the Clerk userId for an `invoice.payment_failed` event.
+ *
+ * The Invoice object does NOT carry our `metadata.userId` (we only stamp it on
+ * the Checkout Session and the Subscription at checkout — see checkout/route.ts).
+ * So we read the invoice's `subscription` id and fetch that Subscription from
+ * Stripe, which DOES carry `metadata.userId`. This is the same source of truth
+ * `customer.subscription.deleted` already relies on.
+ *
+ * Returns null (caller no-ops) if the secret/subscription/metadata is missing,
+ * rather than guessing — a missed downgrade self-heals on the next failed
+ * invoice or on subscription.deleted; a wrong downgrade would strip a paying
+ * user's Pro.
+ */
+async function resolveUserIdFromInvoice(invoice: Record<string, unknown>): Promise<string | null> {
+  // Older Stripe API versions: top-level `invoice.subscription`.
+  // Newer (2024+): `invoice.parent.subscription_details.subscription`.
+  const parent = invoice.parent as { subscription_details?: { subscription?: string } } | undefined
+  const subscriptionId =
+    (invoice.subscription as string | null | undefined) ??
+    parent?.subscription_details?.subscription ??
+    null
+  if (!subscriptionId || !STRIPE_SECRET_KEY) return null
+  try {
+    const res = await fetch(`https://api.stripe.com/v1/subscriptions/${subscriptionId}`, {
+      headers: { Authorization: `Bearer ${STRIPE_SECRET_KEY}` },
+      signal: AbortSignal.timeout(10000),
+    })
+    if (!res.ok) {
+      console.error('payment_failed: failed to fetch subscription', subscriptionId, res.status)
+      return null
+    }
+    const sub = (await res.json()) as { metadata?: Record<string, string> }
+    return sub.metadata?.userId ?? null
+  } catch (e) {
+    console.error('payment_failed: subscription lookup error', String(e))
+    return null
+  }
+}
+
+/** Set Clerk isPro and flush the KV cache so the change is live immediately. */
+async function setProStatus(userId: string, isPro: boolean, extra?: Record<string, unknown>): Promise<void> {
+  const client = await clerkClient()
+  await client.users.updateUserMetadata(userId, {
+    publicMetadata: { isPro, ...(extra ?? {}) },
+  })
+  // Without this, isUserPro() can serve a stale cached value for up to 5 min —
+  // a just-paid user hits the free wall, or a failed-payment user keeps Pro.
+  await invalidateProCache(userId)
+}
 
 /**
  * POST /api/stripe/webhook
@@ -105,26 +158,28 @@ export async function POST(req: NextRequest) {
       const userId = (obj.metadata as Record<string, string>)?.userId
       const customerId = obj.customer as string | null
       if (userId) {
-        const client = await clerkClient()
-        await client.users.updateUserMetadata(userId, {
-          publicMetadata: {
-            isPro: true,
-            ...(customerId ? { stripeCustomerId: customerId } : {}),
-          },
-        })
+        await setProStatus(userId, true, customerId ? { stripeCustomerId: customerId } : undefined)
       }
       break
     }
 
-    case 'customer.subscription.deleted':
-    case 'invoice.payment_failed': {
-      // For subscription deletion/failure, look up userId from subscription metadata
+    case 'customer.subscription.deleted': {
+      // The Subscription object carries our stamped metadata.userId directly.
       const userId = (obj.metadata as Record<string, string>)?.userId
       if (userId) {
-        const client = await clerkClient()
-        await client.users.updateUserMetadata(userId, {
-          publicMetadata: { isPro: false },
-        })
+        await setProStatus(userId, false)
+      }
+      break
+    }
+
+    case 'invoice.payment_failed': {
+      // The Invoice object does NOT carry metadata.userId — resolve it via the
+      // subscription (see helper). Reading obj.metadata.userId here was always
+      // undefined, so this downgrade silently no-op'd and failed-payment users
+      // kept Pro forever (Genta audit 2026-06-06 P1).
+      const userId = await resolveUserIdFromInvoice(obj)
+      if (userId) {
+        await setProStatus(userId, false)
       }
       break
     }

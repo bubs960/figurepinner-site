@@ -13,10 +13,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getFiguresByLine, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
-import { thumb } from '@/lib/imageUrl'
+import FigureThumb from '@/app/components/FigureThumb'
 
-export const dynamic = 'force-dynamic'
+// ISR — KB-only line hub, no user-specific data. "Fast, cacheable, crawlable"
+// (header above) requires this. Was force-dynamic; restored per Genta audit 2026-06-06 P1.
+export const revalidate = 3600
 
 // ─── Genre config (accent colors) ─────────────────────────────────────────────
 
@@ -41,10 +44,9 @@ const GENRE_ACCENT: Record<string, string> = {
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
-
-function prettifySlug(slug: string): string {
-  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-}
+// prettifySlug is imported from figureFormatters (shared, override-aware) — the
+// old local copy was removed in W2 (2026-06-06) so acronym/brand casing is
+// consistent sitewide.
 
 /** Build a display name for the line from the URL slug + first figure's data */
 function buildLineDisplayName(lineSlug: string, figures: KBFigure[]): string {
@@ -96,7 +98,7 @@ export async function generateMetadata(
   const genreName = prettifySlug(genre)
 
   return {
-    title: `${lineName} Price Guide — ${genreName} | FigurePinner`,
+    title: `${lineName} Price Guide — ${genreName}`,
     description: `${lineName} action figure prices. Track values for ${figures.length}+ ${genreName} figures with real eBay sold data on FigurePinner.`,
     openGraph: {
       title: `${lineName} Price Guide | FigurePinner`,
@@ -231,22 +233,7 @@ export default async function LineHubPage(
           {sampleImages.length > 0 && (
             <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem' }}>
               {sampleImages.map((url, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={i}
-                  src={thumb(url, 120) ?? undefined}
-                  alt=""
-                  width={56}
-                  height={56}
-                  style={{
-                    width: 56, height: 56,
-                    objectFit: 'contain',
-                    background: 'var(--s1)',
-                    border: '1px solid var(--border)',
-                    borderRadius: 8,
-                  }}
-                  loading="lazy"
-                />
+                <FigureThumb key={i} image={url} size={56} radius={8} cdnWidth={120} fallback={{ kind: 'icon', accent }} />
               ))}
               {totalCount > sampleImages.length && (
                 <div style={{
@@ -365,16 +352,7 @@ export default async function LineHubPage(
         </p>
       </main>
 
-      {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', color: '#EEEEF5', margin: 0 }}>
-          © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href={`/${genre}`} style={{ color: '#EEEEF5', textDecoration: 'none' }}>
-            All {genreName} figures
-          </a>{' '}·{' '}
-          <a href="/privacy" style={{ color: '#EEEEF5', textDecoration: 'none' }}>Privacy</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }
@@ -409,29 +387,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
       }}
     >
       {/* Thumbnail */}
-      {f.canonical_image_url ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={thumb(f.canonical_image_url, 96) ?? undefined}
-          alt=""
-          width={40}
-          height={40}
-          style={{ width: 40, height: 40, objectFit: 'contain', borderRadius: 4, flexShrink: 0, background: 'var(--s2)' }}
-          loading="lazy"
-        />
-      ) : (
-        <div style={{
-          width: 40, height: 40, borderRadius: 4, flexShrink: 0,
-          background: 'var(--s2)', border: '1px solid var(--border)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke={accent} strokeWidth="1.5" opacity="0.4">
-            <rect x="2" y="2" width="12" height="12" rx="2" />
-            <circle cx="8" cy="6" r="1.5" />
-            <path d="M4 12c0-2.2 1.8-4 4-4s4 1.8 4 4" />
-          </svg>
-        </div>
-      )}
+      <FigureThumb image={f.canonical_image_url} size={40} radius={4} cdnWidth={96} fallback={{ kind: 'icon', accent }} />
 
       {/* Info */}
       <div style={{ flex: 1, minWidth: 0 }}>

@@ -299,6 +299,20 @@ export const LINE_ATTRIBUTES: Record<string, LineAttributes> = {
     packaging_style: 'Oversized blister card',
   },
 
+  // ── AEW ─────────────────────────────────────────────────────────────────────
+
+  'aew-unrivaled': {
+    display_name: 'AEW Unrivaled Collection',
+    years: [2019, 2025],
+    era_label: 'Modern Era',
+    flavor: "Jazwares captured AEW's inaugural roster in plastic before the promotion had run its first full year — Wave 1's Cody Rhodes, Young Bucks, and Kenny Omega now command serious secondary premiums as foundational pieces of the only figure line to meaningfully compete with WWE on the collector shelf.",
+    predecessor_line_key: null,
+    successor_line_key: null,
+    peak_demand: 'high',
+    articulation_level: '22 points',
+    packaging_style: 'Blister card with character artwork',
+  },
+
   // ── Marvel Legends ───────────────────────────────────────────────────────────
 
   'marvel-legends': {

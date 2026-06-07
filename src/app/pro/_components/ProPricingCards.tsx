@@ -5,29 +5,19 @@ import ProUpgradeButton from '../../components/ProUpgradeButton'
 
 const FREE_FEATURES = [
   'Unlimited figure lookups',
-  '100 searches/month',
-  'Current median price + 30-day range',
-  '25 vault slots',
-  '3 price alerts',
-  '5 List Its per month',
-  'Show Mode (basic)',
+  'Unlimited searches',
+  'Real eBay sold prices + history',
+  'Unlimited vault',
+  'Unlimited price alerts',
+  'Full collection & P&L tracking',
+  'Chrome extension + Show Mode',
   'Community support',
 ]
 
 const PRO_FEATURES = [
-  { label: 'Everything in Free', highlight: false },
-  { label: 'Unlimited searches', highlight: true },
-  { label: '90 / 180-day price charts + trend', highlight: true },
-  { label: 'Unlimited vault', highlight: true },
-  { label: 'Unlimited price alerts', highlight: true },
-  { label: 'Unlimited List It', highlight: true },
-  { label: 'Export to CSV / Excel', highlight: true },
-  { label: 'Arbitrage alerts', highlight: true },
-  { label: '6-hour Scout refresh (vs 24h)', highlight: true },
-  { label: 'Enhanced Show Mode analytics', highlight: false },
-  { label: 'Ad-free website', highlight: false },
-  { label: 'Pro badge', highlight: false },
-  { label: 'Priority email support', highlight: false },
+  { label: 'Everything in Free — all of it', highlight: false },
+  { label: 'Export your vault to CSV / Excel', highlight: true },
+  { label: 'Ad-free browsing', highlight: true },
 ]
 
 export default function ProPricingCards() {

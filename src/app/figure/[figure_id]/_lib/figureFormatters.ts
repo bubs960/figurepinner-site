@@ -12,11 +12,106 @@ export function cleanFigureName(raw: string): string {
     .trim()
 }
 
-/** Convert a slug like "john-cena" to "John Cena" */
+/**
+ * Explicit display-name overrides for slugs that title-casing gets wrong:
+ * acronyms (LJN, NECA, TMNT, DC), branded casing (McFarlane), punctuation
+ * (G.I. Joe, 3.75"), and multi-word promotion brands (AEW, NJPW, WWE/WWF).
+ *
+ * Keys are the exact lowercase KB slug values (fandom / manufacturer /
+ * product_line). Grounded in the live KB distinct-value set (W2, 2026-06-06):
+ * 21 fandoms, 22 manufacturers, 125 product lines. Anything not listed falls
+ * through to the acronym-aware title-caser below.
+ */
+const DISPLAY_NAME_OVERRIDES: Record<string, string> = {
+  // ── fandoms ──
+  'dc': 'DC',
+  'gi-joe': 'G.I. Joe',
+  'tmnt': 'TMNT',
+  'scifi': 'Sci-Fi',
+  'aliens-predator': 'Aliens / Predator',
+  'masters-of-the-universe': 'Masters of the Universe',
+  'marvel-comics': 'Marvel',
+  'pop-culture': 'Pop Culture',
+
+  // ── manufacturers ──
+  'ljn': 'LJN',
+  'neca': 'NECA',
+  'mafex': 'MAFEX',
+  'mcfarlane': 'McFarlane',
+  'jakks-pacific': 'Jakks Pacific',
+  'toy-biz': 'Toy Biz',
+  'boss-fight-studio': 'Boss Fight Studio',
+  'four-horsemen': 'Four Horsemen',
+  'gentle-giant': 'Gentle Giant',
+  'hot-toys': 'Hot Toys',
+  'storm-collectibles': 'Storm Collectibles',
+  'super7': 'Super7',
+  'zombie-sailor': 'Zombie Sailor',
+
+  // ── product lines: acronym / branded promotions ──
+  'aew-supreme': 'AEW Supreme',
+  'aew-unmatched': 'AEW Unmatched',
+  'aew-unrivaled': 'AEW Unrivaled',
+  'njpw-ultimates': 'NJPW Ultimates',
+  'storm-collectibles-njpw': 'Storm Collectibles NJPW',
+  'mwfp-ultimates': 'MWFP Ultimates',
+  'wcw-galoob': 'WCW Galoob',
+  'wcw-toy-biz': 'WCW Toy Biz',
+  'wwe-retro': 'WWE Retro',
+  'wwe-superstars': 'WWE Superstars',
+  'wwf-hasbro': 'WWF Hasbro',
+  'ljn-wwf': 'LJN WWF',
+  'ljn-vintage': 'LJN Vintage',
+  'g1': 'G1',
+  'r3-tech': 'R3 Tech',
+  'retro-66': "Retro '66",
+  '3-75-retro-collection': '3.75" Retro Collection',
+  '3-75-walmart': '3.75" Walmart',
+  'hasbro-dnd-cartoon-classics': 'Hasbro D&D Cartoon Classics',
+  'hasbro-dnd-golden-archive': 'Hasbro D&D Golden Archive',
+  'hasbro-ghostbusters': 'Hasbro Ghostbusters',
+  'hasbro-retro-collection': 'Hasbro Retro Collection',
+  'kenner-ghostbusters': 'Kenner Ghostbusters',
+  'kenner-vintage': 'Kenner Vintage',
+  'neca-aliens': 'NECA Aliens',
+  'neca-godzilla': 'NECA Godzilla',
+  'neca-movies': 'NECA Movies',
+  'neca-predator': 'NECA Predator',
+  'neca-ultimate': 'NECA Ultimate',
+  'neca-video-games': 'NECA Video Games',
+  'dc-collectibles-batman-animated': 'DC Collectibles Batman: The Animated Series',
+  'mcfarlane-dc-direct-digital': 'McFarlane DC Direct Digital',
+  'mcfarlane-dc-page-punchers': 'McFarlane DC Page Punchers',
+  'mattel-200x': 'Mattel 200X',
+  'super7-reaction': 'Super7 ReAction',
+  'super7-ultimates': 'Super7 Ultimates',
+  'gentle-giant-diamond-select': 'Gentle Giant / Diamond Select',
+  'batman-the-animated-series': 'Batman: The Animated Series',
+}
+
+/** Words that should be fully uppercased when they appear as a standalone token. */
+const ACRONYM_TOKENS = new Set([
+  'wwe', 'wwf', 'wcw', 'aew', 'tna', 'njpw', 'roh', 'dc', 'gi', 'ljn',
+  'neca', 'mafex', 'mwfp', 'r3', 'dnd', 'nxt', 'jbl',
+])
+
+/**
+ * Convert a slug like "john-cena" to "John Cena".
+ *
+ * Resolution order:
+ *  1. exact override (handles acronyms, branded casing, punctuation)
+ *  2. acronym-aware title case (uppercases known acronym tokens, title-cases the rest)
+ *
+ * This keeps raw, mis-cased slugs ("Wwe", "Ljn", "Gi Joe") off the live site —
+ * the W2 trust fix.
+ */
 export function prettifySlug(slug: string): string {
-  return slug
+  if (!slug) return ''
+  const key = slug.toLowerCase()
+  if (DISPLAY_NAME_OVERRIDES[key]) return DISPLAY_NAME_OVERRIDES[key]
+  return key
     .split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .map(w => (ACRONYM_TOKENS.has(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
     .join(' ')
 }
 

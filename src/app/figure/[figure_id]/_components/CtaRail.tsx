@@ -44,20 +44,14 @@ export default function CtaRail({ genre, brand, line }: CtaRailProps) {
       cta: 'Sign Up Free →',
       accentVar: 'var(--fp-accent-warm)',
     },
-    {
-      label: 'Pro',
-      headline: 'Selling? Pro Is Coming.',
-      body: 'Listing automation, Whatnot show prep, title optimizer powered by 1M+ comps. For sellers.',
-      href: '/pro',
-      cta: 'Join Pro Waitlist →',
-      accentVar: 'var(--fp-accent-rare)',
-    },
+    // Pro card removed 2026-06-06 (Steve): Pro tier held until GrailPulse has
+    // ≥3 verticals. Restore the third card (Pro/seller pitch) when it ships.
   ]
 
   return (
     <div className="fp-cta-rail" style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridTemplateColumns: `repeat(${cards.length}, 1fr)`,
       gap: '1px',
       background: 'var(--fp-border)',
       border: '1px solid var(--fp-border)',

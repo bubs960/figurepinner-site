@@ -22,7 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '',          changeFrequency: 'weekly',  priority: 1.0 },
     { path: '/search',   changeFrequency: 'weekly',  priority: 0.9 },
     { path: '/news',     changeFrequency: 'daily',   priority: 0.85 },
-    { path: '/pro',      changeFrequency: 'monthly', priority: 0.8 },
+    // /pro removed from sitemap 2026-06-06 (Steve): Pro tier disabled until
+    // GrailPulse has ≥3 verticals; /pro now redirects to home. Re-add when restored.
     { path: '/about',    changeFrequency: 'monthly', priority: 0.6 },
     { path: '/privacy',  changeFrequency: 'yearly',  priority: 0.2 },
     { path: '/terms',    changeFrequency: 'yearly',  priority: 0.2 },

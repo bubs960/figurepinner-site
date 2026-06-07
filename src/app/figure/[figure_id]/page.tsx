@@ -3,10 +3,12 @@ import { getFigureById, deriveName, prettyFigureUrl } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 
-// ISR — figure detail re-fetched at most once per hour per figure_id.
+// ISR — figure detail re-rendered at most once per hour per figure_id.
 // Public, immutable-per-figure data; user-specific bits (vault status etc.)
 // are loaded client-side inside FigureDetailContent so caching is safe.
-export const dynamic = 'force-dynamic'
+// (Was force-dynamic via 1b29441, which disabled ISR on this indexed SEO page;
+// restored to revalidate per Genta audit 2026-06-06 P1 — comment was already true.)
+export const revalidate = 3600
 
 const BASE = 'https://figurepinner.com'
 
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = `${BASE}${prettyFigureUrl(local)}`
 
   return {
-    title: `${displayName} Price Guide — ${line} | FigurePinner`,
+    title: `${displayName} Price Guide — ${line}`,
     description: `${displayName} current market value${median ? `: avg $${median.toFixed(0)}` : ''}. Real eBay sold prices for ${fandom} action figures.`,
     alternates: { canonical },
     openGraph: {

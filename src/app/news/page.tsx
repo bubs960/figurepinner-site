@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 
 export const metadata: Metadata = {
-  title: 'News — FigurePinner',
+  title: 'News',
   description: 'Action figure release announcements, line news, and license updates across all 17 genres.',
   alternates: { canonical: 'https://figurepinner.com/news' },
 }

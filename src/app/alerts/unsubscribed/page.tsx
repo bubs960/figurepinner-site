@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Unsubscribed — FigurePinner',
+  title: 'Unsubscribed',
   description: 'You have been unsubscribed from this deal alert.',
   robots: { index: false },
 }
@@ -129,14 +129,7 @@ export default async function UnsubscribedPage({ searchParams }: PageProps) {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: 0 }}>
-          © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href="/privacy" style={{ color: 'var(--dim)' }}>Privacy</a> ·{' '}
-          <a href="/terms"   style={{ color: 'var(--dim)' }}>Terms</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }

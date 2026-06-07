@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getAllFigures, deriveName } from '@/data/kb'
+import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 /**
  * GET /api/v1/search?q=<query>&limit=<n>
@@ -8,11 +9,24 @@ import { getAllFigures, deriveName } from '@/data/kb'
  * Returns figure_id, image (canonical_image_url), and slug fields so the
  * client can build deep links and show thumbnails without a second request.
  *
+ * Pagination model (W4, 2026-06-06): a single fetch returns the full ranked
+ * result pool (up to MAX_RESULTS) and the client reveals it in batches via a
+ * load-more button. This keeps one round-trip + one KB scan + edge-cacheable
+ * responses, rather than offset pagination that re-scans the KB per page.
+ * Each result is ~10 short fields, so a 300-row payload is still small.
+ *
  * Falls back to empty array if KB import fails — never throws.
  */
+const MAX_RESULTS = 300
+
 export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
-  const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') ?? '8'), 60)
+  // limit defaults to the full pool; capped at MAX_RESULTS so a hand-crafted
+  // ?limit=99999 can't force an unbounded payload.
+  const limit = Math.min(
+    parseInt(req.nextUrl.searchParams.get('limit') ?? String(MAX_RESULTS)),
+    MAX_RESULTS,
+  )
 
   // Edge cache headers — search is read-only over a static KB, fine to share
   // across users. 5 min fresh, 1 hour stale-while-revalidate.
@@ -29,7 +43,7 @@ export async function GET(req: NextRequest) {
   try {
     const all = getAllFigures()
 
-    const results = all
+    const scored = all
       .map(f => {
         const char = f.character_canonical.toLowerCase()
         const name = deriveName(f).toLowerCase()
@@ -51,12 +65,16 @@ export async function GET(req: NextRequest) {
       })
       .filter((x): x is { f: ReturnType<typeof getAllFigures>[number]; score: number } => x !== null)
       .sort((a, b) => b.score - a.score)
+
+    const total = scored.length
+
+    const results = scored
       .slice(0, limit)
       .map(({ f }) => ({
         figure_id:          f.figure_id,
         name:               deriveName(f),
-        brand:              f.manufacturer.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        line:               f.product_line.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        brand:              prettifySlug(f.manufacturer),
+        line:               prettifySlug(f.product_line),
         series:             f.release_wave,
         genre:              f.fandom,
         year:               null,
@@ -67,7 +85,13 @@ export async function GET(req: NextRequest) {
         character_slug:     f.character_canonical,
       }))
 
-    return NextResponse.json({ figures: results }, { headers: CACHE_HEADERS })
+    // `total` = full ranked match count (may exceed returned `figures` if it
+    // hit MAX_RESULTS). `capped` tells the client there are matches beyond the
+    // hard pool ceiling, so it can suggest narrowing instead of paging forever.
+    return NextResponse.json(
+      { figures: results, total, capped: total >= MAX_RESULTS },
+      { headers: CACHE_HEADERS },
+    )
   } catch {
     return NextResponse.json({ figures: [] }, { headers: CACHE_HEADERS })
   }

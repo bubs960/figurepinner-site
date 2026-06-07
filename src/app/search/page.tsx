@@ -6,6 +6,7 @@
 
 import type { Metadata } from 'next'
 import SearchInterface from './_components/SearchInterface'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 
 interface SearchPageProps {
   searchParams: Promise<{ q?: string }>
@@ -15,14 +16,14 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
   const { q } = await searchParams
   if (q?.trim()) {
     return {
-      title: `"${q}" — FigurePinner Search`,
+      title: `"${q}" — Search`,
       description: `Search results for ${q}. Find action figure prices, values, and collector info on FigurePinner.`,
       // Don't canonicalize query-specific pages — they're ephemeral
     }
   }
   return {
-    title: 'Search Action Figures — FigurePinner',
-    description: 'Search 20,000+ action figures. Find prices, values, and collector info for WWE, Marvel, Star Wars, and more.',
+    title: 'Search Action Figures',
+    description: `Search ${TOTAL_FIGURES_LABEL} action figures. Find prices, values, and collector info for WWE, Marvel, Star Wars, and more.`,
     alternates: { canonical: 'https://figurepinner.com/search' },
   }
 }
@@ -64,7 +65,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         </div>
       </nav>
 
-      <SearchInterface initialQuery={initialQuery} />
+      <SearchInterface initialQuery={initialQuery} totalLabel={TOTAL_FIGURES_LABEL} />
     </main>
   )
 }

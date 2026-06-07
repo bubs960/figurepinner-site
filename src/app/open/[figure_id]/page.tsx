@@ -47,7 +47,7 @@ export async function generateMetadata({
   if (!figure) return { robots: { index: false } }
 
   return {
-    title: `${deriveName(figure)} — FigurePinner`,
+    title: { absolute: `${deriveName(figure)} — FigurePinner` },
     robots: { index: false, follow: false },
   }
 }

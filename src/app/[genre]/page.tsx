@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getFiguresByFandom, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import GenreLineAccordion, { type LineData } from './_components/GenreLineAccordion'
 
@@ -164,7 +165,7 @@ export async function generateMetadata(
   if (!meta) return {}
 
   return {
-    title: `${meta.label} Action Figure Prices | FigurePinner`,
+    title: `${meta.label} Action Figure Prices`,
     description: meta.description,
     alternates: {
       canonical: `https://figurepinner.com/${genre}`,
@@ -182,7 +183,7 @@ export async function generateMetadata(
 const MAX_PER_LINE = 60
 
 function formatLineName(slug: string): string {
-  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+  return prettifySlug(slug) // shared override-aware caser (W2)
 }
 
 function cardName(f: KBFigure): string {
@@ -419,26 +420,7 @@ export default async function GenrePage(
         </div>
       </main>
 
-      {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
-        <nav style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
-          {[
-            { href: '/wrestling', label: 'Wrestling' },
-            { href: '/marvel', label: 'Marvel' },
-            { href: '/star-wars', label: 'Star Wars' },
-            { href: '/dc', label: 'DC' },
-            { href: '/transformers', label: 'Transformers' },
-          ].map(({ href, label }) => (
-            <a key={href} href={href} style={{ fontSize: '0.75rem', color: '#EEEEF5', textDecoration: 'none' }}>{label}</a>
-          ))}
-        </nav>
-        <p style={{ fontSize: '0.75rem', color: '#EEEEF5' }}>
-          © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href="/about" style={{ color: '#EEEEF5' }}>About</a> ·{' '}
-          <a href="/privacy" style={{ color: '#EEEEF5' }}>Privacy</a> ·{' '}
-          <a href="/terms" style={{ color: '#EEEEF5' }}>Terms</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }

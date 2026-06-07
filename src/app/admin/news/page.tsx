@@ -14,7 +14,7 @@ import NewsForm from './_components/NewsForm'
  */
 
 export const metadata = {
-  title: 'News Admin — FigurePinner',
+  title: 'News Admin',
   robots: { index: false, follow: false },
 }
 

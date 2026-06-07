@@ -108,19 +108,7 @@ export default function TermsPage() {
 
       </main>
 
-      <footer style={{
-        borderTop: '1px solid var(--border)',
-        padding: '1.5rem',
-        textAlign: 'center',
-      }}>
-        <p style={{ fontSize: '0.75rem', color: 'var(--dim)' }}>
-          © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href="/" style={{ color: 'var(--dim)' }}>Home</a> ·{' '}
-          <a href="/about" style={{ color: 'var(--dim)' }}>About</a> ·{' '}
-          <a href="/privacy" style={{ color: 'var(--dim)' }}>Privacy</a> ·{' '}
-          <a href="/pro" style={{ color: 'var(--dim)' }}>Pro</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }

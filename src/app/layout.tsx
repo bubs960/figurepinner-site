@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import { ClerkProvider } from '@clerk/nextjs'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import Footer from './components/Footer'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | FigurePinner',
   },
   description:
-    'The action figure collector\'s edge. Real sold prices, series completion tracking, and deal alerts — powered by 700K+ eBay listings across 20K figures.',
+    `The action figure collector's edge. Real sold prices, series completion tracking, and deal alerts — for ${TOTAL_FIGURES_LABEL} figures.`,
   keywords: [
     'action figure prices',
     'WWE figure prices',
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FigurePinner — Action Figure Price Intelligence',
-    description: 'Real sold prices for 20K+ action figures across 17 genres.',
+    description: `Real sold prices for ${TOTAL_FIGURES_LABEL} action figures across 16 genres.`,
     // Twitter card image auto-pulled from opengraph-image.tsx
   },
   robots: {
@@ -76,7 +78,10 @@ export default function RootLayout({
             rel="stylesheet"
           />
         </head>
-        <body>{children}</body>
+        <body>
+          {children}
+          <Footer />
+        </body>
       </html>
     </ClerkProvider>
   )

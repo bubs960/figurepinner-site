@@ -1,0 +1,208 @@
+import type { Metadata } from 'next'
+import ProPricingCards from './_components/ProPricingCards'
+
+export const metadata: Metadata = {
+  title: { absolute: 'FigurePinner Pro — Export + Ad-Free' },
+  description: 'Everything in FigurePinner is free and unlimited. Pro adds CSV/Excel export and ad-free browsing for $3.99/month or $29.99/year.',
+  alternates: { canonical: 'https://figurepinner.com/pro' },
+}
+
+export default function ProPage() {
+  return (
+    <main style={{ background: 'var(--bg)', minHeight: '100vh', color: 'var(--text)', fontFamily: 'var(--font-body)' }}>
+
+      {/* Nav */}
+      <nav style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '1rem 2rem', borderBottom: '1px solid var(--border)', background: 'var(--s1)',
+      }}>
+        <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
+          FIGURE<span style={{ color: 'var(--blue)' }}>PINNER</span>
+        </a>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <a href="/app" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.875rem' }}>Dashboard</a>
+          <a href="#pricing" style={{
+            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
+            padding: '0.5rem 1rem', borderRadius: '6px', fontSize: '0.875rem', fontWeight: '600',
+          }}>Get Pro</a>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section style={{ textAlign: 'center', padding: '5rem 1rem 3rem', maxWidth: '680px', margin: '0 auto' }}>
+        <div style={{
+          display: 'inline-block', background: 'rgba(0,102,255,0.15)', color: 'var(--blue)',
+          fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.1em',
+          padding: '0.375rem 0.875rem', borderRadius: '100px', marginBottom: '1.25rem',
+          border: '1px solid rgba(0,102,255,0.3)',
+        }}>
+          FIGUREPINNER PRO
+        </div>
+        <h1 style={{
+          fontFamily: 'var(--font-display)', fontSize: 'clamp(2.25rem, 6vw, 3.25rem)',
+          letterSpacing: '0.03em', lineHeight: 1.05, margin: '0 0 1rem',
+        }}>
+          EVERYTHING&apos;S FREE.<br />
+          <span style={{ color: 'var(--blue)' }}>PRO IS THE THANK-YOU.</span>
+        </h1>
+        <p style={{ color: 'var(--muted)', fontSize: '1.05rem', lineHeight: 1.6, margin: '0 0 0.75rem' }}>
+          Every feature — unlimited vault, unlimited alerts, real eBay sold prices, the extension — is free. Pro adds just two things: export your collection to CSV/Excel, and browse ad-free.
+        </p>
+        {/* Section 9 philosophy */}
+        <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.6, maxWidth: '520px', margin: '0 auto' }}>
+          Free FigurePinner is not a trial and not a stripped-down version. It&apos;s the whole product. Pro is for people who want to support the site and get their data out — that&apos;s it.
+        </p>
+      </section>
+
+      {/* ── How We're Free ──
+          Explains the dual model so users don't experience Pro as the only
+          revenue path. Builds trust by being explicit about the affiliate-
+          funded free tier. Keep matter-of-fact tone — collectors are
+          allergic to begging. */}
+      <section style={{
+        maxWidth: 720, margin: '0 auto 2.5rem', padding: '2.25rem 1.5rem',
+        background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 16,
+      }}>
+        <div style={{
+          display: 'inline-block',
+          fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase',
+          color: 'var(--green)', marginBottom: 12,
+        }}>
+          How We&apos;re Free
+        </div>
+        <h2 style={{
+          fontFamily: 'var(--font-display)', fontSize: '1.75rem', letterSpacing: '0.03em',
+          marginBottom: 14, lineHeight: 1.15,
+        }}>
+          Free is the whole product. Nothing&apos;s held back.
+        </h2>
+        <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: 12 }}>
+          Unlimited vault, unlimited price alerts, real eBay sold prices, full collection
+          tracking, the Chrome extension — all free, no caps. We pay for it through
+          eBay&apos;s affiliate program — when you click <em style={{ color: 'var(--text)', fontStyle: 'normal', fontWeight: 600 }}>&ldquo;Find It on eBay&rdquo;</em> and
+          buy something, we earn a small commission. You pay the same eBay price
+          either way.
+        </p>
+        <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: 0 }}>
+          Pro adds exactly two things: <strong style={{ color: 'var(--text)', fontWeight: 600 }}>export your vault to CSV/Excel</strong> and
+          <strong style={{ color: 'var(--text)', fontWeight: 600 }}> ad-free browsing</strong>. It&apos;s a way to support the
+          site and own your data. If you don&apos;t need either, stay free forever — you&apos;re not missing any features.
+        </p>
+      </section>
+
+      {/* Pricing cards — client component for annual/monthly toggle */}
+      <div id="pricing" style={{ scrollMarginTop: '4rem' }}>
+        <ProPricingCards />
+      </div>
+
+      {/* Feature comparison table */}
+      <section style={{ maxWidth: '760px', margin: '0 auto', padding: '0 1rem 5rem' }}>
+        <h2 style={{
+          fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em',
+          textAlign: 'center', marginBottom: '1.5rem',
+        }}>
+          WHAT YOU GET
+        </h2>
+        <style>{`
+          .fp-compare-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+          .fp-compare-table th { padding: 0.625rem 1rem; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; border-bottom: 1px solid var(--border); }
+          .fp-compare-table th:not(:first-child) { text-align: center; }
+          .fp-compare-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+          .fp-compare-table td:not(:first-child) { text-align: center; }
+          .fp-compare-table tr:last-child td { border-bottom: none; }
+          .fp-compare-table .category { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--blue); text-transform: uppercase; padding-top: 1.25rem; }
+        `}</style>
+        <div style={{ background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
+          <table className="fp-compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Free</th>
+                <th style={{ color: 'var(--blue)' }}>Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td className="category" colSpan={3}>Search &amp; Lookup</td></tr>
+              <tr><td>Figure lookup (extension)</td><td><Check /></td><td><Check blue /></td></tr>
+              <tr><td>Searches</td><td><Check label="Unlimited" /></td><td><Check blue label="Unlimited" /></td></tr>
+              <tr><td>eBay sold prices &amp; history</td><td><Check /></td><td><Check blue /></td></tr>
+
+              <tr><td className="category" colSpan={3}>Collection</td></tr>
+              <tr><td>Vault (saved figures)</td><td><Check label="Unlimited" /></td><td><Check blue label="Unlimited" /></td></tr>
+              <tr><td>Collection &amp; P&amp;L tracking</td><td><Check /></td><td><Check blue /></td></tr>
+              <tr><td><strong>Export to CSV / Excel</strong></td><td><X /></td><td><Check blue /></td></tr>
+
+              <tr><td className="category" colSpan={3}>Alerts &amp; Tools</td></tr>
+              <tr><td>Price alerts (watchlist)</td><td><Check label="Unlimited" /></td><td><Check blue label="Unlimited" /></td></tr>
+              <tr><td>Show Mode (Whatnot)</td><td><Check /></td><td><Check blue /></td></tr>
+
+              <tr><td className="category" colSpan={3}>Experience</td></tr>
+              <tr><td><strong>Ad-free browsing</strong></td><td><X /></td><td><Check blue /></td></tr>
+              <tr><td>Support</td><td style={{ color: 'var(--muted)' }}>Community</td><td style={{ color: 'var(--text)' }}>Community</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ borderTop: '1px solid var(--border)', padding: '4rem 1rem', maxWidth: '640px', margin: '0 auto' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', letterSpacing: '0.04em', marginBottom: '2rem', textAlign: 'center' }}>
+          COMMON QUESTIONS
+        </h2>
+        {FAQS.map(faq => (
+          <div key={faq.q} style={{ marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)' }}>
+            <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>{faq.q}</div>
+            <div style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.6 }}>{faq.a}</div>
+          </div>
+        ))}
+      </section>
+
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
+    </main>
+  )
+}
+
+function Check({ blue, label }: { blue?: boolean; label?: string }) {
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', color: blue ? 'var(--blue)' : 'var(--green)' }}>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ flexShrink: 0 }}>
+        <circle cx="7" cy="7" r="6" fill="currentColor" fillOpacity="0.15" />
+        <path d="M4 7l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      {label && <span style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{label}</span>}
+    </span>
+  )
+}
+
+function X() {
+  return (
+    <span style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>—</span>
+  )
+}
+
+const FAQS = [
+  {
+    q: 'Is the free tier actually free forever?',
+    a: 'Yes. No credit card, no trial, no expiry. Free FigurePinner is the full product — unlimited vault, unlimited alerts, real eBay sold prices, the extension. Not a limited demo.',
+  },
+  {
+    q: 'What do I actually get with Pro?',
+    a: 'Two things: export your vault to CSV / Excel, and ad-free browsing. Every other feature is already free and unlimited. Pro is a way to support the site and own your data — not a way to unlock features.',
+  },
+  {
+    q: 'So Pro doesn\'t give me more searches, vault slots, or alerts?',
+    a: 'Correct — because those are already unlimited for everyone, free. We don\'t paywall the basics. The only things behind Pro are CSV/Excel export and removing ads.',
+  },
+  {
+    q: 'What\'s the difference between monthly and annual?',
+    a: 'Monthly is $3.99/month. Annual is $29.99/year — that\'s 37% off, or less than the price of one figure for a full year.',
+  },
+  {
+    q: 'Can I cancel anytime?',
+    a: 'Yes. Cancel from your account settings and you keep Pro access until the end of your billing period. No questions asked.',
+  },
+  {
+    q: 'How accurate is the pricing data?',
+    a: 'Prices are based on actual completed eBay sales — not list prices. We pull fresh sold-comp data regularly.',
+  },
+]

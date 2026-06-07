@@ -9,6 +9,8 @@
  * It never ships to the client bundle.
  */
 
+import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const { FIGURES_V2 } = require('./figures-reference-v2.js') as { FIGURES_V2: KBFigure[] }
 
@@ -27,6 +29,18 @@ export type KBFigure = {
   exclusive_to: string | null
   canonical_image_url?: string | null
   name?: string                // display name — may be absent, derive from fields
+  // Legacy v1 fields — clean human-readable values carried over from the v1 KB.
+  // Present on ~99% of figures (v1_name 21,620/21,811; v1_line/v1_series 21,373).
+  // deriveName() prefers these over slug reconstruction (W2.1, 2026-06-06).
+  v1_name?: string             // e.g. "Snake Eyes"
+  v1_line?: string             // e.g. "Classified Series"
+  v1_series?: string           // e.g. "1" (numeric wave) or "turtles-of-grayskull" (sub-line)
+  // Per-figure enrichment (matcher's character-enrichment program). Optional —
+  // only ~262 wrestling fids have these today; the figure page renders them
+  // only when present, so this is safe before full KB coverage. Both are plain
+  // strings; key_features is a comma-separated list. Feeds site + eBay listings.
+  match_represented?: string   // what match/moment/era/attire this figure depicts
+  key_features?: string        // accessories, deco, variant, exclusivity notes
 }
 
 /** All figures — only use at build time */
@@ -49,24 +63,134 @@ export function getFiguresByFandom(fandom: string): KBFigure[] {
   return FIGURES_V2.filter((f: KBFigure) => f.fandom === fandom)
 }
 
+/** A wave value is a real wave number ("1", "11", "1a") vs a text/sub-line slug. */
+function isNumericWave(w: string | null | undefined): boolean {
+  if (!w) return false
+  return /^[0-9]+[a-z]?$/i.test(String(w).trim())
+}
+
+/**
+ * Title-case a value that may be hyphen- OR space-separated ("turtles-of-grayskull"
+ * or "turtles of grayskull" → "Turtles of Grayskull"). Consults the override map
+ * first (acronyms/branded casing). Small words stay lowercase mid-phrase.
+ */
+const SMALL_WORDS = new Set(['of', 'the', 'and', 'a', 'an', 'to', 'in', 'vs'])
+function titleCaseValue(raw: string): string {
+  if (!raw) return ''
+  const words = raw.trim().split(/[\s-]+/)
+  return words
+    .map((w, i) => {
+      const lw = w.toLowerCase()
+      const override = prettifySlug(lw)
+      // prettifySlug returns an override (e.g. "NECA") only when the FULL token matches;
+      // for a single word it returns the word title-cased, so detect a real override:
+      if (override !== lw.charAt(0).toUpperCase() + lw.slice(1) && !override.includes(' ')) {
+        return override // acronym / branded casing (NECA, LJN, DC…)
+      }
+      if (i > 0 && SMALL_WORDS.has(lw)) return lw
+      return lw.charAt(0).toUpperCase() + lw.slice(1)
+    })
+    .join(' ')
+}
+
+/** Token set of a display string, lowercased, for redundancy comparison. */
+function tokenSet(s: string): Set<string> {
+  return new Set(s.toLowerCase().split(/[\s\-·()]+/).filter(Boolean))
+}
+
+/** True if `inner`'s tokens are all already present in `outer` (sub-line dupes line). */
+function isTokenSubset(inner: string, outer: string): boolean {
+  const o = tokenSet(outer)
+  const i = tokenSet(inner)
+  if (i.size === 0) return true
+  for (const t of i) if (!o.has(t)) return false
+  return true
+}
+
+/**
+ * True if a stored display name already contains the specific garbage this fix
+ * targets — so we regenerate it instead of trusting it. Narrow on purpose:
+ *  - "Series Series" (the doubled-Series bug), or
+ *  - " Series <raw-lowercase-hyphen-slug>" inside parens (e.g. "Series classified",
+ *    "Series turtles-of-grayskull") — a raw wave slug appended after "Series".
+ * Does NOT match legitimate hyphenated variants like "(zero-year)" or clean
+ * numeric waves like "(... Series 11)".
+ */
+function isGarbageName(s: string): boolean {
+  if (/Series\s+Series/i.test(s)) return true
+  // " Series " immediately followed by a lowercase word that is itself a slug
+  // (lowercase, or contains a hyphen) rather than a number or Capitalized word.
+  return /\bSeries\s+([a-z]+-[a-z-]+|[a-z]{2,})\b/.test(s)
+}
+
 /**
  * Derive a display name from KB fields.
- * KB doesn't always have a `name` field — construct from parts.
- * e.g. manufacturer=mattel, product_line=elite, release_wave=11, character=rey-mysterio
- * → "Rey Mysterio (Elite Series 11)"
+ *
+ * Resolution order (W2.1, 2026-06-06 — fixes the "Series Series classified"
+ * garbage that hit ~16,300 figures / 75% of the catalog):
+ *  1. f.name — but only if present AND not itself garbage.
+ *  2. Clean v1_* fields (v1_name 99.1% present, v1_line/v1_series 98%):
+ *     "Snake Eyes (Classified Series · 1)" or "Batista (Deluxe Aggression Series 1)".
+ *  3. Defensive slug derivation for the ~191 with no v1_name — never emits
+ *     "Series Series" or a raw un-prettified wave slug.
  */
 export function deriveName(f: KBFigure): string {
-  if (f.name) return f.name
+  if (f.name && !isGarbageName(f.name)) return f.name
+
+  // ── Prefer clean v1_* fields when present ──
+  if (f.v1_name) {
+    const name = f.v1_name
+    const line = f.v1_line ?? prettifySlug(f.product_line)
+    const series = f.v1_series
+
+    // Append the variant only if v1_name doesn't already include it (avoids
+    // "He-Man (Vintage Sculpt) (vintage-sculpt)").
+    let variant = ''
+    if (f.character_variant && f.character_variant !== 'None') {
+      const vPretty = titleCaseValue(f.character_variant)
+      if (!isTokenSubset(vPretty, name)) variant = ` (${vPretty})`
+    }
+
+    if (series && line) {
+      // numeric series → "Line Series N"; text series → "Line · Pretty-Sub".
+      let seriesPart = ''
+      if (isNumericWave(series)) {
+        seriesPart = ` Series ${series}`
+      } else {
+        let pretty = titleCaseValue(series)
+        // Strip a leading copy of the line name from the sub-line
+        // ("Origins" + "Origins Action Figures" → "Action Figures").
+        const lineLc = line.toLowerCase()
+        if (pretty.toLowerCase().startsWith(lineLc + ' ')) {
+          pretty = pretty.slice(line.length).trim()
+        }
+        // Drop generic-category noise and pure line-dupes.
+        const NOISE = /^(action figures?|figures?|action figure series)$/i
+        if (pretty && !NOISE.test(pretty) && !isTokenSubset(pretty, line)) {
+          seriesPart = ` · ${pretty}`
+        }
+      }
+      return `${name}${variant} (${line}${seriesPart})`
+    }
+    if (line) return `${name}${variant} (${line})`
+    return `${name}${variant}`
+  }
+
+  // ── Fallback: defensive slug derivation (no v1_name available) ──
   const char = f.character_canonical
     .split('-')
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ')
-  const line = f.product_line
-    .split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ')
-  const wave = f.release_wave ? ` Series ${f.release_wave}` : ''
-  const variant = (f.character_variant && f.character_variant !== 'None') ? ` (${f.character_variant})` : ''
+  const line = prettifySlug(f.product_line) // override-aware caser (W2)
+  const variant =
+    f.character_variant && f.character_variant !== 'None'
+      ? ` (${f.character_variant})`
+      : ''
+
+  // Only append a wave when it's a real wave NUMBER. Text-slug waves
+  // (e.g. "classified", "turtles-of-grayskull") that produced the garbage
+  // are dropped — the line already conveys the sub-line.
+  const wave = isNumericWave(f.release_wave) ? ` Series ${f.release_wave}` : ''
   return `${char}${variant} (${line}${wave})`
 }
 

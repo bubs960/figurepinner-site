@@ -97,7 +97,7 @@ export default function OGImage() {
           }}
         >
           {[
-            { num: '20K+', label: 'Figures', color: '#0066FF' },
+            { num: '18K+', label: 'Figures', color: '#0066FF' },
             { num: '96%', label: 'Coverage', color: '#00C870' },
             { num: '17', label: 'Genres', color: '#FF5F00' },
           ].map(({ num, label, color }) => (

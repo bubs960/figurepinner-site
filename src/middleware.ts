@@ -1,40 +1,9 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 
-// ──────────────────────────────────────────────────────────────────────────────
-// COMING-SOON GATE
-// ──────────────────────────────────────────────────────────────────────────────
-// While we build pricing coverage to our launch threshold (60%), the site is
-// gated. Public visitors see /coming-soon for any URL. Internal testers bypass
-// by visiting any URL with `?early=<COMING_SOON_BYPASS>` once — that sets a
-// 30-day cookie and lets them roam the full site freely.
-//
-// To open the site to the public:
-//   - Set env var COMING_SOON_MODE = "false" in .env.production and redeploy.
-//   - OR delete this gate block.
-//
-// To rotate the bypass secret (revoke old links): change COMING_SOON_BYPASS.
-// ──────────────────────────────────────────────────────────────────────────────
-
-const COMING_SOON_MODE = process.env.COMING_SOON_MODE !== 'false'
-const COMING_SOON_BYPASS = 'fp_alpha_2026'
-const COMING_SOON_COOKIE = 'fp_early_access'
-
-// Routes that ALWAYS pass through (even in coming-soon mode):
-//   - /coming-soon: the public-facing page itself
-//   - /api/*: server APIs (extension/internal callers, waitlist signup)
-//   - /.well-known/*: deep-link manifests (AASA, assetlinks)
-const isAllowedThroughComingSoon = createRouteMatcher([
-  '/coming-soon',
-  '/api/(.*)',
-  '/.well-known/(.*)',
-  // /news is public read-only content. Selectively open it through the
-  // coming-soon gate so search engines can index news posts as they're
-  // published. Authenticated dashboard routes (/app/*) and the rest of
-  // the site stay gated until the global flag flips.
-  '/news',
-  '/news/(.*)',
-])
+// The site is public. The former coming-soon gate (COMING_SOON_MODE / bypass
+// token / coming-soon rewrite) has been removed entirely so it can never gate
+// the site again. Auth-protection for /app and /admin remains below.
 
 // Authenticated dashboard routes
 const isProtectedRoute = createRouteMatcher(['/app(.*)', '/admin(.*)'])
@@ -60,47 +29,40 @@ function setNoCacheOnApi(): NextResponse {
   return res
 }
 
+// Public, read-only GET endpoints that set their own Cache-Control and SHOULD be
+// CDN-cacheable. The blanket no-store above was stomping these (Genta audit
+// 2026-06-06 P1 / H1), forcing every search keystroke, deals load and sparkline
+// batch back to the worker uncached. We allowlist them so their route-level
+// Cache-Control survives; everything else (vault, alerts, wantlist, user-settings,
+// stripe, me, devices, admin, and any new route) stays no-store by default.
+// Default-deny: a route is only cacheable if it's explicitly listed here.
+const isPublicCacheableApi = createRouteMatcher([
+  '/api/v1/search',
+  '/api/news',
+  '/api/v1/deals',
+  '/api/sparklines',
+  '/api/upc',
+  '/api/waitlist/count',
+])
+
 export default clerkMiddleware(async (auth, req) => {
   const url = req.nextUrl
 
-  // ─── Coming-soon gate ──────────────────────────────────────────────────────
-  if (COMING_SOON_MODE) {
-    const earlyParam = url.searchParams.get('early')
-    const cookieValue = req.cookies.get(COMING_SOON_COOKIE)?.value
-
-    // Bypass via query param: set cookie, strip param, redirect to clean URL
-    if (earlyParam === COMING_SOON_BYPASS) {
-      const cleanUrl = new URL(url)
-      cleanUrl.searchParams.delete('early')
-      const res = NextResponse.redirect(cleanUrl)
-      res.cookies.set(COMING_SOON_COOKIE, COMING_SOON_BYPASS, {
-        httpOnly: true,
-        maxAge: 60 * 60 * 24 * 30, // 30 days
-        sameSite: 'lax',
-        secure: true,
-        path: '/',
-      })
-      return res
-    }
-
-    const hasBypass = cookieValue === COMING_SOON_BYPASS
-
-    // No bypass and not in allowlist? Rewrite to coming-soon (URL stays same)
-    if (!hasBypass && !isAllowedThroughComingSoon(req)) {
-      return NextResponse.rewrite(new URL('/coming-soon', req.url))
-    }
-  }
-
-  // ─── Standard Clerk protection for /app/* ──────────────────────────────────
+  // ─── Standard Clerk protection for /app/* and /admin/* ─────────────────────
   if (isProtectedRoute(req)) {
     await auth.protect()
   }
 
-  // ─── No-cache headers on all /api/* responses ──────────────────────────────
-  // Must come after auth/coming-soon gates so a rejected request isn't
-  // accidentally served cached. The /api/* paths in the matcher config (below)
-  // ensure this branch only fires for real API routes.
+  // ─── No-cache headers on /api/* responses (default-deny) ───────────────────
+  // Must come after the auth gate so a rejected request isn't
+  // accidentally served cached. Public read-only GETs in the allowlist keep
+  // their own Cache-Control (CDN-cacheable); everything else gets no-store so
+  // authed/mutating data is never edge-cached. GET-only as a belt-and-suspenders
+  // guard — a write verb to an allowlisted path still falls through to no-store.
   if (url.pathname.startsWith('/api/')) {
+    if (req.method === 'GET' && isPublicCacheableApi(req)) {
+      return NextResponse.next()
+    }
     return setNoCacheOnApi()
   }
 })

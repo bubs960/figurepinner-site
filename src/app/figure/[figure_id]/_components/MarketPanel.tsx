@@ -28,19 +28,28 @@ interface MarketPanelProps {
   figureName: string
 }
 
-function normalizeCondition(raw: string | null | undefined): 'moc' | 'loose' {
+// New vs Used, in eBay's own language (Steve's call 2026-06-06).
+// New  = brand new / sealed / MOC / MIB / MISB / mint.
+// Used = pre-owned / loose AND untagged ("None") — most untagged secondhand
+//        sales are effectively used, so they fall here rather than inflating New.
+function normalizeCondition(raw: string | null | undefined): 'new' | 'used' {
   const c = (raw ?? '').toLowerCase().trim()
   if (
     c.includes('moc') || c.includes('mib') || c.includes('misb') ||
-    c.includes('sealed') || c === 'mint' || c === 'new'
-  ) return 'moc'
-  return 'loose'
+    c.includes('sealed') || c === 'mint' || c === 'new' || c.includes('brand new')
+  ) return 'new'
+  return 'used'
 }
 
-function avg(arr: number[]): number {
+function median(arr: number[]): number {
   if (!arr.length) return 0
-  return arr.reduce((s, v) => s + v, 0) / arr.length
+  const s = [...arr].sort((a, b) => a - b)
+  const mid = Math.floor(s.length / 2)
+  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
 }
+
+// Only show a per-condition figure when it has enough real sales to be meaningful.
+const MIN_SPLIT_COMPS = 3
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName }: MarketPanelProps) {
@@ -49,11 +58,13 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
   const comps = pricing.recent_comps
   if (!comps.length) return null
 
-  const buckets: Record<'moc' | 'loose', number[]> = { moc: [], loose: [] }
+  const buckets: Record<'new' | 'used', number[]> = { new: [], used: [] }
   for (const c of comps) buckets[normalizeCondition(c.condition)].push(c.price)
 
-  const hasMoc   = buckets.moc.length > 0
-  const hasLoose = buckets.loose.length > 0
+  // Only surface a condition median when it has ≥3 real sales — below that a
+  // single anomalous sale would misrepresent the condition's market.
+  const showNew  = buckets.new.length  >= MIN_SPLIT_COMPS
+  const showUsed = buckets.used.length >= MIN_SPLIT_COMPS
 
   return (
     <section>
@@ -74,24 +85,27 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         </div>
       </div>
 
-      {/* Condition avg pills */}
+      {/* New vs Used median pills. Each shows only with ≥3 tagged sales; the
+          overall median (in the ValueStrip above) remains the anchor number. */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.375rem' }}>
-        {hasMoc && (
-          <AvgPill label="NIB" prices={buckets.moc} color="var(--fp-success)" />
+        {showNew && (
+          <ConditionPill label="New" prices={buckets.new} color="var(--fp-success)" />
         )}
-        {hasLoose && (
-          <AvgPill label="Loose" prices={buckets.loose} color="var(--fp-accent)" />
+        {showUsed && (
+          <ConditionPill label="Used" prices={buckets.used} color="var(--fp-accent)" />
         )}
-        {!hasMoc && !hasLoose && (
-          <AvgPill label="Avg" prices={comps.map(c => c.price)} color="var(--fp-dim)" />
+        {!showNew && !showUsed && (
+          // Not enough tagged sales in either bucket to split honestly — show the
+          // blended median so the panel still says something true.
+          <ConditionPill label="All" prices={comps.map(c => c.price)} color="var(--fp-dim)" />
         )}
       </div>
     </section>
   )
 }
 
-function AvgPill({ label, prices, color }: { label: string; prices: number[]; color: string }) {
-  const avgPrice = avg(prices)
+function ConditionPill({ label, prices, color }: { label: string; prices: number[]; color: string }) {
+  const med = median(prices)
   return (
     <div style={{
       display: 'inline-flex', alignItems: 'baseline', gap: '0.4rem',
@@ -110,10 +124,10 @@ function AvgPill({ label, prices, color }: { label: string; prices: number[]; co
         fontFamily: 'var(--fp-font-display)', fontSize: '0.95rem',
         color: 'var(--fp-text)', letterSpacing: '0.02em',
       }}>
-        {formatCurrency(avgPrice)}
+        {formatCurrency(med)}
       </span>
       <span style={{ fontSize: '0.7rem', color: 'var(--fp-dim)' }}>
-        avg · {prices.length} sold
+        median · {prices.length} sold
       </span>
     </div>
   )

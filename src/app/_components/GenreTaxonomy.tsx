@@ -13,6 +13,15 @@
 
 import { useState } from 'react'
 
+// ─── Props ───────────────────────────────────────────────────────────────────
+// Real per-genre counts are computed at build time (see data/kb-stats.ts) and
+// passed in by the server page. Keyed by genre slug. If a slug is missing from
+// the map we fall back to the hardcoded totalCount below — but the goal is for
+// every visible genre to use the computed (honest) number.
+interface GenreTaxonomyProps {
+  counts?: Record<string, string>
+}
+
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 interface Line {
@@ -227,18 +236,10 @@ const GENRES: Genre[] = [
       { name: 'Valaverse Action Force',  slug: 'valaverse',            count: '50+',  years: '2021–present', badge: 'new', desc: 'Modern 6-inch revival with elite UK collector following' },
     ],
   },
-  {
-    slug: 'dungeons-dragons',
-    name: 'D&D',
-    emoji: '🐉',
-    totalCount: '350+',
-    accent: '#7B1FA2',
-    lines: [
-      { name: 'Golden Archive (Hasbro)', slug: 'golden-archive', count: '60+',  years: '2023–present', badge: 'new',     desc: '6-inch scale, Honor Among Thieves era' },
-      { name: 'LJN D&D (1983)',         slug: 'ljn-dd',         count: '100+', years: '1983–1985', badge: 'vintage',     desc: 'The original cartoon tie-in, highly collectible' },
-      { name: 'Dungeons & Dragons Cartoon Classic', slug: 'dd-cartoon', count: '80+', years: '2023–present', desc: 'Hasbro cartoon-accurate, nostalgia-driven collector play' },
-    ],
-  },
+  // NOTE: D&D tile removed 2026-06-06 — KB has no clean `dungeons-dragons`
+  // fandom (figures live in the mixed `generic-fantasy` bucket) and the genre
+  // page 404s. Relay filed to matcher to tag D&D properly; restore the tile
+  // once the KB has a real `dungeons-dragons` fandom. See WEB-W3 relay.
   {
     slug: 'spawn',
     name: 'Spawn',
@@ -263,9 +264,14 @@ const BADGE_CONFIG = {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function GenreTaxonomy() {
+export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
   const [activeSlug, setActiveSlug] = useState<string>(GENRES[0].slug)
   const activeGenre = GENRES.find(g => g.slug === activeSlug) ?? GENRES[0]
+
+  // Real (computed) count for a genre, falling back to the hardcoded marketing
+  // number only if the build-time map didn't supply one.
+  const countFor = (slug: string, fallback: string): string =>
+    counts?.[slug] ?? fallback
 
   return (
     <div>
@@ -310,7 +316,7 @@ export default function GenreTaxonomy() {
                 color: isActive ? g.accent : 'var(--dim)',
                 letterSpacing: '0.04em',
               }}>
-                {g.totalCount}
+                {countFor(g.slug, g.totalCount)}
               </span>
             </button>
           )
@@ -336,7 +342,7 @@ export default function GenreTaxonomy() {
               {activeGenre.name}
             </span>
             <span style={{ fontSize: '0.75rem', color: 'var(--dim)', marginLeft: '0.5rem' }}>
-              {activeGenre.totalCount} figures · {activeGenre.lines.length} lines
+              {countFor(activeGenre.slug, activeGenre.totalCount)} figures · {activeGenre.lines.length} lines
             </span>
           </div>
         </div>

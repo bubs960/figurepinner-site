@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 
 export const metadata: Metadata = {
-  title: 'About FigurePinner — Real Prices for Action Figure Collectors',
+  title: 'About — Real Prices for Action Figure Collectors',
   description: 'FigurePinner is a price intelligence tool for action figure collectors. Track real eBay sold prices, set deal alerts, and know exactly what your collection is worth.',
   alternates: { canonical: 'https://figurepinner.com/about' },
   openGraph: {
     title: 'About FigurePinner',
-    description: 'Real eBay sold prices for 18,000+ action figures. Built by a collector, for collectors.',
+    description: `Real eBay sold prices for ${TOTAL_FIGURES_LABEL} action figures. Built by a collector, for collectors.`,
     url: 'https://figurepinner.com/about',
   },
 }
@@ -81,7 +82,7 @@ export default function AboutPage() {
               click Buy It Now.
             </p>
             <p>
-              It's grown into a full price-intelligence platform: 18,000+ figures across 17 genres,
+              It's grown into a full price-intelligence platform: {TOTAL_FIGURES_LABEL} figures across 16 genres,
               a wantlist with deal alerts, a vault to track your collection value, and SEO price guides
               so collectors everywhere can get a quick read on any figure.
             </p>
@@ -99,8 +100,8 @@ export default function AboutPage() {
             gap: '1rem',
           }}>
             {[
-              { value: '18,000+', label: 'Figures tracked' },
-              { value: '17', label: 'Genres covered' },
+              { value: TOTAL_FIGURES_LABEL, label: 'Figures tracked' },
+              { value: '16', label: 'Genres covered' },
               { value: 'Real-time', label: 'eBay sold prices' },
               { value: 'Free', label: 'Core features' },
             ].map(({ value, label }) => (
@@ -178,7 +179,7 @@ export default function AboutPage() {
               {
                 step: '02',
                 title: 'Search Any Figure',
-                body: 'Type any figure name into the search bar and instantly pull up market data: average sold price, median, high/low, and a list of recent eBay sales. 18,000+ figures across 17 genres.',
+                body: `Type any figure name into the search bar and instantly pull up market data: average sold price, median, high/low, and a list of recent eBay sales. ${TOTAL_FIGURES_LABEL} figures across 16 genres.`,
               },
               {
                 step: '03',
@@ -245,15 +246,7 @@ export default function AboutPage() {
 
       </main>
 
-      {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', color: 'var(--dim)' }}>
-          © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href="/privacy" style={{ color: 'var(--dim)' }}>Privacy</a> ·{' '}
-          <a href="/terms" style={{ color: 'var(--dim)' }}>Terms</a> ·{' '}
-          <a href="/pro" style={{ color: 'var(--dim)' }}>Pro</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }

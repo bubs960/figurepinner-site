@@ -18,7 +18,10 @@ import { getFiguresByFandom, getAllFandoms, deriveName, type KBFigure } from '@/
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
-export const dynamic = 'force-dynamic'
+// ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
+// client-side in FigureDetailContent so caching is safe. Was force-dynamic;
+// restored per Genta audit 2026-06-06 P1.
+export const revalidate = 3600
 
 const BASE = 'https://figurepinner.com'
 
@@ -80,7 +83,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = `${BASE}/${genre}/${line}/${slug}`
 
   return {
-    title: `${displayName} Price Guide — ${lineName} | FigurePinner`,
+    title: `${displayName} Price Guide — ${lineName}`,
     description: `${displayName} current market value${median ? `: avg $${median.toFixed(0)}` : ''}. Real eBay sold prices for ${fandomName} action figures.`,
     alternates: { canonical },
     openGraph: {

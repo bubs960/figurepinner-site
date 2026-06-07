@@ -6,7 +6,7 @@ import type { DealResult } from '@/app/api/v1/deals/route'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Price Drop Alert — Action Figure Deals | FigurePinner',
+  title: 'Price Drop Alert — Action Figure Deals',
   description: 'Action figures selling significantly below their historical average right now. Real eBay sold data updated hourly.',
   alternates: { canonical: 'https://figurepinner.com/deals' },
 }

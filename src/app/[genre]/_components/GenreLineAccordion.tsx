@@ -12,7 +12,7 @@
  */
 
 import { useState, useEffect } from 'react'
-import { thumb } from '@/lib/imageUrl'
+import FigureThumb from '@/app/components/FigureThumb'
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 
@@ -210,38 +210,7 @@ function FigureCard({ figure, accent }: { figure: FigureRow; accent: string }) {
       }}
     >
       {/* Thumbnail */}
-      {figure.imageUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={thumb(figure.imageUrl, 96) ?? undefined}
-          alt=""
-          width={36}
-          height={36}
-          style={{
-            width: 36, height: 36,
-            objectFit: 'contain',
-            borderRadius: 4,
-            flexShrink: 0,
-            background: 'var(--s2)',
-          }}
-          loading="lazy"
-        />
-      ) : (
-        <div style={{
-          width: 36, height: 36,
-          borderRadius: 4,
-          flexShrink: 0,
-          background: 'var(--s2)',
-          border: '1px solid var(--border)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke={accent} strokeWidth="1.5" opacity="0.4">
-            <rect x="2" y="2" width="12" height="12" rx="2" />
-            <circle cx="8" cy="6" r="1.5" />
-            <path d="M4 12c0-2.2 1.8-4 4-4s4 1.8 4 4" />
-          </svg>
-        </div>
-      )}
+      <FigureThumb image={figure.imageUrl} size={36} radius={4} cdnWidth={96} fallback={{ kind: 'icon', accent }} />
 
       {/* Text */}
       <div style={{ minWidth: 0 }}>

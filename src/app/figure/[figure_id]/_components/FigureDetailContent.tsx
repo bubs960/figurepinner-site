@@ -10,6 +10,7 @@ import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
 import ValueStrip from './ValueStrip'
 import LoreBand from './LoreBand'
+import FigureEnrichment from './FigureEnrichment'
 import MarketPanel from './MarketPanel'
 import CollectionPanel from './CollectionPanel'
 import CtaRail from './CtaRail'
@@ -24,7 +25,10 @@ import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
-const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? ''
+// Fallback campid is the live EPN campaign — restored after bceb185 silently
+// reverted it to ''. Without it, a build missing .env.production ships campid= blank
+// (working-looking eBay links that pay $0). Do NOT remove. See Genta audit 2026-06-06 P1.
+const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? '5339147406'
 
 // ── API types ──────────────────────────────────────────────────────────────────
 
@@ -288,6 +292,15 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           <LoreBand loreInput={loreInput} />
         </div>
 
+        {/* Zone 3b — Per-figure enrichment (match represented + key features).
+            Render-safe: shows only for fids matcher has enriched. */}
+        <div style={{ marginBottom: '1.5rem' }}>
+          <FigureEnrichment
+            matchRepresented={local.match_represented}
+            keyFeatures={local.key_features}
+          />
+        </div>
+
         {/* Ad slot */}
         <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
           <AdSlot slot="rectangle" />
@@ -313,6 +326,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 compCount={price?.soldCount ?? 0}
                 compact={hasPricing}
               />
+              <a
+                href="/methodology"
+                style={{
+                  display: 'inline-block', marginTop: '0.5rem',
+                  fontSize: '0.75rem', color: 'var(--fp-muted)',
+                  textDecoration: 'underline', textUnderlineOffset: '2px',
+                }}
+              >
+                How is this calculated?
+              </a>
             </div>
 
             {hasPricing ? (
@@ -361,17 +384,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         <CtaRail genre={genre} brand={brand} line={line} />
       </main>
 
-      {/* ── Footer ───────────────────────────────────────────────────────────── */}
-      <footer style={{ borderTop: '1px solid var(--fp-border)', padding: '1.5rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', color: 'var(--fp-dim)', margin: 0 }}>
-          © {new Date().getFullYear()} FigurePinner ·{' '}
-          <a href={`/${genre}`} style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>
-            More {prettifySlug(genre)} figures
-          </a>{' '}·{' '}
-          <a href="/about"   style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>About</a>{' '}·{' '}
-          <a href="/privacy" style={{ color: 'var(--fp-dim)', textDecoration: 'none' }}>Privacy</a>
-        </p>
-      </footer>
+      {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>
   )
 }
