@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 export default function TermsPage() {
-  const updated = 'April 2024'
+  const updated = 'June 2026'
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
@@ -81,6 +81,7 @@ export default function TermsPage() {
         <ProseSection title="Intellectual Property">
           <p>FigurePinner&apos;s software, design, and compiled figure database are owned by Bubs960 Collectibles. You may not copy, reproduce, or redistribute our software or database.</p>
           <p>Action figure names, characters, and trademarks are the property of their respective owners (Mattel, Hasbro, McFarlane Toys, etc.). FigurePinner references these names for nominative fair use purposes — to identify the products our users collect. We are not affiliated with or endorsed by any toy manufacturer.</p>
+          <p>Product photographs displayed on FigurePinner are used solely to identify the specific collectible being priced and remain the property of their respective owners. If you own rights to an image shown here and would like it credited or removed, contact legal@figurepinner.com and we will respond promptly.</p>
         </ProseSection>
 
         <ProseSection title="Pro Subscriptions">
