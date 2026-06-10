@@ -111,6 +111,7 @@ export default {
     const res = await handler.fetch(request, env, ctx)
 
     const skip = storeSkipReason(res)
+    let putDebug = null
     if (!skip) {
       // Cap HTML TTL so deploys propagate; keep route-chosen TTL for JSON etc.
       const isHtml = (res.headers.get('content-type') ?? '').includes('text/html')
@@ -118,11 +119,25 @@ export default {
       const stored = new Response(res.clone().body, res)
       stored.headers.set('cache-control', `public, s-maxage=${ttl}`)
       stored.headers.set('x-fp-edge-stored', new Date().toISOString())
-      ctx.waitUntil(cache.put(key, stored).catch(() => { /* cache write failure must never affect the response */ }))
+      if (request.headers.get('x-fp-debug') === '1') {
+        // Debug mode (S17): await the put and surface its outcome, because a
+        // rejected put inside waitUntil+catch is otherwise invisible. Only
+        // fires when the caller explicitly asks; normal traffic keeps the
+        // non-blocking waitUntil path.
+        try {
+          await cache.put(key, stored)
+          putDebug = 'ok'
+        } catch (e) {
+          putDebug = String((e && e.message) || e).slice(0, 140)
+        }
+      } else {
+        ctx.waitUntil(cache.put(key, stored).catch(() => { /* cache write failure must never affect the response */ }))
+      }
     }
 
     const out = withEdgeHeader(res, 'MISS')
     if (skip) out.headers.set('x-fp-edge-skip', skip)
+    if (putDebug) out.headers.set('x-fp-put', putDebug)
     return out
   },
 }
