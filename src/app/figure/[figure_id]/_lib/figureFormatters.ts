@@ -157,11 +157,52 @@ export function computeTrend(
   return ((avgRecent - avgOlder) / avgOlder) * 100
 }
 
+function cleanEbaySearchPart(value: string): string {
+  return value
+    .replace(/[()]/g, ' ')
+    .replace(/[·|:/]/g, ' ')
+    .replace(/-/g, ' ')
+    .replace(/[#"'`]/g, ' ')
+    .replace(/\bclass\b/gi, ' ')
+    .replace(/\b(none|null|undefined)\b/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+/** Build broad eBay affiliate search terms that still point at the right figure. */
+export function buildEbaySearchTerms(
+  character: string,
+  fandom: string,
+  brand: string,
+  line: string,
+  series: string | null | undefined
+): string {
+  const seen = new Set<string>()
+
+  return [character, fandom, brand, line, series ?? '']
+    .map(cleanEbaySearchPart)
+    .filter(Boolean)
+    .join(' ')
+    .split(/\s+/)
+    .filter(token => {
+      const key = token.toLowerCase()
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+    .join(' ')
+}
+
 /** Build an eBay affiliate search URL */
 export function buildEbaySearchUrl(
-  brand: string, line: string, series: string | null, name: string, campaignId: string
+  character: string,
+  fandom: string,
+  brand: string,
+  line: string,
+  series: string | null | undefined,
+  campaignId: string
 ): string {
-  const terms = encodeURIComponent(`${brand} ${line}${series ? ` ${series}` : ''} ${name}`.trim())
+  const terms = encodeURIComponent(buildEbaySearchTerms(character, fandom, brand, line, series))
   return `https://www.ebay.com/sch/i.html?_nkw=${terms}&_sop=15&mkcid=1&mkrid=711-53200-19255-0&campid=${campaignId}&toolid=10001`
 }
 

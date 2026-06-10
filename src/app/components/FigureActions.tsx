@@ -169,7 +169,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
             padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.8rem',
             fontWeight: '700', textDecoration: 'none',
           }}>
-            Upgrade to Pro →
+            Upgrade to Pro
           </a>
         </div>
       )}
@@ -187,7 +187,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
               : `${vaultWarn.remaining} vault spot${vaultWarn.remaining === 1 ? '' : 's'} left.`}
           </span>
           <a href="/pro" style={{ fontSize: '0.72rem', color: 'var(--blue)', fontWeight: '600', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            Upgrade →
+            Upgrade
           </a>
         </div>
       )}
@@ -196,7 +196,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
       {!vaultGate && (
         vaultStatus === 'done' ? (
           <div style={{ textAlign: 'center', padding: '0.625rem', fontSize: '0.8rem', color: 'var(--fp-success, var(--green))', fontWeight: '600' }}>
-            ✓ Added to Collection
+            Added to Collection
           </div>
         ) : showVaultForm ? (
           <div style={{ border: '1px solid var(--border)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
@@ -239,13 +239,13 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
                   padding: '0.5rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
                 }}
               >
-                {vaultStatus === 'loading' ? '…' : 'Add to Collection'}
+                {vaultStatus === 'loading' ? 'Loading' : 'Add to Collection'}
               </button>
               <button
                 onClick={() => setShowVaultForm(false)}
                 style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.5rem 0.625rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
               >
-                ✕
+                Cancel
               </button>
             </div>
             {vaultStatus === 'error' && <span style={{ fontSize: '0.75rem', color: '#FF4444' }}>Something went wrong</span>}
@@ -259,7 +259,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
               fontSize: '0.8rem', fontWeight: '500', cursor: 'pointer',
             }}
           >
-            + Add to Collection
+            Add to Collection
           </button>
         )
       )}
@@ -267,7 +267,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
       {/* ── Add to Want List ── */}
       {wantStatus === 'done' ? (
         <div style={{ textAlign: 'center', padding: '0.625rem', fontSize: '0.8rem', color: 'var(--fp-success, var(--green))', fontWeight: '600' }}>
-          ✓ Added to Want List
+          Added to Want List
         </div>
       ) : showWantForm ? (
         <div style={{ border: '1px solid var(--border)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -292,13 +292,13 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
                 padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
               }}
             >
-              {wantStatus === 'loading' ? '…' : 'Add to Want List'}
+              {wantStatus === 'loading' ? 'Loading' : 'Add to Want List'}
             </button>
             <button
               onClick={() => setShowWantForm(false)}
               style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.375rem 0.5rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
             >
-              ✕
+              Cancel
             </button>
           </div>
           {wantStatus === 'error' && <span style={{ fontSize: '0.75rem', color: '#FF4444' }}>Something went wrong</span>}
@@ -312,7 +312,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
             fontSize: '0.8rem', fontWeight: '500', cursor: 'pointer',
           }}
         >
-          ⭐ Add to Want List
+          Add to Want List
         </button>
       )}
 
@@ -334,12 +334,12 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
             padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.8rem',
             fontWeight: '700', textDecoration: 'none',
           }}>
-            Upgrade to Pro →
+            Upgrade to Pro
           </a>
         </div>
       ) : alertStatus === 'done' ? (
         <div style={{ textAlign: 'center', padding: '0.625rem', fontSize: '0.8rem', color: 'var(--fp-success, var(--green))', fontWeight: '600' }}>
-          🔔 Alert set
+          Alert set
         </div>
       ) : showAlertForm ? (
         <div style={{ border: '1px solid rgba(0,102,255,0.35)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', background: 'rgba(0,102,255,0.04)' }}>
@@ -365,13 +365,13 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
                 padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
               }}
             >
-              {alertStatus === 'loading' ? '…' : 'Set Alert'}
+              {alertStatus === 'loading' ? 'Loading' : 'Set Alert'}
             </button>
             <button
               onClick={() => setShowAlertForm(false)}
               style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.375rem 0.5rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
             >
-              ✕
+              Cancel
             </button>
           </div>
           {alertStatus === 'error' && <span style={{ fontSize: '0.75rem', color: '#FF4444' }}>Something went wrong</span>}
@@ -386,7 +386,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
             fontSize: '0.8rem', fontWeight: '600', cursor: 'pointer',
           }}
         >
-          🔔 Set Deal Alert
+          Set Deal Alert
         </button>
       )}
 

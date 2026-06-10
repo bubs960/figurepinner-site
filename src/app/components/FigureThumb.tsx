@@ -11,7 +11,7 @@
  * This component guarantees a card never looks broken:
  *   - shows a shimmer skeleton while the image is loading,
  *   - cross-fades the photo in on load,
- *   - falls back to a branded placeholder (monogram or icon) if the image
+ *   - falls back to a branded placeholder if the image
  *     errors or is missing entirely.
  *
  * It is a client component (needs load/error state), but can be imported into
@@ -66,12 +66,12 @@ export default function FigureThumb({
   }
 
   if (!showImage) {
-    // No image (or it errored) → branded fallback fills the same box.
+    // No image (or it errored) -> branded fallback fills the same box.
     return (
       <div style={fallback.kind === 'monogram' ? { ...box, background: 'transparent', border: 'none' } : box}>
         {fallback.kind === 'monogram'
           ? <Monogram name={fallback.name} accent={fallback.accent} size={size} radius={radius} />
-          : <FigureIcon accent={fallback.accent} size={size} />}
+          : <CompactBrandTile accent={fallback.accent} size={size} />}
       </div>
     )
   }
@@ -135,23 +135,33 @@ function Monogram({ name, accent, size, radius }: { name: string; accent: string
         fontSize: Math.max(size * 0.43, 12), fontWeight: 800, color: '#ffffff',
         opacity: 0.96, letterSpacing: '0.01em', lineHeight: 1,
       }}>{initials}</span>
-      <span style={{
-        position: 'absolute', right: size * 0.08, bottom: size * 0.07,
-        fontSize: Math.max(size * 0.08, 8), color: '#ffffff', opacity: 0.8, lineHeight: 1,
-      }}>{'✦'}</span>
     </div>
   )
 }
 
-/** Small line-art icon fallback (used on dense accordion / line grids). */
-function FigureIcon({ accent, size }: { accent: string; size: number }) {
-  const s = Math.round(size * 0.4)
+/** Compact branded tile fallback used on dense accordion / line grids. */
+function CompactBrandTile({ accent, size }: { accent: string; size: number }) {
   return (
-    <svg width={s} height={s} viewBox="0 0 16 16" fill="none" stroke={accent} strokeWidth="1.5" opacity="0.4">
-      <rect x="2" y="2" width="12" height="12" rx="2" />
-      <circle cx="8" cy="6" r="1.5" />
-      <path d="M4 12c0-2.2 1.8-4 4-4s4 1.8 4 4" />
-    </svg>
+    <span
+      aria-hidden
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: Math.max(Math.round(size * 0.58), 20),
+        height: Math.max(Math.round(size * 0.58), 20),
+        borderRadius: Math.max(Math.round(size * 0.12), 4),
+        background: `${accent}22`,
+        color: accent,
+        fontFamily: 'var(--font-display), system-ui, sans-serif',
+        fontSize: Math.max(size * 0.2, 9),
+        fontWeight: 800,
+        letterSpacing: 0,
+        lineHeight: 1,
+      }}
+    >
+      FP
+    </span>
   )
 }
 

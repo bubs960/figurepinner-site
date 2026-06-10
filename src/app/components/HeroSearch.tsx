@@ -17,16 +17,7 @@ type SearchResult = {
   character_slug?: string
 }
 
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
-  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
-  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
-  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
-  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
-  'neca': '🎬', 'spawn': '🦇',
-}
-
-export default function HeroSearch() {
+export default function HeroSearch({ totalLabel = '18,000+' }: { totalLabel?: string }) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
@@ -78,7 +69,7 @@ export default function HeroSearch() {
   }
 
   return (
-    <div ref={wrapperRef} style={{ position: 'relative', width: '100%', maxWidth: 600, margin: '0 auto 32px' }}>
+    <div ref={wrapperRef} style={{ position: 'relative', width: '100%', maxWidth: 720, margin: '0 auto 32px' }}>
       <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -90,10 +81,9 @@ export default function HeroSearch() {
         transition: 'border-color 0.15s',
         boxShadow: open && results.length ? '0 0 0 3px rgba(0,102,255,0.12)' : 'none',
       }}>
-        <SearchIcon />
         <input
           type="text"
-          placeholder="Search 18,000+ figures by name or character…"
+          placeholder={`Search ${totalLabel} figures by name or character...`}
           value={query}
           onChange={e => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && results.length && setOpen(true)}
@@ -142,10 +132,10 @@ export default function HeroSearch() {
             <a
               key={r.figure_id ?? i}
               href={
-                (r.fandom_slug && r.line_slug && r.character_slug)
-                  ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
-                  : r.figure_id
-                    ? `/figure/${r.figure_id}`
+                r.figure_id
+                  ? `/figure/${r.figure_id}`
+                  : (r.fandom_slug && r.line_slug && r.character_slug)
+                    ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
                     : `/search?q=${encodeURIComponent(r.name)}`
               }
               role="option"
@@ -163,7 +153,7 @@ export default function HeroSearch() {
               onMouseEnter={e => (e.currentTarget.style.background = 'var(--s2)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
             >
-              {/* Image or emoji placeholder */}
+              {/* Image or monogram placeholder */}
               <div style={{
                 width: 36, height: 36, borderRadius: 6, flexShrink: 0,
                 background: 'var(--s2)', border: '1px solid var(--border)',
@@ -175,7 +165,7 @@ export default function HeroSearch() {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={r.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                   )
-                  : (GENRE_EMOJI[r.genre] ?? '🤼')
+                  : <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text)' }}>{resultMonogram(r.name)}</span>
                 }
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
@@ -186,9 +176,6 @@ export default function HeroSearch() {
                   {r.brand} {r.line}{r.series ? ` · Series ${r.series}` : ''}
                 </div>
               </div>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--dim)', flexShrink: 0 }}>
-                <path d="M2 6h8M6 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
             </a>
           ))}
           <a
@@ -226,6 +213,13 @@ export default function HeroSearch() {
   )
 }
 
+function resultMonogram(name: string): string {
+  const words = name.replace(/[^a-zA-Z0-9 ]/g, '').split(/\s+/).filter(Boolean)
+  if (words.length === 0) return 'FP'
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase()
+  return `${words[0][0]}${words[1][0]}`.toUpperCase()
+}
+
 // Bold the matched portion of the result name
 function highlightMatch(text: string, query: string): React.ReactNode {
   if (!query) return text
@@ -237,15 +231,6 @@ function highlightMatch(text: string, query: string): React.ReactNode {
       <strong style={{ color: 'var(--blue)', fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</strong>
       {text.slice(idx + query.length)}
     </>
-  )
-}
-
-function SearchIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" style={{ color: 'var(--muted)', flexShrink: 0 }}>
-      <circle cx="7.5" cy="7.5" r="5" />
-      <line x1="11.5" y1="11.5" x2="16" y2="16" />
-    </svg>
   )
 }
 
@@ -265,13 +250,11 @@ function ClearButton({ onClick }: { onClick: () => void }) {
       aria-label="Clear search"
       style={{
         background: 'none', border: 'none', cursor: 'pointer',
-        color: 'var(--muted)', display: 'flex', padding: 4, flexShrink: 0,
+        color: 'var(--muted)', display: 'flex', padding: '4px 0 4px 8px', flexShrink: 0,
+        fontSize: '0.75rem', fontWeight: 700, fontFamily: 'var(--font-ui)',
       }}
     >
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <line x1="2" y1="2" x2="12" y2="12" />
-        <line x1="12" y1="2" x2="2" y2="12" />
-      </svg>
+      Clear
     </button>
   )
 }

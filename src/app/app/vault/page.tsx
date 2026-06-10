@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { useUser } from '@clerk/nextjs'
+import { genreMark } from '@/app/_lib/genreMarks'
 
 
 type VaultItem = {
@@ -17,15 +18,6 @@ type VaultItem = {
 }
 
 const CONDITIONS = ['Loose', 'Near Mint', 'MOC', 'Opened', 'Damaged']
-
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
-  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
-  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
-  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
-  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
-  'neca': '🎬', 'spawn': '🦇',
-}
 
 export default function VaultPage() {
   const [items, setItems] = useState<VaultItem[]>([])
@@ -160,7 +152,7 @@ export default function VaultPage() {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap',
         }}>
           <div>
-            <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>📊 Export your collection</div>
+            <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>Export your collection</div>
             <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>Pro members can export their full vault to CSV or Excel.</div>
           </div>
           <a href="/pro" style={{
@@ -217,8 +209,8 @@ function VaultRow({
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', minWidth: 0 }}>
-        <span style={{ fontSize: '1rem', flexShrink: 0 }} title={item.genre ?? undefined}>
-          {GENRE_EMOJI[item.genre ?? ''] ?? '🤼'}
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.72rem', fontWeight: 800, flexShrink: 0, color: 'var(--muted)' }} title={item.genre ?? undefined}>
+          {genreMark(item.genre)}
         </span>
         <div style={{ minWidth: 0 }}>
           <a
@@ -348,7 +340,7 @@ function EmptyState() {
       textAlign: 'center', padding: '4rem 2rem',
       background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
     }}>
-      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📦</div>
+      <div style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', marginBottom: '1rem' }}>VC</div>
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
         YOUR VAULT IS EMPTY
       </h2>

@@ -59,12 +59,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   })
 
   // ── Figure detail pages ──────────────────────────────────────────────────
-  // Use pretty SEO URLs (/[fandom]/[line]/[slug]) — Google indexes keyword-rich paths.
-  // /figure/[id] pages point canonical → pretty URL so link equity consolidates here.
-  //
-  // DEDUPLICATION: multiple waves share the same pretty URL (e.g. three CM Punk
-  // Elite entries all map to /wrestling/elite/cm-punk). The pretty URL route resolves
-  // to the highest wave, so we only submit each unique URL once.
+  // Use keyword-rich pretty URLs only when they map to one exact figure.
+  // Ambiguous character/line paths stay on /figure/[id] so one wave cannot
+  // canonicalize or sitemap as another wave.
   const figures = getAllFigures()
   const seenUrls = new Set<string>()
   const figurePages: MetadataRoute.Sitemap = []

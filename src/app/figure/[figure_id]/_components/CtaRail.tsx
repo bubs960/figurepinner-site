@@ -74,7 +74,7 @@ export default function CtaRail({ genre, brand, line }: CtaRailProps) {
             transition: 'background 0.15s',
           }}>
             <div style={{
-              fontSize: '0.58rem', fontWeight: '700', letterSpacing: '0.12em',
+              fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.12em',
               color: card.accentVar, textTransform: 'uppercase',
             }}>
               {card.label}

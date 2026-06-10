@@ -6,26 +6,6 @@
 import { useState } from 'react'
 import { thumb } from '@/lib/imageUrl'
 
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling':                    '🤼',
-  'marvel':                       '🦸',
-  'star-wars':                    '⚔️',
-  'dc':                           '🦇',
-  'transformers':                 '🤖',
-  'gijoe':                        '🪖',
-  'masters-of-the-universe':      '⚡',
-  'teenage-mutant-ninja-turtles': '🐢',
-  'power-rangers':                '🦕',
-  'indiana-jones':                '🎩',
-  'ghostbusters':                 '👻',
-  'mythic-legions':               '🗡️',
-  'thundercats':                  '🐱',
-  'action-force':                 '🎖️',
-  'dungeons-dragons':             '🐉',
-  'neca':                         '🎬',
-  'spawn':                        '🦇',
-}
-
 type Props = {
   url: string | null
   name: string
@@ -34,17 +14,19 @@ type Props = {
   bare?: boolean
 }
 
-export default function FigureImage({ url, name, genre, bare }: Props) {
+export default function FigureImage({ url, name, bare }: Props) {
   const [errored, setErrored] = useState(false)
-  const emoji = (genre && GENRE_EMOJI[genre]) ?? '🤼'
 
   const inner = (!url || errored) ? (
     <div style={{
       width: '100%', height: '100%',
       display: 'flex', alignItems: 'center', justifyContent: 'center',
-      fontSize: '3rem', color: 'var(--muted)',
+      fontFamily: 'var(--font-display)',
+      fontSize: '3rem',
+      color: 'var(--muted)',
+      letterSpacing: 0,
     }}>
-      {emoji}
+      {figureMonogram(name)}
     </div>
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
@@ -66,4 +48,11 @@ export default function FigureImage({ url, name, genre, bare }: Props) {
       {inner}
     </div>
   )
+}
+
+function figureMonogram(name: string): string {
+  const words = name.replace(/[^a-zA-Z0-9 ]/g, '').split(/\s+/).filter(Boolean)
+  if (words.length === 0) return 'FP'
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase()
+  return `${words[0][0]}${words[1][0]}`.toUpperCase()
 }

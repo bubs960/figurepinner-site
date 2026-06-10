@@ -97,14 +97,14 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         {!showNew && !showUsed && (
           // Not enough tagged sales in either bucket to split honestly — show the
           // blended median so the panel still says something true.
-          <ConditionPill label="All" prices={comps.map(c => c.price)} color="var(--fp-dim)" />
+          <ConditionPill label="All" prices={comps.map(c => c.price)} color="var(--fp-dim)" tintValue />
         )}
       </div>
     </section>
   )
 }
 
-function ConditionPill({ label, prices, color }: { label: string; prices: number[]; color: string }) {
+function ConditionPill({ label, prices, color, tintValue }: { label: string; prices: number[]; color: string; tintValue?: boolean }) {
   const med = median(prices)
   return (
     <div style={{
@@ -122,11 +122,11 @@ function ConditionPill({ label, prices, color }: { label: string; prices: number
       </span>
       <span style={{
         fontFamily: 'var(--fp-font-display)', fontSize: '0.95rem',
-        color: 'var(--fp-text)', letterSpacing: '0.02em',
+        color: tintValue ? 'var(--fp-success)' : 'var(--fp-text)', letterSpacing: '0.02em',
       }}>
         {formatCurrency(med)}
       </span>
-      <span style={{ fontSize: '0.7rem', color: 'var(--fp-dim)' }}>
+      <span style={{ fontSize: '0.8rem', color: 'var(--fp-dim)' }}>
         median · {prices.length} sold
       </span>
     </div>

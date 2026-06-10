@@ -9,126 +9,108 @@ import GenreLineAccordion, { type LineData } from './_components/GenreLineAccord
 
 const GENRE_META: Record<string, {
   label: string
-  emoji: string
   description: string
   accent: string       // CSS color for genre-specific accent
   highlights: string[] // 3 notable product lines or facts
 }> = {
   'wrestling': {
     label: 'Wrestling',
-    emoji: '🤼',
     description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 8,000+ figures.',
     accent: '#e53238',
     highlights: ['Mattel Elite', 'Jakks Pacific', 'Hasbro WWF'],
   },
   'marvel': {
     label: 'Marvel',
-    emoji: '🦸',
     description: 'Marvel Legends, Spider-Man, and Marvel action figure prices. Track Hasbro and ToyBiz values across your collection.',
     accent: '#e23636',
     highlights: ['Marvel Legends', 'ToyBiz Classics', 'Spider-Man'],
   },
   'star-wars': {
     label: 'Star Wars',
-    emoji: '⚔️',
     description: 'Star Wars action figure prices. Black Series, Vintage Collection, Power of the Force values with real eBay sold data.',
     accent: '#3d7bca',
     highlights: ['Black Series', 'Vintage Collection', 'Power of the Force'],
   },
   'dc': {
     label: 'DC',
-    emoji: '🦇',
     description: 'DC action figure prices. McFarlane, DC Direct, DC Universe Classics values with real eBay sold data.',
     accent: '#3a6fbf',
     highlights: ['McFarlane Toys', 'DC Universe Classics', 'DC Direct'],
   },
   'transformers': {
     label: 'Transformers',
-    emoji: '🤖',
     description: 'Transformers action figure prices. Masterpiece, Studio Series, Generations values with real eBay sold data.',
     accent: '#c44f0e',
     highlights: ['Masterpiece', 'Studio Series', 'Generations'],
   },
   'gijoe': {
     label: 'G.I. Joe',
-    emoji: '🪖',
     description: 'G.I. Joe action figure prices. Classified Series, vintage values with real eBay sold data.',
     accent: '#2e7d32',
     highlights: ['Classified Series', 'A Real American Hero', 'Sigma 6'],
   },
   'masters-of-the-universe': {
     label: 'Masters of the Universe',
-    emoji: '⚡',
     description: 'Masters of the Universe action figure prices. Origins, Masterverse, vintage MOTU values.',
     accent: '#b8860b',
     highlights: ['Masterverse', 'Origins', 'Vintage MOTU'],
   },
   'teenage-mutant-ninja-turtles': {
     label: 'TMNT',
-    emoji: '🐢',
     description: 'Teenage Mutant Ninja Turtles action figure prices. NECA, Playmates, Super7 values with real eBay sold data.',
     accent: '#2e7d32',
     highlights: ['NECA Ultimate', 'Playmates Vintage', 'Super7 ReAction'],
   },
   'power-rangers': {
     label: 'Power Rangers',
-    emoji: '🦕',
     description: 'Power Rangers action figure prices. Lightning Collection, vintage values with real eBay sold data.',
     accent: '#d32f2f',
     highlights: ['Lightning Collection', 'Vintage Bandai', 'Legacy'],
   },
   'indiana-jones': {
     label: 'Indiana Jones',
-    emoji: '🎩',
     description: 'Indiana Jones action figure prices. Adventure Series values with real eBay sold data.',
     accent: '#8d6e63',
     highlights: ['Adventure Series', 'Vintage Kenner'],
   },
   'ghostbusters': {
     label: 'Ghostbusters',
-    emoji: '👻',
     description: 'Ghostbusters action figure prices. Plasma Series, vintage values with real eBay sold data.',
     accent: '#5e35b1',
     highlights: ['Plasma Series', 'Kenner Real Ghostbusters', 'Afterlife'],
   },
   'mythic-legions': {
     label: 'Mythic Legions',
-    emoji: '🗡️',
     description: 'Mythic Legions action figure prices. Four Horsemen values with real eBay sold data.',
     accent: '#7b5e3a',
     highlights: ['Four Horsemen', 'Advent of Decay', 'Necronominus'],
   },
   'thundercats': {
     label: 'Thundercats',
-    emoji: '🐱',
     description: 'Thundercats action figure prices. Super7, LJN vintage values with real eBay sold data.',
     accent: '#f57c00',
     highlights: ['Super7 Ultimates', 'LJN Vintage', 'Bandai'],
   },
   'action-force': {
     label: 'Action Force',
-    emoji: '🎖️',
     description: 'Action Force action figure prices. Values with real eBay sold data.',
     accent: '#455a64',
     highlights: ['Action Force'],
   },
   'dungeons-dragons': {
     label: 'Dungeons & Dragons',
-    emoji: '🐉',
     description: 'Dungeons & Dragons action figure prices. Golden Archive, vintage values with real eBay sold data.',
     accent: '#6a1b9a',
     highlights: ['Golden Archive', 'LJN Vintage', 'Hasbro'],
   },
   'neca': {
     label: 'Horror & Film',
-    emoji: '🎬',
     description: 'NECA Horror & Film action figure prices. Ultimate figures, vintage values with real eBay sold data.',
     accent: '#b71c1c',
     highlights: ['NECA Ultimate', 'Retro', 'Toony Terrors'],
   },
   'spawn': {
     label: 'Spawn',
-    emoji: '🦇',
     description: 'Spawn action figure prices. McFarlane Toys Spawn series values with real eBay sold data.',
     accent: '#37474f',
     highlights: ['McFarlane Series 1–35', 'Deluxe', 'Ultra-Action'],

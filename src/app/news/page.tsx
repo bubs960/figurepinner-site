@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
+import { genreMark } from '@/app/_lib/genreMarks'
 
 export const metadata: Metadata = {
   title: 'News',
@@ -23,24 +24,24 @@ interface NewsEvent {
   created_at: string
 }
 
-const GENRE_LABELS: Record<string, { label: string; emoji: string }> = {
-  wrestling:                       { label: 'Wrestling',      emoji: '🤼' },
-  marvel:                          { label: 'Marvel',         emoji: '🦸' },
-  'star-wars':                     { label: 'Star Wars',      emoji: '⚔️' },
-  dc:                              { label: 'DC',             emoji: '🦇' },
-  transformers:                    { label: 'Transformers',   emoji: '🤖' },
-  gijoe:                           { label: 'GI Joe',         emoji: '🪖' },
-  'masters-of-the-universe':       { label: 'MOTU',           emoji: '⚡' },
-  'teenage-mutant-ninja-turtles':  { label: 'TMNT',           emoji: '🐢' },
-  'power-rangers':                 { label: 'Power Rangers',  emoji: '🦕' },
-  'indiana-jones':                 { label: 'Indiana Jones',  emoji: '🎩' },
-  ghostbusters:                    { label: 'Ghostbusters',   emoji: '👻' },
-  'mythic-legions':                { label: 'Mythic Legions', emoji: '🗡️' },
-  thundercats:                     { label: 'ThunderCats',    emoji: '🐱' },
-  'action-force':                  { label: 'Action Force',   emoji: '🎖️' },
-  'dungeons-dragons':              { label: 'D&D',            emoji: '🐉' },
-  neca:                            { label: 'NECA',           emoji: '🎬' },
-  spawn:                           { label: 'Spawn',          emoji: '🦇' },
+const GENRE_LABELS: Record<string, { label: string }> = {
+  wrestling:                       { label: 'Wrestling' },
+  marvel:                          { label: 'Marvel' },
+  'star-wars':                     { label: 'Star Wars' },
+  dc:                              { label: 'DC' },
+  transformers:                    { label: 'Transformers' },
+  gijoe:                           { label: 'GI Joe' },
+  'masters-of-the-universe':       { label: 'MOTU' },
+  'teenage-mutant-ninja-turtles':  { label: 'TMNT' },
+  'power-rangers':                 { label: 'Power Rangers' },
+  'indiana-jones':                 { label: 'Indiana Jones' },
+  ghostbusters:                    { label: 'Ghostbusters' },
+  'mythic-legions':                { label: 'Mythic Legions' },
+  thundercats:                     { label: 'ThunderCats' },
+  'action-force':                  { label: 'Action Force' },
+  'dungeons-dragons':              { label: 'D&D' },
+  neca:                            { label: 'NECA' },
+  spawn:                           { label: 'Spawn' },
 }
 
 async function fetchEvents(genre: string | null): Promise<NewsEvent[]> {
@@ -164,7 +165,7 @@ export default async function NewsPage({ searchParams }: PageProps) {
                 href={`/news?genre=${encodeURIComponent(g)}`}
                 style={pillStyle(genre === g)}
               >
-                {GENRE_LABELS[g]?.emoji ?? '·'} {prettifyGenre(g)}
+                <span aria-hidden>{genreMark(g)}</span> {prettifyGenre(g)}
               </Link>
             ))}
           </nav>
@@ -175,7 +176,7 @@ export default async function NewsPage({ searchParams }: PageProps) {
             background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: 14,
             padding: '2rem', textAlign: 'center',
           }}>
-            <div style={{ fontSize: '2rem', marginBottom: 12 }}>📰</div>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', marginBottom: 12 }}>NW</div>
             <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text)', marginBottom: 6 }}>
               {genre ? `No ${prettifyGenre(genre)} news yet` : 'No news yet'}
             </div>
@@ -206,7 +207,7 @@ export default async function NewsPage({ searchParams }: PageProps) {
                     background: 'rgba(255,184,0,0.1)', padding: '3px 8px', borderRadius: 9999,
                     border: '1px solid rgba(255,184,0,0.25)',
                   }}>
-                    📌 Pinned
+                    Pinned
                   </div>
                 )}
                 <div style={{

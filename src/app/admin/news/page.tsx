@@ -129,7 +129,7 @@ export default async function AdminNewsPage() {
                   display: 'flex', alignItems: 'center', gap: '0.625rem', fontSize: '0.875rem',
                 }}>
                   {e.pinned === 1 && (
-                    <span style={{ fontSize: '0.65rem', color: '#FFB800' }} title="Pinned">📌</span>
+                    <span style={{ fontSize: '0.65rem', color: '#FFB800', fontWeight: 800 }} title="Pinned">Pinned</span>
                   )}
                   <span style={{ flex: 1, color: 'var(--text)', fontWeight: 600 }}>{e.title}</span>
                   {e.genre && (

@@ -197,18 +197,37 @@ export function deriveName(f: KBFigure): string {
 /**
  * Build the pretty URL path segment for a figure.
  * Format: /figure/<figure_id>  (stable, used for all internal links)
- * Pretty alias: /<fandom>/<product_line>/<character_canonical>  (canonical SEO URL)
+ * Pretty alias: /<fandom>/<product_line>/<character_canonical> when unique.
  */
 export function figureUrl(f: KBFigure): string {
   return `/figure/${f.figure_id}`
 }
 
+function prettyFigureUrlKey(f: KBFigure): string {
+  return `${f.fandom}/${f.product_line}/${f.character_canonical}`
+}
+
+const prettyFigureUrlCounts: Map<string, number> = (() => {
+  const counts = new Map<string, number>()
+  for (const f of FIGURES_V2) {
+    const key = prettyFigureUrlKey(f)
+    counts.set(key, (counts.get(key) ?? 0) + 1)
+  }
+  return counts
+})()
+
+export function hasUniquePrettyFigureUrl(f: KBFigure): boolean {
+  return prettyFigureUrlCounts.get(prettyFigureUrlKey(f)) === 1
+}
+
 /**
  * Keyword-rich SEO canonical URL for a figure.
- * Used in sitemaps and <link rel="canonical"> tags.
- * Format: /<fandom>/<product_line>/<character_canonical>
+ * Used in sitemaps and <link rel="canonical"> tags. Many characters have
+ * multiple waves with the same pretty path, so ambiguous figures keep the
+ * stable identity URL to prevent one release from resolving as another.
  */
 export function prettyFigureUrl(f: KBFigure): string {
+  if (!hasUniquePrettyFigureUrl(f)) return figureUrl(f)
   return `/${f.fandom}/${f.product_line}/${f.character_canonical}`
 }
 

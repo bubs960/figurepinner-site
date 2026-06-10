@@ -7,11 +7,11 @@ import { UserButton, useUser } from '@clerk/nextjs'
 
 // Nav items
 const NAV = [
-  { href: '/app', label: 'Search', icon: SearchIcon },
-  { href: '/app/wantlist', label: 'Want List', icon: HeartIcon },
-  { href: '/app/alerts', label: 'Deal Alerts', icon: BellIcon },
-  { href: '/app/vault', label: 'My Collection', icon: BoxIcon },
-  { href: '/app/settings', label: 'Settings', icon: GearIcon },
+  { href: '/app', label: 'Search', mark: 'SE' },
+  { href: '/app/wantlist', label: 'Want List', mark: 'WL' },
+  { href: '/app/alerts', label: 'Deal Alerts', mark: 'DA' },
+  { href: '/app/vault', label: 'My Collection', mark: 'VC' },
+  { href: '/app/settings', label: 'Settings', mark: 'ST' },
 ]
 
 export default function AppShell({ children }: { children: ReactNode }) {
@@ -139,7 +139,7 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
 
       {/* Nav links */}
       <nav style={{ flex: 1, padding: '1rem 0.5rem', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-        {NAV.map(({ href, label, icon: Icon }) => {
+        {NAV.map(({ href, label, mark }) => {
           const active = pathname === href || (href !== '/app' && pathname.startsWith(href))
           return (
             <a
@@ -159,7 +159,7 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
                 transition: 'color 0.15s, background 0.15s',
               }}
             >
-              <Icon size={16} />
+              <NavMark mark={mark} active={active} />
               {label}
             </a>
           )
@@ -169,7 +169,7 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
       {/* Plan indicator / Pro upsell */}
       {isPro ? (
         <div style={{ padding: '0.75rem 1rem', margin: '0 0.5rem 0.75rem', background: 'var(--s2)', borderRadius: '8px', border: '1px solid rgba(0,102,255,0.3)' }}>
-          <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--blue)', marginBottom: '0.125rem' }}>✦ PRO</div>
+          <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--blue)', marginBottom: '0.125rem' }}>PRO</div>
           <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>Unlimited vault, alerts, and history</div>
         </div>
       ) : (
@@ -219,7 +219,7 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
         }}
       >
         <span style={{ display: 'block', fontWeight: '600', fontSize: '0.75rem', color: 'var(--text)' }}>
-          💰 We Buy Collections
+          We Buy Collections
         </span>
         Sell your figures — email us
       </a>
@@ -256,7 +256,7 @@ function MobileNav() {
 
   return (
     <nav className="fp-mobile-nav">
-      {mobileNav.map(({ href, label, icon: Icon }) => {
+      {mobileNav.map(({ href, label, mark }) => {
         const active = pathname === href || (href !== '/app' && pathname.startsWith(href))
         return (
           <a
@@ -276,7 +276,7 @@ function MobileNav() {
               padding: '0.5rem 0',
             }}
           >
-            <Icon size={20} />
+            <NavMark mark={mark} active={active} size={24} />
             {label}
           </a>
         )
@@ -285,44 +285,29 @@ function MobileNav() {
   )
 }
 
-// ── Inline SVG icons ──────────────────────────────────────────────────────────
-function SearchIcon({ size = 16 }: { size?: number }) {
+function NavMark({ mark, active, size = 20 }: { mark: string; active: boolean; size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-      <circle cx="6.5" cy="6.5" r="4" />
-      <line x1="10" y1="10" x2="14" y2="14" />
-    </svg>
-  )
-}
-function HeartIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M8 13.5S2 9.5 2 5.5a3 3 0 0 1 6-1 3 3 0 0 1 6 1c0 4-6 8-6 8z" />
-    </svg>
-  )
-}
-function BellIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-      <path d="M8 2a4 4 0 0 1 4 4v3l1 1H3l1-1V6a4 4 0 0 1 4-4z" />
-      <path d="M6.5 13a1.5 1.5 0 0 0 3 0" />
-    </svg>
-  )
-}
-function BoxIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="5" width="12" height="9" rx="1" />
-      <path d="M5 5V4a3 3 0 0 1 6 0v1" />
-    </svg>
-  )
-}
-function GearIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-      <circle cx="8" cy="8" r="2" />
-      <path d="M8 2v1.5M8 12.5V14M2 8h1.5M12.5 8H14M3.6 3.6l1 1M11.4 11.4l1 1M12.4 3.6l-1 1M4.6 11.4l-1 1" />
-    </svg>
+    <span
+      aria-hidden
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: size,
+        height: size,
+        borderRadius: 5,
+        flexShrink: 0,
+        background: active ? 'rgba(0,102,255,0.18)' : 'var(--s2)',
+        color: active ? 'var(--blue)' : 'var(--muted)',
+        fontFamily: 'var(--font-display)',
+        fontSize: size * 0.42,
+        fontWeight: 800,
+        letterSpacing: 0,
+        lineHeight: 1,
+      }}
+    >
+      {mark}
+    </span>
   )
 }
 function HamburgerIcon() {

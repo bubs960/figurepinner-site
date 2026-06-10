@@ -1,5 +1,9 @@
 name = "figurepinner-site"
-main = ".open-next/worker.js"
+# S15 2026-06-10: custom entry wraps OpenNext with a colo edge cache for
+# anonymous public GETs (CPU was 623ms avg — every view ran full SSR; zone
+# Cache Rules can't cache Worker HTML). See edge-cache-entry.mjs header for
+# safety gates + rollback (rollback = restore main to ".open-next/worker.js").
+main = "edge-cache-entry.mjs"
 compatibility_date = "2025-09-15"
 compatibility_flags = ["nodejs_compat", "enable_nodejs_process_v2"]
 
@@ -21,14 +25,6 @@ binding = "ASSETS"
 binding = "DB"
 database_name = "figurepinner-userdata"
 database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
-
-# Re-enabled 2026-06-04 for /deals page (ISR 1hr, D1 only queried once/hour).
-# Originally disabled 2026-05-11 (INC-014) to isolate deploy-cascade cost driver.
-# Caching layer now ships; D1 reads are ISR-gated, not per-request.
-[[d1_databases]]
-binding = "LISTINGS_DB"
-database_name = "figurepinner-listings"
-database_id = "52555867-3526-4d7a-8fc1-ca553b499645"
 
 [[kv_namespaces]]
 binding = "PRO_KV"
@@ -78,6 +74,9 @@ custom_domain = true
 [vars]
 FROM_EMAIL = "hello@figurepinner.com"
 NEXT_PUBLIC_ADSENSE_CLIENT = "ca-pub-1062337951127266"
+# Mobile sticky action bar feature flag — "1" = on (mobile only), unset/"0" = off.
+# Flip to "0" + redeploy for instant rollback. See MobileActionBar.tsx.
+NEXT_PUBLIC_MOBILE_ACTION_BAR = "1"
 
 # Salt for per-IP rate-limit bucket keys. Any 16+ char string.
 # Rotating this invalidates all current rate-limit buckets (useful if a
@@ -100,36 +99,6 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL = "/sign-in"
 NEXT_PUBLIC_CLERK_SIGN_UP_URL = "/sign-up"
 NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL = "/app"
 NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL = "/app"
-
-# ── Workers AI binding ──────────────────────────────────────────────────────
-# Enables the worker to call Cloudflare-hosted vision models — CLIP for image
-# embeddings used in the KB image similarity search pipeline. Free tier
-# covers our anticipated volume; no setup required beyond enabling.
-[ai]
-binding = "AI"
-
-# ── Analytics Engine binding ────────────────────────────────────────────────
-# Free with Workers Paid. Used by /api/v1/identify-public (and any other route
-# that calls src/lib/analytics.ts) to track event counters: identify_call,
-# identify_cache_hit, identify_cache_miss, identify_gemini_ok,
-# identify_gemini_fail. The data informs the Gemini-cache-optimization decision
-# (INC-014 follow-up — added 2026-05-11). Query via the CF Analytics Engine
-# SQL API.
-[[analytics_engine_datasets]]
-binding = "ANALYTICS"
-dataset = "figurepinner_identify"
-
-# ── Vectorize binding (image embedding storage + nearest-neighbor search) ───
-# Stores 512-dimensional CLIP embeddings for every KB figure with a
-# canonical_image_url. Query path: compute embedding of user-uploaded photo,
-# find nearest neighbors in this index, return top candidates. Replaces the
-# Gemini API dependency for most identification calls.
-#
-# Index was created via:
-#   npx wrangler vectorize create figure-embeddings --dimensions=512 --metric=cosine
-[[vectorize]]
-binding = "FIGURE_EMBEDDINGS"
-index_name = "figure-embeddings-v2"
 
 # ── Cron binding — REMOVED 2026-05-11 PM, EXPLICIT-EMPTY FORCE 2026-05-13 PM ─
 # Was: */5 * * * * triggering /api/cron/process-jobs for IMPORT_AF411,

@@ -14,6 +14,8 @@
  * Deploy: npx wrangler deploy --config wrangler.alerts.toml
  */
 
+import { runSentinel, type SentinelEnv } from './site-sentinel'
+
 export interface Env {
   DB: D1Database
   RESEND_API_KEY: string
@@ -61,7 +63,14 @@ interface ClerkUser {
 // ─── Main handler ─────────────────────────────────────────────────────────────
 
 export default {
-  async scheduled(_event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
+  async scheduled(event: ScheduledEvent, env: Env, ctx: ExecutionContext): Promise<void> {
+    // Two crons share this worker — branch on which one fired (S15 2026-06-10):
+    //   "*/15 * * * *" → site sentinel (revenue-path probes, email on failure)
+    //   "0 8 * * *"    → deal alert check (original behavior)
+    if (event.cron === '*/15 * * * *') {
+      ctx.waitUntil(runSentinel(env as SentinelEnv))
+      return
+    }
     ctx.waitUntil(runAlertCheck(env))
   },
 }

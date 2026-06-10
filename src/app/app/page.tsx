@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { genreMark, labelMark } from '@/app/_lib/genreMarks'
 
 // Client component — runtime is inherited from the edge layout
 
@@ -86,7 +87,6 @@ export default function AppHome() {
           borderRadius: '10px', padding: '0.875rem 1.25rem', marginBottom: '1.5rem', gap: '1rem',
         }}>
           <div>
-            <span style={{ fontSize: '1rem', marginRight: '0.5rem' }}>🎉</span>
             <span style={{ fontWeight: '600', color: 'var(--text)' }}>Welcome to Pro!</span>
             {' '}
             <span style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
@@ -125,11 +125,10 @@ export default function AppHome() {
             padding: '0 1rem',
             gap: '0.75rem',
           }}>
-            <SearchIconSm />
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search 18,000+ figures by name, line, or character…"
+              placeholder="Search 21,500+ figures by name, line, or character…"
               value={query}
               onChange={e => setQuery(e.target.value)}
               onFocus={() => query.length >= 2 && setOpen(true)}
@@ -166,10 +165,10 @@ export default function AppHome() {
                 <a
                   key={r.figure_id ?? i}
                   href={
-                    (r.fandom_slug && r.line_slug && r.character_slug)
-                      ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
-                      : r.figure_id
-                        ? `/figure/${r.figure_id}`
+                    r.figure_id
+                      ? `/figure/${r.figure_id}`
+                      : (r.fandom_slug && r.line_slug && r.character_slug)
+                        ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
                         : `/search?q=${encodeURIComponent(r.name)}`
                   }
                   style={{
@@ -187,7 +186,7 @@ export default function AppHome() {
                   onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1, minWidth: 0 }}>
-                    {/* Image or genre-emoji placeholder */}
+                    {/* Image or genre mark placeholder */}
                     <div style={{
                       width: 36, height: 36, borderRadius: 6,
                       background: 'var(--s1)', border: '1px solid var(--border)',
@@ -199,7 +198,7 @@ export default function AppHome() {
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={r.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                       ) : (
-                        GENRE_EMOJI[r.genre] ?? '🤼'
+                        <span style={{ fontSize: '0.75rem', fontWeight: 800 }}>{genreMark(r.genre)}</span>
                       )}
                     </div>
                     <div style={{ minWidth: 0 }}>
@@ -211,9 +210,6 @@ export default function AppHome() {
                       </div>
                     </div>
                   </div>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--muted)', flexShrink: 0, marginLeft: '0.5rem' }}>
-                    <path d="M2 6h8M6 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
                 </a>
               ))}
             </div>
@@ -288,7 +284,16 @@ export default function AppHome() {
               onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--blue)')}
               onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
             >
-              <span style={{ marginRight: '0.5rem' }}>{g.emoji}</span>{g.label}
+              <span style={{
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                width: 22, height: 22, borderRadius: 6, marginRight: '0.5rem',
+                background: 'var(--s2)', color: 'var(--muted)',
+                fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 800,
+                letterSpacing: 0, lineHeight: 1,
+              }}>
+                {labelMark(g.label)}
+              </span>
+              {g.label}
             </a>
           ))}
         </div>
@@ -312,15 +317,6 @@ function SectionHeader({ label }: { label: string }) {
   )
 }
 
-function SearchIconSm() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" style={{ color: 'var(--muted)', flexShrink: 0 }}>
-      <circle cx="6.5" cy="6.5" r="4" />
-      <line x1="10" y1="10" x2="14" y2="14" />
-    </svg>
-  )
-}
-
 function SpinnerIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ color: 'var(--muted)', flexShrink: 0, animation: 'spin 0.8s linear infinite' }}>
@@ -330,32 +326,23 @@ function SpinnerIcon() {
   )
 }
 
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
-  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
-  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
-  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
-  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
-  'neca': '🎬', 'spawn': '🦇',
-}
-
 // Fandom slugs match KB `genre` field exactly — 17 genres as of v11.2.0
 const GENRES = [
-  { slug: 'wrestling', label: 'Wrestling', emoji: '🤼' },
-  { slug: 'marvel', label: 'Marvel', emoji: '🦸' },
-  { slug: 'star-wars', label: 'Star Wars', emoji: '⚔️' },
-  { slug: 'dc', label: 'DC', emoji: '🦇' },
-  { slug: 'transformers', label: 'Transformers', emoji: '🤖' },
-  { slug: 'gijoe', label: 'G.I. Joe', emoji: '🪖' },
-  { slug: 'masters-of-the-universe', label: 'MOTU', emoji: '⚡' },
-  { slug: 'teenage-mutant-ninja-turtles', label: 'TMNT', emoji: '🐢' },
-  { slug: 'power-rangers', label: 'Power Rangers', emoji: '🦕' },
-  { slug: 'indiana-jones', label: 'Indiana Jones', emoji: '🎩' },
-  { slug: 'ghostbusters', label: 'Ghostbusters', emoji: '👻' },
-  { slug: 'mythic-legions', label: 'Mythic Legions', emoji: '🗡️' },
-  { slug: 'thundercats', label: 'Thundercats', emoji: '🐱' },
-  { slug: 'action-force', label: 'Action Force', emoji: '🎖️' },
-  { slug: 'dungeons-dragons', label: 'D&D', emoji: '🐉' },
-  { slug: 'neca', label: 'Horror & Film', emoji: '🎬' },
-  { slug: 'spawn', label: 'Spawn', emoji: '🦇' },
+  { slug: 'wrestling', label: 'Wrestling' },
+  { slug: 'marvel', label: 'Marvel' },
+  { slug: 'star-wars', label: 'Star Wars' },
+  { slug: 'dc', label: 'DC' },
+  { slug: 'transformers', label: 'Transformers' },
+  { slug: 'gijoe', label: 'G.I. Joe' },
+  { slug: 'masters-of-the-universe', label: 'MOTU' },
+  { slug: 'teenage-mutant-ninja-turtles', label: 'TMNT' },
+  { slug: 'power-rangers', label: 'Power Rangers' },
+  { slug: 'indiana-jones', label: 'Indiana Jones' },
+  { slug: 'ghostbusters', label: 'Ghostbusters' },
+  { slug: 'mythic-legions', label: 'Mythic Legions' },
+  { slug: 'thundercats', label: 'Thundercats' },
+  { slug: 'action-force', label: 'Action Force' },
+  { slug: 'dungeons-dragons', label: 'D&D' },
+  { slug: 'neca', label: 'Horror & Film' },
+  { slug: 'spawn', label: 'Spawn' },
 ]

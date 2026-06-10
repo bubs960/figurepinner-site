@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
+import { genreMark } from '@/app/_lib/genreMarks'
 
 type WantItem = {
   id: string
@@ -16,15 +17,6 @@ type WantItem = {
 
 // Wantlist is unlimited for all users per pricing doc — no cap
 // Vault has a 25-figure free limit; alerts have a 3-alert free limit
-
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
-  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
-  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
-  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
-  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
-  'neca': '🎬', 'spawn': '🦇',
-}
 
 export default function WantlistPage() {
   const [items, setItems] = useState<WantItem[]>([])
@@ -124,7 +116,7 @@ export default function WantlistPage() {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap',
         }}>
           <div>
-            <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>🔔 Get notified when prices drop</div>
+            <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>Get notified when prices drop</div>
             <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>Pro members get email alerts when any want list figure hits their target.</div>
           </div>
           <a href="/pro" style={{
@@ -172,8 +164,8 @@ function WantRow({
       borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', minWidth: 0 }}>
-        <span style={{ fontSize: '1rem', flexShrink: 0 }} title={item.genre ?? undefined}>
-          {GENRE_EMOJI[item.genre ?? ''] ?? '🤼'}
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.72rem', fontWeight: 800, flexShrink: 0, color: 'var(--muted)' }} title={item.genre ?? undefined}>
+          {genreMark(item.genre)}
         </span>
         <div style={{ minWidth: 0 }}>
           <a
@@ -255,7 +247,7 @@ function EmptyState() {
       textAlign: 'center', padding: '4rem 2rem',
       background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
     }}>
-      <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⭐</div>
+      <div style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', marginBottom: '1rem' }}>WL</div>
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
         WANT LIST IS EMPTY
       </h2>

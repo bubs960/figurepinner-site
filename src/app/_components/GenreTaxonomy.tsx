@@ -36,7 +36,6 @@ interface Line {
 interface Genre {
   slug: string          // fandom slug
   name: string
-  emoji: string
   totalCount: string
   accent: string        // CSS color
   lines: Line[]
@@ -46,7 +45,6 @@ const GENRES: Genre[] = [
   {
     slug: 'wrestling',
     name: 'Wrestling',
-    emoji: '🤼',
     totalCount: '8,000+',
     accent: '#0066FF',
     lines: [
@@ -66,7 +64,6 @@ const GENRES: Genre[] = [
   {
     slug: 'marvel',
     name: 'Marvel',
-    emoji: '🦸',
     totalCount: '3,800+',
     accent: '#E62429',
     lines: [
@@ -80,7 +77,6 @@ const GENRES: Genre[] = [
   {
     slug: 'star-wars',
     name: 'Star Wars',
-    emoji: '⚔️',
     totalCount: '2,600+',
     accent: '#FFE300',
     lines: [
@@ -94,7 +90,6 @@ const GENRES: Genre[] = [
   {
     slug: 'dc',
     name: 'DC',
-    emoji: '🦇',
     totalCount: '1,900+',
     accent: '#1565C0',
     lines: [
@@ -107,7 +102,6 @@ const GENRES: Genre[] = [
   {
     slug: 'transformers',
     name: 'Transformers',
-    emoji: '🤖',
     totalCount: '2,100+',
     accent: '#E65100',
     lines: [
@@ -120,7 +114,6 @@ const GENRES: Genre[] = [
   {
     slug: 'gijoe',
     name: 'G.I. Joe',
-    emoji: '🪖',
     totalCount: '1,400+',
     accent: '#4CAF50',
     lines: [
@@ -132,7 +125,6 @@ const GENRES: Genre[] = [
   {
     slug: 'masters-of-the-universe',
     name: 'MOTU',
-    emoji: '⚡',
     totalCount: '800+',
     accent: '#9C27B0',
     lines: [
@@ -145,7 +137,6 @@ const GENRES: Genre[] = [
   {
     slug: 'teenage-mutant-ninja-turtles',
     name: 'TMNT',
-    emoji: '🐢',
     totalCount: '900+',
     accent: '#4CAF50',
     lines: [
@@ -157,7 +148,6 @@ const GENRES: Genre[] = [
   {
     slug: 'power-rangers',
     name: 'Power Rangers',
-    emoji: '🦕',
     totalCount: '1,200+',
     accent: '#F44336',
     lines: [
@@ -169,7 +159,6 @@ const GENRES: Genre[] = [
   {
     slug: 'neca',
     name: 'Horror & Film',
-    emoji: '🎬',
     totalCount: '700+',
     accent: '#B71C1C',
     lines: [
@@ -181,7 +170,6 @@ const GENRES: Genre[] = [
   {
     slug: 'indiana-jones',
     name: 'Indiana Jones',
-    emoji: '🎩',
     totalCount: '400+',
     accent: '#795548',
     lines: [
@@ -193,7 +181,6 @@ const GENRES: Genre[] = [
   {
     slug: 'ghostbusters',
     name: 'Ghostbusters',
-    emoji: '👻',
     totalCount: '600+',
     accent: '#00BCD4',
     lines: [
@@ -205,7 +192,6 @@ const GENRES: Genre[] = [
   {
     slug: 'mythic-legions',
     name: 'Mythic Legions',
-    emoji: '🗡️',
     totalCount: '500+',
     accent: '#607D8B',
     lines: [
@@ -216,7 +202,6 @@ const GENRES: Genre[] = [
   {
     slug: 'thundercats',
     name: 'Thundercats',
-    emoji: '🐱',
     totalCount: '200+',
     accent: '#FF6F00',
     lines: [
@@ -228,7 +213,6 @@ const GENRES: Genre[] = [
   {
     slug: 'action-force',
     name: 'Action Force',
-    emoji: '🎖️',
     totalCount: '150+',
     accent: '#546E7A',
     lines: [
@@ -243,7 +227,6 @@ const GENRES: Genre[] = [
   {
     slug: 'spawn',
     name: 'Spawn',
-    emoji: '🦇',
     totalCount: '300+',
     accent: '#37474F',
     lines: [
@@ -253,13 +236,44 @@ const GENRES: Genre[] = [
   },
 ]
 
+// ─── Genre monogram ───────────────────────────────────────────────────────────
+// Original plain genre mark: the genre's initial(s) in the display face on
+// an accent-tinted tile. Matches the guides-page treatment for sitewide consistency.
+function genreMonogram(name: string): string {
+  const cleaned = name.replace(/[^A-Za-z0-9 ]/g, '').trim()
+  // Multi-word → initials (e.g. "Power Rangers" → "PR", "G.I. Joe" → "GJ").
+  const words = cleaned.split(/\s+/)
+  if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase()
+  return cleaned.slice(0, 2).toUpperCase()
+}
+
+function GenreMark({ name, accent, size }: { name: string; accent: string; size: number }) {
+  return (
+    <span
+      aria-hidden
+      style={{
+        flexShrink: 0,
+        width: size, height: size,
+        borderRadius: Math.round(size * 0.28),
+        background: `linear-gradient(150deg, ${accent} 0%, ${accent}99 100%)`,
+        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+        fontFamily: 'var(--font-display)',
+        fontSize: size * 0.5, fontWeight: 800, letterSpacing: '0.01em',
+        color: '#fff', lineHeight: 1,
+      }}
+    >
+      {genreMonogram(name)}
+    </span>
+  )
+}
+
 // ─── Badge config ─────────────────────────────────────────────────────────────
 
 const BADGE_CONFIG = {
-  hot:     { label: '🔥 Hot',     bg: 'rgba(255,95,0,0.12)',   color: '#FF5F00', border: 'rgba(255,95,0,0.3)' },
-  vintage: { label: '📼 Vintage', bg: 'rgba(255,184,0,0.1)',   color: '#FFB800', border: 'rgba(255,184,0,0.3)' },
-  new:     { label: '✦ New',      bg: 'rgba(0,200,112,0.1)',   color: '#00C870', border: 'rgba(0,200,112,0.3)' },
-  premium: { label: '★ Premium',  bg: 'rgba(200,160,255,0.1)', color: '#C89BFF', border: 'rgba(200,160,255,0.3)' },
+  hot:     { label: 'Hot',     bg: 'rgba(255,95,0,0.12)',   color: '#FF5F00', border: 'rgba(255,95,0,0.3)' },
+  vintage: { label: 'Vintage', bg: 'rgba(255,184,0,0.1)',   color: '#FFB800', border: 'rgba(255,184,0,0.3)' },
+  new:     { label: 'New',     bg: 'rgba(0,200,112,0.1)',   color: '#00C870', border: 'rgba(0,200,112,0.3)' },
+  premium: { label: 'Premium', bg: 'rgba(200,160,255,0.1)', color: '#C89BFF', border: 'rgba(200,160,255,0.3)' },
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -308,7 +322,7 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
                 outline: 'none',
               }}
             >
-              <span style={{ fontSize: '1rem', lineHeight: 1 }}>{g.emoji}</span>
+              <GenreMark name={g.name} accent={g.accent} size={18} />
               {g.name}
               <span style={{
                 fontSize: '0.625rem',
@@ -331,7 +345,7 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
         marginBottom: '1.25rem',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-          <span style={{ fontSize: '1.75rem', lineHeight: 1 }}>{activeGenre.emoji}</span>
+          <GenreMark name={activeGenre.name} accent={activeGenre.accent} size={36} />
           <div>
             <span style={{
               fontSize: '1.125rem',

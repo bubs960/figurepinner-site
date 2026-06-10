@@ -17,7 +17,8 @@ import CtaRail from './CtaRail'
 import EmptyState from './EmptyState'
 import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
-import { buildEbaySearchUrl, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
+import MobileActionBar from './MobileActionBar'
+import { buildEbaySearchUrl, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { getLineAttributes } from '../_lib/line-attributes-data'
@@ -78,6 +79,28 @@ function _iqr(prices: number[]): { p25: number; p75: number } | null {
   return { p25: _pctile(s, 25), p75: _pctile(s, 75) }
 }
 
+function latestSoldDate(soldHistory: PriceData['soldHistory']): { iso: string; label: string } | null {
+  const dates = soldHistory
+    .map(comp => new Date(comp.sold_date))
+    .filter(date => !Number.isNaN(date.getTime()))
+
+  if (!dates.length) return null
+
+  const latest = dates.reduce((best, date) => (
+    date.getTime() > best.getTime() ? date : best
+  ))
+
+  return {
+    iso: latest.toISOString(),
+    label: new Intl.DateTimeFormat('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      timeZone: 'UTC',
+    }).format(latest),
+  }
+}
+
 export async function fetchFigurePageData(figure_id: string): Promise<{ price: PriceData | null; imageUrl: string | null }> {
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
@@ -105,6 +128,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   if (!local) return <NotFoundState />
 
   const { price, imageUrl } = await fetchFigurePageData(figureId)
+  const latestCompDate = price ? latestSoldDate(price.soldHistory) : null
 
   // ── Derived display values ──────────────────────────────────────────────────
 
@@ -120,7 +144,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   // ── eBay URL ────────────────────────────────────────────────────────────────
 
-  const ebayUrl = buildEbaySearchUrl(brand, line, local.release_wave, displayName, EBAY_CAMPAIGN_ID)
+  const ebayUrl = buildEbaySearchUrl(characterH1, prettifySlug(genre), brand, line, local.release_wave, EBAY_CAMPAIGN_ID)
 
   // ── Pro gate ────────────────────────────────────────────────────────────────
 
@@ -197,24 +221,43 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     }))
 
   // ── JSON-LD ─────────────────────────────────────────────────────────────────
+  // This is a price-guide page, not a merchant product page. Keep the structured
+  // data truthful by describing the figure as the page's subject and exposing
+  // sold-comp stats as properties instead of marking the median as an active
+  // Offer from FigurePinner.
+
+  const valueProperties = [
+    valuePricing?.median != null
+      ? { '@type': 'PropertyValue', name: 'Median sold price', value: formatCurrency(valuePricing.median) }
+      : null,
+    price?.soldCount != null
+      ? { '@type': 'PropertyValue', name: 'Sold comp count', value: String(price.soldCount) }
+      : null,
+    valuePricing?.low != null && valuePricing?.high != null
+      ? { '@type': 'PropertyValue', name: 'Recent sold range', value: `${formatCurrency(valuePricing.low)} to ${formatCurrency(valuePricing.high)}` }
+      : null,
+    local.release_wave
+      ? { '@type': 'PropertyValue', name: 'Series', value: local.release_wave }
+      : null,
+    local.scale
+      ? { '@type': 'PropertyValue', name: 'Scale', value: local.scale }
+      : null,
+  ].filter(Boolean)
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name:        displayName,
-    description: `${displayName} action figure by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
-    brand:       { '@type': 'Brand', name: brand },
-    image:       imageUrlFinal ?? undefined,
-    category:    prettifySlug(genre),
-    offers: valuePricing?.median != null ? {
-      '@type':        'Offer',
-      price:          valuePricing.median.toFixed(2),
-      priceCurrency:  'USD',
-      availability:   'https://schema.org/InStock',
-      url:            ebayUrl,
-      seller:         { '@type': 'Organization', name: 'eBay' },
-      description:    `Based on ${price!.soldCount} recent eBay sold listings`,
-    } : undefined,
+    '@type': 'WebPage',
+    name: `${displayName} Price Guide`,
+    description: `${displayName} action figure price guide by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
+    mainEntity: {
+      '@type': 'Product',
+      name:        displayName,
+      description: `${displayName} action figure by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
+      brand:       { '@type': 'Brand', name: brand },
+      image:       imageUrlFinal ?? undefined,
+      category:    prettifySlug(genre),
+      additionalProperty: valueProperties.length ? valueProperties : undefined,
+    },
   }
 
   const hasPricing = marketPricing != null
@@ -326,6 +369,15 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 compCount={price?.soldCount ?? 0}
                 compact={hasPricing}
               />
+              {latestCompDate && (
+                <div style={{
+                  marginTop: '0.5rem',
+                  fontSize: '0.75rem',
+                  color: 'var(--fp-muted)',
+                }}>
+                  Latest sold comp: <time dateTime={latestCompDate.iso}>{latestCompDate.label}</time>
+                </div>
+              )}
               <a
                 href="/methodology"
                 style={{
@@ -383,6 +435,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         {/* Zone 8 — CTA rail */}
         <CtaRail genre={genre} brand={brand} line={line} />
       </main>
+
+      {/* Sticky mobile action bar — phones only, feature-flag gated.
+          eBay href = the same campid-guarded ebayUrl used everywhere else. */}
+      <MobileActionBar
+        ebaySearchUrl={ebayUrl}
+        figureName={displayName}
+        priceLabel={valuePricing?.median != null ? formatCurrency(valuePricing.median) : null}
+      />
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
     </div>

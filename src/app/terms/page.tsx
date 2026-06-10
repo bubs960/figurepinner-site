@@ -68,6 +68,11 @@ export default function TermsPage() {
           <p>We are not responsible for any losses, missed opportunities, or damages arising from reliance on our price data.</p>
         </ProseSection>
 
+        <ProseSection title="User Submissions">
+          <p>If you submit corrections, issue reports, collection notes, or other feedback to FigurePinner, you confirm that you have the right to share that material with us.</p>
+          <p>You keep ownership of your submissions, but you grant FigurePinner a non-exclusive, royalty-free license to use, reproduce, modify, and display them as needed to operate, improve, protect, and promote the service.</p>
+        </ProseSection>
+
         <ProseSection title="Affiliate Links">
           <p id="affiliate">FigurePinner participates in the eBay Partner Network. When you click &ldquo;Find It →&rdquo; or similar links, you may be redirected to eBay through an affiliate link. If you make a purchase, FigurePinner may earn a commission at no extra cost to you.</p>
           <p>Affiliate relationships do not influence which figures we include in our database, our price estimates, or our matching results. We disclose affiliate links in accordance with FTC guidelines.</p>

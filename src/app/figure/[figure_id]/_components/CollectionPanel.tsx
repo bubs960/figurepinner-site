@@ -60,9 +60,10 @@ export default function CollectionPanel({
 
         {/* eBay CTA */}
         <a
+          data-ebay-inline-cta
           href={ebaySearchUrl}
           target="_blank"
-          rel="noopener noreferrer sponsored"
+          rel="sponsored nofollow noopener noreferrer"
           style={{
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
             background: 'var(--fp-ebay)', color: '#fff',

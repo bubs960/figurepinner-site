@@ -65,11 +65,11 @@ export default function NotFound() {
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
             {[
-              { label: '🤼 Wrestling',    href: '/wrestling' },
-              { label: '🦸 Marvel',       href: '/marvel' },
-              { label: '⚔️ Star Wars',    href: '/star-wars' },
-              { label: '🤖 Transformers', href: '/transformers' },
-              { label: '🦇 DC',           href: '/dc' },
+              { label: 'Wrestling',    href: '/wrestling' },
+              { label: 'Marvel',       href: '/marvel' },
+              { label: 'Star Wars',    href: '/star-wars' },
+              { label: 'Transformers', href: '/transformers' },
+              { label: 'DC',           href: '/dc' },
             ].map(({ label, href }) => (
               <a key={href} href={href} style={{
                 padding: '5px 12px', background: '#111318', border: '1px solid #1E2130',

@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+
   // Required for @cloudflare/next-on-pages edge runtime on Cloudflare Pages
   // next-on-pages transforms the Next.js build output for the Workers runtime
   // Setting experimental.runtime globally so we don't need per-route declarations,
@@ -34,6 +36,8 @@ const nextConfig: NextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=()' },
         ],
       },
       // Apple App Site Association — must be served as application/json with no redirect

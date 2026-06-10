@@ -77,7 +77,7 @@ export default function DataQualityBadge({ state, compCount, compact = true }: P
           border: `1px solid ${c.border}`,
           borderRadius: '9999px',
           padding: '0.3rem 0.7rem',
-          fontSize: '0.7rem',
+          fontSize: '0.75rem',
           fontWeight: 700,
           letterSpacing: '0.04em',
           textTransform: 'uppercase',

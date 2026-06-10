@@ -7,6 +7,8 @@ interface EmptyStateProps {
 }
 
 export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProps) {
+  const soldListingsUrl = `${ebaySearchUrl}&LH_Sold=1&LH_Complete=1`
+
   return (
     <div style={{
       background: 'var(--fp-surface-0)',
@@ -35,14 +37,14 @@ export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProp
           No pricing data yet
         </div>
         <div style={{ fontSize: '0.82rem', color: 'var(--fp-dim)', maxWidth: '34ch', margin: '0 auto', lineHeight: 1.6 }}>
-          We haven&apos;t captured recent sales for {figureName}. Check eBay for live listings.
+          We haven&apos;t captured recent sold comps for {figureName} yet, so we won&apos;t invent a price. Check completed eBay sales directly before you bid or list.
         </div>
       </div>
 
       <a
-        href={ebaySearchUrl}
+        href={soldListingsUrl}
         target="_blank"
-        rel="noopener noreferrer sponsored"
+        rel="sponsored nofollow noopener noreferrer"
         style={{
           display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
           background: 'var(--fp-ebay)', color: '#fff',
@@ -51,7 +53,7 @@ export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProp
           fontSize: '0.875rem', fontWeight: '700', textDecoration: 'none',
         }}
       >
-        Find It on eBay
+        Check Sold Listings
         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>

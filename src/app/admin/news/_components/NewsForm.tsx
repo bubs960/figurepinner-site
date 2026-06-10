@@ -138,7 +138,7 @@ export default function NewsForm() {
 
       <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--text)', cursor: 'pointer' }}>
         <input type="checkbox" name="pinned" />
-        <span>📌 Pin to top of /news</span>
+        <span>Pin to top of /news</span>
       </label>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>

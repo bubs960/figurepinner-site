@@ -2,15 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
-
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
-  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
-  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
-  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
-  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
-  'neca': '🎬', 'spawn': '🦇',
-}
+import { genreMark } from '@/app/_lib/genreMarks'
 
 type AlertItem = {
   id: string
@@ -111,7 +103,7 @@ export default function AlertsPage() {
               borderRadius: '8px', alignItems: 'center', fontSize: '0.875rem',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', minWidth: 0 }}>
-                <span style={{ fontSize: '1rem', flexShrink: 0 }}>{GENRE_EMOJI[alert.genre ?? ''] ?? '🔔'}</span>
+                <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.72rem', fontWeight: 800, flexShrink: 0, color: 'var(--muted)' }}>{genreMark(alert.genre, 'DA')}</span>
                 <div style={{ minWidth: 0 }}>
                   <a
                     href={`/figure/${alert.figure_id}`}
@@ -318,7 +310,7 @@ function ProGate() {
       <div style={{
         background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '16px', padding: '3rem 2rem',
       }}>
-        <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🔔</div>
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', marginBottom: '1rem' }}>DA</div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', letterSpacing: '0.04em', marginBottom: '0.75rem' }}>
           DEAL ALERTS
         </h1>
@@ -358,7 +350,7 @@ function EmptyState({ onNew }: { onNew: () => void }) {
       textAlign: 'center', padding: '4rem 2rem',
       background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
     }}>
-      <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🔔</div>
+      <div style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', marginBottom: '1rem' }}>DA</div>
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
         NO ACTIVE ALERTS
       </h2>

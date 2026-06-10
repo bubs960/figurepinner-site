@@ -1,6 +1,6 @@
 'use client'
 
-import { useUser } from '@clerk/nextjs'
+import { useEffect, useState } from 'react'
 
 /**
  * AdSlot — placeholder for Google AdSense units.
@@ -18,11 +18,11 @@ import { useUser } from '@clerk/nextjs'
  *   2. Add the AdSense <script> tag to src/app/layout.tsx
  *   3. Uncomment the <ins> block below and remove the placeholder div
  *
- * Pro = ad-free. This is a client component, so the host page stays ISR-cached
- * (the Pro check runs in the browser via useUser, no server auth() call that
- * would force the page dynamic). For Pro users we render a zero-height nothing —
- * no ad, no reserved gap. We fail toward ad-free: while Clerk is still loading
- * we hide the ad, so a Pro user never sees an ad flash before it's removed.
+ * Pro = ad-free. This is a client component, so the host page stays cacheable:
+ * the Pro check runs in the browser after hydration through /api/v1/me instead
+ * of requiring Clerk context in the public page tree. For Pro users we render a
+ * zero-height nothing — no ad, no reserved gap. We fail toward ad-free while
+ * the check is pending so a Pro user never sees an ad flash before it's removed.
  * (When AdSense is live, free users get a fixed-height reserved box so enabling
  * ads doesn't cause layout shift — see the active render path below.)
  */
@@ -49,15 +49,33 @@ type Props = {
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? ''
 
 export default function AdSlot({ slot, className }: Props) {
-  const { isLoaded, user } = useUser()
+  const [proState, setProState] = useState<'loading' | 'pro' | 'free'>('loading')
   const config = SLOT_CONFIG[slot]
+
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/v1/me', { credentials: 'same-origin' })
+      .then(async res => {
+        if (cancelled) return
+        if (!res.ok) {
+          setProState('free')
+          return
+        }
+        const data = await res.json() as { isPro?: boolean }
+        setProState(data.isPro ? 'pro' : 'free')
+      })
+      .catch(() => {
+        if (!cancelled) setProState('free')
+      })
+    return () => { cancelled = true }
+  }, [])
+
   if (!config) return null
 
   // Pro = ad-free. Hide for confirmed Pro users, AND while auth is still loading
   // (fail toward ad-free so a Pro user never sees a flash of an ad). Signed-out
   // and free users fall through to the normal ad/placeholder render.
-  const isPro = isLoaded && user?.publicMetadata?.isPro === true
-  if (!isLoaded || isPro) return null
+  if (proState === 'loading' || proState === 'pro') return null
 
   // AdSense not yet configured — show placeholder
   if (!ADSENSE_CLIENT || ADSENSE_CLIENT === '') {
@@ -97,14 +115,22 @@ export default function AdSlot({ slot, className }: Props) {
   return (
     <div
       className={className}
-      style={{ width: config.width, height: config.height, maxWidth: '100%' }}
+      style={{ width: config.width, maxWidth: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'inline-block', width: config.width, height: config.height }}
-        data-ad-client={ADSENSE_CLIENT}
-        data-ad-slot={config.adSlotId}
-      />
+      <span style={{
+        fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase',
+        color: 'var(--dim)', fontFamily: 'var(--font-ui)', marginBottom: '4px',
+      }}>
+        Advertisement
+      </span>
+      <div style={{ width: config.width, height: config.height, maxWidth: '100%' }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: 'inline-block', width: config.width, height: config.height }}
+          data-ad-client={ADSENSE_CLIENT}
+          data-ad-slot={config.adSlotId}
+        />
+      </div>
     </div>
   )
   */

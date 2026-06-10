@@ -82,14 +82,21 @@ export default function ValueStrip({ pricing, className }: ValueStripProps) {
         />
       )}
 
-      {/* Confidence */}
+      {/* Confidence — text-led so level isn't conveyed by dot color alone (WCAG 1.4.1).
+          The DataQualityBadge below states the plain-language level + caveat. */}
       <Cell
         label="Confidence"
-        value=""
+        value={`${confidence} / 5`}
+        valueColor="var(--fp-text)"
+        small
         extra={
-          <div style={{ display: 'flex', gap: '3px', marginTop: '2px' }}>
+          <div
+            role="img"
+            aria-label={`Confidence ${confidence} of 5`}
+            style={{ display: 'flex', gap: '3px', marginTop: '2px' }}
+          >
             {dots.map((filled, i) => (
-              <div key={i} style={{
+              <div key={i} aria-hidden style={{
                 width: 8, height: 8, borderRadius: '50%',
                 background: filled ? 'var(--fp-accent)' : 'var(--fp-surface-2)',
                 border: `1px solid ${filled ? 'var(--fp-accent)' : 'var(--fp-border)'}`,
@@ -129,7 +136,7 @@ function Cell({
       {value && (
         <div style={{
           fontFamily: small ? 'var(--fp-font-body)' : 'var(--fp-font-display)',
-          fontSize: small ? '0.875rem' : '1.5rem',
+          fontSize: small ? '0.875rem' : (highlight ? '1.75rem' : '1.5rem'),
           letterSpacing: small ? 'normal' : '0.02em',
           color: valueColor ?? (highlight ? 'var(--fp-success)' : 'var(--fp-text)'),
           fontWeight: small ? '500' : undefined,

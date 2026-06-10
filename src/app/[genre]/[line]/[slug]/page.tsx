@@ -1,26 +1,28 @@
 /**
  * SEO-canonical figure page: /:fandom/:line/:character
  *
- * This is the URL Google should index. We render full content here —
- * no redirect — and set canonical = this pretty URL.
+ * This URL is indexable only when it maps to one exact figure. Ambiguous
+ * character/line aliases redirect to /figure/<id>, because one pretty slug can
+ * represent many waves of the same character.
  *
  * Supports two line shapes:
  *   /wrestling/elite/cm-punk           (product_line only)
  *   /wrestling/mattel-elite/cm-punk    (manufacturer-prefixed)
  *
- * When multiple waves match (same char + line), picks the highest wave number.
+ * When multiple waves match (same char + line), redirects to the highest wave.
  * Falls back to genre page if no figure found, 404 if genre also invalid.
  */
 
 import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
-import { getFiguresByFandom, getAllFandoms, deriveName, type KBFigure } from '@/data/kb'
+import { getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
 // client-side in FigureDetailContent so caching is safe. Was force-dynamic;
 // restored per Genta audit 2026-06-06 P1.
+export const dynamic = 'force-static'
 export const revalidate = 3600
 
 const BASE = 'https://figurepinner.com'
@@ -31,9 +33,9 @@ function normalizeSlug(s: string) {
   return s.toLowerCase().trim()
 }
 
-function findFigure(fandom: string, line: string, slug: string): KBFigure | null {
+function findFigureMatches(fandom: string, line: string, slug: string): KBFigure[] {
   const candidates = getFiguresByFandom(fandom)
-  if (!candidates.length) return null
+  if (!candidates.length) return []
 
   const lineNorm = normalizeSlug(line)
   const slugNorm = normalizeSlug(slug)
@@ -50,15 +52,11 @@ function findFigure(fandom: string, line: string, slug: string): KBFigure | null
     f => lineMatches(f) && normalizeSlug(f.character_canonical) === slugNorm
   )
 
-  if (!matches.length) return null
-  if (matches.length === 1) return matches[0]
-
-  // Multiple waves — return the highest (most recent)
   return matches.sort((a, b) => {
     const wA = parseInt(a.release_wave) || 0
     const wB = parseInt(b.release_wave) || 0
     return wB - wA
-  })[0]
+  })
 }
 
 // ── Metadata ───────────────────────────────────────────────────────────────────
@@ -69,7 +67,8 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { genre, line, slug } = await params
-  const figure = findFigure(genre, line, slug)
+  const matches = findFigureMatches(genre, line, slug)
+  const figure = matches[0]
   if (!figure) return { title: 'Figure Not Found' }
 
   const displayName = deriveName(figure)
@@ -78,17 +77,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const { price } = await fetchFigurePageData(figure.figure_id)
   const median = price?.medianSold ?? price?.avgSold ?? null
+  const medianLabel = median != null ? `$${median.toFixed(0)} median` : null
+  const compLabel = price?.soldCount
+    ? `${price.soldCount} eBay sold comps.`
+    : 'Recent eBay sold-comps context.'
+  const hasConfirmedZeroSoldData = price != null && price.soldCount === 0
 
-  // Canonical = this pretty URL (Google should index this, not /figure/[id])
-  const canonical = `${BASE}/${genre}/${line}/${slug}`
+  const canonical = `${BASE}${prettyFigureUrl(figure)}`
 
   return {
     title: `${displayName} Price Guide — ${lineName}`,
-    description: `${displayName} current market value${median ? `: avg $${median.toFixed(0)}` : ''}. Real eBay sold prices for ${fandomName} action figures.`,
+    description: `${displayName} current market value${medianLabel ? `: ${medianLabel}` : ''}. Real eBay sold prices for ${fandomName} action figures.`,
     alternates: { canonical },
+    ...(hasConfirmedZeroSoldData
+      ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
+      : {}),
     openGraph: {
-      title: `${displayName}${median ? ` — $${median.toFixed(0)} avg` : ''} | FigurePinner`,
-      description: `Real sold prices for ${displayName}. ${price?.soldCount ?? 0} eBay comps.`,
+      title: `${displayName}${medianLabel ? ` — ${medianLabel}` : ''} | FigurePinner`,
+      description: `Real sold prices for ${displayName}. ${compLabel}`,
       images: figure.canonical_image_url
         ? [{ url: figure.canonical_image_url, width: 400, height: 400, alt: displayName }]
         : [],
@@ -100,10 +106,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function PrettyFigurePage({ params }: PageProps) {
   const { genre, line, slug } = await params
-  const figure = findFigure(genre, line, slug)
+  const matches = findFigureMatches(genre, line, slug)
+  const figure = matches[0]
 
   if (figure) {
-    // Render full content — no redirect, so Google indexes this URL
+    if (matches.length > 1) {
+      redirect(figureUrl(figure))
+    }
     return <FigureDetailContent figureId={figure.figure_id} />
   }
 

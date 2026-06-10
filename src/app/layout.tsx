@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
-import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
 import './globals.css'
@@ -67,22 +66,30 @@ export default function RootLayout({
   children: ReactNode
 }) {
   return (
-    <ClerkProvider dynamic>
-      <html lang="en" suppressHydrationWarning>
-        <head>
-          {/* Google Fonts — preconnect first for perf */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
-            rel="stylesheet"
-          />
-        </head>
-        <body>
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google Fonts — preconnect first for perf */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        {/* Google AdSense — site verification + auto ads. Loads the AdSense
+            script with our pub ID so the reviewer can verify ownership and
+            serve auto ads. Visible <ins> placement units stay off (AdSlot.tsx)
+            until we opt into manual placements. */}
+        <meta name="google-adsense-account" content="ca-pub-1062337951127266" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1062337951127266"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body>
+        {children}
+        <Footer />
+      </body>
+    </html>
   )
 }

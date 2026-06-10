@@ -32,7 +32,7 @@ const STANDARD_LINKS: ReadonlyArray<[label: string, href: string]> = [
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center' }}>
+    <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center', minHeight: '120px' }}>
       <nav
         style={{
           display: 'flex',

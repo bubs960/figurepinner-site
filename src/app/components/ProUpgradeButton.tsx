@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { useUser } from '@clerk/nextjs'
 
 interface Props {
   size?: 'lg' | 'sm'
@@ -18,17 +17,11 @@ const STRIPE_ENABLED = process.env.NEXT_PUBLIC_STRIPE_ENABLED === 'true'
 
 export default function ProUpgradeButton({ size = 'lg', billing = 'annual' }: Props) {
   const [loading, setLoading] = useState(false)
-  const { isSignedIn } = useUser()
 
   async function handleUpgrade() {
     // Pre-launch state: route to homepage waitlist instead of broken checkout
     if (!STRIPE_ENABLED) {
       window.location.href = '/?utm_source=pro_page&utm_content=upgrade_btn'
-      return
-    }
-
-    if (!isSignedIn) {
-      window.location.href = '/sign-up?redirect_url=/pro'
       return
     }
 
@@ -39,6 +32,10 @@ export default function ProUpgradeButton({ size = 'lg', billing = 'annual' }: Pr
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ billing }),
       })
+      if (res.status === 401 || res.status === 403) {
+        window.location.href = '/sign-up?redirect_url=/pro'
+        return
+      }
       const data = await res.json() as { url?: string; error?: string }
       if (data.url) {
         window.location.href = data.url

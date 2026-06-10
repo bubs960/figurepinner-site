@@ -11,7 +11,6 @@
  */
 
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { useUser } from '@clerk/nextjs'
 import Sparkline from '@/app/components/Sparkline'
 import FigureThumb from '@/app/components/FigureThumb'
 
@@ -35,23 +34,23 @@ type SearchResult = {
 // ─── Genre config ─────────────────────────────────────────────────────────────
 
 const GENRES = [
-  { slug: 'wrestling',                  name: 'Wrestling',         emoji: '🤼', accent: '#E63946' },
-  { slug: 'marvel',                     name: 'Marvel',            emoji: '🦸', accent: '#E63946' },
-  { slug: 'star-wars',                  name: 'Star Wars',         emoji: '⚔️', accent: '#FFD700' },
-  { slug: 'dc',                         name: 'DC',                emoji: '🦇', accent: '#1565C0' },
-  { slug: 'transformers',               name: 'Transformers',      emoji: '🤖', accent: '#E65100' },
-  { slug: 'gijoe',                      name: 'GI Joe',            emoji: '🪖', accent: '#388E3C' },
-  { slug: 'masters-of-the-universe',    name: 'MOTU',              emoji: '⚡', accent: '#7B1FA2' },
-  { slug: 'teenage-mutant-ninja-turtles', name: 'TMNT',            emoji: '🐢', accent: '#388E3C' },
-  { slug: 'power-rangers',              name: 'Power Rangers',     emoji: '🦕', accent: '#D32F2F' },
-  { slug: 'indiana-jones',              name: 'Indiana Jones',     emoji: '🎩', accent: '#8D6E63' },
-  { slug: 'ghostbusters',               name: 'Ghostbusters',      emoji: '👻', accent: '#F9A825' },
-  { slug: 'mythic-legions',             name: 'Mythic Legions',    emoji: '🗡️', accent: '#546E7A' },
-  { slug: 'thundercats',                name: 'ThunderCats',       emoji: '🐱', accent: '#E65100' },
-  { slug: 'action-force',               name: 'Action Force',      emoji: '🎖️', accent: '#1565C0' },
-  { slug: 'dungeons-dragons',           name: 'D&D',               emoji: '🐉', accent: '#6A1B9A' },
-  { slug: 'neca',                       name: 'NECA',              emoji: '🎬', accent: '#37474F' },
-  { slug: 'spawn',                      name: 'Spawn',             emoji: '🦇', accent: '#212121' },
+  { slug: 'wrestling',                  name: 'Wrestling',         accent: '#E63946' },
+  { slug: 'marvel',                     name: 'Marvel',            accent: '#E63946' },
+  { slug: 'star-wars',                  name: 'Star Wars',         accent: '#FFD700' },
+  { slug: 'dc',                         name: 'DC',                accent: '#1565C0' },
+  { slug: 'transformers',               name: 'Transformers',      accent: '#E65100' },
+  { slug: 'gijoe',                      name: 'GI Joe',            accent: '#388E3C' },
+  { slug: 'masters-of-the-universe',    name: 'MOTU',              accent: '#7B1FA2' },
+  { slug: 'teenage-mutant-ninja-turtles', name: 'TMNT',            accent: '#388E3C' },
+  { slug: 'power-rangers',              name: 'Power Rangers',     accent: '#D32F2F' },
+  { slug: 'indiana-jones',              name: 'Indiana Jones',     accent: '#8D6E63' },
+  { slug: 'ghostbusters',               name: 'Ghostbusters',      accent: '#F9A825' },
+  { slug: 'mythic-legions',             name: 'Mythic Legions',    accent: '#546E7A' },
+  { slug: 'thundercats',                name: 'ThunderCats',       accent: '#E65100' },
+  { slug: 'action-force',               name: 'Action Force',      accent: '#1565C0' },
+  { slug: 'dungeons-dragons',           name: 'D&D',               accent: '#6A1B9A' },
+  { slug: 'neca',                       name: 'NECA',              accent: '#37474F' },
+  { slug: 'spawn',                      name: 'Spawn',             accent: '#212121' },
 ] as const
 
 type GenreSlug = typeof GENRES[number]['slug']
@@ -68,7 +67,6 @@ interface Props {
 }
 
 export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }: Props) {
-  const { isSignedIn, isLoaded } = useUser()
   const [query, setQuery]             = useState(initialQuery)
   const [results, setResults]         = useState<SearchResult[]>([])
   const [loading, setLoading]         = useState(false)
@@ -79,6 +77,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
   const [activeBrand, setActiveBrand] = useState<string | null>(null)   // facet: manufacturer (prettified label)
   const [sortMode, setSortMode]       = useState<'relevance' | 'az'>('relevance')
   const [capped, setCapped]           = useState(false)                  // true when matches exceeded the API pool ceiling
+  const [note, setNote]               = useState<string | null>(null)    // API forgiveness note ("Showing results for …")
   const PAGE_SIZE = 48
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)            // load-more: how many filtered results to render
   const [focused, setFocused]         = useState(false)
@@ -90,14 +89,9 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
 
   async function handleTrack(r: SearchResult) {
     if (!r.figure_id) return
-    // Anon users: redirect to sign-up with return URL so the context is preserved
-    if (isLoaded && !isSignedIn) {
-      const returnTo = `/search?q=${encodeURIComponent(query)}`
-      window.location.href = `/sign-up?redirect_url=${encodeURIComponent(returnTo)}`
-      return
-    }
     setTrackRecord(s => ({ ...s, [r.figure_id!]: 'loading' }))
     try {
+      const returnTo = `/search?q=${encodeURIComponent(query)}`
       const res = await fetch('/api/wantlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -110,6 +104,10 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
           target_price: 0,
         }),
       })
+      if (res.status === 401 || res.status === 403) {
+        window.location.href = `/sign-up?redirect_url=${encodeURIComponent(returnTo)}`
+        return
+      }
       if (res.status === 201) {
         setTrackRecord(s => ({ ...s, [r.figure_id!]: 'added' }))
       } else if (res.status === 409) {
@@ -138,9 +136,10 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
       // the client reveals it in PAGE_SIZE batches via the load-more button.
       const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}`)
       if (res.ok) {
-        const data = await res.json() as { figures: SearchResult[]; total?: number; capped?: boolean }
+        const data = await res.json() as { figures: SearchResult[]; total?: number; capped?: boolean; note?: string | null }
         setResults(data.figures ?? [])
         setCapped(Boolean(data.capped))
+        setNote(data.note ?? null)
         setSearched(true)
         setActiveGenre(null)        // reset all facets on new search
         setActiveLine(null)
@@ -300,7 +299,6 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
             transition: 'border-color 0.15s, box-shadow 0.15s',
             position: 'relative',
           }}>
-            <SearchIcon />
             <input
               ref={inputRef}
               type="text"
@@ -351,7 +349,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
             {visibleGenres.map(g => (
               <FilterPill
                 key={g.slug}
-                label={`${g.emoji} ${g.name}`}
+                label={g.name}
                 active={activeGenre === g.slug}
                 count={results.filter(r => r.genre === g.slug).length}
                 accent={g.accent}
@@ -439,7 +437,18 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
 
         {filtered.length > 0 && (
           <>
-
+            {/* Forgiveness note — shown when the API corrected a typo or
+                relaxed the match to find these results (S13). */}
+            {note && (
+              <div style={{
+                fontSize: '0.8125rem',
+                color: 'var(--fp-text)',
+                marginBottom: '0.5rem',
+                fontWeight: 600,
+              }}>
+                {note}
+              </div>
+            )}
             <div style={{
               fontSize: '0.75rem',
               color: 'var(--muted)',
@@ -645,10 +654,10 @@ function FigureResultCard({
 }) {
   const genre  = GENRE_MAP[r.genre]
   const accent = genre?.accent ?? '#FF5F00'
-  const href = (r.fandom_slug && r.line_slug && r.character_slug)
-    ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
-    : r.figure_id
-      ? `/figure/${r.figure_id}`
+  const href = r.figure_id
+    ? `/figure/${r.figure_id}`
+    : (r.fandom_slug && r.line_slug && r.character_slug)
+      ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
       : `/search?q=${encodeURIComponent(r.name)}`
 
   const trackDone = trackState === 'added' || trackState === 'exists'
@@ -703,11 +712,11 @@ function FigureResultCard({
           {/* Price — shown as soon as sparkline data loads (~90% of figures) */}
           {sparkline?.median != null && sparkline.median > 0 && (
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: 3 }}>
-              <span style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--text)' }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--fp-success)', letterSpacing: '0.02em' }}>
                 ${sparkline.median.toFixed(0)}
               </span>
               <span style={{ fontSize: '0.68rem', color: 'var(--muted)' }}>
-                avg · {sparkline.soldCount} sales
+                med · {sparkline.soldCount} sales
               </span>
               {sparkline.points.length >= 2 && (
                 <Sparkline points={sparkline.points} trend={sparkline.trend} width={40} height={14} />
@@ -720,7 +729,7 @@ function FigureResultCard({
           </div>
           <div style={{ marginTop: 4 }}>
             <span style={{
-              fontSize: '0.6rem', fontWeight: 700,
+              fontSize: '0.7rem', fontWeight: 700,
               padding: '0.1rem 0.4rem', borderRadius: '9999px',
               background: accent + '18', color: accent,
               border: `1px solid ${accent}30`,
@@ -810,7 +819,6 @@ function EmptyState({ query }: { query: string }) {
       maxWidth: 720, margin: '0 auto',
     }}>
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🔍</div>
         <p style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text)', marginBottom: '0.5rem' }}>
           No results for &ldquo;{query}&rdquo;
         </p>
@@ -946,7 +954,15 @@ function IdlePrompt() {
                 e.currentTarget.style.background = 'var(--s1)'
               }}
             >
-              <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>{g.emoji}</span>
+              <span aria-hidden style={{
+                flexShrink: 0, width: 20, height: 20, borderRadius: 6,
+                background: `linear-gradient(150deg, ${g.accent} 0%, ${g.accent}99 100%)`,
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 800,
+                color: '#fff', lineHeight: 1, letterSpacing: '0.01em',
+              }}>
+                {g.name.replace(/[^A-Za-z0-9 ]/g, '').trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase()}
+              </span>
               <span>{g.name}</span>
             </a>
           ))}
@@ -1032,15 +1048,6 @@ function highlightMatch(text: string, query: string): React.ReactNode {
   )
 }
 
-function SearchIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" style={{ color: 'var(--muted)', flexShrink: 0 }}>
-      <circle cx="7.5" cy="7.5" r="5" />
-      <line x1="11.5" y1="11.5" x2="16" y2="16" />
-    </svg>
-  )
-}
-
 function SpinnerIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 16 16" fill="none" style={{ color: 'var(--muted)', flexShrink: 0, animation: 'search-spin 0.7s linear infinite' }}>
@@ -1057,13 +1064,11 @@ function ClearButton({ onClick }: { onClick: () => void }) {
       aria-label="Clear search"
       style={{
         background: 'none', border: 'none', cursor: 'pointer',
-        color: 'var(--muted)', display: 'flex', padding: 4, flexShrink: 0,
+        color: 'var(--muted)', display: 'flex', padding: '4px 0 4px 8px', flexShrink: 0,
+        fontSize: '0.75rem', fontWeight: 700, fontFamily: 'var(--font-ui)',
       }}
     >
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-        <line x1="2" y1="2" x2="12" y2="12" />
-        <line x1="12" y1="2" x2="2" y2="12" />
-      </svg>
+      Clear
     </button>
   )
 }

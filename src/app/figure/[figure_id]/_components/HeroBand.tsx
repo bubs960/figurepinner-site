@@ -23,21 +23,11 @@ const RARITY_CONFIG = {
   grail:    { label: 'Grail',    color: 'var(--fp-accent-rare)' },
 }
 
-const GENRE_EMOJI: Record<string, string> = {
-  'wrestling': '🤼', 'marvel': '🦸', 'star-wars': '⚔️', 'dc': '🦇',
-  'transformers': '🤖', 'gijoe': '🪖', 'masters-of-the-universe': '⚡',
-  'teenage-mutant-ninja-turtles': '🐢', 'power-rangers': '🦕',
-  'indiana-jones': '🎩', 'ghostbusters': '👻', 'mythic-legions': '🗡️',
-  'thundercats': '🐱', 'action-force': '🎖️', 'dungeons-dragons': '🐉',
-  'neca': '🎬', 'spawn': '🦇',
-}
-
 export default function HeroBand({
   imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
 }: HeroBandProps) {
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
-  const emoji = GENRE_EMOJI[genre] ?? '🤼'
   const metaParts = [
     lineName,
     series ? `Series ${series}` : null,
@@ -55,8 +45,8 @@ export default function HeroBand({
         alignItems: 'start',
       }}
     >
-      {/* Image */}
-      <div style={{ position: 'relative' }}>
+      {/* Image — outer wrapper reserves space before image loads, preventing CLS */}
+      <div style={{ position: 'relative', minHeight: '325px' }}>
         {/* Glow behind image */}
         <div style={{
           position: 'absolute', inset: '-20px',
@@ -79,6 +69,7 @@ export default function HeroBand({
             <img
               src={imageUrl}
               alt={characterName}
+              fetchPriority="high"
               style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1.5rem' }}
             />
           ) : (
@@ -161,8 +152,7 @@ export default function HeroBand({
         </h1>
 
         {/* Genre label */}
-        <div style={{ fontSize: '0.8rem', color: 'var(--fp-text)' }}>
-          <span style={{ marginRight: '0.375rem' }}>{emoji}</span>
+        <div style={{ fontSize: '0.8rem', color: 'var(--fp-text)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>
           {genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
         </div>
       </div>

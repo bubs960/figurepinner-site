@@ -168,7 +168,7 @@ export default function ScanPage() {
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>📦</div>
+          <div style={{ fontFamily: 'var(--fp-font-display)', fontSize: '2rem', marginBottom: '0.5rem' }}>SC</div>
           <h1 style={{
             fontFamily: 'var(--fp-font-display)',
             fontSize: '1.75rem', fontWeight: 800, margin: '0 0 0.375rem',
@@ -209,7 +209,7 @@ export default function ScanPage() {
               marginBottom: '1.5rem',
             }}
           >
-            📷 Start Camera
+            Start Camera
           </button>
         )}
 
@@ -283,9 +283,11 @@ export default function ScanPage() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               {results.map((r, i) => {
-                const href = (r.fandom_slug && r.line_slug && r.character_slug)
-                  ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
-                  : r.figure_id ? `/figure/${r.figure_id}` : '#'
+                const href = r.figure_id
+                  ? `/figure/${r.figure_id}`
+                  : (r.fandom_slug && r.line_slug && r.character_slug)
+                    ? `/${r.fandom_slug}/${r.line_slug}/${r.character_slug}`
+                    : '#'
                 return (
                   <a key={r.figure_id ?? i} href={href} style={{
                     display: 'flex', alignItems: 'center', gap: '0.75rem',
@@ -322,7 +324,7 @@ export default function ScanPage() {
             background: 'var(--fp-surface-0)', border: '1px solid var(--fp-border)',
             borderRadius: 10, padding: '1.5rem', textAlign: 'center', marginBottom: '1.5rem',
           }}>
-            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🤷</div>
+            <div style={{ fontFamily: 'var(--fp-font-display)', fontSize: '1.5rem', marginBottom: '0.5rem' }}>NO</div>
             <div style={{ fontWeight: 700, marginBottom: '0.375rem' }}>No match found</div>
             <div style={{ fontSize: '0.8rem', color: 'var(--fp-dim)', marginBottom: '1rem' }}>
               {productTitle ? `We couldn't match "${productTitle}" to a figure in our catalog.` : "We couldn't match this barcode."}

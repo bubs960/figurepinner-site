@@ -94,6 +94,10 @@
   --fp-accent-warm:   var(--orange);
   --fp-accent-rare:   var(--yellow);    /* aliased: --yellow #FFB800 */
   --fp-success:       var(--green);
+  /* Semantic brand aliases (PR C 2026-06-06) — back-compat, --blue stays canonical.
+     Prep for a future theming pass; no hex change, zero visual delta. */
+  --color-brand:       var(--blue);
+  --color-interactive: var(--blue);
   --fp-danger:        #E5484D;          /* keep until --danger is in main system */
   --fp-ebay:          #E53238;          /* eBay brand red, intentionally distinct */
   --fp-font-display:  "Bebas Neue", system-ui, sans-serif;
@@ -307,8 +311,9 @@ a:hover {
    ============================================================ */
 
 :focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--fp-success);
   outline-offset: 2px;
+  border-radius: inherit;
 }
 
 /* ============================================================
@@ -316,13 +321,20 @@ a:hover {
    ============================================================ */
 
 ::selection {
-  background: rgba(0, 102, 255, 0.3);
+  background: rgba(0, 200, 112, 0.2);
   color: var(--text);
 }
 
 ::-moz-selection {
-  background: rgba(0, 102, 255, 0.3);
+  background: rgba(0, 200, 112, 0.2);
   color: var(--text);
+}
+
+/* ── Mobile action bar — sticky bottom CTA, phones only ───────────────── */
+/* The component sets position:fixed inline; this enforces mobile-only display.
+   Hidden at >=768px so desktop never shows it. */
+@media (min-width: 768px) {
+  .fp-mobile-action-bar { display: none !important; }
 }
 
 /* ── Option C — Depth & hover lift ────────────────────────────────────── */
