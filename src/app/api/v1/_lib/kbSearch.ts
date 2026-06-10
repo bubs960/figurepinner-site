@@ -66,6 +66,34 @@ function tokenScore(token: string, fl: FieldBag): number | null {
   return best
 }
 
+// ── Precomputed index (S17, 2026-06-10 — CPU cost lever) ───────────────────
+// Before: every request rebuilt all ~21.8k FieldBags (deriveName + 7
+// toLowerCase per figure, per query) — a large share of the Worker's CPU
+// bill. Now bags are built ONCE per isolate and reused; a query only pays
+// token comparisons. KB is a static import, so the index can never go stale
+// within a deploy. Memory cost ≈ a few MB of strings, well within Worker
+// limits (isolate already holds the KB itself).
+type IndexEntry = { f: KBFigure; bag: FieldBag }
+let INDEX: IndexEntry[] | null = null
+
+function getIndex(): IndexEntry[] {
+  if (!INDEX) {
+    INDEX = getAllFigures().map(f => ({
+      f,
+      bag: {
+        char: f.character_canonical.toLowerCase(),
+        name: deriveName(f).toLowerCase(),
+        variant: (f.character_variant ?? '').toLowerCase(),
+        line: f.product_line.toLowerCase().replace(/-/g, ' '),
+        brand: f.manufacturer.toLowerCase(),
+        fandom: f.fandom.toLowerCase(),
+        wave: f.release_wave,
+      },
+    }))
+  }
+  return INDEX
+}
+
 /**
  * Score every figure against the token list.
  * allowedMisses=0 → strict AND. allowedMisses=1 → relaxed, but requires at
@@ -73,21 +101,12 @@ function tokenScore(token: string, fl: FieldBag): number | null {
  * unrelated figures.
  */
 function scoreAll(
-  all: KBFigure[],
+  entries: IndexEntry[],
   tokens: string[],
   allowedMisses: number,
 ): { f: KBFigure; score: number }[] {
   const out: { f: KBFigure; score: number }[] = []
-  for (const f of all) {
-    const fl: FieldBag = {
-      char: f.character_canonical.toLowerCase(),
-      name: deriveName(f).toLowerCase(),
-      variant: (f.character_variant ?? '').toLowerCase(),
-      line: f.product_line.toLowerCase().replace(/-/g, ' '),
-      brand: f.manufacturer.toLowerCase(),
-      fandom: f.fandom.toLowerCase(),
-      wave: f.release_wave,
-    }
+  for (const { f, bag: fl } of entries) {
     let score = 0
     let missed = 0
     let strong = false
@@ -113,10 +132,10 @@ function scoreAll(
 // Vocabulary of character + line tokens, built once per isolate.
 let VOCAB: string[] | null = null
 
-function getVocab(all: KBFigure[]): string[] {
+function getVocab(): string[] {
   if (!VOCAB) {
     const set = new Set<string>()
-    for (const f of all) {
+    for (const { f } of getIndex()) {
       for (const t of f.character_canonical.toLowerCase().split(/[^a-z0-9]+/)) {
         if (t.length >= 3) set.add(t)
       }
@@ -180,15 +199,15 @@ export function searchKb(q: string): KbSearchResult {
   if (query.length < 2) return { scored: [], note: null }
 
   const tokens = query.toLowerCase().split(/\s+/).filter(Boolean)
-  const all = getAllFigures()
+  const entries = getIndex()
 
   // Tier 1 — strict AND (alias-expanded)
-  let scored = scoreAll(all, tokens, 0)
+  let scored = scoreAll(entries, tokens, 0)
   let note: string | null = null
 
   // Tier 2 — typo correction, preserves every token so it beats relaxing
   if (scored.length === 0) {
-    const vocab = getVocab(all)
+    const vocab = getVocab()
     let changed = false
     const corrected = tokens.map(t => {
       const fix = correctToken(t, vocab)
@@ -196,7 +215,7 @@ export function searchKb(q: string): KbSearchResult {
       return fix ?? t
     })
     if (changed) {
-      const correctedScored = scoreAll(all, corrected, 0)
+      const correctedScored = scoreAll(entries, corrected, 0)
       if (correctedScored.length > 0) {
         scored = correctedScored
         note = `Showing results for “${corrected.join(' ')}”`
@@ -206,7 +225,7 @@ export function searchKb(q: string): KbSearchResult {
 
   // Tier 3 — relaxed AND (one token may miss, anchored on character/name)
   if (scored.length === 0 && tokens.length >= 2) {
-    scored = scoreAll(all, tokens, 1)
+    scored = scoreAll(entries, tokens, 1)
     if (scored.length > 0) {
       note = `No exact match for “${query}” — showing close matches`
     }

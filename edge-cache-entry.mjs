@@ -75,12 +75,18 @@ function sharedTtl(cc) {
   return m ? parseInt(m[1], 10) : 0
 }
 
-function isCacheableResponse(response) {
-  if (response.status !== 200) return false
-  if (response.headers.has('set-cookie')) return false
+/**
+ * Returns null if cacheable, else a short skip reason (S17 observability —
+ * exposed as `x-fp-edge-skip` so a silent store-refusal is diagnosable from
+ * any browser instead of requiring a deploy cycle per hypothesis).
+ */
+function storeSkipReason(response) {
+  if (response.status !== 200) return 'status'
+  if (response.headers.has('set-cookie')) return 'set-cookie'
   const cc = response.headers.get('cache-control') ?? ''
-  if (/private|no-store|no-cache/i.test(cc)) return false
-  return sharedTtl(cc) > 0
+  if (/private|no-store|no-cache/i.test(cc)) return 'cc-private'
+  if (sharedTtl(cc) <= 0) return 'no-smaxage'
+  return null
 }
 
 function withEdgeHeader(response, value) {
@@ -104,7 +110,8 @@ export default {
 
     const res = await handler.fetch(request, env, ctx)
 
-    if (isCacheableResponse(res)) {
+    const skip = storeSkipReason(res)
+    if (!skip) {
       // Cap HTML TTL so deploys propagate; keep route-chosen TTL for JSON etc.
       const isHtml = (res.headers.get('content-type') ?? '').includes('text/html')
       const ttl = Math.min(sharedTtl(res.headers.get('cache-control')), isHtml ? HTML_TTL_CAP : Infinity)
@@ -114,6 +121,8 @@ export default {
       ctx.waitUntil(cache.put(key, stored).catch(() => { /* cache write failure must never affect the response */ }))
     }
 
-    return withEdgeHeader(res, 'MISS')
+    const out = withEdgeHeader(res, 'MISS')
+    if (skip) out.headers.set('x-fp-edge-skip', skip)
+    return out
   },
 }

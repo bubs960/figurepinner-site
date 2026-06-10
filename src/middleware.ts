@@ -38,6 +38,7 @@ function setNoCacheOnApi(): NextResponse {
 // Default-deny: a route is only cacheable if it's explicitly listed here.
 const isPublicCacheableApi = createRouteMatcher([
   '/api/v1/search',
+  '/api/v1/price-check',
   '/api/news',
   '/api/v1/deals',
   '/api/sparklines',
@@ -69,9 +70,18 @@ export default clerkMiddleware(async (auth, req) => {
 })
 
 export const config = {
+  // S17 (2026-06-10): public read-only GET APIs are EXCLUDED from the matcher
+  // entirely. clerkMiddleware processes every matched response and that was
+  // suspected of attaching Set-Cookie, which makes the S15 edge-cache wrapper
+  // refuse to store them (set-cookie gate) — so the allowlist above never
+  // actually produced edge HITs. These routes need no auth context; skipping
+  // the middleware gives them clean responses. Default-deny is preserved: any
+  // NEW /api route is matched (→ no-store) unless explicitly excluded here
+  // AND allowlisted above.
   matcher: [
     '/app(.*)',
     '/admin(.*)',
-    '/(api|trpc)(.*)',
+    '/trpc(.*)',
+    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$).*)',
   ],
 }
