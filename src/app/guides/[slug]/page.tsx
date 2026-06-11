@@ -41,26 +41,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-// Inline link syntax: [[label|/path]] or [[label|https://...]]
-// Used in article body text and ul items to link examples to search/figure pages.
-const LINK_PATTERN = /\[\[(.+?)\|(.+?)\]\]/g
+// Inline link syntax: [[label|/path]] — used in article body text and ul items.
+// renderText() parses this into styled <a> tags at render time.
 
 function renderText(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
   let last = 0
   let match: RegExpExecArray | null
-  LINK_PATTERN.lastIndex = 0
-  while ((match = LINK_PATTERN.exec(text)) !== null) {
-    if (match.index > last) parts.push(text.slice(last, match.index))
+  const re = /\[\[(.+?)\|(.+?)\]\]/g
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > last) parts.push(<span key={`t${match.index}`}>{text.slice(last, match.index)}</span>)
     parts.push(
-      <a key={match.index} href={match[2]} style={{ color: 'var(--fp-accent)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+      <a key={`a${match.index}`} href={match[2]} style={{ color: 'var(--fp-accent)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
         {match[1]}
       </a>
     )
     last = match.index + match[0].length
   }
-  if (last < text.length) parts.push(text.slice(last))
-  return parts.length === 1 && typeof parts[0] === 'string' ? parts[0] : parts
+  if (parts.length === 0) return text
+  if (last < text.length) parts.push(<span key="tail">{text.slice(last)}</span>)
+  return <>{parts}</>
 }
 
 function Block({ block }: { block: ArticleBlock }) {
