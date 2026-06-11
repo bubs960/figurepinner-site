@@ -41,6 +41,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
+// Inline link syntax: [[label|/path]] or [[label|https://...]]
+// Used in article body text and ul items to link examples to search/figure pages.
+const LINK_PATTERN = /\[\[(.+?)\|(.+?)\]\]/g
+
+function renderText(text: string): React.ReactNode {
+  const parts: React.ReactNode[] = []
+  let last = 0
+  let match: RegExpExecArray | null
+  LINK_PATTERN.lastIndex = 0
+  while ((match = LINK_PATTERN.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index))
+    parts.push(
+      <a key={match.index} href={match[2]} style={{ color: 'var(--fp-accent)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+        {match[1]}
+      </a>
+    )
+    last = match.index + match[0].length
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return parts.length === 1 && typeof parts[0] === 'string' ? parts[0] : parts
+}
+
 function Block({ block }: { block: ArticleBlock }) {
   switch (block.type) {
     case 'h2':
@@ -59,7 +81,7 @@ function Block({ block }: { block: ArticleBlock }) {
       return (
         <ul style={{ margin: '0 0 1.25rem', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
           {block.items.map((it, i) => (
-            <li key={i} style={{ fontSize: '1.02rem', color: 'var(--fp-muted)', lineHeight: 1.7 }}>{it}</li>
+            <li key={i} style={{ fontSize: '1.02rem', color: 'var(--fp-muted)', lineHeight: 1.7 }}>{renderText(it)}</li>
           ))}
         </ul>
       )
@@ -71,14 +93,14 @@ function Block({ block }: { block: ArticleBlock }) {
           borderRadius: '0 var(--fp-radius) var(--fp-radius) 0',
           fontSize: '1rem', color: 'var(--fp-text)', lineHeight: 1.65, fontStyle: 'italic',
         }}>
-          {block.text}
+          {renderText(block.text)}
         </p>
       )
     case 'p':
     default:
       return (
         <p style={{ fontSize: '1.05rem', color: 'var(--fp-muted)', lineHeight: 1.8, margin: '0 0 1.25rem' }}>
-          {block.text}
+          {renderText(block.text)}
         </p>
       )
   }

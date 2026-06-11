@@ -56,9 +56,9 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Rule three: the line and the era set the ceiling' },
       { type: 'p', text: 'Two figures of the same wrestler can be worth wildly different amounts depending on who made it and when. The same Hulk Hogan exists as a 1991 Hasbro, a Jakks Classic Superstars, and a modern Mattel Elite — and those are three different markets with three different buyers.' },
       { type: 'ul', items: [
-        'Vintage (LJN 1984–89, Hasbro WWF 1990–94) — driven by nostalgia and scarcity. The 80s/90s kids who owned these are now in their peak earning years, and that demand is not going away. LJN rubber figures in clean shape carry serious premiums.',
-        'Jakks era (1996–2010) — the bridge generation. Ruthless Aggression and Deluxe Aggression have devoted collectors and surprisingly strong comps on the right names.',
-        'Mattel Elite (2010–present) — the modern standard. Deep, ongoing, and where most active trading happens. Chase variants, exclusives, and early series numbers carry the value here.',
+        '[[Vintage (LJN 1984–89, Hasbro WWF 1990–94)|/wrestling?era=vintage]] — driven by nostalgia and scarcity. The 80s/90s kids who owned these are now in their peak earning years, and that demand is not going away. LJN rubber figures in clean shape carry serious premiums.',
+        '[[Jakks era (1996–2010)|/wrestling?brand=jakks]] — the bridge generation. Ruthless Aggression and Deluxe Aggression have devoted collectors and surprisingly strong comps on the right names.',
+        '[[Mattel Elite (2010–present)|/wrestling?brand=mattel]] — the modern standard. Deep, ongoing, and where most active trading happens. Chase variants, exclusives, and early series numbers carry the value here.',
       ]},
       { type: 'p', text: 'Knowing the era tells you who is buying and why. A vintage Hasbro buyer is buying 1991 back. An Elite buyer is completing a current run. Different emotion, different price behavior.' },
 
@@ -68,7 +68,7 @@ export const ARTICLES: Article[] = [
 
       { type: 'h2', text: 'Putting it together' },
       { type: 'p', text: 'Pricing a figure is four questions, in order. What did the last several actually sell for? What condition were those, and does it match mine? What line and era is this, and who buys it? And is there a real, specific scarcity reason it should sell above the common version? Answer those honestly and you will price like someone who has been doing this for years.' },
-      { type: 'p', text: 'That is exactly what FigurePinner does for you on every figure page — real eBay sold comps, median, range, and how many sales backed the number, so you are working from the truth instead of the wishlist. Look up any figure and you will see the sold data first. The whole point is that you never have to take an asking price at face value again.' },
+      { type: 'p', text: 'That is exactly what [[FigurePinner|/]] does for you on every figure page — real eBay sold comps, median, range, and how many sales backed the number, so you are working from the truth instead of the wishlist. [[Look up any figure|/]] and you will see the sold data first. The whole point is that you never have to take an asking price at face value again.' },
     ],
   },
 
