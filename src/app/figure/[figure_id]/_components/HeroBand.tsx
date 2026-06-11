@@ -1,7 +1,19 @@
 // HeroBand.tsx — Zone 1: Image + identity header
 // Server component — no client-side JS needed
 
+import ValueStrip from './ValueStrip'
+
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
+
+interface Pricing {
+  median: number | null
+  trend_90d_pct: number | null
+  low: number | null
+  high: number | null
+  confidence: 1 | 2 | 3 | 4 | 5
+  comp_count: number
+  dispersion_warning?: boolean
+}
 
 interface HeroBandProps {
   imageUrl: string | null
@@ -15,6 +27,8 @@ interface HeroBandProps {
   rarityTier: RarityTier
   genre: string
   className?: string
+  valuePricing?: Pricing | null
+  valueStripClassName?: string
 }
 
 const RARITY_CONFIG = {
@@ -26,6 +40,7 @@ const RARITY_CONFIG = {
 export default function HeroBand({
   imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
+  valuePricing, valueStripClassName,
 }: HeroBandProps) {
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
   const metaParts = [
@@ -101,7 +116,7 @@ export default function HeroBand({
       </div>
 
       {/* Identity */}
-      <div style={{ paddingTop: '0.5rem' }}>
+      <div style={{ paddingTop: '0.5rem', display: 'flex', flexDirection: 'column' }}>
         {/* Brand chip */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           <span style={{
@@ -155,6 +170,16 @@ export default function HeroBand({
         <div style={{ fontSize: '0.8rem', color: 'var(--fp-text)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>
           {genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
         </div>
+
+        {/* Price strip — inline beside image at wide viewports.
+            marginTop:auto pins it to bottom of the flex column so it always
+            anchors at image-bottom regardless of how much title text there is.
+            At <=768px fp-hero-grid collapses to 1 col and it stacks below image. */}
+        {valuePricing && (
+          <div style={{ marginTop: 'auto', paddingTop: '1.25rem' }}>
+            <ValueStrip className={valueStripClassName} pricing={valuePricing} />
+          </div>
+        )}
       </div>
     </div>
   )

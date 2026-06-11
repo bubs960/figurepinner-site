@@ -8,7 +8,7 @@
 import { getFigureById, getFiguresByFandom, deriveName, figureUrl } from '@/data/kb'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
-import ValueStrip from './ValueStrip'
+import BidCheck from './BidCheck'
 import LoreBand from './LoreBand'
 import FigureEnrichment from './FigureEnrichment'
 import MarketPanel from './MarketPanel'
@@ -150,14 +150,34 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   // ── ValueStrip props ────────────────────────────────────────────────────────
 
-  const valuePricing = price && price.soldCount > 0 ? {
-    median:        price.medianSold ?? price.avgSold ?? null,
-    trend_90d_pct: computeTrend(price.soldHistory),
-    low:           price.minSold ?? null,
-    high:          price.maxSold ?? null,
-    confidence:    compCountToConfidence(price.soldCount),
-    comp_count:    price.soldCount,
-  } : null
+  const valuePricing = (() => {
+    if (!price || price.soldCount === 0) return null
+    const median = price.medianSold ?? price.avgSold ?? null
+    // P10–P90 range: much less sensitive to outliers than raw min/max.
+    // Requires soldHistory to have prices; falls back to raw min/max if not enough data.
+    const sortedPrices = [...price.soldHistory.map(s => s.price)].sort((a, b) => a - b)
+    const low  = sortedPrices.length >= 3 ? _pctile(sortedPrices, 10) : (price.minSold ?? null)
+    const high = sortedPrices.length >= 3 ? _pctile(sortedPrices, 90) : (price.maxSold ?? null)
+    // Dispersion warning: when the raw spread is >4x the median, comp set likely
+    // contains contaminated listings (wrong series, graded lots, wrong figure).
+    // Cap displayed confidence at 4 and surface a caveat label.
+    const rawSpread = (price.maxSold ?? 0) - (price.minSold ?? 0)
+    const dispersionRatio = median && median > 0 ? rawSpread / median : 0
+    const dispersionWarning = dispersionRatio > 4
+    const baseConfidence = compCountToConfidence(price.soldCount)
+    const confidence: 1 | 2 | 3 | 4 | 5 = (dispersionWarning && baseConfidence > 4)
+      ? 4
+      : baseConfidence
+    return {
+      median,
+      trend_90d_pct: computeTrend(price.soldHistory),
+      low,
+      high,
+      confidence,
+      comp_count:         price.soldCount,
+      dispersion_warning: dispersionWarning,
+    }
+  })()
 
   // ── MarketPanel props ───────────────────────────────────────────────────────
 
@@ -274,7 +294,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
           .fp-right-col  { position: static !important; }
         }
-        @media (max-width: 540px) {
+        /* Value strip: wrap to 2×2 grid on narrow viewports.
+           4-cell layout (when trend is visible) clips "CONFIDENCE" label
+           below ~600px container width. 640px breakpoint gives safe margin. */
+        @media (max-width: 640px) {
           .fp-value-strip { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
@@ -306,7 +329,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       {/* ── Main content ─────────────────────────────────────────────────────── */}
       <main style={{ maxWidth: '1040px', margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
 
-        {/* Zone 1 — Hero: image + identity */}
+        {/* Zone 1 — Hero: image + identity + price strip (inline at wide viewports) */}
         <div style={{ marginBottom: '1.75rem' }}>
           <HeroBand
             className="fp-hero-grid"
@@ -320,13 +343,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             releaseYear={releaseYear}
             rarityTier={null}
             genre={genre}
+            valuePricing={valuePricing}
+            valueStripClassName="fp-value-strip"
           />
         </div>
 
-        {/* Zone 2 — Value strip */}
-        {valuePricing && (
+        {/* Zone 2b — Bid Check verdict widget (S16, north star). Renders only
+            when sold comps exist; zero-comp figures keep the EmptyState flow. */}
+        {marketPricing && marketPricing.recent_comps.length > 0 && (
           <div style={{ marginBottom: '1.5rem' }}>
-            <ValueStrip className="fp-value-strip" pricing={valuePricing} />
+            <BidCheck comps={marketPricing.recent_comps.map(c => ({ price: c.price, condition: c.condition }))} />
           </div>
         )}
 
