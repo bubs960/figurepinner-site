@@ -102,12 +102,9 @@ export default function SettingsPage() {
               {portalLoading ? 'Loading…' : 'Manage billing →'}
             </button>
           ) : (
-            <a href="/pro" style={{
-              background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-              padding: '0.5rem 1rem', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700', flexShrink: 0,
-            }}>
-              Upgrade to Pro
-            </a>
+            <span style={{ color: 'var(--muted)', fontSize: '0.8rem', flexShrink: 0 }}>
+              Pro returns soon
+            </span>
           )}
         </div>
       </Section>

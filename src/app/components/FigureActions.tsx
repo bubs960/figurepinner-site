@@ -186,9 +186,6 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
               ? 'Vault is now full.'
               : `${vaultWarn.remaining} vault spot${vaultWarn.remaining === 1 ? '' : 's'} left.`}
           </span>
-          <a href="/pro" style={{ fontSize: '0.72rem', color: 'var(--blue)', fontWeight: '600', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            Upgrade
-          </a>
         </div>
       )}
 

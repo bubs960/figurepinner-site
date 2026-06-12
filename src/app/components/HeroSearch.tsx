@@ -17,13 +17,27 @@ type SearchResult = {
   character_slug?: string
 }
 
-export default function HeroSearch({ totalLabel = '18,000+' }: { totalLabel?: string }) {
+export default function HeroSearch({
+  totalLabel = '18,000+',
+  placeholder,
+  placeholderExamples,
+  showButton = false,
+}: {
+  totalLabel?: string
+  placeholder?: string
+  /** Optional rotating example names — cycles "Try ..." hints while empty. */
+  placeholderExamples?: string[]
+  /** Render a visible submit button so search reads as THE action. */
+  showButton?: boolean
+}) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
+  const [exampleIdx, setExampleIdx] = useState(0)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const wrapperRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (query.length < 2) {
@@ -61,12 +75,49 @@ export default function HeroSearch({ totalLabel = '18,000+' }: { totalLabel?: st
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.key === 'Escape') setOpen(false)
-    if (e.key === 'Enter' && query.trim()) {
+  // "/" focuses the search from anywhere on the page (homepage copy promises
+  // this — keep the hotkey and the micro-line in sync). Ignored while typing
+  // in any form control or during IME composition so it never eats real input.
+  useEffect(() => {
+    function handleSlash(e: KeyboardEvent) {
+      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return
+      const t = e.target as HTMLElement | null
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return
+      e.preventDefault()
+      inputRef.current?.focus()
+    }
+    document.addEventListener('keydown', handleSlash)
+    return () => document.removeEventListener('keydown', handleSlash)
+  }, [])
+
+  // Rotate example placeholders while the field is empty. Respects
+  // prefers-reduced-motion (no cycling — static base placeholder).
+  useEffect(() => {
+    if (!placeholderExamples?.length) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const id = setInterval(() => {
+      setExampleIdx(i => (i + 1) % placeholderExamples.length)
+    }, 3200)
+    return () => clearInterval(id)
+  }, [placeholderExamples])
+
+  function submit() {
+    if (query.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(query)}`
+    } else {
+      inputRef.current?.focus()
     }
   }
+
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'Escape') setOpen(false)
+    if (e.key === 'Enter') submit()
+  }
+
+  const basePlaceholder = placeholder ?? `Search ${totalLabel} figures by name or character...`
+  const liveHint = placeholderExamples?.length
+    ? `Try "${placeholderExamples[exampleIdx % placeholderExamples.length]}"`
+    : basePlaceholder
 
   return (
     <div ref={wrapperRef} style={{ position: 'relative', width: '100%', maxWidth: 720, margin: '0 auto 32px' }}>
@@ -76,21 +127,20 @@ export default function HeroSearch({ totalLabel = '18,000+' }: { totalLabel?: st
         background: 'var(--s1)',
         border: `1px solid ${open && results.length ? 'var(--blue)' : 'var(--border)'}`,
         borderRadius: open && results.length ? '10px 10px 0 0' : '10px',
-        padding: '0 16px',
+        padding: '0 8px 0 16px',
         gap: 10,
         transition: 'border-color 0.15s',
         boxShadow: open && results.length ? '0 0 0 3px rgba(0,102,255,0.12)' : 'none',
       }}>
         <input
+          ref={inputRef}
           type="text"
-          placeholder={`Search ${totalLabel} figures by name or character...`}
+          placeholder={query.length === 0 ? liveHint : basePlaceholder}
           value={query}
           onChange={e => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && results.length && setOpen(true)}
           onKeyDown={handleKeyDown}
           aria-label="Search figures"
-          aria-expanded={open}
-          aria-autocomplete="list"
           style={{
             flex: 1,
             background: 'transparent',
@@ -108,6 +158,29 @@ export default function HeroSearch({ totalLabel = '18,000+' }: { totalLabel?: st
             ? <ClearButton onClick={() => { setQuery(''); setResults([]); setOpen(false) }} />
             : null
         }
+        {showButton && (
+          <button
+            type="button"
+            onClick={submit}
+            aria-label="Run a price check"
+            style={{
+              flexShrink: 0,
+              border: 'none',
+              cursor: 'pointer',
+              background: 'var(--blue)',
+              color: '#fff',
+              fontFamily: 'var(--font-ui)',
+              fontSize: '0.85rem',
+              fontWeight: 800,
+              borderRadius: 8,
+              padding: '10px 16px',
+              margin: '6px 0',
+              boxShadow: '0 6px 18px rgba(0,102,255,0.3)',
+            }}
+          >
+            Price it
+          </button>
+        )}
       </div>
 
       {/* Results dropdown */}

@@ -23,7 +23,7 @@ import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 // client-side in FigureDetailContent so caching is safe. Was force-dynamic;
 // restored per Genta audit 2026-06-06 P1.
 export const dynamic = 'force-static'
-export const revalidate = 3600
+export const revalidate = 86400 // matches /figure/[figure_id] — same content, same KV budget
 
 const BASE = 'https://figurepinner.com'
 

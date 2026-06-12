@@ -10,6 +10,7 @@ interface Pricing {
   high: number | null
   confidence: 1 | 2 | 3 | 4 | 5
   comp_count: number
+  dispersion_warning?: boolean
 }
 
 interface ValueStripProps {
@@ -83,25 +84,36 @@ export default function ValueStrip({ pricing, className }: ValueStripProps) {
       )}
 
       {/* Confidence — text-led so level isn't conveyed by dot color alone (WCAG 1.4.1).
-          The DataQualityBadge below states the plain-language level + caveat. */}
+          dispersion_warning caps at 4/5 and shows a "High spread" caveat when
+          raw comp spread is >4× the median (contaminated/wrong-series listings). */}
       <Cell
         label="Confidence"
         value={`${confidence} / 5`}
         valueColor="var(--fp-text)"
         small
         extra={
-          <div
-            role="img"
-            aria-label={`Confidence ${confidence} of 5`}
-            style={{ display: 'flex', gap: '3px', marginTop: '2px' }}
-          >
-            {dots.map((filled, i) => (
-              <div key={i} aria-hidden style={{
-                width: 8, height: 8, borderRadius: '50%',
-                background: filled ? 'var(--fp-accent)' : 'var(--fp-surface-2)',
-                border: `1px solid ${filled ? 'var(--fp-accent)' : 'var(--fp-border)'}`,
-              }} />
-            ))}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginTop: '2px' }}>
+            <div
+              role="img"
+              aria-label={`Confidence ${confidence} of 5`}
+              style={{ display: 'flex', gap: '3px' }}
+            >
+              {dots.map((filled, i) => (
+                <div key={i} aria-hidden style={{
+                  width: 8, height: 8, borderRadius: '50%',
+                  background: filled ? 'var(--fp-accent)' : 'var(--fp-surface-2)',
+                  border: `1px solid ${filled ? 'var(--fp-accent)' : 'var(--fp-border)'}`,
+                }} />
+              ))}
+            </div>
+            {pricing.dispersion_warning && (
+              <div style={{
+                fontSize: '0.68rem', color: 'var(--fp-warning, #FFB800)',
+                fontWeight: 600, letterSpacing: '0.04em',
+              }}>
+                High spread
+              </div>
+            )}
           </div>
         }
         sub={`${pricing.comp_count} comps`}

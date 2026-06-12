@@ -153,15 +153,8 @@ export default function VaultPage() {
         }}>
           <div>
             <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>Export your collection</div>
-            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>Pro members can export their full vault to CSV or Excel.</div>
+            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>CSV export returns with the Pro relaunch.</div>
           </div>
-          <a href="/pro" style={{
-            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.875rem',
-            fontWeight: '700', flexShrink: 0,
-          }}>
-            Unlock Export
-          </a>
         </div>
       )}
 

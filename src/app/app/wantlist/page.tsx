@@ -117,15 +117,8 @@ export default function WantlistPage() {
         }}>
           <div>
             <div style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '0.25rem' }}>Get notified when prices drop</div>
-            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>Pro members get email alerts when any want list figure hits their target.</div>
+            <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>Email alerts return with the Pro relaunch — your targets are already saved.</div>
           </div>
-          <a href="/pro" style={{
-            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.875rem',
-            fontWeight: '700', flexShrink: 0,
-          }}>
-            Unlock Alerts
-          </a>
         </div>
       )}
 

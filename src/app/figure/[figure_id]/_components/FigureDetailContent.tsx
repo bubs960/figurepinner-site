@@ -24,6 +24,7 @@ import type { LoreInput } from '../_lib/loreRenderer'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
+import { thumb } from '@/lib/imageUrl'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
 // Fallback campid is the live EPN campaign — restored after bceb185 silently
@@ -224,7 +225,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       figure_id: f.figure_id,
       href: figureUrl(f),
       name: f.character_canonical.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-      imageUrl: f.canonical_image_url ?? null,
+      imageUrl: thumb(f.canonical_image_url, 180),
     }))
 
   const characterVariants = allInGenre
@@ -237,7 +238,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       figure_id: f.figure_id,
       href: figureUrl(f),
       name: deriveName(f),
-      imageUrl: f.canonical_image_url ?? null,
+      imageUrl: thumb(f.canonical_image_url, 180),
     }))
 
   // ── JSON-LD ─────────────────────────────────────────────────────────────────
@@ -294,10 +295,13 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
           .fp-right-col  { position: static !important; }
         }
-        /* Value strip: wrap to 2×2 grid on narrow viewports.
-           4-cell layout (when trend is visible) clips "CONFIDENCE" label
-           below ~600px container width. 640px breakpoint gives safe margin. */
-        @media (max-width: 640px) {
+        /* Value strip responsive rules.
+           At 769–900px viewport the hero is still 2-col but the identity
+           column is only ~400–470px wide — too narrow for 4 equal cells
+           without clipping the CONFIDENCE label. Wrap to 2×2 at 900px.
+           At ≤640px the hero has already collapsed to 1-col so the strip
+           is full-width; 2×2 still applies for comfortable reading. */
+        @media (max-width: 900px) {
           .fp-value-strip { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
@@ -320,6 +324,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             {prettifySlug(genre)}
           </a>
           <Chevron />
+          <a href={`/${genre}/${local.product_line}`} style={{ color: 'var(--fp-muted)', textDecoration: 'none', flexShrink: 0 }}>
+            {line}
+          </a>
+          <Chevron />
           <span style={{ color: 'var(--fp-text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {displayName}
           </span>
@@ -333,7 +341,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         <div style={{ marginBottom: '1.75rem' }}>
           <HeroBand
             className="fp-hero-grid"
-            imageUrl={imageUrlFinal}
+            imageUrl={thumb(imageUrlFinal, 760)}
             characterName={characterH1}
             brand={brand}
             lineName={lineAttrs?.display_name ?? line}
@@ -459,7 +467,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         />
 
         {/* Zone 8 — CTA rail */}
-        <CtaRail genre={genre} brand={brand} line={line} />
+        <CtaRail genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
       </main>
 
       {/* Sticky mobile action bar — phones only, feature-flag gated.

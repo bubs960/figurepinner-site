@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://figurepinner.com/terms' },
 }
 
+export const revalidate = 86400 // static page — emit s-maxage for the colo edge cache
+
 export default function TermsPage() {
   const updated = 'June 2026'
 
@@ -24,7 +26,7 @@ export default function TermsPage() {
         <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
           FIGUREPINNER
         </a>
-        <a href="/app" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Back to app</a>
+        <a href="/" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Back to site</a>
       </nav>
 
       {/* Content */}

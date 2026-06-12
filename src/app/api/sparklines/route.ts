@@ -5,7 +5,7 @@ const R2_PROXY = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 export const revalidate = 300
 
 export async function GET(req: NextRequest) {
-  const ids = req.nextUrl.searchParams.get('ids')?.split(',').filter(Boolean).slice(0, 48) ?? []
+  const ids = req.nextUrl.searchParams.get('ids')?.split(',').filter(Boolean).slice(0, 40) ?? []
   if (!ids.length) return NextResponse.json({})
 
   const results: Record<string, { points: number[]; trend: 'up' | 'down' | 'flat'; median: number | null; soldCount: number }> = {}

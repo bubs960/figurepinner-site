@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import GenreTaxonomy from './_components/GenreTaxonomy'
 import HeroSearch from './components/HeroSearch'
-import { TOTAL_FIGURES_LABEL, fandomCountForUISlug, plusLabel } from '@/data/kb-stats'
-import { deriveName, figureUrl, getAllFigures, type KBFigure } from '@/data/kb'
-import { prettifySlug } from './figure/[figure_id]/_lib/figureFormatters'
-import { thumb } from '@/lib/imageUrl'
+import PriceReceipt from './components/PriceReceipt'
+import { fetchHomeMarket } from './_lib/homeReceipt'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { GENRE_TAXONOMY } from '@/data/genre-lines'
 
 export const metadata: Metadata = {
   title: { absolute: 'FigurePinner - Action Figure Price Guide' },
@@ -12,127 +12,19 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://figurepinner.com' },
 }
 
-// Genre slugs shown on the homepage (D&D removed - see GenreTaxonomy note).
-// Counts are computed from the KB at build time so they never drift.
-const HOME_GENRE_SLUGS = [
-  'wrestling', 'marvel', 'star-wars', 'dc', 'transformers', 'gijoe',
-  'masters-of-the-universe', 'teenage-mutant-ninja-turtles', 'power-rangers',
-  'neca', 'indiana-jones', 'ghostbusters', 'mythic-legions', 'thundercats',
-  'action-force', 'spawn',
-]
-
-const SHOWCASE_CONFIG = [
-  { fandom: 'wrestling', productLine: 'elite', needles: ['cody-rhodes', 'roman-reigns', 'rhea-ripley', 'rey-mysterio'] },
-  { fandom: 'star-wars', productLine: 'black-series', needles: ['darth-vader', 'mandalorian', 'ahsoka', 'maul'] },
-  { fandom: 'marvel-comics', productLine: 'marvel-legends', needles: ['spider-man', 'wolverine', 'deadpool', 'captain-america'] },
-  { fandom: 'dc', productLine: 'dc-multiverse', needles: ['batman', 'superman', 'joker', 'wonder-woman'] },
-  { fandom: 'transformers', productLine: 'studio-series', needles: ['optimus-prime', 'megatron', 'bumblebee'] },
-  { fandom: 'gi-joe', productLine: 'classified-series', needles: ['snake-eyes', 'cobra-commander', 'storm-shadow'] },
-  { fandom: 'tmnt', productLine: 'playmates-tmnt', needles: ['leonardo', 'raphael', 'donatello', 'michelangelo'] },
-  { fandom: 'masters-of-the-universe', productLine: 'origins', needles: ['he-man', 'skeletor'] },
-]
-
-const RECEIPTS = [
-  {
-    label: 'Check the comp',
-    title: 'Do not get worked by the BIN price.',
-    body: 'Start with sold listings, not seller optimism. FigurePinner shows the market that actually closed.',
-  },
-  {
-    label: 'Read the condition',
-    title: 'MOC and loose are different markets.',
-    body: 'Sealed, complete loose, and missing-accessory figures do not trade the same. Treat them separately.',
-  },
-  {
-    label: 'Pin the grail',
-    title: 'Track the figure before the fig hunt.',
-    body: 'Save targets, watch the lane, and know when a listing is a real gap instead of ordinary heat.',
-  },
-]
-
-const JOURNEY = [
-  {
-    step: '01',
-    title: 'Search like a collector',
-    body: 'Type the character, line, or wave. Jump straight to the exact figure instead of doom-scrolling active listings.',
-  },
-  {
-    step: '02',
-    title: 'Read the receipt',
-    body: 'Sold comps, data-quality labels, and condition context tell you how much trust to put in the number.',
-  },
-  {
-    step: '03',
-    title: 'Build the vault',
-    body: 'Pin owned figures, chase missing pieces, and keep the collection moving without spreadsheet archaeology.',
-  },
-]
-
-function genreCounts(): Record<string, string> {
-  const out: Record<string, string> = {}
-  for (const slug of HOME_GENRE_SLUGS) {
-    out[slug] = plusLabel(fandomCountForUISlug(slug))
-  }
-  return out
+function fmtTape(n: number): string {
+  return `$${n.toFixed(n % 1 === 0 ? 0 : 2)}`
 }
 
-function pickShowcaseFigures(): Array<{
-  href: string
-  image: string | null
-  name: string
-  line: string
-  genre: string
-}> {
-  const all = getAllFigures()
-  const used = new Set<string>()
-  const picked: KBFigure[] = []
+// Film-grain texture, inlined so it costs zero requests.
+const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")`
 
-  for (const slot of SHOWCASE_CONFIG) {
-    const candidates = all.filter(f =>
-      f.fandom === slot.fandom &&
-      f.product_line === slot.productLine &&
-      !!f.canonical_image_url &&
-      !used.has(f.figure_id)
-    )
-
-    const matched = slot.needles
-      .map(needle => candidates.find(f => {
-        const haystack = `${f.character_canonical} ${f.v1_name ?? ''}`.toLowerCase()
-        return haystack.includes(needle.replace(/-/g, ' '))
-          || haystack.includes(needle)
-      }))
-      .find(Boolean)
-
-    const selected = matched ?? candidates[0]
-    if (selected) {
-      picked.push(selected)
-      used.add(selected.figure_id)
-    }
-  }
-
-  if (picked.length < 8) {
-    for (const figure of all) {
-      if (picked.length >= 8) break
-      if (!figure.canonical_image_url || used.has(figure.figure_id)) continue
-      if (!HOME_GENRE_SLUGS.includes(figure.fandom) && figure.fandom !== 'marvel-comics' && figure.fandom !== 'gi-joe' && figure.fandom !== 'tmnt') continue
-      picked.push(figure)
-      used.add(figure.figure_id)
-    }
-  }
-
-  return picked.slice(0, 8).map(f => ({
-    href: figureUrl(f),
-    image: thumb(f.canonical_image_url, 360),
-    name: f.v1_name ?? deriveName(f),
-    line: f.v1_line ?? prettifySlug(f.product_line),
-    genre: prettifySlug(f.fandom === 'marvel-comics' ? 'marvel' : f.fandom),
-  }))
-}
-
-export default function HomePage() {
-  const counts = genreCounts()
-  const showcase = pickShowcaseFigures()
-  const heroFigures = showcase.slice(0, 8)
+export default async function HomePage() {
+  // Live price snapshots for the receipt demo + sold tape — real numbers or
+  // the modules hide themselves.
+  const { figures: receiptFigures, tape } = await fetchHomeMarket()
+  const showReceipt = receiptFigures.length >= 2
+  const showTape = tape.length >= 6
 
   return (
     <div className="fp-home">
@@ -198,61 +90,66 @@ export default function HomePage() {
         .fp-hero {
           position: relative;
           overflow: hidden;
-          min-height: calc(100vh - 56px);
-          display: flex;
-          align-items: center;
-          padding: 78px 24px 56px;
+          padding: 76px 24px 68px;
           border-bottom: 1px solid rgba(255,255,255,0.08);
           background:
-            linear-gradient(180deg, rgba(9,9,15,0.42), #09090f 92%),
-            linear-gradient(110deg, rgba(229,50,56,0.18), rgba(0,102,255,0.10) 38%, rgba(0,200,112,0.08));
+            radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1.4px) 0 0 / 26px 26px,
+            #09090f;
         }
-        .fp-hero-wall {
+        /* Aurora — two slow-drifting light pools behind everything. GPU-only
+           (transform + filter), low opacity so text contrast never suffers. */
+        .fp-aurora {
           position: absolute;
           inset: 0;
-          display: grid;
-          grid-template-columns: repeat(8, minmax(118px, 1fr));
-          gap: 14px;
-          padding: 38px 24px;
-          opacity: 0.58;
-          transform: rotate(-4deg) scale(1.08);
+          overflow: hidden;
           pointer-events: none;
         }
-        .fp-hero-wall::after {
+        .fp-aurora::before,
+        .fp-aurora::after {
           content: '';
           position: absolute;
+          width: 56vw;
+          height: 56vw;
+          max-width: 900px;
+          max-height: 900px;
+          border-radius: 50%;
+          filter: blur(90px);
+          will-change: transform;
+        }
+        .fp-aurora::before {
+          background: radial-gradient(circle, rgba(0,102,255,0.20), transparent 62%);
+          top: -22%;
+          left: -8%;
+          animation: fp-drift-a 26s ease-in-out infinite alternate;
+        }
+        .fp-aurora::after {
+          background: radial-gradient(circle, rgba(0,200,112,0.13), transparent 62%);
+          bottom: -32%;
+          right: -12%;
+          animation: fp-drift-b 32s ease-in-out infinite alternate;
+        }
+        @keyframes fp-drift-a { to { transform: translate(7vw, 6vh) scale(1.12); } }
+        @keyframes fp-drift-b { to { transform: translate(-6vw, -5vh) scale(1.08); } }
+        .fp-grain {
+          position: absolute;
           inset: 0;
-          background:
-            linear-gradient(90deg, #09090f 0%, rgba(9,9,15,0.38) 20%, rgba(9,9,15,0.2) 70%, #09090f 100%),
-            linear-gradient(180deg, rgba(9,9,15,0.15), #09090f 95%);
+          pointer-events: none;
+          opacity: 0.05;
+          background-image: ${GRAIN};
         }
-        .fp-wall-card {
-          min-height: 172px;
-          border: 1px solid rgba(255,255,255,0.12);
-          border-radius: 8px;
-          background: rgba(20,20,32,0.78);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-          box-shadow: 0 18px 48px rgba(0,0,0,0.34);
-        }
-        .fp-wall-card:nth-child(odd) {
-          transform: translateY(44px);
-        }
-        .fp-wall-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          padding: 18px;
-          filter: saturate(1.04) contrast(1.04);
-        }
-        .fp-hero-inner {
+        .fp-hero-grid {
           position: relative;
           z-index: 1;
-          max-width: 1040px;
+          max-width: 1120px;
           margin: 0 auto;
-          width: 100%;
+          display: grid;
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 56px;
+          align-items: center;
+        }
+        .fp-hero-grid.solo {
+          grid-template-columns: 1fr;
+          max-width: 760px;
           text-align: center;
         }
         .fp-eyebrow {
@@ -264,361 +161,335 @@ export default function HomePage() {
           padding: 7px 13px;
           color: #eeeef5;
           background: rgba(9,9,15,0.72);
-          font-size: 0.72rem;
+          font-size: 0.7rem;
           font-weight: 800;
           letter-spacing: 0.08em;
           text-transform: uppercase;
+          animation: fp-h1-rise 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
         }
         .fp-eyebrow-dot {
           width: 8px;
           height: 8px;
           border-radius: 50%;
           background: #00c870;
+          box-shadow: 0 0 8px rgba(0,200,112,0.8);
         }
         .fp-hero h1 {
-          max-width: 820px;
-          margin: 22px auto 18px;
+          margin: 20px 0 14px;
           font-family: var(--font-display);
-          font-size: 4.8rem;
-          line-height: 0.92;
+          font-size: clamp(3.2rem, 6vw, 5.6rem);
+          line-height: 0.94;
           letter-spacing: 0;
           text-transform: uppercase;
           color: #fff;
+          text-wrap: balance;
           text-shadow: 0 10px 40px rgba(0,0,0,0.62);
         }
+        .fp-h1-line {
+          display: block;
+          animation: fp-h1-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+        .fp-h1-line:nth-child(2) { animation-delay: 0.12s; }
+        @keyframes fp-h1-rise {
+          from { opacity: 0; transform: translateY(28px); }
+        }
+        /* Green shimmer on the payoff line — static green when motion is off. */
+        .fp-h1-shimmer {
+          background: linear-gradient(110deg, #00c870 25%, #b8ffe0 50%, #00c870 75%);
+          background-size: 220% 100%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          text-shadow: none;
+          filter: drop-shadow(0 0 24px rgba(0,200,112,0.25));
+          animation: fp-shimmer 3.8s linear 1.2s infinite;
+        }
+        @keyframes fp-shimmer { to { background-position: -220% 0; } }
         .fp-hero-copy {
-          max-width: 660px;
-          margin: 0 auto 22px;
+          max-width: 480px;
+          margin: 0 0 26px;
           color: #eeeef5;
-          font-size: 1.08rem;
-          line-height: 1.7;
+          font-size: 1.05rem;
+          line-height: 1.65;
           opacity: 0.92;
+          text-wrap: balance;
+          animation: fp-h1-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
         }
-        .fp-hero-actions {
-          max-width: 720px;
-          margin: 0 auto;
-          padding: 16px 0 0;
+        .fp-hero-grid.solo .fp-hero-copy { margin: 0 auto 26px; }
+        .fp-hero-search {
+          scroll-margin-top: 90px;
+          animation: fp-h1-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.28s both;
         }
-        .fp-proof-row {
-          margin: 24px auto 0;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 10px;
-          max-width: 760px;
+        .fp-hero-search > div { margin: 0 0 10px !important; }
+        .fp-hero-grid.solo .fp-hero-search > div { margin: 0 auto 10px !important; }
+        @keyframes fp-search-flash {
+          0%, 100% { box-shadow: none; }
+          35% { box-shadow: 0 0 0 3px rgba(0,102,255,0.55); }
         }
-        .fp-proof {
-          border: 1px solid rgba(255,255,255,0.12);
-          border-radius: 8px;
-          background: rgba(9,9,15,0.72);
-          padding: 14px 16px;
-          text-align: left;
+        .fp-hero-search:target { animation: fp-search-flash 1.2s ease 1; border-radius: 12px; }
+        .fp-hero-micro {
+          font-size: 0.78rem;
+          color: rgba(238,238,245,0.6);
+          animation: fp-h1-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.36s both;
         }
-        .fp-proof strong {
-          display: block;
-          color: #fff;
-          font-size: 0.86rem;
-          margin-bottom: 4px;
+        .fp-hero-micro kbd {
+          font-family: var(--font-ui);
+          border: 1px solid rgba(255,255,255,0.2);
+          border-radius: 4px;
+          padding: 0 5px;
+          font-size: 0.72rem;
         }
-        .fp-proof span {
-          display: block;
-          color: rgba(238,238,245,0.74);
-          font-size: 0.75rem;
-          line-height: 1.45;
+        /* Solo (degraded) mode: recenter the dot grid's companion glow since
+           the two-column composition is gone. */
+        .fp-hero:has(.fp-hero-grid.solo) .fp-aurora::before {
+          left: 50%;
+          top: -30%;
+          transform: translateX(-50%);
+          animation: none;
         }
-        .fp-featured-strip {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 10px;
-          max-width: 980px;
-          margin: 34px auto 0;
+        /* THE TAPE — real solds ticker. Pure CSS marquee: duplicated track,
+           translateX(-50%) loop, hover pause, faded edges. */
+        .fp-tape {
+          display: flex;
+          align-items: stretch;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          background: #0d0d15;
         }
-        .fp-featured-figure {
-          min-width: 0;
-          display: grid;
-          grid-template-columns: 64px 1fr;
-          align-items: center;
-          gap: 12px;
-          padding: 10px;
-          border: 1px solid rgba(255,255,255,0.12);
-          border-radius: 8px;
-          background: rgba(20,20,32,0.84);
-          color: #eeeef5;
-          text-decoration: none;
-        }
-        .fp-featured-figure:hover {
-          color: #fff;
-          border-color: rgba(229,50,56,0.5);
-          background: rgba(26,26,46,0.92);
-        }
-        .fp-featured-thumb {
-          width: 64px;
-          height: 64px;
-          border-radius: 8px;
-          background: #09090f;
-          border: 1px solid rgba(255,255,255,0.08);
+        .fp-tape-lead {
+          flex-shrink: 0;
           display: flex;
           align-items: center;
-          justify-content: center;
-          overflow: hidden;
+          gap: 8px;
+          padding: 12px 16px;
+          font-size: 0.66rem;
+          font-weight: 900;
+          letter-spacing: 0.14em;
+          color: #eeeef5;
+          border-right: 1px solid rgba(255,255,255,0.1);
+          background: #09090f;
+          z-index: 1;
+          white-space: nowrap;
         }
-        .fp-featured-thumb img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          padding: 7px;
-        }
-        .fp-featured-name {
+        .fp-tape-mark {
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+          background: #e53238;
           color: #fff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-family: var(--font-display);
+          font-size: 0.56rem;
+        }
+        .fp-tape-viewport {
+          flex: 1;
+          overflow: hidden;
+          mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+          -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+        }
+        .fp-tape-track {
+          display: flex;
+          width: max-content;
+          animation: fp-tape-scroll 48s linear infinite;
+          will-change: transform;
+        }
+        .fp-tape-viewport:hover .fp-tape-track { animation-play-state: paused; }
+        @keyframes fp-tape-scroll { to { transform: translateX(-50%); } }
+        .fp-tape-seg { display: flex; }
+        .fp-tape-chip {
+          display: inline-flex;
+          align-items: baseline;
+          gap: 8px;
+          padding: 12px 22px;
+          text-decoration: none;
+          white-space: nowrap;
+          border-right: 1px solid rgba(255,255,255,0.05);
+        }
+        .fp-tape-chip:hover .fp-tape-name { color: #fff; }
+        .fp-tape-name {
+          font-family: var(--font-display);
+          font-size: 0.82rem;
+          letter-spacing: 0.06em;
+          color: rgba(238,238,245,0.82);
+        }
+        .fp-tape-price {
           font-size: 0.78rem;
           font-weight: 800;
-          line-height: 1.25;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+          color: var(--green);
+          font-variant-numeric: tabular-nums;
         }
-        .fp-featured-line {
-          margin-top: 4px;
-          color: rgba(238,238,245,0.7);
-          font-size: 0.68rem;
-          line-height: 1.25;
+        .fp-strip {
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          background: #0d0d15;
+          padding: 18px 24px;
+        }
+        .fp-strip-inner {
+          max-width: 1040px;
+          margin: 0 auto;
+          display: flex;
+          align-items: baseline;
+          justify-content: center;
+          gap: 14px;
+          flex-wrap: wrap;
+          text-align: center;
+        }
+        .fp-strip p {
+          color: rgba(238,238,245,0.78);
+          font-size: 0.88rem;
+          line-height: 1.6;
+          max-width: 760px;
+        }
+        .fp-strip a {
+          font-size: 0.85rem;
+          font-weight: 800;
           white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
         }
         .fp-band {
           padding: 72px 24px;
         }
-        .fp-band.alt {
-          background: #0d0d15;
-          border-top: 1px solid rgba(255,255,255,0.08);
-          border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-        .fp-section {
-          max-width: 1040px;
-          margin: 0 auto;
-        }
         .fp-section-head {
-          display: flex;
-          justify-content: space-between;
-          gap: 24px;
-          align-items: end;
-          margin-bottom: 24px;
+          max-width: 1040px;
+          margin: 0 auto 24px;
         }
         .fp-section-kicker {
           color: #e53238;
-          font-size: 0.76rem;
+          font-size: 0.74rem;
           font-weight: 900;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           margin-bottom: 8px;
         }
-        .fp-section h2 {
+        .fp-section-head h2 {
           font-family: var(--font-display);
-          font-size: 3rem;
+          font-size: 2.9rem;
           line-height: 0.96;
-          letter-spacing: 0;
           text-transform: uppercase;
           color: #fff;
         }
         .fp-section-head p {
-          max-width: 390px;
+          margin-top: 10px;
           color: rgba(238,238,245,0.78);
           font-size: 0.95rem;
-        }
-        .fp-card-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 12px;
-        }
-        .fp-receipt-card,
-        .fp-journey-card {
-          min-height: 100%;
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 8px;
-          background: #141420;
-          padding: 22px;
-        }
-        .fp-receipt-label {
-          display: inline-flex;
-          border-radius: 999px;
-          border: 1px solid rgba(0,200,112,0.28);
-          color: #00c870;
-          background: rgba(0,200,112,0.08);
-          padding: 5px 9px;
-          font-size: 0.68rem;
-          font-weight: 900;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          margin-bottom: 18px;
-        }
-        .fp-receipt-card h3,
-        .fp-journey-card h3 {
-          font-size: 1rem;
-          color: #fff;
-          margin-bottom: 10px;
-        }
-        .fp-receipt-card p,
-        .fp-journey-card p {
-          color: rgba(238,238,245,0.76);
-          font-size: 0.88rem;
-          line-height: 1.62;
-        }
-        .fp-journey-step {
-          font-family: var(--font-display);
-          color: #ffb800;
-          font-size: 2.4rem;
-          line-height: 1;
-          margin-bottom: 18px;
-        }
-        .fp-collector-split {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 12px;
-        }
-        .fp-split-panel {
-          border-radius: 8px;
-          border: 1px solid rgba(255,255,255,0.1);
-          background: #141420;
-          padding: 24px;
-        }
-        .fp-split-panel h3 {
-          color: #fff;
-          font-size: 1.05rem;
-          margin-bottom: 10px;
-        }
-        .fp-split-panel p {
-          color: rgba(238,238,245,0.76);
-          line-height: 1.65;
-          font-size: 0.9rem;
+          max-width: 560px;
         }
         .fp-genre-wrap {
           max-width: 1040px;
           margin: 0 auto;
         }
-        .fp-bottom-cta {
-          text-align: center;
-          padding: 72px 24px 84px;
+        .fp-vault-band {
+          padding: 80px 24px 96px;
           background:
-            linear-gradient(180deg, #09090f, rgba(229,50,56,0.16)),
+            radial-gradient(ellipse 50% 60% at 50% 100%, rgba(0,102,255,0.12), rgba(9,9,15,0) 70%),
             #09090f;
           border-top: 1px solid rgba(255,255,255,0.08);
         }
-        .fp-bottom-cta h2 {
-          max-width: 680px;
-          margin: 0 auto 14px;
+        .fp-vault-card {
+          max-width: 720px;
+          margin: 0 auto;
+          text-align: center;
+          background: #141420;
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 16px;
+          padding: 44px 36px;
+        }
+        .fp-vault-card h2 {
           font-family: var(--font-display);
-          font-size: 3.2rem;
+          font-size: 2.9rem;
           line-height: 0.96;
-          letter-spacing: 0;
           text-transform: uppercase;
           color: #fff;
+          margin-bottom: 14px;
         }
-        .fp-bottom-cta p {
+        .fp-vault-card p {
+          color: rgba(238,238,245,0.8);
+          line-height: 1.7;
+          font-size: 0.95rem;
           max-width: 520px;
-          margin: 0 auto 28px;
-          color: rgba(238,238,245,0.78);
+          margin: 0 auto 26px;
         }
-        .fp-cta-row {
+        .fp-vault-actions {
           display: flex;
+          align-items: center;
           justify-content: center;
-          gap: 12px;
+          gap: 18px;
           flex-wrap: wrap;
         }
-        .fp-primary-btn,
-        .fp-secondary-btn {
+        .fp-primary-btn {
           display: inline-flex;
           align-items: center;
           justify-content: center;
           min-height: 46px;
-          padding: 0 20px;
+          padding: 0 22px;
           border-radius: 8px;
           font-weight: 800;
           font-size: 0.92rem;
           text-decoration: none;
-        }
-        .fp-primary-btn {
-          background: #e53238;
+          background: #0066ff;
           color: #fff;
-          box-shadow: 0 14px 34px rgba(229,50,56,0.28);
+          box-shadow: 0 14px 34px rgba(0,102,255,0.28);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
-        .fp-secondary-btn {
-          border: 1px solid rgba(255,255,255,0.14);
+        .fp-primary-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 18px 40px rgba(0,102,255,0.36);
           color: #fff;
-          background: rgba(20,20,32,0.8);
+        }
+        .fp-text-link {
+          color: rgba(238,238,245,0.75);
+          font-size: 0.88rem;
+          font-weight: 700;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+        .fp-text-link:hover { color: #fff; }
+        /* Scroll-triggered reveal — progressive enhancement only (Chromium). */
+        @supports (animation-timeline: view()) {
+          .fp-reveal {
+            animation: fp-rise both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 38%;
+          }
+          @keyframes fp-rise {
+            from { opacity: 0; transform: translateY(26px); }
+            to { opacity: 1; transform: none; }
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .fp-reveal, .fp-eyebrow, .fp-h1-line, .fp-h1-shimmer, .fp-hero-copy,
+          .fp-hero-search, .fp-hero-micro, .fp-aurora::before, .fp-aurora::after {
+            animation: none;
+          }
+          .fp-hero-search:target { animation: none; }
+          .fp-tape-track {
+            animation: none;
+          }
+          .fp-tape-viewport {
+            overflow-x: auto;
+            mask-image: none;
+            -webkit-mask-image: none;
+          }
         }
         @media (max-width: 920px) {
-          .fp-home-nav-links {
-            display: none;
-          }
-          .fp-hero {
-            min-height: auto;
-            padding-top: 62px;
-          }
-          .fp-hero h1 {
-            font-size: 3.35rem;
-          }
-          .fp-hero-copy {
-            font-size: 1rem;
-          }
-          .fp-hero-wall {
-            grid-template-columns: repeat(4, minmax(120px, 1fr));
-            opacity: 0.34;
-          }
-          .fp-proof-row,
-          .fp-card-grid,
-          .fp-collector-split {
+          .fp-home-nav-links { display: none; }
+          .fp-hero { padding: 52px 18px 48px; }
+          .fp-hero-grid {
             grid-template-columns: 1fr;
+            gap: 40px;
           }
-          .fp-featured-strip {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          .fp-section-head {
-            display: block;
-          }
-          .fp-section h2,
-          .fp-bottom-cta h2 {
-            font-size: 2.45rem;
-          }
-          .fp-section-head p {
-            margin-top: 12px;
-            max-width: none;
-          }
+          .fp-hero h1 { font-size: clamp(2.9rem, 11vw, 4rem); }
+          .fp-section-head h2, .fp-vault-card h2 { font-size: 2.4rem; }
+          .fp-band { padding: 56px 18px; }
+          .fp-tape-lead { display: none; }
         }
         @media (max-width: 560px) {
-          .fp-home-nav {
-            padding: 0 14px;
-          }
+          .fp-home-nav { padding: 0 14px; }
           .fp-home-brand span:last-child,
-          .fp-home-nav-actions a:first-child {
-            display: none;
-          }
-          .fp-home-join {
-            padding: 8px 10px;
-          }
-          .fp-hero {
-            padding: 48px 14px 36px;
-          }
-          .fp-hero h1 {
-            font-size: 2.7rem;
-          }
-          .fp-proof {
-            text-align: center;
-          }
-          .fp-featured-strip {
-            grid-template-columns: 1fr;
-          }
-          .fp-band {
-            padding: 54px 14px;
-          }
-          .fp-hero-wall {
-            grid-template-columns: repeat(3, minmax(110px, 1fr));
-            gap: 10px;
-            padding: 24px 8px;
-          }
-          .fp-wall-card {
-            min-height: 136px;
-          }
+          .fp-home-nav-actions a:first-child { display: none; }
+          .fp-home-join { padding: 8px 10px; }
+          .fp-hero { padding: 40px 14px 40px; }
+          .fp-hero-micro-key { display: none; }
+          .fp-vault-card { padding: 34px 20px; }
         }
       `}</style>
 
@@ -640,173 +511,106 @@ export default function HomePage() {
       </nav>
 
       <section className="fp-hero">
-        <div className="fp-hero-wall" aria-hidden>
-          {heroFigures.map((figure, index) => (
-            <div className="fp-wall-card" key={`${figure.href}-${index}`}>
-              {figure.image && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={figure.image} alt="" />
-              )}
+        <div className="fp-aurora" aria-hidden />
+        <div className="fp-grain" aria-hidden />
+        <div className={`fp-hero-grid${showReceipt ? '' : ' solo'}`}>
+          <div>
+            <div className="fp-eyebrow">
+              <span className="fp-eyebrow-dot" />
+              {TOTAL_FIGURES_LABEL} figures · priced from solds, not listings
             </div>
-          ))}
-        </div>
 
-        <div className="fp-hero-inner">
-          <div className="fp-eyebrow">
-            <span className="fp-eyebrow-dot" />
-            {TOTAL_FIGURES_LABEL} figures. Sold comps first. Browse free.
+            <h1>
+              <span className="fp-h1-line">Asking prices lie.</span>
+              <span className="fp-h1-line fp-h1-shimmer">Solds don&apos;t.</span>
+            </h1>
+            <p className="fp-hero-copy">
+              Type a figure. Median sold, true range, comp count, before the auction closes.
+            </p>
+
+            <div className="fp-hero-search" id="search">
+              <HeroSearch
+                totalLabel={TOTAL_FIGURES_LABEL}
+                placeholder="Name the fig. We'll pull the comps."
+                placeholderExamples={showReceipt ? receiptFigures.map(f => f.chipLabel) : undefined}
+                showButton
+              />
+            </div>
+            <div className="fp-hero-micro">
+              <span>No account needed.</span>{' '}
+              <span className="fp-hero-micro-key">Press <kbd>/</kbd> to jump to search.</span>
+            </div>
           </div>
 
-          <h1>Stop getting worked by asking prices.</h1>
-          <p className="fp-hero-copy">
-            FigurePinner is the price guide and collector cockpit for action figures:
-            real sold comps, honest data-quality labels, vault tracking, wantlists, and fig-hunt alerts.
+          {showReceipt && (
+            <div>
+              <PriceReceipt figures={receiptFigures} />
+            </div>
+          )}
+        </div>
+      </section>
+
+      {showTape && (
+        <div className="fp-tape" aria-label="Recent real eBay sold prices">
+          <div className="fp-tape-lead">
+            <span className="fp-tape-mark">FP</span>
+            REAL EBAY SOLDS
+          </div>
+          <div className="fp-tape-viewport">
+            <div className="fp-tape-track">
+              {[0, 1].map(dup => (
+                <div className="fp-tape-seg" key={dup} aria-hidden={dup === 1}>
+                  {tape.map((t, i) => (
+                    <a className="fp-tape-chip" href={t.href} key={`${dup}-${i}`} tabIndex={dup === 1 ? -1 : undefined}>
+                      <span className="fp-tape-name">{t.label}</span>
+                      <span className="fp-tape-price">SOLD {fmtTape(t.price)}</span>
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Methodology strip — renders unconditionally so a price-fetch outage
+          still leaves one trust statement on the page. */}
+      <div className="fp-strip">
+        <div className="fp-strip-inner">
+          <p>
+            Median of real solds. A P10–P90 spread so one weird sale can&apos;t work the
+            number. A confidence score from comp depth. Thin comps get flagged, never
+            hidden, and the BIN somebody&apos;s been relisting since March never touches the math.
           </p>
-
-          <div className="fp-hero-actions">
-            <HeroSearch totalLabel={TOTAL_FIGURES_LABEL} />
-          </div>
-
-          <div className="fp-proof-row" aria-label="FigurePinner proof points">
-            <div className="fp-proof">
-              <strong>No asking-price kayfabe</strong>
-              <span>Sold listings drive the read. We label thin data instead of pretending.</span>
-            </div>
-            <div className="fp-proof">
-              <strong>Openers and MOC collectors</strong>
-              <span>Condition matters. The tool respects both display shelves and sealed walls.</span>
-            </div>
-            <div className="fp-proof">
-              <strong>Built for the hunt</strong>
-              <span>Search now. Pin later. Track the figure before someone else spots the gap.</span>
-            </div>
-          </div>
-
-          <div className="fp-featured-strip" aria-label="Featured figure lines">
-            {showcase.slice(0, 4).map(figure => (
-              <a className="fp-featured-figure" href={figure.href} key={figure.href}>
-                <span className="fp-featured-thumb">
-                  {figure.image && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={figure.image} alt="" />
-                  )}
-                </span>
-                <span>
-                  <span className="fp-featured-name">{figure.name}</span>
-                  <span className="fp-featured-line">{figure.line} · {figure.genre}</span>
-                </span>
-              </a>
-            ))}
-          </div>
+          <a href="/methodology">How pricing works →</a>
         </div>
-      </section>
+      </div>
 
-      <section className="fp-band">
-        <div className="fp-section">
-          <div className="fp-section-head">
-            <div>
-              <div className="fp-section-kicker">The receipt beats the hype</div>
-              <h2>The collector loop, minus the guesswork.</h2>
-            </div>
-            <p>
-              The homepage should drop you into the real job: checking value, reading condition,
-              and deciding whether a figure deserves a pin.
-            </p>
-          </div>
-
-          <div className="fp-card-grid">
-            {RECEIPTS.map(item => (
-              <article className="fp-receipt-card" key={item.title}>
-                <div className="fp-receipt-label">{item.label}</div>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
+      <section className="fp-band fp-reveal">
+        <div className="fp-section-head">
+          <div className="fp-section-kicker">Browse the catalog</div>
+          <h2>Pick your lane.</h2>
+          <p>
+            Sixteen lanes, real counts. Wrestling runs deepest. We know what we are.
+          </p>
         </div>
-      </section>
-
-      <section className="fp-band alt">
-        <div className="fp-section">
-          <div className="fp-section-head">
-            <div>
-              <div className="fp-section-kicker">From first search to finished wave</div>
-              <h2>A real journey from first search to finished wave.</h2>
-            </div>
-            <p>
-              Browse without friction. Create an account only when the tool has already
-              proven it belongs in your fig hunt.
-            </p>
-          </div>
-
-          <div className="fp-card-grid">
-            {JOURNEY.map(item => (
-              <article className="fp-journey-card" key={item.step}>
-                <div className="fp-journey-step">{item.step}</div>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="fp-band">
-        <div className="fp-section">
-          <div className="fp-section-head">
-            <div>
-              <div className="fp-section-kicker">Both camps, one market</div>
-              <h2>Let it breathe or keep it MOC. The data does not care.</h2>
-            </div>
-            <p>
-              FigurePinner sits in the middle of the hobby's oldest argument and gives each side
-              the numbers they need.
-            </p>
-          </div>
-
-          <div className="fp-collector-split">
-            <div className="fp-split-panel">
-              <h3>For sealed-wall collectors</h3>
-              <p>
-                See when card, bubble, exclusivity, and wave scarcity are doing real work in the sold comps.
-                If MOC carries a premium, the market should prove it.
-              </p>
-            </div>
-            <div className="fp-split-panel">
-              <h3>For openers and display shelves</h3>
-              <p>
-                Loose complete is its own lane. Missing belts, hands, heads, weapons, and stands can move
-                the price more than the seller wants to admit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="fp-band alt">
         <div className="fp-genre-wrap">
-          <div className="fp-section-head">
-            <div>
-              <div className="fp-section-kicker">Pick your aisle</div>
-              <h2>Every collector has a lane.</h2>
-            </div>
-            <p>
-              Wrestling, Marvel Legends, Black Series, Classified, MOTU, TMNT, horror, and more.
-              Start broad, then drill into the exact line.
-            </p>
-          </div>
-          <GenreTaxonomy counts={counts} />
+          <GenreTaxonomy genres={GENRE_TAXONOMY} />
         </div>
       </section>
 
-      <section className="fp-bottom-cta">
-        <h2>Pin the grail before the market pops.</h2>
-        <p>
-          Search is free. The vault is where your figures, targets, and alerts start working together.
-        </p>
-        <div className="fp-cta-row">
-          <a className="fp-primary-btn" href="/search">Search the price guide</a>
-          <a className="fp-secondary-btn" href="/sign-up">Create my free vault</a>
+      <section className="fp-vault-band fp-reveal">
+        <div className="fp-vault-card">
+          <h2>Pin the grail before it pops.</h2>
+          <p>
+            A free account adds a Vault for what you own and a Wantlist for what
+            you&apos;re hunting. When comps move on a pinned figure, you hear about it
+            first. No newsletter ambush, no upsell carousel.
+          </p>
+          <div className="fp-vault-actions">
+            <a className="fp-primary-btn" href="/sign-up">Pin your first grail</a>
+            <a className="fp-text-link" href="#search">Keep searching free</a>
+          </div>
         </div>
       </section>
 

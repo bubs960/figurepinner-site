@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://figurepinner.com/methodology' },
 }
 
+// Static marketing/trust page — emit s-maxage so the colo edge cache stores it.
+export const revalidate = 86400
+
 export default function MethodologyPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
@@ -66,6 +69,22 @@ export default function MethodologyPage() {
           <p>FigurePinner price estimates are for informational purposes only. They are not appraisals, not guarantees of value, and not investment advice. Real prices vary with condition — loose vs. complete vs. MOC — plus accessories, packaging, timing, and luck. Use our number as a fast, honest starting point, then look at the actual recent comps we link to before you bid, buy, or sell.</p>
           <p>Spot something that looks wrong? That feedback makes the data better — reach us at <a href="mailto:hello@figurepinner.com">hello@figurepinner.com</a>.</p>
         </ProseSection>
+
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '2.5rem' }}>
+          <a href="/search" style={{
+            display: 'inline-block', padding: '10px 20px', background: 'var(--blue)',
+            color: '#fff', borderRadius: '8px', fontWeight: 700, fontSize: '0.875rem', textDecoration: 'none',
+          }}>
+            See it in action →
+          </a>
+          <a href="/guides" style={{
+            display: 'inline-block', padding: '10px 20px', background: 'transparent',
+            color: 'var(--text)', border: '1px solid var(--border)', borderRadius: '8px',
+            fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none',
+          }}>
+            Browse the guides
+          </a>
+        </div>
 
       </main>
 

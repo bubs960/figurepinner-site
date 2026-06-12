@@ -96,7 +96,7 @@ export default function GuidesPage() {
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
-          <a href="/pro" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Pro</a>
+
         </div>
       </nav>
 
@@ -120,7 +120,7 @@ export default function GuidesPage() {
           </h1>
           <p style={{ fontSize: '1.0625rem', color: 'var(--muted)', lineHeight: 1.7, maxWidth: 640 }}>
             {TOTAL_GUIDES.toLocaleString()} price guides across {GENRES.length} genres, built on real eBay
-            sold data for {TOTAL_FIGURES.toLocaleString()}+ figures. Pick a genre to drill into its lines and waves.
+            sold data for {TOTAL_FIGURES_LABEL} figures. Pick a genre to drill into its lines and waves.
           </p>
         </div>
 

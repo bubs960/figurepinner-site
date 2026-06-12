@@ -172,25 +172,7 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
           <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--blue)', marginBottom: '0.125rem' }}>PRO</div>
           <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>Unlimited vault, alerts, and history</div>
         </div>
-      ) : (
-        <div style={{ padding: '0.75rem 1rem', margin: '0 0.5rem 0.75rem', background: 'var(--s2)', borderRadius: '8px', border: '1px solid var(--border)' }}>
-          <div style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--blue)', marginBottom: '0.25rem' }}>FREE PLAN</div>
-          <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.625rem' }}>Upgrade for unlimited vault + full price history</div>
-          <a href="/pro" style={{
-            display: 'block',
-            textAlign: 'center',
-            padding: '0.375rem',
-            background: 'var(--blue)',
-            color: '#fff',
-            borderRadius: '5px',
-            fontSize: '0.75rem',
-            fontWeight: '600',
-            textDecoration: 'none',
-          }}>
-            Go Pro — $3.99/mo
-          </a>
-        </div>
-      )}
+      ) : null /* Pro upsell removed 2026-06-11 — Pro tier held until GrailPulse has 3+ verticals; /pro redirects home. Restore with relaunch. */}
 
       {/* We Buy Collections CTA */}
       <a
@@ -240,11 +222,6 @@ function TopBar({ onHamburger, isPro }: { onHamburger: () => void; isPro: boolea
       <button className="fp-hamburger" onClick={onHamburger} aria-label="Open menu">
         <HamburgerIcon />
       </button>
-      {!isPro && (
-        <a href="/pro" style={{ fontSize: '0.8rem', color: 'var(--blue)', textDecoration: 'none', fontWeight: '500' }}>
-          Upgrade to Pro
-        </a>
-      )}
       <UserButton afterSignOutUrl="/" />
     </header>
   )

@@ -9,7 +9,10 @@ import { prettifySlug } from './_lib/figureFormatters'
 // (Was force-dynamic via 1b29441, which disabled ISR on this indexed SEO page;
 // restored to revalidate per Genta audit 2026-06-06 P1 — comment was already true.)
 export const dynamic = 'force-static'
-export const revalidate = 3600
+// 24h, not 1h: with the KV incremental cache live, hourly refills of 21k
+// long-tail figure pages would cost ~15M KV writes/month. Price snapshots
+// refresh on a daily aggregation cadence anyway. (Wallet owns cost calls.)
+export const revalidate = 86400
 
 const BASE = 'https://figurepinner.com'
 

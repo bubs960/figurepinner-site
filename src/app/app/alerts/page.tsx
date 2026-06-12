@@ -331,13 +331,13 @@ function ProGate() {
           ))}
         </div>
 
-        <a href="/pro" style={{
-          display: 'block', background: 'var(--blue)', color: '#fff',
-          padding: '0.875rem', borderRadius: '8px', fontSize: '1rem',
-          fontWeight: '700', textDecoration: 'none', marginBottom: '0.625rem',
+        <div style={{
+          display: 'block', background: 'var(--s2)', color: 'var(--muted)',
+          padding: '0.875rem', borderRadius: '8px', fontSize: '0.875rem',
+          fontWeight: '600', marginBottom: '0.625rem', border: '1px solid var(--border)',
         }}>
-          Unlimited Alerts — $3.99/mo or $29.99/yr
-        </a>
+          Pro alerts return soon — held while we build out more verticals.
+        </div>
         <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Cancel anytime. Includes all Pro features.</p>
       </div>
     </div>

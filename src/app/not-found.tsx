@@ -17,7 +17,7 @@ export default function NotFound() {
         <a href="/" style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: '1.25rem', letterSpacing: '0.04em', color: '#EEEEF5', textDecoration: 'none' }}>
           FIGUREPINNER
         </a>
-        <a href="/app" style={{ fontSize: '0.875rem', color: '#c9d0e0', textDecoration: 'none' }}>Search figures →</a>
+        <a href="/search" style={{ fontSize: '0.875rem', color: '#c9d0e0', textDecoration: 'none' }}>Search figures →</a>
       </nav>
 
       {/* Content */}
@@ -44,7 +44,7 @@ export default function NotFound() {
         </p>
 
         <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <a href="/app" style={{
+          <a href="/search" style={{
             padding: '10px 20px', background: '#0066FF', borderRadius: '9999px',
             fontSize: '0.875rem', fontWeight: '600', color: '#fff', textDecoration: 'none',
           }}>

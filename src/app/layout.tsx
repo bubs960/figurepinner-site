@@ -1,8 +1,28 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
+import Script from 'next/script'
+import { Bebas_Neue, Inter } from 'next/font/google'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
 import './globals.css'
+
+// Self-hosted via next/font (S20 perf audit): the old render-blocking
+// fonts.googleapis.com stylesheet cost 100-300ms FCP on every cold visit and
+// pulled font files from a second origin. next/font serves woff2 from
+// /_next/static (same origin, immutable cache) with size-adjusted fallback
+// metrics, so there is no render-blocking CSS and no font layout shift.
+// globals.css resolves --font-display/--font-ui through these variables.
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bebas',
+  display: 'swap',
+})
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -66,29 +86,26 @@ export default function RootLayout({
   children: ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${bebas.variable} ${inter.variable}`}>
       <head>
-        {/* Google Fonts — preconnect first for perf */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-        {/* Google AdSense — site verification + auto ads. Loads the AdSense
-            script with our pub ID so the reviewer can verify ownership and
-            serve auto ads. Visible <ins> placement units stay off (AdSlot.tsx)
-            until we opt into manual placements. */}
+        {/* AdSense ownership verification — the meta tag is what the reviewer
+            checks; it stays in head while the script loads lazily below. */}
         <meta name="google-adsense-account" content="ca-pub-1062337951127266" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1062337951127266"
-          crossOrigin="anonymous"
-        />
       </head>
       <body>
         {children}
         <Footer />
+        {/* Google AdSense — auto ads. lazyOnload (S20 perf audit): the script
+            used to load render-blocking-adjacent in <head>, competing for
+            bandwidth/CPU in the critical first-load window on every page.
+            Ads here are below-fold reading-flow units; nothing above the fold
+            depends on them, and ~99% of traffic is bots that earn nothing. */}
+        <Script
+          id="adsbygoogle-loader"
+          strategy="lazyOnload"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1062337951127266"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   )

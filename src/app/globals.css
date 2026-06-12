@@ -58,9 +58,11 @@
   --space-16: 64px;
 
   /* --- Typography --- */
-  --font-display: 'Bebas Neue', sans-serif;
-  --font-ui: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;  /* alias for --font-ui, used in page-level styles */
+  /* next/font self-hosted variables (set on <html> by layout.tsx); string
+     fallbacks keep dev tools/storybook-ish contexts rendering sanely. */
+  --font-display: var(--font-bebas, 'Bebas Neue'), sans-serif;
+  --font-ui: var(--font-inter, 'Inter'), sans-serif;
+  --font-body: var(--font-inter, 'Inter'), sans-serif;  /* alias for --font-ui, used in page-level styles */
 
   /* --- Shadows --- */
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.4);
@@ -100,8 +102,8 @@
   --color-interactive: var(--blue);
   --fp-danger:        #E5484D;          /* keep until --danger is in main system */
   --fp-ebay:          #E53238;          /* eBay brand red, intentionally distinct */
-  --fp-font-display:  "Bebas Neue", system-ui, sans-serif;
-  --fp-font-body:     "Inter", system-ui, sans-serif;
+  --fp-font-display:  var(--font-bebas, "Bebas Neue"), system-ui, sans-serif;
+  --fp-font-body:     var(--font-inter, "Inter"), system-ui, sans-serif;
   --fp-radius-sm:     8px;
   --fp-radius:        12px;
   --fp-radius-lg:     16px;

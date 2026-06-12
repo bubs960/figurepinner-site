@@ -11,8 +11,8 @@
  */
 
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { getFiguresByLine, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { notFound, permanentRedirect } from 'next/navigation'
+import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
@@ -41,6 +41,70 @@ const GENRE_ACCENT: Record<string, string> = {
   'dungeons-dragons':           '#7b2be2',
   'neca':                       '#37474f',
   'spawn':                      '#212121',
+}
+
+// URL slug → KB fandom slug (S20 fix, 2026-06-11). The genre page has carried
+// this map since launch, but this page never did — so every line link from
+// the /marvel, /gijoe, and /teenage-mutant-ninja-turtles genre pages 404'd.
+// Keep in sync with SLUG_TO_FANDOM in [genre]/page.tsx and UI_SLUG_TO_FANDOM
+// in data/kb-stats.ts.
+const SLUG_TO_FANDOM: Record<string, string> = {
+  'teenage-mutant-ninja-turtles': 'tmnt',
+  'gijoe': 'gi-joe',
+  'marvel': 'marvel-comics',
+  'dungeons-and-dragons': 'dungeons-dragons',
+}
+
+/** The "Horror & Film" UI genre rolls up several KB fandoms (same as kb-stats). */
+const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
+
+function fandomsFor(genre: string): string[] {
+  if (genre === 'neca') return NECA_FANDOMS
+  return [SLUG_TO_FANDOM[genre] ?? genre]
+}
+
+function figuresForLine(genre: string, line: string): KBFigure[] {
+  return fandomsFor(genre).flatMap(f => getFiguresByLine(f, line))
+}
+
+/**
+ * Legacy/typo slug resolver (S20, 2026-06-11). Years of hardcoded line links
+ * (homepage GenreTaxonomy, old guides, anything Google indexed) used slugs
+ * that don't match KB product_line values — e.g. /dc/dc-multiverse for the
+ * KB's "multiverse", /wrestling/hasbro-wwf for "wwf-hasbro". When the exact
+ * lookup misses, try two conservative transforms and 301 to the canonical URL
+ * if exactly one real line matches:
+ *  1. token permutation: same hyphen tokens, any order (hasbro-wwf → wwf-hasbro)
+ *  2. strip leading/trailing genre tokens (dc-multiverse → multiverse,
+ *     super7-thundercats → super7)
+ * Anything still ambiguous or unmatched stays a 404 — no guessing.
+ */
+function resolveLineAlias(genre: string, line: string): string | null {
+  const norm = line.toLowerCase().trim()
+  const lines = new Set<string>()
+  for (const fandom of fandomsFor(genre)) {
+    for (const f of getFiguresByFandom(fandom)) lines.add(f.product_line)
+  }
+
+  // 1. token permutation
+  const sortedKey = norm.split('-').sort().join('-')
+  const permMatches = [...lines].filter(c => c.split('-').sort().join('-') === sortedKey)
+  if (permMatches.length === 1) return permMatches[0]
+
+  // 2. strip genre tokens off the ends
+  const genreTokens = new Set([
+    genre, ...genre.split('-'),
+    ...fandomsFor(genre).flatMap(f => [f, ...f.split('-')]),
+  ])
+  const parts = norm.split('-')
+  let start = 0
+  let end = parts.length
+  while (start < end - 1 && genreTokens.has(parts[start])) start++
+  while (end > start + 1 && genreTokens.has(parts[end - 1])) end--
+  const core = parts.slice(start, end).join('-')
+  if (core !== norm && lines.has(core)) return core
+
+  return null
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -91,8 +155,16 @@ export async function generateMetadata(
   { params }: { params: Promise<{ genre: string; line: string }> }
 ): Promise<Metadata> {
   const { genre, line } = await params
-  const figures = getFiguresByLine(genre, line)
-  if (!figures.length) return { title: 'Not Found' }
+  const figures = figuresForLine(genre, line)
+  if (!figures.length) {
+    // Redirect HERE, not in the page body: generateMetadata runs before the
+    // response starts streaming, so this emits a real 308. A redirect thrown
+    // after streaming begins degrades to a 200 + <meta http-equiv=refresh>,
+    // which Google treats as soft, not permanent.
+    const alias = resolveLineAlias(genre, line)
+    if (alias) permanentRedirect('/' + genre + '/' + alias)
+    return { title: 'Not Found' }
+  }
 
   const lineName  = buildLineDisplayName(line, figures)
   const genreName = prettifySlug(genre)
@@ -117,12 +189,17 @@ export default async function LineHubPage(
 ) {
   const { genre, line } = await params
 
-  // Guard: genre must be valid
+  // Guard: genre must map to at least one valid fandom (after remap/rollup)
   const validFandoms = getAllFandoms()
-  if (!validFandoms.includes(genre)) notFound()
+  if (!fandomsFor(genre).some(f => validFandoms.includes(f))) notFound()
 
-  const figures = getFiguresByLine(genre, line)
-  if (!figures.length) notFound()
+  const figures = figuresForLine(genre, line)
+  if (!figures.length) {
+    // Legacy/typo slug? 301 to the canonical line URL instead of dead-ending.
+    const alias = resolveLineAlias(genre, line)
+    if (alias) permanentRedirect(`/${genre}/${alias}`)
+    notFound()
+  }
 
   const lineName    = buildLineDisplayName(line, figures)
   const genreName   = prettifySlug(genre)
@@ -317,14 +394,14 @@ export default async function LineHubPage(
           ))}
         </div>
 
-        {/* Bottom ad + CTA */}
+        {/* Bottom ad + CTA — the old CTA linked the Chrome Web Store listing,
+            which 301s to the CWS homepage (extension was never published).
+            Replaced with the free-tracking sign-up path (S20 audit). */}
         <div style={{ marginTop: '3rem', textAlign: 'center' }}>
           <AdSlot slot="rectangle" />
           <div style={{ marginTop: '2rem' }}>
             <a
-              href="https://chromewebstore.google.com/detail/figurepinner"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/sign-up"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                 padding: '0.75rem 1.5rem',
@@ -338,7 +415,7 @@ export default async function LineHubPage(
               Track {lineName} Prices Free →
             </a>
             <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#EEEEF5' }}>
-              Chrome extension · No account required
+              Vault, wantlist, and price alerts — free, no caps
             </p>
           </div>
         </div>

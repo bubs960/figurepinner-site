@@ -30,7 +30,7 @@ export const UI_SLUG_TO_FANDOM: Record<string, string> = {
 }
 
 /** KB fandoms that roll up under the "Horror & Film" (neca) UI tile. */
-const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
+export const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
 
 /** Total distinct figures in the KB. Computed once at build. */
 export const TOTAL_FIGURES: number = getAllFigures().length

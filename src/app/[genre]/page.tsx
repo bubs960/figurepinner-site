@@ -129,6 +129,16 @@ function getFandom(slug: string): string {
   return SLUG_TO_FANDOM[slug] ?? slug
 }
 
+// The 'neca' (Horror & Film) UI genre rolls up several KB fandoms — same
+// rollup kb-stats uses for the homepage count. Without this, /neca resolved
+// to a nonexistent 'neca' fandom and the whole genre page 404'd (S20 fix).
+const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
+
+function figuresForGenre(genre: string): KBFigure[] {
+  if (genre === 'neca') return NECA_FANDOMS.flatMap(f => getFiguresByFandom(f))
+  return getFiguresByFandom(getFandom(genre))
+}
+
 
 export const revalidate = 3600
 
@@ -230,7 +240,7 @@ export default async function GenrePage(
   const meta = GENRE_META[genre]
   if (!meta) notFound()
 
-  const figures = getFiguresByFandom(getFandom(genre))
+  const figures = figuresForGenre(genre)
   if (!figures.length) notFound()
 
   const { lines, totalCount: totalFigures } = buildLineData(figures)
@@ -281,10 +291,10 @@ export default async function GenrePage(
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a href="/search" style={{ fontSize: '0.875rem', color: '#EEEEF5', textDecoration: 'none' }}>Search</a>
-          <a href="/pro" style={{
+          <a href="/sign-up" style={{
             padding: '5px 12px', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: '600',
             background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-          }}>Try Pro</a>
+          }}>Track free</a>
         </div>
       </nav>
 
@@ -340,7 +350,7 @@ export default async function GenrePage(
                   {h}
                 </span>
               ))}
-              <a href="/app" style={{
+              <a href={`/search?q=${encodeURIComponent(meta.label)}`} style={{
                 fontSize: '0.875rem', color: meta.accent, textDecoration: 'none', fontWeight: '500',
               }}>
                 Search all {meta.label} figures →
@@ -390,13 +400,13 @@ export default async function GenrePage(
             }}>
               Get Started Free
             </a>
-            <a href="/pro" style={{
+            <a href="/guides" style={{
               display: 'inline-block', padding: '10px 22px',
               background: 'transparent', color: '#EEEEF5',
               border: '1px solid var(--border)',
               borderRadius: '8px', fontWeight: '600', fontSize: '0.875rem', textDecoration: 'none',
             }}>
-              See Pro Features
+              Read the Guides
             </a>
           </div>
         </div>

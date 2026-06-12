@@ -7,6 +7,8 @@ interface CtaRailProps {
   genre: string
   brand: string
   line: string
+  /** Raw product_line slug — builds the /[genre]/[line] hub URL. */
+  lineSlug?: string
 }
 
 interface CtaCard {
@@ -18,22 +20,26 @@ interface CtaCard {
   accentVar: string
 }
 
-export default function CtaRail({ genre, brand, line }: CtaRailProps) {
+export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) {
   const genreSlug = (genre ?? '').toLowerCase().replace(/\s+/g, '-')
+  const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 
   // 2026-04-30 unlock: third card retired its "Upgrade to Pro" pitch.
   // Pro is being rebuilt as a seller tier; collector workflows are uncapped
-  // and free. Replaced with a soft pointer to the coming-soon seller page
-  // for users who happen to be in seller mode. The "Track" card now points
-  // at /sign-up because the value prop ("Own it, want it, track it") is
-  // genuinely free, not gated.
+  // and free. The "Track" card now points at /sign-up because the value prop
+  // ("Own it, want it, track it") is genuinely free, not gated.
+  // 2026-06-11 (S20 audit): Browse card now targets the LINE hub, not the
+  // genre page — a visitor on one Elite figure wants the rest of the line,
+  // and line hubs were getting near-zero internal link equity. Third slot
+  // (empty since the Pro card was pulled 2026-06-06) is now the guides
+  // funnel: 21k figure pages previously had zero links to the 25 guides.
   const cards: CtaCard[] = [
     {
       label: 'Browse',
-      headline: `More ${brand} Figures`,
-      body: `See all ${line} figures with pricing and market data.`,
-      href: `/${genreSlug}`,
-      cta: `Browse ${genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} →`,
+      headline: `More ${line} Figures`,
+      body: `Every ${line} figure by series, with real sold pricing on each.`,
+      href: lineSlug ? `/${genreSlug}/${lineSlug}` : `/${genreSlug}`,
+      cta: `Browse ${line} →`,
       accentVar: 'var(--fp-accent)',
     },
     {
@@ -44,8 +50,14 @@ export default function CtaRail({ genre, brand, line }: CtaRailProps) {
       cta: 'Sign Up Free →',
       accentVar: 'var(--fp-accent-warm)',
     },
-    // Pro card removed 2026-06-06 (Steve): Pro tier held until GrailPulse has
-    // ≥3 verticals. Restore the third card (Pro/seller pitch) when it ships.
+    {
+      label: 'Learn',
+      headline: `How to Price ${genreLabel} Figures`,
+      body: `Guides on reading comps, condition premiums, spotting fakes, and when to sell — by ${brand} collectors, not content farms.`,
+      href: '/guides',
+      cta: 'Read the Guides →',
+      accentVar: 'var(--fp-accent-rare)',
+    },
   ]
 
   return (

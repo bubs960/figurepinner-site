@@ -3,6 +3,12 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   poweredByHeader: false,
 
+  // Bounds worst-case ISR staleness: Next's default emits
+  // stale-while-revalidate=ONE_YEAR on ISR routes; with the KV incremental
+  // cache live (S20), persistently-failing background revalidation could
+  // otherwise serve year-stale HTML. 86400 caps it at one day.
+  expireTime: 86400,
+
   // Required for @cloudflare/next-on-pages edge runtime on Cloudflare Pages
   // next-on-pages transforms the Next.js build output for the Workers runtime
   // Setting experimental.runtime globally so we don't need per-route declarations,
@@ -25,6 +31,38 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'actionfigure411.com' },
       { protocol: 'https', hostname: '*.actionfigure411.com' },
     ],
+  },
+
+  // Legacy line-hub slugs (S20, 2026-06-11): GenreTaxonomy shipped wrong
+  // hardcoded line slugs for months, so these URLs are what got indexed and
+  // shared. Config-level redirects emit true 308s from the routing layer;
+  // the [genre]/[line] page also has a KB-driven alias resolver as catch-all
+  // for variants not listed here (that path degrades to a meta-refresh on
+  // ISR routes, which is why the known set lives here instead).
+  async redirects() {
+    const legacyLines: Array<[string, string]> = [
+      ['/dc/dc-multiverse', '/dc/multiverse'],
+      ['/wrestling/legends', '/wrestling/elite-legends'],
+      ['/wrestling/retro', '/wrestling/wwe-retro'],
+      ['/wrestling/hasbro-wwf', '/wrestling/wwf-hasbro'],
+      ['/transformers/g1-transformers', '/transformers/g1'],
+      ['/masters-of-the-universe/masters-of-the-universe-classics', '/masters-of-the-universe/classics'],
+      ['/masters-of-the-universe/original-motu', '/masters-of-the-universe/original'],
+      ['/teenage-mutant-ninja-turtles/neca-tmnt', '/teenage-mutant-ninja-turtles/neca'],
+      ['/teenage-mutant-ninja-turtles/playmates-tmnt', '/teenage-mutant-ninja-turtles/playmates'],
+      ['/teenage-mutant-ninja-turtles/super7-tmnt', '/teenage-mutant-ninja-turtles/super7'],
+      ['/power-rangers/lightning-collection', '/power-rangers/lightning'],
+      ['/indiana-jones/adventure-series', '/indiana-jones/hasbro-adventure-series'],
+      ['/thundercats/super7-thundercats', '/thundercats/super7'],
+      ['/thundercats/ljn-thundercats', '/thundercats/ljn'],
+      ['/action-force/palitoy-action-force', '/action-force/action-force'],
+      ['/action-force/valaverse', '/action-force/valaverse-action-force'],
+    ]
+    return legacyLines.map(([source, destination]) => ({
+      source,
+      destination,
+      permanent: true,
+    }))
   },
 
   // Security + deep-link headers

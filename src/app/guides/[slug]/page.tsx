@@ -148,11 +148,40 @@ export default async function GuideArticlePage({ params }: PageProps) {
         {article.body.map((block, i) => <Block key={i} block={block} />)}
 
         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
-          <a href="/" style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', textDecoration: 'none', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600 }}>
+          <a href="/search" style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', textDecoration: 'none', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600 }}>
             Look up a figure&apos;s real value →
           </a>
         </div>
+
+        <MoreGuides current={article.slug} />
       </article>
     </main>
+  )
+}
+
+// Cross-links to keep readers in the guides funnel instead of dead-ending.
+function MoreGuides({ current }: { current: string }) {
+  const others = ARTICLES.filter(a => a.slug !== current).slice(0, 3)
+  if (!others.length) return null
+  return (
+    <div style={{ marginTop: '2.5rem' }}>
+      <div style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--muted)', textTransform: 'uppercase', marginBottom: '0.875rem' }}>
+        More guides
+      </div>
+      <div style={{ display: 'grid', gap: '0.625rem' }}>
+        {others.map(a => (
+          <a key={a.slug} href={`/guides/${a.slug}`} style={{
+            display: 'block', padding: '0.875rem 1rem',
+            background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '8px',
+            color: 'var(--text)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600,
+          }}>
+            {a.title}
+            <span style={{ display: 'block', fontSize: '0.78rem', color: 'var(--muted)', fontWeight: 400, marginTop: '0.25rem' }}>
+              {a.readingMinutes} min read
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
   )
 }

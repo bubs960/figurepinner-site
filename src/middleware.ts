@@ -78,10 +78,16 @@ export const config = {
   // the middleware gives them clean responses. Default-deny is preserved: any
   // NEW /api route is matched (→ no-store) unless explicitly excluded here
   // AND allowlisted above.
+  //
+  // S19 (2026-06-11): added v1/figure/, alerts/unsubscribe, waitlist/subscribe
+  // to exclusion list. These are public no-auth routes that were generating
+  // spurious Clerk subrequests (67% 4xx, +107ms latency) on anon/bot traffic.
+  // Auth-needing paths (alerts, vault, wantlist, stripe, user-settings, me,
+  // devices, admin) remain matched and go through Clerk as before.
   matcher: [
     '/app(.*)',
     '/admin(.*)',
     '/trpc(.*)',
-    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$).*)',
+    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
   ],
 }

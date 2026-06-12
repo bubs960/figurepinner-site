@@ -86,6 +86,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
   const inputRef  = useRef<HTMLInputElement>(null)
   const debounce  = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sparklineAbort = useRef<AbortController | null>(null)
+  const searchAbort = useRef<AbortController | null>(null)
 
   async function handleTrack(r: SearchResult) {
     if (!r.figure_id) return
@@ -131,10 +132,15 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
       return
     }
     setLoading(true)
+    // Abort any in-flight search so a slow earlier query can never overwrite
+    // a newer one (out-of-order resolution after the debounce).
+    searchAbort.current?.abort()
+    const ctrl = new AbortController()
+    searchAbort.current = ctrl
     try {
       // No limit param → API returns the full ranked pool (up to its ceiling);
       // the client reveals it in PAGE_SIZE batches via the load-more button.
-      const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}`)
+      const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}`, { signal: ctrl.signal })
       if (res.ok) {
         const data = await res.json() as { figures: SearchResult[]; total?: number; capped?: boolean; note?: string | null }
         setResults(data.figures ?? [])
@@ -148,9 +154,9 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
         setVisibleCount(PAGE_SIZE)  // reset pagination on new search
       }
     } catch {
-      // silent fail
+      // silent fail (incl. AbortError from a superseded query)
     } finally {
-      setLoading(false)
+      if (searchAbort.current === ctrl) setLoading(false)
     }
   }, [])
 
@@ -180,7 +186,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
     if (!ids.length) { setSparklines({}); return }
     const ctrl = new AbortController()
     sparklineAbort.current = ctrl
-    fetch(`/api/sparklines?ids=${encodeURIComponent(ids.slice(0, 48).join(','))}`, { signal: ctrl.signal })
+    fetch(`/api/sparklines?ids=${encodeURIComponent(ids.slice(0, 40).join(','))}`, { signal: ctrl.signal })
       .then(r => r.ok ? r.json() : {})
       .then(data => setSparklines(data as Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number }>))
       .catch(e => { if (e?.name !== 'AbortError') console.warn('sparklines:', e) })

@@ -59,11 +59,19 @@ export function renderLoreBand(input: LoreInput): LoreResult {
   // Sentence 1 — identity + era (requires line_attributes)
   if (line) {
     const characterName = char?.display_name ?? prettifySlug(character_slug)
+    // Use exact year if known. If the line range is tight (≤5 years), show it as
+    // "circa X–Y". If the range is wide (long-running lines like Elite 2010–2025),
+    // omit the year entirely — a 15-year span is noise, not signal.
+    const lineSpan = line.years[1] - line.years[0]
     const yearPhrase = release_year
       ? `released in ${release_year}`
-      : `released circa ${line.years[0]}–${line.years[1]}`
+      : lineSpan <= 5
+        ? `released circa ${line.years[0]}–${line.years[1]}`
+        : null
     sentences.push(
-      `${characterName} from ${brand}'s *${line.display_name}* line (${line.era_label}), ${yearPhrase}.`
+      yearPhrase
+        ? `${characterName} from ${brand}'s *${line.display_name}* line (${line.era_label}), ${yearPhrase}.`
+        : `${characterName} from ${brand}'s *${line.display_name}* line (${line.era_label}).`
     )
 
     // Sentence 2 — line flavor (requires sentence 1 to have fired)

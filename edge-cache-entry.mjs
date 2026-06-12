@@ -61,6 +61,10 @@ function cacheKeyFor(request) {
 
 function isCacheableRequest(request) {
   if (request.method !== 'GET') return false
+  // Auth-shaped surfaces must never be colo-cached, even when rendered
+  // anonymously (a cached dashboard shell reads as a broken signed-in state).
+  const { pathname } = new URL(request.url)
+  if (pathname === '/app' || pathname.startsWith('/app/') || pathname === '/admin' || pathname.startsWith('/admin/')) return false
   const cookie = request.headers.get('cookie')
   if (cookie && hasAuthCookie(cookie)) return false
   for (const h of RSC_HEADERS) {

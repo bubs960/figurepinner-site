@@ -43,21 +43,17 @@ id = "e1858bb16a4f41f5b81afe8cf53519f5"  # FP_KV — shared, prefixed with "pro:
 binding = "NEXT_INC_CACHE_KV"
 id = "e1858bb16a4f41f5b81afe8cf53519f5"  # same namespace as PRO_KV, prefixed with "isr-cache:"
 
-# OpenNext ISR background revalidation queue (added 2026-05-26).
-# Without this, stale-while-revalidate serves the stale page but the
-# background refresh throws "FatalError: Dummy queue is not implemented"
-# and the page only refreshes on the NEXT request after TTL expiry.
-# With this binding, stale pages refresh proactively in the background
-# while still serving the cached version to the user — true SWR behavior.
-# Requires: `wrangler queues create figurepinner-isr-revalidate` (one-time)
-[[queues.producers]]
-queue = "figurepinner-isr-revalidate"
-binding = "NEXT_CACHE_REVALIDATION_QUEUE"
-
-# [[queues.consumers]]
-# queue = "figurepinner-isr-revalidate"
-# max_batch_size = 10
-# max_batch_timeout = 5
+# OpenNext ISR revalidation (reworked 2026-06-11):
+# The old Cloudflare-Queues producer/consumer blocks were DEAD CONFIG —
+# @opennextjs/cloudflare 1.19.x removed the queue-based path entirely, and the
+# bundle was compiled with the dummy queue + dummy incremental cache (ISR was
+# silently OFF; every edge MISS ran full SSR). open-next.config.ts now wires
+# kvIncrementalCache + memoryQueue. memoryQueue requires this self-reference
+# service binding. The orphaned 'figurepinner-isr-revalidate' CF queue can be
+# deleted (wrangler queues delete figurepinner-isr-revalidate).
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "figurepinner-site"
 
 [[routes]]
 pattern = "figurepinner.com"

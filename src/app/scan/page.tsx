@@ -60,8 +60,8 @@ export default function ScanPage() {
     try {
       const res = await fetch(`/api/v1/search?q=${encodeURIComponent(query)}&limit=12`)
       if (!res.ok) throw new Error('Search failed')
-      const data = await res.json() as { results: SearchResult[] }
-      const found = data.results ?? []
+      const data = await res.json() as { figures: SearchResult[] }
+      const found = data.figures ?? []
       setResults(found)
       setState(found.length > 0 ? 'results' : 'not-found')
     } catch {
@@ -151,7 +151,7 @@ export default function ScanPage() {
       {/* Nav */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: 'var(--nav-bg-translucent)', backdropFilter: 'blur(12px)',
+        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--fp-border)',
         padding: '0 1.5rem', height: '52px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',

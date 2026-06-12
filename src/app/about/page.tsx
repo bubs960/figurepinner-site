@@ -14,6 +14,8 @@ export const metadata: Metadata = {
 
 const CWS_URL = 'https://chromewebstore.google.com/detail/figurepinner-%E2%80%94-action-fig/okacelmjpogkmeejifeiemmnghlldbod'
 
+export const revalidate = 86400 // static page — emit s-maxage for the colo edge cache
+
 export default function AboutPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
@@ -31,7 +33,7 @@ export default function AboutPage() {
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
-          <a href="/pro" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Pro</a>
+          <a href="/guides" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Guides</a>
         </div>
       </nav>
 

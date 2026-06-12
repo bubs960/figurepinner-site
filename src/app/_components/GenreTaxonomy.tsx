@@ -1,244 +1,31 @@
 'use client'
 /**
  * GenreTaxonomy.tsx
- * Landing page genre/line selector.
- * Client component — handles active-genre state with zero external deps.
+ * Landing page genre/line selector — PRESENTATION ONLY.
+ *
+ * Data comes from src/data/genre-lines.ts (computed from the KB at build time
+ * + validated editorial overlay) and is passed in by the server page. This
+ * component used to own a hand-typed data array; it drifted until 36 of its
+ * line tiles were broken at once (S20, 2026-06-11). Slugs and counts are
+ * facts — they live with the KB now, never here.
  *
  * UX flow:
  *   1. User sees genre pills across the top (scrollable).
  *   2. Clicking a genre animates-in a grid of its product lines.
- *   3. Each line card links to the genre page.
+ *   3. Each line card links to the line hub page.
  *   4. "Browse all →" pill takes to the full genre page.
  */
 
 import { useState } from 'react'
+import type { GenreTab, LineTile } from '@/data/genre-lines'
 
-// ─── Props ───────────────────────────────────────────────────────────────────
-// Real per-genre counts are computed at build time (see data/kb-stats.ts) and
-// passed in by the server page. Keyed by genre slug. If a slug is missing from
-// the map we fall back to the hardcoded totalCount below — but the goal is for
-// every visible genre to use the computed (honest) number.
 interface GenreTaxonomyProps {
-  counts?: Record<string, string>
+  genres: GenreTab[]
 }
-
-// ─── Data ────────────────────────────────────────────────────────────────────
-
-interface Line {
-  name: string
-  slug: string          // product_line slug in KB
-  count: string
-  years: string
-  badge?: 'hot' | 'vintage' | 'new' | 'premium'
-  desc?: string         // one short clause
-}
-
-interface Genre {
-  slug: string          // fandom slug
-  name: string
-  totalCount: string
-  accent: string        // CSS color
-  lines: Line[]
-}
-
-const GENRES: Genre[] = [
-  {
-    slug: 'wrestling',
-    name: 'Wrestling',
-    totalCount: '8,000+',
-    accent: '#0066FF',
-    lines: [
-      { name: 'WWE Elite Collection',   slug: 'elite',               count: '3,200+', years: '2010–present', badge: 'hot',     desc: 'The standard bearer of modern WWE collecting' },
-      { name: 'Ultimate Edition',       slug: 'ultimate-edition',    count: '80+',    years: '2019–present', badge: 'premium', desc: 'Premium articulation, best sculpts in the line' },
-      { name: 'Mattel Basic Series',    slug: 'basic',               count: '1,800+', years: '2010–present',                   desc: 'Entry-level with full roster depth' },
-      { name: 'Deluxe Aggression',      slug: 'deluxe-aggression',   count: '420+',   years: '2006–2010',    badge: 'vintage', desc: 'Ruthless Aggression-era Jakks pinnacle' },
-      { name: 'Ruthless Aggression',    slug: 'ruthless-aggression', count: '280+',   years: '2002–2007',                      desc: 'Attitude Era crossover collection' },
-      { name: 'Legends Series',         slug: 'legends',             count: '200+',   years: '2010–2022',                      desc: 'Hall of Famers and iconic moments' },
-      { name: 'Mattel Retro Series',    slug: 'retro',               count: '120+',   years: '2018–present',                   desc: 'Hasbro-style sculpts on modern bodies' },
-      { name: 'Classic Superstars',     slug: 'classic-superstars',  count: '160+',   years: '2004–2010',    badge: 'vintage', desc: 'Jakks tribute to WWF golden era talent' },
-      { name: 'Hasbro WWF',             slug: 'hasbro-wwf',          count: '110+',   years: '1990–1994',    badge: 'vintage', desc: 'The original wrestling toy line, endlessly nostalgic' },
-      { name: 'LJN WWF',               slug: 'ljn-wwf',             count: '70+',    years: '1984–1989',    badge: 'vintage', desc: 'Rubber giants — the founding generation' },
-      { name: 'Defining Moments',       slug: 'defining-moments',    count: '60+',    years: '2010–2015',    badge: 'premium', desc: 'Iconic match gear, premium price, strong secondary' },
-    ],
-  },
-  {
-    slug: 'marvel',
-    name: 'Marvel',
-    totalCount: '3,800+',
-    accent: '#E62429',
-    lines: [
-      { name: 'Marvel Legends (Hasbro)',  slug: 'marvel-legends',        count: '2,800+', years: '2007–present', badge: 'hot',     desc: 'The dominant 6-inch scale since 2007' },
-      { name: 'Marvel Legends (ToyBiz)', slug: 'toybiz-marvel-legends', count: '400+',   years: '2002–2007',    badge: 'vintage', desc: 'The originals — Build-A-Figure era grails' },
-      { name: 'Marvel Retro Collection', slug: 'marvel-retro',          count: '120+',   years: '2018–present',                   desc: 'Kenner-style cardbacks on modern figures' },
-      { name: 'Marvel Select',           slug: 'marvel-select',         count: '200+',   years: '2003–present',                   desc: "DST's 7-inch scale deep cuts" },
-      { name: 'Marvel One:12',           slug: 'marvel-one12',          count: '80+',    years: '2016–present', badge: 'premium', desc: 'Mezco cloth-and-resin premium tier' },
-    ],
-  },
-  {
-    slug: 'star-wars',
-    name: 'Star Wars',
-    totalCount: '2,600+',
-    accent: '#FFE300',
-    lines: [
-      { name: 'The Black Series',          slug: 'black-series',         count: '1,200+', years: '2013–present', badge: 'hot',     desc: '6-inch scale, film-accurate, the collector standard' },
-      { name: 'The Vintage Collection',    slug: 'vintage-collection',   count: '600+',   years: '2010–present', badge: 'premium', desc: 'Kenner-style cardback with modern articulation' },
-      { name: 'Power of the Force',        slug: 'power-of-the-force',   count: '180+',   years: '1995–2000',    badge: 'vintage', desc: "The 90s comeback wave, everyone's first Star Wars figs" },
-      { name: 'Original Kenner (1977–85)', slug: 'kenner-star-wars',     count: '120+',   years: '1977–1985',    badge: 'vintage', desc: 'The originals — Telescoping Saber Vader, rocket Fett' },
-      { name: 'Mission Fleet / Micro',     slug: 'mission-fleet',        count: '180+',   years: '2020–present',                   desc: '2.5-inch scale, vehicle-friendly, fast rotation' },
-    ],
-  },
-  {
-    slug: 'dc',
-    name: 'DC',
-    totalCount: '1,900+',
-    accent: '#1565C0',
-    lines: [
-      { name: 'DC Multiverse (McFarlane)', slug: 'dc-multiverse',        count: '700+',   years: '2020–present', badge: 'hot',     desc: 'The new standard — 7-inch scale across all DC media' },
-      { name: 'DC Universe Classics',      slug: 'dc-universe-classics', count: '400+',   years: '2007–2015',    badge: 'vintage', desc: "Mattel's C&C era, deep roster, strong secondary" },
-      { name: 'DC Icons / Essentials',     slug: 'dc-icons',             count: '120+',   years: '2015–2020',                      desc: 'Artist tribute line, beautiful packaging' },
-      { name: 'Kenner Super Powers',       slug: 'super-powers',         count: '90+',    years: '1984–1987',    badge: 'vintage', desc: 'The DC equivalent of vintage Star Wars' },
-    ],
-  },
-  {
-    slug: 'transformers',
-    name: 'Transformers',
-    totalCount: '2,100+',
-    accent: '#E65100',
-    lines: [
-      { name: 'Masterpiece',         slug: 'masterpiece',     count: '180+',   years: '2003–present', badge: 'premium', desc: 'Screen-accurate alt modes, the holy grail tier' },
-      { name: 'Studio Series',       slug: 'studio-series',   count: '280+',   years: '2018–present', badge: 'hot',     desc: 'Film-accurate, shared scale across the timeline' },
-      { name: 'Generations / Legacy', slug: 'generations',    count: '600+',   years: '2010–present',                   desc: 'Core collector line — Selects, Deluxe, Voyager' },
-      { name: 'G1 Original (1984)',   slug: 'g1-transformers', count: '180+',   years: '1984–1990',    badge: 'vintage', desc: 'The Diaclone-origin classics — Optimus, Megatron, Starscream' },
-    ],
-  },
-  {
-    slug: 'gijoe',
-    name: 'G.I. Joe',
-    totalCount: '1,400+',
-    accent: '#4CAF50',
-    lines: [
-      { name: 'Classified Series',      slug: 'classified-series',          count: '300+',   years: '2020–present', badge: 'hot',     desc: '6-inch scale comeback, updated character takes' },
-      { name: 'A Real American Hero',   slug: 'a-real-american-hero',       count: '800+',   years: '1982–1994',    badge: 'vintage', desc: 'The 3.75" originals — the deepest roster in the hobby' },
-      { name: 'Dollar General Exclusive', slug: 'dg-exclusive',             count: '60+',    years: '2012–2015',                      desc: 'Vintage-style retail exclusives, high secondary value' },
-    ],
-  },
-  {
-    slug: 'masters-of-the-universe',
-    name: 'MOTU',
-    totalCount: '800+',
-    accent: '#9C27B0',
-    lines: [
-      { name: 'Masterverse',              slug: 'masterverse',                         count: '200+',   years: '2021–present', badge: 'hot',     desc: 'Modern proportions, deep Netflix/classic roster' },
-      { name: 'Origins',                  slug: 'origins',                             count: '150+',   years: '2020–present',                   desc: 'Vintage-compatible scale, 5.5" retro feel' },
-      { name: 'Classics (Club Grayskull)', slug: 'masters-of-the-universe-classics',   count: '200+',   years: '2009–2017',    badge: 'premium', desc: 'Subscription-era grails, complete runs are rare' },
-      { name: 'Original Mattel (1982)',   slug: 'original-motu',                       count: '80+',    years: '1982–1988',    badge: 'vintage', desc: 'The big-back cards — He-Man and Skeletor as cultural artifacts' },
-    ],
-  },
-  {
-    slug: 'teenage-mutant-ninja-turtles',
-    name: 'TMNT',
-    totalCount: '900+',
-    accent: '#4CAF50',
-    lines: [
-      { name: 'NECA TMNT',             slug: 'neca-tmnt',       count: '120+',   years: '2012–present', badge: 'premium', desc: 'Cartoon and Archie comic accurate, limited runs' },
-      { name: 'Playmates Classic',     slug: 'playmates-tmnt',  count: '600+',   years: '1988–present',                   desc: 'The ubiquitous line — from vintage giants to modern basics' },
-      { name: 'Super7 ReAction TMNT',  slug: 'super7-tmnt',     count: '60+',    years: '2018–present',                   desc: '3.75" retro-kenner style, tight Mondo aesthetic' },
-    ],
-  },
-  {
-    slug: 'power-rangers',
-    name: 'Power Rangers',
-    totalCount: '1,200+',
-    accent: '#F44336',
-    lines: [
-      { name: 'Lightning Collection',   slug: 'lightning-collection', count: '300+',   years: '2019–present', badge: 'hot',     desc: 'Hasbro 6-inch collector standard, deep ranger roster' },
-      { name: 'Legacy Collection',      slug: 'legacy-collection',    count: '100+',   years: '2013–2019',    badge: 'vintage', desc: 'Bandai America premium tier before Lightning' },
-      { name: 'Bandai 5" Classics',     slug: 'bandai-power-rangers', count: '500+',   years: '1993–2018',                      desc: 'The original run — every single ranger era' },
-    ],
-  },
-  {
-    slug: 'neca',
-    name: 'Horror & Film',
-    totalCount: '700+',
-    accent: '#B71C1C',
-    lines: [
-      { name: 'NECA Ultimate',         slug: 'neca-ultimate',         count: '300+', years: '2012–present', badge: 'hot',     desc: 'Maximum accessories, maximum articulation, cult licenses' },
-      { name: 'NECA Reel Toys (7")',   slug: 'neca-reel-toys',        count: '200+', years: '2003–present',                   desc: 'The original NECA scale — film horror icons' },
-      { name: 'NECA Retro Cloth',      slug: 'neca-retro',            count: '80+',  years: '2019–present',                   desc: 'Mego-style horror classics with cloth costumes' },
-    ],
-  },
-  {
-    slug: 'indiana-jones',
-    name: 'Indiana Jones',
-    totalCount: '400+',
-    accent: '#795548',
-    lines: [
-      { name: 'Adventure Series (Hasbro)', slug: 'adventure-series', count: '100+', years: '2023–present', badge: 'new',  desc: 'Modern Black-Series-quality, full film span' },
-      { name: 'Kenner 12-back (1984)',     slug: 'kenner-indy',      count: '80+',  years: '1982–1984',    badge: 'vintage', desc: 'Temple of Doom era originals, strong secondary' },
-      { name: 'Hasbro Original (2008)',    slug: 'hasbro-indy-2008', count: '150+', years: '2008–2010',                      desc: 'Crystal Skull era, wide distribution' },
-    ],
-  },
-  {
-    slug: 'ghostbusters',
-    name: 'Ghostbusters',
-    totalCount: '600+',
-    accent: '#00BCD4',
-    lines: [
-      { name: 'Plasma Series (Hasbro)',      slug: 'plasma-series',       count: '80+',  years: '2020–present', badge: 'hot',     desc: 'Modern 6-inch premium standard, all four busters' },
-      { name: 'Mattel Ghostbusters (6")',    slug: 'mattel-ghostbusters', count: '80+',  years: '2009–2014',    badge: 'vintage', desc: 'DiC-cartoon style, Club Ecto-1 subscription era' },
-      { name: 'Kenner The Real Ghostbusters', slug: 'real-ghostbusters', count: '300+', years: '1986–1991',    badge: 'vintage', desc: 'Cartoon tie-in — the definitive nostalgia play' },
-    ],
-  },
-  {
-    slug: 'mythic-legions',
-    name: 'Mythic Legions',
-    totalCount: '500+',
-    accent: '#607D8B',
-    lines: [
-      { name: 'Mythic Legions (4H)',  slug: 'mythic-legions',  count: '400+', years: '2016–present', badge: 'premium', desc: 'Four Horsemen universe — fully interchangeable armor system' },
-      { name: 'Necronominus',         slug: 'necronominus',    count: '60+',  years: '2021–present',                   desc: 'Undead faction expansion, high secondary velocity' },
-    ],
-  },
-  {
-    slug: 'thundercats',
-    name: 'Thundercats',
-    totalCount: '200+',
-    accent: '#FF6F00',
-    lines: [
-      { name: 'Super7 Ultimates',          slug: 'super7-thundercats', count: '80+',  years: '2019–present', badge: 'premium', desc: 'Most detailed Thundercats figures ever made' },
-      { name: 'LJN Thundercats (1985)',    slug: 'ljn-thundercats',    count: '60+',  years: '1985–1988',    badge: 'vintage', desc: 'The originals — Mumm-Ra and Lion-O in rubber magnificence' },
-      { name: 'Bandai Thundercats (2011)', slug: 'bandai-thundercats', count: '50+',  years: '2011–2012',                      desc: 'Reboot era, strong articulation for the scale' },
-    ],
-  },
-  {
-    slug: 'action-force',
-    name: 'Action Force',
-    totalCount: '150+',
-    accent: '#546E7A',
-    lines: [
-      { name: 'Action Force (Palitoy)',  slug: 'palitoy-action-force', count: '100+', years: '1982–1988', badge: 'vintage', desc: 'UK-market G.I. Joe cousin — rare outside British collections' },
-      { name: 'Valaverse Action Force',  slug: 'valaverse',            count: '50+',  years: '2021–present', badge: 'new', desc: 'Modern 6-inch revival with elite UK collector following' },
-    ],
-  },
-  // NOTE: D&D tile removed 2026-06-06 — KB has no clean `dungeons-dragons`
-  // fandom (figures live in the mixed `generic-fantasy` bucket) and the genre
-  // page 404s. Relay filed to matcher to tag D&D properly; restore the tile
-  // once the KB has a real `dungeons-dragons` fandom. See WEB-W3 relay.
-  {
-    slug: 'spawn',
-    name: 'Spawn',
-    totalCount: '300+',
-    accent: '#37474F',
-    lines: [
-      { name: 'McFarlane Toys Spawn',   slug: 'mcfarlane-spawn', count: '200+', years: '1994–2006', badge: 'vintage', desc: 'The figures that changed the industry — detail-first philosophy' },
-      { name: 'Spawn Ultimates',        slug: 'spawn-ultimates', count: '60+',  years: '2021–present', badge: 'hot',  desc: 'Modern revival — updated articulation on classic sculpts' },
-    ],
-  },
-]
 
 // ─── Genre monogram ───────────────────────────────────────────────────────────
-// Original plain genre mark: the genre's initial(s) in the display face on
-// an accent-tinted tile. Matches the guides-page treatment for sitewide consistency.
+// The genre's initial(s) in the display face on an accent-tinted tile.
+// Matches the guides-page treatment for sitewide consistency.
 function genreMonogram(name: string): string {
   const cleaned = name.replace(/[^A-Za-z0-9 ]/g, '').trim()
   // Multi-word → initials (e.g. "Power Rangers" → "PR", "G.I. Joe" → "GJ").
@@ -278,14 +65,10 @@ const BADGE_CONFIG = {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
-  const [activeSlug, setActiveSlug] = useState<string>(GENRES[0].slug)
-  const activeGenre = GENRES.find(g => g.slug === activeSlug) ?? GENRES[0]
-
-  // Real (computed) count for a genre, falling back to the hardcoded marketing
-  // number only if the build-time map didn't supply one.
-  const countFor = (slug: string, fallback: string): string =>
-    counts?.[slug] ?? fallback
+export default function GenreTaxonomy({ genres }: GenreTaxonomyProps) {
+  const [activeSlug, setActiveSlug] = useState<string>(genres[0]?.slug ?? '')
+  if (!genres.length) return null
+  const activeGenre = genres.find(g => g.slug === activeSlug) ?? genres[0]
 
   return (
     <div>
@@ -299,8 +82,8 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
       }}>
-        {GENRES.map(g => {
-          const isActive = g.slug === activeSlug
+        {genres.map(g => {
+          const isActive = g.slug === activeGenre.slug
           return (
             <button
               key={g.slug}
@@ -319,7 +102,6 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
                 fontWeight: isActive ? 700 : 500,
                 cursor: 'pointer',
                 transition: 'all 0.15s ease',
-                outline: 'none',
               }}
             >
               <GenreMark name={g.name} accent={g.accent} size={18} />
@@ -330,7 +112,7 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
                 color: isActive ? g.accent : 'var(--dim)',
                 letterSpacing: '0.04em',
               }}>
-                {countFor(g.slug, g.totalCount)}
+                {g.totalCount}
               </span>
             </button>
           )
@@ -356,7 +138,7 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
               {activeGenre.name}
             </span>
             <span style={{ fontSize: '0.75rem', color: 'var(--dim)', marginLeft: '0.5rem' }}>
-              {countFor(activeGenre.slug, activeGenre.totalCount)} figures · {activeGenre.lines.length} lines
+              {activeGenre.totalCount} figures · {activeGenre.lines.length} lines
             </span>
           </div>
         </div>
@@ -386,7 +168,7 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
         gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
         gap: '0.625rem',
       }}>
-        {activeGenre.lines.map(line => {
+        {activeGenre.lines.map((line: LineTile) => {
           const badge = line.badge ? BADGE_CONFIG[line.badge] : null
           return (
             <a
@@ -453,8 +235,12 @@ export default function GenreTaxonomy({ counts }: GenreTaxonomyProps = {}) {
                 color: 'var(--dim)',
               }}>
                 <span style={{ fontWeight: 700, color: activeGenre.accent }}>{line.count} figs</span>
-                <span>·</span>
-                <span>{line.years}</span>
+                {line.years && (
+                  <>
+                    <span>·</span>
+                    <span>{line.years}</span>
+                  </>
+                )}
               </div>
 
               {/* Desc */}
