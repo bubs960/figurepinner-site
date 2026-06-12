@@ -1,6 +1,9 @@
 // RelatedRow.tsx — Zone 6 + 7: Series companions / Character thread
 // Server component — pure SSR, no client JS needed
 // Used for both "others in this series" and "other versions of this character"
+// Visual language: 2026-06-12 agency shelf spec — cream mounts, hairline borders, gold accents
+
+import type { CSSProperties } from 'react'
 
 interface RelatedFigure {
   figure_id: string
@@ -15,98 +18,152 @@ interface RelatedRowProps {
   accentColor?: string
 }
 
-export default function RelatedRow({ label, figures, accentColor = 'var(--fp-accent)' }: RelatedRowProps) {
+export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-gold, #e0a83e)' }: RelatedRowProps) {
   if (figures.length === 0) return null
 
   return (
-    <section style={{ marginBottom: '2rem' }}>
-      {/* Header */}
+    <section
+      className="fp-relrow"
+      style={{ marginBottom: '2rem', '--relrow-accent': accentColor } as CSSProperties}
+    >
+      <style>{`
+        .fp-relrow-scroll{scrollbar-width:none;-ms-overflow-style:none}
+        .fp-relrow-scroll::-webkit-scrollbar{display:none}
+        @keyframes fpRelrowIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+        .fp-relrow-card{animation:fpRelrowIn .55s cubic-bezier(.22,.61,.36,1) both}
+        .fp-relrow-card:nth-child(1){animation-delay:.03s}
+        .fp-relrow-card:nth-child(2){animation-delay:.08s}
+        .fp-relrow-card:nth-child(3){animation-delay:.13s}
+        .fp-relrow-card:nth-child(4){animation-delay:.18s}
+        .fp-relrow-card:nth-child(5){animation-delay:.23s}
+        .fp-relrow-card:nth-child(6){animation-delay:.28s}
+        .fp-relrow-card:nth-child(7){animation-delay:.33s}
+        .fp-relrow-card:nth-child(8){animation-delay:.38s}
+        .fp-relrow-mount{transition:transform .35s cubic-bezier(.22,.61,.36,1),border-color .35s ease,box-shadow .35s ease}
+        .fp-relrow-name{transition:color .25s ease}
+        .fp-relrow-card:hover .fp-relrow-mount{
+          transform:translateY(-4px);
+          border-color:var(--relrow-accent,var(--shelf-gold,#e0a83e));
+          box-shadow:0 16px 26px rgba(0,0,0,.5),0 0 16px var(--shelf-line-gold,rgba(224,168,62,.20));
+        }
+        .fp-relrow-card:hover .fp-relrow-name{color:var(--shelf-gold-hi,#f5c462)}
+        @media (prefers-reduced-motion: reduce){
+          .fp-relrow-card{animation:none}
+          .fp-relrow-mount,.fp-relrow-name{transition:none}
+          .fp-relrow-card:hover .fp-relrow-mount{transform:none}
+        }
+      `}</style>
+
+      {/* Header — kicker label with gold dash */}
       <div style={{
-        display: 'flex', alignItems: 'center', gap: '0.75rem',
-        marginBottom: '0.875rem',
-        paddingBottom: '0.625rem',
-        borderBottom: '1px solid var(--fp-border)',
+        display: 'flex', alignItems: 'baseline', gap: '0.75rem',
+        marginBottom: '1rem',
       }}>
-        <div style={{ width: '3px', height: '1rem', background: accentColor, borderRadius: '2px', flexShrink: 0 }} />
+        <span aria-hidden="true" style={{
+          width: '26px', height: '1px', background: accentColor,
+          flexShrink: 0, alignSelf: 'center',
+        }} />
         <span style={{
-          fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-          color: 'var(--fp-text)', textTransform: 'uppercase',
+          fontSize: '0.625rem', fontWeight: 500, letterSpacing: '0.22em',
+          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', textTransform: 'uppercase',
         }}>
           {label}
         </span>
-        <span style={{ fontSize: '0.78rem', color: 'var(--fp-muted)', marginLeft: 'auto' }}>
+        <span style={{
+          fontSize: '0.59rem', fontWeight: 400, letterSpacing: '0.16em',
+          textTransform: 'uppercase',
+          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+          marginLeft: 'auto', whiteSpace: 'nowrap',
+        }}>
           {figures.length} figure{figures.length !== 1 ? 's' : ''}
         </span>
       </div>
 
-      {/* Scrollable row */}
-      <div style={{
-        display: 'flex',
-        gap: '0.5rem',
-        overflowX: 'auto',
-        paddingBottom: '0.25rem',
-        /* Hide scrollbar but allow scroll */
-        scrollbarWidth: 'none',
-        msOverflowStyle: 'none',
-      }}>
+      {/* Scrollable shelf row */}
+      <div
+        className="fp-relrow-scroll"
+        style={{
+          display: 'flex',
+          gap: '0.75rem',
+          overflowX: 'auto',
+          paddingTop: '0.5rem',
+          marginTop: '-0.5rem',
+          paddingBottom: '0.75rem',
+          /* Hide scrollbar but allow scroll */
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        }}
+      >
         {figures.map(fig => (
           <a
             key={fig.figure_id}
             href={fig.href}
+            className="fp-relrow-card"
             style={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
               gap: '0.5rem',
               flexShrink: 0,
-              width: '90px',
+              width: '96px',
               textDecoration: 'none',
               color: 'inherit',
             }}
           >
-            {/* Thumbnail */}
-            <div style={{
-              width: '90px',
-              height: '90px',
-              background: 'var(--fp-surface-0)',
-              border: '1px solid var(--fp-border)',
-              borderRadius: 'var(--fp-radius-sm)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              overflow: 'hidden',
-              flexShrink: 0,
-            }}>
-              {fig.imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={fig.imageUrl}
-                  alt={fig.name}
-                  width={90}
-                  height={90}
-                  loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
-                />
-              ) : (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--fp-dim)" strokeWidth="1.5" opacity="0.4">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                </svg>
-              )}
+            {/* Cream photo mount */}
+            <div
+              className="fp-relrow-mount"
+              style={{
+                background: 'var(--shelf-mount, linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%))',
+                border: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
+                borderRadius: '6px 6px 3px 3px',
+                padding: '5px 5px 6px',
+                boxShadow: '0 10px 18px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.3)',
+              }}
+            >
+              <div style={{
+                width: '100%',
+                aspectRatio: '4 / 5',
+                background: '#e9e0cd',
+                borderRadius: '3px',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                {fig.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={fig.imageUrl}
+                    alt={fig.name}
+                    width={90}
+                    height={90}
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '4px' }}
+                  />
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a7c5e" strokeWidth="1.5" opacity="0.6">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                  </svg>
+                )}
+              </div>
             </div>
 
             {/* Name */}
-            <span style={{
-              fontSize: '0.78rem',
-              color: 'var(--fp-muted)',
-              textAlign: 'center',
-              lineHeight: '1.3',
-              overflow: 'hidden',
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
-              wordBreak: 'break-word',
-            }}>
+            <span
+              className="fp-relrow-name"
+              style={{
+                fontSize: '0.78rem',
+                fontWeight: 500,
+                color: 'var(--shelf-cream, #f2e8d5)',
+                lineHeight: '1.3',
+                overflow: 'hidden',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                wordBreak: 'break-word',
+              }}
+            >
               {fig.name}
             </span>
           </a>

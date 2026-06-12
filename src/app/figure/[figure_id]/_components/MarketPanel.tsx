@@ -1,6 +1,10 @@
 // MarketPanel.tsx — Zone 4: Sold price summary (no listing rows)
 //
 // Changelog:
+//   2026-06-12: Ported to the shelf design language — kicker header over a gold
+//               hairline, condition medians as hairline ledger rows with dotted
+//               leaders + gold SOLD chips, prices in display font at modest size.
+//               Data fields, labels, and all conditional logic unchanged.
 //   2026-05-29: Removed individual comp rows — listing titles exposed bad matches,
 //               killing credibility. Now shows total count + avg NIB / avg Loose only.
 //   2026-05-12: Chart removed, eBay exit CTA removed, conditions collapsed to MOC/Loose.
@@ -68,66 +72,118 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
 
   return (
     <section>
-      {/* Header */}
+      <style>{`
+        @keyframes fpMarketLedgerIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+        .fp-marketledger-row{opacity:0;animation:fpMarketLedgerIn .55s cubic-bezier(.22,.61,.36,1) both}
+        .fp-marketledger-row:nth-child(2){animation-delay:.09s}
+        .fp-marketledger-row:nth-child(3){animation-delay:.18s}
+        @media (prefers-reduced-motion: reduce){
+          .fp-marketledger-row{animation:none;opacity:1}
+        }
+      `}</style>
+
+      {/* Header — kicker over a gold hairline */}
       <div style={{
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        marginBottom: '0.625rem', paddingBottom: '0.5rem',
-        borderBottom: '1px solid var(--fp-border)',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+        paddingBottom: '0.55rem',
+        borderBottom: '1px solid var(--shelf-line-gold, rgba(224,168,62,.20))',
       }}>
         <div style={{
-          fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-          color: 'var(--fp-text)', textTransform: 'uppercase',
+          fontFamily: 'var(--fp-font-body)',
+          fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em',
+          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', textTransform: 'uppercase',
         }}>
           Recent eBay Sales
         </div>
-        <div style={{ fontSize: '0.78rem', color: 'var(--fp-muted)' }}>
+        <div style={{
+          fontSize: '12px', fontWeight: 400,
+          color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+          fontVariantNumeric: 'tabular-nums',
+        }}>
           {pricing.comp_count} sold
         </div>
       </div>
 
-      {/* New vs Used median pills. Each shows only with ≥3 tagged sales; the
-          overall median (in the ValueStrip above) remains the anchor number. */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.375rem' }}>
+      {/* New vs Used median ledger rows. Each shows only with ≥3 tagged sales;
+          the overall median (in the ValueStrip above) remains the anchor number. */}
+      <div>
         {showNew && (
-          <ConditionPill label="New" prices={buckets.new} color="var(--fp-success)" />
+          <LedgerRow label="New" prices={buckets.new} />
         )}
         {showUsed && (
-          <ConditionPill label="Used" prices={buckets.used} color="var(--fp-accent)" />
+          <LedgerRow label="Used" prices={buckets.used} />
         )}
         {!showNew && !showUsed && (
           // Not enough tagged sales in either bucket to split honestly — show the
           // blended median so the panel still says something true.
-          <ConditionPill label="All" prices={comps.map(c => c.price)} color="var(--fp-dim)" tintValue />
+          <LedgerRow label="All" prices={comps.map(c => c.price)} />
         )}
       </div>
     </section>
   )
 }
 
-function ConditionPill({ label, prices, color, tintValue }: { label: string; prices: number[]; color: string; tintValue?: boolean }) {
+function LedgerRow({ label, prices }: { label: string; prices: number[] }) {
   const med = median(prices)
   return (
-    <div style={{
-      display: 'inline-flex', alignItems: 'baseline', gap: '0.4rem',
-      padding: '0.4rem 0.625rem',
-      background: 'var(--fp-surface-0)',
-      border: '1px solid var(--fp-border)',
-      borderRadius: 'var(--fp-radius-sm)',
-    }}>
+    <div
+      className="fp-marketledger-row"
+      style={{
+        display: 'flex', alignItems: 'center', gap: '0.75rem',
+        padding: '0.7rem 0 0.65rem',
+        borderBottom: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
+      }}
+    >
+      {/* condition label — quiet uppercase kicker */}
       <span style={{
-        fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.06em',
-        textTransform: 'uppercase', color,
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+        whiteSpace: 'nowrap',
       }}>
         {label}
       </span>
+
+      {/* dotted leader */}
+      <span aria-hidden="true" style={{
+        flex: '1 1 auto', minWidth: '16px',
+        borderBottom: '1px dotted rgba(242,232,213,.18)',
+        transform: 'translateY(-3px)',
+      }} />
+
+      {/* gold SOLD chip — comp depth behind this row's number */}
       <span style={{
-        fontFamily: 'var(--fp-font-display)', fontSize: '0.95rem',
-        color: tintValue ? 'var(--fp-success)' : 'var(--fp-text)', letterSpacing: '0.02em',
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '9px', fontWeight: 600, letterSpacing: '0.16em',
+        textTransform: 'uppercase',
+        color: '#1a1206',
+        background: 'var(--shelf-gold, #e0a83e)',
+        borderRadius: '3px', padding: '3px 7px',
+        whiteSpace: 'nowrap',
+        fontVariantNumeric: 'tabular-nums',
+      }}>
+        {prices.length} sold
+      </span>
+
+      {/* median price — display font, modest size (numbers support, never shout) */}
+      <span style={{
+        fontFamily: 'var(--fp-font-display)',
+        fontSize: '19px', lineHeight: 1, letterSpacing: '0.03em',
+        color: 'var(--shelf-cream, #f2e8d5)',
+        fontVariantNumeric: 'tabular-nums',
+        whiteSpace: 'nowrap',
       }}>
         {formatCurrency(med)}
       </span>
-      <span style={{ fontSize: '0.8rem', color: 'var(--fp-dim)' }}>
-        median · {prices.length} sold
+      <span style={{
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '9px', fontWeight: 500, letterSpacing: '0.16em',
+        textTransform: 'uppercase',
+        color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+        whiteSpace: 'nowrap',
+      }}>
+        median
       </span>
     </div>
   )

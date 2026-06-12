@@ -1,5 +1,9 @@
 // CtaRail.tsx — Zone 8: Three bottom CTA cards
 // Server component
+// 2026-06-12: restyled to the agency shelf language (design-explorations/
+// 2026-06-12-agency/figure-shelf.html) — hairline panels on the dark page,
+// cream Bebas headings, cream-dim body, gold arrow links. Presentation only;
+// props, hrefs, and copy unchanged.
 
 import Link from 'next/link'
 
@@ -33,6 +37,8 @@ export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) 
   // and line hubs were getting near-zero internal link equity. Third slot
   // (empty since the Pro card was pulled 2026-06-06) is now the guides
   // funnel: 21k figure pages previously had zero links to the 25 guides.
+  // Shelf language: gold is reserved for actions — all three accents are the
+  // brand gold now, applied only to the arrow link.
   const cards: CtaCard[] = [
     {
       label: 'Browse',
@@ -40,7 +46,7 @@ export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) 
       body: `Every ${line} figure by series, with real sold pricing on each.`,
       href: lineSlug ? `/${genreSlug}/${lineSlug}` : `/${genreSlug}`,
       cta: `Browse ${line} →`,
-      accentVar: 'var(--fp-accent)',
+      accentVar: 'var(--shelf-gold, #e0a83e)',
     },
     {
       label: 'Track',
@@ -48,7 +54,7 @@ export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) 
       body: 'Own it, want it, track it. Unlimited vault, alerts, and price history. Free, forever.',
       href: '/sign-up',
       cta: 'Sign Up Free →',
-      accentVar: 'var(--fp-accent-warm)',
+      accentVar: 'var(--shelf-gold, #e0a83e)',
     },
     {
       label: 'Learn',
@@ -56,7 +62,7 @@ export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) 
       body: `Guides on reading comps, condition premiums, spotting fakes, and when to sell — by ${brand} collectors, not content farms.`,
       href: '/guides',
       cta: 'Read the Guides →',
-      accentVar: 'var(--fp-accent-rare)',
+      accentVar: 'var(--shelf-gold, #e0a83e)',
     },
   ]
 
@@ -64,48 +70,66 @@ export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) 
     <div className="fp-cta-rail" style={{
       display: 'grid',
       gridTemplateColumns: `repeat(${cards.length}, 1fr)`,
-      gap: '1px',
-      background: 'var(--fp-border)',
-      border: '1px solid var(--fp-border)',
-      borderRadius: 'var(--fp-radius)',
-      overflow: 'hidden',
+      gap: '16px',
+      alignItems: 'stretch',
     }}>
+      <style>{`
+        .fp-cta-card {
+          transition: border-color .25s ease, transform .3s cubic-bezier(.22,.61,.36,1);
+        }
+        .fp-cta-card:hover {
+          border-color: var(--shelf-line-gold, rgba(224,168,62,.20)) !important;
+          transform: translateY(-2px);
+        }
+        .fp-cta-card:hover .fp-cta-card-link {
+          color: var(--shelf-gold-hi, #f5c462) !important;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .fp-cta-card { transition: none; }
+          .fp-cta-card:hover { transform: none; }
+        }
+      `}</style>
       {cards.map((card) => (
         <Link
           key={card.label}
           href={card.href}
-          style={{ textDecoration: 'none' }}
+          style={{ textDecoration: 'none', display: 'block' }}
         >
-          <div style={{
-            background: 'var(--fp-surface-0)',
-            padding: '1.25rem',
+          <div className="fp-cta-card" style={{
+            border: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
+            borderRadius: '14px',
+            background: 'transparent',
+            padding: '26px 26px 22px',
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
-            gap: '0.5rem',
-            transition: 'background 0.15s',
+            gap: '10px',
           }}>
             <div style={{
-              fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.12em',
-              color: card.accentVar, textTransform: 'uppercase',
+              fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em',
+              color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+              textTransform: 'uppercase',
             }}>
               {card.label}
             </div>
             <div style={{
-              fontSize: '0.9rem', fontWeight: '700',
-              color: 'var(--fp-text)', lineHeight: '1.3',
+              fontFamily: 'var(--fp-font-display)', fontWeight: 400,
+              fontSize: '24px', lineHeight: 1.05, letterSpacing: '0.02em',
+              color: 'var(--shelf-cream, #f2e8d5)',
             }}>
               {card.headline}
             </div>
             <div style={{
-              fontSize: '0.78rem', color: 'var(--fp-muted)',
-              lineHeight: '1.5', flex: 1,
+              fontSize: '14px', fontWeight: 400, lineHeight: 1.65,
+              color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+              flex: 1,
             }}>
               {card.body}
             </div>
-            <div style={{
-              fontSize: '0.75rem', fontWeight: '700',
-              color: card.accentVar, marginTop: '0.25rem',
+            <div className="fp-cta-card-link" style={{
+              fontSize: '13px', fontWeight: 500, letterSpacing: '0.01em',
+              color: card.accentVar, marginTop: '6px',
+              transition: 'color .2s',
             }}>
               {card.cta}
             </div>

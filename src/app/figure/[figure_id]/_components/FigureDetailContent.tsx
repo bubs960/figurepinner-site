@@ -181,6 +181,29 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     }
   })()
 
+  // ── Placard extras (shelf hero) ─────────────────────────────────────────────
+  // Range-bar ticks: recent comp prices normalized into [low, high].
+  const placardTicks = (() => {
+    if (!price || !valuePricing || valuePricing.low == null || valuePricing.high == null) return []
+    const lo = valuePricing.low, hi = valuePricing.high
+    if (hi <= lo) return []
+    return price.soldHistory.slice(0, 30)
+      .map(s => (s.price - lo) / (hi - lo))
+      .filter(v => v >= -0.02 && v <= 1.02)
+      .map(v => Math.min(1, Math.max(0, v)))
+  })()
+  // Most recent individual sale — picked by max sold_date (same trust level
+  // as the existing 'Latest sold comp' line; order of recent[] is not trusted).
+  const lastSale = (() => {
+    if (!price || !price.soldHistory.length) return null
+    let best: { price: number; sold_date?: string } | null = null
+    for (const s of price.soldHistory) {
+      if (!s.sold_date) continue
+      if (!best || String(s.sold_date) > String(best.sold_date)) best = s
+    }
+    return best ? { price: best.price } : null
+  })()
+
   // ── MarketPanel props ───────────────────────────────────────────────────────
 
   const marketPricing = price && price.soldCount > 0 ? {
@@ -285,25 +308,26 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const hasPricing = marketPricing != null
 
   return (
-    <div style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
+    <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Responsive overrides */}
+      {/* Shelf design tokens (scoped) + responsive overrides */}
       <style>{`
+        .fp-shelf {
+          --shelf-cream:     #f2e8d5;
+          --shelf-cream-dim: rgba(242,232,213,0.60);
+          --shelf-cream-mut: rgba(242,232,213,0.38);
+          --shelf-gold:      #e0a83e;
+          --shelf-gold-hi:   #f5c462;
+          --shelf-line:      rgba(242,232,213,0.08);
+          --shelf-line-gold: rgba(224,168,62,0.20);
+          --shelf-mount:     linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);
+        }
         @media (max-width: 768px) {
           .fp-hero-grid  { grid-template-columns: 1fr !important; }
           .fp-main-grid  { grid-template-columns: 1fr !important; }
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
           .fp-right-col  { position: static !important; }
-        }
-        /* Value strip responsive rules.
-           At 769–900px viewport the hero is still 2-col but the identity
-           column is only ~400–470px wide — too narrow for 4 equal cells
-           without clipping the CONFIDENCE label. Wrap to 2×2 at 900px.
-           At ≤640px the hero has already collapsed to 1-col so the strip
-           is full-width; 2×2 still applies for comfortable reading. */
-        @media (max-width: 900px) {
-          .fp-value-strip { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
 
@@ -331,7 +355,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             rarityTier={null}
             genre={genre}
             valuePricing={valuePricing}
-            valueStripClassName="fp-value-strip"
+            loreText={local.match_represented ?? null}
+            ticks={placardTicks}
+            lastSale={lastSale}
           />
         </div>
 
@@ -351,8 +377,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         {/* Zone 3b — Per-figure enrichment (match represented + key features).
             Render-safe: shows only for fids matcher has enriched. */}
         <div style={{ marginBottom: '1.5rem' }}>
+          {/* match_represented renders in the hero lore slot now — features only here */}
           <FigureEnrichment
-            matchRepresented={local.match_represented}
+            matchRepresented={null}
             keyFeatures={local.key_features}
           />
         </div>
@@ -391,16 +418,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                   Latest sold comp: <time dateTime={latestCompDate.iso}>{latestCompDate.label}</time>
                 </div>
               )}
-              <a
-                href="/methodology"
-                style={{
-                  display: 'inline-block', marginTop: '0.5rem',
-                  fontSize: '0.75rem', color: 'var(--fp-muted)',
-                  textDecoration: 'underline', textUnderlineOffset: '2px',
-                }}
-              >
-                How is this calculated?
-              </a>
             </div>
 
             {hasPricing ? (
@@ -434,13 +451,13 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
         {/* Zone 6 — Series companions */}
         <RelatedRow
-          label={`Others In ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
+          label={`Complete the Wave — ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
           figures={seriesCompanions}
         />
 
         {/* Zone 7 — Character thread */}
         <RelatedRow
-          label={`More ${characterH1} Figures`}
+          label={`Every Version of ${characterH1}`}
           figures={characterVariants}
           accentColor="var(--fp-accent-warm)"
         />

@@ -1,11 +1,14 @@
-// DataQualityBadge.tsx — visible "trust this much" pill on figure pages.
+// DataQualityBadge.tsx — quiet one-line honesty strip on figure pages.
 // Server component. Static styling; no client state.
 //
-// Reads the data-quality state derived from soldCount and renders a colored
-// pill with plain-English copy. Hidden affordance for the "60% coverage"
-// problem: instead of opaque gating, every figure self-labels its data
-// quality so users can decide for themselves whether to trust the median.
+// Reads the data-quality state derived from soldCount and renders a small
+// state dot + plain-English reliability text in the shelf footnote style,
+// with a gold hairline-underlined methodology link. Hidden affordance for
+// the "60% coverage" problem: instead of opaque gating, every figure
+// self-labels its data quality so users can decide for themselves whether
+// to trust the median.
 
+import type { CSSProperties } from 'react'
 import type { DataQualityState } from '../_lib/figureFormatters'
 
 interface Props {
@@ -19,44 +22,74 @@ interface Props {
 const COPY: Record<DataQualityState, {
   label: string
   caveat: string
-  bg: string
-  fg: string
-  border: string
   dot: string
 }> = {
   reliable: {
     label: 'Reliable Pricing',
     caveat: 'Median is meaningful — bid with confidence.',
-    bg: 'rgba(0, 200, 112, 0.10)',
-    fg: '#00C870',
-    border: 'rgba(0, 200, 112, 0.30)',
     dot: '#00C870',
   },
   limited: {
     label: 'Limited Data',
     caveat: 'Few recent comps — treat the median as an estimate.',
-    bg: 'rgba(255, 184, 0, 0.10)',
-    fg: '#FFB800',
-    border: 'rgba(255, 184, 0, 0.30)',
     dot: '#FFB800',
   },
   sparse: {
     label: 'Sparse Data',
-    caveat: 'Only 1\u20133 comps. Directional only — verify before bidding.',
-    bg: 'rgba(255, 95, 0, 0.10)',
-    fg: '#FF5F00',
-    border: 'rgba(255, 95, 0, 0.30)',
+    caveat: 'Only 1–3 comps. Directional only — verify before bidding.',
     dot: '#FF5F00',
   },
   none: {
     label: 'No Sold Data Yet',
     caveat: 'No recent comps in our system. Search eBay sold listings directly.',
-    bg: 'rgba(120, 120, 138, 0.10)',
-    fg: 'var(--fp-text)',
-    border: 'rgba(120, 120, 138, 0.25)',
-    dot: 'var(--fp-text)',
+    dot: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
   },
 }
+
+// Footnote-style shared pieces (shelf design language: hairlines, airy
+// uppercase micro-labels, gold reserved for the action link).
+const dotStyle = (color: string): CSSProperties => ({
+  width: 5,
+  height: 5,
+  borderRadius: '50%',
+  background: color,
+  flexShrink: 0,
+})
+
+const labelStyle: CSSProperties = {
+  fontSize: '10px',
+  fontWeight: 500,
+  letterSpacing: '0.18em',
+  textTransform: 'uppercase',
+  color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+}
+
+const compsStyle: CSSProperties = {
+  fontSize: '10px',
+  fontWeight: 500,
+  letterSpacing: '0.16em',
+  textTransform: 'uppercase',
+  color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+  whiteSpace: 'nowrap',
+}
+
+const linkStyle: CSSProperties = {
+  fontSize: '11.5px',
+  fontWeight: 400,
+  color: 'var(--shelf-gold-hi, #f5c462)',
+  textDecoration: 'none',
+  borderBottom: '1px solid var(--shelf-line-gold, rgba(224,168,62,.20))',
+  paddingBottom: 1,
+  whiteSpace: 'nowrap',
+}
+
+const hoverCss = `
+  .fp-dq-link { transition: border-color .2s; }
+  .fp-dq-link:hover { border-bottom-color: var(--shelf-gold-hi, #f5c462); }
+  @media (prefers-reduced-motion: reduce) {
+    .fp-dq-link { transition: none; }
+  }
+`
 
 export default function DataQualityBadge({ state, compCount, compact = true }: Props) {
   const c = COPY[state]
@@ -71,28 +104,18 @@ export default function DataQualityBadge({ state, compCount, compact = true }: P
         style={{
           display: 'inline-flex',
           alignItems: 'center',
-          gap: '0.5rem',
-          background: c.bg,
-          color: c.fg,
-          border: `1px solid ${c.border}`,
-          borderRadius: '9999px',
-          padding: '0.3rem 0.7rem',
-          fontSize: '0.75rem',
-          fontWeight: 700,
-          letterSpacing: '0.04em',
-          textTransform: 'uppercase',
+          gap: '0.6rem',
+          fontFamily: 'var(--fp-font-body)',
           whiteSpace: 'nowrap',
         }}
       >
-        <span
-          aria-hidden
-          style={{
-            width: 6, height: 6, borderRadius: '50%',
-            background: c.dot, flexShrink: 0,
-          }}
-        />
-        <span>{c.label}</span>
-        <span style={{ opacity: 0.6, fontWeight: 600 }}>· {compLabel}</span>
+        <style>{hoverCss}</style>
+        <span aria-hidden style={dotStyle(c.dot)} />
+        <span style={labelStyle}>{c.label}</span>
+        <span style={compsStyle}>· {compLabel}</span>
+        <a href="/methodology" className="fp-dq-link" style={linkStyle}>
+          How pricing works &rarr;
+        </a>
       </div>
     )
   }
@@ -102,40 +125,30 @@ export default function DataQualityBadge({ state, compCount, compact = true }: P
     <div
       role="status"
       aria-label={`Data quality: ${c.label}`}
-      style={{
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: '0.75rem',
-        background: c.bg,
-        color: 'var(--fp-text)',
-        border: `1px solid ${c.border}`,
-        borderRadius: '10px',
-        padding: '0.875rem 1rem',
-      }}
+      style={{ fontFamily: 'var(--fp-font-body)' }}
     >
-      <span
-        aria-hidden
-        style={{
-          width: 8, height: 8, borderRadius: '50%',
-          background: c.dot, marginTop: 6, flexShrink: 0,
-        }}
-      />
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{
-          fontSize: '0.8rem', fontWeight: 700,
-          color: c.fg, letterSpacing: '0.04em', textTransform: 'uppercase',
-        }}>
-          {c.label}
-          <span style={{ opacity: 0.6, fontWeight: 600, marginLeft: '0.5rem' }}>
-            · {compLabel}
-          </span>
-        </div>
-        <div style={{
-          fontSize: '0.8125rem', color: 'var(--fp-muted)',
-          marginTop: 4, lineHeight: 1.5,
-        }}>
-          {c.caveat}
-        </div>
+      <style>{hoverCss}</style>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.6rem',
+        flexWrap: 'wrap',
+      }}>
+        <span aria-hidden style={dotStyle(c.dot)} />
+        <span style={labelStyle}>{c.label}</span>
+        <span style={compsStyle}>· {compLabel}</span>
+      </div>
+      <div style={{
+        marginTop: 6,
+        fontSize: '0.8125rem',
+        fontWeight: 300,
+        lineHeight: 1.6,
+        color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+      }}>
+        {c.caveat}{' '}
+        <a href="/methodology" className="fp-dq-link" style={linkStyle}>
+          How pricing works &rarr;
+        </a>
       </div>
     </div>
   )

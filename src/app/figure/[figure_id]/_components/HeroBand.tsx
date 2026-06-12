@@ -1,7 +1,8 @@
-// HeroBand.tsx — Zone 1: Image + identity header
-// Server component — no client-side JS needed
-
-import ValueStrip from './ValueStrip'
+// HeroBand.tsx — Zone 1: vitrine photo + identity + price placard
+// Server component — shelf design language (port of figure-shelf.html spec).
+// The placard absorbed the old ValueStrip's four cells: median, range,
+// comp count and confidence now read as one museum placard. Price is
+// deliberately subordinate to the character block (owner direction 6/12).
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
@@ -29,26 +30,51 @@ interface HeroBandProps {
   className?: string
   valuePricing?: Pricing | null
   valueStripClassName?: string
+  /** KB enrichment sentence (match_represented) — renders as the hero lore paragraph. */
+  loreText?: string | null
+  /** Normalized 0–1 positions of recent comps within [low, high] for the range-bar ticks. */
+  ticks?: number[]
+  /** Most recent individual sale, if known. */
+  lastSale?: { price: number } | null
 }
 
 const RARITY_CONFIG = {
-  uncommon: { label: 'Uncommon', color: 'var(--fp-accent)' },
-  rare:     { label: 'Rare',     color: 'var(--fp-accent-warm)' },
-  grail:    { label: 'Grail',    color: 'var(--fp-accent-rare)' },
+  uncommon: { label: 'Uncommon' },
+  rare:     { label: 'Rare' },
+  grail:    { label: 'Grail' },
+}
+
+const CONFIDENCE_WORD: Record<1 | 2 | 3 | 4 | 5, string> = {
+  1: 'Thin', 2: 'Limited', 3: 'Moderate', 4: 'Strong', 5: 'Deep',
+}
+
+function fmt(n: number): string {
+  return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
 
 export default function HeroBand({
   imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
-  valuePricing, valueStripClassName,
+  valuePricing, loreText, ticks, lastSale,
 }: HeroBandProps) {
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
-  const metaParts = [
-    lineName,
-    series ? `Series ${series}` : null,
-    releaseYear ? String(releaseYear) : null,
-    scale,
-  ].filter(Boolean)
+  const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+
+  const specs: Array<{ k: string; v: string }> = [
+    { k: 'Line', v: lineName },
+    ...(series ? [{ k: 'Wave', v: String(series) }] : []),
+    ...(releaseYear ? [{ k: 'Year', v: String(releaseYear) }] : []),
+    ...(scale ? [{ k: 'Scale', v: scale }] : []),
+    { k: 'Maker', v: brand },
+    ...(eraLabel ? [{ k: 'Era', v: eraLabel }] : []),
+  ]
+
+  const p = valuePricing ?? null
+  const hasRange = p !== null && p.low !== null && p.high !== null && p.high > (p.low ?? 0)
+  const medianPos = (p && hasRange && p.median !== null)
+    ? Math.min(92, Math.max(8, ((p.median - (p.low as number)) / ((p.high as number) - (p.low as number))) * 100))
+    : 50
+  const trend = p?.trend_90d_pct ?? null
 
   return (
     <div
@@ -60,124 +86,327 @@ export default function HeroBand({
         alignItems: 'start',
       }}
     >
-      {/* Image — outer wrapper reserves space before image loads, preventing CLS */}
+      <style>{`
+        .fp-vit-sweep::after {
+          content: '';
+          position: absolute; top: -25%; bottom: -25%; left: 0; width: 34%;
+          background: linear-gradient(100deg, transparent, rgba(255,236,194,0.045) 32%, rgba(255,236,194,0.12) 50%, rgba(255,236,194,0.045) 68%, transparent);
+          transform: translateX(-140%) skewX(-18deg);
+          animation: fp-vit-sweep 9s linear infinite;
+          pointer-events: none;
+        }
+        @keyframes fp-vit-sweep {
+          0%   { transform: translateX(-140%) skewX(-18deg); }
+          22%  { transform: translateX(440%) skewX(-18deg); }
+          100% { transform: translateX(440%) skewX(-18deg); }
+        }
+        .fp-plc-tick {
+          position: absolute; bottom: 50%; width: 1px; height: 11px;
+          background: var(--shelf-gold, #e0a83e);
+          transform-origin: bottom;
+          animation: fp-tick-in 0.45s cubic-bezier(0.22,0.61,0.36,1) both;
+        }
+        @keyframes fp-tick-in {
+          from { opacity: 0; transform: scaleY(0); }
+          to   { opacity: 0.55; transform: scaleY(1); }
+        }
+        .fp-plc-med {
+          animation: fp-med-in 0.5s cubic-bezier(0.34,1.56,0.64,1) 1.1s both;
+        }
+        @keyframes fp-med-in {
+          from { transform: translate(-50%,-50%) scaleY(0); }
+          to   { transform: translate(-50%,-50%) scaleY(1); }
+        }
+        .fp-sold-stamp {
+          animation: fp-stamp 0.5s cubic-bezier(0.34,1.56,0.64,1) 1.5s both;
+        }
+        @keyframes fp-stamp {
+          0%   { opacity: 0; transform: scale(2.3) rotate(-15deg); }
+          62%  { opacity: 1; transform: scale(0.92) rotate(3deg); }
+          100% { opacity: 1; transform: scale(1) rotate(-2deg); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .fp-vit-sweep::after { animation: none; opacity: 0; }
+          .fp-plc-tick { animation: none; opacity: 0.55; transform: scaleY(1); }
+          .fp-plc-med { animation: none; transform: translate(-50%,-50%) scaleY(1); }
+          .fp-sold-stamp { animation: none; opacity: 1; }
+        }
+      `}</style>
+
+      {/* Vitrine — outer wrapper reserves space before image loads, preventing CLS */}
       <div style={{ position: 'relative', minHeight: '325px' }}>
-        {/* Glow behind image */}
-        <div style={{
-          position: 'absolute', inset: '-20px',
-          background: 'radial-gradient(ellipse at center, rgba(91,141,239,0.18) 0%, transparent 70%)',
-          pointerEvents: 'none',
-          zIndex: 0,
-        }} />
-        <div style={{
-          position: 'relative', zIndex: 1,
-          background: 'var(--fp-surface-0)',
-          border: `1px solid var(--fp-border)`,
-          borderRadius: 'var(--fp-radius-lg)',
-          overflow: 'hidden',
-          aspectRatio: '4/5',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
-        }}>
-          {imageUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={imageUrl}
-              alt={characterName}
-              fetchPriority="high"
-              style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1.5rem' }}
-            />
-          ) : (
-            /* Silhouette placeholder */
-            <div style={{ textAlign: 'center', color: 'var(--fp-dim)' }}>
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.4">
-                <circle cx="32" cy="22" r="10" />
-                <path d="M12 56c0-11 9-20 20-20s20 9 20 20" />
-              </svg>
-              <div style={{ fontSize: '0.7rem', marginTop: '0.5rem', opacity: 0.5 }}>No image</div>
-            </div>
-          )}
+        <div
+          className="fp-vit-sweep"
+          style={{
+            position: 'relative',
+            border: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
+            borderRadius: '16px',
+            padding: '26px 22px 20px',
+            background: 'linear-gradient(180deg, rgba(242,232,213,0.03), rgba(242,232,213,0.008) 60%, transparent)',
+            boxShadow: '0 24px 60px rgba(0,0,0,0.45), inset 0 0 60px rgba(224,168,62,0.035)',
+            overflow: 'hidden',
+          }}
+        >
+          {/* Cream mount the photo sits on */}
+          <div style={{
+            position: 'relative', zIndex: 1,
+            background: 'var(--shelf-mount, linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%))',
+            borderRadius: '8px 8px 4px 4px',
+            padding: '7px 7px 8px',
+            boxShadow: '0 18px 34px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4)',
+          }}>
+            {imageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={imageUrl}
+                alt={characterName}
+                fetchPriority="high"
+                style={{
+                  width: '100%', aspectRatio: '4/4.7', objectFit: 'contain',
+                  borderRadius: '4px', background: '#e9e0cd', display: 'block',
+                }}
+              />
+            ) : (
+              <div style={{
+                width: '100%', aspectRatio: '4/4.7', borderRadius: '4px',
+                background: '#e9e0cd', display: 'flex', flexDirection: 'column',
+                alignItems: 'center', justifyContent: 'center', color: '#8a7e63',
+              }}>
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.5">
+                  <circle cx="32" cy="22" r="10" />
+                  <path d="M12 56c0-11 9-20 20-20s20 9 20 20" />
+                </svg>
+                <div style={{ fontSize: '0.7rem', marginTop: '0.5rem', opacity: 0.7 }}>No image yet</div>
+              </div>
+            )}
+          </div>
+
+          {/* Lit glass ledge the mount rests on */}
+          <div aria-hidden style={{
+            position: 'relative', zIndex: 1, margin: '16px -14px 0', height: '1px',
+            background: 'linear-gradient(90deg, transparent, rgba(245,196,98,0.45), transparent)',
+            boxShadow: '0 5px 16px rgba(245,196,98,0.14)',
+          }} />
         </div>
 
         {/* Rarity badge — only if uncommon/rare/grail */}
         {rarity && (
           <div style={{
             position: 'absolute', top: '0.75rem', left: '0.75rem', zIndex: 2,
-            background: 'rgba(10,13,28,0.85)', backdropFilter: 'blur(8px)',
-            border: `1px solid ${rarity.color}`,
-            borderRadius: 'var(--fp-radius-sm)',
+            background: 'rgba(9,9,15,0.85)', backdropFilter: 'blur(8px)',
+            border: '1px solid var(--shelf-line-gold, rgba(224,168,62,0.2))',
+            borderRadius: '4px',
             padding: '3px 10px',
-            fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-            color: rarity.color, textTransform: 'uppercase',
+            fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.18em',
+            color: 'var(--shelf-gold-hi, #f5c462)', textTransform: 'uppercase',
           }}>
             {rarity.label}
           </div>
         )}
       </div>
 
-      {/* Identity */}
-      <div style={{ paddingTop: '0.5rem', display: 'flex', flexDirection: 'column' }}>
-        {/* Brand chip */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
-          <span style={{
-            display: 'inline-block',
-            background: 'rgba(91,141,239,0.15)',
-            border: '1px solid rgba(91,141,239,0.3)',
-            borderRadius: 'var(--fp-radius-sm)',
-            padding: '3px 10px',
-            fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.08em',
-            color: 'var(--fp-accent)', textTransform: 'uppercase',
-          }}>
-            {brand}
-          </span>
-          {/* Era chip — only if eraLabel present */}
-          {eraLabel && (
-            <span style={{
-              display: 'inline-block',
-              background: 'rgba(240,160,75,0.12)',
-              border: '1px solid rgba(240,160,75,0.25)',
-              borderRadius: 'var(--fp-radius-sm)',
-              padding: '3px 10px',
-              fontSize: '0.78rem', fontWeight: '600', letterSpacing: '0.06em',
-              color: 'var(--fp-accent-warm)',
-            }}>
-              {eraLabel}
-            </span>
-          )}
-        </div>
-
-        {/* Line meta */}
+      {/* Identity + placard */}
+      <div style={{ paddingTop: '0.25rem', display: 'flex', flexDirection: 'column' }}>
+        {/* Eyebrow — genre + maker + line, gold ruled */}
         <div style={{
-          fontSize: '0.8rem', color: 'var(--fp-text)', marginBottom: '0.875rem',
-          letterSpacing: '0.02em',
+          fontSize: '0.84rem', fontWeight: 500, letterSpacing: '0.22em',
+          textTransform: 'uppercase', color: 'var(--shelf-gold, #e0a83e)',
+          display: 'inline-flex', alignItems: 'center', gap: '11px',
         }}>
-          {metaParts.join(' · ')}
+          <span aria-hidden style={{ width: '30px', height: '1px', background: 'var(--shelf-gold, #e0a83e)', opacity: 0.65, flexShrink: 0 }} />
+          {genreLabel} — {brand} {lineName}
         </div>
 
         {/* Character name — H1 */}
         <h1 style={{
           fontFamily: 'var(--fp-font-display)',
-          fontSize: 'clamp(2.25rem, 4vw, 3.5rem)',
-          letterSpacing: '0.04em',
-          lineHeight: '1.0',
-          color: 'var(--fp-text)',
-          margin: '0 0 1rem',
+          fontWeight: 400,
+          fontSize: 'clamp(3.25rem, 5.6vw, 4.875rem)',
+          letterSpacing: '0.012em',
+          lineHeight: '0.94',
+          color: 'var(--shelf-cream, #f2e8d5)',
+          margin: '12px 0 0',
         }}>
           {characterName.toUpperCase()}
         </h1>
 
-        {/* Genre label */}
-        <div style={{ fontSize: '0.8rem', color: 'var(--fp-text)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>
-          {genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+        {/* Spec row */}
+        <div style={{ marginTop: '18px', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', rowGap: '10px' }}>
+          {specs.map((s, i) => (
+            <div key={s.k} style={{
+              padding: i === 0 ? '0 22px 0 0' : '0 22px',
+              borderLeft: i === 0 ? 'none' : '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
+            }}>
+              <div style={{
+                fontSize: '0.69rem', fontWeight: 500, letterSpacing: '0.18em',
+                textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+              }}>
+                {s.k}
+              </div>
+              <div style={{ marginTop: '3px', fontSize: '1.03rem', fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)', whiteSpace: 'nowrap' }}>
+                {s.v}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Price strip — inline beside image at wide viewports.
-            marginTop:auto pins it to bottom of the flex column so it always
-            anchors at image-bottom regardless of how much title text there is.
-            At <=768px fp-hero-grid collapses to 1 col and it stacks below image. */}
-        {valuePricing && (
-          <div style={{ marginTop: 'auto', paddingTop: '1.25rem' }}>
-            <ValueStrip className={valueStripClassName} pricing={valuePricing} />
+        {/* Lore — the character paragraph (KB enrichment; the growth surface) */}
+        {loreText && (
+          <p style={{
+            margin: '16px 0 0', maxWidth: '54ch',
+            fontSize: '1.125rem', fontWeight: 400, lineHeight: 1.7,
+            color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))',
+          }}>
+            {loreText}
+          </p>
+        )}
+
+        {/* THE PLACARD — median, range, confidence, last sale. Quiet by design. */}
+        {p && p.median !== null && (
+          <div style={{
+            marginTop: '24px',
+            border: '1px solid var(--shelf-line-gold, rgba(224,168,62,0.2))',
+            borderRadius: '16px',
+            background: 'linear-gradient(180deg, rgba(224,168,62,0.05), rgba(224,168,62,0.015) 60%, transparent)',
+            padding: '20px 26px 18px',
+            position: 'relative',
+            overflow: 'hidden',
+          }}>
+            {/* thin lit top edge */}
+            <div aria-hidden style={{
+              position: 'absolute', top: 0, left: '10%', right: '10%', height: '1px',
+              background: 'linear-gradient(90deg, transparent, rgba(245,196,98,0.55), transparent)',
+            }} />
+
+            {/* head: label + confidence */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '14px', flexWrap: 'wrap' }}>
+              <div style={{
+                fontSize: '0.63rem', fontWeight: 500, letterSpacing: '0.24em',
+                textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+              }}>
+                Median sold — all solds, any condition
+              </div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px' }}>
+                <span aria-hidden style={{ display: 'inline-flex', alignItems: 'flex-end', gap: '2.5px' }}>
+                  {[5, 8, 11].map((h, i) => (
+                    <span key={i} style={{
+                      width: '3px', height: `${h}px`, borderRadius: '1px', display: 'block',
+                      background: 'var(--shelf-gold, #e0a83e)',
+                      opacity: p.confidence >= (i + 2) ? 1 : 0.25,
+                    }} />
+                  ))}
+                </span>
+                <span style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                  <strong style={{ fontWeight: 500, color: 'var(--shelf-gold-hi, #f5c462)' }}>
+                    {CONFIDENCE_WORD[p.confidence]}
+                  </strong>
+                  {' '}— {p.comp_count} real sold comp{p.comp_count === 1 ? '' : 's'}
+                </span>
+              </div>
+            </div>
+
+            {/* price */}
+            <div style={{
+              marginTop: '4px',
+              fontFamily: 'var(--fp-font-display)', fontWeight: 400,
+              fontSize: 'clamp(2.5rem, 4.2vw, 3.375rem)',
+              lineHeight: 1, letterSpacing: '0.02em',
+              color: 'var(--shelf-gold-hi, #f5c462)',
+              fontVariantNumeric: 'tabular-nums',
+              display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap',
+            }}>
+              ${fmt(p.median)}
+              {trend !== null && Math.abs(trend) >= 1 && (
+                <span style={{
+                  fontFamily: 'var(--fp-font-body)', fontSize: '0.72rem', fontWeight: 500,
+                  letterSpacing: '0.08em',
+                  color: trend > 0 ? 'var(--fp-success, #00C870)' : 'var(--shelf-cream-dim, rgba(242,232,213,0.6))',
+                }}>
+                  {trend > 0 ? '▲' : '▼'} {Math.abs(Math.round(trend))}% 90d
+                </span>
+              )}
+            </div>
+
+            {/* range bar */}
+            {hasRange && (
+              <div style={{ marginTop: '16px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                  <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                    <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.low as number)}</b>
+                    <span style={{
+                      fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
+                      color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
+                    }}>low</span>
+                  </div>
+                  <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                    <span style={{
+                      fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
+                      color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
+                    }}>high</span>
+                    <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.high as number)}</b>
+                  </div>
+                </div>
+                <div style={{ position: 'relative', height: '30px', marginTop: '6px' }}>
+                  <div aria-hidden style={{
+                    position: 'absolute', left: 0, right: 0, top: '50%', height: '1px',
+                    background: 'linear-gradient(90deg, rgba(242,232,213,0.06), rgba(242,232,213,0.18), rgba(242,232,213,0.06))',
+                  }} />
+                  <div aria-hidden style={{ position: 'absolute', top: '50%', left: 0, width: '1px', height: '14px', transform: 'translateY(-50%)', background: 'rgba(242,232,213,0.25)' }} />
+                  <div aria-hidden style={{ position: 'absolute', top: '50%', right: 0, width: '1px', height: '14px', transform: 'translateY(-50%)', background: 'rgba(242,232,213,0.25)' }} />
+                  {(ticks ?? []).map((t, i) => (
+                    <span
+                      key={i}
+                      className="fp-plc-tick"
+                      style={{ left: `${Math.min(98, Math.max(2, t * 100))}%`, animationDelay: `${0.15 + i * 0.035}s` }}
+                      aria-hidden
+                    />
+                  ))}
+                  <span className="fp-plc-med" aria-hidden style={{
+                    position: 'absolute', left: `${medianPos}%`, top: '50%',
+                    width: '2px', height: '24px',
+                    background: 'var(--shelf-gold-hi, #f5c462)', borderRadius: '1px',
+                    boxShadow: '0 0 12px rgba(245,196,98,0.7)',
+                  }} />
+                  <span aria-hidden style={{
+                    position: 'absolute', left: `${medianPos}%`, top: '100%', transform: 'translateX(-50%)',
+                    fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
+                    color: 'var(--shelf-gold, #e0a83e)', whiteSpace: 'nowrap',
+                  }}>
+                    median
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {/* last sale */}
+            {lastSale && (
+              <div style={{
+                marginTop: '22px', paddingTop: '14px',
+                borderTop: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
+                display: 'flex', alignItems: 'center', gap: '12px',
+              }}>
+                <span style={{ fontSize: '0.78rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                  Most recent sale
+                </span>
+                <span aria-hidden style={{
+                  flex: '1 1 auto', borderBottom: '1px dotted rgba(242,232,213,0.18)',
+                  transform: 'translateY(-3px)', minWidth: '20px',
+                }} />
+                <span className="fp-sold-stamp" style={{
+                  fontSize: '0.56rem', fontWeight: 600, letterSpacing: '0.16em',
+                  color: '#1a1206', background: 'var(--shelf-gold, #e0a83e)',
+                  borderRadius: '3px', padding: '3px 7px',
+                }}>
+                  SOLD
+                </span>
+                <span style={{
+                  fontFamily: 'var(--fp-font-display)', fontSize: '1.3rem', letterSpacing: '0.03em',
+                  color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
+                }}>
+                  ${fmt(lastSale.price)}
+                </span>
+              </div>
+            )}
           </div>
         )}
       </div>
