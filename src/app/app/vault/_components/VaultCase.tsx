@@ -179,9 +179,13 @@ function Card({ item, index, onPatch, onRemove }: {
       </div>
       <div
         className="vlt-fig-val"
-        title={item.median != null ? `Median of ${item.comps} real sold comps` : 'No recent sold comps for this figure'}
+        title={item.median != null
+          ? `Median of ${item.comps} real sold comps${item.medianKind !== 'all' ? ` (${item.medianKind} market — matches this item's condition)` : ' (all conditions)'}`
+          : 'No recent sold comps for this figure'}
       >
-        {item.median != null ? <>median ${item.median.toFixed(2)} · </> : <>no recent solds · </>}
+        {item.median != null
+          ? <>{item.medianKind !== 'all' ? `${item.medianKind} ` : ''}median ${item.median.toFixed(2)} · </>
+          : <>no recent solds · </>}
         {editingPaid ? (
           <input
             className="vlt-paid-input"

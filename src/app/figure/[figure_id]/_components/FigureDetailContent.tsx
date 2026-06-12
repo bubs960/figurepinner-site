@@ -35,6 +35,12 @@ const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID ?? '5339147406
 
 // ── API types ──────────────────────────────────────────────────────────────────
 
+/** Per-condition aggregate bucket (matcher's 5/14 aggregation cron). */
+export type CondBucket = {
+  median: number | null; avg: number | null; min: number | null; max: number | null
+  p10: number | null; p90: number | null; count: number
+}
+
 type PriceData = {
   figureId: string
   avgSold: number | null
@@ -53,7 +59,17 @@ type PriceData = {
     condition: string
     sold_date: string
     listing_format: string
+    /** Cron-classified bucket — present after matcher's 6/12 title-fallback deploy. */
+    condition_effective?: 'sealed' | 'loose' | 'unknown'
   }>
+  // Condition split (rendered 6/12 per Steve's critical directive).
+  // GATE ON segmentation, not bucket presence — snapshots ship sealed/loose
+  // objects even under 'pooled' when a bucket is below the >=5-comp
+  // threshold (e.g. CM Punk Elite 1 ships sealed with n=1).
+  sealed?: CondBucket | null
+  loose?: CondBucket | null
+  segmentation?: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
+  conditionInference?: { sealed_from_title: number; loose_from_title: number; overrides: number } | null
 }
 
 // ── Data fetching ──────────────────────────────────────────────────────────────
@@ -64,7 +80,11 @@ type R2Snapshot = {
   figure_id: string; avg_sold: number | null; median_sold: number | null
   min_sold: number | null; max_sold: number | null; sold_count: number
   avg_fs: number | null; fs_count: number; min_fs: number | null
-  recent: Array<{ price: number; title: string; condition: string; sold_date: string; listing_format: string }>
+  recent: Array<{ price: number; title: string; condition: string; sold_date: string; listing_format: string; condition_effective?: 'sealed' | 'loose' | 'unknown' }>
+  sealed?: CondBucket | null
+  loose?: CondBucket | null
+  condition_segmentation?: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
+  condition_inference?: { sealed_from_title: number; loose_from_title: number; overrides: number } | null
 }
 
 function _pctile(sorted: number[], p: number): number {
@@ -118,9 +138,26 @@ export async function fetchFigurePageData(figure_id: string): Promise<{ price: P
       p25Sold: iqr?.p25 ?? null, p75Sold: iqr?.p75 ?? null,
       soldCount: snap.sold_count, avgFS: snap.avg_fs, fsCount: snap.fs_count,
       minFS: snap.min_fs, soldHistory: snap.recent ?? [],
+      sealed: snap.sealed ?? null,
+      loose: snap.loose ?? null,
+      segmentation: snap.condition_segmentation ?? 'pooled',
+      conditionInference: snap.condition_inference ?? null,
     },
     imageUrl: null,
   }
+}
+
+/** Bucket a recent comp the way the aggregation cron does: the cron's own
+ *  condition_effective wins when present (post matcher's 6/12 deploy);
+ *  otherwise eBay's structured condition (New/Open Box → sealed,
+ *  Used/For Parts → loose; blank/other → unknown). */
+function compBucket(c: { condition: string; condition_effective?: string }): 'sealed' | 'loose' | 'unknown' {
+  if (c.condition_effective === 'sealed' || c.condition_effective === 'loose') return c.condition_effective
+  const cond = (c.condition ?? '').toLowerCase()
+  if (!cond) return 'unknown'
+  if (cond.includes('new') || cond.includes('open box')) return 'sealed'
+  if (cond.includes('used') || cond.includes('parts')) return 'loose'
+  return 'unknown'
 }
 
 // ── Main component ─────────────────────────────────────────────────────────────
@@ -152,21 +189,51 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   // ── ValueStrip props ────────────────────────────────────────────────────────
 
+  // ── Condition split (matcher's live aggregation; Steve directive 6/12) ──────
+  // The headline market is the statistically valid bucket per segmentation;
+  // 'pooled' keeps the legacy blended view. Gate on segmentation, never on
+  // bucket presence (buckets ship below-threshold under 'pooled').
+  const segmentation = price?.segmentation ?? 'pooled'
+  const headlineBucket =
+    segmentation === 'split' || segmentation === 'sealed-only' ? (price?.sealed ?? null)
+    : segmentation === 'loose-only' ? (price?.loose ?? null)
+    : null
+  const headlineCondition: 'sealed' | 'loose' | null =
+    headlineBucket == null ? null : (segmentation === 'loose-only' ? 'loose' : 'sealed')
+  const placardConditionLabel =
+    headlineCondition === 'sealed' ? 'sealed / carded'
+    : headlineCondition === 'loose' ? 'loose'
+    : null
+  const placardSecondary =
+    segmentation === 'split' && price?.loose && price.loose.median != null
+      ? { label: 'Loose', median: price.loose.median, count: price.loose.count }
+      : null
+  const inferenceNote = (() => {
+    const inf = price?.conditionInference
+    if (!inf) return null
+    const n = (inf.sealed_from_title ?? 0) + (inf.loose_from_title ?? 0)
+    return n > 0 ? `Includes ${n} comp${n === 1 ? '' : 's'} classified from the listing title.` : null
+  })()
+
   const valuePricing = (() => {
     if (!price || price.soldCount === 0) return null
-    const median = price.medianSold ?? price.avgSold ?? null
-    // P10–P90 range: much less sensitive to outliers than raw min/max.
+    const median = headlineBucket?.median ?? price.medianSold ?? price.avgSold ?? null
+    // P10–P90 range: the headline bucket carries its own percentiles (full
+    // corpus); the blended path keeps the soldHistory-derived range.
     // Requires soldHistory to have prices; falls back to raw min/max if not enough data.
     const sortedPrices = [...price.soldHistory.map(s => s.price)].sort((a, b) => a - b)
-    const low  = sortedPrices.length >= 3 ? _pctile(sortedPrices, 10) : (price.minSold ?? null)
-    const high = sortedPrices.length >= 3 ? _pctile(sortedPrices, 90) : (price.maxSold ?? null)
+    const low = headlineBucket?.p10
+      ?? (sortedPrices.length >= 3 ? _pctile(sortedPrices, 10) : (price.minSold ?? null))
+    const high = headlineBucket?.p90
+      ?? (sortedPrices.length >= 3 ? _pctile(sortedPrices, 90) : (price.maxSold ?? null))
     // Dispersion warning: when the raw spread is >4x the median, comp set likely
     // contains contaminated listings (wrong series, graded lots, wrong figure).
     // Cap displayed confidence at 4 and surface a caveat label.
     const rawSpread = (price.maxSold ?? 0) - (price.minSold ?? 0)
     const dispersionRatio = median && median > 0 ? rawSpread / median : 0
     const dispersionWarning = dispersionRatio > 4
-    const baseConfidence = compCountToConfidence(price.soldCount)
+    const compCount = headlineBucket?.count ?? price.soldCount
+    const baseConfidence = compCountToConfidence(compCount)
     const confidence: 1 | 2 | 3 | 4 | 5 = (dispersionWarning && baseConfidence > 4)
       ? 4
       : baseConfidence
@@ -176,7 +243,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       low,
       high,
       confidence,
-      comp_count:         price.soldCount,
+      comp_count:         compCount,
       dispersion_warning: dispersionWarning,
     }
   })()
@@ -187,7 +254,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     if (!price || !valuePricing || valuePricing.low == null || valuePricing.high == null) return []
     const lo = valuePricing.low, hi = valuePricing.high
     if (hi <= lo) return []
-    return price.soldHistory.slice(0, 30)
+    // When a headline bucket drives the placard, only that bucket's comps
+    // tick the range bar — unbucketable comps stay off an honest bar.
+    const comps = headlineCondition
+      ? price.soldHistory.filter(s => compBucket(s) === headlineCondition)
+      : price.soldHistory
+    return comps.slice(0, 30)
       .map(s => (s.price - lo) / (hi - lo))
       .filter(v => v >= -0.02 && v <= 1.02)
       .map(v => Math.min(1, Math.max(0, v)))
@@ -358,6 +430,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             loreText={local.match_represented ?? null}
             ticks={placardTicks}
             lastSale={lastSale}
+            conditionLabel={placardConditionLabel}
+            secondary={placardSecondary}
+            inferenceNote={inferenceNote}
           />
         </div>
 
@@ -425,6 +500,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 pricing={marketPricing}
                 ebaySearchUrl={ebayUrl}
                 figureName={displayName}
+                buckets={segmentation !== 'pooled' ? {
+                  segmentation,
+                  sealed: price?.sealed ?? null,
+                  loose: price?.loose ?? null,
+                } : null}
               />
             ) : (
               <EmptyState figureName={displayName} ebaySearchUrl={ebayUrl} />

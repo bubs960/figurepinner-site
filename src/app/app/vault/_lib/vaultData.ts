@@ -33,6 +33,9 @@ export type VaultShelfItem = {
   paid: number
   median: number | null
   comps: number
+  /** Which market the median describes: the item's own condition bucket when
+   *  the snapshot's split is statistically valid, else the blended market. */
+  medianKind: 'sealed' | 'loose' | 'all'
 }
 
 export type HuntItem = {
@@ -93,16 +96,52 @@ function resolveDisplay(fid: string, storedName: string | null, storedLine: stri
   }
 }
 
-type Snapshot = { median: number | null; comps: number }
+type CondBucket = { median: number | null; count: number }
+type Snapshot = {
+  median: number | null
+  comps: number
+  sealed: CondBucket | null
+  loose: CondBucket | null
+  segmentation: string
+}
 
 async function fetchSnapshot(fid: string): Promise<Snapshot> {
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`,
     { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
   ).catch(() => null)
-  if (!res?.ok) return { median: null, comps: 0 }
-  const snap = await res.json() as { median_sold: number | null; avg_sold: number | null; sold_count: number }
-  return { median: snap.median_sold ?? snap.avg_sold ?? null, comps: snap.sold_count ?? 0 }
+  if (!res?.ok) return { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled' }
+  const snap = await res.json() as {
+    median_sold: number | null; avg_sold: number | null; sold_count: number
+    sealed?: CondBucket | null; loose?: CondBucket | null; condition_segmentation?: string
+  }
+  return {
+    median: snap.median_sold ?? snap.avg_sold ?? null,
+    comps: snap.sold_count ?? 0,
+    sealed: snap.sealed ?? null,
+    loose: snap.loose ?? null,
+    segmentation: snap.condition_segmentation ?? 'pooled',
+  }
+}
+
+/** The median that matches the item's own condition — sealed bucket for MOC,
+ *  loose bucket for Loose/Opened/Damaged — but ONLY when the snapshot's
+ *  segmentation says that bucket is statistically valid (gate on
+ *  segmentation, not bucket presence: below-threshold buckets ship under
+ *  'pooled'). Near Mint is ambiguous (carded-NM vs loose-NM) → blended. */
+function conditionMatchedMedian(s: Snapshot | undefined, condition: string): {
+  median: number | null; comps: number; medianKind: 'sealed' | 'loose' | 'all'
+} {
+  if (!s) return { median: null, comps: 0, medianKind: 'all' }
+  const sealedValid = (s.segmentation === 'split' || s.segmentation === 'sealed-only') && s.sealed?.median != null
+  const looseValid = (s.segmentation === 'split' || s.segmentation === 'loose-only') && s.loose?.median != null
+  if (condition === 'MOC' && sealedValid) {
+    return { median: s.sealed!.median, comps: s.sealed!.count, medianKind: 'sealed' }
+  }
+  if ((condition === 'Loose' || condition === 'Opened' || condition === 'Damaged') && looseValid) {
+    return { median: s.loose!.median, comps: s.loose!.count, medianKind: 'loose' }
+  }
+  return { median: s.median, comps: s.comps, medianKind: 'all' }
 }
 
 export async function getVaultShelfData(userId: string): Promise<VaultShelfData> {
@@ -137,15 +176,15 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
 
   const items: VaultShelfItem[] = vaultRows.map(r => {
     const d = resolveDisplay(r.figure_id, r.name, r.line)
-    const s = snaps.get(r.figure_id)
+    const condition = r.condition ?? 'Loose'
+    const matched = conditionMatchedMedian(snaps.get(r.figure_id), condition)
     return {
       rowId: r.id,
       fid: r.figure_id,
       ...d,
-      condition: r.condition ?? 'Loose',
+      condition,
       paid: r.paid ?? 0,
-      median: s?.median ?? null,
-      comps: s?.comps ?? 0,
+      ...matched,
     }
   })
 

@@ -36,6 +36,13 @@ interface HeroBandProps {
   ticks?: number[]
   /** Most recent individual sale, if known. */
   lastSale?: { price: number } | null
+  /** Names the headline market when the condition split is statistically
+   *  valid ("sealed / carded" | "loose"); null keeps the legacy blended label. */
+  conditionLabel?: string | null
+  /** The split's other bucket — a quiet ledger row under the price. */
+  secondary?: { label: string; median: number; count: number } | null
+  /** Honesty footnote, e.g. "Includes N comps classified from the listing title." */
+  inferenceNote?: string | null
 }
 
 const RARITY_CONFIG = {
@@ -56,6 +63,7 @@ export default function HeroBand({
   imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
   valuePricing, loreText, ticks, lastSale,
+  conditionLabel, secondary, inferenceNote,
 }: HeroBandProps) {
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
   const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
@@ -284,7 +292,7 @@ export default function HeroBand({
                 fontSize: '0.63rem', fontWeight: 500, letterSpacing: '0.24em',
                 textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
               }}>
-                Median sold — all solds, any condition
+                Median sold — {conditionLabel ?? 'all solds, any condition'}
               </div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px' }}>
                 <span aria-hidden style={{ display: 'inline-flex', alignItems: 'flex-end', gap: '2.5px' }}>
@@ -326,6 +334,29 @@ export default function HeroBand({
                 </span>
               )}
             </div>
+
+            {/* the split's other market — quiet hairline ledger row */}
+            {secondary && (
+              <div style={{
+                marginTop: '10px', display: 'flex', alignItems: 'baseline', gap: '10px',
+              }}>
+                <span style={{
+                  fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.2em',
+                  textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+                }}>
+                  {secondary.label}
+                </span>
+                <span style={{
+                  fontFamily: 'var(--fp-font-display)', fontSize: '1.35rem', letterSpacing: '0.03em',
+                  color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
+                }}>
+                  ${fmt(secondary.median)}
+                </span>
+                <span style={{ fontSize: '0.68rem', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))' }}>
+                  {secondary.count} comp{secondary.count === 1 ? '' : 's'}
+                </span>
+              </div>
+            )}
 
             {/* range bar */}
             {hasRange && (
@@ -405,6 +436,17 @@ export default function HeroBand({
                 }}>
                   ${fmt(lastSale.price)}
                 </span>
+              </div>
+            )}
+
+            {/* honesty footnote — only after matcher's title-fallback cron deploy */}
+            {inferenceNote && (
+              <div style={{
+                marginTop: '10px',
+                fontSize: '0.62rem', fontWeight: 400, letterSpacing: '0.04em',
+                color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+              }}>
+                {inferenceNote}
               </div>
             )}
           </div>

@@ -26,10 +26,20 @@ interface Pricing {
   recent_comps: Comp[]
 }
 
+/** Full-corpus condition buckets from the price snapshot — when present
+ *  (segmentation != 'pooled') they replace the local 30-comp approximation
+ *  so this panel can never contradict the placard above it. */
+interface SnapshotBuckets {
+  segmentation: 'split' | 'sealed-only' | 'loose-only'
+  sealed: { median: number | null; count: number } | null
+  loose: { median: number | null; count: number } | null
+}
+
 interface MarketPanelProps {
   pricing: Pricing | null
   ebaySearchUrl: string
   figureName: string
+  buckets?: SnapshotBuckets | null
 }
 
 // New vs Used, in eBay's own language (Steve's call 2026-06-06).
@@ -56,19 +66,28 @@ function median(arr: number[]): number {
 const MIN_SPLIT_COMPS = 3
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName }: MarketPanelProps) {
+export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName, buckets: snapshotBuckets }: MarketPanelProps) {
   if (!pricing || pricing.comp_count < 1) return null
 
   const comps = pricing.recent_comps
   if (!comps.length) return null
 
-  const buckets: Record<'new' | 'used', number[]> = { new: [], used: [] }
-  for (const c of comps) buckets[normalizeCondition(c.condition)].push(c.price)
+  // Snapshot buckets win: full-corpus medians, same numbers as the placard.
+  const sealedRow = snapshotBuckets?.sealed && snapshotBuckets.sealed.median != null
+    ? { median: snapshotBuckets.sealed.median, count: snapshotBuckets.sealed.count }
+    : null
+  const looseRow = snapshotBuckets?.loose && snapshotBuckets.loose.median != null
+    ? { median: snapshotBuckets.loose.median, count: snapshotBuckets.loose.count }
+    : null
+  const useSnapshot = Boolean(sealedRow || looseRow)
+
+  const localBuckets: Record<'new' | 'used', number[]> = { new: [], used: [] }
+  for (const c of comps) localBuckets[normalizeCondition(c.condition)].push(c.price)
 
   // Only surface a condition median when it has ≥3 real sales — below that a
   // single anomalous sale would misrepresent the condition's market.
-  const showNew  = buckets.new.length  >= MIN_SPLIT_COMPS
-  const showUsed = buckets.used.length >= MIN_SPLIT_COMPS
+  const showNew  = !useSnapshot && localBuckets.new.length  >= MIN_SPLIT_COMPS
+  const showUsed = !useSnapshot && localBuckets.used.length >= MIN_SPLIT_COMPS
 
   return (
     <section>
@@ -104,27 +123,33 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         </div>
       </div>
 
-      {/* New vs Used median ledger rows. Each shows only with ≥3 tagged sales;
-          the overall median (in the ValueStrip above) remains the anchor number. */}
+      {/* Condition median ledger rows. Snapshot buckets (full corpus, same
+          source as the placard) when the split is statistically valid;
+          otherwise the legacy local approximation from the recent comps. */}
       <div>
+        {sealedRow && (
+          <LedgerRow label="Sealed / Carded" median={sealedRow.median} count={sealedRow.count} />
+        )}
+        {looseRow && (
+          <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} />
+        )}
         {showNew && (
-          <LedgerRow label="New" prices={buckets.new} />
+          <LedgerRow label="New" median={median(localBuckets.new)} count={localBuckets.new.length} />
         )}
         {showUsed && (
-          <LedgerRow label="Used" prices={buckets.used} />
+          <LedgerRow label="Used" median={median(localBuckets.used)} count={localBuckets.used.length} />
         )}
-        {!showNew && !showUsed && (
+        {!useSnapshot && !showNew && !showUsed && (
           // Not enough tagged sales in either bucket to split honestly — show the
           // blended median so the panel still says something true.
-          <LedgerRow label="All" prices={comps.map(c => c.price)} />
+          <LedgerRow label="All" median={median(comps.map(c => c.price))} count={comps.length} />
         )}
       </div>
     </section>
   )
 }
 
-function LedgerRow({ label, prices }: { label: string; prices: number[] }) {
-  const med = median(prices)
+function LedgerRow({ label, median: med, count }: { label: string; median: number; count: number }) {
   return (
     <div
       className="fp-marketledger-row"
@@ -163,7 +188,7 @@ function LedgerRow({ label, prices }: { label: string; prices: number[] }) {
         whiteSpace: 'nowrap',
         fontVariantNumeric: 'tabular-nums',
       }}>
-        {prices.length} sold
+        {count} sold
       </span>
 
       {/* median price — display font, modest size (numbers support, never shout) */}
