@@ -30,6 +30,12 @@ export default function AppShell({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  // The Vault wears the shelf design full-bleed (own nav, no sidebar) —
+  // S22 port. Other /app surfaces keep the dashboard shell until ported.
+  if (pathname?.startsWith('/app/vault')) {
+    return <>{children}</>
+  }
+
   return (
     <>
       {/* Responsive layout styles */}
