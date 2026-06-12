@@ -1,132 +1,94 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { prettyFigureUrl, type KBFigure } from '@/data/kb'
-import { figuresForGenre, groupAndSortLines, toFigureRow, cardName, MAX_PER_LINE } from '@/lib/genreFigures'
+import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kb'
+import { figuresForGenre, groupAndSortLines, cardName } from '@/lib/genreFigures'
+import { GENRE_TAXONOMY, type LineTile } from '@/data/genre-lines'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { thumb } from '@/lib/imageUrl'
 import AdSlot from '@/app/components/AdSlot'
-import GenreLineAccordion, { type LineData } from './_components/GenreLineAccordion'
+import HeroSearch from '@/app/components/HeroSearch'
+import ShelfCase, { type ShelfFigure } from '@/app/components/ShelfCase'
+import ScrollReveal from '@/app/components/ScrollReveal'
 import SiteHeader from '@/app/components/SiteHeader'
 
-// ── Genre config ──────────────────────────────────────────────────────────────
+// ── Genre config (SEO copy only — visuals are the shared shelf design) ───────
 
-const GENRE_META: Record<string, {
-  label: string
-  description: string
-  accent: string       // CSS color for genre-specific accent
-  highlights: string[] // 3 notable product lines or facts
-}> = {
+const GENRE_META: Record<string, { label: string; description: string }> = {
   'wrestling': {
     label: 'Wrestling',
     description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 8,000+ figures.',
-    accent: '#e53238',
-    highlights: ['Mattel Elite', 'Jakks Pacific', 'Hasbro WWF'],
   },
   'marvel': {
     label: 'Marvel',
     description: 'Marvel Legends, Spider-Man, and Marvel action figure prices. Track Hasbro and ToyBiz values across your collection.',
-    accent: '#e23636',
-    highlights: ['Marvel Legends', 'ToyBiz Classics', 'Spider-Man'],
   },
   'star-wars': {
     label: 'Star Wars',
     description: 'Star Wars action figure prices. Black Series, Vintage Collection, Power of the Force values with real eBay sold data.',
-    accent: '#3d7bca',
-    highlights: ['Black Series', 'Vintage Collection', 'Power of the Force'],
   },
   'dc': {
     label: 'DC',
     description: 'DC action figure prices. McFarlane, DC Direct, DC Universe Classics values with real eBay sold data.',
-    accent: '#3a6fbf',
-    highlights: ['McFarlane Toys', 'DC Universe Classics', 'DC Direct'],
   },
   'transformers': {
     label: 'Transformers',
     description: 'Transformers action figure prices. Masterpiece, Studio Series, Generations values with real eBay sold data.',
-    accent: '#c44f0e',
-    highlights: ['Masterpiece', 'Studio Series', 'Generations'],
   },
   'gijoe': {
     label: 'G.I. Joe',
     description: 'G.I. Joe action figure prices. Classified Series, vintage values with real eBay sold data.',
-    accent: '#2e7d32',
-    highlights: ['Classified Series', 'A Real American Hero', 'Sigma 6'],
   },
   'masters-of-the-universe': {
     label: 'Masters of the Universe',
     description: 'Masters of the Universe action figure prices. Origins, Masterverse, vintage MOTU values.',
-    accent: '#b8860b',
-    highlights: ['Masterverse', 'Origins', 'Vintage MOTU'],
   },
   'teenage-mutant-ninja-turtles': {
     label: 'TMNT',
     description: 'Teenage Mutant Ninja Turtles action figure prices. NECA, Playmates, Super7 values with real eBay sold data.',
-    accent: '#2e7d32',
-    highlights: ['NECA Ultimate', 'Playmates Vintage', 'Super7 ReAction'],
   },
   'power-rangers': {
     label: 'Power Rangers',
     description: 'Power Rangers action figure prices. Lightning Collection, vintage values with real eBay sold data.',
-    accent: '#d32f2f',
-    highlights: ['Lightning Collection', 'Vintage Bandai', 'Legacy'],
   },
   'indiana-jones': {
     label: 'Indiana Jones',
     description: 'Indiana Jones action figure prices. Adventure Series values with real eBay sold data.',
-    accent: '#8d6e63',
-    highlights: ['Adventure Series', 'Vintage Kenner'],
   },
   'ghostbusters': {
     label: 'Ghostbusters',
     description: 'Ghostbusters action figure prices. Plasma Series, vintage values with real eBay sold data.',
-    accent: '#5e35b1',
-    highlights: ['Plasma Series', 'Kenner Real Ghostbusters', 'Afterlife'],
   },
   'mythic-legions': {
     label: 'Mythic Legions',
     description: 'Mythic Legions action figure prices. Four Horsemen values with real eBay sold data.',
-    accent: '#7b5e3a',
-    highlights: ['Four Horsemen', 'Advent of Decay', 'Necronominus'],
   },
   'thundercats': {
     label: 'Thundercats',
     description: 'Thundercats action figure prices. Super7, LJN vintage values with real eBay sold data.',
-    accent: '#f57c00',
-    highlights: ['Super7 Ultimates', 'LJN Vintage', 'Bandai'],
   },
   'action-force': {
     label: 'Action Force',
     description: 'Action Force action figure prices. Values with real eBay sold data.',
-    accent: '#455a64',
-    highlights: ['Action Force'],
   },
   'dungeons-dragons': {
     label: 'Dungeons & Dragons',
     description: 'Dungeons & Dragons action figure prices. Golden Archive, vintage values with real eBay sold data.',
-    accent: '#6a1b9a',
-    highlights: ['Golden Archive', 'LJN Vintage', 'Hasbro'],
   },
   'neca': {
     label: 'Horror & Film',
     description: 'NECA Horror & Film action figure prices. Ultimate figures, vintage values with real eBay sold data.',
-    accent: '#b71c1c',
-    highlights: ['NECA Ultimate', 'Retro', 'Toony Terrors'],
   },
   'spawn': {
     label: 'Spawn',
     description: 'Spawn action figure prices. McFarlane Toys Spawn series values with real eBay sold data.',
-    accent: '#37474f',
-    highlights: ['McFarlane Series 1–35', 'Deluxe', 'Ultra-Action'],
   },
 }
-
-
 
 export const revalidate = 3600
 
 export function generateStaticParams() {
   return Object.keys(GENRE_META).map(genre => ({ genre }))
 }
-
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
@@ -151,28 +113,104 @@ export async function generateMetadata(
   }
 }
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
+// ── Data assembly (all computed from the KB at build — drift-proof) ──────────
 
+/** KB catch-all buckets that shouldn't headline the registry. They still get
+ *  a row in the "more lines" list so everything stays reachable. */
+const CATCH_ALL_LINES = new Set(['general', 'misc', 'unknown'])
+const REGISTRY_ROWS = 10
 
-function formatLineName(slug: string): string {
-  return prettifySlug(slug) // shared override-aware caser (W2)
+type RegistryRow = {
+  slug: string
+  name: string
+  maker: string | null
+  years: string
+  count: number
+  thumbs: string[]
 }
 
+type MoreLine = { slug: string; name: string; count: number }
 
-/** Build LineData[] from raw KB figures — server-only. Only the first
- *  (default-open) line ships its figure rows; the accordion fetches the
- *  rest from /api/genre-line-figures on open (S20 payload cut — before
- *  this, /wrestling pushed 2,115 cards through the flight payload). */
-function buildLineData(figures: KBFigure[]) {
+function buildHub(genre: string, figures: KBFigure[]) {
   const groups = groupAndSortLines(figures)
-  const lines: LineData[] = groups.map(([slug, group], i) => ({
-    slug,
-    displayName: formatLineName(slug),
-    totalCount:  group.length,
-    figureCount: Math.min(group.length, MAX_PER_LINE),
-    figures:     i === 0 ? group.slice(0, MAX_PER_LINE).map(toFigureRow) : null,
-  }))
-  return { lines, groups, totalCount: figures.length }
+
+  // Editorial overlay (names that deserve better casing + era labels) — same
+  // validated source the homepage taxonomy uses. Keyed by product_line slug.
+  const tab = GENRE_TAXONOMY.find(t => t.slug === genre)
+  const editorial = new Map<string, LineTile>((tab?.lines ?? []).map(l => [l.slug, l]))
+
+  const headline = groups.filter(([slug]) => !CATCH_ALL_LINES.has(slug))
+  const top = headline.slice(0, REGISTRY_ROWS)
+  const topSlugs = new Set(top.map(([slug]) => slug))
+
+  const registry: RegistryRow[] = top.map(([slug, group]) => {
+    const ed = editorial.get(slug)
+    const name = ed?.name ?? prettifySlug(slug)
+
+    // Dominant manufacturer for the line; hidden when the line name already
+    // carries it (e.g. "WCW Toy Biz").
+    const byMfr = new Map<string, number>()
+    for (const f of group) byMfr.set(f.manufacturer, (byMfr.get(f.manufacturer) ?? 0) + 1)
+    const topMfr = [...byMfr.entries()].sort((a, b) => b[1] - a[1])[0]?.[0]
+    const makerName = topMfr ? prettifySlug(topMfr) : null
+    const maker = makerName && !name.toLowerCase().includes(makerName.toLowerCase().split(' ')[0])
+      ? makerName
+      : null
+
+    const thumbs: string[] = []
+    for (const f of group) {
+      if (thumbs.length >= 4) break
+      if (!f.canonical_image_url) continue
+      const t = thumb(f.canonical_image_url, 96)
+      if (t) thumbs.push(t)
+    }
+
+    return { slug, name, maker, years: ed?.years ?? '', count: group.length, thumbs }
+  })
+
+  const more: MoreLine[] = groups
+    .filter(([slug]) => !topSlugs.has(slug))
+    .map(([slug, group]) => ({ slug, name: prettifySlug(slug), count: group.length }))
+
+  // The case: one representative figure per top line (newest wave with a
+  // photo), two shelves of five. Entries without an image are skipped, so
+  // the case can never ship broken mounts.
+  const shelf: ShelfFigure[] = []
+  for (const [slug, group] of headline) {
+    if (shelf.length >= 10) break
+    const lineName = editorial.get(slug)?.name ?? prettifySlug(slug)
+    const f = group.find(g => g.canonical_image_url)
+    if (!f) continue
+    shelf.push({
+      fid: f.figure_id,
+      href: figureUrl(f),
+      name: cardName(f),
+      tag: lineName,
+      img: thumb(f.canonical_image_url!, 225) ?? f.canonical_image_url!,
+    })
+  }
+  // Thin genres: top up with a second figure per deep line.
+  if (shelf.length < 10) {
+    const have = new Set(shelf.map(s => s.fid))
+    for (const [slug, group] of headline) {
+      if (shelf.length >= 10) break
+      const lineName = editorial.get(slug)?.name ?? prettifySlug(slug)
+      for (const f of group) {
+        if (shelf.length >= 10) break
+        if (!f.canonical_image_url || have.has(f.figure_id)) continue
+        have.add(f.figure_id)
+        shelf.push({
+          fid: f.figure_id,
+          href: figureUrl(f),
+          name: cardName(f),
+          tag: lineName,
+          img: thumb(f.canonical_image_url, 225) ?? f.canonical_image_url,
+        })
+      }
+    }
+  }
+
+  return { groups, registry, more, shelf, totalLines: groups.length }
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -187,10 +225,13 @@ export default async function GenrePage(
   const figures = figuresForGenre(genre)
   if (!figures.length) notFound()
 
-  const { lines, groups, totalCount: totalFigures } = buildLineData(figures)
-  const totalLines = lines.length
+  const { groups, registry, more, shelf, totalLines } = buildHub(genre, figures)
+  const totalFigures = figures.length
+  const hunting = shelf.slice(0, 3)
+  const aisle = meta.label.toLowerCase()
 
-  // JSON-LD structured data
+  // JSON-LD structured data (unchanged from the pre-port page — figure URLs
+  // from the five deepest lines).
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -209,149 +250,492 @@ export default async function GenrePage(
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
+    <div className="fph fpg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
-      {/* Genre accent color override */}
       <style>{`
-        :root { --genre-accent: ${meta.accent}; }
-        .genre-tag { background: color-mix(in srgb, ${meta.accent} 15%, var(--s2)); border-color: color-mix(in srgb, ${meta.accent} 30%, var(--border)); color: ${meta.accent}; }
+        .fph {
+          --fph-cream: #f2e8d5;
+          --fph-cream-dim: rgba(242,232,213,.60);
+          --fph-cream-mut: rgba(242,232,213,.38);
+          --fph-gold: #e0a83e;
+          --fph-gold-hi: #f5c462;
+          --fph-gold-mut: rgba(224,168,62,.72);
+          --fph-hair: rgba(242,232,213,.10);
+          --fph-line: rgba(242,232,213,.07);
+          --fph-mount: linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);
+          background: #09090f;
+          color: #EEEEF5;
+          font-family: var(--font-body, var(--fp-font-body, system-ui));
+          min-height: 100vh;
+          overflow-x: hidden;
+        }
+        .fph ::selection { background: var(--fph-gold); color: #1a1206; }
+        .fph .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+        .fph-seam { position: relative; }
+        .fph-seam::before {
+          content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+          width: min(1140px, 94%); height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(242,232,213,.13) 28%, rgba(224,168,62,.20) 50%, rgba(242,232,213,.13) 72%, transparent);
+        }
+        [data-fph-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1); }
+        [data-fph-reveal].in { opacity: 1; transform: none; }
+
+        /* ── masthead ── */
+        .fpg-mast {
+          position: relative; padding: 32px 0 44px; overflow: hidden;
+          background:
+            radial-gradient(900px 520px at 80% -10%, rgba(224,168,62,.085), transparent 64%),
+            radial-gradient(640px 460px at -8% 100%, rgba(0,102,255,.05), transparent 60%),
+            #09090f;
+        }
+        .fpg-mast-grid { display: grid; grid-template-columns: 1fr 1.06fr; gap: 60px; align-items: center; }
+        .fpg-mast-grid > * { min-width: 0; }
+        .fpg-eyebrow {
+          font-size: 12px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase;
+          color: var(--fph-gold); display: inline-flex; align-items: center; gap: 11px;
+        }
+        .fpg-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--fph-gold); opacity: .65; }
+        .fpg h1 {
+          margin: 10px 0 0; font-family: var(--fp-font-display); font-weight: 400;
+          font-size: clamp(56px, 7vw, 100px); line-height: .92; letter-spacing: .015em;
+          color: #EEEEF5; text-wrap: balance;
+        }
+        .fpg-mast-sub { margin-top: 18px; max-width: 500px; font-size: 16.5px; line-height: 1.7; font-weight: 300; color: var(--fph-cream-dim); }
+        .fpg-mast-sub strong { color: var(--fph-cream); font-weight: 500; }
+        .fpg-mast-search { margin-top: 26px; max-width: 500px; }
+        .fpg-mast-search button {
+          background: linear-gradient(180deg, #f5c462, #e0a83e) !important;
+          color: #1a1206 !important;
+        }
+        .fpg-mast-search input {
+          border-color: rgba(242,232,213,.13) !important;
+          background: rgba(242,232,213,.04) !important;
+        }
+        .fpg-mast-search input:focus {
+          border-color: rgba(224,168,62,.55) !important;
+          box-shadow: 0 0 0 3px rgba(224,168,62,.10) !important;
+        }
+        .fpg-hints { margin-top: 13px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+        .fpg-hints span { font-size: 11.5px; font-weight: 300; color: var(--fph-cream-mut); margin-right: 2px; letter-spacing: .02em; }
+        .fpg-chip {
+          font-size: 11.5px; font-weight: 400; letter-spacing: .03em; color: var(--fph-cream-dim);
+          border: 1px solid rgba(242,232,213,.12); border-radius: 99px;
+          padding: 4px 12px; text-decoration: none;
+          transition: color .2s, border-color .2s, background .2s;
+        }
+        .fpg-chip:hover { color: var(--fph-gold-hi); border-color: rgba(224,168,62,.45); background: rgba(224,168,62,.05); }
+
+        /* ── the case (markup in ShelfCase — same skin as the homepage) ── */
+        .fph-case {
+          --mx: 50%; --my: 30%;
+          position: relative; border-radius: 18px; padding: 38px 26px 22px;
+          background:
+            radial-gradient(130% 95% at 50% -5%, rgba(224,168,62,.10), transparent 56%),
+            linear-gradient(180deg, rgba(242,232,213,.030), rgba(242,232,213,.012) 45%, rgba(0,0,0,.10) 100%);
+          border: 1px solid var(--fph-hair);
+          box-shadow: inset 0 1px 0 rgba(255,244,216,.08), inset 0 0 70px rgba(224,168,62,.045), 0 26px 70px rgba(0,0,0,.42);
+          overflow: hidden;
+        }
+        .fph-case::before {
+          content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+          background: radial-gradient(260px circle at var(--mx) var(--my), rgba(255,216,140,.12), transparent 62%);
+          opacity: 0; transition: opacity .5s;
+        }
+        .fph-case.manual::before { opacity: 1; }
+        .fph-case::after {
+          content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 2px; z-index: 2;
+          background: linear-gradient(90deg, transparent, rgba(245,196,98,.75), transparent);
+          box-shadow: 0 0 18px 3px rgba(245,196,98,.28); border-radius: 0 0 3px 3px;
+        }
+        .fph-case-light {
+          position: absolute; left: 50%; top: 42%; width: 1px; height: 1px; z-index: 3;
+          pointer-events: none; opacity: 1; transition: opacity .6s;
+          animation: fph-driftX 12s ease-in-out infinite alternate;
+        }
+        .fph-case-light i {
+          display: block; width: 560px; height: 560px; margin: -280px 0 0 -280px; border-radius: 50%;
+          background: radial-gradient(circle, rgba(255,216,140,.11), transparent 60%);
+          animation: fph-driftY 6s ease-in-out infinite alternate;
+        }
+        .fph-case.manual .fph-case-light { opacity: 0; }
+        @keyframes fph-driftX { from { transform: translateX(-170px); } to { transform: translateX(170px); } }
+        @keyframes fph-driftY { from { transform: translateY(-80px); } to { transform: translateY(80px); } }
+        .fph-case-sweep { position: absolute; inset: 0; z-index: 4; pointer-events: none; overflow: hidden; border-radius: 18px; }
+        .fph-case-sweep::before {
+          content: ''; position: absolute; top: -25%; bottom: -25%; left: 0; width: 32%;
+          background: linear-gradient(100deg, transparent, rgba(255,236,194,.05) 32%, rgba(255,236,194,.12) 50%, rgba(255,236,194,.05) 68%, transparent);
+          transform: translateX(-130%) skewX(-18deg);
+          animation: fph-sweep 8s linear infinite;
+        }
+        @keyframes fph-sweep { 0% { transform: translateX(-130%) skewX(-18deg); } 24% { transform: translateX(480%) skewX(-18deg); } 100% { transform: translateX(480%) skewX(-18deg); } }
+        .fph-case-label {
+          position: absolute; top: 15px; left: 28px; z-index: 5;
+          font-size: 10px; font-weight: 400; letter-spacing: .26em; text-transform: uppercase;
+          color: rgba(242,232,213,.36);
+        }
+        .fph-shelf { position: relative; padding: 0 6px 14px; margin-bottom: 30px; }
+        .fph-shelf:last-of-type { margin-bottom: 6px; }
+        .fph-shelf::after {
+          content: ''; position: absolute; left: -10px; right: -10px; bottom: 0; height: 3px; border-radius: 2px;
+          background: linear-gradient(180deg, rgba(255,236,194,.34), rgba(255,236,194,.06));
+          box-shadow: 0 1px 0 rgba(255,244,216,.10), 0 10px 18px rgba(0,0,0,.38), 0 0 10px rgba(255,236,194,.10);
+        }
+        .fph-shelf-row { display: flex; gap: 14px; align-items: flex-end; position: relative; z-index: 1; }
+        .fph-fig { flex: 1 1 0; min-width: 0; text-decoration: none; position: relative; padding-bottom: 9px; animation: fph-breathe 4.2s ease-in-out infinite alternate; }
+        @keyframes fph-breathe { from { transform: translateY(0); } to { transform: translateY(-2px); } }
+        .fph-shelf-row .fph-fig:nth-child(1) { animation-delay: -.2s; }
+        .fph-shelf-row .fph-fig:nth-child(2) { animation-delay: -1.4s; animation-duration: 3.8s; }
+        .fph-shelf-row .fph-fig:nth-child(3) { animation-delay: -2.7s; }
+        .fph-shelf-row .fph-fig:nth-child(4) { animation-delay: -.8s; animation-duration: 4.6s; }
+        .fph-shelf-row .fph-fig:nth-child(5) { animation-delay: -2s; animation-duration: 3.9s; }
+        .fph-fig:hover { animation-play-state: paused; }
+        .fph-mount {
+          position: relative; background: var(--fph-mount); border-radius: 6px 6px 3px 3px; padding: 5px 5px 6px;
+          box-shadow: 0 10px 18px rgba(0,0,0,.42), 0 2px 4px rgba(0,0,0,.38);
+          transition: transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s;
+        }
+        .fph-mount::after {
+          content: ''; position: absolute; inset: -2px; border-radius: 8px 8px 5px 5px;
+          border: 1px solid var(--fph-gold);
+          box-shadow: 0 0 24px rgba(224,168,62,.45), inset 0 0 14px rgba(224,168,62,.15);
+          opacity: 0; transition: opacity .45s; pointer-events: none;
+        }
+        .fph-mount img { width: 100%; aspect-ratio: 4/4.4; object-fit: cover; border-radius: 3px; background: #e9e0cd; display: block; }
+        .fph-fig:hover .fph-mount { transform: translateY(-9px) rotate(-1.4deg); box-shadow: 0 24px 34px rgba(0,0,0,.55), 0 0 0 1px rgba(224,168,62,.5), 0 0 24px rgba(224,168,62,.16); }
+        .fph-fig.pinned .fph-mount { box-shadow: 0 10px 18px rgba(0,0,0,.42), 0 0 0 1px var(--fph-gold), 0 0 20px rgba(224,168,62,.24); }
+        .fph-fig.demo .fph-mount { transform: translateY(-6px); }
+        .fph-fig.demo .fph-mount::after { opacity: 1; }
+        .fph-fig-name { margin-top: 9px; font-size: 11.5px; font-weight: 500; color: var(--fph-cream); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .fph-fig-tag { margin-top: 2px; font-size: 9.5px; font-weight: 400; letter-spacing: .11em; text-transform: uppercase; color: var(--fph-cream-mut); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .fph-fig-tag.sold { color: var(--fph-gold-hi); }
+        .fph-pin-btn {
+          position: absolute; top: -11px; right: -9px; z-index: 5;
+          width: 28px; height: 28px; border-radius: 50%; border: none; cursor: pointer;
+          background: linear-gradient(180deg, var(--fph-gold-hi), var(--fph-gold));
+          color: #1a1206; display: flex; align-items: center; justify-content: center;
+          opacity: 0; transform: scale(.55) rotate(-12deg);
+          transition: opacity .25s, transform .3s cubic-bezier(.34,1.56,.64,1);
+          box-shadow: 0 4px 11px rgba(0,0,0,.45);
+        }
+        .fph-pin-btn svg { width: 13px; height: 13px; }
+        .fph-fig:hover .fph-pin-btn, .fph-fig.pinned .fph-pin-btn { opacity: 1; transform: scale(1) rotate(0deg); }
+        .fph-fig.demo .fph-pin-btn { opacity: 1; animation: fph-pinDrop .55s cubic-bezier(.34,1.56,.64,1) both; }
+        @keyframes fph-pinDrop {
+          0% { transform: translateY(-18px) scale(1.4) rotate(-20deg); opacity: 0; }
+          60% { transform: translateY(1px) scale(.94) rotate(4deg); opacity: 1; }
+          100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+        }
+        .fph-fig.pinned .fph-pin-btn { background: linear-gradient(180deg, #fff0d0, var(--fph-gold-hi)); box-shadow: 0 4px 11px rgba(0,0,0,.45), 0 0 13px rgba(224,168,62,.65); }
+        .fph-tray {
+          margin-top: 18px; display: flex; align-items: center; gap: 12px;
+          border: 1px dashed rgba(224,168,62,.32); border-radius: 99px;
+          padding: 8px 18px; min-height: 48px; background: rgba(224,168,62,.03);
+          transition: border-color .3s, background .3s;
+        }
+        .fph-tray.active { border-style: solid; border-color: rgba(224,168,62,.5); background: rgba(224,168,62,.06); }
+        .fph-tray-pin { flex: 0 0 auto; color: var(--fph-gold); width: 16px; height: 16px; }
+        .fph-tray-thumbs { display: flex; flex: 0 0 auto; transition: opacity .45s; }
+        .fph-tray-thumbs.clearing { opacity: 0; }
+        .fph-tray-thumbs img {
+          width: 28px; height: 28px; border-radius: 50%; object-fit: cover;
+          border: 1.5px solid #2a2008; margin-left: -9px; background: #efe5d0;
+          animation: fph-thumbIn .35s cubic-bezier(.34,1.56,.64,1) both;
+        }
+        .fph-tray-thumbs img:first-child { margin-left: 0; }
+        @keyframes fph-thumbIn { from { transform: scale(.3); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .fph-tray-text { font-size: 12.5px; font-weight: 300; color: var(--fph-cream-dim); line-height: 1.45; }
+        .fph-tray-text strong { color: var(--fph-cream); font-weight: 500; }
+        .fph-tray-cta {
+          margin-left: auto; flex: 0 0 auto; font-size: 12.5px; font-weight: 500;
+          color: var(--fph-gold-hi); text-decoration: none; white-space: nowrap;
+          border-bottom: 1px solid rgba(224,168,62,.35); transition: border-color .2s; display: none;
+        }
+        .fph-tray-cta:hover { border-color: var(--fph-gold-hi); }
+        .fph-tray.active .fph-tray-cta { display: inline; }
+        .fph-fly-thumb {
+          position: fixed; z-index: 90; pointer-events: none; object-fit: cover; border-radius: 4px;
+          box-shadow: 0 10px 26px rgba(0,0,0,.55); will-change: transform, opacity;
+          transition: transform .72s cubic-bezier(.5,.05,.35,1), opacity .72s ease, border-radius .72s ease;
+        }
+
+        /* ── the line registry ── */
+        .fpg-registry {
+          padding: 34px 0 40px;
+          background:
+            radial-gradient(700px 380px at 88% 0%, rgba(224,168,62,.045), transparent 62%),
+            #09090f;
+        }
+        .fpg-reg-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+        .fpg-kicker {
+          font-size: 11px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
+          color: var(--fph-gold); display: inline-flex; align-items: center; gap: 12px;
+        }
+        .fpg-kicker::before { content: ''; width: 34px; height: 1px; background: linear-gradient(90deg, transparent, var(--fph-gold)); opacity: .7; }
+        .fpg h2 {
+          margin: 0; font-family: var(--fp-font-display); font-weight: 400;
+          font-size: clamp(30px, 3.2vw, 40px); line-height: 1; letter-spacing: .015em; color: #EEEEF5;
+        }
+        .fpg-reg-sub { font-size: 13px; font-weight: 300; color: var(--fph-cream-mut); }
+        .fpg-reg { border-top: 1px solid var(--fph-line); }
+        .fpg-reg-row {
+          position: relative; display: flex; align-items: center; gap: 18px;
+          padding: 10px 10px 10px 14px; border-bottom: 1px solid var(--fph-line);
+          text-decoration: none; color: inherit;
+        }
+        .fpg-reg-row::after {
+          content: ''; position: absolute; inset: 0; pointer-events: none;
+          background: linear-gradient(90deg, rgba(224,168,62,.05), transparent 70%);
+          opacity: 0; transition: opacity .25s;
+        }
+        .fpg-reg-row:hover::after { opacity: 1; }
+        .fpg-reg-row .edge {
+          position: absolute; left: 0; top: 50%; width: 2px; height: 0;
+          transform: translateY(-50%);
+          background: linear-gradient(180deg, var(--fph-gold-hi), var(--fph-gold));
+          border-radius: 1px; box-shadow: 0 0 8px rgba(224,168,62,.5);
+          transition: height .3s cubic-bezier(.22,.61,.36,1);
+        }
+        .fpg-reg-row:hover .edge { height: 58%; }
+        .fpg-reg-who { flex: 0 0 250px; min-width: 0; }
+        .fpg-reg-name {
+          display: block; font-family: var(--fp-font-display); font-size: 25px; font-weight: 400;
+          letter-spacing: .03em; color: var(--fph-cream); line-height: 1.05;
+          white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+          transition: color .2s;
+        }
+        .fpg-reg-row:hover .fpg-reg-name { color: var(--fph-gold-hi); }
+        .fpg-reg-maker {
+          display: block; margin-top: 2px; font-size: 9.5px; font-weight: 400;
+          letter-spacing: .14em; text-transform: uppercase;
+          color: var(--fph-cream-mut); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .fpg-reg-meta {
+          flex: 0 0 auto; font-size: 12px; font-weight: 400; letter-spacing: .05em;
+          color: var(--fph-gold-mut); font-variant-numeric: tabular-nums; white-space: nowrap;
+        }
+        .fpg-reg-meta .dot { color: rgba(224,168,62,.35); margin: 0 7px; }
+        .fpg-reg-lead { flex: 1 1 auto; min-width: 18px; border-bottom: 1px dotted rgba(242,232,213,.14); transform: translateY(2px); }
+        .fpg-reg-thumbs { flex: 0 0 auto; display: flex; gap: 7px; }
+        .fpg-reg-thumbs img {
+          width: 38px; height: 38px; border-radius: 5px; object-fit: cover;
+          background: #e9e0cd; border: 1px solid rgba(242,232,213,.10);
+          transition: transform .3s cubic-bezier(.22,.61,.36,1), border-color .3s;
+        }
+        .fpg-reg-row:hover .fpg-reg-thumbs img { border-color: rgba(224,168,62,.4); transform: translateY(-2px); }
+        .fpg-reg-row:hover .fpg-reg-thumbs img:nth-child(2) { transition-delay: .04s; }
+        .fpg-reg-row:hover .fpg-reg-thumbs img:nth-child(3) { transition-delay: .08s; }
+        .fpg-reg-row:hover .fpg-reg-thumbs img:nth-child(4) { transition-delay: .12s; }
+        .fpg-reg-chev {
+          flex: 0 0 auto; width: 22px; height: 22px; color: var(--fph-cream-mut);
+          transition: color .25s, transform .3s cubic-bezier(.22,.61,.36,1);
+        }
+        .fpg-reg-row:hover .fpg-reg-chev { color: var(--fph-gold-hi); transform: translateX(4px); }
+
+        /* ── more lines (everything beyond the top rows stays reachable) ── */
+        .fpg-more { margin-top: 26px; }
+        .fpg-more-head {
+          font-size: 11px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
+          color: var(--fph-cream-mut); margin-bottom: 12px;
+        }
+        .fpg-more-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .fpg-more-chip {
+          display: inline-flex; align-items: baseline; gap: 7px;
+          font-size: 11.5px; font-weight: 400; letter-spacing: .03em; color: var(--fph-cream-dim);
+          border: 1px solid rgba(242,232,213,.10); border-radius: 99px;
+          padding: 5px 13px; text-decoration: none; line-height: 1.2;
+          transition: color .2s, border-color .2s, background .2s;
+        }
+        .fpg-more-chip .ct { font-size: 10px; color: var(--fph-gold-mut); }
+        .fpg-more-chip:hover { color: var(--fph-gold-hi); border-color: rgba(224,168,62,.45); background: rgba(224,168,62,.05); }
+
+        /* ── ad ── */
+        .fpg-ad { display: flex; justify-content: center; padding: 26px 32px 0; }
+
+        /* ── closer ── */
+        .fpg-closer {
+          padding: 34px 0 38px;
+          background:
+            radial-gradient(700px 360px at 14% 0%, rgba(224,168,62,.05), transparent 60%),
+            radial-gradient(600px 360px at 92% 100%, rgba(224,168,62,.03), transparent 60%);
+        }
+        .fpg-closer-in { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
+        .fpg-closer-copy {
+          margin: 0; font-family: var(--fp-font-display); font-weight: 400;
+          font-size: clamp(26px, 2.9vw, 36px); line-height: 1.06; letter-spacing: .015em;
+          max-width: 620px; text-wrap: balance; color: #EEEEF5;
+        }
+        .fpg-closer-copy em { font-style: normal; color: var(--fph-gold); }
+        .fpg-btn-gold {
+          display: inline-flex; align-items: center; gap: 8px; flex: 0 0 auto;
+          font-size: 14px; font-weight: 500; letter-spacing: .04em;
+          color: #1a1206; background: linear-gradient(180deg, var(--fph-gold-hi), var(--fph-gold));
+          padding: 12px 27px; border-radius: 99px; text-decoration: none; border: none; cursor: pointer;
+          box-shadow: 0 1px 0 rgba(255,255,255,.22) inset, 0 4px 14px rgba(224,168,62,.16);
+          transition: transform .2s, box-shadow .2s;
+        }
+        .fpg-btn-gold:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.22) inset, 0 8px 20px rgba(224,168,62,.28); }
+
+        /* ── reduced motion: freeze to a good static state ── */
+        @media (prefers-reduced-motion: reduce) {
+          [data-fph-reveal] { opacity: 1; transform: none; transition: none; }
+          .fph-fig { animation: none !important; }
+          .fph-case-light, .fph-case-sweep { display: none; }
+          .fph-case::before { display: none; }
+          .fph-tray-thumbs img { animation: none !important; }
+          .fph-fly-thumb { display: none; }
+        }
+
+        /* ── responsive ── */
+        @media (max-width: 1020px) {
+          .fpg-mast-grid { grid-template-columns: 1fr; gap: 46px; }
+          .fpg-mast-sub, .fpg-mast-search { max-width: 640px; }
+          .fpg-reg-who { flex: 0 0 210px; }
+          .fpg-reg-lead { display: none; }
+          .fpg-reg-meta { margin-left: auto; }
+        }
         @media (max-width: 640px) {
-          .genre-hero-grid { grid-template-columns: 1fr !important; }
-          .genre-stats-bar { flex-direction: column !important; }
+          .fph .wrap { padding: 0 20px; }
+          .fpg-mast { padding: 28px 0 40px; }
+          .fph-case { padding: 34px 14px 20px; }
+          .fph-case-label { left: 18px; }
+          .fph-shelf { padding: 0 2px 14px; }
+          .fph-shelf-row { overflow-x: auto; scrollbar-width: none; padding-top: 14px; margin-top: -14px; }
+          .fph-shelf-row::-webkit-scrollbar { display: none; }
+          .fph-fig { flex: 0 0 104px; }
+          .fph-tray { flex-wrap: wrap; border-radius: 16px; }
+          .fph-tray-cta { margin-left: 0; }
+          .fpg-registry { padding: 30px 0 36px; }
+          .fpg-reg-row { flex-wrap: wrap; gap: 8px 12px; padding: 13px 6px 14px 12px; }
+          .fpg-reg-who { flex: 1 1 auto; order: 1; }
+          .fpg-reg-chev { order: 2; }
+          .fpg-reg-meta { order: 3; flex: 1 1 100%; margin-left: 0; }
+          .fpg-reg-thumbs { order: 4; flex: 1 1 100%; }
+          .fpg-reg-thumbs img { width: 40px; height: 40px; }
+          .fpg-closer { padding: 32px 0 36px; }
         }
       `}</style>
 
-      <SiteHeader />
+      <SiteHeader crumbs={[{ label: meta.label }]} />
+      <ScrollReveal />
 
-      {/* Breadcrumb */}
-      <div style={{
-        maxWidth: '1100px', margin: '0 auto', padding: '0.875rem 1.5rem',
-        display: 'flex', alignItems: 'center', gap: '0.375rem',
-        fontSize: '0.8125rem', color: '#EEEEF5',
-      }}>
-        <a href="/" style={{ color: '#EEEEF5', textDecoration: 'none' }}>Home</a>
-        <span>›</span>
-        <span style={{ color: '#EEEEF5' }}>{meta.label}</span>
-      </div>
-
-      {/* Hero */}
-      <header style={{
-        maxWidth: '1100px', margin: '0 auto',
-        padding: '1rem 1.5rem 2.5rem',
-        borderBottom: '1px solid var(--border)',
-      }}>
-        {/* Accent bar */}
-        <div style={{
-          height: '3px', width: '48px', background: meta.accent,
-          borderRadius: '2px', marginBottom: '1.25rem',
-        }} />
-
-        <div className="genre-hero-grid" style={{
-          display: 'grid', gridTemplateColumns: '1fr auto', gap: '2rem', alignItems: 'end',
-        }}>
+      {/* ── MASTHEAD ── */}
+      <section className="fpg-mast">
+        <div className="wrap fpg-mast-grid">
           <div>
-            <h1 style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-              letterSpacing: '0.04em',
-              marginBottom: '0.75rem',
-              lineHeight: '1.05',
-            }}>
-              {meta.label.toUpperCase()} FIGURE PRICES
-            </h1>
-            <p style={{ fontSize: '0.9375rem', color: '#EEEEF5', maxWidth: '600px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-              {meta.description}
+            <span className="fpg-eyebrow">The {aisle} aisle</span>
+            <h1>{meta.label}</h1>
+            <p className="fpg-mast-sub">
+              <strong>{totalFigures.toLocaleString()} figures</strong> across{' '}
+              <strong>{totalLines} lines</strong> &mdash; every era of the aisle
+              under one light, priced from real eBay solds.
             </p>
 
-            {/* Stats bar */}
-            <div className="genre-stats-bar" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
-              <StatBadge value={totalFigures.toLocaleString()} label="figures" accent={meta.accent} />
-              <StatBadge value={totalLines.toString()} label="product lines" accent={meta.accent} />
-              {meta.highlights.slice(0, 2).map(h => (
-                <span key={h} className="genre-tag" style={{
-                  padding: '3px 10px', borderRadius: '100px', fontSize: '0.75rem',
-                  border: '1px solid', fontWeight: '500',
-                }}>
-                  {h}
-                </span>
-              ))}
-              <a href={`/search?q=${encodeURIComponent(meta.label)}`} style={{
-                fontSize: '0.875rem', color: meta.accent, textDecoration: 'none', fontWeight: '500',
-              }}>
-                Search all {meta.label} figures →
-              </a>
+            <div className="fpg-mast-search">
+              <HeroSearch
+                placeholder={`Search ${meta.label} figures`}
+                placeholderExamples={hunting.length ? hunting.map(h => h.name) : undefined}
+                showButton
+              />
             </div>
-          </div>
-        </div>
-      </header>
 
-      {/* Ad */}
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '1.25rem 1.5rem 0' }}>
+            {hunting.length >= 3 && (
+              <div className="fpg-hints">
+                <span>Collectors are hunting:</span>
+                {hunting.map(h => (
+                  <a className="fpg-chip" href={h.href} key={h.fid}>{h.name}</a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {shelf.length >= 6 && (
+            <div data-fph-reveal>
+              <ShelfCase figures={shelf} label={`The ${aisle} case — tap a pin to keep one`} />
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ── THE LINE REGISTRY ── */}
+      <section className="fpg-registry fph-seam" id="registry">
+        <div className="wrap">
+          <div className="fpg-reg-head" data-fph-reveal>
+            <span className="fpg-kicker">The line registry</span>
+            <h2>Pick your era</h2>
+            <span className="fpg-reg-sub">
+              {registry.length < totalLines
+                ? `The ${registry.length} deepest lines`
+                : registry.length === 1 ? 'The line' : `All ${registry.length} lines`}
+              {' '}&mdash; counts live from the guide
+            </span>
+          </div>
+
+          <div className="fpg-reg">
+            {registry.map((r, i) => (
+              <a
+                className="fpg-reg-row"
+                data-fph-reveal
+                style={{ transitionDelay: `${(i % 5) * 0.05}s` }}
+                href={`/${genre}/${r.slug}`}
+                key={r.slug}
+              >
+                <span className="edge" aria-hidden />
+                <span className="fpg-reg-who">
+                  <span className="fpg-reg-name">{r.name}</span>
+                  {r.maker && <span className="fpg-reg-maker">{r.maker}</span>}
+                </span>
+                <span className="fpg-reg-meta">
+                  {r.years && <>{r.years}<span className="dot">&middot;</span></>}
+                  {r.count.toLocaleString()} figures
+                </span>
+                <span className="fpg-reg-lead" aria-hidden />
+                {r.thumbs.length > 0 && (
+                  <span className="fpg-reg-thumbs" aria-hidden>
+                    {r.thumbs.map((t, ti) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={t} alt="" loading="lazy" key={ti} />
+                    ))}
+                  </span>
+                )}
+                <svg className="fpg-reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="m9 6 6 6-6 6" /></svg>
+              </a>
+            ))}
+          </div>
+
+          {more.length > 0 && (
+            <div className="fpg-more" data-fph-reveal>
+              <div className="fpg-more-head">
+                {more.length} more {more.length === 1 ? 'line' : 'lines'} &mdash; all {totalLines} in the aisle
+              </div>
+              <div className="fpg-more-grid">
+                {more.map(l => (
+                  <a className="fpg-more-chip" href={`/${genre}/${l.slug}`} key={l.slug}>
+                    {l.name} <span className="ct">{l.count.toLocaleString()}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ── AD ── */}
+      <div className="fpg-ad">
         <AdSlot slot="leaderboard" />
       </div>
 
-      {/* Line accordion */}
-      <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '1.5rem 1.5rem 5rem' }}>
-        <GenreLineAccordion lines={lines} accent={meta.accent} genre={genre} />
-
-        {/* CTA */}
-        <div style={{
-          marginTop: '2rem',
-          padding: '2.5rem',
-          background: 'var(--s1)',
-          border: '1px solid var(--border)',
-          borderRadius: '16px',
-          textAlign: 'center',
-          position: 'relative',
-          overflow: 'hidden',
-        }}>
-          {/* Decorative accent glow */}
-          <div style={{
-            position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
-            width: '200px', height: '2px', background: meta.accent, borderRadius: '0 0 4px 4px',
-          }} />
-          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.625rem' }}>
-            TRACK YOUR {meta.label.toUpperCase()} COLLECTION
-          </h3>
-          <p style={{ fontSize: '0.9rem', color: '#EEEEF5', marginBottom: '1.5rem', maxWidth: '460px', margin: '0 auto 1.5rem' }}>
-            Search real eBay sold prices, set deal alerts when figures drop below your target price,
-            and track your collection value with FigurePinner.
+      {/* ── CLOSER ── */}
+      <section className="fpg-closer fph-seam" id="vault">
+        <div className="wrap fpg-closer-in" data-fph-reveal>
+          <p className="fpg-closer-copy">
+            Pin the ones you&apos;re hunting &mdash; <em>a free Vault</em> keeps
+            your {aisle} shelf and hears when a grail moves.
           </p>
-          <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/sign-up" style={{
-              display: 'inline-block', padding: '10px 22px',
-              background: meta.accent, color: '#fff',
-              borderRadius: '8px', fontWeight: '700', fontSize: '0.875rem', textDecoration: 'none',
-            }}>
-              Get Started Free
-            </a>
-            <a href="/guides" style={{
-              display: 'inline-block', padding: '10px 22px',
-              background: 'transparent', color: '#EEEEF5',
-              border: '1px solid var(--border)',
-              borderRadius: '8px', fontWeight: '600', fontSize: '0.875rem', textDecoration: 'none',
-            }}>
-              Read the Guides
-            </a>
-          </div>
+          <a className="fpg-btn-gold" href="/sign-up">Start your free Vault</a>
         </div>
-      </main>
+      </section>
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
-    </div>
-  )
-}
-
-// ── Sub-components ────────────────────────────────────────────────────────────
-
-function StatBadge({ value, label, accent }: { value: string; label: string; accent: string }) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.3rem' }}>
-      <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: accent }}>
-        {value}
-      </span>
-      <span style={{ fontSize: '0.75rem', color: '#EEEEF5' }}>{label}</span>
     </div>
   )
 }
