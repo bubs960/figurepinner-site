@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "build:cf": "npx @opennextjs/cloudflare build",
-    "deploy": "npx @opennextjs/cloudflare build && npm run deploy:seed && wrangler deploy",
+    "deploy": "npx @opennextjs/cloudflare build && (npx @opennextjs/cloudflare deploy --cacheChunkSize 10 || npx @opennextjs/cloudflare deploy --cacheChunkSize 10)",
     "deploy:seed": "npx @opennextjs/cloudflare populateCache remote || echo SEED FAILED non-fatal: prerendered pages will ISR-fill on first request instead"
   },
   "dependencies": {
