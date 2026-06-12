@@ -5,7 +5,7 @@ export const GENRE_META: Record<string, {
   highlights: string[]
   ticketCta?: { label: string; href: string; badge?: string; cta?: string } | null
 }> = {
-  'wrestling': { label: 'Wrestling', description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 8,000+ figures.', accent: '#e53238', highlights: ['Mattel Elite', 'Jakks Pacific', 'Hasbro WWF'] },
+  'wrestling': { label: 'Wrestling', description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 5,000+ figures.', accent: '#e53238', highlights: ['Mattel Elite', 'Jakks Pacific', 'Hasbro WWF'] },
   'marvel': { label: 'Marvel', description: 'Marvel Legends, Spider-Man, and Marvel action figure prices. Track Hasbro and ToyBiz values across your collection.', accent: '#e23636', highlights: ['Marvel Legends', 'ToyBiz Classics', 'Spider-Man'] },
   'star-wars': { label: 'Star Wars', description: 'Star Wars action figure prices. Black Series, Vintage Collection, Power of the Force values with real eBay sold data.', accent: '#3d7bca', highlights: ['Black Series', 'Vintage Collection', 'Power of the Force'] },
   'dc': { label: 'DC', description: 'DC action figure prices. McFarlane, DC Direct, DC Universe Classics values with real eBay sold data.', accent: '#3a6fbf', highlights: ['McFarlane Toys', 'DC Universe Classics', 'DC Direct'] },

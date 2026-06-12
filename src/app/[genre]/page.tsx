@@ -16,7 +16,7 @@ import SiteHeader from '@/app/components/SiteHeader'
 const GENRE_META: Record<string, { label: string; description: string }> = {
   'wrestling': {
     label: 'Wrestling',
-    description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 8,000+ figures.',
+    description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 5,000+ figures.',
   },
   'marvel': {
     label: 'Marvel',

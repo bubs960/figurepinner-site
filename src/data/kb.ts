@@ -12,7 +12,11 @@
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { FIGURES_V2 } = require('./figures-reference-v2.js') as { FIGURES_V2: KBFigure[] }
+// Slim variant: matcher's lockstep field-strip emit (whitelisted KBFigure
+// fields only; −17.7% raw / −13.5% gz vs the full file). The FULL file stays
+// committed alongside as the 4-way-lockstep source of truth — do not delete.
+// Activation: MATCHER-TO-WEB-KB-SLIM-CONFIRMED-2026-06-12.
+const { FIGURES_V2 } = require('./figures-reference-v2.slim.js') as { FIGURES_V2: KBFigure[] }
 
 export type KBFigure = {
   figure_id: string
