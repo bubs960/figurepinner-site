@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import SiteHeader from '@/app/components/SiteHeader'
 
 export const metadata: Metadata = {
   title: 'How We Calculate Prices — Methodology',
@@ -14,19 +15,7 @@ export default function MethodologyPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
 
-      {/* Nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
-          FIGUREPINNER
-        </a>
-        <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search figures</a>
-      </nav>
+      <SiteHeader />
 
       {/* Content */}
       <main style={{ maxWidth: '720px', margin: '0 auto', padding: '3rem 1.5rem 5rem' }}>

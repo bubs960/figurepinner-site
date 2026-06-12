@@ -16,6 +16,7 @@ import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figure
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
+import SiteHeader from '@/app/components/SiteHeader'
 
 // ISR — KB-only line hub, no user-specific data. "Fast, cacheable, crawlable"
 // (header above) requires this. Was force-dynamic; restored per Genta audit 2026-06-06 P1.
@@ -247,28 +248,7 @@ export default async function LineHubPage(
         }
       `}</style>
 
-      {/* ── Nav ── */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 50,
-        background: 'rgba(10,10,12,0.92)',
-        backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--border)',
-        padding: '0 clamp(1rem, 5vw, 2rem)',
-      }}>
-        <div style={{
-          maxWidth: 1100, margin: '0 auto',
-          height: 52,
-          display: 'flex', alignItems: 'center', gap: '0.375rem',
-          fontSize: '0.8rem', color: '#EEEEF5',
-          overflow: 'hidden',
-        }}>
-          <a href="/" style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--text)', textDecoration: 'none', flexShrink: 0 }}>FP</a>
-          <span style={{ opacity: 0.4, flexShrink: 0 }}>›</span>
-          <a href={`/${genre}`} style={{ color: '#EEEEF5', textDecoration: 'none', flexShrink: 0 }}>{genreName}</a>
-          <span style={{ opacity: 0.4, flexShrink: 0 }}>›</span>
-          <span style={{ color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{lineName}</span>
-        </div>
-      </nav>
+      <SiteHeader crumbs={[{ label: genreName, href: `/${genre}` }, { label: lineName }]} />
 
       {/* ── Hero ── */}
       <header style={{

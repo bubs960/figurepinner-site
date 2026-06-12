@@ -3,41 +3,39 @@
  * GenreLineAccordion.tsx
  * Client component — renders product-line accordion on genre pages.
  *
- * WHY client: the server renders all line/figure data into props.
- * The client manages which line is open, and only mounts <img> elements
- * for the open line — so image fetches are deferred until the user
- * actually wants to see a line. This is the primary page-speed fix.
+ * WHY client: the client manages which line is open, and only mounts <img>
+ * elements for the open line — so image fetches are deferred until the user
+ * actually wants to see a line.
+ *
+ * S20 payload cut: the server serializes ONLY the first (largest, default-
+ * open) line's figures into props — every other line ships `figures: null`
+ * and is fetched from /api/genre-line-figures on first open (colo-cached).
+ * Before this, /wrestling pushed 2,115 cards through the RSC flight payload
+ * to render 60.
  *
  * Initial state: first (largest) line is open.
  */
 
 import { useState, useEffect } from 'react'
 import FigureThumb from '@/app/components/FigureThumb'
+import type { FigureRowWire } from '@/lib/genreFigures'
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 
-export interface FigureRow {
-  figure_id: string
-  href: string          // navigation link (/figure/[id] — wave-specific)
-  canonicalUrl: string  // SEO canonical (/[fandom]/[line]/[char])
-  name: string
-  series: string | null
-  exclusive: string | null
-  imageUrl: string | null
-}
+export type FigureRow = FigureRowWire
 
 export interface LineData {
   slug: string
   displayName: string
-  figureCount: number   // capped count (rows in figures[])
+  figureCount: number   // capped count (rows available to render)
   totalCount: number    // real KB total for this line
-  figures: FigureRow[]
+  figures: FigureRow[] | null  // null = not shipped — fetch on open
 }
 
 interface Props {
   lines: LineData[]
   accent: string
-  genre: string         // slug for "See all in search" links
+  genre: string         // slug for the fetch + "see all" line-hub links
 }
 
 // ─── Component ─────────────────────────────────────────────────────────────────
@@ -53,6 +51,8 @@ interface Props {
   `
 export default function GenreLineAccordion({ lines, accent, genre }: Props) {
   const [openSlug, setOpenSlug] = useState<string>(lines[0]?.slug ?? '')
+  // Lines fetched after mount, keyed by slug. 'error' = fetch failed.
+  const [fetched, setFetched] = useState<Record<string, FigureRow[] | 'error'>>({})
 
   // If the URL has a hash like #line-elite, open that line on mount
   useEffect(() => {
@@ -63,10 +63,28 @@ export default function GenreLineAccordion({ lines, accent, genre }: Props) {
     }
   }, [lines])
 
+  // Fetch the open line's figures if the server didn't ship them.
+  useEffect(() => {
+    if (!openSlug) return
+    const line = lines.find(l => l.slug === openSlug)
+    if (!line || line.figures !== null || fetched[openSlug]) return
+    let stale = false
+    fetch(`/api/genre-line-figures?genre=${encodeURIComponent(genre)}&line=${encodeURIComponent(openSlug)}`)
+      .then(r => r.ok ? r.json() : Promise.reject(new Error(String(r.status))))
+      .then((d: { figures: FigureRow[] }) => {
+        if (!stale) setFetched(prev => ({ ...prev, [openSlug]: d.figures }))
+      })
+      .catch(() => {
+        if (!stale) setFetched(prev => ({ ...prev, [openSlug]: 'error' }))
+      })
+    return () => { stale = true }
+  }, [openSlug, lines, genre, fetched])
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
       {lines.map(line => {
         const isOpen = line.slug === openSlug
+        const loaded = line.figures ?? fetched[line.slug] ?? null
         return (
           <div
             key={line.slug}
@@ -139,15 +157,43 @@ export default function GenreLineAccordion({ lines, accent, genre }: Props) {
             {/* ── Figure grid — only mounted when open ── */}
             {isOpen && (
               <div style={{ padding: '0 1rem 1rem' }}>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))',
-                  gap: '0.5rem',
-                }}>
-                  {line.figures.map(f => (
-                    <FigureCard key={f.figure_id} figure={f} accent={accent} />
-                  ))}
-                </div>
+                {loaded === 'error' ? (
+                  <div style={{ padding: '1rem 0', textAlign: 'center' }}>
+                    <a
+                      href={`/${genre}/${line.slug}`}
+                      style={{ fontSize: '0.8125rem', color: accent, textDecoration: 'none', fontWeight: 600 }}
+                    >
+                      Couldn&apos;t load this line here — open the {line.displayName} page →
+                    </a>
+                  </div>
+                ) : loaded === null ? (
+                  /* Loading skeleton — same card footprint, so no layout jump */
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))',
+                    gap: '0.5rem',
+                  }}>
+                    {Array.from({ length: Math.min(line.figureCount, 12) }, (_, i) => (
+                      <div key={i} style={{
+                        height: 58,
+                        background: 'var(--s1)',
+                        border: '1px solid var(--border)',
+                        borderRadius: '8px',
+                        opacity: 0.6,
+                      }} />
+                    ))}
+                  </div>
+                ) : (
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))',
+                    gap: '0.5rem',
+                  }}>
+                    {loaded.map(f => (
+                      <FigureCard key={f.figure_id} figure={f} accent={accent} />
+                    ))}
+                  </div>
+                )}
 
                 {/* "See all" link when capped → goes to the line hub page */}
                 {line.totalCount > line.figureCount && (
@@ -183,7 +229,7 @@ export default function GenreLineAccordion({ lines, accent, genre }: Props) {
 function FigureCard({ figure, accent }: { figure: FigureRow; accent: string }) {
   return (
     <a
-      href={figure.href}
+      href={`/figure/${figure.figure_id}`}
       style={{
         display: 'flex',
         alignItems: 'center',

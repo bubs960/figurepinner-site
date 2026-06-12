@@ -48,16 +48,14 @@ export type TapeItem = {
 
 /**
  * Curated demo figures — genre-diverse, verified 2026-06-11 to have 12–50
- * real sold comps each. The Rollins field note is owner-sourced and real
- * (he listed his own UE30 on eBay at $30, priced off this data, from his
- * phone) — never swap in an invented note.
+ * real sold comps each. NOTE: a Rollins "field note" (owner listed his own
+ * UE30 at $30 off this data, from his phone — true, M1 validation 6/10)
+ * shipped here briefly; pulled 2026-06-12 because anonymous self-reference
+ * reads as a fake testimonial. If a note ever returns it must be both real
+ * AND self-explanatory to a stranger.
  */
 const CURATED: Array<{ fid: string; chipLabel: string; fieldNote?: string }> = [
-  {
-    fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66',
-    chipLabel: 'Rollins UE30',
-    fieldNote: 'The guy who runs this site priced his own Rollins UE30 at $30 straight off this receipt. From his phone.',
-  },
+  { fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66', chipLabel: 'Rollins UE30' },
   { fid: 'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_darth-vader_9476c8', chipLabel: 'Vader Black Series' },
   { fid: 'fp_marvel-comics_hasbro_marvel-legends_galactus-baf_spider-man_b05f79', chipLabel: 'Spider-Man ML' },
   { fid: 'fp_gi-joe_hasbro_classified-series_classified_snake-eyes_ae7414', chipLabel: 'Snake Eyes Classified' },

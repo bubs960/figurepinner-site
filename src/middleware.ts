@@ -84,10 +84,13 @@ export const config = {
   // spurious Clerk subrequests (67% 4xx, +107ms latency) on anon/bot traffic.
   // Auth-needing paths (alerts, vault, wantlist, stripe, user-settings, me,
   // devices, admin) remain matched and go through Clerk as before.
+  //
+  // S20 (2026-06-12): added genre-line-figures — public KB-static rows for the
+  // genre-page accordion (payload cut); sets its own s-maxage for the edge cache.
   matcher: [
     '/app(.*)',
     '/admin(.*)',
     '/trpc(.*)',
-    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
+    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|genre-line-figures$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
   ],
 }

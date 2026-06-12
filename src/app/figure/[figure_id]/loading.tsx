@@ -1,3 +1,4 @@
+import SiteHeader from '@/app/components/SiteHeader'
 // Skeleton shown instantly while the figure detail page fetches API data
 export default function FigureLoading() {
   return (
@@ -15,17 +16,7 @@ export default function FigureLoading() {
         }
       `}</style>
 
-      {/* Nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <div className="sk" style={{ width: 32, height: 18 }} />
-        <div className="sk" style={{ width: 60, height: 28, borderRadius: 6 }} />
-      </nav>
+      <SiteHeader />
 
       <main style={{ maxWidth: '960px', margin: '0 auto', padding: '2rem 1.5rem 4rem' }}>
         <div className="sk-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '2.5rem', alignItems: 'start' }}>

@@ -1,4 +1,5 @@
 'use client'
+import SiteHeader from '@/app/components/SiteHeader'
 // not-found.tsx must be a client component — @cloudflare/next-on-pages
 // does not support runtime exports on the not-found route.
 
@@ -8,17 +9,7 @@ export default function NotFound() {
       minHeight: '100vh', background: '#09090F', color: '#EEEEF5',
       fontFamily: 'Inter, sans-serif', display: 'flex', flexDirection: 'column',
     }}>
-      {/* Nav */}
-      <nav style={{
-        borderBottom: '1px solid #1E2130',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <a href="/" style={{ fontFamily: 'Bebas Neue, sans-serif', fontSize: '1.25rem', letterSpacing: '0.04em', color: '#EEEEF5', textDecoration: 'none' }}>
-          FIGUREPINNER
-        </a>
-        <a href="/search" style={{ fontSize: '0.875rem', color: '#c9d0e0', textDecoration: 'none' }}>Search figures →</a>
-      </nav>
+      <SiteHeader />
 
       {/* Content */}
       <div style={{

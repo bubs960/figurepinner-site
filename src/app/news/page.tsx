@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { genreMark } from '@/app/_lib/genreMarks'
+import SiteHeader from '@/app/components/SiteHeader'
 
 export const metadata: Metadata = {
   title: 'News',
@@ -131,6 +132,7 @@ export default async function NewsPage({ searchParams }: PageProps) {
       background: 'var(--bg)', minHeight: '100vh', color: 'var(--text)',
       fontFamily: 'var(--font-body)',
     }}>
+      <SiteHeader />
       <section style={{ maxWidth: 760, margin: '0 auto', padding: '4rem 1.5rem' }}>
         <div style={{
           display: 'inline-block', fontSize: '0.7rem', fontWeight: 800,

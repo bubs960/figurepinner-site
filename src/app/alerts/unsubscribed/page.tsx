@@ -1,4 +1,5 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next'
+import SiteHeader from '@/app/components/SiteHeader'
 
 export const metadata: Metadata = {
   title: 'Unsubscribed',
@@ -22,18 +23,7 @@ export default async function UnsubscribedPage({ searchParams }: PageProps) {
       minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)',
       fontFamily: 'var(--font-ui)', display: 'flex', flexDirection: 'column',
     }}>
-      {/* Nav */}
-      <nav style={{
-        borderBottom: '1px solid var(--border)', padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center',
-      }}>
-        <a href="/" style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.125rem',
-          letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none',
-        }}>
-          FIGUREPINNER
-        </a>
-      </nav>
+      <SiteHeader />
 
       {/* Content */}
       <main style={{

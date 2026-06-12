@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getFiguresByFandom, getLinesByFandom } from '@/data/kb'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { ARTICLES } from './_data/articles'
+import SiteHeader from '@/app/components/SiteHeader'
 
 /**
  * /guides — Price Guide hub.
@@ -83,22 +84,7 @@ export default function GuidesPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
 
-      {/* Nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
-          FIGUREPINNER
-        </a>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="/search" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>Search</a>
-
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(2.5rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem)' }}>
 

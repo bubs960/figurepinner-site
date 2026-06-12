@@ -7,6 +7,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ARTICLES, type Article, type ArticleBlock } from '../_data/articles'
+import SiteHeader from '@/app/components/SiteHeader'
 
 const BASE = 'https://figurepinner.com'
 
@@ -126,13 +127,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
     <main style={{ background: 'var(--bg)', minHeight: '100vh', color: 'var(--text)', fontFamily: 'var(--font-body)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Nav */}
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 2rem', borderBottom: '1px solid var(--border)', background: 'var(--s1)' }}>
-        <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
-          FIGURE<span style={{ color: 'var(--blue)' }}>PINNER</span>
-        </a>
-        <a href="/guides" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.875rem' }}>← All Guides</a>
-      </nav>
+      <SiteHeader crumbs={[{ label: 'Guides', href: '/guides' }, { label: article.title }]} />
 
       <article style={{ maxWidth: '720px', margin: '0 auto', padding: '3.5rem 1.25rem 5rem' }}>
         <div style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--fp-accent-warm)', textTransform: 'uppercase', marginBottom: '1rem' }}>

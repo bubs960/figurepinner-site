@@ -5,6 +5,7 @@ import PriceReceipt from './components/PriceReceipt'
 import { fetchHomeMarket } from './_lib/homeReceipt'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
+import SiteHeader from './components/SiteHeader'
 
 export const metadata: Metadata = {
   title: { absolute: 'FigurePinner - Action Figure Price Guide' },
@@ -34,58 +35,6 @@ export default async function HomePage() {
           background: #09090f;
           color: var(--text);
           font-family: var(--font-body, system-ui);
-        }
-        .fp-home-nav {
-          position: sticky;
-          top: 0;
-          z-index: 100;
-          height: 56px;
-          padding: 0 24px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          border-bottom: 1px solid rgba(255,255,255,0.08);
-          background: rgba(9,9,15,0.9);
-          backdrop-filter: blur(12px);
-        }
-        .fp-home-brand {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          color: var(--text);
-          text-decoration: none;
-          font-weight: 800;
-        }
-        .fp-home-brand-mark {
-          width: 32px;
-          height: 32px;
-          border-radius: 8px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: #e53238;
-          color: #fff;
-          font-family: var(--font-display);
-          font-size: 1.1rem;
-          line-height: 1;
-        }
-        .fp-home-nav-links,
-        .fp-home-nav-actions {
-          display: flex;
-          align-items: center;
-          gap: 18px;
-        }
-        .fp-home-nav a {
-          color: var(--text);
-          text-decoration: none;
-          font-size: 0.875rem;
-          font-weight: 650;
-        }
-        .fp-home-join {
-          padding: 8px 14px;
-          border-radius: 8px;
-          background: #eeeef5;
-          color: #09090f !important;
         }
         .fp-hero {
           position: relative;
@@ -471,7 +420,6 @@ export default async function HomePage() {
           }
         }
         @media (max-width: 920px) {
-          .fp-home-nav-links { display: none; }
           .fp-hero { padding: 52px 18px 48px; }
           .fp-hero-grid {
             grid-template-columns: 1fr;
@@ -483,32 +431,13 @@ export default async function HomePage() {
           .fp-tape-lead { display: none; }
         }
         @media (max-width: 560px) {
-          .fp-home-nav { padding: 0 14px; }
-          .fp-home-brand span:last-child,
-          .fp-home-nav-actions a:first-child { display: none; }
-          .fp-home-join { padding: 8px 10px; }
           .fp-hero { padding: 40px 14px 40px; }
           .fp-hero-micro-key { display: none; }
           .fp-vault-card { padding: 34px 20px; }
         }
       `}</style>
 
-      <nav className="fp-home-nav" aria-label="Main">
-        <a className="fp-home-brand" href="/">
-          <span className="fp-home-brand-mark">FP</span>
-          <span>FigurePinner</span>
-        </a>
-        <div className="fp-home-nav-links">
-          <a href="/search">Search</a>
-          <a href="/guides">Guides</a>
-          <a href="/methodology">Methodology</a>
-          <a href="/app/wantlist">Wantlist</a>
-        </div>
-        <div className="fp-home-nav-actions">
-          <a href="/sign-in">Log in</a>
-          <a className="fp-home-join" href="/sign-up">Sign up free</a>
-        </div>
-      </nav>
+      <SiteHeader />
 
       <section className="fp-hero">
         <div className="fp-aurora" aria-hidden />

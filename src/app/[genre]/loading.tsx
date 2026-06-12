@@ -1,3 +1,4 @@
+import SiteHeader from '@/app/components/SiteHeader'
 // loading.tsx — Genre page skeleton
 // Shown during navigation to /[genre] while the page SSRs
 
@@ -17,17 +18,7 @@ export default function GenreLoading() {
         }
       `}</style>
 
-      {/* Nav skeleton */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <div className="fp-skel" style={{ width: 140, height: 18 }} />
-        <div className="fp-skel" style={{ width: 72, height: 28, borderRadius: 6 }} />
-      </nav>
+      <SiteHeader />
 
       {/* Breadcrumb */}
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0.875rem 1.5rem' }}>

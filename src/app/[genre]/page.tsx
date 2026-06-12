@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getFiguresByFandom, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { figuresForGenre, groupAndSortLines, toFigureRow, cardName, MAX_PER_LINE } from '@/lib/genreFigures'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import GenreLineAccordion, { type LineData } from './_components/GenreLineAccordion'
+import SiteHeader from '@/app/components/SiteHeader'
 
 // ── Genre config ──────────────────────────────────────────────────────────────
 
@@ -117,27 +119,6 @@ const GENRE_META: Record<string, {
   },
 }
 
-// URL slug → KB fandom slug mapping (URL slugs are pretty; KB slugs are canonical)
-const SLUG_TO_FANDOM: Record<string, string> = {
-  'teenage-mutant-ninja-turtles': 'tmnt',
-  'gijoe': 'gi-joe',
-  'marvel': 'marvel-comics',
-  'dungeons-and-dragons': 'dungeons-dragons',
-}
-
-function getFandom(slug: string): string {
-  return SLUG_TO_FANDOM[slug] ?? slug
-}
-
-// The 'neca' (Horror & Film) UI genre rolls up several KB fandoms — same
-// rollup kb-stats uses for the homepage count. Without this, /neca resolved
-// to a nonexistent 'neca' fandom and the whole genre page 404'd (S20 fix).
-const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
-
-function figuresForGenre(genre: string): KBFigure[] {
-  if (genre === 'neca') return NECA_FANDOMS.flatMap(f => getFiguresByFandom(f))
-  return getFiguresByFandom(getFandom(genre))
-}
 
 
 export const revalidate = 3600
@@ -172,63 +153,26 @@ export async function generateMetadata(
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-const MAX_PER_LINE = 60
 
 function formatLineName(slug: string): string {
   return prettifySlug(slug) // shared override-aware caser (W2)
 }
 
-function cardName(f: KBFigure): string {
-  const base = f.character_canonical
-    .split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ')
-  const variant = (f.character_variant && f.character_variant !== 'None')
-    ? ` (${f.character_variant})`
-    : ''
-  return `${base}${variant}`
-}
 
-/** Build serialized LineData[] from raw KB figures — server-only. */
-function buildLineData(figures: KBFigure[]): { lines: LineData[]; totalCount: number } {
-  // 1. Group by product_line
-  const groups = new Map<string, KBFigure[]>()
-  for (const f of figures) {
-    if (!groups.has(f.product_line)) groups.set(f.product_line, [])
-    groups.get(f.product_line)!.push(f)
-  }
-
-  // 2. Sort within each line: newest wave first, then alpha
-  for (const [, group] of groups) {
-    group.sort((a, b) => {
-      const wA = parseInt(a.release_wave ?? '') || 0
-      const wB = parseInt(b.release_wave ?? '') || 0
-      if (wA !== wB) return wB - wA
-      return a.character_canonical.localeCompare(b.character_canonical)
-    })
-  }
-
-  // 3. Sort lines by total count descending
-  const sorted = [...groups.entries()].sort((a, b) => b[1].length - a[1].length)
-
-  // 4. Serialize — cap at MAX_PER_LINE, keep totalCount for "see all" link
-  const lines: LineData[] = sorted.map(([slug, group]) => ({
+/** Build LineData[] from raw KB figures — server-only. Only the first
+ *  (default-open) line ships its figure rows; the accordion fetches the
+ *  rest from /api/genre-line-figures on open (S20 payload cut — before
+ *  this, /wrestling pushed 2,115 cards through the flight payload). */
+function buildLineData(figures: KBFigure[]) {
+  const groups = groupAndSortLines(figures)
+  const lines: LineData[] = groups.map(([slug, group], i) => ({
     slug,
     displayName: formatLineName(slug),
     totalCount:  group.length,
     figureCount: Math.min(group.length, MAX_PER_LINE),
-    figures:     group.slice(0, MAX_PER_LINE).map(f => ({
-      figure_id:    f.figure_id,
-      href:         figureUrl(f),
-      canonicalUrl: prettyFigureUrl(f),
-      name:         cardName(f),
-      series:       f.release_wave ?? null,
-      exclusive:    f.exclusive_to ?? null,
-      imageUrl:     f.canonical_image_url ?? null,
-    })),
+    figures:     i === 0 ? group.slice(0, MAX_PER_LINE).map(toFigureRow) : null,
   }))
-
-  return { lines, totalCount: figures.length }
+  return { lines, groups, totalCount: figures.length }
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -243,7 +187,7 @@ export default async function GenrePage(
   const figures = figuresForGenre(genre)
   if (!figures.length) notFound()
 
-  const { lines, totalCount: totalFigures } = buildLineData(figures)
+  const { lines, groups, totalCount: totalFigures } = buildLineData(figures)
   const totalLines = lines.length
 
   // JSON-LD structured data
@@ -254,12 +198,12 @@ export default async function GenrePage(
     description: meta.description,
     url: `https://figurepinner.com/${genre}`,
     numberOfItems: totalFigures,
-    itemListElement: lines.slice(0, 5).flatMap(line =>
-      line.figures.slice(0, 10).map((f, i) => ({
+    itemListElement: groups.slice(0, 5).flatMap(([, group]) =>
+      group.slice(0, 10).map((f, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://figurepinner.com${f.canonicalUrl}`,
-        name: f.name,
+        url: `https://figurepinner.com${prettyFigureUrl(f)}`,
+        name: cardName(f),
       }))
     ),
   }
@@ -278,25 +222,7 @@ export default async function GenrePage(
         }
       `}</style>
 
-      {/* Nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <a href="/" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--text)', textDecoration: 'none' }}>
-          FIGUREPINNER
-        </a>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="/search" style={{ fontSize: '0.875rem', color: '#EEEEF5', textDecoration: 'none' }}>Search</a>
-          <a href="/sign-up" style={{
-            padding: '5px 12px', borderRadius: '6px', fontSize: '0.8125rem', fontWeight: '600',
-            background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-          }}>Track free</a>
-        </div>
-      </nav>
+      <SiteHeader />
 
       {/* Breadcrumb */}
       <div style={{

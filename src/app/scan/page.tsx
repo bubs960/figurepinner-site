@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
-import Link from 'next/link'
+import Link from 'next/link'
+import SiteHeader from '@/app/components/SiteHeader'
 
 // BarcodeDetector is a browser API not yet in TypeScript's lib. Declare minimally.
 declare class BarcodeDetector {
@@ -148,21 +149,7 @@ export default function ScanPage() {
   return (
     <div style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
 
-      {/* Nav */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(9,9,15,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--fp-border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '1rem', textDecoration: 'none', color: 'var(--fp-text)' }}>
-          FigurePinner
-        </Link>
-        <Link href="/search" style={{ fontSize: '0.8rem', color: 'var(--fp-dim)', textDecoration: 'none' }}>
-          Search →
-        </Link>
-      </nav>
+      <SiteHeader />
 
       <div style={{ maxWidth: 540, margin: '0 auto', padding: '2rem 1.5rem' }}>
 

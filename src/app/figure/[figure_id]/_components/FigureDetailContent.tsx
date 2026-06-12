@@ -25,6 +25,7 @@ import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
 import { thumb } from '@/lib/imageUrl'
+import SiteHeader from '@/app/components/SiteHeader'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
 // Fallback campid is the live EPN campaign — restored after bceb185 silently
@@ -306,33 +307,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         }
       `}</style>
 
-      {/* ── Nav ──────────────────────────────────────────────────────────────── */}
-      <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(10,13,28,0.92)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--fp-border)',
-        padding: '0 1.5rem', height: '52px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--fp-dim)', overflow: 'hidden' }}>
-          <a href="/" style={{
-            fontFamily: 'var(--fp-font-display)', fontSize: '1.1rem',
-            color: 'var(--fp-text)', textDecoration: 'none', letterSpacing: '0.06em', flexShrink: 0,
-          }}>FP</a>
-          <Chevron />
-          <a href={`/${genre}`} style={{ color: 'var(--fp-muted)', textDecoration: 'none', flexShrink: 0 }}>
-            {prettifySlug(genre)}
-          </a>
-          <Chevron />
-          <a href={`/${genre}/${local.product_line}`} style={{ color: 'var(--fp-muted)', textDecoration: 'none', flexShrink: 0 }}>
-            {line}
-          </a>
-          <Chevron />
-          <span style={{ color: 'var(--fp-text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            {displayName}
-          </span>
-        </div>
-      </nav>
+      <SiteHeader crumbs={[
+        { label: prettifySlug(genre), href: `/${genre}` },
+        { label: line, href: `/${genre}/${local.product_line}` },
+        { label: displayName },
+      ]} />
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
       <main style={{ maxWidth: '1040px', margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
@@ -485,9 +464,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
 // ── Micro components ───────────────────────────────────────────────────────────
 
-function Chevron() {
-  return <span style={{ color: 'var(--fp-border)', margin: '0 0.1rem', flexShrink: 0 }}>›</span>
-}
 
 function NotFoundState() {
   return (
