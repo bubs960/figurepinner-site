@@ -8,6 +8,7 @@ import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
 import { getFigureById, figureUrl } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { thumb } from '@/lib/imageUrl'
 
 export const metadata: Metadata = {
   title: { absolute: 'FigurePinner - Action Figure Price Guide' },
@@ -57,7 +58,7 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
       name: titleCase(kb.character_canonical),
       tag: sold != null ? `Sold $${sold.toFixed(2)}` : entry.tag,
       sold: sold != null,
-      img: kb.canonical_image_url,
+      img: thumb(kb.canonical_image_url, 225) ?? kb.canonical_image_url,
     })
   }
   return out
@@ -75,7 +76,7 @@ function enrichTape(tape: TapeItem[]) {
       lineTag: kb
         ? `${prettifySlug(kb.product_line)}${kb.release_wave && /^\d+$/.test(kb.release_wave) ? ` ${kb.release_wave}` : ''}`
         : '',
-      img: kb?.canonical_image_url ?? null,
+      img: kb?.canonical_image_url ? thumb(kb.canonical_image_url, 96) : null,
     }
   })
 }
