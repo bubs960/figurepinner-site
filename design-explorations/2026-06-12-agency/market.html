@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FigurePinner — Know the Market for Your Lines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   FIGUREPINNER — "THE TRADING FLOOR"
+   Direction 3: market pulse at fintech polish.
+   ============================================================ */
+:root{
+  --bg:        #09090f;
+  --panel:     #0e0e17;
+  --panel-2:   #12121d;
+  --line:      #1d1d2c;
+  --line-hi:   #2b2b40;
+  --text:      #EEEEF5;
+  --dim:       #8d8da6;
+  --dim-2:     #5c5c75;
+  --blue:      #0066FF;
+  --blue-hi:   #3d8bff;
+  --green:     #2fd57f;
+  --red:       #e53238;
+  --img-bed:   #f2f2f6;
+  --mono:      'IBM Plex Mono', ui-monospace, monospace;
+  --body:      'Inter', system-ui, sans-serif;
+  --display:   'Bebas Neue', sans-serif;
+  --maxw:      1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    linear-gradient(rgba(255,255,255,.016) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.016) 1px, transparent 1px);
+  background-size:56px 56px;
+}
+::selection{background:var(--blue);color:#fff}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+/* ---------- reveal-on-scroll ---------- */
+.rev{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.rev.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .rev{opacity:1;transform:none;transition:none}
+  .tape-track{animation:none !important}
+  *{transition:none !important}
+}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(9,9,15,.84);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;gap:36px;height:64px}
+.logo{font-family:var(--display);font-size:25px;letter-spacing:1.5px;display:flex;align-items:center;gap:2px;line-height:1}
+.logo b{color:var(--blue-hi);font-weight:400}
+.logo .pin{width:7px;height:7px;background:var(--red);border-radius:2px;margin-left:7px;margin-top:2px}
+.nav-links{display:flex;gap:26px;font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--dim)}
+.nav-links a{transition:color .15s;padding:6px 0}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{margin-left:auto;display:flex;align-items:center;gap:14px}
+.link-quiet{font-size:13.5px;font-weight:500;color:var(--dim);transition:color .15s}
+.link-quiet:hover{color:var(--text)}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--blue);color:#fff;border:none;cursor:pointer;
+  font:600 14px/1 var(--body);padding:11px 20px;border-radius:8px;
+  transition:background .15s, transform .15s, box-shadow .2s;
+  white-space:nowrap;
+}
+.btn:hover{background:#1f78ff;transform:translateY(-1px);box-shadow:0 10px 30px rgba(0,102,255,.32)}
+.btn.big{font-size:15.5px;padding:16px 30px;border-radius:10px}
+
+/* ============ THE TAPE (signature) ============ */
+.tape{
+  position:relative;overflow:hidden;white-space:nowrap;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#0b0b13,#09090f);
+  height:46px;display:flex;align-items:center;
+}
+.tape-label{
+  position:absolute;left:0;top:0;bottom:0;z-index:3;
+  display:flex;align-items:center;gap:8px;padding:0 22px 0 28px;
+  background:linear-gradient(90deg,var(--bg) 62%,rgba(9,9,15,0));
+  font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--green);
+}
+.tape-label .blip{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blip 1.6s ease-in-out infinite}
+@keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}
+.tape::after{
+  content:"";position:absolute;right:0;top:0;bottom:0;width:90px;z-index:3;
+  background:linear-gradient(270deg,var(--bg),rgba(9,9,15,0));pointer-events:none;
+}
+.tape-track{display:inline-flex;align-items:center;will-change:transform;animation:tapeMove 52s linear infinite;padding-left:200px}
+.tape:hover .tape-track{animation-play-state:paused}
+@keyframes tapeMove{to{transform:translateX(-50%)}}
+.tape-half{display:inline-flex;align-items:center}
+.tki{
+  display:inline-flex;align-items:baseline;gap:9px;margin-right:54px;
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.4px;
+  color:var(--dim);transition:color .15s;
+}
+.tki:hover{color:var(--text)}
+.tki .dot{width:5px;height:5px;border-radius:50%;background:var(--green);align-self:center}
+.tki b{color:var(--text);font-weight:600}
+.tki .lk{color:var(--dim-2)}
+.tki em{font-style:normal;color:var(--green);font-weight:600}
+.tki .tag{font-size:10px;letter-spacing:1.5px;color:var(--dim-2)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  padding:88px 0 84px;
+  background:radial-gradient(1100px 540px at 22% -10%, rgba(0,102,255,.13), transparent 62%);
+}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center}
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:3px;color:var(--dim);
+  display:flex;align-items:center;gap:10px;margin-bottom:26px;
+}
+.kicker::before{content:"";width:26px;height:1px;background:var(--blue)}
+h1{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(58px, 7.6vw, 102px);
+  line-height:.92;letter-spacing:.5px;
+  margin-bottom:26px;
+}
+h1 .hl{color:var(--blue-hi)}
+.hero-sub{
+  font-size:17.5px;color:var(--dim);max-width:54ch;margin-bottom:38px;
+}
+.hero-sub b{color:var(--text);font-weight:600}
+
+.search{
+  display:flex;align-items:center;gap:0;
+  background:var(--panel);border:1px solid var(--line-hi);border-radius:11px;
+  padding:6px 6px 6px 18px;max-width:620px;
+  transition:border-color .2s, box-shadow .2s;
+}
+.search:focus-within{border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,102,255,.18)}
+.search svg{flex:none;opacity:.45}
+.search input{
+  flex:1;background:none;border:none;outline:none;color:var(--text);
+  font:500 14.5px var(--mono);padding:13px 14px;min-width:0;
+}
+.search input::placeholder{color:var(--dim-2)}
+.search .btn{flex:none}
+.search-hints{
+  margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.5px;color:var(--dim-2);
+}
+.search-hints a{color:var(--dim);border-bottom:1px dotted var(--line-hi);transition:color .15s}
+.search-hints a:hover{color:var(--blue-hi)}
+
+.hero-stats{
+  display:flex;gap:48px;margin-top:46px;padding-top:30px;
+  border-top:1px solid var(--line);
+}
+.stat .n{font-family:var(--mono);font-size:23px;font-weight:600;color:var(--text)}
+.stat .n i{font-style:normal;color:var(--green)}
+.stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--dim-2);margin-top:5px}
+
+/* ---- hero market card ---- */
+.mcard{
+  background:linear-gradient(180deg,#11111c 0%, #0c0c14 100%);
+  border:1px solid var(--line-hi);border-radius:16px;
+  padding:22px;position:relative;
+  box-shadow:0 30px 90px rgba(0,0,0,.55), 0 0 110px rgba(0,102,255,.13);
+}
+.mcard::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:2px;border-radius:16px 16px 0 0;
+  background:linear-gradient(90deg, transparent, var(--blue) 35%, var(--green) 70%, transparent);
+  opacity:.8;
+}
+.mcard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.mcard-top .code{font-family:var(--mono);font-size:11px;letter-spacing:1.8px;color:var(--dim)}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:1.6px;color:var(--green);
+  border:1px solid rgba(47,213,127,.35);background:rgba(47,213,127,.08);
+  padding:5px 10px;border-radius:99px;
+}
+.pill .dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blip 1.6s infinite}
+.mcard-img{
+  background:var(--img-bed);border-radius:10px;height:268px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.mcard-img img{max-height:92%;max-width:92%;object-fit:contain}
+.mcard-name{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px;gap:12px}
+.mcard-name h3{font-family:var(--display);font-weight:400;font-size:34px;letter-spacing:1px;line-height:1}
+.mcard-price{text-align:right}
+.mcard-price .p{font-family:var(--mono);font-size:27px;font-weight:600;color:var(--green);line-height:1}
+.mcard-price .s{font-family:var(--mono);font-size:9.5px;letter-spacing:1.6px;color:var(--dim-2);margin-top:5px}
+
+.range{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.range-bar{position:relative;height:6px;border-radius:3px;background:var(--panel-2)}
+.range-band{
+  position:absolute;left:8%;right:8%;top:0;bottom:0;border-radius:3px;
+  background:linear-gradient(90deg, rgba(0,102,255,.55), rgba(47,213,127,.75));
+}
+.range-tick{position:absolute;top:-5px;width:2px;height:16px;background:var(--text);border-radius:1px}
+.range-tick.med{background:#fff;box-shadow:0 0 10px rgba(255,255,255,.55)}
+.range-labels{display:flex;justify-content:space-between;margin-top:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:1.6px;color:var(--dim-2)}
+.range-labels .m{color:var(--text)}
+.range-cap{margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--dim-2);line-height:1.8}
+.mcard-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.mcard-foot .fid{font-family:var(--mono);font-size:9.5px;letter-spacing:1.4px;color:var(--dim-2)}
+.go{
+  font:600 13.5px var(--body);color:var(--blue-hi);display:inline-flex;align-items:center;gap:7px;
+}
+.go i{font-style:normal;transition:transform .18s;display:inline-block}
+.go:hover i{transform:translateX(4px)}
+
+/* ============ SECTIONS ============ */
+section{padding:96px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:18px}
+.sec-kick{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--blue-hi);margin-bottom:14px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.6vw,58px);line-height:.95;letter-spacing:.5px}
+.sec-sub{color:var(--dim);font-size:16.5px;max-width:62ch;margin-bottom:44px}
+.sec-sub b{color:var(--text);font-weight:600}
+.sec-link{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--dim);white-space:nowrap;padding-bottom:6px;transition:color .15s}
+.sec-link:hover{color:var(--blue-hi)}
+
+/* ---- lanes ---- */
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lane{
+  background:var(--panel);border:1px solid var(--line);border-radius:13px;
+  padding:24px 24px 22px;position:relative;display:flex;flex-direction:column;gap:10px;
+  transition:border-color .2s, transform .2s, background .2s;
+}
+.lane:hover{border-color:var(--blue);transform:translateY(-3px);background:var(--panel-2)}
+.lane-top{display:flex;justify-content:space-between;align-items:center}
+.lane-tick{font-family:var(--mono);font-size:11px;letter-spacing:2.2px;color:var(--dim-2);transition:color .2s}
+.lane:hover .lane-tick{color:var(--blue-hi)}
+.lane-arrow{font-family:var(--mono);color:var(--dim-2);transition:transform .2s,color .2s}
+.lane:hover .lane-arrow{transform:translateX(4px);color:var(--text)}
+.lane h3{font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:.8px;line-height:1}
+.lane p{font-size:13px;color:var(--dim);line-height:1.6}
+.lane-chip{
+  align-self:flex-start;margin-top:auto;
+  font-family:var(--mono);font-size:10px;letter-spacing:1.6px;color:var(--green);
+  border:1px solid rgba(47,213,127,.3);border-radius:99px;padding:4px 10px;
+}
+.lane.feat{grid-column:span 2;flex-direction:row;align-items:stretch;gap:26px}
+.lane.feat .lane-body{display:flex;flex-direction:column;gap:10px;flex:1}
+.lane-thumbs{display:flex;gap:8px;align-items:flex-end}
+.lane-thumbs span{
+  width:86px;height:104px;background:var(--img-bed);border-radius:8px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.lane-thumbs img{max-width:88%;max-height:92%;object-fit:contain}
+.lane.neca .lane-tick{color:rgba(229,50,56,.85)}
+.lane.ghost{border-style:dashed;justify-content:center;align-items:center;flex-direction:row;gap:12px;background:transparent}
+.lane.ghost:hover{border-color:var(--blue);background:rgba(0,102,255,.05)}
+.lane.ghost h3{font-size:24px;color:var(--dim)}
+.lane.ghost:hover h3{color:var(--text)}
+
+/* ---- board (figure strip) ---- */
+.board{padding-top:0}
+.strip{
+  display:grid;grid-auto-flow:column;grid-auto-columns:176px;gap:14px;
+  overflow-x:auto;padding:4px 4px 18px;
+  scrollbar-width:thin;scrollbar-color:var(--line-hi) transparent;
+}
+.strip::-webkit-scrollbar{height:8px}
+.strip::-webkit-scrollbar-thumb{background:var(--line-hi);border-radius:4px}
+.fig{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;
+  transition:border-color .2s, transform .2s;
+}
+.fig:hover{border-color:var(--blue);transform:translateY(-4px)}
+.fig-img{
+  background:var(--img-bed);border-radius:8px;height:156px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:11px;
+}
+.fig-img img{max-height:90%;max-width:90%;object-fit:contain;transition:transform .35s ease}
+.fig:hover .fig-img img{transform:scale(1.06)}
+.fig-name{font-size:13.5px;font-weight:600;line-height:1.3;margin-bottom:5px}
+.fig-line{font-family:var(--mono);font-size:9.5px;letter-spacing:1.4px;color:var(--dim-2);text-transform:uppercase}
+
+/* ---- proof / the tape table ---- */
+.proof{background:linear-gradient(180deg, transparent, rgba(0,102,255,.045) 45%, transparent)}
+.solds{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+.sold-row{
+  display:grid;grid-template-columns:1fr 230px 150px;align-items:center;gap:18px;
+  padding:18px 26px;border-bottom:1px solid var(--line);
+  transition:background .15s;
+}
+.sold-row:last-child{border-bottom:none}
+.sold-row:hover{background:var(--panel-2)}
+.sold-name{font-size:15.5px;font-weight:600}
+.sold-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;color:var(--dim-2);margin-top:4px}
+.sold-src{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--dim-2)}
+.sold-price{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.sold-price .p{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--green)}
+.sold-price .t{
+  font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--green);
+  border:1px solid rgba(47,213,127,.3);border-radius:4px;padding:3px 6px;
+}
+.proof-note{
+  margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:1px;
+  color:var(--dim-2);display:flex;align-items:center;gap:10px;
+}
+.proof-note::before{content:"";width:18px;height:1px;background:var(--green)}
+
+/* ---- how a price gets made ---- */
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:54px}
+.m-card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:26px;transition:border-color .2s}
+.m-card:hover{border-color:var(--line-hi)}
+.m-viz{height:54px;display:flex;align-items:center;margin-bottom:18px}
+.m-card h4{font-family:var(--display);font-weight:400;font-size:23px;letter-spacing:1px;margin-bottom:8px}
+.m-card p{font-size:13.5px;color:var(--dim);line-height:1.65}
+/* median dots */
+.viz-dots{display:flex;gap:9px;align-items:center}
+.viz-dots i{width:8px;height:8px;border-radius:50%;background:var(--line-hi)}
+.viz-dots i.mid{width:14px;height:14px;background:var(--green);box-shadow:0 0 14px rgba(47,213,127,.5)}
+/* range band */
+.viz-band{position:relative;width:100%;height:6px;border-radius:3px;background:var(--panel-2)}
+.viz-band b{position:absolute;left:14%;right:14%;top:0;bottom:0;border-radius:3px;background:linear-gradient(90deg,rgba(0,102,255,.6),rgba(47,213,127,.7))}
+.viz-band i{position:absolute;top:-5px;width:2px;height:16px;background:var(--text);border-radius:1px}
+/* confidence segments */
+.viz-seg{display:flex;gap:5px;width:100%}
+.viz-seg i{flex:1;height:10px;border-radius:3px;background:var(--panel-2);border:1px solid var(--line)}
+.viz-seg i.on{background:rgba(47,213,127,.55);border-color:rgba(47,213,127,.4)}
+
+/* ---- vault cta ---- */
+.cta-panel{
+  position:relative;border:1px solid var(--line-hi);border-radius:20px;overflow:hidden;
+  background:
+    radial-gradient(800px 420px at 80% -20%, rgba(0,102,255,.2), transparent 60%),
+    linear-gradient(180deg,#10101a,#0b0b12);
+  padding:72px 64px;
+}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.cta-feats{display:flex;flex-direction:column;gap:14px}
+.feat{
+  display:flex;gap:18px;align-items:flex-start;
+  background:rgba(14,14,23,.7);border:1px solid var(--line);border-radius:12px;padding:20px 22px;
+  transition:border-color .2s;
+}
+.feat:hover{border-color:var(--blue)}
+.feat-ic{
+  flex:none;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:15px;font-weight:600;
+  background:rgba(0,102,255,.14);color:var(--blue-hi);border:1px solid rgba(0,102,255,.3);
+}
+.feat.g .feat-ic{background:rgba(47,213,127,.1);color:var(--green);border-color:rgba(47,213,127,.3)}
+.feat h5{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:1px;margin-bottom:3px}
+.feat p{font-size:13.5px;color:var(--dim);line-height:1.6}
+.cta-cap{margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--dim-2)}
+
+/* ---- footer ---- */
+footer{border-top:1px solid var(--line);padding:64px 0 48px;margin-top:40px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-brand p{font-size:13px;color:var(--dim-2);margin-top:14px;max-width:34ch;line-height:1.7}
+.foot-col h6{font-family:var(--mono);font-size:10.5px;letter-spacing:2.2px;color:var(--dim-2);margin-bottom:16px;font-weight:500}
+.foot-col a{display:block;font-size:13.5px;color:var(--dim);padding:5px 0;transition:color .15s}
+.foot-col a:hover{color:var(--text)}
+.foot-base{
+  border-top:1px solid var(--line);padding-top:24px;
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;color:var(--dim-2);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1020px){
+  .lanes{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .mcard{max-width:480px}
+  .cta-grid{grid-template-columns:1fr;gap:44px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav-links{display:none}
+  .link-quiet{display:none}
+  section{padding:68px 0}
+  .hero{padding:64px 0 60px}
+  .hero-stats{gap:28px;flex-wrap:wrap}
+  .sold-row{grid-template-columns:1fr auto}
+  .sold-src{display:none}
+  .method{grid-template-columns:1fr}
+  .lanes{grid-template-columns:1fr}
+  .lane.feat{grid-column:span 1;flex-direction:column}
+  .cta-panel{padding:48px 28px}
+  .wrap{padding:0 20px}
+  .search{flex-direction:row}
+  .search .btn{padding:11px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="https://figurepinner.com">FIGURE<b>PINNER</b><span class="pin"></span></a>
+    <div class="nav-links">
+      <a href="#lanes">LANES</a>
+      <a href="#board">THE BOARD</a>
+      <a href="#tape">THE TAPE</a>
+      <a href="#vault">VAULT</a>
+    </div>
+    <div class="nav-cta">
+      <a class="link-quiet" href="https://figurepinner.com">Sign in</a>
+      <a class="btn" href="https://figurepinner.com">Get started — free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= SOLD TAPE (signature moment) ================= -->
+<div class="tape" aria-label="Recent real eBay sold prices">
+  <div class="tape-label"><span class="blip"></span>RECENT SOLDS</div>
+  <div class="tape-track" id="tapeTrack"><!-- built by script --></div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">FREE ACTION-FIGURE PRICE GUIDE</div>
+      <h1>KNOW THE MARKET<br>FOR <span class="hl">YOUR LINES.</span></h1>
+      <p class="hero-sub">
+        Elite. Black Series. Classified. Legends. FigurePinner reads <b>real eBay sold
+        listings</b> — money that actually changed hands — and turns them into a median,
+        a true P10&ndash;P90 range, and a confidence score for <b>21,917 figures</b>
+        across 16 lanes.
+      </p>
+      <form class="search" action="https://figurepinner.com" method="get" role="search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#EEEEF5" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <input type="text" name="q" placeholder="Search 21,917 figures — try &quot;stone cold elite 122&quot;" aria-label="Search figures">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div class="search-hints">
+        POPULAR&nbsp;&nbsp;
+        <a href="https://figurepinner.com/figure/fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66">seth rollins ue30</a> &nbsp;·&nbsp;
+        <a href="https://figurepinner.com/figure/fp_star-wars_hasbro_black-series_galaxy_darth-vader_be6b6f">darth vader black series</a> &nbsp;·&nbsp;
+        <a href="https://figurepinner.com/figure/fp_gi-joe_hasbro_classified-series_classified_cobra-commander_005bc6">cobra commander</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="n">21,917</div><div class="l">FIGURES INDEXED</div></div>
+        <div class="stat"><div class="n">16</div><div class="l">GENRE LANES</div></div>
+        <div class="stat"><div class="n"><i>$0</i></div><div class="l">PRICE OF ADMISSION</div></div>
+      </div>
+    </div>
+
+    <!-- hero market card : a real figure, a real sale -->
+    <div class="mcard">
+      <div class="mcard-top">
+        <span class="code">MATTEL WWE · ULTIMATE EDITION 30</span>
+        <span class="pill"><span class="dot"></span>SOLD · EBAY</span>
+      </div>
+      <div class="mcard-img">
+        <img src="https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66/frame_1.jpg" alt="Seth Rollins Ultimate Edition 30 action figure">
+      </div>
+      <div class="mcard-name">
+        <h3>SETH ROLLINS</h3>
+        <div class="mcard-price">
+          <div class="p">$27.55</div>
+          <div class="s">LAST SOLD · EBAY</div>
+        </div>
+      </div>
+      <div class="range">
+        <div class="range-bar">
+          <span class="range-band"></span>
+          <span class="range-tick" style="left:8%"></span>
+          <span class="range-tick med" style="left:44%"></span>
+          <span class="range-tick" style="left:92%"></span>
+        </div>
+        <div class="range-labels"><span>P10</span><span class="m">MEDIAN</span><span>P90</span></div>
+        <div class="range-cap">EVERY FIGURE PAGE: MEDIAN · P10&ndash;P90 TRUE RANGE · CONFIDENCE SCORE</div>
+      </div>
+      <div class="mcard-foot">
+        <span class="fid">ID&nbsp;6DFA66</span>
+        <a class="go" href="https://figurepinner.com/figure/fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66">View figure page <i>&rarr;</i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= LANES ================= -->
+<section id="lanes">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div>
+        <div class="sec-kick">01 / THE LANES</div>
+        <h2>PICK YOUR LANE.</h2>
+      </div>
+      <a class="sec-link" href="https://figurepinner.com">ALL 16 LANES &rarr;</a>
+    </div>
+    <p class="sec-sub rev">
+      Sixteen genre lanes, each priced from its own sold comps. Wrestling runs deepest —
+      <b>about 8,500 figures</b> — with Star Wars Black Series close behind.
+    </p>
+    <div class="lanes">
+      <a class="lane feat rev" href="https://figurepinner.com">
+        <div class="lane-body">
+          <div class="lane-top"><span class="lane-tick">WRSTL</span><span class="lane-arrow">&rarr;</span></div>
+          <h3>WRESTLING</h3>
+          <p>Mattel Elite &amp; Ultimate Edition, Hasbro WWF, Jakks. The deepest lane on the board.</p>
+          <span class="lane-chip">~8,500 FIGURES · DEEPEST LANE</span>
+        </div>
+        <div class="lane-thumbs">
+          <span><img src="https://cdn.shopify.com/s/files/1/0717/0185/6559/files/HTX69-BeckyLynch-WWE-Elite112-Figure-B.jpg?v=1722677556" alt="Becky Lynch Elite 112" loading="lazy"></span>
+          <span><img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/HKN81_PIP_23_0077--654f1ce673454033322cd66ffba3df64.jpg?v=1674752407" alt="The Rock Elite 100" loading="lazy"></span>
+          <span><img src="https://cdn.shopify.com/s/files/1/0717/0185/6559/files/JCJ08-JadeCargill-WWE-Elite116-Figure-E.jpg?v=1740239188" alt="Jade Cargill Elite 116" loading="lazy"></span>
+        </div>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">SW-BS</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>STAR WARS</h3>
+        <p>Black Series, from the 2013 orange line to current Galaxy waves.</p>
+        <span class="lane-chip">4,222 FIGURES</span>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">MARVL</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>MARVEL LEGENDS</h3>
+        <p>X-Men, Spider-Man Retro, Gamerverse, exclusives and BAF waves.</p>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">GIJOE</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>GI JOE CLASSIFIED</h3>
+        <p>Classified Series and Retro cardbacks — Joes, Cobra, and everything between.</p>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">TMNT</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>TMNT</h3>
+        <p>Playmates, vintage to modern — turtles, mutants, and the whole sewer.</p>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">MOTU</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>MOTU</h3>
+        <p>Origins figures, beasts &amp; vehicles, and the exclusives that never hit shelves.</p>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">DC</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>DC</h3>
+        <p>Heroes and villains across the DC shelf, priced from real solds.</p>
+      </a>
+      <a class="lane rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">TFMRS</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>TRANSFORMERS</h3>
+        <p>Bots, combiners, and reissues — every alt-mode on the board.</p>
+      </a>
+      <a class="lane neca rev" href="https://figurepinner.com">
+        <div class="lane-top"><span class="lane-tick">NECA</span><span class="lane-arrow">&rarr;</span></div>
+        <h3>HORROR &amp; FILM</h3>
+        <p>NECA's slashers, aliens, and movie icons — the lane that never sleeps.</p>
+      </a>
+      <a class="lane ghost rev" href="https://figurepinner.com">
+        <h3>+ 7 MORE LANES &rarr;</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE BOARD (real figures) ================= -->
+<section id="board" class="board">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div>
+        <div class="sec-kick">02 / ON THE BOARD</div>
+        <h2>REAL FIGURES. REAL PAGES.</h2>
+      </div>
+      <a class="sec-link" href="https://figurepinner.com">BROWSE THE GUIDE &rarr;</a>
+    </div>
+    <p class="sec-sub rev">Every card below is a live page in the guide — <b>21,917</b> and counting.</p>
+    <div class="strip rev">
+      <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_elite_112_becky-lynch_3d7e12">
+        <div class="fig-img"><img src="https://cdn.shopify.com/s/files/1/0717/0185/6559/files/HTX69-BeckyLynch-WWE-Elite112-Figure-B.jpg?v=1722677556" alt="Becky Lynch" loading="lazy"></div>
+        <div class="fig-name">Becky Lynch</div>
+        <div class="fig-line">ELITE · 112</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_elite_100_the-rock_3c447b">
+        <div class="fig-img"><img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/HKN81_PIP_23_0077--654f1ce673454033322cd66ffba3df64.jpg?v=1674752407" alt="The Rock" loading="lazy"></div>
+        <div class="fig-name">The Rock</div>
+        <div class="fig-line">ELITE · 100</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_ultimate-edition_25_cody-rhodes_83188e">
+        <div class="fig-img"><img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20231122_184430531.jpg" alt="Cody Rhodes" loading="lazy"></div>
+        <div class="fig-name">Cody Rhodes</div>
+        <div class="fig-line">ULTIMATE EDITION · 25</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_star-wars_hasbro_black-series_galaxy_darth-vader_be6b6f">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/star-wars/images/thumbs/darth-vader-obi-wan-kenobi-4291.jpg" alt="Darth Vader" loading="lazy"></div>
+        <div class="fig-name">Darth Vader</div>
+        <div class="fig-line">BLACK SERIES · GALAXY</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_star-wars_hasbro_black-series_blue-wave-2014-2015_bossk_19a5e5">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/star-wars/images/thumbs/bossk-23.jpg" alt="Bossk" loading="lazy"></div>
+        <div class="fig-name">Bossk</div>
+        <div class="fig-line">BLACK SERIES · BLUE WAVE</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_marvel-comics_hasbro_marvel-legends_exclusives_doctor-strange_da9845">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/marvel/images/thumbs/doctor-strange-classic-comics-3268.jpg" alt="Doctor Strange" loading="lazy"></div>
+        <div class="fig-name">Doctor Strange</div>
+        <div class="fig-line">MARVEL LEGENDS</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_marvel-comics_hasbro_marvel-legends_x-men_dazzler_0fc468">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/marvel/images/marvel-legends-warlock-dazzler-368.jpg" alt="Dazzler" loading="lazy"></div>
+        <div class="fig-name">Dazzler</div>
+        <div class="fig-line">MARVEL LEGENDS · X-MEN</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_gi-joe_hasbro_classified-series_classified_cobra-commander_005bc6">
+        <div class="fig-img"><img src="https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_classified-series_classified_cobra-commander_005bc6/canonical.jpg" alt="Cobra Commander" loading="lazy"></div>
+        <div class="fig-name">Cobra Commander</div>
+        <div class="fig-line">CLASSIFIED SERIES</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_gi-joe_hasbro_classified-series_classified-retro_beach-head_d9965e">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/gijoe/images/thumbs/beach-head-retro-8456.jpg" alt="Beach Head" loading="lazy"></div>
+        <div class="fig-name">Beach Head</div>
+        <div class="fig-line">CLASSIFIED · RETRO</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_masters-of-the-universe_mattel_origins_origins-action-figures_he-man_f511bd">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/masters-of-the-universe/images/thumbs/he-man-vintage-sculpt-2462.jpg" alt="He-Man" loading="lazy"></div>
+        <div class="fig-name">He-Man</div>
+        <div class="fig-line">MOTU ORIGINS</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_tmnt_playmates_playmates_playmates-action-figures_movie-star-leo_57a525">
+        <div class="fig-img"><img src="https://www.actionfigure411.com/teenage-mutant-ninja-turtles/images/thumbs/movie-star-leo-4907.jpg" alt="Movie Star Leo" loading="lazy"></div>
+        <div class="fig-name">Movie Star Leo</div>
+        <div class="fig-line">TMNT · PLAYMATES</div>
+      </a>
+      <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_ultimate-edition_tgt_rey-mysterio_09717a">
+        <div class="fig-img"><img src="https://i.ebayimg.com/images/g/Q70AAeSweQNqFM3E/s-l225.jpg" alt="Rey Mysterio" loading="lazy"></div>
+        <div class="fig-name">Rey Mysterio</div>
+        <div class="fig-line">ULTIMATE EDITION · TGT</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF: THE TAPE ================= -->
+<section id="tape" class="proof">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div>
+        <div class="sec-kick">03 / THE TAPE</div>
+        <h2>STRAIGHT OFF THE TAPE.</h2>
+      </div>
+    </div>
+    <p class="sec-sub rev">
+      Every FigurePinner price traces back to <b>eBay sold listings</b> — actual sales,
+      not what sellers are asking. Five recent sales from the tape:
+    </p>
+    <div class="solds rev">
+      <a class="sold-row" href="https://figurepinner.com/figure/fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66">
+        <div><div class="sold-name">Seth Rollins</div><div class="sold-meta">MATTEL · ULTIMATE EDITION 30</div></div>
+        <div class="sold-src">EBAY · SOLD LISTING</div>
+        <div class="sold-price"><span class="p">$27.55</span><span class="t">SOLD</span></div>
+      </a>
+      <a class="sold-row" href="https://figurepinner.com">
+        <div><div class="sold-name">Stone Cold Steve Austin</div><div class="sold-meta">MATTEL · ELITE 122</div></div>
+        <div class="sold-src">EBAY · SOLD LISTING</div>
+        <div class="sold-price"><span class="p">$25.00</span><span class="t">SOLD</span></div>
+      </a>
+      <a class="sold-row" href="https://figurepinner.com">
+        <div><div class="sold-name">Darth Vader</div><div class="sold-meta">HASBRO · BLACK SERIES</div></div>
+        <div class="sold-src">EBAY · SOLD LISTING</div>
+        <div class="sold-price"><span class="p">$24.95</span><span class="t">SOLD</span></div>
+      </a>
+      <a class="sold-row" href="https://figurepinner.com">
+        <div><div class="sold-name">Snake Eyes</div><div class="sold-meta">HASBRO · CLASSIFIED SERIES</div></div>
+        <div class="sold-src">EBAY · SOLD LISTING</div>
+        <div class="sold-price"><span class="p">$16.00</span><span class="t">SOLD</span></div>
+      </a>
+      <a class="sold-row" href="https://figurepinner.com">
+        <div><div class="sold-name">Spider-Man</div><div class="sold-meta">HASBRO · MARVEL LEGENDS</div></div>
+        <div class="sold-src">EBAY · SOLD LISTING</div>
+        <div class="sold-price"><span class="p">$14.99</span><span class="t">SOLD</span></div>
+      </a>
+    </div>
+    <div class="proof-note rev">THESE SALES ARE THE RAW MATERIAL BEHIND EVERY MEDIAN ON THE SITE.</div>
+
+    <div class="method">
+      <div class="m-card rev">
+        <div class="m-viz">
+          <div class="viz-dots"><i></i><i></i><i></i><i class="mid"></i><i></i><i></i><i></i></div>
+        </div>
+        <h4>THE MEDIAN</h4>
+        <p>The middle of real sold comps — so one wild auction night can't move your number. What the figure actually trades at.</p>
+      </div>
+      <div class="m-card rev">
+        <div class="m-viz">
+          <div class="viz-band"><b></b><i style="left:14%"></i><i style="left:48%"></i><i style="left:86%"></i></div>
+        </div>
+        <h4>THE TRUE RANGE</h4>
+        <p>P10 to P90 — the band where most sales actually land, loose to minty. The honest spread, not a single magic number.</p>
+      </div>
+      <div class="m-card rev">
+        <div class="m-viz">
+          <div class="viz-seg"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+        </div>
+        <h4>THE CONFIDENCE</h4>
+        <p>Scored from comp depth — how many recent solds stand behind the number. Thin data gets flagged, never hidden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VAULT / WANTLIST CTA ================= -->
+<section id="vault">
+  <div class="wrap">
+    <div class="cta-panel rev">
+      <div class="cta-grid">
+        <div>
+          <div class="sec-kick">04 / YOUR BOARD</div>
+          <h2>PUT YOUR SHELF<br>ON THE BOARD.</h2>
+          <p class="sec-sub" style="margin:18px 0 30px">
+            A free account turns the guide into <b>your</b> guide — your figures,
+            your hunts, your alerts.
+          </p>
+          <a class="btn big" href="https://figurepinner.com">Create your free account &rarr;</a>
+          <div class="cta-cap">FREE ACCOUNT · 21,917 FIGURES · 16 LANES</div>
+        </div>
+        <div class="cta-feats">
+          <div class="feat">
+            <div class="feat-ic">V</div>
+            <div>
+              <h5>THE VAULT</h5>
+              <p>Pin every figure you own. Your whole shelf on one board, each piece with its current market read.</p>
+            </div>
+          </div>
+          <div class="feat g">
+            <div class="feat-ic">W</div>
+            <div>
+              <h5>THE WANTLIST</h5>
+              <p>Pin what you're hunting. Track the grails before you commit, and watch the range instead of guessing.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-ic">!</div>
+            <div>
+              <h5>COMP ALERTS</h5>
+              <p>When comps move on a pinned figure, you hear about it. No more refreshing sold pages at midnight.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="https://figurepinner.com">FIGURE<b>PINNER</b><span class="pin"></span></a>
+        <p>A free price guide for action-figure collectors. Every price derived from real eBay sold listings — 21,917 figures across 16 lanes.</p>
+      </div>
+      <div class="foot-col">
+        <h6>LANES</h6>
+        <a href="https://figurepinner.com">Wrestling</a>
+        <a href="https://figurepinner.com">Star Wars Black Series</a>
+        <a href="https://figurepinner.com">Marvel Legends</a>
+        <a href="https://figurepinner.com">GI Joe Classified</a>
+        <a href="https://figurepinner.com">All 16 lanes</a>
+      </div>
+      <div class="foot-col">
+        <h6>DATA</h6>
+        <a href="#tape">Recent solds</a>
+        <a href="#tape">How prices are made</a>
+        <a href="#board">Browse the board</a>
+      </div>
+      <div class="foot-col">
+        <h6>ACCOUNT</h6>
+        <a href="#vault">Vault</a>
+        <a href="#vault">Wantlist</a>
+        <a href="https://figurepinner.com">Sign in</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 FIGUREPINNER</span>
+      <span>PRICES FROM REAL EBAY SOLD LISTINGS · NOT AFFILIATED WITH EBAY INC. OR ANY MANUFACTURER</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---- build the sold tape from the five real sales ---- */
+(function(){
+  var SOLDS = [
+    {n:"SETH ROLLINS", l:"UE 30", p:"$27.55",
+     h:"https://figurepinner.com/figure/fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66"},
+    {n:"STONE COLD", l:"ELITE 122", p:"$25.00", h:"https://figurepinner.com"},
+    {n:"DARTH VADER", l:"BLACK SERIES", p:"$24.95", h:"https://figurepinner.com"},
+    {n:"SNAKE EYES", l:"CLASSIFIED", p:"$16.00", h:"https://figurepinner.com"},
+    {n:"SPIDER-MAN", l:"MARVEL LEGENDS", p:"$14.99", h:"https://figurepinner.com"}
+  ];
+  function item(s){
+    return '<a class="tki" href="' + s.h + '">' +
+      '<span class="dot"></span><b>' + s.n + '</b>' +
+      '<span class="lk">' + s.l + '</span><em>' + s.p + '</em>' +
+      '<span class="tag">SOLD &middot; EBAY</span></a>';
+  }
+  var group = '';
+  for (var r = 0; r < 3; r++) for (var i = 0; i < SOLDS.length; i++) group += item(SOLDS[i]);
+  var half = '<span class="tape-half">' + group + '</span>';
+  document.getElementById('tapeTrack').innerHTML = half + half;
+})();
+
+/* ---- reveal on scroll ---- */
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.rev').forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold: .12});
+  document.querySelectorAll('.rev').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

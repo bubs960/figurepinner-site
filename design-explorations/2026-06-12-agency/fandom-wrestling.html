@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrestling — FigurePinner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     FIGUREPINNER — FANDOM HUB: WRESTLING
+     The tier between home and the line/figure pages. Design
+     language: shelf-v5 / figure-shelf — hairlines, glass case,
+     gradient seams, light UI weights, gold-on-dark restraint.
+     This is a navigation/identity page: character first, prices
+     nearly absent. Motion: case spotlight drift + cursor takeover,
+     glass sweep, shelf breathe, auto-pin demo, registry rows
+     stagger-fade on scroll. All GPU-only, reduced-motion safe.
+     Data: 100% real from fandom-data.json — 5,192 figures,
+     66 lines, top 10 lines with live counts + samples.
+     ============================================================ */
+  :root{
+    --bg:        #09090f;
+    --ink:       #EEEEF5;
+    --cream:     #f2e8d5;
+    --cream-dim: rgba(242,232,213,.60);
+    --cream-mut: rgba(242,232,213,.38);
+    --gold:      #e0a83e;
+    --gold-hi:   #f5c462;
+    --gold-mut:  rgba(224,168,62,.72);
+    --hair:      rgba(242,232,213,.10);
+    --line:      rgba(242,232,213,.07);
+    --mount:     linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);
+    --display:   'Bebas Neue', sans-serif;
+    --body:      'Inter', sans-serif;
+    --maxw:      1240px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;line-height:1.6;font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:#1a1206}
+  a{color:inherit}
+  img{display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+  /* ---------- gradient seam between sections ---------- */
+  .seam{position:relative}
+  .seam::before{
+    content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:min(1140px,94%);height:1px;
+    background:linear-gradient(90deg,transparent,rgba(242,232,213,.13) 28%,rgba(224,168,62,.20) 50%,rgba(242,232,213,.13) 72%,transparent);
+  }
+
+  /* ---------- reveal on scroll (rows take a per-row --d delay) ---------- */
+  [data-reveal]{
+    opacity:0;transform:translateY(20px);
+    transition:opacity .7s cubic-bezier(.22,.61,.36,1) var(--d,0s),
+               transform .7s cubic-bezier(.22,.61,.36,1) var(--d,0s);
+  }
+  [data-reveal].in{opacity:1;transform:none}
+
+  /* ============================ NAV (v5, slim) ============================ */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(9,9,15,.78);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{
+    max-width:var(--maxw);margin:0 auto;padding:0 32px;
+    height:58px;display:flex;align-items:center;gap:36px;
+  }
+  .logo{
+    font-family:var(--display);font-size:25px;letter-spacing:.05em;
+    text-decoration:none;display:flex;align-items:baseline;gap:7px;line-height:1;
+  }
+  .logo .pin-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--gold);align-self:center;
+    box-shadow:0 0 9px rgba(224,168,62,.8);
+  }
+  .logo em{font-style:normal;color:var(--gold)}
+  .nav-links{display:flex;gap:30px;margin-left:8px}
+  .nav-links a{
+    font-size:13px;font-weight:400;color:var(--cream-dim);
+    text-decoration:none;letter-spacing:.03em;
+    transition:color .2s;position:relative;
+  }
+  .nav-links a::after{
+    content:'';position:absolute;left:0;right:100%;bottom:-6px;height:1px;
+    background:var(--gold);transition:right .25s cubic-bezier(.22,.61,.36,1);
+  }
+  .nav-links a:hover{color:var(--cream)}
+  .nav-links a:hover::after{right:0}
+  .nav-cta{margin-left:auto;display:flex;align-items:center;gap:20px}
+  .nav-cta .signin{font-size:13px;font-weight:400;color:var(--cream-dim);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+  .nav-cta .signin:hover{color:var(--cream)}
+  .btn-gold{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--body);font-size:12.5px;font-weight:500;letter-spacing:.04em;
+    color:#1a1206;background:linear-gradient(180deg,var(--gold-hi),var(--gold));
+    padding:8px 17px;border-radius:99px;text-decoration:none;border:none;cursor:pointer;
+    box-shadow:0 1px 0 rgba(255,255,255,.22) inset, 0 4px 14px rgba(224,168,62,.16);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.22) inset, 0 8px 20px rgba(224,168,62,.28)}
+
+  /* ============================ BREADCRUMB (hairline) ============================ */
+  .crumbs-in{
+    max-width:var(--maxw);margin:0 auto;padding:11px 32px;
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;font-weight:400;color:var(--cream-mut);
+    white-space:nowrap;overflow-x:auto;scrollbar-width:none;
+  }
+  .crumbs-in::-webkit-scrollbar{display:none}
+  .crumbs-in a{text-decoration:none;color:var(--cream-mut);transition:color .2s}
+  .crumbs-in a:hover{color:var(--gold-hi)}
+  .crumbs-in .sep{color:rgba(242,232,213,.2);font-weight:300}
+  .crumbs-in .here{color:var(--cream);font-weight:500}
+
+  /* ============================ MASTHEAD ============================ */
+  .mast{
+    position:relative;
+    padding:32px 0 40px;
+    background:
+      radial-gradient(900px 520px at 80% -10%, rgba(224,168,62,.085), transparent 64%),
+      radial-gradient(640px 460px at -8% 100%, rgba(0,102,255,.05), transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .mast-grid{display:grid;grid-template-columns:1fr 1.06fr;gap:60px;align-items:center}
+  .mast-grid > *{min-width:0}
+  .eyebrow{
+    font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--gold);display:inline-flex;align-items:center;gap:11px;
+  }
+  .eyebrow::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.65}
+  h1{
+    margin-top:10px;
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(62px, 7.4vw, 104px);
+    line-height:.92;letter-spacing:.015em;
+  }
+  .mast-sub{
+    margin-top:18px;max-width:500px;
+    font-size:16.5px;line-height:1.7;font-weight:300;color:var(--cream-dim);
+  }
+  .mast-sub strong{color:var(--cream);font-weight:500}
+
+  /* search — scoped to the fandom, slim bar (v5) */
+  .search{margin-top:26px;max-width:500px;position:relative}
+  .search input{
+    width:100%;height:44px;
+    background:rgba(242,232,213,.04);
+    border:1px solid rgba(242,232,213,.13);
+    border-radius:99px;
+    padding:0 104px 0 44px;
+    color:var(--ink);font-family:var(--body);font-size:14px;font-weight:300;
+    transition:border-color .25s, background .25s, box-shadow .25s;
+  }
+  .search input::placeholder{color:var(--cream-mut)}
+  .search input:focus{
+    outline:none;border-color:rgba(224,168,62,.55);
+    background:rgba(242,232,213,.06);
+    box-shadow:0 0 0 3px rgba(224,168,62,.10);
+  }
+  .search .mag{
+    position:absolute;left:17px;top:50%;transform:translateY(-50%);
+    width:16px;height:16px;color:var(--cream-mut);pointer-events:none;
+  }
+  .search .go{
+    position:absolute;right:6px;top:50%;transform:translateY(-50%);
+    height:32px;padding:0 16px;border-radius:99px;border:none;cursor:pointer;
+    font-family:var(--display);font-size:15px;letter-spacing:.09em;
+    background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1a1206;
+    transition:filter .2s;
+  }
+  .search .go:hover{filter:brightness(1.08)}
+  .search-hints{margin-top:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .search-hints span{font-size:11.5px;font-weight:300;color:var(--cream-mut);margin-right:2px;letter-spacing:.02em}
+  .chip{
+    font-size:11.5px;font-weight:400;letter-spacing:.03em;color:var(--cream-dim);
+    border:1px solid rgba(242,232,213,.12);border-radius:99px;
+    padding:4px 12px;text-decoration:none;
+    transition:color .2s, border-color .2s, background .2s;
+  }
+  .chip:hover{color:var(--gold-hi);border-color:rgba(224,168,62,.45);background:rgba(224,168,62,.05)}
+
+  /* ---------- the glass case (v5 motif) ---------- */
+  .case-col{position:relative}
+  .case{
+    --mx:50%; --my:30%;
+    position:relative;
+    border-radius:18px;
+    padding:32px 24px 16px;
+    background:
+      radial-gradient(130% 95% at 50% -5%, rgba(224,168,62,.10), transparent 56%),
+      linear-gradient(180deg, rgba(242,232,213,.030), rgba(242,232,213,.012) 45%, rgba(0,0,0,.10) 100%);
+    border:1px solid var(--hair);
+    box-shadow:
+      inset 0 1px 0 rgba(255,244,216,.08),
+      inset 0 0 70px rgba(224,168,62,.045),
+      0 26px 70px rgba(0,0,0,.42);
+    overflow:hidden;
+  }
+  /* cursor spotlight (takes over from drift on mousemove) */
+  .case::before{
+    content:'';position:absolute;inset:0;z-index:3;pointer-events:none;
+    background:radial-gradient(260px circle at var(--mx) var(--my), rgba(255,216,140,.12), transparent 62%);
+    opacity:0;transition:opacity .5s;
+  }
+  .case.manual::before{opacity:1}
+  /* thin display light strip */
+  .case::after{
+    content:'';position:absolute;top:0;left:10%;right:10%;height:2px;z-index:2;
+    background:linear-gradient(90deg,transparent,rgba(245,196,98,.75),transparent);
+    box-shadow:0 0 18px 3px rgba(245,196,98,.28);
+    border-radius:0 0 3px 3px;
+  }
+  /* idle spotlight drifting a slow figure-8 */
+  .case-light{
+    position:absolute;left:50%;top:42%;width:1px;height:1px;z-index:3;
+    pointer-events:none;opacity:1;transition:opacity .6s;
+    animation:driftX 12s ease-in-out infinite alternate;
+  }
+  .case-light i{
+    display:block;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,216,140,.11), transparent 60%);
+    animation:driftY 6s ease-in-out infinite alternate;
+  }
+  .case.manual .case-light{opacity:0}
+  @keyframes driftX{from{transform:translateX(-170px)}to{transform:translateX(170px)}}
+  @keyframes driftY{from{transform:translateY(-80px)}to{transform:translateY(80px)}}
+  /* glass sweep ~every 8s */
+  .case-sweep{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden;border-radius:18px}
+  .case-sweep::before{
+    content:'';position:absolute;top:-25%;bottom:-25%;left:0;width:32%;
+    background:linear-gradient(100deg,transparent,rgba(255,236,194,.05) 32%,rgba(255,236,194,.12) 50%,rgba(255,236,194,.05) 68%,transparent);
+    transform:translateX(-130%) skewX(-18deg);
+    animation:sweep 8s linear infinite;
+  }
+  @keyframes sweep{
+    0%{transform:translateX(-130%) skewX(-18deg)}
+    24%{transform:translateX(480%) skewX(-18deg)}
+    100%{transform:translateX(480%) skewX(-18deg)}
+  }
+  .case-label{
+    position:absolute;top:13px;left:26px;z-index:5;
+    font-size:10px;font-weight:400;letter-spacing:.26em;text-transform:uppercase;
+    color:rgba(242,232,213,.36);
+  }
+  .shelf{position:relative;padding:0 6px 12px;margin-bottom:22px}
+  .shelf:last-child{margin-bottom:4px}
+  .shelf::after{ /* glass shelf edge */
+    content:'';position:absolute;left:-10px;right:-10px;bottom:0;height:3px;
+    border-radius:2px;
+    background:linear-gradient(180deg, rgba(255,236,194,.34), rgba(255,236,194,.06));
+    box-shadow:0 1px 0 rgba(255,244,216,.10), 0 10px 18px rgba(0,0,0,.38), 0 0 10px rgba(255,236,194,.10);
+  }
+  .shelf-row{display:flex;gap:13px;align-items:flex-end;position:relative;z-index:1}
+  .fig{
+    flex:1 1 0;min-width:0;
+    text-decoration:none;position:relative;
+    padding-bottom:8px;
+    animation:breathe 4.2s ease-in-out infinite alternate;
+  }
+  @keyframes breathe{from{transform:translateY(0)}to{transform:translateY(-2px)}}
+  .shelf-row .fig:nth-child(1){animation-delay:-.2s}
+  .shelf-row .fig:nth-child(2){animation-delay:-1.4s;animation-duration:3.8s}
+  .shelf-row .fig:nth-child(3){animation-delay:-2.7s}
+  .shelf-row .fig:nth-child(4){animation-delay:-.8s;animation-duration:4.6s}
+  .shelf-row .fig:nth-child(5){animation-delay:-2s;animation-duration:3.9s}
+  .shelf:nth-of-type(2) .fig{animation-duration:4.5s}
+  .fig:hover{animation-play-state:paused}
+  .fig-mount{
+    position:relative;
+    background:var(--mount);
+    border-radius:6px 6px 3px 3px;
+    padding:5px 5px 6px;
+    box-shadow:0 10px 18px rgba(0,0,0,.42), 0 2px 4px rgba(0,0,0,.38);
+    transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s;
+  }
+  .fig-mount::after{
+    content:'';position:absolute;inset:-2px;border-radius:8px 8px 5px 5px;
+    border:1px solid var(--gold);
+    box-shadow:0 0 24px rgba(224,168,62,.45), inset 0 0 14px rgba(224,168,62,.15);
+    opacity:0;transition:opacity .45s;pointer-events:none;
+  }
+  .fig-mount img{
+    width:100%;aspect-ratio:4/4.2;object-fit:cover;border-radius:3px;
+    background:#e9e0cd;
+  }
+  .fig:hover .fig-mount{
+    transform:translateY(-9px) rotate(-1.4deg);
+    box-shadow:0 24px 34px rgba(0,0,0,.55), 0 0 0 1px rgba(224,168,62,.5), 0 0 24px rgba(224,168,62,.16);
+  }
+  .fig.pinned .fig-mount{
+    box-shadow:0 10px 18px rgba(0,0,0,.42), 0 0 0 1px var(--gold), 0 0 20px rgba(224,168,62,.24);
+  }
+  .fig.demo .fig-mount{transform:translateY(-6px)}
+  .fig.demo .fig-mount::after{opacity:1}
+  .fig-name{
+    margin-top:8px;font-size:11.5px;font-weight:500;color:var(--cream);
+    line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .fig-tag{
+    margin-top:2px;font-size:9.5px;font-weight:400;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--cream-mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .pin-btn{
+    position:absolute;top:-11px;right:-9px;z-index:5;
+    width:28px;height:28px;border-radius:50%;border:none;cursor:pointer;
+    background:linear-gradient(180deg,var(--gold-hi),var(--gold));
+    color:#1a1206;display:flex;align-items:center;justify-content:center;
+    opacity:0;transform:scale(.55) rotate(-12deg);
+    transition:opacity .25s, transform .3s cubic-bezier(.34,1.56,.64,1);
+    box-shadow:0 4px 11px rgba(0,0,0,.45);
+  }
+  .pin-btn svg{width:13px;height:13px}
+  .fig:hover .pin-btn, .fig.pinned .pin-btn{opacity:1;transform:scale(1) rotate(0deg)}
+  .fig.demo .pin-btn{opacity:1;animation:pinDrop .55s cubic-bezier(.34,1.56,.64,1) both}
+  @keyframes pinDrop{
+    0%{transform:translateY(-18px) scale(1.4) rotate(-20deg);opacity:0}
+    60%{transform:translateY(1px) scale(.94) rotate(4deg);opacity:1}
+    100%{transform:translateY(0) scale(1) rotate(0deg);opacity:1}
+  }
+  .fig.pinned .pin-btn{
+    background:linear-gradient(180deg,#fff0d0,var(--gold-hi));
+    box-shadow:0 4px 11px rgba(0,0,0,.45), 0 0 13px rgba(224,168,62,.65);
+  }
+
+  /* ============================ THE LINE REGISTRY ============================ */
+  .registry{
+    padding:34px 0 40px;
+    background:
+      radial-gradient(700px 380px at 88% 0%, rgba(224,168,62,.045), transparent 62%),
+      var(--bg);
+  }
+  .reg-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:14px}
+  .reg-kicker{
+    font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--gold);display:inline-flex;align-items:center;gap:12px;
+  }
+  .reg-kicker::before{content:'';width:34px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));opacity:.7}
+  h2{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:.015em;
+  }
+  .reg-sub{font-size:13px;font-weight:300;color:var(--cream-mut)}
+
+  .reg{border-top:1px solid var(--line)}
+  .reg-row{
+    position:relative;
+    display:flex;align-items:center;gap:18px;
+    padding:10px 10px 10px 14px;
+    border-bottom:1px solid var(--line);
+    text-decoration:none;
+  }
+  /* hover wash — own pseudo, so the reveal delay never touches it */
+  .reg-row::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(90deg, rgba(224,168,62,.05), transparent 70%);
+    opacity:0;transition:opacity .25s;
+  }
+  .reg-row:hover::after{opacity:1}
+  /* gold hairline grows on the left */
+  .reg-row .edge{
+    position:absolute;left:0;top:50%;width:2px;height:0;
+    transform:translateY(-50%);
+    background:linear-gradient(180deg,var(--gold-hi),var(--gold));
+    border-radius:1px;box-shadow:0 0 8px rgba(224,168,62,.5);
+    transition:height .3s cubic-bezier(.22,.61,.36,1);
+  }
+  .reg-row:hover .edge{height:58%}
+  .reg-who{flex:0 0 250px;min-width:0}
+  .reg-name{
+    font-family:var(--display);font-size:25px;font-weight:400;letter-spacing:.03em;
+    color:var(--cream);line-height:1.05;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    transition:color .2s;
+  }
+  .reg-row:hover .reg-name{color:var(--gold-hi)}
+  .reg-maker{
+    margin-top:2px;font-size:9.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--cream-mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .reg-meta{
+    flex:0 0 auto;
+    font-size:12px;font-weight:400;letter-spacing:.05em;
+    color:var(--gold-mut);font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  .reg-meta .dot{color:rgba(224,168,62,.35);margin:0 7px}
+  .reg-lead{
+    flex:1 1 auto;min-width:18px;
+    border-bottom:1px dotted rgba(242,232,213,.14);
+    transform:translateY(2px);
+  }
+  .reg-thumbs{flex:0 0 auto;display:flex;gap:7px}
+  .reg-thumbs img{
+    width:38px;height:38px;border-radius:5px;object-fit:cover;
+    background:#e9e0cd;border:1px solid rgba(242,232,213,.10);
+    transition:transform .3s cubic-bezier(.22,.61,.36,1), border-color .3s;
+  }
+  .reg-row:hover .reg-thumbs img{border-color:rgba(224,168,62,.4);transform:translateY(-2px)}
+  .reg-row:hover .reg-thumbs img:nth-child(2){transition-delay:.04s}
+  .reg-row:hover .reg-thumbs img:nth-child(3){transition-delay:.08s}
+  .reg-row:hover .reg-thumbs img:nth-child(4){transition-delay:.12s}
+  .reg-chev{
+    flex:0 0 auto;width:22px;height:22px;color:var(--cream-mut);
+    transition:color .25s, transform .3s cubic-bezier(.22,.61,.36,1);
+  }
+  .reg-row:hover .reg-chev{color:var(--gold-hi);transform:translateX(4px)}
+  /* the "all lines" row */
+  .reg-all{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:14px;padding:10px 18px;
+    border:1px dashed rgba(224,168,62,.30);border-radius:99px;
+    text-decoration:none;
+    font-family:var(--display);font-size:17px;letter-spacing:.12em;color:var(--gold-hi);
+    transition:border-color .25s, background .25s, transform .25s;
+  }
+  .reg-all:hover{border-style:solid;border-color:rgba(224,168,62,.5);background:rgba(224,168,62,.05);transform:translateY(-2px)}
+  .reg-all svg{width:16px;height:16px;transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+  .reg-all:hover svg{transform:translateX(4px)}
+
+  /* ============================ CLOSER (v5, tightened) ============================ */
+  .closer{
+    padding:34px 0 38px;
+    background:
+      radial-gradient(700px 360px at 14% 0%, rgba(224,168,62,.05), transparent 60%),
+      radial-gradient(600px 360px at 92% 100%, rgba(224,168,62,.03), transparent 60%);
+  }
+  .closer-in{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  .closer-copy{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(26px,2.9vw,36px);line-height:1.06;letter-spacing:.015em;
+    max-width:620px;text-wrap:balance;
+  }
+  .closer-copy em{font-style:normal;color:var(--gold)}
+  .btn-gold.big{font-size:14px;padding:12px 27px;flex:0 0 auto}
+
+  /* ============================ FOOTER (v5) ============================ */
+  footer{padding:24px 0 26px}
+  .foot-in{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap}
+  .foot-brand .logo{font-size:22px}
+  .foot-links{display:flex;gap:60px}
+  .foot-col .h{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-mut);margin-bottom:14px}
+  .foot-col a{display:block;font-size:12.5px;font-weight:300;color:var(--cream-dim);text-decoration:none;margin-bottom:9px;transition:color .2s}
+  .foot-col a:hover{color:var(--gold-hi)}
+  .foot-base{margin-top:18px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;font-weight:300;color:var(--cream-mut);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* ============================ REDUCED MOTION ============================ */
+  @media (prefers-reduced-motion: reduce){
+    [data-reveal]{opacity:1;transform:none;transition:none}
+    *{transition-duration:.001ms !important;animation-duration:.001ms !important;animation-delay:0s !important;transition-delay:0s !important}
+    .fig{animation:none !important}
+    .case-light,.case-sweep{display:none}
+    .case::before{display:none}
+    .pin-btn{animation:none !important}
+  }
+
+  /* ============================ RESPONSIVE ============================ */
+  @media (max-width: 1020px){
+    .mast-grid{grid-template-columns:1fr;gap:46px}
+    .mast-sub,.search{max-width:640px}
+    .reg-who{flex:0 0 210px}
+    .reg-lead{display:none}
+    .reg-meta{margin-left:auto}
+  }
+  @media (max-width: 640px){
+    .wrap{padding:0 20px}
+    .nav-in{padding:0 20px;gap:20px;height:56px}
+    .nav-links{display:none}
+    .nav-cta .signin{display:none}
+    .crumbs-in{padding:10px 20px}
+    .mast{padding:32px 0 42px}
+    .case{padding:30px 14px 16px}
+    .case-label{left:18px}
+    .shelf{padding:0 2px 13px}
+    .shelf-row{overflow-x:auto;scrollbar-width:none;padding-top:14px;margin-top:-14px}
+    .shelf-row::-webkit-scrollbar{display:none}
+    .fig{flex:0 0 104px}
+    .registry{padding:34px 0 40px}
+    .reg-row{flex-wrap:wrap;gap:8px 12px;padding:13px 6px 14px 12px}
+    .reg-who{flex:1 1 auto;order:1}
+    .reg-chev{order:2}
+    .reg-meta{order:3;flex:1 1 100%;margin-left:0}
+    .reg-thumbs{order:4;flex:1 1 100%}
+    .reg-thumbs img{width:40px;height:40px}
+    .reg-all{font-size:16px}
+    .closer{padding:36px 0 40px}
+    .foot-links{gap:36px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="https://figurepinner.com"><span class="pin-dot"></span>FIGURE<em>PINNER</em></a>
+    <nav class="nav-links">
+      <a href="#registry">The Lines</a>
+      <a href="https://figurepinner.com/browse">All Fandoms</a>
+      <a href="#vault">Vault &amp; Wantlist</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="signin" href="#vault">Sign in</a>
+      <a class="btn-gold" href="#vault">Start your Vault</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ BREADCRUMB ============================ -->
+<nav class="crumbs seam" aria-label="Breadcrumb">
+  <div class="crumbs-in">
+    <a href="https://figurepinner.com">FP</a><span class="sep">&rsaquo;</span>
+    <span class="here">Wrestling</span>
+  </div>
+</nav>
+
+<!-- ============================ MASTHEAD ============================ -->
+<section class="mast seam">
+  <div class="wrap mast-grid">
+    <div>
+      <span class="eyebrow">The deepest lane in the guide</span>
+      <h1>Wrestling</h1>
+      <p class="mast-sub">
+        <strong>5,192 figures</strong> across <strong>66 lines</strong> &mdash;
+        from Hasbro&rsquo;s WWF shelf to this year&rsquo;s Elite, every era of
+        the aisle under one light.
+      </p>
+
+      <form class="search" onsubmit="return false" role="search" aria-label="Search wrestling figures">
+        <svg class="mag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <input type="text" placeholder="Search wrestling &mdash; try &quot;Randy Savage Hasbro&quot;" aria-label="Search wrestling figures">
+        <button class="go" type="submit">Search</button>
+      </form>
+      <div class="search-hints">
+        <span>Collectors are hunting:</span>
+        <a class="chip" href="https://figurepinner.com/figure/fp_wrestling_hasbro_wwf-hasbro_ex_hulk-hogan_1c7f80">Hasbro Hogan</a>
+        <a class="chip" href="https://figurepinner.com/figure/fp_wrestling_mattel_elite_1_cm-punk_775511">Elite 1 CM Punk</a>
+        <a class="chip" href="https://figurepinner.com/figure/fp_wrestling_toy-biz_wcw-toy-biz_bb1_sting_b0836f">WCW Sting</a>
+      </div>
+    </div>
+
+    <!-- THE WRESTLING CASE -->
+    <div class="case-col" data-reveal>
+      <div class="case" id="case">
+        <div class="case-light" aria-hidden="true"><i></i></div>
+        <div class="case-sweep" aria-hidden="true"></div>
+        <div class="case-label">The wrestling case &mdash; tap a pin to keep one</div>
+
+        <!-- Shelf 1: the modern aisle -->
+        <div class="shelf">
+          <div class="shelf-row">
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_elite_1_cm-punk_775511">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin CM Punk to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://i.ebayimg.com/images/g/ghcAAeSw48RoyFCi/s-l225.jpg" alt="CM Punk Elite 1" loading="lazy">
+              </div>
+              <div class="fig-name">CM Punk</div>
+              <div class="fig-tag">Elite 1</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_basic_1_john-cena_51124a">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin John Cena to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182975394259_7524328_n.jpg" alt="John Cena Basic Series 1" loading="lazy">
+              </div>
+              <div class="fig-name">John Cena</div>
+              <div class="fig-tag">Basic 1</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_jazwares_aew-unrivaled_1_cody-rhodes_032b3e">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Cody Rhodes to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p46_i2_w1400.jpg" alt="Cody Rhodes AEW Unrivaled 1" loading="lazy">
+              </div>
+              <div class="fig-name">Cody Rhodes</div>
+              <div class="fig-tag">AEW Unrivaled</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_mattel_elite_1_rey-mysterio_6df631">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Rey Mysterio to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://i.ebayimg.com/images/g/J5AAAeSw-8pqFM73/s-l225.jpg" alt="Rey Mysterio Elite 1" loading="lazy">
+              </div>
+              <div class="fig-name">Rey Mysterio</div>
+              <div class="fig-tag">Elite 1</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_jazwares_aew-unrivaled_1_kenny-omega_70c18d">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Kenny Omega to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20240330_164733450.jpg" alt="Kenny Omega AEW Unrivaled 1" loading="lazy">
+              </div>
+              <div class="fig-name">Kenny Omega</div>
+              <div class="fig-tag">AEW Unrivaled</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shelf 2: the vintage shelf -->
+        <div class="shelf">
+          <div class="shelf-row">
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_hasbro_wwf-hasbro_ex_hulk-hogan_1c7f80">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Hulk Hogan to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/10170053_1_1.jpg" alt="Hulk Hogan WWF Hasbro" loading="lazy">
+              </div>
+              <div class="fig-name">Hulk Hogan</div>
+              <div class="fig-tag">WWF Hasbro</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_hasbro_wwf-hasbro_ex_randy-savage_dec5f2">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Randy Savage to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/10170052_1_1.jpg" alt="Randy Savage WWF Hasbro" loading="lazy">
+              </div>
+              <div class="fig-name">Randy Savage</div>
+              <div class="fig-tag">WWF Hasbro</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_jakks-pacific_classic-superstars_ex_ultimate-warrior_513957">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Ultimate Warrior to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/toyfairexwarrior.jpg" alt="Ultimate Warrior Classic Superstars" loading="lazy">
+              </div>
+              <div class="fig-name">Ultimate Warrior</div>
+              <div class="fig-tag">Classic Superstars</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_toy-biz_wcw-toy-biz_bb1_sting_b0836f">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Sting to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_6d8115b5-cb0f-4397-8817-fa41509a81c5.webp" alt="Sting WCW Toy Biz" loading="lazy">
+              </div>
+              <div class="fig-name">Sting</div>
+              <div class="fig-tag">WCW Toy Biz</div>
+            </a>
+            <a class="fig" href="https://figurepinner.com/figure/fp_wrestling_jakks-pacific_ruthless-aggression_1_brock-lesnar_36398b">
+              <div class="fig-mount">
+                <button class="pin-btn" aria-label="Pin Brock Lesnar to your Vault"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z"/></svg></button>
+                <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20240101_195705581.jpg" alt="Brock Lesnar Ruthless Aggression 1" loading="lazy">
+              </div>
+              <div class="fig-name">Brock Lesnar</div>
+              <div class="fig-tag">Ruthless Aggression</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ THE LINE REGISTRY ============================ -->
+<section class="registry seam" id="registry">
+  <div class="wrap">
+    <div class="reg-head" data-reveal>
+      <span class="reg-kicker">The line registry</span>
+      <h2>Pick your era</h2>
+      <span class="reg-sub">The ten deepest lines &mdash; counts live from the guide</span>
+    </div>
+
+    <div class="reg">
+
+      <a class="reg-row" data-reveal style="--d:0s" href="https://figurepinner.com/wrestling/basic">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">Basic</span>
+          <span class="reg-maker">Mattel</span>
+        </span>
+        <span class="reg-meta">2010&ndash;2026<span class="dot">&middot;</span>971 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182975369259_2241170_n.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182975449259_5532625_n.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182975514259_3440992_n.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182975394259_7524328_n.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.05s" href="https://figurepinner.com/wrestling/elite">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">Elite</span>
+          <span class="reg-maker">Mattel</span>
+        </span>
+        <span class="reg-meta">2010&ndash;2026<span class="dot">&middot;</span>805 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://i.ebayimg.com/images/g/ghcAAeSw48RoyFCi/s-l225.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182985154259_2727550_n.jpg?v=1668461006" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1917154_182985199259_7846733_n.jpg?v=1668461183" alt="" loading="lazy">
+          <img src="https://i.ebayimg.com/images/g/J5AAAeSw-8pqFM73/s-l225.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.1s" href="https://figurepinner.com/wrestling/classic-superstars">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">Classic Superstars</span>
+          <span class="reg-maker">Jakks Pacific</span>
+        </span>
+        <span class="reg-meta">364 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/cs-3pack-series-1.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_4991c468-cf8a-4b8f-87c7-4ddeb784a0ba.png" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_5c89f9b6-9afe-48a0-880a-fb416d9bfd56.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/toyfairexwarrior.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.15s" href="https://figurepinner.com/wrestling/ruthless-aggression">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">Ruthless Aggression</span>
+          <span class="reg-maker">Jakks Pacific</span>
+        </span>
+        <span class="reg-meta">2002&ndash;2023<span class="dot">&middot;</span>316 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20240101_195705581.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_cebd4f45-9bfa-4a43-8a77-89974d2a7f84.png" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_8b43092c-ee86-4102-ab48-8c022d498090.png" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_be2d8972-7203-4c5e-8802-b81cf4979ac0.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.2s" href="https://figurepinner.com/wrestling/wcw-toy-biz">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">WCW Toy Biz</span>
+        </span>
+        <span class="reg-meta">210 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_b5fc8df9-7c66-4b50-a6da-2fc02cabd081.webp" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_399ee3c8-e875-4380-ad9d-1a61bee4d1d4.webp" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_ad4aa7c7-20eb-4455-9f58-c7ca138dbbd6.webp" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_6d8115b5-cb0f-4397-8817-fa41509a81c5.webp" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:0s" href="https://figurepinner.com/wrestling/aew-unrivaled">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">AEW Unrivaled</span>
+          <span class="reg-maker">Jazwares</span>
+        </span>
+        <span class="reg-meta">2020&ndash;2025<span class="dot">&middot;</span>200 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p46_i2_w1400.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20240330_164733450.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20240330_164859272.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20240330_164756184.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.05s" href="https://figurepinner.com/wrestling/elite-legends">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">Elite Legends</span>
+          <span class="reg-maker">Mattel</span>
+        </span>
+        <span class="reg-meta">2010&ndash;2026<span class="dot">&middot;</span>175 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1432_i11_w800.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1434_i21_w800.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1430_i1_w800.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1431_i6_w800.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.1s" href="https://figurepinner.com/wrestling/wcw-osftm">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">WCW OSFTM</span>
+        </span>
+        <span class="reg-meta">1995&ndash;1998<span class="dot">&middot;</span>153 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://i.ebayimg.com/images/g/Fj0AAOSwwHNl3iDw/s-l225.jpg" alt="" loading="lazy">
+          <img src="https://i.ebayimg.com/images/g/Q1kAAOSws71ltBLI/s-l225.jpg" alt="" loading="lazy">
+          <img src="https://i.ebayimg.com/images/g/Pa0AAOSwfvFjm2pZ/s-l225.jpg" alt="" loading="lazy">
+          <img src="https://i.ebayimg.com/images/g/rWQAAeSwRfVqIbmO/s-l225.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.15s" href="https://figurepinner.com/wrestling/deluxe-aggression">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">Deluxe Aggression</span>
+          <span class="reg-maker">Jakks Pacific</span>
+        </span>
+        <span class="reg-meta">146 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s1-bat.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_0e05e847-292f-4b47-ad8f-4bb8cf710eef.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s1-kurt-angle-2.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s1-randy.jpg" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+      <a class="reg-row" data-reveal style="--d:.2s" href="https://figurepinner.com/wrestling/wwf-hasbro">
+        <span class="edge" aria-hidden="true"></span>
+        <span class="reg-who">
+          <span class="reg-name">WWF Hasbro</span>
+        </span>
+        <span class="reg-meta">123 figures</span>
+        <span class="reg-lead" aria-hidden="true"></span>
+        <span class="reg-thumbs" aria-hidden="true">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/10170052_1_1.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/10170053_1_1.jpg" alt="" loading="lazy">
+          <img src="https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_hasbro_wwf-hasbro_1_randy-savage_8d6355/frame_1.jpg" alt="" loading="lazy">
+          <img src="https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_57df20a7-5c6f-40a1-b17f-4732cb52c091.png" alt="" loading="lazy">
+        </span>
+        <svg class="reg-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+
+    </div>
+
+    <a class="reg-all" data-reveal href="https://figurepinner.com/wrestling">
+      All 66 lines
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============================ CLOSER ============================ -->
+<section class="closer seam" id="vault">
+  <div class="wrap closer-in" data-reveal>
+    <p class="closer-copy">Pin the ones you're hunting &mdash; <em>a free Vault</em> keeps your wrestling shelf and hears when a grail moves.</p>
+    <a class="btn-gold big" href="https://figurepinner.com">Start your free Vault</a>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="seam">
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <a class="logo" href="https://figurepinner.com"><span class="pin-dot"></span>FIGURE<em>PINNER</em></a>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <div class="h">Guide</div>
+          <a href="#registry">The wrestling lines</a>
+          <a href="https://figurepinner.com/browse">All fandoms</a>
+          <a href="https://figurepinner.com">How pricing works</a>
+        </div>
+        <div class="foot-col">
+          <div class="h">Account</div>
+          <a href="#vault">The Vault</a>
+          <a href="#vault">The Wantlist</a>
+          <a href="#vault">Comp alerts</a>
+        </div>
+        <div class="foot-col">
+          <div class="h">Deep lines</div>
+          <a href="https://figurepinner.com/wrestling/elite">Elite</a>
+          <a href="https://figurepinner.com/wrestling/classic-superstars">Classic Superstars</a>
+          <a href="https://figurepinner.com/wrestling/aew-unrivaled">AEW Unrivaled</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 FigurePinner.</span>
+      <span>Built for the shelf.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ============ case spotlight: drift by default, cursor takes over ============ */
+  var caseEl = document.getElementById('case');
+  var manualTimer = null;
+  if (caseEl && window.matchMedia('(pointer:fine)').matches) {
+    caseEl.addEventListener('mousemove', function(e){
+      var r = caseEl.getBoundingClientRect();
+      caseEl.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      caseEl.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      caseEl.classList.add('manual');
+      clearTimeout(manualTimer);
+      manualTimer = setTimeout(function(){ caseEl.classList.remove('manual'); }, 2600);
+    });
+  }
+
+  /* ============ pins: user clicks always work; demo pauses 15s ============ */
+  var figs = [].slice.call(document.querySelectorAll('.fig'));
+  var pauseUntil = 0;
+  function pauseDemo(){ pauseUntil = Date.now() + 15000; }
+  if (caseEl) caseEl.addEventListener('pointerdown', pauseDemo);
+
+  var pins = document.querySelectorAll('.pin-btn');
+  for (var i = 0; i < pins.length; i++) {
+    pins[i].addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      pauseDemo();
+      var fig = this.closest('.fig');
+      if (fig) fig.classList.toggle('pinned');
+    });
+  }
+
+  /* ============ occasional auto-pin demo (~every 6s, case visible only) ============ */
+  var caseVisible = true;
+  if (caseEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      caseVisible = entries[0].isIntersecting;
+    }, { threshold: 0.25 }).observe(caseEl);
+  }
+
+  function pickFig(){
+    for (var tries = 0; tries < 8; tries++) {
+      var f = figs[Math.floor(Math.random() * figs.length)];
+      if (f.classList.contains('pinned') || f.classList.contains('demo')) continue;
+      var r = f.getBoundingClientRect();
+      if (r.right < 0 || r.left > window.innerWidth || r.bottom < 0 || r.top > window.innerHeight) continue;
+      return f;
+    }
+    return null;
+  }
+
+  if (!reduce && figs.length) {
+    setInterval(function(){
+      if (document.hidden || !caseVisible || Date.now() < pauseUntil) return;
+      var f = pickFig();
+      if (!f) return;
+      f.classList.add('demo');
+      setTimeout(function(){ f.classList.remove('demo'); }, 1800);
+    }, 6000);
+  }
+
+  /* ============ reveal on scroll (rows stagger via --d) ============ */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
