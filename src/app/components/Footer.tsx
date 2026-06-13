@@ -53,6 +53,17 @@ export default function Footer() {
         ))}
       </nav>
 
+      <p style={{ fontSize: '0.8rem', color: 'var(--dim)', margin: '0 0 0.4rem' }}>
+        Part of{' '}
+        <a
+          href="https://grailpulse.com"
+          style={{ color: 'var(--text)', textDecoration: 'none', fontWeight: 600 }}
+        >
+          GrailPulse
+        </a>
+        {' '}— real-comp price guides for everything you collect ↗
+      </p>
+
       <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: 0 }}>
         © {new Date().getFullYear()} Bubs960 Collectibles · FigurePinner
       </p>

@@ -38,12 +38,31 @@ const CSS = `
   }
   .fp-sitenav-brand {
     display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
+    flex-shrink: 0;
+  }
+  .fp-sitenav-parent {
+    font-size: 0.625rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--text) !important;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+  .fp-sitenav-parent:hover { opacity: 1; }
+  .fp-sitenav-home {
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     color: var(--text);
     text-decoration: none;
     font-weight: 800;
-    flex-shrink: 0;
   }
   .fp-sitenav-mark {
     width: 32px;
@@ -122,10 +141,15 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
     <nav className="fp-sitenav" aria-label="Main">
       <style>{CSS}</style>
 
-      <a className="fp-sitenav-brand" href="/">
-        <span className="fp-sitenav-mark">FP</span>
-        {!hasCrumbs && <span className="fp-sitenav-word">FigurePinner</span>}
-      </a>
+      <div className="fp-sitenav-brand">
+        <a className="fp-sitenav-parent" href="https://grailpulse.com" aria-label="GrailPulse — the price-guide hub">
+          GrailPulse ↗
+        </a>
+        <a className="fp-sitenav-home" href="/" aria-label="FigurePinner home">
+          <span className="fp-sitenav-mark">FP</span>
+          {!hasCrumbs && <span className="fp-sitenav-word">FigurePinner</span>}
+        </a>
+      </div>
 
       {hasCrumbs ? (
         <div className="fp-sitenav-crumbs">
