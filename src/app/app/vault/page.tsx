@@ -239,6 +239,14 @@ const CSS = `
   }
   .vlt-stats .n.gold { font-size: 27px; color: var(--vlt-gold-hi); }
   .vlt-stats .dot { color: rgba(242,232,213,.22); }
+  .vlt-stats .gain {
+    font-family: var(--fp-font-display); font-weight: 400; font-size: 23px;
+    letter-spacing: .03em; line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  .vlt-stats .gain.up { color: var(--vlt-up); }
+  .vlt-stats .gain.dn { color: var(--vlt-down); }
+  .vlt-stats .gain i { font-style: normal; font-size: 11px; vertical-align: 2px; margin-right: 1px; }
+  .vlt-stats .gain .pct { font-size: 12px; font-weight: 300; margin-left: 4px; opacity: .85; letter-spacing: 0; }
   .vlt-error {
     margin: 26px auto 0; max-width: 900px; padding: 22px 26px; text-align: center;
     border: 1px dashed rgba(242,232,213,.18); border-radius: 14px;
@@ -307,6 +315,9 @@ const CSS = `
     box-shadow: 0 1px 0 rgba(255,244,216,.10), 0 10px 18px rgba(0,0,0,.38), 0 0 10px rgba(255,236,194,.10);
   }
   .vlt-shelf-row { display: flex; gap: 16px; align-items: flex-end; position: relative; z-index: 1; }
+  /* A short row holds fixed quarter-width cards; centering keeps the few cards +
+     ghost slot balanced instead of hard-left with a dead right half. */
+  .vlt-shelf-row.short { justify-content: center; }
   .vlt-shelf-row.short .vlt-fig { flex: 0 0 calc((100% - 48px)/4); }
   .vlt-fig {
     flex: 1 1 0; min-width: 0;
@@ -527,6 +538,7 @@ const CSS = `
     .vlt-hero { padding: 24px 0 30px; }
     .vlt-stats .n { font-size: 20px; }
     .vlt-stats .n.gold { font-size: 23px; }
+    .vlt-stats .gain { font-size: 20px; }
     .vlt-case-col { margin-top: 18px; }
     .vlt-case { padding: 30px 14px 14px; }
     .vlt-case-label { left: 18px; }
