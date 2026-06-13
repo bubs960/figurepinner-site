@@ -4,6 +4,7 @@
 // Visual language: 2026-06-12 agency shelf spec — cream mounts, hairline borders, gold accents
 
 import type { CSSProperties } from 'react'
+import WaveProgress from './WaveProgress'
 
 interface RelatedFigure {
   figure_id: string
@@ -16,9 +17,13 @@ interface RelatedRowProps {
   label: string          // e.g. "Others In This Series" or "More John Cena Figures"
   figures: RelatedFigure[]
   accentColor?: string
+  /** When set, renders a client "You own N of M" badge in the header,
+   *  intersecting the signed-in vault with these wave fids (incl. the current
+   *  figure). Only "Complete the Wave" passes this; omit elsewhere. */
+  ownershipFids?: string[]
 }
 
-export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-gold, #e0a83e)' }: RelatedRowProps) {
+export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-gold, #e0a83e)', ownershipFids }: RelatedRowProps) {
   if (figures.length === 0) return null
 
   return (
@@ -70,12 +75,19 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
           {label}
         </span>
         <span style={{
-          fontSize: '0.59rem', fontWeight: 400, letterSpacing: '0.16em',
-          textTransform: 'uppercase',
-          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+          display: 'inline-flex', alignItems: 'baseline', gap: '0.85rem',
           marginLeft: 'auto', whiteSpace: 'nowrap',
         }}>
-          {figures.length} figure{figures.length !== 1 ? 's' : ''}
+          {ownershipFids && ownershipFids.length > 0 && (
+            <WaveProgress fids={ownershipFids} />
+          )}
+          <span style={{
+            fontSize: '0.59rem', fontWeight: 400, letterSpacing: '0.16em',
+            textTransform: 'uppercase',
+            color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+          }}>
+            {figures.length} figure{figures.length !== 1 ? 's' : ''}
+          </span>
         </span>
       </div>
 

@@ -361,12 +361,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const allInGenre = getFiguresByFandom(genre)
 
-  const seriesCompanions = allInGenre
-    .filter(f =>
-      f.figure_id !== figureId &&
-      f.product_line === local.product_line &&
-      f.release_wave === local.release_wave
-    )
+  // Full wave (uncapped, includes the current figure) — drives an honest
+  // "you own N of M" denominator. The visible row is still capped at 12.
+  const fullWave = allInGenre.filter(f =>
+    f.product_line === local.product_line &&
+    f.release_wave === local.release_wave
+  )
+  const waveFids = fullWave.map(f => f.figure_id)
+
+  const seriesCompanions = fullWave
+    .filter(f => f.figure_id !== figureId)
     .slice(0, 12)
     .map(f => ({
       figure_id: f.figure_id,
@@ -591,6 +595,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         <RelatedRow
           label={`Complete the Wave — ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
           figures={seriesCompanions}
+          ownershipFids={waveFids}
         />
 
         {/* Zone 7 — Character thread */}
