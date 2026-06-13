@@ -43,6 +43,12 @@ const RETAILERS: Record<string, RetailerConfig> = {
   target: { hosts: ['target.com', 'www.target.com'], affiliate: null },
   walmart: { hosts: ['walmart.com', 'www.walmart.com'], affiliate: null },
   amazon: { hosts: ['amazon.com', 'www.amazon.com', 'smile.amazon.com'], affiliate: null },
+
+  // ── NO PROGRAM (do NOT wire — affiliate stays null permanently) ────
+  // Whatnot has no affiliate/partner program open (confirmed Steve 2026-06-13).
+  // The invite link (whatnot.com/invite/bubs960) only earns *signup credit*, not
+  // a commission, and can't be injected into show/product URLs. Link Whatnot
+  // DIRECT. This entry exists only so /go/whatnot doesn't 404 if ever used.
   whatnot: { hosts: ['whatnot.com', 'www.whatnot.com'], affiliate: null },
 }
 
