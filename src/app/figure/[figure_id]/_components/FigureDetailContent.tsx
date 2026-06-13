@@ -103,6 +103,32 @@ function _iqr(prices: number[]): { p25: number; p75: number } | null {
   return { p25: _pctile(s, 25), p75: _pctile(s, 75) }
 }
 
+/** Tukey "far out" upper fence (Q3 + 3·IQR) over a set of comp prices, used to
+ *  cap the displayed range ceiling so a lone graded-lot / bundle / wrong-variant
+ *  sale can't define it.
+ *
+ *  Why this is needed beyond the snapshot p10/p90: on a THIN bucket the 90th
+ *  percentile lands ON the outlier (Cody Elite 3 loose, n=9 → p90 = the $249.95
+ *  CIB lot), so P10–P90 alone leaves the contradiction in place. The fence is
+ *  data-adaptive — a genuinely wide, multi-comp tail has a large IQR so the
+ *  fence sits high and nothing is clipped; a tight cluster + one extreme has a
+ *  small IQR so the extreme falls outside the fence and is disclosed instead.
+ *
+ *  3·IQR (the "extreme outlier" threshold), not 1.5 — sold-comp prices are
+ *  right-skewed (log-normal-ish), and 1.5·IQR over-flags the normal upper tail.
+ *  Returns the highest real comp at/under the fence + the count/max of comps
+ *  above it. <4 comps → null (caller keeps the snapshot percentiles). */
+function fencedHigh(prices: number[]): { high: number; excludedAbove: { count: number; max: number } } | null {
+  const v = prices.filter(p => p > 0).sort((a, b) => a - b)
+  if (v.length < 4) return null
+  const q1 = _pctile(v, 25), q3 = _pctile(v, 75)
+  const fence = q3 + 3 * (q3 - q1)
+  const within = v.filter(p => p <= fence)
+  const aboveCount = v.length - within.length
+  if (!aboveCount || !within.length) return null
+  return { high: within[within.length - 1], excludedAbove: { count: aboveCount, max: v[v.length - 1] } }
+}
+
 function latestSoldDate(soldHistory: PriceData['soldHistory']): { iso: string; label: string } | null {
   const dates = soldHistory
     .map(comp => new Date(comp.sold_date))
@@ -220,14 +246,28 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const valuePricing = (() => {
     if (!price || price.soldCount === 0) return null
     const median = headlineBucket?.median ?? price.medianSold ?? price.avgSold ?? null
-    // P10–P90 range: the headline bucket carries its own percentiles (full
-    // corpus); the blended path keeps the soldHistory-derived range.
-    // Requires soldHistory to have prices; falls back to raw min/max if not enough data.
-    const sortedPrices = [...price.soldHistory.map(s => s.price)].sort((a, b) => a - b)
+    // Display range. Floor + base ceiling = the snapshot bucket percentiles
+    // (full corpus) when present, else the soldHistory percentiles. The ceiling
+    // is then ADDITIONALLY capped by a Tukey far-out fence over the displayed
+    // comps, so a contaminated p90 (thin bucket where p90 sits on a graded-lot
+    // outlier — Cody loose n=9, p90 = $249.95) can't define it. The cap only
+    // ever narrows (never widens a clean range); when it bites, the clipped
+    // extremes are disclosed (standalone audit #2: "label raw extremes").
+    const bucketPrices = (headlineCondition
+      ? price.soldHistory.filter(s => compBucket(s) === headlineCondition)
+      : price.soldHistory
+    ).map(s => s.price)
+    const sortedBucket = [...bucketPrices].filter(p => p > 0).sort((a, b) => a - b)
     const low = headlineBucket?.p10
-      ?? (sortedPrices.length >= 3 ? _pctile(sortedPrices, 10) : (price.minSold ?? null))
-    const high = headlineBucket?.p90
-      ?? (sortedPrices.length >= 3 ? _pctile(sortedPrices, 90) : (price.maxSold ?? null))
+      ?? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 10) : (price.minSold ?? null))
+    const baseHigh = headlineBucket?.p90
+      ?? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 90) : (price.maxSold ?? null))
+    const fence = fencedHigh(bucketPrices)
+    const fenceBites = fence != null && baseHigh != null && fence.high < baseHigh
+    const high = fenceBites ? fence!.high : baseHigh
+    const rangeExtremeNote = fenceBites
+      ? `Range excludes ${fence!.excludedAbove.count} higher sale${fence!.excludedAbove.count === 1 ? '' : 's'} up to ${formatCurrency(fence!.excludedAbove.max)} — likely a graded lot, bundle, or wrong variant.`
+      : null
     // Dispersion warning: when the raw spread is >4x the median, comp set likely
     // contains contaminated listings (wrong series, graded lots, wrong figure).
     // Cap displayed confidence at 4 and surface a caveat label.
@@ -247,6 +287,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       confidence,
       comp_count:         compCount,
       dispersion_warning: dispersionWarning,
+      rangeExtremeNote,
     }
   })()
 
@@ -266,13 +307,21 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       .filter(v => v >= -0.02 && v <= 1.02)
       .map(v => Math.min(1, Math.max(0, v)))
   })()
-  // Most recent individual sale — picked by max sold_date (same trust level
-  // as the existing 'Latest sold comp' line; order of recent[] is not trusted).
+  // Most recent individual sale — picked by max sold_date (order of recent[]
+  // is not trusted). Constrained to the headline bucket and to the DISPLAYED
+  // range [low, high], so "most recent sale" can't show a fence-excluded
+  // outlier above the range ceiling (e.g. a graded-lot $180 over a $97 high).
   const lastSale = (() => {
     if (!price || !price.soldHistory.length) return null
+    const lo = valuePricing?.low ?? -Infinity
+    const hi = valuePricing?.high ?? Infinity
+    const eligible = price.soldHistory.filter(s =>
+      s.sold_date &&
+      s.price >= lo && s.price <= hi &&
+      (headlineCondition ? compBucket(s) === headlineCondition : true)
+    )
     let best: { price: number; sold_date?: string } | null = null
-    for (const s of price.soldHistory) {
-      if (!s.sold_date) continue
+    for (const s of eligible) {
       if (!best || String(s.sold_date) > String(best.sold_date)) best = s
     }
     return best ? { price: best.price } : null
@@ -442,7 +491,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             when sold comps exist; zero-comp figures keep the EmptyState flow. */}
         {marketPricing && marketPricing.recent_comps.length > 0 && (
           <div style={{ marginBottom: '1.5rem' }}>
-            <BidCheck comps={marketPricing.recent_comps.map(c => ({ price: c.price, condition: c.condition }))} />
+            <BidCheck
+              comps={marketPricing.recent_comps.map(c => ({ price: c.price, condition: c.condition }))}
+              segmentation={segmentation}
+              sealedMedian={price?.sealed?.median ?? null}
+              sealedCount={price?.sealed?.count ?? 0}
+              looseMedian={price?.loose?.median ?? null}
+              looseCount={price?.loose?.count ?? 0}
+            />
           </div>
         )}
 

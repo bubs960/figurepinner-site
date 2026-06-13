@@ -14,6 +14,8 @@ interface Pricing {
   confidence: 1 | 2 | 3 | 4 | 5
   comp_count: number
   dispersion_warning?: boolean
+  /** Honest "extremes labeled" line when the range fence clipped real sales. */
+  rangeExtremeNote?: string | null
 }
 
 interface HeroBandProps {
@@ -406,6 +408,17 @@ export default function HeroBand({
                     median
                   </span>
                 </div>
+              </div>
+            )}
+
+            {/* labeled extreme — a clipped graded-lot/bundle, kept honest */}
+            {p.rangeExtremeNote && (
+              <div style={{
+                marginTop: '10px',
+                fontSize: '0.62rem', fontWeight: 400, letterSpacing: '0.04em',
+                color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+              }}>
+                {p.rangeExtremeNote}
               </div>
             )}
 

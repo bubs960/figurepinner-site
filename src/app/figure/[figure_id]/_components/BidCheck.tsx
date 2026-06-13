@@ -39,6 +39,17 @@ interface Comp {
 
 interface BidCheckProps {
   comps: Comp[]
+  /** Authoritative full-corpus condition buckets from the price snapshot.
+   *  When the split is statistically valid (segmentation != 'pooled'), the
+   *  verdict columns use THESE medians/counts instead of recomputing from the
+   *  ~30-comp recent sample — so Bid Check can never contradict the placard /
+   *  MarketPanel above it. Pooled figures keep the local recent-sample split
+   *  (which mirrors MarketPanel's pooled path exactly). */
+  segmentation?: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
+  sealedMedian?: number | null
+  sealedCount?: number
+  looseMedian?: number | null
+  looseCount?: number
 }
 
 const MIN_SPLIT_COMPS = 3
@@ -87,7 +98,14 @@ function pctPhrase(pct: number): string {
 
 // ── Component ────────────────────────────────────────────────────────────────
 
-export default function BidCheck({ comps }: BidCheckProps) {
+export default function BidCheck({
+  comps,
+  segmentation = 'pooled',
+  sealedMedian = null,
+  sealedCount = 0,
+  looseMedian = null,
+  looseCount = 0,
+}: BidCheckProps) {
   const [raw, setRaw] = useState('')
   const bid = parseFloat(raw)
   const hasBid = !isNaN(bid) && bid > 0
@@ -95,11 +113,22 @@ export default function BidCheck({ comps }: BidCheckProps) {
   const newPrices  = comps.filter(c => normalizeCondition(c.condition) === 'new').map(c => c.price)
   const usedPrices = comps.filter(c => normalizeCondition(c.condition) === 'used').map(c => c.price)
 
+  // Authoritative snapshot buckets win when the split is valid (segmentation
+  // != 'pooled') and the bucket has enough comps — same medians as the placard,
+  // so the verdict is judged against the headline number, not a divergent
+  // recompute of the recent sample. New→sealed, Used→loose. Pooled (or a thin
+  // bucket) falls back to the local recent-sample split.
+  const useSnapshot = segmentation !== 'pooled'
+  const resolveCol = (localPrices: number[], snapMedian: number | null, snapCount: number): { med: number; n: number } =>
+    useSnapshot && snapMedian != null && snapCount >= MIN_SPLIT_COMPS
+      ? { med: snapMedian, n: snapCount }
+      : { med: median(localPrices), n: localPrices.length }
+
   const columns = [
-    { key: 'new',  title: 'New',  sub: 'sealed / MOC', prices: newPrices,
-      blank: 'Not enough sealed sales to call it' },
-    { key: 'used', title: 'Used', sub: 'loose / opened', prices: usedPrices,
-      blank: 'Not enough loose sales to call it' },
+    { key: 'new',  title: 'New',  sub: 'sealed / MOC',   blank: 'Not enough sealed sales to call it',
+      ...resolveCol(newPrices, sealedMedian, sealedCount) },
+    { key: 'used', title: 'Used', sub: 'loose / opened', blank: 'Not enough loose sales to call it',
+      ...resolveCol(usedPrices, looseMedian, looseCount) },
   ]
 
   return (
@@ -195,8 +224,8 @@ export default function BidCheck({ comps }: BidCheckProps) {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.875rem' }}>
         {columns.map((col, i) => {
-          const n = col.prices.length
-          const med = median(col.prices)
+          const n = col.n
+          const med = col.med
           const enough = n >= MIN_SPLIT_COMPS
           const v = enough && hasBid ? verdictFor(bid, med) : null
           return (
