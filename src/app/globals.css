@@ -359,3 +359,104 @@ a:hover {
 .fp-fig-card:hover {
   box-shadow: 0 4px 24px rgba(228, 50, 56, 0.15), 0 0 0 1px rgba(228,50,56,0.2) !important;
 }
+
+/* ── Figure-page action surface (vault / want / deal-alert) ───────────── */
+.fp-action-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.fp-action-panel--alert {
+  border-color: rgba(0, 102, 255, 0.35);
+  background: rgba(0, 102, 255, 0.04);
+}
+.fp-action-fields {
+  display: flex;
+  gap: var(--space-2);
+}
+.fp-action-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.fp-action-label {
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.78;
+}
+.fp-action-input {
+  width: 100%;
+  background: var(--s2);
+  border: 1px solid var(--border);
+  border-radius: var(--rsm);
+  color: var(--text);
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color var(--transition);
+}
+.fp-action-input:focus {
+  border-color: var(--blue);
+}
+.fp-action-trigger {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+.fp-action-cta-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+.fp-action-cta-row .btn {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+.fp-action-cta-row .fp-action-input {
+  flex: 1;
+}
+.fp-action-status {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: var(--fp-success, var(--green));
+  font-weight: 600;
+}
+.fp-action-error {
+  font-size: 12px;
+  color: #FF4444;
+}
+.fp-action-gate {
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: var(--r);
+  padding: var(--space-3);
+  background: rgba(0, 102, 255, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.fp-action-gate__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.fp-action-gate__body {
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.78;
+}
+.fp-action-warn {
+  border: 1px solid rgba(255, 184, 0, 0.3);
+  border-radius: var(--rsm);
+  padding: 8px 12px;
+  background: rgba(255, 184, 0, 0.06);
+  font-size: 12px;
+  color: var(--text);
+}

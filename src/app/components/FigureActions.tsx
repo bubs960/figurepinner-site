@@ -73,10 +73,8 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
         const data = await res.json() as WarnPayload
         setVaultStatus('done')
         setShowVaultForm(false)
-        // Show near-limit warning if API returned one
         if (data.warning) setVaultWarn(data)
       } else if (res.status === 409) {
-        // Already in vault — treat as success (idempotent)
         setVaultStatus('done')
         setShowVaultForm(false)
       } else {
@@ -138,7 +136,6 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
       } else if (res.status === 401) {
         window.location.href = '/sign-in'
       } else if (res.status === 409) {
-        // Already in wantlist — treat as success (idempotent)
         setWantStatus('done')
         setShowWantForm(false)
       } else {
@@ -150,237 +147,166 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
 
-      {/* ── Vault gate CTA ── */}
+      {/* ── Vault gate (Pro upsell when free vault is full) ── */}
       {vaultGate && (
-        <div style={{
-          border: '1px solid rgba(0,102,255,0.3)', borderRadius: '8px', padding: '0.875rem',
-          background: 'rgba(0,102,255,0.06)', textAlign: 'center',
-        }}>
-          <div style={{ fontSize: '0.8rem', fontWeight: '600', color: 'var(--text)', marginBottom: '0.375rem' }}>
-            Vault full ({vaultGate.limit} figures)
-          </div>
-          <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.75rem' }}>
-            Upgrade to Pro for unlimited storage.
-          </div>
-          <a href={vaultGate.upgrade_url} style={{
-            display: 'inline-block', background: 'var(--blue)', color: '#fff',
-            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.8rem',
-            fontWeight: '700', textDecoration: 'none',
-          }}>
-            Upgrade to Pro
-          </a>
+        <div className="fp-action-gate">
+          <div className="fp-action-gate__title">Vault full ({vaultGate.limit} figures)</div>
+          <div className="fp-action-gate__body">Upgrade to Pro for unlimited storage.</div>
+          <a href={vaultGate.upgrade_url} className="btn btn-primary">Upgrade to Pro</a>
         </div>
       )}
 
       {/* ── Vault near-limit warning ── */}
       {vaultWarn?.warning && (
-        <div style={{
-          border: '1px solid rgba(255,184,0,0.3)', borderRadius: '6px', padding: '0.625rem 0.875rem',
-          background: 'rgba(255,184,0,0.06)',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem',
-        }}>
-          <span style={{ fontSize: '0.75rem', color: 'var(--text)' }}>
-            {vaultWarn.remaining === 0
-              ? 'Vault is now full.'
-              : `${vaultWarn.remaining} vault spot${vaultWarn.remaining === 1 ? '' : 's'} left.`}
-          </span>
+        <div className="fp-action-warn">
+          {vaultWarn.remaining === 0
+            ? 'Vault is now full.'
+            : `${vaultWarn.remaining} vault spot${vaultWarn.remaining === 1 ? '' : 's'} left.`}
         </div>
       )}
 
-      {/* ── Add to Collection ── */}
+      {/* ── Add to Collection (primary action) ── */}
       {!vaultGate && (
         vaultStatus === 'done' ? (
-          <div style={{ textAlign: 'center', padding: '0.625rem', fontSize: '0.8rem', color: 'var(--fp-success, var(--green))', fontWeight: '600' }}>
-            Added to Collection
-          </div>
+          <div className="fp-action-status">Added to Collection</div>
         ) : showVaultForm ? (
-          <div style={{ border: '1px solid var(--border)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                <label style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>What did you pay?</label>
+          <div className="fp-action-panel">
+            <div className="fp-action-fields">
+              <div className="fp-action-field">
+                <label className="fp-action-label">What did you pay?</label>
                 <input
                   type="number"
                   placeholder="$0"
                   value={paidInput}
                   onChange={e => setPaidInput(e.target.value)}
-                  style={{
-                    width: '100%', background: 'var(--s2)', border: '1px solid var(--border)',
-                    borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
-                    fontSize: '0.875rem', outline: 'none', boxSizing: 'border-box',
-                  }}
+                  className="fp-action-input"
                 />
               </div>
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                <label style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>Condition</label>
+              <div className="fp-action-field">
+                <label className="fp-action-label">Condition</label>
                 <select
                   value={conditionInput}
                   onChange={e => setConditionInput(e.target.value)}
-                  style={{
-                    width: '100%', background: 'var(--s2)', border: '1px solid var(--border)',
-                    borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
-                    fontSize: '0.875rem', outline: 'none', boxSizing: 'border-box',
-                  }}
+                  className="fp-action-input"
                 >
                   {CONDITIONS.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </div>
             </div>
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <div className="fp-action-cta-row">
               <button
                 onClick={addToVault}
                 disabled={vaultStatus === 'loading'}
-                style={{
-                  flex: 1, background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-                  padding: '0.5rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
-                }}
+                className="btn btn-primary"
+                style={{ flex: 1 }}
               >
                 {vaultStatus === 'loading' ? 'Loading' : 'Add to Collection'}
               </button>
               <button
                 onClick={() => setShowVaultForm(false)}
-                style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.5rem 0.625rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
+                className="btn btn-ghost"
               >
                 Cancel
               </button>
             </div>
-            {vaultStatus === 'error' && <span style={{ fontSize: '0.75rem', color: '#FF4444' }}>Something went wrong</span>}
+            {vaultStatus === 'error' && <span className="fp-action-error">Something went wrong</span>}
           </div>
         ) : (
           <button
             onClick={() => setShowVaultForm(true)}
-            style={{
-              display: 'block', width: '100%', textAlign: 'center', border: '1px solid var(--border)',
-              background: 'none', color: 'var(--text)', padding: '0.625rem', borderRadius: '6px',
-              fontSize: '0.8rem', fontWeight: '500', cursor: 'pointer',
-            }}
+            className="btn btn-primary fp-action-trigger"
           >
             Add to Collection
           </button>
         )
       )}
 
-      {/* ── Add to Want List ── */}
+      {/* ── Add to Want List (secondary) ── */}
       {wantStatus === 'done' ? (
-        <div style={{ textAlign: 'center', padding: '0.625rem', fontSize: '0.8rem', color: 'var(--fp-success, var(--green))', fontWeight: '600' }}>
-          Added to Want List
-        </div>
+        <div className="fp-action-status">Added to Want List</div>
       ) : showWantForm ? (
-        <div style={{ border: '1px solid var(--border)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>Target price (optional)</label>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <div className="fp-action-panel">
+          <label className="fp-action-label">Target price (optional)</label>
+          <div className="fp-action-cta-row">
             <input
               type="number"
               placeholder="$0"
               value={targetInput}
               onChange={e => setTargetInput(e.target.value)}
-              style={{
-                flex: 1, background: 'var(--s2)', border: '1px solid var(--border)',
-                borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
-                fontSize: '0.875rem', outline: 'none',
-              }}
+              className="fp-action-input"
             />
             <button
               onClick={addToWantlist}
               disabled={wantStatus === 'loading'}
-              style={{
-                background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-                padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
-              }}
+              className="btn btn-primary"
             >
-              {wantStatus === 'loading' ? 'Loading' : 'Add to Want List'}
+              {wantStatus === 'loading' ? 'Loading' : 'Add'}
             </button>
             <button
               onClick={() => setShowWantForm(false)}
-              style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.375rem 0.5rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
+              className="btn btn-ghost"
             >
               Cancel
             </button>
           </div>
-          {wantStatus === 'error' && <span style={{ fontSize: '0.75rem', color: '#FF4444' }}>Something went wrong</span>}
+          {wantStatus === 'error' && <span className="fp-action-error">Something went wrong</span>}
         </div>
       ) : (
         <button
           onClick={() => setShowWantForm(true)}
-          style={{
-            display: 'block', width: '100%', textAlign: 'center', border: '1px solid var(--border)',
-            background: 'none', color: 'var(--text)', padding: '0.625rem', borderRadius: '6px',
-            fontSize: '0.8rem', fontWeight: '500', cursor: 'pointer',
-          }}
+          className="btn btn-ghost fp-action-trigger"
         >
           Add to Want List
         </button>
       )}
 
-      {/* ── Deal Alert — free gets 3, Pro gets unlimited ── */}
+      {/* ── Deal Alert (Pro-leaning) ── */}
       {alertGate ? (
-        // Hit the free alert limit — show upgrade CTA
-        <div style={{
-          border: '1px solid rgba(0,102,255,0.3)', borderRadius: '8px', padding: '0.875rem',
-          background: 'rgba(0,102,255,0.06)', textAlign: 'center',
-        }}>
-          <div style={{ fontSize: '0.8rem', fontWeight: '600', color: 'var(--text)', marginBottom: '0.375rem' }}>
-            {alertGate.limit} alerts is the Free limit
-          </div>
-          <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.75rem' }}>
-            Unlimited with Pro.
-          </div>
-          <a href={alertGate.upgrade_url} style={{
-            display: 'inline-block', background: 'var(--blue)', color: '#fff',
-            padding: '0.5rem 1.25rem', borderRadius: '6px', fontSize: '0.8rem',
-            fontWeight: '700', textDecoration: 'none',
-          }}>
-            Upgrade to Pro
-          </a>
+        <div className="fp-action-gate">
+          <div className="fp-action-gate__title">{alertGate.limit} alerts is the Free limit</div>
+          <div className="fp-action-gate__body">Unlimited with Pro.</div>
+          <a href={alertGate.upgrade_url} className="btn btn-primary">Upgrade to Pro</a>
         </div>
       ) : alertStatus === 'done' ? (
-        <div style={{ textAlign: 'center', padding: '0.625rem', fontSize: '0.8rem', color: 'var(--fp-success, var(--green))', fontWeight: '600' }}>
-          Alert set
-        </div>
+        <div className="fp-action-status">Alert set</div>
       ) : showAlertForm ? (
-        <div style={{ border: '1px solid rgba(0,102,255,0.35)', borderRadius: '6px', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', background: 'rgba(0,102,255,0.04)' }}>
-          <label style={{ fontSize: '0.7rem', color: 'var(--muted)' }}>Alert me when price drops below ($)</label>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <div className="fp-action-panel fp-action-panel--alert">
+          <label className="fp-action-label">Alert me when price drops below ($)</label>
+          <div className="fp-action-cta-row">
             <input
               type="number"
               placeholder="0"
               value={alertTargetInput}
               onChange={e => setAlertTargetInput(e.target.value)}
-              style={{
-                flex: 1, background: 'var(--s2)', border: '1px solid var(--border)',
-                borderRadius: '5px', color: 'var(--text)', padding: '0.375rem 0.5rem',
-                fontSize: '0.875rem', outline: 'none',
-              }}
+              className="fp-action-input"
               autoFocus
             />
             <button
               onClick={setAlert}
               disabled={alertStatus === 'loading'}
-              style={{
-                background: 'var(--blue)', color: '#fff', border: 'none', cursor: 'pointer',
-                padding: '0.375rem 0.875rem', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '600',
-              }}
+              className="btn btn-primary"
             >
               {alertStatus === 'loading' ? 'Loading' : 'Set Alert'}
             </button>
             <button
               onClick={() => setShowAlertForm(false)}
-              style={{ background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '0.375rem 0.5rem', borderRadius: '5px', color: 'var(--muted)', fontSize: '0.8rem' }}
+              className="btn btn-ghost"
             >
               Cancel
             </button>
           </div>
-          {alertStatus === 'error' && <span style={{ fontSize: '0.75rem', color: '#FF4444' }}>Something went wrong</span>}
+          {alertStatus === 'error' && <span className="fp-action-error">Something went wrong</span>}
         </div>
       ) : (
         <button
           onClick={() => setShowAlertForm(true)}
+          className="btn btn-ghost fp-action-trigger"
           style={{
-            display: 'block', width: '100%', textAlign: 'center',
-            border: '1px solid rgba(0,102,255,0.35)', background: 'rgba(0,102,255,0.06)',
-            color: 'var(--blue)', padding: '0.625rem', borderRadius: '6px',
-            fontSize: '0.8rem', fontWeight: '600', cursor: 'pointer',
+            borderColor: 'rgba(0,102,255,0.35)',
+            color: 'var(--blue)',
+            background: 'rgba(0,102,255,0.04)',
           }}
         >
           Set Deal Alert
