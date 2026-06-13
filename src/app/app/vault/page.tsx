@@ -6,8 +6,7 @@ import { getVaultShelfData, type HuntItem } from './_lib/vaultData'
 import { thumb } from '@/lib/imageUrl'
 import ScrollReveal from '@/app/components/ScrollReveal'
 import VaultNav from './_components/VaultNav'
-import VaultStats from './_components/VaultStats'
-import VaultCase from './_components/VaultCase'
+import VaultClient from './_components/VaultClient'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,7 +22,7 @@ export default async function VaultShelfPage() {
   const { userId } = await auth()
   if (!userId) redirect('/sign-in?redirect_url=/app/vault')
 
-  const [{ items, hunt, totals, loadFailed }, pro] = await Promise.all([
+  const [{ items, hunt, loadFailed }, pro] = await Promise.all([
     getVaultShelfData(userId),
     isUserPro(),
   ])
@@ -39,22 +38,20 @@ export default async function VaultShelfPage() {
       {/* ── MASTHEAD + THE CASE ── */}
       <section className="vlt-hero">
         <div className="wrap">
-          <div className="vlt-mast-row">
-            <div>
-              <span className="vlt-eyebrow">Your shelf, cataloged</span>
-              <h1>The Vault</h1>
-            </div>
-            {!loadFailed && items.length > 0 && (
-              <VaultStats figures={totals.figures} estValue={totals.estValue} paid={totals.paid} />
-            )}
-          </div>
-
           {loadFailed ? (
-            <div className="vlt-error">
-              Couldn&apos;t load your vault just now &mdash; refresh to try again.
-            </div>
+            <>
+              <div className="vlt-mast-row">
+                <div>
+                  <span className="vlt-eyebrow">Your shelf, cataloged</span>
+                  <h1>The Vault</h1>
+                </div>
+              </div>
+              <div className="vlt-error">
+                Couldn&apos;t load your vault just now &mdash; refresh to try again.
+              </div>
+            </>
           ) : (
-            <VaultCase items={items} />
+            <VaultClient items={items} />
           )}
         </div>
       </section>
@@ -299,8 +296,8 @@ const CSS = `
   }
   .vlt-case-label {
     position: absolute; top: 13px; left: 28px; z-index: 5;
-    font-size: 10px; font-weight: 400; letter-spacing: .26em; text-transform: uppercase;
-    color: rgba(242,232,213,.36);
+    font-size: 10px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
+    color: rgba(242,232,213,.55);
   }
   .vlt-shelf { position: relative; padding: 0 6px 13px; margin-bottom: 20px; }
   .vlt-shelf:last-child { margin-bottom: 4px; }
@@ -439,7 +436,7 @@ const CSS = `
     margin: 0; font-family: var(--fp-font-display); font-weight: 400;
     font-size: clamp(26px, 2.8vw, 34px); line-height: 1; letter-spacing: .02em; color: #EEEEF5;
   }
-  .vlt-hunt-sub { font-size: 12.5px; font-weight: 300; color: var(--vlt-cream-mut); }
+  .vlt-hunt-sub { font-size: 12.5px; font-weight: 400; color: rgba(242,232,213,.56); }
   .vlt-hunt-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .vlt-hunt-card {
     display: flex; align-items: center; gap: 12px; min-width: 0;

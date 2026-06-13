@@ -1,15 +1,15 @@
 'use client'
 // VaultCase — the user's glass case (vault-shelf mockup). Cards link to the
 // figure page (locked IA); quick-edit stays on the card: condition chip
-// cycles on click, paid is inline-editable, ✕ removes. Edits PATCH/DELETE
-// the existing /api/vault endpoints with optimistic local state; a remove
-// also router.refresh()es so the server-rendered masthead stats catch up.
+// cycles on click, paid is inline-editable, ✕ removes. State + persistence
+// live in VaultClient (the parent owns the items array so the masthead totals
+// stay in lockstep); this component is controlled — it renders items and
+// reports edits up via onPatch / onRemove.
 //
 // Case motion (spotlight drift + cursor takeover) is DOM-managed in one
 // mount effect, same pattern as the homepage ShelfCase.
 
 import { useEffect, useRef, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import type { VaultShelfItem } from '../_lib/vaultData'
 
 const CONDITIONS = ['MOC', 'Near Mint', 'Loose', 'Opened', 'Damaged']
@@ -27,10 +27,12 @@ function rowsOf<T>(arr: T[], n: number): T[][] {
   return out
 }
 
-export default function VaultCase({ items: initial }: { items: VaultShelfItem[] }) {
-  const [items, setItems] = useState(initial)
+export default function VaultCase({ items, onPatch, onRemove }: {
+  items: VaultShelfItem[]
+  onPatch: (rowId: string, body: { paid?: number; condition?: string }) => void
+  onRemove: (rowId: string) => void
+}) {
   const rootRef = useRef<HTMLDivElement>(null)
-  const router = useRouter()
 
   // spotlight: drift by default, cursor takes over
   useEffect(() => {
@@ -51,22 +53,6 @@ export default function VaultCase({ items: initial }: { items: VaultShelfItem[] 
       if (manualTimer) clearTimeout(manualTimer)
     }
   }, [])
-
-  function patch(rowId: string, body: { paid?: number; condition?: string }) {
-    setItems(prev => prev.map(i => i.rowId === rowId ? { ...i, ...body } : i))
-    fetch(`/api/vault/${rowId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    }).catch(() => {})
-  }
-
-  function remove(rowId: string) {
-    setItems(prev => prev.filter(i => i.rowId !== rowId))
-    fetch(`/api/vault/${rowId}`, { method: 'DELETE' })
-      .then(() => router.refresh())
-      .catch(() => router.refresh())
-  }
 
   const shelves = rowsOf(items, 4)
   // the ghost slot rides the last shelf when there's room, else its own shelf
@@ -91,8 +77,8 @@ export default function VaultCase({ items: initial }: { items: VaultShelfItem[] 
                     key={it.rowId}
                     item={it}
                     index={ri * 4 + ci}
-                    onPatch={patch}
-                    onRemove={remove}
+                    onPatch={onPatch}
+                    onRemove={onRemove}
                   />
                 ))}
                 {isLast && lastShort && <GhostSlot />}
