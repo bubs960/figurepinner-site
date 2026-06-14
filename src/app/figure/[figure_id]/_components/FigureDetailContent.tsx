@@ -562,11 +562,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 pricing={marketPricing}
                 ebaySearchUrl={ebayUrl}
                 figureName={displayName}
-                buckets={segmentation !== 'pooled' ? {
+                buckets={{
                   segmentation,
                   sealed: price?.sealed ?? null,
                   loose: price?.loose ?? null,
-                } : null}
+                }}
               />
             ) : (
               <EmptyState figureName={displayName} ebaySearchUrl={ebayUrl} />

@@ -113,14 +113,14 @@ export default function BidCheck({
   const newPrices  = comps.filter(c => normalizeCondition(c.condition) === 'new').map(c => c.price)
   const usedPrices = comps.filter(c => normalizeCondition(c.condition) === 'used').map(c => c.price)
 
-  // Authoritative snapshot buckets win when the split is valid (segmentation
-  // != 'pooled') and the bucket has enough comps — same medians as the placard,
-  // so the verdict is judged against the headline number, not a divergent
-  // recompute of the recent sample. New→sealed, Used→loose. Pooled (or a thin
-  // bucket) falls back to the local recent-sample split.
-  const useSnapshot = segmentation !== 'pooled'
+  // Single source of truth: the authoritative full-corpus snapshot bucket wins
+  // whenever it has enough comps (≥ MIN_SPLIT_COMPS) — INCLUDING pooled figures.
+  // The recent ~30-comp sample only fills in when the snapshot has no usable
+  // bucket. This stops the figure page from showing a locally-recomputed
+  // condition median (e.g. $28.45) that diverges from the snapshot the placard
+  // and vault both read. New→sealed, Used→loose.
   const resolveCol = (localPrices: number[], snapMedian: number | null, snapCount: number): { med: number; n: number } =>
-    useSnapshot && snapMedian != null && snapCount >= MIN_SPLIT_COMPS
+    snapMedian != null && snapCount >= MIN_SPLIT_COMPS
       ? { med: snapMedian, n: snapCount }
       : { med: median(localPrices), n: localPrices.length }
 

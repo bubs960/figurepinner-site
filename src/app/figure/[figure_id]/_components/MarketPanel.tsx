@@ -26,11 +26,14 @@ interface Pricing {
   recent_comps: Comp[]
 }
 
-/** Full-corpus condition buckets from the price snapshot — when present
- *  (segmentation != 'pooled') they replace the local 30-comp approximation
- *  so this panel can never contradict the placard above it. */
+/** Full-corpus condition buckets from the price snapshot. These are the
+ *  authoritative numbers (same source the placard + vault read); a bucket with
+ *  enough comps replaces the local 30-comp approximation so this panel never
+ *  shows a condition median the rest of the app contradicts. Passed for ALL
+ *  segmentations incl. pooled — a thin bucket (< MIN_SPLIT_COMPS) is ignored
+ *  per-bucket below, falling back to the blended view. */
 interface SnapshotBuckets {
-  segmentation: 'split' | 'sealed-only' | 'loose-only'
+  segmentation: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
   sealed: { median: number | null; count: number } | null
   loose: { median: number | null; count: number } | null
 }
@@ -72,11 +75,14 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
   const comps = pricing.recent_comps
   if (!comps.length) return null
 
-  // Snapshot buckets win: full-corpus medians, same numbers as the placard.
-  const sealedRow = snapshotBuckets?.sealed && snapshotBuckets.sealed.median != null
+  // Snapshot buckets win: full-corpus medians, same numbers as the placard +
+  // vault. Require ≥ MIN_SPLIT_COMPS per bucket (thin buckets ship under pooled
+  // — a 1-sale "sealed" median would mislead), so a thin side falls through to
+  // the blended view instead of asserting a divergent number.
+  const sealedRow = snapshotBuckets?.sealed && snapshotBuckets.sealed.median != null && snapshotBuckets.sealed.count >= MIN_SPLIT_COMPS
     ? { median: snapshotBuckets.sealed.median, count: snapshotBuckets.sealed.count }
     : null
-  const looseRow = snapshotBuckets?.loose && snapshotBuckets.loose.median != null
+  const looseRow = snapshotBuckets?.loose && snapshotBuckets.loose.median != null && snapshotBuckets.loose.count >= MIN_SPLIT_COMPS
     ? { median: snapshotBuckets.loose.median, count: snapshotBuckets.loose.count }
     : null
   const useSnapshot = Boolean(sealedRow || looseRow)
