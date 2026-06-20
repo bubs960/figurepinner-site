@@ -51,51 +51,57 @@ export default function PowerSwordVaults({
         <p className="fh-vaults-sub">Each line is its own market. Draw the Power Sword to unseal its history and its grails.</p>
       </div>
 
-      {vaults.map(v => {
-        const l = lore[v.line] ?? { teaser: `${v.count} figures in the FigurePinner database.`, lore: '' }
-        const isOpen = !!open[v.line]
-        return (
-          <div key={v.line} className={`fh-vault${isOpen ? ' is-open' : ''}`}>
-            <button
-              className="fh-vault-seal"
-              aria-expanded={isOpen}
-              onClick={() => draw(v.line)}
-            >
-              <span className="fh-vault-meta">
-                <span className="fh-vault-line">{v.line}</span>
-                <span className="fh-vault-era">{l.era ? `${l.era} · ` : ''}{v.count} figures</span>
-                {!isOpen && <span className="fh-vault-teaser">{l.teaser}</span>}
-              </span>
-              <span className="fh-sword" aria-hidden="true">
-                <PowerSword drawn={isOpen} />
-                <span className="fh-sword-label">{isOpen ? 'SHEATHE' : 'DRAW THE SWORD'}</span>
-              </span>
-            </button>
+      <div className="fh-vaults-list">
+        {vaults.map(v => {
+          const l = lore[v.line] ?? { teaser: `${v.count} figures in the FigurePinner database.`, lore: '' }
+          const isOpen = !!open[v.line]
+          const panelId = `fh-vault-panel-${v.line.replace(/\s+/g, '-').toLowerCase()}`
+          const lineSlug = encodeURIComponent(v.line)
+          return (
+            <div key={v.line} className={`fh-vault${isOpen ? ' is-open' : ''}`}>
+              <button
+                className="fh-vault-seal"
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                onClick={() => draw(v.line)}
+              >
+                <span className="fh-vault-meta">
+                  <span className="fh-vault-count">{v.count}</span>
+                  <span className="fh-vault-line">{v.line}</span>
+                  <span className="fh-vault-era">{l.era ?? 'figures'}</span>
+                </span>
+                <span className="fh-sword" aria-hidden="true">
+                  <PowerSword drawn={isOpen} />
+                  <span className="fh-sword-label">{isOpen ? 'SHEATHE' : 'DRAW THE SWORD'}</span>
+                </span>
+              </button>
 
-            {isOpen && (
-              <div className="fh-vault-body">
-                {l.lore && <p className="fh-vault-lore">{l.lore}</p>}
-                {v.top.length > 0 && (
-                  <>
-                    <div className="fh-vault-grails-label">Grails of this line</div>
-                    <div className="fh-vault-chips">
-                      {v.top.map(f => (
-                        <a key={f.figure_id} href={f.url} className="fh-vault-chip">
-                          <span className="fh-vault-chip-name">{f.name}</span>
-                          <span className="fh-vault-chip-price">${f.price.toLocaleString('en-US')}<span className="fh-vault-chip-sold">{f.sold_count} sold</span></span>
+              {isOpen && (
+                <div id={panelId} className="fh-vault-body" role="region" aria-label={`${v.line} details`}>
+                  {l.teaser && <p className="fh-vault-teaser">{l.teaser}</p>}
+                  {l.lore && <p className="fh-vault-lore">{l.lore}</p>}
+                  {v.top.length > 0 && (
+                    <>
+                      <div className="fh-vault-grails-label">Grails of this line</div>
+                      <div className="fh-vault-chips">
+                        {v.top.map(f => (
+                          <a key={f.figure_id} href={f.url} className="fh-vault-chip">
+                            <span className="fh-vault-chip-name">{f.name}</span>
+                            <span className="fh-vault-chip-price">${f.price.toLocaleString('en-US')}<span className="fh-vault-chip-sold">{f.sold_count} sold</span></span>
+                          </a>
+                        ))}
+                        <a href={`/masters-of-the-universe?line=${lineSlug}`} className="fh-vault-chip fh-vault-chip-all">
+                          Browse all {v.count} {v.line} figures →
                         </a>
-                      ))}
-                      <a href={`/masters-of-the-universe`} className="fh-vault-chip fh-vault-chip-all">
-                        Browse all {v.count} {v.line} figures →
-                      </a>
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
-          </div>
-        )
-      })}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+          )
+        })}
+      </div>
     </section>
   )
 }

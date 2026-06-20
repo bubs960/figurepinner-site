@@ -187,19 +187,26 @@ export default function FandomHub({
           <IntelTable data={topComps} theme={theme} />
         )}
 
-        <div className="fh-ad"><AdSlot slot="leaderboard" /></div>
-
-        {article.body.slice(0, 2).map((block, i) => <Block key={i} block={block} />)}
-
         {vaults && vaults.vaults.length > 0 ? (
           <PowerSwordVaults vaults={vaults.vaults} lore={MOTU_VAULT_LORE} />
         ) : (
-          article.body.slice(2).map((block, i) => <Block key={i + 2} block={block} />)
+          article.body.map((block, i) => <Block key={i} block={block} />)
         )}
 
         <div className="fh-cta-wrap">
           <a href="/search" className="fh-cta">{v.ctaLabel}</a>
         </div>
+
+        {article.body.length > 0 && (
+          <details className="fh-story">
+            <summary>The MOTU story</summary>
+            <div className="fh-story-body">
+              {article.body.slice(0, 2).map((block, i) => <Block key={i} block={block} />)}
+            </div>
+          </details>
+        )}
+
+        <div className="fh-ad"><AdSlot slot="leaderboard" /></div>
 
         {moreGuides.length > 0 && (
           <div className="fh-more">

@@ -496,7 +496,7 @@ a:hover {
 .fh-hero-inner {
   max-width: 760px;
   margin: 0 auto;
-  padding: 3rem 1.25rem 2.25rem;
+  padding: 1.75rem 1.25rem 1.5rem;
   position: relative;
   z-index: 1;
 }
@@ -706,21 +706,47 @@ a:hover {
 .fh-vaults-title { font-family: var(--fh-display); font-size: 1.6rem; letter-spacing: 0.02em; color: var(--fh-text); margin: 0 0 0.3rem; }
 .fh-vaults-sub { font-size: 0.95rem; color: var(--fh-muted); margin: 0; }
 
-.fh-vault { border: 1px solid var(--fh-line); border-radius: var(--fp-radius); margin-bottom: 0.6rem; background: var(--fh-surface); overflow: hidden; transition: border-color var(--transition); }
+/* 2-column grid — cuts ~1000px tower to ~500px; collapses to 1-col on mobile */
+.fh-vaults-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: start;
+}
+
+.fh-vault { border: 1px solid var(--fh-line); border-radius: var(--fp-radius); background: var(--fh-surface); overflow: hidden; transition: border-color var(--transition); }
 .fh-vault.is-open { border-color: var(--fh-accent2); }
+
+/* Scroll-driven entrance — fires as each card enters viewport, no JS needed */
+@media (prefers-reduced-motion: no-preference) {
+  .fh-vaults-list .fh-vault {
+    animation: fh-vault-enter 380ms ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+@keyframes fh-vault-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 .fh-vault-seal {
   width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
   background: transparent; border: none; cursor: pointer; text-align: left;
-  padding: 1rem 1.15rem; color: var(--fh-text);
+  padding: 0.85rem 1.15rem; color: var(--fh-text);
+  transition: background var(--transition), transform 80ms ease;
 }
 .fh-vault-seal:hover { background: var(--fh-bg); }
+.fh-vault-seal:active { transform: scale(0.98); }
 .fh-vault-seal:focus-visible { outline: 2px solid var(--fh-accent); outline-offset: -2px; }
 .fh-vault-meta { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
-.fh-vault-line { font-family: var(--fh-display); font-size: 1.2rem; letter-spacing: 0.02em; color: var(--fh-text); }
+.fh-vault-line { font-family: var(--fh-display); font-size: 1.1rem; letter-spacing: 0.02em; color: var(--fh-text); }
 .fh-vault.is-open .fh-vault-line { color: var(--fh-hot); }
+/* Count is the visual hero on the closed card — differentiates the 10 at a glance */
+.fh-vault-count { font-family: var(--fh-display); font-size: 1.5rem; font-weight: 700; color: var(--fh-hot); line-height: 1; margin-bottom: 0.1rem; }
 .fh-vault-era { font-size: 0.74rem; letter-spacing: 0.04em; color: var(--fh-accent2); font-family: var(--font-mono); text-transform: uppercase; }
-.fh-vault-teaser { font-size: 0.9rem; color: var(--fh-muted); font-style: italic; margin-top: 0.2rem; }
+/* Teaser only shown inside open body — not on closed card (saves ~30% row height) */
+.fh-vault-teaser { font-size: 0.9rem; color: var(--fh-muted); font-style: italic; margin: 0.5rem 0 0.75rem; }
 
 .fh-sword { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; flex-shrink: 0; color: var(--fh-accent2); }
 .fh-sword-label { font-size: 0.6rem; letter-spacing: 0.12em; font-family: var(--font-mono); color: var(--fh-accent2); white-space: nowrap; }
@@ -728,8 +754,9 @@ a:hover {
 .fh-vault.is-open .fh-sword-svg { transform: translateY(-2px) rotate(0deg); filter: drop-shadow(0 0 6px var(--fh-hot)); color: var(--fh-hot); }
 .fh-vault-seal:hover .fh-sword-svg { filter: drop-shadow(0 0 4px var(--fh-accent2)); }
 
-.fh-vault-body { padding: 0 1.15rem 1.15rem; animation: fh-unseal 360ms ease; }
-@keyframes fh-unseal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+/* Vault body reveal — opacity only (compositor-safe, no layout shift) */
+.fh-vault-body { padding: 0 1.15rem 1.15rem; animation: fh-unseal 280ms ease both; }
+@keyframes fh-unseal { from { opacity: 0; } to { opacity: 1; } }
 .fh-vault-lore { font-size: 1rem; color: var(--fh-muted); line-height: 1.75; margin: 0 0 1rem; }
 .fh-vault-grails-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fh-accent2); font-family: var(--font-mono); margin-bottom: 0.5rem; }
 .fh-vault-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
@@ -737,23 +764,60 @@ a:hover {
   display: flex; flex-direction: column; gap: 0.1rem;
   background: var(--fh-bg); border: 1px solid var(--fh-line); border-radius: var(--fp-radius-sm);
   padding: 0.5rem 0.7rem; text-decoration: none; color: var(--fh-text); font-size: 0.86rem; font-weight: 600;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.fh-vault-chip:hover { border-color: var(--fh-accent2); }
+.fh-vault-chip:hover { border-color: var(--fh-accent2); transform: translateY(-2px); }
 .fh-vault-chip-name { white-space: nowrap; }
 .fh-vault-chip-price { font-family: var(--fh-display); font-size: 0.95rem; color: var(--fh-hot); display: flex; align-items: baseline; gap: 0.4rem; }
 .fh-vault-chip-sold { font-family: var(--font-body); font-size: 0.68rem; font-weight: 400; color: var(--fh-muted); }
 .fh-vault-chip-all { justify-content: center; color: var(--fh-accent); font-weight: 600; border-style: dashed; }
-.fh-vault-chip-all:hover { color: var(--fh-text); }
+.fh-vault-chip-all:hover { color: var(--fh-text); transform: none; }
+
+/* Staggered chip entrance when vault opens */
+@media (prefers-reduced-motion: no-preference) {
+  .fh-vault-chips .fh-vault-chip { animation: fh-chip-enter 260ms ease-out both; }
+  .fh-vault-chips .fh-vault-chip:nth-child(1) { animation-delay: 60ms; }
+  .fh-vault-chips .fh-vault-chip:nth-child(2) { animation-delay: 100ms; }
+  .fh-vault-chips .fh-vault-chip:nth-child(3) { animation-delay: 140ms; }
+  .fh-vault-chips .fh-vault-chip:nth-child(4) { animation-delay: 180ms; }
+  .fh-vault-chips .fh-vault-chip:nth-child(5) { animation-delay: 220ms; }
+  .fh-vault-chips .fh-vault-chip:nth-child(6) { animation-delay: 260ms; }
+  .fh-vault-chips .fh-vault-chip:nth-child(7) { animation-delay: 300ms; }
+}
+@keyframes fh-chip-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* First sword drawn powers up the page — Grayskull glow intensifies once */
 .fh-vaults.is-powered .fh-vaults-title { text-shadow: 0 0 14px rgba(240,185,66,0.25); }
 
+/* MOTU story expander — collapsed prose moved below CTA */
+.fh-story { margin: 2rem 0 1rem; border: 1px solid var(--fh-line); border-radius: var(--fp-radius); background: var(--fh-surface); }
+.fh-story summary {
+  padding: 0.85rem 1.15rem; cursor: pointer; font-family: var(--fh-display);
+  font-size: 0.95rem; letter-spacing: 0.05em; color: var(--fh-accent2); list-style: none;
+  user-select: none;
+}
+.fh-story summary::-webkit-details-marker { display: none; }
+.fh-story summary::before { content: '+ '; }
+.fh-story[open] summary::before { content: '− '; }
+.fh-story-body { padding: 0 1.15rem 1.15rem; }
+
 @media (prefers-reduced-motion: reduce) {
   .fh-sword-svg, .fh-vault.is-open .fh-sword-svg { transition: none; }
   .fh-vault-body { animation: none; }
+  .fh-vault-chip { transition: border-color var(--transition); }
+  .fh-vault-chip:hover { transform: none; }
 }
 @media (max-width: 520px) {
+  .fh-vaults-list { grid-template-columns: 1fr; }
   .fh-vault-chip-name { white-space: normal; }
   .fh-sword-label { display: none; }
+  .fh-vault-count { font-size: 1.25rem; }
 }
+
+/* CTA press feedback */
+.fh-cta { transition: transform 100ms ease, filter 150ms ease; }
+.fh-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.fh-cta:active { transform: scale(0.97); }

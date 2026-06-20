@@ -134,12 +134,12 @@ export default function FandomHubInteractive({
         <>
           {/* Line-filter pills */}
           {lines.length > 2 && (
-            <div className="fh-filter" role="tablist" aria-label="Filter by line">
+            <div className="fh-filter" role="group" aria-label="Filter by line">
               {lines.map(ln => (
                 <button
                   key={ln}
-                  role="tab"
-                  aria-selected={activeLine === ln}
+                  type="button"
+                  aria-pressed={activeLine === ln}
                   className={`fh-filter-pill${activeLine === ln ? ' is-active' : ''}`}
                   onClick={() => setActiveLine(ln)}
                 >
