@@ -688,7 +688,7 @@ a:hover {
    yet — the '82 two-halves Power Sword lands on the seam at Gate 2.
    ════════════════════════════════════════════════════════════════════════ */
 .fh-hero--seam {
-  min-height: clamp(420px, 60vh, 600px);
+  min-height: clamp(460px, 66vh, 660px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -759,11 +759,52 @@ a:hover {
   width: clamp(160px, 27vw, 300px);
   filter: drop-shadow(0 0 6px rgba(111,155,58,0.20));
 }
-.fh-castle-body, .fh-castle-gate { fill: #0c0a06; }
-.fh-castle-gate { fill: #07120f; }
+/* Silhouette fills are inline SVG gradients now (rim-lit, seam-facing edge glow
+   + base mist). Keep only the window ignite + the serpent stroke here. */
 .fh-castle-win { fill: #ffdf8a; filter: drop-shadow(0 0 4px rgba(255,210,120,0.9)); }
-.fh-snake-peak { fill: #08090a; }
-.fh-snake-coil { stroke: #6f9b3a; stroke-width: 4; opacity: 0.5; stroke-linecap: round; }
+.fh-snake-coil { stroke: #8fd24a; stroke-width: 4; opacity: 0.55; stroke-linecap: round; }
+
+/* ── The '82 two-halves Power Sword ON the seam (Gate 2, STATIC) ──
+   Centered on the seam, rising from the lower hero. Decorative + non-LCP.
+   The two halves rest near-joined (small gap so the seam glows through the
+   spine); Gate 3 will animate translateX apart→together on scroll. */
+.fh-pwsword {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  height: clamp(300px, 56vh, 500px);
+  width: auto;
+  transform: translateX(-50%);
+  /* Glow so the sword reads as the lit focal point on the seam, not a dark cutout */
+  filter:
+    drop-shadow(0 4px 12px rgba(0,0,0,0.55))
+    drop-shadow(0 0 14px rgba(255,224,150,0.30))
+    drop-shadow(0 0 34px rgba(240,185,66,0.18));
+  pointer-events: none;
+}
+/* Resting gap: the two halves sit slightly apart so the glowing seam reads
+   through the spine (the ownable "two halves join" narrative). Gate 3 animates
+   this gap apart→together on scroll. */
+.fh-pwsword-left  { transform: translateX(-2.4px); }
+.fh-pwsword-right { transform: translateX(2.4px); }
+
+/* Refinement 1 (web Gate-1 audit): the seam must sit BETWEEN the worlds, not
+   through the words. On desktop, keep the hero copy in the HEROIC (left) half
+   so the seam + sword FRAME it. margin-right:50% is %-based → content reliably
+   ends before the centered sword at every desktop width. Mobile = full-width
+   copy bottom-anchored, sword moved to the upper hero (vertical separation). */
+@media (min-width: 768px) {
+  .fh-hero--seam .fh-hero-inner {
+    margin: 0 50% 0 0;
+    max-width: none;
+    padding-left: clamp(1.25rem, 6vw, 7rem);
+    padding-right: 5rem;
+  }
+  .fh-hero--seam .fh-title { font-size: clamp(1.75rem, 3.6vw, 2.6rem); }
+}
+@media (max-width: 767px) {
+  .fh-pwsword { top: 3%; bottom: auto; height: clamp(180px, 32vh, 250px); opacity: 0.92; }
+}
 
 /* Content scrim — keeps hero copy AA-legible over the bright seam */
 .fh-hero--seam .fh-hero-inner { position: relative; z-index: 1; padding-bottom: 2rem; }
