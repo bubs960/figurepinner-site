@@ -7,7 +7,10 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ARTICLES, type Article, type ArticleBlock } from '../_data/articles'
+import { getHubTheme, loadTopComps, loadVaults } from '../_data/fandomHubs'
+import FandomHub from '../_components/FandomHub'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 
 const BASE = 'https://figurepinner.com'
 
@@ -112,6 +115,19 @@ export default async function GuideArticlePage({ params }: PageProps) {
   const article = getArticle(slug)
   if (!article) notFound()
 
+  // Culture-led themed hub for mapped `-hub` slugs; generic article render otherwise.
+  const hubTheme = getHubTheme(slug)
+  if (hubTheme) {
+    const topComps = await loadTopComps(hubTheme.dataKey)
+    const vaults = await loadVaults(hubTheme.dataKey)
+    const moreGuides = ARTICLES
+      .filter(a => a.slug !== slug)
+      .sort((a, b) => (b.updated ?? '').localeCompare(a.updated ?? ''))
+      .slice(0, 3)
+      .map(a => ({ slug: a.slug, title: a.title, readingMinutes: a.readingMinutes }))
+    return <FandomHub article={article} theme={hubTheme} topComps={topComps} vaults={vaults} moreGuides={moreGuides} />
+  }
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -140,9 +156,17 @@ export default async function GuideArticlePage({ params }: PageProps) {
           {article.dek}
         </p>
 
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+          <AdSlot slot="leaderboard" />
+        </div>
+
         {article.body.map((block, i) => <Block key={i} block={block} />)}
 
-        <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+          <AdSlot slot="adsterra-banner" />
+        </div>
+
+        <div style={{ marginTop: '1rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
           <a href="/search" style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', textDecoration: 'none', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600 }}>
             Look up a figure&apos;s real value →
           </a>
@@ -155,8 +179,12 @@ export default async function GuideArticlePage({ params }: PageProps) {
 }
 
 // Cross-links to keep readers in the guides funnel instead of dead-ending.
+// Sort by most-recently updated so cross-links rotate as new articles ship.
 function MoreGuides({ current }: { current: string }) {
-  const others = ARTICLES.filter(a => a.slug !== current).slice(0, 3)
+  const others = ARTICLES
+    .filter(a => a.slug !== current)
+    .sort((a, b) => (b.updated ?? '').localeCompare(a.updated ?? ''))
+    .slice(0, 3)
   if (!others.length) return null
   return (
     <div style={{ marginTop: '2.5rem' }}>
