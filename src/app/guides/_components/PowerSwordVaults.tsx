@@ -13,7 +13,7 @@
 
 import { useState } from 'react'
 
-export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; url: string }
+export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; image?: string | null; url: string }
 export type Vault = { line: string; count: number; priced_count: number; top: VaultFigure[] }
 export type VaultLore = { teaser: string; lore: string; era?: string }
 
@@ -86,8 +86,13 @@ export default function PowerSwordVaults({
                       <div className="fh-vault-chips">
                         {v.top.map(f => (
                           <a key={f.figure_id} href={f.url} className="fh-vault-chip">
-                            <span className="fh-vault-chip-name">{f.name}</span>
-                            <span className="fh-vault-chip-price">${f.price.toLocaleString('en-US')}<span className="fh-vault-chip-sold">{f.sold_count} sold</span></span>
+                            <span className={`fh-vault-chip-thumb${f.image ? '' : ' is-empty'}`}>
+                              {f.image && <img src={f.image} alt="" loading="lazy" decoding="async" />}
+                            </span>
+                            <span className="fh-vault-chip-text">
+                              <span className="fh-vault-chip-name">{f.name}</span>
+                              <span className="fh-vault-chip-price">${f.price.toLocaleString('en-US')}<span className="fh-vault-chip-sold">{f.sold_count} sold</span></span>
+                            </span>
                           </a>
                         ))}
                         <a href={`/masters-of-the-universe?line=${lineSlug}`} className="fh-vault-chip fh-vault-chip-all">

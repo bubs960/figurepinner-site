@@ -89,6 +89,7 @@ async function buildFandom(fandom, allFigures) {
       sold_count: soldCount,
       last_sold: s.last_sold_date ?? s.last_sold ?? null,
       flag: rarityFlag(f),
+      image: f.canonical_image_url || null,
       url: `/figure/${f.figure_id}`,
     }
   })

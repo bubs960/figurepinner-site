@@ -54,7 +54,7 @@ async function main(){
     const s=await snap(f.figure_id); if(!s)return null
     const p=(s.median_sold??s.avg_sold); const c=s.sold_count??0
     if(p==null||c<=0)return null
-    return { figure_id:f.figure_id, name:name(f), line:lineKey(f), price:Math.round(p), sold_count:c, flag:rarityFlag(f), url:`/figure/${f.figure_id}` }
+    return { figure_id:f.figure_id, name:name(f), line:lineKey(f), price:Math.round(p), sold_count:c, flag:rarityFlag(f), image:f.canonical_image_url||null, url:`/figure/${f.figure_id}` }
   })
   const byId = new Map(priced.filter(Boolean).map(x=>[x.figure_id,x]))
   const vaults = Object.entries(groups)

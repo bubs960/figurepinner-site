@@ -21,6 +21,7 @@ export type TopComp = {
   sold_count: number
   last_sold: string | null
   flag: string
+  image?: string | null
   url: string
 }
 
@@ -154,6 +155,9 @@ export default function FandomHubInteractive({
               <li key={f.figure_id} className="fh-intel-row">
                 <a href={f.url} className="fh-intel-link" title={`${f.name} — ${f.sold_count} sold, median $${f.price.toLocaleString('en-US')}`}>
                   <span className="fh-intel-rank" aria-hidden="true">{i + 1}</span>
+                  <span className={`fh-intel-thumb${f.image ? '' : ' is-empty'}`}>
+                    {f.image && <img src={f.image} alt="" loading="lazy" decoding="async" />}
+                  </span>
                   <span className="fh-intel-name">
                     {f.name}
                     <span className="fh-intel-line">{f.line}</span>
