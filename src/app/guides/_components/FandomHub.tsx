@@ -42,6 +42,58 @@ function renderText(text: string): React.ReactNode {
   return <>{parts}</>
 }
 
+/**
+ * SeamHeroAtmosphere — the good/evil VERTICAL SEAM behind the MOTU hero (Gate 1).
+ *
+ * Eternia divided down a glowing seam: He-Man's heroic side LEFT (blue→gold),
+ * Skeletor's dark side RIGHT (purple→toxic-green→black), Castle Grayskull
+ * silhouette left-of-seam and a Snake Mountain hint right-of-seam, both shrouded
+ * in CSS mist. Everything here is DECORATIVE and aria-hidden: it layers OVER the
+ * SSR'd hero copy, which stays the LCP. Pure CSS gradients + inline-SVG vector
+ * silhouettes — zero raster, negligible bytes (CWV guardrail). The entry "lights
+ * up" ignite + any motion is reduced-motion-gated in globals.css. No sword yet
+ * (Gate 1) — the '82 two-halves Power Sword lands on the seam at Gate 2.
+ *
+ * The silhouettes are ORIGINAL homage shapes (an evocative fortress / a serpent
+ * peak), never the trademarked Grayskull/Snake Mountain logos — formal
+ * legal-compliance pass runs at Gate 2 over sword + these glyphs + the font.
+ */
+function SeamHeroAtmosphere() {
+  return (
+    <div className="fh-seam-atmos" aria-hidden="true">
+      <div className="fh-sky fh-sky-left" />
+      <div className="fh-sky fh-sky-right" />
+      <div className="fh-mist" />
+      <div className="fh-seam" />
+
+      {/* Castle Grayskull — original fortress homage, heroic (left) side */}
+      <svg className="fh-castle" viewBox="0 0 220 150" preserveAspectRatio="xMidYMax meet" focusable="false">
+        <path
+          className="fh-castle-body"
+          d="M0 150 V96 H16 V82 H24 V96 H32 V82 H40 V96 H58 V64 H72 V44 L86 30 V44 H98 V20 L110 6 L122 20 V44 H134 V44 L148 30 V64 H162 V96 H180 V82 H188 V96 H196 V82 H204 V96 H220 V150 Z"
+        />
+        {/* Central gate — the looming jaw-arch face, suggested not copied */}
+        <path className="fh-castle-gate" d="M96 150 V112 Q110 92 124 112 V150 Z" />
+        {/* Windows that ignite on entry */}
+        <rect className="fh-castle-win" x="104" y="48" width="12" height="18" rx="2" />
+        <rect className="fh-castle-win" x="62" y="74" width="7" height="12" rx="1.5" />
+        <rect className="fh-castle-win" x="151" y="74" width="7" height="12" rx="1.5" />
+      </svg>
+
+      {/* Snake Mountain — original serpent-peak homage, dark (right) side */}
+      <svg className="fh-snake" viewBox="0 0 200 150" preserveAspectRatio="xMidYMax meet" focusable="false">
+        <path className="fh-snake-peak" d="M0 150 L40 92 L70 116 L104 40 L132 96 L160 70 L200 150 Z" />
+        {/* the rising serpent silhouette over the peak */}
+        <path
+          className="fh-snake-coil"
+          d="M104 44 C112 30 96 18 110 8 C126 0 138 14 130 26 C124 35 134 40 132 48"
+          fill="none"
+        />
+      </svg>
+    </div>
+  )
+}
+
 function Block({ block }: { block: ArticleBlock }) {
   switch (block.type) {
     case 'h2':
@@ -124,6 +176,9 @@ export default function FandomHub({
   moreGuides: { slug: string; title: string; readingMinutes: number }[]
 }) {
   const v = theme.voice
+  // Seam hero is MOTU's proof-of-concept atmosphere (Gate 1). Other fandoms
+  // keep the flat themed hero until the pattern is templatized post-audit.
+  const isSeam = theme.fandom === 'masters-of-the-universe'
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -151,7 +206,8 @@ export default function FandomHub({
 
       <SiteHeader crumbs={[{ label: 'Guides', href: '/guides' }, { label: article.title }]} />
 
-      <section className="fh-hero">
+      <section className={`fh-hero${isSeam ? ' fh-hero--seam' : ''}`}>
+        {isSeam && <SeamHeroAtmosphere />}
         <div className="fh-hero-inner">
           <div className="fh-kicker">{v.kicker}</div>
           <h1 className="fh-title">{article.title}</h1>
