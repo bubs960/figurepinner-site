@@ -74,68 +74,75 @@ function renderText(text: string): React.ReactNode {
  */
 function PowerSwordSeam() {
   return (
-    <svg className="fh-pwsword" viewBox="0 0 140 380" preserveAspectRatio="xMidYMax meet" focusable="false">
+    <svg className="fh-pwsword" viewBox="0 0 150 330" preserveAspectRatio="xMidYMax meet" focusable="false">
       <defs>
-        {/* Faceted steel: bright edge → dark valley → bright spine = reads as
-            polished steel, not a glow. Left faintly cool-blue (He-Man). */}
+        {/* GLEAMING faceted steel: bright edge + mid valley + bright spine, far
+            lighter than before so the blade catches the Eternia dusk (web fix #4).
+            Left faintly cool-blue (He-Man). */}
         <linearGradient id="pwsSteelL" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#dbe4f1" />
-          <stop offset="0.5" stopColor="#6f7e94" />
-          <stop offset="1" stopColor="#f6f9ff" />
+          <stop offset="0" stopColor="#eef2fb" />
+          <stop offset="0.5" stopColor="#97a4b8" />
+          <stop offset="1" stopColor="#fcfdff" />
         </linearGradient>
         {/* Right faintly cool-green (Skeletor) */}
         <linearGradient id="pwsSteelR" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#f6f9ff" />
-          <stop offset="0.5" stopColor="#5c6c60" />
-          <stop offset="1" stopColor="#bccaba" />
+          <stop offset="0" stopColor="#fcfdff" />
+          <stop offset="0.5" stopColor="#94a296" />
+          <stop offset="1" stopColor="#dde6dd" />
         </linearGradient>
         <linearGradient id="pwsGold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#ffe79a" />
-          <stop offset="0.5" stopColor="#e3b84c" />
-          <stop offset="1" stopColor="#9a7026" />
+          <stop offset="0" stopColor="#ffeaa2" />
+          <stop offset="0.5" stopColor="#e7bd52" />
+          <stop offset="1" stopColor="#9c722a" />
         </linearGradient>
-        <radialGradient id="pwsJewel" cx="0.38" cy="0.32" r="0.85">
-          <stop offset="0" stopColor="#fff3cf" />
-          <stop offset="0.4" stopColor="#f3bd48" />
-          <stop offset="1" stopColor="#8a4f12" />
+        <radialGradient id="pwsJewel" cx="0.38" cy="0.3" r="0.85">
+          <stop offset="0" stopColor="#fff5d6" />
+          <stop offset="0.4" stopColor="#f5c150" />
+          <stop offset="1" stopColor="#8e5214" />
         </radialGradient>
         <radialGradient id="pwsJewelHalo" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#ffcf6a" stopOpacity="0.6" />
-          <stop offset="0.55" stopColor="#e0a52e" stopOpacity="0.22" />
+          <stop offset="0" stopColor="#ffd070" stopOpacity="0.7" />
+          <stop offset="0.55" stopColor="#e0a52e" stopOpacity="0.26" />
           <stop offset="1" stopColor="#e0a52e" stopOpacity="0" />
         </radialGradient>
       </defs>
 
-      {/* amber pommel glow halo — sits behind both gem halves, centered on spine */}
-      <ellipse cx="70" cy="354" rx="34" ry="34" fill="url(#pwsJewelHalo)" />
+      {/* amber pommel glow halo — behind both gem halves, centered on spine */}
+      <ellipse cx="75" cy="282" rx="40" ry="40" fill="url(#pwsJewelHalo)" />
 
-      {/* He-Man's half — left of the spine */}
+      {/* He-Man's half — left of the spine. Broader, shorter blade so the HILT
+          carries the recognizability weight (web fix #3). */}
       <g className="fh-pwsword-half fh-pwsword-left">
-        <path d="M70 10 L60 34 L50 64 L50 248 L70 256 Z" fill="url(#pwsSteelL)" />
-        <path d="M50 64 L50 248" stroke="#dfe7f3" strokeWidth="1" opacity="0.55" />
-        {/* swept-up wing crossguard — the most distinctive tell (bold) */}
-        <path d="M70 252 L37 250 Q16 245 8 223 Q25 237 47 247 Q59 251 70 270 Z" fill="url(#pwsGold)" />
+        <path d="M75 8 L65 30 L52 56 L52 182 L75 190 Z" fill="url(#pwsSteelL)" />
+        {/* full-length specular: bright outer edge + a spine sheen → it gleams */}
+        <path d="M52 56 L52 182" stroke="#f2f6ff" strokeWidth="1.5" opacity="0.7" />
+        <path d="M73 16 L70 56 L70 178 L73 186 Z" fill="#ffffff" opacity="0.28" />
+        {/* SUBSTANTIAL swept-up wing crossguard — thick, short, rising toward the
+            blade (web fix #1, the make-or-break tell) */}
+        <path d="M75 207 L48 203 Q33 198 30 179 Q31 168 38 164 Q46 177 57 185 Q67 190 75 189 Z" fill="url(#pwsGold)" />
         {/* ribbed grip */}
-        <path d="M59 270 L70 270 L70 336 L59 336 Z" fill="url(#pwsGold)" />
-        <path d="M59 283 H70 M59 297 H70 M59 311 H70 M59 325 H70" stroke="#6b4a17" strokeWidth="1.6" opacity="0.7" />
-        {/* jeweled pommel — left semicircle (round amber gem) */}
-        <path d="M70 334 A20 20 0 0 0 70 374 Z" fill="url(#pwsJewel)" />
+        <path d="M64 207 L75 207 L75 262 L64 262 Z" fill="url(#pwsGold)" />
+        <path d="M64 218 H75 M64 230 H75 M64 242 H75 M64 254 H75" stroke="#6b4a17" strokeWidth="1.7" opacity="0.7" />
+        {/* jeweled pommel — left semicircle (round amber gem), raised into view */}
+        <path d="M75 262 A20 20 0 0 0 75 302 Z" fill="url(#pwsJewel)" />
       </g>
 
       {/* Skeletor's half — right of the spine */}
       <g className="fh-pwsword-half fh-pwsword-right">
-        <path d="M70 10 L80 34 L90 64 L90 248 L70 256 Z" fill="url(#pwsSteelR)" />
-        <path d="M90 64 L90 248" stroke="#cfe0cf" strokeWidth="1" opacity="0.5" />
-        <path d="M70 252 L103 250 Q124 245 132 223 Q115 237 93 247 Q81 251 70 270 Z" fill="url(#pwsGold)" />
-        <path d="M81 270 L70 270 L70 336 L81 336 Z" fill="url(#pwsGold)" />
-        <path d="M70 283 H81 M70 297 H81 M70 311 H81 M70 325 H81" stroke="#6b4a17" strokeWidth="1.6" opacity="0.7" />
-        <path d="M70 334 A20 20 0 0 1 70 374 Z" fill="url(#pwsJewel)" />
+        <path d="M75 8 L85 30 L98 56 L98 182 L75 190 Z" fill="url(#pwsSteelR)" />
+        <path d="M98 56 L98 182" stroke="#eef4ee" strokeWidth="1.5" opacity="0.6" />
+        <path d="M77 16 L80 56 L80 178 L77 186 Z" fill="#ffffff" opacity="0.22" />
+        <path d="M75 207 L102 203 Q117 198 120 179 Q119 168 112 164 Q104 177 93 185 Q83 190 75 189 Z" fill="url(#pwsGold)" />
+        <path d="M86 207 L75 207 L75 262 L86 262 Z" fill="url(#pwsGold)" />
+        <path d="M75 218 H86 M75 230 H86 M75 242 H86 M75 254 H86" stroke="#6b4a17" strokeWidth="1.7" opacity="0.7" />
+        <path d="M75 262 A20 20 0 0 1 75 302 Z" fill="url(#pwsJewel)" />
       </g>
 
       {/* gem specular glint + crossguard center boss */}
-      <circle cx="63" cy="347" r="5.5" fill="#fff7e2" opacity="0.85" />
-      <circle cx="70" cy="259" r="5.5" fill="url(#pwsGold)" />
-      <circle cx="70" cy="257" r="2" fill="#fff1c0" opacity="0.7" />
+      <circle cx="68" cy="274" r="6" fill="#fff8e6" opacity="0.85" />
+      <circle cx="71" cy="278" r="2.6" fill="#ffffff" opacity="0.55" />
+      <circle cx="75" cy="197" r="6" fill="url(#pwsGold)" />
+      <circle cx="75" cy="195" r="2.3" fill="#fff1c0" opacity="0.7" />
     </svg>
   )
 }

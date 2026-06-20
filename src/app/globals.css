@@ -771,8 +771,8 @@ a:hover {
 .fh-pwsword {
   position: absolute;
   left: 50%;
-  bottom: 5%;
-  height: clamp(300px, 56vh, 500px);
+  bottom: 21%;
+  height: clamp(255px, 43vh, 380px);
   width: auto;
   transform: translateX(-50%);
   /* Glow so the sword reads as the lit focal point on the seam, not a dark cutout */
