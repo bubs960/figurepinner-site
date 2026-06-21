@@ -19,26 +19,51 @@ import vm from 'node:vm'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 const R2 = 'https://figurepinner-r2proxy.bubs960.workers.dev'
-const FANDOM = 'masters-of-the-universe'
+const FANDOM = process.argv[2] || 'masters-of-the-universe'
 const PER_SIDE = Number(process.env.PER_SIDE || 6)
 const CONCURRENCY = Number(process.env.CONCURRENCY || 16)
 const OUT_DIR = join(ROOT, 'src', 'data', 'fandom-heroes-villains')
 
-// Curated allegiance (character_canonical slugs). Heroes = the Heroic Warriors;
-// Villains = Skeletor's Evil Warriors + the Evil Horde. Faker = He-Man's evil clone → villains.
-const HEROES = new Set([
-  'he-man', 'teela', 'man-at-arms', 'stratos', 'man-e-faces', 'ram-man', 'mekaneck',
-  'buzz-off', 'sy-klone', 'fisto', 'orko', 'battle-cat', 'she-ra', 'bow', 'sorceress',
-  'roboto', 'snout-spout', 'moss-man', 'clamp-champ', 'extendar', 'rio-blast',
-  'king-randor', 'rotar', 'sweet-bee', 'king-grayskull', 'zodac', 'mechanek',
-])
-const VILLAINS = new Set([
-  'skeletor', 'beast-man', 'evil-lyn', 'trap-jaw', 'mer-man', 'tri-klops', 'clawful',
-  'webstor', 'two-bad', 'whiplash', 'spikor', 'stinkor', 'jitsu', 'kobra-khan',
-  'ssqueeze', 'mosquitor', 'scare-glow', 'hordak', 'grizzlor', 'mantenna', 'leech',
-  'modulok', 'multi-bot', 'dragstor', 'faker', 'evilseed', 'evil-seed', 'blast-attak',
-  'ninjor', 'saurod', 'blade', 'karg', 'anti-eternia-he-man',
-])
+// Curated good/evil allegiance per fandom (character_canonical slugs). The H-v-V
+// band leads with these across the seam. Templatized: add a fandom entry to grow.
+const ALLEGIANCE = {
+  'masters-of-the-universe': {
+    // Heroic Warriors vs Skeletor's Evil Warriors + the Evil Horde (Faker = evil clone).
+    heroes: new Set([
+      'he-man', 'teela', 'man-at-arms', 'stratos', 'man-e-faces', 'ram-man', 'mekaneck',
+      'buzz-off', 'sy-klone', 'fisto', 'orko', 'battle-cat', 'she-ra', 'bow', 'sorceress',
+      'roboto', 'snout-spout', 'moss-man', 'clamp-champ', 'extendar', 'rio-blast',
+      'king-randor', 'rotar', 'sweet-bee', 'king-grayskull', 'zodac', 'mechanek',
+    ]),
+    villains: new Set([
+      'skeletor', 'beast-man', 'evil-lyn', 'trap-jaw', 'mer-man', 'tri-klops', 'clawful',
+      'webstor', 'two-bad', 'whiplash', 'spikor', 'stinkor', 'jitsu', 'kobra-khan',
+      'ssqueeze', 'mosquitor', 'scare-glow', 'hordak', 'grizzlor', 'mantenna', 'leech',
+      'modulok', 'multi-bot', 'dragstor', 'faker', 'evilseed', 'evil-seed', 'blast-attak',
+      'ninjor', 'saurod', 'blade', 'karg', 'anti-eternia-he-man',
+    ]),
+  },
+  'gi-joe': {
+    // G.I. Joe team vs Cobra (the premise IS the good/evil split).
+    heroes: new Set([
+      'duke', 'snake-eyes', 'scarlett', 'roadblock', 'flint', 'lady-jaye', 'gung-ho', 'stalker',
+      'hawk', 'beach-head', 'shipwreck', 'sgt-slaughter', 'low-light', 'dusty', 'bazooka', 'alpine',
+      'footloose', 'leatherneck', 'wet-suit', 'rock-n-roll', 'breaker', 'grunt', 'clutch', 'steeler',
+      'zap', 'ripcord', 'airborne', 'quick-kick', 'mutt', 'spirit', 'recondo', 'blowtorch', 'cutter',
+      'doc', 'lifeline', 'sci-fi', 'tunnel-rat', 'falcon', 'jinx', 'chuckles', 'muskrat', 'repeater',
+      'hit-and-run', 'sneak-peek', 'cross-country', 'frostbite', 'snow-job', 'torpedo', 'ace', 'wild-bill',
+    ]),
+    villains: new Set([
+      'cobra-commander', 'destro', 'baroness', 'storm-shadow', 'zartan', 'major-bludd', 'firefly',
+      'serpentor', 'dr-mindbender', 'tomax', 'xamot', 'copperhead', 'scrap-iron', 'wild-weasel',
+      'cobra-trooper', 'cobra-officer', 'viper', 'b-a-t', 'crimson-guard', 'buzzer', 'ripper', 'torch',
+      'monkeywrench', 'raptor', 'zarana', 'zandar', 'dr-venom', 'overkill', 'metal-head', 'night-creeper',
+      'annihilator', 'alley-viper', 'toxo-viper', 'range-viper', 'techno-viper', 'hydro-viper',
+      'gnawgahyde', 'road-pig', 'voltar', 'big-boa', 'croc-master', 'cesspool', 'headman', 'cobra',
+    ]),
+  },
+}
+const { heroes: HEROES, villains: VILLAINS } = ALLEGIANCE[FANDOM] || { heroes: new Set(), villains: new Set() }
 
 function loadFigures() {
   const raw = readFileSync(join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js'), 'utf8')
