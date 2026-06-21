@@ -21,7 +21,9 @@ import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
 import { MOTU_VAULT_LORE } from '../_data/motuVaultLore'
-import PowerSwordVaults from './PowerSwordVaults'
+import MotuLineSections from './MotuLineSections'
+import SeamScrollDriver from './SeamScrollDriver'
+import SkeletorFacts from './SkeletorFacts'
 
 function renderText(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
@@ -95,20 +97,22 @@ function PowerSwordSeam() {
           <stop offset="0.5" stopColor="#e7bd52" />
           <stop offset="1" stopColor="#9c722a" />
         </linearGradient>
-        <radialGradient id="pwsJewel" cx="0.38" cy="0.3" r="0.85">
-          <stop offset="0" stopColor="#fff5d6" />
-          <stop offset="0.4" stopColor="#f5c150" />
-          <stop offset="1" stopColor="#8e5214" />
+        <radialGradient id="pwsJewel" cx="0.36" cy="0.28" r="0.9">
+          <stop offset="0" stopColor="#fff9ea" />
+          <stop offset="0.32" stopColor="#ffd571" />
+          <stop offset="0.7" stopColor="#efaf3a" />
+          <stop offset="1" stopColor="#9a5a16" />
         </radialGradient>
         <radialGradient id="pwsJewelHalo" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#ffd070" stopOpacity="0.7" />
-          <stop offset="0.55" stopColor="#e0a52e" stopOpacity="0.26" />
+          <stop offset="0" stopColor="#ffe6a0" stopOpacity="0.9" />
+          <stop offset="0.4" stopColor="#f3bd48" stopOpacity="0.45" />
           <stop offset="1" stopColor="#e0a52e" stopOpacity="0" />
         </radialGradient>
       </defs>
 
-      {/* amber pommel glow halo — behind both gem halves, centered on spine */}
-      <ellipse cx="75" cy="282" rx="40" ry="40" fill="url(#pwsJewelHalo)" />
+      {/* amber pommel glow halo — behind both gem halves, centered on spine.
+          Brighter + larger so the gem reads as the glowing signature, not a bead. */}
+      <ellipse cx="75" cy="282" rx="48" ry="48" fill="url(#pwsJewelHalo)" />
 
       {/* He-Man's half — left of the spine. Broader, shorter blade so the HILT
           carries the recognizability weight (web fix #3). */}
@@ -138,9 +142,9 @@ function PowerSwordSeam() {
         <path d="M75 262 A20 20 0 0 1 75 302 Z" fill="url(#pwsJewel)" />
       </g>
 
-      {/* gem specular glint + crossguard center boss */}
-      <circle cx="68" cy="274" r="6" fill="#fff8e6" opacity="0.85" />
-      <circle cx="71" cy="278" r="2.6" fill="#ffffff" opacity="0.55" />
+      {/* gem specular glint (bright hotspot) + crossguard center boss */}
+      <circle cx="68" cy="273" r="7" fill="#fff9ea" opacity="0.9" />
+      <circle cx="70" cy="276" r="3" fill="#ffffff" opacity="0.7" />
       <circle cx="75" cy="197" r="6" fill="url(#pwsGold)" />
       <circle cx="75" cy="195" r="2.3" fill="#fff1c0" opacity="0.7" />
     </svg>
@@ -154,6 +158,7 @@ function SeamHeroAtmosphere() {
       <div className="fh-sky fh-sky-right" />
       <div className="fh-mist" />
       <div className="fh-seam" />
+      <div className="fh-seam-bloom" />
 
       {/* Castle Grayskull — original fortress homage, heroic (left) side.
           Gradient body (lifts toward the seam) + a seam-facing gold rim-light +
@@ -341,6 +346,7 @@ export default function FandomHub({
 
       <section className={`fh-hero${isSeam ? ' fh-hero--seam' : ''}`}>
         {isSeam && <SeamHeroAtmosphere />}
+        {isSeam && <SeamScrollDriver />}
         <div className="fh-hero-inner">
           <div className="fh-kicker">{v.kicker}</div>
           <h1 className="fh-title">{article.title}</h1>
@@ -377,7 +383,7 @@ export default function FandomHub({
         )}
 
         {vaults && vaults.vaults.length > 0 ? (
-          <PowerSwordVaults vaults={vaults.vaults} lore={MOTU_VAULT_LORE} />
+          <MotuLineSections vaults={vaults.vaults} lore={MOTU_VAULT_LORE} />
         ) : (
           article.body.map((block, i) => <Block key={i} block={block} />)
         )}
@@ -385,6 +391,8 @@ export default function FandomHub({
         <div className="fh-cta-wrap">
           <a href="/search" className="fh-cta">{v.ctaLabel}</a>
         </div>
+
+        {isSeam && <SkeletorFacts />}
 
         {article.body.length > 0 && (
           <details className="fh-story">
