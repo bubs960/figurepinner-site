@@ -15,6 +15,7 @@
 // register each fandom's file here once its data exists. See loadTopComps() below.
 import motuTopComps from '@/data/fandom-top-comps/masters-of-the-universe.json'
 import motuVaults from '@/data/fandom-vaults/masters-of-the-universe.json'
+import motuHeroesVillains from '@/data/fandom-heroes-villains/masters-of-the-universe.json'
 
 export type HubFlagWording = { vintage?: string; motuc?: string; exclusive?: string; reissue?: string }
 
@@ -98,7 +99,7 @@ const TOP_COMPS: Record<string, TopCompPayload> = {
  * would fail the build instead of degrading). Register each fandom's JSON here once
  * its nightly data exists; until then that hub renders without the table.
  */
-export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; url: string }
+export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; image?: string | null; url: string }
 export type Vault = { line: string; count: number; priced_count: number; top: VaultFigure[] }
 export type VaultPayload = { fandom: string; generated_at: string; source: string; vaults: Vault[] }
 
@@ -108,6 +109,18 @@ const VAULTS: Record<string, VaultPayload> = {
 
 export async function loadVaults(dataKey: string): Promise<VaultPayload | null> {
   return VAULTS[dataKey] ?? null
+}
+
+/** Heroes-vs-Villains curated band — top hero-side grails facing villain-side across the seam. */
+export type HvFigure = { figure_id: string; name: string; char: string; line: string; price: number; sold_count: number; flag: string; image?: string | null; url: string }
+export type HeroesVillainsPayload = { fandom: string; generated_at: string; source: string; heroes: HvFigure[]; villains: HvFigure[] }
+
+const HEROES_VILLAINS: Record<string, HeroesVillainsPayload> = {
+  'masters-of-the-universe': motuHeroesVillains as unknown as HeroesVillainsPayload,
+}
+
+export async function loadHeroesVillains(dataKey: string): Promise<HeroesVillainsPayload | null> {
+  return HEROES_VILLAINS[dataKey] ?? null
 }
 
 export async function loadTopComps(dataKey: string): Promise<TopCompPayload | null> {

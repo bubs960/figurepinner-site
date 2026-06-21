@@ -16,7 +16,7 @@
  */
 
 import type { Article, ArticleBlock } from '../_data/articles'
-import type { HubTheme, TopCompPayload, VaultPayload } from '../_data/fandomHubs'
+import type { HubTheme, TopCompPayload, VaultPayload, HeroesVillainsPayload } from '../_data/fandomHubs'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
@@ -24,6 +24,7 @@ import { MOTU_VAULT_LORE } from '../_data/motuVaultLore'
 import MotuLineSections from './MotuLineSections'
 import SeamScrollDriver from './SeamScrollDriver'
 import SkeletorFacts from './SkeletorFacts'
+import HeroesVillainsBand from './HeroesVillainsBand'
 
 function renderText(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
@@ -305,12 +306,14 @@ export default function FandomHub({
   theme,
   topComps,
   vaults,
+  heroesVillains,
   moreGuides,
 }: {
   article: Article
   theme: HubTheme
   topComps: TopCompPayload | null
   vaults: VaultPayload | null
+  heroesVillains?: HeroesVillainsPayload | null
   moreGuides: { slug: string; title: string; readingMinutes: number }[]
 }) {
   const v = theme.voice
@@ -365,6 +368,8 @@ export default function FandomHub({
       </section>
 
       <article className="fh-body">
+        {isSeam && heroesVillains && <HeroesVillainsBand data={heroesVillains} />}
+
         {topComps && topComps.figures.length > 0 ? (
           <FandomHubInteractive
             figures={topComps.figures}

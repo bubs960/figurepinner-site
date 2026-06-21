@@ -660,6 +660,19 @@ a:hover {
 }
 .fh-main[data-fandom="masters-of-the-universe"] .fh-search-btn,
 .fh-main[data-fandom="masters-of-the-universe"] .fh-cta { color: #14100b; }
+
+/* Scoped chrome tint — ONLY the nav INSIDE this hub's [data-fandom] wrapper
+   (the SiteHeader renders inside .fh-main). The shared SiteHeader defaults and
+   all 200+ other pages are byte-identical. The footer renders OUTSIDE .fh-main
+   (in layout.tsx) so it can't be route-scoped here — left untinted by design. */
+.fh-main[data-fandom="masters-of-the-universe"] .fp-sitenav {
+  background: rgba(20, 15, 9, 0.93);
+  border-bottom-color: var(--fh-accent2);
+}
+.fh-main[data-fandom="masters-of-the-universe"] .fp-sitenav-mark {
+  background: var(--fh-accent2);
+  color: #14100b;
+}
 /* Keep numerals on the punchy condensed face — Cinzel serif numerals read worse
    at small sizes, and prices are the highest-priority legibility target. */
 .fh-main[data-fandom="masters-of-the-universe"] .fh-vault-count,
@@ -783,9 +796,9 @@ a:hover {
   bottom: 21%;
   height: clamp(255px, 43vh, 380px);
   width: auto;
-  /* rises ~46px as you scroll (the "I HAVE THE POWER" draw); resting (rise 0) =
-     the web-approved position with the pommel visible */
-  transform: translateX(-50%) translateY(calc(var(--rise) * -46px));
+  /* Sword reads COMPLETE + placed on load (Steve: "too much scrolling" — don't
+     gate the payoff behind scroll). Scroll adds only a gentle ~22px lift. */
+  transform: translateX(-50%) translateY(calc(var(--rise) * -22px));
   will-change: transform;
   /* Glow so the sword reads as the lit focal point on the seam, not a dark cutout */
   filter:
@@ -794,10 +807,10 @@ a:hover {
     drop-shadow(0 0 34px rgba(240,185,66,0.18));
   pointer-events: none;
 }
-/* The two halves: APART at the top (rise 0) → JOIN on the seam as the sword
-   rises (rise 1). The glowing seam reads through the spine throughout. */
-.fh-pwsword-left  { transform: translateX(calc(-2px - (1 - var(--rise)) * 9px)); }
-.fh-pwsword-right { transform: translateX(calc( 2px + (1 - var(--rise)) * 9px)); }
+/* The two halves read JOINED on load (small spine seam, complete sword); scroll
+   only tightens the join a few px. Duality stays legible without scrolling. */
+.fh-pwsword-left  { transform: translateX(calc(-2px - (1 - var(--rise)) * 3.5px)); }
+.fh-pwsword-right { transform: translateX(calc( 2px + (1 - var(--rise)) * 3.5px)); }
 /* Seam "powers up" as you read down — opacity only (compositor-safe) */
 .fh-seam-bloom {
   position: absolute;
@@ -1044,6 +1057,40 @@ a:hover {
   .fh-vault-chip-name { white-space: normal; }
   .fh-sword-label { display: none; }
   .fh-vault-count { font-size: 1.25rem; }
+}
+
+/* ── Heroes-vs-Villains band (Gate 3) — good/evil grails across the seam ── */
+.fh-hv { margin: 0 0 2.25rem; border: 1px solid var(--fh-line); border-top: 3px solid var(--fh-accent2); border-radius: 0 0 var(--fp-radius) var(--fp-radius); background: var(--fh-surface); padding: 1.1rem 1.1rem 1.2rem; }
+.fh-hv-head { text-align: center; margin-bottom: 1rem; }
+.fh-hv-title { font-family: var(--fh-display); font-size: 1.35rem; font-weight: 700; letter-spacing: 0.03em; color: var(--fh-hot); margin: 0 0 0.2rem; }
+.fh-hv-sub { font-size: 0.84rem; color: var(--fh-muted); margin: 0; }
+.fh-hv-grid { display: grid; grid-template-columns: 1fr 2px 1fr; gap: 0.9rem; align-items: start; }
+.fh-hv-divider { align-self: stretch; min-height: 100%; background: linear-gradient(180deg, transparent, var(--fh-accent2) 20%, #fff3c8 50%, var(--fh-accent2) 80%, transparent); box-shadow: 0 0 12px 2px rgba(240,185,66,0.4); border-radius: 2px; }
+.fh-hv-side { display: flex; flex-direction: column; gap: 0.4rem; }
+.fh-hv-side-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; font-weight: 700; }
+.fh-hv-heroes .fh-hv-side-label { color: #6aa6e6; }
+.fh-hv-villains .fh-hv-side-label { color: var(--fh-accent); text-align: right; }
+.fh-hv-card { display: flex; align-items: center; gap: 0.55rem; background: var(--fh-bg); border: 1px solid var(--fh-line); border-radius: var(--fp-radius-sm); padding: 0.35rem 0.5rem; text-decoration: none; color: var(--fh-text); transition: border-color var(--transition), transform 180ms ease; }
+.fh-hv-card:hover { transform: translateY(-2px); }
+.fh-hv-heroes .fh-hv-card:hover { border-color: #6aa6e6; }
+.fh-hv-villains .fh-hv-card { flex-direction: row-reverse; text-align: right; }
+.fh-hv-villains .fh-hv-card:hover { border-color: var(--fh-accent); }
+.fh-hv-thumb { width: 2.7rem; height: 2.7rem; border-radius: var(--fp-radius-sm); overflow: hidden; background: var(--fh-surface); flex: none; display: flex; align-items: center; justify-content: center; }
+.fh-hv-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fh-hv-thumb.is-empty { background: linear-gradient(135deg, var(--fh-surface), var(--fh-bg)); }
+.fh-hv-thumb.is-empty::after { content: ''; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--fh-line); }
+.fh-hv-text { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; }
+.fh-hv-villains .fh-hv-text { align-items: flex-end; }
+.fh-hv-name { font-size: 0.82rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 9.5rem; }
+.fh-hv-price { font-family: var(--font-bebas), 'Bebas Neue', sans-serif; font-size: 0.98rem; color: var(--fh-hot); display: flex; align-items: baseline; gap: 0.35rem; }
+.fh-hv-sold { font-family: var(--font-body); font-size: 0.66rem; font-weight: 400; color: var(--fh-muted); }
+@media (max-width: 560px) {
+  .fh-hv-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+  .fh-hv-divider { display: none; }
+  .fh-hv-villains .fh-hv-card { flex-direction: row; text-align: left; }
+  .fh-hv-villains .fh-hv-text { align-items: flex-start; }
+  .fh-hv-villains .fh-hv-side-label { text-align: left; }
+  .fh-hv-name { max-width: none; white-space: normal; }
 }
 
 /* ── MOTU lines — always-open SSR'd sections (Gate 3, replaces the vaults) ──

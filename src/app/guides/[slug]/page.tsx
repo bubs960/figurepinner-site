@@ -7,7 +7,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ARTICLES, type Article, type ArticleBlock } from '../_data/articles'
-import { getHubTheme, loadTopComps, loadVaults } from '../_data/fandomHubs'
+import { getHubTheme, loadTopComps, loadVaults, loadHeroesVillains } from '../_data/fandomHubs'
 import FandomHub from '../_components/FandomHub'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
@@ -120,12 +120,13 @@ export default async function GuideArticlePage({ params }: PageProps) {
   if (hubTheme) {
     const topComps = await loadTopComps(hubTheme.dataKey)
     const vaults = await loadVaults(hubTheme.dataKey)
+    const heroesVillains = await loadHeroesVillains(hubTheme.dataKey)
     const moreGuides = ARTICLES
       .filter(a => a.slug !== slug)
       .sort((a, b) => (b.updated ?? '').localeCompare(a.updated ?? ''))
       .slice(0, 3)
       .map(a => ({ slug: a.slug, title: a.title, readingMinutes: a.readingMinutes }))
-    return <FandomHub article={article} theme={hubTheme} topComps={topComps} vaults={vaults} moreGuides={moreGuides} />
+    return <FandomHub article={article} theme={hubTheme} topComps={topComps} vaults={vaults} heroesVillains={heroesVillains} moreGuides={moreGuides} />
   }
 
   const jsonLd = {
