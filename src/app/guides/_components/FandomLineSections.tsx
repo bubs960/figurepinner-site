@@ -1,49 +1,54 @@
 /**
- * MotuLineSections — the 10 MOTU lines as a COLLAPSED series accordion (Gate-3
- * revision R2). Each line is a <details> collapsed by default; the summary shows
- * count + name + era + a compact stat (priced + price range), and expanding
- * reveals lore + grails + a link to the REAL line page. Content stays in the DOM
- * even when collapsed (native <details> = crawlable), so the long-tail SEO holds
- * while the page stops being 10 always-open walls of content (Steve, S39h).
+ * FandomLineSections — a fandom's lines as a COLLAPSED series accordion (the
+ * proven Gate-3/R2 skeleton). Each line is a <details> collapsed by default; the
+ * summary shows count + name + era + a compact stat (priced + price range), and
+ * expanding reveals lore + grails + a link to the REAL distinct line page.
+ * Content stays in the DOM even when collapsed (native <details> = crawlable), so
+ * the long-tail SEO holds while the page stays compact.
  *
- * R1 fix: the line link points at the canonical distinct line page
- * /<fandom>/<product_line> (e.g. /masters-of-the-universe/origins) — the old
- * /masters-of-the-universe?line=Origins was malformed + non-distinct. Server component.
+ * Templatized (S40, was MotuLineSections): the heading/sub, the per-line lore, the
+ * KB path prefix, and the rarity-flag wording all come in as props from the theme,
+ * so a new fandom reuses this verbatim. Line link = the canonical distinct line page
+ * /<fandom>/<product_line> (e.g. /gi-joe/a-real-american-hero) — real 200, no ?query=.
  */
 
-export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; image?: string | null; url: string }
-export type Vault = { line: string; line_slug: string; count: number; priced_count: number; top: VaultFigure[] }
-export type VaultLore = { teaser: string; lore: string; era?: string }
+import type { Vault, HubFlagWording } from '../_data/fandomHubs'
+import type { VaultLore } from '../_data/motuVaultLore'
 
-// Rarity flag → short collector label (real KB-derived flags; "" = no badge).
-function flagLabel(flag: string): string {
-  switch (flag) {
-    case 'VINTAGE': return "VINTAGE '82"
-    case 'MOTUC': return 'MOTUC'
-    case 'EXCLUSIVE': return 'EXCLUSIVE'
-    case 'REISSUE': return 'REISSUE'
-    default: return ''
-  }
+function flagLabel(flag: string, fw: HubFlagWording): string {
+  if (flag === 'VINTAGE') return fw.vintage ?? 'VINTAGE'
+  if (flag === 'MOTUC') return fw.motuc ?? 'CLASSICS'
+  if (flag === 'EXCLUSIVE') return fw.exclusive ?? 'EXCLUSIVE'
+  if (flag === 'REISSUE') return fw.reissue ?? 'REISSUE'
+  return ''
 }
 
-export default function MotuLineSections({
+export default function FandomLineSections({
   vaults,
   lore,
+  genre,
+  title,
+  sub,
+  flag,
 }: {
   vaults: Vault[]
   lore: Record<string, VaultLore>
+  genre: string // KB fandom for the /<genre>/<line> route (may differ from the hub's theme id for line-scoped hubs, e.g. wrestling)
+  title: string
+  sub: string
+  flag: HubFlagWording
 }) {
   return (
     <section className="fh-lines" aria-labelledby="fh-lines-h">
       <div className="fh-lines-head">
-        <h2 id="fh-lines-h" className="fh-lines-title">The ten lines of Eternia</h2>
-        <p className="fh-lines-sub">Four decades of Eternia, line by line. Open a line for its history and grails.</p>
+        <h2 id="fh-lines-h" className="fh-lines-title">{title}</h2>
+        <p className="fh-lines-sub">{sub}</p>
       </div>
 
       <div className="fh-lines-list">
         {vaults.map(v => {
           const l = lore[v.line] ?? { teaser: `${v.count} figures in the FigurePinner database.`, lore: '' }
-          const lineHref = v.line_slug ? `/masters-of-the-universe/${v.line_slug}` : null
+          const lineHref = v.line_slug ? `/${genre}/${v.line_slug}` : null
           const prices = v.top.map(f => f.price)
           const lo = prices.length ? Math.min(...prices) : 0
           const hi = prices.length ? Math.max(...prices) : 0
@@ -81,7 +86,7 @@ export default function MotuLineSections({
                               ${f.price.toLocaleString('en-US')}
                               <span className="fh-line-fig-sold">{f.sold_count} sold</span>
                             </span>
-                            {flagLabel(f.flag) && <span className="fh-line-fig-flag">{flagLabel(f.flag)}</span>}
+                            {flagLabel(f.flag, flag) && <span className="fh-line-fig-flag">{flagLabel(f.flag, flag)}</span>}
                           </span>
                         </a>
                       ))}

@@ -20,10 +20,11 @@ import type { HubTheme, TopCompPayload, VaultPayload, HeroesVillainsPayload } fr
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
-import { MOTU_VAULT_LORE } from '../_data/motuVaultLore'
-import MotuLineSections from './MotuLineSections'
+import FandomLineSections from './FandomLineSections'
+import GiJoeSeamAtmosphere from './GiJoeSeamAtmosphere'
+import WweRingAtmosphere from './WweRingAtmosphere'
 import SeamScrollDriver from './SeamScrollDriver'
-import SkeletorFacts from './SkeletorFacts'
+import FandomFacts from './FandomFacts'
 import HeroesVillainsBand from './HeroesVillainsBand'
 import FaqSection from './FaqSection'
 
@@ -318,9 +319,10 @@ export default function FandomHub({
   moreGuides: { slug: string; title: string; readingMinutes: number }[]
 }) {
   const v = theme.voice
-  // Seam hero is MOTU's proof-of-concept atmosphere (Gate 1). Other fandoms
-  // keep the flat themed hero until the pattern is templatized post-audit.
-  const isSeam = theme.fandom === 'masters-of-the-universe'
+  // Seam hero is the atmospheric centerpiece pattern MOTU proved (Gate 1) and
+  // GI Joe templatized (S40). theme.seam opts a fandom in; theme.centerpiece
+  // picks which inline-SVG hero it renders.
+  const isSeam = theme.seam
 
   // "By the numbers" stats — all derived from real data (no fabrication).
   const totalFigs = vaults ? vaults.vaults.reduce((s, x) => s + x.count, 0) : 0
@@ -355,7 +357,14 @@ export default function FandomHub({
       <SiteHeader crumbs={[{ label: 'Guides', href: '/guides' }, { label: article.title }]} />
 
       <section className={`fh-hero${isSeam ? ' fh-hero--seam' : ''}`}>
-        {isSeam && <SeamHeroAtmosphere />}
+        {isSeam &&
+          (theme.centerpiece === 'pwsword' ? (
+            <SeamHeroAtmosphere />
+          ) : theme.centerpiece === 'wwe-ring' ? (
+            <WweRingAtmosphere />
+          ) : (
+            <GiJoeSeamAtmosphere />
+          ))}
         {isSeam && <SeamScrollDriver />}
         <div className="fh-hero-inner">
           <div className="fh-kicker">{v.kicker}</div>
@@ -376,32 +385,48 @@ export default function FandomHub({
 
       <article className="fh-body">
         {isSeam && totalFigs > 0 && (
-          <div className="fh-stats" aria-label="Masters of the Universe by the numbers">
+          <div className="fh-stats" aria-label={v.statsAria}>
             <div className="fh-stat"><span className="fh-stat-num">{totalFigs.toLocaleString('en-US')}</span><span className="fh-stat-label">figures cataloged</span></div>
             <div className="fh-stat"><span className="fh-stat-num">{pricedFigs.toLocaleString('en-US')}</span><span className="fh-stat-label">with live comps</span></div>
-            <div className="fh-stat"><span className="fh-stat-num">{lineCount}</span><span className="fh-stat-label">lines of Eternia</span></div>
-            <div className="fh-stat"><span className="fh-stat-num">1982<span className="fh-stat-dash">–</span>now</span><span className="fh-stat-label">40+ years</span></div>
+            <div className="fh-stat"><span className="fh-stat-num">{lineCount}</span><span className="fh-stat-label">{v.statsLinesLabel}</span></div>
+            <div className="fh-stat"><span className="fh-stat-num">{theme.era.start}<span className="fh-stat-dash">–</span>{theme.era.end ?? 'now'}</span><span className="fh-stat-label">{theme.era.label}</span></div>
             {topGrail > 0 && <div className="fh-stat"><span className="fh-stat-num">${topGrail.toLocaleString('en-US')}</span><span className="fh-stat-label">top grail</span></div>}
           </div>
         )}
 
-        {isSeam && heroesVillains && <HeroesVillainsBand data={heroesVillains} />}
+        <div className="fh-ad"><AdSlot slot="leaderboard" /></div>
+
+        {isSeam && heroesVillains && (
+          <HeroesVillainsBand
+            data={heroesVillains}
+            title={v.hvTitle}
+            sub={v.hvSub}
+            heroesLabel={v.heroesLabel}
+            villainsLabel={v.villainsLabel}
+            flag={v.flag}
+          />
+        )}
 
         {/* Seam hub (R2): the Heroes-vs-Villains split is the figure module; keep
             ONLY the price-checker tool here (the ranked "Power Level" intel table
             was redundant with the split — dropped). Other fandoms keep the full table. */}
         {isSeam ? (
           <FandomHubInteractive
-            figures={[]}
+            figures={theme.intelMode === 'table' ? (topComps?.figures ?? []) : []}
             generatedAt={topComps?.generated_at ?? ''}
-            checkerOnly
+            checkerOnly={theme.intelMode === 'checker'}
             voice={{
-              intelHeader: theme.voice.intelHeader,
-              intelSub: theme.voice.intelSub,
-              emptyState: theme.voice.emptyState,
-              searchPlaceholder: theme.voice.searchPlaceholder,
-              ctaLabel: theme.voice.ctaLabel,
-              flag: theme.voice.flag,
+              intelHeader: v.intelHeader,
+              intelSub: v.intelSub,
+              emptyState: v.emptyState,
+              searchPlaceholder: v.searchPlaceholder,
+              ctaLabel: v.ctaLabel,
+              flag: v.flag,
+              checkerTitle: v.checkerTitle,
+              checkerSub: v.checkerSub,
+              checkerLoading: v.checkerLoading,
+              checkerMiss: v.checkerMiss,
+              checkerError: v.checkerError,
             }}
           />
         ) : topComps && topComps.figures.length > 0 ? (
@@ -409,20 +434,34 @@ export default function FandomHub({
             figures={topComps.figures}
             generatedAt={topComps.generated_at}
             voice={{
-              intelHeader: theme.voice.intelHeader,
-              intelSub: theme.voice.intelSub,
-              emptyState: theme.voice.emptyState,
-              searchPlaceholder: theme.voice.searchPlaceholder,
-              ctaLabel: theme.voice.ctaLabel,
-              flag: theme.voice.flag,
+              intelHeader: v.intelHeader,
+              intelSub: v.intelSub,
+              emptyState: v.emptyState,
+              searchPlaceholder: v.searchPlaceholder,
+              ctaLabel: v.ctaLabel,
+              flag: v.flag,
+              checkerTitle: v.checkerTitle,
+              checkerSub: v.checkerSub,
+              checkerLoading: v.checkerLoading,
+              checkerMiss: v.checkerMiss,
+              checkerError: v.checkerError,
             }}
           />
         ) : (
           <IntelTable data={topComps} theme={theme} />
         )}
 
+        <div className="fh-ad"><AdSlot slot="rectangle" /></div>
+
         {vaults && vaults.vaults.length > 0 ? (
-          <MotuLineSections vaults={vaults.vaults} lore={MOTU_VAULT_LORE} />
+          <FandomLineSections
+            vaults={vaults.vaults}
+            lore={theme.lore}
+            genre={theme.genre ?? theme.fandom}
+            title={v.linesTitle}
+            sub={v.linesSub}
+            flag={v.flag}
+          />
         ) : (
           article.body.map((block, i) => <Block key={i} block={block} />)
         )}
@@ -433,17 +472,24 @@ export default function FandomHub({
             height + is Pro-aware (ad-free for Pro), so no CLS for free users. */}
         <div className="fh-ad fh-ad-reserve"><AdSlot slot="adsterra-banner" /></div>
 
-        {isSeam && <FaqSection />}
+        {isSeam && <FaqSection faqs={theme.faqs} />}
 
         <div className="fh-cta-wrap">
           <a href="/search" className="fh-cta">{v.ctaLabel}</a>
         </div>
 
-        {isSeam && <SkeletorFacts />}
+        {isSeam && (
+          <FandomFacts
+            facts={theme.facts.items}
+            promptIdle={theme.facts.promptIdle}
+            promptMore={theme.facts.promptMore}
+            glyph={theme.facts.glyph}
+          />
+        )}
 
         {article.body.length > 0 && (
           <details className="fh-story">
-            <summary>The MOTU story</summary>
+            <summary>{v.storyLabel}</summary>
             <div className="fh-story-body">
               {article.body.slice(0, 2).map((block, i) => <Block key={i} block={block} />)}
             </div>

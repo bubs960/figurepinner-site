@@ -1209,3 +1209,399 @@ a:hover {
 .fh-cta { transition: transform 100ms ease, filter 150ms ease; }
 .fh-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
 .fh-cta:active { transform: scale(0.97); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   THEME: G.I. Joe — "Cobra threat board" (S40, first templatized hub)
+   Olive-drab + gunmetal black, Cobra-red alert, brass. Military filecard
+   register, Bebas (already bundled) condensed display type. AA-checked on the
+   dark board bg. Every selector is scoped to [data-fandom="gi-joe"] (scope
+   discipline: NO leak to the site default nav/chrome). Motion reduced-motion-gated.
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-main[data-fandom="gi-joe"] {
+  --fh-bg:      #14160f;   /* near-black olive board surface */
+  --fh-surface: #1e2117;   /* raised olive-charcoal cards/rows */
+  --fh-accent:  #c8a24a;   /* Joe brass — primary (links, focus, buttons) */
+  --fh-accent2: #e2474e;   /* Cobra red — alert/threat (kicker, rank, flags); AA >=4.5:1 on bg */
+  --fh-hot:     #e7b53c;   /* hot amber — "most valuable" highlight */
+  --fh-text:    #e8e6dd;   /* bone */
+  --fh-muted:   #9a9c8c;   /* olive-grey */
+  --fh-line:    #3a3d2e;   /* borders/grid */
+  /* Bebas Neue (SIL OFL, already bundled site-wide) = the heavy condensed
+     military-poster display face — no new network font (CWV guardrail). */
+  --fh-display: var(--font-bebas), 'Bebas Neue', Impact, sans-serif;
+  --fh-motif:
+    radial-gradient(120% 80% at 50% -10%, rgba(200,162,74,0.10), transparent 60%),
+    radial-gradient(90% 60% at 85% 120%, rgba(192,32,42,0.10), transparent 55%),
+    radial-gradient(70% 50% at 10% 110%, rgba(0,0,0,0.5), transparent 60%);
+}
+/* dark text on the light brass primary; white on the red alert (AA) */
+.fh-main[data-fandom="gi-joe"] .fh-search-btn,
+.fh-main[data-fandom="gi-joe"] .fh-cta { color: #14160f; }
+.fh-main[data-fandom="gi-joe"] .fh-check-btn,
+.fh-main[data-fandom="gi-joe"] .fh-filter-pill.is-active { color: #fff; }
+
+/* Scoped chrome tint — ONLY the nav inside this hub's wrapper (matches the MOTU
+   pattern). The shared SiteHeader + every other page stay byte-identical. */
+.fh-main[data-fandom="gi-joe"] .fp-sitenav {
+  background: rgba(20, 22, 15, 0.93);
+  border-bottom-color: var(--fh-accent);
+}
+.fh-main[data-fandom="gi-joe"] .fp-sitenav-mark {
+  background: var(--fh-accent);
+  color: #14160f;
+}
+/* Keep numerals on the condensed face (consistent military-poster numerals). */
+.fh-main[data-fandom="gi-joe"] .fh-vault-count,
+.fh-main[data-fandom="gi-joe"] .fh-line-count,
+.fh-main[data-fandom="gi-joe"] .fh-intel-rank,
+.fh-main[data-fandom="gi-joe"] .fh-intel-price,
+.fh-main[data-fandom="gi-joe"] .fh-line-fig-price,
+.fh-main[data-fandom="gi-joe"] .fh-check-price {
+  font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
+}
+
+/* taller hero so the top-centered sigils + bottom-anchored copy both breathe */
+.fh-main[data-fandom="gi-joe"] .fh-hero--seam { min-height: clamp(500px, 70vh, 680px); }
+
+/* ── Threat-board atmosphere (Joe LEFT / Cobra RIGHT), behind the SSR'd h1 ── */
+.fh-main[data-fandom="gi-joe"] .fh-gj-atmos {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.fh-main[data-fandom="gi-joe"] .fh-gj-sky { position: absolute; top: 0; bottom: 0; width: 50.5%; }
+.fh-main[data-fandom="gi-joe"] .fh-gj-sky-left {
+  left: 0;
+  background: linear-gradient(168deg, #20241a 0%, #353c22 38%, #6b5a26 76%, #c8a24a 100%);
+}
+.fh-main[data-fandom="gi-joe"] .fh-gj-sky-right {
+  right: 0;
+  background: linear-gradient(192deg, #16180f 0%, #241410 42%, #7a1820 80%, #c0202a 100%);
+}
+/* console grid + ground mist — pure CSS, low alpha */
+.fh-main[data-fandom="gi-joe"] .fh-gj-board {
+  position: absolute; inset: 0; opacity: 0.55;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.022) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.022) 0 1px, transparent 1px 26px),
+    radial-gradient(130% 70% at 50% 118%, rgba(8,9,5,0) 40%, rgba(8,9,5,0.72) 92%);
+}
+/* the front line — glowing brass→red seam */
+.fh-main[data-fandom="gi-joe"] .fh-gj-seam {
+  position: absolute; top: -4%; bottom: -4%; left: 50%; width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0%, rgba(200,162,74,0.85) 16%, #ffd27a 50%, rgba(192,32,42,0.9) 84%, transparent 100%);
+  box-shadow: 0 0 16px 3px rgba(200,162,74,0.4), 0 0 40px 12px rgba(192,32,42,0.22);
+}
+/* one-shot scanline sweep (boot-up) */
+.fh-main[data-fandom="gi-joe"] .fh-gj-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(200,162,74,0.16), rgba(226,71,78,0.14), transparent);
+  opacity: 0; transform: translateY(-120%);
+}
+
+/* ── Dual sigils — centered on the seam, BEHIND the h1 (decorative, non-LCP) ── */
+.fh-main[data-fandom="gi-joe"] .fh-gjsigils {
+  position: absolute; left: 50%; top: clamp(10px, 5vh, 46px);
+  transform: translateX(-50%);
+  width: clamp(240px, 52vw, 360px); height: auto;
+  z-index: 0; opacity: 1; pointer-events: none;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.55)) drop-shadow(0 0 16px rgba(200,162,74,0.16));
+}
+/* scroll-lock: the sigils START apart and DRIVE TOGETHER to lock on the seam.
+   --rise (0→1) is written by SeamScrollDriver; reduced-motion default --rise:1
+   (the global .fh-hero--seam rule) → they arrive locked + static. transform-only. */
+.fh-main[data-fandom="gi-joe"] .fh-sigil-joe   { transform: translateX(calc((1 - var(--rise)) * -26px)); will-change: transform; }
+.fh-main[data-fandom="gi-joe"] .fh-sigil-cobra { transform: translateX(calc((1 - var(--rise)) *  26px)); will-change: transform; }
+/* clash spark on the seam brightens as the sigils lock (opacity only) */
+.fh-main[data-fandom="gi-joe"] .fh-gj-spark { opacity: calc(0.12 + var(--rise) * 0.88); }
+
+/* Boot-up: the board powers on once, a scanline sweeps, the sigils fade/scale in
+   and SETTLE at their apart rest positions; scroll-lock then drives them together.
+   All reduced-motion-gated; resting state IS composed so reduced-motion = static. */
+@media (prefers-reduced-motion: no-preference) {
+  .fh-main[data-fandom="gi-joe"] .fh-gj-atmos { animation: fh-gj-ignite 560ms ease-out both; }
+  .fh-main[data-fandom="gi-joe"] .fh-gj-seam { animation: fh-gj-seam-ignite 640ms ease-out both; }
+  .fh-main[data-fandom="gi-joe"] .fh-gj-scan { animation: fh-gj-scan 920ms ease-out 140ms both; }
+  .fh-main[data-fandom="gi-joe"] .fh-gjsigils { animation: fh-gj-bootsig 600ms cubic-bezier(.2,.7,.3,1) 110ms both; }
+}
+@keyframes fh-gj-ignite { from { opacity: 0.12; } to { opacity: 1; } }
+@keyframes fh-gj-seam-ignite {
+  from { opacity: 0.15; transform: translateX(-50%) scaleY(0.72); }
+  to   { opacity: 1;    transform: translateX(-50%) scaleY(1); }
+}
+@keyframes fh-gj-scan {
+  0%   { opacity: 0; transform: translateY(-120%); }
+  18%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(320%); }
+}
+@keyframes fh-gj-bootsig {
+  from { opacity: 0; transform: translateX(-50%) scale(0.9); }
+  to   { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+@media (max-width: 767px) {
+  .fh-main[data-fandom="gi-joe"] .fh-gjsigils { width: clamp(190px, 64vw, 260px); top: clamp(8px, 3vh, 24px); }
+}
+@media (max-width: 520px) {
+  .fh-main[data-fandom="gi-joe"] .fh-hero--seam { min-height: clamp(380px, 66vh, 520px); }
+}
+
+/* R3 (web gate S40): Heroes-vs-Villains faction labels + card hover pick up the
+   GI Joe palette (Joe = brass, Cobra = red), overriding the base MOTU-oriented
+   heroic-blue. Scoped to the hub. */
+.fh-main[data-fandom="gi-joe"] .fh-hv-heroes .fh-hv-side-label { color: var(--fh-accent); }
+.fh-main[data-fandom="gi-joe"] .fh-hv-villains .fh-hv-side-label { color: var(--fh-accent2); }
+.fh-main[data-fandom="gi-joe"] .fh-hv-heroes .fh-hv-card:hover { border-color: var(--fh-accent); }
+.fh-main[data-fandom="gi-joe"] .fh-hv-villains .fh-hv-card:hover { border-color: var(--fh-accent2); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   THEME: WWE Elite — "the squared circle" (S40, hub #2 of the rollout)
+   Arena face/heel: babyface blue+gold LEFT, heel crimson RIGHT, seam down the
+   center of the ring. Bebas condensed display (bundled). AA-checked on dark.
+   Every selector scoped to [data-fandom="wwe-elite"] (no leak to default nav).
+   Motion reduced-motion-gated (reuses fh-gj-seam-ignite / fh-gj-scan keyframes).
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-main[data-fandom="wwe-elite"] {
+  --fh-bg:      #0c0e12;   /* arena black */
+  --fh-surface: #161a22;   /* raised charcoal-navy */
+  --fh-accent:  #e8b94e;   /* title gold — primary */
+  --fh-accent2: #db4b51;   /* heel crimson — alert/heel/rank (AA ~4.8:1 on bg) */
+  --fh-hot:     #ffd76a;   /* bright gold — "most valuable" */
+  --fh-text:    #eceef2;
+  --fh-muted:   #9aa6b2;
+  --fh-line:    #2b313c;
+  --fh-display: var(--font-bebas), 'Bebas Neue', Impact, sans-serif;
+  --fh-motif:
+    radial-gradient(60% 45% at 50% -6%, rgba(255,231,154,0.10), transparent 70%),
+    radial-gradient(90% 60% at 85% 120%, rgba(211,70,75,0.10), transparent 55%),
+    radial-gradient(70% 50% at 10% 110%, rgba(0,0,0,0.5), transparent 60%);
+}
+/* dark text on the gold primary; white on the crimson alert (AA) */
+.fh-main[data-fandom="wwe-elite"] .fh-search-btn,
+.fh-main[data-fandom="wwe-elite"] .fh-cta { color: #0c0e12; }
+.fh-main[data-fandom="wwe-elite"] .fh-check-btn,
+.fh-main[data-fandom="wwe-elite"] .fh-filter-pill.is-active { color: #fff; }
+
+/* Scoped chrome tint — only the nav inside this hub's wrapper */
+.fh-main[data-fandom="wwe-elite"] .fp-sitenav {
+  background: rgba(12, 14, 18, 0.93);
+  border-bottom-color: var(--fh-accent);
+}
+.fh-main[data-fandom="wwe-elite"] .fp-sitenav-mark {
+  background: var(--fh-accent);
+  color: #0c0e12;
+}
+/* numerals on the condensed face */
+.fh-main[data-fandom="wwe-elite"] .fh-vault-count,
+.fh-main[data-fandom="wwe-elite"] .fh-line-count,
+.fh-main[data-fandom="wwe-elite"] .fh-intel-rank,
+.fh-main[data-fandom="wwe-elite"] .fh-intel-price,
+.fh-main[data-fandom="wwe-elite"] .fh-line-fig-price,
+.fh-main[data-fandom="wwe-elite"] .fh-check-price {
+  font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
+}
+/* Heroes-vs-Villains: babyface = blue (base), heel = crimson */
+.fh-main[data-fandom="wwe-elite"] .fh-hv-villains .fh-hv-side-label { color: var(--fh-accent2); }
+.fh-main[data-fandom="wwe-elite"] .fh-hv-villains .fh-hv-card:hover { border-color: var(--fh-accent2); }
+
+.fh-main[data-fandom="wwe-elite"] .fh-hero--seam { min-height: clamp(500px, 70vh, 680px); }
+
+/* ── Arena atmosphere (babyface LEFT / heel RIGHT), behind the SSR'd h1 ── */
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-atmos {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-sky { position: absolute; top: 0; bottom: 0; width: 50.5%; }
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-sky-left {
+  left: 0;
+  background: linear-gradient(168deg, #10203f 0%, #1b3158 38%, #6b5a24 80%, #e8b94e 100%);
+}
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-sky-right {
+  right: 0;
+  background: linear-gradient(192deg, #0c0e12 0%, #2a1014 45%, #7a161c 82%, #d3464b 100%);
+}
+/* arena spotlight + faint grid + ground darkening — pure CSS */
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-board {
+  position: absolute; inset: 0; opacity: 0.5;
+  background:
+    radial-gradient(58% 44% at 50% -4%, rgba(255,231,154,0.12), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 28px),
+    radial-gradient(130% 70% at 50% 118%, rgba(6,8,12,0) 40%, rgba(6,8,12,0.72) 92%);
+}
+/* the front line — glowing gold→crimson seam */
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-seam {
+  position: absolute; top: -4%; bottom: -4%; left: 50%; width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0%, rgba(232,185,78,0.85) 16%, #ffd76a 50%, rgba(211,70,75,0.9) 84%, transparent 100%);
+  box-shadow: 0 0 16px 3px rgba(232,185,78,0.4), 0 0 40px 12px rgba(211,70,75,0.22);
+}
+/* one-shot scanline sweep (boot-up) */
+.fh-main[data-fandom="wwe-elite"] .fh-wwe-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(232,185,78,0.16), rgba(219,75,81,0.14), transparent);
+  opacity: 0; transform: translateY(-120%);
+}
+
+/* ── The 3/4 ring centerpiece — centered on the seam, BEHIND the h1 (non-LCP) ── */
+.fh-main[data-fandom="wwe-elite"] .fh-wwering {
+  position: absolute; left: 50%; top: clamp(6px, 3.5vh, 34px);
+  transform: translateX(-50%);
+  width: clamp(280px, 60vw, 420px); height: auto;
+  z-index: 0; opacity: 1; pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55)) drop-shadow(0 0 18px rgba(232,185,78,0.14));
+}
+/* scroll-lock ("the bell rings"): corner glows + center spark + seam intensify as
+   --rise 0→1 (SeamScrollDriver). Reduced-motion default --rise:1 → fully lit. opacity only. */
+.fh-main[data-fandom="wwe-elite"] .fh-ring-glow-face,
+.fh-main[data-fandom="wwe-elite"] .fh-ring-glow-heel { opacity: calc(0.4 + var(--rise) * 0.6); }
+.fh-main[data-fandom="wwe-elite"] .fh-ring-spark { opacity: calc(0.1 + var(--rise) * 0.9); }
+.fh-main[data-fandom="wwe-elite"] .fh-ring-seam { opacity: calc(0.55 + var(--rise) * 0.45); }
+
+/* Boot-up: arena lights up once (atmos + seam ignite, one scanline + one mat spotlight,
+   ring fades/scales in). reduced-motion-gated; resting state IS lit so reduced-motion = static. */
+@media (prefers-reduced-motion: no-preference) {
+  .fh-main[data-fandom="wwe-elite"] .fh-wwe-atmos { animation: fh-wwe-ignite 560ms ease-out both; }
+  .fh-main[data-fandom="wwe-elite"] .fh-wwe-seam { animation: fh-gj-seam-ignite 640ms ease-out both; }
+  .fh-main[data-fandom="wwe-elite"] .fh-wwe-scan { animation: fh-gj-scan 920ms ease-out 140ms both; }
+  .fh-main[data-fandom="wwe-elite"] .fh-wwering { animation: fh-wwe-bootring 600ms cubic-bezier(.2,.7,.3,1) 110ms both; }
+  .fh-main[data-fandom="wwe-elite"] .fh-ring-spot { animation: fh-wwe-spot 900ms ease-out 220ms both; }
+}
+@keyframes fh-wwe-ignite { from { opacity: 0.12; } to { opacity: 1; } }
+@keyframes fh-wwe-bootring {
+  from { opacity: 0; transform: translateX(-50%) scale(0.92); }
+  to   { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+@keyframes fh-wwe-spot { 0% { opacity: 0; } 32% { opacity: 0.42; } 100% { opacity: 0; } }
+
+@media (max-width: 767px) {
+  .fh-main[data-fandom="wwe-elite"] .fh-wwering { width: clamp(220px, 78vw, 320px); top: clamp(4px, 2vh, 16px); }
+}
+@media (max-width: 520px) {
+  .fh-main[data-fandom="wwe-elite"] .fh-hero--seam { min-height: clamp(380px, 64vh, 520px); }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   SHARED RING VARS — the wwe-ring centerpiece is CSS-var-driven so ONE SVG
+   component renders both wrestling hubs. Base defaults = WWE Elite (blue/crimson);
+   the Jakks block below overrides to gold/steel. Posts + seam + spark stay gold→crimson.
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-wwering {
+  --ring-face: #5a92e2;  --ring-face-dk: #244b8c;
+  --ring-heel: #c23a42;  --ring-heel-dk: #5f1216;
+  --ring-apron-face: #2f63b4;  --ring-apron-face-dk: #16315e;
+  --ring-apron-heel: #8f2329;  --ring-apron-heel-dk: #3c0c0f;
+  --ring-glow-face: #7db0ff;  --ring-glow-heel: #ff7b80;
+  --ring-pad-face: #2f63b4;  --ring-pad-heel: #c0353b;
+  --ring-rope-face: #cfe0ff;  --ring-rope-heel: #ffd2d4;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   THEME: Jakks-Pacific WWE — "the Jakks years" (S40, sibling of WWE Elite)
+   VINTAGE sepia-gold (Classic Superstars) LEFT vs MODERN steel-grey (Ruthless
+   Aggression) RIGHT, seam down the center of the (reused) ring. Bebas display.
+   AA-checked on the warm-dark bg. Every selector scoped to [data-fandom="wrestling-jakks"].
+   Reuses the WWE boot-up keyframes (fh-wwe-*, fh-gj-*). Self-contained (no edit to the Elite block).
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-main[data-fandom="wrestling-jakks"] {
+  --fh-bg:      #14110a;   /* warm dark */
+  --fh-surface: #1e1a12;   /* aged charcoal-brown */
+  --fh-accent:  #caa24a;   /* vintage gold — primary */
+  --fh-accent2: #db4b51;   /* modern/alert crimson (AA ~4.7:1 on bg; brightened from spec #c0392b) */
+  --fh-hot:     #e8c66a;   /* bright gold — "hottest" */
+  --fh-text:    #ece6d8;
+  --fh-muted:   #a99a82;
+  --fh-line:    #352c1d;
+  --fh-display: var(--font-bebas), 'Bebas Neue', Impact, sans-serif;
+  --fh-motif:
+    radial-gradient(60% 45% at 50% -6%, rgba(232,198,106,0.10), transparent 70%),
+    radial-gradient(90% 60% at 85% 120%, rgba(154,166,180,0.08), transparent 55%),
+    radial-gradient(70% 50% at 10% 110%, rgba(0,0,0,0.5), transparent 60%);
+}
+/* ring vars → gold (vintage) / steel (modern) */
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwering {
+  --ring-face: #d8b35e;  --ring-face-dk: #7a5e22;
+  --ring-heel: #9aa6b4;  --ring-heel-dk: #3d454e;
+  --ring-apron-face: #a8842f;  --ring-apron-face-dk: #5a4418;
+  --ring-apron-heel: #6b7480;  --ring-apron-heel-dk: #2a3036;
+  --ring-glow-face: #ffe39a;  --ring-glow-heel: #c8d4e0;
+  --ring-pad-face: #caa24a;  --ring-pad-heel: #8a96a4;
+  --ring-rope-face: #f0e0b0;  --ring-rope-heel: #dfe6ee;
+}
+/* dark text on gold; white on crimson */
+.fh-main[data-fandom="wrestling-jakks"] .fh-search-btn,
+.fh-main[data-fandom="wrestling-jakks"] .fh-cta { color: #14110a; }
+.fh-main[data-fandom="wrestling-jakks"] .fh-check-btn,
+.fh-main[data-fandom="wrestling-jakks"] .fh-filter-pill.is-active { color: #fff; }
+/* scoped nav tint */
+.fh-main[data-fandom="wrestling-jakks"] .fp-sitenav { background: rgba(20, 17, 10, 0.93); border-bottom-color: var(--fh-accent); }
+.fh-main[data-fandom="wrestling-jakks"] .fp-sitenav-mark { background: var(--fh-accent); color: #14110a; }
+/* numerals on the condensed face */
+.fh-main[data-fandom="wrestling-jakks"] .fh-vault-count,
+.fh-main[data-fandom="wrestling-jakks"] .fh-line-count,
+.fh-main[data-fandom="wrestling-jakks"] .fh-intel-rank,
+.fh-main[data-fandom="wrestling-jakks"] .fh-intel-price,
+.fh-main[data-fandom="wrestling-jakks"] .fh-line-fig-price,
+.fh-main[data-fandom="wrestling-jakks"] .fh-check-price {
+  font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
+}
+/* Vintage = gold (left), Modern = steel (right) */
+.fh-main[data-fandom="wrestling-jakks"] .fh-hv-heroes .fh-hv-side-label { color: var(--fh-accent); }
+.fh-main[data-fandom="wrestling-jakks"] .fh-hv-villains .fh-hv-side-label { color: #b8c2cc; }
+.fh-main[data-fandom="wrestling-jakks"] .fh-hv-heroes .fh-hv-card:hover { border-color: var(--fh-accent); }
+.fh-main[data-fandom="wrestling-jakks"] .fh-hv-villains .fh-hv-card:hover { border-color: #9aa6b4; }
+
+.fh-main[data-fandom="wrestling-jakks"] .fh-hero--seam { min-height: clamp(500px, 70vh, 680px); }
+
+/* ── Arena atmosphere (vintage LEFT / modern RIGHT), behind the SSR'd h1 ── */
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-atmos { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-sky { position: absolute; top: 0; bottom: 0; width: 50.5%; }
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-sky-left {
+  left: 0;
+  background: linear-gradient(168deg, #1c160c 0%, #3a2e16 38%, #8a6a28 80%, #d8b35e 100%);
+}
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-sky-right {
+  right: 0;
+  background: linear-gradient(192deg, #0e0f10 0%, #20262c 45%, #4a545e 82%, #9aa6b4 100%);
+}
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-board {
+  position: absolute; inset: 0; opacity: 0.5;
+  background:
+    radial-gradient(58% 44% at 50% -4%, rgba(232,198,106,0.12), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 28px),
+    radial-gradient(130% 70% at 50% 118%, rgba(8,7,4,0) 40%, rgba(8,7,4,0.72) 92%);
+}
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-seam {
+  position: absolute; top: -4%; bottom: -4%; left: 50%; width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0%, rgba(202,162,74,0.85) 16%, #e8c66a 50%, rgba(211,70,75,0.9) 84%, transparent 100%);
+  box-shadow: 0 0 16px 3px rgba(202,162,74,0.4), 0 0 40px 12px rgba(211,70,75,0.2);
+}
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwe-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(216,179,94,0.16), rgba(154,166,180,0.14), transparent);
+  opacity: 0; transform: translateY(-120%);
+}
+/* ring positioning (same geometry as Elite) */
+.fh-main[data-fandom="wrestling-jakks"] .fh-wwering {
+  position: absolute; left: 50%; top: clamp(6px, 3.5vh, 34px);
+  transform: translateX(-50%);
+  width: clamp(280px, 60vw, 420px); height: auto;
+  z-index: 0; opacity: 1; pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55)) drop-shadow(0 0 18px rgba(202,162,74,0.14));
+}
+/* scroll-lock: corner glows + center spark + seam intensify on --rise (reduced-motion default 1) */
+.fh-main[data-fandom="wrestling-jakks"] .fh-ring-glow-face,
+.fh-main[data-fandom="wrestling-jakks"] .fh-ring-glow-heel { opacity: calc(0.4 + var(--rise) * 0.6); }
+.fh-main[data-fandom="wrestling-jakks"] .fh-ring-spark { opacity: calc(0.1 + var(--rise) * 0.9); }
+.fh-main[data-fandom="wrestling-jakks"] .fh-ring-seam { opacity: calc(0.55 + var(--rise) * 0.45); }
+/* boot-up (reuse the WWE/GI Joe keyframes) */
+@media (prefers-reduced-motion: no-preference) {
+  .fh-main[data-fandom="wrestling-jakks"] .fh-wwe-atmos { animation: fh-wwe-ignite 560ms ease-out both; }
+  .fh-main[data-fandom="wrestling-jakks"] .fh-wwe-seam { animation: fh-gj-seam-ignite 640ms ease-out both; }
+  .fh-main[data-fandom="wrestling-jakks"] .fh-wwe-scan { animation: fh-gj-scan 920ms ease-out 140ms both; }
+  .fh-main[data-fandom="wrestling-jakks"] .fh-wwering { animation: fh-wwe-bootring 600ms cubic-bezier(.2,.7,.3,1) 110ms both; }
+  .fh-main[data-fandom="wrestling-jakks"] .fh-ring-spot { animation: fh-wwe-spot 900ms ease-out 220ms both; }
+}
+@media (max-width: 767px) {
+  .fh-main[data-fandom="wrestling-jakks"] .fh-wwering { width: clamp(220px, 78vw, 320px); top: clamp(4px, 2vh, 16px); }
+}
+@media (max-width: 520px) {
+  .fh-main[data-fandom="wrestling-jakks"] .fh-hero--seam { min-height: clamp(380px, 64vh, 520px); }
+}

@@ -8,6 +8,9 @@
  * is the funnel, not decoration (Steve 6/20). Voice strings come from the
  * theme's VoicePack so each fandom speaks its own language.
  *
+ * Templatized (S40): the checker heading/sub + its loading/miss/error copy now
+ * come from the VoicePack too — no MOTU/Eternia string is hardcoded here.
+ *
  * Server <FandomHub> passes plain serializable props; this owns interactivity.
  */
 
@@ -33,6 +36,11 @@ type Voice = {
   searchPlaceholder: string
   ctaLabel: string
   flag: FlagWording
+  checkerTitle: string
+  checkerSub: string
+  checkerLoading: string
+  checkerMiss: string
+  checkerError: string
 }
 
 function flagLabel(flag: string, fw: FlagWording): string {
@@ -100,8 +108,8 @@ export default function FandomHubInteractive({
   return (
     <section className="fh-intel" aria-labelledby="fh-intel-h">
       <div className="fh-intel-head">
-        <h2 id="fh-intel-h" className="fh-intel-title">{checkerOnly ? 'Is it worth it?' : voice.intelHeader}</h2>
-        <p className="fh-intel-sub">{checkerOnly ? 'Check any figure of Eternia against real eBay sold comps — instantly.' : voice.intelSub}</p>
+        <h2 id="fh-intel-h" className="fh-intel-title">{checkerOnly ? voice.checkerTitle : voice.intelHeader}</h2>
+        <p className="fh-intel-sub">{checkerOnly ? voice.checkerSub : voice.intelSub}</p>
       </div>
 
       {/* On-hub price checker — the "is it worth it?" tool */}
@@ -118,9 +126,9 @@ export default function FandomHubInteractive({
       </form>
       {result.state !== 'idle' && (
         <div className="fh-check-result" aria-live="polite">
-          {result.state === 'loading' && <span className="fh-check-dim">Consulting the sorceress…</span>}
-          {result.state === 'miss' && <span className="fh-check-dim">No sold comps on record for that one yet — try another name.</span>}
-          {result.state === 'error' && <span className="fh-check-dim">The crystal went dark. Try again in a moment.</span>}
+          {result.state === 'loading' && <span className="fh-check-dim">{voice.checkerLoading}</span>}
+          {result.state === 'miss' && <span className="fh-check-dim">{voice.checkerMiss}</span>}
+          {result.state === 'error' && <span className="fh-check-dim">{voice.checkerError}</span>}
           {result.state === 'hit' && (
             <a className="fh-check-hit" href={result.url ?? '/search'}>
               <span className="fh-check-name">{result.name}<span className="fh-check-line">{result.brand} {result.line}</span></span>

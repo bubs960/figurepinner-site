@@ -21,6 +21,11 @@ const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 const TOP_N = Number(process.env.TOP_N || 8)
 const CONCURRENCY = Number(process.env.CONCURRENCY || 16)
 const OUT_DIR = join(ROOT, 'src', 'data', 'fandom-top-comps')
+// Optional line-scope: restrict to product_lines matching LINE_MATCH, write to OUT.
+const LINE_MATCH = process.env.LINE_MATCH ? new RegExp(process.env.LINE_MATCH) : null
+const OUT_OVERRIDE = process.env.OUT || null
+const MFR = process.env.MFR || null                                   // manufacturer scope (e.g. jakks-pacific, mattel)
+const LINE_EXCLUDE = process.env.LINE_EXCLUDE ? new RegExp(process.env.LINE_EXCLUDE) : null  // drop product_lines (e.g. ^tna)
 
 function loadFigures() {
   const slim = join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js')
@@ -72,7 +77,7 @@ async function mapLimit(items, limit, fn) {
 }
 
 async function buildFandom(fandom, allFigures) {
-  const figs = allFigures.filter(f => f.fandom === fandom)
+  const figs = allFigures.filter(f => f.fandom === fandom && (!MFR || f.manufacturer === MFR) && (!LINE_MATCH || LINE_MATCH.test(f.product_line || '')) && (!LINE_EXCLUDE || !LINE_EXCLUDE.test(f.product_line || '')))
   if (!figs.length) { console.log(`  ${fandom}: 0 figures — skipped`); return }
   process.stdout.write(`  ${fandom}: ${figs.length} figures, fetching comps`)
   const snaps = await mapLimit(figs, CONCURRENCY, async (f) => {
@@ -97,12 +102,12 @@ async function buildFandom(fandom, allFigures) {
   process.stdout.write(` -> ${ranked.length} with comps\n`)
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true })
   const payload = {
-    fandom,
+    fandom: OUT_OVERRIDE || fandom,
     generated_at: new Date().toISOString(),
     source: 'r2proxy price-summaries (median_sold ?? avg_sold), sold_count>0 only',
     figures: ranked,
   }
-  writeFileSync(join(OUT_DIR, `${fandom}.json`), JSON.stringify(payload, null, 2))
+  writeFileSync(join(OUT_DIR, `${OUT_OVERRIDE || fandom}.json`), JSON.stringify(payload, null, 2))
 }
 
 async function main() {

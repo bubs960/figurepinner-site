@@ -22,6 +22,11 @@ const R2 = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 const PER_LINE = Number(process.env.PER_LINE || 6)
 const CONCURRENCY = Number(process.env.CONCURRENCY || 16)
 const OUT_DIR = join(ROOT, 'src', 'data', 'fandom-vaults')
+const LINE_MATCH = process.env.LINE_MATCH ? new RegExp(process.env.LINE_MATCH) : null
+const OUT_OVERRIDE = process.env.OUT || null
+const MFR = process.env.MFR || null                                   // manufacturer scope (e.g. jakks-pacific, mattel)
+const LINE_EXCLUDE = process.env.LINE_EXCLUDE ? new RegExp(process.env.LINE_EXCLUDE) : null  // drop product_lines (e.g. ^tna)
+const MIN_LINE = Number(process.env.MIN_LINE || 1)
 
 function loadFigures() {
   const raw = readFileSync(join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js'), 'utf8')
@@ -44,11 +49,11 @@ async function main(){
   const fandom = process.argv[2]
   if(!fandom){console.error('usage: node scripts/build-fandom-vaults.mjs <fandom>');process.exit(1)}
   const all = loadFigures()
-  const figs = all.filter(f=>f.fandom===fandom)
+  const figs = all.filter(f=>f.fandom===fandom && (!MFR || f.manufacturer===MFR) && (!LINE_MATCH || LINE_MATCH.test(f.product_line||'')) && (!LINE_EXCLUDE || !LINE_EXCLUDE.test(f.product_line||'')))
   console.log(`${fandom}: ${figs.length} figures`)
   // group by line
   const groups = {}
-  for(const f of figs){ const k=lineKey(f); (groups[k] ||= []).push(f) }
+  for(const f of figs){ const k=(f.product_line||'').trim()||'other'; (groups[k] ||= []).push(f) }
   // fetch comps for all, attach price
   const priced = await mapLimit(figs, CONCURRENCY, async f=>{
     const s=await snap(f.figure_id); if(!s)return null
@@ -58,18 +63,20 @@ async function main(){
   })
   const byId = new Map(priced.filter(Boolean).map(x=>[x.figure_id,x]))
   const vaults = Object.entries(groups)
-    .map(([line,arr])=>{
+    .map(([pl,arr])=>{
       const withComps = arr.map(f=>byId.get(f.figure_id)).filter(Boolean).sort((a,b)=>b.price-a.price)
-      // line_slug = the KB product_line for this group → the REAL distinct line page
-      // /<fandom>/<product_line> (most-common product_line in the group).
-      const plCount = {}; for(const f of arr){ const pl=f.product_line||''; if(pl) plCount[pl]=(plCount[pl]||0)+1 }
-      const line_slug = Object.entries(plCount).sort((a,b)=>b[1]-a[1])[0]?.[0] || ''
-      return { line, line_slug, count: arr.length, priced_count: withComps.length, top: withComps.slice(0,PER_LINE) }
+      // Grouped by KB product_line (consistent). Display name = the most-common v1_line in
+      // the group (nice label; collapses case/format-variant strays). line_slug = product_line
+      // → the REAL distinct line page /<genre>/<product_line>.
+      const vc = {}; for(const f of arr){ const v=(f.v1_line||'').trim(); if(v) vc[v]=(vc[v]||0)+1 }
+      const line = Object.entries(vc).sort((a,b)=>b[1]-a[1])[0]?.[0] || prettify(pl)
+      return { line, line_slug: pl, count: arr.length, priced_count: withComps.length, top: withComps.slice(0,PER_LINE) }
     })
+    .filter(v => v.count >= MIN_LINE)
     .sort((a,b)=>b.count-a.count)
   if(!existsSync(OUT_DIR)) mkdirSync(OUT_DIR,{recursive:true})
-  const payload = { fandom, generated_at:new Date().toISOString(), source:'r2proxy price-summaries, sold_count>0', vaults }
-  writeFileSync(join(OUT_DIR,`${fandom}.json`), JSON.stringify(payload,null,2))
+  const payload = { fandom: OUT_OVERRIDE || fandom, generated_at:new Date().toISOString(), source:'r2proxy price-summaries, sold_count>0', vaults }
+  writeFileSync(join(OUT_DIR,`${OUT_OVERRIDE || fandom}.json`), JSON.stringify(payload,null,2))
   console.log(`wrote ${vaults.length} line-vaults:`, vaults.map(v=>`${v.line}(${v.count}/${v.top.length} priced)`).join(', '))
 }
 main().catch(e=>{console.error(e);process.exit(1)})

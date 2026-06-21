@@ -23,6 +23,10 @@ const FANDOM = process.argv[2] || 'masters-of-the-universe'
 const PER_SIDE = Number(process.env.PER_SIDE || 6)
 const CONCURRENCY = Number(process.env.CONCURRENCY || 16)
 const OUT_DIR = join(ROOT, 'src', 'data', 'fandom-heroes-villains')
+const LINE_MATCH = process.env.LINE_MATCH ? new RegExp(process.env.LINE_MATCH) : null
+const OUT_OVERRIDE = process.env.OUT || null
+const MFR = process.env.MFR || null                                   // manufacturer scope (e.g. jakks-pacific, mattel)
+const LINE_EXCLUDE = process.env.LINE_EXCLUDE ? new RegExp(process.env.LINE_EXCLUDE) : null  // drop product_lines (e.g. ^tna)
 
 // Curated good/evil allegiance per fandom (character_canonical slugs). The H-v-V
 // band leads with these across the seam. Templatized: add a fandom entry to grow.
@@ -62,8 +66,33 @@ const ALLEGIANCE = {
       'gnawgahyde', 'road-pig', 'voltar', 'big-boa', 'croc-master', 'cesspool', 'headman', 'cobra',
     ]),
   },
+  'wwe-elite': {
+    // FACE vs HEEL = wrestling's native good/evil. Alignment is FLUID (most stars were
+    // both) so this is the most-iconic/default run for a fun band, NOT a hard fact;
+    // ambiguous tweeners are deliberately OMITTED rather than guessed. character_canonical slugs.
+    heroes: new Set([
+      'john-cena','rey-mysterio','hulk-hogan','the-rock','cody-rhodes','kofi-kingston','daniel-bryan',
+      'big-e','xavier-woods','becky-lynch','jeff-hardy','eddie-guerrero','dusty-rhodes','ultimate-warrior',
+      'british-bulldog','diamond-dallas-page','sami-zayn','jey-uso','jimmy-uso','macho-man-randy-savage',
+      'stone-cold-steve-austin','shawn-michaels','undertaker','ricky-steamboat','bret-hart','sting',
+    ]),
+    villains: new Set([
+      'roman-reigns','seth-rollins','triple-h','randy-orton','brock-lesnar','kevin-owens','gunther',
+      'miz','bray-wyatt','jake-roberts','yokozuna','dominik-mysterio','logan-paul','jacob-fatu',
+      'andre-the-giant','ric-flair','iron-sheik','ted-dibiase','charlotte-flair','the-fiend',
+    ]),
+  },
+  'wrestling-jakks': {
+    // VINTAGE vs MODERN (not face/heel). Classify by PRODUCT_LINE, not character (line-based = clean,
+    // no guessing). Vintage = the Classic Superstars legend sculpts; Modern = the Ruthless Aggression
+    // action-era mainlines. The band relabels the headers via the voice pack.
+    mode: 'line',
+    heroes: new Set(['classic-superstars', 'deluxe-classic']),
+    villains: new Set(['ruthless-aggression', 'deluxe-aggression', 'r3-tech', 'titan-tron-live']),
+  },
 }
-const { heroes: HEROES, villains: VILLAINS } = ALLEGIANCE[FANDOM] || { heroes: new Set(), villains: new Set() }
+const ALLEGIANCE_KEY = OUT_OVERRIDE && ALLEGIANCE[OUT_OVERRIDE] ? OUT_OVERRIDE : FANDOM
+const { heroes: HEROES, villains: VILLAINS } = ALLEGIANCE[ALLEGIANCE_KEY] || { heroes: new Set(), villains: new Set() }
 
 function loadFigures() {
   const raw = readFileSync(join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js'), 'utf8')
@@ -81,11 +110,11 @@ function rarityFlag(f) { const l = (f.product_line || '').toLowerCase(), e = (f.
 async function snap(id) { try { const r = await fetch(`${R2}/price-summaries/${encodeURIComponent(id)}.json`, { signal: AbortSignal.timeout(8000) }); return r.ok ? await r.json() : null } catch { return null } }
 async function mapLimit(items, limit, fn) { const out = new Array(items.length); let i = 0; await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => { while (i < items.length) { const x = i++; out[x] = await fn(items[x]) } })); return out }
 
-function pickSide(priced, allowSet) {
+function pickSide(priced, matchFn) {
   // dedupe to the highest-priced figure per character, then top N by price
   const byChar = new Map()
   for (const p of priced) {
-    if (!p || !p.image || !allowSet.has(p.char)) continue
+    if (!p || !p.image || !matchFn(p)) continue
     const cur = byChar.get(p.char)
     if (!cur || p.price > cur.price) byChar.set(p.char, p)
   }
@@ -94,22 +123,27 @@ function pickSide(priced, allowSet) {
 
 async function main() {
   const all = loadFigures()
-  const figs = all.filter(f => f.fandom === FANDOM)
-  // only figures whose character is on either side AND that have a photo (band is photo-led)
-  const candidates = figs.filter(f => f.canonical_image_url && (HEROES.has(charSlug(f)) || VILLAINS.has(charSlug(f))))
+  const MODE = (ALLEGIANCE[ALLEGIANCE_KEY] && ALLEGIANCE[ALLEGIANCE_KEY].mode) || 'char'
+  const keyOf = MODE === 'line' ? (p => p.pl) : (p => p.char)
+  const matchFig = MODE === 'line'
+    ? (f => HEROES.has(f.product_line || '') || VILLAINS.has(f.product_line || ''))
+    : (f => HEROES.has(charSlug(f)) || VILLAINS.has(charSlug(f)))
+  const figs = all.filter(f => f.fandom === FANDOM && (!MFR || f.manufacturer === MFR) && (!LINE_EXCLUDE || !LINE_EXCLUDE.test(f.product_line || '')))
+  // only figures on either side AND with a photo (band is photo-led)
+  const candidates = figs.filter(f => f.canonical_image_url && (!LINE_MATCH || LINE_MATCH.test(f.product_line || '')) && matchFig(f))
   console.log(`${FANDOM}: ${figs.length} figs, ${candidates.length} hero/villain candidates with photos`)
   const priced = await mapLimit(candidates, CONCURRENCY, async f => {
     const s = await snap(f.figure_id); if (!s) return null
     const p = (s.median_sold ?? s.avg_sold); const c = s.sold_count ?? 0
     if (p == null || c <= 0) return null
-    return { figure_id: f.figure_id, name: name(f), char: charSlug(f), line: f.v1_line || prettify(f.product_line), price: Math.round(p), sold_count: c, flag: rarityFlag(f), image: f.canonical_image_url || null, url: `/figure/${f.figure_id}` }
+    return { figure_id: f.figure_id, name: name(f), char: charSlug(f), pl: f.product_line || '', line: f.v1_line || prettify(f.product_line), price: Math.round(p), sold_count: c, flag: rarityFlag(f), image: f.canonical_image_url || null, url: `/figure/${f.figure_id}` }
   })
   const clean = priced.filter(Boolean)
-  const heroes = pickSide(clean, HEROES)
-  const villains = pickSide(clean, VILLAINS)
+  const heroes = pickSide(clean, p => HEROES.has(keyOf(p)))
+  const villains = pickSide(clean, p => VILLAINS.has(keyOf(p)))
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true })
-  const payload = { fandom: FANDOM, generated_at: new Date().toISOString(), source: 'curated allegiance + r2proxy price-summaries, sold_count>0, photo required', heroes, villains }
-  writeFileSync(join(OUT_DIR, `${FANDOM}.json`), JSON.stringify(payload, null, 2))
+  const payload = { fandom: OUT_OVERRIDE || FANDOM, generated_at: new Date().toISOString(), source: 'curated allegiance + r2proxy price-summaries, sold_count>0, photo required', heroes, villains }
+  writeFileSync(join(OUT_DIR, `${OUT_OVERRIDE || FANDOM}.json`), JSON.stringify(payload, null, 2))
   console.log(`heroes(${heroes.length}):`, heroes.map(h => `${h.name} $${h.price}`).join(', '))
   console.log(`villains(${villains.length}):`, villains.map(v => `${v.name} $${v.price}`).join(', '))
 }
