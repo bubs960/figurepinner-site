@@ -156,7 +156,7 @@ export default function FandomHubInteractive({
                 <a href={f.url} className="fh-intel-link" title={`${f.name} — ${f.sold_count} sold, median $${f.price.toLocaleString('en-US')}`}>
                   <span className="fh-intel-rank" aria-hidden="true">{i + 1}</span>
                   <span className={`fh-intel-thumb${f.image ? '' : ' is-empty'}`}>
-                    {f.image && <img src={f.image} alt="" loading="lazy" decoding="async" />}
+                    {f.image && <img src={f.image} alt="" width={42} height={42} loading="lazy" decoding="async" />}
                   </span>
                   <span className="fh-intel-name">
                     {f.name}
