@@ -431,7 +431,7 @@ export default function FandomHub({
             (no approval gate, same as other guide pages); the bottom leaderboard is
             the AdSense slot that activates once Google approves. AdSlot reserves
             height + is Pro-aware (ad-free for Pro), so no CLS for free users. */}
-        <div className="fh-ad"><AdSlot slot="adsterra-banner" /></div>
+        <div className="fh-ad fh-ad-reserve"><AdSlot slot="adsterra-banner" /></div>
 
         {isSeam && <FaqSection />}
 

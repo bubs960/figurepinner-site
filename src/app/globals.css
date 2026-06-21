@@ -608,6 +608,10 @@ a:hover {
 .fh-intel-empty { font-size: 0.95rem; color: var(--fh-muted); font-style: italic; padding: 0.4rem 0.2rem 0.6rem; margin: 0; }
 
 .fh-ad { display: flex; justify-content: center; margin: 0 0 2rem; }
+/* Reserve height for the live in-content ad so it can't shift content on load
+   (CLS guard — web Gate-3 check 1). Only on the live slot; the AdSense leaderboard
+   returns null in prod until approval, so its .fh-ad stays empty/heightless (no box). */
+.fh-ad-reserve { align-items: center; min-height: 96px; }
 
 /* Editorial body */
 .fh-h2 { font-family: var(--fh-display); font-size: 1.5rem; letter-spacing: 0.02em; color: var(--fh-text); margin: 2.5rem 0 1rem; }
