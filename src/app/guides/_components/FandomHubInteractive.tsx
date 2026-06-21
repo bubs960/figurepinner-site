@@ -54,10 +54,12 @@ export default function FandomHubInteractive({
   figures,
   generatedAt,
   voice,
+  checkerOnly = false,
 }: {
   figures: TopComp[]
   generatedAt: string
   voice: Voice
+  checkerOnly?: boolean
 }) {
   const lines = useMemo(() => {
     const set = new Set(figures.map(f => f.line).filter(Boolean))
@@ -98,8 +100,8 @@ export default function FandomHubInteractive({
   return (
     <section className="fh-intel" aria-labelledby="fh-intel-h">
       <div className="fh-intel-head">
-        <h2 id="fh-intel-h" className="fh-intel-title">{voice.intelHeader}</h2>
-        <p className="fh-intel-sub">{voice.intelSub}</p>
+        <h2 id="fh-intel-h" className="fh-intel-title">{checkerOnly ? 'Is it worth it?' : voice.intelHeader}</h2>
+        <p className="fh-intel-sub">{checkerOnly ? 'Check any figure of Eternia against real eBay sold comps — instantly.' : voice.intelSub}</p>
       </div>
 
       {/* On-hub price checker — the "is it worth it?" tool */}
@@ -131,7 +133,7 @@ export default function FandomHubInteractive({
         </div>
       )}
 
-      {figures.length > 0 ? (
+      {!checkerOnly && (figures.length > 0 ? (
         <>
           {/* Line-filter pills */}
           {lines.length > 2 && (
@@ -178,7 +180,7 @@ export default function FandomHubInteractive({
         </>
       ) : (
         <p className="fh-intel-empty">{voice.emptyState}</p>
-      )}
+      ))}
     </section>
   )
 }

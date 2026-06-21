@@ -100,7 +100,7 @@ const TOP_COMPS: Record<string, TopCompPayload> = {
  * its nightly data exists; until then that hub renders without the table.
  */
 export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; image?: string | null; url: string }
-export type Vault = { line: string; count: number; priced_count: number; top: VaultFigure[] }
+export type Vault = { line: string; line_slug: string; count: number; priced_count: number; top: VaultFigure[] }
 export type VaultPayload = { fandom: string; generated_at: string; source: string; vaults: Vault[] }
 
 const VAULTS: Record<string, VaultPayload> = {

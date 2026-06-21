@@ -60,7 +60,11 @@ async function main(){
   const vaults = Object.entries(groups)
     .map(([line,arr])=>{
       const withComps = arr.map(f=>byId.get(f.figure_id)).filter(Boolean).sort((a,b)=>b.price-a.price)
-      return { line, count: arr.length, priced_count: withComps.length, top: withComps.slice(0,PER_LINE) }
+      // line_slug = the KB product_line for this group → the REAL distinct line page
+      // /<fandom>/<product_line> (most-common product_line in the group).
+      const plCount = {}; for(const f of arr){ const pl=f.product_line||''; if(pl) plCount[pl]=(plCount[pl]||0)+1 }
+      const line_slug = Object.entries(plCount).sort((a,b)=>b[1]-a[1])[0]?.[0] || ''
+      return { line, line_slug, count: arr.length, priced_count: withComps.length, top: withComps.slice(0,PER_LINE) }
     })
     .sort((a,b)=>b.count-a.count)
   if(!existsSync(OUT_DIR)) mkdirSync(OUT_DIR,{recursive:true})

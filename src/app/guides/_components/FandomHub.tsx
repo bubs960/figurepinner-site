@@ -387,7 +387,24 @@ export default function FandomHub({
 
         {isSeam && heroesVillains && <HeroesVillainsBand data={heroesVillains} />}
 
-        {topComps && topComps.figures.length > 0 ? (
+        {/* Seam hub (R2): the Heroes-vs-Villains split is the figure module; keep
+            ONLY the price-checker tool here (the ranked "Power Level" intel table
+            was redundant with the split — dropped). Other fandoms keep the full table. */}
+        {isSeam ? (
+          <FandomHubInteractive
+            figures={[]}
+            generatedAt={topComps?.generated_at ?? ''}
+            checkerOnly
+            voice={{
+              intelHeader: theme.voice.intelHeader,
+              intelSub: theme.voice.intelSub,
+              emptyState: theme.voice.emptyState,
+              searchPlaceholder: theme.voice.searchPlaceholder,
+              ctaLabel: theme.voice.ctaLabel,
+              flag: theme.voice.flag,
+            }}
+          />
+        ) : topComps && topComps.figures.length > 0 ? (
           <FandomHubInteractive
             figures={topComps.figures}
             generatedAt={topComps.generated_at}
@@ -409,6 +426,12 @@ export default function FandomHub({
         ) : (
           article.body.map((block, i) => <Block key={i} block={block} />)
         )}
+
+        {/* R3: in-content ad (below fold). adsterra-banner is the site's live unit
+            (no approval gate, same as other guide pages); the bottom leaderboard is
+            the AdSense slot that activates once Google approves. AdSlot reserves
+            height + is Pro-aware (ad-free for Pro), so no CLS for free users. */}
+        <div className="fh-ad"><AdSlot slot="adsterra-banner" /></div>
 
         {isSeam && <FaqSection />}
 
