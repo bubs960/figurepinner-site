@@ -1158,5 +1158,1196 @@ export const ARTICLES: Article[] = [
         { type: 'p', text: 'Selling: if you have a childhood tub of these, do not bulk-lot it blind. The tub is mostly commons — but one first-release name or late-series figure can be worth more than the rest combined, and bulk lots hand that figure to a reseller for free. Sort, look up, then lot the leftovers.' },
         { type: 'p', text: 'FigurePinner has the sold comps across the Jakks era — Ruthless Aggression, Deluxe Aggression, and the sublines — so you can separate the climbing figures from the abundant ones in seconds. Look up the name before you buy, and before you let a single figure leave the tub.' },
       ],
-    }
+    },
+
+  {
+    slug: 'most-valuable-vintage-wrestling-figures',
+    title: 'The Most Valuable Vintage Wrestling Figures Right Now',
+    metaTitle: 'Most Valuable Vintage Wrestling Figures — LJN, Hasbro, Jakks | FigurePinner',
+    metaDescription:
+      'Which vintage wrestling figures are actually worth money — specific LJN, Hasbro WWF, and Jakks figures with real sold comp context. What to hunt, what to avoid, and what to look for.',
+    dek: 'Not everything old is valuable. Here are the specific figures that actually command real money — and why.',
+    readingMinutes: 9,
+    updated: '2026-06-16',
+    body: [
+      { type: 'p', text: '"Vintage" is not a price. A 1993 Hasbro Undertaker and a 1993 Hasbro common can sit in the same tub — one is a $40–80 figure in clean condition, the other goes for five bucks all day. The word old does not decide which is which. The name, the condition, the line, and whether the market has decided it cares — those decide it. If you want to know what vintage wrestling figures are worth serious money right now, here is the specific answer.' },
+      { type: 'p', text: 'This is not a tour of why vintage values climb — for that, [[read the era breakdown|/guides/vintage-wrestling-figure-value]]. This is the target list: the figures that are actually moving, what they actually fetch, and the condition and completeness details that separate the real money from the wishful listing.' },
+
+      { type: 'h2', text: 'LJN (1984–1989): where condition is everything' },
+      { type: 'p', text: 'LJN made the Hulkamania-era WWF figures — big rubber characters, minimal articulation, maximum nostalgia. The catch is they were played with hard. Clean survivors are genuinely scarce, which is what makes clean LJN worth real money.' },
+      { type: 'ul', items: [
+        'Hulk Hogan — the most liquid LJN piece, which means both the most available and the most counterfeited. Clean paint, no bite marks, no fade. Loose clean: $30–60 depending on the variant. The immortal yellow is the baseline; the red-and-yellow variants add a premium. MOC examples in clean packaging regularly clear $150–300+.',
+        'Andre the Giant — massive figure, beloved character, high demand. Clean loose examples trade $40–80. The size means condition problems are more visible, not less — a faded Andre is a hard sell.',
+        'Macho Man Randy Savage — strong demand from the generation that considered him the best of the era. Clean loose: $40–70. Missing accessories (sunglasses on certain releases) reduces this noticeably.',
+        'Ultimate Warrior — multiple releases across the LJN run. The later "Talking" version is a separate market. Clean loose base figure: $25–50. Paint stability varies across the run — look for color uniformity on the tassels.',
+        'Million Dollar Man Ted DiBiase — consistently one of the stronger LJN comps for a non-top-tier name. The figure is just good, the character is beloved, and clean examples fetch $30–55 reliably.',
+      ]},
+      { type: 'callout', text: 'The condition split in LJN is severe. "Clean" and "played with" are not the same market — they are not even the same conversation. A Hulk Hogan with a gnawed boot and sun-faded red sells for $10. The same character with sharp paint and no wear is a $50+ piece. Pull photos of the front AND the back of the figure before you value anything in this line.' },
+
+      { type: 'h2', text: 'Hasbro WWF (1990–1994): the series number matters more than the name' },
+      { type: 'p', text: 'The Hasbro line is where the most active vintage trading happens, because the range of values is widest and knowing the line well pays off. Early series shipped in large numbers and stay affordable. The later series are the money.' },
+      { type: 'ul', items: [
+        'Undertaker (Series 3, 1991) — one of the most recognized values in the Hasbro line. Loose complete: $40–75. The chokeslam action feature works or it does not, and "works" adds a premium. MOC clean: $150–250.',
+        'Ultimate Warrior variants — the Series 1 Warrior is common and affordable. The harder-to-find Series 4 variant in the alternate color is a different story — loose examples regularly trade $60–120 depending on completeness.',
+        'Bret Hart (Series 6+) — the Hitman figures from the later waves benefit from both Bret\'s enduring popularity and the print-run drop-off on the back half of the line. Clean loose: $35–65. Carded is where the premium really kicks in.',
+        'Series 10 and later — this is the blanket rule for Hasbro scarcity. As the line wound toward its 1994 end, production thinned. A Series 10–12 figure that might be a midcard character becomes valuable purely by production numbers. Check the series number before you assume a name is common.',
+        'European exclusives — figures released only in the UK and Europe that never hit US shelves. These are genuinely scarce in the North American market and command premiums that reflect it. Yokozuna and the variant decos of certain stars are the most discussed in this category.',
+      ]},
+      { type: 'callout', text: 'Hasbro MOC is a real premium tier. The original card art is iconic — the purple and gold design is instantly recognizable — and sealed examples in clean packaging carry 3–5x the loose price on the right figures. A crushed bubble or bent corner is not a small discount; it is a tier drop.' },
+
+      { type: 'h2', text: 'Jakks era (1996–2010): the name beats the line every time' },
+      { type: 'p', text: 'The Jakks window is earlier in its nostalgia cycle — the Ruthless Aggression audience is just arriving at peak-spending years — but specific figures are already moving. The rule here is simple: the line is enormous and the floor is low, but the right name in the right release punches well above it.' },
+      { type: 'ul', items: [
+        'Eddie Guerrero figures — any Eddie. His death in 2005 ended new production at the peak of his popularity, and demand for his Jakks-era releases has never cooled. Ruthless Aggression Eddie figures loose complete: $40–80. Carded: $80–160. Classic Superstars Eddie figures in clean condition: $60–120+.',
+        'Classic Superstars line — Jakks\'s tribute line to legends, often the only modern-plastic release of certain characters. Clean carded examples of the right names (Macho Man, Mr. Perfect, Ricky Steamboat) trade $30–80 each and continue to climb as the line ages out of production.',
+        'First Cena and first Batista — the initial Jakks releases of stars who went on to define the era. First-figure dynamics work the same as rookie cards: the earliest version of a name that mattered carries a collector premium, loose complete $25–50 and climbing.',
+        'Late-run Ruthless Aggression (Series 30+) — the same print-run scarcity logic that applies to late Hasbro applies here. Series shipped lighter as the license wound down, and those figures exist in smaller numbers regardless of who is on the card.',
+      ]},
+
+      { type: 'h2', text: 'The condition checklist that applies to all three eras' },
+      { type: 'p', text: 'Regardless of which era you are buying, the same four factors set the comp range for any specific figure. Running these in order keeps you from overpaying on a figure whose photos flattered it.' },
+      { type: 'ul', items: [
+        'Completeness first. What accessories came with it, and are they present? A Hasbro figure missing its entry-perk accessory and an LJN missing a belt are not loose-complete figures — they are incomplete, and the comp difference is not minor.',
+        'Condition of the figure itself. Play wear, bite marks, sun fade, paint chips. Vintage figures were used, and the attrition shows. Clean and played-with are different tiers.',
+        'Condition of the card or box (for carded examples). Bubbles, corners, color. The package is the premium on MOC pieces — protect it or price it accordingly.',
+        'Action feature functionality (Hasbro and some Jakks). Working spring mechanism vs. stuck or broken is a disclosed condition that affects value. Test it or ask.',
+      ]},
+      { type: 'callout', text: 'The single most dangerous phrase in a vintage listing is "good for its age." That phrase is doing heavy lifting. A figure in genuinely good condition does not need the qualifier. When you see it, ask for sharper photos of the paint, the back, and the accessories — because "good for its age" usually means wear that the photos are flattering away.' },
+
+      { type: 'h2', text: 'What to actually do with this information' },
+      { type: 'p', text: 'A list of valuable figures is only useful if you pair it with current sold data, because "X is a strong figure" and "X sold for Y last week" are two different facts and both matter. A figure I can name as valuable can also be sitting in a trough right now — temporarily oversupplied, a restock of old stock hitting the market, or just a cold period. And a figure I have not named here might be on a run right now because something cultural happened around it.' },
+      { type: 'p', text: 'The sold comps are the real-time layer. Before you buy a piece that a list told you was valuable, pull it up, check the last ten sales, and confirm the market agrees this week. Before you sell a piece from your collection, do the same — the best vintage figures move in waves, and catching the right moment is how you get the strong comp instead of the low one.' },
+      { type: 'p', text: 'FigurePinner has the sold data for the figures in this guide — Hasbro, LJN, and Jakks era. Look up any of the names above before you buy or sell, and you will see exactly what the market is actually paying this month, not what a list from six months ago told you it was worth.' },
+    ],
+  },
+
+  {
+    slug: 'neca-ultimate-starter-guide',
+    title: 'NECA Ultimates: A Horror and Film Collector\'s Starting Point',
+    metaTitle: 'NECA Ultimate Figures — Collector\'s Guide | FigurePinner',
+    metaDescription: 'NECA Ultimates are the gold standard for horror and movie figures. Here\'s what makes them worth the price, which lines hold resale value, and how to start without overpaying.',
+    dek: 'NECA doesn\'t do mass retail the way everyone else does. That\'s exactly why the secondhand market looks the way it does.',
+    readingMinutes: 7,
+    updated: '2026-06-16',
+    body: [
+      { type: 'p', text: 'Walk into a specialty shop and you\'ll see two kinds of action figure shelves. One is the sea of brightly branded mass-market releases — the same Batman in six different colorways, Marvel Legends repacks, the endless Star Wars waves. The other is a tighter, quieter row of NECA boxes, each one built around a character most mass-market toymakers wouldn\'t touch. Freddy Krueger. The Predator. Michael Myers. The Terminator. If you\'ve ever stood in front of that row and felt like you were looking at the serious end of the hobby, you were.' },
+      { type: 'p', text: 'NECA\'s Ultimate line is the company\'s premium tier. The name matters: these aren\'t just figures. They\'re the most complete version NECA has made of a given character — maximum accessories, multiple head sculpts, swappable hands, and often parts or effects that no previous version included. Understanding what separates an Ultimate from a standard NECA release is the first thing any serious collector needs to know.' },
+
+      { type: 'h2', text: 'What "Ultimate" actually means' },
+      { type: 'p', text: 'NECA releases figures across several tiers. At the base level are standard 7-inch figures — one head, one set of accessories, done. Ultimates are a step above in every direction. Expect five to fifteen or more accessories in the box, multiple interchangeable heads (masked and unmasked versions are common), multiple hand sets, and often character-specific effect parts. The Predator gets his trophy skulls, wrist computer, and plasma caster all in one box. Ghost Face gets multiple masks, multiple knife variants, and an interchangeable bloody version. You\'re getting the director\'s cut figure, not the theatrical cut.' },
+      { type: 'p', text: 'Retail on most Ultimates runs around $30 to $40 depending on the character and where you buy. That\'s a meaningful premium over budget superhero lines, but for the accessory count and sculpt quality you\'re getting, it\'s a fair trade — which is why the secondhand market for discontinued Ultimates consistently lands above original retail when the character has a strong fanbase.' },
+      { type: 'callout', text: 'The thing that separates NECA from the mass-market competition is sculpt quality, not articulation. These aren\'t MAFEX-style engineering marvels — they won\'t hit every dynamic pose. But for character fidelity and screen-accurate paint work, especially on horror and movie properties, the sculpts are often unmatched at any price.' },
+
+      { type: 'h2', text: 'Why horror drives the resale market' },
+      { type: 'p', text: 'NECA built its reputation on licenses no one else wanted. Nightmare on Elm Street, Friday the 13th, Halloween, IT — properties with massive nostalgia footprints and obsessive fan bases but almost no dedicated collector product before NECA showed up. When NECA can\'t renew a license, or when production runs end on a particularly beloved character, the secondhand prices react quickly.' },
+      { type: 'p', text: 'Horror figures also benefit from a demand cycle most toy lines don\'t have. Every October brings a new wave of buyers who want the Michael Myers or Jason Voorhees on their shelf for Halloween season, then either keep them or resell in November. That annual demand spike is real and creates reliable price floors on the horror staples — Michael Myers, Freddy Krueger, Jason Voorhees. A clean example of any of them doesn\'t sit cheap for long.' },
+      { type: 'ul', items: [
+        'Predator and Alien — NECA\'s two flagship franchises; deep release history means condition and variant-specificity drive comps more than scarcity alone.',
+        'Halloween / Friday the 13th / Nightmare on Elm Street — annual demand spikes each October. Classic characters in clean condition hold well.',
+        'Terminator — the T-800 in multiple versions; the cult appeal here is long and steady, not seasonal.',
+        'Gremlins — a strong nostalgia base and limited competition from other manufacturers; Stripe and Gizmo editions move consistently.',
+        'Convention exclusives and retailer exclusives — these print lower regardless of character; condition matters even more when comps are few.',
+      ]},
+
+      { type: 'h2', text: 'The license risk that shapes the market' },
+      { type: 'p', text: 'Here\'s the structural fact that every NECA collector learns eventually: licenses expire. When a studio decides not to renew or changes distribution terms, NECA stops making that figure. The molds don\'t transfer to another manufacturer. What\'s already on the market is what there is — and once the channel inventory clears, the secondary market is the only market.' },
+      { type: 'p', text: 'This creates a specific kind of scarcity. It\'s not the chase-variant short-pack scarcity of a Marvel Legends wave. It\'s the license-loss scarcity of a discontinued character with no reissue on the horizon. When NECA loses a horror license, anyone who wants that figure has to find one on the secondhand market, and the comp data shows it.' },
+      { type: 'callout', text: 'NECA figures don\'t get reissued the way Hasbro repacks do. When a run ends, it ends. That\'s the reason a discontinued Ultimate from a beloved franchise can sit comfortably at double original retail five years after it stopped shipping.' },
+
+      { type: 'h2', text: 'What to know before you buy' },
+      { type: 'p', text: 'NECA\'s quality control has improved substantially over the years but is still inconsistent enough to matter at higher price points. If you\'re buying a recent release at retail, inspect the box for corner damage that suggests a rough shipping history — the paint and accessories inside are usually fine, but box collectors will care. If you\'re buying loose on the secondhand market, the most common issue is accessories: the smaller ones (tiny knives, effect parts, display bases) go missing. Always ask the seller to photograph every piece against the back-of-box checklist before committing.' },
+      { type: 'p', text: 'Also understand the scale ecosystem. NECA\'s core is 7 inches, with a quarter-scale 18-inch line for major characters and an 8-inch retro cloth-goods line. Mixing scales on a shelf is fine as a display choice, but they\'re not interchangeable collector markets. The 18-inch quarter-scale figures carry much higher price ceilings and attract a separate buyer willing to pay for them.' },
+      { type: 'ul', items: [
+        'Buy with all accessories present — incomplete Ultimates sell for significantly less and are harder to complete with loose-part hunting.',
+        'Box condition matters to a subset of collectors; a crushed card on a clean figure loses you buyers, not just value.',
+        'Check the release date — a three-year-old Ultimate is more likely to be discontinued than one from last month. That distinction can double the floor price.',
+        'NECA does sell direct at store.necaonline.com — for in-production releases, that\'s often the most reliable source.',
+      ]},
+
+      { type: 'h2', text: 'Where to start if you\'re new to the line' },
+      { type: 'p', text: 'Pick a franchise you actually love, not the one that looks most impressive on paper. NECA\'s deepest releases cluster around Predator, Alien, Halloween, Nightmare on Elm Street, Friday the 13th, Gremlins, and Terminator. If you grew up watching one of those, start there — the figures will mean more to you, you\'ll know which versions are the ones collectors care about, and you\'ll have the personal conviction to hold when the market dips.' },
+      { type: 'p', text: 'Once you have a few in hand and understand the quality tier you\'re working with, the secondary market opens up differently. You can read a NECA comp on FigurePinner and understand what you\'re looking at — not just the number, but whether that comp reflects a license-discontinued rarity or an in-production figure still available at retail. That context is what separates a smart buy from a panic buy.' },
+    ],
+  },
+
+  {
+    slug: 'mcfarlane-dc-multiverse-guide',
+    title: 'McFarlane DC Multiverse: The Budget Superhero Line Explained',
+    metaTitle: 'McFarlane DC Multiverse Collector\'s Guide — What Holds Value | FigurePinner',
+    metaDescription: 'McFarlane\'s DC Multiverse delivers superhero figures at mass-market prices. Here\'s what holds resale value, what pegwarms, and how the Gold Label tier changes the math.',
+    dek: 'Seven inches, 22 points of articulation, and a price point that made superhero collecting accessible. The catch is knowing which ones actually matter.',
+    readingMinutes: 6,
+    updated: '2026-06-16',
+    body: [
+      { type: 'p', text: 'In January 2020, McFarlane Toys took over the DC Multiverse license and did something the superhero action figure market hadn\'t seen in years: they made it cheap. The line launched at $19.99 to $24.99, with 22 points of articulation and character variety that put Mattel\'s previous DC offerings to shame. For collectors who\'d been watching Marvel Legends dominate the 6-inch premium space, DC Multiverse felt like a real answer — volume, variety, and an accessible entry point.' },
+      { type: 'p', text: 'Five-plus years and hundreds of releases later, the reality of the line is more complicated. Some figures hold value. A lot don\'t. The Gold Label tier changed the math on exclusives. And the QC inconsistency that critics noted at launch hasn\'t fully disappeared. Here\'s how to think about the line before you spend.' },
+
+      { type: 'h2', text: 'How the line is structured' },
+      { type: 'p', text: 'DC Multiverse isn\'t a single line — it\'s a family. The core mass-market releases hit Target, Walmart, and mass retailers at the base price point. Gold Label figures are a step up: premium decos, comic-specific looks, or variant appearances that wouldn\'t work at mass-market margins. These typically carry higher retail prices and shorter production runs. Platinum Label is the exclusive tier — convention pieces, website-direct figures, retailer-exclusive variants. Print runs on Platinum are genuinely low and the market reflects it.' },
+      { type: 'p', text: 'McFarlane also uses a build-a-figure mechanic similar to Marvel Legends, where purchasing each figure in a wave includes a piece that assembles into a larger figure. Which BAF matters varies wave to wave — a desirable BAF drives individual figure sales even on characters with thinner demand, which is one reason comps on BAF-wave releases can look higher than you\'d expect for less-iconic characters.' },
+      { type: 'callout', text: 'The standard DC Multiverse figure has no real scarcity behind it — these are mass-market runs at mass-market volumes. Value in this line is driven almost entirely by character iconicity, variant specificity, and tier (Gold Label and above). A standard Batman or Superman release will floor at or below retail for years.' },
+
+      { type: 'h2', text: 'What actually holds value' },
+      { type: 'p', text: 'Character demand is the single biggest driver here. DC has one of the deepest rosters in superhero fiction, but collector interest concentrates heavily on a short list. Batman — across every version McFarlane has made — has the most consistent secondary market. Superman, The Joker, Wonder Woman, and Harley Quinn follow. Beyond that, demand is franchise-event-driven: a specific look from a popular run, a character who headlined a recent film or animated series, or a figure tied to a moment in comic history that fans already identify with.' },
+      { type: 'ul', items: [
+        'Gold Label exclusives with limited print runs — these are the floor of value in the line. Comic-specific looks and one-retailer exclusives consistently land above retail when they sell through.',
+        'Characters from critically acclaimed storylines — Dark Knight Returns Batman, Knightfall figures, Year One looks. The story connection sustains demand beyond movie cycles.',
+        'First releases of deep-cut characters — the first time McFarlane makes an Azrael or a Mister Miracle, that first release often carries a premium even if subsequent waves bring the price down.',
+        'Convention exclusives and Platinum Label — small print runs, direct-from-show distribution, the collector psychology of having the one-of-few.',
+      ]},
+
+      { type: 'h2', text: 'The QC conversation' },
+      { type: 'p', text: 'McFarlane DC Multiverse has a documented quality control reputation that\'s worth understanding before you buy. The sculpts — many of them based on original McFarlane design sensibilities or specific comic art — are genuinely good. The paint applications at the standard tier can be inconsistent: mold flashing, paint slop, poorly applied wash details. It\'s not consistent enough to be a disqualifier, but it\'s consistent enough that buying from photos matters if condition is important to you.' },
+      { type: 'p', text: 'The articulation engineering at the base price point has a specific limitation: the figures hit some poses well and struggle with others. Collectors who want extreme dynamic posing options often find the engineering doesn\'t deliver what the joint count implies. For a shelf-display collector who wants a solid character representation, this is rarely a problem. For a collector expecting Marvel Legends-level posability at a lower price point, manage the expectation before you spend.' },
+
+      { type: 'h2', text: 'The pegwarmer reality' },
+      { type: 'p', text: 'McFarlane produces a lot of figures at high volume. The combination of volume, accessible price, and a cast of characters that ranges from iconic to deep-deep-cut means the retail shelves produce genuine pegwarmers. A second version of a character who just had a version last year. A supporting character from a canceled show. A figure tied to a movie that underperformed. These sit, clearance, and establish a price floor that can stay below retail for years.' },
+      { type: 'p', text: 'This is actually useful information for collectors. If you want a specific DC Multiverse figure for your shelf and you\'re patient, a lot of them come down to clearance pricing eventually. The ones that don\'t — the Gold Label exclusives, the convention pieces, the first runs of beloved characters — those you buy when you see them, because the secondary market on the misses is not kind.' },
+      { type: 'callout', text: 'The DC Multiverse line is wide. That width means there are genuine bargains for patient buyers who\'ll wait for clearance on the second or third version of a character. It also means understanding that \'held value\' in this line almost always means Gold Label or above, not base-wave standard releases.' },
+
+      { type: 'h2', text: 'Who this line is for' },
+      { type: 'p', text: 'DC Multiverse is the best entry into superhero collecting for someone who wants character variety at a sustainable price. The depth of the DC roster means characters that other lines wouldn\'t produce in a decade show up here regularly. If you\'re a DC fan first and a figure-grade collector second, this line delivers. If you\'re looking for an investment line where figures appreciate consistently, you\'re in the wrong section of the store.' },
+      { type: 'p', text: 'Before you buy at above-retail secondhand prices, pull the FigurePinner comps and check which tier the figure is. A Gold Label at 1.5x retail might be a fair buy given the print run. A standard mass-market Batman at 1.5x retail is a miss — patience will get you there for less, or a reprint will arrive before long.' },
+    ],
+  },
+
+  {
+    slug: 'tmnt-collecting-guide',
+    title: 'TMNT Figures: Playmates Vintage, NECA, and Super7 Explained',
+    metaTitle: 'TMNT Action Figures Price Guide — Playmates Vintage, NECA & Super7 Values | FigurePinner',
+    metaDescription: 'TMNT figure price guide: Playmates vintage 1988 first-wave values, NECA animated-series price floors, Super7 ReAction secondhand prices. Three markets, three different sets of comps.',
+    dek: 'The Turtles have been in plastic since 1988. What that means for your collection depends entirely on which generation you\'re shopping.',
+    readingMinutes: 7,
+    updated: '2026-06-16',
+    body: [
+      { type: 'p', text: 'The first wave of Playmates Teenage Mutant Ninja Turtles figures hit shelves in 1988. Ten figures — the four Turtles plus Splinter, April O\'Neil, Rocksteady, Bebop, and the Foot Soldier — and a licensing deal that would become one of the bestselling toy runs of the decade. If you were a kid in the late 1980s or early 1990s, you owned at least one of these. That nostalgia footprint is why the TMNT figure market is still one of the most active in all of toy collecting, and why understanding the three main product generations is essential before you spend anything.' },
+      { type: 'p', text: 'There is not one TMNT collector market. There are three, each with different buyers, different value drivers, and different things to watch out for. Vintage Playmates, NECA\'s premium collector releases, and Super7\'s ReAction retro line operate almost entirely independently from each other.' },
+
+      { type: 'h2', text: 'Vintage Playmates: the nostalgia engine' },
+      { type: 'p', text: 'Playmates launched the TMNT line in 1988 at the New York Toy Fair, pairing the rollout with the animated series that launched later that year. The commercial result was extraordinary — those first four years of sales numbers are cited as among the bestselling action figure runs of the era. The line ran until 1997, with character variety expanding well beyond the four Turtles into an enormous roster of villains, variants, and cross-promotional figures.' },
+      { type: 'p', text: 'For collectors, the 1988 vintage market concentrates on condition and completeness in a way most modern lines don\'t. These figures are 35-plus years old. Clean paint, tight joints, and all original accessories are genuinely difficult to find. A first-edition Leonardo or Donatello with all accessories in collector-grade condition is a different object than the same figure with a missing weapon and worn paint — and the comp data shows the gap.' },
+      { type: 'ul', items: [
+        'First-edition 1988 wave figures command the strongest premiums — the original four Turtles, Shredder, Splinter, and Krang. A complete Leonardo with all original accessories runs $80–$150+. MOC first-wave examples are a specialist market: clean cards regularly clear $300–$500.',
+        'Accessories are the biggest condition variable. The original soft-PVC weapons are easy to swap from other figures or replace with reproductions. If a seller can\'t confirm weapon originality, price accordingly — a \"complete\" Leonardo with reproduction swords is not a complete Leonardo.',
+        'Authentication matters on high-value examples: card back printing, bubble adhesive, and copyright dates are documented and faked. Buy from photos, not descriptions.',
+        'Mid-run and late-run figures (1993–1997) are abundant and cheap. The market is almost entirely concentrated in 1988–1991 releases.',
+        'The Technodrome and large vehicles carry their own premium when complete — but completeness verification is even harder than on figures. Every piece must be accounted for.',
+      ]},
+      { type: 'callout', text: 'The single most important number for vintage Playmates isn\'t the figure — it\'s the accessories. A complete Leonardo with all weapons and gear can be worth two to three times an otherwise-identical example with the weapons missing. Buy photos first, not assumptions.' },
+
+      { type: 'h2', text: 'NECA\'s TMNT: screen-accurate premium' },
+      { type: 'p', text: 'NECA entered the TMNT market with a very specific product: figures built around their 7-inch Ultimate format, designed to be screen-accurate to the 1987 animated series and the original Mirage comics. These are not nostalgia-repros of the old Playmates design. They\'re detailed adult-collector figures using NECA\'s standard toolkit — multiple head sculpts, swappable hands, character-specific accessories — applied to characters with massive pre-existing recognition.' },
+      { type: 'p', text: 'NECA\'s TMNT releases function like the rest of their horror and film catalog: license-dependent, run-limited, and capable of significant secondary-market appreciation when production ends. The animated-series versions of the Turtles, Shredder, and supporting villains built real collector interest quickly. When specific releases go out of production, the comps on those versions hold above retail consistently, especially for the core four Turtles in the 1987 cartoon deco.' },
+
+      { type: 'h2', text: 'Super7 ReAction: retro format, modern price' },
+      { type: 'p', text: 'Super7\'s ReAction line approaches TMNT from a completely different angle. The format is a deliberate Kenner-homage: roughly 3.75-inch figures, limited articulation (five points), vintage-inspired blister card packaging. The aesthetic is nostalgia-for-nostalgia — collectors who want the feeling of a 1980s figure without paying vintage-market prices for condition on a 35-year-old piece of plastic.' },
+      { type: 'p', text: 'Super7 prices ReAction figures higher than the format suggests — $17 to $22 at retail, often more for exclusives. The premium reflects licensing costs, collector-direct distribution, and limited print runs. Secondhand, the most-wanted characters (Shredder, Krang, Bebop, Rocksteady) run $25–$40 without much trouble. The four Turtles are more liquid and cheaper because Super7 reprints them more often. Honest take: the secondary market is thinner than NECA\'s and less predictable. Run sizes aren\'t published, which makes it hard to know whether a $30 secondhand price reflects genuine scarcity or just low seller competition.' },
+      { type: 'ul', items: [
+        'Shredder, Krang, Bebop, and Rocksteady consistently show the strongest secondary demand across the Super7 TMNT releases.',
+        'Convention exclusives and Ultimates versions (when Super7 produces them) print lower and carry correspondingly stronger floors.',
+        'The ReAction format has a specific buyer — not the vintage purist, not the modern-collector-grade buyer, but the person who wants the aesthetic with the assurance of new plastic and clean condition.',
+      ]},
+
+      { type: 'h2', text: 'How to think about all three markets together' },
+      { type: 'p', text: 'The practical advice is to decide which generation you are before you buy, because crossing markets without intention is how collectors end up with a shelf that satisfies no coherent vision and a collection that\'s hard to sell. Vintage Playmates buyers are buying the specific childhood object — the worn card, the original figure, the accessories they remember. NECA buyers are buying screen-accurate premium craft. Super7 buyers are buying aesthetic nostalgia in a new package.' },
+      { type: 'p', text: 'Those three buyers don\'t cross-shop much, which means the comp data separates cleanly. A vintage Playmates first-wave Leonardo is not competing with a NECA animated-series Leonardo for the same buyer — they\'re different objects solving different collecting needs. Understanding which problem you\'re solving tells you which section of the market to look at, and which set of comps actually reflects your situation.' },
+      { type: 'callout', text: 'If you\'re going to spend significant money on TMNT vintage, do the photo verification work before you commit. Accessories being present and original — not replacements sourced from another figure — makes the difference between a real comp and a misleading one.' },
+
+      { type: 'h2', text: 'Where the real value hides' },
+      { type: 'p', text: 'The highest resale floors in the TMNT market cluster around a few specific conditions: vintage first-edition figures in collector-grade condition with all accessories; NECA releases that have been discontinued due to license expiration or production decisions; Super7 convention exclusives and non-repacked limited editions. Everything else is more price-flexible.' },
+      { type: 'p', text: 'The practical call: if you\'re buying TMNT for nostalgia, vintage Playmates first-wave is the only version that actually is the thing you remember. NECA gives you screen-accurate craft Playmates never attempted. Super7 gives you the aesthetic with new plastic. None of them are the same object. Collectors who cross-shop the three without deciding which problem they\'re solving end up overpaying for the wrong thing. Figure out which generation you\'re buying before spending above retail — and pull the comps, because asking prices in vintage TMNT diverge from sold prices more than almost any other market on this site.' },
+    ],
+  },
+  {
+    slug: 'hope-summers-marvel-legends-figure-guide',
+    title: 'Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For',
+    metaTitle: 'Hope Summers Marvel Legends Figure — Price Guide & Collector Value | FigurePinner',
+    metaDescription:
+      'Hope Summers Marvel Legends Terrax wave guide: what the figure actually sells for, why the 2012 Hasbro release still moves, and which version to buy for your Marvel collection.',
+    dek: "First mutant born after Decimation. Came with Terrax's head. Still running ~$27 on the secondary market thirteen years later.",
+    readingMinutes: 5,
+    updated: '2026-06-18',
+    body: [
+      { type: 'p', text: 'Hope Summers showed up in X-Men #205 in January 2008 as the first mutant born after the Scarlet Witch depowered nearly every mutant on Earth during House of M. Cable grabbed her out of a burning building in Alaska, declared her the mutant messiah, and spent the next several years dragging her through the future to keep Bishop from putting a bullet in her. That is a lot of backstory for a figure Hasbro packed into a $19.99 wave slot in 2012.' },
+      { type: 'p', text: "The Hope Summers Marvel Legends from the Terrax BAF wave came with Terrax's head and Morg's axe — not her own accessories. She is a 6-inch figure in her red bodysuit with cable-influenced design elements, and she got exactly one Marvel Legends release before Hasbro moved on. No repacks. No reissues. No 2.0." },
+
+      { type: 'h2', text: 'What it actually sells for' },
+      { type: 'p', text: 'Loose Hope Summers figures from the Terrax wave have been averaging around $27 on the secondary market, with a range of $12 at the low (beat up, missing the BAF piece) to $40 at the high (clean, with the Terrax head). AF411 shows four tracked eBay sales averaging $26.92 against a $19.99 retail — so she runs about 35% above what she cost at Toys R Us in 2012. That is not a grail premium, but for a figure with no reissue and only one release window, it is a real floor.' },
+      { type: 'p', text: 'The price ceiling is higher if you are buying the whole wave to build Terrax. Hope has the head and weapon, which means a Terrax builder who finds everything else first will pay more than $27 to close the set. Completionist demand is the real driver keeping her above retail.' },
+      { type: 'callout', text: 'FigurePinner tracks current sold comps on the Hope Summers figure page. If you are buying or selling, check what actually moved in the last 30 days before pricing off a number you found anywhere else.' },
+
+      { type: 'h2', text: 'The Terrax wave, ranked for actually finding these' },
+      { type: 'p', text: 'The 2012 Terrax BAF wave is eleven figures and two Ghost Rider variants. Finding them all loose has gotten harder as collections get broken up at estate sales and not at retail. Here is the rough liquidity picture: Iron Man and Thor are the easiest finds (most-wanted for the characters, most produced), Hope and Constrictor are middle-tier, and the Steve Rogers variants are the thin end — not because they are expensive, but because nobody holds onto Captain America variants for thirteen years.' },
+      { type: 'ul', items: [
+        'Ghost Rider (Yellow Flame) — highest average in the wave at ~$42. Hasbro never reissued this exact deco and the yellow flame variant is legitimately harder to find sealed.',
+        'Hope Summers — ~$27, driven by Terrax BAF completionism. Price holds as long as collectors are still building Terrax.',
+        'Thor — ~$25. Common pull but consistently demanded. The market knows what it is.',
+        'Constrictor, Iron Man — at or below retail loose. Serviceable figures, not destination buys.',
+      ]},
+
+      { type: 'h2', text: 'Why a 2008 comic character from a cancelled run still has a market' },
+      { type: 'p', text: "Hope's market position is not about nostalgia in the usual sense. She is not a childhood character — she debuted when adult collectors were already collecting. What keeps her moving is the Krakoa era. Jonathan Hickman's House of X/Powers of X put the Mutant Messiah plot threads front and center again, and the Dawn of X finally gave Hope the role the original Messiah Complex promised: running the Five, the resurrection team that kept Xavier's nation alive. Collectors who read that run wanted the figure, and there is still only the one." },
+      { type: 'p', text: 'There is also no MCU version. The Krakoa books did not become a film, and Hope has never appeared in a Marvel movie or Disney+ series. That cuts both ways. No MCU bump means no massive new casual audience, but it also means no flood of new mass-market figures — what exists from 2012 is still what exists.' },
+
+      { type: 'h2', text: 'Should you buy this figure?' },
+      { type: 'p', text: 'If you read Messiah Complex or the Krakoa-era X-Men, yes — she is the right figure for that shelf. One release, no reissue, a character with genuine history. At $25-30 loose, it is not a risk buy.' },
+      { type: 'p', text: 'If you are building Terrax, factor her in early. The head is what BAF completers need and it is what sellers know to hold. Budget $30-35 for a clean Hope with the BAF piece, and less if you find one without it (the Terrax head is what carries the premium, not the figure itself).' },
+      { type: 'p', text: 'If you are speculating: I would not. There is no MCU trigger coming, no announced new Marvel Legends Hope Summers that would create an anniversary demand spike on the original. The floor is stable. The ceiling is already priced in. Hold what you have if you have it, but do not buy at $40 expecting $80.' },
+      { type: 'p', text: 'The full sold-comp picture for this figure is on [[FigurePinner|/marvel/marvel-legends/hope-summers]]. Current median, comp count, and price range — the same data without the opinion if you just want the number.' },
+    ],
+  },
+  {
+    slug: 'swvc-vs-black-series',
+    title: 'Star Wars Vintage Collection vs Black Series: Which One Is Yours',
+    metaTitle: 'Star Wars Vintage Collection vs Black Series — Collector Guide | FigurePinner',
+    metaDescription: 'Two scales, two completely different collector communities. The Vintage Collection is 3.75-inch carded nostalgia; the Black Series is 6-inch premium display. Here\'s how to pick the right lane.',
+    dek: 'Hasbro makes two lines. You don\'t have to collect both — and most serious collectors don\'t.',
+    readingMinutes: 7,
+    updated: '2026-06-17',
+    body: [
+      { type: 'p', text: 'Walk into any Target with a Star Wars aisle and you\'ll see both of them: a row of small, carded figures on vintage-styled blister cards, and a row of larger premium boxes with more detail, more paint, and a higher price tag. Same franchise, same Hasbro, two completely different collector communities. People who understand one sometimes assume they should collect both. Most of the time, that assumption costs them money and shelf space they didn\'t plan for.' },
+      { type: 'p', text: 'The Vintage Collection and the Black Series answer different questions. The right one for you depends on what you actually want from a Star Wars shelf.' },
+
+      { type: 'h2', text: 'The Vintage Collection: 3.75 inches and the Kenner legacy' },
+      { type: 'p', text: 'The original Kenner Star Wars figures from 1977 were 3.75 inches. That scale defined an entire generation of collecting, enabled vehicles and playsets at a reasonable size, and imprinted deeply on everyone who grew up with them. Hasbro\'s Vintage Collection is a direct heir to that tradition — not just the scale, but the packaging. Each figure ships on a retro-style blister card that deliberately echoes the Kenner cards from the original trilogy era.' },
+      { type: 'p', text: 'At current retail the individual TVC figures price around $17.99 to $19.99, which makes them significantly more accessible per-figure than their 6-inch counterparts. That lower per-unit cost enables something the Black Series doesn\'t: army building, vehicle crews, and the kind of deep-roster collecting where you want 30 different characters for a diorama, not 10 premium ones on a shelf.' },
+      { type: 'ul', items: [
+        'Scale compatibility — TVC figures fit in Hasbro\'s 3.75-inch vehicles and playsets. The Millennium Falcon, the AT-AT, the X-Wing — these are built for this scale.',
+        'Card art matters — the retro-style packaging is part of the product for MOC collectors. Vintage Collection packaging is designed to display as an object in its own right.',
+        'Deep roster — TVC releases obscure characters the Black Series may never touch. Diorama and vehicle collectors need quantity; TVC delivers it at a manageable per-piece cost.',
+        'Nostalgia premium — first-appearance characters and early-run TVC figures carry real secondary market value, especially carded in clean condition.',
+      ]},
+      { type: 'callout', text: 'The TVC card matters to a significant share of its buyers. Collectors who open everything sometimes underestimate how much of the Vintage Collection\'s value proposition is the packaging itself — the vintage aesthetic, the Kenner-era card art, the physical object on the wall. Strip that away and you\'re buying a small, well-articulated 3.75-inch figure. Keep it carded and you\'re buying Star Wars history in a blister.' },
+
+      { type: 'h2', text: 'The Black Series: 6-inch premium and display presence' },
+      { type: 'p', text: 'Hasbro launched The Black Series in 2013 as a direct answer to collector demand for larger, more detailed Star Wars figures. At 6 inches, with more articulation points, better paint applications, and often screen-accurate actor likenesses, Black Series figures are built for display first. They\'re the line you buy when you want Darth Vader to look right on a shelf at arm\'s length — not when you\'re populating a Millennium Falcon cockpit.' },
+      { type: 'p', text: 'Current retail on individual Black Series figures runs around $24.99 to $27.99, with two-packs and deluxe releases priced higher. That\'s a meaningful step up from TVC, and it shapes who collects this line: people who want fewer, better figures rather than comprehensive rosters. The Black Series collector tends to be selective. The TVC collector tends to complete.' },
+      { type: 'ul', items: [
+        'Display quality — at 6 inches, paint detail, head sculpts, and outfit textures read at a comfortable viewing distance. These are shelf objects designed to be looked at.',
+        'Actor likenesses — modern Black Series releases have pushed actor accuracy further than any previous Star Wars line. The premium price reflects engineering investment.',
+        'Archive Series and Deluxe — special releases within the Black Series tier add helmet-off heads, additional accessories, or collector-grade packaging at a further step up in price.',
+        'Secondary market on exclusives — Hasbro Pulse exclusives, SDCC figures, and two-packs with limited retail distribution consistently trade above retail when they sell through.',
+      ]},
+
+      { type: 'h2', text: 'What actually holds value in each line' },
+      { type: 'p', text: 'Both lines produce figures that hold value and figures that don\'t. The pattern is similar on each side: character iconicity, exclusivity, and whether Hasbro is likely to reissue it. The difference is what makes a figure exclusive in each context.' },
+      { type: 'p', text: 'In the Vintage Collection, the highest secondary market prices cluster around early-run figures that haven\'t been repacked, figures tied to specific card styles (original Kenner-inspired runs vs later packaging), and Hasbro Pulse or convention exclusives. Completeness matters here in a way it doesn\'t always in the Black Series — a TVC figure without its accessories is a harder sell, because the scale means accessories are small and easy to lose.' },
+      { type: 'p', text: 'In the Black Series, exclusivity is the dominant driver. A Hasbro Pulse exclusive or a limited 2-pack that sells through quickly trades above retail because there\'s no restock and no reprint on the immediate horizon. Iconic characters — Darth Vader, Luke Skywalker, Boba Fett — have had enough releases that any single version needs something specific to command a premium. The Archive Series repacks of classic characters specifically keep those characters available and cap secondary prices on the standard versions.' },
+      { type: 'callout', text: 'The Black Series repack is the thing TVC collectors don\'t have to think about as much. Hasbro repacks iconic characters into Archive Series releases specifically to keep them accessible — which is great for new collectors and a ceiling on secondary prices for existing sellers. Know which version you have and whether a repack is available before you price yours.' },
+
+      { type: 'h2', text: 'The scale divide is real and it matters' },
+      { type: 'p', text: 'These two lines are not interchangeable. They don\'t display together well. Their vehicles and accessories don\'t cross over. Their collector communities overlap but don\'t fully coincide. Buying one because you like the other is the clearest path to a shelf that satisfies neither.' },
+      { type: 'p', text: 'The collectors who are happiest in the Star Wars market tend to be ones who picked a lane. TVC because they want the full roster, the dioramas, the vehicles, and the carded display. Black Series because they want premium display pieces on a desk or shelf. Both because they\'re separate with a budget that accounts for both. What doesn\'t work is treating them as interchangeable options for the same shelf.' },
+      { type: 'p', text: 'Before you spend anything above retail on the secondary market, pull comps on FigurePinner for the specific figure and version you\'re looking at. The sold data tells you what that exact release — not the character in general — has actually traded for. Both lines have a wide spread between figures that hold and figures that don\'t, and the difference is almost never obvious from the listing title alone.' },
+    ],
+  },
+
+  {
+    slug: 'power-rangers-lightning-collection-guide',
+    title: 'Power Rangers Lightning Collection: Finally Treating Rangers Like Collector Figures',
+    metaTitle: 'Power Rangers Lightning Collection Guide — Value and Exclusives | FigurePinner',
+    metaDescription: 'Hasbro\'s Lightning Collection is the first Power Rangers line built for adult collectors. Here\'s how the exclusives work, what drives secondary market value, and how to navigate a deep catalog without overpaying.',
+    dek: 'For 25 years, Power Rangers had no collector line. Then Hasbro showed up.',
+    readingMinutes: 7,
+    updated: '2026-06-17',
+    body: [
+      { type: 'p', text: 'For most of its run, Power Rangers action figures were built for kids in the toy aisle. Bandai America held the license and produced figures that got the job done: recognizable Rangers, reasonable articulation, affordable price. What they didn\'t produce was anything that felt like it was designed with an adult collector in mind. That changed when Hasbro acquired the global Power Rangers license and announced the Lightning Collection at Power Morphicon in 2018.' },
+      { type: 'p', text: 'The Lightning Collection is the first Power Rangers line that plays by the rules collectors already knew from Marvel Legends and the Black Series. Six inches, 20-plus points of articulation, premium paint applications, character-accurate accessories, and a collector-focused distribution that includes dedicated exclusives. For the generation that watched Mighty Morphin Power Rangers on Saturday morning in 1993, this was the line they\'d been waiting for.' },
+
+      { type: 'h2', text: 'What the line is and how it\'s structured' },
+      { type: 'p', text: 'Each Lightning Collection figure stands at approximately 6 inches with a realistic body proportion rather than the exaggerated heroic sculpt of mass-market lines. Articulation is extensive — over 20 points — which lets these figures hold the action poses the franchise is known for. Accessories typically include interchangeable hands, character weapons, and often alternate effect parts or unmasked head sculpts on premium releases.' },
+      { type: 'p', text: 'The line covers Rangers from across the entire franchise history — Mighty Morphin, Zeo, Turbo, In Space, Lost Galaxy, Lightspeed Rescue, Time Force, Wild Force, Ninja Storm, Dino Thunder, and beyond. That franchise breadth is part of the appeal and part of the challenge for new collectors. There are over a hundred figures and counting; picking a lane matters.' },
+      { type: 'ul', items: [
+        'Standard releases — core wave figures available at Target, Walmart, and general retail. These are the most accessible entry point.',
+        'Two-packs — paired figures often tied to specific storylines or rival-hero matchups. Typically sold at specialty retail or direct from Hasbro Pulse.',
+        'Hasbro Pulse exclusives — direct-purchase figures with smaller print runs and often premium accessories or variants not available in the mass-market release.',
+        'GameStop exclusives — a retailer-exclusive tier that has included notable releases like color-swap 2-packs and the Lord Drakkon Helmet roleplay piece.',
+        'SDCC and convention exclusives — the tightest print runs in the line; convention-floor distribution keeps quantities genuinely low.',
+      ]},
+      { type: 'callout', text: 'The exclusivity tier in the Lightning Collection is real, not marketing language. Hasbro Pulse exclusives and convention pieces print in meaningfully smaller quantities than standard wave figures. When they sell through, the secondary market price reflects genuine scarcity — not manufactured rarity, but actual limited production.' },
+
+      { type: 'h2', text: 'What drives secondary market value' },
+      { type: 'p', text: 'The Lightning Collection secondary market concentrates value in two places: specific Rangers who anchor the franchise\'s nostalgia core, and exclusive figures that didn\'t get wide retail distribution. Those two factors often overlap — a Hasbro Pulse exclusive of the original Mighty Morphin Pink Ranger hits both buttons at once, and figures like that have traded at 2x to 3x original retail on the secondary market once they\'re sold through.' },
+      { type: 'p', text: 'Character demand in this line is deeply tied to the original Mighty Morphin season and the cast that defined the franchise for an entire generation. The five original Mighty Morphin Rangers, their villains (Rita Repulsa, Lord Zedd), and the Green/White Ranger transition arc carry the strongest secondary demand. Characters from later seasons — even popular ones — tend to hold closer to retail unless they\'re exclusive or part of a limited-quantity two-pack.' },
+      { type: 'ul', items: [
+        'Original Mighty Morphin Rangers — the core five (and six with Green Ranger) drive the strongest demand regardless of release format.',
+        'Lord Drakkon — the fan-created villain from the comics; a collector-community grail that generated real secondary market heat on its releases. Pulse-exclusive Drakkon figures have regularly cleared $60–$100 secondhand when they\'ve been available.',
+        'Ranger variants and evil Rangers — alternate deco versions of iconic Rangers (specifically the Black Dragon and evil variants from comics and crossover events).',
+        'Exclusive two-packs with story-specific figures — the In Space Red vs. Astronema pairing and the S.P.D. B-Squad vs. A-Squad releases attracted collectors who wanted the narrative framing as part of the purchase.',
+      ]},
+
+      { type: 'h2', text: 'The completionist challenge' },
+      { type: 'p', text: 'The Lightning Collection is a completionist\'s nightmare in the best possible way. The franchise history is enormous — 30-plus seasons of Rangers, hundreds of characters, and Hasbro has been committed to representing them across the line. A collector who decides to complete every Mighty Morphin figure faces a different task than one completing every Dino Thunder figure, and the secondary market pricing reflects that: Mighty Morphin completionists are competing with the largest pool of buyers.' },
+      { type: 'p', text: 'The practical advice is to pick a team and define done. Collecting all five original Mighty Morphin Rangers plus their major villains is a coherent, achievable goal with strong display impact. Trying to build every season simultaneously is a budget event. The line keeps expanding; if you don\'t set a perimeter, you\'re always one wave behind.' },
+      { type: 'callout', text: 'The Lightning Collection has a team-completion pull that\'s specific to the Rangers format — you need all five (or six) to feel done in a way Marvel Legends wave collecting doesn\'t require. That structural need drives demand for the weaker-market members of a team when collectors are completing a full roster. A figure that pegwarmed in isolation might be a floor-buy for someone who needs it to complete their team display.' },
+
+      { type: 'h2', text: 'What to know before you buy on the secondary market' },
+      { type: 'p', text: 'The Lightning Collection has been in production long enough that some early releases have meaningfully different secondary market prices than their original retail. If you missed a Hasbro Pulse exclusive from 2020, you\'re buying on the secondary market at whatever the current comp is — and for the right characters, that number can be well above original retail.' },
+      { type: 'p', text: 'The category to be cautious about is standard wave figures that haven\'t been exclusive. These print in mass-market quantities and eventually come down to or below retail when retailers clear inventory. Paying a premium for a standard wave figure that simply hasn\'t been discounted yet is the mistake; at $24.99 retail, a standard wave Lightning Collection figure has no business going for $45 unless it has a specific reason to. The comp history will tell you whether a figure has ever traded above retail or has a pattern of sitting.' },
+      { type: 'p', text: 'Pull the FigurePinner comps before committing to any above-retail price in this line. The Lightning Collection has enough releases and enough secondary market history that the comp data is meaningful — you can see whether you\'re buying a genuine scarcity at a fair price or paying early-adopter premium for a figure that will eventually be widely available.' },
+    ],
+  },
+
+  {
+    slug: 'hasbro-wwf-value-breakdown',
+    title: 'Hasbro WWF Figures: The Complete Era Value Breakdown',
+    metaTitle: 'Hasbro WWF Figure Value Guide — Series 1 Through 11 | FigurePinner',
+    metaDescription: 'Eleven series, 99 figures, and a value spread from a few dollars to several hundred. The complete guide to which Hasbro WWF figures actually cost money, and why.',
+    dek: 'Four inches of bright plastic and a spring-loaded gimmick. Some of them are worth grocery money. A few are worth a car payment.',
+    readingMinutes: 8,
+    updated: '2026-06-17',
+    body: [
+      { type: 'p', text: 'There is something specific about a Hasbro WWF figure. The colors are too bright. The proportions are slightly wrong. The action feature — the spring-loaded arm that makes Hulk Hogan throw a punch when you squeeze his legs — is the kind of feature no collector line would include today. And yet these figures, produced between 1990 and 1994, have a hold on a specific generation of wrestling fan that nothing made since has replicated. The people who owned them are in their 30s and 40s now, which is why the serious ones cost serious money.' },
+      { type: 'p', text: 'Understanding the Hasbro WWF line means understanding that value is concentrated at the ends: the early series carry the iconic names, and the late series carry the scarcity. The middle is the affordable floor. Most collectors get burned by not knowing which end they\'re in.' },
+
+      { type: 'h2', text: 'The line at a glance: 11 series, 99 figures' },
+      { type: 'p', text: 'Hasbro produced 11 waves of WWF Real Wrestling Action figures from 1990 through 1994. The line totaled approximately 99 released figures across 86 single-carded releases, 5 tag team two-packs, and 3 mail-away bagged figures. Each figure stood about 4 inches and shipped with a unique action feature built into the body — squeeze the legs, press a button, flex the arms. No two figures had the same gimmick, which was the line\'s signature engineering choice and one of the reasons loose figures without their cards are immediately identifiable to collectors.' },
+      { type: 'p', text: 'The cards changed color by series: Series 1 through 6 used neon blue, Series 7 switched to yellow, Series 8 to red, Series 9 to purple, Series 10 to a darker blue, and Series 11 used the rare green card that is now the most recognizable collector target in the line. Card color tells you era at a glance, which matters when you\'re evaluating a loose figure with no packaging context.' },
+      { type: 'callout', text: 'The card is the fastest provenance signal in the Hasbro WWF line. A green card is a Series 11 figure — the scarcest series in the run. A neon blue card is Series 1 through 6 — the most common era, which is also where the biggest names lived. Blue card Hulk Hogan is accessible. Green card Billy Gunn is not.' },
+
+      { type: 'h2', text: 'Series 1 through 6: big names, common floor' },
+      { type: 'p', text: 'The first wave launched in 1990 with 12 figures covering the biggest names of the era: Hulk Hogan, Ultimate Warrior, Macho Man Randy Savage, Jake "The Snake" Roberts, Andre the Giant, and more. These were the superstars on WWF television every week, the ones kids recognized, and the ones parents would buy. The result was high production volume — these figures were ordered in large quantities because demand was enormous and Hasbro and WWF needed the first series to establish the line.' },
+      { type: 'p', text: 'That volume is the reason most Series 1 through 6 loose figures remain affordable. Hulk Hogan is recognizable and nostalgic, but there are a lot of them. A loose Hogan in decent shape without his accessories is an inexpensive pickup at most collector sales. A complete, clean example with accessories is more interesting, and a mint-on-card example is a real purchase — but the figure\'s iconic status doesn\'t translate to scarcity because they printed millions.' },
+      { type: 'ul', items: [
+        'Hulk Hogan (Series 1) — the flagship, the nostalgia centerpiece, and widely available loose. MOC commands a premium; loose is the budget floor of the whole line.',
+        'Ultimate Warrior (Series 1) — similar dynamics to Hogan: iconic, high production, affordable loose, meaningful MOC premium.',
+        'Andre the Giant (Series 1) — slightly more interesting than other Series 1 figures because of figure size and the emotional weight of the character; still not scarce.',
+        'Series 3 Sgt. Slaughter variant — a no-name-on-card variant believed to have seen very limited regional release; the kind of variant that exists at the far end of the collector obsession curve.',
+      ]},
+
+      { type: 'h2', text: 'Series 7 through 10: the middle ground' },
+      { type: 'p', text: 'As the line moved into the mid-series years, two things changed: roster depth expanded into less iconic names, and production volumes started to reflect declining mass-market demand as wrestling TV struggled in the early 1990s before the Monday Night Wars reignited interest. Series 7 introduced first-time figures of Shawn Michaels, Owen Hart, and Razor Ramon — names that matter to a generation of fans but that weren\'t yet the household names they became.' },
+      { type: 'p', text: 'These mid-run figures occupy an interesting space. They\'re not as scarce as Series 11, not as iconic-driver as Series 1 through 3, and they represent wrestlers who went on to define an era after this line ended. A first-time Shawn Michaels Hasbro figure carries the weight of what he became, even though it was made at a time when he was still on the rise. Collectors who track career trajectories pay attention to these.' },
+
+      { type: 'h2', text: 'Series 11: the green card scarcity' },
+      { type: 'p', text: 'Series 11 is where the real money lives, and the reason is simple: it was the last series produced before the line ended, and it shipped in meaningfully smaller quantities than the earlier waves. When a line is winding down, retailers order conservatively and distribution is uneven. The figures that were in Series 11 — Ludvig Borga, Crush, The 1-2-3 Kid (later X-Pac), and Billy and Bart Gunn — were never going to have the retail staying power of a Hulk Hogan.' },
+      { type: 'p', text: 'The result is that mint-on-card Series 11 figures are among the most difficult finds in the entire Hasbro WWF run. The 1-2-3 Kid and Ludvig Borga in particular are treated as grail-level pieces by serious collectors of the line. Loose examples are more available but still command premiums relative to the rest of the series because the production totals were simply lower.' },
+      { type: 'ul', items: [
+        'Ludvig Borga — the Finnish villain who had a brief but memorable WWF run; one of the hardest Series 11 cards to find in clean condition.',
+        '1-2-3 Kid — the figure that documented a legendary upset moment in WWF history; strong demand from fans of that era.',
+        'Crush — the Kona Crush version from the 1993 heel turn; another short-run figure with collector demand.',
+        'Billy and Bart Gunn (two-pack) — the tag team format means two figures, one card, and a lower production run than standard singles.',
+      ]},
+
+      { type: 'h2', text: 'The mail-away tier and the variants that matter' },
+      { type: 'p', text: 'Three figures in the Hasbro WWF line were distributed exclusively as mail-away bagged figures: a red tank top Hulk Hogan, Bret "Hit Man" Hart, and The Undertaker. These were not available in stores — collectors sent in proof of purchase tokens from other Hasbro WWF products and received these figures directly from Hasbro. Because the barrier to entry required buying multiple other figures and completing the redemption process, the number of people who actually received them was smaller than the retailer run of any Series 1 through 11 figure.' },
+      { type: 'p', text: 'The red tank top Hogan mail-away is the single most valuable figure in the Hasbro WWF line. It exists in smaller numbers than any other release, it documents a specific variant of the era\'s biggest star, and it is legitimately difficult to authenticate because the bagged packaging is fragile and rarely survives intact. Clean examples command prices that can leave regular Series 1 through 11 figures far behind.' },
+      { type: 'callout', text: 'The mail-away figures are the authentication challenge of the Hasbro WWF line. Because they came in a bag rather than a blister card, "sealed" examples are genuinely rare. Ask for documentation, compare the plastic and paint to known examples, and cross-reference the comp history before you spend at mail-away premium prices.' },
+
+      { type: 'h2', text: 'The condition question: what clean actually means here' },
+      { type: 'p', text: 'These figures are 30 to 35 years old. A loose Hasbro WWF figure that shows no paint wear, has all its accessories, and retains tight joints is a different object than one with a faded tan, missing pieces, and a loose action feature. The spread between excellent loose and beat-up loose can be significant — and because these were children\'s figures designed to be played with, the beat-up version is far more common.' },
+      { type: 'p', text: 'MOC collecting at this level requires patience and specificity. The card color tells you the series; the card condition tells you the grade. Bubbles can yellow and separate from the card over 30 years; the printing can fade; the card corners crush. A Series 11 green card figure in genuinely high-grade condition is a much rarer object than a Series 1 Hulk Hogan in the same grade, and the price gap reflects that.' },
+      { type: 'p', text: 'For loose figures, condition assessment comes down to paint retention, accessory completeness, and joint tightness. The action features in these figures rely on internal springs that can weaken or break after 30 years. A figure whose gimmick no longer works is not the same collectible as one that functions — check before you buy.' },
+      { type: 'callout', text: 'Accessories authenticate the figure. Each Hasbro WWF figure shipped with a character-specific accessory, and the loose figure market is full of examples missing their pieces. A Hulk Hogan without his belt, an Ultimate Warrior without his title, an Andre the Giant without his figure-appropriate accessories — these are incomplete, and buyers who know the line will price them accordingly. Learn the accessory list for the figure you\'re targeting before you pay complete-figure prices.' },
+
+      { type: 'h2', text: 'Where to look for comps' },
+      { type: 'p', text: 'The Hasbro WWF secondary market is active on eBay, with sold listings going back far enough to give you real price history on most figures. The spread between a poor example and a clean one is wider in this line than almost any other vintage wrestling release, because the age and the play-toy origin mean condition variation is enormous. Pull the comps on FigurePinner, filter by condition descriptor, and set a price target before you start bidding. A Series 11 MOC in clean condition is a different purchase decision than a loose Series 11 in played-with shape, and the sold data will show you exactly how much that difference costs.' },
+    ],
+  }
+
+,
+
+  {
+    slug: 'marvel-legends-price-guide-2026',
+    title: 'Marvel Legends Price Guide 2026: What Every Wave Is Actually Worth',
+    metaTitle: 'Marvel Legends Price Guide 2026 — Current Values by Wave | FigurePinner',
+    metaDescription: 'Sold-comp pricing on Marvel Legends from Toy Biz to today. BAF economics, Walgreens exclusives, HasLab values, and the figures actually worth hunting in 2026.',
+    dek: 'Twelve years of Hasbro Marvel Legends has produced thousands of figures. Most are worth retail or less. A handful are worth real money. Here is which is which.',
+    readingMinutes: 10,
+    updated: '2026-06-18',
+    body: [
+      { type: 'p', text: 'Marvel Legends pricing splits cleanly into two eras and one uncomfortable truth. The Toy Biz era (2002-2006) produced some of the most articulated mass-market superhero figures ever made and a handful of genuinely scarce releases that now trade at multiples of original retail. The Hasbro era (2012-present) is enormous, well-distributed, and mostly priced within ten dollars of MSRP on the secondary market because Hasbro prints enough of everything to satisfy demand. The uncomfortable truth is that most Legends collectors overpay on the secondary market for figures that were simply at a store they did not visit.' },
+      { type: 'p', text: 'MSRP hit $27.99 in September 2025, up from $24.99. That repricing shifted the entire secondary market calculus: figures that might have sold at $30-35 loose now face a different comparison against retail, and BAF waves where you need five or six figures to complete the build-a-figure are now $140-170 in new purchases. Understanding where secondary market prices sit relative to new retail matters in 2026 in a way it did not three years ago.' },
+
+      { type: 'h2', text: 'Toy Biz era: the figures that actually cost money' },
+      { type: 'p', text: 'The Toy Biz Marvel Legends run ended in 2006 when Hasbro acquired the license. In the years between, Toy Biz produced 14 standard waves plus the Legendary Riders series, Famous Covers, and specialty releases. The articulation was ahead of its time — 40+ points of articulation on figures that retail competitors were selling as 5-POA — and the character selection went deep. That combination created a collector base that never fully converted to Hasbro and still hunts the Toy Biz run specifically.' },
+      { type: 'p', text: 'The rarest Toy Biz releases concentrate value in two places. The Series 6 Blue Variant Wasp — a running production change where a handful of cases shipped with a blue costume instead of the standard yellow — is the single highest-value variant in the Toy Biz run. Clean examples have sold above $3,500. The scarcity is real: it was a brief print run during a mid-wave change, and most collectors who got one either did not know what they had or opened it. Sealed examples are legitimately rare objects.' },
+      { type: 'ul', items: [
+        'Series 6 Blue Variant Wasp — $3,500+ sealed, $800-1,200 loose clean. The single highest-demand Toy Biz variant.',
+        'Series 1 through 3 sealed cases — wave-complete sealed cases have sold in the $400-800 range depending on condition; individual sealed figures from the first waves command 3-4x original retail.',
+        'Onslaught BAF (Series 8) — the first Hasbro-adjacent BAF transition period; complete assembled Onslaught figures have sold in the $180-350 range.',
+        'Galactus (Famous Covers adjacent, 2004) — the 14-inch Galactus from the Legendary Riders era; assembled clean examples at $150-250.',
+      ]},
+
+      { type: 'h2', text: 'Hasbro BAF economics: the math nobody does before they start' },
+      { type: 'p', text: 'The BAF — Build-A-Figure — is the structural mechanic that drives Hasbro wave purchasing. Each figure in a wave includes one piece of a larger figure; buy all six or seven figures in the wave and you can assemble a character that was never sold individually. This is smart product design and the reason collectors describe buying figures for the leg. You are not buying Shriek because you want Shriek. You are buying Shriek because the Zabu BAF is not complete without her piece.' },
+      { type: 'p', text: 'The secondary market consequence is predictable. The most-wanted figure in a wave drives demand for the others. If collectors need every figure to complete the BAF, the weakest-wanted figure in the wave still has to move, so Hasbro has cover to include deeper-cut roster picks. And on the secondary market, BAF pieces trade individually — a missing piece is typically a 20-60% discount off the assembled figure price, with the head commanding the largest premium (often 50%+ of the total assembled value for popular BAFs).' },
+      { type: 'callout', text: 'Before you buy a complete assembled BAF on the secondary market, price out the individual pieces. For many waves, buying the figures you want plus the specific BAF pieces you are missing from other sources comes out cheaper than buying an assembled BAF outright. The exception is when someone has already done this work and is selling a complete assembled figure at a discount to save you the assembly hassle.' },
+      { type: 'p', text: 'The HasLab Sentinel is the most expensive single Marvel Legends release: a 24-inch jumbo figure that funded through Hasbro Pulse in 2021 at $349.99. Secondary market comps on complete Sentinels have settled around $480-680 depending on condition and whether all unlocked tiers are included. It is a significant purchase either way, which is exactly what HasLab is designed to be.' },
+
+      { type: 'h2', text: 'Walgreens exclusives: the pharmacy problem' },
+      { type: 'p', text: 'The Walgreens exclusive program for Marvel Legends began in 2015 and has since produced dozens of figures available only at Walgreens locations. In concept this is a reasonable retail exclusive arrangement. In practice it created shared trauma for an entire community. Walgreens does not distribute product evenly, does not restock predictably, and for several years had no online ordering option. Collectors hunting the original X-Factor Cyclops or the first Dazzler were at the mercy of which Walgreens near them happened to get the shipment.' },
+      { type: 'p', text: 'The secondary market corrects for this distribution failure, which is why Walgreens exclusives that hit at the wrong time or in the wrong region can trade at 2-3x retail. The figures that command the largest premiums are the ones featuring characters with strong demand who had few or no other Legends releases at the time of the exclusive — characters where the Walgreens figure was the only option. A character with multiple Legends releases across different waves has secondary market price relief because collectors can choose which version to hunt.' },
+      { type: 'ul', items: [
+        'X-Factor Cyclops (2016) — the first major Walgreens exclusive to demonstrate the distribution problem; secondary market peaked well above retail, has come down somewhat as more Cyclops releases arrived.',
+        'Dazzler (2017) — the roller-disco costume Dazzler is a specific character want for X-Men completionists and the only release of that costume at that scale; still commands a premium.',
+        'Havok (X-Factor, 2018) — the black costume version; has sold consistently above retail since release because the character demand and the Walgreens friction combined.',
+        "D'Spayre (2019) — lower character demand kept secondary market pricing closer to retail; demonstrates that not all Walgreens exclusives command a premium.",
+      ]},
+
+      { type: 'h2', text: 'Pulse exclusives and Fan Channel figures' },
+      { type: 'p', text: 'Hasbro Pulse sells direct-to-collector exclusives and Fan Channel figures that do not go through standard retail. The Pulse exclusive model solves the scarcity problem by making figures available online, but creates its own version of collector anxiety: Fan Friday drops, bot-driven sell-outs, and the made-to-order vs. limited-run distinction that the community debates constantly. Made-to-order Pulse figures — produced to demand during a specified window — theoretically eliminate secondary market scarcity. In practice, the order window means collectors who miss it still have to pay secondary market prices.' },
+      { type: 'p', text: 'The Pulse premium pricing (typically $34.99-44.99 versus $27.99 retail) also sets a higher floor for secondary market comparison. A Pulse exclusive that sells for $38 at retail has to be noticeably scarce or wanted to trade above $45 on the secondary market, because the markup over retail is already built in. Some do — SDCC and Fan Expo exclusives with specific convention-only packaging have their own collector premium beyond just the figure.' },
+
+      { type: 'h2', text: 'The figures worth buying now and the ones to skip' },
+      { type: 'p', text: 'The honest Legends secondary market assessment in 2026 is that most figures from 2018 forward are within $5-10 of original retail on the secondary market, and many older figures have been reissued or revisited enough that early-release premiums have compressed. The exceptions are figures with no reissue, strong character demand, and limited original distribution — that combination is rarer than collectors assume.' },
+      { type: 'p', text: 'The Fin Fang Foom BAF wave (2007, first year of Hasbro) is the highest-value complete Hasbro wave. Assembled Fin Fang Foom figures have sold in the $265-400 range; the complete wave bought individually costs more than buying the assembled figure, which is unusual. The Series 6 Deadpool from the Toy Biz run — the first widely distributed Deadpool Legends figure — has sold in the $85-200 range for clean loose examples, and the character demand has not cooled.' },
+      { type: 'callout', text: 'The fastest research move in Marvel Legends is checking whether a figure you want has been reissued, retooled, or re-released in a recent wave. Hasbro revisits popular characters regularly. If your target figure has a newer version at retail, the secondary market price on the older release will reflect that availability. If your target is the only Legends release of that character at that scale in that costume, the secondary market pricing will show the scarcity.' },
+      { type: 'p', text: 'What I skip: any standard single-packed Hasbro figure from 2019 forward that is not a confirmed exclusive. These turn up at retail, go on clearance, and the secondary market premium almost never survives 18 months. The collectors paying $45 for a figure that retails at $27.99 and was widely distributed are going to see those comps compress. Pull the FigurePinner sold history before you buy — if the price trend is down over six months, wait.' },
+    ],
+  },
+
+  {
+    slug: 'most-valuable-wwe-elite-figures',
+    title: 'Most Valuable WWE Elite Figures: The Resale Prices That Will Surprise You',
+    metaTitle: 'Most Valuable WWE Elite Figures — Secondary Market Price Guide | FigurePinner',
+    metaDescription: 'The WWE Elite figures worth real money on the secondary market. Ringside exclusives, convention variants, retired legends, and the True FX misses that somehow still command premiums.',
+    dek: 'Mattel has been making Elite figures since 2010. Most are worth what you paid. A specific handful are worth a phone bill, a car payment, or more.',
+    readingMinutes: 9,
+    updated: '2026-06-18',
+    body: [
+      { type: 'p', text: 'The WWE Elite secondary market operates on two variables that do not always move together: character demand and distribution scarcity. A figure of a major star with wide retail distribution trades close to original retail because there are enough of them. A figure of a mid-card guy who got one Elite release and then had his rights lapse trades above retail because there is no other option. The overlap — a major star in a short-run exclusive format — is where the real money lives.' },
+      { type: 'p', text: 'Mattel launched the Elite Collection in 2010 and the line has now exceeded 120 numbered waves plus a parallel track of Ringside Collectibles exclusives, Mattel Creations drops, Target exclusives, and convention-exclusive variants. Understanding which tier a figure came from is more important than the figure itself when assessing secondary market value.' },
+
+      { type: 'h2', text: 'Ringside exclusives: the collector tier that actually holds value' },
+      { type: 'p', text: 'Ringside Collectibles runs the exclusive program that produces the most consistently valuable WWE Elite variants. RSC exclusives are sold through ringsidecollectibles.com and at Ringside Fest, the annual convention that functions as the industry calendar event for wrestling figure collectors. Production on Ringside exclusives is deliberately limited — these are not mass-retail runs, and when they sell through, they are gone.' },
+      { type: 'p', text: 'The figures that command the largest RSC premiums are attire-specific releases of major stars that cannot be replicated from the standard retail lineup. A specific entrance gear version of a Hall of Famer, or a championship-specific attire that only appeared in one match — these have no retail equivalent, and collectors who care about accuracy (which is everyone in this fandom) will pay secondary market prices rather than accept the retail version as a substitute.' },
+      { type: 'ul', items: [
+        'RSC-exclusive Attitude Era variants of Undertaker, Shawn Michaels, and Steve Austin — attire-specific releases that locked in a match or moment; consistently hold 1.5-2.5x original retail on the secondary market.',
+        'Ringside Fest convention exclusives — sold in limited quantities at the event itself; figures that were never made available online or went up in very limited quantities post-event carry the highest premiums.',
+        'Hall of Fame tribute editions — released in conjunction with the annual WWE Hall of Fame ceremony; character demand plus the ceremonial framing drives collector interest.',
+      ]},
+
+      { type: 'h2', text: 'Legends whose rights have lapsed' },
+      { type: 'p', text: 'The most predictable value driver in WWE Elite is a legend whose talent agreement with WWE has ended, taking their likeness rights with it. When Mattel can no longer produce new figures of a performer, every existing Elite becomes the final version — there is no reissue coming, no updated sculpt, no new wave to satisfy demand. The secondary market prices the finality.' },
+      { type: 'p', text: 'The names that generate the most activity in this category shift as talent relationships change. The pattern is consistent: an announcement that a legend is leaving WWE or a deal has not been renewed creates an immediate secondary market bump for their existing Elites. Collectors who have been watching the figure\'s comps and notice this correlation have a window before the broader market catches up. By the time it is widely discussed on r/wrestlefigs, the floor has already moved.' },
+      { type: 'callout', text: 'The rights-lapse play is the most repeatable value opportunity in WWE Elite collecting. It requires knowing which performers are under what kind of agreements and watching the business side of wrestling as closely as the product side. Most collectors only watch the product side. The ones who watch both are consistently ahead on resale timing.' },
+
+      { type: 'h2', text: 'True FX misfires that still sell: the strange economics of scarcity' },
+      { type: 'p', text: 'Mattel introduced True FX face scanning technology around 2019, promising portrait accuracy that would finally make Elite figures look like the performers they depicted. The results have been inconsistent. A True FX miss — where the face scan produces something that looks vaguely like the person but with an expression that suggests mild food poisoning — has become a thread genre on its own. The community has documented the failures with forensic enthusiasm.' },
+      { type: 'p', text: 'Here is the economics paradox: a True FX miss on a major star still sells, because the alternatives are older sculpts or nothing. A bad face scan of Becky Lynch is still the most accurate Becky Lynch figure available if it is the most recent one, and collectors who want their shelf to represent the current roster will buy it. The miss does suppress secondary market premiums — a widely-criticized True FX figure trades closer to retail than a well-received one — but it does not crater the market because there is no alternative product filling the same niche.' },
+
+      { type: 'h2', text: 'The Target and Walmart exclusive tier' },
+      { type: 'p', text: 'Major retailers run their own Elite exclusive programs, and the value dynamics differ meaningfully from Ringside. Target and Walmart exclusives are produced in larger quantities than RSC figures because they need to stock thousands of locations, but they are still not in the general retail planogram — they show up irregularly, ship to certain regions more heavily than others, and sell through at different speeds in different markets.' },
+      { type: 'p', text: 'The Target Elite exclusives in the retro packaging — where current stars are presented on vintage-style packaging that references the classic Hasbro or LJN era — have been the most successful retail exclusive format of the last several years. The retro card is an additional collector argument beyond the figure itself: you are buying a figure AND a piece of nostalgic product design. These sell well at retail and hold their value better than standard-packaged exclusives of comparable figures.' },
+
+      { type: 'h2', text: 'Which Elites are worth tracking right now' },
+      { type: 'p', text: 'The figures generating secondary market activity in the current window are concentrated in a few categories. First-Elite releases of performers who have since become major stars — where the original figure was a mid-card buy at the time and is now the only Elite of a main-eventer. Attitude Era attire variants with licensing windows that look uncertain. And anything from the post-2020 period where a performer\'s exit from WWE came faster than collectors anticipated, leaving a small Elite footprint before the rights question became complicated.' },
+      { type: 'p', text: 'The mistake is buying Elites of active main-eventers with wide retail distribution as investments. Cody Rhodes is getting Elites. Roman Reigns is getting Elites. The Rock returned and got Elites immediately. These are figures that will be reprinted and revisited as long as the performers are relevant to WWE programming, and the secondary market for the current wave version reflects that — you are not going to flip a standard retail Roman Reigns Elite for a meaningful premium when there are three other Roman Reigns Elites in production.' },
+      { type: 'callout', text: 'The comp research move for WWE Elite is checking the figure\'s reissue history before you pay above retail. FigurePinner\'s sold-comp data shows whether a figure has a track record of holding value or compresses when the next version arrives. A figure\'s third or fourth release in a character\'s Elite history needs a specific argument for why this version is irreplaceable — attire accuracy, exclusive format, or lapsed rights — or the secondary market will not reward holding it.' },
+
+      { type: 'h2', text: 'The BRG adjacent market: vintage comparison' },
+      { type: 'p', text: 'Collectors deep enough into wrestling figures to be spending real money on Elites often have opinions about the LJN rubber figures and the Hasbro spring-action era. The comparison matters because it calibrates expectations. LJN Big Rubber Guys from the 1980s are a genuinely scarce collectible market — far fewer were produced, far fewer survived in collector condition, and the characters they cover are fixed by the era. The Elite market is permanently in production for as long as WWE programs.' },
+      { type: 'p', text: 'That production permanence is the structural ceiling on WWE Elite values. No current Elite figure will ever be as scarce as a clean LJN André the Giant, because LJN stopped making figures decades ago and the production run is fixed. Elites can always theoretically be reissued. The exceptions are the situations described above: exclusives with defined production runs, rights-lapsed figures with no legal path to reissue, and figures from specific product lines that Mattel has discontinued. Those are the only Elites that develop genuinely fixed scarcity.' },
+    ],
+  },
+
+  {
+    slug: 'how-to-find-action-figure-values',
+    title: 'How to Find What Your Action Figures Are Worth',
+    metaTitle: 'How to Find Action Figure Values — The Right Way to Research Prices | FigurePinner',
+    metaDescription: 'The correct method for finding what action figures are actually worth. Why listed prices lie, why sold comps are the only number that matters, and where to actually find them.',
+    dek: 'Listed prices are fiction. Sold prices are facts. Here is how to find the facts.',
+    readingMinutes: 7,
+    updated: '2026-06-18',
+    body: [
+      { type: 'p', text: 'The most common mistake in action figure valuation is looking at what figures are listed for rather than what they have actually sold for. These are different numbers, often by a large margin, and confusing them is how collectors end up overinsuring collections, making bad buy decisions, and getting taken at shows. The listed price is what a seller hopes to get. The sold price is what a buyer agreed to pay. Only one of those is real.' },
+
+      { type: 'h2', text: 'Start with sold comps, not listings' },
+      { type: 'p', text: 'eBay sold listings are the primary market data source for action figure values. Go to eBay, search for the figure, then filter to "Sold" listings. What you see is the actual transaction history — what real buyers paid for the same figure in the same condition in recent weeks. This is your comp data.' },
+      { type: 'p', text: 'The reason to filter to sold rather than active listings is simple: anyone can list anything at any price. A figure listed at $500 that has not sold in 18 months is not worth $500. It is worth what someone will pay for it today, which the sold history will tell you. Active listings create anchoring bias — you see a high number and assume it reflects value. Sold listings puncture that assumption immediately.' },
+      { type: 'callout', text: 'FigurePinner aggregates sold-comp data so you do not have to run this search manually for every figure you want to research. The sold history we surface is drawn from real transaction data and gives you a fast read on where a figure\'s market actually sits — not where sellers wish it did.' },
+
+      { type: 'h2', text: 'The condition variables that change the number' },
+      { type: 'p', text: 'Action figure values are not a single number. They are a range defined by condition, completeness, and packaging. The same figure can have a sold history that spans $15 to $150 depending on these variables, and mixing comp data across condition tiers is how you end up with a useless average.' },
+      { type: 'p', text: 'The conditions that matter, in descending order of value: mint in sealed package (never opened, original packaging intact and undamaged); mint on card or mint in box (package opened but figure never removed, or condition clearly near-mint); complete loose with all accessories (figure removed from package but all accessories present and figure in excellent shape); loose without accessories (figure only, no packaging, no extras); played-with condition (paint wear, loose joints, missing pieces, visible play damage).' },
+      { type: 'p', text: 'When you pull comps, filter to the condition you are actually researching. A mint-in-sealed-package comp has nothing to tell you about the value of a played-with loose figure. They are different objects with different markets. The mistake is taking the MOC number and applying it to your open loose figure, then being confused when no one will pay that price.' },
+
+      { type: 'h2', text: 'What accessories actually do to value' },
+      { type: 'p', text: 'Accessories are not afterthoughts. For many figures — particularly vintage lines — an accessory-complete example is worth meaningfully more than the same figure without its pieces. The spread can be 30-50% for figures from the Kenner, Hasbro, LJN, and similar eras where character-specific accessories were part of the product identity. A G.I. Joe figure without its weapons is an incomplete figure, and the secondary market prices it accordingly.' },
+      { type: 'p', text: 'The accessory question matters most in vintage and specialty collector lines. For modern figures in mass-retail lines — a current Hasbro Marvel Legends, a recent WWE Elite — accessories are less central to the value calculation because the figure itself carries most of the appeal. But even here, a figure with all its accessories and the correct hands and swap-out parts is a cleaner object than one missing pieces, and the comp history will reflect it.' },
+
+      { type: 'h2', text: 'Packaging condition for sealed and carded figures' },
+      { type: 'p', text: 'If you are valuing carded or boxed figures, packaging condition is its own research problem. The package is part of the collectible. For vintage carded figures — think Kenner Star Wars, Hasbro WWF, LJN — the card can be worth as much as or more than the figure, and the card condition determines the ceiling on what the complete piece will sell for. Yellowed bubbles, bubble lift, crushed corners, sun fade, and price-tag residue all suppress value in ways that compound.' },
+      { type: 'p', text: 'The collector shorthand for package grades runs from C-10 (absolute perfect) through C-6 (noticeable flaws but presentable) to lower grades that most serious buyers pass on for display-quality purchases. If you are trying to value a carded figure, pull comps specifically for that card grade. A C-9 vintage card is a different purchase than a C-7, and the comp history will show you the dollar difference.' },
+      { type: 'callout', text: 'Professional grading through AFA (Action Figure Authority) adds a tamper-evident case and a standardized grade number that removes subjectivity from condition assessment. Graded figures sell for premiums in some lines — particularly high-value vintage pieces — because buyers trust the grade. Whether grading adds value on your specific figure depends on whether that figure\'s collector market relies on graded examples or prefers raw. Research the line before you pay to grade.' },
+
+      { type: 'h2', text: 'How to read a price history' },
+      { type: 'p', text: 'A single sold comp is data. Multiple comps over time are a trend. The trend is what you actually want to understand. A figure that sold for $120 six months ago and $80 last month is depreciating — something changed the market, whether a reissue, a character falling out of favor, or a surplus of supply hitting the market at once. A figure that sold for $40 a year ago and $95 last month is appreciating — demand is increasing faster than supply. These are different buying and selling decisions.' },
+      { type: 'p', text: 'When I am evaluating whether to pay a secondary market price, I look at the last 10-15 sold comps and whether the average is going up, down, or flat. A flat average over 6 months with consistent volume means the market has found the price. A declining average means I wait. A rising average means I decide quickly or miss the window.' },
+
+      { type: 'h2', text: 'What Google will and will not tell you' },
+      { type: 'p', text: 'The first place most people go is a search engine, and the first results are price guide sites that publish static numbers. These guides are not useless — they can confirm a figure exists, tell you basic production information, and give you a rough tier — but they are lagging indicators at best. A price guide number from six months ago does not reflect what happened to the market after a character appeared in a streaming series, a figure got a wide-release reprint, or a rights situation changed. Static guides are the starting point, not the answer.' },
+      { type: 'p', text: 'What Google will tell you: that a figure exists, what its production era was, whether it has variants, what the character looks like. What Google will not tell you: what someone paid for it last Tuesday. For the second question, you need transaction data, and that requires going to the source — sold listings on eBay and Whatnot, or databases like FigurePinner that aggregate that data so you can skip the manual search.' },
+
+      { type: 'h2', text: 'The figure in front of you: a quick framework' },
+      { type: 'p', text: 'When you have an unknown figure and need a fast valuation: identify the line and character first (manufacturer mark, copyright date, and character name on the figure or packaging), then search the sold history filtering for matching condition. If the figure is loose, note whether you have all accessories — if you do not know what accessories it came with, that is a separate research step. Compare your condition to the comps and set a range. The bottom of the range is a quick-sale price; the middle is a fair market price; the top is the premium end that requires the right buyer.' },
+      { type: 'p', text: 'What makes a figure worth more than the comp average: better condition than the sold examples, accessories that are harder to find separately, original packaging in good shape, or a production variant (color, date stamp, country of origin) that the comps did not capture. What makes it worth less: condition below the sold examples, missing accessories, packaging damage, or a known reissue that has introduced supply to the market since the most recent comps.' },
+      { type: 'callout', text: 'The fast move: search FigurePinner for the figure, check the sold-comp data, confirm your condition matches the comps you are looking at, and set your price. That sequence takes two minutes per figure and is more accurate than any static price guide for active collector lines.' },
+    ],
+  },
+
+  // ─── Approved drafts merged 2026-06-19 (S37) — IDs 24, 25, 34 ───
+  {
+      slug: 'spawn-figures-guide',
+      title: 'Spawn Figures: From McFarlane\'s 1994 Revolution to Today',
+      metaTitle: 'Spawn Action Figures Collector Guide — Value, Series History | FigurePinner',
+      metaDescription:
+        'McFarlane\'s Spawn line didn\'t just make great figures — it created the adult-collector category. Here\'s the series history, what drives value, and where the market sits today.',
+      dek: 'In 1994, Todd McFarlane sold 2.2 million Spawn figures in under three months. The hobby was never the same.',
+      readingMinutes: 7,
+      updated: '2026-06-19',
+      body: [
+        { type: 'p', text: 'Before Spawn, action figures were children\'s toys. They bent, broke, and got lost in the sofa cushions, designed for kids and priced for parents who weren\'t going to spend more than a Happy Meal cost. Todd McFarlane looked at that assumption in 1994 and ignored it. Series 1 shipped six figures, two vehicles, and a playset, packed in with actual comic books — not inserts, comics — and moved 2.2 million units in under three months. That number still makes most modern collector lines look quiet.' },
+        { type: 'p', text: 'It proved a thing nobody had proven at retail price: adult collectors would pay up for better-made pieces, show up wave after wave, and build whole shelves around one property. Every premium line that came after — Marvel Legends, Black Series, NECA\'s deep cuts — is playing in a category Spawn opened.' },
+  
+        { type: 'h2', text: 'What made Series 1 different' },
+        { type: 'p', text: 'The six figures in Series 1 — Spawn, Clown, Violator, Medieval Spawn, Tremor, and Chapel — were sculpted at a level the mass market had never seen at retail price. Articulation was secondary; presentation was the point. Each piece was packaged in hard clamshell plastic that held the figure away from the card, protecting the card itself and making the thing look like something to own, not something to play with on the carpet.' },
+        { type: 'p', text: 'That design philosophy — protect the card, detail the sculpt, include a comic — communicated directly to adults. It said: this is yours. Collectors heard it loud. The Spawn line ran continuously for years, cycling through monster designs, angels, demons, movie tie-ins, and sport spawn variants across dozens of series. By the time the original run wound down, McFarlane Toys had become one of the largest toy manufacturers in the country.' },
+        { type: 'callout', text: 'The template Spawn invented is now the industry default: premium retail price, clamshell packaging built to protect the card, accessories designed as display pieces instead of play features. The thing to know as a buyer is that this same packaging is now the line\'s biggest condition variable — see below.' },
+  
+        { type: 'h2', text: 'How the series run affects value today' },
+        { type: 'p', text: 'The Spawn line produced figures across a long continuous run, with early series commanding the strongest premiums on the secondary market. Series 1 figures in sealed clamshell condition have aged well — that original six-figure cast, in box, draws consistent collector interest. But the comps are condition-dependent in a specific way: the hard plastic clamshell packaging yellows and cracks over time, and a yellowed or cracked bubble drops value substantially. Sealed, clear, and uncracked is the bar for a true MOC premium.' },
+        { type: 'p', text: 'Mid-run series — roughly Series 5 through Series 15 — include some of the line\'s most visually extreme designs: the Curse of the Spawn figures, the Manga Spawn designs, the Movie Spawn tie-in. These attract variant hunters and horror-adjacent collectors. Values are more volatile in this range because the audience is narrower, but the pieces that connect land high when the right buyer shows up.' },
+        { type: 'ul', items: [
+          'Series 1 (1994) — the foundation. Six figures, original clamshell, comic included. Sealed and clear commands the strongest premiums.',
+          'Series 5–15 — extreme sculpts, horror designs, movie variants. Niche buyers but passionate ones. Condition on the clamshell is the primary gate.',
+          'Series 20+ — production ramped up, print runs increased, secondary values softer. The exception is figures tied to specific story arcs with narrower runs.',
+          'Modern relaunch (2019–present) — McFarlane returned Spawn figures to retail. These are current production; they price at retail or slightly above on the secondary market with no vintage premium.',
+        ]},
+  
+        { type: 'h2', text: 'The loose vs. sealed question for Spawn' },
+        { type: 'p', text: 'The opener vs. MOC split feels different on Spawn than on most other lines. Part of what makes a Spawn Series 1 piece compelling as a shelf item is the original packaging — the clamshell design was intentional presentation art. An opener who removed the figure from that package has a great-looking piece of sculpture, but they\'ve given up something the format was designed to preserve.' },
+        { type: 'p', text: 'That said, loose figures from early series in excellent condition find buyers too. Spawn figures were detail-painted and sculpted for display, not handled play. A Series 1 Violator in loose, complete condition with paint in solid shape is a compelling secondary-market pick. The MOC premium on early Spawn runs meaningfully higher than on many contemporaneous lines, but loose complete isn\'t worthless — it\'s a different buyer.' },
+        { type: 'callout', text: 'The clamshell condition is the single biggest comp variable for sealed Spawn. Yellow, cracked, or crushed plastic cuts value significantly. If you\'re buying sealed, photograph the bubble from multiple angles before you commit.' },
+  
+        { type: 'h2', text: 'What drives the highest comps' },
+        { type: 'p', text: 'The Spawn collector market runs on a few reliable value drivers. Original Series 1, sealed and clear, is the floor-setter — it\'s what most collectors think of first. But some of the strongest comps come from figures with narrower production: convention exclusives, retailer variants. The Spawn line had a long production history and a devoted collector base willing to pay for genuine scarcity.' },
+        { type: 'p', text: 'Prototypes from the early Spawn run are legitimately rare and priced accordingly — these are collector-level items where provenance matters and documentation is expected. For collectors operating at standard secondary-market scale, early series in clean condition and comic-included state is the realistic sweet spot.' },
+  
+        { type: 'h2', text: 'Where the market is in 2026' },
+        { type: 'p', text: 'The modern McFarlane Toys machine is still active and still making Spawn, which cuts both ways for the vintage market. New releases introduce new buyers to the character, and some of them chase the originals — a demand tailwind. But the same machine is the one r/McFarlaneFigures spends half its time complaining about: the chase-variant program, the platinum-edition lottery, the paint slop on a $20 retail figure. Todd is personally in that discourse, and "the company is the scalper now" is a take you will read on any given week. None of that touches a sealed 1994 Series 1 piece, but it shapes the mood collectors bring to the brand.' },
+        { type: 'p', text: 'The secondary market for early Spawn is solid without being explosive. Series 1 prices have held at levels that reward patience and punish impulse. This is not the line where a newly discovered variant shocks the room or a convention chase sells out in ninety seconds — it is quiet and condition-driven. Which is exactly the kind of market where pulling the comp before you bid is the difference between a fair buy and overpaying for a yellowed bubble.' },
+        { type: 'p', text: 'If you want to see what sealed Series 1 Spawn figures or mid-run condition pieces are actually selling for right now — not asking prices, sold comps — [[check FigurePinner|/]] for the current market data before you buy or price to sell.' },
+      ],
+    },
+  
+    {
+      slug: 'mythic-legions-guide',
+      title: 'Mythic Legions: Why Four Horsemen Figures Hold Value',
+      metaTitle: 'Mythic Legions Collector Guide — Value, Waves, Scarcity | FigurePinner',
+      metaDescription:
+        'Mythic Legions from Four Horsemen Studios is modular, crowdfunded, and deliberately scarce. Here\'s why early waves hold value and how the collector-economics model works.',
+      dek: 'Every wave closes. Every figure that sells out becomes a secondary-market piece. That\'s not an accident — it\'s the whole model.',
+      readingMinutes: 7,
+      updated: '2026-06-19',
+      body: [
+        { type: 'p', text: 'A mass-market line lives or dies on volume: the more units move, the happier the manufacturer, the retailer, and the licensor taking a cut. Four Horsemen Studios runs Mythic Legions on the inverse. They fund a wave through a crowdfunded pre-order campaign, produce to that funded count, and when the wave closes it closes. No restock, no reissue unless they explicitly announce one. The figure you slept on is gone, and the supply ceiling that got set in 2015 — or 2017, or 2019 — does not move.' },
+        { type: 'p', text: 'That is why early-wave Mythic Legions appreciates instead of depreciating. It also comes with the tax every crowdfunded collector knows: these waves ship late. Twelve to eighteen months between "your card was charged" and "the box arrived" is normal for this line, and the backer forums have a decade of "where is my wave" threads to prove it. Collectors put up with it because the scarcity on the other end is real — but anyone telling you Mythic Legions is a frictionless hobby has never waited out a Store Horsemen production window.' },
+  
+        { type: 'h2', text: 'How the line started' },
+        { type: 'p', text: 'Mythic Legions launched as a Kickstarter campaign in early 2015. The first wave funded around two dozen figures that expanded through stretch goals to roughly 34 unique figures plus weapons packs (exact counts vary by how you classify variants and weapons packs), and shipped to backers who had committed months before production. Four Horsemen Studios — the sculptors behind MOTU Classics and Matty Collector, among other high-profile lines — built the world from scratch: no license to manage, no character IP they didn\'t own. Knights, orcs, skeleton warriors, goblins, elves, demons. A complete fantasy universe in six-inch articulated form, with a modular parts system that made army-building and custom configurations genuinely addictive.' },
+        { type: 'p', text: 'The line found its audience immediately. Collectors who had grown up with D&D, with MOTU, with fantasy illustration had been waiting for this kind of figure at this quality level at a price below the sixth-scale premium tier. Mythic Legions filled that space precisely.' },
+  
+        { type: 'h2', text: 'What makes these figures hold value' },
+        { type: 'p', text: 'The value retention in Mythic Legions traces to three structural factors that don\'t show up in most modern lines.' },
+        { type: 'ul', items: [
+          'Hard supply ceiling — each wave is a closed production run, funded by the campaign. No reprint unless Four Horsemen explicitly announces it, and All-Stars reissue waves are communicated transparently so the market adjusts with information rather than surprise.',
+          'Modular compatibility — figures share parts across waves. A head from 2015 fits a body from 2023. That interoperability keeps older figures relevant to active collectors building displays across multiple waves.',
+          'No mass retail — Mythic Legions is not on Target pegs. No clearance, no overproduction signals, no price-to-move markdown pressure. Secondary market prices are not competing with a retail floor.',
+          'Studio transparency — Four Horsemen publishes wave histories and All-Stars selections openly. Collectors trust the scarcity claims because the studio has a decade of consistent behavior to back them.',
+        ]},
+        { type: 'callout', text: 'The All-Stars waves are the clearest proof that scarcity here is managed, not manufactured. When Four Horsemen reissues a popular figure, they announce it. Collectors who bought at secondary-market prices on that figure absorb a temporary value hit — but the studio\'s transparency means they\'re not blindsided. That trust is part of what keeps the collector base loyal across years and campaigns.' },
+  
+        { type: 'h2', text: 'Wave history and the secondary market' },
+        { type: 'p', text: 'The Mythic Legions 1.0 wave — the original 2015 Kickstarter campaign — is the early-series analog in this line. Figures from that first funding round that didn\'t appear in subsequent All-Stars reissues are the most reliably scarce. The Advent of Decay wave added the line\'s first female figures, and those hold strong secondary values because the character designs from that wave remain fan favorites years later.' },
+        { type: 'p', text: 'Later waves added structural variety: the Coliseum wave introduced a new troll; Soul Spiller added an Ice Troll design that became a collector-favorite sculpt; Arethyr brought the first horses into the line. Each of these design firsts tends to hold value well because collectors who missed the wave and want the piece have exactly one option — the secondary market.' },
+        { type: 'p', text: 'The line has continued through waves including Poxxus, Necronominus, Rising Sons, and Reign of the Beasts, with a 2026 Kickstarter for a roleplaying game extension also in the mix. Activity on the secondary market for recent waves is lighter because the initial campaign window is recent. The real premium shows on waves that shipped three or more years ago.' },
+  
+        { type: 'h2', text: 'Army building: why demand stays structurally high' },
+        { type: 'p', text: 'One behavior specific to Mythic Legions collectors amplifies secondary demand: army building. The skeleton warriors, goblin soldiers, and human troopers in the line are designed to be bought in multiples. Collectors who want a display of a dozen skeletons need a dozen skeletons. That means demand for even troop-builder figures outpaces typical single-character demand, and a figure that looked abundant at wave close starts looking scarce once the army-builders have been through it.' },
+        { type: 'p', text: 'Army-builder figures from sold-out waves are among the most reliably liquid secondary-market picks in the line. Not the grail money that a Wave 1 exclusive commands — but consistent volume at a premium over original price, because the demand driver doesn\'t go away.' },
+  
+        { type: 'h2', text: 'Getting into the line today' },
+        { type: 'p', text: 'New collectors entering Mythic Legions in 2026 face a choice the original backers didn\'t: current campaign pricing vs. secondary market for older pieces. Campaign pricing runs at a meaningful discount to secondary market for popular figures. If a current wave interests you, backing at campaign is almost always the right call — you get the figure at production price and you take no secondary-market risk.' },
+        { type: 'p', text: 'For older waves, the secondary market is the only path, and pricing reflects genuine scarcity. Do the comp work before committing to a Wave 1 or Advent of Decay piece. Know what the last five completed examples sold for, note the condition (boxes and original mailers are relevant here), and set your ceiling before you bid.' },
+        { type: 'p', text: '[[FigurePinner|/]] tracks sold comps across collector lines to give you the actual market data before you buy or sell. Look up any Mythic Legions figure to see what recent sales actually say, not what the asking prices suggest.' },
+      ],
+    },
+  
+    {
+      slug: 'ljn-wwf-value-guide',
+      title: 'LJN WWF Figures: The Rubber Giants and What Clean Ones Cost',
+      metaTitle: 'LJN WWF Wrestling Figures Value Guide — Condition & Pricing | FigurePinner',
+      metaDescription:
+        'LJN WWF Wrestling Superstars ran from 1984 to 1989 and built the Hulkamania generation\'s toy shelf. Condition is everything on these rubber figures — here\'s what drives value.',
+      dek: 'Every LJN figure was played with hard. The clean ones are genuinely scarce now, and the market knows it.',
+      readingMinutes: 7,
+      updated: '2026-06-19',
+      body: [
+        { type: 'p', text: 'Picture a Saturday morning in 1985. Hulk Hogan is on every television set in America, Hulkamania is the dominant cultural force in professional wrestling, and the eight-inch rubber figure of the Hulkster is the toy every kid wanted on the shelf. LJN\'s WWF Wrestling Superstars line was the toy aisle analog to a Monday Night Main Event. Stiff, heavy, rubber-solid, and built for the kind of play that put every accessory in a different zip code.' },
+        { type: 'p', text: 'That durability is a double-edged legacy. These figures survived because the rubber held up. They also wore, scratched, painted over with markers, and lost whatever accessories they came with before the first Christmas was over. Forty years later, the survivors that came through childhood with their paint intact and their details readable are the ones the market prices seriously. A beat-up LJN is a common shelf item. A clean one is a different conversation.' },
+  
+        { type: 'h2', text: 'The production run: 1984 to 1989' },
+        { type: 'p', text: 'LJN signed a licensing agreement with the WWF in July 1984, and the line ran continuously until 1989. The figures shipped in multiple series over that window, roughly tracking the WWF\'s expansion from regional northeastern promotion to national television phenomenon. The roster grew to match — by the time the line ended, it covered the major stars of the golden era, from the original Series 1 headliners through mid-line additions as the roster evolved.' },
+        { type: 'p', text: 'The production detail that drives the biggest premiums sits at the very end of the run. The final LJN release — Series 6, the Black Card Series — came on black backing cards instead of the standard yellow, and was actually manufactured by Grand Toys in Canada, not LJN. It mixed repackaged stars with genuinely new sculpts: the first LJN Ultimate Warrior, Big Bossman, Haku, and Warlord all debuted here. Crucially, it shipped to Canadian retail and US mail-order only, never hitting American store pegs — which is why clean black card examples are dramatically scarcer than their yellow-card equivalents.' },
+        { type: 'callout', text: 'If you see an LJN figure on a black card, you are looking at the toughest find in the line. Series 6 had a fraction of the distribution of the main run, and the comps on clean black card pieces run well above the same wrestler in standard yellow-card packaging. Verify it\'s a genuine Grand Toys black card and not a reproduction before you pay the premium.' },
+  
+        { type: 'h2', text: 'Why condition is the entire story' },
+        { type: 'p', text: 'Most vintage figure lines have condition as a major pricing factor. LJN takes it further — condition is essentially the only pricing factor for common figures, because figures in played-with state are widely available. The paint wear issue is structural: rubber absorbs impact differently than hard plastic, and the raised detail areas — faces, knee pads, belts, trunk text — were the first things to go with any handling. A Hulk Hogan LJN with readable face paint, intact trunk lettering, and solid color is not abundant. Most of them aren\'t.' },
+        { type: 'ul', items: [
+          'Paint-worn with rubbing on face and details — the most common grade. Typically prices at the floor of recent comps. These are the figures you find at flea markets and estate sales.',
+          'Good shape with minor wear — decent face paint, most details readable, some age-appropriate softness on the rubber. The middle of the market for common figures.',
+          'Excellent/near-mint paint — faces sharp, color solid, details intact. Meaningfully rarer and prices considerably above the worn grade.',
+          'MOC (still on card) — the top of the market. LJN cards were retail blister cards not designed for preservation. Sealed examples have diminishing supply every year.',
+        ]},
+        { type: 'p', text: 'For collector-grade LJN figures, condition grading is everything. A Hulk Hogan in excellent paint in loose condition is a genuinely different comp category than the same figure in faded, rubbed shape, even though they\'re technically "the same figure." The data supports pricing them separately — and if you\'re selling, failing to document your figure\'s condition honestly is the fastest way to leave money on the table or generate a return dispute.' },
+  
+        { type: 'h2', text: 'Who drives the most value' },
+        { type: 'p', text: 'The Hulkamania figure is the baseline everyone knows — Hulk Hogan in excellent painted condition draws consistent attention and the nostalgia driver here is enormous. The audience for this figure is the generation that watched Hogan at WrestleMania and wanted that figure under the Christmas tree. Those collectors are adults now with adult budgets, and their interest in clean Hogan LJNs is durable.' },
+        { type: 'p', text: 'Andre the Giant is the other name that commands serious comp attention. The Andre figure was scaled properly larger than the rest of the line, and that physical presence plus WrestleMania III nostalgia keeps clean examples moving consistently. He is the figure most likely to anchor a collection next to Hogan.' },
+        { type: 'p', text: 'Beyond the two headliners, value tracks the era\'s card logic: the bigger the name on the Saturday morning promos, the bigger the collector interest now. Macho Man Randy Savage, Rowdy Roddy Piper, and the Iron Sheik all draw real comp attention in clean condition. The Ultimate Warrior is a special case — his LJN debut came on the 1989 black card rather than the main yellow-card run, so a clean Warrior is chasing the scarcer Series 6 supply from the start, and the comps reflect it.' },
+  
+        { type: 'h2', text: 'The accessories question' },
+        { type: 'p', text: 'LJN figures were not particularly accessory-heavy compared to later wrestling figure generations. Most came without accessories, save for a few that shipped with hats, canes, or entrance gear. But the figures that did come with accessories — and that still have them — are in a meaningfully better position at comp time. A figure that originally came with an entrance item and still has it is a complete example; the same figure without it is incomplete, even if the paint is excellent.' },
+        { type: 'p', text: 'The completeness gap on LJN is smaller than on, say, a Mattel Elite with five accessories and a title belt. But it exists, and buyers paying top dollar for condition are going to ask. Know what your figure originally came with before you price it.' },
+  
+        { type: 'h2', text: 'What the secondary market looks like in 2026' },
+        { type: 'p', text: 'LJN WWF is a stable, well-established secondary market with a loyal collector base and consistent eBay volume. It is not a line where a newly discovered variant shocks the market or a championship run triggers price spikes — it is quiet, data-driven, and condition-dependent. The Hulkamania generation\'s nostalgia for this line is reliable and isn\'t diminishing.' },
+        { type: 'p', text: 'If you\'re buying LJN, the single most important move before committing to a price is pulling recent sold comps for that specific figure in that specific condition grade. The spread between a rough example and a clean one is significant enough that pricing by feel — or off the asking-price wall — will cost you real money in either direction. The data is there; use it.' },
+        { type: 'p', text: '[[FigurePinner|/]] shows you LJN sold comps in real time so you can see what clean examples actually sell for before you negotiate. Look up any figure from the line and you\'ll have the sold-price data that the asking-price listings obscure.' },
+      ],
+    },
+
+  // ─── McFarlane Sports Picks — S38 2026-06-20 ───
+  {
+    slug: 'mcfarlane-sports-picks-guide',
+    title: 'McFarlane Sports Picks: The Variant Game Behind Every Figure',
+    metaTitle: 'McFarlane Sports Picks Value Guide — Variants, Chases & Secondary Market | FigurePinner',
+    metaDescription: 'McFarlane Sports Picks ran from 2001 to 2012 across NFL, MLB, NBA, NHL, and NASCAR. The line\'s entire secondary market runs on variants — here\'s how to read them.',
+    dek: 'The base figure is the floor. The white jersey, the gold uniform, the chase variant you didn\'t know existed — that\'s where the real money is.',
+    readingMinutes: 8,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'McFarlane Toys launched Sports Picks in 2001 with an NFL Series 1 that looked like nothing else in the sports collectible aisle. Six-inch figures with 12-plus points of articulation, game-accurate uniforms, sculpted face likenesses, and a retail price around $12.99. Not action figures in the child-toy sense — display pieces in the McFarlane tradition, just wearing jerseys instead of capes. They sold.' },
+      { type: 'p', text: 'The line expanded quickly: MLB followed in 2002, NBA and NHL in 2003, NASCAR in 2004. At peak production McFarlane was running parallel series in five sports simultaneously, dropping multiple waves per year. The entire run ended around 2012 when the company shifted focus to DC Multiverse and other licenses. Eleven years of production across five sports left an enormous catalog — and buried inside that catalog is a variant structure that functions like a second, hidden product line that most casual buyers never found.' },
+
+      { type: 'h2', text: 'How the variant system worked' },
+      { type: 'p', text: 'Every Sports Picks series included variants — alternate versions of figures in the wave that shipped in reduced quantities. The mechanism changed across the line\'s run. Some variants swapped jersey color: a player whose team had alternate road uniforms, a throwback colorway, a home-vs-away split. Others changed equipment: different helmet decals, alternate glove colors, wristband presence or absence. A small tier — the true chases — were painted in a sepia or gold monochrome, deliberately scarce, and inserted into cases at ratios as low as 1-in-6 or lower.' },
+      { type: 'p', text: 'The ratio is what drives the secondary market. A standard NFL Series 1 figure retailed at $12.99 and moved in predictable volume. The white jersey alternate of the same figure shipped in roughly a third of the cases. The gold chase variant of that same figure might have appeared once every two or three cases. Three versions of the same sculpt, three completely different secondary market prices.' },
+      { type: 'callout', text: 'Cardboardconnection maintains variant guides for NFL (through Series 32) and MLB (through Series 31) that document every known variant, the case ratio where documented, and the jersey or paint change involved. Before you price any Sports Picks figure, verify whether a variant exists for that specific player in that wave — the difference between the base and the chase can be $15 vs. $95 on the same sculpt.' },
+
+      { type: 'h2', text: 'What actually holds value in 2026' },
+      { type: 'p', text: 'Sports Picks secondary market pricing runs on two variables that interact: player legacy and variant scarcity. A common-ratio figure of a retired journeyman is worth five dollars. A gold chase variant of a Hall of Famer from an early series is a different conversation.' },
+      { type: 'ul', items: [
+        'Early NFL series (1–6) — the first runs of iconic players before the variant print-run system was fully understood by the collector market. Sealed examples of chase variants from these waves carry the strongest premiums.',
+        'MLB gold/sepia chases — Baseball figures with the monochrome chase deco. A Babe Ruth sepia chase has moved at $58; comparable base figures sit under $20.',
+        'White jersey NFL variants — Road uniform alternates for marquee players. Randy Moss white jersey has sold around $95; base version under $20. Same sculpt, different case ratio, completely different comp.',
+        'Rookie series figures of players who became stars — the year-1 Sports Picks of a player who won multiple championships afterward. These weren\'t scarce at release; they became scarce as interest concentrated.',
+      ]},
+
+      { type: 'h2', text: 'The sports licensing expiration problem' },
+      { type: 'p', text: 'Sports figures carry a licensing risk structure that action figure collectors don\'t always account for. A McFarlane NFL figure requires two separate licenses: the NFL (the league) and the NFLPA (the players\' association). Lose either one and the figure stops being producible. The Sports Picks line ended in part because managing those dual-license costs across five sports simultaneously became economically untenable at the margins the line was generating.' },
+      { type: 'p', text: 'This creates a collector dynamic similar to NECA\'s horror licenses, but with an additional layer: player likeness rights can complicate reissue possibilities independent of the line ending. A McFarlane figure of a player in a contested-rights situation is as final as it gets. The molds exist. The license doesn\'t.' },
+
+      { type: 'h2', text: 'The condition variables nobody talks about' },
+      { type: 'p', text: 'Sports Picks figures shipped in blister clamshell packaging similar to the Spawn line — designed for display, not archival preservation over two decades. The clamshell yellows. The card stock fades. A sealed Sports Picks figure from 2001 that sat near a window for ten years is not a mint sealed figure. Photo the clamshell from multiple angles before you commit.' },
+      { type: 'p', text: 'Loose figures have their own hierarchy. The face paint on the sculpted likenesses is the most vulnerable detail — these portraits were painted at a $12.99 price point, not museum-quality. A figure with a sharp portrait is worth examining carefully. One with smeared or sunken face paint looks wrong on the shelf. Paint quality on the jersey details — the nameplate lettering, the number application — varies more in this line than in McFarlane\'s superhero work because the retail price demanded cost compression somewhere, and the portrait was usually not where they cut it.' },
+
+      { type: 'h2', text: 'How to research before you buy' },
+      { type: 'p', text: 'The research workflow is different here than for a typical action figure. Step one is always the variant guide for the sport and series — know whether a variant exists before you price the figure in front of you. A seller who doesn\'t know they have the white jersey variant is pricing at the base comp. That information asymmetry is where buyers who do the research win.' },
+      { type: 'p', text: 'Step two is the comp data: what actually sold recently for that player, that series, that variant, in that condition. Sports Picks secondary market isn\'t always liquid. Some figures take weeks to find a comp. When the comp data is thin, the asking price wall is even less trustworthy than usual — sellers routinely anchor on guide-site numbers from 2015 that bear no relationship to what\'s actually moving.' },
+      { type: 'callout', text: 'FigurePinner tracks sold comps on Sports Picks figures alongside the rest of the catalog. Pull the data before you commit to any price — the gap between asking and sold on vintage Sports Picks is wider than almost any other market on this site.' },
+
+      { type: 'h2', text: 'Which sport to focus on' },
+      { type: 'p', text: 'NFL is the most active secondary market by volume — enormous figure library, broad fan base, current comps. MLB has the deepest variant documentation and some of the line\'s most specific chases. NBA is thinner; the basketball collector figure market has consolidated around newer product. NHL is genuinely niche — the hockey Sports Picks collector is a specific person and there are fewer of them. NASCAR ended early in the run and is the most specialized market of the five.' },
+      { type: 'p', text: 'Start with NFL or MLB, early series, know your variant ratios. The chase is the target — but verify the comp data before paying a premium off a guide number that hasn\'t been updated since Obama was in office.' },
+    ],
+  },
+
+
+  {
+
+    slug: 'marvel-legends-hub',
+    title: 'Marvel Legends Price Guide: 938 Characters, 125 Waves, and What They Actually Cost',
+    metaTitle: 'Marvel Legends Price Guide 2026 — Every Wave, BAF & Value | FigurePinner',
+    metaDescription: 'Marvel Legends price guide covering 1,622 figures across 125 waves. Most valuable figures, BAF wave breakdowns, and real eBay sold comps — updated 2026.',
+    dek: '1,622 releases. 938 characters. One Terrax leg that nobody wanted. Here is what the line actually costs right now.',
+    readingMinutes: 12,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'Hasbro has been running Marvel Legends continuously since 2007 — long enough that the line has its own internal archaeology. The Toy Biz era before it (2002–2007) is a separate conversation about better articulation and worse paint at lower prices. The Hasbro era has 125 distinct waves in the FigurePinner database, 938 unique characters, and 1,622 individual releases. If you are trying to figure out what any of it is worth, the honest answer is: it depends heavily on which wave, which character, and whether the secondary market has moved on.' },
+      { type: 'p', text: 'What follows is the actual pricing structure across the line — not a list of every figure, which would be useless, but the wave categories that drive secondary market behavior and the specific factors that separate a $12 peg-warmer from a $90 grail.' },
+
+      { type: 'h2', text: 'How Marvel Legends pricing works' },
+      { type: 'p', text: 'The baseline is retail: Hasbro has moved ML pricing from $19.99 in 2019 to $27.99–$29.99 as of 2025, with some Deluxe and HasLab figures in separate tiers. The secondary market divides into three zones. Below retail means nobody wanted it — Spider-Man repaint territory, common wave anchors, pegwarmers that show up on clearance at $12. At-retail or slight premium means normal demand, solid wave members, characters with fanbases that aren\'t massive. Above retail starts at $40 and can run to $200+ for genuinely scarce figures with large fanbases and no reissue in sight.' },
+      { type: 'p', text: 'The BAF (Build-A-Figure) changes wave economics. Every figure in the wave carries a piece; the completed BAF only exists if you buy the entire wave — or find the piece separately. This is why wave members move at different prices. The wave anchor (the character everybody wants) and the BAF piece everybody needs hold value; the filler characters sell at discount for the piece. "I only bought him for the leg" is not a joke. It is a description of how people shop Marvel Legends.' },
+
+      { type: 'h2', text: 'Most valuable Marvel Legends figures right now' },
+      { type: 'p', text: 'The highest secondary market values cluster in three categories: early Toy Biz runs, Walgreens exclusives from 2014–2021, and made-to-order Pulse exclusives with limited windows.' },
+      { type: 'ul', items: [
+        'Walgreens exclusives (X-Men run, 2015–2021) — Dazzler, Multiple Man, Strong Guy, Psylocke, Gambit, and the entire core X-Men locked to a pharmacy chain. FigurePinner sold comps show these averaging $45–$95 depending on the figure. Gambit regularly clears $70 loose. Strong Guy hits $80–$110 in the window before a reissue is announced.',
+        'Toy Biz Series 1–8 (2002–2006) — the original run before Hasbro. Series 1 Hulk in original packaging has moved above $120. These are genuinely old at this point; QC is not the Hasbro standard, but articulation depth is better than anything Hasbro shipped before 2021.',
+        'HasLab Sentinel (2021) — $395 retail, funded at roughly 18,000 backers. Loose secondary market has stabilized around $280–$350 because the price anchor of the original makes anything below $250 feel like a deal even though it is still more money than three standard waves.',
+        'Galactus BAF (2022) — the 32-inch HasLab Galactus remains the ceiling for the line in secondary market pricing. Funded examples in original box have sold above $500. It is the largest Marvel Legends figure produced.',
+        'Deadpool wave figures with low print runs — certain Deadpool Corps figures from the 2016 wave that shipped in small cases have held $55–$85 loose because the demand for Deadpool variants across any format is inelastic.',
+      ]},
+
+      { type: 'h2', text: 'The Walgreens exclusive problem' },
+      { type: 'p', text: 'The Walgreens exclusive era (roughly 2014–2021) left a specific scar on the Marvel Legends community that is worth understanding before you buy in that segment. Hasbro locked essential X-Men to a pharmacy distribution chain with inconsistent stock allocation, no online ordering option, and a chase-the-store hunting model that had collectors driving to six Walgreens locations to find a single Gambit. The figures themselves were frequently excellent — some of the best X-Men sculpts Hasbro produced in that period. The distribution was deliberately hostile, either by design or negligence.' },
+      { type: 'p', text: 'The secondary market premium on Walgreens exclusives is not entirely about the figure quality. Some of it is paying for the hours of hunting someone else did. When Hasbro eventually released certain characters through other channels — Pulse exclusives, reissues — the prices on the originals dropped significantly. Strong Guy went from $110 to $55 within three months of a reissue announcement in 2023. If you are paying a large premium on a Walgreens exclusive, factor in the reissue risk.' },
+
+      { type: 'h2', text: 'BAF wave breakdown: which waves hold value' },
+      { type: 'p', text: 'The FigurePinner database covers 125 wave variants. Not all BAFs are equal. The factors that make a BAF wave hold secondary market value: the BAF character matters to collectors (Sentinel, Galactus, Sasquatch, Warlock — strong; generic Abomination repaint — not), the wave members include roster-demanded characters, and the wave has not been reissued.' },
+      { type: 'p', text: 'The Terrax wave (2012) is the canonical example of a BAF that launched a secondary market career. Hope Summers was in that wave. So was Ghost Rider, Klaw, and Constrictor. The wave has never been reissued in its original form. Hope Summers sold comps in the FigurePinner database show a range of $12–$40 with a median around $27 — roughly 35% above the original $19.99 retail after fourteen years. The Terrax BAF itself moves between $45 and $80 for a complete assembled figure.' },
+      { type: 'p', text: 'Waves worth tracking for current value: the X-Men 60th Anniversary wave (2023) because it included deep-cut characters with no prior ML releases; the Galactus HasLab wave members because they are linked to a funded collectible; any wave from 2014–2018 that included Walgreens-adjacent characters who were later not reissued.' },
+
+      { type: 'h2', text: 'The Spider-Man repaint economy' },
+      { type: 'p', text: 'Spider-Man has 24 distinct Marvel Legends releases in the FigurePinner database. Iron Man has 24. Captain America has 19. This is not an accident — Hasbro knows these characters move cases. The secondary market consequence is that most Spider-Man Legends are worth retail or below, because the supply is constant and the demand, while large, is matched to it. The exceptions are specific variants: the Pizza Spider-Man (Retro Kenner wave, 2022) moved above retail because the costume is specific and the nostalgia is precise. The black-suit version from the same wave did similarly. The "yet another classic red-and-blue with pinless hips" does not.' },
+      { type: 'callout', text: 'FigurePinner tracks 24 Spider-Man ML releases. Pull the sold comps before buying any Spidey variant — the spread between the $10 peg-warmer version and the $55 Retro variant is entirely about which specific release you have, and they can look similar in a pile.' },
+
+      { type: 'h2', text: 'Exclusives: Pulse vs. retail vs. HasLab' },
+      { type: 'p', text: 'Hasbro Fan Channel (Pulse) exclusives moved the distribution model for collector-targeted ML figures starting around 2018. Made-to-order windows: Hasbro opens a preorder period, ships to everyone who ordered, closes production. No hunting, no scalping in theory. The secondary market effect is that Pulse exclusives from closed windows have reliable supply caps — once the preorder closed, no more were made. Prices on these hold better long-term than retail waves because you cannot walk into Target and find one on a Tuesday.' },
+      { type: 'p', text: 'The debate in the ML community is whether Pulse exclusives killed the hunt or killed scalping. The answer is both, partially. Pulse Fan Friday reveals still sell out in minutes to bots. The made-to-order window system mitigates this more effectively — it is why Hasbro has leaned toward MTO for premium figures. If you are buying a Pulse MTO exclusive on the secondary market, you are paying a premium above what anyone paid at preorder pricing, which is already above retail wave pricing. Factor that in.' },
+
+      { type: 'h2', text: 'What pinless means for value' },
+      { type: 'p', text: 'Hasbro introduced pinless articulation across ML starting around 2021 — no visible pins at the elbows and knees, cleaner aesthetic. The community called it pinless. Hasbro called it an improvement. Whether it is depends on the figure: some joints are smoother and look better; some are loose and floppy within six months of opening. Pinless figures from 2021–2023 have a specific QC issue with thigh swivel durability that shows up in reviews but not in box photography.' },
+      { type: 'p', text: 'For secondary market purposes, pinless is a mixed signal. Early pinless figures in good condition hold value well because they photograph better. Pinless figures with known joint issues lose secondary market interest faster than their pre-pinless equivalents, because "loose joints on an opened figure" is not a selling point. If you are buying loose pinless ML figures from 2021–2023, check the hips and thighs before you close the deal.' },
+
+      { type: 'h2', text: 'The Toy Biz era: should you buy it in 2026' },
+      { type: 'p', text: 'Toy Biz ran Marvel Legends from Series 1 (2002) through Series 15 and various themed waves before Hasbro took the license in 2007. The articulation on Toy Biz figures — up to 38 points on some releases — has not been matched by Hasbro in the standard retail tier. The paint and sculpt quality were inconsistent because the price point demanded cost compression. The result is figures that pose better than almost anything Hasbro has shipped, in paint apps that sometimes look rough by modern standards.' },
+      { type: 'p', text: 'Secondary market pricing on Toy Biz is stable and has been for years. Series 1–4 in original carded packaging move between $45 and $150 depending on character. Loose examples of common characters are cheap — $8–$15 on most Series 5–10 figures. The premium is concentrated in first-release characters (Hulk, Iron Man, Captain America from Series 1) and in complete-with-all-accessories examples of figures that shipped with complex accessory loads. Old heads still rate Toy Biz articulation above Hasbro; if you are building a collection to pose and photograph, that argument has data behind it.' },
+
+      { type: 'h2', text: 'How to check any figure\'s current price' },
+      { type: 'p', text: 'The right methodology is eBay sold comps, not asking prices. The asking price wall on Marvel Legends is set by people who looked at a guide number from 2022 or who are testing the market at optimism pricing. What actually matters is what sold in the last 90 days, in what condition, and at what price. The spread between asking and sold on ML is regularly 40–60% on figures that have been sitting.' },
+      { type: 'p', text: '[[FigurePinner|/]] aggregates eBay sold data for all 1,622 Marvel Legends releases in the database. Search any character or wave, see the actual sold median, and make decisions off what the market cleared rather than what sellers wish it would clear. The Terrax wave, the Walgreens exclusives, the Pulse MTO figures — all in there.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Marvel Legends Price Guide 2026: What Every Wave Is Actually Worth|/guides/marvel-legends-price-guide-2026]] — wave-by-wave breakdown with specific comp data',
+        '[[Marvel Legends: Where to Begin|/guides/marvel-legends-where-to-begin]] — entry point for new collectors choosing a first wave',
+        '[[Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For|/guides/hope-summers-marvel-legends-figure-guide]] — Terrax wave deep-dive',
+        '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
+      ]},
+    ],
+  }
+
+  ,{
+    slug: 'jakks-hub',
+    title: 'Jakks Pacific WWE: A Collector\'s Guide to the Classic Superstars & Ruthless Aggression Years',
+    metaTitle: 'Jakks WWE Figures Price Guide 2026 — Classic Superstars & Ruthless Aggression | FigurePinner',
+    metaDescription: 'A collector\'s guide to Jakks Pacific WWE figures (1996-2009) — Classic Superstars legends, the Ruthless Aggression action era, the ToyFare grails, and real eBay sold comps.',
+    dek: 'Jakks ran WWE figures from 1996 to 2009 — the Classic Superstars legends and the Ruthless Aggression action era. A collector\'s field guide to both.',
+    readingMinutes: 9,
+    updated: '2026-06-21',
+    body: [
+      { type: 'p', text: "Before Mattel took the WWE figure license in 2010, Jakks Pacific made them -- from 1996 all the way through 2009. The Jakks era splits cleanly in two: the Classic Superstars line, high-end legend sculpts that collectors treat as sacred, and Ruthless Aggression, the gimmick-driven action mainline that ran the Attitude-era and post-Attitude pegs. This is a collector's guide to both eras." },
+      { type: 'h2', text: 'Classic Superstars: the sacred line' },
+      { type: 'p', text: "Classic Superstars launched in 2004 and ran to 2009 -- high-end sculpts of WWF/WWE legends that became an instant fan favorite and the most revered line of the Jakks era. The reverence is real: modern Mattel lines still get measured against it, and not knowing Classic Superstars is a poser tell. The grails live here -- the ToyFare mail-away exclusives, made in roughly 100 units each. The Glow-in-the-Dark Undertaker, the Ultimate Warrior exclusive, and the 'Bloody Funk U' Terry Funk are the most valuable Jakks figures, and a rare Ultimate Warrior marble figurine has reached around $2,000." },
+      { type: 'h2', text: 'Ruthless Aggression: the action era' },
+      { type: 'p', text: "Ruthless Aggression was Jakks' premier mainline from 2002-03 through 2009, replacing the earlier Titan Tron Live and R-3 Tech lines. It is the action-feature era -- spring-loaded gimmicks, deco churn, and numbered series that built checklist culture. Most are affordable shelf figures; the value concentrates in the short-run series, the exclusives, and the early figures of wrestlers who became stars later. Deluxe Aggression is the upscale, accessory-heavy cut of the same line." },
+      { type: 'h2', text: 'Jakks or Mattel?' },
+      { type: 'p', text: "Whether Jakks or Mattel made the better WWE figures is the hobby's live debate. Jakks gets credit for the Classic Superstars sculpts and the Attitude-era nostalgia; Mattel for the Elite line's articulation and the modern adult-collector standard. There is no settled answer -- which is why each era gets its own shelf." },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
+      ]},
+    ],
+  }
+
+  ,{
+
+    slug: 'wwe-elite-hub',
+    title: 'WWE Elite: A Collector\'s Guide to the Squared Circle',
+    metaTitle: 'WWE Elite Price Guide 2026 — Series, Tiers, Values & Rarity | FigurePinner',
+    metaDescription: 'WWE Elite price guide — Mattel\'s tiers (Basic, Elite, Ultimate Edition), the sub-lines, the grails, and real eBay sold comps. Updated 2026.',
+    dek: 'Sixteen years of Mattel\'s Elite line — the tiers, the sub-lines, and the grails the squared-circle faithful actually chase.',
+    readingMinutes: 10,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'Mattel has been producing WWE Elite since 2010 — sixteen years of six-figure waves that now cover 365 distinct wrestlers across 127 series. Before Elite, Jakks Pacific ran the line. Before Jakks, there was LJN, then Hasbro, then a string of smaller manufacturers racing to put plastic wrestlers on pegs during the Attitude Era. The secondary market for all of it exists and is active. But Elite is where the real collector money moves right now, and it is the format that rewards knowing the difference between a series 12 peg-warmer and a series 90 Walgreen-exclusive variant that sold in two markets and three Walgreens locations.' },
+      { type: 'p', text: 'FigurePinner tracks 805 Elite figures, plus 175 Elite Legends releases in a separate sub-line targeting the classic era. What follows is how the pricing structure actually works across both.' },
+
+      { type: 'h2', text: 'How WWE Elite pricing works' },
+      { type: 'p', text: 'Elite retail is currently $27.99–$29.99 per figure at Target, Walmart, and Amazon. Mattel has raised this three times since 2019; old-timers remember sub-$20 series prices and are still annoyed about it. The secondary market breaks into the same three zones as any action figure line: below retail (clearance wrestlers, superseded versions of active talent, anyone who left WWE before the wave shipped), at retail to slight premium (current talent with normal demand), and above retail (retired legends with no planned reissue, variants from low-distribution exclusives, early series with strong nostalgic value).' },
+      { type: 'p', text: 'The wave structure matters more than people think. Each Elite series ships roughly six figures per case with specific case ratios — the "one per case" figure is the chase, intentionally scarce relative to the heavy hitters who get two or three slots. On secondary market, one-per-case figures from recent series run 40–80% above retail within weeks of hitting shelves. The same figures six months later, once the secondary supply normalizes, often collapse back toward retail. Buy the one-per-case immediately or wait it out.' },
+
+      { type: 'h2', text: 'Most valuable WWE Elite figures right now' },
+      { type: 'p', text: 'The highest secondary market values in the Elite line concentrate in four categories: early series figures from 2010–2014 featuring wrestlers who are now legends, Walgreens exclusives from the exclusive era, Target and Amazon exclusives with specific paint decos or accessories not in the standard release, and Elite Legends entries featuring deceased or retired talent who will never get another figure.' },
+      { type: 'ul', items: [
+        'Elite Legends with deceased wrestlers — Jake "The Snake" Roberts, Terry Funk, Dusty Rhodes, British Bulldog, Iron Sheik. These hold value indefinitely because no reissue is coming. FigurePinner sold comps show Terry Funk Elite Legends averaging $55–$85 depending on condition. Iron Sheik moved after his death in 2023.',
+        'Early series CM Punk — CM Punk has 10 Elite releases in the FigurePinner database. The Series 12 Punk (2013 release, during the height of his first run) moves between $45 and $90 depending on the variant. The Series 63 release from his return is more available but still holds premium.',
+        'The Rock across series — 9 Elite releases tracked; certain variants (black trunks, specific attire from specific matches) carry premiums that the "standard" Rock does not. Sold comps range from $22 to $75 depending on which one.',
+        'Undertaker across his full run — 11 Elite releases. The Deadman gimmick variants (Ministry attire, Phenom 2000-era look) hold better than the American Badass period figures, which have always been less collected.',
+        'Exclusive variants — Walmart exclusives, Target exclusives, and GameStop exclusives each have their own scarcity tier. The Amazon exclusives (specific accessories, gold-ring event attire) tend to hold value best because the distribution window is clearest.',
+      ]},
+
+      { type: 'h2', text: 'Elite vs. Elite Legends: two different markets' },
+      { type: 'p', text: 'Mattel runs Elite and Elite Legends as distinct sub-lines with different pricing dynamics. Standard Elite covers current and recent talent across 127 series; the figures are in stores now and the secondary market is liquid. Elite Legends targets the classic 1980s–2000s era — Hulk Hogan, Ultimate Warrior, Ricky Steamboat, Dusty Rhodes, Jake Roberts — and skews older buyers who want their childhood wrestlers in modern articulation.' },
+      { type: 'p', text: 'Elite Legends carries a structural premium that Elite does not. Ultimate Warrior has 6 releases in the database; Hogan has 6. Neither is getting new figures. Every year that passes, the demand from fans who grew up watching them in the 80s grows relative to supply. FigurePinner sold comps on Hogan Elite Legends average $35–$65 depending on series and condition. A "sealed in package" Hogan from the first Elite Legends wave runs above $100. That is a nostalgia premium, not a rarity premium — Mattel made plenty of them. The scarcity is the Hulkster not getting new figures until further notice.' },
+      { type: 'callout', text: 'FigurePinner tracks 175 Elite Legends releases. The price spread between a loose opened Hogan and a sealed first-release Hogan is currently 60–90%. If you are buying to display loose, the value equation looks completely different.' },
+
+      { type: 'h2', text: 'The articulation gap: why Elite exists' },
+      { type: 'p', text: 'Mattel produces two tiers of WWE figures simultaneously: Basic (limited articulation, lower price point, mass retail) and Elite (20+ points of articulation, accessories, fabric elements on some releases). The Elite line exists specifically because the basic tier does not serve the collector market. You cannot pose a Basic Undertaker doing a sit-up. You can do it with Elite.' },
+      { type: 'p', text: 'The articulation model for Elite has evolved across the 127 series. Early series (1–20) used a slightly different joint construction that some collectors rate as less durable than the current design. The shoulder joints on certain early figures are the weak point — they wear loose over time with posing. Series 40+ figures have a more consistent shoulder design. This is relevant for secondary market buying: early series figures in opened condition should have their shoulders checked before purchase. A figure that cannot hold a raised arm is worth significantly less than one with tight joints.' },
+
+      { type: 'h2', text: 'John Cena has 22 Elite figures' },
+      { type: 'p', text: 'John Cena leads the Elite character count at 22 distinct releases — more than Roman Reigns (18), Rey Mysterio (16), or Seth Rollins (15). This is not an accident: Mattel and WWE know Cena moves product, so he gets included in more waves. The secondary market consequence is that most Cena Elites are not valuable. The exceptions are variants with specific gear from specific matches, and early series releases from 2010–2012 when the character was at peak momentum. A Series 1 John Cena in original packaging sells for more than a Series 60 John Cena in identical condition — not because Series 60 is worse, but because the older one has been out of production longer and carries nostalgic premium.' },
+      { type: 'p', text: 'The same logic applies to Roman Reigns, Randy Orton, and Triple H — all of whom have 10+ Elite releases. More figures means more options and more chances to get cheap, but it also means the specific variants that collectors actually want carry real premiums over the standard releases. Know which series you are buying.' },
+
+      { type: 'h2', text: 'The vintage lines: Classic Superstars and Ruthless Aggression' },
+      { type: 'p', text: 'The FigurePinner database covers 5,571 wrestling figures total — not just Elite. Before Mattel took the license in 2010, Jakks Pacific ran WWE through multiple sub-lines. Classic Superstars (364 figures in the database) was Jakks\'s retro line targeting the same demand that Elite Legends now serves. Ruthless Aggression (316 figures) was the main Jakks line from 2002–2008, covering the Attitude Era and early PG era in 6-inch scale.' },
+      { type: 'p', text: 'Classic Superstars commands genuine secondary market premiums for characters who either died or retired before Mattel took the license and therefore have no Mattel equivalent. Terry Funk in Classic Superstars — no Elite equivalent existed until late in his life. Eddie Guerrero in Classic Superstars has moved steadily above its 2004 retail since his death in 2005. The sold comps on Guerrero Classic Superstars run $40–$90 depending on variant and condition. That is a twenty-year-old figure at double its original retail, held up purely by the impossibility of a new release.' },
+
+      { type: 'h2', text: 'What to check before buying loose wrestling figures' },
+      { type: 'p', text: 'Wrestling figures get played with. Not all collectors are collectors from day one — many were bought for kids, used heavily, and then sold on eBay as "collector items" fifteen years later with loose joints and missing accessories. Before buying any loose Elite or Classic Superstars figure, verify: joint tightness (especially shoulders and hips), belt and accessory completeness (many figures ship with belts that get lost), and head paint (eyes chip on figures that have been handled).' },
+      { type: 'p', text: 'The accessories gap is real on secondary market. A John Cena Elite that shipped with a chain and a t-shirt accessory is worth materially less without those accessories — sometimes 20–30% less. Sellers frequently list figures as "complete" when they mean "I have no idea what came with this." Pull the original checklist before buying anything premium.' },
+
+      { type: 'h2', text: 'Check any wrestler\'s current price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks 805 Elite figures, 175 Elite Legends, 364 Classic Superstars, and 316 Ruthless Aggression figures with eBay sold comp data. Search any wrestler by name to see what their figures actually cleared — not asking prices, actual sales from the last 90 days. The difference between what a seller lists and what a buyer paid is 40–60% on most wrestling figures.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[WWE Elite Price Guide 2026: Series by Series Values|/guides/wwe-elite-price-guide-2026]] — series breakdown with comp data',
+        '[[Most Valuable WWE Figures: Elite, Classic Superstars, and Vintage|/guides/most-valuable-wwe-figures]] — the figures actually worth money',
+        '[[Classic Superstars vs. Elite Legends: Which Vintage Line Is Worth Collecting|/guides/classic-superstars-vs-elite-legends]] — buying guide for classic-era collectors',
+      ]},
+    ],
+  }
+  ,{
+    slug: 'star-wars-black-series-hub',
+    title: 'Star Wars Black Series Price Guide: 838 Figures, Every Phase, and What They Actually Cost',
+    metaTitle: 'Star Wars Black Series Price Guide 2026 -- Every Phase, Value & Rarity | FigurePinner',
+    metaDescription: 'Star Wars Black Series price guide covering 838 figures across every phase. Most valuable figures, exclusive tiers, and real eBay sold comps -- updated 2026.',
+    dek: '838 figures. 537 characters. Luke Skywalker has 21 of them. Here is what the Black Series actually costs in 2026.',
+    readingMinutes: 10,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'Hasbro launched Star Wars Black Series in 2013 with an orange-carded 6-inch figure and a lot of goodwill from collectors who had been tolerating the 3.75-inch scale since 1977. Thirteen years later it is the dominant premium Star Wars format: 838 figures in the FigurePinner database, 537 unique characters, and a secondary market that ranges from $8 clearance Stormtroopers to $200+ HasLab Sail Barge figures that funded on sheer collector will.' },
+      { type: 'p', text: 'The line has gone through distinct phases that collectors track like geological strata. Orange wave, blue wave, Force Awakens era, 40th Anniversary, Galaxy series. Each phase has different articulation standards, paint quality benchmarks, and secondary market behavior. Buying a Phase 1 orange-carded figure and a current Galaxy-series release is not the same transaction even if they cost the same at retail.' },
+
+      { type: 'h2', text: 'How Black Series pricing works' },
+      { type: 'p', text: 'Retail is currently $27.99 to $29.99 for standard Black Series, with Deluxe and vehicle sets above that tier. The secondary market breaks into three zones: below retail (overproduced or unpopular -- any army-builder stormtrooper variant beyond the first has this problem), at-retail or slight premium (normal demand for a current character), and above retail (scarcity plus demand -- usually an exclusive with a closed window, or an early-phase figure never reissued).' },
+      { type: 'p', text: 'The exclusive tier is massive. The FigurePinner database counts 142 exclusive Black Series figures -- nearly one in six releases. Exclusives come from Target, Walmart, Amazon, GameStop, Fan Channel/Pulse, Celebration events, and the Disney parks. Park exclusives carry the highest premiums because supply is gated behind a theme park ticket. A Disney park Obi-Wan or Ahsoka moves significantly above retail because non-park attendees have no other option.' },
+
+      { type: 'h2', text: 'Most valuable Star Wars Black Series figures right now' },
+      { type: 'ul', items: [
+        'HasLab Rancor (2021) -- funded at $349.99 retail, the HasLab Rancor with Luke and Gamorrean Guard accessories is the secondary market ceiling for standard Black Series. Loose with all accessories: above $280. Sealed: above $400.',
+        'Disney park exclusives -- figures sold only at Hollywood Studios and Disneyland. Ahsoka Tano, specific clone variants, and park-run droids have moved $60-$120 on secondary market because supply is gated by geography and a park ticket.',
+        '40th Anniversary line -- 56 figures in the database covering the original trilogy with special vintage-style packaging. The 40th Anniversary Darth Vader (2017) sealed has held above $70; the packaging format is specific and has not been reissued.',
+        'Celebration and convention exclusives -- figures sold at Star Wars Celebration events. These carry event premiums that dissolve over time but hold for 12-18 months after the show.',
+        'Phase 1 orange wave (2013) -- the first 10 figures of the line. Luke, Vader, R2-D2 from the original 2013 run in sealed packaging move between $45 and $90. Loose, they are mostly $12-$20.',
+      ]},
+
+      { type: 'h2', text: 'The Luke Skywalker problem' },
+      { type: 'p', text: 'Luke Skywalker has 21 distinct Black Series releases. Obi-Wan Kenobi has 15. Darth Vader has 15. Boba Fett has 13. These are the core characters who get reissued whenever Hasbro needs a wave to ship -- Luke in X-wing pilot gear, Luke in Bespin, Luke in Jedi robes, Luke in black for Return of the Jedi. The secondary market consequence is predictable: most Luke figures are worth retail or below.' },
+      { type: 'p', text: 'The exceptions are format-specific variants. The Carbonized Luke -- chrome-finish from the Carbonized sub-line -- holds above retail because the presentation is genuinely different. The 40th Anniversary Luke holds because the packaging is collectible. Most Luke figures are product, not collectibles. Know which version you have.' },
+
+      { type: 'h2', text: 'Ahsoka Tano: the Black Series breakout character' },
+      { type: 'p', text: 'Ahsoka Tano has 8 Black Series releases and the most secondary market momentum in the line right now. She was introduced in The Clone Wars, appeared in Rebels and The Mandalorian, then got her own live-action show -- every new property generates a new wave of buyers. Her Clone Wars-era white-and-blue look and her Rebels-era white-blade appearance have different fanbases and different price points.' },
+      { type: 'p', text: 'Which version matters enormously. The Ahsoka from her 2023 Disney+ show is widely available near retail. Earlier animated-likeness versions, especially the first Clone Wars figure, move between $35 and $80 depending on condition and accessory completeness. Buying Ahsoka on secondary market without knowing which era you want is how you overpay.' },
+
+      { type: 'h2', text: 'The Vintage Collection: 3.75-inch runs parallel' },
+      { type: 'p', text: 'FigurePinner tracks 814 Vintage Collection figures -- nearly identical count to Black Series. The Vintage Collection is 3.75-inch scale with cardback styling that matches original Kenner. It is a completely separate market that runs parallel to Black Series. Some collectors are 6-inch only; some are 3.75-inch only; some buy both. The scales are incompatible on the same shelf.' },
+      { type: 'p', text: 'Vintage Collection carries its own nostalgia premium for collectors who grew up with original Kenner figures in the late 1970s and 1980s. Sealed Vintage Collection figures on Kenner-style cards run notably higher than sealed Black Series for the same character, because the cardback format is the specific nostalgia object.' },
+      { type: 'callout', text: 'FigurePinner tracks 4,222 Star Wars figures total -- Black Series, Vintage Collection, The Clone Wars, Power of the Force, and more. If you are hunting a specific character across all formats, every major line is in the database.' },
+
+      { type: 'h2', text: 'Phase guide: what changed across Black Series eras' },
+      { type: 'p', text: 'Orange wave (2013): the original 6-inch launch, solid articulation for the era, variable paint. Blue wave (2014-2015): refined construction, improved joints on some figures. Force Awakens era (2015-2018): sequel trilogy characters introduced, paint quality starts to diverge between basic and premium tiers. 40th Anniversary (2017): vintage packaging on current-construction figures. Galaxy series (2018-present): current standard, Deluxe tier introduced, photo real paint on premium releases.' },
+      { type: 'p', text: 'Photo real paint -- the face-likeness process Hasbro introduced around 2019-2020 -- is the single biggest quality jump in the line. Pre-photo-real faces are stylized action-figure faces. Post-photo-real faces are noticeably accurate to actor likenesses. For human characters, a post-2019 release almost always looks better than any pre-2019 version of the same character, even if the older release is rarer.' },
+
+      { type: 'h2', text: 'Check any Black Series figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 838 Black Series figures plus the full Star Wars library with eBay sold comp data. Search any character to see actual sold prices -- not asking prices, not guide estimates, real cleared transactions from the last 90 days.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Star Wars Black Series Price Guide 2026: Most Valuable Figures by Phase|/guides/star-wars-black-series-price-guide-2026]] -- phase breakdown with comp data',
+        '[[Star Wars Vintage Collection Price Guide|/guides/star-wars-vintage-collection-price-guide]] -- the 3.75-inch collector market',
+        '[[HasLab Star Wars: Every Project, Every Price|/guides/haslab-star-wars-price-guide]] -- the top-tier Black Series market',
+      ]},
+    ],
+  }
+
+  ,{
+    slug: 'dc-multiverse-hub',
+    title: 'DC Multiverse Price Guide: 1,508 Figures, 457 Characters, and What They Actually Cost',
+    metaTitle: 'DC Multiverse Price Guide 2026 -- Every Wave, Gold Label & Value | FigurePinner',
+    metaDescription: 'DC Multiverse price guide covering 1,508 figures. Gold Label rarity, Batman variant guide, CnC wave breakdown, and real eBay sold comps -- updated 2026.',
+    dek: '1,508 figures. 457 characters. Batman has 235 of them. Here is what McFarlane Toys DC Multiverse actually costs.',
+    readingMinutes: 10,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'McFarlane Toys took over the DC license in 2020 and immediately started shipping waves at a pace that made the Mattel DC Universe Classics era look leisurely. The DC Multiverse line now covers 1,508 figures in the FigurePinner database across 457 unique characters. Batman accounts for 235 of those releases. Superman has 77. The Joker has 38. If you are trying to understand what any of it is worth, start with the tiering system -- because McFarlane built a deliberate scarcity structure into Multiverse from the beginning.' },
+      { type: 'p', text: 'The line divides into two formal tiers: standard Multiverse and Gold Label. Gold Label is the scarcity tier -- limited production runs, retailer exclusives, and collector-targeted variants that McFarlane signals from the front of the package. Understanding this distinction is the single most important thing you can know about DC Multiverse secondary market pricing.' },
+
+      { type: 'h2', text: 'Standard Multiverse vs. Gold Label' },
+      { type: 'p', text: 'Standard Multiverse figures ship in normal retail quantities to Target, Walmart, Amazon, and specialty shops. The secondary market on most standard Multiverse releases is thin -- good figures at retail pricing, not scarce enough to generate real premiums above $10-$15 over MSRP for most characters. The exceptions are one-per-case chase figures and characters with high demand but limited production (villain-heavy waves with a single villain getting short-packed against five Batman variants).' },
+      { type: 'p', text: 'Gold Label is a different animal. The FigurePinner database shows 365 Gold Label releases -- nearly a quarter of all Multiverse figures. Gold Label figures are exclusive to specific retailers or sold in limited windows: McFarlane store exclusives, Target exclusives, Walmart exclusives, Amazon exclusives, GameStop exclusives, and convention exclusives. The production run is stated to be lower. Secondary market premiums on Gold Label run 30-100% above retail within weeks of a figure going out of stock.' },
+      { type: 'callout', text: 'FigurePinner tracks 365 Gold Label DC Multiverse figures separately from standard releases. Gold Label is where the secondary market action is -- most standard Multiverse is worth close to retail.' },
+
+      { type: 'h2', text: 'Batman has 235 Multiverse releases' },
+      { type: 'p', text: 'Batman leads the DC Multiverse character count at 235 distinct releases -- more than three times Superman (77) and more than six times the Joker (38). This is not a knock on McFarlane; DC Comics has published roughly 35,000 Batman stories since 1939 and there are genuinely dozens of distinct looks worth making. But the secondary market consequence is significant: most Batman Multiverse figures sell at retail or below. The supply is constant and the variants are many.' },
+      { type: 'p', text: 'The valuable Batman releases are specific: Gold Label variants in limited production, the Batman Animated Series sub-line (which draws its own fandom separate from the main Multiverse line), and specific suit variants from major storylines that have collector demand beyond casual buyers. The "yet another blue-and-grey Batman" does not hold value. The Detective Comics #27 anniversary figure in Gold Label packaging does.' },
+
+      { type: 'h2', text: 'Most valuable DC Multiverse figures right now' },
+      { type: 'ul', items: [
+        'Gold Label exclusives with limited windows -- McFarlane store-exclusive Gold Labels that sold out and closed. The aftermarket on these runs 40-90% above their original retail. Specific DC Direct and McFarlane Collector Edition figures with sub-2000 stated print runs.',
+        'Batman Animated Series figures (Kenner-style and McFarlane-era) -- the Batman Animated Series has its own collector base that predates Multiverse entirely. The original Kenner Batman Animated (87 figures in the database) and the McFarlane Batman Animated Series rereleases both command premiums from collectors who grew up with the 1992 animated show.',
+        'CnC (Collect-and-Connect) wave completions -- the Multiverse equivalent of a BAF. King Shark, Bane, and Steppenwolf CnC waves (27, 26, and 22 figures respectively in the database) generate the same BAF economics as Marvel Legends: wave members sell unevenly based on whether the buyer wants the figure or just the piece.',
+        'DC Collectibles Batman Animated Series -- 69 figures in the database from the DC Collectibles (pre-McFarlane) run. These are an older collector item now; the Harley Quinn and Poison Ivy figures from this line have held the strongest secondary market values because the character designs are considered definitive.',
+        'Super Powers vintage (1984-1986) -- 142 figures in the database. The original Kenner Super Powers line is a vintage collectible market entirely separate from modern Multiverse. Sealed Super Powers figures in good card condition move between $40 and $200 depending on character and condition.',
+      ]},
+
+      { type: 'h2', text: 'The Batman Animated Series as a separate market' },
+      { type: 'p', text: 'The 1992 Batman: The Animated Series is one of the most beloved pieces of DC animation ever produced, and it has generated a collector market that runs across three different manufacturer eras. Kenner made the original figures (1992-1996, 87 figures in the database). DC Collectibles made a modern version (69 figures). McFarlane has made their own Animated Series releases as part of the broader Multiverse line.' },
+      { type: 'p', text: 'Each era has different collector bases and different value drivers. Kenner originals are nostalgic artifacts from the early 1990s; the Mr. Freeze, Ra\'s al Ghul, and Talia figures from the Kenner run command real premiums ($35-$80 for good loose examples) because the line ended before completing the full villain roster. DC Collectibles versions are modern articulated figures with animated-accurate styling; the first-run figures hold value because the line was cancelled. McFarlane versions are widely available.' },
+
+      { type: 'h2', text: 'DC Universe Classics: the pre-McFarlane premium line' },
+      { type: 'p', text: 'Before McFarlane, Mattel ran DC Universe Classics (2007-2016) with 172 figures tracked in the FigurePinner database. DCUC is the predecessor to Multiverse in collector esteem and secondary market behavior. The Collect-and-Connect system (DCUC used the same BAF model) produced complete figures that are now genuinely old collectibles. Certain DCUC figures -- Vigilante, B\'wana Beast, Kamandi -- shipped in limited quantities to stores that nobody visited and now command $60-$120 loose because they are genuinely hard to find.' },
+      { type: 'p', text: 'The DCUC vs. Multiverse comparison is a genuine collector debate. DCUC has deeper character selection in the obscure tier and a more consistent scale across releases. Multiverse has better paint applications, better face sculpts, and active retail availability. If you are building a comprehensive DC collection, you need both.' },
+
+      { type: 'h2', text: 'Checking rarity before buying' },
+      { type: 'p', text: 'The Gold Label designation on the package is the most reliable rarity signal in the Multiverse line, but it is not the only one. Check the UPC and look for the retailer-exclusive sticker -- a figure that says "McFarlane Toys Direct" or "Target Exclusive" in small text on the packaging has a different secondary market ceiling than a standard retail release. Loose secondary market Multiverse figures frequently do not list their Gold Label status; always cross-reference against the FigurePinner database before paying above-retail prices.' },
+
+      { type: 'h2', text: 'Check any DC Multiverse figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 1,508 DC Multiverse figures plus DC Universe Classics, Batman Animated Series, Super Powers, and the full DC catalog with eBay sold comp data. The Gold Label tier, the CnC wave figures, the animated-series sub-markets -- all covered with real sold prices.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[DC Multiverse Price Guide 2026: Gold Label vs. Standard Values|/guides/dc-multiverse-price-guide-2026]] -- tier breakdown with comp data',
+        '[[Batman Animated Series Figure Guide: Kenner vs. DC Collectibles vs. McFarlane|/guides/batman-animated-series-figure-guide]] -- the three-era collector market',
+        '[[DC Universe Classics: The Collector Guide to DCUC Values|/guides/dc-universe-classics-price-guide]] -- pre-McFarlane era values',
+      ]},
+    ],
+  }
+  ,
+  {
+    slug: 'masters-of-the-universe-hub',
+    title: 'Masters of the Universe Price Guide: 1,497 Figures Across 40 Years of Eternia',
+    metaTitle: 'MOTU Price Guide 2026 -- Origins, Masterverse, Classics & Vintage Values | FigurePinner',
+    metaDescription: 'Masters of the Universe price guide covering 1,497 figures across Origins, Masterverse, MOTUC, Super7, and 1982 vintage. Line-by-line value breakdown and real eBay sold comps -- updated 2026.',
+    dek: '1,497 figures. 526 characters. Ten lines, three of them shipping right now, and a fandom that has been braced for cancellation since 2004. Here is what MOTU actually costs.',
+    readingMinutes: 11,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'No fandom has been left at the altar more times than this one. The 200X line died in 2004 with the story half-told. Mattycollector ran the Classics line on a subscription model that crashed its own servers every sale day and trained an entire fandom to panic-buy. Super7 inherited the keys and immediately asked for $600 to crowdfund a Snake Mountain. Then Origins, the line that was supposed to bring He-Man back to a Walmart peg, got quietly exiled to Mattel Creations and online ordering. If you collect MOTU, your default emotional register is cautious hope braced for the next cancellation. The FigurePinner database tracks 1,497 of these figures across 526 characters and ten distinct lines -- and the value story is completely different depending on which line you are holding.' },
+      { type: 'p', text: 'He-Man (84 releases) and Skeletor (77) dominate the character count the way Batman dominates DC Multiverse -- which means most He-Man and Skeletor figures are common and sell at or near retail. The money is in the supporting cast, the dead lines, and the vintage cards. Start with the line, not the character.' },
+
+      { type: 'h2', text: 'The ten lines, and which ones hold value' },
+      { type: 'p', text: 'MOTU is not one collection, it is ten overlapping ones. The database breaks down as: Origins (474), Classics/MOTUC (210), the 1982 vintage original (198), Masterverse (167), the 200X Mattel line (126), Eternia Minis (96), Super7 (94), Mondo (83), New Adventures of He-Man (38), and Mattel Chronicles (11). Each one has its own collector base and its own pricing physics.' },
+      { type: 'callout', text: 'Origins is the biggest line by figure count (474) but the softest in secondary value -- it is the current retail line. MOTUC and 200X are the smaller, dead lines where the real premiums live. Count of figures is not a proxy for value.' },
+
+      { type: 'h2', text: 'Origins: 474 figures and a retail collapse problem' },
+      { type: 'p', text: 'Origins launched in 2020 as the 5.5-inch vintage-style line meant to put He-Man back on store pegs at a $15 price point. It is the largest MOTU line in the database at 474 figures, and for most collectors that is exactly the problem -- the supply is enormous and the distribution got worse, not better. Mattel moved more and more of the line to Mattel Creations and online-exclusive drops, and the fandom has a name for what happens next: the "can\'t find it in stores" death spiral. A line that lives online does not build casual collectors, and Origins\' secondary market reflects it. Most standard Origins figures sell loose for less than their original retail.' },
+      { type: 'p', text: 'The exceptions are the Creations and convention exclusives and the deco variants -- the Origins-exclusives wave and the cross-line collaboration figures. Those move. A standard wave-five Beast Man does not. Before you pay a premium on a loose Origins figure, check whether it was a general-retail release or an online-exclusive, because that single fact sets the ceiling.' },
+
+      { type: 'h2', text: 'MOTUC: the Mattycollector trauma line' },
+      { type: 'p', text: 'Masters of the Universe Classics ran from 2008 to 2018, sold almost entirely through Mattycollector\'s subscription-and-sale-day model, and is the line most current collectors mean when they say "the good stuff." The database tracks 210 MOTUC figures. The sculpting was handled by the Four Horsemen -- the studio fans revere by name, and the reason MOTUC figures still look better than a lot of what shipped after. Because the line sold through a subscription with limited sale-day windows that routinely crashed the Mattycollector servers, supply on individual figures was genuinely constrained in a way Origins supply never has been.' },
+      { type: 'p', text: 'That constraint shows up in the comps. The harder MOTUC figures -- late-run releases, the Club Grayskull subset, characters that sold out before fans could re-buy -- run real premiums loose and serious premiums sealed. This is the line where "I missed the sale day and have been paying for it ever since" is a genuine collector loss story, not a marketing line. I will be honest about where the data thins out: print runs on individual MOTUC figures were never officially published, so any specific scarcity claim you see is an estimate, not a number Mattel ever confirmed.' },
+
+      { type: 'h2', text: 'The 1982 vintage line: 198 figures and the crotch-wash joke' },
+      { type: 'p', text: 'The original 1982-1987 Mattel line -- 198 figures in the database -- is the vintage market underneath everything else. This is where carded-versus-loose splits the value in two: a loose vintage He-Man with his armor and weapon is a $20-$40 figure depending on condition, while the same figure carded in decent shape is a different order of magnitude. The fandom\'s favorite running joke lives here too: the "vintage taint," the flesh-tone crotch-wash paint application Mattel used on the figures, which the community has never stopped finding funny and never will.' },
+      { type: 'p', text: 'Vintage MOTU value drivers are the usual vintage drivers: completeness (the right weapon, the right armor, the mini-comic), card condition for sealed examples, and the harder later-wave figures that shipped in lower quantities as the line wound down. The early core characters are common; the late-line and the New Adventures-adjacent vintage releases are where vintage scarcity actually lives.' },
+
+      { type: 'h2', text: 'Masterverse, 200X, Super7, and the rest' },
+      { type: 'ul', items: [
+        'Masterverse (167) -- the 7-inch fully-articulated modern line, the current "premium" tier alongside Origins. Includes Filmation-deco figures and movie-tie-in releases. The fandom is watching it for slowdown signs, and the 2026 live-action movie figures draw equal parts excitement and "movie lines have killed us before" dread. Secondary value is still mostly retail-adjacent except for the exclusives.',
+        '200X / Mattel 200X (126) -- the 2002-2004 line that died with its story half-told. Because the line was cancelled mid-run, the late-wave 200X figures that barely shipped are genuine grails for that sub-fandom, and the deeper-cut characters command real money. This is a dead-line premium, same economics as a cancelled DCUC wave.',
+        'Super7 (94) -- the Club Grayskull and ReAction-adjacent era, including the infamous $600 Snake Mountain crowdfund. The fandom splits hard on Super7: gratitude for keeping the brand alive versus resentment over pricing and quality, and people who collect MOTU seriously will police you for flattening that era into hero-or-villain. Value is uneven and product-dependent.',
+        'Mondo (83) -- the high-end 1/6-ish premium-collectible tier. Different buyer entirely, priced as display-piece collectibles rather than mass-market figures.',
+        'New Adventures of He-Man (38) -- the space-future 1989 reboot. Defending the NA line is, in fandom terms, a hipster position; the figures are a niche-within-a-niche and priced accordingly, with a small but committed buyer base.',
+        'Eternia Minis (96) and Mattel Chronicles (11) -- the blind-box and small-format tiers; collectible but low-dollar per unit.',
+      ]},
+
+      { type: 'h2', text: 'Knowing your lines is the price test' },
+      { type: 'p', text: 'The single most common MOTU pricing mistake is treating a figure as "a He-Man figure" instead of "an Origins He-Man" or "a MOTUC He-Man" or "a 1982 vintage He-Man." Those are three completely different markets with three different price ceilings, and a loose figure stripped of its packaging often does not announce which line it came from. The poser tells in this fandom are exactly the value mistakes: confusing Origins with Classics with Masterverse, not knowing the Four Horsemen sculpted MOTUC, and -- the cardinal sin -- spelling it "Skeletore."' },
+
+      { type: 'h2', text: 'Check any MOTU figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 1,497 Masters of the Universe figures across Origins, Masterverse, MOTUC, the 1982 vintage line, 200X, Super7, Mondo, and the rest -- with eBay sold comp data, so you can tell an online-exclusive Origins figure from a general-retail one and a dead-line 200X grail from a common core character before you pay.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Masters of the Universe Collecting Guide: Where to Start|/guides/motu-collecting-guide]] -- the line-by-line starter for new MOTU collectors',
+      ]},
+    ],
+  }
+
+  ,
+  {
+    slug: 'tmnt-hub',
+    title: 'TMNT Price Guide: 1,182 Figures Across NECA, Playmates, and Super7',
+    metaTitle: 'TMNT Price Guide 2026 -- NECA, Playmates, Super7 Ultimates & Values | FigurePinner',
+    metaDescription: 'Teenage Mutant Ninja Turtles price guide covering 1,182 figures across NECA, Playmates, and Super7 Ultimates. Line-by-line value breakdown, Haulathon comps, and real eBay sold prices -- updated 2026.',
+    dek: '1,182 figures. 605 characters. The hottest license in the hobby, three manufacturers who barely share a scale, and a Target drop day that gave an entire fandom PTSD. Here is what TMNT actually costs.',
+    readingMinutes: 11,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'There is a phrase collectors use when a TMNT figure sells out in nine seconds and resells for triple before it ships: the turtle tax. TMNT is the hottest license in the action-figure hobby right now, and the consequence is that almost everything sells out and almost nothing sits. The FigurePinner database tracks 1,182 Turtles figures across 605 characters and three manufacturers who each serve a different slice of the fandom and barely agree on what scale a turtle should be. If you want to price any of them, the first question is never "which character" -- it is "which line, and which continuity."' },
+      { type: 'p', text: 'The four turtles cluster tightly in the database: Raphael (33), Donatello (32), and Leonardo and Michelangelo (30 each). Shredder has 21, Casey Jones 20, Splinter 15. The deep cuts go a long way -- Usagi Yojimbo has 11 releases, The Last Ronin has 9. But character count is not the value story here. Manufacturer and continuity are.' },
+
+      { type: 'h2', text: 'Three manufacturers, three completely different markets' },
+      { type: 'p', text: 'NECA dominates the database with 449 figures in its main TMNT line (650 across all NECA sub-lines), Playmates has 339, and Super7 has 144 in its Ultimates line. These are not competing versions of the same product -- they are three separate collector markets. NECA serves the continuity factions (1987 cartoon, 1990 movies, Mirage comics, the cartoon-accurate cel-shaded look). Super7 serves vintage-toy nostalgia with the high-end Ultimates treatment. Playmates is the budget legacy holder that everyone scolds and everyone still buys.' },
+      { type: 'callout', text: 'Calling a Super7 Ultimates figure "a NECA" is a poser tell. So is thinking Playmates is the collector line. The three lines do not share a scale -- NECA, Super7, and Playmates turtles do not stand comfortably on the same shelf, and that scale incompatibility is a genuine ongoing fandom complaint.' },
+
+      { type: 'h2', text: 'NECA: the line that created Haulathon PTSD' },
+      { type: 'p', text: 'NECA is the collector-tier TMNT line, and its signature is toon-accurate -- the cel-shaded deco that recreates the 1987 cartoon look. The database holds 449 figures in the core NECA line plus a 67-figure Ultimate sub-line. NECA serves each continuity faction separately: the toon line, the 1990 movie line, the Mirage black-and-white comic deco. Which one you want determines which figures even exist for you.' },
+      { type: 'p', text: 'And then there is Haulathon. NECA distributes large Target-exclusive multipacks on specific drop days, and "Haulathon" has become shorthand for a particular kind of suffering: the app crashes, carts empty at checkout, bots clear stock before humans load the page, and the figures are then nearly impossible to find in actual stores. The secondary-market consequence is direct -- Haulathon-exclusive sets command real premiums because the in-store availability the price assumes never materialized. When you see a NECA TMNT set priced well above its stated retail, the reason is almost always that it was a Haulathon drop that nobody could actually buy at retail. NECA and Randy Falk discourse on social media is its own meta-topic in the fandom.' },
+
+      { type: 'h2', text: 'Super7 Ultimates: premium, brittle, and worth the wait (mostly)' },
+      { type: 'p', text: 'Super7 makes the Ultimates line -- 144 figures in the database -- the high-end, vintage-nostalgia tier. These are built and priced as premium collectibles, with the accessory-heavy "Ultimates" treatment that gives the line its name. Two things define the Super7 ownership experience and both affect resale. First, the wait: Super7 Ultimates ship on a long pre-order timeline, long enough that "I forgot I ordered this" is a running joke. Second, the joints: Super7 figures have a reputation for brittle plastic and stuck joints, and condition risk on loose examples is real.' },
+      { type: 'p', text: 'Value-wise, sold-out Ultimates waves hold and climb -- the pre-order model means production is keyed to demand and the secondary market on a closed wave is thin. But because of the brittleness, loose-figure condition matters more here than in most modern lines. A loose Super7 turtle with intact joints is worth meaningfully more than one with the common ankle or shoulder breakage.' },
+
+      { type: 'h2', text: 'Playmates: the line everyone scolds' },
+      { type: 'p', text: 'Playmates has held the mass-market TMNT license since the original 1988 vintage line, and the database tracks 339 Playmates figures plus a 49-figure Mutant Mayhem sub-line tied to the 2023 movie. Playmates is the budget legacy holder, and the fandom\'s relationship with it is openly grumpy. The common complaint about modern Playmates reissues is blunt: "same figure, worse plastic, 2025 price." The reissues recycle old tooling at higher price points with cheaper materials, and collectors notice.' },
+      { type: 'p', text: 'The value here splits hard between vintage and modern. Vintage Playmates (the 1988-1997 original run) is a real collectible market -- carded examples of the early waves and the harder-to-find later figures command vintage premiums, and condition-graded sealed pieces are a separate tier entirely. Modern Playmates retail figures are mostly worth retail or less, with the Mutant Mayhem line tracking the movie\'s commercial life. Do not pay collector prices for a modern Playmates basic figure; do take vintage Playmates seriously.' },
+
+      { type: 'h2', text: 'The roster jokes are also value signals' },
+      { type: 'p', text: '"Where\'s Casey" is a long-running fandom complaint -- core characters and obvious roster needs get skipped while lines go deep into one-off variants and obscure deep cuts. April O\'Neil variant fatigue is a related gripe. These are not just jokes; they are value information. When a line re-decos the same four turtles for the fifth time while a wanted character stays unmade, the unmade character\'s existing releases hold value and the fifth turtle re-deco does not. The deep cuts that the toon line keeps producing -- the Usagi Yojimbo and Last Ronin figures, the obscure mutants -- often outperform the core re-releases precisely because they were made once.' },
+
+      { type: 'h2', text: 'Check any TMNT figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 1,182 Teenage Mutant Ninja Turtles figures across NECA, the Ultimate sub-line, Super7 Ultimates, vintage and modern Playmates, and the Mutant Mayhem releases -- with eBay sold comp data, so you can tell a Haulathon-premium set from a standard retail release and a vintage Playmates collectible from a modern reissue before you pay the turtle tax.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[TMNT Collecting Guide: Where to Start|/guides/tmnt-collecting-guide]] -- the continuity-and-line breakdown for new Turtles collectors',
+      ]},
+    ],
+  }
+
+  ,
+  {
+    slug: 'transformers-hub',
+    title: 'Transformers Price Guide: 1,592 Figures From G1 to Studio Series',
+    metaTitle: 'Transformers Price Guide 2026 -- Masterpiece, Studio Series, G1 & Values | FigurePinner',
+    metaDescription: 'Transformers price guide covering 1,592 figures across Masterpiece, Studio Series, Generations, and vintage G1. Line breakdown, Gold Plastic Syndrome warning, and real eBay sold comps -- updated 2026.',
+    dek: '1,592 figures. 975 characters. The most lore-encrusted fandom in the hobby, a $400 Optimus problem, and a plastic disease that turns vintage gold to dust. Here is what Transformers actually costs.',
+    readingMinutes: 11,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'Transformers collectors do not review robots. They review transformations. This is the most engineering-obsessed, self-documenting fandom in the hobby -- the kind of community where "shellformer" and "partsformer" are damning verdicts and "intuitive" is the highest compliment a transformation can earn (never "easy" -- saying a transformation is "easy" marks you as a tourist). The FigurePinner database tracks 1,592 Transformers figures across 975 characters, all of them Hasbro, spread across more than twenty distinct lines. Optimus Prime leads with 38 releases, Bumblebee 32, Megatron 29, Starscream 22. The Seekers joke -- "they will repaint Starscream into all of them" -- is visible right there in the data: Thundercracker (14) and Skywarp (11) are just Starscream repaints, and the fandom both mocks and buys every one.' },
+      { type: 'p', text: 'Pricing Transformers means knowing the line and knowing one specific disease.' },
+
+      { type: 'h2', text: 'Gold Plastic Syndrome: the vintage value-killer' },
+      { type: 'p', text: 'Before anything else, if you are buying vintage G1 or early reissues, learn GPS -- Gold Plastic Syndrome. Certain gold-swirl plastic Hasbro and Takara used in the late 1980s and early 1990s degrades and crumbles with age, regardless of storage. Affected figures (specific Pretenders, certain Decepticon parts, the gold-plastic combiner pieces) can shatter under their own joint tension years later. This is not condition wear; it is a chemical time bomb baked into the plastic. A vintage figure with GPS-prone parts is worth a fraction of a clean example, and "looks fine in the photo" means nothing -- GPS parts fail suddenly. Always ask a vintage seller specifically about stress marks on gold parts.' },
+      { type: 'callout', text: 'GPS is the single most important thing to check before paying vintage-G1 prices. The database tracks 126 G1 figures and 76 vintage-G1 reissues -- on the GPS-era pieces, the gold plastic condition sets the value, not the box.' },
+
+      { type: 'h2', text: 'The lines, and where value concentrates' },
+      { type: 'p', text: 'The modern Generations ecosystem is enormous and cited wave-by-wave: Studio Series leads the database at 236 figures, then the War for Cybertron trilogy (Siege, Earthrise, Kingdom -- 59, 47, and 50 figures) and its Legacy continuation (Legacy 64, Evolution 58, United 55). Universe (168), Generations (81), Combiner Wars (69), Power of the Primes (46), Titans Return (75). The complaint that comes with all of it is Legacy repaint fatigue -- the line re-releases the same molds in new decos faster than it makes never-made characters, and collectors track reuse-retool-pretool spotting as a sport.' },
+      { type: 'p', text: 'Generations-Selects (48) is the Hasbro Pulse online-exclusive subset, and those carry secondary premiums when they sell out because the distribution was online-only. Shattered Glass (12) -- the evil-Autobots/heroic-Decepticons concept -- is a small, collector-targeted niche that holds value for the same scarcity reason.' },
+
+      { type: 'h2', text: 'Masterpiece: the $400 Optimus problem' },
+      { type: 'p', text: 'Masterpiece (MP) is the high-end, screen-or-toy-accurate flagship tier -- 171 figures in the database -- and it is where the real money lives and the real arguments happen. The philosophical war is cel-accurate (matching the cartoon) versus toy-accurate (matching the original toy), and it never resolves because both camps are right. A current MP Optimus can run $200-$400 at retail, and the discontinued ones climb hard. Takara-branded Masterpiece releases frequently get better decos than the Hasbro versions, which means the import-versus-domestic premium is a real pricing variable: the Takara version of the same character often commands more.' },
+      { type: 'p', text: 'Here is where I will admit the data thins out: the third-party (3P) market -- Fans Toys, MMC, Magic Square and others making unlicensed "not-Grimlock" figures -- runs parallel to the official lines and is openly discussed in the fandom, but those figures are outside the FigurePinner database (we track licensed Hasbro releases). If you are pricing a 3P figure, the official-release comps here are a reference point, not a direct match. The 3P market has its own contraction-and-pricing dynamics that the licensed comps do not capture.' },
+
+      { type: 'h2', text: 'Check any Transformers figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 1,592 Hasbro Transformers figures across Masterpiece, Studio Series, the full War-for-Cybertron and Legacy waves, Combiner Wars, and vintage G1 -- with eBay sold comp data, so you can separate a GPS-risk vintage piece from a clean one and a sold-out Pulse exclusive from a peg-warming repaint before you pay.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Transformers Collecting Guide: Where to Start|/guides/transformers-collecting-guide]] -- the line-by-line starter for new TF collectors',
+      ]},
+    ],
+  }
+  ,
+  {
+    slug: 'gi-joe-hub',
+    title: 'G.I. Joe Price Guide: 1,178 Figures From ARAH to Classified',
+    metaTitle: 'GI Joe Price Guide 2026 -- ARAH Vintage, Classified Series & Values | FigurePinner',
+    metaDescription: 'G.I. Joe price guide covering 1,178 figures across vintage A Real American Hero, Classified Series, 25th Anniversary, and Super7. Line breakdown, o-ring values, and real eBay sold comps -- updated 2026.',
+    dek: '1,178 figures. 792 characters. A 40-year spine of o-ring nostalgia, a 6-inch revival, and a community that treats Larry Hama filecards as scripture. Here is what G.I. Joe actually costs.',
+    readingMinutes: 11,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'In the G.I. Joe fandom, the o-ring is an identity, not a spec. The original 1982-1994 A Real American Hero line built figures around an internal rubber o-ring that gave them their articulation, and four decades later that single design choice still defines who is a real collector and who is a tourist (calling the o-ring a defect is a poser tell). The FigurePinner database tracks 1,178 G.I. Joe figures across 792 characters and several distinct eras. ARAH dominates at 483 figures; the modern 6-inch Classified Series has 256; the 25th Anniversary line 140; the Super7 ReAction and collector subsets and the Collectors Club fill out the rest. Snake Eyes leads the character count at 30, Cobra Commander 29 -- and the Snake Eyes count is itself the running joke: the "Snake Eyes tax," where he gets five variants before your favorite character gets one. He is the line\'s Batman.' },
+      { type: 'p', text: 'Larry Hama wrote the filecards, and name-dropping him is mandatory respect in this fandom. The lore is the product as much as the plastic.' },
+
+      { type: 'h2', text: 'ARAH vintage: the 483-figure spine' },
+      { type: 'p', text: 'The vintage A Real American Hero line (1982-1994) is the foundation of everything, with 483 figures in the database, and its pricing follows classic vintage rules with one Joe-specific wrinkle: completeness is brutal. ARAH figures came with small, easily-lost accessories and -- critically -- the o-ring itself perishes. A vintage Joe with a cracked or missing o-ring is a project, not a complete figure, and the value gap between a complete-with-accessories example and a "figure only, no gear" example is enormous. The filecard and the original weapons matter as much as the figure.' },
+      { type: 'p', text: 'Army building drives a specific corner of ARAH value. Cobra troopers, Vipers, and B.A.T.s were meant to be bought in bulk to build a Cobra army, and the one-per-case ratios on certain trooper figures created genuine scarcity that persists on the secondary market. The repaint sub-teams -- Python Patrol, Tiger Force, Night Force -- are their own collecting targets, and the harder repaints command real premiums over the base figures.' },
+      { type: 'callout', text: 'For vintage ARAH, "complete" means figure plus all original accessories plus an intact o-ring plus the filecard. Each missing element drops the value a tier. A loose figure with no gear is the floor, not the comp.' },
+
+      { type: 'h2', text: 'Classified Series: the modern revival' },
+      { type: 'p', text: 'Classified Series (2020-present, 256 figures) is the 6-inch modern line that finally gave Joes the same premium-collector treatment Marvel Legends gave superheroes. It is the current center of gravity for new collectors, and it has the modern-line pricing pattern: most standard retail figures sell at or near retail, while the Hasbro Pulse exclusives and convention pieces carry secondary premiums. The fandom anxiety attached to Classified is whether the line is winding down -- "Classified slowdown" is a recurring worry -- and that uncertainty makes fan-demanded characters that went Pulse-exclusive harder to get and pricier.' },
+      { type: 'p', text: 'A real budget tension shapes the modern market: Hasbro runs both Classified (6-inch) and a retro o-ring line (the 3.75-inch Retro Collection, 31 figures in the database) at the same time, and collectors openly complain that Hasbro "can\'t fund both scales" well. The 25th Anniversary line (2007, 140 figures) was the previous collector golden age before Classified -- thinking serious Joe collecting started with Classified is a poser tell, and the 25th Anniversary figures have their own established secondary market.' },
+
+      { type: 'h2', text: 'Super7 and the rest' },
+      { type: 'ul', items: [
+        'Super7 ReAction (117 figures) -- vintage-style 3.75-inch throwbacks in the Kenner-retro mold, plus a smaller 34-figure Super7 subset. Collectible but priced as nostalgia novelties rather than the premium tier; value is product-and-character dependent.',
+        'Collectors Club (117 figures) -- the club-exclusive releases, often army-builder sets and convention figures with limited production. These run premiums when the specific set was scarce, and the club exclusives are a known checklist target.',
+        '3.75 Retro Collection (31) -- the modern o-ring revival at mass retail. Mostly retail-priced, tracking the modern Hasbro distribution pattern.',
+      ]},
+
+      { type: 'h2', text: 'Check any G.I. Joe figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 1,178 G.I. Joe figures across vintage ARAH, Classified Series, the 25th Anniversary line, Super7 ReAction, and the Collectors Club exclusives -- with eBay sold comp data, so you can tell a complete-with-o-ring vintage Cobra trooper from a gearless project figure and a Pulse-exclusive Classified release from a standard retail one before you pay.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[G.I. Joe: Classified vs. ARAH Collecting Guide|/guides/gi-joe-classified-vs-arah]] -- the scale-and-era breakdown for new Joe collectors',
+      ]},
+    ],
+  }
+  ,
+  {
+    slug: 'neca-hub',
+    title: 'NECA Price Guide: 1,662 Figures Across Horror, Aliens, Predator, and More',
+    metaTitle: 'NECA Price Guide 2026 -- Horror, Aliens, Predator, Ultimate Values | FigurePinner',
+    metaDescription: 'NECA price guide covering 1,662 figures across horror, Aliens, Predator, sci-fi, Terminator, and TMNT. The Ultimate format, QC and breakage value impact, and real eBay sold comps -- updated 2026.',
+    dek: '1,662 figures. 968 characters. The licenses nobody else would touch, the sculpts nobody else could match, and the QC roulette every owner has paid for. Here is what NECA actually costs.',
+    readingMinutes: 11,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'The NECA deal is simple and every collector knows it going in: unmatched sculpts and licenses nobody else will touch, in exchange for QC roulette. "His hand fell off in the box" is a whole genre of post in the NECA community, and breakage first-aid -- the freezer trick to loosen a stuck joint, boil-and-pop to reseat a limb -- is assumed knowledge, not advanced technique. The FigurePinner database tracks 1,662 NECA figures across 968 characters and eight different fandoms, because NECA is not a single line -- it is a manufacturer that makes the figures the big companies consider too niche. Genre-movie love first, engineering second.' },
+      { type: 'p', text: 'Because NECA spans so many licenses, the price story is really several stories under one brand. Jason Voorhees (17 releases) and the T-800 (18) and Godzilla (14) and Robocop (11) live in completely different sub-markets, but they share a brand-wide value logic worth understanding before you buy any of them.' },
+
+      { type: 'h2', text: 'The Ultimate format is the value tier' },
+      { type: 'p', text: 'The single most important NECA concept is the "Ultimate" format -- the window-box-with-flap packaging that comes loaded with swappable heads, hands, and accessories. The database tracks 297 figures in the Ultimate line plus related Ultimate sub-categories. "Ultimate-ize it" is a standing fan demand: when NECA releases a basic version of a character, collectors immediately ask for the deluxe Ultimate treatment. The practical pricing consequence is that Ultimate versions command meaningful premiums over the original basic releases of the same character, and a discontinued Ultimate from a popular franchise routinely sits at double its original retail. When NECA stops making something, it stops -- there is no Hasbro-style endless repack -- so a closed Ultimate run climbs.' },
+      { type: 'callout', text: 'NECA figures do not get reissued the way mass-market lines do. When a license lapses or a run ends, it ends. That scarcity is exactly why a sold-out Ultimate from a lapsed license is one of the more reliable secondary-market climbers in the hobby.' },
+
+      { type: 'h2', text: 'Horror, Aliens, Predator: the core franchises' },
+      { type: 'p', text: 'NECA built its reputation on horror and sci-fi licenses with massive nostalgia footprints and almost no dedicated collector product before NECA showed up. The horror catalog (Friday the 13th, A Nightmare on Elm Street, Halloween, IT and more) is the brand\'s backbone, and the franchise figures hold value tightly because the fanbase is obsessive and the production runs are finite. The Aliens and Predator lines have their own deep collector base -- the database has dedicated NECA-Aliens (27) and NECA-Predator (25) sub-lines on top of the figures filed under the broader sci-fi and movies categories. The affectionate fandom joke is Predator and Alien repaint fatigue: NECA repaints these two franchises constantly, and collectors complain about it while buying every variant.' },
+      { type: 'p', text: 'Randy Falk reveal interviews are appointment viewing in this fandom -- "Randy said maybe" can fuel a year of speculation about a figure that may never ship. The reveal-to-release gap and quiet cancellations are real sore points, and a figure that was revealed and then cancelled before release becomes a phantom grail. License-flex pride is the other side of it: "only NECA would make this" is said with genuine affection about the deep-cut licenses, and those obscure pieces (the one-off movie licenses, the video-game tie-ins -- 18 in the database) are the point, not a weakness.' },
+
+      { type: 'h2', text: 'Condition is the NECA-specific price variable' },
+      { type: 'p', text: 'Because of the QC reputation, loose-figure condition matters more for NECA than for almost any other brand. "NECA hands" -- loose wrist pegs and the reused-hand-sculpt meme -- is a brand-wide running joke, and the breakage is real: snapped ankles, stress-cracked joints, accessories that arrived broken. A loose NECA figure with all its swap parts, intact joints, and original accessories is worth substantially more than one missing a hand or with a repaired ankle. Being surprised by breakage is a poser tell here; experienced NECA collectors price the risk in. Do not confuse NECA with Mezco One:12 (the premium rival) or Trick or Treat Studios (the budget rival) -- different brands, different price tiers.' },
+
+      { type: 'h2', text: 'Check any NECA figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 1,662 NECA figures across horror, Aliens, Predator, Terminator, Godzilla, Robocop, TMNT, and the deep-cut movie and video-game licenses -- with eBay sold comp data, so you can tell an Ultimate from a basic release and a sold-out lapsed-license grail from a current-shelf figure before you pay.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[NECA Ultimate Starter Guide|/guides/neca-ultimate-starter-guide]] -- the format-and-license breakdown for new NECA collectors',
+      ]},
+    ],
+  }
+  ,
+  {
+    slug: 'mythic-legions-hub',
+    title: 'Mythic Legions Price Guide: 342 Figures From the Four Horsemen',
+    metaTitle: 'Mythic Legions Price Guide 2026 -- Four Horsemen Values & Wave Comps | FigurePinner',
+    metaDescription: 'Mythic Legions price guide covering 342 figures from Four Horsemen Studios. The crowdfunded closed-run model, why figures hold value, and real eBay sold comps -- updated 2026.',
+    dek: '342 figures. 303 characters. A crowdfunded fantasy line built by the studio that sculpted everything you love, sold in closed runs that never restock. Here is what Mythic Legions actually costs.',
+    readingMinutes: 9,
+    updated: '2026-06-20',
+    body: [
+      { type: 'p', text: 'Mythic Legions is the line the Four Horsemen make for themselves. The same studio that sculpted MOTU Classics, the modern DC and other licensed work the hobby reveres, launched their own original fantasy line on Kickstarter in early 2015, and it has grown into a deep, interchangeable-parts fantasy universe. The FigurePinner database tracks 342 Mythic Legions figures across 303 characters -- almost one figure per character, which tells you something important about the line\'s value structure: there is very little repaint padding. This is not a line that re-decos the same four heroes a dozen times.' },
+      { type: 'p', text: 'The whole pricing model flows from one fact: this is a crowdfunded, closed-run line.' },
+
+      { type: 'h2', text: 'The closed-run model is the entire value story' },
+      { type: 'p', text: 'Mythic Legions sells primarily through pre-order and crowdfunding waves. You back the wave, the figures are produced to roughly match demand, and then -- unless the Four Horsemen explicitly announce an All-Stars reissue of a specific figure -- that figure does not come back. There is no perpetual retail availability, no endless Hasbro-style repack. When a wave closes, the secondary market is the only market. This is the structural reason Mythic Legions figures hold value better than almost any mass-retail line: supply is capped at the pre-order window, and demand from people who missed the window has nowhere else to go but resale.' },
+      { type: 'callout', text: 'The All-Stars line is the one exception to "closed run, no restock" -- Four Horsemen reissue selected popular figures and parts through All-Stars. A figure available in All-Stars has a softer secondary market than one that has only ever shipped in a single closed wave. Check whether a figure was All-Stars-reissued before paying single-wave-scarcity prices.' },
+
+      { type: 'h2', text: 'Why the parts system matters for value' },
+      { type: 'p', text: 'Mythic Legions is built on a shared, interchangeable parts system -- armor, heads, weapons, and limbs swap across figures, and customizers ("builders") buy figures partly to harvest parts for original characters. This creates a value wrinkle you do not see in most lines: a figure can be worth more parted out than whole if it carries a sought-after head sculpt or armor piece, and loose accessory lots and individual parts have their own active secondary market. A complete, carded figure and a "torso and a few parts" lot are genuinely different products with different buyers.' },
+      { type: 'p', text: 'I will be precise about where the public numbers get soft: the exact figure-and-wave counts across the line\'s history are debated even among collectors, and the early Kickstarter totals (the first wave funded somewhere around two dozen figures and grew via stretch goals) are general-knowledge baselines rather than numbers anyone has cleanly verified. What is solid is the FigurePinner database count -- 342 figures, 303 characters -- and the closed-run scarcity logic that governs the comps.' },
+
+      { type: 'h2', text: 'Check any Mythic Legions figure price' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all 342 Mythic Legions figures from the Four Horsemen across the crowdfunded waves and All-Stars reissues -- with eBay sold comp data, so you can tell a single-wave closed-run figure from an All-Stars reissue and price a complete figure against a parted-out lot before you pay.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Mythic Legions Collecting Guide|/guides/mythic-legions-guide]] -- the wave-and-parts breakdown for new Mythic Legions collectors',
+      ]},
+    ],
+  }
+
 ]
