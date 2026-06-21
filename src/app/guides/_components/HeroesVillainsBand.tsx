@@ -9,6 +9,16 @@
 
 import type { HeroesVillainsPayload, HvFigure } from '../_data/fandomHubs'
 
+function flagLabel(flag: string): string {
+  switch (flag) {
+    case 'VINTAGE': return "VINTAGE '82"
+    case 'MOTUC': return 'MOTUC'
+    case 'EXCLUSIVE': return 'EXCLUSIVE'
+    case 'REISSUE': return 'REISSUE'
+    default: return ''
+  }
+}
+
 function HvCard({ f }: { f: HvFigure }) {
   return (
     <a href={f.url} className="fh-hv-card">
@@ -21,6 +31,7 @@ function HvCard({ f }: { f: HvFigure }) {
           ${f.price.toLocaleString('en-US')}
           <span className="fh-hv-sold">{f.sold_count} sold</span>
         </span>
+        {flagLabel(f.flag) && <span className="fh-hv-flag">{flagLabel(f.flag)}</span>}
       </span>
     </a>
   )

@@ -1059,6 +1059,14 @@ a:hover {
   .fh-vault-count { font-size: 1.25rem; }
 }
 
+/* ── "By the numbers" stat strip (Gate 3 enrichment) — real data, fills the hub ── */
+.fh-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.6rem; margin: 0 0 1.6rem; }
+.fh-stat { text-align: center; padding: 0.7rem 0.4rem; background: var(--fh-surface); border: 1px solid var(--fh-line); border-top: 2px solid var(--fh-accent2); border-radius: var(--fp-radius-sm); }
+.fh-stat-num { display: block; font-family: var(--font-bebas), 'Bebas Neue', sans-serif; font-size: 1.75rem; line-height: 1; color: var(--fh-hot); letter-spacing: 0.01em; }
+.fh-stat-dash { padding: 0 0.04em; }
+.fh-stat-label { display: block; margin-top: 0.28rem; font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--fh-muted); font-family: var(--font-mono); }
+@media (max-width: 560px) { .fh-stats { grid-template-columns: repeat(2, 1fr); } }
+
 /* ── Heroes-vs-Villains band (Gate 3) — good/evil grails across the seam ── */
 .fh-hv { margin: 0 0 2.25rem; border: 1px solid var(--fh-line); border-top: 3px solid var(--fh-accent2); border-radius: 0 0 var(--fp-radius) var(--fp-radius); background: var(--fh-surface); padding: 1.1rem 1.1rem 1.2rem; }
 .fh-hv-head { text-align: center; margin-bottom: 1rem; }
@@ -1084,6 +1092,8 @@ a:hover {
 .fh-hv-name { font-size: 0.82rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 9.5rem; }
 .fh-hv-price { font-family: var(--font-bebas), 'Bebas Neue', sans-serif; font-size: 0.98rem; color: var(--fh-hot); display: flex; align-items: baseline; gap: 0.35rem; }
 .fh-hv-sold { font-family: var(--font-body); font-size: 0.66rem; font-weight: 400; color: var(--fh-muted); }
+.fh-hv-flag { margin-top: 0.12rem; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.05em; color: var(--fh-accent2); border: 1px solid var(--fh-accent2); border-radius: 999px; padding: 0.03rem 0.36rem; white-space: nowrap; }
+.fh-hv-villains .fh-hv-flag { align-self: flex-end; }
 @media (max-width: 560px) {
   .fh-hv-grid { grid-template-columns: 1fr; gap: 1.1rem; }
   .fh-hv-divider { display: none; }
@@ -1123,6 +1133,9 @@ a:hover {
 .fh-line-name a { color: var(--fh-text); text-decoration: none; }
 .fh-line-name a:hover { color: var(--fh-hot); text-decoration: underline; text-underline-offset: 3px; }
 .fh-line-era { font-size: 0.72rem; letter-spacing: 0.05em; color: var(--fh-accent2); font-family: var(--font-mono); text-transform: uppercase; }
+.fh-line-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin: 0 0 0.75rem; font-size: 0.76rem; color: var(--fh-muted); font-family: var(--font-mono); }
+.fh-line-meta strong { color: var(--fh-hot); font-weight: 700; }
+.fh-line-fig-flag { align-self: flex-start; margin-top: 0.15rem; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.05em; color: var(--fh-accent2); border: 1px solid var(--fh-accent2); border-radius: 999px; padding: 0.04rem 0.4rem; white-space: nowrap; }
 .fh-line-teaser { font-size: 0.92rem; color: var(--fh-muted); font-style: italic; margin: 0 0 0.6rem; }
 .fh-line-lore { font-size: 1rem; color: var(--fh-muted); line-height: 1.75; margin: 0 0 1rem; }
 .fh-line-grails-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fh-accent2); font-family: var(--font-mono); margin-bottom: 0.5rem; }
@@ -1152,6 +1165,14 @@ a:hover {
 @media (max-width: 520px) {
   .fh-line-fig-name { white-space: normal; max-width: none; }
 }
+
+/* ── Collector FAQ (Gate 3 enrichment) — content density + FAQPage schema ── */
+.fh-faq { margin: 2.5rem 0 1rem; }
+.fh-faq-title { font-family: var(--fh-display); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.02em; color: var(--fh-text); margin: 0 0 1.1rem; }
+.fh-faq-list { display: flex; flex-direction: column; gap: 1.1rem; }
+.fh-faq-item { border-left: 2px solid var(--fh-accent2); padding-left: 0.95rem; }
+.fh-faq-q { font-family: var(--fh-display); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.01em; color: var(--fh-hot); margin: 0 0 0.35rem; }
+.fh-faq-a { font-size: 1rem; line-height: 1.72; color: var(--fh-muted); margin: 0; }
 
 /* ── Skeletor Facts easter egg (Gate 3, ledger-sourced, cuttable) ── */
 .fh-skel { margin: 1.75rem 0 0.5rem; }

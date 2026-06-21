@@ -25,6 +25,7 @@ import MotuLineSections from './MotuLineSections'
 import SeamScrollDriver from './SeamScrollDriver'
 import SkeletorFacts from './SkeletorFacts'
 import HeroesVillainsBand from './HeroesVillainsBand'
+import FaqSection from './FaqSection'
 
 function renderText(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
@@ -321,6 +322,12 @@ export default function FandomHub({
   // keep the flat themed hero until the pattern is templatized post-audit.
   const isSeam = theme.fandom === 'masters-of-the-universe'
 
+  // "By the numbers" stats — all derived from real data (no fabrication).
+  const totalFigs = vaults ? vaults.vaults.reduce((s, x) => s + x.count, 0) : 0
+  const pricedFigs = vaults ? vaults.vaults.reduce((s, x) => s + x.priced_count, 0) : 0
+  const lineCount = vaults ? vaults.vaults.length : 0
+  const topGrail = topComps && topComps.figures.length ? Math.max(...topComps.figures.map(f => f.price)) : 0
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -368,6 +375,16 @@ export default function FandomHub({
       </section>
 
       <article className="fh-body">
+        {isSeam && totalFigs > 0 && (
+          <div className="fh-stats" aria-label="Masters of the Universe by the numbers">
+            <div className="fh-stat"><span className="fh-stat-num">{totalFigs.toLocaleString('en-US')}</span><span className="fh-stat-label">figures cataloged</span></div>
+            <div className="fh-stat"><span className="fh-stat-num">{pricedFigs.toLocaleString('en-US')}</span><span className="fh-stat-label">with live comps</span></div>
+            <div className="fh-stat"><span className="fh-stat-num">{lineCount}</span><span className="fh-stat-label">lines of Eternia</span></div>
+            <div className="fh-stat"><span className="fh-stat-num">1982<span className="fh-stat-dash">–</span>now</span><span className="fh-stat-label">40+ years</span></div>
+            {topGrail > 0 && <div className="fh-stat"><span className="fh-stat-num">${topGrail.toLocaleString('en-US')}</span><span className="fh-stat-label">top grail</span></div>}
+          </div>
+        )}
+
         {isSeam && heroesVillains && <HeroesVillainsBand data={heroesVillains} />}
 
         {topComps && topComps.figures.length > 0 ? (
@@ -392,6 +409,8 @@ export default function FandomHub({
         ) : (
           article.body.map((block, i) => <Block key={i} block={block} />)
         )}
+
+        {isSeam && <FaqSection />}
 
         <div className="fh-cta-wrap">
           <a href="/search" className="fh-cta">{v.ctaLabel}</a>

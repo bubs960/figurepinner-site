@@ -15,6 +15,17 @@ export type VaultFigure = { figure_id: string; name: string; price: number; sold
 export type Vault = { line: string; count: number; priced_count: number; top: VaultFigure[] }
 export type VaultLore = { teaser: string; lore: string; era?: string }
 
+// Rarity flag → short collector label (real KB-derived flags; "" = no badge).
+function flagLabel(flag: string): string {
+  switch (flag) {
+    case 'VINTAGE': return "VINTAGE '82"
+    case 'MOTUC': return 'MOTUC'
+    case 'EXCLUSIVE': return 'EXCLUSIVE'
+    case 'REISSUE': return 'REISSUE'
+    default: return ''
+  }
+}
+
 export default function MotuLineSections({
   vaults,
   lore,
@@ -33,6 +44,9 @@ export default function MotuLineSections({
         {vaults.map(v => {
           const l = lore[v.line] ?? { teaser: `${v.count} figures in the FigurePinner database.`, lore: '' }
           const lineHref = `/masters-of-the-universe?line=${encodeURIComponent(v.line)}`
+          const prices = v.top.map(f => f.price)
+          const lo = prices.length ? Math.min(...prices) : 0
+          const hi = prices.length ? Math.max(...prices) : 0
           return (
             <article key={v.line} className="fh-line">
               <header className="fh-line-head">
@@ -44,6 +58,13 @@ export default function MotuLineSections({
                   <span className="fh-line-era">{l.era ?? 'figures'}</span>
                 </div>
               </header>
+
+              <div className="fh-line-meta">
+                <span><strong>{v.priced_count}</strong> with live comps</span>
+                {hi > 0 && (
+                  <span>grails {lo === hi ? `$${hi.toLocaleString('en-US')}` : `$${lo.toLocaleString('en-US')}–$${hi.toLocaleString('en-US')}`}</span>
+                )}
+              </div>
 
               {l.teaser && <p className="fh-line-teaser">{l.teaser}</p>}
               {l.lore && <p className="fh-line-lore">{l.lore}</p>}
@@ -63,6 +84,7 @@ export default function MotuLineSections({
                             ${f.price.toLocaleString('en-US')}
                             <span className="fh-line-fig-sold">{f.sold_count} sold</span>
                           </span>
+                          {flagLabel(f.flag) && <span className="fh-line-fig-flag">{flagLabel(f.flag)}</span>}
                         </span>
                       </a>
                     ))}
