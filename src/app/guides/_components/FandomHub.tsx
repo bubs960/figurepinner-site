@@ -26,6 +26,9 @@ import WweRingAtmosphere from './WweRingAtmosphere'
 import SeamScrollDriver from './SeamScrollDriver'
 import FandomFacts from './FandomFacts'
 import HeroesVillainsBand from './HeroesVillainsBand'
+import SaberClashAtmosphere from './SaberClashAtmosphere'
+import FactionSeamAtmosphere from './FactionSeamAtmosphere'
+import EraMapGrid from './EraMapGrid'
 import FaqSection from './FaqSection'
 
 function renderText(text: string): React.ReactNode {
@@ -362,6 +365,10 @@ export default function FandomHub({
             <SeamHeroAtmosphere />
           ) : theme.centerpiece === 'wwe-ring' ? (
             <WweRingAtmosphere />
+          ) : theme.centerpiece === 'saber-clash' ? (
+            <SaberClashAtmosphere />
+          ) : theme.centerpiece === 'faction-seam' ? (
+            <FactionSeamAtmosphere />
           ) : (
             <GiJoeSeamAtmosphere />
           ))}
@@ -394,7 +401,24 @@ export default function FandomHub({
           </div>
         )}
 
+        {/* PARENT-page stat strip (general wrestling-hub): the parent has no vaults, so
+            its "by the numbers" come from theme.parentStats + the grails roll-up. */}
+        {isSeam && theme.parentStats && theme.parentStats.length > 0 && (
+          <div className="fh-stats" aria-label={v.statsAria}>
+            {theme.parentStats.map((s) => (
+              <div className="fh-stat" key={s.label}><span className="fh-stat-num">{s.num}</span><span className="fh-stat-label">{s.label}</span></div>
+            ))}
+            {topGrail > 0 && <div className="fh-stat"><span className="fh-stat-num">${topGrail.toLocaleString('en-US')}</span><span className="fh-stat-label">top grail</span></div>}
+          </div>
+        )}
+
         <div className="fh-ad"><AdSlot slot="leaderboard" /></div>
+
+        {/* PARENT-page era map (general wrestling-hub): links DOWN to child hubs + scoped
+            searches instead of re-listing figures (cannibalization law). */}
+        {theme.eraMap && theme.eraMap.length > 0 && (
+          <EraMapGrid title={theme.eramapTitle ?? 'Pick your era'} sub={theme.eramapSub ?? ''} cards={theme.eraMap} />
+        )}
 
         {isSeam && heroesVillains && (
           <HeroesVillainsBand
@@ -487,7 +511,10 @@ export default function FandomHub({
           />
         )}
 
-        {article.body.length > 0 && (
+        {/* Story expander only when the body wasn't already rendered inline above
+            (vault hubs swap the body slot for the line accordion; the parent page
+            renders the full body inline, so no collapsed re-render — avoids dup). */}
+        {vaults && vaults.vaults.length > 0 && article.body.length > 0 && (
           <details className="fh-story">
             <summary>{v.storyLabel}</summary>
             <div className="fh-story-body">

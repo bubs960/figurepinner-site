@@ -46,14 +46,17 @@ export default function FandomLineSections({
       </div>
 
       <div className="fh-lines-list">
-        {vaults.map(v => {
+        {vaults.map((v, vi) => {
           const l = lore[v.line] ?? { teaser: `${v.count} figures in the FigurePinner database.`, lore: '' }
           const lineHref = v.line_slug ? `/${genre}/${v.line_slug}` : null
           const prices = v.top.map(f => f.price)
           const lo = prices.length ? Math.min(...prices) : 0
           const hi = prices.length ? Math.max(...prices) : 0
           return (
-            <details key={v.line} className="fh-line">
+            // key by line_slug (unique) not display name — some fandoms have two
+            // distinct product_lines that prettify to the same v1_line (e.g. TF
+            // "Generations Selects"); falls back to index if a slug is ever absent.
+            <details key={v.line_slug || `${v.line}-${vi}`} className="fh-line">
               <summary className="fh-line-head">
                 <span className="fh-line-count">{v.count}</span>
                 <span className="fh-line-headtext">

@@ -82,6 +82,45 @@ const ALLEGIANCE = {
       'andre-the-giant','ric-flair','iron-sheik','ted-dibiase','charlotte-flair','the-fiend',
     ]),
   },
+  'transformers': {
+    // AUTOBOTS vs DECEPTICONS — the cleanest faction split of all. Faction is NOT a KB
+    // field (sub_fandom is mostly null), so this is a CURATED character map (like SW).
+    // Maximals (Beast Wars heroes: Optimus Primal, Cheetor) fold into Autobots; Predacons
+    // and evil Prime clones (Nemesis Prime) fold into Decepticons. character_canonical slugs.
+    heroes: new Set([
+      'optimus-prime', 'bumblebee', 'wheeljack', 'ultra-magnus', 'grimlock', 'ratchet', 'ironhide',
+      'sideswipe', 'hot-rod', 'mirage', 'prowl', 'red-alert', 'smokescreen', 'cliffjumper', 'jazz',
+      'autobot-jazz', 'jetfire', 'sunstreaker', 'warpath', 'inferno', 'blurr', 'perceptor', 'arcee',
+      'cheetor', 'windcharger', 'hound', 'hoist', 'powerglide', 'hot-shot', 'rodimus-prime', 'wreck-gar',
+      'optimus-primal', 'snarl', 'springer', 'elita-1', 'bluestreak', 'huffer', 'brawn', 'tracks', 'gears',
+    ]),
+    villains: new Set([
+      'megatron', 'starscream', 'thundercracker', 'skywarp', 'soundwave', 'shockwave', 'nemesis-prime',
+      'galvatron', 'astrotrain', 'barricade', 'scourge', 'devastator', 'bonecrusher', 'brawl', 'blitzwing',
+      'thrust', 'cyclonus', 'ramjet', 'dirge', 'reflector', 'ravage', 'laserbeak', 'rumble', 'frenzy',
+      'blast-off', 'vortex', 'swindle', 'onslaught', 'motormaster', 'dead-end', 'breakdown', 'wildrider',
+    ]),
+  },
+  'star-wars': {
+    // LIGHT (Jedi / Rebellion / Republic / Resistance) vs DARK (Sith / Empire / First
+    // Order / bounty hunters). The native good/evil duality. character_canonical slugs.
+    // Ambiguous arcs (Anakin pre-fall, generic clone-trooper, Tusken/Jawa neutrals) OMITTED.
+    heroes: new Set([
+      'luke-skywalker', 'han-solo', 'obi-wan-kenobi', 'ben-kenobi', 'r2-d2', 'c-3po', 'chewbacca',
+      'princess-leia-organa', 'princess-leia', 'yoda', 'ahsoka-tano', 'lando-calrissian', 'mandalorian',
+      'the-mandalorian', 'rey', 'mace-windu', 'padme-amidala', 'kit-fisto', 'captain-rex',
+      'clone-commander-cody', 'bo-katan-kryze', 'sabine-wren', 'ezra-bridger', 'jyn-erso', 'k-2so',
+      'admiral-ackbar', 'ig-11', 'finn', 'poe-dameron', 'qui-gon-jinn', 'wedge-antilles', 'wicket',
+    ]),
+    villains: new Set([
+      'darth-vader', 'darth-maul', 'kylo-ren', 'general-grievous', 'captain-phasma', 'jango-fett',
+      'boba-fett', 'cad-bane', 'emperor-palpatine', 'darth-sidious', 'count-dooku', 'grand-admiral-thrawn',
+      'moff-gideon', 'sith-trooper', 'first-order-stormtrooper', 'imperial-death-trooper', 'snowtrooper',
+      'scout-trooper', 'biker-scout', 'bossk', 'ig-88', '4-lom', 'super-battle-droid', 'battle-droid',
+      'magnaguard', 'at-at-driver', 'imperial-stormtrooper', 'stormtrooper', 'sandtrooper', 'greedo',
+      'bib-fortuna', 'gamorrean-guard', 'darth-revan', 'asajj-ventress', 'aurra-sing', 'dengar',
+    ]),
+  },
   'wrestling-jakks': {
     // VINTAGE vs MODERN (not face/heel). Classify by PRODUCT_LINE, not character (line-based = clean,
     // no guessing). Vintage = the Classic Superstars legend sculpts; Modern = the Ruthless Aggression

@@ -1605,3 +1605,301 @@ a:hover {
 @media (max-width: 520px) {
   .fh-main[data-fandom="wrestling-jakks"] .fh-hero--seam { min-height: clamp(380px, 64vh, 520px); }
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   THEME: General Wrestling — the umbrella PARENT page (S41)
+   Promotion-NEUTRAL "house" palette: arena-black + championship gold, NOT a
+   face/heel (Elite) or vintage/modern (Jakks) duality. The reused ring renders
+   in neutral warm gold both corners ("the squared circle itself, before any
+   match"). Boot-up ignite only. Scoped to [data-fandom="wrestling"]; reuses the
+   global fh-wwe-* / fh-gj-* keyframes. Self-contained (no edit to sibling blocks).
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-main[data-fandom="wrestling"] {
+  --fh-bg:      #0c0e12;   /* arena black */
+  --fh-surface: #181b21;   /* charcoal */
+  --fh-accent:  #e8b94e;   /* championship gold — the one color all of wrestling shares */
+  --fh-accent2: #9aa6b2;   /* neutral steel — secondary (no heel crimson here) */
+  --fh-hot:     #ffd76a;   /* bright gold — grail highlight */
+  --fh-text:    #eceef2;
+  --fh-muted:   #9aa6b2;
+  --fh-line:    #2b313c;
+  --fh-display: var(--font-bebas), 'Bebas Neue', Impact, sans-serif;
+  --fh-motif:
+    radial-gradient(60% 45% at 50% -6%, rgba(255,231,154,0.12), transparent 70%),
+    radial-gradient(80% 55% at 50% 120%, rgba(232,185,78,0.07), transparent 60%);
+}
+.fh-main[data-fandom="wrestling"] .fh-search-btn,
+.fh-main[data-fandom="wrestling"] .fh-cta { color: #0c0e12; }
+.fh-main[data-fandom="wrestling"] .fh-check-btn { color: #0c0e12; }
+.fh-main[data-fandom="wrestling"] .fp-sitenav { background: rgba(12, 14, 18, 0.93); border-bottom-color: var(--fh-accent); }
+.fh-main[data-fandom="wrestling"] .fp-sitenav-mark { background: var(--fh-accent); color: #0c0e12; }
+.fh-main[data-fandom="wrestling"] .fh-vault-count,
+.fh-main[data-fandom="wrestling"] .fh-line-count,
+.fh-main[data-fandom="wrestling"] .fh-intel-rank,
+.fh-main[data-fandom="wrestling"] .fh-intel-price,
+.fh-main[data-fandom="wrestling"] .fh-line-fig-price,
+.fh-main[data-fandom="wrestling"] .fh-check-price { font-family: var(--font-bebas), 'Bebas Neue', sans-serif; }
+
+.fh-main[data-fandom="wrestling"] .fh-hero--seam { min-height: clamp(460px, 64vh, 620px); }
+
+/* neutral gold "house" ring — both corners warm gold (no faction split) */
+.fh-main[data-fandom="wrestling"] .fh-wwering {
+  --ring-face: #e0bd6a;  --ring-face-dk: #8a6a26;
+  --ring-heel: #c9ab63;  --ring-heel-dk: #735821;
+  --ring-apron-face: #9c7a2a;  --ring-apron-face-dk: #4a3712;
+  --ring-apron-heel: #8a6c28;  --ring-apron-heel-dk: #41310f;
+  --ring-glow-face: #ffe39a;  --ring-glow-heel: #ffdf8a;
+  --ring-pad-face: #9c7a2a;  --ring-pad-heel: #8a6c28;
+  --ring-rope-face: #f0e0b0;  --ring-rope-heel: #ecd9a4;
+  position: absolute; left: 50%; top: clamp(6px, 3.5vh, 34px); transform: translateX(-50%);
+  width: clamp(280px, 60vw, 420px); height: auto; z-index: 0; opacity: 1; pointer-events: none;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55)) drop-shadow(0 0 18px rgba(232,185,78,0.16));
+}
+/* atmosphere — neutral warm wash both sides (not a rivalry split) */
+.fh-main[data-fandom="wrestling"] .fh-wwe-atmos { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.fh-main[data-fandom="wrestling"] .fh-wwe-sky { position: absolute; top: 0; bottom: 0; width: 50.5%; }
+.fh-main[data-fandom="wrestling"] .fh-wwe-sky-left { left: 0; background: linear-gradient(168deg, #0c0e12 0%, #1a1710 46%, #6b5a24 82%, #c9a23e 100%); }
+.fh-main[data-fandom="wrestling"] .fh-wwe-sky-right { right: 0; background: linear-gradient(192deg, #0c0e12 0%, #1a1710 46%, #6b5a24 82%, #c9a23e 100%); }
+.fh-main[data-fandom="wrestling"] .fh-wwe-board {
+  position: absolute; inset: 0; opacity: 0.5;
+  background:
+    radial-gradient(58% 44% at 50% -4%, rgba(255,231,154,0.12), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 28px),
+    radial-gradient(130% 70% at 50% 118%, rgba(6,8,12,0) 40%, rgba(6,8,12,0.72) 92%);
+}
+.fh-main[data-fandom="wrestling"] .fh-wwe-seam {
+  position: absolute; top: -4%; bottom: -4%; left: 50%; width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0%, rgba(232,185,78,0.85) 18%, #ffd76a 50%, rgba(232,185,78,0.85) 82%, transparent 100%);
+  box-shadow: 0 0 16px 3px rgba(232,185,78,0.4);
+}
+.fh-main[data-fandom="wrestling"] .fh-wwe-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(232,185,78,0.16), transparent);
+  opacity: 0; transform: translateY(-120%);
+}
+.fh-main[data-fandom="wrestling"] .fh-ring-glow-face,
+.fh-main[data-fandom="wrestling"] .fh-ring-glow-heel { opacity: calc(0.4 + var(--rise) * 0.6); }
+.fh-main[data-fandom="wrestling"] .fh-ring-spark { opacity: calc(0.1 + var(--rise) * 0.9); }
+.fh-main[data-fandom="wrestling"] .fh-ring-seam { opacity: calc(0.55 + var(--rise) * 0.45); }
+@media (prefers-reduced-motion: no-preference) {
+  .fh-main[data-fandom="wrestling"] .fh-wwe-atmos { animation: fh-wwe-ignite 560ms ease-out both; }
+  .fh-main[data-fandom="wrestling"] .fh-wwe-seam { animation: fh-gj-seam-ignite 640ms ease-out both; }
+  .fh-main[data-fandom="wrestling"] .fh-wwe-scan { animation: fh-gj-scan 920ms ease-out 140ms both; }
+  .fh-main[data-fandom="wrestling"] .fh-wwering { animation: fh-wwe-bootring 600ms cubic-bezier(.2,.7,.3,1) 110ms both; }
+  .fh-main[data-fandom="wrestling"] .fh-ring-spot { animation: fh-wwe-spot 900ms ease-out 220ms both; }
+}
+@media (max-width: 767px) {
+  .fh-main[data-fandom="wrestling"] .fh-wwering { width: clamp(220px, 78vw, 320px); top: clamp(4px, 2vh, 16px); }
+}
+@media (max-width: 520px) {
+  .fh-main[data-fandom="wrestling"] .fh-hero--seam { min-height: clamp(360px, 60vh, 480px); }
+}
+
+/* ── ERA-MAP card grid — the parent page's "pick your era" navigation module ── */
+.fh-eramap { margin: 2.5rem 0 1.5rem; }
+.fh-eramap-head { margin-bottom: 1.25rem; }
+.fh-eramap-title { font-family: var(--fh-display); font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: 0.02em; color: var(--fh-text); margin: 0 0 0.35rem; }
+.fh-eramap-sub { font-size: 1rem; color: var(--fh-muted); line-height: 1.6; margin: 0; }
+.fh-eramap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 0.9rem; }
+.fh-eracard {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding: 1.1rem 1.15rem 1rem; text-decoration: none;
+  background: var(--fh-surface); border: 1px solid var(--fh-line); border-radius: 12px;
+  border-left: 3px solid var(--fh-accent);
+  transition: border-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+.fh-eracard:hover { border-color: var(--fh-accent); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.35); }
+.fh-eracard-era { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fh-accent); }
+.fh-eracard-title { font-family: var(--fh-display); font-size: 1.4rem; letter-spacing: 0.02em; color: var(--fh-text); line-height: 1.1; }
+.fh-eracard-count { font-size: 0.78rem; color: var(--fh-muted); font-weight: 600; }
+.fh-eracard-blurb { font-size: 0.92rem; color: var(--fh-muted); line-height: 1.55; margin-top: 0.15rem; }
+.fh-eracard-cta { font-size: 0.85rem; font-weight: 700; color: var(--fh-accent); margin-top: 0.5rem; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   THEME: Star Wars — "the war of light and dark" (S41, hub #2 consolidated)
+   Deep starfield charcoal. LIGHT side (blue saber) LEFT vs DARK side (red saber)
+   RIGHT, blades crossing ON the seam. Bebas display. Scoped to
+   [data-fandom="star-wars-black-series"]. Reuses the global fh-gj-* boot keyframes.
+   Blade colors are CSS vars (--saber-*). Self-contained.
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-main[data-fandom="star-wars-black-series"] {
+  --fh-bg:      #07090f;   /* deep starfield charcoal */
+  --fh-surface: #12161f;   /* raised slate */
+  --fh-accent:  #5aa0ff;   /* light-side blue — primary (AA ~5.6:1 on bg) */
+  --fh-accent2: #ff5a5f;   /* dark-side red — alert/dark (AA ~4.8:1 on bg) */
+  --fh-hot:     #8fc0ff;   /* bright blue — "most valuable" */
+  --fh-text:    #eef2f8;
+  --fh-muted:   #9aa6b8;
+  --fh-line:    #232b38;
+  --fh-display: var(--font-bebas), 'Bebas Neue', Impact, sans-serif;
+  --fh-motif:
+    radial-gradient(55% 40% at 28% 8%, rgba(90,160,255,0.10), transparent 70%),
+    radial-gradient(55% 40% at 72% 8%, rgba(255,90,95,0.10), transparent 70%),
+    radial-gradient(80% 60% at 50% 120%, rgba(0,0,0,0.5), transparent 60%);
+}
+.fh-main[data-fandom="star-wars-black-series"] .fh-search-btn,
+.fh-main[data-fandom="star-wars-black-series"] .fh-cta { color: #07090f; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-check-btn,
+.fh-main[data-fandom="star-wars-black-series"] .fh-filter-pill.is-active { color: #07090f; }
+.fh-main[data-fandom="star-wars-black-series"] .fp-sitenav { background: rgba(7, 9, 15, 0.93); border-bottom-color: var(--fh-accent); }
+.fh-main[data-fandom="star-wars-black-series"] .fp-sitenav-mark { background: var(--fh-accent); color: #07090f; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-vault-count,
+.fh-main[data-fandom="star-wars-black-series"] .fh-line-count,
+.fh-main[data-fandom="star-wars-black-series"] .fh-intel-rank,
+.fh-main[data-fandom="star-wars-black-series"] .fh-intel-price,
+.fh-main[data-fandom="star-wars-black-series"] .fh-line-fig-price,
+.fh-main[data-fandom="star-wars-black-series"] .fh-check-price { font-family: var(--font-bebas), 'Bebas Neue', sans-serif; }
+/* H-v-V: Light side = blue (base), Dark side = red */
+.fh-main[data-fandom="star-wars-black-series"] .fh-hv-villains .fh-hv-side-label { color: var(--fh-accent2); }
+.fh-main[data-fandom="star-wars-black-series"] .fh-hv-villains .fh-hv-card:hover { border-color: var(--fh-accent2); }
+
+.fh-main[data-fandom="star-wars-black-series"] .fh-hero--seam { min-height: clamp(500px, 70vh, 680px); }
+
+/* ── saber atmosphere (light LEFT / dark RIGHT), behind the SSR'd h1 ── */
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-atmos { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-sky { position: absolute; top: 0; bottom: 0; width: 50.5%; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-sky-left { left: 0; background: linear-gradient(165deg, #07090f 0%, #0a1426 52%, #143a6b 86%, #1d4f86 100%); }
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-sky-right { right: 0; background: linear-gradient(195deg, #07090f 0%, #210a12 52%, #6b1418 86%, #8a1d22 100%); }
+/* starfield specks + ground darkening — pure CSS */
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-board {
+  position: absolute; inset: 0; opacity: 0.55;
+  background:
+    radial-gradient(1px 1px at 18% 22%, rgba(255,255,255,0.6), transparent 60%),
+    radial-gradient(1px 1px at 64% 14%, rgba(255,255,255,0.5), transparent 60%),
+    radial-gradient(1px 1px at 82% 36%, rgba(255,255,255,0.45), transparent 60%),
+    radial-gradient(1px 1px at 36% 40%, rgba(255,255,255,0.4), transparent 60%),
+    radial-gradient(1.4px 1.4px at 50% 8%, rgba(255,255,255,0.7), transparent 60%),
+    radial-gradient(130% 70% at 50% 120%, rgba(5,6,10,0) 40%, rgba(5,6,10,0.75) 92%);
+}
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-seam {
+  position: absolute; top: -4%; bottom: -4%; left: 50%; width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0%, rgba(90,160,255,0.85) 16%, #ffffff 50%, rgba(255,77,82,0.9) 84%, transparent 100%);
+  box-shadow: 0 0 16px 3px rgba(120,180,255,0.35), 0 0 40px 12px rgba(255,77,82,0.18);
+}
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(90,160,255,0.16), rgba(255,90,95,0.14), transparent);
+  opacity: 0; transform: translateY(-120%);
+}
+
+/* ── the crossed-saber centerpiece — centered on the seam, BEHIND the h1 (non-LCP) ── */
+.fh-main[data-fandom="star-wars-black-series"] .fh-saberclash {
+  position: absolute; left: 50%; top: clamp(10px, 5vh, 48px); transform: translateX(-50%);
+  width: clamp(260px, 56vw, 400px); height: auto; z-index: 0; opacity: 1; pointer-events: none;
+  filter: drop-shadow(0 0 18px rgba(90,160,255,0.18)) drop-shadow(0 0 18px rgba(255,90,95,0.16));
+}
+/* blade colors */
+.fh-main[data-fandom="star-wars-black-series"] .fh-saberclash {
+  --saber-light: #4d94ff; --saber-light-core: #eaf3ff;
+  --saber-dark: #ff3b40; --saber-dark-core: #ffe2e2;
+}
+/* scroll-lock: blades slide from slightly apart → crossed on the seam; spark blooms.
+   reduced-motion default --rise:1 → arrive crossed + static. transform/opacity only. */
+.fh-main[data-fandom="star-wars-black-series"] .fh-saber-light { transform: translateX(calc((1 - var(--rise)) * -24px)); will-change: transform; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-saber-dark  { transform: translateX(calc((1 - var(--rise)) *  24px)); will-change: transform; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-spark { opacity: calc(0.12 + var(--rise) * 0.88); }
+.fh-main[data-fandom="star-wars-black-series"] .fh-sw-split { opacity: calc(0.5 + var(--rise) * 0.5); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fh-main[data-fandom="star-wars-black-series"] .fh-sw-atmos { animation: fh-wwe-ignite 560ms ease-out both; }
+  .fh-main[data-fandom="star-wars-black-series"] .fh-sw-seam { animation: fh-gj-seam-ignite 640ms ease-out both; }
+  .fh-main[data-fandom="star-wars-black-series"] .fh-sw-scan { animation: fh-gj-scan 920ms ease-out 140ms both; }
+  .fh-main[data-fandom="star-wars-black-series"] .fh-saberclash { animation: fh-wwe-bootring 600ms cubic-bezier(.2,.7,.3,1) 110ms both; }
+}
+@media (max-width: 767px) {
+  .fh-main[data-fandom="star-wars-black-series"] .fh-saberclash { width: clamp(210px, 76vw, 300px); top: clamp(6px, 3vh, 24px); }
+}
+@media (max-width: 520px) {
+  .fh-main[data-fandom="star-wars-black-series"] .fh-hero--seam { min-height: clamp(380px, 64vh, 520px); }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   THEME: Transformers — "the Cybertronian war" (S41, hub #3 consolidated)
+   Gunmetal Cybertron. AUTOBOT (azure visor) LEFT vs DECEPTICON (violet mask) RIGHT,
+   the two faction glyphs confronting ON the seam. Bebas display. Scoped to
+   [data-fandom="transformers"]. Reuses the global fh-gj-* boot keyframes + the
+   sigil translate pattern (.fh-faction-*). Self-contained.
+   ════════════════════════════════════════════════════════════════════════ */
+.fh-main[data-fandom="transformers"] {
+  --fh-bg:      #0a0c11;   /* gunmetal Cybertron */
+  --fh-surface: #141822;   /* raised slate-steel */
+  --fh-accent:  #5aa0ff;   /* Autobot azure — primary (AA ~5.6:1) */
+  --fh-accent2: #c266e6;   /* Decepticon violet — alert/con (AA ~4.6:1) */
+  --fh-hot:     #8fc0ff;
+  --fh-text:    #eef2f8;
+  --fh-muted:   #9aa6b8;
+  --fh-line:    #252d3a;
+  --fh-display: var(--font-bebas), 'Bebas Neue', Impact, sans-serif;
+  --fh-motif:
+    radial-gradient(55% 40% at 26% 6%, rgba(90,160,255,0.10), transparent 70%),
+    radial-gradient(55% 40% at 74% 6%, rgba(194,102,230,0.10), transparent 70%),
+    radial-gradient(80% 60% at 50% 120%, rgba(0,0,0,0.5), transparent 60%);
+}
+.fh-main[data-fandom="transformers"] .fh-search-btn,
+.fh-main[data-fandom="transformers"] .fh-cta { color: #0a0c11; }
+.fh-main[data-fandom="transformers"] .fh-check-btn,
+.fh-main[data-fandom="transformers"] .fh-filter-pill.is-active { color: #0a0c11; }
+.fh-main[data-fandom="transformers"] .fp-sitenav { background: rgba(10, 12, 17, 0.93); border-bottom-color: var(--fh-accent); }
+.fh-main[data-fandom="transformers"] .fp-sitenav-mark { background: var(--fh-accent); color: #0a0c11; }
+.fh-main[data-fandom="transformers"] .fh-vault-count,
+.fh-main[data-fandom="transformers"] .fh-line-count,
+.fh-main[data-fandom="transformers"] .fh-intel-rank,
+.fh-main[data-fandom="transformers"] .fh-intel-price,
+.fh-main[data-fandom="transformers"] .fh-line-fig-price,
+.fh-main[data-fandom="transformers"] .fh-check-price { font-family: var(--font-bebas), 'Bebas Neue', sans-serif; }
+/* H-v-V: Autobots = azure (base), Decepticons = violet */
+.fh-main[data-fandom="transformers"] .fh-hv-villains .fh-hv-side-label { color: var(--fh-accent2); }
+.fh-main[data-fandom="transformers"] .fh-hv-villains .fh-hv-card:hover { border-color: var(--fh-accent2); }
+
+.fh-main[data-fandom="transformers"] .fh-hero--seam { min-height: clamp(500px, 70vh, 680px); }
+
+/* ── faction atmosphere (Autobot LEFT / Decepticon RIGHT), behind the SSR'd h1 ── */
+.fh-main[data-fandom="transformers"] .fh-tf-atmos { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.fh-main[data-fandom="transformers"] .fh-tf-sky { position: absolute; top: 0; bottom: 0; width: 50.5%; }
+.fh-main[data-fandom="transformers"] .fh-tf-sky-left { left: 0; background: linear-gradient(165deg, #0a0c11 0%, #0c1a30 54%, #143a6b 88%, #1d4f86 100%); }
+.fh-main[data-fandom="transformers"] .fh-tf-sky-right { right: 0; background: linear-gradient(195deg, #0a0c11 0%, #1d0c2e 54%, #4a1a6b 88%, #6b1d8a 100%); }
+.fh-main[data-fandom="transformers"] .fh-tf-board {
+  position: absolute; inset: 0; opacity: 0.5;
+  background:
+    radial-gradient(58% 44% at 50% -4%, rgba(150,190,255,0.10), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 30px),
+    radial-gradient(130% 70% at 50% 118%, rgba(6,8,12,0) 40%, rgba(6,8,12,0.72) 92%);
+}
+.fh-main[data-fandom="transformers"] .fh-tf-seam {
+  position: absolute; top: -4%; bottom: -4%; left: 50%; width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0%, rgba(90,160,255,0.85) 16%, #ffffff 50%, rgba(194,102,230,0.9) 84%, transparent 100%);
+  box-shadow: 0 0 16px 3px rgba(120,180,255,0.32), 0 0 40px 12px rgba(194,102,230,0.2);
+}
+.fh-main[data-fandom="transformers"] .fh-tf-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(90,160,255,0.16), rgba(194,102,230,0.14), transparent);
+  opacity: 0; transform: translateY(-120%);
+}
+
+/* ── the dual faction-glyph centerpiece — centered on the seam, BEHIND the h1 (non-LCP) ── */
+.fh-main[data-fandom="transformers"] .fh-tfglyphs {
+  position: absolute; left: 50%; top: clamp(10px, 5vh, 44px); transform: translateX(-50%);
+  width: clamp(260px, 56vw, 400px); height: auto; z-index: 0; opacity: 1; pointer-events: none;
+  filter: drop-shadow(0 0 18px rgba(90,160,255,0.18)) drop-shadow(0 0 18px rgba(194,102,230,0.16));
+}
+/* scroll-lock: glyphs slide apart → confronting on the seam; spark blooms.
+   reduced-motion default --rise:1 → arrive locked + static. transform/opacity only. */
+.fh-main[data-fandom="transformers"] .fh-faction-bot { transform: translateX(calc((1 - var(--rise)) * -26px)); will-change: transform; }
+.fh-main[data-fandom="transformers"] .fh-faction-con { transform: translateX(calc((1 - var(--rise)) *  26px)); will-change: transform; }
+.fh-main[data-fandom="transformers"] .fh-tf-spark { opacity: calc(0.12 + var(--rise) * 0.88); }
+.fh-main[data-fandom="transformers"] .fh-tf-split { opacity: calc(0.5 + var(--rise) * 0.5); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fh-main[data-fandom="transformers"] .fh-tf-atmos { animation: fh-wwe-ignite 560ms ease-out both; }
+  .fh-main[data-fandom="transformers"] .fh-tf-seam { animation: fh-gj-seam-ignite 640ms ease-out both; }
+  .fh-main[data-fandom="transformers"] .fh-tf-scan { animation: fh-gj-scan 920ms ease-out 140ms both; }
+  .fh-main[data-fandom="transformers"] .fh-tfglyphs { animation: fh-wwe-bootring 600ms cubic-bezier(.2,.7,.3,1) 110ms both; }
+}
+@media (max-width: 767px) {
+  .fh-main[data-fandom="transformers"] .fh-tfglyphs { width: clamp(210px, 76vw, 300px); top: clamp(6px, 3vh, 24px); }
+}
+@media (max-width: 520px) {
+  .fh-main[data-fandom="transformers"] .fh-hero--seam { min-height: clamp(380px, 64vh, 520px); }
+}

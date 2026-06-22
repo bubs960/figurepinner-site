@@ -57,6 +57,35 @@ function MicGlyph() {
   )
 }
 
+function SaberGlyph() {
+  return (
+    <svg className="fh-skel-glyph" viewBox="0 0 40 44" width="34" height="38" aria-hidden="true" focusable="false">
+      {/* original single lightsaber — metallic hilt + glowing blade + white-hot core.
+          Generic emitter/grip geometry, no replica of a specific prop, no wordmark. */}
+      <rect x="17" y="30" width="6" height="11" rx="1.5" fill="#c5ccd6" />
+      <rect x="17.5" y="32" width="5" height="1.6" fill="#11151c" opacity="0.6" />
+      <rect x="17.5" y="35" width="5" height="1.6" fill="#11151c" opacity="0.6" />
+      <rect x="16" y="28" width="8" height="3" rx="1.5" fill="#8f97a3" />
+      <line x1="20" y1="28" x2="20" y2="5" stroke="#5aa0ff" strokeWidth="5" strokeLinecap="round" />
+      <line x1="20" y1="28" x2="20" y2="5" stroke="#eaf2ff" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function FactionGlyph() {
+  return (
+    <svg className="fh-skel-glyph" viewBox="0 0 40 44" width="34" height="38" aria-hidden="true" focusable="false">
+      {/* original angular faction visor — crested helm + visor slit. Generic mask
+          silhouette, NOT the trademarked Autobot/Decepticon insignia, no wordmark. */}
+      <path d="M8 30 C8 16 13 7 20 7 C27 7 32 16 32 30 L26 33 L22 24 L20 30 L18 24 L14 33 Z" fill="#5aa0ff" />
+      <path d="M20 3 L24 14 L16 14 Z" fill="#5aa0ff" />
+      <rect x="12" y="21" width="16" height="4" rx="2" fill="#0a0d13" />
+      <rect x="13.5" y="22" width="5" height="2" rx="1" fill="#bfe0ff" />
+      <rect x="21.5" y="22" width="5" height="2" rx="1" fill="#bfe0ff" />
+    </svg>
+  )
+}
+
 export default function FandomFacts({
   facts,
   promptIdle,
@@ -66,7 +95,7 @@ export default function FandomFacts({
   facts: string[]
   promptIdle: string
   promptMore: string
-  glyph: 'skeletor' | 'cobra' | 'mic'
+  glyph: 'skeletor' | 'cobra' | 'mic' | 'saber' | 'faction'
 }) {
   const [idx, setIdx] = useState<number | null>(null)
   if (!facts.length) return null
@@ -82,7 +111,7 @@ export default function FandomFacts({
   return (
     <div className="fh-skel">
       <button type="button" className="fh-skel-btn" aria-expanded={idx !== null} onClick={speak}>
-        {glyph === 'cobra' ? <CobraGlyph /> : glyph === 'mic' ? <MicGlyph /> : <SkeletorGlyph />}
+        {glyph === 'cobra' ? <CobraGlyph /> : glyph === 'mic' ? <MicGlyph /> : glyph === 'saber' ? <SaberGlyph /> : glyph === 'faction' ? <FactionGlyph /> : <SkeletorGlyph />}
         <span className="fh-skel-prompt">{idx === null ? promptIdle : promptMore}</span>
       </button>
       {idx !== null && (
