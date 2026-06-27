@@ -5,7 +5,9 @@
  * so both get the same content; canonical URL is controlled by generateMetadata.
  */
 
-import { getFigureById, getFiguresByFandom, deriveName, figureUrl } from '@/data/kb'
+import { notFound } from 'next/navigation'
+import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
+import { genreSlugForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
 import BidCheck from './BidCheck'
@@ -24,8 +26,10 @@ import type { LoreInput } from '../_lib/loreRenderer'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
+import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
 import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
+import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
 // Fallback campid is the live EPN campaign — restored after bceb185 silently
@@ -129,10 +133,21 @@ function fencedHigh(prices: number[]): { high: number; excludedAbove: { count: n
   return { high: within[within.length - 1], excludedAbove: { count: aboveCount, max: v[v.length - 1] } }
 }
 
+// A real sold_date is an ISO date string ("2025-12-01" or a full timestamp).
+// null/0/"" coerce via `new Date()` to 1970-01-01 (NOT NaN, so they slip past
+// the NaN filter and render as "Jan 1, 1970"), and a bare "0" coerces to
+// 2000-01-01. Requiring a YYYY-MM-DD prefix rejects all of those, and a sanity
+// floor (no eBay figure comp predates 2000) also rejects a literal "1970-01-01"
+// string — returning null so the "Latest sold comp" line is suppressed. Self-
+// heals once the nightly cron writes real ISO dates.
+const ISO_DATE_PREFIX = /^\d{4}-\d{2}-\d{2}/
+const MIN_VALID_SOLD_MS = Date.UTC(2000, 0, 1)
+
 function latestSoldDate(soldHistory: PriceData['soldHistory']): { iso: string; label: string } | null {
   const dates = soldHistory
+    .filter(comp => typeof comp.sold_date === 'string' && ISO_DATE_PREFIX.test(comp.sold_date))
     .map(comp => new Date(comp.sold_date))
-    .filter(date => !Number.isNaN(date.getTime()))
+    .filter(date => !Number.isNaN(date.getTime()) && date.getTime() >= MIN_VALID_SOLD_MS)
 
   if (!dates.length) return null
 
@@ -152,9 +167,14 @@ function latestSoldDate(soldHistory: PriceData['soldHistory']): { iso: string; l
 }
 
 export async function fetchFigurePageData(figure_id: string): Promise<{ price: PriceData | null; imageUrl: string | null }> {
+  // AbortSignal.timeout() intentionally omitted: passing a dynamic signal
+  // alongside next:{revalidate} opts the fetch out of Next's cache in Next 15,
+  // forcing revalidate=0 → private/no-store on the entire route (BYPASS).
+  // The r2proxy worker has its own upstream timeout; Cloudflare's 30s wall-clock
+  // limit is the backstop. (Fix: S32, 2026-06-18 — WEB-HEALTH-ALERT-2026-06-16)
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
-    { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+    { next: { revalidate: 3600 } }
   ).catch(() => null)
   if (!res?.ok) return { price: null, imageUrl: null }
   const snap = await res.json() as R2Snapshot
@@ -192,7 +212,12 @@ function compBucket(c: { condition: string; condition_effective?: string }): 'se
 
 export default async function FigureDetailContent({ figureId }: { figureId: string }) {
   const local = getFigureById(figureId)
-  if (!local) return <NotFoundState />
+  // A missing figure must be a true HTTP 404, not a 200 page that merely looks
+  // like a 404. The old `<NotFoundState />` returned 200 — a soft-404 that wasted
+  // crawl budget and let Google index junk /figure/<bad-id> URLs. notFound()
+  // renders app/not-found.tsx with a real 404 status; a true 404 is de-indexed by
+  // Google without an explicit X-Robots-Tag header. (SEO verify 2026-06-25, R5.)
+  if (!local) notFound()
 
   const { price, imageUrl } = await fetchFigurePageData(figureId)
   const latestCompDate = price ? latestSoldDate(price.soldHistory) : null
@@ -204,6 +229,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const brand        = prettifySlug(local.manufacturer)
   const line         = prettifySlug(local.product_line)
   const genre        = local.fandom
+  // Resolving genre URL slug — the figure's raw fandom may differ from the genre
+  // route segment (marvel-comics→marvel, tmnt→teenage-mutant-ninja-turtles,
+  // gi-joe→gijoe). Crumb links MUST use the slug or they 404. (SEO fix 2026-06-25.)
+  const genreSlug    = genreSlugForFandom(local.fandom)
   const localAny     = local as Record<string, unknown>
   const releaseYear  = typeof localAny.release_year === 'number' ? localAny.release_year : null
   const seriesNum    = (() => { const n = parseInt(local.release_wave ?? ''); return isNaN(n) ? null : n })()
@@ -398,6 +427,25 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // sold-comp stats as properties instead of marking the median as an active
   // Offer from FigurePinner.
 
+  // ── JSON-LD additional properties ──────────────────────────────────────────
+  // Retail price from line-level defaults (same source as SeoSummary).
+  const jsonLdRetailPrice = LINE_RETAIL_PRICE[local.product_line] ?? null
+
+  // Sales velocity for JSON-LD — mirrors SeoSummary logic.
+  const jsonLdVelocity = (() => {
+    const history = price?.soldHistory
+    if (!history || history.length < 3) return null
+    const dates = history.map(s => new Date(s.sold_date).getTime()).filter(t => !isNaN(t)).sort((a, b) => a - b)
+    if (dates.length < 3) return null
+    const rangeDays = (dates[dates.length - 1] - dates[0]) / (1000 * 60 * 60 * 24)
+    if (rangeDays < 7) return null
+    const spd = history.length / rangeDays
+    if (spd >= 1)    return `~${Math.round(spd)} per day`
+    if (spd >= 0.14) return `~${Math.round(spd * 7)} per week`
+    const pm = Math.round(spd * 30)
+    return pm >= 1 ? `~${pm} per month` : null
+  })()
+
   const valueProperties = [
     valuePricing?.median != null
       ? { '@type': 'PropertyValue', name: 'Median sold price', value: formatCurrency(valuePricing.median) }
@@ -414,7 +462,33 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     local.scale
       ? { '@type': 'PropertyValue', name: 'Scale', value: local.scale }
       : null,
+    jsonLdRetailPrice != null
+      ? { '@type': 'PropertyValue', name: 'Original retail price', value: formatCurrency(jsonLdRetailPrice) }
+      : null,
+    jsonLdVelocity != null
+      ? { '@type': 'PropertyValue', name: 'Sales velocity', value: jsonLdVelocity }
+      : null,
+    local.exclusive_to && local.exclusive_to !== 'None'
+      ? { '@type': 'PropertyValue', name: 'Exclusive retailer', value: local.exclusive_to }
+      : null,
   ].filter(Boolean)
+
+  // AggregateOffer — required by Google for Product rich results.
+  // Uses sold-comp median as the representative price. Only emitted when we
+  // have ≥3 comps so the data is meaningful.
+  const jsonLdOffers =
+    valuePricing?.median != null && (price?.soldCount ?? 0) >= 3
+      ? {
+          '@type': 'AggregateOffer',
+          priceCurrency: 'USD',
+          price: valuePricing.median.toFixed(2),
+          ...(valuePricing.low != null ? { lowPrice: valuePricing.low.toFixed(2) } : {}),
+          ...(valuePricing.high != null ? { highPrice: valuePricing.high.toFixed(2) } : {}),
+          offerCount: price!.soldCount,
+          availability: 'https://schema.org/InStock',
+          seller: { '@type': 'Organization', name: 'FigurePinner', url: 'https://figurepinner.com' },
+        }
+      : undefined
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -429,6 +503,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       image:       imageUrlFinal ?? undefined,
       category:    prettifySlug(genre),
       additionalProperty: valueProperties.length ? valueProperties : undefined,
+      ...(jsonLdOffers ? { offers: jsonLdOffers } : {}),
     },
   }
 
@@ -437,6 +512,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbJsonLd crumbs={[
+        { name: 'Home', url: 'https://figurepinner.com' },
+        { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },
+        { name: line, url: `https://figurepinner.com/${genreSlug}/${local.product_line}` },
+        { name: displayName, url: `https://figurepinner.com${prettyFigureUrl(local)}` },
+      ]} />
 
       {/* Shelf design tokens (scoped) + responsive overrides */}
       <style>{`
@@ -459,8 +540,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       `}</style>
 
       <SiteHeader crumbs={[
-        { label: prettifySlug(genre), href: `/${genre}` },
-        { label: line, href: `/${genre}/${local.product_line}` },
+        { label: prettifySlug(genreSlug), href: `/${genreSlug}` },
+        { label: line, href: `/${genreSlug}/${local.product_line}` },
         { label: displayName },
       ]} />
 
@@ -521,10 +602,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           />
         </div>
 
-        {/* Ad slot */}
-        <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
-          <AdSlot slot="rectangle" />
-        </div>
 
         {/* Seller listing */}
         {sellerListings.length > 0 && (
@@ -591,12 +668,32 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           </div>
         </div>
 
+        {/* SEO Summary — natural language paragraph + retail vs market + velocity */}
+        <SeoSummary
+          displayName={displayName}
+          brand={brand}
+          line={line}
+          productLine={local.product_line}
+          seriesNum={seriesNum}
+          scale={local.scale ?? null}
+          exclusiveTo={(local.exclusive_to && local.exclusive_to !== 'None') ? local.exclusive_to : null}
+          soldCount={price?.soldCount ?? 0}
+          median={valuePricing?.median ?? null}
+          trendPct={valuePricing?.trend_90d_pct ?? null}
+          soldHistory={price?.soldHistory ?? []}
+        />
+
         {/* Zone 6 — Series companions */}
         <RelatedRow
           label={`Complete the Wave — ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
           figures={seriesCompanions}
           ownershipFids={waveFids}
         />
+
+        {/* Ad — Adsterra Banner (468×60), between series and character rows */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '0.5rem 0' }}>
+          <AdSlot slot="adsterra-banner" />
+        </div>
 
         {/* Zone 7 — Character thread */}
         <RelatedRow
@@ -607,6 +704,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
         {/* Zone 8 — CTA rail */}
         <CtaRail genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
+
+        {/* Ad — Adsterra Native Banner, below CTA rail before footer */}
+        <div style={{ padding: '1.5rem 0 0.5rem', width: '100%' }}>
+          <AdSlot slot="adsterra-native" />
+        </div>
       </main>
 
       {/* Sticky mobile action bar — phones only, feature-flag gated.
@@ -623,22 +725,3 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 }
 
 // ── Micro components ───────────────────────────────────────────────────────────
-
-
-function NotFoundState() {
-  return (
-    <main style={{
-      background: 'var(--fp-bg)', minHeight: '100vh',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      color: 'var(--fp-text)',
-    }}>
-      <div style={{ textAlign: 'center' }}>
-        <div style={{ fontFamily: 'var(--fp-font-display)', fontSize: '3rem', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>
-          404
-        </div>
-        <p style={{ color: 'var(--fp-muted)', marginBottom: '1.5rem' }}>Figure not found.</p>
-        <a href="/" style={{ color: 'var(--fp-accent)', textDecoration: 'none', fontWeight: '600' }}>← Back to search</a>
-      </div>
-    </main>
-  )
-}

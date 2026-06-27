@@ -10,85 +10,107 @@ import HeroSearch from '@/app/components/HeroSearch'
 import ShelfCase, { type ShelfFigure } from '@/app/components/ShelfCase'
 import ScrollReveal from '@/app/components/ScrollReveal'
 import SiteHeader from '@/app/components/SiteHeader'
+import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 
 // ── Genre config (SEO copy only — visuals are the shared shelf design) ───────
 
-const GENRE_META: Record<string, { label: string; description: string }> = {
+const GENRE_META: Record<string, { label: string; title: string; description: string }> = {
   'wrestling': {
     label: 'Wrestling',
-    description: 'WWE, AEW, and wrestling action figure prices. Track Mattel Elite, Hasbro, Jakks, and Entrance Greats values across 5,000+ figures.',
+    title: 'WWE & Wrestling Figure Price Guide — Mattel Elite, Hasbro & More',
+    description: 'WWE, AEW, and wrestling action figure price guide. Real eBay sold prices for Mattel Elite, Hasbro WWF, Jakks Ruthless Aggression, and 5,000+ figures. Updated daily.',
   },
   'marvel': {
     label: 'Marvel',
-    description: 'Marvel Legends, Spider-Man, and Marvel action figure prices. Track Hasbro and ToyBiz values across your collection.',
+    title: 'Marvel Legends Price Guide — Hasbro, ToyBiz & More',
+    description: 'Marvel Legends price guide with real eBay sold prices. Track Hasbro Marvel Legends, ToyBiz, and Marvel action figure values across your collection. Updated daily.',
   },
   'star-wars': {
     label: 'Star Wars',
-    description: 'Star Wars action figure prices. Black Series, Vintage Collection, Power of the Force values with real eBay sold data.',
+    title: 'Star Wars Action Figure Price Guide — Black Series, Vintage Collection & More',
+    description: 'Star Wars action figure price guide. Real eBay sold prices for Black Series, Vintage Collection, Power of the Force, and more. Updated daily.',
   },
   'dc': {
     label: 'DC',
-    description: 'DC action figure prices. McFarlane, DC Direct, DC Universe Classics values with real eBay sold data.',
+    title: 'DC Action Figure Price Guide — McFarlane, DC Direct & More',
+    description: 'DC action figure price guide. Real eBay sold prices for McFarlane DC Multiverse, DC Direct, and DC Universe Classics figures. Updated daily.',
   },
   'transformers': {
     label: 'Transformers',
-    description: 'Transformers action figure prices. Masterpiece, Studio Series, Generations values with real eBay sold data.',
+    title: 'Transformers Figure Price Guide — Masterpiece, Studio Series & More',
+    description: 'Transformers action figure price guide. Real eBay sold prices for Masterpiece, Studio Series, and Generations figures. Updated daily.',
   },
   'gijoe': {
     label: 'G.I. Joe',
-    description: 'G.I. Joe action figure prices. Classified Series, vintage values with real eBay sold data.',
+    title: 'G.I. Joe Figure Price Guide — Classified Series & Vintage',
+    description: 'G.I. Joe action figure price guide. Real eBay sold prices for Classified Series and vintage A Real American Hero figures. Updated daily.',
   },
   'masters-of-the-universe': {
     label: 'Masters of the Universe',
-    description: 'Masters of the Universe action figure prices. Origins, Masterverse, vintage MOTU values.',
+    title: 'Masters of the Universe Price Guide — MOTU Origins, Masterverse & Vintage',
+    description: 'Masters of the Universe (MOTU) price guide. Real eBay sold prices for Origins, Masterverse, and vintage 1982 Mattel figures. Updated daily.',
   },
   'teenage-mutant-ninja-turtles': {
     label: 'TMNT',
-    description: 'Teenage Mutant Ninja Turtles action figure prices. NECA, Playmates, Super7 values with real eBay sold data.',
+    title: 'TMNT Figure Price Guide — NECA, Playmates & Super7',
+    description: 'Teenage Mutant Ninja Turtles action figure price guide. Real eBay sold prices for NECA, Playmates vintage, and Super7 TMNT figures. Updated daily.',
   },
   'power-rangers': {
     label: 'Power Rangers',
-    description: 'Power Rangers action figure prices. Lightning Collection, vintage values with real eBay sold data.',
+    title: 'Power Rangers Figure Price Guide — Lightning Collection & Vintage',
+    description: 'Power Rangers action figure price guide. Real eBay sold prices for Lightning Collection and vintage Power Rangers figures. Updated daily.',
   },
   'indiana-jones': {
     label: 'Indiana Jones',
-    description: 'Indiana Jones action figure prices. Adventure Series values with real eBay sold data.',
+    title: 'Indiana Jones Figure Price Guide — Adventure Series & Vintage Kenner',
+    description: 'Indiana Jones action figure price guide. Real eBay sold prices for Adventure Series and vintage Kenner figures. Updated daily.',
   },
   'ghostbusters': {
     label: 'Ghostbusters',
-    description: 'Ghostbusters action figure prices. Plasma Series, vintage values with real eBay sold data.',
+    title: 'Ghostbusters Figure Price Guide — Plasma Series & Vintage Kenner',
+    description: 'Ghostbusters action figure price guide. Real eBay sold prices for Plasma Series and vintage Kenner Real Ghostbusters figures. Updated daily.',
   },
   'mythic-legions': {
     label: 'Mythic Legions',
-    description: 'Mythic Legions action figure prices. Four Horsemen values with real eBay sold data.',
+    title: 'Mythic Legions Price Guide — Four Horsemen Figures',
+    description: 'Mythic Legions price guide. Real eBay sold prices for Four Horsemen figures from all waves. Updated daily.',
   },
   'thundercats': {
     label: 'Thundercats',
-    description: 'Thundercats action figure prices. Super7, LJN vintage values with real eBay sold data.',
+    title: 'Thundercats Figure Price Guide — Super7 & LJN Vintage',
+    description: 'Thundercats action figure price guide. Real eBay sold prices for Super7 Ultimates and vintage LJN Thundercats figures. Updated daily.',
   },
   'action-force': {
     label: 'Action Force',
-    description: 'Action Force action figure prices. Values with real eBay sold data.',
+    title: 'Action Force Figure Price Guide',
+    description: 'Action Force action figure price guide. Real eBay sold prices updated daily.',
   },
   'dungeons-dragons': {
     label: 'Dungeons & Dragons',
-    description: 'Dungeons & Dragons action figure prices. Golden Archive, vintage values with real eBay sold data.',
+    title: 'Dungeons & Dragons Figure Price Guide — Golden Archive & Vintage',
+    description: 'Dungeons & Dragons action figure price guide. Real eBay sold prices for Golden Archive and vintage D&D figures. Updated daily.',
   },
   'neca': {
     label: 'Horror & Film',
-    description: 'NECA Horror & Film action figure prices. Ultimate figures, vintage values with real eBay sold data.',
+    title: 'NECA Horror & Film Figure Price Guide — Ultimate Series & More',
+    description: 'NECA Horror & Film action figure price guide. Real eBay sold prices for Ultimate figures, slashers, and movie characters. Updated daily.',
   },
   'spawn': {
     label: 'Spawn',
-    description: 'Spawn action figure prices. McFarlane Toys Spawn series values with real eBay sold data.',
+    title: 'Spawn Figure Price Guide — McFarlane Toys Series 1–40',
+    description: 'Spawn action figure price guide. Real eBay sold prices for McFarlane Toys Spawn series from Series 1 through modern releases. Updated daily.',
   },
 }
 
 export const revalidate = 3600
 
-export function generateStaticParams() {
-  return Object.keys(GENRE_META).map(genre => ({ genre }))
-}
+// On-demand ISR (no generateStaticParams) — Option E (2026-06-14). Prerendering
+// all 17 genres at build instantiated the full ~22k-figure KB array once PER
+// genre worker (figuresForGenre → getFiguresByFandom) — the multiplier behind the
+// build-heap OOM. Without GSP these render on first request (invalid genres are
+// caught by the GENRE_META guard in the page body) and cache via `revalidate`,
+// the same on-demand pattern the figure pages already use. dynamicParams
+// defaults to true. See Bridge/WEB-OPTION-E-MIGRATION-RUNBOOK-2026-06-14.md.
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
@@ -97,16 +119,16 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { genre } = await params
   const meta = GENRE_META[genre]
-  if (!meta) return {}
+  if (!meta) return { robots: { index: false, follow: false } }
 
   return {
-    title: `${meta.label} Action Figure Prices`,
+    title: meta.title,
     description: meta.description,
     alternates: {
       canonical: `https://figurepinner.com/${genre}`,
     },
     openGraph: {
-      title: `${meta.label} Action Figure Prices | FigurePinner`,
+      title: meta.title,
       description: meta.description,
       url: `https://figurepinner.com/${genre}`,
     },
@@ -234,24 +256,32 @@ export default async function GenrePage(
   // from the five deepest lines).
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: `${meta.label} Action Figure Prices`,
+    '@type': 'CollectionPage',
+    name: `${meta.label} Action Figure Price Guide`,
     description: meta.description,
     url: `https://figurepinner.com/${genre}`,
-    numberOfItems: totalFigures,
-    itemListElement: groups.slice(0, 5).flatMap(([, group]) =>
-      group.slice(0, 10).map((f, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        url: `https://figurepinner.com${prettyFigureUrl(f)}`,
-        name: cardName(f),
-      }))
-    ),
+    mainEntity: {
+      '@type': 'ItemList',
+      name: `${meta.label} Action Figure Prices`,
+      numberOfItems: totalFigures,
+      itemListElement: groups.slice(0, 5).flatMap(([, group]) =>
+        group.slice(0, 10).map((f, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://figurepinner.com${prettyFigureUrl(f)}`,
+          name: cardName(f),
+        }))
+      ),
+    },
   }
 
   return (
     <div className="fph fpg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbJsonLd crumbs={[
+        { name: 'Home', url: 'https://figurepinner.com' },
+        { name: meta.label, url: `https://figurepinner.com/${genre}` },
+      ]} />
       <style>{`
         .fph {
           --fph-cream: #f2e8d5;

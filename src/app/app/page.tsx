@@ -342,7 +342,7 @@ const GENRES = [
   { slug: 'mythic-legions', label: 'Mythic Legions' },
   { slug: 'thundercats', label: 'Thundercats' },
   { slug: 'action-force', label: 'Action Force' },
-  { slug: 'dungeons-dragons', label: 'D&D' },
+  // D&D omitted — no figures in KB yet (excluded 2026-06-06); re-add when ingested.
   { slug: 'neca', label: 'Horror & Film' },
   { slug: 'spawn', label: 'Spawn' },
 ]

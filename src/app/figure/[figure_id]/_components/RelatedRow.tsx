@@ -146,7 +146,7 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={fig.imageUrl}
-                    alt={fig.name}
+                    alt={`${fig.name} action figure`}
                     width={90}
                     height={90}
                     loading="lazy"

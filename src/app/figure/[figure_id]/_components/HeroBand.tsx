@@ -169,7 +169,7 @@ export default function HeroBand({
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={imageUrl}
-                alt={characterName}
+                alt={`${characterName} ${lineName} action figure`}
                 fetchPriority="high"
                 style={{
                   width: '100%', aspectRatio: '4/4.7', objectFit: 'contain',

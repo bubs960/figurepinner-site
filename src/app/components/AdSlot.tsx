@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Script from 'next/script'
 
 /**
  * AdSlot — placeholder for Google AdSense units.
@@ -35,10 +36,13 @@ type SlotConfig = {
 }
 
 const SLOT_CONFIG: Record<string, SlotConfig> = {
-  'leaderboard':    { width: 728, height: 90,  adSlotId: 'TODO', label: 'Leaderboard (728×90)' },
-  'rectangle':      { width: 300, height: 250, adSlotId: 'TODO', label: 'Rectangle (300×250)' },
-  'wide-skyscraper': { width: 160, height: 600, adSlotId: 'TODO', label: 'Wide Skyscraper (160×600)' },
-  'mobile-banner':  { width: 320, height: 50,  adSlotId: 'TODO', label: 'Mobile Banner (320×50)' },
+  'leaderboard':      { width: 728, height: 90,  adSlotId: 'TODO', label: 'Leaderboard (728×90)' },
+  'rectangle':        { width: 300, height: 250, adSlotId: 'TODO', label: 'Rectangle (300×250)' },
+  'wide-skyscraper':  { width: 160, height: 600, adSlotId: 'TODO', label: 'Wide Skyscraper (160×600)' },
+  'mobile-banner':    { width: 320, height: 50,  adSlotId: 'TODO', label: 'Mobile Banner (320×50)' },
+  // Adsterra native — handled separately before this config is read
+  'adsterra-native':  { width: 0, height: 0, adSlotId: 'adsterra', label: 'Adsterra Native Banner' },
+  'adsterra-banner':  { width: 468, height: 60, adSlotId: 'adsterra-banner', label: 'Adsterra Banner (468×60)' },
 }
 
 type Props = {
@@ -76,6 +80,58 @@ export default function AdSlot({ slot, className }: Props) {
   // (fail toward ad-free so a Pro user never sees a flash of an ad). Signed-out
   // and free users fall through to the normal ad/placeholder render.
   if (proState === 'loading' || proState === 'pro') return null
+
+  // Adsterra Banner (468×60) — live, no approval needed.
+  if (slot === 'adsterra-banner') {
+    return (
+      <div className={className} style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0.5rem 0' }}>
+        <span style={{
+          fontSize: '9px', letterSpacing: '0.1em', textTransform: 'uppercase',
+          color: 'var(--dim)', fontFamily: 'var(--font-ui)', marginBottom: '4px',
+        }}>Advertisement</span>
+        <Script
+          id="adsterra-banner-config"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `atOptions = { 'key': 'ab2e03dd6cc847d4106fbfd169b86808', 'format': 'iframe', 'height': 60, 'width': 468, 'params': {} };`,
+          }}
+        />
+        <Script
+          id="adsterra-banner-invoke"
+          strategy="lazyOnload"
+          src="https://www.highperformanceformat.com/ab2e03dd6cc847d4106fbfd169b86808/invoke.js"
+        />
+      </div>
+    )
+  }
+
+  // Adsterra Native Banner — live, no approval needed.
+  // Renders inline for free users; Pro returns null above.
+  if (slot === 'adsterra-native') {
+    return (
+      <div className={className} style={{ width: '100%', maxWidth: '100%', margin: '0 auto' }}>
+        <span style={{
+          display: 'block',
+          fontSize: '9px',
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          color: 'var(--dim)',
+          fontFamily: 'var(--font-ui)',
+          marginBottom: '4px',
+          textAlign: 'center',
+        }}>
+          Advertisement
+        </span>
+        <Script
+          id="adsterra-native-banner"
+          strategy="lazyOnload"
+          data-cfasync="false"
+          src="https://pl29755502.effectivecpmnetwork.com/f8c9d26c910e0075d97aed43b635d95a/invoke.js"
+        />
+        <div id="container-f8c9d26c910e0075d97aed43b635d95a" />
+      </div>
+    )
+  }
 
   // AdSense not yet configured — show placeholder
   if (!ADSENSE_CLIENT || ADSENSE_CLIENT === '') {

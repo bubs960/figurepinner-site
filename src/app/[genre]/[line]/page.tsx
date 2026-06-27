@@ -17,6 +17,7 @@ import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
 import SiteHeader from '@/app/components/SiteHeader'
+import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 
 // ISR — KB-only line hub, no user-specific data. "Fast, cacheable, crawlable"
 // (header above) requires this. Was force-dynamic; restored per Genta audit 2026-06-06 P1.
@@ -42,6 +43,18 @@ const GENRE_ACCENT: Record<string, string> = {
   'dungeons-dragons':           '#7b2be2',
   'neca':                       '#37474f',
   'spawn':                      '#212121',
+}
+
+// ─── Editorial intros for high-priority lines ─────────────────────────────────
+// Injected below the hero stats on matching line pages.
+// Key format: "kb_fandom/kb_product_line" (canonical KB values, not URL slugs).
+const LINE_INTROS: Record<string, string> = {
+  'marvel-comics/marvel-legends': "Hasbro's Marvel Legends has been the dominant 6-inch Marvel line since 2012, with over 1,600 figures spanning every corner of the comics and MCU. Value is character-driven: first appearances, short-packed variants, and Walmart/Target exclusives regularly trade at 3-5x retail years after release. The Build-A-Figure (BAF) system means incomplete sets -- missing the BAF piece -- sell at a meaningful discount, so completeness matters here more than almost any other line.",
+  'wrestling/elite': "Mattel WWE Elite is the current gold standard for modern wrestling figures, running since 2010 with near-weekly restocks at major retail. Most singles retail at $22-30 and settle near retail used -- the floor is low and reliable. What breaks out: first-run legends, store exclusives (Target Elite, Walgreens), short-packed chase variants, and retired figures of wrestlers who've since passed. Early series (1-20) command premiums on the secondary market.",
+  'star-wars/black-series': "Hasbro's 6-inch Black Series launched in 2013 and is now the collector-tier standard for Star Wars figures. The line splits cleanly between pegwarmers and scarce exclusives -- Fan Channel and convention-exclusive figures routinely hit 2-4x retail. Orange-card early series figures (2013-2015) are the most collectible; the Archive sub-line reissues fan favorites, which suppresses value on those characters. Condition on original-card figures matters significantly for resale.",
+  'transformers/masterpiece': "Takara's Masterpiece line is the prestige tier of Transformers collecting -- highly accurate screen-scale figures with die-cast parts and tight transformation engineering. Most releases are import-only from Japan, with US releases (licensed through Hasbro) running 12-18 months later at lower price points. Discontinued MP numbers climb steadily; MP-10 Optimus and MP-36 Megatron are the benchmark grails. Reissues are common for popular entries and will reset value on those molds.",
+  'horror/neca-ultimate': "NECA's Ultimate line packs the definitive version of each horror and film character -- multiple head sculpts, swappable hands, full accessory sets -- in a single premium release. Horror IP scarcity drives this market: Leatherface, Pennywise, and Universal Monster entries go out of print without warning and spike hard. Opened but complete figures trade at 60-75% of sealed; missing accessories (especially small items like weapons) cuts value more than condition.",
+  'tmnt/neca': "NECA's TMNT line covers the full Teenage Mutant Ninja Turtles catalog with 7-inch figures based on the original cartoon, movie, and Mirage comic designs. The cartoon-accurate figures from the first waves are the most sought-after; Mirage comic variants appeal to a smaller but dedicated collector base. Like all NECA lines, production runs are finite -- figures don't get indefinite shelf life, which creates genuine scarcity within 1-2 years of release.",
 }
 
 // URL slug → KB fandom slug (S20 fix, 2026-06-11). The genre page has carried
@@ -211,6 +224,11 @@ export default async function LineHubPage(
   // Unique characters (for meta)
   const uniqueChars = new Set(figures.map(f => f.character_canonical)).size
 
+  // Editorial intro for priority lines
+  const lineIntro = figures.length
+    ? (LINE_INTROS[figures[0].fandom + '/' + figures[0].product_line] ?? null)
+    : null
+
   // Sample images for the hero (first 4 figures with images)
   const sampleImages = figures
     .filter(f => f.canonical_image_url)
@@ -240,6 +258,11 @@ export default async function LineHubPage(
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh', color: 'var(--text)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BreadcrumbJsonLd crumbs={[
+        { name: 'Home', url: 'https://figurepinner.com' },
+        { name: genreName, url: `https://figurepinner.com/${genre}` },
+        { name: lineName, url: `https://figurepinner.com/${genre}/${line}` },
+      ]} />
       {/* Hover styles — server-safe CSS, no client JS needed */}
       <style>{`
         .line-card:hover {
@@ -332,6 +355,22 @@ export default async function LineHubPage(
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
           <AdSlot slot="leaderboard" />
         </div>
+
+        {/* Editorial intro -- rendered for lines with curated content */}
+        {lineIntro && (
+          <div style={{
+            background: 'var(--s1)',
+            border: '1px solid var(--border)',
+            borderRadius: 8,
+            padding: '1.25rem 1.5rem',
+            marginBottom: '2rem',
+            fontSize: '0.9375rem',
+            lineHeight: 1.65,
+            color: '#EEEEF5',
+          }}>
+            <p style={{ margin: 0 }}>{lineIntro}</p>
+          </div>
+        )}
 
         {/* Series / wave sections */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>

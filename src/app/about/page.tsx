@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import SiteHeader from '@/app/components/SiteHeader'
 
 export const metadata: Metadata = {
@@ -130,7 +130,7 @@ export default function AboutPage() {
               { slug: 'ghostbusters', label: 'Ghostbusters' },
               { slug: 'mythic-legions', label: 'Mythic Legions' },
               { slug: 'thundercats', label: 'Thundercats' },
-              { slug: 'dungeons-dragons', label: 'D&D' },
+              // D&D omitted — no figures in KB yet (excluded 2026-06-06); re-add when ingested.
               { slug: 'neca', label: 'Horror & Film' },
               { slug: 'spawn', label: 'Spawn' },
               { slug: 'action-force', label: 'Action Force' },

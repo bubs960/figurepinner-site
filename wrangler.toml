@@ -26,6 +26,23 @@ binding = "DB"
 database_name = "figurepinner-userdata"
 database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
 
+# ── KB_DB — Option E catalog DB (kb_figures), read at request/ISR time ────────
+# STAGED 2026-06-14 (web S27). The 21,917-figure catalog moves out of the build
+# graph (the OOM source) into this D1 table. src/data/kbDb.ts reads it via the
+# KB_DB binding. Kept COMMENTED until standalone provisions the DB so a deploy
+# from the working tree can't bind a nonexistent database.
+#
+# ACTIVATION (standalone/Steve, AFTER matcher emits + DDL/bulk-load applied):
+#   1. wrangler d1 create figurepinner-kb   → copy the returned database_id below
+#   2. apply scripts/option-e-kb_figures.sql (DDL) + the bulk-load chunks
+#   3. uncomment this block, fill database_id, redeploy
+# Deliberately a SEPARATE DB from figurepinner-userdata: matcher reloads the KB
+# wholesale (DROP/recreate), which must not share a DB with live user vaults.
+# [[d1_databases]]
+# binding = "KB_DB"
+# database_name = "figurepinner-kb"
+# database_id = "<fill-after-wrangler-d1-create>"
+
 [[kv_namespaces]]
 binding = "PRO_KV"
 id = "e1858bb16a4f41f5b81afe8cf53519f5"  # FP_KV — shared, prefixed with "pro:"
@@ -54,6 +71,16 @@ id = "e1858bb16a4f41f5b81afe8cf53519f5"  # same namespace as PRO_KV, prefixed wi
 [[services]]
 binding = "WORKER_SELF_REFERENCE"
 service = "figurepinner-site"
+
+# Workers Analytics Engine — edge cache observability (S36 2026-06-19).
+# Tracks HIT/MISS/BYPASS counts for the Worker-level HTML cache in
+# edge-cache-entry.mjs. CF zone "Cache rate %" is assets-only and never
+# reflects Worker HTML cache hits — this is the only accurate signal.
+# Free tier: 100K data points/day, well within budget.
+# Query via /api/cache-stats or CF GraphQL API (dataset: fp_edge_cache).
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "fp_edge_cache"
 
 [[routes]]
 pattern = "figurepinner.com"

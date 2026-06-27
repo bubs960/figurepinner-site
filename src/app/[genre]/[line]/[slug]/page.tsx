@@ -16,6 +16,7 @@
 import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
 import { getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { getFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
@@ -34,7 +35,10 @@ function normalizeSlug(s: string) {
 }
 
 function findFigureMatches(fandom: string, line: string, slug: string): KBFigure[] {
-  const candidates = getFiguresByFandom(fandom)
+  // `fandom` is the URL [genre] slug, which diverges from the KB fandom for the
+  // remapped fandoms (gijoe→gi-joe, marvel→marvel-comics, teenage-mutant-ninja-turtles→tmnt).
+  // Remap via getFandom so /gijoe/<line>/<char> resolves, matching the line/character routes.
+  const candidates = getFiguresByFandom(getFandom(fandom))
   if (!candidates.length) return []
 
   const lineNorm = normalizeSlug(line)
@@ -86,8 +90,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = `${BASE}${prettyFigureUrl(figure)}`
 
   return {
-    title: `${displayName} Price Guide — ${lineName}`,
-    description: `${displayName} current market value${medianLabel ? `: ${medianLabel}` : ''}. Real eBay sold prices for ${fandomName} action figures.`,
+    title: `${displayName} — ${lineName} Price & Value | FigurePinner`,
+    description: medianLabel
+      ? `${displayName} ${lineName} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
+      : `${displayName} ${lineName} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
     ...(hasConfirmedZeroSoldData
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
@@ -116,9 +122,11 @@ export default async function PrettyFigurePage({ params }: PageProps) {
     return <FigureDetailContent figureId={figure.figure_id} />
   }
 
-  // No figure match — fall back to genre page if valid, else 404
+  // No figure match — fall back to genre page if the genre resolves, else 404.
+  // Check the remapped fandom (getFandom) so remapped-slug genres (gijoe, marvel,
+  // teenage-mutant-ninja-turtles) redirect to their genre page instead of 404ing.
   const fandoms = getAllFandoms()
-  if (fandoms.includes(genre)) {
+  if (fandoms.includes(getFandom(genre))) {
     redirect(`/${genre}`)
   }
 

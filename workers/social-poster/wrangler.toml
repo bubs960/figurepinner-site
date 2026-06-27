@@ -1,0 +1,22 @@
+name = "social-poster"
+main = "worker.js"
+compatibility_date = "2024-12-01"
+
+[triggers]
+crons = ["0 10 * * *"]  # Run daily at 10:00 UTC
+
+[[d1_databases]]
+binding = "DB"
+database_name = "social-posts-db"
+database_id = ""  # You'll get this when you create the database
+
+[vars]
+# Environment variables
+POSTING_ENABLED = "true"
+DEFAULT_SUBREDDIT = "ActionFigures"
+
+[env.production]
+zone_id = ""
+routes = [
+  { pattern = "social-poster.figurepinner.com", custom_domain = true }
+]

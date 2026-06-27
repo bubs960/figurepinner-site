@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import Script from 'next/script'
-import { Bebas_Neue, Inter } from 'next/font/google'
+import { Bebas_Neue, Inter, Cinzel } from 'next/font/google'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
 import './globals.css'
@@ -22,6 +22,18 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+})
+// Cinzel (SIL OFL, Google Fonts) — heroic-poster serif for the MOTU fandom hub
+// ONLY. preload:false so the woff2 is fetched only on pages that actually render
+// [data-fandom="masters-of-the-universe"] type — zero added weight sitewide (CWV
+// guardrail). display:swap + serif fallback keeps the hero title paintable at FCP.
+const cinzel = Cinzel({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  variable: '--font-cinzel',
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: true, // size-adjusted serif fallback → no CLS on the swap
 })
 
 export const metadata: Metadata = {
@@ -86,11 +98,12 @@ export default function RootLayout({
   children: ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${bebas.variable} ${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${bebas.variable} ${inter.variable} ${cinzel.variable}`}>
       <head>
         {/* AdSense ownership verification — the meta tag is what the reviewer
             checks; it stays in head while the script loads lazily below. */}
         <meta name="google-adsense-account" content="ca-pub-1062337951127266" />
+        <meta name="yandex-verification" content="5dd6adeb78ca7373" />
       </head>
       <body>
         {children}
@@ -105,6 +118,21 @@ export default function RootLayout({
           strategy="lazyOnload"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1062337951127266"
           crossOrigin="anonymous"
+        />
+        {/* Adsterra Popunder — DISABLED. Was intercepting internal nav clicks
+            and serving adult inventory. Use Native Banner only. */}
+        {/* <Script
+          id="adsterra-popunder"
+          strategy="lazyOnload"
+          src="https://pl29755501.effectivecpmnetwork.com/57/09/40/57094087da8eb25d6b0930dc2e36c3a1.js"
+        /> */}
+        {/* Infolinks — REMOVED. Declined due to 404 error on their review. */}
+        {/* Cloudflare Web Analytics beacon - bot-filtered real human visit count */}
+        <Script
+          id="cf-web-analytics"
+          strategy="afterInteractive"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={'{"token": "63401800264c480c94a7335a223f9db8"}'}
         />
       </body>
     </html>

@@ -1,0 +1,7 @@
+name = "coinspinner-r2proxy"
+main = "worker.js"
+compatibility_date = "2026-06-07"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "coinspinner-photos"

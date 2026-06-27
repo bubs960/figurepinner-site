@@ -7,12 +7,16 @@
 // FIGUREPINNER-CULTURE-VOICE-GUIDE. Body is an array of blocks rendered as
 // semantic HTML by the route. Keep claims specific and accurate.
 
+import { BIDCHECK_ARTICLES } from './bidcheck-articles'
+
 export type ArticleBlock =
   | { type: 'p'; text: string }
   | { type: 'h2'; text: string }
   | { type: 'h3'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'callout'; text: string }
+  // Live sold-median card — renders the current r2proxy median for `fid` (Bid Check).
+  | { type: 'comp'; fid: string; label: string; sublabel?: string; href?: string }
 
 export interface Article {
   slug: string
@@ -26,12 +30,69 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  ...BIDCHECK_ARTICLES,
+  {
+    slug: 'ultimate-warrior-figure-value',
+    title: 'Ultimate Warrior Figures: A Megastar With a Bargain-Bin Price',
+    metaTitle: 'Ultimate Warrior Figure Value — What His Figures Actually Sell For | FigurePinner',
+    metaDescription:
+      'What Ultimate Warrior action figures are really worth, from the $11 Hasbro to the modern $20 Elite — real eBay sold comps, why a megastar stays cheap, and the variants that actually carry money.',
+    dek: 'One of the biggest stars of his era. Some of the most affordable figures in the hobby. The sold data explains why.',
+    readingMinutes: 6,
+    updated: '2026-06-25',
+    body: [
+      { type: 'p', text: 'The Ultimate Warrior sold out arenas, beat Hulk Hogan clean at WrestleMania VI, and burned as bright as anyone in the business. His action figures cost about as much as lunch. That gap between enormous fame and small price is one of the clearest lessons in wrestling figure collecting, and the sold data makes it plain.' },
+      { type: 'p', text: 'Run his name through real eBay sold comps and the pattern is immediate. The Warrior was made early, made often, and made by everyone, and a character that printed in those numbers does not stay scarce. Here is what his figures actually move for, and the short list of exceptions that buck it.' },
+      { type: 'h2', text: 'What the sold comps say' },
+      { type: 'ul', items: [
+        'WWF Hasbro Series 1 (1990): median $11 across 42 sold. The vintage one most collectors picture, and one of the cheapest vintage wrestling figures you can buy loose, because Hasbro shipped a mountain of them.',
+        'Mattel Elite Series 26: median $20 across 50 sold. The modern standard Warrior. Deep supply, easy to find, priced like it.',
+        'Mattel Origins, the Masters of the WWE Universe crossover: median $18.89 across 30 sold. The MOTU-style novelty has not pushed it past the common tier.',
+        'Mattel Ultimate Edition Series 1: median $17.93, but only 7 sold. A thinner market, so treat that number as soft.',
+      ]},
+      { type: 'callout', text: 'Notice the sample sizes. Forty-two and fifty sold in the comp window is a liquid market; you can trust those numbers within a couple of dollars. The figures with seven or fewer sales are where the price gets noisy, and a single motivated buyer can swing the next sale either way.' },
+      { type: 'h2', text: 'Why the biggest stars are often the cheapest figures' },
+      { type: 'p', text: 'This is the trap that catches new collectors. Fame and figure value are not the same thing, and they are frequently inverse. A wrestler who headlined for years got figure after figure across every line, every retailer, every gimmick. Supply piles up faster than nostalgia can absorb it. The Warrior, Hogan, Austin, and Cena are all easy to find cheap for exactly this reason: the companies made a lot of money printing them, which means a lot of them exist.' },
+      { type: 'p', text: 'Scarcity moves price. Fame moves print runs. When a character is famous enough to be printed endlessly, the second force cancels the first, and you get a legend whose loose figure costs eleven dollars.' },
+      { type: 'h2', text: 'Where Warrior value actually hides' },
+      { type: 'p', text: 'If a Warrior figure is going to carry real money, it will not be the mainline release. It will be a condition story or a scarcity story. A sealed, sharp-cornered vintage Hasbro card grades into a different market than the $11 loose figure; preservation-grade vintage is a separate buyer. Short-printed or retailer-exclusive variants, and the genuinely low-sample releases, are the only places the common-floor rule bends. Confirm the scarcity is real before you pay for it: a low sold count can mean rare, or it can simply mean nobody is buying.' },
+      { type: 'p', text: 'For the everyday Warrior on a shelf, the honest answer is that it is a common figure, and that is fine. You collect the Warrior because the Warrior meant something, not because the plastic is an investment.' },
+      { type: 'p', text: 'Before you buy or sell one, pull the real sold history. [[Look up any Ultimate Warrior figure|/wrestling/character/ultimate-warrior]] and you will see the median, the range, and how many sales backed it, the same data this guide is built on. The asking price is a wish; [[the sold price|/guides/how-to-find-action-figure-values]] is the truth.' },
+    ],
+  },
+  {
+    slug: 'tully-blanchard-figure-value',
+    title: 'Tully Blanchard Figures: When a Horseman Out-Prices the Headliners',
+    metaTitle: 'Tully Blanchard Figure Value & Price — Real Sold Comps | FigurePinner',
+    metaDescription:
+      'What Tully Blanchard action figures sell for — the Jakks Classic Superstars that beats modern main-event figures, the Elite Legends two-pack, and why a non-headliner holds value. Real eBay sold comps.',
+    dek: 'He never main-evented WrestleMania. His figures still out-price plenty of wrestlers who did. Scarcity is why.',
+    readingMinutes: 5,
+    updated: '2026-06-25',
+    body: [
+      { type: 'p', text: 'Tully Blanchard was a tag-team specialist and a Horseman, not a headliner who got a figure in every wave for thirty years. That is exactly why his figures are worth more than you would guess, and in at least one case, worth more than a modern Ultimate Warrior.' },
+      { type: 'p', text: 'The sold comps tell a story that runs opposite to fame. Tully was not printed endlessly, so the figures that exist clear at real numbers instead of bargain-bin prices.' },
+      { type: 'h2', text: 'What the sold comps say' },
+      { type: 'ul', items: [
+        'Jakks Classic Superstars Series 15: median $38 across 16 sold. This is the Tully to know. It out-medians the modern Mattel Elite Ultimate Warrior at $20, and the Warrior was a world champion. Sixteen sales is a real market, not a fluke.',
+        'Mattel Elite Legends, the Four Horsemen two-pack: median $24.29 across 21 sold. A solid, liquid number, helped by the fact that you are buying a piece of the Four Horsemen, one of the most collected factions in wrestling.',
+        'Remco All-Star Wrestlers (NWA, vintage): no sold comps in the window. The vintage Remco rarely trades, which is its own signal. You cannot quote a price on a figure nobody is selling, and an empty sold history means the next sale could land anywhere.',
+      ]},
+      { type: 'callout', text: 'An empty sold history is not the same as worthless or priceless. It means the market is illiquid. Price it off the nearest real comps you can find, in the closest condition, and treat any single sale as an anecdote until a few more confirm it.' },
+      { type: 'h2', text: 'Scarcity beats fame' },
+      { type: 'p', text: 'Here is the rule the Tully comps prove. A non-main-eventer who got a handful of figures can hold value better than a megastar who got hundreds, because the thing that moves price is how many exist, not how famous the wrestler was. Collectors chasing a complete Four Horsemen shelf have few Tully options to compete over, and limited supply against steady demand is the whole pricing equation.' },
+      { type: 'p', text: 'It is the same reason a deep-cut character can quietly out-price a legend in the same line. Fame sets the demand. The print run sets the supply. Supply is usually the variable that decides what you actually pay.' },
+      { type: 'h2', text: 'What to check before you buy' },
+      { type: 'p', text: 'Match the line and the condition to the comp. A loose Classic Superstars Tully and a sealed one are different markets, and the Horsemen two-pack is priced as a set, so a split or incomplete example is worth less than the $24.29 figure. With a vintage Remco that barely trades, lean on condition and patience rather than a confident number.' },
+      { type: 'p', text: 'Pull the real history before you pay. [[Look up any Tully Blanchard figure|/wrestling/character/tully-blanchard]] for the median, the range, and the sale count behind it. If you are pricing a deep-cut wrestler in general, [[start with sold comps, not listings|/guides/how-to-find-action-figure-values]].' },
+    ],
+  },
   {
     slug: 'how-to-price-wrestling-figures',
     title: 'How to Price a Wrestling Figure (Without Getting Worked)',
-    metaTitle: 'How to Price Wrestling Figures — Sold Comps Guide | FigurePinner',
+    metaTitle: 'How Much Is My WWE Figure Worth? Price It With Real Sold Comps | FigurePinner',
     metaDescription:
-      'Stop pricing off asking prices. Learn to value any wrestling figure using real eBay sold comps — condition, completeness, line, and the MOC-vs-loose premium that moves price.',
+      'How much is my WWE figure worth? Stop pricing off asking prices. Value any wrestling figure with real eBay sold comps — condition, completeness, line, and the MOC-vs-loose premium that moves price.',
     dek: 'The asking price is a wish. The sold price is the truth. Here is how to tell them apart.',
     readingMinutes: 7,
     updated: '2026-06-06',
@@ -1645,8 +1706,8 @@ export const ARTICLES: Article[] = [
   {
     slug: 'how-to-find-action-figure-values',
     title: 'How to Find What Your Action Figures Are Worth',
-    metaTitle: 'How to Find Action Figure Values — The Right Way to Research Prices | FigurePinner',
-    metaDescription: 'The correct method for finding what action figures are actually worth. Why listed prices lie, why sold comps are the only number that matters, and where to actually find them.',
+    metaTitle: 'Action Figure Sold Price Guide — How to Find What Yours Is Actually Worth | FigurePinner',
+    metaDescription: 'An action figure sold price guide: the correct way to find what figures are actually worth. Why listed prices lie, why sold comps are the only number that matters, and where to find them.',
     dek: 'Listed prices are fiction. Sold prices are facts. Here is how to find the facts.',
     readingMinutes: 7,
     updated: '2026-06-18',
@@ -1986,8 +2047,8 @@ export const ARTICLES: Article[] = [
   ,{
     slug: 'star-wars-black-series-hub',
     title: 'Star Wars Figures Price Guide',
-    metaTitle: 'Star Wars Figures Price Guide 2026 — Kenner, Black Series, Vintage Collection & Grails | FigurePinner',
-    metaDescription: 'A collector\'s guide to Star Wars action figures — the 1977 Kenner originals, the 6-inch Black Series, the Vintage Collection, the million-dollar grails, and real eBay sold comps.',
+    metaTitle: 'Star Wars Black Series Price Guide 2026 — Plus Kenner, Vintage Collection & Grails | FigurePinner',
+    metaDescription: 'A price guide to Star Wars action figures — the 6-inch Black Series, the 1977 Kenner originals, the Vintage Collection, the million-dollar grails, and real eBay sold comps.',
     dek: 'Forty-five years of the galaxy in plastic — Kenner to Black Series, light side and dark, with real sold comps.',
     readingMinutes: 9,
     updated: '2026-06-21',

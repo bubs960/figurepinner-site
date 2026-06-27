@@ -22,6 +22,18 @@ export function getFandom(slug: string): string {
   return SLUG_TO_FANDOM[slug] ?? slug
 }
 
+// Inverse of SLUG_TO_FANDOM: KB fandom → genre URL slug. Used to build links to
+// genre/line pages from a figure's raw fandom (e.g. fandom "marvel-comics" → the
+// resolving genre route "/marvel", "tmnt" → "/teenage-mutant-ninja-turtles").
+// Identity fallback covers fandoms whose slug already matches (wrestling, dc, …)
+// and NECA-rollup fandoms (horror, terminator, …), which resolve at /<fandom>.
+const FANDOM_TO_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(SLUG_TO_FANDOM).map(([slug, fandom]) => [fandom, slug]),
+)
+export function genreSlugForFandom(fandom: string): string {
+  return FANDOM_TO_SLUG[fandom] ?? fandom
+}
+
 // The 'neca' (Horror & Film) UI genre rolls up several KB fandoms — same
 // rollup kb-stats uses for the homepage count.
 export const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']

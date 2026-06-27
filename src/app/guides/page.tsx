@@ -45,7 +45,7 @@ const GENRES: GenreDef[] = [
   { slug: 'ghostbusters', label: 'Ghostbusters', accent: '#5e35b1', blurb: 'Plasma Series, Kenner Real Ghostbusters.', highlights: ['Plasma Series', 'Kenner RGB', 'Afterlife'] },
   { slug: 'mythic-legions', label: 'Mythic Legions', accent: '#7b5e3a', blurb: 'Four Horsemen — Advent of Decay, Necronominus.', highlights: ['Four Horsemen', 'Advent of Decay', 'Necronominus'] },
   { slug: 'thundercats', label: 'Thundercats', accent: '#f57c00', blurb: 'Super7 Ultimates, LJN vintage, Bandai.', highlights: ['Super7 Ultimates', 'LJN Vintage', 'Bandai'] },
-  { slug: 'dungeons-dragons', label: 'Dungeons & Dragons', accent: '#6a1b9a', blurb: 'Golden Archive, LJN vintage, Hasbro.', highlights: ['Golden Archive', 'LJN Vintage', 'Hasbro'] },
+  // D&D omitted — no 'dungeons-dragons' figures in KB (excluded 2026-06-06); re-add chip when ingested.
   { slug: 'neca', label: 'Horror & Film', accent: '#b71c1c', blurb: 'NECA Ultimate, Retro, Toony Terrors.', highlights: ['NECA Ultimate', 'Retro', 'Toony Terrors'] },
   { slug: 'spawn', label: 'Spawn', accent: '#37474f', blurb: 'McFarlane Toys Spawn Series 1–35, Deluxe.', highlights: ['Series 1–35', 'Deluxe', 'Ultra-Action'] },
   { slug: 'action-force', label: 'Action Force', accent: '#455a64', blurb: 'British Action Force figures and vehicles.', highlights: ['Action Force'] },

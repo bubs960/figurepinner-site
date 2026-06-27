@@ -111,9 +111,12 @@ async function fetchOne(entry: { fid: string; chipLabel: string; fieldNote?: str
   const kb = getFigureById(entry.fid)
   if (!kb || !kb.canonical_image_url) return null
 
+  // AbortSignal.timeout() omitted — same reason as FigureDetailContent:
+  // dynamic signal busts Next 15 fetch cache → revalidate=0 → page no-store.
+  // (Fix: S32, 2026-06-18)
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(entry.fid)}.json`,
-    { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+    { next: { revalidate: 3600 } }
   ).catch(() => null)
   if (!res?.ok) return null
 

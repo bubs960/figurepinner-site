@@ -15,7 +15,8 @@ export type Crumb = { label: string; href?: string }
 const NAV_LINKS = [
   { label: 'Search', href: '/search' },
   { label: 'Guides', href: '/guides' },
-  { label: 'News', href: '/news' },
+  // 'News' removed 2026-06-25 (Steve: "we don't have news"). The public /news
+  // route is deleted; the auth-gated admin authoring tool is kept for revival.
   { label: 'Methodology', href: '/methodology' },
   { label: 'Wantlist', href: '/app/wantlist' },
 ]

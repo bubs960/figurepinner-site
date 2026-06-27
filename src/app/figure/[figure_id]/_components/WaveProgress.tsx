@@ -19,9 +19,16 @@ export default function WaveProgress({ fids }: WaveProgressProps) {
   const [owned, setOwned] = useState<number | null>(null)
   const total = fids.length
 
+  // `fids` is a fresh array reference on every render, so depending on it
+  // directly re-runs this effect on each re-render — the cleanup sets
+  // `cancelled = true`, which made the in-flight fetch discard its result
+  // before `setOwned` committed, so the badge never appeared. Depend on a
+  // stable string key instead so the effect runs once per actual wave.
+  const fidsKey = fids.join(',')
+
   useEffect(() => {
     let cancelled = false
-    const waveSet = new Set(fids)
+    const waveSet = new Set(fidsKey.split(','))
     fetch('/api/vault')
       .then(res => (res.ok ? res.json() : null))
       .then((data: { items?: { figure_id: string }[] } | null) => {
@@ -38,7 +45,7 @@ export default function WaveProgress({ fids }: WaveProgressProps) {
       })
       .catch(() => { /* logged-out or offline — stay invisible */ })
     return () => { cancelled = true }
-  }, [fids])
+  }, [fidsKey])
 
   // Invisible until we know the user owns at least one of the wave.
   if (owned == null || owned < 1) return null

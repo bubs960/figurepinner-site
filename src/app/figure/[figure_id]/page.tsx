@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getFigureById, deriveName, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, deriveName, prettyFigureUrl, hasUniquePrettyFigureUrl } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 
@@ -43,10 +43,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = `${BASE}${prettyFigureUrl(local)}`
 
   return {
-    title: `${displayName} Price Guide — ${line}`,
-    description: `${displayName} current market value${medianLabel ? `: ${medianLabel}` : ''}. Real eBay sold prices for ${fandom} action figures.`,
+    title: `${displayName} — ${line} Price & Value | FigurePinner`,
+    description: medianLabel
+      ? `${displayName} ${line} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
+      : `${displayName} ${line} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
-    ...(hasConfirmedZeroSoldData
+    // Noindex /figure/[id] when the figure has a unique pretty URL — the pretty
+    // URL is the canonical and Google was treating both as duplicate pages.
+    // For non-unique figures (multiple waves, same slug) /figure/[id] IS the
+    // canonical so we leave it indexable.
+    ...((hasConfirmedZeroSoldData || hasUniquePrettyFigureUrl(local))
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
     openGraph: {

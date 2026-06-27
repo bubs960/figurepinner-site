@@ -11,6 +11,7 @@ import { getHubTheme, loadTopComps, loadVaults, loadHeroesVillains } from '../_d
 import FandomHub from '../_components/FandomHub'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
+import LiveMedian, { fetchPriceSnaps, type PriceSnap } from '../_components/LiveMedian'
 
 const BASE = 'https://figurepinner.com'
 
@@ -67,8 +68,10 @@ function renderText(text: string): React.ReactNode {
   return <>{parts}</>
 }
 
-function Block({ block }: { block: ArticleBlock }) {
+function Block({ block, comps }: { block: ArticleBlock; comps: Map<string, PriceSnap> }) {
   switch (block.type) {
+    case 'comp':
+      return <LiveMedian snap={comps.get(block.fid)} label={block.label} sublabel={block.sublabel} href={block.href} />
     case 'h2':
       return (
         <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.02em', color: 'var(--fp-text)', margin: '2.5rem 0 1rem' }}>
@@ -129,6 +132,10 @@ export default async function GuideArticlePage({ params }: PageProps) {
     return <FandomHub article={article} theme={hubTheme} topComps={topComps} vaults={vaults} heroesVillains={heroesVillains} moreGuides={moreGuides} />
   }
 
+  // Live sold-median data for any `comp` blocks — one batched ISR-cached fetch.
+  const compFids = article.body.flatMap((b) => (b.type === 'comp' ? [b.fid] : []))
+  const comps = compFids.length ? await fetchPriceSnaps(compFids) : new Map<string, PriceSnap>()
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -161,7 +168,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
           <AdSlot slot="leaderboard" />
         </div>
 
-        {article.body.map((block, i) => <Block key={i} block={block} />)}
+        {article.body.map((block, i) => <Block key={i} block={block} comps={comps} />)}
 
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <AdSlot slot="adsterra-banner" />

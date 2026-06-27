@@ -22,6 +22,10 @@
  *    (Emergency: Dashboard → Caching → Purge Everything also clears this.)
  *
  * OBSERVABILITY: every response gets `x-fp-edge: HIT | MISS | BYPASS`.
+ *   S36 2026-06-19: also writes to Workers Analytics Engine (binding: ANALYTICS,
+ *   dataset: fp_edge_cache) — fire-and-forget via waitUntil so it never adds
+ *   latency. Query via /api/cache-stats or CF GraphQL. This is the only accurate
+ *   HTML cache signal — CF zone "Cache rate %" is assets-only.
  *
  * Rollback: set `main = ".open-next/worker.js"` in wrangler.toml + redeploy.
  */
@@ -31,17 +35,26 @@ import handler from './.open-next/worker.js'
 export { DOQueueHandler, DOShardedTagCache, BucketCachePurge } from './.open-next/worker.js'
 
 /**
- * Signed-in detection (S15 refinement): Clerk sets `__client_uat=0` on EVERY
- * visitor including signed-out ones, so "any Clerk cookie" would bypass all
- * human traffic. Auth = a __session JWT, or __client_uat with a NONZERO value
- * (Clerk's own signed-in marker). `__client_uat=0` explicitly means no session.
+ * Signed-in detection (S41c refinement, 2026-06-22): the only reliable Clerk
+ * signed-in marker is the `__session` JWT cookie. Match it only.
+ *
+ * The S15 logic also treated `__client_uat` with a NONZERO value as signed-in.
+ * That assumption was wrong: Clerk leaves `__client_uat=<timestamp>` (a NONZERO
+ * "last activity" tracker) persistently after sign-out, so any visitor who had
+ * EVER signed in got permanent BYPASS forever — even completely anonymous
+ * subsequent visits. Real fresh visitors with no Clerk cookies still hit the
+ * cache, which is why cache-stats showed positive HIT% on Google traffic but
+ * Steve's dogfooding browser always BYPASSED. Drop the `__client_uat` check;
+ * `__session` is the only auth-real cookie. Diagnosed 2026-06-22 — the post-
+ * clear-cookies probe on the same Chrome session flipped BYPASS→MISS.
+ *
+ * The `(?:^|;\s*)__session` pattern matches both `__session=...` and the
+ * Clerk instance-suffixed `__session_xxxxx=...` variant.
  */
 function hasAuthCookie(cookie) {
-  if (/(?:^|;\s*)__session/.test(cookie)) return true
-  for (const m of cookie.matchAll(/(?:^|;\s*)__client_uat(?:_[^=;]+)?=(\d+)/g)) {
-    if (m[1] !== '0') return true
-  }
-  return false
+  // Token-strict: __session followed by `=` (top-level) or `_xxx=` (Clerk
+  // instance-suffixed). Rejects `__sessionnnn=...` false-positives.
+  return /(?:^|;\s*)__session(?:=|_[^=;]+=)/.test(cookie)
 }
 const RSC_HEADERS = ['rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url']
 const HTML_TTL_CAP = 3600
@@ -89,8 +102,22 @@ function storeSkipReason(response) {
   if (response.headers.has('set-cookie')) return 'set-cookie'
   const cc = response.headers.get('cache-control') ?? ''
   if (/private|no-store|no-cache/i.test(cc)) return 'cc-private'
-  if (sharedTtl(cc) <= 0) return 'no-smaxage'
+  // s-maxage missing on public HTML is synthesized below — not a skip reason
   return null
+}
+
+/** Synthesize s-maxage on responses that are public but missing one (e.g. OpenNext
+ *  emits no s-maxage on some ISR routes). Only applied to HTML pages on non-API paths. */
+function synthesizeCacheControl(response, request) {
+  const ct = response.headers.get('content-type') ?? ''
+  if (!ct.includes('text/html')) return response
+  const { pathname } = new URL(request.url)
+  if (pathname.startsWith('/api/')) return response
+  const cc = response.headers.get('cache-control') ?? ''
+  if (sharedTtl(cc) > 0) return response // already has s-maxage, leave it
+  const out = new Response(response.body, response)
+  out.headers.set('cache-control', 'public, s-maxage=3600, stale-while-revalidate=86400')
+  return out
 }
 
 function withEdgeHeader(response, value) {
@@ -101,8 +128,30 @@ function withEdgeHeader(response, value) {
 
 export default {
   async fetch(request, env, ctx) {
+    // www → naked redirect (S31, 2026-06-17): both custom_domain routes point
+    // at this worker, so Page Rules can't intercept. Redirect must happen here.
+    const url = new URL(request.url)
+    if (url.hostname === 'www.figurepinner.com') {
+      url.hostname = 'figurepinner.com'
+      return Response.redirect(url.toString(), 301)
+    }
+
+    /** Fire-and-forget analytics write — never blocks the response. */
+    function recordEdge(status) {
+      if (!env.ANALYTICS) return
+      const { pathname } = new URL(request.url)
+      ctx.waitUntil(Promise.resolve().then(() => {
+        env.ANALYTICS.writeDataPoint({
+          blobs: [status, pathname.split('/')[1] || 'home'],
+          doubles: [1],
+          indexes: [status],
+        })
+      }))
+    }
+
     if (!isCacheableRequest(request)) {
       const res = await handler.fetch(request, env, ctx)
+      recordEdge('BYPASS')
       return withEdgeHeader(res, 'BYPASS')
     }
 
@@ -110,17 +159,21 @@ export default {
     const key = cacheKeyFor(request)
 
     const hit = await cache.match(key)
-    if (hit) return withEdgeHeader(hit, 'HIT')
+    if (hit) {
+      recordEdge('HIT')
+      return withEdgeHeader(hit, 'HIT')
+    }
 
     const res = await handler.fetch(request, env, ctx)
+    const res2 = synthesizeCacheControl(res, request)
 
-    const skip = storeSkipReason(res)
+    const skip = storeSkipReason(res2)
     let putDebug = null
     if (!skip) {
       // Cap HTML TTL so deploys propagate; keep route-chosen TTL for JSON etc.
-      const isHtml = (res.headers.get('content-type') ?? '').includes('text/html')
-      const ttl = Math.min(sharedTtl(res.headers.get('cache-control')), isHtml ? HTML_TTL_CAP : Infinity)
-      const stored = new Response(res.clone().body, res)
+      const isHtml = (res2.headers.get('content-type') ?? '').includes('text/html')
+      const ttl = Math.min(sharedTtl(res2.headers.get('cache-control')), isHtml ? HTML_TTL_CAP : Infinity)
+      const stored = new Response(res2.clone().body, res2)
       stored.headers.set('cache-control', `public, s-maxage=${ttl}`)
       stored.headers.set('x-fp-edge-stored', new Date().toISOString())
       if (request.headers.get('x-fp-debug') === '1') {
@@ -139,7 +192,8 @@ export default {
       }
     }
 
-    const out = withEdgeHeader(res, 'MISS')
+    recordEdge('MISS')
+    const out = withEdgeHeader(res2, 'MISS')
     if (skip) out.headers.set('x-fp-edge-skip', skip)
     if (putDebug) out.headers.set('x-fp-put', putDebug)
     return out

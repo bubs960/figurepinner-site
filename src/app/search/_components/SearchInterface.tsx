@@ -48,7 +48,7 @@ const GENRES = [
   { slug: 'mythic-legions',             name: 'Mythic Legions',    accent: '#546E7A' },
   { slug: 'thundercats',                name: 'ThunderCats',       accent: '#E65100' },
   { slug: 'action-force',               name: 'Action Force',      accent: '#1565C0' },
-  { slug: 'dungeons-dragons',           name: 'D&D',               accent: '#6A1B9A' },
+  // D&D omitted — no 'dungeons-dragons' figures in KB (excluded 2026-06-06); re-add chip when ingested.
   { slug: 'neca',                       name: 'NECA',              accent: '#37474F' },
   { slug: 'spawn',                      name: 'Spawn',             accent: '#212121' },
 ] as const

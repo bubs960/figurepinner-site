@@ -15,9 +15,10 @@
  * loses no internal linking.
  */
 
-// /news and /deals are intentionally omitted until they have content (W6):
-// /news has no published events yet, /deals populates only when pricing
-// coverage surfaces real drops. Both pages stay live at their URLs.
+// /deals is intentionally omitted from the footer until it has content (W6):
+// it populates only when pricing coverage surfaces real drops; the page stays
+// live at its URL. (/news was removed entirely 2026-06-25 — Steve: "we don't
+// have news"; the public route now 404s. Admin authoring tooling kept.)
 const STANDARD_LINKS: ReadonlyArray<[label: string, href: string]> = [
   ['Price Guide', '/guides'],
   ['About', '/about'],

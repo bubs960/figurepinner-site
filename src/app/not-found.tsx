@@ -1,7 +1,12 @@
 'use client'
 import SiteHeader from '@/app/components/SiteHeader'
 // not-found.tsx must be a client component — @cloudflare/next-on-pages
-// does not support runtime exports on the not-found route.
+// does not support runtime exports on the not-found route, so do NOT add a
+// metadata export here (it breaks prerender).
+// 404 de-indexing: routes that hit this boundary (e.g. /figure/<bad-id> via
+// notFound()) return a real HTTP 404, which Google de-indexes on its own — no
+// X-Robots-Tag header is required. (An earlier comment pointed at a CF worker
+// "src/worker.ts" for this; that file never existed. SEO verify 2026-06-25, R5.)
 
 export default function NotFound() {
   return (

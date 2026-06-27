@@ -45,28 +45,12 @@ interface MarketPanelProps {
   buckets?: SnapshotBuckets | null
 }
 
-// New vs Used, in eBay's own language (Steve's call 2026-06-06).
-// New  = brand new / sealed / MOC / MIB / MISB / mint.
-// Used = pre-owned / loose AND untagged ("None") — most untagged secondhand
-//        sales are effectively used, so they fall here rather than inflating New.
-function normalizeCondition(raw: string | null | undefined): 'new' | 'used' {
-  const c = (raw ?? '').toLowerCase().trim()
-  if (
-    c.includes('moc') || c.includes('mib') || c.includes('misb') ||
-    c.includes('sealed') || c === 'mint' || c === 'new' || c.includes('brand new')
-  ) return 'new'
-  return 'used'
-}
-
 function median(arr: number[]): number {
   if (!arr.length) return 0
   const s = [...arr].sort((a, b) => a - b)
   const mid = Math.floor(s.length / 2)
   return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
 }
-
-// Only show a per-condition figure when it has enough real sales to be meaningful.
-const MIN_SPLIT_COMPS = 3
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName, buckets: snapshotBuckets }: MarketPanelProps) {
@@ -75,25 +59,25 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
   const comps = pricing.recent_comps
   if (!comps.length) return null
 
-  // Snapshot buckets win: full-corpus medians, same numbers as the placard +
-  // vault. Require ≥ MIN_SPLIT_COMPS per bucket (thin buckets ship under pooled
-  // — a 1-sale "sealed" median would mislead), so a thin side falls through to
-  // the blended view instead of asserting a divergent number.
-  const sealedRow = snapshotBuckets?.sealed && snapshotBuckets.sealed.median != null && snapshotBuckets.sealed.count >= MIN_SPLIT_COMPS
+  // Show the condition split ONLY when the snapshot says it is statistically
+  // valid — segmentation split / sealed-only / loose-only — the SAME gate the
+  // vault (vaultData.conditionMatchedMedian) and the placard (FigureDetailContent
+  // headlineBucket) use. So all three valuation surfaces agree on a figure. A
+  // 'pooled' figure falls through to the blended median below — exactly what the
+  // placard and vault show for it.
+  //
+  // (Was a count-based ≥3 gate that fired even under 'pooled', surfacing a
+  // sealed/loose split that the placard + vault blended away — the cross-surface
+  // contradiction standalone flagged. The local recent-sample split is dropped
+  // entirely: it is exactly the divergent local recompute P1 moved off of. 2026-06-14.)
+  const seg = snapshotBuckets?.segmentation ?? 'pooled'
+  const sealedRow = snapshotBuckets?.sealed && (seg === 'split' || seg === 'sealed-only') && snapshotBuckets.sealed.median != null
     ? { median: snapshotBuckets.sealed.median, count: snapshotBuckets.sealed.count }
     : null
-  const looseRow = snapshotBuckets?.loose && snapshotBuckets.loose.median != null && snapshotBuckets.loose.count >= MIN_SPLIT_COMPS
+  const looseRow = snapshotBuckets?.loose && (seg === 'split' || seg === 'loose-only') && snapshotBuckets.loose.median != null
     ? { median: snapshotBuckets.loose.median, count: snapshotBuckets.loose.count }
     : null
   const useSnapshot = Boolean(sealedRow || looseRow)
-
-  const localBuckets: Record<'new' | 'used', number[]> = { new: [], used: [] }
-  for (const c of comps) localBuckets[normalizeCondition(c.condition)].push(c.price)
-
-  // Only surface a condition median when it has ≥3 real sales — below that a
-  // single anomalous sale would misrepresent the condition's market.
-  const showNew  = !useSnapshot && localBuckets.new.length  >= MIN_SPLIT_COMPS
-  const showUsed = !useSnapshot && localBuckets.used.length >= MIN_SPLIT_COMPS
 
   return (
     <section>
@@ -139,16 +123,15 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         {looseRow && (
           <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} />
         )}
-        {showNew && (
-          <LedgerRow label="New" median={median(localBuckets.new)} count={localBuckets.new.length} />
-        )}
-        {showUsed && (
-          <LedgerRow label="Used" median={median(localBuckets.used)} count={localBuckets.used.length} />
-        )}
-        {!useSnapshot && !showNew && !showUsed && (
-          // Not enough tagged sales in either bucket to split honestly — show the
-          // blended median so the panel still says something true.
-          <LedgerRow label="All" median={median(comps.map(c => c.price))} count={comps.length} />
+        {!useSnapshot && (
+          // Pooled / no statistically valid split — the blended median, identical
+          // to the placard + vault. Full-corpus snapshot median when present;
+          // local-comp median only as a last resort if the snapshot carries none.
+          <LedgerRow
+            label="All"
+            median={pricing.median ?? median(comps.map(c => c.price))}
+            count={pricing.median != null ? pricing.comp_count : comps.length}
+          />
         )}
       </div>
     </section>
