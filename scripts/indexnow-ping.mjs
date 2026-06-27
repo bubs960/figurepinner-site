@@ -1,23 +1,26 @@
 /**
  * indexnow-ping.mjs — post-deploy IndexNow submission
  *
- * Submits the FULL sitemap URL set to IndexNow (Bing + Yandex network) on every
- * deploy, so the entire price-oracle catalog gets a fast re-crawl signal — not
- * just a handful of hand-picked pages.
+ * Submits a small priority URL set to IndexNow (Bing + Yandex network) on
+ * routine deploys, plus a sitemap ping. This avoids telling Bing the whole
+ * catalog changed every time we ship a code-only fix.
  *
- * WHY (2026-06-27, R5 traffic push): the sitemap has ~32,650 URLs but this script
- * previously submitted only 24 hardcoded URLs. The rest waited on slow organic
- * crawl (weeks). IndexNow accepts up to 10,000 URLs/request, so we read every
- * <loc> and submit in 10k batches. More indexed pages -> more "[figure] value"
- * searches land -> visits. Fully automated; runs in the deploy script.
+ * WHY (2026-06-27): IndexNow is strongest when used as a changed-URL signal.
+ * The earlier R5 traffic push submitted the full sitemap on deploy; that was
+ * useful once, but too noisy as a permanent default. Use --full only for rare
+ * catalog/schema recrawl pushes where we intentionally want every sitemap URL
+ * resubmitted.
  *
  * URL SOURCE: prefer the locally-built sitemap on disk
  * (.next/server/app/sitemap.xml.body) — no network, immune to Bot Fight Mode
  * (which 403s datacenter/non-browser fetches of the live sitemap). Falls back to
- * fetching the live sitemap, then to a small priority list, so it never no-ops.
+ * fetching the live sitemap, then to a small priority list.
  *
  * Protocol: https://www.indexnow.org/documentation
- * Usage: node scripts/indexnow-ping.mjs
+ * Usage:
+ *   node scripts/indexnow-ping.mjs           # routine deploy: priority URLs
+ *   node scripts/indexnow-ping.mjs --full    # rare full sitemap resubmission
+ *   node scripts/indexnow-ping.mjs <url...>  # submit explicit changed URLs
  */
 
 import { readFileSync, existsSync } from 'node:fs'
@@ -27,6 +30,9 @@ const HOST = 'figurepinner.com'
 const SITEMAP = 'https://' + HOST + '/sitemap.xml'
 const ENDPOINT = 'https://api.indexnow.org/IndexNow'
 const BATCH_SIZE = 10000
+const args = process.argv.slice(2)
+const FULL_SUBMIT = args.includes('--full') || process.env.INDEXNOW_FULL === '1'
+const EXPLICIT_URLS = args.filter((arg) => arg !== '--full' && /^https:\/\/figurepinner\.com\//.test(arg))
 
 const LOCAL_SITEMAP_PATHS = [
   '.next/server/app/sitemap.xml.body',
@@ -107,8 +113,15 @@ async function submitBatch(urlList, idx, total) {
 }
 
 async function ping() {
-  const urls = await getSitemapUrls()
+  const urls = EXPLICIT_URLS.length > 0
+    ? withPriority(EXPLICIT_URLS)
+    : FULL_SUBMIT
+      ? await getSitemapUrls()
+      : [...PRIORITY_URLS]
+
   const batches = Math.ceil(urls.length / BATCH_SIZE)
+  const mode = EXPLICIT_URLS.length > 0 ? 'explicit+priority' : FULL_SUBMIT ? 'full sitemap' : 'priority'
+  console.log('[IndexNow] mode: ' + mode)
   console.log('[IndexNow] Submitting ' + urls.length + ' URLs in ' + batches + ' batch(es) of up to ' + BATCH_SIZE + '...')
 
   for (let i = 0; i < urls.length; i += BATCH_SIZE) {
@@ -124,7 +137,7 @@ async function ping() {
     console.warn('[IndexNow] sitemap ping error (non-fatal): ' + err.message)
   }
 
-  console.log('[IndexNow] Done - full catalog submitted for re-crawl.')
+  console.log('[IndexNow] Done.')
 }
 
 ping()

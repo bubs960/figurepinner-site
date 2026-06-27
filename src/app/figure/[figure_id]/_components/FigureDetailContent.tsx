@@ -485,6 +485,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           ...(valuePricing.low != null ? { lowPrice: valuePricing.low.toFixed(2) } : {}),
           ...(valuePricing.high != null ? { highPrice: valuePricing.high.toFixed(2) } : {}),
           offerCount: price!.soldCount,
+          itemCondition: 'https://schema.org/UsedCondition',
           availability: 'https://schema.org/InStock',
           seller: { '@type': 'Organization', name: 'FigurePinner', url: 'https://figurepinner.com' },
         }
