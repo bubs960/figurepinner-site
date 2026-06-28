@@ -72,18 +72,31 @@ function cacheKeyFor(request) {
   return changed || url.search ? new Request(url.toString(), { method: 'GET' }) : request
 }
 
-function isCacheableRequest(request) {
-  if (request.method !== 'GET') return false
+function routeBucketFor(pathname) {
+  if (pathname === '/') return 'home'
+  if (pathname.startsWith('/api/')) {
+    const parts = pathname.split('/').filter(Boolean)
+    return parts.slice(0, 3).join('/')
+  }
+  return pathname.split('/')[1] || 'home'
+}
+
+function trafficClassFor(request) {
+  return request.cf?.verifiedBotCategory || 'non-bot'
+}
+
+function cacheBypassReason(request) {
+  if (request.method !== 'GET') return 'method'
   // Auth-shaped surfaces must never be colo-cached, even when rendered
   // anonymously (a cached dashboard shell reads as a broken signed-in state).
   const { pathname } = new URL(request.url)
-  if (pathname === '/app' || pathname.startsWith('/app/') || pathname === '/admin' || pathname.startsWith('/admin/')) return false
+  if (pathname === '/app' || pathname.startsWith('/app/') || pathname === '/admin' || pathname.startsWith('/admin/')) return 'private-route'
   const cookie = request.headers.get('cookie')
-  if (cookie && hasAuthCookie(cookie)) return false
+  if (cookie && hasAuthCookie(cookie)) return 'auth-cookie'
   for (const h of RSC_HEADERS) {
-    if (request.headers.has(h)) return false
+    if (request.headers.has(h)) return `rsc-${h}`
   }
-  return true
+  return null
 }
 
 /** Positive s-maxage from a Cache-Control header, else 0. */
@@ -137,22 +150,33 @@ export default {
     }
 
     /** Fire-and-forget analytics write — never blocks the response. */
-    function recordEdge(status) {
+    function recordEdge(status, detail = {}) {
       if (!env.ANALYTICS) return
       const { pathname } = new URL(request.url)
+      const route = routeBucketFor(pathname)
       ctx.waitUntil(Promise.resolve().then(() => {
         env.ANALYTICS.writeDataPoint({
-          blobs: [status, pathname.split('/')[1] || 'home'],
+          blobs: [
+            status,
+            route,
+            detail.reason || 'none',
+            request.method,
+            String(detail.responseStatus || ''),
+            trafficClassFor(request),
+          ],
           doubles: [1],
           indexes: [status],
         })
       }))
     }
 
-    if (!isCacheableRequest(request)) {
+    const bypassReason = cacheBypassReason(request)
+    if (bypassReason) {
       const res = await handler.fetch(request, env, ctx)
-      recordEdge('BYPASS')
-      return withEdgeHeader(res, 'BYPASS')
+      recordEdge('BYPASS', { reason: bypassReason, responseStatus: res.status })
+      const out = withEdgeHeader(res, 'BYPASS')
+      out.headers.set('x-fp-edge-reason', bypassReason)
+      return out
     }
 
     const cache = caches.default
@@ -160,7 +184,7 @@ export default {
 
     const hit = await cache.match(key)
     if (hit) {
-      recordEdge('HIT')
+      recordEdge('HIT', { responseStatus: hit.status })
       return withEdgeHeader(hit, 'HIT')
     }
 
@@ -192,7 +216,7 @@ export default {
       }
     }
 
-    recordEdge('MISS')
+    recordEdge('MISS', { reason: skip || 'stored', responseStatus: res2.status })
     const out = withEdgeHeader(res2, 'MISS')
     if (skip) out.headers.set('x-fp-edge-skip', skip)
     if (putDebug) out.headers.set('x-fp-put', putDebug)

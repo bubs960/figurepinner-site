@@ -65,6 +65,7 @@ export async function GET(request: Request) {
 
   const url = new URL(request.url)
   const debug = url.searchParams.get('debug') === '1'
+  const detail = debug || url.searchParams.get('detail') === '1' || url.searchParams.get('breakdown') === '1'
 
   // CF Analytics Engine SQL API. The `_sample_interval` column is how AE
   // surfaces the sample-weighted count of each row (when the worker calls
@@ -131,6 +132,61 @@ FORMAT JSON`
   const cacheableTotal = hit + miss
   const now = new Date()
 
+  let breakdown:
+    | { label: string; route: string; reason: string; method: string; response_status: string; traffic_class: string; count: number }[]
+    | undefined
+  let breakdown_error: { status?: number; body_preview?: string; detail?: string } | undefined
+
+  if (detail) {
+    const detailSql = `SELECT
+  index1 AS label,
+  blob2 AS route,
+  blob3 AS reason,
+  blob4 AS method,
+  blob5 AS response_status,
+  blob6 AS traffic_class,
+  SUM(_sample_interval) AS count
+FROM fp_edge_cache
+WHERE timestamp > NOW() - INTERVAL '24' HOUR
+GROUP BY index1, blob2, blob3, blob4, blob5, blob6
+LIMIT 500
+FORMAT JSON`
+
+    try {
+      const detailRaw = await fetch(sqlUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain',
+          Authorization: `Bearer ${apiToken}`,
+        },
+        body: detailSql,
+      })
+      const detailText = await detailRaw.text()
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let detailParsed: any = null
+      try { detailParsed = JSON.parse(detailText) } catch { /* leave detailParsed=null */ }
+
+      if (detailRaw.ok && detailParsed && Array.isArray(detailParsed.data)) {
+        breakdown = detailParsed.data
+          .map((row: Record<string, unknown>) => ({
+            label: String(row.label ?? ''),
+            route: String(row.route || 'legacy'),
+            reason: String(row.reason || 'legacy'),
+            method: String(row.method || 'legacy'),
+            response_status: String(row.response_status || 'legacy'),
+            traffic_class: String(row.traffic_class || 'legacy'),
+            count: Number(row.count) || 0,
+          }))
+          .sort((a: { count: number }, b: { count: number }) => b.count - a.count)
+          .slice(0, 50)
+      } else {
+        breakdown_error = { status: detailRaw.status, body_preview: detailText.slice(0, 400) }
+      }
+    } catch (e) {
+      breakdown_error = { detail: String(e) }
+    }
+  }
+
   return NextResponse.json(
     {
       window: '24h',
@@ -142,6 +198,8 @@ FORMAT JSON`
       cacheable_pct: total > 0 ? Math.round((cacheableTotal / total) * 1000) / 10 : null,
       ts: now.toISOString(),
       sql_rows_count: data.length,
+      breakdown,
+      breakdown_error,
       sql_response: debug ? parsed : undefined,
     },
     {
