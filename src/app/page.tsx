@@ -34,6 +34,38 @@ const SHELF_FIDS: Array<{ fid: string; tag: string }> = [
   { fid: 'fp_marvel-comics_hasbro_marvel-legends_exclusives_doctor-strange_da9845', tag: 'Marvel Legends' },
   { fid: 'fp_marvel-comics_hasbro_marvel-legends_x-men_dazzler_0fc468', tag: 'Marvel Legends' },
 ]
+const PRIORITY_GUIDES = [
+  {
+    href: '/guides/how-to-find-action-figure-values',
+    label: 'Find a figure value',
+    kicker: 'pricing method',
+  },
+  {
+    href: '/guides/most-valuable-wwe-elite-figures',
+    label: 'Most valuable WWE Elite figures',
+    kicker: 'wrestling comps',
+  },
+  {
+    href: '/guides/marvel-legends-price-guide-2026',
+    label: 'Marvel Legends price guide',
+    kicker: 'superhero market',
+  },
+  {
+    href: '/guides/star-wars-black-series-hub',
+    label: 'Star Wars Black Series guide',
+    kicker: 'black series',
+  },
+  {
+    href: '/guides/dc-multiverse-hub',
+    label: 'DC Multiverse price guide',
+    kicker: 'gold label',
+  },
+  {
+    href: '/guides/tmnt-hub',
+    label: 'TMNT figure price guide',
+    kicker: 'neca playmates',
+  },
+]
 
 function titleCase(slug: string): string {
   return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
@@ -356,6 +388,49 @@ export default async function HomePage() {
         [data-fph-stagger].in .fph-lane-chip:nth-child(11) { transition-delay: .5s; }
         [data-fph-stagger].in .fph-lane-chip:hover { transition-delay: 0s; }
 
+        /* ── search-intent guides ── */
+        .fph-guide-rail { padding: 26px 0 30px; background: rgba(242,232,213,.018); }
+        .fph-guide-head {
+          display: flex; align-items: end; justify-content: space-between; gap: 24px;
+          margin-bottom: 14px;
+        }
+        .fph-guide-title {
+          font-size: 11px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
+          color: var(--fph-gold); margin: 0;
+        }
+        .fph-guide-copy {
+          margin: 5px 0 0; max-width: 620px;
+          font-size: 13px; line-height: 1.6; color: var(--fph-cream-mut);
+        }
+        .fph-guide-all {
+          flex: 0 0 auto; color: var(--fph-cream-dim); text-decoration: none;
+          font-size: 12px; font-weight: 500; border-bottom: 1px solid rgba(242,232,213,.22);
+        }
+        .fph-guide-all:hover { color: var(--fph-gold-hi); border-color: rgba(224,168,62,.55); }
+        .fph-guide-grid {
+          display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 10px;
+        }
+        .fph-guide-card {
+          display: block; min-width: 0; padding: 14px 15px;
+          border: 1px solid rgba(242,232,213,.10); border-radius: 10px;
+          background: rgba(242,232,213,.025); text-decoration: none;
+          transition: transform .2s, border-color .2s, background .2s;
+        }
+        .fph-guide-card:hover {
+          transform: translateY(-2px); border-color: rgba(224,168,62,.42);
+          background: rgba(224,168,62,.045);
+        }
+        .fph-guide-kicker {
+          display: block; margin-bottom: 5px;
+          font-size: 9.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+          color: var(--fph-gold-mut);
+        }
+        .fph-guide-label {
+          display: block; font-size: 13px; line-height: 1.35; font-weight: 500;
+          color: var(--fph-cream);
+        }
+
         /* ── ticker ── */
         .fph-ticker { background: rgba(224,168,62,.02); overflow: hidden; position: relative; }
         .fph-ticker .fade-l, .fph-ticker .fade-r { position: absolute; top: 0; bottom: 0; width: 70px; z-index: 2; pointer-events: none; }
@@ -453,6 +528,7 @@ export default async function HomePage() {
           .fph-hero-grid { grid-template-columns: 1fr; gap: 56px; }
           .fph-hero-sub, .fph-hero-search { max-width: 640px; }
           .fph-closer-grid { grid-template-columns: 1fr; gap: 40px; }
+          .fph-guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
         @media (max-width: 640px) {
           .fph .wrap { padding: 0 20px; }
@@ -470,6 +546,9 @@ export default async function HomePage() {
           .fph-lines { padding: 28px 0 24px; }
           .fph-lane-kicker { width: 100%; margin-right: 0; margin-bottom: 2px; }
           .fph-lane-chip { padding: 7px 14px; font-size: 11px; }
+          .fph-guide-head { display: block; }
+          .fph-guide-all { display: inline-block; margin-top: 10px; }
+          .fph-guide-grid { grid-template-columns: 1fr; }
           .fph-closer { padding: 46px 0 50px; }
           .fph-ledger-row { padding: 12px 18px; }
           .fph-ledger-head, .fph-ledger-foot { padding-left: 18px; padding-right: 18px; }
@@ -530,6 +609,29 @@ export default async function HomePage() {
               </a>
             ))}
             <a className="fph-lane-chip all" href="/search">All {laneCount} lanes &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── HIGH-INTENT GUIDES ── */}
+      <section className="fph-guide-rail fph-seam" aria-label="Action figure price guide shortcuts">
+        <div className="wrap">
+          <div className="fph-guide-head" data-fph-reveal>
+            <div>
+              <h2 className="fph-guide-title">Fastest price-guide paths</h2>
+              <p className="fph-guide-copy">
+                Jump straight into the pages collectors search for when they need a sold-price answer.
+              </p>
+            </div>
+            <a className="fph-guide-all" href="/guides">All collector guides &rarr;</a>
+          </div>
+          <div className="fph-guide-grid" data-fph-reveal>
+            {PRIORITY_GUIDES.map(guide => (
+              <a className="fph-guide-card" href={guide.href} key={guide.href}>
+                <span className="fph-guide-kicker">{guide.kicker}</span>
+                <span className="fph-guide-label">{guide.label}</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>

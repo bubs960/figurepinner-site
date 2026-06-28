@@ -40,14 +40,14 @@ const LOCAL_SITEMAP_PATHS = [
 ]
 
 const PRIORITY_URLS = [
-  'https://figurepinner.com/wrestling/elite/cm-punk',
-  'https://figurepinner.com/wrestling/elite/roman-reigns',
-  'https://figurepinner.com/marvel/marvel-legends/spider-man',
-  'https://figurepinner.com/star-wars/the-black-series/darth-vader',
-  'https://figurepinner.com/transformers/masterpiece/optimus-prime',
-  'https://figurepinner.com/dc/multiverse/batman',
-  'https://figurepinner.com/guides/marvel-legends-price-guide-2026',
+  'https://figurepinner.com/',
+  'https://figurepinner.com/guides',
   'https://figurepinner.com/guides/how-to-find-action-figure-values',
+  'https://figurepinner.com/guides/most-valuable-wwe-elite-figures',
+  'https://figurepinner.com/guides/marvel-legends-price-guide-2026',
+  'https://figurepinner.com/guides/star-wars-black-series-hub',
+  'https://figurepinner.com/guides/dc-multiverse-hub',
+  'https://figurepinner.com/guides/tmnt-hub',
 ]
 
 function extractLocs(xml) {
