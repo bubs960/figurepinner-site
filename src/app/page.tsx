@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 //    their image are dropped at build, never shipped broken) ────────────────────
 const SHELF_FIDS: Array<{ fid: string; tag: string }> = [
   // row 1 — wrestling (deepest lane)
-  { fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66', tag: 'Ultimate Ed. 30' },
   { fid: 'fp_wrestling_mattel_elite_112_becky-lynch_3d7e12', tag: 'Elite 112' },
   { fid: 'fp_wrestling_mattel_elite_100_the-rock_3c447b', tag: 'Elite 100' },
   { fid: 'fp_wrestling_mattel_ultimate-edition_25_cody-rhodes_83188e', tag: 'Ultimate Ed. 25' },
   { fid: 'fp_wrestling_mattel_elite_116_jade-cargill_dd785b', tag: 'Elite 116' },
+  { fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66', tag: 'Ultimate Ed. 30' },
   { fid: 'fp_wrestling_mattel_ultimate-edition_tgt_rey-mysterio_09717a', tag: 'Ultimate Edition' },
   // row 2 — across the lanes
   { fid: 'fp_star-wars_hasbro_black-series_galaxy_darth-vader_be6b6f', tag: 'Black Series' },

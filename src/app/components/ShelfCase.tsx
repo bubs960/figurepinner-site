@@ -209,7 +209,13 @@ export default function ShelfCase({ figures, label }: { figures: ShelfFigure[]; 
                       <svg viewBox="0 0 24 24" fill="currentColor"><path d={PIN_PATH} /></svg>
                     </button>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={f.img} alt={f.name} loading={ri === 0 ? 'eager' : 'lazy'} />
+                    <img
+                      src={f.img}
+                      alt={f.name}
+                      loading={ri === 0 && f === row[0] ? 'eager' : 'lazy'}
+                      fetchPriority={ri === 0 && f === row[0] ? 'high' : 'auto'}
+                      decoding="async"
+                    />
                   </div>
                   <div className="fph-fig-name">{f.name}</div>
                   <div className={`fph-fig-tag${f.sold ? ' sold' : ''}`}>{f.tag}</div>
