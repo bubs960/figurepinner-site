@@ -24,15 +24,15 @@ const SHELF_FIDS: Array<{ fid: string; tag: string }> = [
   { fid: 'fp_wrestling_mattel_elite_100_the-rock_3c447b', tag: 'Elite 100' },
   { fid: 'fp_wrestling_mattel_ultimate-edition_25_cody-rhodes_83188e', tag: 'Ultimate Ed. 25' },
   { fid: 'fp_wrestling_mattel_elite_116_jade-cargill_dd785b', tag: 'Elite 116' },
-  { fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66', tag: 'Ultimate Ed. 30' },
-  { fid: 'fp_wrestling_mattel_ultimate-edition_tgt_rey-mysterio_09717a', tag: 'Ultimate Edition' },
+  { fid: 'fp_wrestling_mattel_elite_1_edge_f3ac96', tag: 'Elite 1' },
+  { fid: 'fp_wrestling_mattel_elite_1_undertaker_6eadf3', tag: 'Elite 1' },
   // row 2 — across the lanes
-  { fid: 'fp_star-wars_hasbro_black-series_galaxy_darth-vader_be6b6f', tag: 'Black Series' },
-  { fid: 'fp_star-wars_hasbro_black-series_blue-wave-2014-2015_obi-wan-kenobi_4deda7', tag: 'Black Series' },
-  { fid: 'fp_gi-joe_hasbro_classified-series_classified_snake-eyes_ae7414', tag: 'Classified Series' },
-  { fid: 'fp_gi-joe_hasbro_classified-series_classified_cobra-commander_005bc6', tag: 'Classified Series' },
-  { fid: 'fp_marvel-comics_hasbro_marvel-legends_exclusives_doctor-strange_da9845', tag: 'Marvel Legends' },
-  { fid: 'fp_marvel-comics_hasbro_marvel-legends_x-men_dazzler_0fc468', tag: 'Marvel Legends' },
+  { fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_darth-vader_a039ff', tag: 'Vintage Collection' },
+  { fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_boba-fett_3bc65d', tag: 'Vintage Collection' },
+  { fid: 'fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_snake-eyes_c47357', tag: 'Real American Hero' },
+  { fid: 'fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_cobra-commander_a9ccf4', tag: 'Real American Hero' },
+  { fid: 'fp_masters-of-the-universe_mattel_origins_origins-action-figures_skeletor_87c6a1', tag: 'Origins' },
+  { fid: 'fp_transformers_hasbro_war-for-cybertron-kingdom_leader_optimus-prime_9524b9', tag: 'Kingdom' },
 ]
 const PRIORITY_GUIDES = [
   {
@@ -71,6 +71,11 @@ function titleCase(slug: string): string {
   return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
 }
 
+function isTinyThumbSafe(url: string | null): boolean {
+  if (!url) return false
+  return url.includes('cdn.shopify.com') || url.includes('i.ebayimg.com') || url.includes('/images/thumbs/')
+}
+
 /** Resolve curated shelf entries against the KB; real sold prices (from the
  *  tape) replace the line tag where we have one. */
 function buildShelf(tape: TapeItem[]): ShelfFigure[] {
@@ -90,7 +95,7 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
       name: titleCase(kb.character_canonical),
       tag: sold != null ? `Sold $${sold.toFixed(2)}` : entry.tag,
       sold: sold != null,
-      img: thumb(kb.canonical_image_url, 225) ?? kb.canonical_image_url,
+      img: thumb(kb.canonical_image_url, 180) ?? kb.canonical_image_url,
     })
   }
   return out
@@ -101,6 +106,7 @@ function enrichTape(tape: TapeItem[]) {
   return tape.map(t => {
     const m = /^\/figure\/(.+)$/.exec(t.href)
     const kb = m ? getFigureById(m[1]) : null
+    const img = kb?.canonical_image_url ? thumb(kb.canonical_image_url, 96) : null
     return {
       href: t.href,
       price: t.price,
@@ -108,7 +114,7 @@ function enrichTape(tape: TapeItem[]) {
       lineTag: kb
         ? `${prettifySlug(kb.product_line)}${kb.release_wave && /^\d+$/.test(kb.release_wave) ? ` ${kb.release_wave}` : ''}`
         : '',
-      img: kb?.canonical_image_url ? thumb(kb.canonical_image_url, 96) : null,
+      img: isTinyThumbSafe(img) ? img : null,
     }
   })
 }
@@ -122,12 +128,12 @@ export default async function HomePage() {
   const laneCount = GENRE_TAXONOMY.length
 
   return (
-    <div className="fph">
+    <main className="fph">
       <style>{`
         .fph {
           --fph-cream: #f2e8d5;
-          --fph-cream-dim: rgba(242,232,213,.60);
-          --fph-cream-mut: rgba(242,232,213,.38);
+          --fph-cream-dim: rgba(242,232,213,.76);
+          --fph-cream-mut: rgba(242,232,213,.62);
           --fph-gold: #e0a83e;
           --fph-gold-hi: #f5c462;
           --fph-gold-mut: rgba(224,168,62,.72);
@@ -250,7 +256,7 @@ export default async function HomePage() {
         .fph-case-label {
           position: absolute; top: 15px; left: 28px; z-index: 5;
           font-size: 10px; font-weight: 400; letter-spacing: .26em; text-transform: uppercase;
-          color: rgba(242,232,213,.36);
+          color: rgba(242,232,213,.60);
         }
         .fph-shelf { position: relative; padding: 0 6px 14px; margin-bottom: 30px; }
         .fph-shelf:last-of-type { margin-bottom: 6px; }
@@ -524,6 +530,24 @@ export default async function HomePage() {
         }
 
         /* ── responsive ── */
+        @media (pointer: coarse) {
+          .fph a, .fph button { touch-action: manipulation; }
+          .fph-chip, .fph-lane-chip, .fph-guide-all, .fph-tick-chip, .fph-btn-gold, .fph-btn-ghost {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+          }
+          .fph-guide-card { min-height: 72px; }
+          .fph-tray-cta { min-height: 44px; align-items: center; }
+          .fph-tray.active .fph-tray-cta { display: inline-flex; }
+          .fph-pin-btn {
+            width: 44px;
+            height: 44px;
+            top: -18px;
+            right: -16px;
+          }
+          .fph-pin-btn svg { width: 16px; height: 16px; }
+        }
         @media (max-width: 1020px) {
           .fph-hero-grid { grid-template-columns: 1fr; gap: 56px; }
           .fph-hero-sub, .fph-hero-search { max-width: 640px; }
@@ -703,6 +727,6 @@ export default async function HomePage() {
       </section>
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
-    </div>
+    </main>
   )
 }
