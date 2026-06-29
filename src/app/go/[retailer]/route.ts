@@ -25,6 +25,8 @@ type AffiliateInjector =
   | { kind: 'wrap'; template: string }
   | { kind: 'epn'; campid: string }
 
+const MAX_DEST_URL_LENGTH = 2048
+
 const RETAILERS: Record<string, RetailerConfig> = {
   // ── ACTIVE ─────────────────────────────────────────────────────────
   ebay: {
@@ -97,12 +99,19 @@ export async function GET(
   if (!rawDest) {
     return new NextResponse('Missing ?url=', { status: 400 })
   }
+  if (rawDest.length > MAX_DEST_URL_LENGTH) {
+    return new NextResponse('Destination URL too long', { status: 400 })
+  }
 
   let dest: URL
   try {
     dest = new URL(rawDest)
   } catch {
     return new NextResponse('Invalid ?url=', { status: 400 })
+  }
+
+  if (dest.protocol !== 'https:') {
+    return new NextResponse('Destination must use https', { status: 400 })
   }
 
   const hostOk = retailer.hosts.some(h => dest.hostname === h)
@@ -118,7 +127,7 @@ export async function GET(
   console.log(JSON.stringify({
     type: 'go_click',
     retailer: retailerKey.toLowerCase(),
-    ref,
+    ref: ref.slice(0, 80),
     has_affiliate: retailer.affiliate !== null,
     dest_host: dest.hostname,
     ua: request.headers.get('user-agent')?.slice(0, 120) ?? null,

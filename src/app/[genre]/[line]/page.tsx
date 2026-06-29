@@ -18,6 +18,7 @@ import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
+import JsonLd from '@/app/_components/JsonLd'
 
 // ISR — KB-only line hub, no user-specific data. "Fast, cacheable, crawlable"
 // (header above) requires this. Was force-dynamic; restored per Genta audit 2026-06-06 P1.
@@ -257,7 +258,7 @@ export default async function LineHubPage(
 
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh', color: 'var(--text)' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: genreName, url: `https://figurepinner.com/${genre}` },

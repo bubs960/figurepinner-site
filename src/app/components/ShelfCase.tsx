@@ -58,10 +58,12 @@ export default function ShelfCase({ figures, label }: { figures: ShelfFigure[]; 
       const n = trayThumbs!.children.length
       if (n === 0) {
         tray!.classList.remove('active')
-        trayText!.innerHTML = 'Hover a figure and tap the pin &mdash; start a shelf of your own.'
+        trayText!.textContent = 'Hover a figure and tap the pin - start a shelf of your own.'
       } else {
         tray!.classList.add('active')
-        trayText!.innerHTML = `<strong>${n} ${n === 1 ? 'figure' : 'figures'} pinned</strong> &mdash; a free Vault keeps them.`
+        const strong = document.createElement('strong')
+        strong.textContent = `${n} ${n === 1 ? 'figure' : 'figures'} pinned`
+        trayText!.replaceChildren(strong, document.createTextNode(' - a free Vault keeps them.'))
       }
     }
     function appendThumb(src: string, fid: string | null) {

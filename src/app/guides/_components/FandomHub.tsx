@@ -30,6 +30,7 @@ import SaberClashAtmosphere from './SaberClashAtmosphere'
 import FactionSeamAtmosphere from './FactionSeamAtmosphere'
 import EraMapGrid from './EraMapGrid'
 import FaqSection from './FaqSection'
+import JsonLd from '@/app/_components/JsonLd'
 
 function renderText(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
@@ -356,8 +357,8 @@ export default function FandomHub({
 
   return (
     <main data-fandom={theme.fandom} className="fh-main">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbLd} />
 
       <SiteHeader crumbs={[{ label: 'Guides', href: '/guides' }, { label: article.title }]} />
 

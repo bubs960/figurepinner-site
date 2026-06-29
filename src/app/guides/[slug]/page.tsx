@@ -12,6 +12,7 @@ import FandomHub from '../_components/FandomHub'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import LiveMedian, { fetchPriceSnaps, type PriceSnap } from '../_components/LiveMedian'
+import JsonLd from '@/app/_components/JsonLd'
 
 const BASE = 'https://figurepinner.com'
 
@@ -149,7 +150,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
 
   return (
     <main style={{ background: 'var(--bg)', minHeight: '100vh', color: 'var(--text)', fontFamily: 'var(--font-body)' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
 
       <SiteHeader crumbs={[{ label: 'Guides', href: '/guides' }, { label: article.title }]} />
 

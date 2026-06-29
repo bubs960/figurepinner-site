@@ -91,10 +91,19 @@ export function renderLoreBand(input: LoreInput): LoreResult {
   }
 }
 
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
 /**
  * Render sentences to HTML-safe strings.
- * Converts *word* → <em>word</em>. No full markdown parser needed.
+ * Converts *word* -> <em>word</em>. No full markdown parser needed.
  */
 export function renderSentenceToHtml(sentence: string): string {
-  return sentence.replace(/\*([^*]+)\*/g, '<em>$1</em>')
+  return escapeHtml(sentence).replace(/\*([^*]+)\*/g, '<em>$1</em>')
 }

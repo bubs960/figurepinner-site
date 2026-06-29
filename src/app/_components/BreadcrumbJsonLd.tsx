@@ -1,3 +1,5 @@
+import JsonLd from './JsonLd'
+
 export default function BreadcrumbJsonLd({ crumbs }: { crumbs: Array<{ name: string; url: string }> }) {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -9,5 +11,5 @@ export default function BreadcrumbJsonLd({ crumbs }: { crumbs: Array<{ name: str
       item: crumb.url,
     })),
   }
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  return <JsonLd data={jsonLd} />
 }

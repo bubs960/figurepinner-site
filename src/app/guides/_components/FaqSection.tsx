@@ -9,6 +9,7 @@
  */
 
 import type { HubFaq } from '../_data/fandomHubs'
+import JsonLd from '@/app/_components/JsonLd'
 
 export default function FaqSection({ faqs, title = 'Collector questions' }: { faqs: HubFaq[]; title?: string }) {
   if (!faqs.length) return null
@@ -23,7 +24,7 @@ export default function FaqSection({ faqs, title = 'Collector questions' }: { fa
   }
   return (
     <section className="fh-faq" aria-labelledby="fh-faq-h">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
       <h2 id="fh-faq-h" className="fh-faq-title">{title}</h2>
       <div className="fh-faq-list">
         {faqs.map((f, i) => (

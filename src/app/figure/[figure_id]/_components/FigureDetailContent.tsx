@@ -30,6 +30,7 @@ import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
 import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
+import JsonLd from '@/app/_components/JsonLd'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
 // Fallback campid is the live EPN campaign — restored after bceb185 silently
@@ -512,7 +513,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },

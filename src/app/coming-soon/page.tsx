@@ -225,7 +225,9 @@ const FORM_SCRIPT = `
       .then(function(res) { return res.json(); })
       .then(function(d) {
         if (d && typeof d.floored === 'number' && d.floored >= 10) {
-          countEl.innerHTML = '<strong>' + d.floored + '+</strong> collectors already on the list';
+          var strong = document.createElement('strong');
+          strong.textContent = d.floored + '+';
+          countEl.replaceChildren(strong, document.createTextNode(' collectors already on the list'));
         }
       })
       .catch(function() { /* silent */ });

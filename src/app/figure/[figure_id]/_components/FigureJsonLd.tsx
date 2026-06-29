@@ -12,6 +12,7 @@
  *
  * Renders server-side into <head> via the page component — no JS overhead.
  */
+import JsonLd from '@/app/_components/JsonLd'
 
 const BASE = 'https://figurepinner.com'
 
@@ -154,20 +155,9 @@ export default function FigureJsonLd({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
-      />
-      {faq && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
-        />
-      )}
+      <JsonLd data={product} />
+      <JsonLd data={breadcrumb} />
+      {faq && <JsonLd data={faq} />}
     </>
   )
 }

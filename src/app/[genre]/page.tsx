@@ -11,6 +11,7 @@ import ShelfCase, { type ShelfFigure } from '@/app/components/ShelfCase'
 import ScrollReveal from '@/app/components/ScrollReveal'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
+import JsonLd from '@/app/_components/JsonLd'
 
 // ── Genre config (SEO copy only — visuals are the shared shelf design) ───────
 
@@ -277,7 +278,7 @@ export default async function GenrePage(
 
   return (
     <div className="fph fpg">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: meta.label, url: `https://figurepinner.com/${genre}` },

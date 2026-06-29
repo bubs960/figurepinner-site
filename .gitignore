@@ -42,6 +42,9 @@ credentials.json
 *.tsbuildinfo
 next-env.d.ts
 
+# editors
+.idea/
+
 # OS
 .DS_Store
 Thumbs.db

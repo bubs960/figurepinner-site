@@ -22,12 +22,12 @@ const nextConfig: NextConfig = {
     // Using raw <img> tags with onError fallback throughout the app.
     unoptimized: true,
     // Figure images come from canonical_image_url in the KB — primarily:
-    //   - Shopify CDN (WFD wrestling photos): cdn.shopify.com
-    //   - ActionFigure411 CDN (fandom photos): various hostnames
-    // R2 proxy serves pattern dictionary only, not images.
+    //   - Shopify CDN (WFD wrestling photos): cdn.shopify.com only
+    //   - ActionFigure411 CDN (fandom photos): actionfigure411.com only
+    // R2 proxy serves pattern dictionary only, not images. Keep this list
+    // explicit; broad wildcards turn KB image data into an origin allowlist.
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.shopify.com' },
-      { protocol: 'https', hostname: '*.shopify.com' },
       { protocol: 'https', hostname: 'actionfigure411.com' },
       { protocol: 'https', hostname: '*.actionfigure411.com' },
     ],
