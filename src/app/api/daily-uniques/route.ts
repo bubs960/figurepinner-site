@@ -10,18 +10,14 @@ import { NextResponse } from 'next/server'
  * WHY THIS EXISTS (2026-06-26, web chat — R1 scoreboard):
  * Ground rule R1 — FigurePinner must hit 50 real human visits/day by 2026-07-03
  * or the figures vertical is decommissioned. We cannot grade that without a real,
- * verified daily-visitor number. A local Node script (scripts/daily-uniques.mjs)
- * was written first, but CF_API_TOKEN is a *Worker* secret (set via wrangler
- * secret put), not in the local secrets file — so a local process cannot read it.
- * This route runs inside the Worker, where process.env.CF_API_TOKEN IS available,
- * exactly like /api/cache-stats. It is the durable, schedulable scoreboard feed.
+ * verified daily-visitor number. This route is the durable, browser-readable
+ * scoreboard feed. The local Node script mirrors this same RUM query when local
+ * CF_API_TOKEN is available.
  *
  * IMPORTANT — what the number means:
- *   `uniques` here is CF's zone-level de-duplicated visitor estimate. At zone
- *   level it INCLUDES bot/crawler IPs, so it is the UPPER BOUND on human traffic,
- *   not the human count. The honest human FLOOR is GSC clicks (cross-check
- *   separately — R2 two-source rule). There is no CF Web Analytics (RUM) beacon
- *   on the site as of 2026-06-26, so the bot-excluding RUM dataset is empty.
+ *   `uniques` here is CF Web Analytics RUM visits. The beacon runs in real
+ *   browsers and excludes most bots/crawlers, so this is the best daily human-visit
+ *   proxy.
  *
  * DOES NOT silently return zeros. If CF GraphQL rejects a field, this returns the
  * raw CF errors with HTTP 502 so the query can be fixed — the same discipline that
