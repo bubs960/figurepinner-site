@@ -15,9 +15,10 @@
  *    payloads from the SAME URL distinguished only by headers, and the Cache
  *    API ignores `Vary` — caching those would serve flight payloads to
  *    browsers (or HTML to the router). Plain document requests only.
- *  - Response stored only if: status 200, no Set-Cookie, Cache-Control has a
- *    positive s-maxage (route opted into shared caching — /search is
- *    private/no-store and /app pages have no s-maxage, so they self-exclude).
+ *  - Response stored only if: status 200 or public HTML 404, no Set-Cookie,
+ *    Cache-Control has a positive s-maxage (route opted into shared caching --
+ *    /search is private/no-store and /app pages have no s-maxage, so they
+ *    self-exclude).
  *  - HTML TTL capped at 1h so a deploy fully propagates within the hour.
  *    (Emergency: Dashboard → Caching → Purge Everything also clears this.)
  *
@@ -58,6 +59,8 @@ function hasAuthCookie(cookie) {
 }
 const RSC_HEADERS = ['rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url']
 const HTML_TTL_CAP = 3600
+const NOT_FOUND_TTL = 900
+const FAVICON_SVG_PATH = '/favicon.svg'
 
 // Marketing params that fragment the cache key without changing the page.
 const STRIP_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'fbclid', 'gclid', 'msclkid']
@@ -85,6 +88,14 @@ function trafficClassFor(request) {
   return request.cf?.verifiedBotCategory || 'non-bot'
 }
 
+function analyticsPathDetail(pathname, responseStatus) {
+  // Keep high-cardinality exact paths only where they explain waste/errors.
+  // Successful pages stay route-bucketed; bad/redirecting paths become traceable.
+  const status = Number(responseStatus) || 0
+  if (status === 200) return ''
+  return pathname.slice(0, 180)
+}
+
 function cacheBypassReason(request) {
   if (request.method !== 'GET') return 'method'
   // Auth-shaped surfaces must never be colo-cached, even when rendered
@@ -110,13 +121,29 @@ function sharedTtl(cc) {
  * exposed as `x-fp-edge-skip` so a silent store-refusal is diagnosable from
  * any browser instead of requiring a deploy cycle per hypothesis).
  */
-function storeSkipReason(response) {
-  if (response.status !== 200) return 'status'
+function isPublicHtmlNotFound(response, request) {
+  if (response.status !== 404) return false
+  const ct = response.headers.get('content-type') ?? ''
+  if (!ct.includes('text/html')) return false
+  const { pathname } = new URL(request.url)
+  if (pathname.startsWith('/api/')) return false
+  return true
+}
+
+function storeSkipReason(response, request) {
   if (response.headers.has('set-cookie')) return 'set-cookie'
   const cc = response.headers.get('cache-control') ?? ''
   if (/private|no-store|no-cache/i.test(cc)) return 'cc-private'
-  // s-maxage missing on public HTML is synthesized below — not a skip reason
+  if (isPublicHtmlNotFound(response, request)) return null
+  if (response.status !== 200) return 'status'
+  // s-maxage missing on public HTML is synthesized below -- not a skip reason
   return null
+}
+
+function storeTtl(response, request) {
+  if (isPublicHtmlNotFound(response, request)) return NOT_FOUND_TTL
+  const isHtml = (response.headers.get('content-type') ?? '').includes('text/html')
+  return Math.min(sharedTtl(response.headers.get('cache-control')), isHtml ? HTML_TTL_CAP : Infinity)
 }
 
 /** Synthesize s-maxage on responses that are public but missing one (e.g. OpenNext
@@ -129,7 +156,11 @@ function synthesizeCacheControl(response, request) {
   const cc = response.headers.get('cache-control') ?? ''
   if (sharedTtl(cc) > 0) return response // already has s-maxage, leave it
   const out = new Response(response.body, response)
-  out.headers.set('cache-control', 'public, s-maxage=3600, stale-while-revalidate=86400')
+  if (response.status === 404) {
+    out.headers.set('cache-control', `public, s-maxage=${NOT_FOUND_TTL}, stale-while-revalidate=3600`)
+  } else {
+    out.headers.set('cache-control', 'public, s-maxage=3600, stale-while-revalidate=86400')
+  }
   return out
 }
 
@@ -149,11 +180,23 @@ export default {
       return Response.redirect(url.toString(), 301)
     }
 
+    if (url.pathname === '/favicon.ico') {
+      url.pathname = FAVICON_SVG_PATH
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: url.toString(),
+          'Cache-Control': 'public, max-age=86400',
+        },
+      })
+    }
+
     /** Fire-and-forget analytics write — never blocks the response. */
     function recordEdge(status, detail = {}) {
       if (!env.ANALYTICS) return
       const { pathname } = new URL(request.url)
       const route = routeBucketFor(pathname)
+      const responseStatus = String(detail.responseStatus || '')
       ctx.waitUntil(Promise.resolve().then(() => {
         env.ANALYTICS.writeDataPoint({
           blobs: [
@@ -161,8 +204,9 @@ export default {
             route,
             detail.reason || 'none',
             request.method,
-            String(detail.responseStatus || ''),
+            responseStatus,
             trafficClassFor(request),
+            analyticsPathDetail(pathname, responseStatus),
           ],
           doubles: [1],
           indexes: [status],
@@ -191,12 +235,11 @@ export default {
     const res = await handler.fetch(request, env, ctx)
     const res2 = synthesizeCacheControl(res, request)
 
-    const skip = storeSkipReason(res2)
+    const skip = storeSkipReason(res2, request)
     let putDebug = null
     if (!skip) {
       // Cap HTML TTL so deploys propagate; keep route-chosen TTL for JSON etc.
-      const isHtml = (res2.headers.get('content-type') ?? '').includes('text/html')
-      const ttl = Math.min(sharedTtl(res2.headers.get('cache-control')), isHtml ? HTML_TTL_CAP : Infinity)
+      const ttl = storeTtl(res2, request)
       const stored = new Response(res2.clone().body, res2)
       stored.headers.set('cache-control', `public, s-maxage=${ttl}`)
       stored.headers.set('x-fp-edge-stored', new Date().toISOString())

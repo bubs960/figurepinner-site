@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { getFigureById, deriveName, prettyFigureUrl, hasUniquePrettyFigureUrl } from '@/data/kb'
+import { permanentRedirect } from 'next/navigation'
+import { getFigureById, getFigureByStableSuffix, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 
@@ -25,7 +26,11 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { figure_id } = await params
   const local = getFigureById(figure_id)
-  if (!local) return { title: 'Figure Not Found' }
+  if (!local) {
+    const canonical = getFigureByStableSuffix(figure_id)
+    if (canonical) permanentRedirect(figureUrl(canonical))
+    return { title: 'Figure Not Found' }
+  }
 
   const displayName = deriveName(local)
   const line = prettifySlug(local.product_line)
@@ -69,5 +74,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function FigureDetailPage({ params }: PageProps) {
   const { figure_id } = await params
+  if (!getFigureById(figure_id)) {
+    const canonical = getFigureByStableSuffix(figure_id)
+    if (canonical) permanentRedirect(figureUrl(canonical))
+  }
   return <FigureDetailContent figureId={figure_id} />
 }

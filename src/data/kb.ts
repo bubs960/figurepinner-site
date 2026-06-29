@@ -57,9 +57,36 @@ export function getAllFandoms(): string[] {
   return [...new Set(FIGURES_V2.map((f: KBFigure) => f.fandom))]
 }
 
+const FIGURES_BY_ID: Map<string, KBFigure> = (() => {
+  const byId = new Map<string, KBFigure>()
+  for (const f of FIGURES_V2) byId.set(f.figure_id, f)
+  return byId
+})()
+
+function stableIdSuffix(figure_id: string): string | null {
+  return /_([0-9a-f]{6})$/i.exec(figure_id)?.[1]?.toLowerCase() ?? null
+}
+
+const FIGURES_BY_STABLE_SUFFIX: Map<string, KBFigure | null> = (() => {
+  const bySuffix = new Map<string, KBFigure | null>()
+  for (const f of FIGURES_V2) {
+    const suffix = stableIdSuffix(f.figure_id)
+    if (!suffix) continue
+    bySuffix.set(suffix, bySuffix.has(suffix) ? null : f)
+  }
+  return bySuffix
+})()
+
 /** Look up a single figure by figure_id */
 export function getFigureById(figure_id: string): KBFigure | null {
-  return FIGURES_V2.find((f: KBFigure) => f.figure_id === figure_id) ?? null
+  return FIGURES_BY_ID.get(figure_id) ?? null
+}
+
+/** Resolve stale/truncated generated IDs when their final stable hash is unique. */
+export function getFigureByStableSuffix(figure_id: string): KBFigure | null {
+  const suffix = stableIdSuffix(figure_id)
+  if (!suffix) return null
+  return FIGURES_BY_STABLE_SUFFIX.get(suffix) ?? null
 }
 
 /** All figures for a given fandom */

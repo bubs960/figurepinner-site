@@ -133,7 +133,10 @@ FORMAT JSON`
   const now = new Date()
 
   let breakdown:
-    | { label: string; route: string; reason: string; method: string; response_status: string; traffic_class: string; count: number }[]
+    | { label: string; route: string; reason: string; method: string; response_status: string; traffic_class: string; path_detail: string; count: number }[]
+    | undefined
+  let bad_paths:
+    | { route: string; response_status: string; traffic_class: string; path_detail: string; count: number }[]
     | undefined
   let breakdown_error: { status?: number; body_preview?: string; detail?: string } | undefined
 
@@ -145,10 +148,11 @@ FORMAT JSON`
   blob4 AS method,
   blob5 AS response_status,
   blob6 AS traffic_class,
+  blob7 AS path_detail,
   SUM(_sample_interval) AS count
 FROM fp_edge_cache
 WHERE timestamp > NOW() - INTERVAL '24' HOUR
-GROUP BY index1, blob2, blob3, blob4, blob5, blob6
+GROUP BY index1, blob2, blob3, blob4, blob5, blob6, blob7
 LIMIT 500
 FORMAT JSON`
 
@@ -175,12 +179,52 @@ FORMAT JSON`
             method: String(row.method || 'legacy'),
             response_status: String(row.response_status || 'legacy'),
             traffic_class: String(row.traffic_class || 'legacy'),
+            path_detail: String(row.path_detail || ''),
             count: Number(row.count) || 0,
           }))
           .sort((a: { count: number }, b: { count: number }) => b.count - a.count)
           .slice(0, 50)
       } else {
         breakdown_error = { status: detailRaw.status, body_preview: detailText.slice(0, 400) }
+      }
+
+      const badPathSql = `SELECT
+  blob2 AS route,
+  blob5 AS response_status,
+  blob6 AS traffic_class,
+  blob7 AS path_detail,
+  SUM(_sample_interval) AS count
+FROM fp_edge_cache
+WHERE timestamp > NOW() - INTERVAL '24' HOUR
+  AND blob7 IS NOT NULL
+  AND blob7 != ''
+GROUP BY blob2, blob5, blob6, blob7
+LIMIT 100
+FORMAT JSON`
+
+      const badPathRaw = await fetch(sqlUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain',
+          Authorization: `Bearer ${apiToken}`,
+        },
+        body: badPathSql,
+      })
+      const badPathText = await badPathRaw.text()
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let badPathParsed: any = null
+      try { badPathParsed = JSON.parse(badPathText) } catch { /* leave badPathParsed=null */ }
+      if (badPathRaw.ok && badPathParsed && Array.isArray(badPathParsed.data)) {
+        bad_paths = badPathParsed.data
+          .map((row: Record<string, unknown>) => ({
+            route: String(row.route || 'legacy'),
+            response_status: String(row.response_status || 'legacy'),
+            traffic_class: String(row.traffic_class || 'legacy'),
+            path_detail: String(row.path_detail || ''),
+            count: Number(row.count) || 0,
+          }))
+          .sort((a: { count: number }, b: { count: number }) => b.count - a.count)
+          .slice(0, 50)
       }
     } catch (e) {
       breakdown_error = { detail: String(e) }
@@ -199,6 +243,7 @@ FORMAT JSON`
       ts: now.toISOString(),
       sql_rows_count: data.length,
       breakdown,
+      bad_paths,
       breakdown_error,
       sql_response: debug ? parsed : undefined,
     },
