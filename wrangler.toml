@@ -27,21 +27,28 @@ database_name = "figurepinner-userdata"
 database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
 
 # ── KB_DB — Option E catalog DB (kb_figures), read at request/ISR time ────────
-# STAGED 2026-06-14 (web S27). The 21,917-figure catalog moves out of the build
-# graph (the OOM source) into this D1 table. src/data/kbDb.ts reads it via the
-# KB_DB binding. Kept COMMENTED until standalone provisions the DB so a deploy
-# from the working tree can't bind a nonexistent database.
+# STAGED 2026-06-14 (web S27). The catalog moves out of the build graph (the
+# OOM source) into this D1 table. src/data/kbDb.ts reads it via the KB_DB binding.
+# Active for the first runtime canary: /api/v1/figure/[figure_id] reads D1 via kbDb.ts.
 #
-# ACTIVATION (standalone/Steve, AFTER matcher emits + DDL/bulk-load applied):
-#   1. wrangler d1 create figurepinner-kb   → copy the returned database_id below
-#   2. apply scripts/option-e-kb_figures.sql (DDL) + the bulk-load chunks
-#   3. uncomment this block, fill database_id, redeploy
+# Remote DB loaded + parity-checked 2026-06-30:
+#   database_name = figurepinner-kb
+#   database_id   = ec1b97f5-9b65-48ca-aa15-5e612d37ebfe
+#   rows          = 22,768
+#   image rows    = 21,722
+#   enriched rows = 18,851
+#
+# REFRESH / VERIFY BEFORE DEPLOY:
+#   1. npm run kb:d1:check && npm run kb:d1:build
+#   2. apply generated load chunks to figurepinner-kb
+#   3. npm run kb:d1:remote-check
+#   4. npm run kb:d1:canary-audit
 # Deliberately a SEPARATE DB from figurepinner-userdata: matcher reloads the KB
 # wholesale (DROP/recreate), which must not share a DB with live user vaults.
-# [[d1_databases]]
-# binding = "KB_DB"
-# database_name = "figurepinner-kb"
-# database_id = "<fill-after-wrangler-d1-create>"
+[[d1_databases]]
+binding = "KB_DB"
+database_name = "figurepinner-kb"
+database_id = "ec1b97f5-9b65-48ca-aa15-5e612d37ebfe"
 
 [[kv_namespaces]]
 binding = "PRO_KV"

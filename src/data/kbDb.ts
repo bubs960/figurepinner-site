@@ -1,15 +1,14 @@
 /**
  * Request-time KB access layer (Option E — KB moved out of the build graph)
  *
- * The full 21,917-figure array (src/data/figures-reference-v2.slim.js, read by
+ * The full slim figure array (src/data/figures-reference-v2.slim.js, read by
  * src/data/kb.ts) is what OOM'd `next build`: every static-gen worker instantiated
  * its own copy. Option E moves the catalog to a D1 table (`kb_figures`) read at
  * request/ISR time, so the array stops entering the build graph entirely.
  *
  * This module mirrors the sync helpers in src/data/kb.ts but reads D1 (binding
- * KB_DB) instead of the bundled array. The PURE helpers (deriveName, figureUrl,
- * the KBFigure type) still live in kb.ts and are re-exported here so derivation
- * logic stays single-sourced.
+ * KB_DB) instead of the bundled array. Pure helpers live in kbTypes.ts so this
+ * module does not pull the slim JS catalog into the build graph.
  *
  * Surfaces convert by swapping `from '@/data/kb'` → `from '@/data/kbDb'` and
  * adding `await`. Build-time-only readers (homepage shelf, sitemap) do NOT use
@@ -19,7 +18,7 @@
  */
 
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { deriveName, figureUrl, type KBFigure } from './kb'
+import { deriveName, figureUrl, prettyFigureUrlKey, stableIdSuffix, type KBFigure } from './kbTypes'
 
 // Re-export the pure parts so a converted surface can import everything from
 // one place (`import { getFigureById, deriveName } from '@/data/kbDb'`).
@@ -112,6 +111,26 @@ export async function getFigureById(figure_id: string): Promise<KBFigure | null>
   return row ? mapRow(row) : null
 }
 
+/** Resolve stale/truncated generated IDs when their final stable hash is unique. */
+export async function getFigureByStableSuffix(figure_id: string): Promise<KBFigure | null> {
+  const suffix = stableIdSuffix(figure_id)
+  if (!suffix) return null
+
+  const db = await getKbDb()
+  const { results } = await db
+    .prepare(
+      `SELECT figure_id FROM kb_figures
+       WHERE SUBSTR(figure_id, -7, 1) = '_' AND LOWER(SUBSTR(figure_id, -6)) = ?
+       LIMIT 2`,
+    )
+    .bind(suffix)
+    .all<{ figure_id: string }>()
+
+  const matches = results ?? []
+  if (matches.length !== 1) return null
+  return getFigureById(matches[0].figure_id)
+}
+
 /** All figures for a given fandom. Mirrors kb.getFiguresByFandom. */
 export async function getFiguresByFandom(fandom: string): Promise<KBFigure[]> {
   const db = await getKbDb()
@@ -167,10 +186,6 @@ export async function getLinesByFandom(fandom: string): Promise<string[]> {
 //   • bulk (sitemap) → scan a narrow projection once, build the map in-handler
 //     (buildPrettyUrlMap + prettyFigureUrlFromMap below).
 
-function prettyKey(f: Pick<KBFigure, 'fandom' | 'product_line' | 'character_canonical'>): string {
-  return `${f.fandom}/${f.product_line}/${f.character_canonical}`
-}
-
 /** True if (fandom, product_line, character_canonical) maps to exactly one figure. */
 export async function isPrettyUrlUnique(
   f: Pick<KBFigure, 'fandom' | 'product_line' | 'character_canonical'>,
@@ -223,7 +238,7 @@ export async function getFiguresForSitemap(): Promise<SitemapRow[]> {
 export function buildPrettyUrlMap(rows: SitemapRow[]): Map<string, number> {
   const counts = new Map<string, number>()
   for (const r of rows) {
-    const key = prettyKey(r)
+    const key = prettyFigureUrlKey(r)
     counts.set(key, (counts.get(key) ?? 0) + 1)
   }
   return counts
@@ -231,7 +246,7 @@ export function buildPrettyUrlMap(rows: SitemapRow[]): Map<string, number> {
 
 /** Resolve one sitemap row's URL against a prebuilt count map (pure, no I/O). */
 export function prettyFigureUrlFromMap(r: SitemapRow, counts: Map<string, number>): string {
-  if (counts.get(prettyKey(r)) === 1) {
+  if (counts.get(prettyFigureUrlKey(r)) === 1) {
     return `/${r.fandom}/${r.product_line}/${r.character_canonical}`
   }
   return `/figure/${r.figure_id}`

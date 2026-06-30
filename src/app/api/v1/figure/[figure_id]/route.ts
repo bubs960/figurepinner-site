@@ -1,15 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getFigureById, deriveName } from '@/data/kb'
+import { getFigureById, deriveName } from '@/data/kbDb'
 
 export async function GET(
   _req: NextRequest,
   { params }: { params: Promise<{ figure_id: string }> }
 ) {
   const { figure_id } = await params
-  const f = getFigureById(figure_id)
+  const f = await getFigureById(figure_id)
+
+  const responseInit = { headers: { 'x-fp-kb-source': 'd1' } }
 
   if (!f) {
-    return NextResponse.json({ error: 'Not found' }, { status: 404 })
+    return NextResponse.json({ error: 'Not found' }, { status: 404, ...responseInit })
   }
 
   const titleCase = (s: string) =>
@@ -27,5 +29,5 @@ export async function GET(
     exclusive_to: f.exclusive_to ?? null,
     pack_size: f.pack_size,
     scale: f.scale ?? null,
-  })
+  }, responseInit)
 }
