@@ -9,6 +9,7 @@
 // so the default state must be invisible (no regression, no discouraging "0 of N").
 
 import { useEffect, useState } from 'react'
+import { hasClientClerkSession } from '@/app/_lib/clientAuth'
 
 interface WaveProgressProps {
   /** Every fid in the wave, including the figure currently being viewed. */
@@ -27,6 +28,7 @@ export default function WaveProgress({ fids }: WaveProgressProps) {
   const fidsKey = fids.join(',')
 
   useEffect(() => {
+    if (!hasClientClerkSession()) return
     let cancelled = false
     const waveSet = new Set(fidsKey.split(','))
     fetch('/api/vault')

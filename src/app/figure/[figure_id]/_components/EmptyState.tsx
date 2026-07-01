@@ -1,12 +1,14 @@
 // EmptyState.tsx — shown when pricing is null or comp_count < 1
 // Server component
+import TrackedLink from '@/app/components/TrackedLink'
 
 interface EmptyStateProps {
+  figureId: string
   figureName: string
   ebaySearchUrl: string
 }
 
-export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProps) {
+export default function EmptyState({ figureId, figureName, ebaySearchUrl }: EmptyStateProps) {
   const soldListingsUrl = `${ebaySearchUrl}&LH_Sold=1&LH_Complete=1`
 
   return (
@@ -61,11 +63,13 @@ export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProp
         </div>
       </div>
 
-      <a
+      <TrackedLink
         href={soldListingsUrl}
         target="_blank"
         rel="sponsored nofollow noopener noreferrer"
         className="fp-empty-cta"
+        funnelEvent="ebay_exit"
+        funnelDetail={{ figureId, target: 'empty_state' }}
         style={{
           display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
           background: 'transparent',
@@ -81,7 +85,7 @@ export default function EmptyState({ figureName, ebaySearchUrl }: EmptyStateProp
         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-      </a>
+      </TrackedLink>
       <div style={{
         fontSize: '11px',
         fontWeight: 300,

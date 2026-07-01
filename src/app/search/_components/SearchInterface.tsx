@@ -13,6 +13,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Sparkline from '@/app/components/Sparkline'
 import FigureThumb from '@/app/components/FigureThumb'
+import { trackFunnel } from '@/app/_lib/funnelClient'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -254,6 +255,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
       const trimmed = query.trim()
       const url = trimmed ? `/search?q=${encodeURIComponent(trimmed)}` : '/search'
       window.history.replaceState(null, '', url)
+      if (trimmed.length >= 2) trackFunnel('search_submit', { query: trimmed, target: 'search_enter' })
       if (trimmed.length >= 2) runSearch(trimmed)
       return
     }
@@ -266,6 +268,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
     const trimmed = query.trim()
     const url = trimmed ? `/search?q=${encodeURIComponent(trimmed)}` : '/search'
     window.history.replaceState(null, '', url)
+    if (trimmed.length >= 2) trackFunnel('search_submit', { query: trimmed, target: 'search_form' })
     runSearch(trimmed)
   }
 
@@ -697,6 +700,11 @@ function FigureResultCard({
       {/* Clickable left section — thumb + info */}
       <a
         href={href}
+        onClick={() => trackFunnel('search_result_click', {
+          query,
+          figureId: r.figure_id ?? '',
+          target: 'search_result',
+        })}
         style={{
           display: 'flex', alignItems: 'center', gap: '0.75rem',
           flex: 1, minWidth: 0, textDecoration: 'none', color: 'var(--text)',

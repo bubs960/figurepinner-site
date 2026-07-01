@@ -18,6 +18,15 @@ interface Pricing {
   rangeExtremeNote?: string | null
 }
 
+interface ConditionRow {
+  key: 'sealed' | 'loose'
+  label: string
+  median: number
+  count: number
+  depthLabel: string
+  rangeLabel?: string | null
+}
+
 interface HeroBandProps {
   imageUrl: string | null
   characterName: string
@@ -41,6 +50,8 @@ interface HeroBandProps {
   /** Names the headline market when the condition split is statistically
    *  valid ("sealed / carded" | "loose"); null keeps the legacy blended label. */
   conditionLabel?: string | null
+  /** Thin per-condition signals are shown even when the headline remains mixed. */
+  conditionRows?: ConditionRow[]
   /** The split's other bucket — a quiet ledger row under the price. */
   secondary?: { label: string; median: number; count: number } | null
   /** Honesty footnote, e.g. "Includes N comps classified from the listing title." */
@@ -65,7 +76,7 @@ export default function HeroBand({
   imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
   valuePricing, loreText, ticks, lastSale,
-  conditionLabel, secondary, inferenceNote,
+  conditionLabel, conditionRows, secondary, inferenceNote,
 }: HeroBandProps) {
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
   const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
@@ -80,6 +91,8 @@ export default function HeroBand({
   ]
 
   const p = valuePricing ?? null
+  const marketLabel = conditionLabel ? `Median sold - ${conditionLabel}` : 'Mixed condition estimate'
+  const visibleConditionRows = conditionRows ?? []
   const hasRange = p !== null && p.low !== null && p.high !== null && p.high > (p.low ?? 0)
   const medianPos = (p && hasRange && p.median !== null)
     ? Math.min(92, Math.max(8, ((p.median - (p.low as number)) / ((p.high as number) - (p.low as number))) * 100))
@@ -294,7 +307,7 @@ export default function HeroBand({
                 fontSize: '0.63rem', fontWeight: 500, letterSpacing: '0.24em',
                 textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
               }}>
-                Median sold — {conditionLabel ?? 'all solds, any condition'}
+                {marketLabel}
               </div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '9px' }}>
                 <span aria-hidden style={{ display: 'inline-flex', alignItems: 'flex-end', gap: '2.5px' }}>
@@ -337,8 +350,54 @@ export default function HeroBand({
               )}
             </div>
 
-            {/* the split's other market — quiet hairline ledger row */}
-            {secondary && (
+            {/* per-condition signals — visible even when the headline remains mixed */}
+            {visibleConditionRows.length > 0 ? (
+              <div style={{
+                marginTop: '13px',
+                paddingTop: '10px',
+                borderTop: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
+                display: 'grid',
+                gap: '8px',
+              }}>
+                {visibleConditionRows.map(row => (
+                  <div
+                    key={row.key}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'baseline',
+                      gap: '10px',
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    <span style={{
+                      fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.18em',
+                      textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+                      minWidth: '132px',
+                    }}>
+                      {row.label}
+                    </span>
+                    <span style={{
+                      fontFamily: 'var(--fp-font-display)', fontSize: '1.35rem', letterSpacing: '0.03em',
+                      color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
+                    }}>
+                      ${fmt(row.median)}
+                    </span>
+                    <span style={{ fontSize: '0.68rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                      {row.count} comp{row.count === 1 ? '' : 's'} · {row.depthLabel}
+                    </span>
+                    {row.rangeLabel && (
+                      <span style={{
+                        fontSize: '0.6rem',
+                        color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+                        letterSpacing: '0.04em',
+                      }}>
+                        range {row.rangeLabel}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ) : secondary && (
               <div style={{
                 marginTop: '10px', display: 'flex', alignItems: 'baseline', gap: '10px',
               }}>

@@ -2,6 +2,7 @@
 // Wraps existing FigureActions (client component)
 
 import FigureActions from '@/app/components/FigureActions'
+import TrackedLink from '@/app/components/TrackedLink'
 import { formatCurrency } from '../_lib/figureFormatters'
 
 interface CollectionPanelProps {
@@ -94,12 +95,14 @@ export default function CollectionPanel({
         </div>
 
         {/* eBay CTA — gold filled, dark text, the one loud thing */}
-        <a
+        <TrackedLink
           data-ebay-inline-cta
           href={ebaySearchUrl}
           target="_blank"
           rel="sponsored nofollow noopener noreferrer"
           className="fp-cpanel-cta"
+          funnelEvent="ebay_exit"
+          funnelDetail={{ figureId, target: 'inline_cta' }}
           style={{
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
             background: 'linear-gradient(180deg, var(--shelf-gold-hi, #f5c462), var(--shelf-gold, #e0a83e))',
@@ -117,7 +120,7 @@ export default function CollectionPanel({
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </a>
+        </TrackedLink>
         <div style={{
           fontSize: '0.7rem', fontWeight: 300,
           color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',

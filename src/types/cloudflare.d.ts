@@ -13,3 +13,11 @@ interface D1Database {
   batch<T = unknown>(statements: D1PreparedStatement[]): Promise<T[]>
   exec(query: string): Promise<void>
 }
+
+interface AnalyticsEngineDataset {
+  writeDataPoint(point: {
+    indexes?: string[]
+    blobs?: string[]
+    doubles?: number[]
+  }): void
+}

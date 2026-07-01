@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Script from 'next/script'
+import { hasClientClerkSession } from '@/app/_lib/clientAuth'
 
 /**
  * AdSlot — placeholder for Google AdSense units.
@@ -58,6 +59,10 @@ export default function AdSlot({ slot, className }: Props) {
 
   useEffect(() => {
     let cancelled = false
+    if (!hasClientClerkSession()) {
+      setProState('free')
+      return () => { cancelled = true }
+    }
     fetch('/api/v1/me', { credentials: 'same-origin' })
       .then(async res => {
         if (cancelled) return

@@ -31,6 +31,7 @@ import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 import JsonLd from '@/app/_components/JsonLd'
+import FunnelEvent from '@/app/_components/FunnelEvent'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
 // Fallback campid is the live EPN campaign — restored after bceb185 silently
@@ -209,6 +210,12 @@ function compBucket(c: { condition: string; condition_effective?: string }): 'se
   return 'unknown'
 }
 
+function conditionDepthLabel(count: number): string {
+  if (count <= 1) return 'early signal'
+  if (count < 5) return 'limited'
+  return 'condition split'
+}
+
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default async function FigureDetailContent({ figureId }: { figureId: string }) {
@@ -266,6 +273,30 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     segmentation === 'split' && price?.loose && price.loose.median != null
       ? { label: 'Loose', median: price.loose.median, count: price.loose.count }
       : null
+  const placardConditionRows = (() => {
+    if (!price) return []
+    const rows = [
+      { key: 'sealed' as const, label: 'Sealed / carded', bucket: price.sealed ?? null },
+      { key: 'loose' as const, label: 'Loose / opened', bucket: price.loose ?? null },
+    ].flatMap(({ key, label, bucket }) => {
+      if (!bucket || bucket.median == null || bucket.count < 1) return []
+      const rangeLabel = bucket.min != null && bucket.max != null && bucket.max > bucket.min
+        ? `${formatCurrency(bucket.min)}-${formatCurrency(bucket.max)}`
+        : null
+      return [{
+        key,
+        label,
+        median: bucket.median,
+        count: bucket.count,
+        depthLabel: conditionDepthLabel(bucket.count),
+        rangeLabel,
+      }]
+    })
+
+    // If a statistically valid bucket is already the headline, keep the
+    // condition rows for the other market. Under pooled, show both thin signals.
+    return rows.filter(row => row.key !== headlineCondition)
+  })()
   const inferenceNote = (() => {
     const inf = price?.conditionInference
     if (!inf) return null
@@ -514,6 +545,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       <JsonLd data={jsonLd} />
+      <FunnelEvent
+        event="figure_view"
+        detail={{
+          figureId,
+          genre,
+          line: local.product_line,
+        }}
+      />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },
@@ -569,6 +608,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             ticks={placardTicks}
             lastSale={lastSale}
             conditionLabel={placardConditionLabel}
+            conditionRows={placardConditionRows}
             secondary={placardSecondary}
             inferenceNote={inferenceNote}
           />
@@ -648,7 +688,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 }}
               />
             ) : (
-              <EmptyState figureName={displayName} ebaySearchUrl={ebayUrl} />
+              <EmptyState figureId={figureId} figureName={displayName} ebaySearchUrl={ebayUrl} />
             )}
           </div>
 
@@ -716,6 +756,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       {/* Sticky mobile action bar — phones only, feature-flag gated.
           eBay href = the same campid-guarded ebayUrl used everywhere else. */}
       <MobileActionBar
+        figureId={figureId}
         ebaySearchUrl={ebayUrl}
         figureName={displayName}
         priceLabel={valuePricing?.median != null ? formatCurrency(valuePricing.median) : null}

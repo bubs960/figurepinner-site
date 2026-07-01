@@ -89,6 +89,11 @@ service = "figurepinner-site"
 binding = "ANALYTICS"
 dataset = "fp_edge_cache"
 
+# First-party, anonymous funnel beacons for paid/social tests.
+[[analytics_engine_datasets]]
+binding = "FUNNEL_ANALYTICS"
+dataset = "fp_funnel"
+
 [[routes]]
 pattern = "figurepinner.com"
 custom_domain = true

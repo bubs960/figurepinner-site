@@ -87,10 +87,13 @@ export const config = {
   //
   // S20 (2026-06-12): added genre-line-figures — public KB-static rows for the
   // genre-page accordion (payload cut); sets its own s-maxage for the edge cache.
+  //
+  // S44 (2026-07-01): added funnel — anonymous first-party beacon. It sets
+  // no-store itself and should not pay Clerk middleware cost on ad traffic.
   matcher: [
     '/app(.*)',
     '/admin(.*)',
     '/trpc(.*)',
-    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|genre-line-figures$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
+    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|genre-line-figures$|funnel$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
   ],
 }

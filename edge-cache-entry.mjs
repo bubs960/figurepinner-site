@@ -63,7 +63,7 @@ const NOT_FOUND_TTL = 900
 const FAVICON_SVG_PATH = '/favicon.svg'
 
 // Marketing params that fragment the cache key without changing the page.
-const STRIP_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'fbclid', 'gclid', 'msclkid']
+const STRIP_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'fbclid', 'gclid', 'msclkid', 'rdt_cid']
 
 function cacheKeyFor(request) {
   const url = new URL(request.url)

@@ -15,15 +15,17 @@
 // CollectionPanel eBay CTA is on screen, to avoid two sponsored links at once.
 
 import { useEffect, useState } from 'react'
+import TrackedLink from '@/app/components/TrackedLink'
 
 interface Props {
+  figureId: string
   ebaySearchUrl: string
   figureName: string
   /** Median sold price, already formatted (e.g. "$30"), or null when no comps. */
   priceLabel: string | null
 }
 
-export default function MobileActionBar({ ebaySearchUrl, figureName, priceLabel }: Props) {
+export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, priceLabel }: Props) {
   // Feature flag — off by default until verified on a real phone.
   const enabled = process.env.NEXT_PUBLIC_MOBILE_ACTION_BAR === '1'
 
@@ -89,11 +91,13 @@ export default function MobileActionBar({ ebaySearchUrl, figureName, priceLabel 
       </div>
 
       {/* Right: eBay CTA — href is the parent-built, campid-guarded URL */}
-      <a
+      <TrackedLink
         href={ebaySearchUrl}
         target="_blank"
         rel="sponsored nofollow noopener noreferrer"
         aria-label={`Search eBay sold listings for ${figureName}`}
+        funnelEvent="ebay_exit"
+        funnelDetail={{ figureId, target: 'mobile_bar' }}
         style={{
           marginLeft: 'auto',
           flex: 1,
@@ -112,7 +116,7 @@ export default function MobileActionBar({ ebaySearchUrl, figureName, priceLabel 
         }}
       >
         See it on eBay
-      </a>
+      </TrackedLink>
     </div>
   )
 }

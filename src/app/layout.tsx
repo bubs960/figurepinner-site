@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Bebas_Neue, Inter, Cinzel } from 'next/font/google'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
+import FunnelTracker from './_components/FunnelTracker'
 import './globals.css'
 
 // Self-hosted via next/font (S20 perf audit): the old render-blocking
@@ -106,6 +107,7 @@ export default function RootLayout({
         <meta name="yandex-verification" content="5dd6adeb78ca7373" />
       </head>
       <body>
+        <FunnelTracker />
         {children}
         <Footer />
         {/* Google AdSense — auto ads. lazyOnload (S20 perf audit): the script

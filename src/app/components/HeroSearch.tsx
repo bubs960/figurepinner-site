@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { trackFunnel } from '@/app/_lib/funnelClient'
 
 // Matches actual /api/v1/search response shape
 type SearchResult = {
@@ -103,6 +104,7 @@ export default function HeroSearch({
 
   function submit() {
     if (query.trim()) {
+      trackFunnel('search_submit', { query: query.trim(), target: 'hero_search' })
       window.location.href = `/search?q=${encodeURIComponent(query)}`
     } else {
       inputRef.current?.focus()
@@ -212,6 +214,11 @@ export default function HeroSearch({
                     : `/search?q=${encodeURIComponent(r.name)}`
               }
               role="option"
+              onClick={() => trackFunnel('search_result_click', {
+                query,
+                figureId: r.figure_id ?? '',
+                target: 'hero_dropdown',
+              })}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -253,6 +260,7 @@ export default function HeroSearch({
           ))}
           <a
             href={`/search?q=${encodeURIComponent(query)}`}
+            onClick={() => trackFunnel('search_submit', { query: query.trim(), target: 'hero_all_results' })}
             style={{
               display: 'block',
               padding: '10px 16px',
