@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllFigures, getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
+import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
 import { ARTICLES } from '@/app/guides/_data/articles'
 
 // Fandom slugs (KB values) → genre slugs (URL path segments used by the router).
@@ -16,17 +16,41 @@ function fandomToGenre(fandom: string): string {
   return FANDOM_TO_GENRE[fandom] ?? fandom
 }
 
+const BASE = 'https://figurepinner.com'
+const STATIC_ID = 'static'
+
 /**
  * Sitemap — generated at build time from the KB.
- * Covers: static pages, genre landing pages, individual figure pages.
- * Next.js splits this automatically if >50K URLs.
+ *
+ * Split into one child per fandom (D3, hygiene plan 2026-07-02) instead of a
+ * single ~32.8K-URL/6.6MB file: each fandom's figure/line/character pages are
+ * a self-contained chunk a crawler can re-fetch on its own schedule, instead
+ * of re-downloading everything to catch one changed fandom.
+ *
+ * lastModified honesty (D3): guide pages already use their real `a.updated`
+ * date. Static/genre/line/character/figure pages have NO per-entity freshness
+ * field anywhere in KBFigure or the build pipeline — there is no
+ * enrichment/price-refresh timestamp to read. Rather than fabricate one,
+ * these still stamp `now` (same behavior as before the split). Closing the
+ * "everything changed today" signal for real requires the KB to start
+ * carrying a per-figure last-updated field — flagged to matcher, not solved
+ * here.
  */
-export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://figurepinner.com'
+export async function generateSitemaps(): Promise<{ id: string }[]> {
+  return [{ id: STATIC_ID }, ...getAllFandoms().map(fandom => ({ id: fandom }))]
+}
+
+export default function sitemap({ id }: { id: string }): MetadataRoute.Sitemap {
   const now = new Date()
 
-  // ── Static pages ────────────────────────────────────────────────────────
-  // To add a new page: append an entry to this array.
+  if (id === STATIC_ID) {
+    return staticSitemap(now)
+  }
+  return fandomSitemap(id, now)
+}
+
+function staticSitemap(now: Date): MetadataRoute.Sitemap {
+  // To add a new static page: append an entry to this array.
   // changeFrequency: 'always'|'hourly'|'daily'|'weekly'|'monthly'|'yearly'|'never'
   // priority: 0.0 – 1.0 (1.0 = most important)
   const STATIC_PAGES: Array<{
@@ -46,43 +70,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const staticPages: MetadataRoute.Sitemap = STATIC_PAGES.map(({ path, changeFrequency, priority }) => ({
-    url: `${base}${path}`,
+    url: `${BASE}${path}`,
     lastModified: now,
     changeFrequency,
     priority,
   }))
 
-  // ── Genre landing pages ──────────────────────────────────────────────────
-  const fandoms = getAllFandoms()
-  const genrePages: MetadataRoute.Sitemap = fandoms.map(fandom => ({
-    url: `${base}/${fandomToGenre(fandom)}`,
+  const guidesIndex: MetadataRoute.Sitemap = [{
+    url: `${BASE}/guides`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }]
+
+  // Derive from ARTICLES — the actually-rendered guide set — not the BACKLOG idea
+  // tracker. Prevents a published article (e.g. the Bid Check pages) from silently
+  // missing the sitemap because no one flipped a backlog status flag.
+  const guidePages: MetadataRoute.Sitemap = ARTICLES.map(a => ({
+    url: `${BASE}/guides/${a.slug}`,
+    lastModified: a.updated ? new Date(a.updated) : now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  const genrePages: MetadataRoute.Sitemap = getAllFandoms().map(fandom => ({
+    url: `${BASE}/${fandomToGenre(fandom)}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }))
 
+  return [...staticPages, ...guidesIndex, ...guidePages, ...genrePages]
+}
+
+function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
+  const figs = getFiguresByFandom(fandom)
+  const genre = fandomToGenre(fandom)
+
   // ── Line hub pages (/[genre]/[line]) ────────────────────────────────────
-  // One page per unique product_line within each fandom.
-  const linePages: MetadataRoute.Sitemap = fandoms.flatMap(fandom => {
-    const figs = getFiguresByFandom(fandom)
-    const lines = [...new Set(figs.map(f => f.product_line))]
-    return lines.map(line => ({
-      url: `${base}/${fandomToGenre(fandom)}/${line}`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }))
-  })
+  const lines = [...new Set(figs.map(f => f.product_line))]
+  const linePages: MetadataRoute.Sitemap = lines.map(line => ({
+    url: `${BASE}/${genre}/${line}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // ── Character hub pages (/[genre]/character/[character_slug]) ───────────
+  // One page per unique character_canonical within the fandom. High-value SEO
+  // pages: "[Character] action figure" queries.
+  const chars = [...new Set(figs.map(f => f.character_canonical))]
+  const characterPages: MetadataRoute.Sitemap = chars.map(char => ({
+    url: `${BASE}/${genre}/character/${char}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.75,
+  }))
 
   // ── Figure detail pages ──────────────────────────────────────────────────
   // Use keyword-rich pretty URLs only when they map to one exact figure.
   // Ambiguous character/line paths stay on /figure/[id] so one wave cannot
   // canonicalize or sitemap as another wave.
-  const figures = getAllFigures()
   const seenUrls = new Set<string>()
   const figurePages: MetadataRoute.Sitemap = []
-  for (const f of figures) {
-    const url = `${base}${prettyFigureUrl(f)}`
+  for (const f of figs) {
+    const url = `${BASE}${prettyFigureUrl(f)}`
     if (!seenUrls.has(url)) {
       seenUrls.add(url)
       figurePages.push({
@@ -93,47 +145,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     }
   }
-  // ── Character hub pages (/[genre]/character/[character_slug]) ────────────
-  // One page per unique character_canonical within each fandom.
-  // These are high-value SEO pages: "[Character] action figure" queries.
-  const characterPages: MetadataRoute.Sitemap = fandoms.flatMap(fandom => {
-    const figs = getFiguresByFandom(fandom)
-    const chars = [...new Set(figs.map(f => f.character_canonical))]
-    return chars.map(char => ({
-      url: `${base}/${fandomToGenre(fandom)}/character/${char}`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.75,
-    }))
-  })
 
-  // ── Guide / article pages (/guides/[slug]) ───────────────────────────────
-  // Derive from ARTICLES — the actually-rendered guide set — not the BACKLOG idea
-  // tracker. Prevents a published article (e.g. the Bid Check pages) from silently
-  // missing the sitemap because no one flipped a backlog status flag.
-  const guidePages: MetadataRoute.Sitemap = ARTICLES
-    .map(a => ({
-      url: `${base}/guides/${a.slug}`,
-      lastModified: a.updated ? new Date(a.updated) : now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    }))
-
-  // ── Guides index (/guides) ───────────────────────────────────────────────
-  const guidesIndex: MetadataRoute.Sitemap = [{
-    url: `${base}/guides`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }]
-
-  return [
-    ...staticPages,
-    ...guidesIndex,
-    ...guidePages,
-    ...genrePages,
-    ...linePages,
-    ...characterPages,
-    ...figurePages,
-  ]
+  return [...linePages, ...characterPages, ...figurePages]
 }
