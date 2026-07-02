@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { deriveName } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb } from '../_lib/kbSearch'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 /**
  * GET /api/v1/price-check?q=<free text>
@@ -53,7 +54,22 @@ function spokenCurrency(n: number): string {
   })}`
 }
 
+// S1 (hygiene plan, 2026-07-02): one of two open data faucets (the other is
+// r2proxy, a separate worker — week 2). No auth by design (see file header),
+// so a fixed-window per-IP limiter is the only abuse guard. Verified bots
+// (Googlebot etc.) are exempt inside checkRateLimit — never throttle the
+// crawl we're trying to grow post-403-fix.
+const RATE_LIMIT_PER_MINUTE = 30
+
 export async function GET(req: NextRequest) {
+  const rl = await checkRateLimit(req, 'price-check', RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { ...CACHE_HEADERS, 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const raw = req.nextUrl.searchParams.get('q')?.trim() ?? ''
   const q = raw.replace(FILLER, '').trim()
 

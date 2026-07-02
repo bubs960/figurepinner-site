@@ -6,7 +6,9 @@ import { NextResponse } from 'next/server'
 // the site again. Auth-protection for /app and /admin remains below.
 
 // Authenticated dashboard routes
-const isProtectedRoute = createRouteMatcher(['/app(.*)', '/admin(.*)'])
+// '/admin(.*)' doesn't cover '/api/admin/*' — add it so new admin API routes
+// are gated by default instead of relying on each route to self-guard.
+const isProtectedRoute = createRouteMatcher(['/app(.*)', '/admin(.*)', '/api/admin(.*)'])
 
 // ──────────────────────────────────────────────────────────────────────────────
 // API NO-CACHE HEADERS

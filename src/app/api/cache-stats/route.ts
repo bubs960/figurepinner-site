@@ -33,9 +33,21 @@ import { NextResponse } from 'next/server'
  *   bypass: number,    // count of BYPASS responses
  *   total: number,
  *   hit_pct: number,   // hit / (hit + miss) * 100 — excludes BYPASS (RSC/auth)
+ *   hit_pct_bot: number,   // same math, traffic_class != 'non-bot' only (S45 C2, 2026-07-02)
+ *   hit_pct_human: number, // same math, traffic_class == 'non-bot' only
  *   cacheable_pct: number, // (hit + miss) / total * 100
  *   ts: string,        // ISO timestamp of query
  * }
+ *
+ * S45 (2026-07-02, hygiene plan C2): the top-level hit_pct blends bot and
+ * human traffic. Under crawl-heavy weeks (recrawl post-403-fix, Reddit ad
+ * traffic) that blend swings on bot volume alone and reads as a false
+ * "regression" — the human number is what actually grades UX and is what the
+ * digest scoreboard should cite. traffic_class comes from
+ * request.cf.verifiedBotCategory (edge-cache-entry.mjs trafficClassFor);
+ * 'non-bot' is the human+unverified-scraper bucket (CF only labels VERIFIED
+ * bots), so hit_pct_human is really "not a known verified bot" — a
+ * conservative human proxy, not a guarantee.
  *
  * Debug mode: `?debug=1` returns the raw SQL response body for diagnosis.
  */
@@ -72,15 +84,18 @@ export async function GET(request: Request) {
   // writeDataPoint, sample_interval defaults to 1 for unsampled data, so
   // SUM(_sample_interval) === the raw event count for our usage).
   // index1 = the status label (HIT/MISS/BYPASS) from edge-cache-entry.mjs.
+  // blob6 = traffic_class ('non-bot' or a verifiedBotCategory value) — grouped
+  // in here too (S45 C2) so the bot/human split costs zero extra SQL calls.
   // The fp_edge_cache table is referenced by quoted-name; AE SQL is case-
   // sensitive on dataset names.
   const sql = `SELECT
   index1 AS label,
+  blob6 AS traffic_class,
   SUM(_sample_interval) AS count
 FROM fp_edge_cache
 WHERE timestamp > NOW() - INTERVAL '24' HOUR
-GROUP BY index1
-LIMIT 10
+GROUP BY index1, blob6
+LIMIT 50
 FORMAT JSON`
 
   const sqlUrl = `https://api.cloudflare.com/client/v4/accounts/${accountId}/analytics_engine/sql`
@@ -116,13 +131,21 @@ FORMAT JSON`
     )
   }
 
-  // SQL API JSON format: { meta: [...], data: [{label, count}, ...], rows: N, rows_before_limit_at_least: N }
+  // SQL API JSON format: { meta: [...], data: [{label, traffic_class, count}, ...], rows: N, rows_before_limit_at_least: N }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const data: { label: string; count: number }[] = Array.isArray(parsed?.data) ? parsed.data : []
+  const data: { label: string; traffic_class?: string; count: number }[] = Array.isArray(parsed?.data) ? parsed.data : []
 
   const counts: Record<string, number> = { HIT: 0, MISS: 0, BYPASS: 0 }
+  // S45 C2: same rows, split by traffic_class. 'non-bot' = human bucket (see
+  // JSDoc caveat above); anything else (a verifiedBotCategory value) = bot.
+  const humanCounts: Record<string, number> = { HIT: 0, MISS: 0, BYPASS: 0 }
+  const botCounts: Record<string, number> = { HIT: 0, MISS: 0, BYPASS: 0 }
   for (const row of data) {
-    if (row.label in counts) counts[row.label] = Number(row.count) || 0
+    if (!(row.label in counts)) continue
+    const n = Number(row.count) || 0
+    counts[row.label] += n
+    const bucket = row.traffic_class === 'non-bot' ? humanCounts : botCounts
+    bucket[row.label] += n
   }
 
   const hit = counts.HIT
@@ -130,6 +153,8 @@ FORMAT JSON`
   const bypass = counts.BYPASS
   const total = hit + miss + bypass
   const cacheableTotal = hit + miss
+  const humanCacheable = humanCounts.HIT + humanCounts.MISS
+  const botCacheable = botCounts.HIT + botCounts.MISS
   const now = new Date()
 
   let breakdown:
@@ -239,6 +264,8 @@ FORMAT JSON`
       bypass,
       total,
       hit_pct: cacheableTotal > 0 ? Math.round((hit / cacheableTotal) * 1000) / 10 : null,
+      hit_pct_bot: botCacheable > 0 ? Math.round((botCounts.HIT / botCacheable) * 1000) / 10 : null,
+      hit_pct_human: humanCacheable > 0 ? Math.round((humanCounts.HIT / humanCacheable) * 1000) / 10 : null,
       cacheable_pct: total > 0 ? Math.round((cacheableTotal / total) * 1000) / 10 : null,
       ts: now.toISOString(),
       sql_rows_count: data.length,
