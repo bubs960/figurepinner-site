@@ -22,12 +22,12 @@
  * throttled — the G1 lesson (WEB-GOOGLEBOT-403-CONFIRMED-2026-07-02),
  * inverted. Do not remove this without re-reading that verdict.
  *
- * ⚠️ UNVERIFIED AT WRITE TIME (2026-07-02): sandbox had no node_modules /
- * shell access to `tsc` this session, so the `.cf` access on NextRequest and
- * the `caches.default` global below are written to the documented Workers
- * API shape but have NOT been type-checked or runtime-tested. Run `npm run
- * build` (or at minimum `tsc --noEmit`) before deploying, and hit
- * /api/v1/price-check from curl in a loop to confirm 429s actually fire.
+ * RUNTIME-VERIFIED 2026-07-02 (live, post-deploy): the original fire-and-
+ * forget `void cache.put(...)` never persisted the counter — the Workers
+ * runtime cancels floating promises once the response returns, so 38
+ * requests inside one aligned 60s window produced zero 429s. The put must
+ * be awaited (see below). Re-verify with a >limit curl burst after any
+ * change to this file.
  */
 
 const WINDOW_SECONDS = 60
@@ -82,8 +82,13 @@ export async function checkRateLimit(req: Request, bucket: string, limit: number
     const count = cached ? Number(await cached.text()) || 0 : 0
     const next = count + 1
 
-    // Fire-and-forget write — never block the request path on the counter.
-    void cache.put(
+    // MUST await this put. The Workers runtime cancels floating promises
+    // when the response returns, so a fire-and-forget write never persists
+    // the counter — verified live 2026-07-02: 38 requests in one aligned
+    // window produced zero 429s. The put is colo-local (single-digit ms);
+    // if the write must leave the request path, it needs ctx.waitUntil,
+    // which route handlers don't have here.
+    await cache.put(
       key,
       new Response(String(next), { headers: { 'Cache-Control': `max-age=${WINDOW_SECONDS}` } }),
     )
