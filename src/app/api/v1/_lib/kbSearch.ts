@@ -189,16 +189,27 @@ export interface KbSearchResult {
   note: string | null
 }
 
+// Abuse caps (S50 security audit, 2026-07-02). scoreAll is O(tokens × ~22k
+// figures) and runs up to 3 tiers; the response is CDN-cached on the exact
+// query string, so an attacker can pad q with junk tokens to defeat the cache
+// and force a full-cost scan on every request. No legitimate collector query —
+// or anything Googlebot constructs — approaches these bounds, so capping here
+// (the shared chokepoint /api/v1/search AND /api/v1/price-check funnel through)
+// makes the caps identical for both callers per this file's contract, and is a
+// no-op for every real query while bounding worst-case CPU for abusive ones.
+const MAX_QUERY_LEN = 120
+const MAX_TOKENS = 12
+
 /**
  * Run the full forgiveness ladder over the KB for a free-text query.
  * Returns the complete ranked pool (uncapped) — callers slice to their limit.
  * Never throws on bad input; returns an empty pool for queries < 2 chars.
  */
 export function searchKb(q: string): KbSearchResult {
-  const query = q.trim()
+  const query = q.trim().slice(0, MAX_QUERY_LEN)
   if (query.length < 2) return { scored: [], note: null }
 
-  const tokens = query.toLowerCase().split(/\s+/).filter(Boolean)
+  const tokens = query.toLowerCase().split(/\s+/).filter(Boolean).slice(0, MAX_TOKENS)
   const entries = getIndex()
 
   // Tier 1 — strict AND (alias-expanded)

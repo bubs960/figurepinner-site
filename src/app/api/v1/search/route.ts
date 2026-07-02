@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { deriveName } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb, MAX_RESULTS } from '../_lib/kbSearch'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 /**
  * GET /api/v1/search?q=<query>&limit=<n>
@@ -22,7 +23,26 @@ import { searchKb, MAX_RESULTS } from '../_lib/kbSearch'
  *
  * Falls back to empty array if KB import fails — never throws.
  */
+// S50 security audit (2026-07-02): pairs with the input caps in kbSearch. The
+// scan is uncacheable when q is padded to defeat the CDN key, so a per-IP
+// window bounds an abuser's request rate. Verified bots (Googlebot etc.) are
+// exempt inside checkRateLimit — never throttle the crawl we're growing. 60/min
+// is generous for interactive typeahead (each search = one fetch; load-more
+// reveals client-side with no refetch), higher than sibling price-check's 30
+// (a one-shot voice query) because this backs the live search box.
+const RATE_LIMIT_PER_MINUTE = 60
+
 export async function GET(req: NextRequest) {
+  const rl = await checkRateLimit(req, 'search', RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    // no-store: this route's CDN cache key is the query string (shared across
+    // users), so a per-IP 429 must never be cached and served to another IP.
+    return NextResponse.json(
+      { figures: [], error: 'rate_limited' },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
   // limit defaults to the full pool; capped at MAX_RESULTS so a hand-crafted
   // ?limit=99999 can't force an unbounded payload.
