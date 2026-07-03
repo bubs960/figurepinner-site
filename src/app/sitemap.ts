@@ -81,6 +81,12 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
+  }, {
+    // Static route, not an ARTICLES entry — seasonal RWB hub (rwb-jul4 campaign)
+    url: `${BASE}/guides/red-white-blue`,
+    lastModified: new Date('2026-07-03'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
   }]
 
   // Derive from ARTICLES — the actually-rendered guide set — not the BACKLOG idea
