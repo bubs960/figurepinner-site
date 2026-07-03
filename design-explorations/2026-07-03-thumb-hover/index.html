@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumb Hover Lab — 3 polish levels (S53 exploration)</title>
+<style>
+  /* Tokens lifted from the live site's globals.css scheme */
+  :root {
+    --bg: #0a0a0c;
+    --s1: #131318;
+    --s2: #1b1b22;
+    --border: #26262e;
+    --text: #f4f4f6;
+    --muted: #9b9ba6;
+    --blue: #3d7bca;
+    --gold: #e8b64c;
+    --red: #e43238;
+    --r: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 2.5rem clamp(1rem, 4vw, 3rem) 6rem;
+  }
+  h1 { font-size: 1.5rem; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+  .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.5rem; max-width: 720px; line-height: 1.6; }
+  section { margin-bottom: 3.5rem; }
+  h2 { font-size: 1.05rem; margin-bottom: 0.3rem; color: var(--gold); }
+  .how { color: var(--muted); font-size: 0.82rem; margin-bottom: 1.1rem; max-width: 680px; line-height: 1.55; }
+
+  /* ── Shared fake-dropdown chrome ─────────────────────────────── */
+  .dropdown {
+    max-width: 640px; background: var(--s1);
+    border: 1px solid var(--border); border-radius: var(--r);
+    overflow: visible; /* overlays must escape */
+  }
+  .row {
+    display: flex; align-items: center; gap: 0.8rem;
+    padding: 0.6rem 0.9rem; cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    transition: background 0.12s ease;
+  }
+  .row:last-child { border-bottom: none; }
+  .row:hover { background: var(--s2); }
+  .meta { min-width: 0; flex: 1; }
+  .name { font-weight: 600; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .name b { color: var(--blue); }
+  .line { font-size: 0.75rem; color: var(--muted); margin-top: 1px; }
+  .price { font-variant-numeric: tabular-nums; color: var(--gold); font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+
+  /* ── Base thumb box: FIXED size in the row — the row NEVER reflows ── */
+  .thumbbox {
+    position: relative; width: 48px; height: 48px; flex-shrink: 0;
+    border-radius: 8px; background: var(--s2);
+    border: 1px solid var(--border);
+  }
+  .thumbbox img.base {
+    width: 100%; height: 100%; object-fit: contain; border-radius: 8px;
+    display: block;
+  }
+
+  /* ══ VARIANT A — clean overlay scale ══════════════════════════
+     The zoom is a separate absolutely-positioned layer scaled from
+     the thumb's own corner. transform+opacity only = compositor-only,
+     zero layout, zero CLS. */
+  .zoomA {
+    position: absolute; top: 50%; left: 0; z-index: 30;
+    width: 190px; height: 190px;
+    background: var(--s1);
+    border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.65), 0 0 0 1px rgba(232,182,76,0.14);
+    opacity: 0; pointer-events: none;
+    transform: translateY(-50%) scale(0.32);
+    transform-origin: left center;
+    transition: transform 0.28s cubic-bezier(0.22, 1.28, 0.36, 1), opacity 0.16s ease;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .zoomA img { width: 100%; height: 100%; object-fit: contain; }
+  .row:hover .zoomA, .row:focus-within .zoomA { opacity: 1; transform: translateY(-50%) scale(1); transition-delay: 0.16s; }
+
+  /* ══ VARIANT B — Quick-Look card: image + the price moment ══ */
+  .zoomB {
+    position: absolute; top: 50%; left: 0; z-index: 30;
+    width: 240px;
+    background: linear-gradient(170deg, var(--s2) 0%, var(--s1) 70%);
+    border: 1px solid rgba(232,182,76,0.25); border-radius: 16px;
+    box-shadow: 0 22px 60px rgba(0,0,0,0.7);
+    opacity: 0; pointer-events: none;
+    transform: translateY(-50%) translateX(-8px) scale(0.9);
+    transform-origin: left center;
+    transition: transform 0.3s cubic-bezier(0.22, 1.28, 0.36, 1), opacity 0.18s ease;
+    padding: 10px 10px 12px;
+  }
+  .zoomB .pic { width: 100%; height: 200px; border-radius: 10px; background: var(--bg);
+    display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .zoomB .pic img { width: 100%; height: 100%; object-fit: contain; }
+  .zoomB .cap { padding: 10px 4px 0; }
+  .zoomB .cap .n { font-size: 0.82rem; font-weight: 700; }
+  .zoomB .cap .l { font-size: 0.7rem; color: var(--muted); margin-top: 1px; }
+  .zoomB .cap .p { margin-top: 7px; display: flex; align-items: baseline; gap: 0.45rem; }
+  .zoomB .cap .p .v { color: var(--gold); font-weight: 800; font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+  .zoomB .cap .p .s { color: var(--muted); font-size: 0.66rem; }
+  .row:hover .zoomB, .row:focus-within .zoomB { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); transition-delay: 0.18s; }
+
+  /* ══ VARIANT C — Holo collector card: B + cursor tilt + foil sweep ══ */
+  .zoomC {
+    position: absolute; top: 50%; left: 0; z-index: 30;
+    width: 250px;
+    opacity: 0; pointer-events: none;
+    transform: translateY(-50%) scale(0.9);
+    transform-origin: left center;
+    transition: transform 0.3s cubic-bezier(0.22, 1.28, 0.36, 1), opacity 0.18s ease;
+    perspective: 700px;
+  }
+  .row:hover .zoomC, .row:focus-within .zoomC { opacity: 1; transform: translateY(-50%) scale(1); transition-delay: 0.18s; }
+  .zoomC .card3d {
+    background: linear-gradient(170deg, var(--s2) 0%, var(--s1) 70%);
+    border: 1px solid rgba(232,182,76,0.35); border-radius: 16px;
+    box-shadow: 0 22px 60px rgba(0,0,0,0.7);
+    padding: 10px 10px 12px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    position: relative; overflow: hidden;
+  }
+  /* foil sheen: a rotated gradient bar that tracks the cursor via --mx */
+  .zoomC .card3d::after {
+    content: ''; position: absolute; inset: -40%;
+    background: linear-gradient(105deg, transparent 42%,
+      rgba(232,182,76,0.16) 47%, rgba(255,255,255,0.20) 50%,
+      rgba(232,182,76,0.16) 53%, transparent 58%);
+    transform: translateX(calc((var(--mx, 0.5) - 0.5) * 160%));
+    pointer-events: none;
+  }
+  .zoomC .pic { width: 100%; height: 208px; border-radius: 10px; background: var(--bg);
+    display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .zoomC .pic img { width: 100%; height: 100%; object-fit: contain; }
+  .zoomC .cap { padding: 10px 4px 0; }
+  .zoomC .cap .n { font-size: 0.82rem; font-weight: 700; }
+  .zoomC .cap .l { font-size: 0.7rem; color: var(--muted); margin-top: 1px; }
+  .zoomC .cap .p { margin-top: 7px; display: flex; align-items: baseline; gap: 0.45rem; }
+  .zoomC .cap .p .v { color: var(--gold); font-weight: 800; font-size: 1.15rem; }
+  .zoomC .cap .p .s { color: var(--muted); font-size: 0.66rem; }
+
+  /* Reduced motion: overlays appear instantly, no scale/tilt theater */
+  @media (prefers-reduced-motion: reduce) {
+    .zoomA, .zoomB, .zoomC, .zoomC .card3d { transition: opacity 0.1s linear !important; transform: translateY(-50%) !important; }
+    .zoomC .card3d { transform: none !important; }
+    .zoomC .card3d::after { display: none; }
+  }
+
+  .note { margin-top: 2.5rem; padding: 1rem 1.25rem; border: 1px solid var(--border);
+    border-radius: var(--r); background: var(--s1); color: var(--muted);
+    font-size: 0.8rem; line-height: 1.65; max-width: 720px; }
+  .note b { color: var(--text); }
+</style>
+</head>
+<body>
+
+<h1>Thumbnail hover lab — 3 polish levels</h1>
+<p class="sub">Hover (or keyboard-focus) any row. Every variant is an <b>overlay</b> — the row itself never
+changes size, so the list never shifts (zero CLS). Animations are transform/opacity only
+(GPU-composited). A ~170ms hover-intent delay stops the strobe effect while scanning the list.
+Images progressively sharpen: the 48px thumb shows instantly, a 480px rendition crossfades in.</p>
+
+<section>
+  <h2>A — Clean overlay zoom</h2>
+  <p class="how">The thumb blooms into a 190px sharp version anchored to the row. Minimal, quiet, fast.
+  The floor: what every polished app does.</p>
+  <div class="dropdown" id="varA"></div>
+</section>
+
+<section>
+  <h2>B — Quick-Look card (the price moment)</h2>
+  <p class="how">The zoom is a small floating card: big image + name + <b>live median in gold</b>.
+  Turns the hover into a price-guide moment, not just a bigger picture. (Prices below are sample data.)</p>
+  <div class="dropdown" id="varB"></div>
+</section>
+
+<section>
+  <h2>C — Holo collector card (B + tilt + foil)</h2>
+  <p class="how">Same card, but it tilts subtly toward your cursor and a gold foil sheen tracks your
+  pointer across it — the carded-figure-under-store-lights feeling. Tilt is capped at ±7° so it stays
+  premium, not gimmicky.</p>
+  <div class="dropdown" id="varC"></div>
+</section>
+
+<div class="note">
+  <b>Hygiene engineering baked into all three:</b> overlay never reflows the list (no CLS) ·
+  transform/opacity only (compositor-only, no paint storms) · 170ms intent delay via transition-delay
+  (scanning the list doesn't strobe) · large rendition (width=480) fetched only on first hover of that
+  row, cached after · low-res thumb upscales instantly underneath so there is never a blank frame ·
+  <code>prefers-reduced-motion</code> collapses everything to a simple fade ·
+  touch devices never see it (hover: none media query would gate it in production — tap still navigates).
+</div>
+
+<script>
+const FIGS = [
+  { ch: 'Hulk Hogan',       line: 'Mattel Elite · Series 34',            price: 84,  img: 'https://cdn.shopify.com/s/files/1/0619/5534/2589/products/CHR41_PIP_FE_15_001-884516610.jpg' },
+  { ch: 'The Rock',         line: 'Mattel Elite · Series 14',            price: 62,  img: 'https://cdn.shopify.com/s/files/1/0619/5534/2589/products/07__scaled_800_e428359b-027b-430a-972e-fc7fdc91b7d5.jpg' },
+  { ch: 'Ultimate Warrior', line: 'Mattel Elite · Series 26',            price: 45,  img: 'https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20241216_205056446.jpg' },
+  { ch: 'Becky Lynch',      line: 'Mattel Elite · Series 49',            price: 38,  img: 'https://cdn.shopify.com/s/files/1/0619/5534/2589/products/apifihdiy__49046.1550284226.jpg' },
+  { ch: 'Undertaker',       line: 'Jakks Deluxe Aggression · Series 2',  price: 71,  img: 'https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_bed0f7ac-f721-4989-8067-b92227114be2.jpg' },
+  { ch: 'Rey Mysterio',     line: 'Jakks Deluxe Aggression · Series 1',  price: 55,  img: 'https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s1-rey.jpg' },
+]
+
+const small = u => u + (u.includes('?') ? '&' : '?') + 'width=96'
+const big   = u => u + (u.includes('?') ? '&' : '?') + 'width=480'
+
+function rowHtml(f, variant) {
+  const overlay =
+    variant === 'A' ? `
+      <div class="zoomA"><img data-big="${big(f.img)}" src="${small(f.img)}" alt=""></div>` :
+    variant === 'B' ? `
+      <div class="zoomB">
+        <div class="pic"><img data-big="${big(f.img)}" src="${small(f.img)}" alt=""></div>
+        <div class="cap">
+          <div class="n">${f.ch}</div>
+          <div class="l">${f.line}</div>
+          <div class="p"><span class="v">$${f.price}</span><span class="s">median · loose · sample</span></div>
+        </div>
+      </div>` : `
+      <div class="zoomC"><div class="card3d">
+        <div class="pic"><img data-big="${big(f.img)}" src="${small(f.img)}" alt=""></div>
+        <div class="cap">
+          <div class="n">${f.ch}</div>
+          <div class="l">${f.line}</div>
+          <div class="p"><span class="v">$${f.price}</span><span class="s">median · loose · sample</span></div>
+        </div>
+      </div></div>`
+
+  return `<div class="row" tabindex="0">
+    <div class="thumbbox"><img class="base" src="${small(f.img)}" alt="${f.ch}" loading="lazy"></div>
+    <div class="meta">
+      <div class="name"><b>${f.ch.slice(0, 6)}</b>${f.ch.slice(6)}</div>
+      <div class="line">${f.line}</div>
+    </div>
+    <div class="price">$${f.price}</div>
+    ${overlay}
+  </div>`
+}
+
+for (const [id, v] of [['varA','A'], ['varB','B'], ['varC','C']]) {
+  document.getElementById(id).innerHTML = FIGS.map(f => rowHtml(f, v)).join('')
+}
+
+// Progressive sharpen: on first hover of a row, swap the overlay img to the
+// 480px rendition. The 96px version is already painted underneath, so the
+// swap is a sharpen, never a blank.
+document.querySelectorAll('.row').forEach(row => {
+  let upgraded = false
+  row.addEventListener('pointerenter', () => {
+    if (upgraded) return
+    upgraded = true
+    row.querySelectorAll('img[data-big]').forEach(img => {
+      const hi = new Image()
+      hi.onload = () => { img.src = img.dataset.big }
+      hi.src = img.dataset.big
+    })
+  }, { passive: true })
+})
+
+// Variant C: cursor tilt + foil tracking (rAF-throttled, listeners local to card)
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+if (!reduced) {
+  document.querySelectorAll('.zoomC').forEach(wrap => {
+    const card = wrap.querySelector('.card3d')
+    let raf = null
+    wrap.parentElement.addEventListener('pointermove', e => {
+      if (raf) return
+      raf = requestAnimationFrame(() => {
+        raf = null
+        const r = card.getBoundingClientRect()
+        if (!r.width) return
+        const mx = Math.min(Math.max((e.clientX - r.left) / r.width, 0), 1)
+        const my = Math.min(Math.max((e.clientY - r.top) / r.height, 0), 1)
+        card.style.setProperty('--mx', mx.toFixed(3))
+        const tiltY = (mx - 0.5) * 14   // max ±7deg
+        const tiltX = (0.5 - my) * 10   // max ±5deg
+        card.style.transform = `rotateY(${tiltY.toFixed(2)}deg) rotateX(${tiltX.toFixed(2)}deg)`
+      })
+    }, { passive: true })
+    wrap.parentElement.addEventListener('pointerleave', () => {
+      card.style.transform = ''
+      card.style.setProperty('--mx', 0.5)
+    }, { passive: true })
+  })
+}
+</script>
+</body>
+</html>

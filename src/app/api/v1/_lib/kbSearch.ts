@@ -189,6 +189,20 @@ export interface KbSearchResult {
   note: string | null
 }
 
+/**
+ * Aggregate fandom (genre) counts over a scored pool — powers the search
+ * takeover panel's genre pills (S54). Pure single-pass function; callers pass
+ * the FULL pool (pre-limit) so counts reflect everything the query matched,
+ * not just the returned page.
+ */
+export function aggregateGenreFacets(
+  scored: { f: Pick<KBFigure, 'fandom'> }[],
+): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const { f } of scored) counts[f.fandom] = (counts[f.fandom] ?? 0) + 1
+  return counts
+}
+
 // Abuse caps (S50 security audit, 2026-07-02). scoreAll is O(tokens × ~22k
 // figures) and runs up to 3 tiers; the response is CDN-cached on the exact
 // query string, so an attacker can pad q with junk tokens to defeat the cache

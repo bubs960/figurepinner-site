@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { deriveName } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
-import { searchKb, MAX_RESULTS } from '../_lib/kbSearch'
+import { searchKb, aggregateGenreFacets, MAX_RESULTS } from '../_lib/kbSearch'
 import { checkRateLimit } from '@/lib/rateLimit'
 
 /**
@@ -85,8 +85,9 @@ export async function GET(req: NextRequest) {
     // `total` = full ranked match count (may exceed returned `figures` if it
     // hit MAX_RESULTS). `capped` tells the client there are matches beyond the
     // hard pool ceiling, so it can suggest narrowing instead of paging forever.
+    // `facets` = fandom counts over the full pool (S54 genre pills).
     return NextResponse.json(
-      { figures: results, total, capped: total >= MAX_RESULTS, note },
+      { figures: results, total, capped: total >= MAX_RESULTS, note, facets: aggregateGenreFacets(scored) },
       { headers: CACHE_HEADERS },
     )
   } catch {

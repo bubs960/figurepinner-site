@@ -13,7 +13,9 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Sparkline from '@/app/components/Sparkline'
 import FigureThumb from '@/app/components/FigureThumb'
+import HoverZoomCard from '@/app/components/HoverZoomCard'
 import { trackFunnel } from '@/app/_lib/funnelClient'
+import { SOLD_COUNT_CONFIDENCE_FLOOR } from '@/lib/searchDisplay'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -34,15 +36,20 @@ type SearchResult = {
 
 // ─── Genre config ─────────────────────────────────────────────────────────────
 
+// Slugs are KB FANDOM values — the API's `genre` field is raw f.fandom, so
+// filter comparisons must use fandom slugs, not the pretty URL-genre slugs
+// (S54 fix: 'marvel'/'gijoe'/'teenage-mutant-ninja-turtles' never matched
+// 'marvel-comics'/'gi-joe'/'tmnt', so those filter pills silently never
+// appeared — the genre-slug remap trap again).
 const GENRES = [
   { slug: 'wrestling',                  name: 'Wrestling',         accent: '#E63946' },
-  { slug: 'marvel',                     name: 'Marvel',            accent: '#E63946' },
+  { slug: 'marvel-comics',              name: 'Marvel',            accent: '#E63946' },
   { slug: 'star-wars',                  name: 'Star Wars',         accent: '#FFD700' },
   { slug: 'dc',                         name: 'DC',                accent: '#1565C0' },
   { slug: 'transformers',               name: 'Transformers',      accent: '#E65100' },
-  { slug: 'gijoe',                      name: 'GI Joe',            accent: '#388E3C' },
+  { slug: 'gi-joe',                     name: 'GI Joe',            accent: '#388E3C' },
   { slug: 'masters-of-the-universe',    name: 'MOTU',              accent: '#7B1FA2' },
-  { slug: 'teenage-mutant-ninja-turtles', name: 'TMNT',            accent: '#388E3C' },
+  { slug: 'tmnt',                       name: 'TMNT',              accent: '#388E3C' },
   { slug: 'power-rangers',              name: 'Power Rangers',     accent: '#D32F2F' },
   { slug: 'indiana-jones',              name: 'Indiana Jones',     accent: '#8D6E63' },
   { slug: 'ghostbusters',               name: 'Ghostbusters',      accent: '#F9A825' },
@@ -62,12 +69,15 @@ const GENRE_MAP = Object.fromEntries(GENRES.map(g => [g.slug, g])) as Record<str
 
 interface Props {
   initialQuery: string
+  /** Optional ?genre= prefilter (KB fandom slug) — set by the hero takeover's
+   *  genre pills (S54 D2). Applied once, after the initial fetch lands. */
+  initialGenre?: string
   /** Build-time KB figure count label, e.g. "18,000+". Passed by the server
    *  page so the client bundle never imports the KB. */
   totalLabel?: string
 }
 
-export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }: Props) {
+export default function SearchInterface({ initialQuery, initialGenre, totalLabel = '18,000+' }: Props) {
   const [query, setQuery]             = useState(initialQuery)
   const [results, setResults]         = useState<SearchResult[]>([])
   const [loading, setLoading]         = useState(false)
@@ -88,6 +98,11 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
   const debounce  = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sparklineAbort = useRef<AbortController | null>(null)
   const searchAbort = useRef<AbortController | null>(null)
+  // ?genre= prefilter — consumed by the FIRST completed search only (runSearch
+  // resets facets on every new search, so a later query clears it as normal).
+  const pendingGenre = useRef<GenreSlug | null>(
+    initialGenre && GENRES.some(g => g.slug === initialGenre) ? initialGenre as GenreSlug : null,
+  )
 
   async function handleTrack(r: SearchResult) {
     if (!r.figure_id) return
@@ -148,7 +163,8 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
         setCapped(Boolean(data.capped))
         setNote(data.note ?? null)
         setSearched(true)
-        setActiveGenre(null)        // reset all facets on new search
+        setActiveGenre(pendingGenre.current) // usually null — non-null only on first load with ?genre=
+        pendingGenre.current = null
         setActiveLine(null)
         setActiveBrand(null)
         setShowAllGenres(false)     // collapse genre pills on new search
@@ -161,8 +177,16 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
     }
   }, [])
 
-  // ── Debounce on query change
+  // ── Debounce on query change. Skips its mount run when the query is still
+  //    the SSR-provided initialQuery: the initial-load effect below already
+  //    fetches it, and this duplicate used to (a) double-hit the API and
+  //    (b) land second, wiping the consumed ?genre= prefilter (S54 race).
+  const debounceMounted = useRef(false)
   useEffect(() => {
+    if (!debounceMounted.current) {
+      debounceMounted.current = true
+      if (query.trim() === initialQuery.trim()) return
+    }
     if (debounce.current) clearTimeout(debounce.current)
     debounce.current = setTimeout(() => {
       // update URL (no navigation, shareable link)
@@ -173,7 +197,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
       runSearch(query.trim())
     }, 260)
     return () => { if (debounce.current) clearTimeout(debounce.current) }
-  }, [query, runSearch])
+  }, [query, runSearch]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Initial load: run if there's a pre-filled query
   useEffect(() => {
@@ -485,6 +509,7 @@ export default function SearchInterface({ initialQuery, totalLabel = '18,000+' }
                 sparkline={r.figure_id ? sparklines[r.figure_id] : undefined}
                 trackState={r.figure_id ? (trackRecord[r.figure_id] ?? 'idle') : 'idle'}
                 onTrack={() => handleTrack(r)}
+                eager={i < 6}
               />
               ))}
             </div>
@@ -653,14 +678,21 @@ function SortToggle({ mode, onChange }: { mode: 'relevance' | 'az'; onChange: (m
 }
 
 function FigureResultCard({
-  result: r, query, sparkline, trackState, onTrack,
+  result: r, query, sparkline, trackState, onTrack, eager = false,
 }: {
   result: SearchResult
   query: string
   sparkline?: { points: number[]; trend: 'up' | 'down' | 'flat'; median: number|null; soldCount: number }
   trackState: 'idle' | 'loading' | 'added' | 'exists' | 'error'
   onTrack: () => void
+  /** loading="eager" for the first above-the-fold cards (kills the gray-grid first impression). */
+  eager?: boolean
 }) {
+  // Hover-zoom quick-look (S54 Phase 4): `hot` triggers the one-time 480px
+  // sharpen; `flip` opens the card leftward when the row sits close enough to
+  // the right viewport edge that the overlay would clip.
+  const [hzHot, setHzHot] = useState(false)
+  const [hzFlip, setHzFlip] = useState(false)
   const genre  = GENRE_MAP[r.genre]
   const accent = genre?.accent ?? '#FF5F00'
   const href = r.figure_id
@@ -673,7 +705,9 @@ function FigureResultCard({
 
   return (
     <div
+      className="fp-hz-row"
       style={{
+        position: 'relative',
         display: 'flex',
         alignItems: 'center',
         gap: '0.75rem',
@@ -683,6 +717,12 @@ function FigureResultCard({
         borderRadius: 16,
         transition: 'border-color 0.12s, background 0.12s',
         cursor: 'pointer',
+      }}
+      onPointerEnter={e => {
+        if (hzHot) return
+        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
+        setHzFlip(e.currentTarget.getBoundingClientRect().left + 264 > window.innerWidth)
+        setHzHot(true)
       }}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLDivElement
@@ -711,7 +751,7 @@ function FigureResultCard({
         }}
       >
         {/* Thumbnail */}
-        <FigureThumb image={r.image} size={88} radius={14} fallback={{ kind: 'monogram', name: r.name, accent }} />
+        <FigureThumb image={r.image} size={88} radius={14} eager={eager} fallback={{ kind: 'monogram', name: r.name, accent }} />
 
         {/* Info */}
         <div style={{ flex: 1, minWidth: 0 }}>
@@ -723,14 +763,18 @@ function FigureResultCard({
             {highlightMatch(r.name, query)}
           </div>
 
-          {/* Price — shown as soon as sparkline data loads (~90% of figures) */}
+          {/* Price — shown as soon as sparkline data loads (~90% of figures).
+              Gold per the S54 plan (price = the money moment); sold count only
+              above the D4 confidence floor — a thin count advertises weak data. */}
           {sparkline?.median != null && sparkline.median > 0 && (
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: 3 }}>
-              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--fp-success)', letterSpacing: '0.02em' }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--gold)', letterSpacing: '0.02em', fontVariantNumeric: 'tabular-nums' }}>
                 ${sparkline.median.toFixed(0)}
               </span>
               <span style={{ fontSize: '0.68rem', color: 'var(--muted)' }}>
-                med · {sparkline.soldCount} sales
+                {sparkline.soldCount >= SOLD_COUNT_CONFIDENCE_FLOOR
+                  ? `median · ${sparkline.soldCount} sold`
+                  : 'median'}
               </span>
               {sparkline.points.length >= 2 && (
                 <Sparkline points={sparkline.points} trend={sparkline.trend} width={40} height={14} />
@@ -795,6 +839,20 @@ function FigureResultCard({
            'Track'}
         </button>
       )}
+
+      {/* Quick-look hover card — same median already fetched above, zero
+          extra requests (S54 Phase 4). baseWidth 176 = FigureThumb's
+          cdnWidth at size 88, so the base paint is a cache hit. */}
+      <HoverZoomCard
+        image={r.image}
+        name={r.name}
+        line={`${r.brand} · ${r.line}${r.series ? ` · Ser. ${r.series}` : ''}`}
+        median={sparkline?.median}
+        soldCount={sparkline?.soldCount}
+        baseWidth={176}
+        hot={hzHot}
+        flip={hzFlip}
+      />
     </div>
   )
 }

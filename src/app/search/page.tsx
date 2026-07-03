@@ -6,11 +6,11 @@
 
 import type { Metadata } from 'next'
 import SearchInterface from './_components/SearchInterface'
-import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import SiteHeader from '@/app/components/SiteHeader'
 
 interface SearchPageProps {
-  searchParams: Promise<{ q?: string }>
+  searchParams: Promise<{ q?: string; genre?: string }>
 }
 
 export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
@@ -30,14 +30,17 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
-  const { q } = await searchParams
+  const { q, genre } = await searchParams
   const initialQuery = q?.trim() ?? ''
+  // ?genre= prefilter (KB fandom slug) — set by the hero takeover's genre
+  // pills (S54 D2). SearchInterface validates it against its GENRES list.
+  const initialGenre = genre?.trim() || undefined
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)' }}>
       <SiteHeader />
 
-      <SearchInterface initialQuery={initialQuery} totalLabel={TOTAL_FIGURES_LABEL} />
+      <SearchInterface initialQuery={initialQuery} initialGenre={initialGenre} totalLabel={TOTAL_FIGURES_LABEL} />
     </main>
   )
 }

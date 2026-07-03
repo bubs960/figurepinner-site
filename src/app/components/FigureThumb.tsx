@@ -33,6 +33,9 @@ export default function FigureThumb({
   cdnWidth,
   fallback,
   alt = '',
+  /** loading="eager" for above-the-fold thumbs (S54: first ~6 search cards)
+      so the grid's first impression isn't a wall of gray shimmer. */
+  eager = false,
 }: {
   image: string | null | undefined
   size?: number
@@ -40,6 +43,7 @@ export default function FigureThumb({
   cdnWidth?: number
   fallback: Fallback
   alt?: string
+  eager?: boolean
 }) {
   const [loaded, setLoaded] = useState(false)
   const [errored, setErrored] = useState(false)
@@ -98,7 +102,7 @@ export default function FigureThumb({
         alt={alt}
         width={size}
         height={size}
-        loading="lazy"
+        loading={eager ? 'eager' : 'lazy'}
         decoding="async"
         onLoad={() => setLoaded(true)}
         onError={() => setErrored(true)}
