@@ -1,12 +1,11 @@
 /**
- * genreFigures.ts — shared genre→figures helpers for the genre page and the
- * /api/genre-line-figures route (S20 payload cut: the genre page ships only
- * the first line's cards; the accordion fetches the rest on open).
+ * genreFigures.ts — the single home for URL-genre → KB-fandom resolution
+ * (SLUG_TO_FANDOM + inverse + NECA rollup, consolidated S53) and the genre
+ * page's figure grouping/serialization helpers (extracted from
+ * src/app/[genre]/page.tsx in the S20 payload cut).
  *
- * Extracted from src/app/[genre]/page.tsx so both surfaces serialize rows
- * identically. The line `slug` here is always the raw KB product_line value
- * (the accordion groups by product_line), NOT the pretty URL slug forms the
- * line-hub route also accepts.
+ * The line `slug` in groupAndSortLines is always the raw KB product_line
+ * value, NOT the pretty URL slug forms the line-hub route also accepts.
  */
 import { getFiguresByFandom, type KBFigure } from '@/data/kb'
 
@@ -48,8 +47,6 @@ export function figuresForGenre(genre: string): KBFigure[] {
   return fandomsForGenre(genre).flatMap(f => getFiguresByFandom(f))
 }
 
-export const MAX_PER_LINE = 60
-
 export function cardName(f: KBFigure): string {
   const base = f.character_canonical
     .split('-')
@@ -59,26 +56,6 @@ export function cardName(f: KBFigure): string {
     ? ` (${f.character_variant})`
     : ''
   return `${base}${variant}`
-}
-
-/** Wire shape for one accordion card. href is derived client-side from
- *  figure_id, so it is deliberately NOT serialized. */
-export interface FigureRowWire {
-  figure_id: string
-  name: string
-  series: string | null
-  exclusive: string | null
-  imageUrl: string | null
-}
-
-export function toFigureRow(f: KBFigure): FigureRowWire {
-  return {
-    figure_id: f.figure_id,
-    name:      cardName(f),
-    series:    f.release_wave ?? null,
-    exclusive: (f.exclusive_to && f.exclusive_to !== 'None') ? f.exclusive_to : null,
-    imageUrl:  f.canonical_image_url ?? null,
-  }
 }
 
 /** Group a genre's figures by product_line, sorted: newest wave first then
@@ -98,19 +75,4 @@ export function groupAndSortLines(figures: KBFigure[]): [string, KBFigure[]][] {
     })
   }
   return [...groups.entries()].sort((a, b) => b[1].length - a[1].length)
-}
-
-/** Up to MAX_PER_LINE serialized rows for one product_line of a genre,
- *  sorted exactly like the genre page's first line. Empty array = unknown
- *  genre/line. */
-export function figuresForLine(genre: string, lineSlug: string): FigureRowWire[] {
-  const inLine = figuresForGenre(genre).filter(f => f.product_line === lineSlug)
-  if (!inLine.length) return []
-  inLine.sort((a, b) => {
-    const wA = parseInt(a.release_wave ?? '') || 0
-    const wB = parseInt(b.release_wave ?? '') || 0
-    if (wA !== wB) return wB - wA
-    return a.character_canonical.localeCompare(b.character_canonical)
-  })
-  return inLine.slice(0, MAX_PER_LINE).map(toFigureRow)
 }

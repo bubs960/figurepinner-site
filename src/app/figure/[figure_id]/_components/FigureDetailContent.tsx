@@ -247,10 +247,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const ebayUrl = buildEbaySearchUrl(characterH1, prettifySlug(genre), brand, line, local.release_wave, EBAY_CAMPAIGN_ID)
 
-  // ── Pro gate ────────────────────────────────────────────────────────────────
-
-  // ── ValueStrip props ────────────────────────────────────────────────────────
-
   // ── Condition split (matcher's live aggregation; Steve directive 6/12) ──────
   // The headline market is the statistically valid bucket per segmentation;
   // 'pooled' keeps the legacy blended view. Gate on segmentation, never on

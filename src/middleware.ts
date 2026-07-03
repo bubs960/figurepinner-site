@@ -87,15 +87,15 @@ export const config = {
   // Auth-needing paths (alerts, vault, wantlist, stripe, user-settings, me,
   // devices, admin) remain matched and go through Clerk as before.
   //
-  // S20 (2026-06-12): added genre-line-figures — public KB-static rows for the
-  // genre-page accordion (payload cut); sets its own s-maxage for the edge cache.
-  //
   // S44 (2026-07-01): added funnel — anonymous first-party beacon. It sets
   // no-store itself and should not pay Clerk middleware cost on ad traffic.
+  //
+  // S53 (2026-07-03): removed genre-line-figures from the exclusion — the route
+  // was deleted (its only caller, the genre-page accordion, was dead code).
   matcher: [
     '/app(.*)',
     '/admin(.*)',
     '/trpc(.*)',
-    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|genre-line-figures$|funnel$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
+    '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|funnel$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
   ],
 }

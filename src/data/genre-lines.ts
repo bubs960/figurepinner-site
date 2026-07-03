@@ -1,10 +1,11 @@
 /**
  * Build-time genre/line taxonomy — single source of truth for the homepage
- * genre browser (GenreTaxonomy component).
+ * genre browser (rendered inline by src/app/page.tsx via GENRE_TAXONOMY).
  *
  * WHY THIS EXISTS (S20, 2026-06-11):
- * GenreTaxonomy shipped a hand-typed data array. It drifted from the KB the
- * same way the hardcoded figure counts did before kb-stats.ts existed:
+ * The original homepage genre browser shipped a hand-typed data array. It
+ * drifted from the KB the same way the hardcoded figure counts did before
+ * kb-stats.ts existed:
  * 36 of its line tiles were broken at once — 16 wrong slugs (dc-multiverse
  * vs the KB's "multiverse") and 20 tiles for lines the KB doesn't carry,
  * with invented counts. Slugs and counts are FACTS, so they are computed
