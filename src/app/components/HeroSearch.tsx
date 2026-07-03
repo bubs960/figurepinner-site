@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import { thumb } from '@/lib/imageUrl'
 import HoverZoomCard from '@/app/components/HoverZoomCard'
@@ -67,7 +68,15 @@ export default function HeroSearch({
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const priceAbortRef = useRef<AbortController | null>(null)
   const wrapperRef = useRef<HTMLDivElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+  // Takeover panel anchor, measured from the wrapper. The panel PORTALS to
+  // document.body with position:fixed — an in-place absolute panel gets
+  // clipped by ancestor overflow (homepage .fph-hero has overflow:hidden and
+  // cut the panel off below the first row) and is at the mercy of transformed
+  // reveal wrappers. Scroll is locked while open, so a fixed anchor is stable;
+  // re-measured on window resize.
+  const [panelPos, setPanelPos] = useState<{ top: number; left: number; width: number } | null>(null)
 
   useEffect(() => {
     if (query.length < 2) {
@@ -120,17 +129,39 @@ export default function HeroSearch({
       .catch(() => { /* honest blank — rows simply show no price */ })
   }, [results])
 
-  // Close on outside click
+  // Close on outside click. The takeover panel lives in a body portal, so
+  // "inside" means the wrapper OR the portaled panel.
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
-        setOpen(false)
-        setTakeover(false)
-      }
+      const t = e.target as Node
+      if (wrapperRef.current?.contains(t)) return
+      if (panelRef.current?.contains(t)) return
+      setOpen(false)
+      setTakeover(false)
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
+
+  // Measure the panel anchor while the takeover is open; re-measure on resize.
+  useEffect(() => {
+    if (!takeover) { setPanelPos(null); return }
+    function measure() {
+      const el = wrapperRef.current
+      if (!el) return
+      const r = el.getBoundingClientRect()
+      setPanelPos({
+        top: r.bottom + 8,
+        left: r.left + r.width / 2,
+        // Wrapper width + 48 keeps the ±24px overhang from poking past the
+        // viewport edge when the hero column sits off-center.
+        width: Math.min(720, r.width + 48, window.innerWidth * 0.92),
+      })
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [takeover])
 
   // Scroll-lock while the takeover is open. Compensate for the vanishing
   // scrollbar with padding-right so the page behind does not shift (the
@@ -225,21 +256,25 @@ export default function HeroSearch({
     : basePlaceholder
 
   const showResults = open && results.length > 0
-  // Takeover panel floats detached under the input (Nike move, our scale);
-  // plain dropdown stays visually attached (unchanged mobile/touch behavior).
+  // Takeover: a body-portaled FIXED panel floating detached under the input
+  // (immune to ancestor overflow/transform — the homepage hero clips in-place
+  // absolutes). Plain dropdown stays attached-absolute (unchanged mobile/touch
+  // behavior; scroll isn't locked there, so fixed anchoring would drift).
   // Longhand border props in BOTH branches — switching between the `border`
   // shorthand and a `borderTop` override across rerenders trips React's
   // conflicting-style warning and mangles the border.
-  const panelStyle: React.CSSProperties = takeover
+  const inTakeover = takeover && panelPos !== null
+  const panelStyle: React.CSSProperties = inTakeover
     ? {
-        position: 'absolute',
-        top: 'calc(100% + 8px)',
-        left: '50%',
+        position: 'fixed',
+        top: panelPos.top,
+        left: panelPos.left,
         transform: 'translateX(-50%)',
-        // Cap at wrapper width + 48 so the ±24px overhang can't poke past the
-        // viewport edge when the hero column sits off-center (two-column hero
-        // at mid-size viewports put the 720px panel 8px off-screen left).
-        width: 'min(720px, calc(100% + 48px), 92vw)',
+        width: panelPos.width,
+        // Short windows: the panel scrolls instead of running off-screen
+        // (scroll-lock means the page can't scroll to reveal it).
+        maxHeight: `calc(100vh - ${panelPos.top + 16}px)`,
+        overflowY: 'auto',
         background: 'var(--s1)',
         borderWidth: 1,
         borderStyle: 'solid',
@@ -268,7 +303,10 @@ export default function HeroSearch({
 
   return (
     <>
-      {takeover && <div className="fp-search-backdrop" aria-hidden onMouseDown={close} />}
+      {takeover && createPortal(
+        <div className="fp-search-backdrop" aria-hidden onMouseDown={close} />,
+        document.body,
+      )}
       <div
         ref={wrapperRef}
         style={{
@@ -349,11 +387,10 @@ export default function HeroSearch({
         )}
       </div>
 
-      {/* Results panel — plain dropdown, or the rich takeover panel on desktop.
-          overflow stays visible so the hover-zoom cards can escape; the footer
-          link carries the bottom radius instead of a container clip. */}
-      {showResults && (
-        <div id="hero-search-listbox" role="listbox" style={panelStyle}>
+      {/* Results panel — plain dropdown in place, or the rich takeover panel
+          portaled to <body> (fixed) so no ancestor overflow can clip it. */}
+      {showResults && renderPanel(
+        <div ref={panelRef} id="hero-search-listbox" role="listbox" style={panelStyle}>
           {/* Genre count pills (takeover only) — aggregated over the FULL
               scored pool by the API, so counts are the real match landscape,
               not the 8 visible rows. Clickable per D2 → /search prefiltered. */}
@@ -442,12 +479,12 @@ export default function HeroSearch({
           >
             See all results for &ldquo;{query}&rdquo; →
           </a>
-        </div>
+        </div>,
       )}
 
       {/* Empty state */}
-      {open && query.length >= 2 && !loading && results.length === 0 && (
-        <div style={{
+      {open && query.length >= 2 && !loading && results.length === 0 && renderPanel(
+        <div ref={panelRef} style={{
           ...panelStyle,
           padding: '16px',
           textAlign: 'center',
@@ -455,11 +492,16 @@ export default function HeroSearch({
           fontSize: '0.875rem',
         }}>
           No figures found for &ldquo;{query}&rdquo;
-        </div>
+        </div>,
       )}
       </div>
     </>
   )
+
+  /** In-place for the plain dropdown; body portal for the fixed takeover panel. */
+  function renderPanel(node: React.ReactElement) {
+    return inTakeover ? createPortal(node, document.body) : node
+  }
 }
 
 function DropdownRow({
