@@ -1788,13 +1788,38 @@ a:hover {
   padding: 10px 10px 12px;
   pointer-events: none;
   transform-origin: left center;
-  /* S56: gentle fade-up instead of the springy pop — combined with the 450ms
-     hover-intent delay the card eases in rather than ambushing the cursor. */
-  animation: fp-ql-pop 0.32s ease-out both;
+  /* S56b: modern gradient reveal — the card resolves from a soft blur while a
+     gold sheen (::after) sweeps across it once. Paired with the 450ms
+     hover-intent delay so it feels deliberate, not an ambush. */
+  animation: fp-ql-pop 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 @keyframes fp-ql-pop {
-  from { opacity: 0; transform: translateY(4px) scale(0.98); }
-  to   { opacity: 1; transform: none; }
+  from { opacity: 0; transform: translateY(6px) scale(0.985); filter: blur(10px); }
+  60%  { filter: blur(0); }
+  to   { opacity: 1; transform: none; filter: blur(0); }
+}
+/* One-shot diagonal gold sheen over the whole card on entry, then gone. */
+.fp-ql-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(232, 182, 76, 0.16) 46%,
+    rgba(255, 255, 255, 0.10) 50%,
+    rgba(232, 182, 76, 0.16) 54%,
+    transparent 70%
+  );
+  background-size: 250% 250%;
+  background-position: 120% 120%;
+  animation: fp-ql-sheen 0.9s ease-out 0.12s both;
+}
+@keyframes fp-ql-sheen {
+  from { background-position: 120% 120%; opacity: 1; }
+  to   { background-position: -80% -80%; opacity: 0; }
 }
 .fp-ql-pic {
   width: 100%;
@@ -1823,4 +1848,7 @@ a:hover {
 .fp-ql-price { margin-top: 7px; display: flex; align-items: baseline; gap: 0.45rem; }
 .fp-ql-val { color: var(--gold); font-weight: 800; font-size: 1.3rem; font-variant-numeric: tabular-nums; }
 .fp-ql-lbl { color: var(--muted); font-size: 0.7rem; }
-@media (prefers-reduced-motion: reduce) { .fp-ql-card { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .fp-ql-card { animation: none; }
+  .fp-ql-card::after { animation: none; opacity: 0; } /* static sheen would linger */
+}
