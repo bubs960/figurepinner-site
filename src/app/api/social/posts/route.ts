@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { auth } from '@clerk/nextjs/server';
 
 // Mock database - replace with your actual D1/KV storage
 const mockPosts = [
@@ -70,8 +71,21 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    const { userId } = await auth();
+    if (!userId) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+    const allowList = (process.env.FP_ADMIN_USER_IDS ?? '')
+      .split(',').map(s => s.trim()).filter(Boolean);
+    if (allowList.length === 0) {
+      return NextResponse.json({ success: false, error: 'admin_endpoint_not_configured' }, { status: 503 });
+    }
+    if (!allowList.includes(userId)) {
+      return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 });
+    }
+
     const body = await request.json();
-    
+
     // Validate required fields
     if (!body.title || !body.content || !body.subreddit) {
       return NextResponse.json(
@@ -79,7 +93,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    
+    if (body.title.length > 200 || body.content.length > 5000 || body.subreddit.length > 100) {
+      return NextResponse.json(
+        { success: false, error: 'Field too long' },
+        { status: 400 }
+      );
+    }
+
     // Create new post
     const newPost = {
       id: Date.now().toString(),

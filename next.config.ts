@@ -74,8 +74,27 @@ const nextConfig: NextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=()' },
+          // Report-Only: never enforced yet. Staged rollout per
+          // WEB-SECURITY-NEXT-CHAT-PLAN-2026-07-02 Batch E — ship Report-Only,
+          // add a report collector, monitor 1-2 weeks with zero unexpected
+          // violations, only then consider enforcing.
+          {
+            key: 'Content-Security-Policy-Report-Only',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.highperformanceformat.com https://*.effectivecpmnetwork.com https://static.cloudflareinsights.com https://clerk.figurepinner.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: https://cdn.shopify.com https://bubs960collectibles.myshopify.com https://actionfigure411.com https://*.actionfigure411.com https://img.clerk.com https://pagead2.googlesyndication.com",
+              "font-src 'self' data:",
+              "connect-src 'self' https://figurepinner-api.bubs960.workers.dev https://clerk.figurepinner.com https://static.cloudflareinsights.com https://cloudflareinsights.com",
+              "frame-src https://clerk.figurepinner.com https://*.effectivecpmnetwork.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "frame-ancestors 'none'",
+            ].join('; '),
+          },
         ],
       },
       // Apple App Site Association — must be served as application/json with no redirect

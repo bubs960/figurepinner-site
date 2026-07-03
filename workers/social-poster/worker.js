@@ -80,7 +80,17 @@ function selectRandomFigure(figures) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    
+
+    if (url.pathname === '/queue/next' || url.pathname === '/queue/mark-posted') {
+      const token = request.headers.get('X-Internal-Token');
+      if (!env.INTERNAL_TOKEN || token !== env.INTERNAL_TOKEN) {
+        return new Response(JSON.stringify({ success: false, error: 'Unauthorized' }), {
+          status: 401,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
+    }
+
     // GET /queue/next - Get next post to make
     if (url.pathname === '/queue/next' && request.method === 'GET') {
       try {

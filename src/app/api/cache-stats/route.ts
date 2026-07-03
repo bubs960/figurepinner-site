@@ -55,11 +55,15 @@ import { NextResponse } from 'next/server'
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: Request) {
-  // Admin-only via shared secret (no public exposure).
+  // Admin-only via shared secret (no public exposure). Fails CLOSED: an unset
+  // key must never be treated as "no gate."
   const authHeader = request.headers.get('x-cache-stats-key')
   const expectedKey = process.env.CACHE_STATS_KEY
-  if (expectedKey && authHeader !== expectedKey) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+  if (!expectedKey) {
+    return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
+  }
+  if (authHeader !== expectedKey) {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
   }
 
   const accountId = process.env.CF_ACCOUNT_ID

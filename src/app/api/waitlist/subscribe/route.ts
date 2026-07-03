@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 /**
  * POST /api/waitlist/subscribe
@@ -17,6 +18,14 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 const EMAIL_RX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export async function POST(req: NextRequest) {
+  const rl = await checkRateLimit(req, 'waitlist-subscribe', 5)
+  if (rl.limited) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   let email: string | undefined
   let source: string | undefined
 

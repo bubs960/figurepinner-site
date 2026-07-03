@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 /**
  * GET /api/daily-uniques
@@ -60,10 +61,30 @@ export async function GET(request: Request) {
 
   const url = new URL(request.url)
   const debug = url.searchParams.get('debug') === '1'
+  const introspect = url.searchParams.get('introspect') === '1'
+
+  // debug/introspect leak raw CF GraphQL bodies + schema — gate behind a
+  // secret + rate limit. The base visitor count below stays public.
+  if (debug || introspect) {
+    const rl = await checkRateLimit(request, 'daily-uniques-debug', 10)
+    if (rl.limited) {
+      return NextResponse.json(
+        { error: 'rate_limited' },
+        { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
+      )
+    }
+    const debugKey = process.env.DAILY_UNIQUES_DEBUG_KEY
+    if (!debugKey) {
+      return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
+    }
+    if (request.headers.get('x-daily-uniques-key') !== debugKey) {
+      return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
+    }
+  }
 
   // TEMP introspection (2026-06-27): ask CF what RUM fields exist under Zone so we
   // stop guessing dataset names. Remove after the query is fixed. ?introspect=1
-  if (url.searchParams.get('introspect') === '1') {
+  if (introspect) {
     const introQ = `query { __type(name: "Zone") { fields { name } } }`
     const ir = await fetch(GRAPHQL, {
       method: 'POST',

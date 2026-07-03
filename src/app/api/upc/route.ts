@@ -1,9 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 
 // Proxy UPCitemdb free trial — avoids CORS from browser, keeps key server-side.
 // Free tier: 100 lookups/day, no API key required.
 export async function GET(req: NextRequest) {
+  const rl = await checkRateLimit(req, 'upc-lookup', 20)
+  if (rl.limited) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const upc = req.nextUrl.searchParams.get('upc')?.replace(/\D/g, '')
   if (!upc || upc.length < 8) {
     return NextResponse.json({ error: 'Invalid UPC' }, { status: 400 })
