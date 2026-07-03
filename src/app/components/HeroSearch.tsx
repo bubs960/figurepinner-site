@@ -76,6 +76,8 @@ export default function HeroSearch({
   // reveal wrappers. Scroll is locked while open, so a fixed anchor is stable;
   // re-measured on window resize.
   const [panelPos, setPanelPos] = useState<{ top: number; left: number; width: number } | null>(null)
+  // Plain-dropdown max height (keyboard-avoidance, touch path) — null until measured.
+  const [plainMaxH, setPlainMaxH] = useState<number | null>(null)
 
   useEffect(() => {
     if (query.length < 2) {
@@ -161,6 +163,38 @@ export default function HeroSearch({
     window.addEventListener('resize', measure)
     return () => window.removeEventListener('resize', measure)
   }, [takeover])
+
+  // Keyboard-avoidance for the plain (non-takeover) dropdown — the mobile
+  // path (S55 item 3). 8 rows ≈ 700px with no cap: on a phone the on-screen
+  // keyboard buries all but the first row. The keyboard shrinks the VISUAL
+  // viewport, not the layout viewport, so cap the panel to the space between
+  // the input and the visual viewport's bottom and let it scroll internally.
+  // Also correct on short desktop windows; the takeover branch has its own
+  // maxHeight and ignores this.
+  useEffect(() => {
+    if (!open || takeover) { setPlainMaxH(null); return }
+    function measure() {
+      const el = wrapperRef.current
+      if (!el) return
+      const vv = window.visualViewport
+      const viewBottom = vv ? vv.offsetTop + vv.height : window.innerHeight
+      setPlainMaxH(Math.max(160, Math.round(viewBottom - el.getBoundingClientRect().bottom - 12)))
+    }
+    measure()
+    const vv = window.visualViewport
+    vv?.addEventListener('resize', measure)
+    vv?.addEventListener('scroll', measure)
+    window.addEventListener('resize', measure)
+    // Layout scroll moves the absolute-attached panel with the page — the
+    // wrapper's viewport-relative bottom changes, so the cap must re-measure.
+    window.addEventListener('scroll', measure, { passive: true })
+    return () => {
+      vv?.removeEventListener('resize', measure)
+      vv?.removeEventListener('scroll', measure)
+      window.removeEventListener('resize', measure)
+      window.removeEventListener('scroll', measure)
+    }
+  }, [open, takeover])
 
   // Scroll-lock while the takeover is open. Compensate for the vanishing
   // scrollbar with padding-right so the page behind does not shift (the
@@ -294,6 +328,9 @@ export default function HeroSearch({
         borderRadius: '0 0 10px 10px',
         zIndex: 200,
         boxShadow: '0 12px 32px rgba(0,0,0,0.5)',
+        // Keyboard-avoidance cap (see the plainMaxH effect) — scrolls
+        // internally instead of running under the on-screen keyboard.
+        ...(plainMaxH !== null ? { maxHeight: plainMaxH, overflowY: 'auto' as const } : {}),
       }
 
   const facetEntries = facets
@@ -464,7 +501,8 @@ export default function HeroSearch({
             onClick={() => trackFunnel('search_submit', { query: query.trim(), target: 'hero_all_results' })}
             style={{
               display: 'block',
-              padding: '10px 16px',
+              // Touch gets a taller tap target (S55 mobile pass).
+              padding: isDesktopPointer() ? '10px 16px' : '14px 16px',
               fontSize: '0.8rem',
               color: 'var(--blue)',
               textDecoration: 'none',
@@ -524,6 +562,10 @@ function DropdownRow({
     price: price ?? null,
   })
 
+  // Touch rows get taller padding (S55 mobile pass) — comfort on thumbs;
+  // rows only render client-side (post-fetch), so no hydration concern.
+  const touch = !isDesktopPointer()
+
   return (
     <a
       id={`hero-search-opt-${i}`}
@@ -545,7 +587,7 @@ function DropdownRow({
         display: 'flex',
         alignItems: 'center',
         gap: 12,
-        padding: '9px 16px',
+        padding: touch ? '13px 16px' : '9px 16px',
         color: 'var(--text)',
         textDecoration: 'none',
         borderBottom: isLast ? 'none' : '1px solid var(--border)',
