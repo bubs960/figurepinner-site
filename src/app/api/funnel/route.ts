@@ -96,6 +96,10 @@ export async function POST(request: NextRequest) {
   try {
     const { env } = await getCloudflareContext()
     const analytics = (env as { FUNNEL_ANALYTICS?: AnalyticsEngineDataset }).FUNNEL_ANALYTICS
+    // writeDataPoint is synchronous (returns void, not a Promise) on CF's
+    // AnalyticsEngineDataset binding — there is nothing to await here. Do NOT
+    // "fix" this into `await analytics?.writeDataPoint(...)`; that would await
+    // a non-Promise value (a no-op) while looking like a real fix.
     analytics?.writeDataPoint({
       blobs: [
         event,

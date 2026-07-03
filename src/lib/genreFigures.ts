@@ -38,9 +38,14 @@ export function genreSlugForFandom(fandom: string): string {
 // rollup kb-stats uses for the homepage count.
 export const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
 
+/** KB fandom(s) a URL genre slug resolves to, handling the NECA rollup. */
+export function fandomsForGenre(genre: string): string[] {
+  if (genre === 'neca') return NECA_FANDOMS
+  return [getFandom(genre)]
+}
+
 export function figuresForGenre(genre: string): KBFigure[] {
-  if (genre === 'neca') return NECA_FANDOMS.flatMap(f => getFiguresByFandom(f))
-  return getFiguresByFandom(getFandom(genre))
+  return fandomsForGenre(genre).flatMap(f => getFiguresByFandom(f))
 }
 
 export const MAX_PER_LINE = 60

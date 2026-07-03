@@ -22,6 +22,7 @@ import {
   prettyFigureUrl,
   type KBFigure,
 } from '@/data/kb'
+import { fandomsForGenre } from '@/lib/genreFigures'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
@@ -59,25 +60,15 @@ const GENRE_ACCENT: Record<string, string> = {
   'spawn':                        '#212121',
 }
 
-const SLUG_TO_FANDOM: Record<string, string> = {
-  'teenage-mutant-ninja-turtles': 'tmnt',
-  'gijoe':                        'gi-joe',
-  'marvel':                       'marvel-comics',
-  'dungeons-and-dragons':         'dungeons-dragons',
-}
-
-const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
-
-function fandomsFor(genre: string): string[] {
-  if (genre === 'neca') return NECA_FANDOMS
-  return [SLUG_TO_FANDOM[genre] ?? genre]
-}
+// URL slug → KB fandom remap + NECA rollup: single source of truth is
+// lib/genreFigures.ts (consolidated S52+1 — this page used to carry its own
+// copy of SLUG_TO_FANDOM/NECA_FANDOM, same pattern as [line]/page.tsx).
 
 // ─── Data helpers ─────────────────────────────────────────────────────────────
 
 /** All figures for a genre + character slug combination. */
 function figuresForCharacter(genre: string, characterSlug: string): KBFigure[] {
-  return fandomsFor(genre).flatMap(fandom =>
+  return fandomsForGenre(genre).flatMap(fandom =>
     getFiguresByFandom(fandom).filter(
       f => f.character_canonical === characterSlug
     )
@@ -190,7 +181,7 @@ export default async function CharacterHubPage({
 
   // Guard: genre must be valid
   const validFandoms = getAllFandoms()
-  if (!fandomsFor(genre).some(f => validFandoms.includes(f))) notFound()
+  if (!fandomsForGenre(genre).some(f => validFandoms.includes(f))) notFound()
 
   const figures = figuresForCharacter(genre, character_slug)
   if (!figures.length) notFound()

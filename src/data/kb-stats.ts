@@ -14,23 +14,16 @@
  */
 
 import { getAllFigures, getFiguresByFandom } from './kb'
+import { SLUG_TO_FANDOM as UI_SLUG_TO_FANDOM, NECA_FANDOMS } from '@/lib/genreFigures'
 
 /**
- * UI genre slug → KB fandom slug.
- * The homepage / nav use "pretty" genre slugs; the KB uses canonical fandom
- * slugs. Mirrors SLUG_TO_FANDOM in app/[genre]/page.tsx — keep in sync.
+ * UI genre slug → KB fandom slug, and the NECA-rollup fandom list.
+ * Single source of truth is src/lib/genreFigures.ts — re-exported here under
+ * the historical names so existing consumers (e.g. genre-lines.ts) are
+ * unaffected. Do not redefine these locally elsewhere; import from
+ * lib/genreFigures (or this re-export) instead.
  */
-export const UI_SLUG_TO_FANDOM: Record<string, string> = {
-  'teenage-mutant-ninja-turtles': 'tmnt',
-  'gijoe': 'gi-joe',
-  'marvel': 'marvel-comics',
-  'dungeons-and-dragons': 'dungeons-dragons',
-  // 'neca' UI slug maps to the KB 'horror' fandom (+ a few sibling fandoms);
-  // handled explicitly in fandomCountForUISlug below since it's many-to-one.
-}
-
-/** KB fandoms that roll up under the "Horror & Film" (neca) UI tile. */
-export const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
+export { UI_SLUG_TO_FANDOM, NECA_FANDOMS }
 
 /** Total distinct figures in the KB. Computed once at build. */
 export const TOTAL_FIGURES: number = getAllFigures().length

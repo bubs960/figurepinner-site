@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getFiguresByFandom, getLinesByFandom } from '@/data/kb'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { getFandom } from '@/lib/genreFigures'
 import { ARTICLES } from './_data/articles'
 import SiteHeader from '@/app/components/SiteHeader'
 
@@ -13,15 +14,6 @@ import SiteHeader from '@/app/components/SiteHeader'
  *
  * Original card treatment — accent monogram tiles, no emoji/generic icons.
  */
-
-// URL slug → KB fandom slug (URL slugs are pretty; KB slugs are canonical).
-// Mirrors SLUG_TO_FANDOM in /[genre]/page.tsx.
-const SLUG_TO_FANDOM: Record<string, string> = {
-  'teenage-mutant-ninja-turtles': 'tmnt',
-  'gijoe': 'gi-joe',
-  'marvel': 'marvel-comics',
-  'dungeons-dragons': 'dungeons-dragons',
-}
 
 type GenreDef = {
   slug: string
@@ -54,7 +46,7 @@ const GENRES: GenreDef[] = [
 export const revalidate = 3600
 
 function genreStats(slug: string): { figures: number; guides: number } {
-  const fandom = SLUG_TO_FANDOM[slug] ?? slug
+  const fandom = getFandom(slug)
   try {
     const figures = getFiguresByFandom(fandom).length
     const guides = getLinesByFandom(fandom).length

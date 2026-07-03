@@ -13,6 +13,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { fandomsForGenre } from '@/lib/genreFigures'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
@@ -58,28 +59,13 @@ const LINE_INTROS: Record<string, string> = {
   'tmnt/neca': "NECA's TMNT line covers the full Teenage Mutant Ninja Turtles catalog with 7-inch figures based on the original cartoon, movie, and Mirage comic designs. The cartoon-accurate figures from the first waves are the most sought-after; Mirage comic variants appeal to a smaller but dedicated collector base. Like all NECA lines, production runs are finite -- figures don't get indefinite shelf life, which creates genuine scarcity within 1-2 years of release.",
 }
 
-// URL slug → KB fandom slug (S20 fix, 2026-06-11). The genre page has carried
-// this map since launch, but this page never did — so every line link from
-// the /marvel, /gijoe, and /teenage-mutant-ninja-turtles genre pages 404'd.
-// Keep in sync with SLUG_TO_FANDOM in [genre]/page.tsx and UI_SLUG_TO_FANDOM
-// in data/kb-stats.ts.
-const SLUG_TO_FANDOM: Record<string, string> = {
-  'teenage-mutant-ninja-turtles': 'tmnt',
-  'gijoe': 'gi-joe',
-  'marvel': 'marvel-comics',
-  'dungeons-and-dragons': 'dungeons-dragons',
-}
-
-/** The "Horror & Film" UI genre rolls up several KB fandoms (same as kb-stats). */
-const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
-
-function fandomsFor(genre: string): string[] {
-  if (genre === 'neca') return NECA_FANDOMS
-  return [SLUG_TO_FANDOM[genre] ?? genre]
-}
+// URL slug → KB fandom remap + NECA rollup: single source of truth is
+// lib/genreFigures.ts (S20 fix, 2026-06-11, consolidated S52+1 — this page
+// used to carry its own copy, which is how every line link from /marvel,
+// /gijoe, and /teenage-mutant-ninja-turtles genre pages 404'd before S20).
 
 function figuresForLine(genre: string, line: string): KBFigure[] {
-  return fandomsFor(genre).flatMap(f => getFiguresByLine(f, line))
+  return fandomsForGenre(genre).flatMap(f => getFiguresByLine(f, line))
 }
 
 /**
@@ -97,7 +83,7 @@ function figuresForLine(genre: string, line: string): KBFigure[] {
 function resolveLineAlias(genre: string, line: string): string | null {
   const norm = line.toLowerCase().trim()
   const lines = new Set<string>()
-  for (const fandom of fandomsFor(genre)) {
+  for (const fandom of fandomsForGenre(genre)) {
     for (const f of getFiguresByFandom(fandom)) lines.add(f.product_line)
   }
 
@@ -109,7 +95,7 @@ function resolveLineAlias(genre: string, line: string): string | null {
   // 2. strip genre tokens off the ends
   const genreTokens = new Set([
     genre, ...genre.split('-'),
-    ...fandomsFor(genre).flatMap(f => [f, ...f.split('-')]),
+    ...fandomsForGenre(genre).flatMap(f => [f, ...f.split('-')]),
   ])
   const parts = norm.split('-')
   let start = 0
@@ -206,7 +192,7 @@ export default async function LineHubPage(
 
   // Guard: genre must map to at least one valid fandom (after remap/rollup)
   const validFandoms = getAllFandoms()
-  if (!fandomsFor(genre).some(f => validFandoms.includes(f))) notFound()
+  if (!fandomsForGenre(genre).some(f => validFandoms.includes(f))) notFound()
 
   const figures = figuresForLine(genre, line)
   if (!figures.length) {

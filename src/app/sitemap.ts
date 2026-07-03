@@ -1,20 +1,12 @@
 import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
+import { genreSlugForFandom as fandomToGenre } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
 
-// Fandom slugs (KB values) → genre slugs (URL path segments used by the router).
-// The character hub page at /[genre]/character/[slug] uses SLUG_TO_FANDOM to
-// resolve genre → fandom at render time. The sitemap must use the same genre
-// slugs so submitted URLs actually resolve. Identity entries omitted.
-const FANDOM_TO_GENRE: Record<string, string> = {
-  'tmnt':              'teenage-mutant-ninja-turtles',
-  'gi-joe':            'gijoe',
-  'marvel-comics':     'marvel',
-  'dungeons-dragons':  'dungeons-and-dragons',
-}
-function fandomToGenre(fandom: string): string {
-  return FANDOM_TO_GENRE[fandom] ?? fandom
-}
+// Fandom slug (KB value) → genre slug (URL path segment used by the router).
+// The character hub page at /[genre]/character/[slug] resolves genre → fandom
+// via lib/genreFigures.ts (SLUG_TO_FANDOM); this is its inverse, so the
+// sitemap uses the same genre slugs its own submitted URLs resolve to.
 
 const BASE = 'https://figurepinner.com'
 const STATIC_ID = 'static'
