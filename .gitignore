@@ -56,3 +56,7 @@ Thumbs.db
 # logs
 *.log
 npm-debug.log*
+
+# Plugin/skill artifacts dropped into .claude/ by Cowork sessions - never ship, never commit
+.claude/*
+!.claude/launch.json
