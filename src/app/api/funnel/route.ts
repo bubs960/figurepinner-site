@@ -10,6 +10,7 @@ const ALLOWED_EVENTS = new Set([
   'search_result_click',
   'figure_view',
   'ebay_exit',
+  'price_receipt_open',
 ])
 
 // S3 (hygiene plan, 2026-07-02): /api/funnel is an unauthenticated,
