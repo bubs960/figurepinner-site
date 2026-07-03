@@ -26,6 +26,8 @@ import { fandomsForGenre } from '@/lib/genreFigures'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
+import QuickLookAnchor from '@/app/components/QuickLookAnchor'
+import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 import JsonLd from '@/app/_components/JsonLd'
@@ -498,9 +500,13 @@ function CharFigureCard({ figure: f, accent }: { figure: KBFigure; accent: strin
     f.exclusive_to && f.exclusive_to !== 'None' ? f.exclusive_to : null
 
   return (
-    <a
+    <QuickLookAnchor
       href={prettyFigureUrl(f)}
       className="char-card"
+      image={thumb(f.canonical_image_url, 640)}
+      name={name}
+      sub={exclusive}
+      figureId={f.figure_id}
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -546,6 +552,6 @@ function CharFigureCard({ figure: f, accent }: { figure: KBFigure; accent: strin
       >
         <path d="M2 6h8M6 2l4 4-4 4" />
       </svg>
-    </a>
+    </QuickLookAnchor>
   )
 }

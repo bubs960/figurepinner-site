@@ -1,10 +1,13 @@
 // RelatedRow.tsx — Zone 6 + 7: Series companions / Character thread
-// Server component — pure SSR, no client JS needed
+// Server component; tiles render through the QuickLookAnchor client island
+// (S54: rail thumbs are too small to read — desktop hover blows each tile up
+// into a large quick-look card, portaled past this row's overflow-x clip).
 // Used for both "others in this series" and "other versions of this character"
 // Visual language: 2026-06-12 agency shelf spec — cream mounts, hairline borders, gold accents
 
 import type { CSSProperties } from 'react'
 import WaveProgress from './WaveProgress'
+import QuickLookAnchor from '@/app/components/QuickLookAnchor'
 
 interface RelatedFigure {
   figure_id: string
@@ -107,10 +110,13 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
         }}
       >
         {figures.map(fig => (
-          <a
+          <QuickLookAnchor
             key={fig.figure_id}
             href={fig.href}
             className="fp-relrow-card"
+            image={fig.imageUrl}
+            name={fig.name}
+            figureId={fig.figure_id}
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -178,7 +184,7 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
             >
               {fig.name}
             </span>
-          </a>
+          </QuickLookAnchor>
         ))}
       </div>
     </section>

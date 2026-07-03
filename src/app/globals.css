@@ -1839,3 +1839,44 @@ a:hover {
     transform: translateY(-50%);
   }
 }
+
+/* ── Quick-look card for tile rails + compact figure cards (S54 follow-up).
+      Body-portaled FIXED variant-B card, JS-driven from QuickLookAnchor.tsx —
+      rails sit in overflow-x scrollers that clip in-place overlays, and a
+      CSS :hover chain can't reach a body portal. ── */
+.fp-ql-card {
+  position: fixed;
+  z-index: 400;
+  width: 340px;
+  background: linear-gradient(170deg, var(--s2) 0%, var(--s1) 70%);
+  border: 1px solid rgba(232, 182, 76, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.75);
+  padding: 10px 10px 12px;
+  pointer-events: none;
+  transform-origin: left center;
+  animation: fp-ql-pop 0.26s cubic-bezier(0.22, 1.28, 0.36, 1) both;
+}
+.fp-ql-card.fp-ql-flip { transform-origin: right center; }
+@keyframes fp-ql-pop {
+  from { opacity: 0; transform: translateX(-6px) scale(0.94); }
+  to   { opacity: 1; transform: none; }
+}
+.fp-ql-pic {
+  width: 100%;
+  height: 340px;
+  border-radius: 10px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.fp-ql-pic img { width: 100%; height: 100%; object-fit: contain; }
+.fp-ql-cap { padding: 10px 4px 0; }
+.fp-ql-name { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+.fp-ql-sub { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
+.fp-ql-price { margin-top: 7px; display: flex; align-items: baseline; gap: 0.45rem; }
+.fp-ql-val { color: var(--gold); font-weight: 800; font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+.fp-ql-lbl { color: var(--muted); font-size: 0.7rem; }
+@media (prefers-reduced-motion: reduce) { .fp-ql-card { animation: none; } }
