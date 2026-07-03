@@ -105,6 +105,10 @@ export default function RootLayout({
             checks; it stays in head while the script loads lazily below. */}
         <meta name="google-adsense-account" content="ca-pub-1062337951127266" />
         <meta name="yandex-verification" content="5dd6adeb78ca7373" />
+        {/* Build stamp — which BUILD rendered this page (ISR pages cache HTML
+            across deploys, so this can lag the deployed sha; that lag is the
+            signal). Compare against /api/version. See next.config.ts. */}
+        <meta name="fp-build" content={process.env.FP_BUILD_SHA ?? 'unknown'} />
       </head>
       <body>
         <FunnelTracker />

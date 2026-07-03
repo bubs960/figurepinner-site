@@ -1,7 +1,27 @@
 import type { NextConfig } from 'next'
+import { execSync } from 'node:child_process'
+
+// Build-identity stamp (S52, 2026-07-03): baked into every rendered page as
+// <meta name="fp-build"> and served at /api/version. Purpose: ISR cache
+// persists ACROSS deploys, so "I'm looking at the live page" does NOT mean
+// "I'm looking at the new build" — comparing the page's fp-build sha against
+// /api/version (always-fresh) makes staleness checkable instead of guessable.
+function gitSha(): string {
+  try {
+    const dirty = execSync('git status --porcelain', { encoding: 'utf8' }).trim() ? '-dirty' : ''
+    return execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim() + dirty
+  } catch {
+    return 'unknown'
+  }
+}
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+
+  env: {
+    FP_BUILD_SHA: gitSha(),
+    FP_BUILD_TIME: new Date().toISOString(),
+  },
 
   // Bounds worst-case ISR staleness: Next's default emits
   // stale-while-revalidate=ONE_YEAR on ISR routes; with the KV incremental

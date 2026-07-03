@@ -14,7 +14,7 @@
     "kb:d1:canary-audit": "node scripts/audit-kb-d1-canary.mjs",
     "kb:d1:canary-live": "node scripts/check-kb-d1-canary-live.mjs",
     "build:cf": "npx @opennextjs/cloudflare build",
-    "deploy": "npx @opennextjs/cloudflare build && (npx @opennextjs/cloudflare deploy --cacheChunkSize 10 || npx @opennextjs/cloudflare deploy --cacheChunkSize 10) && node scripts/indexnow-ping.mjs && node scripts/post-deploy-git-check.mjs",
+    "deploy": "node scripts/predeploy-clean-check.mjs && npx @opennextjs/cloudflare build && (npx @opennextjs/cloudflare deploy --cacheChunkSize 10 || npx @opennextjs/cloudflare deploy --cacheChunkSize 10) && node scripts/indexnow-ping.mjs && node scripts/post-deploy-git-check.mjs",
     "deploy:seed": "npx @opennextjs/cloudflare populateCache remote || echo SEED FAILED non-fatal: prerendered pages will ISR-fill on first request instead"
   },
   "dependencies": {

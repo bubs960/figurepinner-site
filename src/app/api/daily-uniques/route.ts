@@ -9,7 +9,7 @@ import { checkRateLimit } from '@/lib/rateLimit'
  * API (dataset: httpRequests1dGroups).
  *
  * WHY THIS EXISTS (2026-06-26, web chat — R1 scoreboard):
- * Ground rule R1 — FigurePinner must hit 50 real human visits/day by 2026-07-03
+ * Ground rule R1 — FigurePinner must hit 50 real human visits/day by 2026-07-31 (extended from 7/03, override on record 2026-07-01)
  * or the figures vertical is decommissioned. We cannot grade that without a real,
  * verified daily-visitor number. This route is the durable, browser-readable
  * scoreboard feed. The local Node script mirrors this same RUM query when local
@@ -210,7 +210,7 @@ export async function GET(request: Request) {
     {
       zone: ZONE_NAME,
       window_days: days,
-      note: 'visits = CF Web Analytics (RUM beacon) sessions — fires in real browsers, EXCLUDES most bots, so a close human estimate. pageViews = pageloads. R1 target: 50 real human visits/day by 2026-07-03.',
+      note: 'visits = CF Web Analytics (RUM beacon) sessions — fires in real browsers, EXCLUDES most bots, so a close human estimate. pageViews = pageloads. R1 target: 50 real human visits/day by 2026-07-31 (extended from 7/03, override on record 2026-07-01).',
       avg_visits_per_day: avgUniques,
       latest_day: latest,
       rows,

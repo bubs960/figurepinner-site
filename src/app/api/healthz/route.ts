@@ -32,8 +32,17 @@ export async function GET() {
   }
 
   const status = dbOk ? 200 : 503
+  // build/builtAt: deploy-identity stamp (S52). This route re-renders every
+  // 30s, so it reports the CURRENTLY DEPLOYED build — compare against any
+  // page's <meta name="fp-build"> to detect ISR HTML that predates the deploy.
   return NextResponse.json(
-    { ok: dbOk, db: dbOk, ts: new Date().toISOString() },
+    {
+      ok: dbOk,
+      db: dbOk,
+      build: process.env.FP_BUILD_SHA ?? 'unknown',
+      builtAt: process.env.FP_BUILD_TIME ?? 'unknown',
+      ts: new Date().toISOString(),
+    },
     {
       status,
       headers: {
