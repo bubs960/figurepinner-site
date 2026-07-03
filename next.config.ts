@@ -85,6 +85,23 @@ const nextConfig: NextConfig = {
     }))
   },
 
+  // /sitemap.xml → the sitemapindex route handler (S55, 2026-07-03). The
+  // bare URL 404'd after the D3 per-fandom split (Next emits only
+  // /sitemap/[id].xml children, no index). beforeFiles is load-bearing: the
+  // app/sitemap.ts metadata route claims /sitemap.xml in dev (serving an
+  // empty <urlset>), so the rewrite must run before filesystem routing to
+  // win in both dev and prod. Rewrite, not redirect — crawlers keep the
+  // canonical well-known URL.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/sitemap.xml', destination: '/sitemap-index.xml' },
+      ],
+      afterFiles: [],
+      fallback: [],
+    }
+  },
+
   // Security + deep-link headers
   async headers() {
     return [
