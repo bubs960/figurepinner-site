@@ -1788,10 +1788,12 @@ a:hover {
   padding: 10px 10px 12px;
   pointer-events: none;
   transform-origin: left center;
-  animation: fp-ql-pop 0.26s cubic-bezier(0.22, 1.28, 0.36, 1) both;
+  /* S56: gentle fade-up instead of the springy pop — combined with the 450ms
+     hover-intent delay the card eases in rather than ambushing the cursor. */
+  animation: fp-ql-pop 0.32s ease-out both;
 }
 @keyframes fp-ql-pop {
-  from { opacity: 0; transform: translateX(-6px) scale(0.94); }
+  from { opacity: 0; transform: translateY(4px) scale(0.98); }
   to   { opacity: 1; transform: none; }
 }
 .fp-ql-pic {

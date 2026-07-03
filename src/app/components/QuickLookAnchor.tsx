@@ -14,7 +14,10 @@
  *
  * Hygiene contract:
  *  - desktop pointers only ((hover:hover)+(pointer:fine) checked in JS);
- *  - 170ms hover-intent delay (scanning a list doesn't strobe);
+ *  - 450ms hover-intent delay (S56: 170ms fired while merely scanning — the
+ *    card must feel deliberate, not ambush the pointer);
+ *  - card sits BESIDE the anchor (right, flipping left at the viewport edge)
+ *    so the rest of the list stays visible while it's open;
  *  - card is pointer-events:none — clicks pass through;
  *  - any scroll hides it (fixed anchors drift under a scrolling page/rail);
  *  - median honest-blank per the D4 sold-count floor; callers with batched
@@ -68,11 +71,13 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
     const el = hoverEl.current
     if (!el) return
     const r = el.getBoundingClientRect()
-    // Horizontal: overlay the anchor's left edge; flip to its right edge when
-    // that would cross the viewport; clamp to the edge gap either way.
-    const flip = r.left + CARD_W + EDGE > window.innerWidth
+    // Horizontal: BESIDE the anchor, never on top of it (S56 — overlaying the
+    // row's left edge hid the rest of the list while scanning). Prefer the
+    // right side; flip to the left side when there's no room; clamp last.
+    const GAP = 14
+    const fitsRight = r.right + GAP + CARD_W + EDGE <= window.innerWidth
     const left = Math.min(
-      Math.max(EDGE, flip ? r.right - CARD_W + 8 : r.left - 8),
+      Math.max(EDGE, fitsRight ? r.right + GAP : r.left - GAP - CARD_W),
       window.innerWidth - CARD_W - EDGE,
     )
     // Vertical: center on the anchor, clamped so the card never leaves the
@@ -132,7 +137,7 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
       if (!image || !desktopPointer()) return
       hoverEl.current = e.currentTarget
       if (timer.current) clearTimeout(timer.current)
-      timer.current = setTimeout(show, 170)
+      timer.current = setTimeout(show, 450)
     },
     onPointerLeave() { hide() },
     onFocus(e: React.FocusEvent<HTMLElement>) {
