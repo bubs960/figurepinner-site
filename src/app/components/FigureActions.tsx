@@ -149,12 +149,11 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
 
-      {/* ── Vault gate (Pro upsell when free vault is full) ── */}
+      {/* ── Vault limit reached (Pro not purchasable yet — no dead-end CTA) ── */}
       {vaultGate && (
         <div className="fp-action-gate">
           <div className="fp-action-gate__title">Vault full ({vaultGate.limit} figures)</div>
-          <div className="fp-action-gate__body">Upgrade to Pro for unlimited storage.</div>
-          <a href={vaultGate.upgrade_url} className="btn btn-primary">Upgrade to Pro</a>
+          <div className="fp-action-gate__body">You&apos;ve reached the free plan&apos;s storage limit.</div>
         </div>
       )}
 
@@ -262,12 +261,11 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
         </button>
       )}
 
-      {/* ── Deal Alert (Pro-leaning) ── */}
+      {/* ── Deal Alert limit reached (Pro not purchasable yet — no dead-end CTA) ── */}
       {alertGate ? (
         <div className="fp-action-gate">
           <div className="fp-action-gate__title">{alertGate.limit} alerts is the Free limit</div>
-          <div className="fp-action-gate__body">Unlimited with Pro.</div>
-          <a href={alertGate.upgrade_url} className="btn btn-primary">Upgrade to Pro</a>
+          <div className="fp-action-gate__body">You&apos;ve reached the free plan&apos;s alert limit.</div>
         </div>
       ) : alertStatus === 'done' ? (
         <div className="fp-action-status">Alert set</div>
