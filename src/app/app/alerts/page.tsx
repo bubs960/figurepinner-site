@@ -338,7 +338,9 @@ function ProGate() {
         }}>
           Pro alerts return soon — held while we build out more verticals.
         </div>
-        <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Cancel anytime. Includes all Pro features.</p>
+        {/* Purchase copy ("Cancel anytime...") removed 2026-07-03 (Steve: hide
+            dead-end Pro CTAs) — orphaned sales language under a returns-soon
+            notice with nothing to buy. Restore with the Pro relaunch. */}
       </div>
     </div>
   )
