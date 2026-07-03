@@ -29,8 +29,10 @@ export default async function OpenDeepLink({
   const figure = getFigureById(figure_id)
 
   if (!figure) {
-    // Unknown figure_id — redirect to search rather than 404
-    redirect('/app')
+    // Unknown figure_id — redirect to search rather than 404. (Was '/app',
+    // which auth-walls anonymous visitors at Clerk sign-in — a deep link with
+    // a stale fid dead-ended at a login form. S52.)
+    redirect('/search')
   }
 
   // Redirect to canonical web URL — app would have intercepted before this

@@ -15,12 +15,14 @@
  * loses no internal linking.
  */
 
-// /deals is intentionally omitted from the footer until it has content (W6):
-// it populates only when pricing coverage surfaces real drops; the page stays
-// live at its URL. (/news was removed entirely 2026-06-25 — Steve: "we don't
-// have news"; the public route now 404s. Admin authoring tooling kept.)
+// /deals is intentionally omitted from the footer (W6). NOTE (S52): the page
+// no longer "stays live" — commit 127b4c3 (2026-06-06) gutted it to a hard
+// notFound(), so /deals 404s outright. Restore-or-delete is a Steve call.
+// (/news was removed entirely 2026-06-25 — Steve: "we don't have news"; the
+// public route now 404s. Admin authoring tooling kept.)
 const STANDARD_LINKS: ReadonlyArray<[label: string, href: string]> = [
   ['Price Guide', '/guides'],
+  ['Scan a Barcode', '/scan'],
   ['About', '/about'],
   ['Methodology', '/methodology'],
   ['Privacy', '/privacy'],

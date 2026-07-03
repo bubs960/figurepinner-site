@@ -3,6 +3,7 @@ import { permanentRedirect } from 'next/navigation'
 import { getFigureById, getFigureByStableSuffix, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
+import { enrichedDescription } from './_lib/enrichedCopy'
 
 // ISR — figure detail re-rendered at most once per hour per figure_id.
 // Public, immutable-per-figure data; user-specific bits (vault status etc.)
@@ -47,11 +48,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Canonical points to the keyword-rich pretty URL
   const canonical = `${BASE}${prettyFigureUrl(local)}`
 
+  // Enriched prose leads when it passes the quality gates (S52 meta wiring —
+  // differentiates ~18K near-identical descriptions); templated fallback else.
+  const enriched = enrichedDescription(local)
+  const priceTail = medianLabel
+    ? `Sells for ~${medianLabel} — real eBay solds, free on FigurePinner.`
+    : `Real eBay sold prices, free on FigurePinner.`
+
   return {
-    title: `${displayName} — ${line} Price & Value | FigurePinner`,
-    description: medianLabel
-      ? `${displayName} ${line} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
-      : `${displayName} ${line} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
+    // No '| FigurePinner' here — the root layout title template appends it;
+    // hard-coding it too rendered 'Price & Value | FigurePinner | FigurePinner'
+    // on every figure SERP title (S52 fix).
+    title: `${displayName} — ${line} Price & Value`,
+    description: enriched
+      ? `${enriched} ${priceTail}`
+      : medianLabel
+        ? `${displayName} ${line} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
+        : `${displayName} ${line} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
     // Noindex /figure/[id] when the figure has a unique pretty URL — the pretty
     // URL is the canonical and Google was treating both as duplicate pages.

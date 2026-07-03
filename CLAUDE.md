@@ -41,6 +41,19 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
 - Guide articles live in `src/app/guides/_data/articles.ts`; the RWB seasonal
   hub is a static route at `src/app/guides/red-white-blue/`.
 
+## Styling (S52 design-system extraction — audit-backed, keep it this small)
+
+- **Use the shared primitives** in `src/app/components/ui.tsx` — `SectionLabel`,
+  `Card`, `CtaButton` — instead of hand-rolling those patterns (the audit found
+  32/22/12 drifted copies respectively). Migrate old pages only when touched
+  for another reason; never a mass find-replace.
+- **Canonical tokens:** `--s1 --border --text --muted --blue --font-display`
+  (+ `--r` for radius). The `--fp-*` names are legacy aliases — they keep
+  working, but write NO new code with them.
+- Meta/JSON-LD on figure pages: enriched prose flows through the quality gate
+  in `src/app/figure/[figure_id]/_lib/enrichedCopy.ts` — never bypass it to
+  inline `match_represented` raw (it can contain internal QA language).
+
 ## Session discipline
 
 - Cross-chat state: `C:\Users\bubs9\Documents\Claude\Projects\Bridge\`

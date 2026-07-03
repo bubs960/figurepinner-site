@@ -23,6 +23,7 @@ import MobileActionBar from './MobileActionBar'
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
+import { enrichedDescription } from '../_lib/enrichedCopy'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
@@ -519,15 +520,21 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         }
       : undefined
 
+  // Gated enrichment prose replaces the templated boilerplate when present
+  // (S52 meta wiring — same gate as generateMetadata, so meta description and
+  // structured data tell Google the same differentiated story per figure).
+  const jsonLdEnriched = enrichedDescription(local)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: `${displayName} Price Guide`,
-    description: `${displayName} action figure price guide by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
+    description: jsonLdEnriched
+      ?? `${displayName} action figure price guide by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
     mainEntity: {
       '@type': 'Product',
       name:        displayName,
-      description: `${displayName} action figure by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
+      description: jsonLdEnriched
+        ?? `${displayName} action figure by ${brand}. ${line}${seriesNum ? ` Series ${seriesNum}` : ''}.`,
       brand:       { '@type': 'Brand', name: brand },
       image:       imageUrlFinal ?? undefined,
       category:    prettifySlug(genre),

@@ -26,6 +26,7 @@ import SiteHeader from '@/app/components/SiteHeader'
 import FigureThumb from '@/app/components/FigureThumb'
 import AdSlot from '@/app/components/AdSlot'
 import JsonLd from '@/app/_components/JsonLd'
+import { SectionLabel, Card, CtaButton } from '@/app/components/ui'
 
 const BASE = 'https://figurepinner.com'
 const CANONICAL = `${BASE}/guides/red-white-blue`
@@ -154,12 +155,9 @@ export default async function RedWhiteBluePage() {
       <div style={{ maxWidth: '1080px', margin: '0 auto', padding: '3rem 1.25rem 5rem' }}>
         {/* Hero */}
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{
-            fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
-            color: '#e53238', marginBottom: '0.75rem',
-          }}>
+          <SectionLabel color="#e53238" style={{ letterSpacing: '0.14em', marginBottom: '0.75rem' }}>
             ★ ★ ★ &nbsp;July 4th Special&nbsp; ★ ★ ★
-          </div>
+          </SectionLabel>
           <h1 style={{
             fontFamily: 'var(--font-display)', fontSize: 'clamp(2.1rem, 6vw, 3.25rem)',
             lineHeight: 1.05, letterSpacing: '0.01em', margin: '0 0 1rem', color: 'var(--fp-text)',
@@ -190,15 +188,13 @@ export default async function RedWhiteBluePage() {
             const accent = FANDOM_ACCENT[t.entry.fandom] ?? 'var(--fp-accent)'
             const range = ranges.get(t.entry.character + t.entry.fandom)
             return (
-              <a
+              <Card
                 key={t.entry.fandom + t.entry.character}
+                as="a"
                 href={t.href}
                 style={{
                   display: 'flex', flexDirection: 'column', gap: '0.75rem',
-                  padding: '1.1rem', textDecoration: 'none',
-                  background: 'var(--s1)', border: '1px solid var(--border)',
                   borderTop: `3px solid ${accent}`,
-                  borderRadius: '12px', color: 'var(--text)',
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -211,12 +207,9 @@ export default async function RedWhiteBluePage() {
                   />
                 </div>
                 <div>
-                  <div style={{
-                    fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em',
-                    textTransform: 'uppercase', color: accent, marginBottom: '0.3rem',
-                  }}>
+                  <SectionLabel color={accent} style={{ fontSize: '0.68rem', marginBottom: '0.3rem' }}>
                     {FANDOM_LABEL[t.entry.fandom] ?? t.entry.fandom}
-                  </div>
+                  </SectionLabel>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.08rem', fontWeight: 700, lineHeight: 1.2, marginBottom: '0.35rem' }}>
                     {t.entry.label}
                   </div>
@@ -232,7 +225,7 @@ export default async function RedWhiteBluePage() {
                     )}
                   </div>
                 </div>
-              </a>
+              </Card>
             )
           })}
         </div>
@@ -248,19 +241,8 @@ export default async function RedWhiteBluePage() {
             real eBay sold data — {`look yours up free.`}
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/search?q=captain+america" style={{
-              display: 'inline-block', background: 'var(--blue)', color: '#fff', textDecoration: 'none',
-              padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600,
-            }}>
-              All Captain America figures →
-            </a>
-            <a href="/gijoe" style={{
-              display: 'inline-block', background: 'var(--s1)', border: '1px solid var(--border)',
-              color: 'var(--text)', textDecoration: 'none',
-              padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600,
-            }}>
-              A Real American Hero: G.I. Joe →
-            </a>
+            <CtaButton href="/search?q=captain+america">All Captain America figures →</CtaButton>
+            <CtaButton href="/gijoe" variant="secondary">A Real American Hero: G.I. Joe →</CtaButton>
           </div>
         </div>
       </div>

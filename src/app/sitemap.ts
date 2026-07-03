@@ -65,6 +65,11 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
     // /pro removed from sitemap 2026-06-06 (Steve): Pro tier disabled until
     // GrailPulse has ≥3 verticals; /pro now redirects to home. Re-add when restored.
     { path: '/about',    changeFrequency: 'monthly', priority: 0.6 },
+    // /methodology + /scan added S52: both fully-built public pages that were
+    // simply missing here (methodology is footer+header-linked; scan had no
+    // links at all until S52).
+    { path: '/methodology', changeFrequency: 'monthly', priority: 0.6 },
+    { path: '/scan',        changeFrequency: 'monthly', priority: 0.5 },
     { path: '/privacy',  changeFrequency: 'yearly',  priority: 0.2 },
     { path: '/terms',    changeFrequency: 'yearly',  priority: 0.2 },
   ]

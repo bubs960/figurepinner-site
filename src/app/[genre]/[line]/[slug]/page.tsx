@@ -19,6 +19,7 @@ import { getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureU
 import { getFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
 // client-side in FigureDetailContent so caching is safe. Was force-dynamic;
@@ -89,11 +90,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonical = `${BASE}${prettyFigureUrl(figure)}`
 
+  // Enriched prose leads when it passes the quality gates (S52 meta wiring) —
+  // this is the INDEXED canonical route, so it matters most here.
+  const enriched = enrichedDescription(figure)
+  const priceTail = medianLabel
+    ? `Sells for ~${medianLabel} — real eBay solds, free on FigurePinner.`
+    : `Real eBay sold prices, free on FigurePinner.`
+
   return {
-    title: `${displayName} — ${lineName} Price & Value | FigurePinner`,
-    description: medianLabel
-      ? `${displayName} ${lineName} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
-      : `${displayName} ${lineName} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
+    // No '| FigurePinner' here — the root layout title template appends it;
+    // hard-coding it too rendered 'Price & Value | FigurePinner | FigurePinner'
+    // on every figure SERP title (S52 fix).
+    title: `${displayName} — ${lineName} Price & Value`,
+    description: enriched
+      ? `${enriched} ${priceTail}`
+      : medianLabel
+        ? `${displayName} ${lineName} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
+        : `${displayName} ${lineName} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
     ...(hasConfirmedZeroSoldData
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
