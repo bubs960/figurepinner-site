@@ -22,7 +22,9 @@ type SearchResult = {
   character_slug?: string
 }
 
-type SparkPrice = { median: number | null; soldCount: number }
+// `stat` = which aggregate `median` holds (route falls back to avg_sold when
+// a snapshot has no median_sold) — the label must say what the number is.
+type SparkPrice = { median: number | null; soldCount: number; stat?: 'median' | 'avg' }
 
 // Dropdown thumb rendition — 64px box, 2× for retina.
 const THUMB_SIZE = 64
@@ -634,8 +636,8 @@ function DropdownRow({
           <CountUpPrice value={price.median} />
           <div style={{ fontSize: '0.62rem', color: 'var(--muted)', marginTop: 1 }}>
             {price.soldCount >= SOLD_COUNT_CONFIDENCE_FLOOR
-              ? `median · ${price.soldCount} sold`
-              : 'median'}
+              ? `${price.stat ?? 'median'} · ${price.soldCount} sold`
+              : (price.stat ?? 'median')}
           </div>
         </div>
       )}

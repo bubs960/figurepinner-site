@@ -29,6 +29,9 @@ interface Comp {
 
 interface Pricing {
   median: number | null
+  /** True when `median` is actually the average (snapshot had no median_sold) —
+   *  the "All" ledger row label must say so (S55 FTC audit). */
+  medianIsAvg?: boolean
   comp_count: number
   chart_points: Array<{ date: string; price: number }>
   recent_comps: Comp[]
@@ -182,6 +185,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
             label="All"
             median={pricing.median ?? median(comps.map(c => c.price))}
             count={pricing.median != null ? pricing.comp_count : comps.length}
+            stat={pricing.median != null && pricing.medianIsAvg ? 'avg' : 'median'}
           />
         )}
       </div>
@@ -209,7 +213,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
   )
 }
 
-function LedgerRow({ label, median: med, count }: { label: string; median: number; count: number }) {
+function LedgerRow({ label, median: med, count, stat = 'median' }: { label: string; median: number; count: number; stat?: 'median' | 'avg' }) {
   return (
     <div
       className="fp-marketledger-row"
@@ -268,7 +272,7 @@ function LedgerRow({ label, median: med, count }: { label: string; median: numbe
         color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
         whiteSpace: 'nowrap',
       }}>
-        median
+        {stat}
       </span>
     </div>
   )

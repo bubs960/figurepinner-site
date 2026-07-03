@@ -13,6 +13,9 @@ interface CollectionPanelProps {
   genre: string
   ebaySearchUrl: string
   median: number | null
+  /** True when `median` is actually the average (snapshot had no median_sold) —
+   *  the label must say so (S55 FTC audit). */
+  medianIsAvg?: boolean
   compCount: number
   scale: string | null
   series: number | null
@@ -22,7 +25,7 @@ interface CollectionPanelProps {
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, compCount, scale, series, packSize, exclusiveTo,
+  median, medianIsAvg, compCount, scale, series, packSize, exclusiveTo,
 }: CollectionPanelProps) {
   return (
     <div className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -80,7 +83,7 @@ export default function CollectionPanel({
                 color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
                 marginTop: '0.375rem',
               }}>
-                median sold · {compCount} comps
+                {medianIsAvg ? 'avg' : 'median'} sold · {compCount} comps
               </div>
             </>
           ) : (

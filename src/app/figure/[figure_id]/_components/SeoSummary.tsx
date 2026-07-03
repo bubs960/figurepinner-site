@@ -102,6 +102,8 @@ interface SeoSummaryProps {
   exclusiveTo:  string | null
   soldCount:    number
   median:       number | null
+  /** True when `median` is actually the average (snapshot had no median_sold). */
+  medianIsAvg?: boolean
   trendPct:     number | null
   soldHistory:  Array<{ sold_date: string }>
 }
@@ -116,6 +118,7 @@ export default function SeoSummary({
   exclusiveTo,
   soldCount,
   median,
+  medianIsAvg,
   trendPct,
   soldHistory,
 }: SeoSummaryProps) {
@@ -129,7 +132,7 @@ export default function SeoSummary({
   // Price sentence
   let priceSentence: string
   if (soldCount >= 3 && median != null) {
-    priceSentence = `Based on ${soldCount} recent eBay sold listings, it currently sells for a median of ${formatCurrency(median)}.`
+    priceSentence = `Based on ${soldCount} recent eBay sold listings, it currently sells for ${medianIsAvg ? 'an average' : 'a median'} of ${formatCurrency(median)}.`
   } else if (soldCount > 0) {
     priceSentence = `Pricing data is limited (${soldCount} comp${soldCount === 1 ? '' : 's'}) — check eBay for the most current market value.`
   } else {

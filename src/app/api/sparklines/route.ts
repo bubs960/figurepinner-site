@@ -8,7 +8,11 @@ export async function GET(req: NextRequest) {
   const ids = req.nextUrl.searchParams.get('ids')?.split(',').filter(Boolean).slice(0, 40) ?? []
   if (!ids.length) return NextResponse.json({})
 
-  const results: Record<string, { points: number[]; trend: 'up' | 'down' | 'flat'; median: number | null; soldCount: number }> = {}
+  // `stat` says which aggregate `median` actually holds: snapshots missing
+  // median_sold fall back to avg_sold, and labeling an average "median" is
+  // the FTC label-truthfulness drift the 5/22 estimated-price spec exists to
+  // prevent (S55 audit). Clients render the label from this field.
+  const results: Record<string, { points: number[]; trend: 'up' | 'down' | 'flat'; median: number | null; soldCount: number; stat: 'median' | 'avg' }> = {}
 
   await Promise.allSettled(
     ids.map(async (id) => {
@@ -25,6 +29,7 @@ export async function GET(req: NextRequest) {
         }
         const prices = (snap.recent ?? []).map((r) => r.price).filter((p) => p > 0)
         const median = snap.median_sold ?? snap.avg_sold ?? null
+        const stat: 'median' | 'avg' = snap.median_sold != null ? 'median' : 'avg'
         // trend needs at least 2 points; median can stand alone
         if (prices.length < 2 && median == null) return
         const first = prices.slice(0, Math.ceil(prices.length / 2))
@@ -35,7 +40,7 @@ export async function GET(req: NextRequest) {
           prices.length < 2  ? 'flat' :
           avgLast > avgFirst * 1.05 ? 'up' :
           avgLast < avgFirst * 0.95 ? 'down' : 'flat'
-        results[id] = { points: prices, trend, median, soldCount: snap.sold_count ?? 0 }
+        results[id] = { points: prices, trend, median, soldCount: snap.sold_count ?? 0, stat }
       } catch {
         // skip missing snapshots
       }

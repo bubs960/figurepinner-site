@@ -27,7 +27,10 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { SOLD_COUNT_CONFIDENCE_FLOOR } from '@/lib/searchDisplay'
 
-export type QuickLookPrice = { median: number | null; soldCount: number }
+// `stat` = which aggregate `median` holds ('avg' when the snapshot had no
+// median_sold and the sparklines route fell back) — labels must not call an
+// average a median (S55 FTC audit).
+export type QuickLookPrice = { median: number | null; soldCount: number; stat?: 'median' | 'avg' }
 
 // Module-wide so hovering the same figure twice (or in two rails) never
 // refetches. `null` doubles as the in-flight marker.
@@ -161,8 +164,8 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
                 <span className="fp-ql-val">${Math.round(effectivePrice.median)}</span>
                 <span className="fp-ql-lbl">
                   {effectivePrice.soldCount >= SOLD_COUNT_CONFIDENCE_FLOOR
-                    ? `median · ${effectivePrice.soldCount} sold`
-                    : 'median'}
+                    ? `${effectivePrice.stat ?? 'median'} · ${effectivePrice.soldCount} sold`
+                    : (effectivePrice.stat ?? 'median')}
                 </span>
               </div>
             )}

@@ -49,6 +49,9 @@ export default function LiveMedian({
   figureId?: string
 }) {
   const median = snap ? (snap.median_sold ?? snap.avg_sold) : null
+  // Label truthfulness (S55 FTC audit): when a snapshot has no median_sold the
+  // number shown is the average — say so instead of calling it a median.
+  const stat = snap?.median_sold != null ? 'median' : 'avg'
   const n = snap?.sold_count ?? 0
   const hasData = median !== null && n > 0
 
@@ -105,7 +108,7 @@ export default function LiveMedian({
               {fmtMoney(median as number)}
             </div>
             <div style={{ fontSize: '0.66rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--fp-muted)', marginTop: '0.3rem' }}>
-              {n} sold &middot; median &middot; live
+              {n} sold &middot; {stat} &middot; live
             </div>
           </>
         ) : (

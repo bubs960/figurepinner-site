@@ -94,7 +94,7 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)            // load-more: how many filtered results to render
   const [focused, setFocused]         = useState(false)
   const [trackRecord, setTrackRecord] = useState<Record<string, 'idle'|'loading'|'added'|'exists'|'error'>>({})
-  const [sparklines, setSparklines]   = useState<Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number }>>({})
+  const [sparklines, setSparklines]   = useState<Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number; stat?: 'median'|'avg' }>>({})
   const inputRef  = useRef<HTMLInputElement>(null)
   const debounce  = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sparklineAbort = useRef<AbortController | null>(null)
@@ -214,7 +214,7 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
     sparklineAbort.current = ctrl
     fetch(`/api/sparklines?ids=${encodeURIComponent(ids.slice(0, 40).join(','))}`, { signal: ctrl.signal })
       .then(r => r.ok ? r.json() : {})
-      .then(data => setSparklines(data as Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number }>))
+      .then(data => setSparklines(data as Record<string, { points: number[]; trend: 'up'|'down'|'flat'; median: number|null; soldCount: number; stat?: 'median'|'avg' }>))
       .catch(e => { if (e?.name !== 'AbortError') console.warn('sparklines:', e) })
   }, [results])
 
@@ -683,7 +683,7 @@ function FigureResultCard({
 }: {
   result: SearchResult
   query: string
-  sparkline?: { points: number[]; trend: 'up' | 'down' | 'flat'; median: number|null; soldCount: number }
+  sparkline?: { points: number[]; trend: 'up' | 'down' | 'flat'; median: number|null; soldCount: number; stat?: 'median' | 'avg' }
   trackState: 'idle' | 'loading' | 'added' | 'exists' | 'error'
   onTrack: () => void
   /** loading="eager" for the first above-the-fold cards (kills the gray-grid first impression). */
@@ -772,8 +772,8 @@ function FigureResultCard({
               </span>
               <span style={{ fontSize: '0.68rem', color: 'var(--muted)' }}>
                 {sparkline.soldCount >= SOLD_COUNT_CONFIDENCE_FLOOR
-                  ? `median · ${sparkline.soldCount} sold`
-                  : 'median'}
+                  ? `${sparkline.stat ?? 'median'} · ${sparkline.soldCount} sold`
+                  : (sparkline.stat ?? 'median')}
               </span>
               {sparkline.points.length >= 2 && (
                 <Sparkline points={sparkline.points} trend={sparkline.trend} width={40} height={14} />

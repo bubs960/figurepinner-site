@@ -300,6 +300,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const valuePricing = (() => {
     if (!price || price.soldCount === 0) return null
     const median = headlineBucket?.median ?? price.medianSold ?? price.avgSold ?? null
+    // Label truthfulness (S55 FTC audit): the last fallback is the AVERAGE —
+    // anything that names this value must not call it a median then.
+    const medianIsAvg = headlineBucket?.median == null && price.medianSold == null && price.avgSold != null
     // Display range. Floor + base ceiling = the snapshot bucket percentiles
     // (full corpus) when present, else the soldHistory percentiles. The ceiling
     // is then ADDITIONALLY capped by a Tukey far-out fence over the displayed
@@ -335,6 +338,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       : baseConfidence
     return {
       median,
+      medianIsAvg,
       trend_90d_pct: computeTrend(price.soldHistory),
       low,
       high,
@@ -385,6 +389,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const marketPricing = price && price.soldCount > 0 ? {
     median:       price.medianSold ?? price.avgSold ?? null,
+    medianIsAvg:  price.medianSold == null && price.avgSold != null,
     comp_count:   price.soldCount,
     chart_points: price.soldHistory.map(s => ({ date: s.sold_date, price: s.price })),
     recent_comps: price.soldHistory.map(s => ({
@@ -473,7 +478,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const valueProperties = [
     valuePricing?.median != null
-      ? { '@type': 'PropertyValue', name: 'Median sold price', value: formatCurrency(valuePricing.median) }
+      ? { '@type': 'PropertyValue', name: valuePricing.medianIsAvg ? 'Average sold price' : 'Median sold price', value: formatCurrency(valuePricing.median) }
       : null,
     price?.soldCount != null
       ? { '@type': 'PropertyValue', name: 'Sold comp count', value: String(price.soldCount) }
@@ -700,6 +705,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               genre={genre}
               ebaySearchUrl={ebayUrl}
               median={valuePricing?.median ?? null}
+              medianIsAvg={valuePricing?.medianIsAvg ?? false}
               compCount={price?.soldCount ?? 0}
               scale={local.scale ?? null}
               series={seriesNum}
@@ -720,6 +726,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           exclusiveTo={(local.exclusive_to && local.exclusive_to !== 'None') ? local.exclusive_to : null}
           soldCount={price?.soldCount ?? 0}
           median={valuePricing?.median ?? null}
+          medianIsAvg={valuePricing?.medianIsAvg ?? false}
           trendPct={valuePricing?.trend_90d_pct ?? null}
           soldHistory={price?.soldHistory ?? []}
         />
