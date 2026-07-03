@@ -1,6 +1,12 @@
+'use client'
+
 // MarketPanel.tsx — Zone 4: Sold price summary (no listing rows)
 //
 // Changelog:
+//   2026-07-02: Added an expandable "See the comps" list (WP1, price-receipt
+//               feature) — price + condition + sold date per comp, deliberately
+//               NO listing title, so it can't reintroduce the exact problem
+//               2026-05-29 removed titles for. Fires price_receipt_open on open.
 //   2026-06-12: Ported to the shelf design language — kicker header over a gold
 //               hairline, condition medians as hairline ledger rows with dotted
 //               leaders + gold SOLD chips, prices in display font at modest size.
@@ -9,7 +15,9 @@
 //               killing credibility. Now shows total count + avg NIB / avg Loose only.
 //   2026-05-12: Chart removed, eBay exit CTA removed, conditions collapsed to MOC/Loose.
 
-import { formatCurrency } from '../_lib/figureFormatters'
+import { useState } from 'react'
+import { formatCurrency, formatDate } from '../_lib/figureFormatters'
+import { trackFunnel } from '@/app/_lib/funnelClient'
 
 interface Comp {
   title: string
@@ -52,12 +60,26 @@ function median(arr: number[]): number {
   return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName: _figureName, buckets: snapshotBuckets }: MarketPanelProps) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- ebaySearchUrl kept in the prop contract, unused here
+export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, buckets: snapshotBuckets }: MarketPanelProps) {
+  const [showComps, setShowComps] = useState(false)
+
   if (!pricing || pricing.comp_count < 1) return null
 
   const comps = pricing.recent_comps
   if (!comps.length) return null
+
+  // Most recent first; cap the visible list — this is supplementary evidence
+  // for the median above, not a full listing browser.
+  const compRows = [...comps]
+    .sort((a, b) => (b.sold_date || '').localeCompare(a.sold_date || ''))
+    .slice(0, 15)
+
+  function toggleComps() {
+    const next = !showComps
+    setShowComps(next)
+    if (next) trackFunnel('price_receipt_open', { figure_name: figureName, comp_count: comps.length })
+  }
 
   // Show the condition split ONLY when the snapshot says it is statistically
   // valid — segmentation split / sealed-only / loose-only — the SAME gate the
@@ -88,6 +110,35 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         .fp-marketledger-row:nth-child(3){animation-delay:.18s}
         @media (prefers-reduced-motion: reduce){
           .fp-marketledger-row{animation:none;opacity:1}
+        }
+        .fp-comps-toggle{
+          background:none;border:none;cursor:pointer;padding:0.6rem 0 0.2rem;
+          font-family:var(--fp-font-body);font-size:11px;font-weight:600;
+          letter-spacing:0.1em;text-transform:uppercase;
+          color:var(--shelf-gold,#e0a83e);
+        }
+        .fp-comps-toggle:hover{color:var(--shelf-gold-hi,#f5c462)}
+        .fp-comps-list{
+          overflow:hidden;max-height:0;opacity:0;
+          transition:max-height 0.3s ease,opacity 0.25s ease;
+        }
+        .fp-comps-list.open{max-height:600px;opacity:1}
+        @media (prefers-reduced-motion: reduce){
+          .fp-comps-list{transition:none}
+        }
+        .fp-comp-row{
+          display:flex;align-items:center;gap:0.75rem;padding:0.4rem 0;
+          font-family:var(--fp-font-body);font-size:11.5px;
+          border-bottom:1px solid var(--shelf-line,rgba(242,232,213,.06));
+        }
+        .fp-comp-date{color:var(--shelf-cream-mut,rgba(242,232,213,.5));min-width:3.6em}
+        .fp-comp-condition{
+          color:var(--shelf-cream-dim,rgba(242,232,213,.7));flex:1 1 auto;
+          text-transform:capitalize;
+        }
+        .fp-comp-price{
+          font-family:var(--fp-font-display);color:var(--shelf-cream,#f2e8d5);
+          font-variant-numeric:tabular-nums;
         }
       `}</style>
 
@@ -133,6 +184,26 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
             count={pricing.median != null ? pricing.comp_count : comps.length}
           />
         )}
+      </div>
+
+      {/* Expandable comp list — price/condition/date only, deliberately no
+          listing title (see 2026-05-29 changelog entry above). */}
+      <button
+        type="button"
+        className="fp-comps-toggle"
+        onClick={toggleComps}
+        aria-expanded={showComps}
+      >
+        {showComps ? 'Hide the comps ▴' : 'See the comps ▾'}
+      </button>
+      <div className={`fp-comps-list${showComps ? ' open' : ''}`}>
+        {compRows.map((c, i) => (
+          <div className="fp-comp-row" key={`${c.sold_date}-${i}`}>
+            <span className="fp-comp-date">{formatDate(c.sold_date)}</span>
+            <span className="fp-comp-condition">{c.condition}</span>
+            <span className="fp-comp-price">{formatCurrency(c.price)}</span>
+          </div>
+        ))}
       </div>
     </section>
   )

@@ -6,6 +6,7 @@ export type FunnelEvent =
   | 'search_result_click'
   | 'figure_view'
   | 'ebay_exit'
+  | 'price_receipt_open'
 
 type FunnelDetail = Record<string, string | number | boolean | null | undefined>
 
