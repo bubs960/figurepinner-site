@@ -41,7 +41,9 @@ export const RWB_ROSTER: RwbRosterEntry[] = [
     seedFid: 'fp_wrestling_mattel_elite_101_mr-america_1eb9fadba86e',
   },
   { fandom: 'wrestling', character: 'hulk-hogan', label: 'Hulk Hogan', tagline: 'The Real American himself' },
-  { fandom: 'wrestling', character: 'sgt-slaughter', label: 'Sgt. Slaughter', tagline: 'And that’s an order' },
+  // wrestling sgt-slaughter PULLED (Steve 7/3): the WWE Elite figure depicts
+  // the 1991 Iraqi-sympathizer heel angle — insensitive to feature right now.
+  // The G.I. Joe Sgt. Slaughter tile below covers the character.
   { fandom: 'wrestling', character: 'kurt-angle', label: 'Kurt Angle', tagline: 'It’s true. It’s damn true.' },
   { fandom: 'wrestling', character: 'hacksaw-jim-duggan', label: 'Hacksaw Jim Duggan', tagline: 'HOOO! Tough guy with a 2x4 and a flag' },
   { fandom: 'wrestling', character: 'lex-luger', label: 'Lex Luger', tagline: 'The Lex Express, summer of ’93' },
