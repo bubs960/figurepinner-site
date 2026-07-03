@@ -1,23 +1,25 @@
 'use client'
 /**
- * QuickLookAnchor — large hover "quick-look" card for tile rails and compact
- * figure cards (S54 follow-up: rail/list thumbs are too small to read — on
- * desktop hover they blow up into a 340px variant-B card).
+ * Quick-look hover card — THE single hover-enlarge mechanism for every figure
+ * surface (search dropdown rows, /search cards, figure-page rails, character
+ * hub cards). S54 follow-ups: rail thumbs too small → 340px hover card; then
+ * Steve found top-of-viewport hovers clipped the image — cards near the top
+ * of the screen (and inside the takeover panel's own scroll clip) cut off.
  *
- * Same visual language as HoverZoomCard (lab variant B) but a different
- * mechanism, because rails live inside overflow-x scroll containers that clip
- * any in-place absolute overlay (same trap as the homepage hero, S54): the
- * card renders through createPortal to document.body at a FIXED position
- * measured from the anchor on hover-intent. A CSS :hover chain can't reach a
- * body portal, so show/hide is JS-driven.
+ * Mechanism: body-portaled FIXED card, measured from the hovered element on
+ * hover-intent and CLAMPED to the viewport on both axes — the image is always
+ * fully visible no matter where the anchor sits. In-place absolute overlays
+ * are unusable here: rails/panels are overflow scrollers and the homepage
+ * hero has overflow:hidden (all three clipped in practice).
  *
  * Hygiene contract:
  *  - desktop pointers only ((hover:hover)+(pointer:fine) checked in JS);
- *  - 170ms hover-intent delay (scanning a rail doesn't strobe);
- *  - card is pointer-events:none — clicks pass through to the page;
+ *  - 170ms hover-intent delay (scanning a list doesn't strobe);
+ *  - card is pointer-events:none — clicks pass through;
  *  - any scroll hides it (fixed anchors drift under a scrolling page/rail);
- *  - median lazy-fetched once per figure from the edge-cached sparklines
- *    route, cached module-wide, honest-blank until it lands (D4 floor);
+ *  - median honest-blank per the D4 sold-count floor; callers with batched
+ *    price data pass `price`, callers without pass `figureId` for a lazy
+ *    per-figure fetch from the edge-cached sparklines route (module cache);
  *  - prefers-reduced-motion drops the pop animation (globals.css).
  */
 
@@ -25,59 +27,68 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { SOLD_COUNT_CONFIDENCE_FLOOR } from '@/lib/searchDisplay'
 
-type Price = { median: number | null; soldCount: number }
+export type QuickLookPrice = { median: number | null; soldCount: number }
 
 // Module-wide so hovering the same figure twice (or in two rails) never
 // refetches. `null` doubles as the in-flight marker.
-const priceCache = new Map<string, Price | null>()
+const priceCache = new Map<string, QuickLookPrice | null>()
 
 const CARD_W = 340
-const CARD_EST_H = 470 // pic 340 + caption + padding — used for viewport clamping
+const CARD_EST_H = 470 // pic 340 + clamped caption + padding — viewport clamp basis
+const EDGE = 12        // minimum gap to every viewport edge
 
-export default function QuickLookAnchor({
-  href, className, style, image, name, sub, figureId, children,
-}: {
-  href: string
-  className?: string
-  style?: React.CSSProperties
+export interface QuickLookOptions {
   /** Best-available image URL for the card (pass a large rendition). null → no card. */
   image: string | null
   name: string
   sub?: string | null
-  /** Enables the lazy median lookup on first hover. */
+  /** Lazy per-figure median fetch on first hover. Ignored when `price` is provided. */
   figureId?: string
-  children: React.ReactNode
-}) {
-  const anchorRef = useRef<HTMLAnchorElement>(null)
+  /** Caller-supplied price (e.g. search's batched sparklines). Passing this —
+   *  even as null — disables the hook's own fetch. */
+  price?: QuickLookPrice | null
+}
+
+export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOptions) {
+  const hoverEl = useRef<HTMLElement | null>(null)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const [pos, setPos] = useState<{ top: number; left: number; flip: boolean } | null>(null)
-  const [price, setPrice] = useState<Price | null>(null)
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null)
+  const [fetched, setFetched] = useState<QuickLookPrice | null>(null)
+
+  const effectivePrice = price !== undefined ? price : fetched
 
   function show() {
-    const el = anchorRef.current
+    const el = hoverEl.current
     if (!el) return
     const r = el.getBoundingClientRect()
-    const flip = r.left + CARD_W + 16 > window.innerWidth
-    const left = Math.max(12, flip ? r.right - CARD_W + 8 : r.left - 8)
+    // Horizontal: overlay the anchor's left edge; flip to its right edge when
+    // that would cross the viewport; clamp to the edge gap either way.
+    const flip = r.left + CARD_W + EDGE > window.innerWidth
+    const left = Math.min(
+      Math.max(EDGE, flip ? r.right - CARD_W + 8 : r.left - 8),
+      window.innerWidth - CARD_W - EDGE,
+    )
+    // Vertical: center on the anchor, clamped so the card never leaves the
+    // viewport (the "image cut off at the top" fix — clamp, don't center).
     const centerY = r.top + r.height / 2
     const half = CARD_EST_H / 2
     const top = Math.round(
-      Math.min(Math.max(centerY, half + 12), window.innerHeight - half - 12) - half,
+      Math.min(Math.max(centerY, half + EDGE), window.innerHeight - half - EDGE) - half,
     )
-    setPos({ top, left: Math.round(left), flip })
+    setPos({ top, left: Math.round(left) })
 
-    if (!figureId) return
+    if (price !== undefined || !figureId) return
     if (priceCache.has(figureId)) {
-      setPrice(priceCache.get(figureId) ?? null)
+      setFetched(priceCache.get(figureId) ?? null)
       return
     }
     priceCache.set(figureId, null) // in-flight marker
     fetch(`/api/sparklines?ids=${encodeURIComponent(figureId)}`)
       .then(res => (res.ok ? res.json() : {}))
-      .then((data: Record<string, Price>) => {
+      .then((data: Record<string, QuickLookPrice>) => {
         const p = data[figureId] ?? null
         priceCache.set(figureId, p)
-        setPrice(p)
+        setFetched(p)
       })
       .catch(() => { priceCache.delete(figureId) })
   }
@@ -87,8 +98,8 @@ export default function QuickLookAnchor({
     setPos(null)
   }
 
-  // Any scroll while open → hide (capture phase catches the rail's own
-  // overflow-x scroll, not just the window).
+  // Any scroll while open → hide (capture phase catches rail/panel scrollers,
+  // not just the window).
   useEffect(() => {
     if (!pos) return
     const onScroll = () => hide()
@@ -102,28 +113,25 @@ export default function QuickLookAnchor({
     return window.matchMedia('(hover: hover) and (pointer: fine)').matches
   }
 
-  return (
-    <a
-      ref={anchorRef}
-      href={href}
-      className={className}
-      style={style}
-      onPointerEnter={() => {
-        if (!image || !desktopPointer()) return
-        if (timer.current) clearTimeout(timer.current)
-        timer.current = setTimeout(show, 170)
-      }}
-      onPointerLeave={hide}
-      onFocus={() => { if (image && desktopPointer()) show() }}
-      onBlur={hide}
-    >
-      {children}
-      {pos && image && createPortal(
-        <div
-          className={'fp-ql-card' + (pos.flip ? ' fp-ql-flip' : '')}
-          style={{ top: pos.top, left: pos.left }}
-          aria-hidden
-        >
+  const anchorHandlers = {
+    onPointerEnter(e: React.PointerEvent<HTMLElement>) {
+      if (!image || !desktopPointer()) return
+      hoverEl.current = e.currentTarget
+      if (timer.current) clearTimeout(timer.current)
+      timer.current = setTimeout(show, 170)
+    },
+    onPointerLeave() { hide() },
+    onFocus(e: React.FocusEvent<HTMLElement>) {
+      if (!image || !desktopPointer()) return
+      hoverEl.current = e.currentTarget
+      show()
+    },
+    onBlur() { hide() },
+  }
+
+  const quickLook = pos && image
+    ? createPortal(
+        <div className="fp-ql-card" style={{ top: pos.top, left: pos.left }} aria-hidden>
           <div className="fp-ql-pic">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={image} alt="" decoding="async" />
@@ -131,12 +139,12 @@ export default function QuickLookAnchor({
           <div className="fp-ql-cap">
             <div className="fp-ql-name">{name}</div>
             {sub && <div className="fp-ql-sub">{sub}</div>}
-            {price?.median != null && price.median > 0 && (
+            {effectivePrice?.median != null && effectivePrice.median > 0 && (
               <div className="fp-ql-price">
-                <span className="fp-ql-val">${Math.round(price.median)}</span>
+                <span className="fp-ql-val">${Math.round(effectivePrice.median)}</span>
                 <span className="fp-ql-lbl">
-                  {price.soldCount >= SOLD_COUNT_CONFIDENCE_FLOOR
-                    ? `median · ${price.soldCount} sold`
+                  {effectivePrice.soldCount >= SOLD_COUNT_CONFIDENCE_FLOOR
+                    ? `median · ${effectivePrice.soldCount} sold`
                     : 'median'}
                 </span>
               </div>
@@ -144,7 +152,26 @@ export default function QuickLookAnchor({
           </div>
         </div>,
         document.body,
-      )}
+      )
+    : null
+
+  return { anchorHandlers, quickLook }
+}
+
+/** Anchor-shaped convenience wrapper (figure-page rails, character hub cards). */
+export default function QuickLookAnchor({
+  href, className, style, image, name, sub, figureId, children,
+}: QuickLookOptions & {
+  href: string
+  className?: string
+  style?: React.CSSProperties
+  children: React.ReactNode
+}) {
+  const { anchorHandlers, quickLook } = useQuickLook({ image, name, sub, figureId })
+  return (
+    <a href={href} className={className} style={style} {...anchorHandlers}>
+      {children}
+      {quickLook}
     </a>
   )
 }

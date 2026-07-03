@@ -1,6 +1,6 @@
 /**
  * searchDisplay.ts — client-safe display constants shared by the search
- * surfaces (HeroSearch dropdown, /search cards, HoverZoomCard).
+ * surfaces (HeroSearch dropdown, /search cards, QuickLookAnchor).
  * NO KB imports — this ships in the client bundle.
  */
 

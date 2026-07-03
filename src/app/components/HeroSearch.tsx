@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import { thumb } from '@/lib/imageUrl'
-import HoverZoomCard from '@/app/components/HoverZoomCard'
+import { useQuickLook } from '@/app/components/QuickLookAnchor'
 import { SOLD_COUNT_CONFIDENCE_FLOOR, fandomName } from '@/lib/searchDisplay'
 
 // Matches actual /api/v1/search response shape
@@ -24,8 +24,7 @@ type SearchResult = {
 
 type SparkPrice = { median: number | null; soldCount: number }
 
-// Dropdown thumb rendition — 64px box, 2× for retina. HoverZoomCard reuses
-// this exact width so its base paint is a cache hit (no extra fetch).
+// Dropdown thumb rendition — 64px box, 2× for retina.
 const THUMB_SIZE = 64
 const THUMB_CDN_WIDTH = 128
 
@@ -515,14 +514,19 @@ function DropdownRow({
   isLast: boolean
   onActivate: () => void
 }) {
-  // One-time hover-zoom trigger: flips the 480px sharpen in HoverZoomCard.
-  // Gated on desktop pointer so a tap on touch never spends the fetch.
-  const [hot, setHot] = useState(false)
+  // Quick-look hover card — body-portaled + viewport-clamped, so top rows
+  // aren't clipped by the takeover panel's own scroll box. Prices come from
+  // the dropdown's batch fetch (passing `price` disables the hook's fetch).
+  const { anchorHandlers, quickLook } = useQuickLook({
+    image: thumb(r.image, 640),
+    name: r.name,
+    sub: `${r.brand} ${r.line}${r.series ? ` · Series ${r.series}` : ''}`,
+    price: price ?? null,
+  })
 
   return (
     <a
       id={`hero-search-opt-${i}`}
-      className="fp-hz-row"
       href={resultHref(r)}
       role="option"
       aria-selected={active}
@@ -531,9 +535,10 @@ function DropdownRow({
         figureId: r.figure_id ?? '',
         target: 'hero_dropdown',
       })}
-      onPointerEnter={() => {
+      {...anchorHandlers}
+      onPointerEnter={e => {
         onActivate()
-        if (!hot && isDesktopPointer()) setHot(true)
+        anchorHandlers.onPointerEnter(e)
       }}
       style={{
         position: 'relative',
@@ -593,15 +598,7 @@ function DropdownRow({
         </div>
       )}
 
-      <HoverZoomCard
-        image={r.image}
-        name={r.name}
-        line={`${r.brand} ${r.line}${r.series ? ` · Series ${r.series}` : ''}`}
-        median={price?.median}
-        soldCount={price?.soldCount}
-        baseWidth={THUMB_CDN_WIDTH}
-        hot={hot}
-      />
+      {quickLook}
     </a>
   )
 }

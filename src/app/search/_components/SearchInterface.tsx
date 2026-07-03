@@ -13,7 +13,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Sparkline from '@/app/components/Sparkline'
 import FigureThumb from '@/app/components/FigureThumb'
-import HoverZoomCard from '@/app/components/HoverZoomCard'
+import { useQuickLook } from '@/app/components/QuickLookAnchor'
+import { thumb } from '@/lib/imageUrl'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import { SOLD_COUNT_CONFIDENCE_FLOOR } from '@/lib/searchDisplay'
 
@@ -688,11 +689,15 @@ function FigureResultCard({
   /** loading="eager" for the first above-the-fold cards (kills the gray-grid first impression). */
   eager?: boolean
 }) {
-  // Hover-zoom quick-look (S54 Phase 4): `hot` triggers the one-time 480px
-  // sharpen; `flip` opens the card leftward when the row sits close enough to
-  // the right viewport edge that the overlay would clip.
-  const [hzHot, setHzHot] = useState(false)
-  const [hzFlip, setHzFlip] = useState(false)
+  // Quick-look hover card — body-portaled + viewport-clamped (top-row hovers
+  // used to clip the image at the viewport edge). Prices reuse the page's
+  // batched sparklines (passing `price` disables the hook's own fetch).
+  const { anchorHandlers, quickLook } = useQuickLook({
+    image: thumb(r.image, 640),
+    name: r.name,
+    sub: `${r.brand} · ${r.line}${r.series ? ` · Ser. ${r.series}` : ''}`,
+    price: sparkline ? { median: sparkline.median, soldCount: sparkline.soldCount } : null,
+  })
   const genre  = GENRE_MAP[r.genre]
   const accent = genre?.accent ?? '#FF5F00'
   const href = r.figure_id
@@ -705,7 +710,6 @@ function FigureResultCard({
 
   return (
     <div
-      className="fp-hz-row"
       style={{
         position: 'relative',
         display: 'flex',
@@ -718,12 +722,7 @@ function FigureResultCard({
         transition: 'border-color 0.12s, background 0.12s',
         cursor: 'pointer',
       }}
-      onPointerEnter={e => {
-        if (hzHot) return
-        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-        setHzFlip(e.currentTarget.getBoundingClientRect().left + 264 > window.innerWidth)
-        setHzHot(true)
-      }}
+      {...anchorHandlers}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLDivElement
         if (trackState !== 'added') {
@@ -840,19 +839,7 @@ function FigureResultCard({
         </button>
       )}
 
-      {/* Quick-look hover card — same median already fetched above, zero
-          extra requests (S54 Phase 4). baseWidth 176 = FigureThumb's
-          cdnWidth at size 88, so the base paint is a cache hit. */}
-      <HoverZoomCard
-        image={r.image}
-        name={r.name}
-        line={`${r.brand} · ${r.line}${r.series ? ` · Ser. ${r.series}` : ''}`}
-        median={sparkline?.median}
-        soldCount={sparkline?.soldCount}
-        baseWidth={176}
-        hot={hzHot}
-        flip={hzFlip}
-      />
+      {quickLook}
     </div>
   )
 }
