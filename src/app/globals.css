@@ -1776,6 +1776,11 @@ a:hover {
   position: fixed;
   z-index: 400;
   width: 340px;
+  /* Safety net for the JS top-clamp (QuickLookAnchor.show()): on a viewport
+     shorter than the card's ~470px estimate, this caps it to the visible
+     area so a bad estimate clips the bottom instead of overflowing off-screen. */
+  max-height: calc(100vh - 24px);
+  overflow: hidden;
   background: linear-gradient(170deg, var(--s2) 0%, var(--s1) 70%);
   border: 1px solid rgba(232, 182, 76, 0.28);
   border-radius: 16px;

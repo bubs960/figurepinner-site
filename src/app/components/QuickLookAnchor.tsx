@@ -54,6 +54,10 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null)
   const [fetched, setFetched] = useState<QuickLookPrice | null>(null)
+  // First paint of a not-yet-cached image is an instant full-size "pop" —
+  // fades it in instead. Stays true after the first load (per-anchor, not
+  // per-show) so a repeat hover of the same figure never re-fades.
+  const [imgLoaded, setImgLoaded] = useState(false)
 
   const effectivePrice = price !== undefined ? price : fetched
 
@@ -70,10 +74,17 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
     )
     // Vertical: center on the anchor, clamped so the card never leaves the
     // viewport (the "image cut off at the top" fix — clamp, don't center).
+    // Outer floor: on short viewports (innerHeight < CARD_EST_H + 2*EDGE) the
+    // two inner clamp bounds invert and the naive result goes negative —
+    // rendering the card above the viewport, overlapping whatever sits at
+    // y=0 (search bar, nav). Never let it go above EDGE, even then.
     const centerY = r.top + r.height / 2
     const half = CARD_EST_H / 2
     const top = Math.round(
-      Math.min(Math.max(centerY, half + EDGE), window.innerHeight - half - EDGE) - half,
+      Math.max(
+        EDGE,
+        Math.min(Math.max(centerY, half + EDGE), window.innerHeight - half - EDGE) - half,
+      ),
     )
     setPos({ top, left: Math.round(left) })
 
@@ -134,7 +145,13 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
         <div className="fp-ql-card" style={{ top: pos.top, left: pos.left }} aria-hidden>
           <div className="fp-ql-pic">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt="" decoding="async" />
+            <img
+              src={image}
+              alt=""
+              decoding="async"
+              onLoad={() => setImgLoaded(true)}
+              style={{ opacity: imgLoaded ? 1 : 0, transition: 'opacity 0.2s ease' }}
+            />
           </div>
           <div className="fp-ql-cap">
             <div className="fp-ql-name">{name}</div>
