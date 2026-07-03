@@ -11,8 +11,11 @@ import { getHubTheme, loadTopComps, loadVaults, loadHeroesVillains } from '../_d
 import FandomHub from '../_components/FandomHub'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
-import LiveMedian, { fetchPriceSnaps, type PriceSnap } from '../_components/LiveMedian'
+import LiveMedian from '../_components/LiveMedian'
+import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
+import { getFigureById } from '@/data/kb'
+import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 const BASE = 'https://figurepinner.com'
 
@@ -69,10 +72,19 @@ function renderText(text: string): React.ReactNode {
   return <>{parts}</>
 }
 
-function Block({ block, comps }: { block: ArticleBlock; comps: Map<string, PriceSnap> }) {
+function Block({ block, comps, ebayUrls }: { block: ArticleBlock; comps: Map<string, PriceSnap>; ebayUrls: Map<string, string> }) {
   switch (block.type) {
     case 'comp':
-      return <LiveMedian snap={comps.get(block.fid)} label={block.label} sublabel={block.sublabel} href={block.href} />
+      return (
+        <LiveMedian
+          snap={comps.get(block.fid)}
+          label={block.label}
+          sublabel={block.sublabel}
+          href={block.href}
+          ebayUrl={ebayUrls.get(block.fid)}
+          figureId={block.fid}
+        />
+      )
     case 'h2':
       return (
         <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.02em', color: 'var(--fp-text)', margin: '2.5rem 0 1rem' }}>
@@ -137,6 +149,23 @@ export default async function GuideArticlePage({ params }: PageProps) {
   const compFids = article.body.flatMap((b) => (b.type === 'comp' ? [b.fid] : []))
   const comps = compFids.length ? await fetchPriceSnaps(compFids) : new Map<string, PriceSnap>()
 
+  // eBay affiliate search URL per comp block — these guide pages had no direct
+  // affiliate link before 2026-07-02 (ad units only); this is what a real
+  // affiliate-vs-ad comparison needs to start collecting data against.
+  const ebayUrls = new Map<string, string>()
+  for (const fid of compFids) {
+    const kb = getFigureById(fid)
+    if (!kb) continue
+    ebayUrls.set(fid, buildEbaySearchUrl(
+      prettifySlug(kb.character_canonical),
+      prettifySlug(kb.fandom),
+      kb.manufacturer,
+      kb.product_line,
+      kb.release_wave,
+      EBAY_CAMPAIGN_ID,
+    ))
+  }
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -169,7 +198,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
           <AdSlot slot="leaderboard" />
         </div>
 
-        {article.body.map((block, i) => <Block key={i} block={block} comps={comps} />)}
+        {article.body.map((block, i) => <Block key={i} block={block} comps={comps} ebayUrls={ebayUrls} />)}
 
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <AdSlot slot="adsterra-banner" />

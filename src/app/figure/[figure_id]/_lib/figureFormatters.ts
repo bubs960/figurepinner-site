@@ -193,6 +193,15 @@ export function buildEbaySearchTerms(
     .join(' ')
 }
 
+// Fallback campid is the live EPN campaign — restored after bceb185 silently
+// reverted it to ''. Without it, a build missing .env.production ships campid= blank
+// (working-looking eBay links that pay $0). Do NOT remove. See Genta audit 2026-06-06 P1.
+// `||` (not `??`) on purpose: an env var set to "" must also fall back — `??`
+// would keep the empty string and ship a blank campid. (Affiliate-leak audit 2026-06-13.)
+// Single source of truth — every eBay-affiliate-link call site imports this,
+// never redeclares it, so the fallback can't drift out of sync again.
+export const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID || '5339147406'
+
 /** Build an eBay affiliate search URL */
 export function buildEbaySearchUrl(
   character: string,

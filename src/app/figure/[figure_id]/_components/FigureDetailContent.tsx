@@ -20,7 +20,7 @@ import EmptyState from './EmptyState'
 import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
 import MobileActionBar from './MobileActionBar'
-import { buildEbaySearchUrl, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
+import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { getLineAttributes } from '../_lib/line-attributes-data'
@@ -34,12 +34,8 @@ import JsonLd from '@/app/_components/JsonLd'
 import FunnelEvent from '@/app/_components/FunnelEvent'
 
 const API_BASE = 'https://figurepinner-api.bubs960.workers.dev'
-// Fallback campid is the live EPN campaign — restored after bceb185 silently
-// reverted it to ''. Without it, a build missing .env.production ships campid= blank
-// (working-looking eBay links that pay $0). Do NOT remove. See Genta audit 2026-06-06 P1.
-// `||` (not `??`) on purpose: an env var set to "" must also fall back — `??`
-// would keep the empty string and ship a blank campid. (Affiliate-leak audit 2026-06-13.)
-const EBAY_CAMPAIGN_ID = process.env.NEXT_PUBLIC_EBAY_CAMPAIGN_ID || '5339147406'
+// EBAY_CAMPAIGN_ID now lives in figureFormatters.ts (single source of truth,
+// so this fallback can't drift out of sync with other call sites again).
 
 // ── API types ──────────────────────────────────────────────────────────────────
 

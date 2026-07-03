@@ -1,3 +1,5 @@
+'use client'
+
 // LiveMedian — the Bid Check differentiator inside the indexable guide format.
 //
 // A guide cites a figure's real sold median; this renders it LIVE from the
@@ -5,45 +7,23 @@
 // API read), so the number self-updates and no competitor can fake it. The
 // prose around it carries the story; this carries the current truth.
 //
-// Server-side data: `fetchPriceSnaps()` is called once by the page (async) for
-// every `comp` block's fid and the result map is passed down, so this component
-// stays a SYNC presentational leaf (no async-component-in-sync-JSX typing pain).
-// The fetch is ISR-cached at 1h so the page shell can stay static while the
-// medians refresh hourly. A fid with no comps renders an honest blank, never a
-// derived number (S16 honest-blanks rule).
+// Server-side data: `fetchPriceSnaps()` (now in `../_lib/priceSnaps.ts` — see
+// that file's header for why it had to move out of this one) is called once
+// by the page (async) for every `comp` block's fid and the result map is
+// passed down as plain props, so this stays a thin client leaf (needed now
+// for the tracked eBay click). The fetch is ISR-cached at 1h so the page
+// shell can stay static while the medians refresh hourly. A fid with no
+// comps renders an honest blank, never a derived number (S16 honest-blanks
+// rule).
+//
+// 2026-07-02: added a direct eBay affiliate CTA (ebayUrl) + trackFunnel
+// ebay_exit on click — these pages previously had NO affiliate link at all
+// (ad units only), so there was nothing to compare against ad performance.
+// This is the instrumentation the comparison needs; the comparison itself
+// waits on a real data-collection window.
 
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
-
-export type PriceSnap = {
-  median_sold: number | null
-  avg_sold: number | null
-  min_sold: number | null
-  max_sold: number | null
-  sold_count: number
-}
-
-/** Batched, ISR-cached (1h) fetch of price snapshots for a set of fids.
- *  Returns only fids that have a usable snapshot. */
-export async function fetchPriceSnaps(fids: string[]): Promise<Map<string, PriceSnap>> {
-  const unique = [...new Set(fids)]
-  const entries = await Promise.all(
-    unique.map(async (fid) => {
-      try {
-        const r = await fetch(`${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`, {
-          next: { revalidate: 3600 },
-          signal: AbortSignal.timeout(4000),
-        })
-        if (!r.ok) return [fid, null] as const
-        const j = (await r.json()) as PriceSnap
-        if (!j || Object.keys(j).length === 0) return [fid, null] as const
-        return [fid, j] as const
-      } catch {
-        return [fid, null] as const
-      }
-    }),
-  )
-  return new Map(entries.filter((e): e is readonly [string, PriceSnap] => e[1] !== null))
-}
+import { trackFunnel } from '@/app/_lib/funnelClient'
+import type { PriceSnap } from '../_lib/priceSnaps'
 
 function fmtMoney(n: number): string {
   const hasCents = Math.round(n * 100) % 100 !== 0
@@ -58,15 +38,23 @@ export default function LiveMedian({
   label,
   sublabel,
   href,
+  ebayUrl,
+  figureId,
 }: {
   snap?: PriceSnap | null
   label: string
   sublabel?: string
   href?: string
+  ebayUrl?: string
+  figureId?: string
 }) {
   const median = snap ? (snap.median_sold ?? snap.avg_sold) : null
   const n = snap?.sold_count ?? 0
   const hasData = median !== null && n > 0
+
+  function onEbayClick() {
+    trackFunnel('ebay_exit', { figureId: figureId ?? '', target: 'guide_bidcheck' })
+  }
 
   return (
     <div
@@ -87,14 +75,27 @@ export default function LiveMedian({
         {sublabel && (
           <div style={{ fontSize: '0.82rem', color: 'var(--fp-muted)', marginTop: '0.15rem' }}>{sublabel}</div>
         )}
-        {href && (
-          <a
-            href={href}
-            style={{ display: 'inline-block', marginTop: '0.35rem', fontSize: '0.82rem', fontWeight: 600, color: 'var(--fp-accent)', textDecoration: 'none' }}
-          >
-            See every sold &rarr;
-          </a>
-        )}
+        <div style={{ display: 'flex', gap: '0.9rem', marginTop: '0.35rem' }}>
+          {href && (
+            <a
+              href={href}
+              style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--fp-accent)', textDecoration: 'none' }}
+            >
+              See every sold &rarr;
+            </a>
+          )}
+          {ebayUrl && (
+            <a
+              href={ebayUrl}
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              onClick={onEbayClick}
+              style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--fp-muted)', textDecoration: 'none' }}
+            >
+              Shop similar on eBay &rarr;
+            </a>
+          )}
+        </div>
       </div>
 
       <div style={{ textAlign: 'right', flexShrink: 0 }}>
