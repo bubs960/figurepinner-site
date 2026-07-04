@@ -28,8 +28,12 @@ import { checkRateLimit } from '@/lib/rateLimit'
  *   ?days=30    widen the window (default 7, capped at 90)
  *   ?debug=1    include the raw GraphQL response body
  *
- * No auth gate: the response is nothing but public visitor counts. If gating is
- * wanted later, copy the x-cache-stats-key pattern from cache-stats/route.ts.
+ * Auth gate (S56, Steve ruling 7/3 — hygiene plan S4 "gate them"): visitor
+ * counts reveal our traffic level to competitors. Gated behind the SAME
+ * shared secret as cache-stats (CACHE_STATS_KEY, header x-cache-stats-key) so
+ * no new wrangler secret is needed. Fails CLOSED when the key is unset.
+ * Readers (digest task, weekly web read) must send the header — same as they
+ * already do for cache-stats/funnel-stats.
  */
 
 export const dynamic = 'force-dynamic'
@@ -46,6 +50,15 @@ const REST = 'https://api.cloudflare.com/client/v4'
 type DayRow = { date: string; uniques: number; requests: number; pageViews: number }
 
 export async function GET(request: Request) {
+  // S4 gate (S56): shared ops-stats secret, fails closed. See header comment.
+  const expectedKey = process.env.CACHE_STATS_KEY
+  if (!expectedKey) {
+    return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
+  }
+  if (request.headers.get('x-cache-stats-key') !== expectedKey) {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
+  }
+
   const accountId = process.env.CF_ACCOUNT_ID
   const apiToken = process.env.CF_API_TOKEN
 
