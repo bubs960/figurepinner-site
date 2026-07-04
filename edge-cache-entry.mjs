@@ -19,7 +19,11 @@
  *    Cache-Control has a positive s-maxage (route opted into shared caching --
  *    /search is private/no-store and /app pages have no s-maxage, so they
  *    self-exclude).
- *  - HTML TTL capped at 1h so a deploy fully propagates within the hour.
+ *  - HTML TTL capped at 24h (raised from 1h, C1 2026-07-04 hygiene plan) --
+ *    safe because `npm run deploy` now purges the zone on every successful
+ *    deploy (scripts/purge-cache.mjs), so propagation is purge-triggered, not
+ *    TTL-bounded. A 24h cap still exists as a ceiling for any page that never
+ *    goes through a deploy-triggered purge (manual R2/KB-only content pokes).
  *    (Emergency: Dashboard → Caching → Purge Everything also clears this.)
  *
  * OBSERVABILITY: every response gets `x-fp-edge: HIT | MISS | BYPASS`.
@@ -58,7 +62,7 @@ function hasAuthCookie(cookie) {
   return /(?:^|;\s*)__session(?:=|_[^=;]+=)/.test(cookie)
 }
 const RSC_HEADERS = ['rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url']
-const HTML_TTL_CAP = 3600
+const HTML_TTL_CAP = 86400
 const NOT_FOUND_TTL = 900
 const FAVICON_SVG_PATH = '/favicon.svg'
 
