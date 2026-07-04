@@ -29,7 +29,7 @@ export { UI_SLUG_TO_FANDOM, NECA_FANDOMS }
 export const TOTAL_FIGURES: number = getAllFigures().length
 
 /** Number of distinct fandoms present in the KB. */
-export const TOTAL_FANDOMS: number = new Set(
+const TOTAL_FANDOMS: number = new Set(
   getAllFigures().map(f => f.fandom)
 ).size
 
@@ -37,7 +37,7 @@ export const TOTAL_FANDOMS: number = new Set(
  * Real figure count for a homepage UI genre slug.
  * Handles the pretty-slug→fandom remap and the neca→horror many-to-one rollup.
  */
-export function fandomCountForUISlug(uiSlug: string): number {
+function fandomCountForUISlug(uiSlug: string): number {
   if (uiSlug === 'neca') {
     return NECA_FANDOMS.reduce((sum, f) => sum + getFiguresByFandom(f).length, 0)
   }
@@ -50,7 +50,7 @@ export function fandomCountForUISlug(uiSlug: string): number {
  * Honest (never overstates) and stable across small KB changes.
  * e.g. 18,455 → 18,000 ; 4,777 → 4,500 ; 200 → 200.
  */
-export function floorCount(n: number): number {
+function floorCount(n: number): number {
   if (n >= 1000) return Math.floor(n / 500) * 500
   if (n >= 100)  return Math.floor(n / 50) * 50
   return n

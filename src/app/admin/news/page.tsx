@@ -107,7 +107,8 @@ export default async function AdminNewsPage() {
           Post News Event
         </h1>
         <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '2rem' }}>
-          Posts immediately to <a href="/news" style={{ color: 'var(--blue)', textDecoration: 'none' }}>/news</a>.
+          Posts immediately to <code>/news</code> (currently retired — the public page is
+          parked, not deleted; see `admin/news` kept-for-revival notes).
           Set published_at to a future ISO timestamp to schedule.
         </p>
 

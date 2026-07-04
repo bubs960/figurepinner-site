@@ -3,7 +3,7 @@ type JsonLdProps = {
   id?: string
 }
 
-export function serializeJsonLd(data: unknown): string {
+function serializeJsonLd(data: unknown): string {
   return JSON.stringify(data)
     .replace(/&/g, '\\u0026')
     .replace(/</g, '\\u003c')

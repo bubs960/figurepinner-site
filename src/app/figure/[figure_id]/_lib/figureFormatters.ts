@@ -4,7 +4,7 @@
  */
 
 /** Strip null/None/undefined variant artifacts from figure names. */
-export function cleanFigureName(raw: string): string {
+function cleanFigureName(raw: string): string {
   return raw
     .replace(/\s*\(\s*(none|null|undefined)\s*\)/gi, '')
     .replace(/\s*\(\s*\)/g, '')
@@ -170,7 +170,7 @@ function cleanEbaySearchPart(value: string): string {
 }
 
 /** Build broad eBay affiliate search terms that still point at the right figure. */
-export function buildEbaySearchTerms(
+function buildEbaySearchTerms(
   character: string,
   fandom: string,
   brand: string,
@@ -216,7 +216,7 @@ export function buildEbaySearchUrl(
 }
 
 /** Build SVG polyline path from price history points */
-export function buildChartPath(
+function buildChartPath(
   points: Array<{ date: string; price: number }>,
   width: number,
   height: number

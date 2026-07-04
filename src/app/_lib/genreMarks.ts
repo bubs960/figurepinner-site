@@ -1,4 +1,4 @@
-export const GENRE_MARKS: Record<string, string> = {
+const GENRE_MARKS: Record<string, string> = {
   'wrestling': 'WR',
   'marvel': 'MV',
   'star-wars': 'SW',
