@@ -5,3 +5,15 @@ compatibility_date = "2026-04-09"
 [[r2_buckets]]
 binding = "ASSETS"
 bucket_name = "figurepinner-assets"
+
+# S1 rate-limit fix, 2026-07-04: caches.default never persists on *.workers.dev
+# (Cache API needs a custom domain per Cloudflare docs), so the original
+# cache-based counter silently never triggered. This binding works the same
+# on workers.dev as on a zone.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+
+[ratelimits.simple]
+limit = 120
+period = 60

@@ -12,31 +12,25 @@ const ALLOWED_ORIGIN = "https://figurepinner.com";
 // not normal page loads (a photo-heavy page can legitimately fire dozens of
 // GETs at once, most of which are cache HITs after the first visitor warms
 // them).
-const RATE_LIMIT_PER_MINUTE = 120;
-const RATE_WINDOW_SECONDS = 60;
+//
+// Live-verified 2026-07-04: the first cut used caches.default as a counter,
+// which silently never persists on *.workers.dev (Cache API only functions
+// on custom domains — Cloudflare docs) — every one of 130 burst requests
+// against the deployed URL got 200, never a 429. Switched to the native
+// Rate Limiting binding (RATE_LIMITER, see wrangler.toml), which works the
+// same on workers.dev as on a zone.
+const RATE_LIMIT_RETRY_AFTER_SECONDS = 60;
 
-async function isRateLimited(request) {
+async function isRateLimited(request, env) {
   const ip = request.headers.get("cf-connecting-ip");
   if (!ip) return false;
   if (request.cf?.verifiedBotCategory) return false;
 
-  const nowSeconds = Math.floor(Date.now() / 1000);
-  const windowStart = Math.floor(nowSeconds / RATE_WINDOW_SECONDS) * RATE_WINDOW_SECONDS;
-  const key = new Request(`https://ratelimit.internal/r2proxy/${ip}/${windowStart}`);
-
   try {
-    const cache = caches.default;
-    const cached = await cache.match(key);
-    const count = cached ? Number(await cached.text()) || 0 : 0;
-    const next = count + 1;
-    // Fire-and-forget — a broken counter must never break asset delivery.
-    await cache.put(
-      key,
-      new Response(String(next), { headers: { "Cache-Control": `max-age=${RATE_WINDOW_SECONDS}` } }),
-    );
-    return next > RATE_LIMIT_PER_MINUTE;
+    const { success } = await env.RATE_LIMITER.limit({ key: ip });
+    return !success;
   } catch {
-    return false; // Cache API unavailable — fail open, same law as site-side.
+    return false; // Rate limiter unavailable — fail open, same law as before.
   }
 }
 __name(isRateLimited, "isRateLimited");
@@ -84,10 +78,10 @@ var worker_default = {
     const hit = await cache.match(request);
     if (hit) return hit;
 
-    if (await isRateLimited(request)) {
+    if (await isRateLimited(request, env)) {
       return new Response("Too Many Requests", {
         status: 429,
-        headers: { "Retry-After": String(RATE_WINDOW_SECONDS), "Cache-Control": "no-store" },
+        headers: { "Retry-After": String(RATE_LIMIT_RETRY_AFTER_SECONDS), "Cache-Control": "no-store" },
       });
     }
 
