@@ -595,7 +595,17 @@ function DropdownRow({
         borderBottom: isLast ? 'none' : '1px solid var(--border)',
         fontSize: '0.9rem',
         background: active ? 'var(--s2)' : 'transparent',
-        transition: 'background 0.1s',
+        // Glow only (no lift/tilt) for WP2 — this row sits in a tightly
+        // packed list with hairline border-bottom separators; a translateY
+        // lift here would visually detach the row from its own separator
+        // line, unlike the card-grid surfaces (search results, line/char
+        // cards) where the ShelfCase lift+tilt+glow recipe was ported as-is.
+        // Driven off `active` (not a bare :hover) so keyboard roving-focus
+        // gets the identical treatment mouse-hover does — today both already
+        // share the same active-driven background swap; this keeps that
+        // parity rather than introducing a new mouse-only effect.
+        boxShadow: active ? 'inset 0 0 0 1px rgba(232,182,76,.35), 0 0 14px rgba(232,182,76,.16)' : 'none',
+        transition: 'background 0.1s, box-shadow 0.2s',
       }}
     >
       {/* Image or monogram placeholder */}

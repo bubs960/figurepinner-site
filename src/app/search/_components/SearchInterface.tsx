@@ -710,32 +710,25 @@ function FigureResultCard({
 
   return (
     <div
-      style={{
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.75rem',
-        padding: '0.75rem 1rem',
-        background: trackState === 'added' ? 'rgba(30,170,63,0.05)' : 'var(--s1)',
-        border: `1px solid ${trackState === 'added' ? 'rgba(30,170,63,0.35)' : 'var(--border)'}`,
-        borderRadius: 16,
-        transition: 'border-color 0.12s, background 0.12s',
-        cursor: 'pointer',
-      }}
+      className={`search-row${trackState === 'added' ? ' track-added' : ''}`}
+      style={{ position: 'relative', cursor: 'pointer' }}
       {...anchorHandlers}
-      onMouseEnter={e => {
-        const el = e.currentTarget as HTMLDivElement
-        if (trackState !== 'added') {
-          el.style.borderColor = 'var(--border-hover)'
-          el.style.background = 'var(--s2)'
-        }
-      }}
-      onMouseLeave={e => {
-        const el = e.currentTarget as HTMLDivElement
-        el.style.borderColor = trackState === 'added' ? 'rgba(30,170,63,0.35)' : 'var(--border)'
-        el.style.background  = trackState === 'added' ? 'rgba(30,170,63,0.05)' : 'var(--s1)'
-      }}
     >
+      {/* Visual chrome + hover lift/tilt/glow live here, not on the row div
+          above — see the .search-row-mount comment in globals.css. */}
+      <div
+        className="search-row-mount"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          padding: '0.75rem 1rem',
+          background: trackState === 'added' ? 'rgba(30,170,63,0.05)' : 'var(--s1)',
+          border: `1px solid ${trackState === 'added' ? 'rgba(30,170,63,0.35)' : 'var(--border)'}`,
+          borderRadius: 16,
+          transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
+        }}
+      >
       {/* Clickable left section — thumb + info */}
       <a
         href={href}
@@ -838,6 +831,7 @@ function FigureResultCard({
            'Track'}
         </button>
       )}
+      </div>
 
       {quickLook}
     </div>

@@ -520,6 +520,11 @@ export default async function HomePage() {
           [data-fph-stagger] .fph-lane-kicker, [data-fph-stagger] .fph-lane-chip { opacity: 1; transform: none; transition: none; }
           .fph-ticker-track { animation: none !important; }
           .fph-fig { animation: none !important; }
+          /* Hover lift/tilt/glow is user-initiated (not automatic), but this is
+             the reference pattern every other card hover gets promoted from
+             (WP2, 2026-07-05) — zero it here too so the "reduced motion"
+             hover contract is unambiguous for whoever copies it next. */
+          .fph-fig:hover .fph-mount { transform: none; transition: none; }
           .fph-case-light, .fph-case-sweep { display: none; }
           .fph-case::before { display: none; }
           .fph h1 .grail::after { display: none; }

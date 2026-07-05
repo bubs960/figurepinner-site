@@ -250,11 +250,21 @@ export default async function LineHubPage(
         { name: genreName, url: `https://figurepinner.com/${genre}` },
         { name: lineName, url: `https://figurepinner.com/${genre}/${line}` },
       ]} />
-      {/* Hover styles — server-safe CSS, no client JS needed */}
+      {/* Hover styles — server-safe CSS, no client JS needed.
+          Lift+tilt+glow promoted from the homepage ShelfCase reference
+          pattern (src/app/page.tsx:290, WP2 2026-07-05) — same recipe,
+          this line's own accent color instead of gold. No QuickLookAnchor
+          on this card, so the transform can live directly on the anchor
+          with no popover-positioning risk. */}
       <style>{`
         .line-card:hover {
           border-color: ${accent}55 !important;
           background: ${accent}0A !important;
+          transform: translateY(-4px) rotate(-0.6deg);
+          box-shadow: 0 14px 22px rgba(0,0,0,.35), 0 0 0 1px ${accent}40, 0 0 16px ${accent}29;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .line-card:hover { transform: none; }
         }
       `}</style>
 
@@ -465,7 +475,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
         textDecoration: 'none',
         color: 'var(--text)',
         fontSize: '0.8125rem',
-        transition: 'border-color 0.12s, background 0.12s',
+        transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
         minWidth: 0,
       }}
     >

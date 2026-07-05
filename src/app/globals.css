@@ -1763,6 +1763,26 @@ a:hover {
    same day by the body-portaled .fp-ql-card below, which viewport-clamps so
    cards near the top of the screen never clip. One mechanism, every surface.) */
 
+/* ── Search result row lift+tilt+glow (WP2, 2026-07-05) ──
+   Promoted from the homepage ShelfCase pattern (src/app/page.tsx:290).
+   Targets .search-row-mount, not .search-row itself — .search-row also
+   carries QuickLookAnchor's hover handlers via useQuickLook(), and that
+   hook reads .search-row's getBoundingClientRect() to position its portaled
+   preview card. A transform on .search-row directly would move that rect
+   out from under the popover's own measurement; same anchor/mount split
+   RelatedRow.tsx already uses (fp-relrow-card/fp-relrow-mount). Skipped
+   entirely on .track-added rows — the existing "added" success color owns
+   that state, no competing hover treatment. */
+.search-row:hover:not(.track-added) .search-row-mount {
+  border-color: var(--border-hover);
+  background: var(--s2);
+  transform: translateY(-4px) rotate(-0.6deg);
+  box-shadow: 0 14px 22px rgba(0,0,0,.35), 0 0 0 1px rgba(232,182,76,.35), 0 0 16px rgba(232,182,76,.22);
+}
+@media (prefers-reduced-motion: reduce) {
+  .search-row:hover:not(.track-added) .search-row-mount { transform: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fp-search-backdrop { animation: none; }
   .fp-note-shimmer::after { display: none; }

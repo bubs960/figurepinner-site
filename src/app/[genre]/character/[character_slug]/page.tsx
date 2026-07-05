@@ -235,9 +235,23 @@ export default async function CharacterHubPage({
         { name: charName, url: `https://figurepinner.com/${genre}/character/${character_slug}` },
       ]} />
       <style>{`
-        .char-card:hover {
+        /* Lift+tilt+glow promoted from the homepage ShelfCase pattern
+           (src/app/page.tsx:290, WP2 2026-07-05). Targets .char-card-mount,
+           NOT the .char-card anchor itself — the anchor also carries
+           QuickLookAnchor's hover handlers, and QuickLookAnchor reads the
+           anchor's getBoundingClientRect() to position its portaled preview
+           card. Transforming the anchor directly would move that rect out
+           from under the popover's own measurement; the same anchor/mount
+           split RelatedRow.tsx already uses (fp-relrow-card / fp-relrow-mount)
+           avoids that entirely by keeping the anchor transform-free. */
+        .char-card:hover .char-card-mount {
           border-color: ${accent}55 !important;
           background: ${accent}0A !important;
+          transform: translateY(-4px) rotate(-0.6deg);
+          box-shadow: 0 14px 22px rgba(0,0,0,.35), 0 0 0 1px ${accent}40, 0 0 16px ${accent}29;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .char-card:hover .char-card-mount { transform: none; }
         }
         .line-section + .line-section {
           margin-top: 2.5rem;
@@ -508,50 +522,60 @@ function CharFigureCard({ figure: f, accent }: { figure: KBFigure; accent: strin
       sub={exclusive}
       figureId={f.figure_id}
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.625rem',
-        padding: '0.625rem 0.75rem',
-        background: 'var(--s1)',
-        border: '1px solid var(--border)',
-        borderRadius: 8,
+        display: 'block',
         textDecoration: 'none',
         color: 'var(--text)',
         fontSize: '0.8125rem',
-        transition: 'border-color 0.12s, background 0.12s',
         minWidth: 0,
       }}
     >
-      <FigureThumb
-        image={f.canonical_image_url}
-        size={40}
-        radius={4}
-        cdnWidth={96}
-        fallback={{ kind: 'icon', accent }}
-      />
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div
-          style={{
-            fontWeight: 600,
-            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-            lineHeight: 1.3,
-          }}
-        >
-          {name}
-        </div>
-        {exclusive && (
-          <div style={{ fontSize: '0.65rem', color: accent, marginTop: 1, opacity: 0.85 }}>
-            {exclusive}
-          </div>
-        )}
-      </div>
-      <svg
-        width="10" height="10" viewBox="0 0 12 12" fill="none"
-        stroke={accent} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-        style={{ flexShrink: 0, opacity: 0.6 }}
+      {/* Visual chrome + hover lift/tilt/glow live here, not on the anchor
+          above — see the .char-card-mount comment in the <style> block. */}
+      <div
+        className="char-card-mount"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.625rem',
+          padding: '0.625rem 0.75rem',
+          background: 'var(--s1)',
+          border: '1px solid var(--border)',
+          borderRadius: 8,
+          minWidth: 0,
+          transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
+        }}
       >
-        <path d="M2 6h8M6 2l4 4-4 4" />
-      </svg>
+        <FigureThumb
+          image={f.canonical_image_url}
+          size={40}
+          radius={4}
+          cdnWidth={96}
+          fallback={{ kind: 'icon', accent }}
+        />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div
+            style={{
+              fontWeight: 600,
+              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+              lineHeight: 1.3,
+            }}
+          >
+            {name}
+          </div>
+          {exclusive && (
+            <div style={{ fontSize: '0.65rem', color: accent, marginTop: 1, opacity: 0.85 }}>
+              {exclusive}
+            </div>
+          )}
+        </div>
+        <svg
+          width="10" height="10" viewBox="0 0 12 12" fill="none"
+          stroke={accent} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+          style={{ flexShrink: 0, opacity: 0.6 }}
+        >
+          <path d="M2 6h8M6 2l4 4-4 4" />
+        </svg>
+      </div>
     </QuickLookAnchor>
   )
 }
