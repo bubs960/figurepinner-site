@@ -36,6 +36,9 @@ export type VaultShelfItem = {
   /** Which market the median describes: the item's own condition bucket when
    *  the snapshot's split is statistically valid, else the blended market. */
   medianKind: 'sealed' | 'loose' | 'all'
+  /** 30-day sold-price movement (WP4 shelf ticker); null = not enough dated
+   *  comps in one or both windows to call a trend. */
+  trend30d: { delta: number; pct: number | null } | null
 }
 
 export type HuntItem = {
@@ -52,10 +55,24 @@ export type HuntItem = {
   targetHit: boolean
 }
 
+export type ShelfMover = { fid: string; name: string; href: string; delta: number; pct: number | null }
+
 export type VaultShelfData = {
   items: VaultShelfItem[]
   hunt: HuntItem[]
-  totals: { figures: number; estValue: number; paid: number }
+  totals: {
+    figures: number
+    estValue: number
+    paid: number
+    /** Sum of item-level trend30d deltas, counting only items where a trend
+     *  could be computed. null when zero items have enough dated comps —
+     *  the ticker shows an honest "not enough sales history yet" state. */
+    trend30d: number | null
+    /** How many items actually contributed to trend30d — shown alongside
+     *  the number so a 1-of-40-items delta doesn't read as shelf-wide. */
+    trend30dCoverage: number
+    topMovers: ShelfMover[]
+  }
   /** True when D1 was unreachable — render the honest error state. */
   loadFailed: boolean
 }
@@ -103,6 +120,43 @@ type Snapshot = {
   sealed: CondBucket | null
   loose: CondBucket | null
   segmentation: string
+  /** 30-day sold-price movement, derived from the same snapshot's dated
+   *  comps — no new data source, no D1, no second fetch. null when either
+   *  window (last 30d / prior 30d) has fewer than MIN_TREND_COMPS priced
+   *  sales; a shelf-ticker trend is never fabricated from thin data. */
+  trend30d: { delta: number; pct: number | null } | null
+}
+
+const MIN_TREND_COMPS = 2
+const DAY_MS = 24 * 60 * 60 * 1000
+
+function median(nums: number[]): number {
+  const s = [...nums].sort((a, b) => a - b)
+  const mid = Math.floor(s.length / 2)
+  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
+}
+
+/** Bucket dated comps into "sold in the last 30 days" vs "sold 30-60 days
+ *  ago" and compare medians. Mirrors Bid Check's own honesty rule (never
+ *  derive a number from too few sales) rather than inventing a new gate. */
+function computeTrend30d(recent: { price: number; sold_date: string | null }[]): Snapshot['trend30d'] {
+  const now = Date.now()
+  const last30: number[] = []
+  const prior30: number[] = []
+  for (const r of recent) {
+    if (!r.sold_date || typeof r.price !== 'number') continue
+    const t = Date.parse(r.sold_date)
+    if (isNaN(t)) continue
+    const ageDays = (now - t) / DAY_MS
+    if (ageDays < 0) continue
+    if (ageDays <= 30) last30.push(r.price)
+    else if (ageDays <= 60) prior30.push(r.price)
+  }
+  if (last30.length < MIN_TREND_COMPS || prior30.length < MIN_TREND_COMPS) return null
+  const mNow = median(last30)
+  const mPrior = median(prior30)
+  const delta = mNow - mPrior
+  return { delta, pct: mPrior > 0 ? (delta / mPrior) * 100 : null }
 }
 
 async function fetchSnapshot(fid: string): Promise<Snapshot> {
@@ -110,10 +164,11 @@ async function fetchSnapshot(fid: string): Promise<Snapshot> {
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`,
     { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
   ).catch(() => null)
-  if (!res?.ok) return { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled' }
+  if (!res?.ok) return { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled', trend30d: null }
   const snap = await res.json() as {
     median_sold: number | null; avg_sold: number | null; sold_count: number
     sealed?: CondBucket | null; loose?: CondBucket | null; condition_segmentation?: string
+    recent?: { price: number; sold_date: string | null }[]
   }
   return {
     median: snap.median_sold ?? snap.avg_sold ?? null,
@@ -121,6 +176,7 @@ async function fetchSnapshot(fid: string): Promise<Snapshot> {
     sealed: snap.sealed ?? null,
     loose: snap.loose ?? null,
     segmentation: snap.condition_segmentation ?? 'pooled',
+    trend30d: computeTrend30d(snap.recent ?? []),
   }
 }
 
@@ -185,6 +241,7 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
       condition,
       paid: r.paid ?? 0,
       ...matched,
+      trend30d: snaps.get(r.figure_id)?.trend30d ?? null,
     }
   })
 
@@ -209,5 +266,23 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
   const estValue = items.reduce((s, i) => s + (i.median ?? i.paid ?? 0), 0)
   const paid = items.reduce((s, i) => s + (i.paid ?? 0), 0)
 
-  return { items, hunt, totals: { figures: items.length, estValue, paid }, loadFailed }
+  return { items, hunt, totals: shelfTotals(items), loadFailed }
+}
+
+/** Shared totals math (server first paint + client re-derive after an
+ *  optimistic edit) — one formula, so the two never drift. */
+export function shelfTotals(items: VaultShelfItem[]): VaultShelfData['totals'] {
+  const withTrend = items.filter(i => i.trend30d != null)
+  const topMovers: ShelfMover[] = withTrend
+    .map(i => ({ fid: i.fid, name: i.name, href: i.href, delta: i.trend30d!.delta, pct: i.trend30d!.pct }))
+    .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+    .slice(0, 3)
+  return {
+    figures: items.length,
+    estValue: items.reduce((s, i) => s + (i.median ?? i.paid ?? 0), 0),
+    paid: items.reduce((s, i) => s + (i.paid ?? 0), 0),
+    trend30d: withTrend.length > 0 ? withTrend.reduce((s, i) => s + i.trend30d!.delta, 0) : null,
+    trend30dCoverage: withTrend.length,
+    topMovers,
+  }
 }

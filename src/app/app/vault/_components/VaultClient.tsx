@@ -10,19 +10,20 @@
 
 import { useMemo, useState } from 'react'
 import type { VaultShelfItem } from '../_lib/vaultData'
+import { shelfTotals } from '../_lib/vaultData'
 import VaultStats from './VaultStats'
 import VaultCase from './VaultCase'
+import ShelfTicker from './ShelfTicker'
 
 export default function VaultClient({ items: initial }: { items: VaultShelfItem[] }) {
   const [items, setItems] = useState(initial)
 
-  // Mirrors getVaultShelfData's server formula exactly so the first paint
-  // matches the server totals; recomputes on every optimistic edit.
-  const totals = useMemo(() => ({
-    figures: items.length,
-    estValue: items.reduce((s, i) => s + (i.median ?? i.paid ?? 0), 0),
-    paid: items.reduce((s, i) => s + (i.paid ?? 0), 0),
-  }), [items])
+  // Mirrors getVaultShelfData's server formula exactly (shelfTotals is the
+  // one shared implementation) so the first paint matches the server totals;
+  // recomputes on every optimistic edit. trend30d/topMovers are snapshot-time
+  // facts attached per item at fetch — an inline paid/condition edit doesn't
+  // change them, but a removed item correctly drops out of the movers list.
+  const totals = useMemo(() => shelfTotals(items), [items])
 
   function patch(rowId: string, body: { paid?: number; condition?: string }) {
     setItems(prev => prev.map(i => i.rowId === rowId ? { ...i, ...body } : i))
@@ -52,6 +53,16 @@ export default function VaultClient({ items: initial }: { items: VaultShelfItem[
           <VaultStats figures={totals.figures} estValue={totals.estValue} paid={totals.paid} />
         )}
       </div>
+
+      {items.length > 0 && (
+        <ShelfTicker
+          estValue={totals.estValue}
+          trend30d={totals.trend30d}
+          coverage={totals.trend30dCoverage}
+          figures={totals.figures}
+          topMovers={totals.topMovers}
+        />
+      )}
 
       <VaultCase items={items} onPatch={patch} onRemove={remove} />
     </>

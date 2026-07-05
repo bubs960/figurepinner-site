@@ -7,6 +7,8 @@ export type FunnelEvent =
   | 'figure_view'
   | 'ebay_exit'
   | 'price_receipt_open'
+  | 'ad_impression'
+  | 'shelf_ticker_open'
 
 type FunnelDetail = Record<string, string | number | boolean | null | undefined>
 

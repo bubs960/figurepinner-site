@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Script from 'next/script'
 import { hasClientClerkSession } from '@/app/_lib/clientAuth'
+import { trackFunnel } from '@/app/_lib/funnelClient'
 
 /**
  * AdSlot — placeholder for Google AdSense units.
@@ -78,6 +79,18 @@ export default function AdSlot({ slot, className }: Props) {
       })
     return () => { cancelled = true }
   }, [])
+
+  // Ad-side instrumentation (Bid Check affiliate-vs-ad measurement, 2026-07-05):
+  // ebay_exit already tracks affiliate exits; nothing fired for ad exposure
+  // until now. This fires once per real render of a live (non-placeholder)
+  // ad unit — the same page-view denominator ('landing') lets both be
+  // compared per-visit. Click-through can't be tracked here: Adsterra's
+  // creative runs inside a cross-origin iframe this page doesn't control.
+  useEffect(() => {
+    if (proState !== 'free') return
+    if (slot !== 'adsterra-banner' && slot !== 'adsterra-native') return
+    trackFunnel('ad_impression', { target: slot })
+  }, [proState, slot])
 
   if (!config) return null
 
