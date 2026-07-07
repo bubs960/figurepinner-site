@@ -9,6 +9,23 @@
 // items carrying a computable trend renders "not enough sold history yet",
 // never a fabricated 0.0%. The coverage count is shown alongside the delta
 // so a 1-of-40-items number never reads as shelf-wide.
+//
+// Correction 2026-07-05 (standalone flag): originally referenced --shelf-*
+// (BidCheck.tsx's token set, scoped to the figure-detail page only) — those
+// vars are never declared under /app/vault, so every color here was quietly
+// running on hardcoded fallback text the whole time. This page has its OWN
+// equivalent token set already, --vlt-* (declared in vault/page.tsx's CSS
+// blob, same values) — switched to that instead. Up/down colors also now
+// match VaultStats/VaultCase's --vlt-up/--vlt-down rather than the generic
+// site-wide --green/--red, for visual consistency with the rest of this page.
+//
+// Digit reveal (added 2026-07-05, standalone's transitions.dev flag): the
+// headline delta pops in per-character on first paint, matching the "number
+// pop-in" spec (transitions.dev, MIT). Adapted, not copy-pasted verbatim —
+// this value is server-rendered once per page load (no live re-fetch), so
+// the JS "replay on value change" half of the spec is dead weight here; only
+// the CSS keyframe + one-time markup is used. prefers-reduced-motion guard
+// kept as specified (non-negotiable per that spec and our own WP2 precedent).
 
 import { useState } from 'react'
 import type { ShelfMover } from '../_lib/vaultData'
@@ -20,6 +37,26 @@ type Props = {
   coverage: number
   figures: number
   topMovers: ShelfMover[]
+}
+
+/** Renders `text` as one <span> per character, each carrying a stagger index
+ *  on the last two characters — mirrors the spec's decimal-digits-lag-behind
+ *  feel without needing per-digit-type detection. */
+function PopInText({ text }: { text: string }) {
+  const chars = [...text]
+  return (
+    <span className="fp-st-digits is-animating">
+      {chars.map((ch, i) => {
+        const fromEnd = chars.length - i
+        const stagger = fromEnd === 2 ? 1 : fromEnd === 1 ? 2 : undefined
+        return (
+          <span key={i} className="fp-st-digit" data-stagger={stagger}>
+            {ch === ' ' ? ' ' : ch}
+          </span>
+        )
+      })}
+    </span>
+  )
 }
 
 export default function ShelfTicker({ estValue, trend30d, coverage, figures, topMovers }: Props) {
@@ -41,26 +78,42 @@ export default function ShelfTicker({ estValue, trend30d, coverage, figures, top
         .fp-st-btn {
           display: inline-flex; align-items: center; gap: 0.5rem;
           padding: 0.4375rem 0.875rem; border-radius: 999px; cursor: pointer;
-          border: 1px solid var(--shelf-line, rgba(242,232,213,.08));
+          border: 1px solid var(--vlt-line, rgba(242,232,213,.07));
           background: linear-gradient(180deg, rgba(242,232,213,.03), rgba(242,232,213,.008) 60%, transparent);
-          color: var(--shelf-cream-dim, rgba(242,232,213,.60));
+          color: var(--vlt-cream-dim, rgba(242,232,213,.60));
           font-size: 0.8125rem; font-weight: 400;
         }
         .fp-st-btn:hover { border-color: rgba(242,232,213,.18); }
-        .fp-st-label { color: var(--shelf-cream-mut, rgba(242,232,213,.38)); }
-        .fp-st-delta.up { color: var(--green); }
-        .fp-st-delta.dn { color: var(--red); }
-        .fp-st-cov { font-size: 0.6875rem; color: var(--shelf-cream-mut, rgba(242,232,213,.38)); }
+        .fp-st-label { color: var(--vlt-cream-mut, rgba(242,232,213,.38)); }
+        .fp-st-delta.up { color: var(--vlt-up, #79c98c); }
+        .fp-st-delta.dn { color: var(--vlt-down, #e08078); }
+        .fp-st-cov { font-size: 0.6875rem; color: var(--vlt-cream-mut, rgba(242,232,213,.38)); }
         .fp-st-panel {
           margin-top: 0.5rem; padding: 0.75rem 1rem; border-radius: 12px;
-          border: 1px solid var(--shelf-line, rgba(242,232,213,.08));
+          border: 1px solid var(--vlt-line, rgba(242,232,213,.07));
           background: rgba(242,232,213,.02);
           display: flex; flex-direction: column; gap: 0.5rem;
           max-width: 26rem;
         }
         .fp-st-mover { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.8125rem; }
-        .fp-st-mover-name { color: var(--shelf-cream-dim, rgba(242,232,213,.60)); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .fp-st-mover-name { color: var(--vlt-cream-dim, rgba(242,232,213,.60)); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .fp-st-mover-delta { font-variant-numeric: tabular-nums; flex-shrink: 0; }
+
+        /* number pop-in (transitions.dev, adapted — one-time reveal, no replay JS needed) */
+        .fp-st-digits { display: inline-flex; align-items: baseline; font-variant-numeric: tabular-nums; }
+        .fp-st-digit { display: inline-block; will-change: transform, opacity, filter; }
+        .fp-st-digits.is-animating .fp-st-digit {
+          animation: fp-st-digit-pop-in 500ms cubic-bezier(0.34, 1.45, 0.64, 1) both;
+        }
+        .fp-st-digits.is-animating .fp-st-digit[data-stagger="1"] { animation-delay: 70ms; }
+        .fp-st-digits.is-animating .fp-st-digit[data-stagger="2"] { animation-delay: 140ms; }
+        @keyframes fp-st-digit-pop-in {
+          0%   { transform: translateY(8px); opacity: 0; filter: blur(2px); }
+          100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .fp-st-digits .fp-st-digit { animation: none !important; }
+        }
       `}</style>
 
       <button
@@ -73,7 +126,8 @@ export default function ShelfTicker({ estValue, trend30d, coverage, figures, top
         {hasTrend ? (
           <>
             <span className={`fp-st-delta ${trend30d! >= 0 ? 'up' : 'dn'}`}>
-              {trend30d! >= 0 ? '▲' : '▼'} ${Math.abs(trend30d!).toFixed(2)}
+              {trend30d! >= 0 ? '▲' : '▼'}{' '}
+              <PopInText text={`$${Math.abs(trend30d!).toFixed(2)}`} />
               {pct != null && <> ({trend30d! >= 0 ? '+' : '−'}{Math.abs(pct).toFixed(1)}%)</>}
             </span>
             <span className="fp-st-cov">({coverage} of {figures} priced this window)</span>

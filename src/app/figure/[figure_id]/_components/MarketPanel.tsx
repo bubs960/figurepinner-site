@@ -134,9 +134,9 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
           font-family:var(--fp-font-body);font-size:11.5px;
           border-bottom:1px solid var(--shelf-line,rgba(242,232,213,.06));
         }
-        .fp-comp-date{color:var(--shelf-cream-mut,rgba(242,232,213,.5));min-width:3.6em}
+        .fp-comp-date{color:var(--shelf-cream-mut,rgba(242,232,213,.38));min-width:3.6em}
         .fp-comp-condition{
-          color:var(--shelf-cream-dim,rgba(242,232,213,.7));flex:1 1 auto;
+          color:var(--shelf-cream-dim,rgba(242,232,213,.60));flex:1 1 auto;
           text-transform:capitalize;
         }
         .fp-comp-price{
