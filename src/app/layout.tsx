@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import Script from 'next/script'
 import { Bebas_Neue, Inter, Cinzel } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
 import FunnelTracker from './_components/FunnelTracker'
@@ -111,9 +112,23 @@ export default function RootLayout({
         <meta name="fp-build" content={process.env.FP_BUILD_SHA ?? 'unknown'} />
       </head>
       <body>
-        <FunnelTracker />
-        {children}
-        <Footer />
+        {/* Plain ClerkProvider, NO `dynamic` prop (S70 fix, 2026-07-07, per
+            standalone's spec: STANDALONE-TO-WEB-CLERK-HEADER-FIX-SPEC).
+            `dynamic` opts a subtree into per-request rendering, which needs
+            clerkMiddleware() to have processed the request — that's what
+            broke the first attempt, since middleware.ts's matcher
+            deliberately excludes public routes (S19, bot-traffic cost).
+            Plain ClerkProvider on v6 does NOT force dynamic rendering, so
+            public pages stay static/ISR'd exactly as before; SiteHeader's
+            <SignedIn>/<SignedOut> read Clerk's CLIENT-side session state
+            after hydration instead, no middleware coverage required.
+            app/app/layout.tsx keeps its own <ClerkProvider dynamic> for real
+            per-request auth() calls in /app — unchanged, untouched. */}
+        <ClerkProvider>
+          <FunnelTracker />
+          {children}
+          <Footer />
+        </ClerkProvider>
         {/* Google AdSense — auto ads. lazyOnload (S20 perf audit): the script
             used to load render-blocking-adjacent in <head>, competing for
             bandwidth/CPU in the critical first-load window on every page.

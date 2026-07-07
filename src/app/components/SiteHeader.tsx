@@ -1,4 +1,7 @@
+'use client'
+
 import { Fragment } from 'react'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 // Unified site header — the single nav for every public page.
 // Visuals extracted from the homepage nav (Steve-approved S20 redesign):
@@ -170,8 +173,19 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
       )}
 
       <div className="fp-sitenav-actions">
-        <a href="/sign-in">Log in</a>
-        <a className="fp-sitenav-join" href="/sign-up">Sign up free</a>
+        {/* S70 (2026-07-07): was hardcoded, always showed Log in/Sign up
+            regardless of session — root layout had no ClerkProvider so this
+            couldn't reflect real auth state. Client-side check now, reads
+            Clerk's session after hydration — no middleware coverage needed,
+            public pages stay static/ISR'd (see root layout.tsx). */}
+        <SignedOut>
+          <a href="/sign-in">Log in</a>
+          <a className="fp-sitenav-join" href="/sign-up">Sign up free</a>
+        </SignedOut>
+        <SignedIn>
+          <a href="/app">My Collection</a>
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
       </div>
     </nav>
   )
