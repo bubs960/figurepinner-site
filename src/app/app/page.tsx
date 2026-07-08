@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { genreMark, labelMark } from '@/app/_lib/genreMarks'
 
@@ -31,7 +31,14 @@ type WantItem = {
   added_at: string
 }
 
-export default function AppHome() {
+// Was rendered directly as the page's default export. Removing the redundant
+// nested <ClerkProvider dynamic> on /app (S71, 2026-07-08) meant this route
+// was no longer implicitly forced dynamic, so Next.js's build-time static
+// prerender attempt hit the real, pre-existing gap: useSearchParams() here
+// had no Suspense boundary. That combo previously masked the requirement
+// rather than satisfying it. Suspense wrapper below is the standard fix,
+// independent of the ClerkProvider change.
+function AppHomeContent() {
   const searchParams = useSearchParams()
   const [upgradeBanner, setUpgradeBanner] = useState(() => searchParams.get('upgraded') === '1')
   const [query, setQuery] = useState('')
@@ -299,6 +306,14 @@ export default function AppHome() {
         </div>
       </section>
     </div>
+  )
+}
+
+export default function AppHome() {
+  return (
+    <Suspense fallback={null}>
+      <AppHomeContent />
+    </Suspense>
   )
 }
 
