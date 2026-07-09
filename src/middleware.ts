@@ -96,6 +96,20 @@ export const config = {
     '/app(.*)',
     '/admin(.*)',
     '/trpc(.*)',
+    '/sign-in(.*)',
+    '/sign-up(.*)',
     '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|funnel$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
   ],
 }
+// /sign-in and /sign-up added (S71, 2026-07-08): both layouts use
+// <ClerkProvider dynamic>, which per Clerk's own docs requires per-request
+// clerkMiddleware evaluation to work correctly -- neither route was in this
+// matcher, so that requirement was silently unmet. Live customer report same
+// day: sign-up -> verify -> stuck in a redirect loop back to sign-in, which
+// matches Clerk's documented "infinite redirect loop" failure class (unable
+// to determine auth state for the request). NOT a repeat of the S19 public-
+// page-latency regression this matcher otherwise guards against -- sign-in/
+// sign-up are `robots: noindex`, low-traffic, and are exactly the auth-
+// critical routes Clerk's own quickstart matcher covers by default; S19 was
+// specifically about high-volume BOT-CRAWLED, INDEXED content pages (genre
+// hubs, guides), which this change does not touch.
