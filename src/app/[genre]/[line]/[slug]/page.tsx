@@ -15,11 +15,12 @@
 
 import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
-import { getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { getAllFandoms, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
 import { getFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
+import { findFigureMatches } from './_lib/findFigureMatches'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
 // client-side in FigureDetailContent so caching is safe. Was force-dynamic;
@@ -28,41 +29,6 @@ export const dynamic = 'force-static'
 export const revalidate = 86400 // matches /figure/[figure_id] — same content, same KV budget
 
 const BASE = 'https://figurepinner.com'
-
-// ── Figure lookup ──────────────────────────────────────────────────────────────
-
-function normalizeSlug(s: string) {
-  return s.toLowerCase().trim()
-}
-
-function findFigureMatches(fandom: string, line: string, slug: string): KBFigure[] {
-  // `fandom` is the URL [genre] slug, which diverges from the KB fandom for the
-  // remapped fandoms (gijoe→gi-joe, marvel→marvel-comics, teenage-mutant-ninja-turtles→tmnt).
-  // Remap via getFandom so /gijoe/<line>/<char> resolves, matching the line/character routes.
-  const candidates = getFiguresByFandom(getFandom(fandom))
-  if (!candidates.length) return []
-
-  const lineNorm = normalizeSlug(line)
-  const slugNorm = normalizeSlug(slug)
-
-  function lineMatches(f: KBFigure): boolean {
-    const pl = normalizeSlug(f.product_line)
-    const mfr = normalizeSlug(f.manufacturer)
-    if (pl === lineNorm) return true
-    if (`${mfr}-${pl}` === lineNorm) return true
-    return false
-  }
-
-  const matches = candidates.filter(
-    f => lineMatches(f) && normalizeSlug(f.character_canonical) === slugNorm
-  )
-
-  return matches.sort((a, b) => {
-    const wA = parseInt(a.release_wave) || 0
-    const wB = parseInt(b.release_wave) || 0
-    return wB - wA
-  })
-}
 
 // ── Metadata ───────────────────────────────────────────────────────────────────
 
@@ -111,12 +77,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ...(hasConfirmedZeroSoldData
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
+    // No `images` here — the file-convention opengraph-image.tsx in this same
+    // route segment supplies the real Grail Card, superseding the bare product
+    // photo this used to point at.
     openGraph: {
       title: `${displayName}${medianLabel ? ` — ${medianLabel}` : ''} | FigurePinner`,
       description: `Real sold prices for ${displayName}. ${compLabel}`,
-      images: figure.canonical_image_url
-        ? [{ url: figure.canonical_image_url, width: 400, height: 400, alt: displayName }]
-        : [],
     },
   }
 }

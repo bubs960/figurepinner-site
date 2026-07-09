@@ -1,0 +1,335 @@
+/**
+ * Shared "Grail Card" element — the ImageResponse primitive both the public
+ * per-figure OG image (this session) and the future per-user shelf card
+ * (Claiming Ritual Phase C, P3 §3) render through. Satori CSS subset only:
+ * flexbox, gradients, radius, basic transform — no box-shadow, no
+ * backdrop-filter.
+ *
+ * Collector-first positioning (Steve, 2026-07-09): the figure leads — photo,
+ * name, museum-placard framing. Price is a small supporting line, never the
+ * headline.
+ */
+import type { KBFigure } from '@/data/kb'
+import { deriveName } from '@/data/kb'
+import { prettifySlug } from './figureFormatters'
+
+export const OG_SIZE = { width: 1200, height: 630 }
+
+const GOLD = '#D4AF37'
+const INK = '#09090F'
+const PAPER = '#EEEEF5'
+const MUTED = '#9AA0B4'
+
+export type GrailCardStatus = 'hunting' | 'in_vault'
+
+export type GrailCardPrice = {
+  medianLabel: string | null
+  soldCount: number
+}
+
+// Live-KB measured (2026-07-09 webaudit P2S2): p50 46 chars, 26.2% >60,
+// 6.7% (1,516 figures) >80, max 164. Step size down before the line-clamp
+// backstop has to do the heavy lifting.
+function nameFontSize(name: string): number {
+  const len = name.length
+  if (len <= 28) return 54
+  if (len <= 46) return 42
+  if (len <= 70) return 32
+  return 24
+}
+
+// eBay's dead/purged thumb signature: HTTP 200 + image/jpeg + exactly 1,359
+// bytes (documented in project_photo_cleaning memory). Treat as no-photo.
+const EBAY_PLACEHOLDER_BYTES = 1359
+const MAX_PHOTO_BYTES = 5 * 1024 * 1024 // guard against an unexpectedly huge source photo
+
+function arrayBufferToBase64(buf: ArrayBuffer): string {
+  const bytes = new Uint8Array(buf)
+  let binary = ''
+  const chunkSize = 0x8000
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize))
+  }
+  return btoa(binary)
+}
+
+/**
+ * Fetch + validate a figure photo for card rendering. Bounded latency (satori's
+ * own internal <img> fetch has no timeout and never checks response.ok — this
+ * replaces that with one controlled fetch), catches eBay's silent placeholder,
+ * and returns a data URI so the card never depends on the source host staying
+ * up at render time. Returns null on any failure — the card already renders a
+ * clean wordmark fallback for a null photo.
+ */
+export async function resolveCardPhoto(url: string | null | undefined): Promise<string | null> {
+  if (!url) return null
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(4000) })
+    if (!res.ok) return null
+    const contentType = res.headers.get('content-type') ?? ''
+    if (!contentType.startsWith('image/')) return null
+    const contentLength = Number(res.headers.get('content-length') ?? '0')
+    if (contentLength > MAX_PHOTO_BYTES) return null
+    const buf = await res.arrayBuffer()
+    if (buf.byteLength === EBAY_PLACEHOLDER_BYTES) return null
+    if (buf.byteLength < 200) return null
+    if (buf.byteLength > MAX_PHOTO_BYTES) return null
+    return `data:${contentType};base64,${arrayBufferToBase64(buf)}`
+  } catch {
+    return null
+  }
+}
+
+type CardFont = { name: string; data: ArrayBuffer; weight: 400 | 700 | 900; style: 'normal' }
+
+let fontsPromise: Promise<CardFont[]> | null = null
+
+async function loadInterWeight(weight: 400 | 700 | 900): Promise<ArrayBuffer> {
+  // Standard next/og pattern: Google's CSS2 endpoint serves ttf/otf (not woff2)
+  // to a plain server-side fetch with no browser UA — satori needs ttf/otf.
+  // Bounded like resolveCardPhoto's fetch — a hung fonts.googleapis.com must
+  // not stall the render; the timeout flows into loadCardFonts' own catch.
+  const css = await fetch(`https://fonts.googleapis.com/css2?family=Inter:wght@${weight}`, {
+    signal: AbortSignal.timeout(4000),
+  }).then(r => r.text())
+  const match = css.match(/src: url\(([^)]+)\) format\('(?:opentype|truetype)'\)/)
+  if (!match) throw new Error(`Inter ${weight} font URL not found in Google Fonts CSS`)
+  const fontRes = await fetch(match[1], { signal: AbortSignal.timeout(4000) })
+  if (!fontRes.ok) throw new Error(`Inter ${weight} font fetch failed: ${fontRes.status}`)
+  return fontRes.arrayBuffer()
+}
+
+/**
+ * Loads Inter 400/700/900 for the card's real weight hierarchy (next/og's
+ * default otherwise auto-registers exactly ONE weight — every fontWeight in
+ * this file renders identical glyphs without this). Fails soft: on any error
+ * returns [], and every element's `fontFamily: 'Inter, sans-serif'` falls
+ * through to next/og's bundled default — never breaks a render over a font.
+ * Memoized per isolate/cold-start, not per-request.
+ */
+export function loadCardFonts(): Promise<CardFont[]> {
+  if (!fontsPromise) {
+    fontsPromise = Promise.all(
+      ([400, 700, 900] as const).map(async weight => ({
+        name: 'Inter',
+        data: await loadInterWeight(weight),
+        weight,
+        style: 'normal' as const,
+      }))
+    ).catch(() => [])
+  }
+  return fontsPromise
+}
+
+const FONT_STACK = 'Inter, sans-serif'
+
+export function GrailCard({
+  figure,
+  price,
+  photoSrc,
+  status = 'hunting',
+}: {
+  figure: KBFigure
+  price: GrailCardPrice | null
+  photoSrc: string | null
+  status?: GrailCardStatus
+}) {
+  const displayName = deriveName(figure)
+  const line = prettifySlug(figure.product_line)
+  const fandom = prettifySlug(figure.fandom)
+  const ribbonLabel = status === 'in_vault' ? 'IN THE VAULT' : 'HUNTING'
+  const ribbonColor = status === 'in_vault' ? GOLD : '#7C8399'
+
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: INK,
+        fontFamily: FONT_STACK,
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* warm glow */}
+      <div
+        style={{
+          position: 'absolute',
+          top: -160,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 1000,
+          height: 640,
+          background:
+            'radial-gradient(ellipse at center, rgba(212,175,55,0.16) 0%, rgba(212,175,55,0.05) 45%, transparent 70%)',
+          borderRadius: '50%',
+        }}
+      />
+
+      {/* placard panel — overflow:hidden is the final backstop for the ~6.7%
+          of names that stay too long even after the clamp below */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 56,
+          width: 1080,
+          height: 540,
+          padding: 48,
+          borderRadius: 28,
+          background: 'rgba(255,255,255,0.03)',
+          border: '2px solid rgba(212,175,55,0.35)',
+          overflow: 'hidden',
+        }}
+      >
+        {/* photo frame */}
+        <div style={{ position: 'relative', display: 'flex', width: 400, height: 400 }}>
+          <div
+            style={{
+              display: 'flex',
+              width: 400,
+              height: 400,
+              borderRadius: 20,
+              overflow: 'hidden',
+              background: '#15151f',
+              border: '3px solid rgba(212,175,55,0.5)',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {photoSrc ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={photoSrc}
+                width={400}
+                height={400}
+                style={{ objectFit: 'contain' }}
+              />
+            ) : (
+              <div style={{ display: 'flex', color: MUTED, fontSize: 20 }}>FigurePinner</div>
+            )}
+          </div>
+
+          {/* gold pin, corner */}
+          <div
+            style={{
+              position: 'absolute',
+              top: -14,
+              right: -14,
+              width: 40,
+              height: 40,
+              borderRadius: 20,
+              background: GOLD,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <div style={{ display: 'flex', width: 14, height: 14, borderRadius: 7, background: '#FFF6D8' }} />
+          </div>
+
+          {/* status ribbon */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 20,
+              left: -10,
+              display: 'flex',
+              paddingLeft: 16,
+              paddingRight: 16,
+              paddingTop: 8,
+              paddingBottom: 8,
+              borderRadius: 6,
+              background: ribbonColor,
+            }}
+          >
+            <div style={{ display: 'flex', fontSize: 18, fontWeight: 900, color: INK, letterSpacing: '0.12em' }}>
+              {ribbonLabel}
+            </div>
+          </div>
+        </div>
+
+        {/* text block */}
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, gap: 14, minWidth: 0 }}>
+          <div
+            style={{
+              display: 'flex',
+              fontSize: 20,
+              fontWeight: 700,
+              color: GOLD,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+            }}
+          >
+            {fandom}
+          </div>
+          <div
+            style={{
+              display: '-webkit-box',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 3,
+              overflow: 'hidden',
+              fontSize: nameFontSize(displayName),
+              fontWeight: 900,
+              color: PAPER,
+              lineHeight: 1.05,
+            }}
+          >
+            {displayName}
+          </div>
+          <div style={{ display: 'flex', fontSize: 24, color: MUTED, fontWeight: 700 }}>{line}</div>
+          {price && (
+            <div style={{ display: 'flex', marginTop: 18, fontSize: 22, color: '#c9d0e0' }}>
+              {price.medianLabel
+                ? `${price.medianLabel} median${price.soldCount ? ` · ${price.soldCount} sold` : ''}`
+                : 'Real eBay sold prices on FigurePinner'}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* domain bar */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 28,
+          left: 0,
+          right: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: 18,
+          letterSpacing: '0.06em',
+        }}
+      >
+        <span style={{ color: PAPER, fontWeight: 900 }}>Figure</span>
+        <span style={{ color: GOLD, fontWeight: 900 }}>Pinner</span>
+        <span style={{ color: MUTED, marginLeft: 10 }}>· figurepinner.com</span>
+      </div>
+    </div>
+  )
+}
+
+export function FallbackOGCard() {
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: INK,
+        fontFamily: FONT_STACK,
+      }}
+    >
+      <div style={{ display: 'flex', fontSize: 48, fontWeight: 900, color: PAPER }}>
+        <span>Figure</span>
+        <span style={{ color: GOLD }}>Pinner</span>
+      </div>
+    </div>
+  )
+}

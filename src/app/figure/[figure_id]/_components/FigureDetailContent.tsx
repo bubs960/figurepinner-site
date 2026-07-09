@@ -176,7 +176,8 @@ export async function fetchFigurePageData(figure_id: string): Promise<{ price: P
     { next: { revalidate: 3600 } }
   ).catch(() => null)
   if (!res?.ok) return { price: null, imageUrl: null }
-  const snap = await res.json() as R2Snapshot
+  const snap = await res.json().catch(() => null) as R2Snapshot | null
+  if (!snap) return { price: null, imageUrl: null }
   const iqr = _iqr((snap.recent ?? []).map((s: { price: number }) => s.price))
   return {
     price: {

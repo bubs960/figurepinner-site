@@ -73,12 +73,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ...((hasConfirmedZeroSoldData || hasUniquePrettyFigureUrl(local))
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
+    // No `images` here — the file-convention opengraph-image.tsx in this same
+    // route segment supplies the real Grail Card, superseding the bare product
+    // photo this used to point at.
     openGraph: {
       title: `${displayName}${medianLabel ? ` — ${medianLabel}` : ''} | FigurePinner`,
       description: `Real sold prices for ${displayName}. ${compLabel}`,
-      images: local.canonical_image_url
-        ? [{ url: local.canonical_image_url, width: 400, height: 400, alt: displayName }]
-        : [],
     },
   }
 }
