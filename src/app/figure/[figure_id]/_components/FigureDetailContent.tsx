@@ -438,11 +438,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       imageUrl: thumb(f.canonical_image_url, 180),
     }))
 
-  const characterVariants = allInGenre
-    .filter(f =>
-      f.figure_id !== figureId &&
-      f.character_canonical === local.character_canonical
-    )
+  const characterVariantsAll = allInGenre.filter(f =>
+    f.figure_id !== figureId &&
+    f.character_canonical === local.character_canonical
+  )
+  const characterVariants = characterVariantsAll
     .slice(0, 12)
     .map(f => ({
       figure_id: f.figure_id,
@@ -450,6 +450,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       name: deriveName(f),
       imageUrl: thumb(f.canonical_image_url, 180),
     }))
+  const characterHubHref = `/${genreSlug}/character/${local.character_canonical}`
 
   // ── JSON-LD ─────────────────────────────────────────────────────────────────
   // This is a price-guide page, not a merchant product page. Keep the structured
@@ -561,6 +562,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },
         { name: line, url: `https://figurepinner.com/${genreSlug}/${local.product_line}` },
+        { name: characterH1, url: `https://figurepinner.com${characterHubHref}` },
         { name: displayName, url: `https://figurepinner.com${prettyFigureUrl(local)}` },
       ]} />
 
@@ -587,6 +589,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       <SiteHeader crumbs={[
         { label: prettifySlug(genreSlug), href: `/${genreSlug}` },
         { label: line, href: `/${genreSlug}/${local.product_line}` },
+        { label: characterH1, href: characterHubHref },
         { label: displayName },
       ]} />
 
@@ -748,6 +751,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           label={`Every Version of ${characterH1}`}
           figures={characterVariants}
           accentColor="var(--fp-accent-warm)"
+          headerLink={{
+            href: characterHubHref,
+            label: `See all ${characterVariantsAll.length + 1} ${characterH1} figures →`,
+          }}
         />
 
         {/* Zone 8 — CTA rail */}

@@ -13,7 +13,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
-import { fandomsForGenre } from '@/lib/genreFigures'
+import { fandomsForGenre, genreSlugForFandom } from '@/lib/genreFigures'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import FigureThumb from '@/app/components/FigureThumb'
@@ -266,6 +266,27 @@ export default async function LineHubPage(
         @media (prefers-reduced-motion: reduce) {
           .line-card:hover { transform: none; }
         }
+        /* Character-hub link (P2 distribution) — a sibling of .line-card, not
+           nested inside it (the whole card is already one <a>, can't nest a
+           second interactive anchor). Hover/focus-reveal to avoid cluttering
+           a dense grid. */
+        .line-card-wrap { position: relative; }
+        .line-card-char-link {
+          position: absolute; top: 6px; right: 6px;
+          font-size: 0.6rem; font-weight: 600; letter-spacing: 0.02em;
+          padding: 2px 7px; border-radius: 999px;
+          background: var(--bg); border: 1px solid ${accent}40;
+          color: ${accent}; text-decoration: none;
+          opacity: 0; transition: opacity 0.15s ease;
+          pointer-events: none;
+        }
+        .line-card-wrap:hover .line-card-char-link,
+        .line-card-wrap:focus-within .line-card-char-link {
+          opacity: 1; pointer-events: auto;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .line-card-char-link { transition: none; }
+        }
       `}</style>
 
       <SiteHeader crumbs={[{ label: genreName, href: `/${genre}` }, { label: lineName }]} />
@@ -461,52 +482,64 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
     ? f.exclusive_to : null
 
   return (
-    <a
-      href={figureUrl(f)}
-      className="line-card"
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.625rem',
-        padding: '0.625rem 0.75rem',
-        background: 'var(--s1)',
-        border: '1px solid var(--border)',
-        borderRadius: 8,
-        textDecoration: 'none',
-        color: 'var(--text)',
-        fontSize: '0.8125rem',
-        transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
-        minWidth: 0,
-      }}
-    >
-      {/* Thumbnail */}
-      <FigureThumb image={f.canonical_image_url} size={40} radius={4} cdnWidth={96} fallback={{ kind: 'icon', accent }} />
+    <div className="line-card-wrap">
+      <a
+        href={figureUrl(f)}
+        className="line-card"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.625rem',
+          padding: '0.625rem 0.75rem',
+          background: 'var(--s1)',
+          border: '1px solid var(--border)',
+          borderRadius: 8,
+          textDecoration: 'none',
+          color: 'var(--text)',
+          fontSize: '0.8125rem',
+          transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
+          minWidth: 0,
+        }}
+      >
+        {/* Thumbnail */}
+        <FigureThumb image={f.canonical_image_url} size={40} radius={4} cdnWidth={96} fallback={{ kind: 'icon', accent }} />
 
-      {/* Info */}
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div style={{
-          fontWeight: 600,
-          overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-          lineHeight: 1.3,
-        }}>
-          {charName}
+        {/* Info */}
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{
+            fontWeight: 600,
+            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+            lineHeight: 1.3,
+          }}>
+            {charName}
+          </div>
+          {variant && (
+            <div style={{ fontSize: '0.68rem', color: '#EEEEF5', marginTop: 1 }}>
+              {variant}
+            </div>
+          )}
+          {exclusive && (
+            <div style={{ fontSize: '0.65rem', color: accent, marginTop: 1, opacity: 0.85 }}>
+              {exclusive}
+            </div>
+          )}
         </div>
-        {variant && (
-          <div style={{ fontSize: '0.68rem', color: '#EEEEF5', marginTop: 1 }}>
-            {variant}
-          </div>
-        )}
-        {exclusive && (
-          <div style={{ fontSize: '0.65rem', color: accent, marginTop: 1, opacity: 0.85 }}>
-            {exclusive}
-          </div>
-        )}
-      </div>
 
-      {/* Arrow */}
-      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke={accent} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, opacity: 0.6 }}>
-        <path d="M2 6h8M6 2l4 4-4 4" />
-      </svg>
-    </a>
+        {/* Arrow */}
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke={accent} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, opacity: 0.6 }}>
+          <path d="M2 6h8M6 2l4 4-4 4" />
+        </svg>
+      </a>
+      {/* Sibling link to the character hub — see .line-card-char-link above.
+          Uses genreSlugForFandom(f.fandom), NOT the route's genre param: on
+          NECA-rollup line pages (served under /neca/...) the route param is
+          "neca" but each figure's true fandom (and the character hub's own
+          canonical URL) is its specific genre (horror, aliens-predator, ...)
+          — using the route param would link a self-canonicalized duplicate
+          URL for every NECA character (webaudit P2S1 verdict, 2026-07-09). */}
+      <a href={`/${genreSlugForFandom(f.fandom)}/character/${f.character_canonical}`} className="line-card-char-link">
+        All →
+      </a>
+    </div>
   )
 }

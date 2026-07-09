@@ -24,9 +24,12 @@ interface RelatedRowProps {
    *  intersecting the signed-in vault with these wave fids (incl. the current
    *  figure). Only "Complete the Wave" passes this; omit elsewhere. */
   ownershipFids?: string[]
+  /** When set, renders a link in the header (e.g. to the character hub page —
+   *  P2 distribution, character pages otherwise have zero inbound links). */
+  headerLink?: { href: string; label: string }
 }
 
-export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-gold, #e0a83e)', ownershipFids }: RelatedRowProps) {
+export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-gold, #e0a83e)', ownershipFids, headerLink }: RelatedRowProps) {
   if (figures.length === 0) return null
 
   return (
@@ -77,6 +80,17 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
         }}>
           {label}
         </span>
+        {headerLink && (
+          <a
+            href={headerLink.href}
+            style={{
+              fontSize: '0.6875rem', fontWeight: 500, letterSpacing: '0.02em',
+              color: accentColor, textDecoration: 'none', whiteSpace: 'nowrap',
+            }}
+          >
+            {headerLink.label}
+          </a>
+        )}
         <span style={{
           display: 'inline-flex', alignItems: 'baseline', gap: '0.85rem',
           marginLeft: 'auto', whiteSpace: 'nowrap',
