@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kb'
-import { figuresForGenre, groupAndSortLines, cardName } from '@/lib/genreFigures'
+import { figuresForGenre, groupAndSortLines, cardName, genreSlugForFandom } from '@/lib/genreFigures'
 import { GENRE_TAXONOMY, type LineTile } from '@/data/genre-lines'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
@@ -161,13 +161,25 @@ type CharacterHighlight = {
   name: string
   count: number
   image: string | null
+  href: string
 }
 
 /** Top characters in a genre by release count (Phase 2 session 3 — the
  *  genre hub's own inbound link to /[genre]/character/[slug], which
  *  Phase 2 session 1 left orphaned from every template except line pages.
  *  Render-only from the already-loaded figures array — no new fetches,
- *  same ISR-safe shape as session 1's rail link + breadcrumb. */
+ *  same ISR-safe shape as session 1's rail link + breadcrumb.
+ *
+ *  P2S3 fix: link via the character's DOMINANT fandom
+ *  (genreSlugForFandom), not the route's raw genre param. On non-rollup
+ *  genres these are identical (a no-op). On the NECA rollup, the route
+ *  param is 'neca' but the character hub's real canonical + the sitemap
+ *  both key off the figure's own fandom slug (horror/terminator/…) — the
+ *  same trap [genre]/[line]/page.tsx's FigureCard chip already had to
+ *  dodge for P2S1. Linking the raw route param here would mint a second,
+ *  self-canonicalizing URL variant for every NECA character. Count is
+ *  recomputed within the dominant fandom too, so the card matches what
+ *  the linked page actually shows. */
 function buildCharacterHighlights(figures: KBFigure[]): CharacterHighlight[] {
   const groups = new Map<string, KBFigure[]>()
   for (const f of figures) {
@@ -177,12 +189,26 @@ function buildCharacterHighlights(figures: KBFigure[]): CharacterHighlight[] {
   return [...groups.entries()]
     .sort((a, b) => b[1].length - a[1].length)
     .slice(0, CHARACTER_ROWS)
-    .map(([slug, group]) => ({
-      slug,
-      name: prettifySlug(slug),
-      count: group.length,
-      image: group.find(f => f.canonical_image_url)?.canonical_image_url ?? null,
-    }))
+    .map(([slug, group]) => {
+      const byFandom = new Map<string, KBFigure[]>()
+      for (const f of group) {
+        if (!byFandom.has(f.fandom)) byFandom.set(f.fandom, [])
+        byFandom.get(f.fandom)!.push(f)
+      }
+      const [dominantFandom, dominantGroup] =
+        [...byFandom.entries()].sort((a, b) => b[1].length - a[1].length)[0]
+
+      return {
+        slug,
+        name: prettifySlug(slug),
+        count: dominantGroup.length,
+        image:
+          dominantGroup.find(f => f.canonical_image_url)?.canonical_image_url ??
+          group.find(f => f.canonical_image_url)?.canonical_image_url ??
+          null,
+        href: `/${genreSlugForFandom(dominantFandom)}/character/${slug}`,
+      }
+    })
 }
 
 function buildHub(genre: string, figures: KBFigure[]) {
@@ -807,7 +833,7 @@ export default async function GenrePage(
             </div>
             <div className="fpg-char-grid">
               {characters.map(c => (
-                <a className="fpg-char-card" href={`/${genre}/character/${c.slug}`} key={c.slug}>
+                <a className="fpg-char-card" href={c.href} key={c.slug}>
                   <FigureThumb
                     image={c.image}
                     size={40}
