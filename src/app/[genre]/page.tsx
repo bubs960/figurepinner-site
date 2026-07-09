@@ -7,6 +7,7 @@ import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 import AdSlot from '@/app/components/AdSlot'
 import HeroSearch from '@/app/components/HeroSearch'
+import FigureThumb from '@/app/components/FigureThumb'
 import ShelfCase, { type ShelfFigure } from '@/app/components/ShelfCase'
 import ScrollReveal from '@/app/components/ScrollReveal'
 import SiteHeader from '@/app/components/SiteHeader'
@@ -142,6 +143,7 @@ export async function generateMetadata(
  *  a row in the "more lines" list so everything stays reachable. */
 const CATCH_ALL_LINES = new Set(['general', 'misc', 'unknown'])
 const REGISTRY_ROWS = 10
+const CHARACTER_ROWS = 12
 
 type RegistryRow = {
   slug: string
@@ -153,6 +155,35 @@ type RegistryRow = {
 }
 
 type MoreLine = { slug: string; name: string; count: number }
+
+type CharacterHighlight = {
+  slug: string
+  name: string
+  count: number
+  image: string | null
+}
+
+/** Top characters in a genre by release count (Phase 2 session 3 — the
+ *  genre hub's own inbound link to /[genre]/character/[slug], which
+ *  Phase 2 session 1 left orphaned from every template except line pages.
+ *  Render-only from the already-loaded figures array — no new fetches,
+ *  same ISR-safe shape as session 1's rail link + breadcrumb. */
+function buildCharacterHighlights(figures: KBFigure[]): CharacterHighlight[] {
+  const groups = new Map<string, KBFigure[]>()
+  for (const f of figures) {
+    if (!groups.has(f.character_canonical)) groups.set(f.character_canonical, [])
+    groups.get(f.character_canonical)!.push(f)
+  }
+  return [...groups.entries()]
+    .sort((a, b) => b[1].length - a[1].length)
+    .slice(0, CHARACTER_ROWS)
+    .map(([slug, group]) => ({
+      slug,
+      name: prettifySlug(slug),
+      count: group.length,
+      image: group.find(f => f.canonical_image_url)?.canonical_image_url ?? null,
+    }))
+}
 
 function buildHub(genre: string, figures: KBFigure[]) {
   const groups = groupAndSortLines(figures)
@@ -249,6 +280,7 @@ export default async function GenrePage(
   if (!figures.length) notFound()
 
   const { groups, registry, more, shelf, totalLines } = buildHub(genre, figures)
+  const characters = buildCharacterHighlights(figures)
   const totalFigures = figures.length
   const hunting = shelf.slice(0, 3)
   const aisle = meta.label.toLowerCase()
@@ -562,6 +594,20 @@ export default async function GenrePage(
         }
         .fpg-reg-row:hover .fpg-reg-chev { color: var(--fph-gold-hi); transform: translateX(4px); }
 
+        /* ── shop by character (Phase 2 session 3) ── */
+        .fpg-chars { padding: 6px 0 8px; }
+        .fpg-char-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+        .fpg-char-card {
+          display: flex; align-items: center; gap: 10px;
+          padding: 9px 12px; border-radius: 10px; border: 1px solid var(--fph-line);
+          background: rgba(242,232,213,.014); text-decoration: none; color: inherit;
+          transition: border-color .2s, background .2s, transform .25s cubic-bezier(.22,.61,.36,1);
+        }
+        .fpg-char-card:hover { border-color: rgba(224,168,62,.4); background: rgba(224,168,62,.05); transform: translateY(-2px); }
+        .fpg-char-text { min-width: 0; }
+        .fpg-char-name { display: block; font-size: 13px; font-weight: 500; color: var(--fph-cream); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .fpg-char-count { display: block; margin-top: 1px; font-size: 10.5px; color: var(--fph-gold-mut); }
+
         /* ── more lines (everything beyond the top rows stays reachable) ── */
         .fpg-more { margin-top: 26px; }
         .fpg-more-head {
@@ -615,6 +661,7 @@ export default async function GenrePage(
           .fph-case::before { display: none; }
           .fph-tray-thumbs img { animation: none !important; }
           .fph-fly-thumb { display: none; }
+          .fpg-char-card:hover { transform: none; }
         }
 
         /* ── responsive ── */
@@ -643,6 +690,7 @@ export default async function GenrePage(
           .fpg-reg-meta { order: 3; flex: 1 1 100%; margin-left: 0; }
           .fpg-reg-thumbs { order: 4; flex: 1 1 100%; }
           .fpg-reg-thumbs img { width: 40px; height: 40px; }
+          .fpg-char-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
           .fpg-closer { padding: 32px 0 36px; }
         }
       `}</style>
@@ -749,6 +797,33 @@ export default async function GenrePage(
             </div>
           )}
         </div>
+
+        {characters.length >= 4 && (
+          <div className="fpg-chars" data-fph-reveal>
+            <div className="fpg-reg-head">
+              <span className="fpg-kicker">Shop by character</span>
+              <h2>Find your favorite</h2>
+              <span className="fpg-reg-sub">Top {characters.length} by figure count</span>
+            </div>
+            <div className="fpg-char-grid">
+              {characters.map(c => (
+                <a className="fpg-char-card" href={`/${genre}/character/${c.slug}`} key={c.slug}>
+                  <FigureThumb
+                    image={c.image}
+                    size={40}
+                    radius={8}
+                    cdnWidth={96}
+                    fallback={{ kind: 'icon', accent: '#e0a83e' }}
+                  />
+                  <span className="fpg-char-text">
+                    <span className="fpg-char-name">{c.name}</span>
+                    <span className="fpg-char-count">{c.count.toLocaleString()} figure{c.count !== 1 ? 's' : ''}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* ── AD ── */}
