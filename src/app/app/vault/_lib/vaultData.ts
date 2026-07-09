@@ -160,9 +160,11 @@ function computeTrend30d(recent: { price: number; sold_date: string | null }[]):
 }
 
 async function fetchSnapshot(fid: string): Promise<Snapshot> {
+  // AbortSignal.timeout() intentionally omitted — combining it with
+  // next:{revalidate} forces the fetch out of ISR cache (S32, 2026-06-18).
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`,
-    { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) }
+    { next: { revalidate: 3600 } }
   ).catch(() => null)
   if (!res?.ok) return { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled', trend30d: null }
   const snap = await res.json() as {

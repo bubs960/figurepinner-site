@@ -908,6 +908,9 @@ a:hover {
 .fh-hv-heroes .fh-hv-card:hover { border-color: #6aa6e6; }
 .fh-hv-villains .fh-hv-card { flex-direction: row-reverse; text-align: right; }
 .fh-hv-villains .fh-hv-card:hover { border-color: var(--fh-accent); }
+@media (prefers-reduced-motion: reduce) {
+  .fh-hv-card:hover { transform: none; }
+}
 .fh-hv-thumb { width: 2.7rem; height: 2.7rem; border-radius: var(--fp-radius-sm); overflow: hidden; background: var(--fh-surface); flex: none; display: flex; align-items: center; justify-content: center; }
 .fh-hv-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .fh-hv-thumb.is-empty { background: linear-gradient(135deg, var(--fh-surface), var(--fh-bg)); }

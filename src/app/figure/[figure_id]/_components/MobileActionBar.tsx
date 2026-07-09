@@ -33,6 +33,10 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
   // never sees two sponsored eBay links on one screen.
   const [hideForInlineCta, setHideForInlineCta] = useState(false)
 
+  // Slide transition is JS-driven (inline style), so it needs its own
+  // reduced-motion check — a CSS media query can't reach an inline style.
+  const [reducedMotion, setReducedMotion] = useState(false)
+
   useEffect(() => {
     if (!enabled) return
     const inlineCta = document.querySelector('[data-ebay-inline-cta]')
@@ -43,6 +47,15 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
     )
     obs.observe(inlineCta)
     return () => obs.disconnect()
+  }, [enabled])
+
+  useEffect(() => {
+    if (!enabled) return
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setReducedMotion(mq.matches)
+    const onChange = () => setReducedMotion(mq.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
   }, [enabled])
 
   if (!enabled) return null
@@ -68,7 +81,7 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
         borderTop: '1px solid var(--fp-border)',
         boxShadow: '0 -4px 16px rgba(0,0,0,0.25)',
         transform: hideForInlineCta ? 'translateY(110%)' : 'translateY(0)',
-        transition: 'transform 0.2s ease',
+        transition: reducedMotion ? 'none' : 'transform 0.2s ease',
       }}
     >
       {/* Left: price */}

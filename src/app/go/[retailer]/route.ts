@@ -11,6 +11,7 @@
  */
 
 import { NextResponse, type NextRequest } from 'next/server'
+import { EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 
 // ── Retailer config ─────────────────────────────────────────────────────────
@@ -31,7 +32,10 @@ const RETAILERS: Record<string, RetailerConfig> = {
   // ── ACTIVE ─────────────────────────────────────────────────────────
   ebay: {
     hosts: ['ebay.com', 'www.ebay.com'],
-    affiliate: { kind: 'epn', campid: '5339147406' },
+    // Single source of truth (P1 H2) — was a hardcoded literal that could
+    // drift from figureFormatters.ts's EBAY_CAMPAIGN_ID (env-driven, with
+    // its own '' -> fallback guard; see that file for why).
+    affiliate: { kind: 'epn', campid: EBAY_CAMPAIGN_ID },
   },
 
   // ── PENDING APPLICATION (swap when accepted) ───────────────────────

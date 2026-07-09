@@ -284,6 +284,7 @@ export default async function CharacterHubPage({
                 radius={12}
                 cdnWidth={240}
                 fallback={{ kind: 'icon', accent }}
+                eager
               />
             </div>
           )}
@@ -333,6 +334,7 @@ export default async function CharacterHubPage({
                     radius={8}
                     cdnWidth={120}
                     fallback={{ kind: 'icon', accent }}
+                    eager={i === 0}
                   />
                 ))}
                 {totalCount > imageStrip.length && (

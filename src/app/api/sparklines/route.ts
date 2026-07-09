@@ -1,10 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 const R2_PROXY = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 
 export const revalidate = 300
 
+// No auth on this route (public batch price lookup) — same per-IP guard as
+// the sibling /api/v1/search endpoint. Higher than price-check's 30 since
+// this is a per-pageview call, not a one-off lookup (matters more once the
+// sparkline mounts on every figure page — P1 M5).
+const RATE_LIMIT_PER_MINUTE = 60
+
 export async function GET(req: NextRequest) {
+  const rl = await checkRateLimit(req, 'sparklines', RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const ids = req.nextUrl.searchParams.get('ids')?.split(',').filter(Boolean).slice(0, 40) ?? []
   if (!ids.length) return NextResponse.json({})
 

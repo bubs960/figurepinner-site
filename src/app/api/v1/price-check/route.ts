@@ -90,9 +90,11 @@ export async function GET(req: NextRequest) {
     const line = prettifySlug(f.product_line)
     const match = { fid: f.figure_id, name, brand, line }
 
+    // AbortSignal.timeout() intentionally omitted — combining it with
+    // next:{revalidate} forces the fetch out of ISR cache (S32, 2026-06-18).
     const res = await fetch(
       `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(f.figure_id)}.json`,
-      { next: { revalidate: 3600 }, signal: AbortSignal.timeout(4000) },
+      { next: { revalidate: 3600 } },
     ).catch(() => null)
 
     const snap = res?.ok ? ((await res.json()) as R2Snapshot) : null

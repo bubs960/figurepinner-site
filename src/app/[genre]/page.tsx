@@ -610,6 +610,7 @@ export default async function GenrePage(
         @media (prefers-reduced-motion: reduce) {
           [data-fph-reveal] { opacity: 1; transform: none; transition: none; }
           .fph-fig { animation: none !important; }
+          .fph-fig:hover .fph-mount { transform: none; transition: none; }
           .fph-case-light, .fph-case-sweep { display: none; }
           .fph-case::before { display: none; }
           .fph-tray-thumbs img { animation: none !important; }

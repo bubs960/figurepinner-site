@@ -24,9 +24,12 @@ export async function fetchPriceSnaps(fids: string[]): Promise<Map<string, Price
   const entries = await Promise.all(
     unique.map(async (fid) => {
       try {
+        // AbortSignal.timeout() intentionally omitted: combining a dynamic
+        // signal with next:{revalidate} opts the fetch out of Next's cache
+        // in Next 15, forcing revalidate=0 -> no-store on the route (S32,
+        // 2026-06-18 — see FigureDetailContent.tsx for the original fix).
         const r = await fetch(`${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`, {
           next: { revalidate: 3600 },
-          signal: AbortSignal.timeout(4000),
         })
         if (!r.ok) return [fid, null] as const
         const j = (await r.json()) as PriceSnap

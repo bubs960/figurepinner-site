@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getFigureById, deriveName } from '@/data/kbDb'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 const CACHE_HEADERS = {
   'Cache-Control': 'public, max-age=300, s-maxage=600, stale-while-revalidate=3600',
@@ -11,10 +12,22 @@ const NOT_FOUND_HEADERS = {
   'x-fp-kb-source': 'd1',
 }
 
+// Same guard as the sibling public v1 endpoint (price-check) — no auth on
+// this route, so a fixed-window per-IP limiter is the only abuse guard.
+const RATE_LIMIT_PER_MINUTE = 30
+
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ figure_id: string }> }
 ) {
+  const rl = await checkRateLimit(req, 'v1-figure', RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { ...CACHE_HEADERS, 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const { figure_id } = await params
   const f = await getFigureById(figure_id)
 
