@@ -335,8 +335,15 @@ export default async function HomePage() {
         .fph-hero-sub strong { color: var(--fph-cream); font-weight: 500; }
         .fph-hero-search { margin-top: 30px; max-width: 520px; }
         /* HeroSearch is a shared client component with inline styles — scope
-           the shelf-gold skin onto it here (important beats inline). */
-        .fph-hero-search button {
+           the shelf-gold skin onto it here (important beats inline). Scoped
+           to the specific "Run a price check" button, NOT a bare button
+           selector: HeroSearch also renders a plain-text "Clear" button
+           once a query is typed, and a bare selector forced the same solid
+           gold background onto it too — Clear has no border-radius/matching
+           padding (it was styled as inline text, not a pill), so the two
+           differently-shaped same-color rectangles sitting side by side
+           read as a broken, overlapping control (Steve, 2026-07-10). */
+        .fph-hero-search button[aria-label="Run a price check"] {
           background: linear-gradient(180deg, #f5c462, #e0a83e) !important;
           color: #1a1206 !important;
         }
