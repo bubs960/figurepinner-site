@@ -200,6 +200,16 @@ export default async function HomePage() {
   const ticker = enrichTape(tape)
   const ledger = ticker.slice(0, 3)
   const laneCount = GENRE_TAXONOMY.length
+  // Room I (Museum Night S3): top lanes by live figure count become large
+  // featured vitrine tiles; the rest fall back to a compact floor directory.
+  // Stable sort keeps GENRE_UI's editorial ordering as the tiebreaker.
+  const FEATURED_LANE_COUNT = 6
+  const rankedLanes = [...GENRE_TAXONOMY].sort((a, b) => b.figureCount - a.figureCount)
+  const featuredLanes = rankedLanes.slice(0, FEATURED_LANE_COUNT)
+  const floorLanes = rankedLanes.slice(FEATURED_LANE_COUNT)
+  // Deterministic lean angles for Room II's book-spine cards — same each
+  // build (server-rendered), cycles if there are ever more than 6 guides.
+  const SPINE_LEAN_DEG = [-3, 2.4, -1.6, 3, -2.2, 1.4]
 
   return (
     <main className="fph">
@@ -511,9 +521,51 @@ export default async function HomePage() {
           transition: transform .72s cubic-bezier(.5,.05,.35,1), opacity .72s ease, border-radius .72s ease;
         }
 
-        /* ── lanes ── */
-        .fph-lines { padding: 34px 0 30px; }
-        .fph-lane-row { display: flex; flex-wrap: wrap; gap: 10px 9px; align-items: center; }
+        /* ── lanes / Room I gallery (Museum Night S3) ── */
+        .fph-gallery { padding: 34px 0 30px; }
+        .fph-room-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
+        .fph-room-eyebrow {
+          font-size: 10px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase;
+          color: var(--fph-gold-mut); white-space: nowrap;
+        }
+        .fph-vitrine-grid {
+          display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px; margin-bottom: 24px;
+        }
+        .fph-vitrine-tile {
+          --accent: var(--fph-gold);
+          position: relative; display: block; min-width: 0; padding: 18px 18px 16px;
+          border: 1px solid rgba(242,232,213,.10); border-radius: 12px;
+          background: rgba(242,232,213,.025); text-decoration: none;
+          transition: transform .3s cubic-bezier(.22,.61,.36,1), border-color .3s, background .3s, box-shadow .3s;
+        }
+        .fph-vitrine-tile:hover {
+          transform: translateY(-4px) rotate(-.4deg);
+          border-color: rgba(224,168,62,.42);
+          box-shadow: 0 14px 26px rgba(0,0,0,.4), 0 0 0 1px rgba(224,168,62,.32), 0 0 18px rgba(224,168,62,.16);
+        }
+        .fph-vitrine-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+        .fph-vitrine-name {
+          font-family: var(--fp-font-display); font-size: 19px; letter-spacing: .01em; color: var(--fph-cream);
+          border-bottom: 1px solid var(--accent); padding-bottom: 2px; opacity: .96;
+        }
+        .fph-vitrine-count { font-size: 11px; font-weight: 400; color: var(--fph-cream-mut); white-space: nowrap; }
+        .fph-vitrine-lines { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+        .fph-vline { display: flex; align-items: baseline; gap: 7px; font-size: 11px; color: var(--fph-cream-dim); }
+        .fph-vline-name { font-weight: 500; color: var(--fph-cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .fph-vline-years { font-size: 9.5px; color: var(--fph-cream-mut); white-space: nowrap; }
+        .fph-vbadge {
+          flex: 0 0 auto; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+          padding: 2px 5px; border-radius: 3px; color: #1a1206; background: var(--fph-gold-mut);
+        }
+        .fph-vbadge.hot { background: var(--fph-gold); }
+        .fph-vbadge.premium { background: linear-gradient(180deg, var(--fph-gold-hi), var(--fph-gold)); }
+        .fph-vbadge.vintage { background: rgba(242,232,213,.55); }
+        .fph-vbadge.new { background: #7fd9a8; }
+        .fph-vitrine-desc {
+          margin: 10px 0 0; font-size: 11.5px; line-height: 1.5; font-weight: 300; color: var(--fph-cream-mut);
+        }
+        .fph-floor-row { display: flex; flex-wrap: wrap; gap: 10px 9px; align-items: center; }
         .fph-lane-kicker {
           font-size: 11px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
           color: var(--fph-gold); display: inline-flex; align-items: center; gap: 12px; margin-right: 16px;
@@ -529,14 +581,6 @@ export default async function HomePage() {
         }
         .fph-lane-chip .ct { font-size: 10px; font-weight: 400; letter-spacing: .08em; color: var(--fph-gold-mut); }
         .fph-lane-chip:hover { border-color: rgba(224,168,62,.42); color: var(--fph-cream); transform: translateY(-2px); background: rgba(224,168,62,.04); }
-        .fph-lane-chip.featured { border-color: rgba(224,168,62,.45); color: var(--fph-cream); background: rgba(224,168,62,.05); position: relative; overflow: hidden; }
-        .fph-lane-chip.featured::before {
-          content: ''; position: absolute; top: -30%; bottom: -30%; left: 0; width: 34px;
-          background: linear-gradient(100deg, transparent, rgba(245,196,98,.28), transparent);
-          transform: translateX(-70px) skewX(-20deg);
-          animation: fph-chipShine 5.5s linear infinite; pointer-events: none;
-        }
-        @keyframes fph-chipShine { 0% { transform: translateX(-70px) skewX(-20deg); } 32% { transform: translateX(260px) skewX(-20deg); } 100% { transform: translateX(260px) skewX(-20deg); } }
         .fph-lane-chip.all { border-style: dashed; border-color: rgba(224,168,62,.30); color: var(--fph-gold-hi); }
         .fph-lane-chip.all:hover { border-style: solid; }
         [data-fph-stagger] .fph-lane-kicker, [data-fph-stagger] .fph-lane-chip {
@@ -555,9 +599,20 @@ export default async function HomePage() {
         [data-fph-stagger].in .fph-lane-chip:nth-child(10) { transition-delay: .45s; }
         [data-fph-stagger].in .fph-lane-chip:nth-child(11) { transition-delay: .5s; }
         [data-fph-stagger].in .fph-lane-chip:hover { transition-delay: 0s; }
+        [data-fph-stagger] .fph-vitrine-tile {
+          opacity: 0; transform: translateY(16px);
+          transition: opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1), border-color .3s, background .3s, box-shadow .3s;
+        }
+        [data-fph-stagger].in .fph-vitrine-tile { opacity: 1; transform: none; }
+        [data-fph-stagger].in .fph-vitrine-tile:nth-child(2) { transition-delay: .07s; }
+        [data-fph-stagger].in .fph-vitrine-tile:nth-child(3) { transition-delay: .14s; }
+        [data-fph-stagger].in .fph-vitrine-tile:nth-child(4) { transition-delay: .21s; }
+        [data-fph-stagger].in .fph-vitrine-tile:nth-child(5) { transition-delay: .28s; }
+        [data-fph-stagger].in .fph-vitrine-tile:nth-child(6) { transition-delay: .35s; }
+        [data-fph-stagger].in .fph-vitrine-tile:hover { transition-delay: 0s; }
 
-        /* ── search-intent guides ── */
-        .fph-guide-rail { padding: 26px 0 30px; background: rgba(242,232,213,.018); }
+        /* ── Room II — Wing Guide book-spine cards (Museum Night S3) ── */
+        .fph-wing { padding: 26px 0 30px; background: rgba(242,232,213,.018); }
         .fph-guide-head {
           display: flex; align-items: end; justify-content: space-between; gap: 24px;
           margin-bottom: 14px;
@@ -575,28 +630,47 @@ export default async function HomePage() {
           font-size: 12px; font-weight: 500; border-bottom: 1px solid rgba(242,232,213,.22);
         }
         .fph-guide-all:hover { color: var(--fph-gold-hi); border-color: rgba(224,168,62,.55); }
-        .fph-guide-grid {
-          display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 10px;
+        /* Shared slow-gleam sheen — reuses the existing fph-sweep keyframe
+           (defined above for the case light-sweep) instead of a new
+           mechanism. --sheen-delay staggers instances so they never move
+           in sync. */
+        .gallery-sheen {
+          position: absolute; top: -25%; bottom: -25%; left: 0; width: 30%; z-index: 1;
+          background: linear-gradient(100deg, transparent, rgba(255,236,194,.10) 32%, rgba(255,236,194,.18) 50%, rgba(255,236,194,.10) 68%, transparent);
+          transform: translateX(-130%) skewX(-18deg); pointer-events: none;
+          animation: fph-sweep 9s linear infinite;
+          animation-delay: var(--sheen-delay, 0s);
         }
-        .fph-guide-card {
-          display: block; min-width: 0; padding: 14px 15px;
-          border: 1px solid rgba(242,232,213,.10); border-radius: 10px;
-          background: rgba(242,232,213,.025); text-decoration: none;
-          transition: transform .2s, border-color .2s, background .2s;
+        .fph-spine-shelf {
+          position: relative; display: flex; align-items: flex-end; gap: 12px; padding-top: 8px;
         }
-        .fph-guide-card:hover {
-          transform: translateY(-2px); border-color: rgba(224,168,62,.42);
-          background: rgba(224,168,62,.045);
+        .fph-spine-shelf::after {
+          content: ''; position: absolute; left: -10px; right: -10px; bottom: 0; height: 3px; border-radius: 2px;
+          background: linear-gradient(180deg, rgba(255,236,194,.34), rgba(255,236,194,.06));
+          box-shadow: 0 1px 0 rgba(255,244,216,.10), 0 10px 18px rgba(0,0,0,.38), 0 0 10px rgba(255,236,194,.10);
         }
-        .fph-guide-kicker {
-          display: block; margin-bottom: 5px;
-          font-size: 9.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+        .fph-spine {
+          position: relative; flex: 1 1 0; min-width: 0; overflow: hidden;
+          display: flex; flex-direction: column; justify-content: flex-end;
+          min-height: 190px; padding: 16px 14px 18px; text-decoration: none;
+          border: 1px solid rgba(242,232,213,.11); border-radius: 8px 8px 3px 3px;
+          background: linear-gradient(180deg, rgba(242,232,213,.05), rgba(242,232,213,.02) 55%, rgba(0,0,0,.12) 100%);
+          transform: rotate(var(--lean, 0deg)); transform-origin: bottom center;
+          transition: transform .35s cubic-bezier(.22,.61,.36,1), border-color .3s, box-shadow .3s;
+        }
+        .fph-spine:hover, .fph-spine:focus-visible {
+          transform: rotate(0deg) translateY(-3px);
+          border-color: rgba(224,168,62,.42);
+          box-shadow: 0 12px 22px rgba(0,0,0,.4), 0 0 0 1px rgba(224,168,62,.3), 0 0 16px rgba(224,168,62,.15);
+        }
+        .fph-spine-kicker {
+          display: block; margin-bottom: 8px; position: relative; z-index: 1;
+          font-size: 9px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
           color: var(--fph-gold-mut);
         }
-        .fph-guide-label {
-          display: block; font-size: 13px; line-height: 1.35; font-weight: 500;
-          color: var(--fph-cream);
+        .fph-spine-label {
+          display: block; position: relative; z-index: 1;
+          font-size: 13px; line-height: 1.3; font-weight: 500; color: var(--fph-cream);
         }
 
         /* ── ticker ── */
@@ -690,7 +764,6 @@ export default async function HomePage() {
           .fph-case-light, .fph-case-sweep { display: none; }
           .fph-case::before { display: none; }
           .fph h1 .grail::after { display: none; }
-          .fph-lane-chip.featured::before { display: none; }
           .fph-solds .sold-chip, .fph-solds.in .sold-chip { opacity: 1 !important; animation: none !important; transform: translateY(-2px) !important; }
           .fph-tray-thumbs img { animation: none !important; }
           .fph-fly-thumb { display: none; }
@@ -702,6 +775,18 @@ export default async function HomePage() {
              immediately instead of playing the staggered rise. */
           .fph-type-layer { transform: none !important; }
           .fph-mount { animation: none !important; opacity: 1 !important; transform: none !important; }
+          /* Museum Night S3 additions: Room I/II reveal-in staggers snap to
+             their rest state immediately (same [data-fph-reveal]/
+             [data-fph-stagger] contract as above); the two card hovers
+             follow the same "zero it for contract consistency" rule as
+             .fph-fig:hover above, even though hover is user-initiated. The
+             sheen is a continuous decorative loop, same category as the
+             case light-sweep already killed here. */
+          [data-fph-stagger] .fph-vitrine-tile { opacity: 1; transform: none; transition: none; }
+          .fph-vitrine-tile:hover { transform: none; transition: none; }
+          .fph-spine { transition: none; }
+          .fph-spine:hover, .fph-spine:focus-visible { transform: rotate(var(--lean, 0deg)); }
+          .gallery-sheen { display: none; }
         }
 
         /* ── responsive ── */
@@ -712,7 +797,6 @@ export default async function HomePage() {
             display: inline-flex;
             align-items: center;
           }
-          .fph-guide-card { min-height: 72px; }
           .fph-tray-cta { min-height: 44px; align-items: center; }
           .fph-tray.active .fph-tray-cta { display: inline-flex; }
           .fph-pin-btn {
@@ -727,7 +811,9 @@ export default async function HomePage() {
           .fph-hero-grid { grid-template-columns: 1fr; gap: 56px; }
           .fph-hero-sub, .fph-hero-search { max-width: 640px; }
           .fph-closer-grid { grid-template-columns: 1fr; gap: 40px; }
-          .fph-guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .fph-vitrine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .fph-spine-shelf { flex-wrap: wrap; }
+          .fph-spine { flex: 1 1 150px; }
         }
         @media (max-width: 640px) {
           .fph .wrap { padding: 0 20px; }
@@ -753,12 +839,18 @@ export default async function HomePage() {
           .fph-tick-chip { margin: 0 9px; gap: 8px; }
           .fph-tick-name { font-size: 11.5px; }
           .fph-tick-price { font-size: 16px; }
-          .fph-lines { padding: 28px 0 24px; }
+          .fph-gallery { padding: 28px 0 24px; }
           .fph-lane-kicker { width: 100%; margin-right: 0; margin-bottom: 2px; }
           .fph-lane-chip { padding: 7px 14px; font-size: 11px; }
+          .fph-vitrine-grid { grid-template-columns: 1fr; }
           .fph-guide-head { display: block; }
           .fph-guide-all { display: inline-block; margin-top: 10px; }
-          .fph-guide-grid { grid-template-columns: 1fr; }
+          /* Leaning book spines only read cleanly with room to breathe —
+             stack full-width and drop the lean on narrow screens so every
+             spine's text is upright and legible without needing hover. */
+          .fph-spine-shelf { flex-direction: column; }
+          .fph-spine { min-height: auto; padding: 14px 16px; transform: none; }
+          .fph-spine:hover, .fph-spine:focus-visible { transform: translateY(-1px); }
           .fph-closer { padding: 46px 0 50px; }
           .fph-ledger-row { padding: 12px 18px; }
           .fph-ledger-head, .fph-ledger-foot { padding-left: 18px; padding-right: 18px; }
@@ -809,17 +901,50 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── LANES — first thing below the fold ── */}
-      <section className="fph-lines fph-seam" id="lines">
+      {/* ── ROOM I — GALLERY OF LANES (was "Pick your lane"). Museum Night
+          S3: top lanes become large vitrine tiles pulling GENRE_TAXONOMY's
+          line-level editorial data (badge/years/desc — computed at build,
+          previously never rendered); the rest stay a compact floor
+          directory. Every lane keeps its real <a href>. ── */}
+      <section className="fph-gallery fph-seam" id="lines">
         <div className="wrap">
-          <div className="fph-lane-row" data-fph-reveal data-fph-stagger>
-            <span className="fph-lane-kicker">Pick your lane</span>
-            {GENRE_TAXONOMY.map(g => (
+          <div className="fph-room-head" data-fph-reveal>
+            <span className="fph-room-eyebrow">Room I</span>
+            <h2 className="fph-guide-title">Gallery of lanes</h2>
+          </div>
+
+          <div className="fph-vitrine-grid" data-fph-reveal data-fph-stagger>
+            {featuredLanes.map(g => (
               <a
-                key={g.slug}
-                className={`fph-lane-chip${g.slug === 'wrestling' ? ' featured' : ''}`}
+                className="fph-vitrine-tile"
                 href={`/${g.slug}`}
+                key={g.slug}
+                style={{ '--accent': g.accent } as React.CSSProperties}
               >
+                <div className="fph-vitrine-top">
+                  <span className="fph-vitrine-name">{g.name}</span>
+                  <span className="fph-vitrine-count">{g.totalCount}</span>
+                </div>
+                {g.lines.length > 0 && (
+                  <div className="fph-vitrine-lines">
+                    {g.lines.slice(0, 2).map(l => (
+                      <div className="fph-vline" key={l.slug}>
+                        {l.badge && <span className={`fph-vbadge ${l.badge}`}>{l.badge}</span>}
+                        <span className="fph-vline-name">{l.name}</span>
+                        {l.years && <span className="fph-vline-years">{l.years}</span>}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {g.lines[0]?.desc && <p className="fph-vitrine-desc">{g.lines[0].desc}</p>}
+              </a>
+            ))}
+          </div>
+
+          <div className="fph-floor-row" data-fph-reveal>
+            <span className="fph-lane-kicker">More lanes</span>
+            {floorLanes.map(g => (
+              <a className="fph-lane-chip" href={`/${g.slug}`} key={g.slug}>
                 {g.name} <span className="ct">{g.totalCount}</span>
               </a>
             ))}
@@ -828,23 +953,37 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── HIGH-INTENT GUIDES ── */}
-      <section className="fph-guide-rail fph-seam" aria-label="Action figure price guide shortcuts">
+      {/* ── ROOM II — WING GUIDE (was "Fastest price-guide paths"). Museum
+          Night S3: the 6 guides render as book spines leaning against a
+          shelf ledge at a fixed deterministic angle, straightening on
+          hover/focus. Sheen reuses the existing fph-sweep keyframe via the
+          shared .gallery-sheen class — no new sweep mechanism. ── */}
+      <section className="fph-wing fph-seam" aria-label="Action figure price guide shortcuts">
         <div className="wrap">
           <div className="fph-guide-head" data-fph-reveal>
             <div>
-              <h2 className="fph-guide-title">Fastest price-guide paths</h2>
+              <span className="fph-room-eyebrow">Room II</span>
+              <h2 className="fph-guide-title">Wing guide</h2>
               <p className="fph-guide-copy">
                 Jump straight into the pages collectors search for when they need a sold-price answer.
               </p>
             </div>
             <a className="fph-guide-all" href="/guides">All collector guides &rarr;</a>
           </div>
-          <div className="fph-guide-grid" data-fph-reveal>
-            {PRIORITY_GUIDES.map(guide => (
-              <a className="fph-guide-card" href={guide.href} key={guide.href}>
-                <span className="fph-guide-kicker">{guide.kicker}</span>
-                <span className="fph-guide-label">{guide.label}</span>
+          <div className="fph-spine-shelf" data-fph-reveal>
+            {PRIORITY_GUIDES.map((guide, i) => (
+              <a
+                className="fph-spine"
+                href={guide.href}
+                key={guide.href}
+                style={{
+                  '--lean': `${SPINE_LEAN_DEG[i % SPINE_LEAN_DEG.length]}deg`,
+                  '--sheen-delay': `${i * 1.3}s`,
+                } as React.CSSProperties}
+              >
+                <span className="gallery-sheen" aria-hidden />
+                <span className="fph-spine-kicker">{guide.kicker}</span>
+                <span className="fph-spine-label">{guide.label}</span>
               </a>
             ))}
           </div>

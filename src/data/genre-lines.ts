@@ -39,7 +39,8 @@ export interface LineTile {
 export interface GenreTab {
   slug: string          // UI genre slug (route param)
   name: string
-  totalCount: string    // computed from the KB
+  totalCount: string    // computed from the KB, display label ("6,000+")
+  figureCount: number   // same fact, raw — for ranking genres by live size
   accent: string
   lines: LineTile[]
 }
@@ -242,6 +243,7 @@ function buildGenre(ui: { slug: string; name: string; accent: string }): GenreTa
     name: ui.name,
     accent: ui.accent,
     totalCount: plusLabel(figures.length),
+    figureCount: figures.length,
     lines: tiles.map(({ order: _o, n: _n, ...tile }) => tile),
   }
 }
