@@ -57,6 +57,9 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# local deploy-script run state (machine-specific, no secrets, safe to delete)
+/.kv-purge-state.json
+
 # Plugin/skill artifacts dropped into .claude/ by Cowork sessions - never ship, never commit
 .claude/*
 !.claude/launch.json
