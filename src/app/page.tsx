@@ -8,7 +8,8 @@ import SiteHeader from './components/SiteHeader'
 import { fetchHomeMarket, type TapeItem } from './_lib/homeReceipt'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
-import { getFigureById, figureUrl } from '@/data/kb'
+import { getFigureById, getFiguresByLine, figureUrl } from '@/data/kb'
+import { getFandom } from '@/lib/genreFigures'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 
@@ -85,36 +86,48 @@ function pickShelfFids<T>(pool: T[], count: number): T[] {
   }
   return arr.slice(0, n)
 }
-const PRIORITY_GUIDES = [
+// fandom/line: which KB line represents this guide's bookplate photo (Room
+// II, Museum Night S3 follow-up). null means no single line maps cleanly —
+// that guide gets the CSS-only gold fallback plate instead of a photo.
+const PRIORITY_GUIDES: Array<{
+  href: string; label: string; kicker: string
+  fandom: string | null; line: string | null
+}> = [
   {
     href: '/guides/how-to-find-action-figure-values',
     label: 'Find a figure value',
     kicker: "Don't know what it's worth? Start here",
+    fandom: null, line: null,
   },
   {
     href: '/guides/most-valuable-wwe-elite-figures',
     label: 'Most valuable WWE Elite figures',
     kicker: 'Pricing a Wrestling Elite? Start here',
+    fandom: 'wrestling', line: 'elite',
   },
   {
     href: '/guides/marvel-legends-price-guide-2026',
     label: 'Marvel Legends price guide',
     kicker: 'What Marvel Legends collectors are paying',
+    fandom: 'marvel', line: 'marvel-legends',
   },
   {
     href: '/guides/star-wars-black-series-hub',
     label: 'Star Wars Black Series guide',
     kicker: 'What Black Series collectors are paying',
+    fandom: 'star-wars', line: 'black-series',
   },
   {
     href: '/guides/dc-multiverse-hub',
     label: 'DC Multiverse price guide',
     kicker: 'Chasing a Gold Label? Start here',
+    fandom: 'dc', line: 'multiverse',
   },
   {
     href: '/guides/tmnt-hub',
     label: 'TMNT figure price guide',
     kicker: 'What NECA and Playmates TMNT go for',
+    fandom: 'teenage-mutant-ninja-turtles', line: 'neca',
   },
 ]
 
@@ -125,6 +138,23 @@ function titleCase(slug: string): string {
 function isTinyThumbSafe(url: string | null): boolean {
   if (!url) return false
   return url.includes('cdn.shopify.com') || url.includes('i.ebayimg.com') || url.includes('/images/thumbs/')
+}
+
+/** Room II bookplate photo (Museum Night S3 follow-up): one representative,
+ *  thumb-safe figure per guide's fandom/line. `fandom` here is the UI genre
+ *  slug (same values PRIORITY_GUIDES/GENRE_TAXONOMY use elsewhere on this
+ *  page) — getFandom() resolves it to the KB's actual fandom string where
+ *  they differ (e.g. 'marvel' -> 'marvel-comics', 'teenage-mutant-ninja-
+ *  turtles' -> 'tmnt'); calling getFiguresByLine with the raw UI slug
+ *  silently returns zero rows for those two. Deterministic (first KB match,
+ *  not shuffled) — this is a static-feeling badge, not the rotating shelf.
+ *  Returns null (no line mapping, or no thumb-safe photo exists) so the
+ *  caller falls back to the CSS-only gold plate instead of ever shipping an
+ *  unresized image into a 56px badge. */
+function guidePlateImg(fandom: string | null, line: string | null): string | null {
+  if (!fandom || !line) return null
+  const fig = getFiguresByLine(getFandom(fandom), line).find(f => isTinyThumbSafe(f.canonical_image_url ?? null))
+  return fig ? thumb(fig.canonical_image_url!, 112) ?? null : null
 }
 
 /** Resolve curated shelf entries against the KB; real sold prices (from the
@@ -210,6 +240,8 @@ export default async function HomePage() {
   // Deterministic lean angles for Room II's book-spine cards — same each
   // build (server-rendered), cycles if there are ever more than 6 guides.
   const SPINE_LEAN_DEG = [-3, 2.4, -1.6, 3, -2.2, 1.4]
+  // Bookplate photo per guide — null falls back to the CSS-only gold plate.
+  const guidePlates = PRIORITY_GUIDES.map(g => guidePlateImg(g.fandom, g.line))
 
   return (
     <main className="fph">
@@ -663,6 +695,28 @@ export default async function HomePage() {
           border-color: rgba(224,168,62,.42);
           box-shadow: 0 12px 22px rgba(0,0,0,.4), 0 0 0 1px rgba(224,168,62,.3), 0 0 16px rgba(224,168,62,.15);
         }
+        /* Bookplate badge (Museum Night S3 follow-up) — an ex-libris circle
+           breaking the spine's top edge, like a photo plate on a book cover.
+           Absolutely positioned (NOT a flex child): .fph-spine is
+           justify-content:flex-end, so a normal-flow child would just join
+           the kicker/label cluster at the bottom instead of sitting at the
+           top; overflow:hidden on .fph-spine also means a negative-offset
+           trick to "break the border" would get clipped. z-index:2 puts it
+           above .gallery-sheen/kicker/label (both z-index:1) so the sheen
+           sweep visibly glides UNDER the photo. It rotates/straightens with
+           the card for free — no separate transform, it's just a descendant
+           of the element that owns --lean. */
+        .fph-spine-plate {
+          position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 2;
+          width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+          border: 1.5px solid rgba(224,168,62,.45); background: #efe5d0;
+          box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 3px 8px rgba(0,0,0,.35);
+        }
+        .fph-spine-plate img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .fph-spine-plate--fallback {
+          display: flex; align-items: center; justify-content: center;
+          background: linear-gradient(135deg, var(--fph-gold-hi), var(--fph-gold) 55%, #8a6420 100%);
+        }
         .fph-spine-kicker {
           display: block; margin-bottom: 8px; position: relative; z-index: 1;
           font-size: 9px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
@@ -849,8 +903,14 @@ export default async function HomePage() {
              stack full-width and drop the lean on narrow screens so every
              spine's text is upright and legible without needing hover. */
           .fph-spine-shelf { flex-direction: column; }
-          .fph-spine { min-height: auto; padding: 14px 16px; transform: none; }
+          /* Extra top padding makes room for the absolutely-positioned
+             bookplate badge below — .fph-spine is auto-height here (no
+             surplus for flex-end to push content into), so without this the
+             badge would sit directly over the kicker text instead of above
+             it. */
+          .fph-spine { min-height: auto; padding: 58px 16px 14px; transform: none; }
           .fph-spine:hover, .fph-spine:focus-visible { transform: translateY(-1px); }
+          .fph-spine-plate { width: 40px; height: 40px; top: 10px; }
           .fph-closer { padding: 46px 0 50px; }
           .fph-ledger-row { padding: 12px 18px; }
           .fph-ledger-head, .fph-ledger-foot { padding-left: 18px; padding-right: 18px; }
@@ -981,6 +1041,19 @@ export default async function HomePage() {
                   '--sheen-delay': `${i * 1.3}s`,
                 } as React.CSSProperties}
               >
+                {guidePlates[i] ? (
+                  <span className="fph-spine-plate">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={guidePlates[i]!} alt="" width={56} height={56} loading="lazy" decoding="async" />
+                  </span>
+                ) : (
+                  <span className="fph-spine-plate fph-spine-plate--fallback" aria-hidden>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1a1206" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="10.5" cy="10.5" r="6.5" />
+                      <line x1="15.3" y1="15.3" x2="20.5" y2="20.5" />
+                    </svg>
+                  </span>
+                )}
                 <span className="gallery-sheen" aria-hidden />
                 <span className="fph-spine-kicker">{guide.kicker}</span>
                 <span className="fph-spine-label">{guide.label}</span>
