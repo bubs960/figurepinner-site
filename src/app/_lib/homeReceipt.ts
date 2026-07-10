@@ -53,10 +53,24 @@ export type TapeItem = {
  * shipped here briefly; pulled 2026-06-12 because anonymous self-reference
  * reads as a fake testimonial. If a note ever returns it must be both real
  * AND self-explanatory to a stranger.
+ *
+ * Order matters: fetchHomeMarket() preserves this order (failures drop
+ * silently, survivors keep their relative position), and the hero only
+ * shows receiptFigures.slice(0, 3) as chips — so the FIRST three entries
+ * that resolve are what a cold visitor actually sees. Webaudit's homepage-
+ * journey audit (2026-07-10) found the original 5 all read as SKU-speak to
+ * an unfamiliar visitor ("Rollins UE30") and carried zero DC signal despite
+ * DC Multiverse being a top-6 lane — hand-ordered the top 3 below to fix
+ * both in one move rather than adding per-build rotation logic for a
+ * one-line copy problem. Hogan/Batman fids confirmed against the KB directly
+ * (grep) before adding, not guessed; Batman reuses the exact fid already
+ * proven live in the homepage shelf pool (page.tsx SHELF_POOL).
  */
 const CURATED: Array<{ fid: string; chipLabel: string; fieldNote?: string }> = [
-  { fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66', chipLabel: 'Rollins UE30' },
+  { fid: 'fp_wrestling_hasbro_wwf-hasbro_1_hulk-hogan_474714', chipLabel: "Hulk Hogan Hasbro '90" },
+  { fid: 'fp_dc_mcfarlane_multiverse_mcfarlane_batman_5efc4c', chipLabel: 'Batman DC Multiverse' },
   { fid: 'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_darth-vader_9476c8', chipLabel: 'Vader Black Series' },
+  { fid: 'fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66', chipLabel: 'Rollins UE30' },
   { fid: 'fp_marvel-comics_hasbro_marvel-legends_galactus-baf_spider-man_b05f79', chipLabel: 'Spider-Man ML' },
   { fid: 'fp_gi-joe_hasbro_classified-series_classified_snake-eyes_ae7414', chipLabel: 'Snake Eyes Classified' },
   { fid: 'fp_wrestling_mattel_elite_122_stone-cold-steve-austin_a8fd30aa3a7e', chipLabel: 'Stone Cold E122' },

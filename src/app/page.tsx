@@ -315,6 +315,16 @@ export default async function HomePage() {
           letter-spacing: .01em; white-space: nowrap;
           color: var(--fph-gold); opacity: .06;
         }
+        /* Webaudit homepage-journey E1 (2026-07-10): museum-plaque kicker
+           stacked above the H1 — names the page's function before a cold
+           visitor has to infer it from the search box. Reuses
+           .fph-room-eyebrow's type treatment (same 10px/.32em/gold-mut
+           eyebrow already established for Rooms I/II) rather than a new
+           one; the compound selector below overrides its nowrap (fine for
+           short "ROOM I" labels, wrong for this much longer line) with
+           higher specificity than source order alone would guarantee. */
+        .fph-hero-eyebrow { display: block; margin-bottom: 10px; }
+        .fph-hero-eyebrow.fph-room-eyebrow { white-space: normal; }
         .fph h1 {
           font-family: var(--fp-font-display); font-weight: 400;
           font-size: clamp(56px, 6.2vw, 94px);
@@ -364,6 +374,17 @@ export default async function HomePage() {
           transition: color .2s, border-color .2s, background .2s;
         }
         .fph-chip:hover { color: var(--fph-gold-hi); border-color: rgba(224,168,62,.45); background: rgba(224,168,62,.05); }
+        /* Webaudit homepage-journey E2 (2026-07-10): "New? Start here" —
+           the one existing chip written for a cold, no-search-term visitor
+           (PRIORITY_GUIDES[0]'s own kicker), surfaced here as a solid-gold
+           pointer instead of moving/duplicating the Wing Guide card three
+           sections down. Same pill shape as the other hints chips, filled
+           instead of outlined so it reads as "this one's for you." */
+        .fph-chip.fph-chip-start {
+          font-weight: 500; color: #1a1206; border-color: transparent;
+          background: linear-gradient(180deg, var(--fph-gold-hi), var(--fph-gold));
+        }
+        .fph-chip.fph-chip-start:hover { color: #1a1206; background: linear-gradient(180deg, #f5c462, #e0a83e); border-color: transparent; }
 
         /* ── the case (markup in ShelfCase) ── */
         .fph-case {
@@ -939,6 +960,7 @@ export default async function HomePage() {
         <GalleryTypeLayer text="GRAILS" />
         <div className="wrap fph-hero-grid">
           <div>
+            <span className="fph-room-eyebrow fph-hero-eyebrow">The collector&apos;s price guide &mdash; not another marketplace.</span>
             <h1>Every <span className="grail" data-text="grail">grail</span> starts as a gap on the shelf.</h1>
             <p className="fph-hero-sub">
               <strong>{TOTAL_FIGURES_LABEL} figures</strong> across <strong>{laneCount} lanes</strong> &mdash; priced
@@ -954,14 +976,22 @@ export default async function HomePage() {
               />
             </div>
 
-            {receiptFigures.length >= 3 && (
-              <div className="fph-hints">
-                <span>Collectors are hunting:</span>
-                {receiptFigures.slice(0, 3).map(f => (
-                  <a className="fph-chip" href={f.href} key={f.fid}>{f.chipLabel}</a>
-                ))}
-              </div>
-            )}
+            {/* Webaudit homepage-journey E2 (2026-07-10): the "New? Start
+                here" chip renders unconditionally — it's the only cue a
+                cold, no-search-term visitor gets, so it can't disappear
+                along with the dynamic "Collectors are hunting" chips if
+                receipt data ever fails to load at build. */}
+            <div className="fph-hints">
+              {receiptFigures.length >= 3 && (
+                <>
+                  <span>Collectors are hunting:</span>
+                  {receiptFigures.slice(0, 3).map(f => (
+                    <a className="fph-chip" href={f.href} key={f.fid}>{f.chipLabel}</a>
+                  ))}
+                </>
+              )}
+              <a className="fph-chip fph-chip-start" href="/guides/how-to-find-action-figure-values">New? Start here &rarr;</a>
+            </div>
           </div>
 
           {shelf.length >= 6 && <ShelfCase figures={shelf} />}
