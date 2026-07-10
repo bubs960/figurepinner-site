@@ -19,23 +19,72 @@ export const metadata: Metadata = {
 }
 
 // ── The shelf — curated, KB-resolved (entries that stop resolving or lose
-//    their image are dropped at build, never shipped broken) ────────────────────
-const SHELF_FIDS: Array<{ fid: string; tag: string }> = [
-  // row 1 — wrestling (deepest lane)
+//    their image are dropped at build, never shipped broken). This is a POOL,
+//    not a fixed list: SHELF_COUNT are picked at random per render (see
+//    pickShelfFids) so repeat visitors see a different shelf instead of the
+//    same 12 figures every time (Steve, 2026-07-10 — "user sees same 8 or
+//    whatever total cards on each visit that's a miss"). Rotation happens on
+//    ISR regeneration (this route revalidates hourly), not on every reload.
+const SHELF_COUNT = 12
+const SHELF_POOL: Array<{ fid: string; tag: string }> = [
+  // wrestling
   { fid: 'fp_wrestling_mattel_elite_112_becky-lynch_3d7e12', tag: 'Elite 112' },
   { fid: 'fp_wrestling_mattel_elite_100_the-rock_3c447b', tag: 'Elite 100' },
   { fid: 'fp_wrestling_mattel_ultimate-edition_25_cody-rhodes_83188e', tag: 'Ultimate Ed. 25' },
   { fid: 'fp_wrestling_mattel_elite_116_jade-cargill_dd785b', tag: 'Elite 116' },
   { fid: 'fp_wrestling_mattel_elite_1_edge_f3ac96', tag: 'Elite 1' },
   { fid: 'fp_wrestling_mattel_elite_1_undertaker_6eadf3', tag: 'Elite 1' },
-  // row 2 — across the lanes
+  { fid: 'fp_wrestling_mattel_elite_26_roman-reigns_ed6a97', tag: 'Elite 26' },
+  { fid: 'fp_wrestling_mattel_elite_25_seth-rollins_4f0cf5', tag: 'Elite 25' },
+  { fid: 'fp_wrestling_mattel_ultimate-edition_5_john-cena_2b9a45', tag: 'Ultimate Ed. 5' },
+  { fid: 'fp_wrestling_mattel_ultimate-edition_9_stone-cold-steve_41cafb', tag: 'Ultimate Ed. 9' },
+  { fid: 'fp_wrestling_mattel_elite_84_rhea-ripley_10845a', tag: 'Elite 84' },
+  { fid: 'fp_wrestling_mattel_elite_81_bianca-belair_786a59', tag: 'Elite 81' },
+  // star wars
   { fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_darth-vader_a039ff', tag: 'Vintage Collection' },
   { fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_boba-fett_3bc65d', tag: 'Vintage Collection' },
+  { fid: 'fp_star-wars_hasbro_black-series_galaxy_luke-skywalker_234457', tag: 'Black Series' },
+  { fid: 'fp_star-wars_hasbro_black-series_orange-wave-2013_stormtrooper_ff3e42', tag: 'Black Series' },
+  // gi joe
   { fid: 'fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_snake-eyes_c47357', tag: 'Real American Hero' },
   { fid: 'fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_cobra-commander_a9ccf4', tag: 'Real American Hero' },
+  { fid: 'fp_gi-joe_hasbro_classified-series_classified_duke_23109e', tag: 'Classified Series' },
+  { fid: 'fp_gi-joe_hasbro_classified-series_classified_storm-shadow_e06f94', tag: 'Classified Series' },
+  { fid: 'fp_gi-joe_hasbro_classified-series_classified_destro_702404', tag: 'Classified Series' },
+  { fid: 'fp_gi-joe_hasbro_classified-series_classified_scarlett_194b91', tag: 'Classified Series' },
+  // motu
   { fid: 'fp_masters-of-the-universe_mattel_origins_origins-action-figures_skeletor_87c6a1', tag: 'Origins' },
+  { fid: 'fp_masters-of-the-universe_mattel_origins_origins-action-figures_he-man_6814e4', tag: 'Origins' },
+  { fid: 'fp_masters-of-the-universe_mattel_origins_origins-action-figures_beast-man_1db519', tag: 'Origins' },
+  { fid: 'fp_masters-of-the-universe_mattel_origins_origins-action-figures_teela_720190', tag: 'Origins' },
+  // transformers
   { fid: 'fp_transformers_hasbro_war-for-cybertron-kingdom_leader_optimus-prime_9524b9', tag: 'Kingdom' },
+  { fid: 'fp_transformers_hasbro_studio-series_deluxe-class_bumblebee_5fe8e0', tag: 'Studio Series' },
+  { fid: 'fp_transformers_hasbro_studio-series_leader-class_megatron_58242f', tag: 'Studio Series' },
+  // marvel legends (new lane on the shelf)
+  { fid: 'fp_marvel-comics_hasbro_marvel-legends_avengers_thanos_59d1dd', tag: 'Marvel Legends' },
+  { fid: 'fp_marvel-comics_hasbro_marvel-legends_sentinel-baf_wolverine_c8b1f7', tag: 'Marvel Legends' },
+  { fid: 'fp_marvel-comics_hasbro_marvel-legends_giant-man-baf_captain-america_7ae598', tag: 'Marvel Legends' },
+  // dc multiverse (new lane on the shelf)
+  { fid: 'fp_dc_mcfarlane_multiverse_mcfarlane_batman_5efc4c', tag: 'DC Multiverse' },
+  { fid: 'fp_dc_mcfarlane_multiverse_mcfarlane_joker_00a342', tag: 'DC Multiverse' },
+  // tmnt (new lane on the shelf)
+  { fid: 'fp_tmnt_neca_ultimate_2024_leonardo_a6f2d6', tag: 'NECA Ultimate' },
+  { fid: 'fp_tmnt_neca_ultimate_2023_michelangelo_774c4e', tag: 'NECA Ultimate' },
 ]
+
+/** Fisher-Yates partial shuffle — picks `count` distinct entries from `pool`
+ *  in random order. Server-only (this file never runs client-side), so
+ *  Math.random() here is fine — it's per-render, not per-user-session. */
+function pickShelfFids<T>(pool: T[], count: number): T[] {
+  const arr = pool.slice()
+  const n = Math.min(count, arr.length)
+  for (let i = 0; i < n; i++) {
+    const j = i + Math.floor(Math.random() * (arr.length - i))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr.slice(0, n)
+}
 const PRIORITY_GUIDES = [
   {
     href: '/guides/how-to-find-action-figure-values',
@@ -86,20 +135,43 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
     const m = /^\/figure\/(.+)$/.exec(t.href)
     if (m && !soldByFid.has(m[1])) soldByFid.set(m[1], t.price)
   }
-  const out: ShelfFigure[] = []
-  for (const entry of SHELF_FIDS) {
+  const resolved: Array<{ fig: ShelfFigure; safeHost: boolean }> = []
+  // Shuffle the FULL pool and draw until SHELF_COUNT figures survive the
+  // KB/photo filter below — not just shuffle-then-take-12. Drawing exactly
+  // SHELF_COUNT first gave the filter zero real margin despite the pool
+  // being 3x bigger (adversarial review caught this): a bad handful of
+  // picks could silently collapse the shelf below its >=6 render gate.
+  for (const entry of pickShelfFids(SHELF_POOL, SHELF_POOL.length)) {
+    if (resolved.length >= SHELF_COUNT) break
     const kb = getFigureById(entry.fid)
     if (!kb || !kb.canonical_image_url) continue
     const sold = soldByFid.get(entry.fid)
-    out.push({
-      fid: entry.fid,
-      href: figureUrl(kb),
-      name: titleCase(kb.character_canonical),
-      tag: sold != null ? 'Just sold' : entry.tag,
-      sold: sold != null,
-      img: thumb(kb.canonical_image_url, 180) ?? kb.canonical_image_url,
+    resolved.push({
+      fig: {
+        fid: entry.fid,
+        href: figureUrl(kb),
+        name: titleCase(kb.character_canonical),
+        tag: sold != null ? 'Just sold' : entry.tag,
+        sold: sold != null,
+        img: thumb(kb.canonical_image_url, 180) ?? kb.canonical_image_url,
+      },
+      safeHost: isTinyThumbSafe(kb.canonical_image_url),
     })
   }
+  // LCP guard: whichever figure lands at index 0 gets eager-load +
+  // fetchPriority:high and is excluded from the curtain-rise entrance
+  // animation (see ShelfCase.tsx / the data-shelf-idx CSS below) — it's
+  // the single most performance-critical image on the page. thumb() only
+  // resizes cdn.shopify.com/i.ebayimg.com; most of SHELF_POOL is R2-hosted
+  // and passes through unresized. Reorder so a resize-safe entry always
+  // lands first when this render's draw contains one, instead of leaving
+  // it to chance which host ends up in the priority slot.
+  const safeIdx = resolved.findIndex(r => r.safeHost)
+  if (safeIdx > 0) {
+    const [safe] = resolved.splice(safeIdx, 1)
+    resolved.unshift(safe)
+  }
+  const out = resolved.map(r => r.fig)
   return out
 }
 
@@ -660,6 +732,17 @@ export default async function HomePage() {
         @media (max-width: 640px) {
           .fph .wrap { padding: 0 20px; }
           .fph-hero { padding: 40px 0 48px; }
+          /* Steve, 2026-07-10: "not seeing a big difference from mobile" —
+             both correct calls. The type layer's 6% opacity (fine on a
+             desktop screenshot) and 20px brass plates read as basically
+             invisible on a phone at a glance: no scroll (parallax never
+             triggers), and the curtain-rise is a one-shot ~1.3s animation
+             easy to miss on a fast-loading page — the type layer is the
+             ONLY rest-state difference that doesn't depend on timing or
+             scrolling, so it's the one lever worth strengthening here.
+             Desktop opacity/size stay at the original spec'd values. */
+          .fph-type-layer span { opacity: .11; }
+          .fph-case-plate { width: 30px; height: 30px; opacity: .65; }
           .fph-case { padding: 34px 14px 20px; }
           .fph-case-label { left: 18px; }
           .fph-shelf { padding: 0 2px 14px; }
