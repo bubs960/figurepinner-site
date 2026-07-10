@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import HeroSearch from './components/HeroSearch'
 import ShelfCase, { type ShelfFigure } from './components/ShelfCase'
 import ScrollReveal from './components/ScrollReveal'
+import HeroTypeScrollDriver from './components/HeroTypeScrollDriver'
+import GalleryTypeLayer from './components/GalleryTypeLayer'
 import SiteHeader from './components/SiteHeader'
 import { fetchHomeMarket, type TapeItem } from './_lib/homeReceipt'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
@@ -38,32 +40,32 @@ const PRIORITY_GUIDES = [
   {
     href: '/guides/how-to-find-action-figure-values',
     label: 'Find a figure value',
-    kicker: 'pricing method',
+    kicker: "Don't know what it's worth? Start here",
   },
   {
     href: '/guides/most-valuable-wwe-elite-figures',
     label: 'Most valuable WWE Elite figures',
-    kicker: 'wrestling comps',
+    kicker: 'Pricing a Wrestling Elite? Start here',
   },
   {
     href: '/guides/marvel-legends-price-guide-2026',
     label: 'Marvel Legends price guide',
-    kicker: 'superhero market',
+    kicker: 'What Marvel Legends collectors are paying',
   },
   {
     href: '/guides/star-wars-black-series-hub',
     label: 'Star Wars Black Series guide',
-    kicker: 'black series',
+    kicker: 'What Black Series collectors are paying',
   },
   {
     href: '/guides/dc-multiverse-hub',
     label: 'DC Multiverse price guide',
-    kicker: 'gold label',
+    kicker: 'Chasing a Gold Label? Start here',
   },
   {
     href: '/guides/tmnt-hub',
     label: 'TMNT figure price guide',
-    kicker: 'neca playmates',
+    kicker: 'What NECA and Playmates TMNT go for',
   },
 ]
 
@@ -93,7 +95,7 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
       fid: entry.fid,
       href: figureUrl(kb),
       name: titleCase(kb.character_canonical),
-      tag: sold != null ? `Sold $${sold.toFixed(2)}` : entry.tag,
+      tag: sold != null ? 'Just sold' : entry.tag,
       sold: sold != null,
       img: thumb(kb.canonical_image_url, 180) ?? kb.canonical_image_url,
     })
@@ -134,9 +136,9 @@ export default async function HomePage() {
           --fph-cream: #f2e8d5;
           --fph-cream-dim: rgba(242,232,213,.76);
           --fph-cream-mut: rgba(242,232,213,.62);
-          --fph-gold: #e0a83e;
-          --fph-gold-hi: #f5c462;
-          --fph-gold-mut: rgba(224,168,62,.72);
+          --fph-gold: var(--vitrine-gold);
+          --fph-gold-hi: var(--vitrine-gold-hi);
+          --fph-gold-mut: var(--vitrine-gold-mut);
           --fph-hair: rgba(242,232,213,.10);
           --fph-line: rgba(242,232,213,.07);
           --fph-mount: linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);
@@ -165,8 +167,40 @@ export default async function HomePage() {
             radial-gradient(700px 500px at -10% 95%, rgba(0,102,255,.06), transparent 60%),
             #09090f;
         }
-        .fph-hero-grid { display: grid; grid-template-columns: 1fr 1.04fr; gap: 68px; align-items: center; }
+        .fph-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.04fr; gap: 68px; align-items: center; }
         .fph-hero-grid > * { min-width: 0; }
+
+        /* ── Museum Night S2 — GalleryTypeLayer: giant decorative "GRAILS"
+           background type, parallaxed via HeroTypeScrollDriver writing
+           --parallax-y (0-1). Purely decorative: aria-hidden, no pointer
+           events, out of flow, transform-only motion (no reflow), never
+           the LCP element (H1/shelf image own that). ── */
+        .fph-type-layer {
+          position: absolute; inset: 0; z-index: 0;
+          display: flex; align-items: center; justify-content: center;
+          pointer-events: none; overflow: hidden;
+          transform: translateY(calc(var(--parallax-y, 0) * -70px));
+          will-change: transform;
+        }
+        .fph-type-layer span {
+          font-family: var(--fp-font-display); font-weight: 400;
+          /* Floor was 220px, no mobile override — adversarial review found
+             that on phones (<~647px, where 34vw drops below 220px) the
+             text pinned at a still-oversized 220px, and since it's
+             white-space:nowrap clipped by overflow:hidden, only a fragment
+             of 1-2 letters would paint instead of a recognizable "GRAILS"
+             watermark. A separate breakpoint override was tried first and
+             rejected: its own vw formula didn't actually meet 220px at the
+             640px boundary (real discontinuity, not the seamless join the
+             first draft's comment claimed). Lowering the floor to 64px
+             instead keeps the SAME 34vw scaling at every width — desktop
+             is unaffected (34vw already exceeds 220px above ~647px, so the
+             floor never engaged there anyway) and mobile now scales down
+             smoothly with no separate rule needed. */
+          font-size: clamp(64px, 34vw, 520px); line-height: .82;
+          letter-spacing: .01em; white-space: nowrap;
+          color: var(--fph-gold); opacity: .06;
+        }
         .fph h1 {
           font-family: var(--fp-font-display); font-weight: 400;
           font-size: clamp(56px, 6.2vw, 94px);
@@ -235,8 +269,20 @@ export default async function HomePage() {
         .fph-case-light {
           position: absolute; left: 50%; top: 42%; width: 1px; height: 1px; z-index: 3;
           pointer-events: none; opacity: 1; transition: opacity .6s;
-          animation: fph-driftX 12s ease-in-out infinite alternate;
+          animation: fph-curtainLight .9s ease-out backwards, fph-driftX 12s ease-in-out infinite alternate;
         }
+        /* Curtain-rise (Museum Night S2, load-time only, needs zero blocked
+           assets): the case-light fades in on mount instead of snapping to
+           full brightness immediately. 'backwards' (NOT 'both'/'forwards') is
+           deliberate: forwards fill would permanently pin opacity via the
+           animation cascade origin, silently breaking the pre-existing
+           '.fph-case.manual .fph-case-light { opacity: 0; }' cursor-follow
+           dim-out below (adversarial review caught this — forwards fill
+           outranks normal-priority rules on the same property forever, not
+           just during the animation). The "to" keyframe (opacity:1) already
+           matches this element's static rest value, so releasing control
+           after the animation ends produces no visual jump. */
+        @keyframes fph-curtainLight { from { opacity: 0; } to { opacity: 1; } }
         .fph-case-light i {
           display: block; width: 560px; height: 560px; margin: -280px 0 0 -280px; border-radius: 50%;
           background: radial-gradient(circle, rgba(255,216,140,.11), transparent 60%);
@@ -258,6 +304,18 @@ export default async function HomePage() {
           font-size: 10px; font-weight: 400; letter-spacing: .26em; text-transform: uppercase;
           color: rgba(242,232,213,.60);
         }
+        /* Brass corner plates (Museum Night S2, "Vitrine One" framing) —
+           static decorative CSS, no motion, clipped to the case's own
+           rounded/overflow:hidden bounds, zero CWV surface. */
+        .fph-case-plate {
+          position: absolute; z-index: 5; width: 20px; height: 20px; pointer-events: none;
+          background: linear-gradient(135deg, var(--fph-gold-hi), var(--fph-gold) 55%, #8a6420 100%);
+          opacity: .5;
+        }
+        .fph-case-plate.tl { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
+        .fph-case-plate.tr { top: 0; right: 0; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+        .fph-case-plate.bl { bottom: 0; left: 0; clip-path: polygon(0 0, 100% 100%, 0 100%); }
+        .fph-case-plate.br { bottom: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
         .fph-shelf { position: relative; padding: 0 6px 14px; margin-bottom: 30px; }
         .fph-shelf:last-of-type { margin-bottom: 6px; }
         .fph-shelf::after {
@@ -291,6 +349,38 @@ export default async function HomePage() {
         .fph-fig.pinned .fph-mount { box-shadow: 0 10px 18px rgba(0,0,0,.42), 0 0 0 1px var(--fph-gold), 0 0 20px rgba(224,168,62,.24); }
         .fph-fig.demo .fph-mount { transform: translateY(-6px); }
         .fph-fig.demo .fph-mount::after { opacity: 1; }
+        /* Curtain-rise stagger (Museum Night S2): every shelf figure EXCEPT
+           idx 0 (the LCP candidate, eager-loaded above) rises + fades in on
+           mount. idx 0 is intentionally excluded from this selector — it
+           renders at full opacity/position immediately, same as before this
+           change, so the LCP paint is never delayed or entrance-animated.
+           'backwards' fill (NOT 'both'/'forwards') is deliberate: this
+           targets .fph-mount's own transform, the SAME property the
+           hover-lift (line 335) and .demo pin-drop lift (line 337) rules
+           already animate on the same element. A 'forwards'-filling
+           animation permanently pins transform via the animation cascade
+           origin, which outranks normal-priority rules forever — silently
+           killing hover-lift and the demo's lift for every figure this
+           targets (adversarial review caught this live: hover produced a
+           shadow change but zero movement). The "to" keyframe
+           (translateY(0), opacity:1) already matches the element's static
+           rest state, so releasing control once the one-shot entrance ends
+           is visually seamless and lets hover/demo regain the property. */
+        @keyframes fph-mountRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+        .fph-fig[data-shelf-idx]:not([data-shelf-idx="0"]) .fph-mount {
+          animation: fph-mountRise .6s cubic-bezier(.22,.61,.36,1) backwards;
+        }
+        .fph-fig[data-shelf-idx="1"] .fph-mount { animation-delay: .06s; }
+        .fph-fig[data-shelf-idx="2"] .fph-mount { animation-delay: .12s; }
+        .fph-fig[data-shelf-idx="3"] .fph-mount { animation-delay: .18s; }
+        .fph-fig[data-shelf-idx="4"] .fph-mount { animation-delay: .24s; }
+        .fph-fig[data-shelf-idx="5"] .fph-mount { animation-delay: .30s; }
+        .fph-fig[data-shelf-idx="6"] .fph-mount { animation-delay: .36s; }
+        .fph-fig[data-shelf-idx="7"] .fph-mount { animation-delay: .42s; }
+        .fph-fig[data-shelf-idx="8"] .fph-mount { animation-delay: .48s; }
+        .fph-fig[data-shelf-idx="9"] .fph-mount { animation-delay: .54s; }
+        .fph-fig[data-shelf-idx="10"] .fph-mount { animation-delay: .60s; }
+        .fph-fig[data-shelf-idx="11"] .fph-mount { animation-delay: .66s; }
         .fph-fig-name { margin-top: 9px; font-size: 11.5px; font-weight: 500; color: var(--fph-cream); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .fph-fig-tag { margin-top: 2px; font-size: 9.5px; font-weight: 400; letter-spacing: .11em; text-transform: uppercase; color: var(--fph-cream-mut); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .fph-fig-tag.sold { color: var(--fph-gold-hi); }
@@ -495,7 +585,7 @@ export default async function HomePage() {
         .fph-ledger { border: 1px solid rgba(224,168,62,.16); border-radius: 16px; background: linear-gradient(180deg, rgba(224,168,62,.035), transparent 55%); overflow: hidden; }
         .fph-ledger-head { display: flex; align-items: center; justify-content: space-between; padding: 13px 26px; border-bottom: 1px solid rgba(242,232,213,.07); }
         .fph-ledger-head .t { font-family: var(--fp-font-display); font-size: 19px; letter-spacing: .13em; color: var(--fph-cream); }
-        .fph-ledger-row { display: flex; align-items: baseline; gap: 16px; padding: 13px 26px; border-bottom: 1px solid rgba(242,232,213,.05); transition: background .2s; }
+        .fph-ledger-row { display: flex; align-items: baseline; gap: 16px; padding: 13px 26px; border-bottom: 1px solid rgba(242,232,213,.05); transition: background .2s; text-decoration: none; color: inherit; }
         .fph-ledger-row:last-of-type { border-bottom: none; }
         .fph-ledger-row:hover { background: rgba(224,168,62,.04); }
         .fph-ledger-row .who { flex: 0 1 auto; min-width: 0; }
@@ -532,6 +622,14 @@ export default async function HomePage() {
           .fph-solds .sold-chip, .fph-solds.in .sold-chip { opacity: 1 !important; animation: none !important; transform: translateY(-2px) !important; }
           .fph-tray-thumbs img { animation: none !important; }
           .fph-fly-thumb { display: none; }
+          /* Museum Night S2 additions: type layer freezes at its composed
+             rest position (driver never attaches; default --parallax-y:0
+             already means transform:translateY(0), this is defensive/
+             explicit to match the pattern above); curtain-rise mount
+             entrance is disabled — figures render at rest state
+             immediately instead of playing the staggered rise. */
+          .fph-type-layer { transform: none !important; }
+          .fph-mount { animation: none !important; opacity: 1 !important; transform: none !important; }
         }
 
         /* ── responsive ── */
@@ -589,9 +687,14 @@ export default async function HomePage() {
 
       <SiteHeader />
       <ScrollReveal />
+      <HeroTypeScrollDriver />
 
       {/* ── HERO ── */}
       <section className="fph-hero">
+        {/* GalleryTypeLayer — decorative only, aria-hidden, out of flow,
+            client-mounted only (see component) so it's never an LCP
+            candidate; H1 + shelf image own that. */}
+        <GalleryTypeLayer text="GRAILS" />
         <div className="wrap fph-hero-grid">
           <div>
             <h1>Every <span className="grail" data-text="grail">grail</span> starts as a gap on the shelf.</h1>
@@ -712,7 +815,7 @@ export default async function HomePage() {
                   <div className="t">Recent solds</div>
                 </div>
                 {ledger.map((t, i) => (
-                  <div className="fph-ledger-row" key={i}>
+                  <a className="fph-ledger-row" href={t.href} key={i}>
                     <div className="who">
                       <div className="name">{t.name}</div>
                       {t.lineTag && <div className="line-tag">{t.lineTag}</div>}
@@ -720,10 +823,10 @@ export default async function HomePage() {
                     <div className="dots" />
                     <span className="sold-chip">SOLD</span>
                     <div className="price">${t.price.toFixed(2)}</div>
-                  </div>
+                  </a>
                 ))}
                 <div className="fph-ledger-foot">
-                  Median &middot; P10&ndash;P90 range &middot; confidence-scored. Built from real solds.
+                  Every price here came from a completed eBay sale &mdash; never a hopeful listing.
                 </div>
               </div>
             </div>

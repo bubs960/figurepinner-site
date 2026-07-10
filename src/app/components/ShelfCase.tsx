@@ -200,29 +200,43 @@ export default function ShelfCase({ figures, label }: { figures: ShelfFigure[]; 
         <div className="fph-case-light" aria-hidden><i /></div>
         <div className="fph-case-sweep" aria-hidden />
         <div className="fph-case-label">{label ?? 'The Shelf — tap a pin to keep one'}</div>
+        {/* Brass corner plates — Museum Night S2, purely decorative CSS,
+            no motion, no layout, no LCP/CWV surface. */}
+        <span className="fph-case-plate tl" aria-hidden />
+        <span className="fph-case-plate tr" aria-hidden />
+        <span className="fph-case-plate bl" aria-hidden />
+        <span className="fph-case-plate br" aria-hidden />
 
         {rows.map((row, ri) => (
           <div className="fph-shelf" key={ri}>
             <div className="fph-shelf-row">
-              {row.map(f => (
-                <a className="fph-fig" href={f.href} key={f.fid}>
-                  <div className="fph-mount">
-                    <button className="fph-pin-btn" aria-label={`Pin ${f.name} to your Vault`}>
-                      <svg viewBox="0 0 24 24" fill="currentColor"><path d={PIN_PATH} /></svg>
-                    </button>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={f.img}
-                      alt={f.name}
-                      loading={ri === 0 && f === row[0] ? 'eager' : 'lazy'}
-                      fetchPriority={ri === 0 && f === row[0] ? 'high' : 'auto'}
-                      decoding="async"
-                    />
-                  </div>
-                  <div className="fph-fig-name">{f.name}</div>
-                  <div className={`fph-fig-tag${f.sold ? ' sold' : ''}`}>{f.tag}</div>
-                </a>
-              ))}
+              {row.map((f, fi) => {
+                // Global index across BOTH rows (row 1 continues where row 0
+                // left off) — idx 0 is the LCP candidate (eager image below)
+                // and is HARD-EXCLUDED from the curtain-rise mount animation
+                // via this attribute; every other figure gets a staggered
+                // rise, however many actually render.
+                const globalIdx = ri === 0 ? fi : half + fi
+                return (
+                  <a className="fph-fig" href={f.href} key={f.fid} data-shelf-idx={globalIdx}>
+                    <div className="fph-mount">
+                      <button className="fph-pin-btn" aria-label={`Pin ${f.name} to your Vault`}>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d={PIN_PATH} /></svg>
+                      </button>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={f.img}
+                        alt={f.name}
+                        loading={globalIdx === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={globalIdx === 0 ? 'high' : 'auto'}
+                        decoding="async"
+                      />
+                    </div>
+                    <div className="fph-fig-name">{f.name}</div>
+                    <div className={`fph-fig-tag${f.sold ? ' sold' : ''}`}>{f.tag}</div>
+                  </a>
+                )
+              })}
             </div>
           </div>
         ))}

@@ -573,8 +573,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           --shelf-cream:     #f2e8d5;
           --shelf-cream-dim: rgba(242,232,213,0.60);
           --shelf-cream-mut: rgba(242,232,213,0.38);
-          --shelf-gold:      #e0a83e;
-          --shelf-gold-hi:   #f5c462;
+          --shelf-gold:      var(--vitrine-gold);
+          --shelf-gold-hi:   var(--vitrine-gold-hi);
           --shelf-line:      rgba(242,232,213,0.08);
           --shelf-line-gold: rgba(224,168,62,0.20);
           --shelf-mount:     linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);

@@ -36,6 +36,16 @@
   --gold: #E8B64C;      /* price moments — search medians, quick-look cards (S54;
                            SearchInterface already referenced var(--gold), which
                            silently no-opped until this token existed) */
+  /* Vitrine gold — the homepage hero/shelf + figure-detail case theme's own
+     warmer bronze-gold, distinct from --gold above (a brighter, different hex
+     used for price-moment accents elsewhere). Promoted here (Museum Night S1,
+     2026-07-10) from 3 identical literal duplicates: page.tsx's --fph-gold,
+     [genre]/page.tsx's --fph-gold, and FigureDetailContent.tsx's --shelf-gold
+     — same hex three times, no shared source. Those files now alias to these;
+     the sparkline build (S4) wants the same tokens, so this is done once. */
+  --vitrine-gold:     #e0a83e;
+  --vitrine-gold-hi:  #f5c462;
+  --vitrine-gold-mut: rgba(224,168,62,.72);
 
   /* --- Text --- */
   --text: #EEEEF5;      /* primary text */

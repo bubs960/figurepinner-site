@@ -346,9 +346,9 @@ export default async function GenrePage(
           --fph-cream: #f2e8d5;
           --fph-cream-dim: rgba(242,232,213,.60);
           --fph-cream-mut: rgba(242,232,213,.38);
-          --fph-gold: #e0a83e;
-          --fph-gold-hi: #f5c462;
-          --fph-gold-mut: rgba(224,168,62,.72);
+          --fph-gold: var(--vitrine-gold);
+          --fph-gold-hi: var(--vitrine-gold-hi);
+          --fph-gold-mut: var(--vitrine-gold-mut);
           --fph-hair: rgba(242,232,213,.10);
           --fph-line: rgba(242,232,213,.07);
           --fph-mount: linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);
