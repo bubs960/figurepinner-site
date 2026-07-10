@@ -57,8 +57,14 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# local deploy-script run state (machine-specific, no secrets, safe to delete)
+# local deploy-script run state (machine-specific, no secrets, safe to delete).
+# The .tmp-<pid> variant is the atomic-write scratch file — it's supposed to
+# be transient (write, then rename over the real file), but a Windows-only
+# EPERM race (something else briefly holding the destination handle, e.g.
+# antivirus) can leave it stranded. Ignore it too so a deploy that hits that
+# race doesn't surface as a false "uncommitted change" warning.
 /.kv-purge-state.json
+/.kv-purge-state.json.tmp-*
 
 # Plugin/skill artifacts dropped into .claude/ by Cowork sessions - never ship, never commit
 .claude/*

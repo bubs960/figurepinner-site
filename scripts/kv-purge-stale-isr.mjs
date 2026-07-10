@@ -218,10 +218,18 @@ function loadState() {
 // Atomic write (temp file + rename) -- a hard kill (SIGKILL, terminal
 // closed, laptop sleep) mid-write can never leave a torn/corrupt state
 // file this way; the rename is a single filesystem operation.
-function saveState(state) {
+//
+// Windows-only wrinkle (hit live 2026-07-10): renameSync onto an existing
+// destination can throw EPERM if something else (antivirus, an indexer)
+// has the destination handle open for a moment -- purely transient, clears
+// in well under a second. Retries via the existing withRetry() helper with
+// a short local-filesystem delay (its 5000ms default is tuned for network
+// calls like wrangler, not a local rename); a repeated/persistent failure
+// still surfaces as the same non-fatal top-level warning as before.
+async function saveState(state) {
   const tmpPath = `${STATE_FILE}.tmp-${process.pid}`
   writeFileSync(tmpPath, JSON.stringify(state, null, 2))
-  renameSync(tmpPath, STATE_FILE)
+  await withRetry(() => renameSync(tmpPath, STATE_FILE), { attempts: 3, baseDelayMs: 50, label: 'state-file rename' })
 }
 
 // Call the locally-installed binary directly (not `npx wrangler`) -- avoids
@@ -418,7 +426,7 @@ async function main() {
     // an interruption (including a genuine AnomalyError) on the very first
     // build processed used to discard this entire scan silently, forcing
     // every subsequent run to redo it from scratch.
-    if (execute) saveState({ pendingBuildIds: pending, lastKeptBuildId: keepBuildId })
+    if (execute) await saveState({ pendingBuildIds: pending, lastKeptBuildId: keepBuildId })
   } else {
     console.log(`[kv-purge-stale-isr] resuming persisted queue from a prior run: ${pending.length} stale build(s) remaining.`)
   }
@@ -435,7 +443,7 @@ async function main() {
 
   if (!pending.length) {
     console.log('[kv-purge-stale-isr] nothing to do.')
-    if (execute) saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId })
+    if (execute) await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId })
     return
   }
 
@@ -524,12 +532,12 @@ async function main() {
     // NEXT build only ever loses progress on that one build in flight;
     // every prior outcome this run (and everything from before this run)
     // is already saved.
-    saveState({ pendingBuildIds: [...nextQueue, ...pending.slice(i + 1)], lastKeptBuildId: keepBuildId })
+    await saveState({ pendingBuildIds: [...nextQueue, ...pending.slice(i + 1)], lastKeptBuildId: keepBuildId })
   }
 
   console.log(`[kv-purge-stale-isr] this run: processed ${processedBuilds} build(s), ${callsThisRun} wrangler calls, deleted ${deletedThisRun} keys. ${nextQueue.length} build(s) still queued.`)
   if (!nextQueue.length) {
-    saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId })
+    await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId })
     console.log('[kv-purge-stale-isr] queue fully drained -- next run will do a fresh full scan for any newly-accumulated stale builds.')
   }
 }
