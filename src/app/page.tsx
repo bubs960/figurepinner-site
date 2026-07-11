@@ -5,12 +5,12 @@ import ScrollReveal from './components/ScrollReveal'
 import HeroTypeScrollDriver from './components/HeroTypeScrollDriver'
 import GalleryTypeLayer from './components/GalleryTypeLayer'
 import SiteHeader from './components/SiteHeader'
-import { fetchHomeMarket, type TapeItem } from './_lib/homeReceipt'
+import { fetchHomeMarket, type TapeItem, type ReceiptFigure } from './_lib/homeReceipt'
+import ProvenanceTypeScrollDriver from './components/ProvenanceTypeScrollDriver'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
 import { getFigureById, getFiguresByLine, figureUrl } from '@/data/kb'
 import { getFandom } from '@/lib/genreFigures'
-import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 
 export const metadata: Metadata = {
@@ -205,30 +205,53 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
   return out
 }
 
-/** Ticker/ledger rows: tape solds enriched with KB name/line/photo. */
-function enrichTape(tape: TapeItem[]) {
-  return tape.map(t => {
-    const m = /^\/figure\/(.+)$/.exec(t.href)
-    const kb = m ? getFigureById(m[1]) : null
-    const img = kb?.canonical_image_url ? thumb(kb.canonical_image_url, 96) : null
-    return {
-      href: t.href,
-      price: t.price,
-      name: kb ? titleCase(kb.character_canonical) : t.label,
-      lineTag: kb
-        ? `${prettifySlug(kb.product_line)}${kb.release_wave && /^\d+$/.test(kb.release_wave) ? ` ${kb.release_wave}` : ''}`
-        : '',
-      img: isTinyThumbSafe(img) ? img : null,
-    }
-  })
+/** Room III/IV (Museum Night S4): where the single hairline-mark dot sits on
+ *  its 60px baseline. No sold_date field exists in the KB yet (see this
+ *  file's own honesty-rules header), so "most recent sale" isn't a real
+ *  signal here — the dot marks the median's own normalized position within
+ *  [p10, p90] instead, which the placard text already states as the
+ *  headline number. Honest, not a fabricated timeline point. */
+function medianTickPosition(f: ReceiptFigure): number {
+  const span = f.p90 - f.p10
+  return span > 0 ? Math.min(1, Math.max(0, (f.median - f.p10) / span)) : 0.5
+}
+
+/** Shared card for the Provenance Wall corridor (Room III) and the closer's
+ *  single flagship pick (Room IV) — `large` scales it up for the latter.
+ *  Every card is a real `<a href="/figure/{fid}">` (the old ledger rows were
+ *  unlinked plain divs with zero SEO value — Museum Night S4 fixes that). */
+function VitrineCard({ f, large }: { f: ReceiptFigure; large?: boolean }) {
+  const dotPos = medianTickPosition(f)
+  return (
+    <a className={`fph-vc${large ? ' large' : ''}`} href={f.href}>
+      {f.image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="fph-vc-img" src={f.image} alt="" loading="lazy" decoding="async" />
+      )}
+      <div className="fph-vc-body">
+        <div className="fph-vc-name">{f.name}</div>
+        <div className="fph-vc-line">{f.line}</div>
+        <div className="fph-vc-placard">
+          Last changed hands: <strong>${f.median.toFixed(2)}</strong> &middot; {f.compCount} real solds tracked
+        </div>
+        <div className="fph-vc-conf" aria-hidden>
+          {[1, 2, 3, 4, 5].map(n => (
+            <span className={`dot${n <= f.confidence ? ' on' : ''}`} key={n} />
+          ))}
+        </div>
+        <div className="fph-vc-hairline" aria-hidden>
+          <span className="line" />
+          <span className="mark" style={{ left: `${dotPos * 100}%` }} />
+        </div>
+      </div>
+    </a>
+  )
 }
 
 export default async function HomePage() {
   // Live market data — real solds or the modules hide themselves.
   const { figures: receiptFigures, tape } = await fetchHomeMarket()
   const shelf = buildShelf(tape)
-  const ticker = enrichTape(tape)
-  const ledger = ticker.slice(0, 3)
   const laneCount = GENRE_TAXONOMY.length
   // Room I (Museum Night S3): top lanes by live figure count become large
   // featured vitrine tiles; the rest fall back to a compact floor directory.
@@ -242,6 +265,17 @@ export default async function HomePage() {
   const SPINE_LEAN_DEG = [-3, 2.4, -1.6, 3, -2.2, 1.4]
   // Bookplate photo per guide — null falls back to the CSS-only gold plate.
   const guidePlates = PRIORITY_GUIDES.map(g => guidePlateImg(g.fandom, g.line))
+  // Room III (Museum Night S4): curated 6-8 wall, Steve's explicit density
+  // call (2026-07-10) over an exhaustive 15-entry feed. receiptFigures is
+  // already curated (CURATED array, homeReceipt.ts) so no further picking
+  // logic is needed beyond a sane cap.
+  const provenanceFigures = receiptFigures.slice(0, 8)
+  // Room IV's single closing pick — the most data-backed figure (highest
+  // confidence, real tiebreak on array order) rather than an arbitrary
+  // index, matching this page's own "never a hopeful listing" honesty rule.
+  const closerPick = provenanceFigures.length
+    ? [...provenanceFigures].sort((a, b) => b.confidence - a.confidence)[0]
+    : null
 
   return (
     <main className="fph">
@@ -755,27 +789,77 @@ export default async function HomePage() {
           font-size: 13px; line-height: 1.3; font-weight: 500; color: var(--fph-cream);
         }
 
-        /* ── ticker ── */
-        .fph-ticker { background: rgba(224,168,62,.02); overflow: hidden; position: relative; }
-        .fph-ticker .fade-l, .fph-ticker .fade-r { position: absolute; top: 0; bottom: 0; width: 70px; z-index: 2; pointer-events: none; }
-        .fph-ticker .fade-l { left: 0; background: linear-gradient(90deg, #09090f, transparent); }
-        .fph-ticker .fade-r { right: 0; background: linear-gradient(270deg, #09090f, transparent); }
-        .fph-ticker-track { display: flex; width: max-content; animation: fph-tickerMove 38s linear infinite; }
-        .fph-ticker:hover .fph-ticker-track { animation-play-state: paused; }
-        @keyframes fph-tickerMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .fph-ticker-half { display: flex; align-items: center; padding: 10px 0; flex: 0 0 auto; }
-        .fph-tick-chip {
-          display: inline-flex; align-items: center; gap: 10px;
-          margin: 0 14px; padding: 4px 14px 4px 5px;
-          border: 1px solid rgba(242,232,213,.09); border-radius: 99px; text-decoration: none;
-          background: transparent; transition: border-color .25s;
+        /* ── Room III — Provenance Wall (Museum Night S4) ──
+           Second (final) GalleryTypeLayer instance lives here — two max on
+           the page, Hero + this one, per the audit's own v1 scope cut.
+           Parallax via ProvenanceTypeScrollDriver, IO-gated so it only runs
+           while this section is actually in view (the spec's own risk
+           register flags "two parallax layers" as the thing to manage). */
+        .fph-provenance { position: relative; overflow: hidden; padding: 40px 0 30px; }
+        .fph-provenance .fph-room-head { padding: 0 32px; max-width: 1240px; margin-left: auto; margin-right: auto; }
+        .fph-corridor-wrap { position: relative; margin-top: 6px; }
+        .fph-corridor-wrap .fade-l, .fph-corridor-wrap .fade-r {
+          position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
         }
-        .fph-tick-chip:hover { border-color: rgba(224,168,62,.45); }
-        .fph-tick-thumb { width: 27px; height: 27px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(224,168,62,.40); background: #efe5d0; flex: 0 0 auto; }
-        .fph-tick-name { font-size: 12px; font-weight: 500; color: var(--fph-cream); white-space: nowrap; }
-        .fph-tick-line { font-size: 9.5px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; color: var(--fph-cream-mut); white-space: nowrap; }
-        .fph-tick-sold { font-size: 8.5px; font-weight: 600; letter-spacing: .12em; color: #1a1206; background: var(--fph-gold); border-radius: 3px; padding: 2px 6px; }
-        .fph-tick-price { font-family: var(--fp-font-display); font-size: 18px; letter-spacing: .03em; color: var(--fph-gold-hi); line-height: 1; }
+        .fph-corridor-wrap .fade-l { left: 0; background: linear-gradient(90deg, #09090f, transparent); }
+        .fph-corridor-wrap .fade-r { right: 0; background: linear-gradient(270deg, #09090f, transparent); }
+        /* User-driven scroll, NOT an autoplaying marquee — the mechanical
+           difference from the old ticker that kills the "stock exchange"
+           feeling. Native overflow scroll + snap, no JS scroll-hijacking. */
+        .fph-corridor {
+          display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity;
+          padding: 4px 32px 10px; scrollbar-width: none;
+        }
+        .fph-corridor::-webkit-scrollbar { display: none; }
+        .fph-corridor-dots { display: flex; justify-content: center; gap: 6px; margin-top: 2px; }
+        .fph-corridor-dots .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(242,232,213,.18); }
+        .fph-provenance-foot {
+          margin-top: 18px; font-size: 11.5px; font-weight: 300; color: var(--fph-cream-mut);
+          line-height: 1.55; text-align: center;
+        }
+
+        /* ── VitrineCard — shared by the Room III corridor and Room IV's
+           single closing pick (.large). Every card is a real figure-page
+           link (the old ledger rows were unlinked plain divs — zero SEO
+           value; this is the standing fix). ── */
+        .fph-vc {
+          flex: 0 0 auto; scroll-snap-align: center; width: 200px; text-decoration: none;
+          display: block; border: 1px solid rgba(242,232,213,.11); border-radius: 12px;
+          background: linear-gradient(180deg, rgba(242,232,213,.035), transparent 55%);
+          overflow: hidden; transition: transform .3s cubic-bezier(.22,.61,.36,1), border-color .3s, box-shadow .3s;
+        }
+        .fph-vc:hover {
+          transform: translateY(-4px); border-color: rgba(224,168,62,.4);
+          box-shadow: 0 14px 26px rgba(0,0,0,.4), 0 0 0 1px rgba(224,168,62,.3), 0 0 18px rgba(224,168,62,.15);
+        }
+        .fph-vc-img { width: 100%; aspect-ratio: 4/3.4; object-fit: cover; display: block; background: #e9e0cd; }
+        .fph-vc-body { padding: 12px 14px 14px; }
+        .fph-vc-name { font-size: 13.5px; font-weight: 600; color: var(--fph-cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .fph-vc-line { margin-top: 2px; font-size: 9.5px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; color: var(--fph-cream-mut); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .fph-vc-placard { margin-top: 9px; font-size: 11px; line-height: 1.5; color: var(--fph-cream-dim); }
+        .fph-vc-placard strong { font-family: var(--fp-font-display); font-size: 15px; font-weight: 400; letter-spacing: .02em; color: var(--fph-gold-hi); }
+        .fph-vc-conf { margin-top: 9px; display: flex; gap: 4px; }
+        .fph-vc-conf .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(242,232,213,.16); }
+        .fph-vc-conf .dot.on { background: var(--fph-gold); box-shadow: 0 0 5px rgba(224,168,62,.6); }
+        /* The hairline provenance mark — deliberately foreshadows the
+           Liquid Gold Sparkline (next in the build order after Museum
+           Night). The single gold mark sits at the median's own normalized
+           position within [p10,p90] (see medianTickPosition()) — not a
+           fabricated "latest sale" timeline point; no sold_date field
+           exists in the KB yet. */
+        .fph-vc-hairline { position: relative; margin-top: 10px; width: 60px; height: 8px; }
+        .fph-vc-hairline .line { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(242,232,213,.16); }
+        .fph-vc-hairline .mark {
+          position: absolute; top: 50%; width: 6px; height: 6px; margin: -3px 0 0 -3px;
+          border-radius: 50%; background: var(--fph-gold); box-shadow: 0 0 6px rgba(224,168,62,.7);
+        }
+        .fph-vc.large { width: 100%; max-width: 380px; }
+        .fph-vc.large .fph-vc-img { aspect-ratio: 4/3; }
+        .fph-vc.large .fph-vc-body { padding: 16px 20px 20px; }
+        .fph-vc.large .fph-vc-name { font-size: 17px; white-space: normal; }
+        .fph-vc.large .fph-vc-placard { font-size: 12.5px; }
+        .fph-vc.large .fph-vc-placard strong { font-size: 18px; }
+        .fph-closer-pick { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 
         /* ── closer ── */
         .fph-closer {
@@ -810,33 +894,11 @@ export default async function HomePage() {
           transition: border-color .2s, color .2s, background .2s;
         }
         .fph-btn-ghost:hover { border-color: rgba(224,168,62,.5); color: var(--fph-cream); background: rgba(224,168,62,.05); }
-        .fph-ledger { border: 1px solid rgba(224,168,62,.16); border-radius: 16px; background: linear-gradient(180deg, rgba(224,168,62,.035), transparent 55%); overflow: hidden; }
-        .fph-ledger-head { display: flex; align-items: center; justify-content: space-between; padding: 13px 26px; border-bottom: 1px solid rgba(242,232,213,.07); }
-        .fph-ledger-head .t { font-family: var(--fp-font-display); font-size: 19px; letter-spacing: .13em; color: var(--fph-cream); }
-        .fph-ledger-row { display: flex; align-items: baseline; gap: 16px; padding: 13px 26px; border-bottom: 1px solid rgba(242,232,213,.05); transition: background .2s; text-decoration: none; color: inherit; }
-        .fph-ledger-row:last-of-type { border-bottom: none; }
-        .fph-ledger-row:hover { background: rgba(224,168,62,.04); }
-        .fph-ledger-row .who { flex: 0 1 auto; min-width: 0; }
-        .fph-ledger-row .name { font-size: 14px; font-weight: 500; color: var(--fph-cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .fph-ledger-row .line-tag { font-size: 10px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--fph-cream-mut); margin-top: 3px; }
-        .fph-ledger-row .dots { flex: 1 1 auto; border-bottom: 1px dotted rgba(242,232,213,.18); transform: translateY(-4px); min-width: 24px; }
-        .fph-ledger-row .price { font-family: var(--fp-font-display); font-size: 27px; letter-spacing: .03em; color: var(--fph-gold-hi); line-height: 1; flex: 0 0 auto; }
-        .fph-ledger-row .sold-chip { flex: 0 0 auto; font-size: 9px; font-weight: 600; letter-spacing: .14em; color: #1a1206; background: var(--fph-gold); border-radius: 4px; padding: 3px 7px; transform: translateY(-2px); opacity: 0; }
-        .fph-solds.in .sold-chip { animation: fph-stamp .5s cubic-bezier(.34,1.56,.64,1) both; }
-        .fph-solds.in .fph-ledger-row:nth-child(3) .sold-chip { animation-delay: .25s; }
-        .fph-solds.in .fph-ledger-row:nth-child(4) .sold-chip { animation-delay: .5s; }
-        @keyframes fph-stamp {
-          0% { opacity: 0; transform: translateY(-2px) scale(2.4) rotate(-16deg); }
-          62% { opacity: 1; transform: translateY(-2px) scale(.92) rotate(3deg); }
-          100% { opacity: 1; transform: translateY(-2px) scale(1) rotate(-2deg); }
-        }
-        .fph-ledger-foot { padding: 11px 26px 13px; font-size: 11.5px; font-weight: 300; color: var(--fph-cream-mut); line-height: 1.55; border-top: 1px solid rgba(242,232,213,.06); }
 
         /* ── reduced motion: freeze to a good static state ── */
         @media (prefers-reduced-motion: reduce) {
           [data-fph-reveal] { opacity: 1; transform: none; transition: none; }
           [data-fph-stagger] .fph-lane-kicker, [data-fph-stagger] .fph-lane-chip { opacity: 1; transform: none; transition: none; }
-          .fph-ticker-track { animation: none !important; }
           .fph-fig { animation: none !important; }
           /* Hover lift/tilt/glow is user-initiated (not automatic), but this is
              the reference pattern every other card hover gets promoted from
@@ -846,7 +908,6 @@ export default async function HomePage() {
           .fph-case-light, .fph-case-sweep { display: none; }
           .fph-case::before { display: none; }
           .fph h1 .grail::after { display: none; }
-          .fph-solds .sold-chip, .fph-solds.in .sold-chip { opacity: 1 !important; animation: none !important; transform: translateY(-2px) !important; }
           .fph-tray-thumbs img { animation: none !important; }
           .fph-fly-thumb { display: none; }
           /* Museum Night S2 additions: type layer freezes at its composed
@@ -869,12 +930,20 @@ export default async function HomePage() {
           .fph-spine { transition: none; }
           .fph-spine:hover, .fph-spine:focus-visible { transform: rotate(var(--lean, 0deg)); }
           .gallery-sheen { display: none; }
+          /* Museum Night S4 additions: Room III's type-layer parallax is
+             already covered by the generic .fph-type-layer rule above
+             (ProvenanceTypeScrollDriver never attaches under reduced
+             motion regardless); the corridor's scroll-snap is native
+             user-driven scrolling, not a CSS animation, so it needs no
+             override. VitrineCard hover follows the same "zero it for
+             contract consistency" rule as every other card hover here. */
+          .fph-vc:hover { transform: none; transition: none; }
         }
 
         /* ── responsive ── */
         @media (pointer: coarse) {
           .fph a, .fph button { touch-action: manipulation; }
-          .fph-chip, .fph-lane-chip, .fph-guide-all, .fph-tick-chip, .fph-btn-gold, .fph-btn-ghost {
+          .fph-chip, .fph-lane-chip, .fph-guide-all, .fph-btn-gold, .fph-btn-ghost {
             min-height: 44px;
             display: inline-flex;
             align-items: center;
@@ -917,10 +986,9 @@ export default async function HomePage() {
           .fph-shelf-row { overflow-x: auto; scrollbar-width: none; padding-top: 14px; margin-top: -14px; }
           .fph-shelf-row::-webkit-scrollbar { display: none; }
           .fph-fig { flex: 0 0 108px; }
-          .fph-ticker-half { padding: 9px 0; }
-          .fph-tick-chip { margin: 0 9px; gap: 8px; }
-          .fph-tick-name { font-size: 11.5px; }
-          .fph-tick-price { font-size: 16px; }
+          .fph-provenance .fph-room-head { padding: 0 20px; }
+          .fph-corridor { padding: 4px 20px 10px; }
+          .fph-vc { width: 168px; }
           .fph-gallery { padding: 28px 0 24px; }
           .fph-lane-kicker { width: 100%; margin-right: 0; margin-bottom: 2px; }
           .fph-lane-chip { padding: 7px 14px; font-size: 11px; }
@@ -940,9 +1008,7 @@ export default async function HomePage() {
           .fph-spine:hover, .fph-spine:focus-visible { transform: translateY(-1px); }
           .fph-spine-plate { width: 40px; height: 40px; top: 10px; }
           .fph-closer { padding: 46px 0 50px; }
-          .fph-ledger-row { padding: 12px 18px; }
-          .fph-ledger-head, .fph-ledger-foot { padding-left: 18px; padding-right: 18px; }
-          .fph-ledger-row .price { font-size: 23px; }
+          .fph-vc.large { max-width: 100%; }
           .fph-tray { flex-wrap: wrap; border-radius: 16px; }
           .fph-tray-cta { margin-left: 0; }
         }
@@ -951,6 +1017,7 @@ export default async function HomePage() {
       <SiteHeader />
       <ScrollReveal />
       <HeroTypeScrollDriver />
+      <ProvenanceTypeScrollDriver />
 
       {/* ── HERO ── */}
       <section className="fph-hero">
@@ -1100,28 +1167,35 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── SOLD TICKER ── */}
-      {ticker.length >= 4 && (
-        <section className="fph-ticker fph-seam" aria-label="Recent real eBay sold prices">
-          <div className="fade-l" aria-hidden />
-          <div className="fade-r" aria-hidden />
-          <div className="fph-ticker-track">
-            {[0, 1].map(half => (
-              <div className="fph-ticker-half" key={half} aria-hidden={half === 1}>
-                {[...ticker, ...ticker].map((t, i) => (
-                  <a className="fph-tick-chip" href={t.href} key={`${half}-${i}`} tabIndex={half === 1 ? -1 : undefined}>
-                    {t.img && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img className="fph-tick-thumb" src={t.img} alt="" loading="lazy" />
-                    )}
-                    <span className="fph-tick-name">{t.name}</span>
-                    {t.lineTag && <span className="fph-tick-line">{t.lineTag}</span>}
-                    <span className="fph-tick-sold">SOLD</span>
-                    <span className="fph-tick-price">${t.price.toFixed(2)}</span>
-                  </a>
-                ))}
-              </div>
-            ))}
+      {/* ── ROOM III — PROVENANCE WALL (was Sold Ticker + Recent Solds,
+          merged). Museum Night S4, the de-Bloomberg core: zero ticker, zero
+          autoplay, zero stamp animation — user-driven scroll is the
+          mechanical difference that kills the ticker feeling. Curated 6-8
+          wall (Steve's explicit density call, 2026-07-10) over an
+          exhaustive feed. Every card is a real figure-page link. ── */}
+      {provenanceFigures.length >= 4 && (
+        <section className="fph-provenance fph-seam" aria-label="Provenance wall — recent real eBay sold prices">
+          <GalleryTypeLayer text="PROVENANCE" />
+          <div className="wrap">
+            <div className="fph-room-head" data-fph-reveal>
+              <span className="fph-room-eyebrow">Room III</span>
+              <h2 className="fph-guide-title">Provenance wall</h2>
+            </div>
+          </div>
+          <div className="fph-corridor-wrap" data-fph-reveal>
+            <div className="fade-l" aria-hidden />
+            <div className="fade-r" aria-hidden />
+            <div className="fph-corridor">
+              {provenanceFigures.map(f => <VitrineCard f={f} key={f.fid} />)}
+            </div>
+          </div>
+          <div className="fph-corridor-dots" aria-hidden>
+            {provenanceFigures.map(f => <span className="dot" key={f.fid} />)}
+          </div>
+          <div className="wrap">
+            <p className="fph-provenance-foot">
+              Every price here came from a completed eBay sale &mdash; never a hopeful listing.
+            </p>
           </div>
         </section>
       )}
@@ -1140,27 +1214,14 @@ export default async function HomePage() {
               <a className="fph-btn-ghost" href="/methodology">How pricing works</a>
             </div>
           </div>
-          {ledger.length === 3 && (
-            <div className="fph-solds" data-fph-reveal>
-              <div className="fph-ledger">
-                <div className="fph-ledger-head">
-                  <div className="t">Recent solds</div>
-                </div>
-                {ledger.map((t, i) => (
-                  <a className="fph-ledger-row" href={t.href} key={i}>
-                    <div className="who">
-                      <div className="name">{t.name}</div>
-                      {t.lineTag && <div className="line-tag">{t.lineTag}</div>}
-                    </div>
-                    <div className="dots" />
-                    <span className="sold-chip">SOLD</span>
-                    <div className="price">${t.price.toFixed(2)}</div>
-                  </a>
-                ))}
-                <div className="fph-ledger-foot">
-                  Every price here came from a completed eBay sale &mdash; never a hopeful listing.
-                </div>
-              </div>
+          {/* ── ROOM IV — VAULT ENTRANCE (closer). Museum Night S4: the
+              ledger's spot now closes on ONE large VitrineCard — "pin this
+              one first" — instead of a 3-row list; left column (CTA)
+              untouched per spec. ── */}
+          {closerPick && (
+            <div className="fph-closer-pick" data-fph-reveal>
+              <span className="fph-room-eyebrow">Pin this one first</span>
+              <VitrineCard f={closerPick} large />
             </div>
           )}
         </div>
