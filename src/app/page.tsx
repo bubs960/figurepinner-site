@@ -832,7 +832,18 @@ export default async function HomePage() {
           transform: translateY(-4px); border-color: rgba(224,168,62,.4);
           box-shadow: 0 14px 26px rgba(0,0,0,.4), 0 0 0 1px rgba(224,168,62,.3), 0 0 18px rgba(224,168,62,.15);
         }
-        .fph-vc-img { width: 100%; aspect-ratio: 4/3.4; object-fit: cover; display: block; background: #e9e0cd; }
+        /* Aspect ratio matches .fph-mount img's proven 4/5.1 (the shelf's own
+           full-body-figure photo convention) instead of a landscape-ish box —
+           these source photos are portrait (full-body upright figure or
+           package art), and a wider box forces a much bigger vertical crop.
+           object-position biases that crop toward the top: every one of
+           these photos puts the identity-critical content (face, cowl, head)
+           in the top portion of frame, so favoring the top over dead-center
+           trades a bit of extra background/base at the bottom (the least
+           important content) instead of cutting into the figure's head
+           (confirmed live 2026-07-10 — Steve caught Hulk Hogan's face
+           getting cut off under the old 4/3 dead-center crop). */
+        .fph-vc-img { width: 100%; aspect-ratio: 4/5.1; object-fit: cover; object-position: 50% 10%; display: block; background: #e9e0cd; }
         .fph-vc-body { padding: 12px 14px 14px; }
         .fph-vc-name { font-size: 13.5px; font-weight: 600; color: var(--fph-cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .fph-vc-line { margin-top: 2px; font-size: 9.5px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; color: var(--fph-cream-mut); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -854,7 +865,6 @@ export default async function HomePage() {
           border-radius: 50%; background: var(--fph-gold); box-shadow: 0 0 6px rgba(224,168,62,.7);
         }
         .fph-vc.large { width: 100%; max-width: 380px; }
-        .fph-vc.large .fph-vc-img { aspect-ratio: 4/3; }
         .fph-vc.large .fph-vc-body { padding: 16px 20px 20px; }
         .fph-vc.large .fph-vc-name { font-size: 17px; white-space: normal; }
         .fph-vc.large .fph-vc-placard { font-size: 12.5px; }
