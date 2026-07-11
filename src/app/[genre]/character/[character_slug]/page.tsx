@@ -23,8 +23,9 @@ import {
   type KBFigure,
 } from '@/data/kb'
 import { fandomsForGenre } from '@/lib/genreFigures'
-import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
+import TrackedLink from '@/app/components/TrackedLink'
 import FigureThumb from '@/app/components/FigureThumb'
 import QuickLookAnchor from '@/app/components/QuickLookAnchor'
 import { thumb } from '@/lib/imageUrl'
@@ -194,6 +195,7 @@ export default async function CharacterHubPage({
   const lineGroups = groupByLineAndWave(figures)
   const lineCount = lineGroups.length
   const totalCount = figures.length
+  const ebayHref = buildEbaySearchUrl(charName, genreName, '', '', null, EBAY_CAMPAIGN_ID)
 
   // Hero image — prefer figure with an image
   const heroFig = figures.find(f => f.canonical_image_url)
@@ -492,6 +494,21 @@ export default async function CharacterHubPage({
             <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: 'var(--fp-muted)' }}>
               Vault, wantlist, and price alerts — free, no caps
             </p>
+            <TrackedLink
+              href={ebayHref}
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              funnelEvent="ebay_exit"
+              funnelDetail={{ target: 'character_hub_cta', character: character_slug }}
+              style={{
+                display: 'inline-block', marginTop: '1rem',
+                fontSize: '0.85rem', fontWeight: 600,
+                color: accent, textDecoration: 'none',
+                borderBottom: `1px solid ${accent}55`,
+              }}
+            >
+              Hunt {charName} on eBay →
+            </TrackedLink>
           </div>
         </div>
 

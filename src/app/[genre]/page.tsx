@@ -3,9 +3,10 @@ import { notFound } from 'next/navigation'
 import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kb'
 import { figuresForGenre, groupAndSortLines, cardName, genreSlugForFandom } from '@/lib/genreFigures'
 import { GENRE_TAXONOMY, type LineTile } from '@/data/genre-lines'
-import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 import AdSlot from '@/app/components/AdSlot'
+import TrackedLink from '@/app/components/TrackedLink'
 import HeroSearch from '@/app/components/HeroSearch'
 import FigureThumb from '@/app/components/FigureThumb'
 import ShelfCase, { type ShelfFigure } from '@/app/components/ShelfCase'
@@ -310,6 +311,7 @@ export default async function GenrePage(
   const totalFigures = figures.length
   const hunting = shelf.slice(0, 3)
   const aisle = meta.label.toLowerCase()
+  const ebayHref = buildEbaySearchUrl('', `${meta.label} action figures`, '', '', null, EBAY_CAMPAIGN_ID)
 
   // JSON-LD structured data (unchanged from the pre-port page — figure URLs
   // from the five deepest lines).
@@ -677,6 +679,12 @@ export default async function GenrePage(
           transition: transform .2s, box-shadow .2s;
         }
         .fpg-btn-gold:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.22) inset, 0 8px 20px rgba(224,168,62,.28); }
+        .fpg-closer-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: 0 0 auto; }
+        .fpg-closer-ebay {
+          font-size: 13px; font-weight: 600; letter-spacing: .02em;
+          color: var(--fph-gold); text-decoration: none;
+          border-bottom: 1px solid rgba(224,168,62,.33);
+        }
 
         /* ── reduced motion: freeze to a good static state ── */
         @media (prefers-reduced-motion: reduce) {
@@ -864,7 +872,19 @@ export default async function GenrePage(
             Pin the ones you&apos;re hunting &mdash; <em>a free Vault</em> keeps
             your {aisle} shelf and hears when a grail moves.
           </p>
-          <a className="fpg-btn-gold" href="/sign-up">Start your free Vault</a>
+          <div className="fpg-closer-actions">
+            <a className="fpg-btn-gold" href="/sign-up">Start your free Vault</a>
+            <TrackedLink
+              href={ebayHref}
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              funnelEvent="ebay_exit"
+              funnelDetail={{ target: 'genre_hub_cta', genre }}
+              className="fpg-closer-ebay"
+            >
+              Hunt {meta.label} on eBay →
+            </TrackedLink>
+          </div>
         </div>
       </section>
 

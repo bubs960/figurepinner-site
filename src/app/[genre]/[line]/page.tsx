@@ -14,8 +14,9 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
 import { fandomsForGenre, genreSlugForFandom } from '@/lib/genreFigures'
-import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
+import TrackedLink from '@/app/components/TrackedLink'
 import FigureThumb from '@/app/components/FigureThumb'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
@@ -207,6 +208,7 @@ export default async function LineHubPage(
   const accent      = GENRE_ACCENT[genre] ?? '#FF5F00'
   const waves       = groupByWave(figures)
   const totalCount  = figures.length
+  const ebayHref    = buildEbaySearchUrl('', genreName, '', lineName, null, EBAY_CAMPAIGN_ID)
 
   // Unique characters (for meta)
   const uniqueChars = new Set(figures.map(f => f.character_canonical)).size
@@ -454,6 +456,21 @@ export default async function LineHubPage(
             <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#EEEEF5' }}>
               Vault, wantlist, and price alerts — free, no caps
             </p>
+            <TrackedLink
+              href={ebayHref}
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              funnelEvent="ebay_exit"
+              funnelDetail={{ target: 'line_hub_cta', line }}
+              style={{
+                display: 'inline-block', marginTop: '1rem',
+                fontSize: '0.85rem', fontWeight: 600,
+                color: accent, textDecoration: 'none',
+                borderBottom: `1px solid ${accent}55`,
+              }}
+            >
+              Hunt {lineName} on eBay →
+            </TrackedLink>
           </div>
         </div>
 
