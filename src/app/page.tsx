@@ -1030,7 +1030,7 @@ export default async function HomePage() {
             <span className="fph-room-eyebrow fph-hero-eyebrow">The collector&apos;s price guide &mdash; not another marketplace.</span>
             <h1>Every <span className="grail" data-text="grail">grail</span> starts as a gap on the shelf.</h1>
             <p className="fph-hero-sub">
-              <strong>{TOTAL_FIGURES_LABEL} figures</strong> across <strong>{laneCount} lanes</strong> &mdash; priced
+              <strong>{TOTAL_FIGURES_LABEL} figures</strong> across <strong>{laneCount} fandoms</strong> &mdash; priced
               from <strong>real eBay solds</strong>, not hopeful asks.
             </p>
 
@@ -1065,16 +1065,22 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── ROOM I — GALLERY OF LANES (was "Pick your lane"). Museum Night
-          S3: top lanes become large vitrine tiles pulling GENRE_TAXONOMY's
-          line-level editorial data (badge/years/desc — computed at build,
-          previously never rendered); the rest stay a compact floor
-          directory. Every lane keeps its real <a href>. ── */}
+      {/* ── ROOM I — GALLERY OF FANDOMS (was "Pick your lane"). Museum
+          Night S3: top lanes/fandoms become large vitrine tiles pulling
+          GENRE_TAXONOMY's line-level editorial data (badge/years/desc —
+          computed at build, previously never rendered); the rest stay a
+          compact floor directory. Every fandom keeps its real <a href>.
+          "Lane" survives as the internal/CSS name (fph-lane-chip,
+          laneCount, GENRE_TAXONOMY) — Steve flagged 2026-07-10 that
+          "lane" alone reads as unexplained jargon to a visitor even
+          though it's exactly a fandom (Wrestling, Star Wars, etc.); all
+          USER-FACING copy says "fandom(s)" now, internal naming
+          untouched (lower-risk, invisible to visitors). ── */}
       <section className="fph-gallery fph-seam" id="lines">
         <div className="wrap">
           <div className="fph-room-head" data-fph-reveal>
             <span className="fph-room-eyebrow">Room I</span>
-            <h2 className="fph-guide-title">Gallery of lanes</h2>
+            <h2 className="fph-guide-title">Gallery of fandoms</h2>
           </div>
 
           <div className="fph-vitrine-grid" data-fph-reveal data-fph-stagger>
@@ -1106,13 +1112,13 @@ export default async function HomePage() {
           </div>
 
           <div className="fph-floor-row" data-fph-reveal>
-            <span className="fph-lane-kicker">More lanes</span>
+            <span className="fph-lane-kicker">More fandoms</span>
             {floorLanes.map(g => (
               <a className="fph-lane-chip" href={`/${g.slug}`} key={g.slug}>
                 {g.name} <span className="ct">{g.totalCount}</span>
               </a>
             ))}
-            <a className="fph-lane-chip all" href="/search">All {laneCount} lanes &rarr;</a>
+            <a className="fph-lane-chip all" href="/search">All {laneCount} fandoms &rarr;</a>
           </div>
         </div>
       </section>
