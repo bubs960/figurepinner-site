@@ -201,7 +201,7 @@ function currentBuildId() {
 // which build id was "current" as of the last save, so a newly-superseded
 // build can be queued immediately instead of waiting for a full rescan.
 function loadState() {
-  if (!existsSync(STATE_FILE)) return { pendingBuildIds: null, lastKeptBuildId: null }
+  if (!existsSync(STATE_FILE)) return { pendingBuildIds: null, lastKeptBuildId: null, lastRun: null }
   try {
     const parsed = JSON.parse(readFileSync(STATE_FILE, 'utf8'))
     const pendingBuildIds =
@@ -209,9 +209,13 @@ function loadState() {
         ? parsed.pendingBuildIds
         : null
     const lastKeptBuildId = typeof parsed.lastKeptBuildId === 'string' ? parsed.lastKeptBuildId : null
-    return { pendingBuildIds, lastKeptBuildId }
+    // lastRun (2026-07-11, webaudit observability endorsement): pure pass-through --
+    // this script never reads its own lastRun back, it's written for an external
+    // reader (webhealth) to detect a stale/silently-skipped purge step.
+    const lastRun = parsed.lastRun && typeof parsed.lastRun === 'object' ? parsed.lastRun : null
+    return { pendingBuildIds, lastKeptBuildId, lastRun }
   } catch {
-    return { pendingBuildIds: null, lastKeptBuildId: null }
+    return { pendingBuildIds: null, lastKeptBuildId: null, lastRun: null }
   }
 }
 
@@ -443,7 +447,7 @@ async function main() {
 
   if (!pending.length) {
     console.log('[kv-purge-stale-isr] nothing to do.')
-    if (execute) await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId })
+    if (execute) await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId, lastRun: { at: new Date().toISOString(), status: 'ok', deleted: 0, calls: 0, queueDepth: 0 } })
     return
   }
 
@@ -536,13 +540,36 @@ async function main() {
   }
 
   console.log(`[kv-purge-stale-isr] this run: processed ${processedBuilds} build(s), ${callsThisRun} wrangler calls, deleted ${deletedThisRun} keys. ${nextQueue.length} build(s) still queued.`)
-  if (!nextQueue.length) {
-    await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId })
-    console.log('[kv-purge-stale-isr] queue fully drained -- next run will do a fresh full scan for any newly-accumulated stale builds.')
-  }
+  if (!nextQueue.length) console.log('[kv-purge-stale-isr] queue fully drained -- next run will do a fresh full scan for any newly-accumulated stale builds.')
+  // lastRun persists here regardless of drain state -- an external reader (webhealth)
+  // needs every run's outcome, not just the terminal "fully drained" one.
+  await saveState({
+    pendingBuildIds: nextQueue.length ? nextQueue : null,
+    lastKeptBuildId: keepBuildId,
+    lastRun: { at: new Date().toISOString(), status: 'ok', deleted: deletedThisRun, calls: callsThisRun, queueDepth: nextQueue.length },
+  })
 }
 
-await main().catch((err) => {
+await main().catch(async (err) => {
+  // Persist the failure too (webaudit 2026-07-11 observability endorsement) -- this
+  // handler used to be console.warn-only, whose only surface was transient deploy-log
+  // output nobody reads passively -- the exact failure shape that let the original
+  // ~523k-key backlog go unnoticed. Wrapped in its own .catch so a state-file hiccup
+  // here can never turn this already-non-fatal path into a real failure.
+  if (process.argv.includes('--execute')) {
+    const prior = loadState()
+    await saveState({
+      pendingBuildIds: prior.pendingBuildIds,
+      lastKeptBuildId: prior.lastKeptBuildId,
+      lastRun: {
+        at: new Date().toISOString(),
+        status: err?.anomaly ? 'anomaly' : 'failed',
+        deleted: 0,
+        calls: 0,
+        queueDepth: prior.pendingBuildIds?.length ?? 0,
+      },
+    }).catch(() => {})
+  }
   if (err?.anomaly) {
     console.warn('\n\u{1F6A8}\u{1F6A8}\u{1F6A8} [kv-purge-stale-isr] ANOMALY -- cleanup SKIPPED/PAUSED, this is not routine \u{1F6A8}\u{1F6A8}\u{1F6A8}')
     console.warn(`              ${err.message}`)
