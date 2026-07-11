@@ -84,6 +84,10 @@ import shopExport from './shop-listings.json'
 import { getFigureById } from './kb'
 import { deriveName } from './kbTypes'
 
+// Steve's real eBay storefront (confirmed 2026-07-11) — powers the "Browse
+// more at Bubs960 Collectibles" footer link on eBay-sourced SellerCards.
+const EBAY_STORE_URL = 'https://www.ebay.com/usr/bubs960'
+
 interface ShopExportItem {
   figure_id: string
   price: number
@@ -107,6 +111,7 @@ function ebayListingsFor(figureId: string): SellerListing[] {
   const title = figure ? deriveName(figure) : figureId
   return items.map(item => ({
     seller_name: 'Bubs960 Collectibles',
+    seller_url: EBAY_STORE_URL,
     price: item.price,
     title,
     buy_url: item.item_url,
