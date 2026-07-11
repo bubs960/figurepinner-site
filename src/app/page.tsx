@@ -232,7 +232,7 @@ function VitrineCard({ f, large }: { f: ReceiptFigure; large?: boolean }) {
         <div className="fph-vc-name">{f.name}</div>
         <div className="fph-vc-line">{f.line}</div>
         <div className="fph-vc-placard">
-          Last changed hands: <strong>${f.median.toFixed(2)}</strong> &middot; {f.compCount} real solds tracked
+          Median real sale: <strong>${f.median.toFixed(2)}</strong> &middot; {f.compCount} real solds tracked
         </div>
         <div className="fph-vc-conf" aria-hidden>
           {[1, 2, 3, 4, 5].map(n => (
