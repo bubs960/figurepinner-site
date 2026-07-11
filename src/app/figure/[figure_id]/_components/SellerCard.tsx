@@ -8,6 +8,7 @@
 
 import type { CSSProperties } from 'react'
 import type { SellerListing } from '@/data/bubs-inventory'
+import TrackedLink from '@/app/components/TrackedLink'
 
 interface SellerCardProps {
   listings: SellerListing[]
@@ -179,24 +180,28 @@ export default function SellerCard({ listings }: SellerCardProps) {
                 ${listing.price.toFixed(2)}
               </span>
 
-              <span style={{
-                fontSize: '9.5px',
-                fontWeight: 500,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                padding: '0.25rem 0.625rem',
-                borderRadius: '99px',
-                whiteSpace: 'nowrap',
-                ...conditionChipStyle(listing.condition),
-              }}>
-                {listing.condition}
-              </span>
+              {listing.condition && (
+                <span style={{
+                  fontSize: '9.5px',
+                  fontWeight: 500,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  padding: '0.25rem 0.625rem',
+                  borderRadius: '99px',
+                  whiteSpace: 'nowrap',
+                  ...conditionChipStyle(listing.condition),
+                }}>
+                  {listing.condition}
+                </span>
+              )}
 
-              <a
+              <TrackedLink
                 className="fp-sc-buy"
                 href={listing.buy_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                funnelEvent="ebay_exit"
+                funnelDetail={{ target: 'shop_module', price: listing.price }}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -218,31 +223,34 @@ export default function SellerCard({ listings }: SellerCardProps) {
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <path d="M2 10L10 2M10 2H4M10 2v6" stroke="#1a1206" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </TrackedLink>
             </div>
           </div>
         ))}
       </div>
 
-      {/* "More from this store" footer */}
-      <div style={{ marginTop: '0.625rem', textAlign: 'center' }}>
-        <a
-          className="fp-sc-more"
-          href={listings[0]?.seller_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontSize: '0.75rem',
-            fontWeight: 400,
-            color: 'var(--shelf-gold-hi, #f5c462)',
-            textDecoration: 'none',
-            borderBottom: '1px solid rgba(224,168,62,.35)',
-            paddingBottom: 1,
-          }}
-        >
-          Browse more at {listings[0]?.seller_name} →
-        </a>
-      </div>
+      {/* "More from this store" footer — only when a real store URL is known
+          (eBay-sourced listings don't carry one; never link to a guess) */}
+      {listings[0]?.seller_url && (
+        <div style={{ marginTop: '0.625rem', textAlign: 'center' }}>
+          <a
+            className="fp-sc-more"
+            href={listings[0].seller_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: '0.75rem',
+              fontWeight: 400,
+              color: 'var(--shelf-gold-hi, #f5c462)',
+              textDecoration: 'none',
+              borderBottom: '1px solid rgba(224,168,62,.35)',
+              paddingBottom: 1,
+            }}
+          >
+            Browse more at {listings[0].seller_name} →
+          </a>
+        </div>
+      )}
     </section>
   )
 }

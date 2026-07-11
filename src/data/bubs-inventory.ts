@@ -15,15 +15,19 @@
  * FINDING FIGURE IDs:
  *   Search figurepinner.com for the figure → click it → copy the ID from the URL.
  *   Example: /figure/wwe-elite-series-91-roman-reigns → figure_id = "wwe-elite-series-91-roman-reigns"
+ *
+ * eBay listings (below the manual seed) are merged in automatically from
+ * shop-listings.json — see the "eBay-sourced listings" section at the
+ * bottom of this file. Don't hand-add an eBay listing here; it'll double up.
  */
 
 export interface SellerListing {
   seller_name:  string    // Store display name
-  seller_url:   string    // Store homepage
+  seller_url?:  string    // Store homepage — omit when unknown (e.g. no eBay store slug on file)
   price:        number    // USD, no tax
-  condition:    string    // "New Sealed" | "New Open" | "Used - Like New" | "Used - Good"
-  title:        string    // Your Shopify product title (shown in card)
-  buy_url:      string    // Direct Shopify product URL
+  condition?:   string    // "New Sealed" | "New Open" | "Used - Like New" | "Used - Good" — omit when unknown, never guess
+  title:        string    // Product title (shown in card)
+  buy_url:      string    // Direct product URL
   in_stock:     boolean   // Flip to false when sold instead of deleting the entry
   badge?:       string    // Optional short badge text: "Buy 2 Save 10%" | "Last 1" | "Ships Today"
 }
@@ -58,9 +62,64 @@ export const SELLER_INVENTORY: Record<string, SellerListing[]> = {
 
 }
 
+// ─── eBay-sourced listings (ad-revenue plan S5, "From the shop" module) ──────
+// Auto-generated static export, NOT hand-edited. Pipeline: lister's
+// export-shop-listings.py cross-checks Steve's live eBay listings against
+// listings-log.json's captured figure_id (never reverse-engineered from the
+// eBay sku, which is a lossy transform for longer fids) and the live KB,
+// then writes Bridge/shop-listings-export.json. Web copies that file to
+// shop-listings.json here on each refresh — see the TODO below for the
+// still-manual step in that chain.
+//
+// TODO: this copy step isn't automated yet. Until it is, shop-listings.json
+// only reflects whatever was live at the last manual refresh — check
+// generated_at below before trusting it's current, and re-copy from Bridge
+// before the next deploy if it's stale.
+//
+// No title/condition in the export (out of scope for the eBay side of this
+// ask) — title is derived from the KB's own display name (deriveName), and
+// condition is deliberately omitted rather than guessed; SellerCard treats
+// a missing condition as "don't render that chip," not "assume Used."
+import shopExport from './shop-listings.json'
+import { getFigureById } from './kb'
+import { deriveName } from './kbTypes'
+
+interface ShopExportItem {
+  figure_id: string
+  price: number
+  quantity: number
+  status: string
+  item_url: string
+}
+
+const EBAY_LISTINGS_BY_FID = new Map<string, ShopExportItem[]>()
+for (const item of (shopExport as { items: ShopExportItem[] }).items) {
+  if (item.status !== 'PUBLISHED' || item.quantity < 1) continue
+  const bucket = EBAY_LISTINGS_BY_FID.get(item.figure_id)
+  if (bucket) bucket.push(item)
+  else EBAY_LISTINGS_BY_FID.set(item.figure_id, [item])
+}
+
+function ebayListingsFor(figureId: string): SellerListing[] {
+  const items = EBAY_LISTINGS_BY_FID.get(figureId)
+  if (!items) return []
+  const figure = getFigureById(figureId)
+  const title = figure ? deriveName(figure) : figureId
+  return items.map(item => ({
+    seller_name: 'Bubs960 Collectibles',
+    price: item.price,
+    title,
+    buy_url: item.item_url,
+    in_stock: true,
+    badge: item.quantity === 1 ? 'Last 1' : undefined,
+  }))
+}
+
 // ─── Lookup helper ────────────────────────────────────────────────────────────
 
-/** Returns in-stock listings for a given figure_id, empty array if none. */
+/** Returns in-stock listings for a given figure_id, empty array if none.
+ *  Merges the hand-maintained Shopify seed with the auto eBay export. */
 export function getSellerListings(figureId: string): SellerListing[] {
-  return (SELLER_INVENTORY[figureId] ?? []).filter(l => l.in_stock)
+  const manual = (SELLER_INVENTORY[figureId] ?? []).filter(l => l.in_stock)
+  return [...manual, ...ebayListingsFor(figureId)]
 }
