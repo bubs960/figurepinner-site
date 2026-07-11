@@ -719,6 +719,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           </div>
         </div>
 
+        {/* Ad — Adsterra Banner (468×60), below the price/comps panel
+            (ad-revenue plan S4: unit 1 of 2 on figure pages) */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '0.5rem 0' }}>
+          <AdSlot slot="adsterra-banner" />
+        </div>
+
         {/* SEO Summary — natural language paragraph + retail vs market + velocity */}
         <SeoSummary
           displayName={displayName}
@@ -742,11 +748,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           ownershipFids={waveFids}
         />
 
-        {/* Ad — Adsterra Banner (468×60), between series and character rows */}
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '0.5rem 0' }}>
-          <AdSlot slot="adsterra-banner" />
-        </div>
-
         {/* Zone 7 — Character thread */}
         <RelatedRow
           label={`Every Version of ${characterH1}`}
@@ -761,9 +762,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         {/* Zone 8 — CTA rail */}
         <CtaRail genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
 
-        {/* Ad — Adsterra Native Banner, below CTA rail before footer */}
-        <div style={{ padding: '1.5rem 0 0.5rem', width: '100%' }}>
-          <AdSlot slot="adsterra-native" />
+        {/* Ad — Adsterra Banner (468×60), page bottom after related figures
+            (ad-revenue plan S4: unit 2 of 2 — native slot converts to banner,
+            format swap not removal; no native widgets sitewide per plan S3.2) */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0 0.5rem' }}>
+          <AdSlot slot="adsterra-banner" />
         </div>
       </main>
 

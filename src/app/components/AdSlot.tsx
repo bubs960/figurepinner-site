@@ -42,8 +42,6 @@ const SLOT_CONFIG: Record<string, SlotConfig> = {
   'rectangle':        { width: 300, height: 250, adSlotId: 'TODO', label: 'Rectangle (300×250)' },
   'wide-skyscraper':  { width: 160, height: 600, adSlotId: 'TODO', label: 'Wide Skyscraper (160×600)' },
   'mobile-banner':    { width: 320, height: 50,  adSlotId: 'TODO', label: 'Mobile Banner (320×50)' },
-  // Adsterra native — handled separately before this config is read
-  'adsterra-native':  { width: 0, height: 0, adSlotId: 'adsterra', label: 'Adsterra Native Banner' },
   'adsterra-banner':  { width: 468, height: 60, adSlotId: 'adsterra-banner', label: 'Adsterra Banner (468×60)' },
 }
 
@@ -88,7 +86,7 @@ export default function AdSlot({ slot, className }: Props) {
   // creative runs inside a cross-origin iframe this page doesn't control.
   useEffect(() => {
     if (proState !== 'free') return
-    if (slot !== 'adsterra-banner' && slot !== 'adsterra-native') return
+    if (slot !== 'adsterra-banner') return
     trackFunnel('ad_impression', { target: slot })
   }, [proState, slot])
 
@@ -119,34 +117,6 @@ export default function AdSlot({ slot, className }: Props) {
           strategy="lazyOnload"
           src="https://www.highperformanceformat.com/ab2e03dd6cc847d4106fbfd169b86808/invoke.js"
         />
-      </div>
-    )
-  }
-
-  // Adsterra Native Banner — live, no approval needed.
-  // Renders inline for free users; Pro returns null above.
-  if (slot === 'adsterra-native') {
-    return (
-      <div className={className} style={{ width: '100%', maxWidth: '100%', margin: '0 auto' }}>
-        <span style={{
-          display: 'block',
-          fontSize: '9px',
-          letterSpacing: '0.1em',
-          textTransform: 'uppercase',
-          color: 'var(--dim)',
-          fontFamily: 'var(--font-ui)',
-          marginBottom: '4px',
-          textAlign: 'center',
-        }}>
-          Advertisement
-        </span>
-        <Script
-          id="adsterra-native-banner"
-          strategy="lazyOnload"
-          data-cfasync="false"
-          src="https://pl29755502.effectivecpmnetwork.com/f8c9d26c910e0075d97aed43b635d95a/invoke.js"
-        />
-        <div id="container-f8c9d26c910e0075d97aed43b635d95a" />
       </div>
     )
   }
