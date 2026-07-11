@@ -76,10 +76,15 @@ export const SELLER_INVENTORY: Record<string, SellerListing[]> = {
 // generated_at below before trusting it's current, and re-copy from Bridge
 // before the next deploy if it's stale.
 //
-// No title/condition in the export (out of scope for the eBay side of this
-// ask) — title is derived from the KB's own display name (deriveName), and
-// condition is deliberately omitted rather than guessed; SellerCard treats
-// a missing condition as "don't render that chip," not "assume Used."
+// No title in the export — derived from the KB's own display name
+// (deriveName), never re-typed. Condition is sourced from lister's own
+// condition_map.py (pkg_label) — the SAME canonical taxonomy that module's
+// docstring says is shared with figurepinner.com's MarketPanel ("Do NOT
+// drift these mappings without coordinating with site lane"), so this
+// reuses the site's existing packaging/grade vocabulary rather than
+// inventing a parallel one. If a future export item ever lacks a condition
+// (schema drift, not expected today), SellerCard treats that as "don't
+// render the chip," not "assume Used" — never guess.
 import shopExport from './shop-listings.json'
 import { getFigureById } from './kb'
 import { deriveName } from './kbTypes'
@@ -93,6 +98,7 @@ interface ShopExportItem {
   price: number
   quantity: number
   status: string
+  condition?: string
   item_url: string
 }
 
@@ -113,6 +119,7 @@ function ebayListingsFor(figureId: string): SellerListing[] {
     seller_name: 'Bubs960 Collectibles',
     seller_url: EBAY_STORE_URL,
     price: item.price,
+    condition: item.condition,
     title,
     buy_url: item.item_url,
     in_stock: true,

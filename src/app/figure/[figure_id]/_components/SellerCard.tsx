@@ -256,11 +256,14 @@ export default function SellerCard({ listings }: SellerCardProps) {
 }
 
 // ─── Condition chip style ─────────────────────────────────────────────────────
-// "New Sealed" (mint on card) gets the gold-outline chip; every other
-// condition gets the quiet cream hairline. Chip text = raw condition string.
+// Sealed conditions get the gold-outline chip; every other condition gets
+// the quiet cream hairline. Chip text = raw condition string. Two vocabularies
+// feed this: the manual Shopify seed ("New Sealed") and lister's
+// condition_map.py export ("Factory Sealed") — check the substring, not an
+// exact prefix, so either source's "sealed" state renders the same way.
 
 function conditionChipStyle(condition: string): CSSProperties {
-  if (condition.startsWith('New Sealed')) {
+  if (condition.includes('Sealed')) {
     return {
       color: 'var(--shelf-gold-hi, #f5c462)',
       border: '1px solid rgba(224,168,62,.45)',
