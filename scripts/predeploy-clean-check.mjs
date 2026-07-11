@@ -34,7 +34,7 @@ import { execSync } from 'node:child_process'
 
 function git(args) {
   try {
-    return execSync(`git ${args}`, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+    return execSync(`git ${args}`, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trimEnd()
   } catch {
     return ''
   }
