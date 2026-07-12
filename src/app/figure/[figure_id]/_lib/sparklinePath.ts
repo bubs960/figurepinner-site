@@ -23,6 +23,8 @@ export interface SparklinePathResult {
   fullTreatment: boolean
   /** Most recent (rightmost) point's price — Session 2's momentum droplet anchors here. */
   latestPrice: number
+  /** Y coordinate (SPARKLINE_VIEW_BOX space) of the final rendered point. X is always SPARKLINE_END_X. */
+  endY: number
 }
 
 const VIEW_W = 600
@@ -64,10 +66,12 @@ export function buildSparklinePath(history: SparklinePoint[]): SparklinePathResu
   // like the line collapsed to the bottom edge, not "flat and centered").
   const centerY = PAD_Y + (VIEW_H - PAD_Y * 2) / 2
 
+  let endY = centerY
   const d = prices
     .map((p, i) => {
       const x = prices.length === 1 ? 0 : (i / (prices.length - 1)) * VIEW_W
       const y = range === 0 ? centerY : PAD_Y + (1 - (p - min) / range) * (VIEW_H - PAD_Y * 2)
+      if (i === prices.length - 1) endY = y
       return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`
     })
     .join(' ')
@@ -77,7 +81,9 @@ export function buildSparklinePath(history: SparklinePoint[]): SparklinePathResu
     pointCount: clean.length,
     fullTreatment: clean.length >= 4,
     latestPrice: clean[clean.length - 1].price,
+    endY,
   }
 }
 
 export const SPARKLINE_VIEW_BOX = `0 0 ${VIEW_W} ${VIEW_H}`
+export const SPARKLINE_END_X = VIEW_W

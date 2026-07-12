@@ -694,6 +694,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                   sealed: price?.sealed ?? null,
                   loose: price?.loose ?? null,
                 }}
+                trendPct={valuePricing?.trend_90d_pct ?? null}
               />
             ) : (
               <EmptyState figureId={figureId} figureName={displayName} ebaySearchUrl={ebayUrl} />

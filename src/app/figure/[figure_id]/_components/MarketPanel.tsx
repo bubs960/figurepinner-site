@@ -55,6 +55,10 @@ interface MarketPanelProps {
   ebaySearchUrl: string
   figureName: string
   buckets?: SnapshotBuckets | null
+  /** Same number the page's own JSON-LD already claims (valuePricing.trend_90d_pct,
+   *  passed to SeoSummary too) — the sparkline's momentum droplet reuses it rather
+   *  than computing a second, differently-windowed "trend" that could disagree. */
+  trendPct?: number | null
 }
 
 function median(arr: number[]): number {
@@ -65,7 +69,7 @@ function median(arr: number[]): number {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- ebaySearchUrl kept in the prop contract, unused here
-export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, buckets: snapshotBuckets }: MarketPanelProps) {
+export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, buckets: snapshotBuckets, trendPct = null }: MarketPanelProps) {
   const [showComps, setShowComps] = useState(false)
 
   if (!pricing || pricing.comp_count < 1) return null
@@ -171,7 +175,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
       {/* Hero sparkline — the real sold-comp price line, P2.2 spec.
           Session 1 (surface) only: static gold stroke. Session 2 adds the
           liquid treatment (pour-in, shimmer, wobble, momentum droplet). */}
-      <LiquidSparkline soldHistory={comps} />
+      <LiquidSparkline soldHistory={comps} trendPct={trendPct} />
 
       {/* Condition median ledger rows. Snapshot buckets (full corpus, same
           source as the placard) when the split is statistically valid;
