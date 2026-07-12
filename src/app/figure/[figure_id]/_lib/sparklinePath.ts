@@ -33,7 +33,16 @@ const PAD_Y = 6
 
 // Same date-validity bar as FigureDetailContent's latestSoldDate() — a
 // pre-2000 or unparseable sold_date must never corrupt point ordering.
-const ISO_DATE_PREFIX = /^\d{4}-\d{2}-\d{2}/
+// Capture groups (Y, M, D) feed Date.UTC() directly below — webaudit
+// FIX/S3 2026-07-11: `new Date(h.sold_date)` on a bare "YYYY-MM-DDTHH:mm:ss"
+// (no timezone offset) parses as LOCAL time per the ISO 8601 spec, which
+// computes a DIFFERENT instant on the SSR Worker (UTC) than on the
+// hydrating client (user's local tz) — silently reordering same-day sales
+// and risking a server/client hydration mismatch on the baked `d` string.
+// Deriving the timestamp from ONLY the matched Y-M-D digits via Date.UTC()
+// is deterministic regardless of where it runs, and ignores any time
+// component entirely (this line has never needed sub-day precision).
+const ISO_DATE_PREFIX = /^(\d{4})-(\d{2})-(\d{2})/
 const MIN_VALID_SOLD_MS = Date.UTC(2000, 0, 1)
 
 /**
@@ -44,9 +53,14 @@ const MIN_VALID_SOLD_MS = Date.UTC(2000, 0, 1)
  */
 export function buildSparklinePath(history: SparklinePoint[]): SparklinePathResult | null {
   const clean = history
-    .filter((h) => typeof h.price === 'number' && h.price > 0 && ISO_DATE_PREFIX.test(h.sold_date ?? ''))
-    .map((h) => ({ price: h.price, t: new Date(h.sold_date).getTime() }))
-    .filter((h) => !Number.isNaN(h.t) && h.t >= MIN_VALID_SOLD_MS)
+    .flatMap((h) => {
+      if (typeof h.price !== 'number' || h.price <= 0) return []
+      const m = ISO_DATE_PREFIX.exec(h.sold_date ?? '')
+      if (!m) return []
+      const t = Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]))
+      if (t < MIN_VALID_SOLD_MS) return []
+      return [{ price: h.price, t }]
+    })
     .sort((a, b) => a.t - b.t)
 
   if (clean.length === 0) return null

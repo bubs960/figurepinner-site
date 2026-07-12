@@ -13,6 +13,7 @@ const ALLOWED_EVENTS = new Set([
   'price_receipt_open',
   'ad_impression',
   'shelf_ticker_open',
+  'sparkline_drawn',
 ])
 
 // S3 (hygiene plan, 2026-07-02): /api/funnel is an unauthenticated,

@@ -6,13 +6,43 @@
 //
 // Session 1 (surface, commit 8f60a31): static gold/gradient stroke, mounted
 // in MarketPanel.tsx's placard.
-// Session 2 (this pass — the liquid treatment): pour-in draw, shimmer sheen,
+// Session 2 (d036bc2 — the liquid treatment): pour-in draw, shimmer sheen,
 // SVG-filter wobble, momentum-pulsing droplet, prefers-reduced-motion branch,
-// sparkline_drawn funnel event. Full liquid treatment gates on
-// data-treatment="full" (>=4 real sold points) AND motion allowed — the
-// fallback tier (<4 points) and the reduced-motion branch both render the
-// SAME static gradient stroke, zero animation, per the spec's own wording for
-// both cases ("static gradient stroke" / "static gradient-filled line").
+// sparkline_drawn funnel event.
+// Fix-first round (webaudit verdict, WEBAUDIT-TO-WEB-SPARKLINE-VERDICT-
+// 2026-07-11.md) — FIX-2..5 + S1/S2, this pass:
+//   FIX-2: killed getTotalLength()/--len entirely. pathLength={1} normalizes
+//     the path so a LITERAL dasharray/dashoffset of 1 always means "fully
+//     hidden" regardless of real geometric length — no JS measurement, no
+//     race with mount timing. The UNARMED default (no special class) has NO
+//     dasharray override at all, so pre-hydration/no-JS visitors see the
+//     real, honest, SOLID line — never a blank box. Arming (the class that
+//     switches to the hidden 1/1 state) happens in useLayoutEffect, which
+//     commits synchronously before the browser's next paint, so hydration
+//     hides-then-the-IO-reveal-redraws within one frame for in-view mounts,
+//     and invisibly for below-fold ones. A slow connection may show the
+//     solid SSR line for a beat before it arms — that's honest content
+//     during a real network wait, not a defect, and not worth fighting.
+//   FIX-3: the droplet now fades in only once actually drawn — it used to
+//     float alone, fully opaque, inside the hidden pre-reveal window.
+//   FIX-4: the fallback timer only fires the reveal if IntersectionObserver
+//     has NEVER responded at all (not even a non-intersecting callback) by
+//     2s — MarketPanel renders below HeroBand/BidCheck/LoreBand/
+//     FigureEnrichment/SellerCard, off-screen at load for essentially every
+//     visitor, so an unconditional 2s timer was playing the signature
+//     moment off-screen for everyone who scrolls slower than that. Once IO
+//     has responded even once, it's proven to work and the timer is
+//     redundant. sparkline_drawn now only fires on the IO-driven reveal, so
+//     the event means "revealed in view" — combined with FIX-1 (server
+//     allowlist) it's both delivered and true.
+//   FIX-5: never unobserve. The shimmer/droplet loop animations now pause
+//     via animation-play-state while scrolled off-screen (battery/jank tax
+//     otherwise ran forever on the vault's most-trafficked page, exactly
+//     the low-end phones the R1 audience uses) and resume on return.
+//   S1: role="img" + aria-label from real data only (pointCount), never a
+//     trend adjective the data can't back.
+//   S2: forced-colors fallback — a gradient paint server can survive
+//     forced-colors mode while its background context gets repainted flat.
 //
 // Perf guardrail (spec item 9): this treatment mounts on exactly ONE element
 // per page (MarketPanel renders once), so the fixed SVG filter/gradient ids
@@ -22,9 +52,9 @@
 // the SAME number the page's own JSON-LD and SeoSummary already claim as this
 // figure's trend, rather than importing vaultData.ts's differently-windowed,
 // module-private computeTrend30d() and risking two disagreeing "trend"
-// numbers on one page.
+// numbers on one page (webaudit-endorsed 2026-07-11).
 
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { buildSparklinePath, SPARKLINE_VIEW_BOX, SPARKLINE_END_X, type SparklinePoint } from '../_lib/sparklinePath'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 
@@ -38,43 +68,51 @@ const WOBBLE_FILTER_ID = 'fp-ls-wobble'
 
 export default function LiquidSparkline({ soldHistory, trendPct = null }: LiquidSparklineProps) {
   const built = buildSparklinePath(soldHistory)
-  const pathRef = useRef<SVGPathElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const [armed, setArmed] = useState(false)
   const [drawn, setDrawn] = useState(false)
+  const [inView, setInView] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!built?.fullTreatment) return
-    const path = pathRef.current
     const container = containerRef.current
-    if (!path || !container) return
+    if (!container) return
 
-    container.style.setProperty('--len', String(path.getTotalLength()))
+    // Synchronous, pre-paint: arms the hidden (dasharray/dashoffset=1) state
+    // before the browser paints this frame, so there's no flash of a solid
+    // line snapping to hidden after the fact.
+    setArmed(true)
 
     let fired = false
-    const reveal = () => {
+    let ioResponded = false
+    const reveal = (viaIO: boolean) => {
       if (fired) return
       fired = true
       setDrawn(true)
-      trackFunnel('sparkline_drawn', { point_count: built.pointCount })
+      if (viaIO) trackFunnel('sparkline_drawn', { point_count: built.pointCount })
     }
 
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (!entry.isIntersecting) continue
-          reveal()
-          io.unobserve(entry.target)
+          ioResponded = true
+          setInView(entry.isIntersecting)
+          if (entry.isIntersecting) reveal(true)
+          // Deliberately never unobserve (FIX-5) -- continued tracking is
+          // what drives the off-screen animation-pause below.
         }
       },
       { threshold: 0.4 },
     )
     io.observe(container)
 
-    // Safety net: IntersectionObserver has near-universal support, but a real
-    // sold-comp line must never stay permanently hidden if it somehow fails to
-    // fire (a blocking extension, an unusual embed context) -- "never fake a
-    // line" cuts both ways, it must also never silently hide a real one.
-    const fallback = window.setTimeout(reveal, 2000)
+    // Safety net for the TRUE "IO never responds at all" case only (a
+    // blocking extension, an unusual embed context). Once IO has responded
+    // even once -- including a non-intersecting callback -- it's proven to
+    // work and this timer becomes a no-op by design.
+    const fallback = window.setTimeout(() => {
+      if (!ioResponded) reveal(false)
+    }, 2000)
 
     return () => {
       io.disconnect()
@@ -99,12 +137,23 @@ export default function LiquidSparkline({ soldHistory, trendPct = null }: Liquid
   const maskSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${SPARKLINE_VIEW_BOX}"><path d="${built.d}" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`
   const maskDataUri = `data:image/svg+xml,${encodeURIComponent(maskSvg)}`
 
+  const stateClass = [
+    'fp-liquid-sparkline',
+    armed && 'fp-liquid-sparkline--armed',
+    drawn && 'fp-liquid-sparkline--drawn',
+    inView && 'fp-liquid-sparkline--inview',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
     <div
       ref={containerRef}
       data-treatment={built.fullTreatment ? 'full' : 'fallback'}
       data-point-count={built.pointCount}
-      className={`fp-liquid-sparkline${drawn ? ' fp-liquid-sparkline--drawn' : ''}`}
+      className={stateClass}
+      role="img"
+      aria-label={`Sold-price history: ${built.pointCount} real sale${built.pointCount === 1 ? '' : 's'} plotted.`}
       style={
         {
           width: '100%',
@@ -120,25 +169,26 @@ export default function LiquidSparkline({ soldHistory, trendPct = null }: Liquid
           stroke: url(#${GRADIENT_ID});
         }
         @media (prefers-reduced-motion: no-preference) {
-          .fp-liquid-sparkline[data-treatment="full"] .fp-ls-stroke {
+          .fp-liquid-sparkline--armed[data-treatment="full"] .fp-ls-stroke {
             stroke: var(--shelf-gold, #e0a83e);
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
           }
-          /* Hidden (dash-offset = full length) is the default full-treatment
-             state -- unconditional, not dependent on a transition firing off
-             a custom property becoming defined (that path is unreliable: a
-             transition only animates a change between two already-rendered
-             frames, and --len can go from unset to set within the same
-             pre-paint window on mount, which some browsers don't animate).
-             Only the class toggle below drives the actual reveal. */
-          .fp-liquid-sparkline[data-treatment="full"]:not(.fp-liquid-sparkline--drawn) .fp-ls-stroke {
-            stroke-dasharray: var(--len, 0);
-            stroke-dashoffset: var(--len, 0);
-          }
-          .fp-liquid-sparkline--drawn[data-treatment="full"] .fp-ls-stroke {
-            stroke-dasharray: var(--len, 0);
+          .fp-liquid-sparkline--armed.fp-liquid-sparkline--drawn[data-treatment="full"] .fp-ls-stroke {
             stroke-dashoffset: 0;
             transition: stroke-dashoffset 700ms cubic-bezier(.2,.8,.2,1);
           }
+        }
+        @media (forced-colors: active) {
+          /* !important is the standard, spec-sanctioned pattern for forced-
+             colors overrides (browsers' own forced-colors UA stylesheets use
+             it internally) -- without it these lose the specificity fight
+             against the --armed/--drawn rules below, which apply to nearly
+             every full-treatment visitor within a frame of mount (webaudit
+             verify, 2026-07-11: confirmed live via getComputedStyle that a
+             non-!important override here is silently beaten). */
+          .fp-liquid-sparkline .fp-ls-stroke { stroke: CanvasText !important; }
+          .fp-liquid-sparkline .fp-ls-sheen { display: none !important; }
         }
         .fp-liquid-sparkline .fp-ls-sheen {
           position: absolute;
@@ -159,9 +209,24 @@ export default function LiquidSparkline({ soldHistory, trendPct = null }: Liquid
           display: none;
         }
         @media (prefers-reduced-motion: no-preference) {
-          .fp-liquid-sparkline--drawn[data-treatment="full"] .fp-ls-sheen {
+          .fp-liquid-sparkline--armed.fp-liquid-sparkline--drawn[data-treatment="full"] .fp-ls-sheen {
             display: block;
-            animation: fpLsShimmer 3.5s linear infinite;
+            /* Longhand, not the animation shorthand -- the shorthand
+               implicitly resets EVERY sub-property it doesn't name,
+               including animation-play-state, back to "running" at this
+               rule's specificity, silently overriding the pause rule below
+               regardless of which one wins the cascade (webaudit verify,
+               2026-07-11: confirmed dead via getComputedStyle in a live
+               browser). Naming only these four longhands leaves
+               animation-play-state entirely unset here, so the pause rule
+               is the sole author of that property and always applies. */
+            animation-name: fpLsShimmer;
+            animation-duration: 3.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          .fp-liquid-sparkline:not(.fp-liquid-sparkline--inview) .fp-ls-sheen {
+            animation-play-state: paused;
           }
         }
         @keyframes fpLsShimmer {
@@ -173,8 +238,22 @@ export default function LiquidSparkline({ soldHistory, trendPct = null }: Liquid
           transform-box: fill-box;
         }
         @media (prefers-reduced-motion: no-preference) {
-          .fp-liquid-sparkline--drawn[data-treatment="full"] .fp-ls-droplet {
-            animation: fpLsDropletPulse var(--pulse-speed, 3s) ease-in-out infinite;
+          .fp-liquid-sparkline--armed[data-treatment="full"] .fp-ls-droplet {
+            opacity: 0;
+          }
+          .fp-liquid-sparkline--armed.fp-liquid-sparkline--drawn[data-treatment="full"] .fp-ls-droplet {
+            opacity: 1;
+            transition: opacity 300ms ease;
+            /* Longhand -- same reason as the sheen rule above: the
+               animation shorthand would silently reset animation-play-
+               state to "running" here, defeating the pause rule below. */
+            animation-name: fpLsDropletPulse;
+            animation-duration: var(--pulse-speed, 3s);
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+          }
+          .fp-liquid-sparkline:not(.fp-liquid-sparkline--inview) .fp-ls-droplet {
+            animation-play-state: paused;
           }
         }
         @keyframes fpLsDropletPulse {
@@ -207,13 +286,13 @@ export default function LiquidSparkline({ soldHistory, trendPct = null }: Liquid
           )}
         </defs>
         <path
-          ref={pathRef}
           className="fp-ls-stroke"
           d={built.d}
           fill="none"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
+          pathLength={built.fullTreatment ? 1 : undefined}
           filter={built.fullTreatment ? `url(#${WOBBLE_FILTER_ID})` : undefined}
         />
         {built.fullTreatment && (
