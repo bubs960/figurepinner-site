@@ -18,6 +18,7 @@
 import { useState } from 'react'
 import { formatCurrency, formatDate } from '../_lib/figureFormatters'
 import { trackFunnel } from '@/app/_lib/funnelClient'
+import LiquidSparkline from './LiquidSparkline'
 
 interface Comp {
   title: string
@@ -166,6 +167,11 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
           {pricing.comp_count} sold
         </div>
       </div>
+
+      {/* Hero sparkline — the real sold-comp price line, P2.2 spec.
+          Session 1 (surface) only: static gold stroke. Session 2 adds the
+          liquid treatment (pour-in, shimmer, wobble, momentum droplet). */}
+      <LiquidSparkline soldHistory={comps} />
 
       {/* Condition median ledger rows. Snapshot buckets (full corpus, same
           source as the placard) when the split is statistically valid;
