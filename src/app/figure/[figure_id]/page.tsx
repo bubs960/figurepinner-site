@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { permanentRedirect } from 'next/navigation'
-import { getFigureById, getFigureByStableSuffix, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl } from '@/data/kb'
+import { getFigureById, getFigureByStableSuffix, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 import { enrichedDescription } from './_lib/enrichedCopy'
@@ -66,11 +66,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ? `${displayName} ${line} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
         : `${displayName} ${line} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
-    // Noindex /figure/[id] when the figure has a unique pretty URL — the pretty
-    // URL is the canonical and Google was treating both as duplicate pages.
-    // For non-unique figures (multiple waves, same slug) /figure/[id] IS the
-    // canonical so we leave it indexable.
-    ...((hasConfirmedZeroSoldData || hasUniquePrettyFigureUrl(local))
+    // Zero-sold-data pages stay noindexed (deliberate quality policy). The
+    // has-unique-pretty-URL noindex was REMOVED 2026-07-12: hard-noindexing
+    // ~11K indexed fid pages while their pretty replacements sat unindexed
+    // drove the 22K→6K index collapse. Consolidation now rides the canonical
+    // hint alone — Google may keep serving fid pages until it trusts the
+    // pretty set, which is the desired behavior while domain authority is
+    // thin. See WEBAUDIT-TO-WEB-GOOGLE-ZERO-ROOTCAUSE-2026-07-12.md (FIX-4).
+    ...(hasConfirmedZeroSoldData
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same

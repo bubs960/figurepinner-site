@@ -13,7 +13,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
-import { fandomsForGenre, genreSlugForFandom } from '@/lib/genreFigures'
+import { fandomsForGenre, genreSlugForFandom, getFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
@@ -157,6 +157,14 @@ export async function generateMetadata(
   { params }: { params: Promise<{ genre: string; line: string }> }
 ): Promise<Metadata> {
   const { genre, line } = await params
+
+  // Genre-alias 308 (2026-07-12 root-cause FIX-2): exactly one slug namespace
+  // serves 200 per fandom — /marvel-comics/<line> 308s to /marvel/<line>, etc.
+  // Here in generateMetadata (pre-streaming) for a real 308; page body has the
+  // fallback copy, same as the resolveLineAlias pattern below.
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}`)
+
   const figures = figuresForLine(genre, line)
   if (!figures.length) {
     // Redirect HERE, not in the page body: generateMetadata runs before the
@@ -190,6 +198,10 @@ export default async function LineHubPage(
   { params }: { params: Promise<{ genre: string; line: string }> }
 ) {
   const { genre, line } = await params
+
+  // Genre-alias 308 fallback (real 308 comes from generateMetadata above).
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}`)
 
   // Guard: genre must map to at least one valid fandom (after remap/rollup)
   const validFandoms = getAllFandoms()

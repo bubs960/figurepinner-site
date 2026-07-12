@@ -14,9 +14,9 @@
  */
 
 import type { Metadata } from 'next'
-import { notFound, redirect } from 'next/navigation'
+import { notFound, redirect, permanentRedirect } from 'next/navigation'
 import { getAllFandoms, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
-import { getFandom } from '@/lib/genreFigures'
+import { getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
@@ -38,6 +38,13 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { genre, line, slug } = await params
+
+  // Genre-alias 308 lives HERE as well as in the page body: generateMetadata
+  // runs before the response streams, so this emits a real 308 (the page-body
+  // copy is the fallback). See the [line] route's resolveLineAlias comment.
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}/${slug}`)
+
   const matches = findFigureMatches(genre, line, slug)
   const figure = matches[0]
   if (!figure) return { title: 'Figure Not Found' }
@@ -91,6 +98,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function PrettyFigurePage({ params }: PageProps) {
   const { genre, line, slug } = await params
+
+  // Exactly ONE slug namespace serves 200 per fandom; every alias 308s to it
+  // (2026-07-12 root-cause FIX-2). Before this, /marvel-comics/... and
+  // /marvel/... both rendered the same page as twin 200s and Google indexed
+  // neither. Thrown before any streaming, so this emits a real 308.
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}/${slug}`)
+
   const matches = findFigureMatches(genre, line, slug)
   const figure = matches[0]
 

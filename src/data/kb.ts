@@ -9,7 +9,7 @@
  * It never ships to the client bundle.
  */
 
-import { figureUrl, prettyFigureUrlKey, stableIdSuffix, type KBFigure } from './kbTypes'
+import { figureUrl, prettyFigureUrlKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
 export { deriveName, figureUrl } from './kbTypes'
 export type { KBFigure } from './kbTypes'
 
@@ -81,10 +81,16 @@ export function hasUniquePrettyFigureUrl(f: KBFigure): boolean {
  * Used in sitemaps and <link rel="canonical"> tags. Many characters have
  * multiple waves with the same pretty path, so ambiguous figures keep the
  * stable identity URL to prevent one release from resolving as another.
+ *
+ * MUST emit the site's genre slug (genreSlugForFandom), never raw f.fandom:
+ * the raw-fandom form pointed canonicals/sitemap at namespaces with 404ing
+ * hubs and zero internal links for the 4 remapped fandoms, which Google
+ * refused to index — the 2026-07 index collapse (22K→6K). See
+ * WEBAUDIT-TO-WEB-GOOGLE-ZERO-ROOTCAUSE-2026-07-12.md.
  */
 export function prettyFigureUrl(f: KBFigure): string {
   if (!hasUniquePrettyFigureUrl(f)) return figureUrl(f)
-  return `/${f.fandom}/${f.product_line}/${f.character_canonical}`
+  return `/${genreSlugForFandom(f.fandom)}/${f.product_line}/${f.character_canonical}`
 }
 
 /**

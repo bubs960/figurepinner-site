@@ -9,29 +9,12 @@
  */
 import { getFiguresByFandom, type KBFigure } from '@/data/kb'
 
-// URL slug → KB fandom slug mapping (URL slugs are pretty; KB slugs are canonical)
-export const SLUG_TO_FANDOM: Record<string, string> = {
-  'teenage-mutant-ninja-turtles': 'tmnt',
-  'gijoe': 'gi-joe',
-  'marvel': 'marvel-comics',
-  'dungeons-and-dragons': 'dungeons-dragons',
-}
-
-export function getFandom(slug: string): string {
-  return SLUG_TO_FANDOM[slug] ?? slug
-}
-
-// Inverse of SLUG_TO_FANDOM: KB fandom → genre URL slug. Used to build links to
-// genre/line pages from a figure's raw fandom (e.g. fandom "marvel-comics" → the
-// resolving genre route "/marvel", "tmnt" → "/teenage-mutant-ninja-turtles").
-// Identity fallback covers fandoms whose slug already matches (wrestling, dc, …)
-// and NECA-rollup fandoms (horror, terminator, …), which resolve at /<fandom>.
-const FANDOM_TO_SLUG: Record<string, string> = Object.fromEntries(
-  Object.entries(SLUG_TO_FANDOM).map(([slug, fandom]) => [fandom, slug]),
-)
-export function genreSlugForFandom(fandom: string): string {
-  return FANDOM_TO_SLUG[fandom] ?? fandom
-}
+// URL slug ↔ KB fandom mapping now lives in @/data/kbTypes (leaf module) so
+// kb.ts's prettyFigureUrl can use it without a circular import (2026-07-12
+// Google-zero root-cause fix). Re-exported here unchanged for the existing
+// consumers of this module.
+export { SLUG_TO_FANDOM, getFandom, genreSlugForFandom } from '@/data/kbTypes'
+import { getFandom } from '@/data/kbTypes'
 
 // The 'neca' (Horror & Film) UI genre rolls up several KB fandoms — same
 // rollup kb-stats uses for the homepage count.

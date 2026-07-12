@@ -13,7 +13,7 @@
  */
 
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import {
   getFiguresByFandom,
   getAllFandoms,
@@ -22,7 +22,7 @@ import {
   prettyFigureUrl,
   type KBFigure,
 } from '@/data/kb'
-import { fandomsForGenre } from '@/lib/genreFigures'
+import { fandomsForGenre, getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
@@ -144,6 +144,12 @@ export async function generateMetadata({
   params: Promise<{ genre: string; character_slug: string }>
 }): Promise<Metadata> {
   const { genre, character_slug } = await params
+
+  // Genre-alias 308 (2026-07-12 root-cause FIX-2) — in generateMetadata for a
+  // real pre-streaming 308; page body carries the fallback copy.
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/character/${character_slug}`)
+
   const figures = figuresForCharacter(genre, character_slug)
   if (!figures.length) {
     return { title: 'Not Found', robots: { index: false, follow: false } }
@@ -181,6 +187,10 @@ export default async function CharacterHubPage({
   params: Promise<{ genre: string; character_slug: string }>
 }) {
   const { genre, character_slug } = await params
+
+  // Genre-alias 308 fallback (real 308 comes from generateMetadata above).
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/character/${character_slug}`)
 
   // Guard: genre must be valid
   const validFandoms = getAllFandoms()

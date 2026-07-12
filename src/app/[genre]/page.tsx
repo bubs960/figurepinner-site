@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kb'
-import { figuresForGenre, groupAndSortLines, cardName, genreSlugForFandom } from '@/lib/genreFigures'
+import { figuresForGenre, groupAndSortLines, cardName, genreSlugForFandom, getFandom } from '@/lib/genreFigures'
 import { GENRE_TAXONOMY, type LineTile } from '@/data/genre-lines'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
@@ -121,6 +121,14 @@ export async function generateMetadata(
   { params }: { params: Promise<{ genre: string }> }
 ): Promise<Metadata> {
   const { genre } = await params
+
+  // Genre-alias 308 (2026-07-12 root-cause FIX-2): /marvel-comics → /marvel,
+  // /gi-joe → /gijoe, /tmnt → /teenage-mutant-ninja-turtles. These aliases
+  // 404'd (no GENRE_META entry) while thousands of pages canonicaled into
+  // them. In generateMetadata for a real pre-streaming 308.
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}`)
+
   const meta = GENRE_META[genre]
   if (!meta) return { robots: { index: false, follow: false } }
 
@@ -300,6 +308,11 @@ export default async function GenrePage(
   { params }: { params: Promise<{ genre: string }> }
 ) {
   const { genre } = await params
+
+  // Genre-alias 308 fallback (real 308 comes from generateMetadata above).
+  const canonicalGenre = genreSlugForFandom(getFandom(genre))
+  if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}`)
+
   const meta = GENRE_META[genre]
   if (!meta) notFound()
 

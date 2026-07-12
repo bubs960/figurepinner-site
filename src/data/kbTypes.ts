@@ -139,3 +139,33 @@ export function prettyFigureUrlKey(
 ): string {
   return `${f.fandom}/${f.product_line}/${f.character_canonical}`
 }
+
+// ── URL genre slug ↔ KB fandom mapping ──────────────────────────────────────
+// Moved here from lib/genreFigures.ts (2026-07-12 Google-zero root-cause fix)
+// so kb.ts can consume it without a circular import — genreFigures.ts imports
+// from kb.ts and re-exports these for its existing consumers. Every URL the
+// site emits (canonicals, sitemap, internal links) MUST use the genre-slug
+// form via genreSlugForFandom(); emitting raw f.fandom mints a duplicate
+// namespace with no hub and no internal links (the 2026-07 index collapse).
+
+// URL slug → KB fandom slug mapping (URL slugs are pretty; KB slugs are canonical)
+export const SLUG_TO_FANDOM: Record<string, string> = {
+  'teenage-mutant-ninja-turtles': 'tmnt',
+  'gijoe': 'gi-joe',
+  'marvel': 'marvel-comics',
+  'dungeons-and-dragons': 'dungeons-dragons',
+}
+
+export function getFandom(slug: string): string {
+  return SLUG_TO_FANDOM[slug] ?? slug
+}
+
+// Inverse of SLUG_TO_FANDOM: KB fandom → genre URL slug. Identity fallback
+// covers fandoms whose slug already matches (wrestling, dc, …) and the
+// NECA-rollup fandoms (horror, terminator, …), which resolve at /<fandom>.
+const FANDOM_TO_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(SLUG_TO_FANDOM).map(([slug, fandom]) => [fandom, slug]),
+)
+export function genreSlugForFandom(fandom: string): string {
+  return FANDOM_TO_SLUG[fandom] ?? fandom
+}

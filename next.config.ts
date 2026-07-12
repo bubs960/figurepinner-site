@@ -78,11 +78,25 @@ const nextConfig: NextConfig = {
       ['/action-force/palitoy-action-force', '/action-force/action-force'],
       ['/action-force/valaverse', '/action-force/valaverse-action-force'],
     ]
-    return legacyLines.map(([source, destination]) => ({
+    const legacyLineRedirects = legacyLines.map(([source, destination]) => ({
       source,
       destination,
       permanent: true,
     }))
+
+    // Dead /checklists/* section (2026-07-12 root-cause FIX-3): the section
+    // was removed long ago but Google still ranks it — it earned 2 of the
+    // site's 11 Google clicks in the 28d to 7/10 and every one of them hit a
+    // 404. Route the residual equity to the nearest live equivalent instead.
+    // Deepest rule first — Next applies the first matching redirect.
+    const checklistRedirects = [
+      { source: '/checklists/:genre/:line/:rest*', destination: '/:genre/:line', permanent: true },
+      { source: '/checklists/:genre/:line', destination: '/:genre/:line', permanent: true },
+      { source: '/checklists/:genre', destination: '/:genre', permanent: true },
+      { source: '/checklists', destination: '/guides', permanent: true },
+    ]
+
+    return [...legacyLineRedirects, ...checklistRedirects]
   },
 
   // /sitemap.xml → the sitemapindex route handler (S55, 2026-07-03). The
