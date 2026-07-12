@@ -21,11 +21,14 @@ interface CollectionPanelProps {
   series: number | null
   packSize: number
   exclusiveTo: string | null
+  /** Hero photo URL, threaded down to FigureActions for the Claiming Ritual
+   *  spike's photo-flight (Session 1 de-risk gate) — see ClaimRitual.tsx. */
+  imgSrc?: string | null
 }
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, medianIsAvg, compCount, scale, series, packSize, exclusiveTo,
+  median, medianIsAvg, compCount, scale, series, packSize, exclusiveTo, imgSrc,
 }: CollectionPanelProps) {
   return (
     <div className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -140,6 +143,7 @@ export default function CollectionPanel({
           brand={brand}
           line={line}
           genre={genre}
+          imgSrc={imgSrc}
         />
 
         {/* Quick facts — sleek spec list, hairline-divided */}

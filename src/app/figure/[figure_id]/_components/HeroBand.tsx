@@ -181,6 +181,14 @@ export default function HeroBand({
             {imageUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
+                // Stable hook for ClaimRitual.tsx (Session 1 de-risk spike):
+                // FigureActions.tsx reads this node's getBoundingClientRect()
+                // at "Add to Collection" time to know where the photo-flight
+                // should start from. The image URL itself is threaded down as
+                // an explicit prop instead (see FigureActions `imgSrc`) — this
+                // id exists only for live on-screen geometry, which can't come
+                // from a prop.
+                id="fp-hero-photo"
                 src={imageUrl}
                 alt={`${characterName} ${lineName} action figure`}
                 fetchPriority="high"

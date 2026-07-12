@@ -8,6 +8,11 @@ type Props = {
   brand: string
   line: string
   genre: string
+  /** Hero photo URL for the Claiming Ritual spike's photo-flight (Session 1
+   *  de-risk gate). Optional — pages that don't render a hero image (or that
+   *  don't pass it) simply get no ritual flight, never an error.
+   *  See ClaimRitual.tsx for the consumer. */
+  imgSrc?: string | null
 }
 
 type Status = 'idle' | 'loading' | 'done' | 'error'
@@ -29,7 +34,7 @@ type WarnPayload = {
   upgrade_url?: string
 }
 
-export default function FigureActions({ figure_id, name, brand, line, genre }: Props) {
+export default function FigureActions({ figure_id, name, brand, line, genre, imgSrc }: Props) {
   const [vaultStatus, setVaultStatus] = useState<Status>('idle')
   const [wantStatus, setWantStatus] = useState<Status>('idle')
   const [alertStatus, setAlertStatus] = useState<Status>('idle')
@@ -74,6 +79,25 @@ export default function FigureActions({ figure_id, name, brand, line, genre }: P
         setVaultStatus('done')
         setShowVaultForm(false)
         if (data.warning) setVaultWarn(data)
+        // Claiming Ritual trigger (Session 1 de-risk gate spike, bare
+        // photo-flight only — see ClaimRitual.tsx). Scoped deliberately to
+        // this success branch only: the 401 anonymous-user redirect, the 402
+        // gate, the 409 already-owned path, and the generic error path are
+        // all left untouched — a real "claim" only happened here. Wrapped in
+        // try/catch so a ritual-side failure can never break the save.
+        try {
+          const heroImg = document.getElementById('fp-hero-photo') as HTMLImageElement | null
+          const rect = heroImg?.getBoundingClientRect() ?? null
+          window.dispatchEvent(new CustomEvent('figure:claimed', {
+            detail: {
+              figureId: figure_id,
+              imgSrc: imgSrc ?? heroImg?.currentSrc ?? heroImg?.src ?? null,
+              rect: rect ? { left: rect.left, top: rect.top, width: rect.width, height: rect.height } : null,
+            },
+          }))
+        } catch {
+          // Ritual trigger must never break the core save-to-vault flow.
+        }
       } else if (res.status === 409) {
         setVaultStatus('done')
         setShowVaultForm(false)

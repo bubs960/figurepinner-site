@@ -10,6 +10,7 @@ export type FunnelEvent =
   | 'ad_impression'
   | 'shelf_ticker_open'
   | 'sparkline_drawn'
+  | 'collection_claim_ritual_played'
 
 type FunnelDetail = Record<string, string | number | boolean | null | undefined>
 

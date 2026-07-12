@@ -14,6 +14,7 @@ const ALLOWED_EVENTS = new Set([
   'ad_impression',
   'shelf_ticker_open',
   'sparkline_drawn',
+  'collection_claim_ritual_played',
 ])
 
 // S3 (hygiene plan, 2026-07-02): /api/funnel is an unauthenticated,
@@ -95,6 +96,7 @@ export async function POST(request: NextRequest) {
   const referrer = clean(body?.referrer, 120)
   const sessionId = clean(body?.sessionId, 80)
   const target = clean(body?.target, 80)
+  const flight = clean(body?.flight, 20)
 
   try {
     const { env } = await getCloudflareContext()
@@ -113,6 +115,7 @@ export async function POST(request: NextRequest) {
         query,
         referrer,
         target,
+        flight,
       ],
       doubles: [1],
       indexes: [event],

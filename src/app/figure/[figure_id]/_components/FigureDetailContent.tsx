@@ -716,6 +716,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               series={seriesNum}
               packSize={Number(local.pack_size) || 1}
               exclusiveTo={local.exclusive_to ?? null}
+              imgSrc={thumb(imageUrlFinal, 760)}
             />
           </div>
         </div>

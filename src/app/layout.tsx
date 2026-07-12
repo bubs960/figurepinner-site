@@ -6,6 +6,15 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
 import FunnelTracker from './_components/FunnelTracker'
+// Claiming Ritual — Session 1 de-risk gate spike (bare photo-flight only, no
+// nameplate/particles/sound). Client-only: it reads window/document geometry
+// (getBoundingClientRect, matchMedia, startViewTransition) that doesn't exist
+// during SSR. layout.tsx is a Server Component, and Next forbids a
+// next/dynamic({ ssr:false }) call directly inside one, so the dynamic()
+// call itself lives in ClaimRitualLoader.tsx (a 'use client' file) — this
+// import just gets the already-wrapped component. Mounted once, globally,
+// exactly like FunnelTracker below. See src/app/components/ClaimRitual.tsx.
+import ClaimRitual from './components/ClaimRitualLoader'
 import './globals.css'
 
 // Self-hosted via next/font (S20 perf audit): the old render-blocking
@@ -126,6 +135,7 @@ export default function RootLayout({
             per-request auth() calls in /app — unchanged, untouched. */}
         <ClerkProvider>
           <FunnelTracker />
+          <ClaimRitual />
           {children}
           <Footer />
         </ClerkProvider>
