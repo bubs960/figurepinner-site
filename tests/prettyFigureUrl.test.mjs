@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
-import { figureUrl, prettyFigureUrlKey } from '../src/data/kbTypes.ts'
+import { figureUrl, prettyFigureUrlKey, genreSlugForFandom, SLUG_TO_FANDOM } from '../src/data/kbTypes.ts'
 import { getAllFigures, hasUniquePrettyFigureUrl, prettyFigureUrl } from '../src/data/kb.ts'
 
 describe('kbTypes pure helpers', () => {
@@ -41,10 +41,29 @@ describe('prettyFigureUrl (real KB, structural invariants)', () => {
       const url = prettyFigureUrl(f)
       assert.ok(url.startsWith('/'), `${f.figure_id}: pretty URL must be absolute-path, got ${url}`)
       if (hasUniquePrettyFigureUrl(f)) {
-        assert.equal(url, `/${f.fandom}/${f.product_line}/${f.character_canonical}`, `${f.figure_id}: unique figure should get the keyword-rich URL`)
+        // GENRE slug, never raw f.fandom (2026-07-12 root-cause fix): the
+        // raw-fandom form pointed 2,289 canonicals/sitemap URLs at namespaces
+        // with 404ing hubs and zero internal links, and Google refused to
+        // index them — the July index collapse. This assertion is the spec.
+        assert.equal(url, `/${genreSlugForFandom(f.fandom)}/${f.product_line}/${f.character_canonical}`, `${f.figure_id}: unique figure should get the keyword-rich URL in the GENRE-slug namespace`)
       } else {
         assert.equal(url, `/figure/${f.figure_id}`, `${f.figure_id}: ambiguous figure should fall back to the stable ID URL`)
       }
+    }
+  })
+
+  test('no pretty URL ever starts with a remapped RAW fandom slug (the July-collapse bug shape)', () => {
+    // The forbidden first segments are exactly the KB fandoms that have a
+    // different site slug (values of SLUG_TO_FANDOM): marvel-comics, gi-joe,
+    // tmnt, dungeons-dragons. A URL like /marvel-comics/... or /gi-joe/...
+    // is a twin namespace with no hub and no internal links — the exact
+    // defect behind the 22K→6K index collapse. Full sweep, not sampled:
+    // this is the cheap deterministic guard the incident was missing.
+    const forbidden = new Set(Object.values(SLUG_TO_FANDOM))
+    for (const f of figures) {
+      const url = prettyFigureUrl(f)
+      const firstSegment = url.split('/')[1]
+      assert.ok(!forbidden.has(firstSegment), `${f.figure_id}: pretty URL ${url} sits in the raw-fandom twin namespace /${firstSegment}/ — must use genreSlugForFandom`)
     }
   })
 
