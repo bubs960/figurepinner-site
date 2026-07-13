@@ -54,4 +54,19 @@ describe('matcher NONE-string bug — population sweep (documents blast radius, 
     // to one day's exact number".
     assert.ok(noneScale > 5000, `expected a large real population with scale==="None", got ${noneScale}`)
   })
+
+  // webaudit's independent sentinel census (2026-07-13 review of daf5b74)
+  // found two MORE junk exclusive_to literals the original fix didn't catch.
+  // Same "document the real population, don't re-derive the guard" pattern
+  // as the scale sweep above -- EXCLUSIVE_TO_JUNK lives inline in
+  // FigureDetailContent.tsx (page-local, not worth extracting for one set).
+  test('exclusive_to junk sentinels ("unspecified", "Exclusive") are a real, non-trivial population', () => {
+    const figures = getAllFigures()
+    const unspecified = figures.filter(f => f.exclusive_to === 'unspecified').length
+    const exclusiveLiteral = figures.filter(f => f.exclusive_to === 'Exclusive').length
+    // webaudit's census: 261 and 125 respectively. Floor, not exact count --
+    // same reasoning as the scale sweep.
+    assert.ok(unspecified > 100, `expected a real population with exclusive_to==="unspecified", got ${unspecified}`)
+    assert.ok(exclusiveLiteral > 50, `expected a real population with exclusive_to==="Exclusive", got ${exclusiveLiteral}`)
+  })
 })

@@ -256,12 +256,25 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // (the other already had this exact guard) -- computed once here for both
   // instead of leaving the fix duplicated ad hoc at each JSX call site.
   const scaleClean = (local.scale && local.scale !== 'None') ? local.scale : null
-  const exclusiveToClean = (local.exclusive_to && local.exclusive_to !== 'None') ? local.exclusive_to : null
+  // webaudit's independent sentinel census (2026-07-13 review of daf5b74)
+  // found exclusive_to carries two MORE junk literals the original 'None'
+  // guard didn't catch: "unspecified" (261 fids) and "Exclusive" (125 fids)
+  // -- both truthy, both rendered as "Exclusive retailer: unspecified" or a
+  // circular "Exclusive". Census says these 3 are the complete sentinel set
+  // for this field; matcher owns the underlying 386-fid KB backfill.
+  const EXCLUSIVE_TO_JUNK = new Set(['None', 'unspecified', 'Exclusive'])
+  const exclusiveToClean = (local.exclusive_to && !EXCLUSIVE_TO_JUNK.has(local.exclusive_to)) ? local.exclusive_to : null
   const imageUrlFinal = imageUrl ?? local.canonical_image_url ?? null
 
   // ── eBay URL ────────────────────────────────────────────────────────────────
-
-  const ebayUrl = buildEbaySearchUrl(characterH1, prettifySlug(genre), brand, line, local.release_wave, EBAY_CAMPAIGN_ID)
+  // webaudit's 2026-07-13 review flagged this as a non-blocking eBay-CTA
+  // quality item, same root cause as the Series-fabrication bug: raw
+  // release_wave (a mangled slug like "3-75-orange-2013" on unmigrated
+  // entries) was being appended straight into the search terms, polluting
+  // the query on exactly the fids this bug class affects. isNumericWave()
+  // is the same guard seriesNum already uses for this field.
+  const ebayWave = isNumericWave(local.release_wave) ? local.release_wave : null
+  const ebayUrl = buildEbaySearchUrl(characterH1, prettifySlug(genre), brand, line, ebayWave, EBAY_CAMPAIGN_ID)
 
   // ── Condition split (matcher's live aggregation; Steve directive 6/12) ──────
   // The headline market is the statistically valid bucket per segmentation;
@@ -520,8 +533,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     jsonLdVelocity != null
       ? { '@type': 'PropertyValue', name: 'Sales velocity', value: jsonLdVelocity }
       : null,
-    local.exclusive_to && local.exclusive_to !== 'None'
-      ? { '@type': 'PropertyValue', name: 'Exclusive retailer', value: local.exclusive_to }
+    exclusiveToClean
+      ? { '@type': 'PropertyValue', name: 'Exclusive retailer', value: exclusiveToClean }
       : null,
   ].filter(Boolean)
 
