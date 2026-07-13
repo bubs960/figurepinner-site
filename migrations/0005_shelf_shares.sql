@@ -8,9 +8,11 @@
 -- NOT YET APPLIED to prod -- author only, per this repo's D1 discipline
 -- (Steve/CF MCP applies migrations; see wrangler.toml's [[d1_databases]]
 -- comment on prior migrations for the same pattern).
+-- No separate index on user_id (webaudit SHOULD-2, 2026-07-13 verdict):
+-- the UNIQUE constraint below already creates one -- a second CREATE INDEX
+-- on the same column is pure write overhead + dead schema.
 CREATE TABLE IF NOT EXISTS shelf_shares (
   token TEXT PRIMARY KEY,
   user_id TEXT NOT NULL UNIQUE,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
-CREATE INDEX IF NOT EXISTS idx_shelf_shares_user ON shelf_shares (user_id);

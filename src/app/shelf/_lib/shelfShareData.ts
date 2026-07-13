@@ -5,6 +5,7 @@
  * Anyone with a share link can see "N grails, M gaps" — that's the whole
  * point of sharing it — but nothing else about the account.
  */
+import { cache } from 'react'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 
 async function getDB(): Promise<D1Database> {
@@ -15,8 +16,17 @@ async function getDB(): Promise<D1Database> {
 
 export type ShelfShareStats = { grails: number; gaps: number }
 
-/** null = token doesn't exist (unknown/revoked share link) -> caller 404s. */
-export async function getShelfShareStats(token: string): Promise<ShelfShareStats | null> {
+/**
+ * null = token doesn't exist (unknown/revoked share link) -> caller 404s.
+ *
+ * Wrapped in React's `cache()` (webaudit SHOULD-1, 2026-07-13 verdict): both
+ * the page and the OG image route call this from generateMetadata AND their
+ * body/default-export (4 call sites total across the two routes) — without
+ * request-scoped memoization that's 6 D1 queries per view instead of 3. No
+ * `cache()` precedent elsewhere in this repo yet; this is the standard Next
+ * idiom for exactly this shape.
+ */
+export const getShelfShareStats = cache(async (token: string): Promise<ShelfShareStats | null> => {
   const db = await getDB()
 
   const share = await db
@@ -33,4 +43,4 @@ export async function getShelfShareStats(token: string): Promise<ShelfShareStats
   ])
 
   return { grails: v?.c ?? 0, gaps: w?.c ?? 0 }
-}
+})
