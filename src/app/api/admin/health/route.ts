@@ -22,8 +22,6 @@ interface HealthSnapshot {
   ok: boolean
   ts: string
   env: {
-    coming_soon_mode: boolean
-    coming_soon_bypass_set: boolean
     stripe_enabled_flag: boolean
     clerk_publishable_live: boolean
     clerk_secret_set: boolean
@@ -78,8 +76,6 @@ export async function GET() {
   // ─── Env / secret presence ───────────────────────────────────────────────
   const pkPub = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? ''
   const env = {
-    coming_soon_mode: process.env.COMING_SOON_MODE !== 'false',
-    coming_soon_bypass_set: !!process.env.COMING_SOON_BYPASS || true, // hardcoded in middleware
     stripe_enabled_flag: process.env.NEXT_PUBLIC_STRIPE_ENABLED === 'true',
     clerk_publishable_live: pkPub.startsWith('pk_live_'),
     clerk_secret_set: !!process.env.CLERK_SECRET_KEY,
@@ -149,9 +145,6 @@ export async function GET() {
   }
   if (env.stripe_enabled_flag && !env.stripe_secret_set) {
     notes.push('CRITICAL: Stripe feature flag is ON but secrets are MISSING — flip flag off until secrets are wired.')
-  }
-  if (!env.coming_soon_mode) {
-    notes.push('Coming-soon gate is OFF — site is fully public.')
   }
   if (!kv.pro_kv_reachable) {
     notes.push('PRO_KV binding not found — isUserPro() will fall through to Clerk on every call. Verify wrangler.toml has the [[kv_namespaces]] block.')
