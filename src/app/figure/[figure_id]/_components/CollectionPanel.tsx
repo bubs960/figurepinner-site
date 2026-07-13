@@ -24,11 +24,18 @@ interface CollectionPanelProps {
   /** Hero photo URL, threaded down to FigureActions for the Claiming Ritual
    *  spike's photo-flight (Session 1 de-risk gate) — see ClaimRitual.tsx. */
   imgSrc?: string | null
+  /** "Grail Whisper" (Claiming Ritual bench rider, P3 §3): the SAME
+   *  quality-gated enrichment fact already computed for this page's own
+   *  JSON-LD (enrichedCopy.ts's honesty gate — hedge-language/duplicate/
+   *  too-short entries return null). Threaded down for the ritual to surface
+   *  at claim time; null means Tier-2 (no real fact) and the ritual just
+   *  silently skips the whisper, exactly as spec'd. */
+  whisper?: string | null
 }
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, medianIsAvg, compCount, scale, series, packSize, exclusiveTo, imgSrc,
+  median, medianIsAvg, compCount, scale, series, packSize, exclusiveTo, imgSrc, whisper,
 }: CollectionPanelProps) {
   return (
     <div className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -144,6 +151,7 @@ export default function CollectionPanel({
           line={line}
           genre={genre}
           imgSrc={imgSrc}
+          whisper={whisper}
         />
 
         {/* Quick facts — sleek spec list, hairline-divided */}

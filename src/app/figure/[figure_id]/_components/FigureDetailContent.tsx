@@ -738,6 +738,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               packSize={Number(local.pack_size) || 1}
               exclusiveTo={exclusiveToClean}
               imgSrc={thumb(imageUrlFinal, 760)}
+              whisper={jsonLdEnriched}
             />
           </div>
         </div>

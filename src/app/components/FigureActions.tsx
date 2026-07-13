@@ -14,6 +14,12 @@ type Props = {
    *  don't pass it) simply get no ritual flight, never an error.
    *  See ClaimRitual.tsx for the consumer. */
   imgSrc?: string | null
+  /** "Grail Whisper" bench rider (P3 §3): a real, quality-gated enrichment
+   *  fact for THIS figure (same gate as the page's own JSON-LD — see
+   *  enrichedCopy.ts), or null for a Tier-2 figure with nothing real to say.
+   *  Passed straight through into the figure:claimed event; ClaimRitual
+   *  decides whether to show it. */
+  whisper?: string | null
 }
 
 type Status = 'idle' | 'loading' | 'done' | 'error'
@@ -35,7 +41,7 @@ type WarnPayload = {
   upgrade_url?: string
 }
 
-export default function FigureActions({ figure_id, name, brand, line, genre, imgSrc }: Props) {
+export default function FigureActions({ figure_id, name, brand, line, genre, imgSrc, whisper }: Props) {
   const { owned } = useOwnershipStatus(figure_id)
   const [vaultStatus, setVaultStatus] = useState<Status>('idle')
 
@@ -101,6 +107,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
               figureId: figure_id,
               imgSrc: imgSrc ?? heroImg?.currentSrc ?? heroImg?.src ?? null,
               rect: rect ? { left: rect.left, top: rect.top, width: rect.width, height: rect.height } : null,
+              whisper: whisper ?? null,
             },
           }))
         } catch {

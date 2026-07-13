@@ -50,6 +50,11 @@ type ClaimedDetail = {
   figureId?: string
   imgSrc?: string | null
   rect?: ClaimedRect | null
+  /** "Grail Whisper" bench rider: a real, quality-gated enrichment fact for
+   *  this figure, or null/undefined for a Tier-2 figure with nothing real to
+   *  say — showNameplate() renders nothing extra in that case, never a
+   *  fabricated or generic filler line. */
+  whisper?: string | null
 }
 
 type FlightMode = 'flip' | 'svt'
@@ -267,8 +272,13 @@ function spawnGoldDust(container: HTMLElement) {
  *  the same way the flight clones are — imperative DOM, cleans up after
  *  itself — rather than React state, so it never fights the flight
  *  animations running in parallel. Reduced-motion still shows the plate (the
- *  confirmation matters) but skips the wipe, particles, and clink. */
-function showNameplate(reduced: boolean) {
+ *  confirmation matters) but skips the wipe, particles, and clink.
+ *
+ *  `whisper` is the "Grail Whisper" bench rider (P3 §3): a real,
+ *  quality-gated enrichment fact for the claimed figure, already null for
+ *  any Tier-2 figure (enrichedCopy.ts's own honesty gate) — when absent this
+ *  renders nothing extra, never a fabricated or generic line. */
+function showNameplate(reduced: boolean, whisper?: string | null) {
   ensureBrushedMetalFilter()
 
   const wrap = document.createElement('div')
@@ -328,6 +338,34 @@ function showNameplate(reduced: boolean) {
   plate.appendChild(dateEl)
 
   wrap.appendChild(plate)
+
+  if (whisper) {
+    const whisperEl = document.createElement('div')
+    whisperEl.textContent = whisper
+    whisperEl.style.marginTop = '8px'
+    whisperEl.style.maxWidth = '220px'
+    whisperEl.style.textAlign = 'right'
+    whisperEl.style.marginLeft = 'auto'
+    whisperEl.style.fontFamily = 'var(--fp-font-body, system-ui)'
+    whisperEl.style.fontSize = '11px'
+    whisperEl.style.fontStyle = 'italic'
+    whisperEl.style.lineHeight = '1.4'
+    whisperEl.style.color = 'rgba(242,232,213,.75)'
+    whisperEl.style.textShadow = '0 1px 3px rgba(0,0,0,.6)'
+    whisperEl.style.display = '-webkit-box'
+    // @ts-expect-error -- webkit line-clamp
+    whisperEl.style.WebkitBoxOrient = 'vertical'
+    // @ts-expect-error -- webkit line-clamp
+    whisperEl.style.WebkitLineClamp = '3'
+    whisperEl.style.overflow = 'hidden'
+    whisperEl.style.opacity = '0'
+    whisperEl.style.transition = reduced ? 'opacity 200ms ease' : 'opacity 480ms ease 500ms'
+    wrap.appendChild(whisperEl)
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      whisperEl.style.opacity = '1'
+    }))
+  }
+
   document.body.appendChild(wrap)
 
   if (reduced) {
@@ -399,7 +437,7 @@ export default function ClaimRitual() {
       if (reduced) {
         anchor.style.transition = 'opacity 200ms ease'
         anchor.style.opacity = String(ANCHOR_ACTIVE_OPACITY)
-        showNameplate(true)
+        showNameplate(true, detail.whisper)
         window.setTimeout(() => {
           anchor.style.opacity = String(ANCHOR_IDLE_OPACITY)
           settle(mode)
@@ -409,7 +447,7 @@ export default function ClaimRitual() {
 
       const onFlightDone = () => {
         pulseAnchor()
-        showNameplate(false)
+        showNameplate(false, detail.whisper)
         settle(mode)
       }
 
