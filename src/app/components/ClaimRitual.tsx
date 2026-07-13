@@ -1,11 +1,14 @@
 'use client'
 
-// ClaimRitual.tsx — Session 1 de-risk gate spike for the Claiming Ritual.
+// ClaimRitual.tsx — the Claiming Ritual (P3 §3 Phase A).
 //
-// SCOPE (hard boundary, per product spec): bare photo-flight ONLY. No
-// nameplate, no particles, no sound, no brass corner pin, no Shelf page
-// changes, no share cards — "hard stop, judge's condition" until this gate
-// passes. Do not extend this component beyond that without a new spec pass.
+// Session 1 (2026-07-12) shipped the de-risk gate: bare photo-flight only,
+// real-device Safari/Firefox comparison, Steve-cleared. Session 2 adds the
+// polish the gate unblocked — brass nameplate ("ACQUIRED <date>"), a few
+// gold-dust particles, an optional (default-OFF) brass "clink" synth, and
+// prefers-reduced-motion still gets a confirmation (just no flight/particles/
+// wipe-reveal — a quick fade to the end-state). The Shelf (Phase B) and
+// share-card module (Phase C) are separate work, not this file's concern.
 //
 // Mounted ONCE, globally, via next/dynamic({ ssr:false }) in src/app/layout.tsx.
 // Listens for a window CustomEvent('figure:claimed') (dispatched by
@@ -65,6 +68,14 @@ const ANCHOR_IDLE_OPACITY = 0.28
 const ANCHOR_ACTIVE_OPACITY = 0.95
 const FLIGHT_MS = 620
 const VIEW_TRANSITION_NAME = 'fp-claim-photo'
+
+const NAMEPLATE_HOLD_MS = 1900
+const NAMEPLATE_HOLD_MS_REDUCED = 900
+const GOLD_DUST_COUNT = 7
+// Spec: "Optional brass clink (Web Audio synth), default OFF." Left as a
+// literal so a future settings toggle can flip it without touching the synth
+// itself — no dead-code-behind-a-flag ambiguity, just off by default.
+const ENABLE_CLINK_SOUND = false
 
 function rectOf(el: HTMLElement): ClaimedRect {
   const r = el.getBoundingClientRect()
@@ -168,6 +179,175 @@ function flySvt(imgSrc: string, source: ClaimedRect, target: ClaimedRect, onDone
     })
 }
 
+/** Brass "clink" — a short percussive pitch-drop, synthesized so there's no
+ *  audio asset to ship. Default OFF (see ENABLE_CLINK_SOUND); guarded so a
+ *  browser without Web Audio, or any runtime hiccup, just stays silent
+ *  rather than breaking the ritual it's decorating. */
+function playClink() {
+  if (!ENABLE_CLINK_SOUND) return
+  try {
+    const AudioCtxCtor =
+      window.AudioContext ??
+      (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+    if (!AudioCtxCtor) return
+    const ctx = new AudioCtxCtor()
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc.type = 'triangle'
+    osc.frequency.setValueAtTime(1400, ctx.currentTime)
+    osc.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.09)
+    gain.gain.setValueAtTime(0.15, ctx.currentTime)
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.16)
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+    osc.start()
+    osc.stop(ctx.currentTime + 0.18)
+    osc.onended = () => ctx.close()
+  } catch {
+    // Decorative and default-off — never let a synth failure surface.
+  }
+}
+
+let brushedMetalFilterInjected = false
+/** Injects the feTurbulence brushed-metal filter def once (idempotent —
+ *  cheap to call from every nameplate reveal). Zero-size <svg>, filter only
+ *  referenced by url(#...), never rendered as visible content itself. */
+function ensureBrushedMetalFilter() {
+  if (brushedMetalFilterInjected || document.getElementById('fp-brushed-metal-defs')) {
+    brushedMetalFilterInjected = true
+    return
+  }
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+  svg.setAttribute('id', 'fp-brushed-metal-defs')
+  svg.setAttribute('width', '0')
+  svg.setAttribute('height', '0')
+  svg.style.position = 'absolute'
+  svg.innerHTML = `
+    <filter id="fp-brushed-metal">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.02" numOctaves="2" seed="7" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 0.9  0 0 0 0 0.6  0 0 0 0.5 0" />
+    </filter>
+  `
+  document.body.appendChild(svg)
+  brushedMetalFilterInjected = true
+}
+
+/** A handful of SVG-rendered gold-dust motes burst from the nameplate corner
+ *  and fade — no confetti library, just CSS keyframes (defined once in this
+ *  component's <style> block) driven by randomized per-particle custom
+ *  properties. Self-removing after its animation ends. */
+function spawnGoldDust(container: HTMLElement) {
+  for (let i = 0; i < GOLD_DUST_COUNT; i++) {
+    const angle = (Math.random() * 150 - 75) * (Math.PI / 180)
+    const dist = 20 + Math.random() * 28
+    const dx = Math.sin(angle) * dist
+    const dy = -Math.cos(angle) * dist - 4
+    const size = 2 + Math.random() * 2.5
+    const delay = i * 22
+
+    const mote = document.createElement('span')
+    mote.style.position = 'absolute'
+    mote.style.top = '6px'
+    mote.style.right = `${8 + Math.random() * 20}px`
+    mote.style.width = `${size}px`
+    mote.style.height = `${size}px`
+    mote.style.borderRadius = '50%'
+    mote.style.background = 'radial-gradient(circle, #fff2cf, #e0a83e 70%)'
+    mote.style.boxShadow = '0 0 4px rgba(245,196,98,.8)'
+    mote.style.setProperty('--fp-dust-dx', `${dx}px`)
+    mote.style.setProperty('--fp-dust-dy', `${dy}px`)
+    mote.style.animation = `fp-gold-dust 760ms cubic-bezier(.22,.61,.36,1) ${delay}ms both`
+    container.appendChild(mote)
+    window.setTimeout(() => mote.remove(), 900 + delay)
+  }
+}
+
+/** The engraving reveal: a brass nameplate wipes in near the Vault anchor,
+ *  reads "ACQUIRED <today>", and fades out on its own after a hold. Built
+ *  the same way the flight clones are — imperative DOM, cleans up after
+ *  itself — rather than React state, so it never fights the flight
+ *  animations running in parallel. Reduced-motion still shows the plate (the
+ *  confirmation matters) but skips the wipe, particles, and clink. */
+function showNameplate(reduced: boolean) {
+  ensureBrushedMetalFilter()
+
+  const wrap = document.createElement('div')
+  wrap.setAttribute('aria-hidden', 'true')
+  wrap.style.position = 'fixed'
+  wrap.style.top = '44px'
+  wrap.style.right = '14px'
+  wrap.style.zIndex = '2147483000'
+  wrap.style.pointerEvents = 'none'
+
+  const plate = document.createElement('div')
+  plate.style.position = 'relative'
+  plate.style.overflow = 'hidden'
+  plate.style.borderRadius = '5px'
+  plate.style.padding = '7px 12px'
+  plate.style.background = 'linear-gradient(155deg, #fff2d4, #e8b34e 45%, #b9822b)'
+  plate.style.boxShadow = '0 6px 18px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,244,216,.35)'
+  if (reduced) {
+    plate.style.opacity = '0'
+    plate.style.transition = 'opacity 200ms ease'
+  } else {
+    plate.style.clipPath = 'inset(0 100% 0 0)'
+    plate.style.transition = 'clip-path 620ms cubic-bezier(.65,0,.35,1) 60ms'
+  }
+
+  const texture = document.createElement('div')
+  texture.style.position = 'absolute'
+  texture.style.inset = '0'
+  texture.style.filter = 'url(#fp-brushed-metal)'
+  texture.style.mixBlendMode = 'overlay'
+  texture.style.opacity = '0.45'
+  plate.appendChild(texture)
+
+  const label = document.createElement('div')
+  label.textContent = 'ACQUIRED'
+  label.style.position = 'relative'
+  label.style.fontFamily = 'var(--fp-font-display, serif)'
+  label.style.fontSize = '10px'
+  label.style.fontWeight = '600'
+  label.style.letterSpacing = '.16em'
+  label.style.color = '#3a2405'
+  label.style.textShadow = '0 1px 0 rgba(255,255,255,.4)'
+  label.style.whiteSpace = 'nowrap'
+  plate.appendChild(label)
+
+  const dateEl = document.createElement('div')
+  // Local date, not UTC (webaudit FIX-3, 2026-07-12 verdict) — .toISOString()
+  // engraves TOMORROW's date on any claim after ~8pm ET. en-CA formats as
+  // YYYY-MM-DD in the browser's own local timezone.
+  dateEl.textContent = new Date().toLocaleDateString('en-CA')
+  dateEl.style.position = 'relative'
+  dateEl.style.fontFamily = 'var(--fp-font-display, serif)'
+  dateEl.style.fontSize = '9px'
+  dateEl.style.color = '#4a3008'
+  dateEl.style.marginTop = '1px'
+  dateEl.style.whiteSpace = 'nowrap'
+  plate.appendChild(dateEl)
+
+  wrap.appendChild(plate)
+  document.body.appendChild(wrap)
+
+  if (reduced) {
+    requestAnimationFrame(() => { plate.style.opacity = '1' })
+  } else {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      plate.style.clipPath = 'inset(0 0 0 0)'
+    }))
+    spawnGoldDust(wrap)
+    playClink()
+  }
+
+  const holdMs = reduced ? NAMEPLATE_HOLD_MS_REDUCED : NAMEPLATE_HOLD_MS
+  window.setTimeout(() => {
+    wrap.style.transition = 'opacity 320ms ease'
+    wrap.style.opacity = '0'
+    window.setTimeout(() => wrap.remove(), 340)
+  }, holdMs)
+}
+
 export default function ClaimRitual() {
   const anchorRef = useRef<HTMLDivElement>(null)
   const inFlightRef = useRef(false)
@@ -219,6 +399,7 @@ export default function ClaimRitual() {
       if (reduced) {
         anchor.style.transition = 'opacity 200ms ease'
         anchor.style.opacity = String(ANCHOR_ACTIVE_OPACITY)
+        showNameplate(true)
         window.setTimeout(() => {
           anchor.style.opacity = String(ANCHOR_IDLE_OPACITY)
           settle(mode)
@@ -228,6 +409,7 @@ export default function ClaimRitual() {
 
       const onFlightDone = () => {
         pulseAnchor()
+        showNameplate(false)
         settle(mode)
       }
 
@@ -249,6 +431,14 @@ export default function ClaimRitual() {
         ::view-transition-old(${VIEW_TRANSITION_NAME}),
         ::view-transition-new(${VIEW_TRANSITION_NAME}) {
           animation-duration: ${FLIGHT_MS}ms;
+        }
+        @keyframes fp-gold-dust {
+          0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+          18% { opacity: 1; }
+          100% { opacity: 0; transform: translate(var(--fp-dust-dx), var(--fp-dust-dy)) scale(0.15); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          @keyframes fp-gold-dust { 0%, 100% { opacity: 0; } }
         }
       `}</style>
       {/* Placeholder "Vault" anchor — stands in for a future nav icon that

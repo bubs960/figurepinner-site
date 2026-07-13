@@ -9,13 +9,13 @@
 // stats sit in the same flex row and must share the live count.
 
 import { useMemo, useState } from 'react'
-import type { VaultShelfItem } from '../_lib/vaultData'
+import type { VaultShelfItem, HuntItem } from '../_lib/vaultData'
 import { shelfTotals } from '../_lib/vaultData'
 import VaultStats from './VaultStats'
 import VaultCase from './VaultCase'
 import ShelfTicker from './ShelfTicker'
 
-export default function VaultClient({ items: initial }: { items: VaultShelfItem[] }) {
+export default function VaultClient({ items: initial, hunt }: { items: VaultShelfItem[]; hunt: HuntItem[] }) {
   const [items, setItems] = useState(initial)
 
   // Mirrors getVaultShelfData's server formula exactly (shelfTotals is the
@@ -64,7 +64,7 @@ export default function VaultClient({ items: initial }: { items: VaultShelfItem[
         />
       )}
 
-      <VaultCase items={items} onPatch={patch} onRemove={remove} />
+      <VaultCase items={items} hunt={hunt} onPatch={patch} onRemove={remove} />
     </>
   )
 }

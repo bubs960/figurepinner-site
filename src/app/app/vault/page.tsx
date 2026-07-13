@@ -51,7 +51,7 @@ export default async function VaultShelfPage() {
               </div>
             </>
           ) : (
-            <VaultClient items={items} />
+            <VaultClient items={items} hunt={hunt} />
           )}
         </div>
       </section>
@@ -440,6 +440,54 @@ const CSS = `
   .vlt-ghost-mount .g1 { font-size: 10.5px; font-weight: 300; color: var(--vlt-cream-mut); line-height: 1.5; }
   .vlt-ghost-mount .g2 { font-size: 11px; font-weight: 500; color: var(--vlt-gold-hi); }
 
+  /* ── Phase B: want-list gap silhouettes on the shelf itself ── */
+  .vlt-fig.vlt-want { padding-bottom: 8px; }
+  .vlt-want-mount {
+    position: relative;
+    border: 1px dashed rgba(224,168,62,.32); border-radius: 6px;
+    padding: 5px 5px 6px;
+    transition: border-color .25s, transform .25s cubic-bezier(.22,.61,.36,1);
+  }
+  .vlt-want-mount img, .vlt-want-mount .vlt-noimg {
+    width: 100%; aspect-ratio: 4/4.4; object-fit: cover; border-radius: 3px;
+    display: block;
+    filter: grayscale(1) brightness(0) opacity(.15);
+  }
+  .vlt-want-mount .vlt-noimg {
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--fp-font-display); font-size: 28px; color: var(--vlt-cream);
+    background: rgba(242,232,213,.06);
+  }
+  .vlt-fig.vlt-want:hover .vlt-want-mount {
+    border-color: rgba(224,168,62,.6); transform: translateY(-4px);
+  }
+  .vlt-fig.vlt-want:hover .vlt-want-mount img { filter: grayscale(1) brightness(0) opacity(.26); }
+  .vlt-fig.vlt-want .vlt-fig-name { color: var(--vlt-cream-mut); }
+  .vlt-want-caption {
+    margin-top: 2px; font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--vlt-gold-hi); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* ── Phase B: line-completion glow ──
+     SHOULD-1 (webaudit 2026-07-12 verdict): these pulses run 2.6s infinite
+     with no off-screen pause (the sparkline FIX-5 class). Accepted as-is,
+     not fixed — /app/vault is signed-in-only, not the R1 public surface,
+     so the battery/jank cost is a small audience, not sitewide. Reduced-
+     motion already stops both cleanly via animation:none !important. */
+  .vlt-mount.complete {
+    animation: vlt-completePulse 2.6s ease-in-out infinite;
+  }
+  @keyframes vlt-completePulse {
+    0%, 100% { box-shadow: 0 10px 18px rgba(0,0,0,.42), 0 0 0 1px rgba(224,168,62,.55), 0 0 18px rgba(224,168,62,.18); }
+    50% { box-shadow: 0 10px 18px rgba(0,0,0,.42), 0 0 0 1.5px rgba(245,196,98,.9), 0 0 30px rgba(245,196,98,.5); }
+  }
+  .vlt-complete-badge {
+    margin-top: 3px; font-size: 8px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: #1a1206; background: linear-gradient(180deg, var(--vlt-gold-hi), var(--vlt-gold));
+    border-radius: 3px; padding: 2px 6px; display: inline-block; white-space: nowrap;
+    animation: vlt-movedPulse 2.6s ease-in-out infinite;
+  }
+
   /* ── the hunt ── */
   .vlt-hunt { padding: 24px 0 26px; }
   .vlt-hunt-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -525,6 +573,8 @@ const CSS = `
     .vlt-bell.live svg { animation: none !important; }
     .vlt-bell.live::after { display: none; }
     .vlt-moved { animation: none !important; opacity: 1; }
+    .vlt-mount.complete { animation: none !important; }
+    .vlt-complete-badge { animation: none !important; opacity: 1; }
   }
 
   /* ── responsive ── */

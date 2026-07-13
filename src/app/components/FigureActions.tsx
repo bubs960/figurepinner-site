@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useOwnershipStatus } from '@/app/_lib/useOwnershipStatus'
 
 type Props = {
   figure_id: string
@@ -35,7 +36,14 @@ type WarnPayload = {
 }
 
 export default function FigureActions({ figure_id, name, brand, line, genre, imgSrc }: Props) {
+  const { owned } = useOwnershipStatus(figure_id)
   const [vaultStatus, setVaultStatus] = useState<Status>('idle')
+
+  // Reflect an already-owned figure on load — otherwise a revisit shows a
+  // fresh "Add to Collection" button that would attempt a duplicate insert.
+  useEffect(() => {
+    if (owned) setVaultStatus('done')
+  }, [owned])
   const [wantStatus, setWantStatus] = useState<Status>('idle')
   const [alertStatus, setAlertStatus] = useState<Status>('idle')
   const [paidInput, setPaidInput] = useState('')

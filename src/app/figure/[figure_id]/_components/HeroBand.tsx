@@ -4,6 +4,8 @@
 // comp count and confidence now read as one museum placard. Price is
 // deliberately subordinate to the character block (owner direction 6/12).
 
+import ClaimPin from '@/app/components/ClaimPin'
+
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
 interface Pricing {
@@ -28,6 +30,8 @@ interface ConditionRow {
 }
 
 interface HeroBandProps {
+  /** Powers the ambient brass corner pin (Claiming Ritual Phase A graft). */
+  figureId: string
   imageUrl: string | null
   characterName: string
   brand: string
@@ -73,7 +77,7 @@ function fmt(n: number): string {
 }
 
 export default function HeroBand({
-  imageUrl, characterName, brand, lineName, series, scale,
+  figureId, imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
   valuePricing, loreText, ticks, lastSale,
   conditionLabel, conditionRows, secondary, inferenceNote,
@@ -234,6 +238,8 @@ export default function HeroBand({
             {rarity.label}
           </div>
         )}
+
+        <ClaimPin figureId={figureId} />
       </div>
 
       {/* Identity + placard */}

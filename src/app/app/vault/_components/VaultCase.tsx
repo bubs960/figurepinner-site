@@ -6,14 +6,23 @@
 // stay in lockstep); this component is controlled — it renders items and
 // reports edits up via onPatch / onRemove.
 //
+// Phase B (Claiming Ritual, "The Shelf with gaps"): a capped slice of the
+// Want List renders interleaved into the SAME shelf grid as owned figures —
+// grayscale, dashed-gold silhouettes, "MISSING — tap to hunt". The full
+// Want List with pricing/target-alerts still lives in the richer "Hunt"
+// section below (page.tsx) — this is the shelf preview, not a replacement.
+//
 // Case motion (spotlight drift + cursor takeover) is DOM-managed in one
 // mount effect, same pattern as the homepage ShelfCase.
 
 import { useEffect, useRef, useState } from 'react'
-import type { VaultShelfItem } from '../_lib/vaultData'
+import type { VaultShelfItem, HuntItem } from '../_lib/vaultData'
 
 const CONDITIONS = ['MOC', 'Near Mint', 'Loose', 'Opened', 'Damaged']
 const PIN_PATH = 'M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z'
+// Enough to fill out a row or two of gaps without duplicating the full Hunt
+// section's job — that section still shows every want-list item with pricing.
+const WANT_GAP_CAP = 8
 
 function condClass(c: string): string {
   if (c === 'MOC') return 'moc'
@@ -27,8 +36,13 @@ function rowsOf<T>(arr: T[], n: number): T[][] {
   return out
 }
 
-export default function VaultCase({ items, onPatch, onRemove }: {
+type Slot =
+  | { kind: 'owned'; item: VaultShelfItem }
+  | { kind: 'want'; item: HuntItem }
+
+export default function VaultCase({ items, hunt, onPatch, onRemove }: {
   items: VaultShelfItem[]
+  hunt: HuntItem[]
   onPatch: (rowId: string, body: { paid?: number; condition?: string }) => void
   onRemove: (rowId: string) => void
 }) {
@@ -54,9 +68,15 @@ export default function VaultCase({ items, onPatch, onRemove }: {
     }
   }, [])
 
-  const shelves = rowsOf(items, 4)
+  const wantGhosts = hunt.slice(0, WANT_GAP_CAP)
+  const slots: Slot[] = [
+    ...items.map(item => ({ kind: 'owned' as const, item })),
+    ...wantGhosts.map(item => ({ kind: 'want' as const, item })),
+  ]
+  const shelves = rowsOf(slots, 4)
   // the ghost slot rides the last shelf when there's room, else its own shelf
   const lastShort = shelves.length > 0 && shelves[shelves.length - 1].length < 4
+  const totallyEmpty = items.length === 0 && wantGhosts.length === 0
 
   return (
     <div className="vlt-case-col" ref={rootRef}>
@@ -72,16 +92,18 @@ export default function VaultCase({ items, onPatch, onRemove }: {
           return (
             <div className="vlt-shelf" key={ri}>
               <div className={`vlt-shelf-row${isLast && lastShort ? ' short' : ''}`}>
-                {row.map((it, ci) => (
+                {row.map((slot, ci) => slot.kind === 'owned' ? (
                   <Card
-                    key={it.rowId}
-                    item={it}
+                    key={slot.item.rowId}
+                    item={slot.item}
                     index={ri * 4 + ci}
                     onPatch={onPatch}
                     onRemove={onRemove}
                   />
+                ) : (
+                  <WantGhost key={slot.item.rowId} item={slot.item} index={ri * 4 + ci} />
                 ))}
-                {isLast && lastShort && <GhostSlot />}
+                {isLast && lastShort && <GhostSlot empty={totallyEmpty} />}
               </div>
             </div>
           )
@@ -90,7 +112,7 @@ export default function VaultCase({ items, onPatch, onRemove }: {
         {(shelves.length === 0 || !lastShort) && (
           <div className="vlt-shelf">
             <div className="vlt-shelf-row short">
-              <GhostSlot empty={shelves.length === 0} />
+              <GhostSlot empty={totallyEmpty} />
             </div>
           </div>
         )}
@@ -128,7 +150,7 @@ function Card({ item, index, onPatch, onRemove }: {
 
   return (
     <a className="vlt-fig" style={{ '--i': index } as React.CSSProperties} href={item.href}>
-      <div className="vlt-mount">
+      <div className={`vlt-mount${item.lineComplete ? ' complete' : ''}`}>
         <span className="vlt-pin-mark" role="img" aria-label="Pinned to your Vault">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d={PIN_PATH} /></svg>
         </span>
@@ -149,6 +171,11 @@ function Card({ item, index, onPatch, onRemove }: {
       </div>
       <div className="vlt-fig-name">{item.name}</div>
       <div className="vlt-fig-tag">{item.tag}</div>
+      {item.lineComplete && (
+        <div className="vlt-complete-badge" title={`${item.lineLabel} — every figure in this wave, on your shelf`}>
+          {item.lineOwned}/{item.lineTotal} — SHELF COMPLETE
+        </div>
+      )}
       <div className="vlt-fig-meta">
         <button
           className={`vlt-cond ${condClass(item.condition)}`}
@@ -194,6 +221,32 @@ function Card({ item, index, onPatch, onRemove }: {
           </button>
         )}
       </div>
+    </a>
+  )
+}
+
+/** Phase B "gap on the shelf": a want-list figure rendered as a desaturated
+ *  silhouette in the same grid an owned figure would occupy — the tagline
+ *  ("every grail starts as a gap on the shelf") turned into a UI object.
+ *  Links straight to the figure page, same as an owned card. */
+function WantGhost({ item, index }: { item: HuntItem; index: number }) {
+  return (
+    <a
+      className="vlt-fig vlt-want"
+      style={{ '--i': index } as React.CSSProperties}
+      href={item.href}
+      aria-label={`${item.name} — missing from your case, tap to hunt`}
+    >
+      <div className="vlt-want-mount">
+        {item.img ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={item.img} alt="" aria-hidden loading="lazy" />
+        ) : (
+          <span className="vlt-noimg" aria-hidden>{item.name.slice(0, 2).toUpperCase()}</span>
+        )}
+      </div>
+      <div className="vlt-fig-name">{item.name}</div>
+      <div className="vlt-want-caption">MISSING &mdash; tap to hunt</div>
     </a>
   )
 }

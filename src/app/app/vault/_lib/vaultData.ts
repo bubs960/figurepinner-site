@@ -13,7 +13,7 @@
  *    never an error.
  */
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { getFigureById, figureUrl } from '@/data/kb'
+import { getFigureById, getAllFigures, figureUrl } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 
@@ -39,6 +39,15 @@ export type VaultShelfItem = {
   /** 30-day sold-price movement (WP4 shelf ticker); null = not enough dated
    *  comps in one or both windows to call a trend. */
   trend30d: { delta: number; pct: number | null } | null
+  /** Claiming Ritual Phase B — "complete a line and the shelf row pulses
+   *  gold." Set only when this figure belongs to a real assortment/wave
+   *  (LINE_GROUP_MIN-LINE_GROUP_MAX figures in the KB, guards against a
+   *  generic "" release_wave bucket reading as one giant fake line) and the
+   *  user owns every figure in it. */
+  lineComplete: boolean
+  lineLabel: string | null
+  lineOwned: number
+  lineTotal: number
 }
 
 export type HuntItem = {
@@ -202,6 +211,60 @@ function conditionMatchedMedian(s: Snapshot | undefined, condition: string): {
   return { median: s.median, comps: s.comps, medianKind: 'all' }
 }
 
+// A real assortment/wave is small — a boxed set, a series release. Below the
+// floor it's not a "line" at all (a lone repaint); above the ceiling it's a
+// generic bucket (e.g. figures with no real release_wave sharing "" — the KB
+// has plenty of those) and calling it "complete" would be meaningless.
+const LINE_GROUP_MIN = 2
+const LINE_GROUP_MAX = 12
+
+function lineGroupKey(fandom: string, productLine: string, releaseWave: string): string {
+  return `${fandom}/${productLine}/${releaseWave}`
+}
+
+type LineCompletion = { lineComplete: boolean; lineLabel: string | null; lineOwned: number; lineTotal: number }
+const NO_LINE: LineCompletion = { lineComplete: false, lineLabel: null, lineOwned: 0, lineTotal: 0 }
+
+/** Per-figure_id line-completion lookup for a set of owned rows. Two passes:
+ *  one over the (small) owned set to find which line-groups are in play, one
+ *  over the full KB to size only those groups — never an O(owned × KB) scan. */
+function computeLineCompletion(vaultRows: VaultRow[]): Map<string, LineCompletion> {
+  const result = new Map<string, LineCompletion>()
+  const ownedByKey = new Map<string, string[]>() // lineKey -> owned figure_ids
+
+  for (const r of vaultRows) {
+    const kb = getFigureById(r.figure_id)
+    if (!kb || !kb.release_wave) continue
+    const key = lineGroupKey(kb.fandom, kb.product_line, kb.release_wave)
+    const list = ownedByKey.get(key)
+    if (list) list.push(r.figure_id)
+    else ownedByKey.set(key, [r.figure_id])
+  }
+  if (ownedByKey.size === 0) return result
+
+  const totals = new Map<string, number>()
+  for (const f of getAllFigures()) {
+    if (!f.release_wave) continue
+    const key = lineGroupKey(f.fandom, f.product_line, f.release_wave)
+    if (!ownedByKey.has(key)) continue
+    totals.set(key, (totals.get(key) ?? 0) + 1)
+  }
+
+  for (const [key, fids] of ownedByKey) {
+    const total = totals.get(key) ?? 0
+    if (total < LINE_GROUP_MIN || total > LINE_GROUP_MAX) continue
+    const complete = fids.length >= total
+    // Label from any one member of the group — they share fandom/line/wave.
+    const sample = getFigureById(fids[0])
+    if (!sample) continue
+    const label = `${prettifySlug(sample.product_line)} ${sample.release_wave}`
+    for (const fid of fids) {
+      result.set(fid, { lineComplete: complete, lineLabel: label, lineOwned: fids.length, lineTotal: total })
+    }
+  }
+  return result
+}
+
 export async function getVaultShelfData(userId: string): Promise<VaultShelfData> {
   let vaultRows: VaultRow[] = []
   let wantRows: WantRow[] = []
@@ -232,6 +295,8 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
     await Promise.all(toFetch.map(async fid => [fid, await fetchSnapshot(fid)] as const))
   )
 
+  const lineCompletion = computeLineCompletion(vaultRows)
+
   const items: VaultShelfItem[] = vaultRows.map(r => {
     const d = resolveDisplay(r.figure_id, r.name, r.line)
     const condition = r.condition ?? 'Loose'
@@ -244,6 +309,7 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
       paid: r.paid ?? 0,
       ...matched,
       trend30d: snaps.get(r.figure_id)?.trend30d ?? null,
+      ...(lineCompletion.get(r.figure_id) ?? NO_LINE),
     }
   })
 

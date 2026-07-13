@@ -601,6 +601,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         <div style={{ marginBottom: '1.75rem' }}>
           <HeroBand
             className="fp-hero-grid"
+            figureId={figureId}
             imageUrl={thumb(imageUrlFinal, 760)}
             characterName={characterH1}
             brand={brand}
