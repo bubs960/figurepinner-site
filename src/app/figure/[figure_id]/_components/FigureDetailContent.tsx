@@ -6,7 +6,7 @@
  */
 
 import { notFound } from 'next/navigation'
-import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl, isNumericWave } from '@/data/kb'
 import { genreSlugForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
@@ -241,7 +241,22 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const genreSlug    = genreSlugForFandom(local.fandom)
   const localAny     = local as Record<string, unknown>
   const releaseYear  = typeof localAny.release_year === 'number' ? localAny.release_year : null
-  const seriesNum    = (() => { const n = parseInt(local.release_wave ?? ''); return isNaN(n) ? null : n })()
+  // Matcher bug report 2026-07-12: raw parseInt() stops at the first
+  // non-digit, so a mangled release_wave slug like "3-75-orange-2013" (scale
+  // + color-line + year, not a series number) parsed as "3" and the page
+  // fabricated a "Series 3" with no relationship to reality. isNumericWave()
+  // is the same real-vs-slug guard deriveName() already uses for this exact
+  // field (kbTypes.ts) -- reused here instead of a second ad-hoc check.
+  const seriesNum    = isNumericWave(local.release_wave) ? parseInt(local.release_wave, 10) : null
+  // Matcher bug report 2026-07-12: `local.scale ?? null` only catches real
+  // null/undefined -- the KB stores the literal string "None" for scale on
+  // ~48% of fids (10,986/22,790, unmigrated legacy entries), which is truthy
+  // and sailed through into SeoSummary's "is a None action figure" sentence.
+  // exclusiveTo had the identical bug at one of its two call sites below
+  // (the other already had this exact guard) -- computed once here for both
+  // instead of leaving the fix duplicated ad hoc at each JSX call site.
+  const scaleClean = (local.scale && local.scale !== 'None') ? local.scale : null
+  const exclusiveToClean = (local.exclusive_to && local.exclusive_to !== 'None') ? local.exclusive_to : null
   const imageUrlFinal = imageUrl ?? local.canonical_image_url ?? null
 
   // ── eBay URL ────────────────────────────────────────────────────────────────
@@ -488,11 +503,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     valuePricing?.low != null && valuePricing?.high != null
       ? { '@type': 'PropertyValue', name: 'Recent sold range', value: `${formatCurrency(valuePricing.low)} to ${formatCurrency(valuePricing.high)}` }
       : null,
-    local.release_wave
-      ? { '@type': 'PropertyValue', name: 'Series', value: local.release_wave }
+    // Matcher bug report 2026-07-12: both of these fed the RAW KB field
+    // straight into structured data. release_wave is often a mangled slug
+    // (not a real series number) -- seriesNum is the already-guarded parsed
+    // value used elsewhere on this page, reused here instead of a second
+    // raw read. scale uses the same "None" string guard as the visible copy.
+    seriesNum != null
+      ? { '@type': 'PropertyValue', name: 'Series', value: String(seriesNum) }
       : null,
-    local.scale
-      ? { '@type': 'PropertyValue', name: 'Scale', value: local.scale }
+    scaleClean
+      ? { '@type': 'PropertyValue', name: 'Scale', value: scaleClean }
       : null,
     jsonLdRetailPrice != null
       ? { '@type': 'PropertyValue', name: 'Original retail price', value: formatCurrency(jsonLdRetailPrice) }
@@ -607,7 +627,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             brand={brand}
             lineName={lineAttrs?.display_name ?? line}
             series={seriesNum}
-            scale={local.scale ?? null}
+            scale={scaleClean}
             eraLabel={lineAttrs?.era_label ?? null}
             releaseYear={releaseYear}
             rarityTier={null}
@@ -713,10 +733,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               median={valuePricing?.median ?? null}
               medianIsAvg={valuePricing?.medianIsAvg ?? false}
               compCount={price?.soldCount ?? 0}
-              scale={local.scale ?? null}
+              scale={scaleClean}
               series={seriesNum}
               packSize={Number(local.pack_size) || 1}
-              exclusiveTo={local.exclusive_to ?? null}
+              exclusiveTo={exclusiveToClean}
               imgSrc={thumb(imageUrlFinal, 760)}
             />
           </div>
@@ -735,8 +755,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           line={line}
           productLine={local.product_line}
           seriesNum={seriesNum}
-          scale={local.scale ?? null}
-          exclusiveTo={(local.exclusive_to && local.exclusive_to !== 'None') ? local.exclusive_to : null}
+          scale={scaleClean}
+          exclusiveTo={exclusiveToClean}
           soldCount={price?.soldCount ?? 0}
           median={valuePricing?.median ?? null}
           medianIsAvg={valuePricing?.medianIsAvg ?? false}

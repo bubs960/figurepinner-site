@@ -27,7 +27,7 @@ export function stableIdSuffix(figure_id: string): string | null {
 }
 
 /** A wave value is a real wave number ("1", "11", "1a") vs a text/sub-line slug. */
-function isNumericWave(w: string | null | undefined): boolean {
+export function isNumericWave(w: string | null | undefined): boolean {
   if (!w) return false
   return /^[0-9]+[a-z]?$/i.test(String(w).trim())
 }
@@ -37,9 +37,16 @@ function isNumericWave(w: string | null | undefined): boolean {
  * override map first, and keeps small words lowercase mid-phrase.
  */
 const SMALL_WORDS = new Set(['of', 'the', 'and', 'a', 'an', 'to', 'in', 'vs'])
-function titleCaseValue(raw: string): string {
+export function titleCaseValue(raw: string): string {
   if (!raw) return ''
-  const words = raw.trim().split(/[\s-]+/)
+  // Split on whitespace, or a hyphen NOT flanked by digits on both sides
+  // (matcher bug report 2026-07-12): a digit-hyphen-digit run ("2013-2014")
+  // is a real year/numeric range, not a slug separator -- the old
+  // [\s-]+ pattern split it into two unrelated-looking numbers. A normal
+  // slug hyphen (at least one side non-digit, e.g. "elite-100") still
+  // splits exactly as before -- the OR condition only refuses to split
+  // when BOTH neighbors are digits.
+  const words = raw.trim().split(/\s+|(?:(?<!\d)-|-(?!\d))/).filter(Boolean)
   return words
     .map((w, i) => {
       const lw = w.toLowerCase()
