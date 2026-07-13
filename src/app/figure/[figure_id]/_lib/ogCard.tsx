@@ -21,7 +21,7 @@ const INK = '#09090F'
 const PAPER = '#EEEEF5'
 const MUTED = '#9AA0B4'
 
-export type GrailCardStatus = 'hunting' | 'in_vault'
+export type GrailCardStatus = 'hunting' | 'in_vault' | 'spotlight'
 
 export type GrailCardPrice = {
   medianLabel: string | null
@@ -138,8 +138,8 @@ export function GrailCard({
   const displayName = deriveName(figure)
   const line = prettifySlug(figure.product_line)
   const fandom = prettifySlug(figure.fandom)
-  const ribbonLabel = status === 'in_vault' ? 'IN THE VAULT' : 'HUNTING'
-  const ribbonColor = status === 'in_vault' ? GOLD : '#7C8399'
+  const ribbonLabel = status === 'in_vault' ? 'IN THE VAULT' : status === 'spotlight' ? "TODAY'S PICK" : 'HUNTING'
+  const ribbonColor = status === 'hunting' ? '#7C8399' : GOLD
 
   return (
     <div

@@ -59,6 +59,13 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
   }> = [
     { path: '',          changeFrequency: 'weekly',  priority: 1.0 },
     { path: '/search',   changeFrequency: 'weekly',  priority: 0.9 },
+    // /today — Daily Grail Spotlight (W3): content changes daily, so 'daily'
+    // is honest here (unlike most of this file's 'weekly'/'monthly' entries).
+    // Dated archive URLs (/today/YYYY-MM-DD) are deliberately NOT enumerated
+    // here — they self-canonicalize to their figure page, not to themselves,
+    // so they're discovered via internal links (the permalink on /today
+    // itself) rather than sitemap-listed as if each were primary content.
+    { path: '/today',    changeFrequency: 'daily',  priority: 0.85 },
     // /news removed from sitemap 2026-06-25 (Steve: "we don't have news"); the
     // public route is deleted and now 404s (clean de-index, no redirect).
     // /pro removed from sitemap 2026-06-06 (Steve): Pro tier disabled until
