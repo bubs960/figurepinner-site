@@ -395,7 +395,12 @@ async function checkSitemapPrefixCensus(localChildren) {
     const localPrefixes = new Set()
     for (const [, counts] of localPrefixByChild) for (const p of counts.keys()) localPrefixes.add(p)
 
-    const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p))
+    // Non-fandom feature routes (not KB-driven, never a twin-namespace risk)
+    // that are expected to appear as a new sitemap prefix once, on the deploy
+    // that ships them. 'today' = Daily Grail Spotlight (4286507, 2026-07-13).
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today'])
+
+    const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
       failures.push(`STOP [2:prefix-census] NEW top-level sitemap prefix(es) present locally but not in PROD: ${newPrefixes.join(', ')} -- if this is a deliberate new fandom/section, confirm by eye before shipping; if not, it is the exact 2026-07-12 bug shape (a new accidental namespace)`)
     }
