@@ -1,16 +1,7 @@
 'use client'
 
-export type FunnelEvent =
-  | 'landing'
-  | 'search_submit'
-  | 'search_result_click'
-  | 'figure_view'
-  | 'ebay_exit'
-  | 'price_receipt_open'
-  | 'ad_impression'
-  | 'shelf_ticker_open'
-  | 'sparkline_drawn'
-  | 'collection_claim_ritual_played'
+import type { FunnelEvent } from '@/lib/funnelEvents'
+export type { FunnelEvent }
 
 type FunnelDetail = Record<string, string | number | boolean | null | undefined>
 

@@ -3,6 +3,10 @@ import { getAllFandoms } from '@/data/kb'
 
 const BASE = 'https://figurepinner.com'
 
+// Same safety net as sitemap.ts — static until next deploy either way at
+// current cadence, this just bounds staleness explicitly.
+export const revalidate = 86400
+
 export default function robots(): MetadataRoute.Robots {
   // D3 hygiene split (2026-07-02) replaced the single /sitemap.xml with one
   // child sitemap per fandom (see src/app/sitemap.ts generateSitemaps). Next.js

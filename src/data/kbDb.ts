@@ -18,7 +18,7 @@
  */
 
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { deriveName, figureUrl, prettyFigureUrlKey, stableIdSuffix, type KBFigure } from './kbTypes'
+import { deriveName, figureUrl, prettyFigureUrlKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
 
 // Re-export the pure parts so a converted surface can import everything from
 // one place (`import { getFigureById, deriveName } from '@/data/kbDb'`).
@@ -205,10 +205,18 @@ export async function isPrettyUrlUnique(
  * Keyword-rich canonical URL for a single figure (figure detail page).
  * Ambiguous (fandom/line/char shared by >1 wave) → stable /figure/[id], so one
  * release can't canonicalize as another. Mirrors kb.prettyFigureUrl semantics.
+ *
+ * MUST emit the site's genre slug (genreSlugForFandom), never raw f.fandom —
+ * same fix as kb.ts's prettyFigureUrl, same reason: the raw-fandom form
+ * points canonicals/sitemap at namespaces with 404ing hubs and zero internal
+ * links for the 4 remapped fandoms, which Google refused to index (the
+ * 2026-07 index collapse). This module carried the bug independently of
+ * kb.ts's fix (b01e823 never touched this file) — see
+ * WEBAUDIT-FINAL-CYCLE-PLAN-2026-07-12.md §4 C1.
  */
 export async function prettyFigureUrl(f: KBFigure): Promise<string> {
   if (await isPrettyUrlUnique(f)) {
-    return `/${f.fandom}/${f.product_line}/${f.character_canonical}`
+    return `/${genreSlugForFandom(f.fandom)}/${f.product_line}/${f.character_canonical}`
   }
   return figureUrl(f)
 }
@@ -244,10 +252,16 @@ export function buildPrettyUrlMap(rows: SitemapRow[]): Map<string, number> {
   return counts
 }
 
-/** Resolve one sitemap row's URL against a prebuilt count map (pure, no I/O). */
+/**
+ * Resolve one sitemap row's URL against a prebuilt count map (pure, no I/O).
+ * Same genre-slug requirement as prettyFigureUrl above — this is the second
+ * of the two call sites that carried the raw-fandom bug in this file (the
+ * sitemap bulk path, the higher-consequence one since it emits every
+ * figure's canonical in one pass).
+ */
 export function prettyFigureUrlFromMap(r: SitemapRow, counts: Map<string, number>): string {
   if (counts.get(prettyFigureUrlKey(r)) === 1) {
-    return `/${r.fandom}/${r.product_line}/${r.character_canonical}`
+    return `/${genreSlugForFandom(r.fandom)}/${r.product_line}/${r.character_canonical}`
   }
   return `/figure/${r.figure_id}`
 }

@@ -28,6 +28,13 @@ const STATIC_ID = 'static'
  * carrying a per-figure last-updated field — flagged to matcher, not solved
  * here.
  */
+// Safety net, not a behavior change today: with no revalidate/dynamic export
+// this route is static until the next deploy anyway (fine at 2-3 deploys/day
+// per current cadence) — this just makes that explicit and bounds staleness
+// if deploy frequency ever drops (WEBAUDIT-FINAL-CYCLE-PLAN-2026-07-12.md §4
+// tail).
+export const revalidate = 86400
+
 export async function generateSitemaps(): Promise<{ id: string }[]> {
   return [{ id: STATIC_ID }, ...getAllFandoms().map(fandom => ({ id: fandom }))]
 }

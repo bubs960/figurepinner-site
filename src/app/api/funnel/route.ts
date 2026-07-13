@@ -1,21 +1,17 @@
 import { NextRequest } from 'next/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { checkRateLimit } from '@/lib/rateLimit'
+import { FUNNEL_EVENTS } from '@/lib/funnelEvents'
 
 export const dynamic = 'force-dynamic'
 
-const ALLOWED_EVENTS = new Set([
-  'landing',
-  'search_submit',
-  'search_result_click',
-  'figure_view',
-  'ebay_exit',
-  'price_receipt_open',
-  'ad_impression',
-  'shelf_ticker_open',
-  'sparkline_drawn',
-  'collection_claim_ritual_played',
-])
+// Sourced from the same FUNNEL_EVENTS the client's FunnelEvent type derives
+// from (src/lib/funnelEvents.ts) — a route.ts file can't add its own named
+// export (Next's route-segment-config type checker rejects anything beyond
+// the reserved HTTP-verb/config set, same restriction page.tsx has), so
+// tests/funnelAllowlist.test.mjs imports FUNNEL_EVENTS directly rather than
+// this Set.
+const ALLOWED_EVENTS = new Set<string>(FUNNEL_EVENTS)
 
 // S3 (hygiene plan, 2026-07-02): /api/funnel is an unauthenticated,
 // unauthenticated-by-design first-party beacon (S44) — anyone can POST to it
@@ -52,6 +48,15 @@ function clean(value: unknown, max = 160): string {
   return typeof value === 'string' ? value.slice(0, max) : ''
 }
 
+// 0 default for an absent optional numeric detail field — these are only
+// ever meaningful for the ONE event type each is sent from (comp_count on
+// price_receipt_open, point_count on sparkline_drawn, figures/coverage on
+// shelf_ticker_open); every other event legitimately has nothing to report
+// here, and 0 reads correctly as "not applicable" when queried per-index1.
+function num(value: unknown): number {
+  return typeof value === 'number' && Number.isFinite(value) ? value : 0
+}
+
 function routeBucket(path: string): string {
   if (!path || path === '/') return 'home'
   if (path.startsWith('/figure/')) return 'figure'
@@ -59,6 +64,15 @@ function routeBucket(path: string): string {
   const part = path.split('/').filter(Boolean)[0]
   return part || 'home'
 }
+
+// This metric is about to grade real ad spend (C6, WEBAUDIT-FINAL-CYCLE-
+// PLAN-2026-07-12.md §4) — a silently-missing binding or silently-failed
+// write can no longer be invisible. `analytics?.writeDataPoint(...)`'s
+// optional chaining made a MISSING binding a no-op that never even reached
+// the catch below; warn explicitly for that case once per isolate (not once
+// ever — a fresh isolate after a redeploy/binding fix should warn again if
+// the problem persists) rather than spamming a warn on every request.
+let missingBindingWarned = false
 
 export async function POST(request: NextRequest) {
   if (!hostAllowed(request)) {
@@ -90,6 +104,7 @@ export async function POST(request: NextRequest) {
   }
 
   const path = clean(body?.path, 180)
+  const search = clean(body?.search, 240)
   const source = clean(body?.source, 80)
   const figureId = clean(body?.figureId, 120)
   const query = clean(body?.query, 100)
@@ -97,31 +112,50 @@ export async function POST(request: NextRequest) {
   const sessionId = clean(body?.sessionId, 80)
   const target = clean(body?.target, 80)
   const flight = clean(body?.flight, 20)
+  const figureName = clean(body?.figure_name, 160)
+  const pointCount = num(body?.point_count)
+  const compCount = num(body?.comp_count)
+  const figures = num(body?.figures)
+  const coverage = num(body?.coverage)
 
   try {
     const { env } = await getCloudflareContext()
     const analytics = (env as { FUNNEL_ANALYTICS?: AnalyticsEngineDataset }).FUNNEL_ANALYTICS
-    // writeDataPoint is synchronous (returns void, not a Promise) on CF's
-    // AnalyticsEngineDataset binding — there is nothing to await here. Do NOT
-    // "fix" this into `await analytics?.writeDataPoint(...)`; that would await
-    // a non-Promise value (a no-op) while looking like a real fix.
-    analytics?.writeDataPoint({
-      blobs: [
-        event,
-        source || 'unknown',
-        routeBucket(path),
-        path,
-        figureId,
-        query,
-        referrer,
-        target,
-        flight,
-      ],
-      doubles: [1],
-      indexes: [event],
-    })
-  } catch {
-    // Tracking must never affect the user path.
+    if (!analytics) {
+      if (!missingBindingWarned) {
+        missingBindingWarned = true
+        console.warn('[funnel] FUNNEL_ANALYTICS binding is absent — events are being silently dropped')
+      }
+    } else {
+      // writeDataPoint is synchronous (returns void, not a Promise) on CF's
+      // AnalyticsEngineDataset binding — there is nothing to await here. Do NOT
+      // "fix" this into `await analytics.writeDataPoint(...)`; that would await
+      // a non-Promise value (a no-op) while looking like a real fix.
+      analytics.writeDataPoint({
+        // Positional — funnel-stats/route.ts's SQL reads specific blobN/
+        // doubleN indices. New fields are ALWAYS appended at the end, never
+        // inserted/reordered, so existing queries never silently shift.
+        blobs: [
+          event,           // blob1
+          source || 'unknown', // blob2
+          routeBucket(path), // blob3
+          path,            // blob4
+          figureId,        // blob5
+          query,           // blob6
+          referrer,        // blob7
+          target,          // blob8
+          flight,          // blob9
+          search,          // blob10
+          figureName,      // blob11
+        ],
+        doubles: [1, pointCount, compCount, figures, coverage],
+        indexes: [event],
+      })
+    }
+  } catch (err) {
+    // Tracking must never affect the user path — but a write failure must not
+    // vanish silently either (same silent-swallow class as the GraphQL lesson).
+    console.warn('[funnel] writeDataPoint failed', event, err instanceof Error ? err.message : String(err))
   }
 
   // sessionId is accepted to keep client sessions stable for future sampling,
