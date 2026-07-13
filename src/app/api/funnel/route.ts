@@ -113,6 +113,7 @@ export async function POST(request: NextRequest) {
   const target = clean(body?.target, 80)
   const flight = clean(body?.flight, 20)
   const figureName = clean(body?.figure_name, 160)
+  const method = clean(body?.method, 20)
   const pointCount = num(body?.point_count)
   const compCount = num(body?.comp_count)
   const figures = num(body?.figures)
@@ -147,6 +148,7 @@ export async function POST(request: NextRequest) {
           flight,          // blob9
           search,          // blob10
           figureName,      // blob11
+          method,          // blob12
         ],
         doubles: [1, pointCount, compCount, figures, coverage],
         indexes: [event],

@@ -14,6 +14,7 @@ export const FUNNEL_EVENTS = [
   'shelf_ticker_open',
   'sparkline_drawn',
   'collection_claim_ritual_played',
+  'shelf_shared',
 ] as const
 
 export type FunnelEvent = typeof FUNNEL_EVENTS[number]

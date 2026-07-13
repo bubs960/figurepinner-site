@@ -1,13 +1,14 @@
 /**
  * Shared "Grail Card" element — the ImageResponse primitive both the public
- * per-figure OG image (this session) and the future per-user shelf card
- * (Claiming Ritual Phase C, P3 §3) render through. Satori CSS subset only:
- * flexbox, gradients, radius, basic transform — no box-shadow, no
+ * per-figure OG image (this session) and the per-user shelf card (Claiming
+ * Ritual Phase C, P3 §3, added 2026-07-13) render through. Satori CSS subset
+ * only: flexbox, gradients, radius, basic transform — no box-shadow, no
  * backdrop-filter.
  *
  * Collector-first positioning (Steve, 2026-07-09): the figure leads — photo,
  * name, museum-placard framing. Price is a small supporting line, never the
- * headline.
+ * headline. ShelfCard below applies the SAME rule to the share card: the
+ * headline stat is the grail COUNT, never a dollar total.
  */
 import type { KBFigure } from '@/data/kb'
 import { deriveName } from '@/data/kb'
@@ -292,6 +293,146 @@ export function GrailCard({
       </div>
 
       {/* domain bar */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 28,
+          left: 0,
+          right: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: 18,
+          letterSpacing: '0.06em',
+        }}
+      >
+        <span style={{ color: PAPER, fontWeight: 900 }}>Figure</span>
+        <span style={{ color: GOLD, fontWeight: 900 }}>Pinner</span>
+        <span style={{ color: MUTED, marginLeft: 10 }}>· figurepinner.com</span>
+      </div>
+    </div>
+  )
+}
+
+/**
+ * Per-user "Share My Shelf" card (Phase C). Headline stat is the grail COUNT
+ * — never a dollar figure (collector-first positioning; "My Shelf — $340
+ * value" would read as the price-tracker framing the whole Ritual exists to
+ * avoid). Gaps are shown as a secondary, positive-framed stat ("the hunt
+ * continues"), not a shortfall.
+ *
+ * Guards the empty-shelf state per spec: a token whose owner has since
+ * removed every figure (or a stale/edge-case token) still renders something
+ * coherent instead of "0 GRAILS" reading as broken.
+ */
+export function ShelfCard({ grails, gaps }: { grails: number; gaps: number }) {
+  const isEmpty = grails <= 0
+
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: INK,
+        fontFamily: FONT_STACK,
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* warm glow — same treatment as GrailCard */}
+      <div
+        style={{
+          position: 'absolute',
+          top: -160,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 1000,
+          height: 640,
+          background:
+            'radial-gradient(ellipse at center, rgba(212,175,55,0.16) 0%, rgba(212,175,55,0.05) 45%, transparent 70%)',
+          borderRadius: '50%',
+        }}
+      />
+
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 28,
+          width: 1080,
+          height: 540,
+          padding: 48,
+          borderRadius: 28,
+          background: 'rgba(255,255,255,0.03)',
+          border: '2px solid rgba(212,175,55,0.35)',
+          overflow: 'hidden',
+        }}
+      >
+        {/* gold pin, top-center — the shelf's own signature mark, not a
+            figure photo (there's no single photo to represent a whole shelf) */}
+        <div
+          style={{
+            display: 'flex',
+            width: 56,
+            height: 56,
+            borderRadius: 28,
+            background: GOLD,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <div style={{ display: 'flex', width: 20, height: 20, borderRadius: 10, background: '#FFF6D8' }} />
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            fontSize: 22,
+            fontWeight: 700,
+            color: GOLD,
+            letterSpacing: '0.22em',
+            textTransform: 'uppercase',
+          }}
+        >
+          My Shelf
+        </div>
+
+        {isEmpty ? (
+          <div style={{ display: 'flex', fontSize: 34, fontWeight: 900, color: PAPER, textAlign: 'center' }}>
+            Every grail starts as a gap on the shelf
+          </div>
+        ) : (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 64 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div style={{ display: 'flex', fontSize: 96, fontWeight: 900, color: PAPER, lineHeight: 1 }}>
+                {grails}
+              </div>
+              <div style={{ display: 'flex', fontSize: 22, fontWeight: 700, color: MUTED, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: 8 }}>
+                {grails === 1 ? 'Grail' : 'Grails'}
+              </div>
+            </div>
+            {gaps > 0 && (
+              <>
+                <div style={{ display: 'flex', width: 2, height: 90, background: 'rgba(212,175,55,0.25)' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', fontSize: 96, fontWeight: 900, color: GOLD, lineHeight: 1 }}>
+                    {gaps}
+                  </div>
+                  <div style={{ display: 'flex', fontSize: 22, fontWeight: 700, color: MUTED, letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: 8 }}>
+                    {gaps === 1 ? 'Gap — the hunt continues' : 'Gaps — the hunt continues'}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* domain bar — same treatment as GrailCard */}
       <div
         style={{
           position: 'absolute',

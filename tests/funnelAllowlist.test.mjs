@@ -30,6 +30,8 @@ const KNOWN_PAYLOAD_FIELDS = [
   'figures', 'coverage',
   // LiquidSparkline.tsx (sparkline_drawn)
   'point_count',
+  // ShareShelfButton.tsx (shelf_shared)
+  'method',
 ]
 
 // Fields deliberately accepted but never written to Analytics Engine, with

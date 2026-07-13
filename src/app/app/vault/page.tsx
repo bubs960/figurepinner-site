@@ -253,6 +253,16 @@ const CSS = `
     font-size: 14px; font-weight: 300; color: var(--vlt-cream-dim);
   }
 
+  /* ── Phase C: Share My Shelf ── */
+  .vlt-share-btn {
+    font-family: inherit; font-size: 12.5px; font-weight: 600; letter-spacing: .03em;
+    color: #1a1206; background: linear-gradient(180deg, var(--vlt-gold-hi), var(--vlt-gold));
+    border: none; border-radius: 999px; padding: 9px 18px; cursor: pointer;
+    white-space: nowrap; transition: transform .2s, box-shadow .2s;
+  }
+  .vlt-share-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(224,168,62,.3); }
+  .vlt-share-btn:disabled { opacity: .7; cursor: default; }
+
   /* ── the case ── */
   .vlt-case-col { margin-top: 22px; }
   .vlt-case {

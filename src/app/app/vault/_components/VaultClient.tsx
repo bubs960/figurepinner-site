@@ -14,6 +14,7 @@ import { shelfTotals } from '../_lib/vaultData'
 import VaultStats from './VaultStats'
 import VaultCase from './VaultCase'
 import ShelfTicker from './ShelfTicker'
+import ShareShelfButton from './ShareShelfButton'
 
 export default function VaultClient({ items: initial, hunt }: { items: VaultShelfItem[]; hunt: HuntItem[] }) {
   const [items, setItems] = useState(initial)
@@ -50,7 +51,10 @@ export default function VaultClient({ items: initial, hunt }: { items: VaultShel
           <h1>The Vault</h1>
         </div>
         {items.length > 0 && (
-          <VaultStats figures={totals.figures} estValue={totals.estValue} paid={totals.paid} />
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '20px' }}>
+            <VaultStats figures={totals.figures} estValue={totals.estValue} paid={totals.paid} />
+            <ShareShelfButton />
+          </div>
         )}
       </div>
 
