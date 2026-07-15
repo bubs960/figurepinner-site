@@ -134,7 +134,10 @@ function isPublicHtmlNotFound(response, request) {
   return true
 }
 
-function storeSkipReason(response, request) {
+// Exported for direct unit testing (tests/edgeCacheOrdering.test.mjs) --
+// these are pure functions over Response/Request, safe to test without
+// mocking the full Worker fetch handler, caches.default, or Analytics.
+export function storeSkipReason(response, request) {
   if (response.headers.has('set-cookie')) return 'set-cookie'
   const cc = response.headers.get('cache-control') ?? ''
   if (/private|no-store|no-cache/i.test(cc)) return 'cc-private'
@@ -152,7 +155,7 @@ function storeTtl(response, request) {
 
 /** Synthesize s-maxage on responses that are public but missing one (e.g. OpenNext
  *  emits no s-maxage on some ISR routes). Only applied to HTML pages on non-API paths. */
-function synthesizeCacheControl(response, request) {
+export function synthesizeCacheControl(response, request) {
   const ct = response.headers.get('content-type') ?? ''
   if (!ct.includes('text/html')) return response
   const { pathname } = new URL(request.url)
@@ -237,9 +240,21 @@ export default {
     }
 
     const res = await handler.fetch(request, env, ctx)
-    const res2 = synthesizeCacheControl(res, request)
 
-    const skip = storeSkipReason(res2, request)
+    // 2026-07-15 fix (webaudit/Codex-sourced): skip-check MUST run against the
+    // ORIGINAL response, before synthesizeCacheControl rewrites cache-control.
+    // synthesizeCacheControl rewrites any HTML response lacking a positive
+    // s-maxage to a public, cacheable header -- but a genuinely private/
+    // no-store/no-cache response also has no s-maxage, so it used to qualify
+    // for that same rewrite. Checking storeSkipReason AFTER synthesis meant it
+    // was checking its own rewritten header and could never see the original
+    // private/no-store/no-cache value it exists to catch. This bug is
+    // separate from the explicit auth/RSC/app/admin bypass list above --
+    // it's specifically about any route that relies on its OWN Cache-Control
+    // header (not the bypass list) to stay private.
+    const skip = storeSkipReason(res, request)
+    const res2 = skip ? res : synthesizeCacheControl(res, request)
+
     let putDebug = null
     if (!skip) {
       // Cap HTML TTL so deploys propagate; keep route-chosen TTL for JSON etc.

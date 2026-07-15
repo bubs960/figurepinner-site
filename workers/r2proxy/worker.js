@@ -91,20 +91,23 @@ var worker_default = {
 
     const object = await env.ASSETS.get(key);
     if (!object) {
-      const isPriceSummary = key.startsWith("price-summaries/");
-      if (isPriceSummary) {
-        const empty = new Response("{}", {
-          status: 200,
-          headers: {
-            "Content-Type": "application/json",
-            "Cache-Control": notFoundCacheControlFor(key),
-            ...(origin ? { "Access-Control-Allow-Origin": ALLOWED_ORIGIN } : {}),
-            "X-FP-Cache": "MISS-EMPTY",
-          },
-        });
-        ctx.waitUntil(cache.put(request, empty.clone()));
-        return empty;
-      }
+      // 2026-07-15 fix (webaudit/Codex-sourced): a missing price-summaries/*
+      // object used to return a cacheable `200 {}` (X-FP-Cache: MISS-EMPTY),
+      // which is indistinguishable to every caller from "this figure has
+      // zero recent sold comps" -- a legitimate, common state. A real
+      // ingestion failure (wrong key, missing object, partial sync) looked
+      // identical to normal empty data, and the empty result got CACHED on
+      // top of that (public, s-maxage=300), extending the masking window.
+      // Safe-interim fix (the pipeline cannot currently distinguish
+      // "figure has no comps" from "object should exist but doesn't" at
+      // this proxy layer): fold price-summaries/* into the SAME 404 path
+      // every other missing key already uses below. Every current caller in
+      // the site already checks `if (!res.ok) return <fallback>` (see
+      // FigureDetailContent.tsx, dailySpotlight.ts, homeReceipt.ts,
+      // api/sparklines/route.ts) -- none of them special-cased the old
+      // `200 {}` shape, so this is a strict correctness fix, not a behavior
+      // change any caller depends on. Do NOT cache this as if it were valid
+      // data either way.
       return new Response(`Not found: ${key}`, {
         status: 404,
         headers: {
