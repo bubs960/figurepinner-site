@@ -5,6 +5,7 @@
 // deliberately subordinate to the character block (owner direction 6/12).
 
 import ClaimPin from '@/app/components/ClaimPin'
+import ConditionShineBox from './ConditionShineBox'
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
@@ -97,6 +98,14 @@ export default function HeroBand({
   const p = valuePricing ?? null
   const marketLabel = conditionLabel ? `Median sold - ${conditionLabel}` : 'Mixed condition estimate'
   const visibleConditionRows = conditionRows ?? []
+  // Range-bar tone must follow the ACTUAL headline population, not be
+  // hardcoded gold (webaudit 2026-07-15 scope note: "if the range bar's
+  // population is ever not the sealed bucket... both the label and the
+  // color/shine assignment must reflect the correct population"). A
+  // loose-only figure (no sealed data at all) has conditionLabel === 'loose'
+  // and its range bar IS the loose bucket's p10/p90 — that case must render
+  // red, not gold, or the color cue would lie about which population it is.
+  const rangeBarTone: 'gold' | 'red' = conditionLabel === 'loose' ? 'red' : 'gold'
   const hasRange = p !== null && p.low !== null && p.high !== null && p.high > (p.low ?? 0)
   const medianPos = (p && hasRange && p.median !== null)
     ? Math.min(92, Math.max(8, ((p.median - (p.low as number)) / ((p.high as number) - (p.low as number))) * 100))
@@ -412,75 +421,103 @@ export default function HeroBand({
                 ))}
               </div>
             ) : secondary && (
-              <div style={{
-                marginTop: '10px', display: 'flex', alignItems: 'baseline', gap: '10px',
-              }}>
-                <span style={{
-                  fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.2em',
-                  textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
-                }}>
-                  {secondary.label}
-                </span>
-                <span style={{
-                  fontFamily: 'var(--fp-font-display)', fontSize: '1.35rem', letterSpacing: '0.03em',
-                  color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
-                }}>
-                  ${fmt(secondary.median)}
-                </span>
-                <span style={{ fontSize: '0.68rem', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))' }}>
-                  {secondary.count} comp{secondary.count === 1 ? '' : 's'}
-                </span>
+              // HeroBand condition-color fix (webaudit 2026-07-15): the loose
+              // secondary row used to sit as plain text directly above the
+              // range bar below, with no visual boundary — Steve read $20 as
+              // if it were part of the sealed-only $65-$625 range bar right
+              // under it. Red shine box, same graphic polish as the gold
+              // range-bar box below (Steve's explicit "no lesser treatment"
+              // requirement), makes the population boundary read on a fast
+              // scroll-past, not just close reading.
+              <div style={{ marginTop: '14px' }}>
+                <ConditionShineBox tone="red" instanceKey="loose">
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', flexWrap: 'wrap' }}>
+                    <span style={{
+                      fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.2em',
+                      textTransform: 'uppercase', color: 'var(--fp-danger-hi, #F97075)',
+                    }}>
+                      {secondary.label}
+                    </span>
+                    <span style={{
+                      fontFamily: 'var(--fp-font-display)', fontSize: '1.35rem', letterSpacing: '0.03em',
+                      color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
+                    }}>
+                      ${fmt(secondary.median)}
+                    </span>
+                    <span style={{ fontSize: '0.68rem', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))' }}>
+                      {secondary.count} comp{secondary.count === 1 ? '' : 's'}
+                    </span>
+                  </div>
+                </ConditionShineBox>
               </div>
             )}
 
-            {/* range bar */}
+            {/* range bar — tone follows the ACTUAL headline population
+                (usually sealed/gold, but a loose-only figure renders red —
+                see rangeBarTone above). Verified 2026-07-15: low/high are
+                always the SAME headline bucket's p10/p90, never mixed with
+                the secondary condition's data. Qualifier text names the
+                population explicitly as the backup to the color cue. */}
             {hasRange && (
               <div style={{ marginTop: '16px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
-                    <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.low as number)}</b>
-                    <span style={{
-                      fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
-                      color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
-                    }}>low</span>
+                <ConditionShineBox tone={rangeBarTone} instanceKey="range">
+                  {conditionLabel && (
+                    <div style={{
+                      fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.14em', textTransform: 'uppercase',
+                      color: rangeBarTone === 'red' ? 'var(--fp-danger-hi, #F97075)' : 'var(--shelf-gold-hi, #f5c462)',
+                      marginBottom: '8px',
+                    }}>
+                      Range shown: {conditionLabel} only
+                    </div>
+                  )}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                      <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.low as number)}</b>
+                      <span style={{
+                        fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
+                        color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
+                      }}>low</span>
+                    </div>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                      <span style={{
+                        fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
+                        color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
+                      }}>high</span>
+                      <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.high as number)}</b>
+                    </div>
                   </div>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
-                    <span style={{
+                  <div style={{ position: 'relative', height: '30px', marginTop: '6px' }}>
+                    <div aria-hidden style={{
+                      position: 'absolute', left: 0, right: 0, top: '50%', height: '1px',
+                      background: 'linear-gradient(90deg, rgba(242,232,213,0.06), rgba(242,232,213,0.18), rgba(242,232,213,0.06))',
+                    }} />
+                    <div aria-hidden style={{ position: 'absolute', top: '50%', left: 0, width: '1px', height: '14px', transform: 'translateY(-50%)', background: 'rgba(242,232,213,0.25)' }} />
+                    <div aria-hidden style={{ position: 'absolute', top: '50%', right: 0, width: '1px', height: '14px', transform: 'translateY(-50%)', background: 'rgba(242,232,213,0.25)' }} />
+                    {(ticks ?? []).map((t, i) => (
+                      <span
+                        key={i}
+                        className="fp-plc-tick"
+                        style={{ left: `${Math.min(98, Math.max(2, t * 100))}%`, animationDelay: `${0.15 + i * 0.035}s` }}
+                        aria-hidden
+                      />
+                    ))}
+                    <span className="fp-plc-med" aria-hidden style={{
+                      position: 'absolute', left: `${medianPos}%`, top: '50%',
+                      width: '2px', height: '24px',
+                      background: rangeBarTone === 'red' ? 'var(--fp-danger-hi, #F97075)' : 'var(--shelf-gold-hi, #f5c462)',
+                      borderRadius: '1px',
+                      boxShadow: rangeBarTone === 'red' ? '0 0 12px rgba(249,112,117,0.7)' : '0 0 12px rgba(245,196,98,0.7)',
+                    }} />
+                    <span aria-hidden style={{
+                      position: 'absolute', left: `${medianPos}%`, top: '100%', transform: 'translateX(-50%)',
                       fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
-                      color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
-                    }}>high</span>
-                    <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.high as number)}</b>
+                      color: rangeBarTone === 'red' ? 'var(--fp-danger, #E5484D)' : 'var(--shelf-gold, #e0a83e)',
+                      whiteSpace: 'nowrap',
+                    }}>
+                      median
+                    </span>
                   </div>
-                </div>
-                <div style={{ position: 'relative', height: '30px', marginTop: '6px' }}>
-                  <div aria-hidden style={{
-                    position: 'absolute', left: 0, right: 0, top: '50%', height: '1px',
-                    background: 'linear-gradient(90deg, rgba(242,232,213,0.06), rgba(242,232,213,0.18), rgba(242,232,213,0.06))',
-                  }} />
-                  <div aria-hidden style={{ position: 'absolute', top: '50%', left: 0, width: '1px', height: '14px', transform: 'translateY(-50%)', background: 'rgba(242,232,213,0.25)' }} />
-                  <div aria-hidden style={{ position: 'absolute', top: '50%', right: 0, width: '1px', height: '14px', transform: 'translateY(-50%)', background: 'rgba(242,232,213,0.25)' }} />
-                  {(ticks ?? []).map((t, i) => (
-                    <span
-                      key={i}
-                      className="fp-plc-tick"
-                      style={{ left: `${Math.min(98, Math.max(2, t * 100))}%`, animationDelay: `${0.15 + i * 0.035}s` }}
-                      aria-hidden
-                    />
-                  ))}
-                  <span className="fp-plc-med" aria-hidden style={{
-                    position: 'absolute', left: `${medianPos}%`, top: '50%',
-                    width: '2px', height: '24px',
-                    background: 'var(--shelf-gold-hi, #f5c462)', borderRadius: '1px',
-                    boxShadow: '0 0 12px rgba(245,196,98,0.7)',
-                  }} />
-                  <span aria-hidden style={{
-                    position: 'absolute', left: `${medianPos}%`, top: '100%', transform: 'translateX(-50%)',
-                    fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
-                    color: 'var(--shelf-gold, #e0a83e)', whiteSpace: 'nowrap',
-                  }}>
-                    median
-                  </span>
-                </div>
+                </ConditionShineBox>
               </div>
             )}
 

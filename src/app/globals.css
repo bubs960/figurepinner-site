@@ -114,6 +114,11 @@
   --color-brand:       var(--blue);
   --color-interactive: var(--blue);
   --fp-danger:        #E5484D;          /* keep until --danger is in main system */
+  /* 2026-07-15 (HeroBand condition-color fix, webaudit token audit): lighter
+     "hi" tint for shine/highlight treatments, matching --shelf-gold's own
+     lightness/saturation lift to --shelf-gold-hi (ratio-computed, not a hue
+     rotation) so gold and red shine boxes read as the same visual system. */
+  --fp-danger-hi:     #F97075;
   --fp-ebay:          #E53238;          /* eBay brand red, intentionally distinct */
   --fp-font-display:  var(--font-bebas, "Bebas Neue"), system-ui, sans-serif;
   --fp-font-body:     var(--font-inter, "Inter"), system-ui, sans-serif;
