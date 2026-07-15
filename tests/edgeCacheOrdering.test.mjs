@@ -1,6 +1,11 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
-import { storeSkipReason, synthesizeCacheControl } from '../edge-cache-entry.mjs'
+// Import from edge-cache-policy.mjs, NOT edge-cache-entry.mjs -- the entry
+// file imports .open-next/worker.js, which pulls in `cloudflare:*` runtime
+// built-ins several layers down and is not importable from plain Node
+// (ERR_UNSUPPORTED_ESM_URL_SCHEME). edge-cache-policy.mjs holds the same
+// functions with zero Workers-runtime imports, so it can be tested directly.
+import { storeSkipReason, synthesizeCacheControl } from '../edge-cache-policy.mjs'
 
 // 2026-07-15 (webaudit/Codex-sourced fix): storeSkipReason must run against
 // the ORIGINAL response, before synthesizeCacheControl can rewrite a missing
