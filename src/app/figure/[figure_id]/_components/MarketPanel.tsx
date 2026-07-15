@@ -19,6 +19,7 @@ import { useState } from 'react'
 import { formatCurrency, formatDate } from '../_lib/figureFormatters'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import LiquidSparkline from './LiquidSparkline'
+import { derivePriceContract, INSUFFICIENT_COMPS_LABEL } from '../_lib/priceContract'
 
 interface Comp {
   title: string
@@ -61,13 +62,6 @@ interface MarketPanelProps {
   trendPct?: number | null
 }
 
-function median(arr: number[]): number {
-  if (!arr.length) return 0
-  const s = [...arr].sort((a, b) => a - b)
-  const mid = Math.floor(s.length / 2)
-  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
-}
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- ebaySearchUrl kept in the prop contract, unused here
 export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, buckets: snapshotBuckets, trendPct = null }: MarketPanelProps) {
   const [showComps, setShowComps] = useState(false)
@@ -89,24 +83,26 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
     if (next) trackFunnel('price_receipt_open', { figure_name: figureName, comp_count: comps.length })
   }
 
-  // Show the condition split ONLY when the snapshot says it is statistically
-  // valid — segmentation split / sealed-only / loose-only — the SAME gate the
-  // vault (vaultData.conditionMatchedMedian) and the placard (FigureDetailContent
-  // headlineBucket) use. So all three valuation surfaces agree on a figure. A
-  // 'pooled' figure falls through to the blended median below — exactly what the
-  // placard and vault show for it.
-  //
-  // (Was a count-based ≥3 gate that fired even under 'pooled', surfacing a
-  // sealed/loose split that the placard + vault blended away — the cross-surface
-  // contradiction standalone flagged. The local recent-sample split is dropped
-  // entirely: it is exactly the divergent local recompute P1 moved off of. 2026-06-14.)
+  // FPPS-01 (2026-07-15, Steve's binding decisions): this panel is THE
+  // surface webaudit flagged for the pooled "$180 · MEDIAN SOLD · 50 COMPS"
+  // pattern. The condition-split gate below is unchanged (still keyed off
+  // segmentation, so this stays in lockstep with the placard + vault), but
+  // each row's NUMBER now runs through the same 10+/3-9/<3 comp-count tier
+  // as every other price surface, via derivePriceContract -- a thin bucket
+  // (3-9 comps) gets a "Thin data" chip instead of a plain "sold" chip, and
+  // a suppressed bucket (<3 comps) renders NO number, just the insufficient-
+  // comps state, rather than falling through to the pooled blend.
   const seg = snapshotBuckets?.segmentation ?? 'pooled'
-  const sealedRow = snapshotBuckets?.sealed && (seg === 'split' || seg === 'sealed-only') && snapshotBuckets.sealed.median != null
-    ? { median: snapshotBuckets.sealed.median, count: snapshotBuckets.sealed.count }
-    : null
-  const looseRow = snapshotBuckets?.loose && (seg === 'split' || seg === 'loose-only') && snapshotBuckets.loose.median != null
-    ? { median: snapshotBuckets.loose.median, count: snapshotBuckets.loose.count }
-    : null
+  const contract = derivePriceContract({
+    soldCount: pricing.comp_count,
+    medianSold: pricing.median,
+    avgSold: null,
+    segmentation: seg,
+    sealed: (seg === 'split' || seg === 'sealed-only') ? snapshotBuckets?.sealed ?? null : null,
+    loose: (seg === 'split' || seg === 'loose-only') ? snapshotBuckets?.loose ?? null : null,
+  })
+  const sealedRow = contract.sealed
+  const looseRow = contract.loose
   const useSnapshot = Boolean(sealedRow || looseRow)
 
   return (
@@ -179,24 +175,34 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
 
       {/* Condition median ledger rows. Snapshot buckets (full corpus, same
           source as the placard) when the split is statistically valid;
-          otherwise the legacy local approximation from the recent comps. */}
+          otherwise the legacy local approximation from the recent comps.
+          FPPS-01: each row is now tier-aware -- 10+ comps renders plain,
+          3-9 comps renders with a "Thin data" chip, <3 comps renders NO
+          number (INSUFFICIENT_COMPS_LABEL instead), per bucket. */}
       <div>
         {sealedRow && (
-          <LedgerRow label="Sealed / Carded" median={sealedRow.median} count={sealedRow.count} />
+          sealedRow.median != null
+            ? <LedgerRow label="Sealed / Carded" median={sealedRow.median} count={sealedRow.count} thin={sealedRow.needsThinDataLabel} />
+            : <SuppressedRow label="Sealed / Carded" count={sealedRow.count} />
         )}
         {looseRow && (
-          <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} />
+          looseRow.median != null
+            ? <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} thin={looseRow.needsThinDataLabel} />
+            : <SuppressedRow label="Loose" count={looseRow.count} />
         )}
-        {!useSnapshot && (
-          // Pooled / no statistically valid split — the blended median, identical
-          // to the placard + vault. Full-corpus snapshot median when present;
-          // local-comp median only as a last resort if the snapshot carries none.
-          <LedgerRow
-            label="All"
-            median={pricing.median ?? median(comps.map(c => c.price))}
-            count={pricing.median != null ? pricing.comp_count : comps.length}
-            stat={pricing.median != null && pricing.medianIsAvg ? 'avg' : 'median'}
-          />
+        {!useSnapshot && contract.pooled && (
+          // No statistically valid condition split at all — the blended
+          // median, identical to the placard + vault. Still tier-gated: a
+          // pooled figure with <3 total comps suppresses here too.
+          contract.pooled.median != null
+            ? <LedgerRow
+                label="All"
+                median={contract.pooled.median}
+                count={pricing.comp_count}
+                stat={contract.pooled.isAvg ? 'avg' : 'median'}
+                thin={contract.pooled.needsThinDataLabel}
+              />
+            : <SuppressedRow label="All" count={pricing.comp_count} />
         )}
       </div>
 
@@ -223,7 +229,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
   )
 }
 
-function LedgerRow({ label, median: med, count, stat = 'median' }: { label: string; median: number; count: number; stat?: 'median' | 'avg' }) {
+function LedgerRow({ label, median: med, count, stat = 'median', thin = false }: { label: string; median: number; count: number; stat?: 'median' | 'avg'; thin?: boolean }) {
   return (
     <div
       className="fp-marketledger-row"
@@ -283,6 +289,63 @@ function LedgerRow({ label, median: med, count, stat = 'median' }: { label: stri
         whiteSpace: 'nowrap',
       }}>
         {stat}
+      </span>
+
+      {/* FPPS-01: 3-9 comp tier requires a "thin data" label wherever this
+          number renders (Steve's binding decision 2) -- same caution the
+          Hogan page's sealed bucket already carried, now applied everywhere. */}
+      {thin && (
+        <span style={{
+          fontFamily: 'var(--fp-font-body)',
+          fontSize: '9px', fontWeight: 600, letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+          border: '1px solid rgba(242,232,213,.22)',
+          borderRadius: '3px', padding: '2px 6px',
+          whiteSpace: 'nowrap',
+        }}>
+          Thin data
+        </span>
+      )}
+    </div>
+  )
+}
+
+/** Under-3-comp state (Steve's decision 2): NO number renders, ever, for a
+ *  bucket this thin -- this row exists so the condition is still named
+ *  (so the layout doesn't silently vanish a whole condition) without ever
+ *  computing or displaying a median from 1-2 sales. */
+function SuppressedRow({ label, count }: { label: string; count: number }) {
+  return (
+    <div
+      className="fp-marketledger-row"
+      style={{
+        display: 'flex', alignItems: 'center', gap: '0.75rem',
+        padding: '0.7rem 0 0.65rem',
+        borderBottom: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
+      }}
+    >
+      <span style={{
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+        whiteSpace: 'nowrap',
+      }}>
+        {label}
+      </span>
+      <span aria-hidden="true" style={{
+        flex: '1 1 auto', minWidth: '16px',
+        borderBottom: '1px dotted rgba(242,232,213,.18)',
+        transform: 'translateY(-3px)',
+      }} />
+      <span style={{
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '11px', fontWeight: 400, fontStyle: 'italic',
+        color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+        whiteSpace: 'nowrap',
+      }}>
+        {INSUFFICIENT_COMPS_LABEL} ({count})
       </span>
     </div>
   )

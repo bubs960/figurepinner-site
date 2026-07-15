@@ -28,6 +28,7 @@ import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
 import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
+import { derivePriceContract } from '../_lib/priceContract'
 import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
@@ -506,10 +507,49 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     return pm >= 1 ? `~${pm} per month` : null
   })()
 
+  // FPPS-01 (2026-07-15, Steve's binding decision 1 + 5): JSON-LD must never
+  // emit a single pooled "Median sold price" when sealed and loose both have
+  // real data -- that's exactly the pooled-vs-visible-page mismatch webaudit
+  // flagged (this figure's page shows $180/$20 split; the OLD JSON-LD here
+  // agreed by coincidence because it read the same headlineBucket valuePricing
+  // already used, but the field was still misleadingly named as if it were
+  // the only price). Both conditions present -> two labeled PropertyValues,
+  // no single "Median sold price". One condition (or pooled) -> keep the
+  // single labeled property, still tier-gated (suppressed <3-comp buckets
+  // emit no price property at all for that condition).
+  const jsonLdPriceContract = derivePriceContract(price ? {
+    soldCount: price.soldCount,
+    medianSold: price.medianSold,
+    avgSold: price.avgSold,
+    sealed: price.sealed,
+    loose: price.loose,
+    segmentation: price.segmentation,
+  } : null)
+  const jsonLdPriceProperties = (() => {
+    if (jsonLdPriceContract.hasBothConditions) {
+      return [
+        jsonLdPriceContract.sealed?.median != null
+          ? { '@type': 'PropertyValue', name: 'Sealed / carded median sold price', value: formatCurrency(jsonLdPriceContract.sealed.median) }
+          : null,
+        jsonLdPriceContract.loose?.median != null
+          ? { '@type': 'PropertyValue', name: 'Loose median sold price', value: formatCurrency(jsonLdPriceContract.loose.median) }
+          : null,
+      ]
+    }
+    const only = jsonLdPriceContract.sealed?.median != null ? jsonLdPriceContract.sealed
+      : jsonLdPriceContract.loose?.median != null ? jsonLdPriceContract.loose
+      : null
+    if (only) {
+      return [{ '@type': 'PropertyValue', name: `${only.label} median sold price`, value: formatCurrency(only.median!) }]
+    }
+    if (jsonLdPriceContract.pooled?.median != null) {
+      return [{ '@type': 'PropertyValue', name: jsonLdPriceContract.pooled.isAvg ? 'Average sold price' : 'Median sold price', value: formatCurrency(jsonLdPriceContract.pooled.median) }]
+    }
+    return []
+  })()
+
   const valueProperties = [
-    valuePricing?.median != null
-      ? { '@type': 'PropertyValue', name: valuePricing.medianIsAvg ? 'Average sold price' : 'Median sold price', value: formatCurrency(valuePricing.median) }
-      : null,
+    ...jsonLdPriceProperties,
     price?.soldCount != null
       ? { '@type': 'PropertyValue', name: 'Sold comp count', value: String(price.soldCount) }
       : null,
@@ -539,16 +579,26 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   ].filter(Boolean)
 
   // AggregateOffer — required by Google for Product rich results.
-  // Uses sold-comp median as the representative price. Only emitted when we
-  // have ≥3 comps so the data is meaningful.
+  // FPPS-01 (2026-07-15, Steve's decision 5): AggregateOffer.price is a
+  // SINGLE representative value by spec -- it cannot honestly represent two
+  // condition-specific medians. When both sealed and loose have real data,
+  // omit `price` entirely (lowPrice/highPrice still ship -- that's a genuine
+  // range across all comps, not a misleading single figure) rather than
+  // picking one condition to report as "the" price, which is exactly the
+  // price/page mismatch Google's own Product-schema guidance penalizes.
+  // Single-condition or pooled figures keep `price` as before, still gated
+  // on the same tier: <3 total comps still omits offers entirely.
+  const jsonLdOfferPrice = jsonLdPriceContract.hasBothConditions
+    ? null // both conditions honest, but AggregateOffer can't say "two prices"
+    : (jsonLdPriceContract.sealed?.median ?? jsonLdPriceContract.loose?.median ?? jsonLdPriceContract.pooled?.median ?? null)
   const jsonLdOffers =
-    valuePricing?.median != null && (price?.soldCount ?? 0) >= 3
+    !jsonLdPriceContract.hasNoData && (price?.soldCount ?? 0) >= 3 && (jsonLdOfferPrice != null || jsonLdPriceContract.hasBothConditions)
       ? {
           '@type': 'AggregateOffer',
           priceCurrency: 'USD',
-          price: valuePricing.median.toFixed(2),
-          ...(valuePricing.low != null ? { lowPrice: valuePricing.low.toFixed(2) } : {}),
-          ...(valuePricing.high != null ? { highPrice: valuePricing.high.toFixed(2) } : {}),
+          ...(jsonLdOfferPrice != null ? { price: jsonLdOfferPrice.toFixed(2) } : {}),
+          ...(valuePricing?.low != null ? { lowPrice: valuePricing.low.toFixed(2) } : {}),
+          ...(valuePricing?.high != null ? { highPrice: valuePricing.high.toFixed(2) } : {}),
           offerCount: price!.soldCount,
           itemCondition: 'https://schema.org/UsedCondition',
           availability: 'https://schema.org/InStock',
@@ -580,6 +630,28 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   }
 
   const hasPricing = marketPricing != null
+
+  // FPPS-01 (2026-07-15, folded in per webaudit scope note): MobileActionBar
+  // is a fixed-width sticky bar -- genuinely space-constrained like a meta
+  // tag, so it can't lay out two full condition rows without breaking its
+  // own design. Rather than keep showing ONE unlabeled headline number
+  // (the original bug), it shows ONE number but with an honest sub-label
+  // naming which condition it is ("Sealed" / "Loose" / "Median sold" for
+  // pooled), and suppresses per the same tier as every other surface. This
+  // does NOT fully satisfy "show both, always" on this one narrow surface --
+  // flagged to webaudit in the fix packet rather than silently redesigning
+  // the component's layout under this ticket.
+  const mobileActionBarPrice = (() => {
+    const c = jsonLdPriceContract
+    if (c.hasNoData) return { priceLabel: null, priceSubLabel: null }
+    const lead = c.sealed?.median != null ? { median: c.sealed.median, label: 'Sealed' }
+      : c.loose?.median != null ? { median: c.loose.median, label: 'Loose' }
+      : c.pooled?.median != null ? { median: c.pooled.median, label: c.pooled.isAvg ? 'Average sold' : 'Median sold' }
+      : null
+    return lead
+      ? { priceLabel: formatCurrency(lead.median), priceSubLabel: lead.label }
+      : { priceLabel: null, priceSubLabel: null }
+  })()
 
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
@@ -772,6 +844,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           scale={scaleClean}
           exclusiveTo={exclusiveToClean}
           soldCount={price?.soldCount ?? 0}
+          priceInput={price ? {
+            soldCount: price.soldCount,
+            medianSold: price.medianSold,
+            avgSold: price.avgSold,
+            sealed: price.sealed,
+            loose: price.loose,
+            segmentation: price.segmentation,
+          } : null}
           median={valuePricing?.median ?? null}
           medianIsAvg={valuePricing?.medianIsAvg ?? false}
           trendPct={valuePricing?.trend_90d_pct ?? null}
@@ -813,7 +893,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         figureId={figureId}
         ebaySearchUrl={ebayUrl}
         figureName={displayName}
-        priceLabel={valuePricing?.median != null ? formatCurrency(valuePricing.median) : null}
+        {...mobileActionBarPrice}
       />
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}

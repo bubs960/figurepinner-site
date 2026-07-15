@@ -4,6 +4,7 @@ import { getFigureById, getFigureByStableSuffix, deriveName, figureUrl, prettyFi
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 import { enrichedDescription } from './_lib/enrichedCopy'
+import { derivePriceContract } from './_lib/priceContract'
 
 // ISR — figure detail re-rendered at most once per hour per figure_id.
 // Public, immutable-per-figure data; user-specific bits (vault status etc.)
@@ -38,8 +39,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const fandom = prettifySlug(local.fandom)
 
   const { price } = await fetchFigurePageData(figure_id)
-  const median = price?.medianSold ?? price?.avgSold ?? null
-  const medianLabel = median != null ? `$${median.toFixed(0)} median` : null
+
+  // FPPS-01 (2026-07-15, Steve's binding decisions): meta tags must never
+  // assert a single pooled price when condition-split data exists. Compact,
+  // condition-aware label builder for the tight space meta tags allow --
+  // omits price entirely rather than picking one condition to lead with,
+  // per Steve's explicit "flag rather than quietly pick" rule.
+  const contract = derivePriceContract(price)
+
+  /** Short "$X sealed / $Y loose" style fragment, or a single-condition/
+   *  pooled fragment, or null if no honest price can be stated in this
+   *  space. Suppressed (<3 comp) buckets are simply omitted from the
+   *  fragment rather than shown as "insufficient comps" -- that caveat
+   *  copy only makes sense on the full page, not a truncated meta tag. */
+  function compactPriceFragment(): string | null {
+    if (contract.hasNoData) return null
+    const sealedNum = contract.sealed?.median ?? null
+    const looseNum = contract.loose?.median ?? null
+    if (sealedNum != null && looseNum != null) {
+      return `$${sealedNum.toFixed(0)} sealed / $${looseNum.toFixed(0)} loose median`
+    }
+    if (sealedNum != null) return `$${sealedNum.toFixed(0)} sealed median`
+    if (looseNum != null) return `$${looseNum.toFixed(0)} loose median`
+    if (contract.pooled?.median != null) {
+      return `$${contract.pooled.median.toFixed(0)} ${contract.pooled.isAvg ? 'average' : 'median'}`
+    }
+    // Every bucket that exists is suppressed (all <3 comps) -- no honest
+    // number fits in a meta tag; the crawlable page body still explains why.
+    return null
+  }
+  const priceFragment = compactPriceFragment()
   const compLabel = price?.soldCount
     ? `${price.soldCount} eBay sold comps.`
     : 'Recent eBay sold-comps context.'
@@ -51,8 +80,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Enriched prose leads when it passes the quality gates (S52 meta wiring —
   // differentiates ~18K near-identical descriptions); templated fallback else.
   const enriched = enrichedDescription(local)
-  const priceTail = medianLabel
-    ? `Sells for ~${medianLabel} — real eBay solds, free on FigurePinner.`
+  const priceTail = priceFragment
+    ? `Sells for ~${priceFragment} — real eBay solds, free on FigurePinner.`
     : `Real eBay sold prices, free on FigurePinner.`
 
   return {
@@ -62,8 +91,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${displayName} — ${line} Price & Value`,
     description: enriched
       ? `${enriched} ${priceTail}`
-      : medianLabel
-        ? `${displayName} ${line} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
+      : priceFragment
+        ? `${displayName} ${line} sells for ~${priceFragment} (eBay sold data). Check current prices free — FigurePinner tracks real sold data.`
         : `${displayName} ${line} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
     // Zero-sold-data pages stay noindexed (deliberate quality policy). The
@@ -80,8 +109,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // route segment supplies the real Grail Card, superseding the bare product
     // photo this used to point at.
     openGraph: {
-      title: `${displayName}${medianLabel ? ` — ${medianLabel}` : ''} | FigurePinner`,
-      description: `Real sold prices for ${displayName}. ${compLabel}`,
+      title: `${displayName}${priceFragment ? ` — ${priceFragment}` : ''} | FigurePinner`,
+      description: priceFragment
+        ? `Real sold prices for ${displayName}: ${priceFragment}. ${compLabel}`
+        : `Real sold prices for ${displayName}. ${compLabel}`,
     },
   }
 }

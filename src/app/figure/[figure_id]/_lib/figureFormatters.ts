@@ -273,3 +273,30 @@ export function dataQualityState(soldCount: number): DataQualityState {
   return 'none'
 }
 
+/**
+ * FPPS-01 (2026-07-15, Steve's binding product decision, price-contract fix).
+ * Distinct from dataQualityState above -- that drives the badge copy/dot
+ * color with its own 4-tier thresholds (10/4/1). This is the strict 3-tier
+ * rule for whether a PRICE NUMBER may render at all, and whether it needs a
+ * "thin data" caveat, on every price-bearing surface (bottom summary, prose,
+ * meta tags, JSON-LD, mobile action bar). Do not conflate the two: a figure
+ * can be dataQualityState 'limited' (4-9 comps) while priceCompTier says
+ * 'thin' (3-9) or 'suppress' (0-2) for a SPECIFIC condition bucket, since
+ * this tier is evaluated per-bucket (sealed vs loose), not on the pooled
+ * soldCount dataQualityState uses.
+ *
+ *   trustworthy: 10+ comps -- show as a normal number, no caveat.
+ *   thin:        3-9 comps -- show the number, but the surface must label
+ *                it "thin data" (or equivalent) wherever it renders.
+ *   suppress:    0-2 comps -- do NOT render a number for this bucket at all.
+ *                Surfaces show "insufficient recent comps" (or omit
+ *                entirely, on space-constrained surfaces like meta tags).
+ */
+export type PriceCompTier = 'trustworthy' | 'thin' | 'suppress'
+
+export function priceCompTier(compCount: number): PriceCompTier {
+  if (compCount >= 10) return 'trustworthy'
+  if (compCount >= 3)  return 'thin'
+  return 'suppress'
+}
+

@@ -23,9 +23,14 @@ interface Props {
   figureName: string
   /** Median sold price, already formatted (e.g. "$30"), or null when no comps. */
   priceLabel: string | null
+  /** FPPS-01 (2026-07-15): which condition/stat priceLabel represents --
+   *  "Sealed" | "Loose" | "Median sold" (pooled) | "Average sold" (pooled,
+   *  no median in the snapshot). Never blank when priceLabel is set -- this
+   *  bar shows one number, but it must always say honestly what it is. */
+  priceSubLabel?: string | null
 }
 
-export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, priceLabel }: Props) {
+export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, priceLabel, priceSubLabel }: Props) {
   // Feature flag — off by default until verified on a real phone.
   const enabled = process.env.NEXT_PUBLIC_MOBILE_ACTION_BAR === '1'
 
@@ -95,7 +100,7 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
               {priceLabel}
             </span>
             <span style={{ fontSize: '0.62rem', color: 'var(--fp-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-              Median sold
+              {priceSubLabel ?? 'Median sold'}
             </span>
           </>
         ) : (

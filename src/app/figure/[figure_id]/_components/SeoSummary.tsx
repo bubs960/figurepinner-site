@@ -9,6 +9,7 @@
  */
 
 import { formatCurrency } from '../_lib/figureFormatters'
+import { derivePriceContract, type PriceContractInput } from '../_lib/priceContract'
 
 /** Line-level retail price defaults (Option B: hardcoded until KB carries retail_price). */
 export const LINE_RETAIL_PRICE: Record<string, number> = {
@@ -101,6 +102,17 @@ interface SeoSummaryProps {
   scale:        string | null
   exclusiveTo:  string | null
   soldCount:    number
+  /** Full price input (soldCount/medianSold/avgSold/sealed/loose/segmentation)
+   *  -- FPPS-01 (2026-07-15): this paragraph asserts sentences from
+   *  derivePriceContract now, never a single pooled median directly, so it
+   *  can never again claim "the median is $X" when sealed and loose data
+   *  disagree. `median`/`medianIsAvg` retained ONLY for the retail-markup
+   *  comparison below, which intentionally still uses one number (the
+   *  headline) since "180% above retail" needs a single anchor -- but the
+   *  PROSE sentence itself is condition-aware. */
+  priceInput:   PriceContractInput | null
+  /** Headline median for the retail-markup comparison chip only (not the
+   *  prose sentence). Pass the same headline the rest of the page uses. */
   median:       number | null
   /** True when `median` is actually the average (snapshot had no median_sold). */
   medianIsAvg?: boolean
@@ -117,6 +129,7 @@ export default function SeoSummary({
   scale,
   exclusiveTo,
   soldCount,
+  priceInput,
   median,
   medianIsAvg,
   trendPct,
@@ -129,10 +142,31 @@ export default function SeoSummary({
   const scaleStr   = scale ? `${scale} ` : ''
   const seriesStr  = seriesNum ? `, Series ${seriesNum}` : ''
 
-  // Price sentence
+  // FPPS-01 (2026-07-15, Steve's binding decision 1): "Based on N recent
+  // eBay sold listings, it currently sells for a median of $X" used to
+  // assert ONE pooled figure as fact even when sealed and loose data
+  // disagreed wildly (Hogan: $180 sealed vs $20 loose, pooled ~$23-ish
+  // blend depending on sample). Rewritten to name both conditions and
+  // their own comp counts when both exist, and to apply the same 10+/3-9/
+  // <3 comp-count tiers as every other price surface -- a bucket under 3
+  // comps is never asserted as a sentence fact.
+  const contract = derivePriceContract(priceInput)
   let priceSentence: string
-  if (soldCount >= 3 && median != null) {
-    priceSentence = `Based on ${soldCount} recent eBay sold listings, it currently sells for ${medianIsAvg ? 'an average' : 'a median'} of ${formatCurrency(median)}.`
+  if (contract.hasNoData) {
+    priceSentence = 'No recent eBay sales data is available — check eBay for current pricing.'
+  } else if (contract.hasBothConditions) {
+    const sealedFrag = contract.sealed?.median != null
+      ? `${formatCurrency(contract.sealed.median)} sealed / carded (${contract.sealed.count} sold${contract.sealed.needsThinDataLabel ? ', thin data' : ''})`
+      : contract.sealed ? `not enough recent sealed comps to price (${contract.sealed.count} sold)` : null
+    const looseFrag = contract.loose?.median != null
+      ? `${formatCurrency(contract.loose.median)} loose (${contract.loose.count} sold${contract.loose.needsThinDataLabel ? ', thin data' : ''})`
+      : contract.loose ? `not enough recent loose comps to price (${contract.loose.count} sold)` : null
+    priceSentence = `Recent eBay sold prices: ${[sealedFrag, looseFrag].filter(Boolean).join(', ')}.`
+  } else if (contract.sealed?.median != null || contract.loose?.median != null) {
+    const only = contract.sealed?.median != null ? contract.sealed : contract.loose!
+    priceSentence = `Based on ${only.count} recent eBay sold ${only.label.toLowerCase()} listings, it currently sells for a median of ${formatCurrency(only.median!)}${only.needsThinDataLabel ? ' (thin data — treat as a range, not a fixed price)' : ''}.`
+  } else if (contract.pooled?.median != null) {
+    priceSentence = `Based on ${soldCount} recent eBay sold listings, it currently sells for ${contract.pooled.isAvg ? 'an average' : 'a median'} of ${formatCurrency(contract.pooled.median)}${contract.pooled.needsThinDataLabel ? ' (thin data — treat as a range, not a fixed price)' : ''}.`
   } else if (soldCount > 0) {
     priceSentence = `Pricing data is limited (${soldCount} comp${soldCount === 1 ? '' : 's'}) — check eBay for the most current market value.`
   } else {
