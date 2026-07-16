@@ -373,51 +373,64 @@ export default function HeroBand({
               )}
             </div>
 
-            {/* per-condition signals — visible even when the headline remains mixed */}
+            {/* per-condition signals — visible even when the headline remains mixed.
+                CONFIRMED LIVE 2026-07-15 (post-deploy DOM check on the Hogan page,
+                the ticket's own example): this branch is the one that ACTUALLY
+                fires for split-segmentation figures with a non-headline bucket
+                present, NOT the `secondary` branch below — placardConditionRows
+                in FigureDetailContent.tsx filters out only the headline
+                condition, so the non-headline bucket survives into
+                conditionRows regardless of segmentation, meaning this branch's
+                length is >0 whenever `secondary` would ALSO have been non-null.
+                The original fix wired ConditionShineBox into the `secondary`
+                branch only, which was structurally unreachable for the ticket's
+                own example — moved the same tone-per-row treatment here instead. */}
             {visibleConditionRows.length > 0 ? (
               <div style={{
                 marginTop: '13px',
                 paddingTop: '10px',
                 borderTop: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
                 display: 'grid',
-                gap: '8px',
+                gap: '10px',
               }}>
                 {visibleConditionRows.map(row => (
-                  <div
-                    key={row.key}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'baseline',
-                      gap: '10px',
-                      flexWrap: 'wrap',
-                    }}
-                  >
-                    <span style={{
-                      fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.18em',
-                      textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
-                      minWidth: '132px',
-                    }}>
-                      {row.label}
-                    </span>
-                    <span style={{
-                      fontFamily: 'var(--fp-font-display)', fontSize: '1.35rem', letterSpacing: '0.03em',
-                      color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
-                    }}>
-                      ${fmt(row.median)}
-                    </span>
-                    <span style={{ fontSize: '0.68rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
-                      {row.count} comp{row.count === 1 ? '' : 's'} · {row.depthLabel}
-                    </span>
-                    {row.rangeLabel && (
+                  <ConditionShineBox key={row.key} tone={row.key === 'loose' ? 'red' : 'gold'} instanceKey={row.key}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'baseline',
+                        gap: '10px',
+                        flexWrap: 'wrap',
+                      }}
+                    >
                       <span style={{
-                        fontSize: '0.6rem',
-                        color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
-                        letterSpacing: '0.04em',
+                        fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.18em',
+                        textTransform: 'uppercase',
+                        color: row.key === 'loose' ? 'var(--fp-danger-hi, #F97075)' : 'var(--shelf-gold-hi, #f5c462)',
+                        minWidth: '132px',
                       }}>
-                        range {row.rangeLabel}
+                        {row.label}
                       </span>
-                    )}
-                  </div>
+                      <span style={{
+                        fontFamily: 'var(--fp-font-display)', fontSize: '1.35rem', letterSpacing: '0.03em',
+                        color: 'var(--shelf-cream, #f2e8d5)', lineHeight: 1, fontVariantNumeric: 'tabular-nums',
+                      }}>
+                        ${fmt(row.median)}
+                      </span>
+                      <span style={{ fontSize: '0.68rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
+                        {row.count} comp{row.count === 1 ? '' : 's'} · {row.depthLabel}
+                      </span>
+                      {row.rangeLabel && (
+                        <span style={{
+                          fontSize: '0.6rem',
+                          color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+                          letterSpacing: '0.04em',
+                        }}>
+                          range {row.rangeLabel}
+                        </span>
+                      )}
+                    </div>
+                  </ConditionShineBox>
                 ))}
               </div>
             ) : secondary && (
