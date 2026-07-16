@@ -545,6 +545,26 @@ export default function HeroBand({
               </div>
             )}
 
+            {/* dispersion caveat — 2026-07-15 (webaudit found dead-wired, Steve set
+                threshold + treatment): a different claim than rangeExtremeNote above.
+                That note means "a sale was excluded from this range." This means "no
+                sale was excluded, but the sample is thin enough that the honest range
+                reads wide relative to its own median — directional, not precise."
+                Deliberately lighter than rangeExtremeNote (smaller, more muted) since
+                it's flagging read-confidence, not a data-integrity exclusion. Only
+                shown when rangeExtremeNote ISN'T already firing, so the two never
+                stack and repeat the same "take this range with caution" idea twice. */}
+            {!p.rangeExtremeNote && p.dispersion_warning && (
+              <div style={{
+                marginTop: '10px',
+                fontSize: '0.58rem', fontWeight: 400, letterSpacing: '0.04em',
+                color: 'var(--shelf-cream-mut, rgba(242,232,213,0.30))',
+                fontStyle: 'italic',
+              }}>
+                Wide spread on thin data — read as directional, not precise.
+              </div>
+            )}
+
             {/* last sale */}
             {lastSale && (
               <div style={{

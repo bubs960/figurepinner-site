@@ -355,12 +355,25 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     const rangeExtremeNote = fenceBites
       ? `Range excludes ${fence!.excludedAbove.count} higher sale${fence!.excludedAbove.count === 1 ? '' : 's'} up to ${formatCurrency(fence!.excludedAbove.max)} — likely a graded lot, bundle, or wrong variant.`
       : null
-    // Dispersion warning: when the raw spread is >4x the median, comp set likely
-    // contains contaminated listings (wrong series, graded lots, wrong figure).
-    // Cap displayed confidence at 4 and surface a caveat label.
-    const rawSpread = (price.maxSold ?? 0) - (price.minSold ?? 0)
+    // Dispersion warning (webaudit + Steve, 2026-07-15: dead-wired signal found and
+    // recalibrated). Two fixes together:
+    //  1. POPULATION BUG: this used to divide the POOLED min/max (price.minSold/
+    //     maxSold -- both conditions combined, e.g. Hogan's full $5.99-$625 across
+    //     50 sealed+loose comps) by the HEADLINE-BUCKET median (sealed-only $180).
+    //     That mixes populations -- exactly the pattern FPPS-01 eliminated from
+    //     every other price surface on this page. Now uses `low`/`high`, the SAME
+    //     headline-bucket-only range the range bar itself displays (both already
+    //     computed above from headlineBucket.p10/p90 or the headline-filtered
+    //     comps) -- the ratio is now always about the SAME range a reader is
+    //     looking at, never a different, wider population.
+    //  2. THRESHOLD: was >4, calibrated too loose -- Hogan's own headline-bucket
+    //     ratio is 3.11 and visibly read as untrustworthy to a real user (Steve,
+    //     2026-07-15), so >4 silently passed the exact case this exists to catch.
+    //     Lowered to >3 per Steve's decision on WEB-TO-WEBAUDIT-THIN-BUCKET-RANGE-
+    //     DISPLAY-2026-07-15.md.
+    const rawSpread = (high ?? 0) - (low ?? 0)
     const dispersionRatio = median && median > 0 ? rawSpread / median : 0
-    const dispersionWarning = dispersionRatio > 4
+    const dispersionWarning = dispersionRatio > 3
     const compCount = headlineBucket?.count ?? price.soldCount
     const baseConfidence = compCountToConfidence(compCount)
     const confidence: 1 | 2 | 3 | 4 | 5 = (dispersionWarning && baseConfidence > 4)
