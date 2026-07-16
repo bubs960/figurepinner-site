@@ -17,6 +17,15 @@ interface CollectionPanelProps {
    *  the label must say so (S55 FTC audit). */
   medianIsAvg?: boolean
   compCount: number
+  /** WO-1 (webaudit Codex-triage, 2026-07-16): names which condition `median`/
+   *  `compCount` belong to ("sealed" | "loose"), null for the pooled/blended
+   *  case — caller (FigureDetailContent) derives this via derivePriceContract
+   *  so `median` and `compCount` are always the SAME bucket's numbers, never
+   *  a headline median paired with a pooled count. */
+  conditionLabel?: 'sealed' | 'loose' | null
+  /** FPPS-01 decision 2: a 3-9 comp bucket must carry a "thin data" caveat
+   *  wherever its number renders. */
+  needsThinDataLabel?: boolean
   scale: string | null
   series: number | null
   packSize: number
@@ -35,7 +44,7 @@ interface CollectionPanelProps {
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, medianIsAvg, compCount, scale, series, packSize, exclusiveTo, imgSrc, whisper,
+  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, scale, series, packSize, exclusiveTo, imgSrc, whisper,
 }: CollectionPanelProps) {
   return (
     <div className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -93,7 +102,10 @@ export default function CollectionPanel({
                 color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
                 marginTop: '0.375rem',
               }}>
-                {medianIsAvg ? 'avg' : 'median'} sold · {compCount} comps
+                {conditionLabel
+                  ? `${conditionLabel} ${medianIsAvg ? 'avg' : 'median'}`
+                  : `${medianIsAvg ? 'avg' : 'median'} sold`} · {compCount} comp{compCount === 1 ? '' : 's'}
+                {needsThinDataLabel ? ' · thin data' : ''}
               </div>
             </>
           ) : (

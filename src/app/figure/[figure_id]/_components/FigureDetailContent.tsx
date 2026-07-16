@@ -727,6 +727,35 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       : { priceLabel: null, priceSubLabel: null }
   })()
 
+  // WO-1 (webaudit Codex-triage, 2026-07-16): CollectionPanel was a missed
+  // FPPS-01 surface -- the 5th sighting of the sibling-surface trap. It was
+  // passed valuePricing.median (headline bucket, e.g. Hogan's sealed $180)
+  // alongside price.soldCount (POOLED total, e.g. 50) with no condition
+  // label -- exactly the "one number, wrong count, unlabeled" pattern FPPS-01
+  // fixed everywhere else. Same lead-condition selection as
+  // mobileActionBarPrice above (reuses the SAME jsonLdPriceContract, no
+  // second derivePriceContract call), but carries THAT bucket's own count +
+  // an explicit condition label + the tier's thin-data flag, since this
+  // panel has room to be fully explicit (no mobile-width constraint forcing
+  // mobileActionBarPrice's compromise above).
+  const collectionPanelPrice: {
+    median: number | null; medianIsAvg: boolean; compCount: number
+    conditionLabel: 'sealed' | 'loose' | null; needsThinDataLabel: boolean
+  } = (() => {
+    const c = jsonLdPriceContract
+    if (c.hasNoData) return { median: null, medianIsAvg: false, compCount: 0, conditionLabel: null, needsThinDataLabel: false }
+    if (c.sealed?.median != null) {
+      return { median: c.sealed.median, medianIsAvg: false, compCount: c.sealed.count, conditionLabel: 'sealed' as const, needsThinDataLabel: c.sealed.needsThinDataLabel }
+    }
+    if (c.loose?.median != null) {
+      return { median: c.loose.median, medianIsAvg: false, compCount: c.loose.count, conditionLabel: 'loose' as const, needsThinDataLabel: c.loose.needsThinDataLabel }
+    }
+    if (c.pooled?.median != null) {
+      return { median: c.pooled.median, medianIsAvg: c.pooled.isAvg, compCount: price?.soldCount ?? 0, conditionLabel: null, needsThinDataLabel: c.pooled.needsThinDataLabel }
+    }
+    return { median: null, medianIsAvg: false, compCount: 0, conditionLabel: null, needsThinDataLabel: false }
+  })()
+
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       <JsonLd data={jsonLd} />
@@ -889,9 +918,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               line={line}
               genre={genre}
               ebaySearchUrl={ebayUrl}
-              median={valuePricing?.median ?? null}
-              medianIsAvg={valuePricing?.medianIsAvg ?? false}
-              compCount={price?.soldCount ?? 0}
+              median={collectionPanelPrice.median}
+              medianIsAvg={collectionPanelPrice.medianIsAvg}
+              compCount={collectionPanelPrice.compCount}
+              conditionLabel={collectionPanelPrice.conditionLabel}
+              needsThinDataLabel={collectionPanelPrice.needsThinDataLabel}
               scale={scaleClean}
               series={seriesNum}
               packSize={Number(local.pack_size) || 1}
