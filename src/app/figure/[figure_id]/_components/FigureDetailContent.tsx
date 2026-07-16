@@ -422,6 +422,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       comp_count:         compCount,
       dispersion_warning: dispersionWarning,
       rangeExtremeNote,
+      // Range-bar suppression (Steve, 2026-07-16): p25-p75 narrowed the thin-
+      // bucket range from 311% of median to 126% (this exact figure's real
+      // 8 sealed comps) but that still read as untrustworthy. Rather than
+      // keep re-tuning the percentile width, Steve chose to stop showing a
+      // dollar range at all for thin buckets -- median + confidence + comp
+      // count only (unchanged, already exist above the bar), full spread
+      // still available via MarketPanel's "see the comps" list. `low`/`high`
+      // above are still computed and still flow into JSON-LD (a separate,
+      // webaudit-owned SEO surface, not part of this ask) -- only the VISUAL
+      // bar in HeroBand is gated on this flag, nothing else.
+      isThinBucket,
     }
   })()
 
@@ -454,8 +465,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // reintroducing the exact contradiction this whole arc exists to kill.
   // Fixed the dishonesty at the LABEL instead — see "Recent sale in shown
   // range" in HeroBand.tsx, not "Most recent sale".
+  //
+  // 2026-07-16: the label fix above is now moot for THIN buckets specifically
+  // -- Steve's range-bar suppression means there's no visible band left for
+  // "in shown range" to refer to. Rather than invent a new unfiltered-recency
+  // display under time pressure (a real option, but a different, unapproved
+  // scope), this row is suppressed entirely on thin buckets, matching the
+  // literal "just median + confidence + comp count" description Steve
+  // approved -- same call as the range bar itself, not a separate decision.
   const lastSale = (() => {
-    if (!price || !price.soldHistory.length) return null
+    if (!price || !price.soldHistory.length || valuePricing?.isThinBucket) return null
     const lo = valuePricing?.low ?? -Infinity
     const hi = valuePricing?.high ?? Infinity
     const eligible = price.soldHistory.filter(s =>

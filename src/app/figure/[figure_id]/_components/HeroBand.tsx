@@ -19,6 +19,15 @@ interface Pricing {
   dispersion_warning?: boolean
   /** Honest "extremes labeled" line when the range fence clipped real sales. */
   rangeExtremeNote?: string | null
+  /** Range-bar suppression (Steve, 2026-07-16): true for thin (3-9 comp)
+   *  buckets. Even p25-p75 read as untrustworthy at that width (126% of
+   *  median on the ticket's own real 8-comp figure) -- rather than keep
+   *  narrowing the percentile band, the whole dollar range bar is hidden for
+   *  thin buckets; median + confidence + comp count (elsewhere in this
+   *  component, unaffected) are the whole story. `low`/`high` above are
+   *  still real values (still used for JSON-LD, a separate surface) -- this
+   *  flag ONLY gates the visual bar below. */
+  isThinBucket?: boolean
 }
 
 interface ConditionRow {
@@ -106,7 +115,9 @@ export default function HeroBand({
   // and its range bar IS the loose bucket's p10/p90 — that case must render
   // red, not gold, or the color cue would lie about which population it is.
   const rangeBarTone: 'gold' | 'red' = conditionLabel === 'loose' ? 'red' : 'gold'
-  const hasRange = p !== null && p.low !== null && p.high !== null && p.high > (p.low ?? 0)
+  // Steve, 2026-07-16: thin (3-9 comp) buckets suppress the range bar
+  // entirely, not just narrow it further -- see isThinBucket doc on Pricing.
+  const hasRange = p !== null && !p.isThinBucket && p.low !== null && p.high !== null && p.high > (p.low ?? 0)
   const medianPos = (p && hasRange && p.median !== null)
     ? Math.min(92, Math.max(8, ((p.median - (p.low as number)) / ((p.high as number) - (p.low as number))) * 100))
     : 50

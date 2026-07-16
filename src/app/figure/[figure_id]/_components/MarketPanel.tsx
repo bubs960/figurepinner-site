@@ -182,12 +182,12 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
       <div>
         {sealedRow && (
           sealedRow.median != null
-            ? <LedgerRow label="Sealed / Carded" median={sealedRow.median} count={sealedRow.count} thin={sealedRow.needsThinDataLabel} />
+            ? <LedgerRow label="Sealed / Carded" median={sealedRow.median} count={sealedRow.count} thin={sealedRow.needsThinDataLabel} tone="gold" />
             : <SuppressedRow label="Sealed / Carded" count={sealedRow.count} />
         )}
         {looseRow && (
           looseRow.median != null
-            ? <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} thin={looseRow.needsThinDataLabel} />
+            ? <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} thin={looseRow.needsThinDataLabel} tone="red" />
             : <SuppressedRow label="Loose" count={looseRow.count} />
         )}
         {!useSnapshot && contract.pooled && (
@@ -229,7 +229,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
   )
 }
 
-function LedgerRow({ label, median: med, count, stat = 'median', thin = false }: { label: string; median: number; count: number; stat?: 'median' | 'avg'; thin?: boolean }) {
+function LedgerRow({ label, median: med, count, stat = 'median', thin = false, tone }: { label: string; median: number; count: number; stat?: 'median' | 'avg'; thin?: boolean; tone?: 'gold' | 'red' }) {
   return (
     <div
       className="fp-marketledger-row"
@@ -239,12 +239,18 @@ function LedgerRow({ label, median: med, count, stat = 'median', thin = false }:
         borderBottom: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
       }}
     >
-      {/* condition label — quiet uppercase kicker */}
+      {/* condition label — quiet uppercase kicker. Colored to match HeroBand's
+          per-condition label treatment (row.key === 'loose' ? red-hi : gold-hi)
+          when this row IS a real condition (sealed/loose); the pooled "All"
+          row passes no tone and stays neutral cream, since there's no
+          condition being distinguished there. */}
       <span style={{
         fontFamily: 'var(--fp-font-body)',
         fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em',
         textTransform: 'uppercase',
-        color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+        color: tone === 'red' ? 'var(--fp-danger-hi, #F97075)'
+          : tone === 'gold' ? 'var(--shelf-gold-hi, #f5c462)'
+          : 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
         whiteSpace: 'nowrap',
       }}>
         {label}
@@ -257,13 +263,23 @@ function LedgerRow({ label, median: med, count, stat = 'median', thin = false }:
         transform: 'translateY(-3px)',
       }} />
 
-      {/* gold SOLD chip — comp depth behind this row's number */}
+      {/* SOLD chip — comp depth behind this row's number. Steve, 2026-07-16:
+          this chip was hardcoded gold regardless of condition, while the
+          top-of-page HeroBand placard colors loose=red / sealed=gold (same
+          --fp-danger-hi / --shelf-gold tokens as ConditionShineBox) — a reader
+          scrolling from the placard to this panel saw the same figure's loose
+          row switch from red to gold with no reason. Matched here. Text stays
+          the same near-black (#1a1206) on both — computed contrast against
+          --fp-danger-hi is 6.7:1 (vs --shelf-gold's 8.7:1), both comfortably
+          clear AA's 4.5:1 for this size; the base (non-hi) red token was
+          checked too and only clears it narrowly (4.7:1), which is why -hi
+          was picked over base despite gold using its base variant. */}
       <span style={{
         fontFamily: 'var(--fp-font-body)',
         fontSize: '9px', fontWeight: 600, letterSpacing: '0.16em',
         textTransform: 'uppercase',
         color: '#1a1206',
-        background: 'var(--shelf-gold, #e0a83e)',
+        background: tone === 'red' ? 'var(--fp-danger-hi, #F97075)' : 'var(--shelf-gold, #e0a83e)',
         borderRadius: '3px', padding: '3px 7px',
         whiteSpace: 'nowrap',
         fontVariantNumeric: 'tabular-nums',
