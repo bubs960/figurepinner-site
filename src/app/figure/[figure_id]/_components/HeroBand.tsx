@@ -494,19 +494,25 @@ export default function HeroBand({
                       Range shown: {conditionLabel} only
                     </div>
                   )}
+                  {/* webaudit SHOULD-1, 2026-07-16: "low"/"high" overstate precision --
+                      these are p25/p75 on thin buckets (25% of real sales sit below
+                      "low", 25% above "high") and even on trustworthy buckets the fence
+                      already means "high" isn't literally the highest sale. "Typical"
+                      is accurate either way, applied unconditionally rather than only
+                      on the thin tier. */}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                     <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
                       <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.low as number)}</b>
                       <span style={{
                         fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
                         color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
-                      }}>low</span>
+                      }}>typical low</span>
                     </div>
                     <div style={{ fontSize: '0.72rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
                       <span style={{
                         fontSize: '0.56rem', fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase',
                         color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))', margin: '0 5px',
-                      }}>high</span>
+                      }}>typical high</span>
                       <b style={{ fontWeight: 500, color: 'var(--shelf-cream, #f2e8d5)' }}>${fmt(p.high as number)}</b>
                     </div>
                   </div>
@@ -584,7 +590,14 @@ export default function HeroBand({
                 display: 'flex', alignItems: 'center', gap: '12px',
               }}>
                 <span style={{ fontSize: '0.78rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))' }}>
-                  Most recent sale
+                  {/* webaudit FIX-1, 2026-07-16: eligibility is gated to the DISPLAYED
+                      [low, high] band (see lastSale in FigureDetailContent.tsx), which
+                      excluded ~20% of a thin bucket's sales under the old p10-p90 band
+                      but excludes ~50% by construction under the new p25-p75 quartile
+                      band -- "Most recent sale" became a false recency claim on thin
+                      buckets (the row often shows an older in-band sale while a newer
+                      out-of-band one exists). Relabeled to say what's actually true. */}
+                  Recent sale in shown range
                 </span>
                 <span aria-hidden style={{
                   flex: '1 1 auto', borderBottom: '1px dotted rgba(242,232,213,0.18)',

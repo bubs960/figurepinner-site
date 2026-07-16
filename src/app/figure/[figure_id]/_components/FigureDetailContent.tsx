@@ -356,10 +356,13 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     // dense middle of the sample instead of its two tails; trustworthy
     // buckets (10+) are unaffected, still p10-p90 as before. Reuses the SAME
     // sortedBucket array already computed for the fence -- no second data
-    // source. Side effect, noted not hidden: since p75 is ~ the fence's own
-    // q3, the Tukey fence below effectively stops biting on thin buckets
-    // (fence.high, the highest real comp under q3+3*IQR, is almost always
-    // >= q3 itself) -- rangeExtremeNote's exclusion disclosure becomes a
+    // source. Side effect, noted not hidden, CONFIRMED BY CONSTRUCTION on
+    // webaudit review (2026-07-16, not just "almost always"): baseHigh here
+    // IS fencedHigh()'s own q3 (`_pctile(v, 75)` over the identical positive-
+    // filtered array), so the Tukey fence below can only ever narrow further
+    // when it also excludes q3 itself, which fencedHigh() never does (a fence
+    // below its own q3 is not constructible) -- it structurally stops biting
+    // on thin buckets. rangeExtremeNote's exclusion disclosure becomes a
     // trustworthy-tier-only signal going forward, its job on thin buckets
     // now done by the narrower range itself rather than a clip + caption.
     const isThinBucket = priceCompTier(compCount) === 'thin'
@@ -391,6 +394,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     //     2026-07-15), so >4 silently passed the exact case this exists to catch.
     //     Lowered to >3 per Steve's decision on WEB-TO-WEBAUDIT-THIN-BUCKET-RANGE-
     //     DISPLAY-2026-07-15.md.
+    //
+    // RECORDED LOUDLY (webaudit, 2026-07-16, range-width fix review) so a future
+    // audit doesn't re-diagnose this as dead-wired a second time: on THIN buckets,
+    // rawSpread is now high-low = p75-p25 = the bucket's own IQR by definition,
+    // and an IQR exceeding 3x its own median is near-impossible for real sold-comp
+    // data. This warning is therefore DORMANT BY DESIGN on thin buckets from here
+    // on -- same practical outcome as the 7/15 dead-wire bug (never renders on
+    // thin data) but for the opposite reason: not disconnected, just structurally
+    // unreachable now that the range itself is narrow enough not to need it. Only
+    // the trustworthy (10+) tier, still on p10/p90, can realistically trigger this
+    // going forward.
     const rawSpread = (high ?? 0) - (low ?? 0)
     const dispersionRatio = median && median > 0 ? rawSpread / median : 0
     const dispersionWarning = dispersionRatio > 3
@@ -429,8 +443,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   })()
   // Most recent individual sale — picked by max sold_date (order of recent[]
   // is not trusted). Constrained to the headline bucket and to the DISPLAYED
-  // range [low, high], so "most recent sale" can't show a fence-excluded
-  // outlier above the range ceiling (e.g. a graded-lot $180 over a $97 high).
+  // range [low, high], so this can't show a fence-excluded outlier above the
+  // range ceiling (e.g. a graded-lot $180 over a $97 high). webaudit FIX-1
+  // (2026-07-16): the [low, high] gate excluded ~20% of a thin bucket's sales
+  // under the old p10-p90 band; under the new p25-p75 quartile band (range-
+  // width fix) it excludes ~50% by construction, so the row often isn't
+  // actually the figure's most recent sale anymore -- kept this gate (not
+  // widened to the fence ceiling, webaudit's option (b)) because losing it
+  // would let a legit out-of-band sale render under a much narrower bar,
+  // reintroducing the exact contradiction this whole arc exists to kill.
+  // Fixed the dishonesty at the LABEL instead — see "Recent sale in shown
+  // range" in HeroBand.tsx, not "Most recent sale".
   const lastSale = (() => {
     if (!price || !price.soldHistory.length) return null
     const lo = valuePricing?.low ?? -Infinity
