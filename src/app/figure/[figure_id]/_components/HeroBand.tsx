@@ -423,7 +423,16 @@ export default function HeroBand({
                       {row.rangeLabel && (
                         <span style={{
                           fontSize: '0.6rem',
-                          color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+                          // 2026-07-15 (Steve, contrast report on loose row): was
+                          // --shelf-cream-mut (0.38 opacity) — legible on the neutral
+                          // dark background other tertiary labels (low/high captions)
+                          // sit on, but this span renders INSIDE the red-tinted
+                          // ConditionShineBox, where the same opacity reads much
+                          // fainter. Bumped to --shelf-cream-dim (0.6 opacity, already
+                          // used a few lines up for "N comps · depthLabel" in this same
+                          // row) so range text has the same real contrast as its
+                          // sibling label, not a muted afterthought.
+                          color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))',
                           letterSpacing: '0.04em',
                         }}>
                           range {row.rangeLabel}
