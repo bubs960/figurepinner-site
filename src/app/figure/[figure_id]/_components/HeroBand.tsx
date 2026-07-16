@@ -477,8 +477,10 @@ export default function HeroBand({
             {/* range bar — tone follows the ACTUAL headline population
                 (usually sealed/gold, but a loose-only figure renders red —
                 see rangeBarTone above). Verified 2026-07-15: low/high are
-                always the SAME headline bucket's p10/p90, never mixed with
-                the secondary condition's data. Qualifier text names the
+                always the SAME headline bucket's data, never mixed with the
+                secondary condition's — p10/p90 on trustworthy (10+ comp)
+                buckets, narrowed to p25/p75 on thin (3-9 comp) buckets since
+                2026-07-16 (range-width fix). Qualifier text names the
                 population explicitly as the backup to the color cue. */}
             {hasRange && (
               <div style={{ marginTop: '16px' }}>

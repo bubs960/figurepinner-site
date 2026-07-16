@@ -20,7 +20,7 @@ import EmptyState from './EmptyState'
 import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
 import MobileActionBar from './MobileActionBar'
-import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState } from '../_lib/figureFormatters'
+import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { enrichedDescription } from '../_lib/enrichedCopy'
@@ -345,10 +345,30 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       : price.soldHistory
     ).map(s => s.price)
     const sortedBucket = [...bucketPrices].filter(p => p > 0).sort((a, b) => a - b)
-    const low = headlineBucket?.p10
-      ?? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 10) : (price.minSold ?? null))
-    const baseHigh = headlineBucket?.p90
-      ?? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 90) : (price.maxSold ?? null))
+    const compCount = headlineBucket?.count ?? price.soldCount
+    // Range-width fix (Steve, 2026-07-15 thin-bucket-range-display thread):
+    // on a THIN bucket (3-9 comps -- priceCompTier's own threshold, the same
+    // one already gating the "thin data" label everywhere else on this page),
+    // p10-p90 over so few points is dominated by the two most extreme sales
+    // (Hogan sealed n=8: p10=$65/p90=$625, a 9.6x spread on a $180 median) --
+    // mathematically honest per the fence below, but reads as noise to a
+    // reader. Narrowing to p25-p75 on thin buckets keeps the range inside the
+    // dense middle of the sample instead of its two tails; trustworthy
+    // buckets (10+) are unaffected, still p10-p90 as before. Reuses the SAME
+    // sortedBucket array already computed for the fence -- no second data
+    // source. Side effect, noted not hidden: since p75 is ~ the fence's own
+    // q3, the Tukey fence below effectively stops biting on thin buckets
+    // (fence.high, the highest real comp under q3+3*IQR, is almost always
+    // >= q3 itself) -- rangeExtremeNote's exclusion disclosure becomes a
+    // trustworthy-tier-only signal going forward, its job on thin buckets
+    // now done by the narrower range itself rather than a clip + caption.
+    const isThinBucket = priceCompTier(compCount) === 'thin'
+    const low = isThinBucket
+      ? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 25) : (headlineBucket?.p10 ?? price.minSold ?? null))
+      : (headlineBucket?.p10 ?? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 10) : (price.minSold ?? null)))
+    const baseHigh = isThinBucket
+      ? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 75) : (headlineBucket?.p90 ?? price.maxSold ?? null))
+      : (headlineBucket?.p90 ?? (sortedBucket.length >= 3 ? _pctile(sortedBucket, 90) : (price.maxSold ?? null)))
     const fence = fencedHigh(bucketPrices)
     const fenceBites = fence != null && baseHigh != null && fence.high < baseHigh
     const high = fenceBites ? fence!.high : baseHigh
@@ -374,7 +394,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     const rawSpread = (high ?? 0) - (low ?? 0)
     const dispersionRatio = median && median > 0 ? rawSpread / median : 0
     const dispersionWarning = dispersionRatio > 3
-    const compCount = headlineBucket?.count ?? price.soldCount
     const baseConfidence = compCountToConfidence(compCount)
     const confidence: 1 | 2 | 3 | 4 | 5 = (dispersionWarning && baseConfidence > 4)
       ? 4
