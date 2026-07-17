@@ -277,17 +277,49 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const ebayWave = isNumericWave(local.release_wave) ? local.release_wave : null
   const ebayUrl = buildEbaySearchUrl(characterH1, prettifySlug(genre), brand, line, ebayWave, EBAY_CAMPAIGN_ID)
 
-  // ── Condition split (matcher's live aggregation; Steve directive 6/12) ──────
-  // The headline market is the statistically valid bucket per segmentation;
-  // 'pooled' keeps the legacy blended view. Gate on segmentation, never on
-  // bucket presence (buckets ship below-threshold under 'pooled').
+  // ── Condition split (Steve, 2026-07-17 -- condition-blend census: 3,839
+  // affected fids, 20.3% of priced pages showed a blended sealed+loose number
+  // even though real per-condition data existed underneath). OLD gate trusted
+  // matcher's segmentation label -- 'pooled' always fell back to the blended
+  // view, even when real sealed+loose buckets existed (the aggregation cron
+  // just hadn't classified them 'split'). CollectionPanel/MobileActionBar
+  // already avoid this by keying off REAL bucket presence via
+  // jsonLdPriceContract instead of the segmentation string. Steve's decision:
+  // strict -- never blend, everywhere, to match. jsonLdPriceContract is
+  // hoisted here from its old spot near the JSON-LD block below (same single
+  // derivePriceContract call, now also driving the headline -- not a second
+  // computation).
+  //
+  // NOTE: `segmentation` (the raw matcher label) stays declared -- BidCheck
+  // and MarketPanel's own buckets prop still legitimately consume the raw
+  // label for their own separate logic. Only headlineBucket/headlineCondition
+  // below switch from the raw label to bucket-presence-based selection.
   const segmentation = price?.segmentation ?? 'pooled'
+  const jsonLdPriceContract = derivePriceContract(price ? {
+    soldCount: price.soldCount,
+    medianSold: price.medianSold,
+    avgSold: price.avgSold,
+    sealed: price.sealed,
+    loose: price.loose,
+    segmentation: price.segmentation,
+  } : null)
+  // PRESENT (bucket object exists, count>=1) vs USABLE (also tier-cleared --
+  // .median survives the <3-comp suppress rule) are different questions. A
+  // present-but-suppressed bucket can't lead as a headline number, but its
+  // mere presence still must block the legacy blended fallback below -- a
+  // present-but-thin bucket is more honest than a blended figure even when
+  // it's too thin to show a number of its own (same rule CollectionPanel/
+  // MobileActionBar already apply via jsonLdPriceContract.pooled's own gate).
+  const sealedPresent = jsonLdPriceContract.sealed != null
+  const loosePresent = jsonLdPriceContract.loose != null
+  const sealedUsable = jsonLdPriceContract.sealed?.median != null
+  const looseUsable = jsonLdPriceContract.loose?.median != null
   const headlineBucket =
-    segmentation === 'split' || segmentation === 'sealed-only' ? (price?.sealed ?? null)
-    : segmentation === 'loose-only' ? (price?.loose ?? null)
+    sealedUsable ? (price?.sealed ?? null)
+    : looseUsable ? (price?.loose ?? null)
     : null
   const headlineCondition: 'sealed' | 'loose' | null =
-    headlineBucket == null ? null : (segmentation === 'loose-only' ? 'loose' : 'sealed')
+    headlineBucket == null ? null : (sealedUsable ? 'sealed' : 'loose')
   const placardConditionLabel =
     headlineCondition === 'sealed' ? 'sealed / carded'
     : headlineCondition === 'loose' ? 'loose'
@@ -329,7 +361,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const valuePricing = (() => {
     if (!price || price.soldCount === 0) return null
-    const median = headlineBucket?.median ?? price.medianSold ?? price.avgSold ?? null
+    // Legacy pooled fallback (medianSold/avgSold) ONLY when NEITHER bucket is
+    // present at all -- matches jsonLdPriceContract.pooled's own gate exactly
+    // (derivePriceContract: "pooled ... ONLY used when NEITHER sealed nor
+    // loose has a bucket at all"). A present-but-suppressed bucket (e.g. a
+    // 2-comp sealed + 1-comp loose figure, both under the tier floor) blocks
+    // the blended fallback too -- shows NO headline number rather than a
+    // blended one, same as CollectionPanel/MobileActionBar already do for
+    // this exact both-suppressed edge case (webaudit's Elite Legends 21
+    // Hogan ticket).
+    const median = headlineBucket?.median
+      ?? (sealedPresent || loosePresent ? null : (price.medianSold ?? price.avgSold ?? null))
     // Label truthfulness (S55 FTC audit): the last fallback is the AVERAGE —
     // anything that names this value must not call it a median then.
     const medianIsAvg = headlineBucket?.median == null && price.medianSold == null && price.avgSold != null
@@ -591,14 +633,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // no single "Median sold price". One condition (or pooled) -> keep the
   // single labeled property, still tier-gated (suppressed <3-comp buckets
   // emit no price property at all for that condition).
-  const jsonLdPriceContract = derivePriceContract(price ? {
-    soldCount: price.soldCount,
-    medianSold: price.medianSold,
-    avgSold: price.avgSold,
-    sealed: price.sealed,
-    loose: price.loose,
-    segmentation: price.segmentation,
-  } : null)
+  // (jsonLdPriceContract itself is now computed once, up near headlineBucket --
+  // 2026-07-17 condition-blend fix hoisted it so the headline could reuse it too.)
   const jsonLdPriceProperties = (() => {
     if (jsonLdPriceContract.hasBothConditions) {
       return [
