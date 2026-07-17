@@ -142,6 +142,26 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* P1 mobile fix (webaudit, 2026-07-17): Adsterra's invoke.js appends a bare
+     468px-wide iframe (width/height set as HTML attributes, no class/id, no
+     inline style -- confirmed live via DOM probe) directly to <body>, no
+     wrapper to target. It's the widest thing on the page on a 375px phone,
+     stretching the whole document 93px wide and forcing every figure page
+     (~23K pages, the R1 SEO landing surface) to side-scroll. A React-side
+     container can't catch this -- next/script's lazyOnload strategy appends
+     the <script> tag to document.body directly, decoupled from whatever JSX
+     wrapper it was nested in, and Adsterra's own script writes the iframe at
+     body level from there. overflow-x:hidden on html ONLY (not body -- tested
+     live, setting it on both makes body's own overflow-y compute to `auto`
+     too per the CSS spec's paired-axis rule, creating a second nested scroll
+     container and visibly breaking page scroll; html-only avoids that, since
+     html becoming the scrolling box via overflow-y:auto is already its normal
+     role). This is the universal safety net webaudit asked for: it clips ANY
+     oversized body-level element (this one, or a future one) without needing
+     a selector for something that has no class or id to hook. Does not touch
+     the ad itself -- same size, same zone, still renders and fires
+     impressions; only the page-level scroll canvas is clamped. */
+  overflow-x: hidden;
 }
 
 body {
