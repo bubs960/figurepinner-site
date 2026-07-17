@@ -701,6 +701,18 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const jsonLdOfferPrice = jsonLdPriceContract.hasBothConditions
     ? null // both conditions honest, but AggregateOffer can't say "two prices"
     : (jsonLdPriceContract.sealed?.median ?? jsonLdPriceContract.loose?.median ?? jsonLdPriceContract.pooled?.median ?? null)
+  // GAP 1 fix (webaudit structured-data gate verdict, 2026-07-17): itemCondition
+  // was hardcoded to UsedCondition on every figure, including sealed-headline
+  // ones -- confirmed live on 2 real pages, a genuine schema/page mismatch, not
+  // cosmetic. Keys on `headlineCondition` (NOT jsonLdPriceContract.hasBothConditions
+  // -- webaudit's amendment: those are different notions of "both conditions",
+  // and only headlineCondition is the one that actually scopes low/high below).
+  // Pooled/unknown -> omit entirely (Google: itemCondition is Recommended, not
+  // Required -- omission costs enrichment only, never eligibility).
+  const jsonLdItemCondition =
+    headlineCondition === 'sealed' ? 'https://schema.org/NewCondition'
+    : headlineCondition === 'loose' ? 'https://schema.org/UsedCondition'
+    : null
   const jsonLdOffers =
     !jsonLdPriceContract.hasNoData && (price?.soldCount ?? 0) >= 3 && (jsonLdOfferPrice != null || jsonLdPriceContract.hasBothConditions)
       ? {
@@ -709,8 +721,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           ...(jsonLdOfferPrice != null ? { price: jsonLdOfferPrice.toFixed(2) } : {}),
           ...(valuePricing?.low != null ? { lowPrice: valuePricing.low.toFixed(2) } : {}),
           ...(valuePricing?.high != null ? { highPrice: valuePricing.high.toFixed(2) } : {}),
-          offerCount: price!.soldCount,
-          itemCondition: 'https://schema.org/UsedCondition',
+          // GAP 2 fix (webaudit, 2026-07-17): offerCount used to be the POOLED
+          // total (price.soldCount) while lowPrice/highPrice describe only the
+          // headline bucket whenever headlineCondition != null -- confirmed live
+          // on 2 pages (offerCount:50 beside a sealed-only 97.49-324.75 range).
+          // valuePricing.comp_count already IS the headline-bucket count in that
+          // branch (and a harmless no-op, same value as before, in the pooled
+          // branch) -- same ternary population as low/high in every branch, by
+          // construction. Not a new variable.
+          offerCount: valuePricing?.comp_count ?? price!.soldCount,
+          ...(jsonLdItemCondition != null ? { itemCondition: jsonLdItemCondition } : {}),
           availability: 'https://schema.org/InStock',
           seller: { '@type': 'Organization', name: 'FigurePinner', url: 'https://figurepinner.com' },
         }
