@@ -18,6 +18,22 @@ function gitSha(): string {
 const nextConfig: NextConfig = {
   poweredByHeader: false,
 
+  // WO-2 correction (2026-07-17): adding a real eslint.config.mjs (to make
+  // `npm run lint` a real command instead of the interactive setup prompt)
+  // had an undiscovered side effect -- Next.js's OWN build-time lint step
+  // silently no-op'd with no config present pre-WO-2, and now runs for real,
+  // hard-failing `next build` (and therefore `next-on-pages`/`@opennextjs/
+  // cloudflare build`, i.e. the actual deploy pipeline) on the 222
+  // pre-existing lint errors. That directly contradicts Steve's explicit
+  // WO-2 ruling ("lint stays a standalone command, zero deploy-pipeline
+  // impact, guard wiring deferred post-7/31") -- caught only because a full
+  // `npm run build:cf` was run for an unrelated fix. Restores the
+  // pre-WO-2 build behavior; `npm run lint` itself is unaffected and still
+  // a real, working command.
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   env: {
     FP_BUILD_SHA: gitSha(),
     FP_BUILD_TIME: new Date().toISOString(),
