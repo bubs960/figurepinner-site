@@ -917,6 +917,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 state={dataQualityState(price?.soldCount ?? 0)}
                 compCount={price?.soldCount ?? 0}
                 compact={hasPricing}
+                mixedConditions={sealedPresent && loosePresent}
               />
               {latestCompDate && (
                 <div style={{

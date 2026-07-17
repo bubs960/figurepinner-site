@@ -17,6 +17,14 @@ interface Props {
   /** When true, render a compact pill (e.g. for hero rows). When false,
    *  render the wider explainer card. Defaults to compact. */
   compact?: boolean
+  /** WO-3 (webaudit Codex-triage, 2026-07-16; wording Steve's pick 2026-07-17):
+   *  `compCount` here is always the POOLED total. When real sealed AND loose
+   *  data both exist, per-condition chips elsewhere on the page (MarketPanel/
+   *  HeroBand) show a much lower per-condition count ("THIN DATA · 8 SOLD"),
+   *  which reads as contradicting this badge's "50 comps" a few inches away --
+   *  same figure, two scopes. Naming the scope directly removes the apparent
+   *  contradiction without changing the number itself. */
+  mixedConditions?: boolean
 }
 
 const COPY: Record<DataQualityState, {
@@ -91,9 +99,9 @@ const hoverCss = `
   }
 `
 
-export default function DataQualityBadge({ state, compCount, compact = true }: Props) {
+export default function DataQualityBadge({ state, compCount, compact = true, mixedConditions = false }: Props) {
   const c = COPY[state]
-  const compLabel = compCount === 1 ? '1 comp' : `${compCount} comps`
+  const compLabel = (compCount === 1 ? '1 comp' : `${compCount} comps`) + (mixedConditions ? ' across conditions' : '')
 
   if (compact) {
     return (
