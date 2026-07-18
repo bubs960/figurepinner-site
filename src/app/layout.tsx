@@ -6,6 +6,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import Footer from './components/Footer'
 import FunnelTracker from './_components/FunnelTracker'
+import CfBeacon from './_components/CfBeacon'
 // Claiming Ritual — Session 1 de-risk gate spike (bare photo-flight only, no
 // nameplate/particles/sound). Client-only: it reads window/document geometry
 // (getBoundingClientRect, matchMedia, startViewTransition) that doesn't exist
@@ -158,13 +159,12 @@ export default function RootLayout({
           src="https://pl29755501.effectivecpmnetwork.com/57/09/40/57094087da8eb25d6b0930dc2e36c3a1.js"
         /> */}
         {/* Infolinks — REMOVED. Declined due to 404 error on their review. */}
-        {/* Cloudflare Web Analytics beacon - bot-filtered real human visit count */}
-        <Script
-          id="cf-web-analytics"
-          strategy="afterInteractive"
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon={'{"token": "63401800264c480c94a7335a223f9db8"}'}
-        />
+        {/* Cloudflare Web Analytics beacon - bot-filtered real human visit count.
+            QA-exclusion (2026-07-17): wrapped in a client component so a flagged
+            team-QA browser (localStorage fp_qa, see qaFlag.ts) sends zero RUM
+            pageviews -- team verification browsing was contaminating the real
+            R1 visitor count. */}
+        <CfBeacon />
       </body>
     </html>
   )

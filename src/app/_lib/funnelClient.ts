@@ -1,6 +1,7 @@
 'use client'
 
 import type { FunnelEvent } from '@/lib/funnelEvents'
+import { isQaSession } from './qaFlag'
 export type { FunnelEvent }
 
 type FunnelDetail = Record<string, string | number | boolean | null | undefined>
@@ -42,6 +43,10 @@ function trafficSource(): string {
 
 export function trackFunnel(event: FunnelEvent, detail: FunnelDetail = {}) {
   if (typeof window === 'undefined') return
+  // QA-exclusion (2026-07-17): a flagged team-QA browser sends zero funnel
+  // events -- see qaFlag.ts. This is the only client sender of /api/funnel
+  // (repo-verified, ClaimRitual/sparkline/shelf all route through here).
+  if (isQaSession()) return
 
   const payload = {
     event,
