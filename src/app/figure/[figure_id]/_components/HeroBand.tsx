@@ -6,6 +6,7 @@
 
 import ClaimPin from '@/app/components/ClaimPin'
 import ConditionShineBox from './ConditionShineBox'
+import NoUpscalePhoto from './NoUpscalePhoto'
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
@@ -203,15 +204,16 @@ export default function HeroBand({
             boxShadow: '0 18px 34px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4)',
           }}>
             {imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                // Stable hook for ClaimRitual.tsx (Session 1 de-risk spike):
-                // FigureActions.tsx reads this node's getBoundingClientRect()
-                // at "Add to Collection" time to know where the photo-flight
-                // should start from. The image URL itself is threaded down as
-                // an explicit prop instead (see FigureActions `imgSrc`) — this
-                // id exists only for live on-screen geometry, which can't come
-                // from a prop.
+              // Stable hook for ClaimRitual.tsx (Session 1 de-risk spike):
+              // FigureActions.tsx reads this node's getBoundingClientRect()
+              // at "Add to Collection" time to know where the photo-flight
+              // should start from. The image URL itself is threaded down as
+              // an explicit prop instead (see FigureActions `imgSrc`) — this
+              // id exists only for live on-screen geometry, which can't come
+              // from a prop. NoUpscalePhoto renders the SAME <img> node (no
+              // wrapping div), so this id and its measured geometry are
+              // unaffected by the no-upscale behavior (Photo P2, 2026-07-17).
+              <NoUpscalePhoto
                 id="fp-hero-photo"
                 src={imageUrl}
                 alt={`${characterName} ${lineName} action figure`}
