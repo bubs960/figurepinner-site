@@ -2,17 +2,28 @@ import { NextResponse } from 'next/server'
 
 export const dynamic = 'force-dynamic'
 
-const SQL = `SELECT
+// Cloudflare Analytics Engine's free-tier retention is 90 days; cap the
+// window there rather than at some arbitrary smaller number.
+const MAX_HOURS = 90 * 24
+const DEFAULT_HOURS = 24
+
+function buildSql(hours: number): string {
+  // `hours` is validated as a finite integer in [1, MAX_HOURS] by the
+  // caller before this ever runs -- interpolated directly (Analytics
+  // Engine's SQL API has no parameterized-query support), safe only
+  // because it can never be anything but that validated integer.
+  return `SELECT
   index1 AS event,
   blob2 AS source,
   blob3 AS route,
   blob8 AS target,
   SUM(_sample_interval) AS count
 FROM fp_funnel
-WHERE timestamp > NOW() - INTERVAL '24' HOUR
+WHERE timestamp > NOW() - INTERVAL '${hours}' HOUR
 GROUP BY index1, blob2, blob3, blob8
 LIMIT 200
 FORMAT JSON`
+}
 
 export async function GET(request: Request) {
   // Fails CLOSED: an unset key must never be treated as "no gate."
@@ -24,6 +35,16 @@ export async function GET(request: Request) {
   if (authHeader !== expectedKey) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
   }
+
+  // Optional ?hours=N -- was hardcoded to 24h, too thin a sample for any
+  // source/fandom behavioral comparison (2026-07-17 finding). Invalid or
+  // out-of-range values fall back to the prior default rather than erroring,
+  // so this stays backward-compatible for existing callers.
+  const requestedHours = Number(new URL(request.url).searchParams.get('hours'))
+  const hours = Number.isInteger(requestedHours) && requestedHours >= 1 && requestedHours <= MAX_HOURS
+    ? requestedHours
+    : DEFAULT_HOURS
+  const SQL = buildSql(hours)
 
   const accountId = process.env.CF_ACCOUNT_ID
   const apiToken = process.env.CF_API_TOKEN
@@ -72,7 +93,7 @@ export async function GET(request: Request) {
   const rows = Array.isArray(parsed?.data) ? parsed.data : []
   return NextResponse.json(
     {
-      window: '24h',
+      window: `${hours}h`,
       rows,
       total: rows.reduce((sum: number, row: Record<string, unknown>) => sum + (Number(row.count) || 0), 0),
       ts: new Date().toISOString(),
