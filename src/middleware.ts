@@ -1,5 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
-import { NextResponse } from 'next/server'
+import { NextResponse, type NextRequest, type NextFetchEvent } from 'next/server'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 // The site is public. The former coming-soon gate (COMING_SOON_MODE / bypass
 // token / coming-soon rewrite) has been removed entirely so it can never gate
@@ -49,7 +50,56 @@ const isPublicCacheableApi = createRouteMatcher([
   '/api/waitlist/count',
 ])
 
-export default clerkMiddleware(async (auth, req) => {
+// ──────────────────────────────────────────────────────────────────────────────
+// FIGURE-PAGE-HTML RATE LIMIT (Data Defense Layer 2, 2026-07-18)
+// ──────────────────────────────────────────────────────────────────────────────
+// Threat: HobbyPlatforms-class competitors bulk-ripping the KB + real eBay
+// sold-comp data via the ~22,790 figure detail pages (see
+// STANDALONE-DATA-DEFENSE-WORK-ORDER-2026-07-18.md). Before this, ONLY the
+// JSON API endpoints (/api/v1/search, /api/v1/figure/*, /api/sparklines) had
+// any per-IP throttle — the actual rendered HTML pages had none.
+//
+// 100 req/min/IP: generous enough that no real human or Googlebot could ever
+// hit it (a real visitor loads a handful of pages/minute), but slow enough
+// that ripping the full ~22,790-figure catalog from one IP takes 3.8+ hours
+// instead of minutes — "a polite-crawl cap ... hurts no human, no Googlebot,"
+// per the work order's own framing. No public page can be made unscrapeable;
+// this makes it slow and loud, not impossible. `checkRateLimit`'s verified-bot
+// exemption (`.cf.verifiedBotCategory`) is UNCONDITIONAL — Googlebot, Bingbot,
+// etc. are never throttled regardless of volume.
+//
+// Deliberately bypasses `clerkMiddleware` entirely for these paths — see the
+// S19 comment on `config.matcher` below: routing this exact traffic class
+// (anonymous, heavily bot-crawled, public) through Clerk's session-resolution
+// cost +107ms/67% 4xx last time it was tried, which is why v1/figure/ and
+// friends are EXCLUDED from the Clerk matcher already. `isFigurePageRoute` is
+// checked, and `handleFigurePageRateLimit` returns, BEFORE `clerkHandler` is
+// ever invoked — Clerk's own machinery never runs for a figure-page request.
+const FIGURE_PAGE_RATE_LIMIT_PER_MINUTE = 100
+
+function isFigurePageRoute(pathname: string): boolean {
+  const segments = pathname.split('/').filter(Boolean)
+  if (segments[0] === 'figure' && segments.length === 2) return true
+  // [genre]/[line]/[slug] is the figure detail page (exactly 3 segments).
+  // [genre]/character/[slug] is ALSO 3 segments but is the character-hub
+  // page (aggregates every release of a character) — not a figure detail
+  // page, explicitly excluded so it isn't throttled or double-counted here.
+  if (segments.length === 3 && segments[1] !== 'character') return true
+  return false
+}
+
+async function handleFigurePageRateLimit(req: NextRequest): Promise<NextResponse> {
+  const rl = await checkRateLimit(req, 'figure-page', FIGURE_PAGE_RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    return new NextResponse('Too many requests', {
+      status: 429,
+      headers: { 'Retry-After': String(rl.retryAfter), 'Cache-Control': 'no-store' },
+    })
+  }
+  return NextResponse.next()
+}
+
+const clerkHandler = clerkMiddleware(async (auth, req) => {
   const url = req.nextUrl
 
   // ─── Standard Clerk protection for /app/* and /admin/* ─────────────────────
@@ -70,6 +120,40 @@ export default clerkMiddleware(async (auth, req) => {
     return setNoCacheOnApi()
   }
 })
+
+// `/:genre/:line/:slug` (added to config.matcher below) structurally ALSO
+// matches the character-hub page `/[genre]/character/[slug]` — same 3-segment
+// shape, `isFigurePageRoute` correctly excludes it, but that means it falls
+// through to HERE. It must NOT then go to `clerkHandler`: this route was
+// NEVER matched before this change (character hubs have no auth/API
+// relevance), and routing it through Clerk's session-resolution wrapper
+// regardless of what runs inside is exactly the S19 cost (found live during
+// this change's own verification: a genuinely different bug from the one
+// S19 originally fixed, same root cause — a newly-widened matcher pulling an
+// unrelated public page into the Clerk pipeline). Only forward to Clerk for
+// paths that actually need it; everything else the widened matcher now also
+// catches passes straight through, matching its pre-change behavior exactly.
+function needsClerkPipeline(pathname: string): boolean {
+  return (
+    pathname.startsWith('/app') ||
+    pathname.startsWith('/admin') ||
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/trpc') ||
+    pathname.startsWith('/sign-in') ||
+    pathname.startsWith('/sign-up')
+  )
+}
+
+export default async function middleware(req: NextRequest, event: NextFetchEvent) {
+  const pathname = req.nextUrl.pathname
+  if (isFigurePageRoute(pathname)) {
+    return handleFigurePageRateLimit(req)
+  }
+  if (needsClerkPipeline(pathname)) {
+    return clerkHandler(req, event)
+  }
+  return NextResponse.next()
+}
 
 export const config = {
   // S17 (2026-06-10): public read-only GET APIs are EXCLUDED from the matcher
@@ -99,6 +183,13 @@ export const config = {
     '/sign-in(.*)',
     '/sign-up(.*)',
     '/api/((?!v1/search$|v1/price-check$|v1/deals$|news$|sparklines$|upc$|healthz$|waitlist/count$|funnel$|v1/figure/|alerts/unsubscribe|waitlist/subscribe).*)',
+    // Data Defense Layer 2 (2026-07-18): figure detail pages, matched so
+    // `isFigurePageRoute` + `handleFigurePageRateLimit` can run — but see the
+    // function above, this branch returns BEFORE `clerkHandler`/Clerk's own
+    // middleware logic is ever invoked, so this does NOT reintroduce the S19
+    // regression (this traffic still never touches Clerk).
+    '/figure/:figure_id',
+    '/:genre/:line/:slug',
   ],
 }
 // /sign-in and /sign-up added (S71, 2026-07-08): both layouts use

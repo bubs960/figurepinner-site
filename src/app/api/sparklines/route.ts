@@ -6,10 +6,18 @@ const R2_PROXY = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 export const revalidate = 300
 
 // No auth on this route (public batch price lookup) — same per-IP guard as
-// the sibling /api/v1/search endpoint. Higher than price-check's 30 since
-// this is a per-pageview call, not a one-off lookup (matters more once the
-// sparkline mounts on every figure page — P1 M5).
-const RATE_LIMIT_PER_MINUTE = 60
+// the sibling /api/v1/search endpoint.
+//
+// Data Defense Layer 2 (2026-07-18): tightened 60->30/min. This is the
+// highest bulk-extraction-throughput single endpoint in the app — up to 40
+// ids/call (capped above), so 60/min gave a theoretical ceiling of 2,400
+// fids/min (the whole 22,790-fid catalog in <10 min at the rate ceiling).
+// The 40-id batch cap is untouched (traced every real call site --
+// SearchInterface.tsx/HeroSearch.tsx/QuickLookAnchor.tsx -- the search-
+// results page legitimately requests up to 40 at once; a real user never
+// calls this 30+ times in one minute, so 30/min costs real usage nothing
+// while roughly halving the worst-case scrape throughput).
+const RATE_LIMIT_PER_MINUTE = 30
 
 export async function GET(req: NextRequest) {
   const rl = await checkRateLimit(req, 'sparklines', RATE_LIMIT_PER_MINUTE)

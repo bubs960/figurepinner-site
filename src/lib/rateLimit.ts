@@ -55,6 +55,10 @@ function isVerifiedBot(req: Request): boolean {
 /**
  * @param req    incoming request — needs the cf-connecting-ip header and
  *               (ideally) the Workers `.cf` object for the bot exemption.
+ *               A `NextRequest` (middleware) satisfies this too, so this
+ *               same function is also called directly from `middleware.ts`
+ *               for the figure-page-HTML guard (2026-07-18 Data Defense
+ *               Layer 2) — no separate Server-Component code path needed.
  * @param bucket logical namespace so routes don't share one counter, e.g.
  *               'price-check', 'funnel'.
  * @param limit  max requests per 60s window per IP.
