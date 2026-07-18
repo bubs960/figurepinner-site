@@ -2044,53 +2044,6 @@ export const ARTICLES: Article[] = [
     ],
   }
 
-  ,{
-    slug: 'star-wars-black-series-hub',
-    title: 'Star Wars Figures Price Guide',
-    metaTitle: 'Star Wars Black Series Price Guide 2026 — Plus Kenner, Vintage Collection & Grails | FigurePinner',
-    metaDescription: 'A price guide to Star Wars action figures — the 6-inch Black Series, the 1977 Kenner originals, the Vintage Collection, the million-dollar grails, and real eBay sold comps.',
-    dek: 'Forty-five years of the galaxy in plastic — Kenner to Black Series, light side and dark, with real sold comps.',
-    readingMinutes: 9,
-    updated: '2026-06-21',
-    body: [
-      { type: 'p', text: "Star Wars created the modern action figure. When the film outran Kenner's ability to make toys in 1977, the line defined the 3.75-inch small scale that every other brand — G.I. Joe included — would later copy. Forty-five years on, the secondary market spans the original Kenner relics, the 6-inch Black Series, and the 3.75-inch Vintage Collection, and the grails reach into seven figures. This is the collector's field guide, light side and dark." },
-      { type: 'h2', text: 'Where it started: Kenner, 1977-1985' },
-      { type: 'p', text: "Kenner could not make figures fast enough for the 1977 demand, so they sold an 'Early Bird' kit — an empty box with a certificate you mailed in for figures that shipped months later. The original line ran to 1985 and is the vintage prestige tier. Value here is driven by the cardback (the '12-back' first-run cards are the most prized), condition, and AFA grade. The grails live in this era: the vinyl-cape Jawa on a 12-back card reaches $30,000-$45,000 graded, because Kenner swapped the cheap-looking vinyl cape for cloth almost immediately." },
-      { type: 'h2', text: 'The holy grail: rocket-firing Boba Fett' },
-      { type: 'p', text: "The single most valuable action figure ever is a rocket-firing Boba Fett prototype — a graded example sold for $1.34 million in 2024. It was planned as a mail-away with a spring-fired rocket, but Kenner glued the rocket in place over child-safety fears before any firing version shipped. Only about three are known to exist. No other figure comes close." },
-      { type: 'h2', text: 'The modern standard: The Black Series, 2013-now' },
-      { type: 'p', text: "Hasbro launched the 6-inch Black Series in 2013 — the first retail wave (August 1, 2013) was Luke Skywalker in his X-Wing flightsuit, Darth Maul, R2-D2, and a Sandtrooper, in the orange-accent packaging collectors now hunt. It is the super-articulated display standard, numbered and phased. Early orange-line figures and short-packed waves carry the premium." },
-      { type: 'h2', text: 'The collector favorite: The Vintage Collection' },
-      { type: 'p', text: "The Vintage Collection (TVC) runs 3.75-inch figures on Kenner-homage cardbacks. It first ran 2010-2012 and relaunched in 2018, and it is the line the faithful argue out-paints the 6-inch Black Series for the money. It stays cheaper, the sculpts are dense, and the scale works with the vintage vehicles and playsets. The eternal 3.75-vs-6-inch scale debate has no winner — collect the format that fits your shelf." },
-      { type: 'h2', text: 'Further reading' },
-      { type: 'ul', items: [
-        '[[Most valuable vintage figures|/guides/most-valuable-vintage-wrestling-figures]] -- how condition and grading drive vintage value',
-      ]},
-    ],
-  }
-
-  ,{
-    slug: 'transformers-hub',
-    title: 'Transformers Figures Price Guide',
-    metaTitle: 'Transformers Figures Price Guide 2026 — G1, Masterpiece, Studio Series & Grails | FigurePinner',
-    metaDescription: 'A collector\'s guide to Transformers action figures — the 1984 G1 origins, the Masterpiece line, Studio Series, the sealed-Optimus grails, and real eBay sold comps.',
-    dek: 'Forty years of the Cybertronian war in plastic — G1 to Masterpiece, Autobot and Decepticon, with real sold comps.',
-    readingMinutes: 8,
-    updated: '2026-06-21',
-    body: [
-      { type: 'p', text: "Transformers did not start as Transformers. In 1983 Hasbro saw Takara's transforming-robot toys — the Diaclone and Micro Change lines — at the Tokyo Toy Show, licensed the molds, and rebranded them under one banner. Every figure in the 1984 launch was a repurposed Japanese toy, and Hasbro hired Marvel Comics to write the Autobots-vs-Decepticons war around them after the fact. Forty years later the secondary market runs from sealed G1 grails to the modern Masterpiece line. This is the collector's field guide, both factions." },
-      { type: 'h2', text: 'Generation 1: 1984-1990' },
-      { type: 'p', text: "G1 is the foundation and the grail tier. A sealed 1984 Optimus Prime complete with his trailer is the holy grail — a pristine loose one runs $500+, and sealed examples go far higher. A mint Jetfire and the G1 'Pepsi' Optimus Prime have each cleared nearly $25,000 at auction. The connoisseur's grail is a Soundwave mint-in-sealed-box complete with all five cassettes — Ravage, Laserbeak, Rumble, Frenzy, and Ratbat — in original packaging. Completeness is everything in G1: every accessory, every cassette, every weapon counts." },
-      { type: 'h2', text: 'The modern benchmark: Masterpiece' },
-      { type: 'p', text: "The Masterpiece line (Takara Tomy) is the collector-grade, anime-accurate, adult-targeted standard — MP-10 Optimus Prime, MP-36 Megatron — engineered to be what G1 was in 1984 with modern fidelity and transformation. It holds value: discontinued editions like MP-04 Convoy with trailer and MP-13 Soundwave already trade at three to five times retail." },
-      { type: 'h2', text: 'Where to start today' },
-      { type: 'p', text: "If sealed G1 is out of reach, the Vintage G1 Reissue program brings the original molds back in officially licensed runs, and Studio Series renders the movie designs at collector scale with scene-specific detail. The reissues scratch the G1 itch at a fraction of the sealed-vintage price — though collectors still track which reissue, which year, and which deco, because some reissues are themselves now scarce." },
-      { type: 'h2', text: 'Further reading' },
-      { type: 'ul', items: [
-        '[[Most valuable vintage figures|/guides/most-valuable-vintage-wrestling-figures]] -- how condition and completeness drive vintage value',
-      ]},
-    ],
-  }
 
   ,{
 
@@ -2146,7 +2099,7 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Further reading' },
       { type: 'ul', items: [
         '[[WWE Elite Price Guide 2026: Series by Series Values|/guides/wwe-elite-price-guide-2026]] — series breakdown with comp data',
-        '[[Most Valuable WWE Figures: Elite, Classic Superstars, and Vintage|/guides/most-valuable-wwe-figures]] — the figures actually worth money',
+        '[[Most Valuable WWE Figures: Elite, Classic Superstars, and Vintage|/guides/most-valuable-wwe-elite-figures]] — the figures actually worth money',
         '[[Classic Superstars vs. Elite Legends: Which Vintage Line Is Worth Collecting|/guides/classic-superstars-vs-elite-legends]] — buying guide for classic-era collectors',
       ]},
     ],
