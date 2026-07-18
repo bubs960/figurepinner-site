@@ -221,6 +221,14 @@ export default function HeroBand({
                 style={{
                   width: '100%', aspectRatio: '4/4.7', objectFit: 'contain',
                   borderRadius: '4px', background: '#e9e0cd', display: 'block',
+                  // webaudit SHOULD-1 (Photo P2 check, 2026-07-17): a block
+                  // element with a maxWidth cap narrower than its 100% parent
+                  // left-aligns by default with no auto margins -- only
+                  // visible once the cap actually binds (small R2 sources),
+                  // which the flagship Hogan test case (natural width 570px,
+                  // never capped in that viewport) never exercised. No-op
+                  // when the cap doesn't bind, since there's nothing to center.
+                  margin: '0 auto',
                 }}
               />
             ) : (

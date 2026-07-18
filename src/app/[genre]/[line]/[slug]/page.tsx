@@ -20,6 +20,7 @@ import { getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
+import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import { findFigureMatches } from './_lib/findFigureMatches'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
@@ -54,8 +55,41 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const fandomName = prettifySlug(genre)
 
   const { price } = await fetchFigurePageData(figure.figure_id)
-  const median = price?.medianSold ?? price?.avgSold ?? null
-  const medianLabel = median != null ? `$${median.toFixed(0)} median` : null
+
+  // FIX-1 (webaudit transparent-split gate, 2026-07-17 s4, "sibling-surface
+  // trap sighting #6"): this route's own generateMetadata used to read raw
+  // pooled medianSold/avgSold directly, bypassing derivePriceContract
+  // entirely -- on the SEO-CANONICAL INDEXED route, no less, the one Google
+  // actually sees. That both showed a blended figure for the 3,839-fid
+  // affected population (contradicting the page's own now-fixed HeroBand
+  // headline) AND ignored the <3-comp suppression tier (a 1-2-sale median
+  // could print here). Same fix already shipped on /figure/[figure_id]/
+  // page.tsx -- ported verbatim so both canonical/id routes describe the
+  // same figure identically.
+  const contract = derivePriceContract(price)
+
+  /** Short "$X sealed / $Y loose" style fragment, or a single-condition/
+   *  pooled fragment, or null if no honest price can be stated in this
+   *  space. Suppressed (<3 comp) buckets are simply omitted from the
+   *  fragment rather than shown as "insufficient comps" -- that caveat
+   *  copy only makes sense on the full page, not a truncated meta tag. */
+  function compactPriceFragment(): string | null {
+    if (contract.hasNoData) return null
+    const sealedNum = contract.sealed?.median ?? null
+    const looseNum = contract.loose?.median ?? null
+    if (sealedNum != null && looseNum != null) {
+      return `$${sealedNum.toFixed(0)} sealed / $${looseNum.toFixed(0)} loose median`
+    }
+    if (sealedNum != null) return `$${sealedNum.toFixed(0)} sealed median`
+    if (looseNum != null) return `$${looseNum.toFixed(0)} loose median`
+    if (contract.pooled?.median != null) {
+      return `$${contract.pooled.median.toFixed(0)} ${contract.pooled.isAvg ? 'average' : 'median'}`
+    }
+    // Every bucket that exists is suppressed (all <3 comps) -- no honest
+    // number fits in a meta tag; the crawlable page body still explains why.
+    return null
+  }
+  const priceFragment = compactPriceFragment()
   const compLabel = price?.soldCount
     ? `${price.soldCount} eBay sold comps.`
     : 'Recent eBay sold-comps context.'
@@ -66,8 +100,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Enriched prose leads when it passes the quality gates (S52 meta wiring) —
   // this is the INDEXED canonical route, so it matters most here.
   const enriched = enrichedDescription(figure)
-  const priceTail = medianLabel
-    ? `Sells for ~${medianLabel} — real eBay solds, free on FigurePinner.`
+  const priceTail = priceFragment
+    ? `Sells for ~${priceFragment} — real eBay solds, free on FigurePinner.`
     : `Real eBay sold prices, free on FigurePinner.`
 
   return {
@@ -77,8 +111,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${displayName} — ${lineName} Price & Value`,
     description: enriched
       ? `${enriched} ${priceTail}`
-      : medianLabel
-        ? `${displayName} ${lineName} sells for ~${medianLabel} (eBay sold median). Check current prices free — FigurePinner tracks real sold data.`
+      : priceFragment
+        ? `${displayName} ${lineName} sells for ~${priceFragment} (eBay sold data). Check current prices free — FigurePinner tracks real sold data.`
         : `${displayName} ${lineName} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
     ...(hasConfirmedZeroSoldData
@@ -88,8 +122,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // route segment supplies the real Grail Card, superseding the bare product
     // photo this used to point at.
     openGraph: {
-      title: `${displayName}${medianLabel ? ` — ${medianLabel}` : ''} | FigurePinner`,
-      description: `Real sold prices for ${displayName}. ${compLabel}`,
+      title: `${displayName}${priceFragment ? ` — ${priceFragment}` : ''} | FigurePinner`,
+      description: priceFragment
+        ? `Real sold prices for ${displayName}: ${priceFragment}. ${compLabel}`
+        : `Real sold prices for ${displayName}. ${compLabel}`,
     },
   }
 }
