@@ -85,21 +85,33 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
 
   // FPPS-01 (2026-07-15, Steve's binding decisions): this panel is THE
   // surface webaudit flagged for the pooled "$180 · MEDIAN SOLD · 50 COMPS"
-  // pattern. The condition-split gate below is unchanged (still keyed off
-  // segmentation, so this stays in lockstep with the placard + vault), but
-  // each row's NUMBER now runs through the same 10+/3-9/<3 comp-count tier
-  // as every other price surface, via derivePriceContract -- a thin bucket
-  // (3-9 comps) gets a "Thin data" chip instead of a plain "sold" chip, and
-  // a suppressed bucket (<3 comps) renders NO number, just the insufficient-
-  // comps state, rather than falling through to the pooled blend.
+  // pattern. Each row's NUMBER runs through the same 10+/3-9/<3 comp-count
+  // tier as every other price surface, via derivePriceContract -- a thin
+  // bucket (3-9 comps) gets a "Thin data" chip instead of a plain "sold"
+  // chip, and a suppressed bucket (<3 comps) renders NO number, just the
+  // insufficient-comps state, rather than falling through to the pooled blend.
+  //
+  // Census-addendum transparent-split fix (2026-07-17): sealed/loose used to
+  // be gated on `segmentation === 'split'` (etc.) before being passed in --
+  // for the 3,839-fid affected population (segmentation 'pooled' but real
+  // sealed+loose buckets both exist underneath), that nulled BOTH buckets out
+  // and fell straight through to the blended "All" row, directly contradicting
+  // HeroBand's headline immediately above it on the same page (the exact bug
+  // 13b0cf6 already fixed for the headline -- this panel was the one surface
+  // still gating on the raw segmentation label instead of real bucket
+  // presence, same class as the fixed HeroBand ticket-let). derivePriceContract
+  // itself already gates per-bucket on presence (median != null && count >= 1,
+  // see priceContract.ts) -- passing the raw buckets unconditionally, same as
+  // HeroBand/CollectionPanel/SeoSummary/meta description all already do via
+  // jsonLdPriceContract, is the fix; no second gate needed here.
   const seg = snapshotBuckets?.segmentation ?? 'pooled'
   const contract = derivePriceContract({
     soldCount: pricing.comp_count,
     medianSold: pricing.median,
     avgSold: null,
     segmentation: seg,
-    sealed: (seg === 'split' || seg === 'sealed-only') ? snapshotBuckets?.sealed ?? null : null,
-    loose: (seg === 'split' || seg === 'loose-only') ? snapshotBuckets?.loose ?? null : null,
+    sealed: snapshotBuckets?.sealed ?? null,
+    loose: snapshotBuckets?.loose ?? null,
   })
   const sealedRow = contract.sealed
   const looseRow = contract.loose

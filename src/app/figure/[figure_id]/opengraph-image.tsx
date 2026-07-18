@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { getFigureById, getFigureByStableSuffix, deriveName } from '@/data/kb'
 import { fetchFigurePageData } from './_components/FigureDetailContent'
+import { derivePriceContract } from './_lib/priceContract'
 import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts } from './_lib/ogCard'
 
 export const contentType = 'image/png'
@@ -38,7 +39,26 @@ export default async function Image({ params }: Props) {
     resolveCardPhoto(figure.canonical_image_url),
     loadCardFonts(),
   ])
-  const median = price?.medianSold ?? price?.avgSold ?? null
+
+  // Census-addendum transparent-split fix (2026-07-17): this card used to read
+  // price.medianSold/avgSold directly -- the raw pooled figure, bypassing
+  // derivePriceContract entirely. For the 3,839-fid affected population
+  // (pooled label, real sealed+loose buckets both present), that showed a
+  // blended number in the social-share image while the page itself now shows
+  // (post 13b0cf6) a real per-condition headline -- a reader who clicks
+  // through from the shared card sees a different number than the card
+  // promised. Card is a small fixed-width line (same space constraint as
+  // MobileActionBar), so it leads with ONE number, same sealed > loose >
+  // pooled selection as mobileActionBarPrice, with an honest condition
+  // suffix rather than a bare unlabeled figure.
+  const contract = derivePriceContract(price)
+  const lead = contract.sealed?.median != null
+    ? { median: contract.sealed.median, count: contract.sealed.count, suffix: ' sealed' }
+    : contract.loose?.median != null
+      ? { median: contract.loose.median, count: contract.loose.count, suffix: ' loose' }
+      : contract.pooled?.median != null
+        ? { median: contract.pooled.median, count: price?.soldCount ?? 0, suffix: '' }
+        : null
 
   return new ImageResponse(
     (
@@ -46,8 +66,8 @@ export default async function Image({ params }: Props) {
         figure={figure}
         photoSrc={photoSrc}
         price={{
-          medianLabel: median != null ? `$${median.toFixed(0)}` : null,
-          soldCount: price?.soldCount ?? 0,
+          medianLabel: lead != null ? `$${lead.median.toFixed(0)}${lead.suffix}` : null,
+          soldCount: lead?.count ?? price?.soldCount ?? 0,
         }}
       />
     ),
