@@ -14,7 +14,7 @@
  */
 
 import type { Metadata } from 'next'
-import { notFound, redirect, permanentRedirect } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 import { getAllFandoms, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
 import { getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
@@ -147,7 +147,11 @@ export default async function PrettyFigurePage({ params }: PageProps) {
 
   if (figure) {
     if (matches.length > 1) {
-      redirect(figureUrl(figure))
+      // Deterministic mapping (same char+line always resolves to the same
+      // highest-wave figure) -- permanent per the 2026-07-18 INDEXING PROGRAM
+      // Part A fix (a temporary redirect() here taught Google to keep
+      // recrawling the disambiguation URL instead of the real target).
+      permanentRedirect(figureUrl(figure))
     }
     return <FigureDetailContent figureId={figure.figure_id} />
   }
@@ -155,9 +159,11 @@ export default async function PrettyFigurePage({ params }: PageProps) {
   // No figure match — fall back to genre page if the genre resolves, else 404.
   // Check the remapped fandom (getFandom) so remapped-slug genres (gijoe, marvel,
   // teenage-mutant-ninja-turtles) redirect to their genre page instead of 404ing.
+  // Permanent per the 2026-07-18 INDEXING PROGRAM Part A fix -- same reasoning
+  // as above, this line/slug combination stably falls through to the genre hub.
   const fandoms = getAllFandoms()
   if (fandoms.includes(getFandom(genre))) {
-    redirect(`/${genre}`)
+    permanentRedirect(`/${genre}`)
   }
 
   notFound()
