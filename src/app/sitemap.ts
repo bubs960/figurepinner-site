@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
 import { genreSlugForFandom as fandomToGenre } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
+import { isAtOrAboveIndexBar, censusLastCompDate } from '@/data/indexValueCensus'
 
 // Fandom slug (KB value) → genre slug (URL path segment used by the router).
 // The character hub page at /[genre]/character/[slug] resolves genre → fandom
@@ -148,15 +149,32 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   // Use keyword-rich pretty URLs only when they map to one exact figure.
   // Ambiguous character/line paths stay on /figure/[id] so one wave cannot
   // canonicalize or sitemap as another wave.
+  //
+  // INDEXING PROGRAM Part B (2026-07-18): below-index-bar figures (0 sold
+  // comps, per matcher's value census) are excluded here entirely — they stay
+  // live and crawlable via internal links, just not submitted for indexing.
+  // This MUST stay in lockstep with the page's own `hasConfirmedZeroSoldData`
+  // noindex flag (figure/[figure_id]/page.tsx and [genre]/[line]/[slug]/page.tsx
+  // both apply the identical soldCount===0 test) — submitting a noindexed page
+  // in the sitemap is exactly the mixed signal that wastes crawl budget.
+  // `isAtOrAboveIndexBar` also honors the one Bing-protection exemption (a
+  // below-bar page with real measured external referral traffic).
   const seenUrls = new Set<string>()
   const figurePages: MetadataRoute.Sitemap = []
   for (const f of figs) {
+    if (!isAtOrAboveIndexBar(f.figure_id)) continue
     const url = `${BASE}${prettyFigureUrl(f)}`
     if (!seenUrls.has(url)) {
       seenUrls.add(url)
+      // Honest lastmod: the real last-comp-change date when the census has
+      // one, never a fabricated `now` (D3/R8 — a flat build-timestamp on
+      // every URL teaches Google to distrust and lazily recrawl our lastmod).
+      // The lone Bing-protected exempt fid has no census entry (0 comps) so
+      // falls back to `now` here same as before this change — one page, not
+      // worth a fabricated placeholder date either.
       figurePages.push({
         url,
-        lastModified: now,
+        lastModified: censusLastCompDate(f.figure_id) ?? now,
         changeFrequency: 'weekly' as const,
         priority: 0.7,
       })
