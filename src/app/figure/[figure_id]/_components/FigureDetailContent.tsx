@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation'
 import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl, isNumericWave } from '@/data/kb'
 import { genreSlugForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
+import SocialBarAd from '@/app/components/SocialBarAd'
 import HeroBand from './HeroBand'
 import BidCheck from './BidCheck'
 import LoreBand from './LoreBand'
@@ -834,6 +835,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           line: local.product_line,
         }}
       />
+      <SocialBarAd />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },
