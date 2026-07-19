@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "test": "node --import ./scripts/register-ts-loader.mjs --test tests/**/*.test.mjs",
     "smoke": "node scripts/post-deploy-smoke-probe.mjs",
+    "check:index-bar-drift": "node scripts/check-index-bar-drift.mjs",
     "traffic": "node scripts/daily-uniques.mjs",
     "kb:d1:check": "node scripts/build-kb-d1-sql.mjs --check",
     "kb:d1:build": "node scripts/build-kb-d1-sql.mjs --out .tmp/kb-d1",
