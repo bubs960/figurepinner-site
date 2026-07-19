@@ -2438,6 +2438,67 @@ export const ARTICLES: Article[] = [
         '[[Mythic Legions Collecting Guide|/guides/mythic-legions-guide]] -- the wave-and-parts breakdown for new Mythic Legions collectors',
       ]},
     ],
-  }
+  },
+
+  {
+    slug: 'free-action-figure-price-checker',
+    title: 'The Free Action Figure Price Checker (No Login Wall, No Guessing)',
+    metaTitle: 'Free Action Figure Price Checker — Real eBay Sold Data | FigurePinner',
+    metaDescription:
+      'A free action figure price checker built on real eBay sold comps, not active listings or a paywall. See the median, the sample size, and how to read the number before you buy or sell.',
+    dek: 'Free is not the hard part. Honest is. Here is what a real price checker actually shows you.',
+    readingMinutes: 5,
+    updated: '2026-07-19',
+    body: [
+      { type: 'p', text: 'Search "action figure price checker free" and you get three kinds of results. A price-guide site locked behind an email wall. A static list nobody has touched in three years. Or a page of eBay active listings, sorted high to low, that tells you what sellers hope to get and nothing about what anyone actually paid. None of the three answer the question you actually asked.' },
+      { type: 'p', text: 'A real price checker does one thing well: it shows completed sales for the exact figure, not a category of figures that look like it, and it tells you how many sales are behind the number. That is the entire trick, and it is also the reason most "checkers" skip it. Scraping a list of active listings is free. Building real sold-comp data is not, so most sites do not bother.' },
+
+      { type: 'h2', text: 'What a free checker should actually show you' },
+      { type: 'p', text: 'No account, no email gate, no card on file to see a median. Search a figure and the page should hand you the real sold price, the range around it, and the sale count the number is built on. On FigurePinner that is pulled from 22,500-plus figures across 16 fandoms, and the free version is the whole product, not a teaser for a paid one.' },
+      { type: 'p', text: 'When I check a figure, the median is the second thing I look at. The first is the sale count, because a $40 median built on two sales and a $40 median built on forty are not the same fact, and a checker that will not show you which one you are looking at is hiding the part that matters most.' },
+
+      { type: 'h2', text: 'A worked example, pulled live today' },
+      { type: 'ul', items: [
+        'Hulk Hogan, WWF Hasbro Series 1 — median $23.00 across 50 tracked sales.',
+        'Batman, DC Multiverse (Arkham Asylum) — median $35.99 across 33 sales.',
+        'Darth Vader, 6-inch Black Series (A New Hope) — median $28.00 across 30 sales.',
+        'Seth Rollins, Ultimate Edition 30 — median $36.00 across 30 sales.',
+        '"Stone Cold" Steve Austin, Elite 122 — median $33.98 across 30 sales.',
+      ]},
+      { type: 'callout', text: 'Every one of those runs 30-plus tracked sales, which is a liquid market — trust the median within a couple of dollars. The number gets noisy fast below that. A figure with three sales in 90 days does not have a price yet, it has a rumor, and a free checker that will not tell you the sample size is hoping you will not ask.' },
+
+      { type: 'h2', text: 'Where a free checker hits a real wall' },
+      { type: 'p', text: 'Honest limit, not a sales pitch: about 17 percent of the figures in FigurePinner\'s own catalog have zero tracked sold comps right now. That is not a bug in the tool. It is the market telling you something — a figure nobody has sold recently does not have a reliable price, free or paid, and any site that hands you a confident number for one is making it up. When a figure shows no comps, the correct move is patience or a wider search, not a guess dressed up as data.' },
+      { type: 'p', text: 'The same honesty applies to condition. A median built from mixed loose-and-sealed sales is a free number that lies to you slower than a paywall does. [[Read a sold listing properly|/guides/read-ebay-sold-listings]] before you treat any single median as gospel across every condition it might cover.' },
+      { type: 'p', text: 'Free only means something if the data behind it is real. [[Look up any figure|/]] and check the sale count before you check the price — a number without its sample size is not a price checker, it is a guess with better formatting.' },
+    ],
+  },
+
+  {
+    slug: 'whatnot-price-check-before-you-bid',
+    title: 'How to Price-Check a Figure Before You Bid on Whatnot',
+    metaTitle: 'Whatnot Action Figure Price Check — Know Your Number Before You Bid | FigurePinner',
+    metaDescription:
+      'The Whatnot countdown clock is built to make you decide fast. Here is how to check a figure\'s real sold price before the show starts, so the clock cannot talk you into overpaying.',
+    dek: 'The clock hits zero in ten seconds. That is not when you want to start doing math.',
+    readingMinutes: 5,
+    updated: '2026-07-19',
+    body: [
+      { type: 'p', text: 'A Whatnot auction gives you a ten-second countdown, a seller talking over it, and a running list of other bidders you can see in real time. None of that is an accident. It is a format built to make you decide with your gut, and your gut is bad at remembering what a figure actually sold for last month.' },
+      { type: 'p', text: 'eBay gives you time. You can sit with a listing for a day, pull comps, sleep on it. A live auction removes that buffer on purpose. The fix is not to think faster during the countdown. It is to do the pricing work before the show starts, so there is nothing left to decide except your ceiling number.' },
+
+      { type: 'h2', text: 'Build your ceiling before the stream, not during it' },
+      { type: 'p', text: 'If you know a seller is running a wrestling or Star Wars box break tonight, spend ten minutes beforehand pulling real sold medians for anything you might actually want. [[Search FigurePinner|/]] for each name on your list, note the median and the sale count, and write down a number you will not go past. That number is your ceiling. The show is where you execute the decision, not where you make it.' },
+
+      { type: 'h2', text: 'Two numbers the room will not give you' },
+      { type: 'p', text: 'The opening banter price is not a comp. A seller talking a figure up to "$80 easy, I have seen these go for way more" is a seller doing the job of a seller. What the last item in the same show closed for is not a comp either — it was a different figure with different demand, in a room that had already spent five minutes working itself up. Neither number is sold data. Both are designed to move you, not inform you.' },
+      { type: 'p', text: 'The only number that counts is what real, completed eBay sales say the figure has actually gone for, recently, in the condition you are looking at. I do not care how confident a seller sounds mid-stream — a spoken price is not a comp, and neither is the item that closed two lots ago. The sold-comp median is the one number in the room that was not built to move you.' },
+      { type: 'callout', text: 'Sample size still applies live. A figure with 30-plus tracked sales gives you a ceiling you can trust within a couple of dollars. A figure with two or three sales is genuinely thin, and thin markets are exactly where auction adrenaline does the most damage, because there is no solid number to check your bid against in the moment.' },
+
+      { type: 'h2', text: 'The honest limit here' },
+      { type: 'p', text: 'FigurePinner\'s sold data comes from eBay, not from Whatnot\'s own closed shows, so a figure that trades mostly on Whatnot may show thinner eBay comps than its real live-auction demand. Treat a thin eBay comp set on a Whatnot-heavy figure as a floor, not the whole picture, and set your ceiling a little looser than you would for a figure that trades everywhere.' },
+      { type: 'p', text: '[[Pull the real sold median for anything on your watchlist|/]] before the next stream starts, and decide your ceiling in a quiet room, not a live one with someone else\'s excitement in your ear.' },
+    ],
+  },
 
 ]
