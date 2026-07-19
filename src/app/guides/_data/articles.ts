@@ -2470,7 +2470,7 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Where a free checker hits a real wall' },
       { type: 'p', text: 'Honest limit, not a sales pitch: about 17 percent of the figures in FigurePinner\'s own catalog have zero tracked sold comps right now. That is not a bug in the tool. It is the market telling you something — a figure nobody has sold recently does not have a reliable price, free or paid, and any site that hands you a confident number for one is making it up. When a figure shows no comps, the correct move is patience or a wider search, not a guess dressed up as data.' },
       { type: 'p', text: 'The same honesty applies to condition. A median built from mixed loose-and-sealed sales is a free number that lies to you slower than a paywall does. [[Read a sold listing properly|/guides/read-ebay-sold-listings]] before you treat any single median as gospel across every condition it might cover.' },
-      { type: 'p', text: 'Free only means something if the data behind it is real. [[Look up any figure|/]] and check the sale count before you check the price — a number without its sample size is not a price checker, it is a guess with better formatting.' },
+      { type: 'p', text: 'Free only means something if the data behind it is real. [[Look up any figure|/]] and check the sale count before you check the price. A number with no sample size behind it is a guess wearing a nicer font.' },
     ],
   },
 
@@ -2485,7 +2485,7 @@ export const ARTICLES: Article[] = [
     updated: '2026-07-19',
     body: [
       { type: 'p', text: 'A Whatnot auction gives you a ten-second countdown, a seller talking over it, and a running list of other bidders you can see in real time. None of that is an accident. It is a format built to make you decide with your gut, and your gut is bad at remembering what a figure actually sold for last month.' },
-      { type: 'p', text: 'eBay gives you time. You can sit with a listing for a day, pull comps, sleep on it. A live auction removes that buffer on purpose. The fix is not to think faster during the countdown. It is to do the pricing work before the show starts, so there is nothing left to decide except your ceiling number.' },
+      { type: 'p', text: 'eBay gives you time. You can sit with a listing for a day, pull comps, sleep on it. A live auction removes that buffer on purpose. Do the pricing work before the show starts, and there is nothing left to decide once the countdown hits except your ceiling number.' },
 
       { type: 'h2', text: 'Build your ceiling before the stream, not during it' },
       { type: 'p', text: 'If you know a seller is running a wrestling or Star Wars box break tonight, spend ten minutes beforehand pulling real sold medians for anything you might actually want. [[Search FigurePinner|/]] for each name on your list, note the median and the sale count, and write down a number you will not go past. That number is your ceiling. The show is where you execute the decision, not where you make it.' },
