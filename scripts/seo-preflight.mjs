@@ -101,11 +101,20 @@
  * that were all this same false-positive shape (thundercats, indiana-jones,
  * generic-fantasy, action-force, ghostbusters, horror, pop-culture,
  * terminator, robocop — all below-bar, all confirmed via
- * isAtOrAboveIndexBar(), none a real orphan). Fix: the zero-sitemap-
- * membership branch below now checks isAtOrAboveIndexBar(f.figure_id) FIRST
- * — below-bar zero-membership is expected (INFO, not STOP); at-or-above-bar
- * zero-membership is still the real 2026-07-12 defect shape (STOP,
- * unchanged). The internal-link check is NOT touched by this — Part B's own
+ * isAtOrAboveIndexBar(), none a real orphan). Fix: the sitemap-membership
+ * invariant now branches on isAtOrAboveIndexBar(f.figure_id) FIRST, and is
+ * INVERTED for the below-bar class, not just relaxed:
+ *   - at-or-above-bar (or Bing-protection-exempted): unchanged pre-Part-B
+ *     invariant — exactly 1 sitemap child. 0 = STOP (orphaned, the real
+ *     2026-07-12 shape). >1 = STOP (twin namespace).
+ *   - below-bar: EXACTLY 0 sitemap children is now the expected state
+ *     (INFO, not STOP). ANY membership (even exactly 1) is a NEW STOP —
+ *     it means sitemap.ts's own isAtOrAboveIndexBar() exclusion silently
+ *     isn't being applied for that fid, a real curation bug distinct from
+ *     the 2026-07-12 shape.
+ * PASS lines print `index-bar=at-bar|below-bar` so future logs are
+ * self-explaining without cross-referencing the census by hand. The
+ * internal-link check is NOT touched by any of this — Part B's own
  * ratification says these figures stay fully reachable via internal links,
  * just excluded from sitemap priority, so a below-bar figure with NO
  * internal link is still a genuine problem worth stopping on.
@@ -358,20 +367,29 @@ async function checkSampleUrlMatrix(base, localChildren) {
       for (const [id, child] of localChildren) {
         if (child.ok && child.locs.includes(canonicalAbsForMatch)) memberChildren.push(id)
       }
-      if (memberChildren.length === 0) {
-        // Part B awareness (see header comment): a below-index-bar fid is
-        // DELIBERATELY excluded from every sitemap child -- zero membership
-        // is the correct, ratified state for it, not the 2026-07-12 orphan
-        // bug. Only STOP here if this fid actually clears the bar (or is
-        // Bing-protection-exempted) and still has no sitemap coverage --
-        // that combination is still a real defect.
-        if (isAtOrAboveIndexBar(f.figure_id)) {
-          failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} is ORPHANED -- appears in ZERO sitemap children (expected exactly 1), and this fid IS at-or-above Part B's index bar, so it should have coverage -- this is a genuine gap, not the below-bar exclusion`)
-        } else {
-          infoLines.push(`INFO [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} has zero sitemap children -- EXPECTED, this fid is below INDEXING PROGRAM Part B's index bar (deliberately excluded from the sitemap while staying live/indexable per Steve's ratification: off-sitemap != off-site != noindex). Not a STOP.`)
+      // Part B awareness (see header comment): the "exactly 1 sitemap child"
+      // invariant only holds for at-or-above-index-bar fids. A below-bar fid
+      // is DELIBERATELY excluded from every sitemap child (Steve's
+      // ratification: off-sitemap != off-site != noindex) -- for that class
+      // the invariant INVERTS to "exactly 0 sitemap children," and ANY
+      // membership is the new STOP condition (means sitemap.ts's
+      // isAtOrAboveIndexBar() exclusion isn't actually being applied for
+      // this fid -- a real curation bug, not the 2026-07-12 shape).
+      const atBar = isAtOrAboveIndexBar(f.figure_id)
+      const barLabel = atBar ? 'at-bar' : 'below-bar'
+
+      if (atBar) {
+        if (memberChildren.length === 0) {
+          failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} is ORPHANED -- appears in ZERO sitemap children (expected exactly 1; fid is at-or-above Part B's index bar, so it should have coverage) -- the 2026-07-12 bug shape`)
+        } else if (memberChildren.length > 1) {
+          failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} appears in ${memberChildren.length} sitemap children (${memberChildren.join(', ')}) -- twins another live URL, expected exactly 1`)
         }
-      } else if (memberChildren.length > 1) {
-        failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} appears in ${memberChildren.length} sitemap children (${memberChildren.join(', ')}) -- twins another live URL, expected exactly 1`)
+      } else {
+        if (memberChildren.length === 0) {
+          infoLines.push(`INFO [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} has zero sitemap children -- EXPECTED, this fid is below INDEXING PROGRAM Part B's index bar (deliberately excluded from the sitemap while staying live/indexable per Steve's ratification: off-sitemap != off-site != noindex). Not a STOP.`)
+        } else {
+          failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} appears in ${memberChildren.length} sitemap child(ren) (${memberChildren.join(', ')}) despite being BELOW Part B's index bar -- below-bar fids must be excluded from every sitemap child; sitemap.ts's isAtOrAboveIndexBar() exclusion is not actually being applied for this fid, a real curation bug`)
+        }
       }
 
       // Internal-link check. Real site architecture (verified against
@@ -389,7 +407,7 @@ async function checkSampleUrlMatrix(base, localChildren) {
         failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} has NO internal link from its hub page ${hubPath} (hub status ${hub.status}) -- orphaned page + no internal links is the exact 2026-07-12 bug shape`)
       }
 
-      infoLines.push(`PASS [1:sample-matrix] ${f.figure_id}: served=${servedPath} robots="${metaRobots}" canonical-target=${canonicalPath} sitemap-children=[${memberChildren.join(',')}] linked-from=${hubPath}`)
+      infoLines.push(`PASS [1:sample-matrix] ${f.figure_id}: served=${servedPath} robots="${metaRobots}" canonical-target=${canonicalPath} index-bar=${barLabel} sitemap-children=[${memberChildren.join(',')}] linked-from=${hubPath}`)
     }
   }
 
