@@ -20,7 +20,11 @@
  *   1. Sample-URL matrix    — >=2 figures per fandom: served URL, meta
  *                             robots, canonical, and for the canonical
  *                             TARGET: 200 status, membership in exactly one
- *                             sitemap child, and >=1 internal link to it.
+ *                             sitemap child (UNLESS the fid is below
+ *                             INDEXING PROGRAM Part B's index bar — see
+ *                             "PART B AWARENESS" below — in which case zero
+ *                             membership is the CORRECT, ratified state, not
+ *                             a STOP), and >=1 internal link to it.
  *   2. Sitemap prefix census — URL count per top-level path prefix, per
  *                              sitemap child, diffed against prod. A NEW
  *                              prefix, or one fandom split across two
@@ -80,6 +84,32 @@
  * checkAliasProbe's comment). Do not "clean this up" back to
  * prettyFigureUrl(f); that reintroduces the exact blind spot.
  *
+ * ── PART B AWARENESS (added 2026-07-19, first real deploy after Part B) ──
+ * INDEXING PROGRAM Part B (commit 5c55c76, Steve-ratified 2026-07-19)
+ * deliberately excludes below-index-bar fids (sold_comp_count 0, not
+ * Bing-protection-exempted — see src/data/indexValueCensus.ts) from the
+ * sitemap, while the figure keeps rendering normally and — this is the part
+ * this check originally didn't know about — can still legitimately carry
+ * `index, follow` (hasConfirmedZeroSoldData only fires when the LIVE
+ * r2proxy soldCount is confirmed 0 at render time; the D1 census snapshot
+ * and the live price fetch are two different pipelines that can disagree
+ * for a given fid on a given day — a known, accepted approximation per the
+ * Part B completion relay). Steve's own words on this: "off-sitemap != off-
+ * site != noindex." That is EXACTLY the state check 1 used to treat as an
+ * unconditional STOP (zero sitemap membership = orphaned = the 2026-07-12
+ * bug shape), which is why the first real deploy after Part B hit 14 STOPs
+ * that were all this same false-positive shape (thundercats, indiana-jones,
+ * generic-fantasy, action-force, ghostbusters, horror, pop-culture,
+ * terminator, robocop — all below-bar, all confirmed via
+ * isAtOrAboveIndexBar(), none a real orphan). Fix: the zero-sitemap-
+ * membership branch below now checks isAtOrAboveIndexBar(f.figure_id) FIRST
+ * — below-bar zero-membership is expected (INFO, not STOP); at-or-above-bar
+ * zero-membership is still the real 2026-07-12 defect shape (STOP,
+ * unchanged). The internal-link check is NOT touched by this — Part B's own
+ * ratification says these figures stay fully reachable via internal links,
+ * just excluded from sitemap priority, so a below-bar figure with NO
+ * internal link is still a genuine problem worth stopping on.
+ *
  * This script imports the REAL, LIVE modules (src/data/kbTypes.ts,
  * src/data/kb.ts) via the repo's existing test-time TS loader
  * (scripts/ts-loader.mjs). It self-registers that loader at the top of this
@@ -133,6 +163,7 @@ register('./ts-loader.mjs', import.meta.url)
 const { getAllFandoms, getFiguresByFandom, prettyFigureUrl, hasUniquePrettyFigureUrl } =
   await import('../src/data/kb.ts')
 const { SLUG_TO_FANDOM, genreSlugForFandom } = await import('../src/data/kbTypes.ts')
+const { isAtOrAboveIndexBar } = await import('../src/data/indexValueCensus.ts')
 
 // ── CLI ──────────────────────────────────────────────────────────────────
 
@@ -328,7 +359,17 @@ async function checkSampleUrlMatrix(base, localChildren) {
         if (child.ok && child.locs.includes(canonicalAbsForMatch)) memberChildren.push(id)
       }
       if (memberChildren.length === 0) {
-        failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} is ORPHANED -- appears in ZERO sitemap children (expected exactly 1)`)
+        // Part B awareness (see header comment): a below-index-bar fid is
+        // DELIBERATELY excluded from every sitemap child -- zero membership
+        // is the correct, ratified state for it, not the 2026-07-12 orphan
+        // bug. Only STOP here if this fid actually clears the bar (or is
+        // Bing-protection-exempted) and still has no sitemap coverage --
+        // that combination is still a real defect.
+        if (isAtOrAboveIndexBar(f.figure_id)) {
+          failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} is ORPHANED -- appears in ZERO sitemap children (expected exactly 1), and this fid IS at-or-above Part B's index bar, so it should have coverage -- this is a genuine gap, not the below-bar exclusion`)
+        } else {
+          infoLines.push(`INFO [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} has zero sitemap children -- EXPECTED, this fid is below INDEXING PROGRAM Part B's index bar (deliberately excluded from the sitemap while staying live/indexable per Steve's ratification: off-sitemap != off-site != noindex). Not a STOP.`)
+        }
       } else if (memberChildren.length > 1) {
         failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} appears in ${memberChildren.length} sitemap children (${memberChildren.join(', ')}) -- twins another live URL, expected exactly 1`)
       }

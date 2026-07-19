@@ -47,6 +47,27 @@ export async function resolve(specifier, context, nextResolve) {
       const found = resolveOnDisk(resolvePath(parentDir, specifier))
       if (found) return { url: pathToFileURL(found).href, shortCircuit: true }
     }
+    // A relative .json import (added 2026-07-19, found while wiring
+    // src/data/indexValueCensus.ts into seo-preflight.mjs): TS source
+    // authored the way bundlers (Next/webpack) expect --
+    // `import x from './y.json'`, no import attribute -- is exactly what
+    // Node's OWN native ESM loader rejects as of the installed Node version
+    // (ERR_IMPORT_ATTRIBUTE_MISSING: ".json needs an import attribute of
+    // type: json"). The source file is correct for its real (bundled)
+    // runtime; this hook's job is to make plain `node --test`/script
+    // execution tolerate the same source, not to change the source. Inject
+    // the attribute here rather than editing every .ts file that imports
+    // JSON, and rather than each script hand-rolling its own fs.readFileSync
+    // + JSON.parse duplicate of the data (the exact "never redefine, import
+    // the real module" rule this file's callers already follow elsewhere).
+    if (specifier.endsWith('.json')) {
+      const result = await nextResolve(specifier, context)
+      // The attribute has to live on THIS hook's own returned object -- handing
+      // a modified context to nextResolve() does not reliably survive into the
+      // subsequent load() step (confirmed by testing; the naive version of this
+      // fix still hit ERR_IMPORT_ATTRIBUTE_MISSING).
+      return { ...result, importAttributes: { ...(result.importAttributes ?? context.importAttributes), type: 'json' } }
+    }
   }
   return nextResolve(specifier, context)
 }
