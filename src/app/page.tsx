@@ -5,6 +5,7 @@ import ScrollReveal from './components/ScrollReveal'
 import HeroTypeScrollDriver from './components/HeroTypeScrollDriver'
 import GalleryTypeLayer from './components/GalleryTypeLayer'
 import SiteHeader from './components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 import { fetchHomeMarket, type TapeItem, type ReceiptFigure } from './_lib/homeReceipt'
 import ProvenanceTypeScrollDriver from './components/ProvenanceTypeScrollDriver'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
@@ -1132,6 +1133,14 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AD STANDARD v2 HOME class, 1 unit -- after the first full content
+          section below the hero (Room I gallery), never inside/above the
+          hero. Steve's explicit monetize-GO, 2026-07-19 -- homepage was
+          deliberately ZERO ads until this decision. */}
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '3rem 0' }}>
+        <AdSlot slot="adsterra-banner" />
+      </div>
 
       {/* ── ROOM II — WING GUIDE (was "Fastest price-guide paths"). Museum
           Night S3: the 6 guides render as book spines leaning against a
