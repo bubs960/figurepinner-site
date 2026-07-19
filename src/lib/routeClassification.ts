@@ -5,18 +5,35 @@
 // the same reason edge-cache-policy.mjs exists separately from
 // edge-cache-entry.mjs. See tests/middlewareRouteClassification.test.mjs.
 
+// Exact-segment prefix match: true for `pathname === prefix` or
+// `pathname` starting with `prefix + '/'`. Plain `startsWith(prefix)` also
+// matches an unrelated longer segment (`/app` matching `/apple/foo`,
+// `/admin` matching `/administrator`) -- harmless in practice today (no such
+// route exists), but webaudit flagged it as worth tightening whenever this
+// file is next touched (2026-07-19 deploy-queue gate, SHOULD-class note).
+function isOrIsUnder(pathname: string, prefix: string): boolean {
+  return pathname === prefix || pathname.startsWith(prefix + '/')
+}
+
 // Paths that must always go through Clerk's middleware pipeline. Single
 // source of truth: `isFigurePageRoute` below defers to this FIRST so a
 // reserved prefix can never be misclassified as a figure-page route no
 // matter what segment shape it happens to have.
 export function needsClerkPipeline(pathname: string): boolean {
   return (
-    pathname.startsWith('/app') ||
-    pathname.startsWith('/admin') ||
+    isOrIsUnder(pathname, '/app') ||
+    isOrIsUnder(pathname, '/admin') ||
     pathname.startsWith('/api/') ||
-    pathname.startsWith('/trpc') ||
-    pathname.startsWith('/sign-in') ||
-    pathname.startsWith('/sign-up')
+    isOrIsUnder(pathname, '/trpc') ||
+    isOrIsUnder(pathname, '/sign-in') ||
+    isOrIsUnder(pathname, '/sign-up') ||
+    // `_next` (2026-07-19, same gate note): no exactly-3-segment /_next/*
+    // path exists today -- Next's own static/chunk paths are 4+ segments,
+    // and middleware's own config.matcher doesn't even list a /_next
+    // pattern, so this is currently inert. Added defensively so the
+    // reserved-prefix class stays closed permanently, not just for the
+    // paths that happen to exist right now.
+    isOrIsUnder(pathname, '/_next')
   )
 }
 

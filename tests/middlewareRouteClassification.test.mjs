@@ -53,4 +53,26 @@ describe('middleware route classification', () => {
     assert.equal(needsClerkPipeline('/wrestling/wwf-hasbro/hulk-hogan'), false)
     assert.equal(needsClerkPipeline('/figure/fp_abc123'), false)
   })
+
+  // 2026-07-19 (webaudit SHOULD-class hardening notes on the deploy-queue
+  // gate, both pre-existing, neither a blocker at the time): bare
+  // startsWith(prefix) also matches an unrelated longer segment, and _next
+  // wasn't in the reserved list at all. Neither had a real live route to
+  // exploit it, but both are now closed for good.
+  test('exact-segment matching: a longer unrelated segment does NOT falsely match a reserved prefix', () => {
+    assert.equal(needsClerkPipeline('/apple/foo'), false)
+    assert.equal(needsClerkPipeline('/administrator/panel'), false)
+    assert.equal(needsClerkPipeline('/trpcfoo/bar'), false)
+    assert.equal(needsClerkPipeline('/sign-instant/whatever'), false)
+    assert.equal(needsClerkPipeline('/sign-upward/mobility'), false)
+    // exact match (no trailing segment) still counts
+    assert.equal(needsClerkPipeline('/app'), true)
+    assert.equal(needsClerkPipeline('/admin'), true)
+  })
+
+  test('_next is now a reserved prefix (defensive close, currently inert -- no live /_next/* path is 2-3 segments)', () => {
+    assert.equal(needsClerkPipeline('/_next'), true)
+    assert.equal(needsClerkPipeline('/_next/static/chunk.js'), true)
+    assert.equal(isFigurePageRoute('/_next/foo'), false)
+  })
 })
