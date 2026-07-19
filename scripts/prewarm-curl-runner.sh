@@ -21,6 +21,7 @@
 #   node --import ./scripts/register-ts-loader.mjs scripts/gen-curated-url-list.mjs /tmp/curated-urls.tsv
 #   scripts/prewarm-curl-runner.sh /tmp/curated-urls.tsv <offset> <limit> [delay_seconds] [out_csv]
 set -euo pipefail
+shopt -s nocasematch
 
 LIST_FILE="${1:?usage: prewarm-curl-runner.sh <list-file> <offset> <limit> [delay_seconds] [out_csv]}"
 OFFSET="${2:?offset required}"
@@ -40,13 +41,25 @@ cold=0; warm=0; err=0; n=0
 # stream sends tail a SIGPIPE, which `pipefail` turns into a fatal exit 141.
 sed -n "$((OFFSET + 1)),$((OFFSET + LIMIT))p" "$LIST_FILE" | while IFS=$'\t' read -r fid path; do
   n=$((n + 1))
+  # Single curl call (the only subprocess this loop body needs) -- header
+  # parsing below is pure bash builtins (case/parameter-expansion), not
+  # grep/cut/tr pipelines. On Windows/Git-Bash, each extra forked process is
+  # slow (MSYS process-spawn overhead) -- the original 4-subshell parse chain
+  # was adding ~2.7s/request of pure shell overhead on top of the real curl
+  # time, roughly halving real throughput (found live, batch 1, 2026-07-19).
   resp=$(curl -s -D - -o /dev/null --max-time 20 -A "$UA" \
     -w '\nHTTP_STATUS:%{http_code}\nTIME_TOTAL:%{time_total}\n' \
-    "${BASE}${path}" 2>/dev/null || echo "HTTP_STATUS:000")
-  status=$(echo "$resp" | grep -o 'HTTP_STATUS:[0-9]*' | tail -1 | cut -d: -f2)
-  time_total=$(echo "$resp" | grep -o 'TIME_TOTAL:[0-9.]*' | tail -1 | cut -d: -f2)
-  edge=$(echo "$resp" | grep -i '^x-fp-edge:' | tr -d '\r' | cut -d' ' -f2 || true)
-  cfcache=$(echo "$resp" | grep -i '^cf-cache-status:' | tr -d '\r' | cut -d' ' -f2 || true)
+    "${BASE}${path}" 2>/dev/null || printf 'HTTP_STATUS:000\n')
+  status=""; time_total=""; edge=""; cfcache=""
+  while IFS= read -r line; do
+    line="${line%$'\r'}"
+    case "$line" in
+      HTTP_STATUS:*)      status="${line#HTTP_STATUS:}" ;;
+      TIME_TOTAL:*)       time_total="${line#TIME_TOTAL:}" ;;
+      x-fp-edge:*)        edge="${line#x-fp-edge: }" ;;
+      cf-cache-status:*)  cfcache="${line#cf-cache-status: }" ;;
+    esac
+  done <<< "$resp"
   echo "${fid},${path},${status:-000},${edge:-},${cfcache:-},${time_total:-}" >> "$OUT_CSV"
   if [ "${status:-000}" = "000" ] || [ "${status:-200}" -ge 400 ] 2>/dev/null; then err=$((err+1))
   elif [ "$edge" = "MISS" ]; then cold=$((cold+1))
