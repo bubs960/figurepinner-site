@@ -174,10 +174,6 @@ export default async function RedWhiteBluePage() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
-          <AdSlot slot="leaderboard" />
-        </div>
-
         {/* Tile grid */}
         <div style={{
           display: 'grid',

@@ -194,10 +194,6 @@ export default async function GuideArticlePage({ params }: PageProps) {
           {article.dek}
         </p>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-          <AdSlot slot="leaderboard" />
-        </div>
-
         {article.body.map((block, i) => <Block key={i} block={block} comps={comps} ebayUrls={ebayUrls} />)}
 
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>

@@ -402,10 +402,6 @@ export default async function CharacterHubPage({
           padding: 'clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 5vw, 3rem) 5rem',
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-          <AdSlot slot="leaderboard" />
-        </div>
-
         {/* Line sections */}
         <div>
           {lineGroups.map((lineGroup, lineIdx) => (
@@ -484,9 +480,11 @@ export default async function CharacterHubPage({
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA — AD STANDARD v2: GRID class, 1 unit, after the last
+            content grid, before the closer — position already matched,
+            swapped the dead AdSense rectangle call for the live Adsterra key. */}
         <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-          <AdSlot slot="rectangle" />
+          <AdSlot slot="adsterra-banner" />
           <div style={{ marginTop: '2rem' }}>
             <a
               href="/sign-up"

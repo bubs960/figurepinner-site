@@ -761,6 +761,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   const hasPricing = marketPricing != null
 
+  // AD STANDARD v2 thin-page precedence rule (2026-07-19): on no-comp figures
+  // (EmptyState variant), unit 1 (after the price panel) and unit 2 (page
+  // bottom) can land within ~1 viewport of each other since SeoSummary +
+  // CtaRail alone don't add much height. Content-presence check, not pixel
+  // math: count the two content sections that actually vary in height
+  // (RelatedRow returns null when its figures array is empty) and drop unit
+  // 2 when fewer than 2 are present AND there's no pricing to begin with.
+  const relatedSectionCount =
+    (seriesCompanions.length > 0 ? 1 : 0) + (characterVariants.length > 0 ? 1 : 0)
+  const showUnitTwo = hasPricing || relatedSectionCount >= 2
+
   // FPPS-01 (2026-07-15, folded in per webaudit scope note): MobileActionBar
   // is a fixed-width sticky bar -- genuinely space-constrained like a meta
   // tag, so it can't lay out two full condition rows without breaking its
@@ -1043,10 +1054,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
         {/* Ad — Adsterra Banner (468×60), page bottom after related figures
             (ad-revenue plan S4: unit 2 of 2 — native slot converts to banner,
-            format swap not removal; no native widgets sitewide per plan S3.2) */}
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0 0.5rem' }}>
-          <AdSlot slot="adsterra-banner" />
-        </div>
+            format swap not removal; no native widgets sitewide per plan S3.2).
+            AD STANDARD v2 thin-page rule: skipped on thin no-comp pages where
+            it would land within ~1 viewport of unit 1 — see showUnitTwo above. */}
+        {showUnitTwo && (
+          <div style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0 0.5rem' }}>
+            <AdSlot slot="adsterra-banner" />
+          </div>
+        )}
       </main>
 
       {/* Sticky mobile action bar — phones only, feature-flag gated.

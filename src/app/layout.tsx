@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
-import Script from 'next/script'
 import { Bebas_Neue, Inter, Cinzel } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
@@ -140,17 +139,11 @@ export default function RootLayout({
           {children}
           <Footer />
         </ClerkProvider>
-        {/* Google AdSense — auto ads. lazyOnload (S20 perf audit): the script
-            used to load render-blocking-adjacent in <head>, competing for
-            bandwidth/CPU in the critical first-load window on every page.
-            Ads here are below-fold reading-flow units; nothing above the fold
-            depends on them, and ~99% of traffic is bots that earn nothing. */}
-        <Script
-          id="adsbygoogle-loader"
-          strategy="lazyOnload"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1062337951127266"
-          crossOrigin="anonymous"
-        />
+        {/* AD STANDARD v2 (2026-07-19): AdSense auto-ads script removed —
+            unconditional sitewide loader wrapping every route incl. signed-in
+            surfaces, Google-chosen placements, no unit ever rendered (the
+            <ins> branch in AdSlot.tsx was always commented out). Adsterra
+            iframe banners only, per-page-type, per the format ruling. */}
         {/* Adsterra Popunder — DISABLED. Was intercepting internal nav clicks
             and serving adult inventory. Use Native Banner only. */}
         {/* <Script

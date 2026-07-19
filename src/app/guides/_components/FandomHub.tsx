@@ -415,8 +415,6 @@ export default function FandomHub({
           </div>
         )}
 
-        <div className="fh-ad"><AdSlot slot="leaderboard" /></div>
-
         {/* PARENT-page era map (general wrestling-hub): links DOWN to child hubs + scoped
             searches instead of re-listing figures (cannibalization law). */}
         {theme.eraMap && theme.eraMap.length > 0 && (
@@ -478,8 +476,6 @@ export default function FandomHub({
           <IntelTable data={topComps} theme={theme} />
         )}
 
-        <div className="fh-ad"><AdSlot slot="rectangle" /></div>
-
         {vaults && vaults.vaults.length > 0 ? (
           <FandomLineSections
             vaults={vaults.vaults}
@@ -493,10 +489,11 @@ export default function FandomHub({
           article.body.map((block, i) => <Block key={i} block={block} />)
         )}
 
-        {/* R3: in-content ad (below fold). adsterra-banner is the site's live unit
-            (no approval gate, same as other guide pages); the bottom leaderboard is
-            the AdSense slot that activates once Google approves. AdSlot reserves
-            height + is Pro-aware (ad-free for Pro), so no CLS for free users. */}
+        {/* AD STANDARD v2: FandomHub is the ARTICLE class (tiebreaker vs GRID),
+            1 unit — this is it. Sole survivor of the old 4-slot layout; the
+            other 3 were dead AdSense-branch code and never rendered. AdSlot
+            reserves height + is Pro-aware (ad-free for Pro), so no CLS for
+            free users. */}
         <div className="fh-ad fh-ad-reserve"><AdSlot slot="adsterra-banner" /></div>
 
         {isSeam && <FaqSection faqs={theme.faqs} />}
@@ -525,8 +522,6 @@ export default function FandomHub({
             </div>
           </details>
         )}
-
-        <div className="fh-ad"><AdSlot slot="leaderboard" /></div>
 
         {moreGuides.length > 0 && (
           <div className="fh-more">

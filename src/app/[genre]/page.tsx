@@ -873,9 +873,11 @@ export default async function GenrePage(
         )}
       </section>
 
-      {/* ── AD ── */}
+      {/* AD STANDARD v2: GRID class, 1 unit, after the last content grid,
+          before the closer. Was a dead AdSense leaderboard call in the same
+          position — swapped to the live Adsterra key, no position change. */}
       <div className="fpg-ad">
-        <AdSlot slot="leaderboard" />
+        <AdSlot slot="adsterra-banner" />
       </div>
 
       {/* ── CLOSER ── */}

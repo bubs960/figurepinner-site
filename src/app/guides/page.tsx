@@ -4,6 +4,7 @@ import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { getFandom } from '@/lib/genreFigures'
 import { ARTICLES } from './_data/articles'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 
 /**
  * /guides — Price Guide hub.
@@ -218,6 +219,13 @@ export default function GuidesPage() {
             ))}
           </div>
         </section>
+
+        {/* AD STANDARD v2: ARTICLE-INDEX class, 1 unit, after the last grid
+            (the article-card grid above), before footer. Was bare — this
+            page earned $0 before Phase 1. */}
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '2.5rem 0 0' }}>
+          <AdSlot slot="adsterra-banner" />
+        </div>
       </main>
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}

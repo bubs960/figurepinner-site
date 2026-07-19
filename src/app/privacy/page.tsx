@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import SiteHeader from '@/app/components/SiteHeader'
 
 export const metadata: Metadata = {
@@ -72,13 +72,13 @@ export default function PrivacyPage() {
         <ProseSection title="Affiliate Links & Third-Party Services">
           <p>FigurePinner displays links to eBay listings. Some of these links are affiliate links through the eBay Partner Network. When you click an affiliate link and make a purchase, we may earn a commission at no extra cost to you. These commissions help support the development of FigurePinner.</p>
           <p>Clicking an eBay affiliate link sends you to eBay, which has its own privacy policy and data practices. FigurePinner does not receive any personal information from eBay as a result of these clicks.</p>
-          <p>FigurePinner may also use Google AdSense on public content pages. Google and its advertising partners may use cookies, web beacons, IP addresses, or similar identifiers to serve ads, measure ad performance, and prevent fraud. You can learn more at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses data when you use our partners&apos; sites or apps</a>.</p>
+          <p>FigurePinner displays third-party display ads (Adsterra) on select public content pages. These ads render inside a cross-origin iframe that FigurePinner does not control; the ad network may use cookies or similar identifiers within that iframe to serve ads and measure performance.</p>
           <p>We also use the following third-party services:</p>
           <ul>
             <li><strong>Clerk</strong> — authentication and user management</li>
             <li><strong>Cloudflare</strong> — hosting, CDN, and edge computing</li>
             <li><strong>eBay Partner Network</strong> — affiliate link tracking</li>
-            <li><strong>Google AdSense</strong> — advertising, ad measurement, and site monetization on public content pages</li>
+            <li><strong>Adsterra</strong> — display advertising and site monetization on select public content pages</li>
           </ul>
         </ProseSection>
 
@@ -109,8 +109,8 @@ export default function PrivacyPage() {
         </ProseSection>
 
         <ProseSection title="Cookies">
-          <p>FigurePinner uses essential cookies to maintain your login session (managed by Clerk). Public pages may also include Google AdSense ad tags. Third-party vendors, including Google, may use cookies to serve ads based on prior visits to FigurePinner or other websites. Google&apos;s use of advertising cookies enables it and its partners to serve ads based on visits to this site and other sites on the internet.</p>
-          <p>You can control cookies through your browser settings, though disabling essential cookies may break authentication. You can also visit <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> to manage personalized advertising preferences.</p>
+          <p>FigurePinner uses essential cookies to maintain your login session (managed by Clerk). Select public pages may also include a third-party ad unit (Adsterra), which loads inside a cross-origin iframe and may set its own cookies to serve ads; FigurePinner does not control or read those cookies.</p>
+          <p>You can control cookies through your browser settings, though disabling essential cookies may break authentication.</p>
         </ProseSection>
 
         <ProseSection title="Changes to This Policy">
