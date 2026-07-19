@@ -1,6 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse, type NextRequest, type NextFetchEvent } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
+import { isFigurePageRoute, needsClerkPipeline } from '@/lib/routeClassification'
 
 // The site is public. The former coming-soon gate (COMING_SOON_MODE / bypass
 // token / coming-soon rewrite) has been removed entirely so it can never gate
@@ -75,18 +76,14 @@ const isPublicCacheableApi = createRouteMatcher([
 // friends are EXCLUDED from the Clerk matcher already. `isFigurePageRoute` is
 // checked, and `handleFigurePageRateLimit` returns, BEFORE `clerkHandler` is
 // ever invoked — Clerk's own machinery never runs for a figure-page request.
+// `isFigurePageRoute`/`needsClerkPipeline` themselves live in
+// src/lib/routeClassification.ts (2026-07-19) so the pure classification
+// logic can be unit-tested without pulling in @clerk/nextjs/server, which
+// cannot be imported from plain Node — see
+// tests/middlewareRouteClassification.test.mjs for the regression guard
+// (a reserved-prefix path like /api/admin/health used to be misclassified
+// as a figure page here, which would have 500'd every request on deploy).
 const FIGURE_PAGE_RATE_LIMIT_PER_MINUTE = 100
-
-function isFigurePageRoute(pathname: string): boolean {
-  const segments = pathname.split('/').filter(Boolean)
-  if (segments[0] === 'figure' && segments.length === 2) return true
-  // [genre]/[line]/[slug] is the figure detail page (exactly 3 segments).
-  // [genre]/character/[slug] is ALSO 3 segments but is the character-hub
-  // page (aggregates every release of a character) — not a figure detail
-  // page, explicitly excluded so it isn't throttled or double-counted here.
-  if (segments.length === 3 && segments[1] !== 'character') return true
-  return false
-}
 
 async function handleFigurePageRateLimit(req: NextRequest): Promise<NextResponse> {
   const rl = await checkRateLimit(req, 'figure-page', FIGURE_PAGE_RATE_LIMIT_PER_MINUTE)
@@ -133,16 +130,6 @@ const clerkHandler = clerkMiddleware(async (auth, req) => {
 // unrelated public page into the Clerk pipeline). Only forward to Clerk for
 // paths that actually need it; everything else the widened matcher now also
 // catches passes straight through, matching its pre-change behavior exactly.
-function needsClerkPipeline(pathname: string): boolean {
-  return (
-    pathname.startsWith('/app') ||
-    pathname.startsWith('/admin') ||
-    pathname.startsWith('/api/') ||
-    pathname.startsWith('/trpc') ||
-    pathname.startsWith('/sign-in') ||
-    pathname.startsWith('/sign-up')
-  )
-}
 
 export default async function middleware(req: NextRequest, event: NextFetchEvent) {
   const pathname = req.nextUrl.pathname
