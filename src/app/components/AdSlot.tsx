@@ -1,12 +1,12 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Script from 'next/script'
 import { hasClientClerkSession } from '@/app/_lib/clientAuth'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 
 /**
- * AdSlot — Adsterra iframe banner unit (AD STANDARD v2, 2026-07-19).
+ * AdSlot — Adsterra iframe banner unit (AD STANDARD v2, 2026-07-19; iframe-isolation
+ * fix 2026-07-19 same day, see WEBAUDIT-TO-WEB-ADSLOT-COLLAPSE-BUG-LIVE-2026-07-19.md).
  *
  * Usage:
  *   <AdSlot slot="adsterra-banner" /> // 300×250, live, no approval needed
@@ -27,6 +27,21 @@ import { trackFunnel } from '@/app/_lib/funnelClient'
  * FILL_TIMEOUT_MS (AD STANDARD v2 Phase 2's "reserve + collapse-when-unfilled"
  * requirement, merged with figurepinner's existing Pro-gate/funnel tracking,
  * which are both untouched below).
+ *
+ * The ad markup (atOptions + invoke.js) renders inside a same-origin `srcDoc`
+ * iframe we own, NOT via next/script. Two reasons, both root-caused live in
+ * prod: (1) next/script's lazyOnload strategy portals its <script> tags to the
+ * end of <body>, decoupled from JSX position, so Adsterra's injected iframe
+ * landed as a body-root sibling — never inside our reserved frame, and always
+ * past <footer>, i.e. real ads rendered but were nearly unreachable by scroll.
+ * (2) Both figure-page AdSlot instances shared the same next/script id, so
+ * Next's page-wide script dedup silently dropped the second instance's tags
+ * entirely — one of the two "ad units" never had a chance to fill. A same-origin
+ * srcDoc iframe sidesteps both: the ad markup parses as part of THIS iframe's
+ * own initial document (so injection lands inside it, at the position we
+ * control), and each AdSlot mount gets its own iframe with its own
+ * `window`/`atOptions` scope, so there's no cross-instance dedup or global
+ * collision to worry about.
  */
 
 const FILL_TIMEOUT_MS = 4000
@@ -35,10 +50,11 @@ type SlotConfig = {
   width: number
   height: number
   label: string
+  key: string
 }
 
 const SLOT_CONFIG: Record<string, SlotConfig> = {
-  'adsterra-banner': { width: 300, height: 250, label: 'Adsterra Banner (300×250)' },
+  'adsterra-banner': { width: 300, height: 250, label: 'Adsterra Banner (300×250)', key: '5758f0cf21092928ed5d04198e165847' },
 }
 
 type Props = {
@@ -49,7 +65,7 @@ type Props = {
 export default function AdSlot({ slot, className }: Props) {
   const [proState, setProState] = useState<'loading' | 'pro' | 'free'>('loading')
   const [adState, setAdState] = useState<'pending' | 'filled' | 'unfilled'>('pending')
-  const frameRef = useRef<HTMLDivElement>(null)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
   const config = SLOT_CONFIG[slot]
 
   useEffect(() => {
@@ -87,26 +103,43 @@ export default function AdSlot({ slot, className }: Props) {
   }, [proState, slot])
 
   // Reserve + collapse-when-unfilled (AD STANDARD v2 Phase 2): watch for the
-  // iframe Adsterra injects into the frame. If it never shows up within
-  // FILL_TIMEOUT_MS, stop reserving space instead of leaving a permanent gap.
+  // iframe Adsterra injects inside OUR srcDoc iframe's own document. If it
+  // never shows up within FILL_TIMEOUT_MS, stop reserving space instead of
+  // leaving a permanent gap. Must watch the srcDoc iframe's contentDocument,
+  // not the parent-page DOM — see the file-header comment for why.
   useEffect(() => {
     if (proState !== 'free') return
-    const frame = frameRef.current
-    if (!frame) return
+    const iframeEl = iframeRef.current
+    if (!iframeEl) return
 
-    const checkForAd = () => {
-      if (frame.querySelector('iframe')) setAdState('filled')
+    let observer: MutationObserver | null = null
+    let attached = false
+
+    const attach = () => {
+      if (attached) return
+      const doc = iframeEl.contentDocument
+      if (!doc || !doc.body) return
+      attached = true
+
+      const checkForAd = () => {
+        if (doc.body.querySelector('iframe')) setAdState('filled')
+      }
+      checkForAd()
+
+      observer = new MutationObserver(checkForAd)
+      observer.observe(doc.body, { childList: true, subtree: true })
     }
-    checkForAd()
 
-    const observer = new MutationObserver(checkForAd)
-    observer.observe(frame, { childList: true, subtree: true })
+    iframeEl.addEventListener('load', attach)
+    attach() // covers the case where the srcDoc document is already loaded by the time this effect runs
+
     const timeout = setTimeout(() => {
       setAdState(current => (current === 'pending' ? 'unfilled' : current))
     }, FILL_TIMEOUT_MS)
 
     return () => {
-      observer.disconnect()
+      iframeEl.removeEventListener('load', attach)
+      observer?.disconnect()
       clearTimeout(timeout)
     }
   }, [proState])
@@ -123,6 +156,14 @@ export default function AdSlot({ slot, className }: Props) {
   // empty space.
   if (adState === 'unfilled') return null
 
+  // Self-contained HTML document for the srcDoc iframe: atOptions + invoke.js
+  // parse as part of THIS document's initial load, so Adsterra's injection
+  // happens at the right place and in its own isolated window scope.
+  const adHtml = '<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;overflow:hidden;}</style></head><body>' +
+    `<script>atOptions = { 'key': '${config.key}', 'format': 'iframe', 'height': ${config.height}, 'width': ${config.width}, 'params': {} };</script>` +
+    `<script src="https://www.highperformanceformat.com/${config.key}/invoke.js"></script>` +
+    '</body></html>'
+
   // Adsterra Banner (300×250) — live, no approval needed.
   return (
     <div className={className} style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0.5rem 0' }}>
@@ -131,7 +172,6 @@ export default function AdSlot({ slot, className }: Props) {
         color: 'var(--dim)', fontFamily: 'var(--font-ui)', marginBottom: '4px',
       }}>Advertisement</span>
       <div
-        ref={frameRef}
         style={{
           width: `min(${config.width}px, 100%)`,
           height: config.height,
@@ -140,17 +180,11 @@ export default function AdSlot({ slot, className }: Props) {
           justifyContent: 'center',
         }}
       >
-        <Script
-          id="adsterra-banner-config"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `atOptions = { 'key': '5758f0cf21092928ed5d04198e165847', 'format': 'iframe', 'height': ${config.height}, 'width': ${config.width}, 'params': {} };`,
-          }}
-        />
-        <Script
-          id="adsterra-banner-invoke"
-          strategy="lazyOnload"
-          src="https://www.highperformanceformat.com/5758f0cf21092928ed5d04198e165847/invoke.js"
+        <iframe
+          ref={iframeRef}
+          srcDoc={adHtml}
+          title="Advertisement"
+          style={{ width: config.width, height: config.height, border: 'none', maxWidth: '100%' }}
         />
       </div>
     </div>

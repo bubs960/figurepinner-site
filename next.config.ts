@@ -156,7 +156,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: https://cdn.shopify.com https://bubs960collectibles.myshopify.com https://actionfigure411.com https://*.actionfigure411.com https://img.clerk.com https://pagead2.googlesyndication.com",
               "font-src 'self' data:",
               "connect-src 'self' https://figurepinner-api.bubs960.workers.dev https://clerk.figurepinner.com https://static.cloudflareinsights.com https://cloudflareinsights.com",
-              "frame-src https://clerk.figurepinner.com https://*.effectivecpmnetwork.com",
+              "frame-src 'self' https://clerk.figurepinner.com https://*.effectivecpmnetwork.com https://www.highperformanceformat.com",
               "object-src 'none'",
               "base-uri 'self'",
               "frame-ancestors 'none'",
