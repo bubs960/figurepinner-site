@@ -5,8 +5,10 @@ import { hasClientClerkSession } from '@/app/_lib/clientAuth'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 
 /**
- * AdSlot — Adsterra iframe banner unit (AD STANDARD v2, 2026-07-19; iframe-isolation
- * fix 2026-07-19 same day, see WEBAUDIT-TO-WEB-ADSLOT-COLLAPSE-BUG-LIVE-2026-07-19.md).
+ * AdSlot — Adsterra iframe banner unit (AD STANDARD v2, 2026-07-19; iframe
+ * namespace-isolation fix 2026-07-19 same day (separate `window` scope per
+ * mount, not a security sandbox -- there is no `sandbox` attribute), see
+ * WEBAUDIT-TO-WEB-ADSLOT-COLLAPSE-BUG-LIVE-2026-07-19.md).
  *
  * Usage:
  *   <AdSlot slot="adsterra-banner" /> // 300×250, live, no approval needed
@@ -113,13 +115,24 @@ export default function AdSlot({ slot, className }: Props) {
     if (!iframeEl) return
 
     let observer: MutationObserver | null = null
-    let attached = false
+    let attachedDoc: Document | null = null
 
+    // Keyed to document identity, not a one-shot flag: an <iframe srcDoc> starts
+    // on an empty placeholder document before the browser navigates it to the
+    // real srcDoc content (a genuine document replacement, not a mutation). If
+    // this runs before that navigation completes, contentDocument is still the
+    // placeholder -- rebinding on every call (fallback AND every 'load' event)
+    // whenever the document object has changed means the real navigation's
+    // 'load' event always gets a chance to correct onto the real document,
+    // instead of a one-shot flag permanently locking onto whichever document
+    // happened to be current on the first call (see
+    // WEBAUDIT-TO-WEB-ADSLOT-FIX-RACE-CONDITION-ADDENDUM-2026-07-19.md).
     const attach = () => {
-      if (attached) return
       const doc = iframeEl.contentDocument
       if (!doc || !doc.body) return
-      attached = true
+      if (doc === attachedDoc) return
+      observer?.disconnect()
+      attachedDoc = doc
 
       const checkForAd = () => {
         if (doc.body.querySelector('iframe')) setAdState('filled')
