@@ -57,7 +57,9 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
 ## Session discipline
 
 - Cross-chat state: `C:\Users\bubs9\Documents\Claude\Projects\Bridge\`
-  (DAILY-DIGEST.md + TEAM-GROUND-RULES.md bind here too — R1 traffic deadline,
-  R7 subagents never Fable/Opus with explicit `model:`).
+  (OPEN-ITEMS.md + TEAM-GROUND-RULES.md bind here too — R1 traffic target,
+  R7 subagents never Fable/Opus with explicit `model:`). The plain-named
+  daily-digest file may not exist at a given moment — check OPEN-ITEMS.md
+  first, don't block on a specific digest filename.
 - Update memory (`project_web_status_log.md`) after every work block, and
   commit your work before session close.
