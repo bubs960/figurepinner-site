@@ -221,25 +221,23 @@ export async function prettyFigureUrl(f: KBFigure): Promise<string> {
   return figureUrl(f)
 }
 
-// ── Sitemap bulk path ────────────────────────────────────────────────────────
-// The sitemap needs every figure's URL + a global uniqueness decision. Pull a
-// narrow 4-column projection (not all 18) to keep the scan light, build the
-// count map once, then resolve each URL against it with pure helpers.
+// ── Sitemap bulk path (count/resolve helpers only) ─────────────────────────
+// src/app/sitemap.ts actually reads the build-time bundled array (@/data/kb),
+// not this D1 path -- there is no live getFiguresForSitemap() call anywhere
+// in production (2026-07-20 cost audit: confirmed zero callers, removed --
+// a full unindexed `SELECT * FROM kb_figures` D1 scan on every cold sitemap
+// request would have been a real, currently-nonexistent cost landmine had
+// this ever gotten wired up by accident during the "Option E" D1 migration).
+// SitemapRow + the two pure helpers below are KEPT: they're actively
+// regression-tested (tests/prettyFigureUrl.test.mjs, guarding the
+// twin-namespace raw-fandom URL bug, b01e823) and have zero runtime cost on
+// their own -- only the D1 read itself was the cost risk.
 
 export interface SitemapRow {
   figure_id: string
   fandom: string
   product_line: string
   character_canonical: string
-}
-
-/** Narrow projection of every figure for sitemap URL generation. */
-export async function getFiguresForSitemap(): Promise<SitemapRow[]> {
-  const db = await getKbDb()
-  const { results } = await db
-    .prepare('SELECT figure_id, fandom, product_line, character_canonical FROM kb_figures')
-    .all<SitemapRow>()
-  return results ?? []
 }
 
 /** Count map keyed by fandom/product_line/character_canonical for the sitemap. */
