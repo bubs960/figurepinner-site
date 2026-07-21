@@ -48,6 +48,10 @@ const PRIORITY_URLS = [
   'https://figurepinner.com/guides/star-wars-black-series-hub',
   'https://figurepinner.com/guides/dc-multiverse-hub',
   'https://figurepinner.com/guides/tmnt-hub',
+  // SDCC 2026 (2026-07-21): time-sensitive, updates through the show — worth
+  // a re-ping on every deploy this week. Revisit removing after the show
+  // (7/26) once it stops changing daily.
+  'https://figurepinner.com/guides/sdcc-2026-toy-reveal-roundup',
 ]
 
 function extractLocs(xml) {

@@ -101,6 +101,12 @@ const PRIORITY_GUIDES: Array<{
     fandom: null, line: null,
   },
   {
+    href: '/guides/sdcc-2026-toy-reveal-roundup',
+    label: 'SDCC 2026 toy reveals, tracked',
+    kicker: 'WWE panel Thursday — every fandom we cover, updated live',
+    fandom: null, line: null,
+  },
+  {
     href: '/guides/most-valuable-wwe-elite-figures',
     label: 'Most valuable WWE Elite figures',
     kicker: 'Pricing a Wrestling Elite? Start here',
