@@ -20,6 +20,16 @@ import { checkRateLimit } from '@/lib/rateLimit'
  *   browsers and excludes most bots/crawlers, so this is the best daily human-visit
  *   proxy.
  *
+ * DAY BOUNDARIES ARE America/New_York, NOT UTC (fixed 2026-07-20/21, S? — the
+ * "0 visits on 7/19" incident): the CF `date` dimension on rumPageloadEventsAdaptiveGroups
+ * buckets by UTC calendar day. Steve reads the Cloudflare dashboard in EDT/EST, and a
+ * late-evening (post ~8pm ET) work session's traffic lands in the NEXT UTC day's bucket
+ * — a normal evening looked like a dead day. Fixed by fetching hourly (`datetimeHour`)
+ * rows over a padded UTC window and re-bucketing each hour into its America/New_York
+ * calendar date ourselves, so `rows[].date` always matches what the CF dashboard shows
+ * for that same NY calendar day. Verified against a live dashboard read (absolute range
+ * Jul 19 00:00–24:00 EDT = 6 visits / 7 pageviews) before shipping this fix.
+ *
  * DOES NOT silently return zeros. If CF GraphQL rejects a field, this returns the
  * raw CF errors with HTTP 502 so the query can be fixed — the same discipline that
  * the cache-stats endpoint learned the hard way (see cache-stats/route.ts S41c note).
@@ -46,6 +56,12 @@ const ZONE_NAME = 'figurepinner.com'
 const ZONE_ID_FALLBACK = '66a98bfaa6a2992c9ed3c32f9f3c1702'
 const GRAPHQL = 'https://api.cloudflare.com/client/v4/graphql'
 const REST = 'https://api.cloudflare.com/client/v4'
+
+// Steve/the dashboard read this zone in US Eastern time — bucket day boundaries
+// to match, not UTC. Handles EDT/EST transitions automatically via Intl.
+const NY_TZ = 'America/New_York'
+const nyDateString = (d: Date): string =>
+  new Intl.DateTimeFormat('en-CA', { timeZone: NY_TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d)
 
 type DayRow = { date: string; uniques: number; requests: number; pageViews: number }
 
@@ -125,13 +141,17 @@ export async function GET(request: Request) {
   //  lives under viewer.accounts, takes siteTag, not viewer.zones/zoneTag.)
   const accountTag = accountId
   const end = new Date()
-  const start = new Date(end.getTime() - days * 24 * 60 * 60 * 1000)
-  const fmt = (d: Date) => d.toISOString().slice(0, 10) // YYYY-MM-DD
+  // Fetch one extra day of UTC padding on each side so every hour that could
+  // possibly fall into a requested NY calendar day is present before we re-bucket
+  // below — a fixed UTC date_geq/date_leq window would clip late-ET-evening hours
+  // (see the 7/19 incident in the header comment).
+  const fmt = (d: Date) => d.toISOString().slice(0, 10) // YYYY-MM-DD, used only for siteTag discovery below
 
   // Resolve the RUM siteTag for figurepinner.com from this account's Web Analytics sites.
   let siteTag = process.env.CF_RUM_SITE_TAG || ''
   if (!siteTag) {
-    const siteQ = `query($a: String!) { viewer { accounts(filter: { accountTag: $a }) { rumPageloadEventsAdaptiveGroups(limit: 50, filter: { date_geq: "${fmt(start)}", date_leq: "${fmt(end)}" }) { dimensions { siteTag } sum { visits } } } } }`
+    const siteStart = new Date(end.getTime() - (days + 1) * 24 * 60 * 60 * 1000)
+    const siteQ = `query($a: String!) { viewer { accounts(filter: { accountTag: $a }) { rumPageloadEventsAdaptiveGroups(limit: 50, filter: { date_geq: "${fmt(siteStart)}", date_leq: "${fmt(end)}" }) { dimensions { siteTag } sum { visits } } } } }`
     try {
       const sr = await fetch(GRAPHQL, { method: 'POST', headers: authHeaders, body: JSON.stringify({ query: siteQ, variables: { a: accountTag } }) })
       const sj = (await sr.json()) as any
@@ -143,16 +163,21 @@ export async function GET(request: Request) {
     } catch { /* fall through; query below will surface the error */ }
   }
 
+  // Hourly window, padded a full extra day on each side of the requested range —
+  // generous enough to cover any UTC/NY offset (max 5h) with huge margin, and cheap
+  // since we bucket + trim server-side below.
+  const fetchStart = new Date(end.getTime() - (days + 1) * 24 * 60 * 60 * 1000)
+
   const query = `
-    query Visits($accountTag: String!, $siteTag: String!, $start: String!, $end: String!) {
+    query Visits($accountTag: String!, $siteTag: String!, $start: Time!, $end: Time!) {
       viewer {
         accounts(filter: { accountTag: $accountTag }) {
           rumPageloadEventsAdaptiveGroups(
-            limit: 100
-            filter: { siteTag: $siteTag, date_geq: $start, date_leq: $end }
-            orderBy: [date_ASC]
+            limit: 10000
+            filter: { siteTag: $siteTag, datetime_geq: $start, datetime_leq: $end }
+            orderBy: [datetimeHour_ASC]
           ) {
-            dimensions { date }
+            dimensions { datetimeHour }
             sum { visits }
             count
           }
@@ -167,7 +192,7 @@ export async function GET(request: Request) {
     const r = await fetch(GRAPHQL, {
       method: 'POST',
       headers: authHeaders,
-      body: JSON.stringify({ query, variables: { accountTag, siteTag, start: fmt(start), end: fmt(end) } }),
+      body: JSON.stringify({ query, variables: { accountTag, siteTag, start: fetchStart.toISOString(), end: end.toISOString() } }),
     })
     rawStatus = r.status
     rawBody = await r.text()
@@ -206,27 +231,64 @@ export async function GET(request: Request) {
     )
   }
 
-  // RUM rows: `sum.visits` = sessions (best human-visit proxy), `count` = pageloads.
+  // Re-bucket hourly rows into America/New_York calendar days (see header comment
+  // for why: CF's own `date` dimension is UTC, and that silently hid a normal
+  // evening's traffic on 7/19).
+  const buckets = new Map<string, { uniques: number; requests: number }>()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const rows: DayRow[] = groups.map((g: any) => ({
-    date: g.dimensions?.date,
-    uniques: g.sum?.visits ?? 0,
-    requests: g.count ?? 0,
-    pageViews: g.count ?? 0,
-  }))
+  for (const g of groups as any[]) {
+    const ts = g?.dimensions?.datetimeHour
+    if (!ts) continue
+    const day = nyDateString(new Date(ts))
+    const b = buckets.get(day) ?? { uniques: 0, requests: 0 }
+    b.uniques += g.sum?.visits ?? 0
+    b.requests += g.count ?? 0
+    buckets.set(day, b)
+  }
+
+  const sortedDays = Array.from(buckets.keys()).sort()
+  // Keep only the most recent `days` NY calendar-day buckets — earlier buckets
+  // exist only because of the padded fetch window above.
+  const trimmedDays = sortedDays.slice(-days)
+  const rows: DayRow[] = trimmedDays.map((date) => {
+    const b = buckets.get(date)!
+    return { date, uniques: b.uniques, requests: b.requests, pageViews: b.requests }
+  })
 
   const uniqVals = rows.map((r) => r.uniques)
   const avgUniques = uniqVals.length ? Math.round(uniqVals.reduce((a, b) => a + b, 0) / uniqVals.length) : 0
   const latest = rows[rows.length - 1] ?? null
 
+  // Day-over-day delta — the "+1/-1 each day" read Steve asked for (2026-07-20/21).
+  const dayOverDay = rows.map((r, i) => ({
+    date: r.date,
+    uniques: r.uniques,
+    delta: i === 0 ? null : r.uniques - rows[i - 1].uniques,
+  }))
+
+  // Week-over-week — only meaningful once >=14 NY days of data exist in the window.
+  let weekOverWeek: { this_week_total: number; last_week_total: number; delta: number; pct_change: number | null } | null = null
+  if (rows.length >= 14) {
+    const thisWeek = rows.slice(-7).reduce((a, r) => a + r.uniques, 0)
+    const lastWeek = rows.slice(-14, -7).reduce((a, r) => a + r.uniques, 0)
+    weekOverWeek = {
+      this_week_total: thisWeek,
+      last_week_total: lastWeek,
+      delta: thisWeek - lastWeek,
+      pct_change: lastWeek > 0 ? Math.round(((thisWeek - lastWeek) / lastWeek) * 1000) / 10 : null,
+    }
+  }
+
   return NextResponse.json(
     {
       zone: ZONE_NAME,
       window_days: days,
-      note: 'visits = CF Web Analytics (RUM beacon) sessions — fires in real browsers, EXCLUDES most bots, so a close human estimate. pageViews = pageloads. R1 target: 50 real human visits/day by 2026-07-31 (extended from 7/03, override on record 2026-07-01).',
+      note: 'visits = CF Web Analytics (RUM beacon) sessions — fires in real browsers, EXCLUDES most bots, so a close human estimate. pageViews = pageloads. Days are bucketed in America/New_York (matches the CF dashboard), not UTC. R1 target: 50 real human visits/day by 2026-07-31 (extended from 7/03, override on record 2026-07-01).',
       avg_visits_per_day: avgUniques,
       latest_day: latest,
       rows,
+      day_over_day: dayOverDay,
+      week_over_week: weekOverWeek,
       ts: new Date().toISOString(),
       graphql_response: debug ? p : undefined,
     },
