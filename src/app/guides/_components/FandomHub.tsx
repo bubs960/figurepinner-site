@@ -255,6 +255,8 @@ function Block({ block }: { block: ArticleBlock }) {
       return <p className="fh-callout">{renderText(block.text)}</p>
     case 'comp':
       return null // live-median cards render only in generic guide articles, not themed hubs
+    case 'countdown':
+      return null // countdown timers render only in generic guide articles, not themed hubs
     case 'p':
     default:
       return <p className="fh-p">{renderText(block.text)}</p>

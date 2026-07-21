@@ -12,6 +12,7 @@ import FandomHub from '../_components/FandomHub'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import LiveMedian from '../_components/LiveMedian'
+import CountdownTimer from '../_components/CountdownTimer'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
 import { getFigureById } from '@/data/kb'
@@ -105,6 +106,8 @@ function Block({ block, comps, ebayUrls }: { block: ArticleBlock; comps: Map<str
           ))}
         </ul>
       )
+    case 'countdown':
+      return <CountdownTimer label={block.label} targetIso={block.targetIso} />
     case 'callout':
       return (
         <p style={{

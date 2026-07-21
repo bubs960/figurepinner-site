@@ -17,6 +17,8 @@ export type ArticleBlock =
   | { type: 'callout'; text: string }
   // Live sold-median card — renders the current r2proxy median for `fid` (Bid Check).
   | { type: 'comp'; fid: string; label: string; sublabel?: string; href?: string }
+  // Live client-side countdown to a fixed UTC instant (e.g. a convention panel start).
+  | { type: 'countdown'; label: string; targetIso: string }
 
 export interface Article {
   slug: string
@@ -2511,6 +2513,7 @@ export const ARTICLES: Article[] = [
     body: [
       { type: 'p', text: 'San Diego Comic-Con runs July 22 through 26, 2026, and the toy side of it is, as always, less about what gets announced than what gets rationed. Every major line has an exclusive this week. Most of them cap out somewhere between 50 units and "while supplies last," which is convention-speak for "buy it Wednesday morning or watch it on eBay by Friday for triple." We track the fandoms below year-round; here is what is real, sourced, and worth your attention as the show unfolds.' },
       { type: 'h2', text: 'Wrestling: the one to actually clear your calendar for' },
+      { type: 'countdown', label: 'WWE Elite Squad Reveal Panel — Thu, July 23, 11:15am PT / 2:15pm ET, Room 6A', targetIso: '2026-07-23T18:15:00Z' },
       { type: 'p', text: 'Mattel has not shown a single new WWE figure as of this writing. What they have shown is the panel structure, and it tells you something: the WWE Elite Squad Reveal Panel is Thursday, July 23, 11:15am to 12:15pm, Room 6A, with Danhausen, Rey Mysterio, and Sam Roberts on stage plus unnamed "surprise appearances." A meet-and-greet follows at 1:15pm at the Mattel booth (#2945), where SDCC collector posters and pins go out to whoever is standing there. Elite exclusives have gone from "figure nobody wanted" to "figure everybody scalps" inside a single generation, and the fact that Mattel is booking a comedian-wrestler and a Hall of Famer to do the reveal instead of just posting a product shot tells you they know it too.' },
       { type: 'p', text: 'Jakks Pacific has said nothing about an AEW exclusive for this show, as of this writing. That is a real gap, not an oversight on our part. We checked the WrestlingFigs forums directly and found active speculation threads but no press release. Worth a second look Thursday once Mattel\'s panel actually happens.' },
       { type: 'h2', text: 'Star Wars and Marvel Legends: Hasbro plays it safe' },
