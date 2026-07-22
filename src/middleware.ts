@@ -2,6 +2,7 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextResponse, type NextRequest, type NextFetchEvent } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
 import { isFigurePageRoute, needsClerkPipeline } from '@/lib/routeClassification'
+import figureIdToPrettyPath from '@/data/figureIdToPrettyPath.generated.json'
 
 // The site is public. The former coming-soon gate (COMING_SOON_MODE / bypass
 // token / coming-soon rewrite) has been removed entirely so it can never gate
@@ -85,7 +86,11 @@ const isPublicCacheableApi = createRouteMatcher([
 // as a figure page here, which would have 500'd every request on deploy).
 const FIGURE_PAGE_RATE_LIMIT_PER_MINUTE = 100
 
-async function handleFigurePageRateLimit(req: NextRequest): Promise<NextResponse> {
+// Returns the 429 response when limited, null when the request may proceed
+// -- null (not NextResponse.next()) so the KV-consolidation rewrite below can
+// still run afterward instead of the rate-limit check hard-committing to
+// "pass through unchanged."
+async function checkFigurePageRateLimit(req: NextRequest): Promise<NextResponse | null> {
   const rl = await checkRateLimit(req, 'figure-page', FIGURE_PAGE_RATE_LIMIT_PER_MINUTE)
   if (rl.limited) {
     return new NextResponse('Too many requests', {
@@ -93,7 +98,7 @@ async function handleFigurePageRateLimit(req: NextRequest): Promise<NextResponse
       headers: { 'Retry-After': String(rl.retryAfter), 'Cache-Control': 'no-store' },
     })
   }
-  return NextResponse.next()
+  return null
 }
 
 const clerkHandler = clerkMiddleware(async (auth, req) => {
@@ -131,10 +136,48 @@ const clerkHandler = clerkMiddleware(async (auth, req) => {
 // paths that actually need it; everything else the widened matcher now also
 // catches passes straight through, matching its pre-change behavior exactly.
 
+// ──────────────────────────────────────────────────────────────────────────────
+// KV ROUTE-TREE CONSOLIDATION (2026-07-22, cost-scaling review)
+// ──────────────────────────────────────────────────────────────────────────────
+// /figure/[figure_id] and /[genre]/[line]/[slug] render the identical
+// FigureDetailContent for the same figure, but Next's KV incremental cache
+// keys by resolved route+params -- a figure visited via both URL shapes
+// writes two separate page-cache entries. Rewriting the id-route request to
+// the figure's pretty path BEFORE Next picks a page to render makes both
+// URLs resolve to the SAME cached page: the client/bot still sees
+// /figure/:figure_id (this is next.rewrite, not a redirect -- no visible
+// 3xx, no change to <link rel=canonical>, no SEO signal touched, the exact
+// area the 2026-07-12 Google-zero incident was about). Figures with no
+// unique pretty path (ambiguous multi-wave characters) are absent from the
+// map on purpose -- see scripts/gen-figure-id-pretty-map.mjs -- and fall
+// through to normal /figure/[figure_id] rendering, same as today.
+const FIGURE_ID_ROUTE = /^\/figure\/([^/]+)$/
+
+function rewriteFigureIdToPrettyPath(req: NextRequest): NextResponse | null {
+  const match = FIGURE_ID_ROUTE.exec(req.nextUrl.pathname)
+  if (!match) return null
+  const prettyPath = (figureIdToPrettyPath as Record<string, string>)[match[1]]
+  if (!prettyPath) return null
+  const url = req.nextUrl.clone()
+  url.pathname = prettyPath
+  return NextResponse.rewrite(url)
+}
+
 export default async function middleware(req: NextRequest, event: NextFetchEvent) {
   const pathname = req.nextUrl.pathname
   if (isFigurePageRoute(pathname)) {
-    return handleFigurePageRateLimit(req)
+    // Rate limit ALWAYS runs first and can always veto, regardless of
+    // whether this request ends up rewritten below -- the KV-consolidation
+    // rewrite changes which page renders, not whether Data Defense Layer 2
+    // applies to it. Getting this order backwards would let a scraper hit
+    // /figure/:id at unlimited volume for every figure with a pretty-path
+    // mapping (~half the catalog), since /figure/:id itself carries no rate
+    // limit of its own once rewritten.
+    const limited = await checkFigurePageRateLimit(req)
+    if (limited) return limited
+    const rewritten = rewriteFigureIdToPrettyPath(req)
+    if (rewritten) return rewritten
+    return NextResponse.next()
   }
   if (needsClerkPipeline(pathname)) {
     return clerkHandler(req, event)
