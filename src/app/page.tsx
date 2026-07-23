@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import HeroSearch from './components/HeroSearch'
 import ShelfCase, { type ShelfFigure } from './components/ShelfCase'
 import ScrollReveal from './components/ScrollReveal'
+import SpotlightVitrine from './components/SpotlightVitrine'
 import HeroTypeScrollDriver from './components/HeroTypeScrollDriver'
 import GalleryTypeLayer from './components/GalleryTypeLayer'
 import SiteHeader from './components/SiteHeader'
@@ -1240,13 +1241,18 @@ export default async function HomePage() {
             </div>
           </div>
           {/* ── ROOM IV — VAULT ENTRANCE (closer). Museum Night S4: the
-              ledger's spot now closes on ONE large VitrineCard — "pin this
-              one first" — instead of a 3-row list; left column (CTA)
-              untouched per spec. ── */}
+              ledger's spot now closes on ONE flagship pick — "pin this one
+              first"; left column (CTA) untouched per spec. Vitrine
+              Showstopper (2026-07-23, approved design 441e2cb9): when the
+              pick has a photo it renders as the spotlight-reveal case
+              (SpotlightVitrine) — scroll-triggered light-up next to the
+              sign-up CTA; photo-less picks keep the flat VitrineCard. ── */}
           {closerPick && (
             <div className="fph-closer-pick" data-fph-reveal>
               <span className="fph-room-eyebrow">Pin this one first</span>
-              <VitrineCard f={closerPick} large />
+              {closerPick.image
+                ? <SpotlightVitrine f={closerPick} />
+                : <VitrineCard f={closerPick} large />}
             </div>
           )}
         </div>
