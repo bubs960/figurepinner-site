@@ -134,7 +134,8 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
 
         .fph-sv-imgwrap {
           position: relative; display: flex; justify-content: center;
-          padding: 26px 0 20px;
+          padding: 26px 0 0;
+          /* the placard overlaps this from below — leave no gap of its own */
         }
         .fph-sv-img {
           width: min(240px, 62%); height: auto; border-radius: 8px;
@@ -174,8 +175,19 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
           100% { opacity: 0; transform: translateY(30px); }
         }
 
-        /* placard — slides up after the light lands (approved text sizes) */
-        .fph-sv-placard { position: relative; opacity: 1; transform: none; transition: opacity .7s ease .95s, transform .7s cubic-bezier(.22,.61,.36,1) .95s; }
+        /* placard — slides up after the light lands (approved text sizes).
+           THE signature detail Steve called out in the design review: the big
+           gold display name sits IN FRONT of the figure photo, overlapping
+           its lower half like a museum poster — not stacked below it. The
+           negative top margin rides the whole placard up over the image;
+           z-index puts the type above it; a soft bottom-up scrim keeps the
+           text legible against whatever photo the closer pick resolves to. */
+        .fph-sv-placard {
+          position: relative; z-index: 1; margin-top: -128px; padding-top: 52px;
+          background: linear-gradient(180deg, transparent 0%, rgba(10,10,17,.55) 34%, rgba(10,10,17,.92) 62%, #0a0a11 100%);
+          opacity: 1; transform: none;
+          transition: opacity .7s ease .95s, transform .7s cubic-bezier(.22,.61,.36,1) .95s;
+        }
         .fph-sv.armed:not(.lit):not(.settled) .fph-sv-placard { opacity: 0; transform: translateY(18px); }
         .fph-sv-name {
           font-family: var(--font-display, inherit);
@@ -214,6 +226,9 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
         @media (max-width: 720px) {
           .fph-sv-frame { padding: 22px 20px 20px; }
           .fph-sv-name { font-size: 27px; }
+          /* photo renders smaller here — shallower ride-up keeps the
+             overlap near the same quarter-of-the-photo feel as desktop */
+          .fph-sv-placard { margin-top: -96px; }
         }
       `}</style>
 
