@@ -67,6 +67,21 @@ export default function Footer() {
         {' '}— real-comp price guides for everything you collect ↗
       </p>
 
+      <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: '0 0 0.75rem' }}>
+        More GrailPulse price guides:{' '}
+        <a href="https://coins.grailpulse.com" style={{ color: 'var(--dim)', textDecoration: 'underline' }}>
+          CoinSpinner — coin price guide
+        </a>
+        {', '}
+        <a href="https://diecast.grailpulse.com" style={{ color: 'var(--dim)', textDecoration: 'underline' }}>
+          Die Cast price guide
+        </a>
+        {', '}
+        <a href="https://games.grailpulse.com" style={{ color: 'var(--dim)', textDecoration: 'underline' }}>
+          GrailGamer — video game price guide
+        </a>
+      </p>
+
       <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: 0 }}>
         © {new Date().getFullYear()} Bubs960 Collectibles · FigurePinner
       </p>
