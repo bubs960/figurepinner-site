@@ -1079,6 +1079,7 @@ export default async function HomePage() {
             placeholder="Search the guide — try &quot;Seth Rollins Ultimate Edition&quot;"
             placeholderExamples={receiptFigures.length ? receiptFigures.map(f => f.chipLabel) : undefined}
             showButton
+            buttonLabel="Search"
           />
         </div>
 

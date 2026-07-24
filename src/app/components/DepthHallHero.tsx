@@ -268,11 +268,16 @@ export default function DepthHallHero({
                   <span className={styles.cardGlow} aria-hidden />
                   <span className={styles.cardImgBox}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {/* Eager, not lazy: these ride 3D-transformed cards that
+                        start at translateZ(-4400px)/opacity 0 — Chrome's
+                        lazy-load viewport check never fires there, so lazy
+                        images simply never loaded (live incident,
+                        2026-07-24). They're the hero visual anyway. */}
                     <img
                       className={styles.cardImg}
                       src={c.img}
                       alt=""
-                      loading="lazy"
+                      loading="eager"
                       decoding="async"
                       onError={() => setBroken(b => ({ ...b, [c.fid]: true }))}
                     />

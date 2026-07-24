@@ -48,6 +48,7 @@ export default function HeroSearch({
   placeholder,
   placeholderExamples,
   showButton = false,
+  buttonLabel = 'Price it',
 }: {
   totalLabel?: string
   placeholder?: string
@@ -55,6 +56,8 @@ export default function HeroSearch({
   placeholderExamples?: string[]
   /** Render a visible submit button so search reads as THE action. */
   showButton?: boolean
+  /** Button text — Depth Hall hero says "Search" (Steve, 2026-07-24). */
+  buttonLabel?: string
 }) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
@@ -420,7 +423,7 @@ export default function HeroSearch({
               boxShadow: '0 6px 18px rgba(0,102,255,0.3)',
             }}
           >
-            Price it
+            {buttonLabel}
           </button>
         )}
       </div>
