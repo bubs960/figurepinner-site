@@ -40,13 +40,29 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
     root.classList.add('armed')
 
     let settleTimer: ReturnType<typeof setTimeout> | null = null
-    const light = () => {
-      root.classList.remove('lit', 'settled')
-      // restart CSS animations
-      void root.offsetWidth
+    const startSequence = () => {
       root.classList.add('lit')
       if (settleTimer) clearTimeout(settleTimer)
       settleTimer = setTimeout(() => root.classList.add('settled'), 1500)
+    }
+    const light = (replay = false) => {
+      // Replays must actually PAINT a dark frame first: the photo dim and
+      // placard drop are delay-bearing transitions, so a same-task
+      // remove→reflow→re-add retargets them to their current (lit) values
+      // and nothing visibly re-runs. `.rewind` snaps them dark instantly;
+      // the double-rAF guarantees that dark frame reaches the screen
+      // before the sequence starts.
+      if (replay) root.classList.add('rewind')
+      root.classList.remove('lit', 'settled')
+      void root.offsetWidth
+      if (replay) {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          root.classList.remove('rewind')
+          startSequence()
+        }))
+      } else {
+        startSequence()
+      }
     }
 
     const io = new IntersectionObserver(entries => {
@@ -60,7 +76,7 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
     io.observe(root)
 
     const dial = root.querySelector<HTMLButtonElement>('.fph-sv-dial')
-    const onDial = () => light()
+    const onDial = () => light(true)
     dial?.addEventListener('click', onDial)
 
     // hover tilt — fine pointers only, ±4deg, transform-only
@@ -97,7 +113,9 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
   return (
     <div className="fph-sv" ref={rootRef}>
       <style>{`
-        .fph-sv { position: relative; }
+        /* pinned footprint — matches the .fph-vc.large card this replaces so
+           the closer column never resizes per-pick or on lazy-image load */
+        .fph-sv { position: relative; width: 100%; max-width: 380px; }
         .fph-sv-frame {
           --rx: 0deg; --ry: 0deg;
           position: relative; overflow: hidden; display: block;
@@ -138,7 +156,13 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
           /* the placard overlaps this from below — leave no gap of its own */
         }
         .fph-sv-img {
-          width: min(240px, 62%); height: auto; border-radius: 8px;
+          width: min(240px, 62%); border-radius: 8px;
+          /* house convention (.fph-vc-img): reserve the photo box BEFORE the
+             lazy bytes arrive — the placard's negative-margin overlap needs
+             this geometry to exist pre-load, and a 404'd photo degrades to a
+             quiet dark plate instead of a collapsed, clipped card */
+          aspect-ratio: 4 / 5.1; object-fit: cover;
+          background: rgba(242,232,213,.05);
           filter: brightness(1.02) saturate(1.05) contrast(1.02); /* lit default */
           transition: filter 1.1s ease .25s;
         }
@@ -164,10 +188,13 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
           position: absolute; width: 3px; height: 3px; border-radius: 50%;
           background: rgba(255,226,168,.5); opacity: 0; pointer-events: none;
         }
-        .fph-sv.armed.lit .fph-sv-mote, .fph-sv.armed.settled .fph-sv-mote { animation: fphSvMote 7s linear infinite; }
-        .fph-sv-mote:nth-child(1) { left: 38%; top: 24%; animation-delay: .9s !important; }
-        .fph-sv-mote:nth-child(2) { left: 55%; top: 16%; animation-delay: 2.4s !important; }
-        .fph-sv-mote:nth-child(3) { left: 47%; top: 34%; animation-delay: 4.2s !important; }
+        /* finite run (4 cycles ≈ 28s) — the case settles for good instead of
+           three compositor animations ticking for the life of the page */
+        .fph-sv.armed.lit .fph-sv-mote, .fph-sv.armed.settled .fph-sv-mote { animation: fphSvMote 7s linear 4; }
+        /* motes are anchor children 3-5 (beam and sweep precede them) */
+        .fph-sv-mote:nth-child(3) { left: 38%; top: 24%; animation-delay: .9s !important; }
+        .fph-sv-mote:nth-child(4) { left: 55%; top: 16%; animation-delay: 2.4s !important; }
+        .fph-sv-mote:nth-child(5) { left: 47%; top: 34%; animation-delay: 4.2s !important; }
         @keyframes fphSvMote {
           0% { opacity: 0; transform: translateY(0); }
           12% { opacity: .8; }
@@ -184,16 +211,23 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
            text legible against whatever photo the closer pick resolves to. */
         .fph-sv-placard {
           position: relative; z-index: 1; margin-top: -128px; padding-top: 52px;
-          background: linear-gradient(180deg, transparent 0%, rgba(10,10,17,.55) 34%, rgba(10,10,17,.92) 62%, #0a0a11 100%);
+          /* scrim reaches ~.62 alpha by the name's first glyph line and .9 by
+             mid-name — eBay photos are overwhelmingly white-background, and
+             the thinner first draft measured ~2.1:1 on gold over white */
+          background: linear-gradient(180deg, transparent 0%, rgba(10,10,17,.62) 14%, rgba(10,10,17,.90) 30%, rgba(10,10,17,.97) 55%, #0a0a11 100%);
           opacity: 1; transform: none;
           transition: opacity .7s ease .95s, transform .7s cubic-bezier(.22,.61,.36,1) .95s;
         }
+        /* instant-dark helper for the relight dial (see light(true)) */
+        .fph-sv.rewind .fph-sv-img, .fph-sv.rewind .fph-sv-placard { transition: none !important; }
         .fph-sv.armed:not(.lit):not(.settled) .fph-sv-placard { opacity: 0; transform: translateY(18px); }
         .fph-sv-name {
           font-family: var(--font-display, inherit);
           font-size: 34px; line-height: 1.08; letter-spacing: .01em;
           color: var(--fph-gold, #e0a83e); font-weight: 700;
           text-transform: uppercase;
+          /* photo-independent legibility floor under the scrim */
+          text-shadow: 0 1px 10px rgba(6,6,10,.85), 0 0 3px rgba(6,6,10,.9);
         }
         .fph-sv-meta {
           margin-top: 7px; font-size: 13px; letter-spacing: .14em;
@@ -240,8 +274,10 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
         <span className="fph-sv-mote" aria-hidden />
         <div className="fph-sv-imgwrap">
           {f.image && (
+            // alt="" — decorative-in-context: the placard right below names
+            // the same figure, so alt={name} made the link stutter it twice
             // eslint-disable-next-line @next/next/no-img-element
-            <img className="fph-sv-img" src={f.image} alt={f.name} loading="lazy" decoding="async" />
+            <img className="fph-sv-img" src={f.image} alt="" loading="lazy" decoding="async" />
           )}
         </div>
         <div className="fph-sv-placard">

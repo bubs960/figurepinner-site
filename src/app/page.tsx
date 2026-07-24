@@ -1247,14 +1247,20 @@ export default async function HomePage() {
               pick has a photo it renders as the spotlight-reveal case
               (SpotlightVitrine) — scroll-triggered light-up next to the
               sign-up CTA; photo-less picks keep the flat VitrineCard. ── */}
-          {closerPick && (
+          {closerPick && (closerPick.image ? (
+            /* SpotlightVitrine owns its own entrance (dark case → light-up) —
+               data-fph-reveal's 0.8s wrapper fade would play UNDER the
+               flicker and dim its marquee opening frames (review 7/23) */
+            <div className="fph-closer-pick">
+              <span className="fph-room-eyebrow">Pin this one first</span>
+              <SpotlightVitrine f={closerPick} />
+            </div>
+          ) : (
             <div className="fph-closer-pick" data-fph-reveal>
               <span className="fph-room-eyebrow">Pin this one first</span>
-              {closerPick.image
-                ? <SpotlightVitrine f={closerPick} />
-                : <VitrineCard f={closerPick} large />}
+              <VitrineCard f={closerPick} large />
             </div>
-          )}
+          ))}
         </div>
       </section>
 
