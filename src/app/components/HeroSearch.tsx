@@ -407,7 +407,7 @@ export default function HeroSearch({
           <button
             type="button"
             onClick={submit}
-            aria-label="Run a price check"
+            className="fpdh-search-submit"
             style={{
               flexShrink: 0,
               border: 'none',

@@ -316,13 +316,17 @@
 /* Submit button: the approved gold gradient (the old hero restyled this via
    a .fph-hero-search selector that died in the swap — live incident
    2026-07-24: the button shipped stray-blue). !important because HeroSearch
-   styles it inline. */
-.parallax :global(.fpdh-search button[aria-label='Run a price check']) {
+   styles it inline. Keyed on .fpdh-search-submit (a class HeroSearch always
+   sets on this button), NOT aria-label — webaudit W-1 (2026-07-24): the old
+   aria-label-based selector coupled visual styling to the accessible name,
+   so a future label change (buttonLabel prop) risked silently breaking this
+   rule again the same way the .fph-hero-search selector died. */
+.parallax :global(.fpdh-search button.fpdh-search-submit) {
   background: linear-gradient(180deg, #f5c462, #dd9f2e) !important;
   color: #09090f !important;
   box-shadow: 0 10px 34px -6px rgba(224, 168, 62, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
 }
-.parallax :global(.fpdh-search button[aria-label='Run a price check']:hover) {
+.parallax :global(.fpdh-search button.fpdh-search-submit:hover) {
   transform: translateY(-2px);
 }
 /* Fragment navigation (/#search): the sticky header would otherwise sit on

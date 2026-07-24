@@ -405,8 +405,8 @@ export default async function HomePage() {
         /* Old hero's HeroSearch skin removed 2026-07-24 — the Depth Hall
            hero owns its search styling in DepthHallHero.module.css (the
            fpdh-search rules), which keeps the 2026-07-10 lesson: target the
-           specific "Run a price check" button, never a bare button selector
-           (HeroSearch's plain-text Clear button must not go gold). */
+           specific .fpdh-search-submit button class, never a bare button
+           selector (HeroSearch's plain-text Clear button must not go gold). */
         .fph-hints { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
         .fph-hints span { font-size: 11.5px; font-weight: 300; color: var(--fph-cream-mut); margin-right: 2px; letter-spacing: .02em; }
         .fph-chip {
