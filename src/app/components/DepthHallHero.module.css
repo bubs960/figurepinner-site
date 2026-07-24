@@ -1,0 +1,605 @@
+/* Depth Hall hero — ported from the approved design-chat prototype
+   ("Homepage Depth Hall", cowork project "Figurepinner homepage visual
+   depth", approved by Steve 2026-07-24 — WEB-EOC-2026-07-24-design.md).
+   Full-viewport infinite 3D dolly through a collector hall: two colonnades
+   of spotlit KB figures glide past, liquid SVG background + starfield,
+   moving floor grid, dust motes, gold-sheen headline, live-comps ticker.
+
+   Reduced motion: the prototype paused every animation, which left the
+   fpRise entrance elements (fill-mode: both) frozen at opacity 0 — i.e.
+   an unreadable hero. Port fix: entrance/readability animations are
+   REMOVED (final state shows), only the decorative loops stop. */
+
+.scene {
+  position: relative;
+  height: 100vh;
+  min-height: 660px;
+  background: #09090f;
+  color: #eeeef5;
+}
+
+.viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(130% 100% at 50% 0%, #141126 0%, #0a0913 46%, #060509 100%);
+}
+
+/* ── starfield ── */
+.starLayer {
+  position: absolute;
+  inset: 0;
+  animation: fpStarZoom 44s linear infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: fpTwinkle 3s ease-in-out infinite;
+}
+
+/* ── liquid background blobs + specular sheen ── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.blobA {
+  left: -22%; top: -30%; width: 75%; height: 85%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(88, 64, 150, 0.3), rgba(88, 64, 150, 0) 70%);
+  filter: blur(70px);
+  animation: fpBlobA 26s ease-in-out infinite alternate;
+}
+.blobB {
+  right: -25%; top: 6%; width: 70%; height: 80%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(224, 168, 62, 0.16), rgba(224, 168, 62, 0) 70%);
+  filter: blur(80px);
+  animation: fpBlobB 32s ease-in-out infinite alternate;
+}
+.blobC {
+  left: 16%; bottom: -38%; width: 68%; height: 75%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(46, 74, 140, 0.26), rgba(46, 74, 140, 0) 70%);
+  filter: blur(75px);
+  animation: fpBlobC 38s ease-in-out infinite alternate;
+}
+.liquid {
+  position: absolute;
+  inset: -8%;
+  animation: fpLiquidDrift 24s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ── ceiling light shaft ── */
+.shaft {
+  position: absolute;
+  left: 50%; top: -12%;
+  width: 900px; height: 88%;
+  margin-left: -450px;
+  transform-origin: top center;
+  clip-path: polygon(44% 0%, 56% 0%, 96% 100%, 4% 100%);
+  background: linear-gradient(180deg, rgba(255, 247, 222, 0.28) 0%, rgba(255, 242, 208, 0.14) 30%, rgba(255, 236, 190, 0.055) 62%, rgba(255, 230, 180, 0) 92%);
+  mix-blend-mode: screen;
+  animation: fpSway 11s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* ── the hall (3D dolly) ── */
+.stage {
+  position: absolute;
+  inset: 0;
+  perspective: 1150px;
+  perspective-origin: 50% 44%;
+}
+.camera {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 500ms cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.card {
+  position: absolute;
+  left: 50%; top: 44%;
+  width: 252px; height: 388px;
+  margin: -194px 0 0 -126px;
+  animation-duration: var(--fp-dur, 17s);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+  opacity: 0;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+.cardL { animation-name: fpHallL; }
+.cardR { animation-name: fpHallR; }
+.cardSpot {
+  position: absolute;
+  left: 50%; top: -118px;
+  width: 300px; height: 150px;
+  margin-left: -150px;
+  clip-path: polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(180deg, rgba(255, 246, 218, 0.5), rgba(255, 238, 196, 0.12) 70%, rgba(255, 238, 196, 0));
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.cardBody {
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(120% 85% at 50% 20%, #1b1826 0%, #0c0b14 60%, #06050b 100%);
+  border: 1px solid rgba(224, 168, 62, 0.42);
+  box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+.card:hover .cardBody,
+.card:focus-visible .cardBody {
+  border-color: rgba(245, 196, 98, 0.95);
+  box-shadow: 0 24px 60px -14px rgba(0, 0, 0, 0.9), 0 0 34px -4px rgba(224, 168, 62, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 42% at 50% 30%, rgba(245, 196, 98, 0.18), transparent 75%);
+}
+.cardImgBox {
+  position: absolute;
+  left: 0; right: 0; top: 16px; bottom: 86px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.cardImg {
+  max-width: 78%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(1.04) saturate(1.05) drop-shadow(0 14px 16px rgba(0, 0, 0, 0.6));
+}
+.cardPlacard {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 12px 16px 13px;
+  background: linear-gradient(180deg, rgba(6, 5, 9, 0), rgba(6, 5, 9, 0.95) 40%);
+  text-align: center;
+}
+.cardName {
+  font-family: var(--font-display);
+  font-size: 23px;
+  letter-spacing: 0.04em;
+  color: #f5c462;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.cardTag {
+  margin-top: 5px;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(238, 238, 245, 0.55);
+}
+
+/* ── floor grid ── */
+.floor {
+  position: absolute;
+  left: -50%; bottom: -6%;
+  width: 200%; height: 58%;
+  transform: rotateX(63deg);
+  transform-origin: bottom center;
+  background:
+    repeating-linear-gradient(0deg, rgba(224, 168, 62, 0.14) 0 1px, transparent 1px 150px),
+    repeating-linear-gradient(90deg, rgba(224, 168, 62, 0.1) 0 1px, transparent 1px 130px);
+  animation: fpFloor 1.35s linear infinite;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 45%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 45%, #000 100%);
+  pointer-events: none;
+}
+
+/* ── dust motes ── */
+.mote {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 244, 214, 0.9);
+  filter: blur(0.5px);
+  animation: fpMoteUp 8s ease-in-out infinite;
+}
+
+/* ── vignette ── */
+.vignetteSoft {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(46% 34% at 50% 42%, rgba(6, 5, 10, 0.62) 0%, rgba(6, 5, 10, 0.22) 55%, transparent 78%);
+}
+.vignetteHard {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 160px 50px rgba(3, 3, 6, 0.9);
+}
+
+/* ── centered content ── */
+.content {
+  position: relative;
+  z-index: 5;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 84px 28px 110px;
+}
+.parallax {
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.parallax :global(.fpdh-eyebrow) {
+  animation: fpRise 0.7s cubic-bezier(0.2, 0.8, 0.25, 1) 0.25s both;
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #e0a83e;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 18px rgba(224, 168, 62, 0.35);
+}
+.parallax :global(.fpdh-headline) {
+  animation: fpRise 0.8s cubic-bezier(0.2, 0.8, 0.25, 1) 0.4s both;
+  margin: 0 auto 18px;
+  max-width: 11.5em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(34px, 4.6vw, 68px);
+  line-height: 1.04;
+  letter-spacing: 0.015em;
+  color: #eeeef5;
+}
+.parallax :global(.fpdh-grail) {
+  background: linear-gradient(105deg, #f5c462 0%, #fff3d6 28%, #e0a83e 55%, #f5c462 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: fpSheen 7s ease-in-out infinite;
+}
+.parallax :global(.fpdh-sub) {
+  animation: fpRise 0.8s cubic-bezier(0.2, 0.8, 0.25, 1) 0.55s both;
+  margin: 0 auto 30px;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(238, 238, 245, 0.82);
+}
+.parallax :global(.fpdh-sub strong) { color: #eeeef5; }
+
+/* ── search (wraps the real HeroSearch client component) ── */
+.parallax :global(.fpdh-search) {
+  animation: fpRise 0.8s cubic-bezier(0.2, 0.8, 0.25, 1) 0.7s both;
+  width: min(620px, 88vw);
+  margin: 0 auto;
+  text-align: left;
+}
+/* Dark-theme + glow overrides for HeroSearch's light inline styles, same
+   scoped-override technique page.tsx already uses on the old hero. */
+.parallax :global(.fpdh-search input) {
+  background: rgba(22, 21, 34, 0.9) !important;
+  border-color: rgba(224, 168, 62, 0.55) !important;
+  color: #eeeef5 !important;
+  backdrop-filter: blur(10px);
+  animation: fpSearchPulse 2.6s ease-in-out infinite;
+}
+.parallax :global(.fpdh-search input::placeholder) {
+  color: rgba(238, 238, 245, 0.66) !important;
+}
+
+/* ── hint chips (kept from the old hero — E2: the "New? Start here" chip
+   must render unconditionally for cold visitors) ── */
+.parallax :global(.fpdh-hints) {
+  animation: fpRise 0.8s cubic-bezier(0.2, 0.8, 0.25, 1) 0.85s both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 13px;
+  color: rgba(238, 238, 245, 0.6);
+}
+.parallax :global(.fpdh-chip) {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(224, 168, 62, 0.35);
+  background: rgba(22, 21, 34, 0.7);
+  color: rgba(238, 238, 245, 0.85);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+.parallax :global(.fpdh-chip:hover) { border-color: rgba(245, 196, 98, 0.9); color: #f5c462; }
+.parallax :global(.fpdh-chip-start) { border-color: rgba(245, 196, 98, 0.6); color: #f5c462; }
+
+/* ── live comps ticker ── */
+.ticker {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 6;
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid rgba(224, 168, 62, 0.28);
+  background: rgba(8, 8, 13, 0.78);
+  backdrop-filter: blur(10px);
+}
+.tickerLabel {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  background: rgba(224, 168, 62, 0.12);
+  border-right: 1px solid rgba(224, 168, 62, 0.28);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #f5c462;
+}
+.tickerDot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #f5c462;
+  display: inline-block;
+}
+.tickerWindow {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.tickerTrack {
+  display: flex;
+  gap: 52px;
+  width: max-content;
+  padding: 14px 0;
+  animation: fpTicker 36s linear infinite;
+}
+.tickerItem {
+  white-space: nowrap;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: rgba(238, 238, 245, 0.62);
+  text-decoration: none;
+}
+.tickerItem:hover .tickerName { color: #f5c462; }
+.tickerName { color: #eeeef5; transition: color 160ms ease; }
+.tickerPrice { font-weight: 700; color: #f5c462; }
+
+/* ── inspect panel ── */
+.inspectOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(5, 4, 9, 0.72);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+}
+.inspectPanel {
+  animation: fpRise 0.35s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+  position: relative;
+  width: min(720px, 92vw);
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #16131f 0%, #0b0a12 60%, #070609 100%);
+  border: 1px solid rgba(224, 168, 62, 0.5);
+  box-shadow: 0 40px 90px -20px rgba(0, 0, 0, 0.9), 0 0 60px -10px rgba(224, 168, 62, 0.25);
+  cursor: default;
+}
+.inspectStage {
+  position: relative;
+  background: radial-gradient(110% 80% at 50% 24%, #1d1a29 0%, #0c0b14 70%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 26px 18px 22px;
+  min-height: 340px;
+}
+.inspectShaft {
+  position: absolute;
+  left: 50%; top: 0;
+  width: 78%; height: 72%;
+  transform: translateX(-50%);
+  clip-path: polygon(44% 0%, 56% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(180deg, rgba(255, 246, 218, 0.4), rgba(255, 238, 196, 0.08) 70%, rgba(255, 238, 196, 0));
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.inspectImg {
+  position: relative;
+  max-width: 88%;
+  max-height: 300px;
+  object-fit: contain;
+  filter: brightness(1.06) saturate(1.06) drop-shadow(0 16px 20px rgba(0, 0, 0, 0.65));
+}
+.inspectBody {
+  padding: 34px 34px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inspectKicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(224, 168, 62, 0.85);
+  margin-bottom: 12px;
+}
+.inspectName {
+  font-family: var(--font-display);
+  font-size: 44px;
+  letter-spacing: 0.02em;
+  line-height: 0.98;
+  color: #f5c462;
+  text-transform: uppercase;
+}
+.inspectTag {
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(238, 238, 245, 0.6);
+}
+.inspectCopy {
+  margin-top: 16px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(238, 238, 245, 0.75);
+}
+.inspectActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.inspectCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  background: linear-gradient(180deg, #f5c462, #dd9f2e);
+  color: #09090f;
+  font-weight: 800;
+  font-size: 14.5px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -8px rgba(224, 168, 62, 0.6);
+  text-decoration: none;
+  transition: transform 160ms ease;
+}
+.inspectCta:hover { transform: translateY(-2px); color: #09090f; }
+.inspectBack {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(238, 238, 245, 0.55);
+  cursor: pointer;
+  border: 0;
+  background: none;
+  font-family: inherit;
+}
+.inspectBack:hover { color: #eeeef5; }
+.inspectClose {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.inspectClose:hover { background: rgba(255, 255, 255, 0.14); }
+
+/* ── entrance curtain ── */
+.curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  background: #060509;
+  animation: fpFadeOut 1s ease 0.3s forwards;
+  pointer-events: none;
+}
+
+/* ── keyframes ── */
+@keyframes fpHallL {
+  0% { transform: translateX(-590px) translateZ(-4400px) rotateY(36deg); opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(-590px) translateZ(560px) rotateY(36deg); opacity: 0; }
+}
+@keyframes fpHallR {
+  0% { transform: translateX(590px) translateZ(-4400px) rotateY(-36deg); opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(590px) translateZ(560px) rotateY(-36deg); opacity: 0; }
+}
+@keyframes fpFloor { from { background-position: 0 0, 0 0; } to { background-position: 0 150px, 0 0; } }
+@keyframes fpTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes fpMoteUp {
+  0% { transform: translateY(0); opacity: 0; }
+  15% { opacity: 0.7; }
+  70% { opacity: 0.5; }
+  100% { transform: translateY(-46vh); opacity: 0; }
+}
+@keyframes fpSheen { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes fpRise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fpFadeOut { to { opacity: 0; } }
+@keyframes fpSway { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+@keyframes fpBlobA { from { transform: translate(0, 0) scale(1); } to { transform: translate(9%, 14%) scale(1.25); } }
+@keyframes fpBlobB { from { transform: translate(0, 0) scale(1.15); } to { transform: translate(-12%, -8%) scale(0.9); } }
+@keyframes fpBlobC { from { transform: translate(0, 0) scale(1); } to { transform: translate(-8%, -12%) scale(1.3); } }
+@keyframes fpLiquidDrift { from { transform: translate3d(-2.5%, -2%, 0) scale(1.08); } to { transform: translate3d(2.5%, 2%, 0) scale(1.16); } }
+@keyframes fpStarZoom {
+  0% { transform: scale(1); opacity: 0; }
+  12% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+@keyframes fpTwinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+@keyframes fpSearchPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 168, 62, 0.32), 0 10px 40px -8px rgba(224, 168, 62, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
+  50% { box-shadow: 0 0 0 7px rgba(224, 168, 62, 0), 0 10px 46px -6px rgba(224, 168, 62, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
+}
+
+/* ── responsive ── */
+@media (max-width: 720px) {
+  .scene { min-height: 600px; }
+  .camera { transform: scale(0.62); }
+  .content { padding: 64px 20px 120px; }
+  .inspectPanel { grid-template-columns: 1fr; }
+  .inspectStage { min-height: 240px; }
+  .inspectImg { max-height: 200px; }
+  .inspectBody { padding: 24px 24px 26px; }
+  .inspectName { font-size: 34px; }
+}
+
+/* ── reduced motion: decorative loops stop; entrance/readability
+   animations are removed entirely so the final lit state renders
+   (never a paused opacity-0 frame). Hall cards are decorative-plus-
+   navigational; with their fly-through removed they'd stack invisible
+   at opacity 0, so they stay hidden — every card's figure remains
+   reachable via search and the shelf below. ── */
+@media (prefers-reduced-motion: reduce) {
+  .starLayer, .star, .blobA, .blobB, .blobC, .liquid, .shaft, .floor,
+  .mote, .tickerTrack, .curtain, .card,
+  .parallax :global(.fpdh-grail),
+  .parallax :global(.fpdh-search input) {
+    animation: none !important;
+  }
+  .curtain { display: none; }
+  .inspectPanel,
+  .parallax :global(.fpdh-eyebrow),
+  .parallax :global(.fpdh-headline),
+  .parallax :global(.fpdh-sub),
+  .parallax :global(.fpdh-search),
+  .parallax :global(.fpdh-hints) {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .camera, .parallax { transition: none; }
+}

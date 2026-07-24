@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import HeroSearch from './components/HeroSearch'
+import DepthHallHero, { type HallCard, type HallTickerItem } from './components/DepthHallHero'
 import ShelfCase, { type ShelfFigure } from './components/ShelfCase'
 import ScrollReveal from './components/ScrollReveal'
 import SpotlightVitrine from './components/SpotlightVitrine'
-import HeroTypeScrollDriver from './components/HeroTypeScrollDriver'
 import GalleryTypeLayer from './components/GalleryTypeLayer'
 import SiteHeader from './components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
@@ -250,10 +250,32 @@ function VitrineCard({ f, large }: { f: ReceiptFigure; large?: boolean }) {
   )
 }
 
+/** Depth Hall colonnade cards — same curated pool + KB resolution as the
+ *  shelf, re-imaged at hall size (the shelf's 180px thumbs would blur on
+ *  the hero's 252px-wide cards). Failures drop silently; the client
+ *  component's onError guard catches anything that still 404s live. */
+function buildHallCards(shelf: ShelfFigure[]): HallCard[] {
+  const out: HallCard[] = []
+  for (const f of shelf) {
+    const kb = getFigureById(f.fid)
+    if (!kb?.canonical_image_url) continue
+    out.push({
+      fid: f.fid,
+      href: f.href,
+      name: f.name,
+      tag: f.tag,
+      img: thumb(kb.canonical_image_url, 400) ?? kb.canonical_image_url,
+    })
+  }
+  return out
+}
+
 export default async function HomePage() {
   // Live market data — real solds or the modules hide themselves.
   const { figures: receiptFigures, tape } = await fetchHomeMarket()
   const shelf = buildShelf(tape)
+  const hallCards = buildHallCards(shelf)
+  const hallTicker: HallTickerItem[] = tape.slice(0, 12)
   const laneCount = GENRE_TAXONOMY.length
   // Room I (Museum Night S3): top lanes by live figure count become large
   // featured vitrine tiles; the rest fall back to a compact floor directory.
@@ -618,6 +640,12 @@ export default async function HomePage() {
         }
 
         /* ── lanes / Room I gallery (Museum Night S3) ── */
+        /* The Shelf strip — ShelfCase's new home after the Depth Hall hero
+           swap (2026-07-24); centered, capped at its old hero-column width. */
+        .fph-shelf-strip { padding: 48px 0 40px; }
+        .fph-shelf-strip .wrap { display: flex; justify-content: center; }
+        .fph-shelf-strip .wrap > * { width: min(720px, 100%); }
+
         .fph-gallery { padding: 34px 0 30px; }
         .fph-room-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
         .fph-room-eyebrow {
@@ -1028,54 +1056,59 @@ export default async function HomePage() {
 
       <SiteHeader />
       <ScrollReveal />
-      <HeroTypeScrollDriver />
       <ProvenanceTypeScrollDriver />
 
-      {/* ── HERO ── */}
-      <section className="fph-hero">
-        {/* GalleryTypeLayer — decorative only, aria-hidden, out of flow,
-            client-mounted only (see component) so it's never an LCP
-            candidate; H1 + shelf image own that. */}
-        <GalleryTypeLayer text="GRAILS" />
-        <div className="wrap fph-hero-grid">
-          <div>
-            <span className="fph-room-eyebrow fph-hero-eyebrow">The collector&apos;s price guide &mdash; not another marketplace.</span>
-            <h1>Every <span className="grail" data-text="grail">grail</span> starts as a gap on the shelf.</h1>
-            <p className="fph-hero-sub">
-              <strong>{TOTAL_FIGURES_LABEL} figures</strong> across <strong>{laneCount} fandoms</strong> &mdash; priced
-              from <strong>real eBay solds</strong>, not hopeful asks.
-            </p>
+      {/* ── HERO — Depth Hall (approved design port, 2026-07-24:
+          WEB-EOC-2026-07-24-design.md). Replaces the old HeroSearch split
+          hero; the search block + hint chips ride inside as server-rendered
+          children so the funnel is unchanged. Ticker = real tape solds
+          (the prototype's sample prices never ship). ShelfCase moved to its
+          own section directly below — the pin funnel is a shipped,
+          Steve-praised feature and does not leave the homepage. ── */}
+      <DepthHallHero cards={hallCards} ticker={hallTicker}>
+        <span className="fpdh-eyebrow">The collector&apos;s price guide &mdash; not another marketplace.</span>
+        <h1 className="fpdh-headline">Every <span className="fpdh-grail">grail</span> starts as a gap on the shelf.</h1>
+        <p className="fpdh-sub">
+          <strong>{TOTAL_FIGURES_LABEL} figures</strong> across <strong>{laneCount} fandoms</strong> &mdash; priced
+          from <strong>real eBay solds</strong>, not hopeful asks.
+        </p>
 
-            <div className="fph-hero-search" id="search">
-              <HeroSearch
-                totalLabel={TOTAL_FIGURES_LABEL}
-                placeholder="Search the guide — try &quot;Seth Rollins Ultimate Edition&quot;"
-                placeholderExamples={receiptFigures.length ? receiptFigures.map(f => f.chipLabel) : undefined}
-                showButton
-              />
-            </div>
-
-            {/* Webaudit homepage-journey E2 (2026-07-10): the "New? Start
-                here" chip renders unconditionally — it's the only cue a
-                cold, no-search-term visitor gets, so it can't disappear
-                along with the dynamic "Collectors are hunting" chips if
-                receipt data ever fails to load at build. */}
-            <div className="fph-hints">
-              {receiptFigures.length >= 3 && (
-                <>
-                  <span>Collectors are hunting:</span>
-                  {receiptFigures.slice(0, 3).map(f => (
-                    <a className="fph-chip" href={f.href} key={f.fid}>{f.chipLabel}</a>
-                  ))}
-                </>
-              )}
-              <a className="fph-chip fph-chip-start" href="/guides/how-to-find-action-figure-values">New? Start here &rarr;</a>
-            </div>
-          </div>
-
-          {shelf.length >= 6 && <ShelfCase figures={shelf} />}
+        <div className="fpdh-search" id="search">
+          <HeroSearch
+            totalLabel={TOTAL_FIGURES_LABEL}
+            placeholder="Search the guide — try &quot;Seth Rollins Ultimate Edition&quot;"
+            placeholderExamples={receiptFigures.length ? receiptFigures.map(f => f.chipLabel) : undefined}
+            showButton
+          />
         </div>
-      </section>
+
+        {/* Webaudit homepage-journey E2 (2026-07-10): the "New? Start
+            here" chip renders unconditionally — it's the only cue a
+            cold, no-search-term visitor gets, so it can't disappear
+            along with the dynamic "Collectors are hunting" chips if
+            receipt data ever fails to load at build. */}
+        <div className="fpdh-hints">
+          {receiptFigures.length >= 3 && (
+            <>
+              <span>Collectors are hunting:</span>
+              {receiptFigures.slice(0, 3).map(f => (
+                <a className="fpdh-chip" href={f.href} key={f.fid}>{f.chipLabel}</a>
+              ))}
+            </>
+          )}
+          <a className="fpdh-chip fpdh-chip-start" href="/guides/how-to-find-action-figure-values">New? Start here &rarr;</a>
+        </div>
+      </DepthHallHero>
+
+      {/* ── THE SHELF — was the hero's right column; now its own strip so
+          the pin-a-figure funnel survives the Depth Hall hero swap. ── */}
+      {shelf.length >= 6 && (
+        <section className="fph-shelf-strip fph-seam">
+          <div className="wrap">
+            <ShelfCase figures={shelf} />
+          </div>
+        </section>
+      )}
 
       {/* ── ROOM I — GALLERY OF FANDOMS (was "Pick your lane"). Museum
           Night S3: top lanes/fandoms become large vitrine tiles pulling
