@@ -26,7 +26,14 @@ export type ShelfFigure = {
 
 const PIN_PATH = 'M14.6 2.6 21.4 9.4 19.8 11l-.9-.3-4 4 .3 2.6-1.6 1.6-4-4-5.2 5.2-1.4-1.4L8.2 13.5l-4-4L5.8 8l2.6.3 4-4-.3-.9 2.5-.8Z'
 
-export default function ShelfCase({ figures, label }: { figures: ShelfFigure[]; label?: string }) {
+export default function ShelfCase({ figures, label, priorityFirstImage = true }: {
+  figures: ShelfFigure[]
+  label?: string
+  /** idx-0 eager + fetchPriority:high LCP treatment. Pass false when the
+   *  case renders below the fold (homepage post-Depth-Hall, 2026-07-24) —
+   *  a high-priority below-fold image steals bandwidth from the real LCP. */
+  priorityFirstImage?: boolean
+}) {
   const rootRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -227,8 +234,8 @@ export default function ShelfCase({ figures, label }: { figures: ShelfFigure[]; 
                       <img
                         src={f.img}
                         alt={f.name}
-                        loading={globalIdx === 0 ? 'eager' : 'lazy'}
-                        fetchPriority={globalIdx === 0 ? 'high' : 'auto'}
+                        loading={priorityFirstImage && globalIdx === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={priorityFirstImage && globalIdx === 0 ? 'high' : 'auto'}
                         decoding="async"
                       />
                     </div>

@@ -402,27 +402,11 @@ export default async function HomePage() {
         .fph-hero-sub { margin-top: 24px; max-width: 520px; font-size: 16.5px; line-height: 1.7; font-weight: 300; color: var(--fph-cream-dim); }
         .fph-hero-sub strong { color: var(--fph-cream); font-weight: 500; }
         .fph-hero-search { margin-top: 30px; max-width: 520px; }
-        /* HeroSearch is a shared client component with inline styles — scope
-           the shelf-gold skin onto it here (important beats inline). Scoped
-           to the specific "Run a price check" button, NOT a bare button
-           selector: HeroSearch also renders a plain-text "Clear" button
-           once a query is typed, and a bare selector forced the same solid
-           gold background onto it too — Clear has no border-radius/matching
-           padding (it was styled as inline text, not a pill), so the two
-           differently-shaped same-color rectangles sitting side by side
-           read as a broken, overlapping control (Steve, 2026-07-10). */
-        .fph-hero-search button[aria-label="Run a price check"] {
-          background: linear-gradient(180deg, #f5c462, #e0a83e) !important;
-          color: #1a1206 !important;
-        }
-        .fph-hero-search input {
-          border-color: rgba(242,232,213,.13) !important;
-          background: rgba(242,232,213,.04) !important;
-        }
-        .fph-hero-search input:focus {
-          border-color: rgba(224,168,62,.55) !important;
-          box-shadow: 0 0 0 3px rgba(224,168,62,.10) !important;
-        }
+        /* Old hero's HeroSearch skin removed 2026-07-24 — the Depth Hall
+           hero owns its search styling in DepthHallHero.module.css (the
+           fpdh-search rules), which keeps the 2026-07-10 lesson: target the
+           specific "Run a price check" button, never a bare button selector
+           (HeroSearch's plain-text Clear button must not go gold). */
         .fph-hints { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
         .fph-hints span { font-size: 11.5px; font-weight: 300; color: var(--fph-cream-mut); margin-right: 2px; letter-spacing: .02em; }
         .fph-chip {
@@ -1106,7 +1090,7 @@ export default async function HomePage() {
       {shelf.length >= 6 && (
         <section className="fph-shelf-strip fph-seam">
           <div className="wrap">
-            <ShelfCase figures={shelf} />
+            <ShelfCase figures={shelf} priorityFirstImage={false} />
           </div>
         </section>
       )}

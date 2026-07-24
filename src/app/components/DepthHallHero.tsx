@@ -100,25 +100,59 @@ export default function DepthHallHero({
   const [tilt, setTilt] = useState({ rx: 0, ry: 0, px: 0, py: 0 })
   const [broken, setBroken] = useState<Record<string, boolean>>({})
   const [selected, setSelected] = useState<HallCard | null>(null)
+  // SMIL <animate> nodes ignore CSS animation:none, so reduced-motion must
+  // also be React state that unmounts them (review finding, 2026-07-24).
+  const [reduced, setReduced] = useState(false)
   const reducedRef = useRef(false)
   const tickingRef = useRef(false)
   const mouseRef = useRef({ mx: 0, my: 0 })
+  const panelRef = useRef<HTMLDivElement>(null)
+  const openerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    reducedRef.current =
+    const prefersReduced =
       typeof window !== 'undefined' &&
       !!window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    reducedRef.current = prefersReduced
+    if (prefersReduced) setReduced(true)
   }, [])
 
-  // Close the inspect panel on Escape.
+  // Inspect panel focus management (review finding, 2026-07-24): dialog
+  // semantics need initial focus, a Tab trap, and focus restoration —
+  // role="dialog" alone does none of that. Escape closes.
   useEffect(() => {
     if (!selected) return
+    const panel = panelRef.current
+    const focusables = () =>
+      panel
+        ? [...panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')]
+        : []
+    focusables()[0]?.focus()
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setSelected(null)
+      if (e.key === 'Escape') {
+        setSelected(null)
+        return
+      }
+      if (e.key !== 'Tab') return
+      const els = focusables()
+      if (!els.length) return
+      const first = els[0]
+      const last = els[els.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
     }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      openerRef.current?.focus?.()
+      openerRef.current = null
+    }
   }, [selected])
 
   const { starLayers, motes } = useMemo(() => {
@@ -132,18 +166,19 @@ export default function DepthHallHero({
     }
   }, [])
 
-  // Left/right colonnades with the prototype's stagger: each side spreads
-  // its cards across the full loop; the right column offsets by half a step
-  // so the two sides interleave instead of passing in lockstep.
+  // Left/right colonnades with the prototype's stagger: ONE shared step
+  // (computed from the left side, exactly like the prototype's
+  // `step = 17 / LEFT.length`) spreads both sides across the loop, with the
+  // right side offset by half that same step so the columns interleave.
+  // Per-side steps break the interleave on uneven splits (review finding).
   const laidOut = useMemo(() => {
     const half = Math.ceil(cards.length / 2)
     const left = cards.slice(0, half)
     const right = cards.slice(half)
     const out: Array<HallCard & { side: 'L' | 'R'; delay: string }> = []
-    const stepL = HALL_DURATION_S / Math.max(1, left.length)
-    left.forEach((c, i) => out.push({ ...c, side: 'L', delay: (-i * stepL).toFixed(2) }))
-    const stepR = HALL_DURATION_S / Math.max(1, right.length)
-    right.forEach((c, i) => out.push({ ...c, side: 'R', delay: (-(i * stepR + stepR / 2)).toFixed(2) }))
+    const step = HALL_DURATION_S / Math.max(1, left.length)
+    left.forEach((c, i) => out.push({ ...c, side: 'L', delay: (-i * step).toFixed(2) }))
+    right.forEach((c, i) => out.push({ ...c, side: 'R', delay: (-(i * step + step / 2)).toFixed(2) }))
     return out
   }, [cards])
 
@@ -207,19 +242,21 @@ export default function DepthHallHero({
           <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs>
               <filter id="fpLiquidSheen" x="-20%" y="-20%" width="140%" height="140%">
+                {/* SMIL <animate> ignores CSS animation:none — under reduced
+                    motion these nodes must not render at all (review finding). */}
                 <feTurbulence type="fractalNoise" baseFrequency="0.0035 0.008" numOctaves={3} seed={11} result="noise">
-                  <animate attributeName="baseFrequency" values="0.0035 0.008;0.0055 0.012;0.0035 0.008" dur="26s" repeatCount="indefinite" />
+                  {!reduced && <animate attributeName="baseFrequency" values="0.0035 0.008;0.0055 0.012;0.0035 0.008" dur="26s" repeatCount="indefinite" />}
                 </feTurbulence>
                 <feSpecularLighting in="noise" surfaceScale={5} specularConstant={0.85} specularExponent={16} lightingColor="#8f9dd8" result="spec">
                   <feDistantLight azimuth={235} elevation={60}>
-                    <animate attributeName="azimuth" values="235;255;235" dur="30s" repeatCount="indefinite" />
+                    {!reduced && <animate attributeName="azimuth" values="235;255;235" dur="30s" repeatCount="indefinite" />}
                   </feDistantLight>
                 </feSpecularLighting>
                 <feComposite in="spec" in2="SourceAlpha" operator="in" />
               </filter>
               <filter id="fpLiquidGold" x="-20%" y="-20%" width="140%" height="140%">
                 <feTurbulence type="fractalNoise" baseFrequency="0.0022 0.005" numOctaves={2} seed={4} result="noise2">
-                  <animate attributeName="baseFrequency" values="0.0022 0.005;0.0034 0.0075;0.0022 0.005" dur="34s" repeatCount="indefinite" />
+                  {!reduced && <animate attributeName="baseFrequency" values="0.0022 0.005;0.0034 0.0075;0.0022 0.005" dur="34s" repeatCount="indefinite" />}
                 </feTurbulence>
                 <feSpecularLighting in="noise2" surfaceScale={6} specularConstant={0.6} specularExponent={22} lightingColor="#e0a83e" result="spec2">
                   <feDistantLight azimuth={120} elevation={55} />
@@ -249,8 +286,14 @@ export default function DepthHallHero({
         <div className={styles.stage}>
           <div
             className={styles.camera}
-            style={{ transform: `rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)` }}
+            style={{ '--fp-rx': `${tilt.rx}deg`, '--fp-ry': `${tilt.ry}deg` } as React.CSSProperties}
           >
+            {/* Cards are aria-hidden + tabIndex -1 (review findings,
+                2026-07-24): they're mouse/touch shortcuts — 12 flying
+                buttons in tab order before the search input is a keyboard
+                trap, and each spends 25% of its loop focusable-but-
+                invisible. Every figure stays reachable via search and the
+                shelf below. */}
             {visibleCards.map(c => (
               <button
                 type="button"
@@ -260,8 +303,12 @@ export default function DepthHallHero({
                   animationDelay: `${c.delay}s`,
                   animationPlayState: selected ? 'paused' : 'running',
                 }}
-                onClick={() => setSelected(c)}
-                aria-label={`${c.name} — ${c.tag}, view price guide`}
+                onClick={e => {
+                  openerRef.current = e.currentTarget
+                  setSelected(c)
+                }}
+                aria-hidden="true"
+                tabIndex={-1}
               >
                 <span className={styles.cardSpot} aria-hidden />
                 <span className={styles.cardBody}>
@@ -278,13 +325,14 @@ export default function DepthHallHero({
                       src={c.img}
                       alt=""
                       loading="eager"
+                      fetchPriority="low"
                       decoding="async"
                       onError={() => setBroken(b => ({ ...b, [c.fid]: true }))}
                     />
                   </span>
                   <span className={styles.cardPlacard}>
                     <span className={styles.cardName}>{c.name}</span>
-                    <span className={styles.cardTag} style={{ display: 'block' }}>{c.tag}</span>
+                    <span className={styles.cardTag}>{c.tag}</span>
                   </span>
                 </span>
               </button>
@@ -332,8 +380,16 @@ export default function DepthHallHero({
             </div>
             <div className={styles.tickerWindow}>
               <div className={styles.tickerTrack}>
-                {[...ticker, ...ticker].map((t, i) => (
+                {ticker.map((t, i) => (
                   <a className={styles.tickerItem} href={t.href} key={i}>
+                    SOLD · <span className={styles.tickerName}>{t.label}</span>{' '}
+                    <span className={styles.tickerPrice}>${t.price.toFixed(2)}</span>
+                  </a>
+                ))}
+                {/* Marquee clone — visual only; hidden from AT and tab order
+                    so users don't hit every sold comp twice (review finding). */}
+                {ticker.map((t, i) => (
+                  <a className={styles.tickerItem} href={t.href} key={`c-${i}`} aria-hidden="true" tabIndex={-1}>
                     SOLD · <span className={styles.tickerName}>{t.label}</span>{' '}
                     <span className={styles.tickerPrice}>${t.price.toFixed(2)}</span>
                   </a>
@@ -352,7 +408,7 @@ export default function DepthHallHero({
             aria-modal="true"
             aria-label={`${selected.name} — from the guide`}
           >
-            <div className={styles.inspectPanel} onClick={e => e.stopPropagation()}>
+            <div className={styles.inspectPanel} onClick={e => e.stopPropagation()} ref={panelRef}>
               <div className={styles.inspectStage}>
                 <div className={styles.inspectShaft} aria-hidden />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
