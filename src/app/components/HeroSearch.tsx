@@ -64,6 +64,7 @@ export default function HeroSearch({
   placeholderExamples,
   showButton = false,
   buttonLabel = 'Price it',
+  disableTakeover = false,
 }: {
   totalLabel?: string
   placeholder?: string
@@ -73,6 +74,16 @@ export default function HeroSearch({
   showButton?: boolean
   /** Button text — Depth Hall hero says "Search" (Steve, 2026-07-24). */
   buttonLabel?: string
+  /**
+   * Skip the desktop takeover (fixed backdrop + portaled results panel)
+   * entirely and always use the plain in-place dropdown, regardless of
+   * pointer type. For mounting HeroSearch inside another already-modal
+   * surface (SiteHeader's search overlay, 2026-07-25) — nesting the
+   * takeover's own backdrop/portal inside a different overlay's backdrop
+   * is untested, avoidable complexity for zero benefit when the parent
+   * surface already provides the "focused" framing this was built for.
+   */
+  disableTakeover?: boolean
 }) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
@@ -396,7 +407,7 @@ export default function HeroSearch({
           value={query}
           onChange={e => setQuery(e.target.value)}
           onFocus={() => {
-            if (isDesktopPointer()) setTakeover(true)
+            if (!disableTakeover && isDesktopPointer()) setTakeover(true)
             if (query.length >= 2 && results.length) setOpen(true)
           }}
           onKeyDown={handleKeyDown}

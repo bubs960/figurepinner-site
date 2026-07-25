@@ -1,7 +1,9 @@
 'use client'
 
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import HeroSearch from './HeroSearch'
 
 // Unified site header — the single nav for every public page.
 // Visuals extracted from the homepage nav (Steve-approved S20 redesign):
@@ -12,6 +14,21 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 // Plain <a> links for now — the site-wide next/link conversion is its own
 // deploy (AdSense soft-nav test first); when that lands, this is the one
 // place nav links change.
+//
+// SEARCH ICON (2026-07-25, Steve-relayed finding): `NAV_LINKS` includes a
+// "Search" link, but it only renders in the no-crumbs branch below — every
+// crumbed page (every figure, line, genre, character, and guide page; i.e.
+// every page on the site except the homepage) lost search entirely, not
+// hidden behind anything, just structurally absent. The homepage's own
+// HeroSearch takeover was never reachable from anywhere else. Fix: an
+// always-visible icon button (works whether or not crumbs are shown) that
+// opens the same HeroSearch component in a dedicated, explicitly-dismissible
+// overlay — deliberately NOT reusing HeroSearch's own device-capability-
+// gated takeover (see HeroSearch.tsx's isDesktopPointer() fix, same date):
+// this is a user-triggered click on a real target, not an ambient focus
+// trigger, so it needs no device detection, and it ships with a generously
+// sized, clearly-labeled close button from day one rather than relying on
+// tap-outside alone — the exact class of gap the original bug report found.
 
 export type Crumb = { label: string; href?: string }
 
@@ -137,10 +154,95 @@ const CSS = `
     .fp-sitenav-actions a:first-child { display: none; }
     .fp-sitenav-join { padding: 8px 10px; }
   }
+
+  /* ── Header search icon + overlay (2026-07-25) ── */
+  .fp-sitenav-search-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .fp-sitenav-search-btn:hover,
+  .fp-sitenav-search-btn:focus-visible {
+    background: rgba(255,255,255,0.08);
+    outline: none;
+  }
+  .fp-header-search-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(5, 5, 8, 0.72);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 88px 20px 20px;
+    overflow-y: auto;
+  }
+  .fp-header-search-panel {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    background: var(--s0, #12121a);
+    border: 1px solid var(--border, rgba(255,255,255,0.12));
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  }
+  /* Generously sized and explicitly labeled on purpose — see the file-header
+     comment on why this is not a repeat of the tap-outside-only pattern. */
+  .fp-header-search-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--s1, #1c1c28);
+    border: 1px solid var(--border, rgba(255,255,255,0.16));
+    border-radius: 50%;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  }
+  .fp-header-search-close:hover,
+  .fp-header-search-close:focus-visible {
+    background: var(--s2, #24243333);
+    outline: none;
+  }
 `
 
 export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
   const hasCrumbs = Boolean(crumbs && crumbs.length > 0)
+  const [searchOpen, setSearchOpen] = useState(false)
+
+  // Escape closes it — same convention as the homepage takeover's own
+  // outside-click dismiss, plus a real keyboard path.
+  useEffect(() => {
+    if (!searchOpen) return
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setSearchOpen(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [searchOpen])
+
+  // Scroll lock while open, released unconditionally on close/unmount —
+  // never left dangling regardless of how the overlay closes (Escape,
+  // backdrop click, the close button, or navigating away).
+  useEffect(() => {
+    if (!searchOpen) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = prev }
+  }, [searchOpen])
 
   return (
     <nav className="fp-sitenav" aria-label="Main">
@@ -174,6 +276,20 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
       )}
 
       <div className="fp-sitenav-actions">
+        <button
+          type="button"
+          className="fp-sitenav-search-btn"
+          aria-label="Search figures"
+          aria-haspopup="dialog"
+          aria-expanded={searchOpen}
+          onClick={() => setSearchOpen(true)}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+
         {/* S70 (2026-07-07): was hardcoded, always showed Log in/Sign up
             regardless of session — root layout had no ClerkProvider so this
             couldn't reflect real auth state. Client-side check now, reads
@@ -188,6 +304,32 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
           <UserButton afterSignOutUrl="/" />
         </SignedIn>
       </div>
+
+      {searchOpen && typeof document !== 'undefined' && createPortal(
+        <div
+          className="fp-header-search-backdrop"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Search figures"
+          onMouseDown={(e) => { if (e.target === e.currentTarget) setSearchOpen(false) }}
+        >
+          <div className="fp-header-search-panel">
+            <button
+              type="button"
+              className="fp-header-search-close"
+              aria-label="Close search"
+              onClick={() => setSearchOpen(false)}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round">
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="18" y1="6" x2="6" y2="18" />
+              </svg>
+            </button>
+            <HeroSearch showButton buttonLabel="Search" disableTakeover />
+          </div>
+        </div>,
+        document.body,
+      )}
     </nav>
   )
 }
