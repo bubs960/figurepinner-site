@@ -14,7 +14,7 @@
  *  - Tape prices are individual real sold comps from the same snapshots.
  */
 
-import { getFigureById, figureUrl } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kb'
 import { thumb } from '@/lib/imageUrl'
 import { compCountToConfidence, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
@@ -162,7 +162,7 @@ async function fetchOne(entry: { fid: string; chipLabel: string; fieldNote?: str
   return {
     figure: {
       fid: entry.fid,
-      href: figureUrl(kb),
+      href: prettyFigureUrl(kb),
       chipLabel: entry.chipLabel,
       name: kb.v1_name ?? prettifySlug(kb.character_canonical),
       line: `${kb.v1_line ?? prettifySlug(kb.product_line)}${seriesNum ? ` ${seriesNum}` : ''}`,

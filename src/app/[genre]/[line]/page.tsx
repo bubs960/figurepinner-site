@@ -511,7 +511,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
   return (
     <div className="line-card-wrap">
       <a
-        href={figureUrl(f)}
+        href={prettyFigureUrl(f)}
         className="line-card"
         style={{
           display: 'flex',

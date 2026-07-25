@@ -272,7 +272,7 @@ function buildHub(genre: string, figures: KBFigure[]) {
     if (!f) continue
     shelf.push({
       fid: f.figure_id,
-      href: figureUrl(f),
+      href: prettyFigureUrl(f),
       name: cardName(f),
       tag: lineName,
       img: thumb(f.canonical_image_url!, 225) ?? f.canonical_image_url!,
@@ -290,7 +290,7 @@ function buildHub(genre: string, figures: KBFigure[]) {
         have.add(f.figure_id)
         shelf.push({
           fid: f.figure_id,
-          href: figureUrl(f),
+          href: prettyFigureUrl(f),
           name: cardName(f),
           tag: lineName,
           img: thumb(f.canonical_image_url, 225) ?? f.canonical_image_url,

@@ -580,7 +580,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     .slice(0, 12)
     .map(f => ({
       figure_id: f.figure_id,
-      href: figureUrl(f),
+      href: prettyFigureUrl(f),
       name: f.character_canonical.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
       imageUrl: thumb(f.canonical_image_url, 180),
     }))
@@ -593,7 +593,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     .slice(0, 12)
     .map(f => ({
       figure_id: f.figure_id,
-      href: figureUrl(f),
+      href: prettyFigureUrl(f),
       name: deriveName(f),
       imageUrl: thumb(f.canonical_image_url, 180),
     }))

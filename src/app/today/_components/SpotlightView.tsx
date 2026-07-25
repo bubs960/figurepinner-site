@@ -3,7 +3,7 @@
 // canonicalizes to the figure page). Same gold/ink museum aesthetic as the
 // /shelf share page, deliberately reused rather than a third visual system.
 
-import { getFigureById, deriveName, figureUrl } from '@/data/kb'
+import { getFigureById, deriveName, prettyFigureUrl } from '@/data/kb'
 import { thumb } from '@/lib/imageUrl'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import type { SpotlightRow } from '../_lib/dailySpotlight'
@@ -55,7 +55,7 @@ export function SpotlightView({
         </div>
         <div className="tds-comps">{row.compCount} real sold comps behind this read</div>
 
-        <a className="tds-cta" href={figureUrl(figure)}>See full price history &rarr;</a>
+        <a className="tds-cta" href={prettyFigureUrl(figure)}>See full price history &rarr;</a>
 
         {isToday ? (
           <a className="tds-sub" href={`/today/${row.date}`}>Permalink for today &rarr;</a>

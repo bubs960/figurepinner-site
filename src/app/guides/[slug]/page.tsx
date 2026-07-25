@@ -15,7 +15,17 @@ import LiveMedian from '../_components/LiveMedian'
 import CountdownTimer from '../_components/CountdownTimer'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
-import { getFigureById } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kb'
+
+// §0 canonical-link fix (2026-07-24): the `href` baked into every comp block in
+// bidcheck-articles.ts is the non-canonical /figure/<fid> form. Resolve it from
+// the fid at render time rather than regenerating the data — a generated URL
+// artifact is exactly what went stale in figureIdToPrettyPath.generated.json.
+// Falls back to the authored href if the fid no longer resolves in the KB.
+function compHref(fid: string, authored: string | undefined): string | undefined {
+  const kb = getFigureById(fid)
+  return kb ? prettyFigureUrl(kb) : authored
+}
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 const BASE = 'https://figurepinner.com'
@@ -81,7 +91,7 @@ function Block({ block, comps, ebayUrls }: { block: ArticleBlock; comps: Map<str
           snap={comps.get(block.fid)}
           label={block.label}
           sublabel={block.sublabel}
-          href={block.href}
+          href={compHref(block.fid, block.href)}
           ebayUrl={ebayUrls.get(block.fid)}
           figureId={block.fid}
         />

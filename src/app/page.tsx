@@ -11,7 +11,7 @@ import { fetchHomeMarket, type TapeItem, type ReceiptFigure } from './_lib/homeR
 import ProvenanceTypeScrollDriver from './components/ProvenanceTypeScrollDriver'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
-import { getFigureById, getFiguresByLine, figureUrl } from '@/data/kb'
+import { getFigureById, getFiguresByLine, prettyFigureUrl } from '@/data/kb'
 import { getFandom } from '@/lib/genreFigures'
 import { thumb } from '@/lib/imageUrl'
 
@@ -181,7 +181,7 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
     resolved.push({
       fig: {
         fid: entry.fid,
-        href: figureUrl(kb),
+        href: prettyFigureUrl(kb),
         name: titleCase(kb.character_canonical),
         tag: sold != null ? 'Just sold' : entry.tag,
         sold: sold != null,
