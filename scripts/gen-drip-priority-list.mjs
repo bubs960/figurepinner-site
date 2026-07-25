@@ -1,6 +1,20 @@
 #!/usr/bin/env node
 /**
- * gen-drip-priority-list.mjs — ranked recrawl-drip priority list, v1.
+ * gen-drip-priority-list.mjs — ranked recrawl-drip priority list, v2.
+ *
+ * v2 (2026-07-25): wires the R2 real price/demand signal PLAN V2 named as
+ * signal (b) -- v1 shipped only signal (a) (enriched-copy quality), with
+ * comp-recency as a cheap LOCAL STAND-IN for demand because pricing lives in
+ * R2 (figurepinner-r2proxy/price-summaries/<fid>.json), a network call per
+ * figure. v2 fetches a real median-sold price for every figure that clears
+ * the copy-first gate (measured 2026-07-25: 6,967 figures -- larger than the
+ * ~1,000 the original v1 comment estimated). Comp-recency now falls back
+ * only for rows R2 has no comps snapshot for yet. `--no-price` skips this
+ * entirely for a fast, v1-parity dry run. Determinism is no longer
+ * byte-for-byte guaranteed run-to-run -- real prices move with the market,
+ * so a re-run days later can legitimately reorder rows near a price
+ * boundary; only the hard filters and the copy-first gate stay fixed
+ * against a given KB snapshot.
  *
  * ┌──────────────────────────────────────────────────────────────────────────┐
  * │ ⚠️  PROVISIONAL — this is NOT the official ranked money-tier list.        │
@@ -20,26 +34,32 @@
  * │ measured. v2 (with price) is owed before the 8/5 readout.                │
  * └──────────────────────────────────────────────────────────────────────────┘
  *
- * RANKING (v1, "copy-first + cheap local tiebreak" per the audit verdict):
+ * RANKING (v2, "copy-first gate + real price + cheap local fallback"):
  *   0. HARD FILTERS — above the index bar, unambiguous pretty URL. A drip must
- *      never be handed an ambiguous URL (guardrail #3).
- *   1. Enriched copy passes `enrichedDescription()`  ← the copy-first signal.
+ *      never be handed an ambiguous URL (guardrail #3). UNCHANGED from v1.
+ *   1. Enriched copy passes `enrichedDescription()`  ← the copy-first GATE.
  *      A recrawl is most valuable where the page now says something genuinely
  *      differentiated; re-crawling a templated page teaches Google little.
- *   2. Comp recency from index-value-census.json (last sold-comp date) — the
- *      cheapest honest local stand-in for liveness. NOT price, NOT demand
- *      volume. Do not describe it as either.
- *   3. Has a canonical image (a complete page is a better crawl target).
- *   4. Has key_features (more unique on-page content).
- *   5. Enriched copy length, capped at the 200-char meta budget.
- *   6. figure_id, purely to make the order TOTAL and reproducible.
+ *      Price does not override this gate — a pricier figure with a templated
+ *      page still sits below a cheap one with real enriched copy.
+ *   2. Has a real R2 price snapshot (median_sold ?? avg_sold, sold_count>0) —
+ *      PLAN V2's named signal (b), now real rather than a proxy.
+ *   3. The price itself, descending, among rows that have one.
+ *   4. Comp recency from index-value-census.json (last sold-comp date) — now
+ *      a FALLBACK for rows with no R2 price (network miss or genuinely no
+ *      comps yet), not the primary demand signal.
+ *   5. Has a canonical image (a complete page is a better crawl target).
+ *   6. Has key_features (more unique on-page content).
+ *   7. Enriched copy length, capped at the 200-char meta budget.
+ *   8. figure_id, purely to make the order TOTAL and reproducible.
  *
  * Determinism is a feature, not an accident: the drip is consumed ~11/day over
  * many days, so a list that reshuffles between runs would silently re-submit
  * some URLs and skip others. Same KB + same census => byte-identical output.
  *
  * Usage:
- *   node --import ./scripts/register-ts-loader.mjs scripts/gen-drip-priority-list.mjs <out.tsv> [n] [--handoff <out.md>] [--exclude <fids.txt>]
+ *   node --import ./scripts/register-ts-loader.mjs scripts/gen-drip-priority-list.mjs <out.tsv> [n] [--handoff <out.md>] [--exclude <fids.txt>] [--no-price]
+ *   CONCURRENCY=16 node ...   (R2 fetch concurrency; matches build-fandom-top-comps.mjs's default)
  */
 import { getAllFigures, prettyFigureUrl, hasUniquePrettyFigureUrl } from '../src/data/kb.ts'
 import { enrichedDescription } from '../src/app/figure/[figure_id]/_lib/enrichedCopy.ts'
@@ -54,10 +74,42 @@ const outPath = positional[0]
 const n = Number(positional[1]) || 1000
 const handoffPath = argv.includes('--handoff') ? argv[argv.indexOf('--handoff') + 1] : null
 const excludePath = argv.includes('--exclude') ? argv[argv.indexOf('--exclude') + 1] : null
+const noPrice = argv.includes('--no-price')
 
 if (!outPath) {
-  console.error('Usage: gen-drip-priority-list.mjs <out.tsv> [n] [--handoff <out.md>] [--exclude <fids.txt>]')
+  console.error('Usage: gen-drip-priority-list.mjs <out.tsv> [n] [--handoff <out.md>] [--exclude <fids.txt>] [--no-price]')
   process.exit(1)
+}
+
+// ── R2 price/demand signal (v2) ─────────────────────────────────────────────
+// Same recipe as scripts/build-fandom-top-comps.mjs -- reused deliberately,
+// not reinvented, since it's already proven live against this exact
+// endpoint (8s per-call timeout, bounded concurrency, graceful null on any
+// failure so one bad fetch never aborts the run).
+const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
+const CONCURRENCY = Number(process.env.CONCURRENCY || 16)
+
+async function fetchSnapshot(figure_id) {
+  try {
+    const res = await fetch(
+      `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
+      { signal: AbortSignal.timeout(8000) },
+    )
+    if (!res.ok) return null
+    return await res.json()
+  } catch {
+    return null
+  }
+}
+
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length)
+  let i = 0
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (i < items.length) { const idx = i++; out[idx] = await fn(items[idx], idx) }
+  })
+  await Promise.all(workers)
+  return out
 }
 
 const CENSUS = JSON.parse(readFileSync(path.join(__dirname, '../src/data/index-value-census.json'), 'utf8'))
@@ -116,16 +168,50 @@ for (const f of getAllFigures()) {
     hasKeyFeatures: !!(f.key_features && String(f.key_features).trim()),
     fandom: f.fandom,
     line: f.product_line,
+    hasPrice: false, // filled in by the R2 fetch pass below (v2), unless --no-price
+    price: null,
   })
 }
 
+/*
+ * R2 PRICE/DEMAND FETCH (v2; skipped entirely with --no-price).
+ *
+ * Only fetched for rows that already cleared the copy-first gate
+ * (enriched === true) -- price never overrides that gate (see RANKING
+ * comment above), so pricing a non-enriched row could never change its
+ * position anyway. Bounds the fetch to the real eligible population
+ * (6,967 measured 2026-07-25) instead of either all ~18,700 above-bar
+ * figures (wasteful -- most can never outrank an enriched row) or an
+ * arbitrary top-N slice of `rows` taken BEFORE price is known (which would
+ * make a high-value figure outside that slice permanently invisible to the
+ * v2 signal it's the whole point of adding).
+ */
+let pricedCount = 0
+if (!noPrice) {
+  const priceable = rows.filter(r => r.enriched)
+  console.log(`[drip-v2] fetching R2 price snapshots for ${priceable.length} enriched-gate figure(s) (concurrency ${CONCURRENCY})...`)
+  await mapLimit(priceable, CONCURRENCY, async (row) => {
+    const snap = await fetchSnapshot(row.fid)
+    if (!snap) return
+    const price = snap.median_sold ?? snap.avg_sold
+    const soldCount = snap.sold_count ?? 0
+    if (price == null || soldCount <= 0) return
+    row.hasPrice = true
+    row.price = Math.round(price)
+    pricedCount++
+  })
+  console.log(`[drip-v2] R2 price coverage: ${pricedCount}/${priceable.length} enriched figures (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%) returned a valid priced comp.`)
+}
+
 rows.sort((a, b) =>
-  Number(b.enriched) - Number(a.enriched) ||          // 1. copy-first
-  b.lastComp.localeCompare(a.lastComp) ||             // 2. comp recency
-  Number(b.hasImage) - Number(a.hasImage) ||          // 3. complete page
-  Number(b.hasKeyFeatures) - Number(a.hasKeyFeatures) || // 4. more content
-  b.enrichedLen - a.enrichedLen ||                    // 5. copy depth
-  a.fid.localeCompare(b.fid)                          // 6. total order
+  Number(b.enriched) - Number(a.enriched) ||          // 1. copy-first gate
+  Number(b.hasPrice) - Number(a.hasPrice) ||          // 2. real price/demand present
+  (b.price ?? -1) - (a.price ?? -1) ||                // 3. the price itself
+  b.lastComp.localeCompare(a.lastComp) ||             // 4. comp-recency fallback
+  Number(b.hasImage) - Number(a.hasImage) ||          // 5. complete page
+  Number(b.hasKeyFeatures) - Number(a.hasKeyFeatures) || // 6. more content
+  b.enrichedLen - a.enrichedLen ||                    // 7. copy depth
+  a.fid.localeCompare(b.fid)                          // 8. total order
 )
 
 /*
@@ -171,18 +257,19 @@ const ordered = flat ? rows : roundRobin(rows)
 const picked = ordered.slice(0, n)
 
 const HEADER = [
-  '# PROVISIONAL drip-priority list v1 — NOT the official ranked money-tier list.',
-  '# Ranked on locally-computable signals ONLY: enriched-copy gate, comp recency,',
-  '# image presence, key_features, copy length. NO price/demand signal (that is v2,',
-  '# owed before the 8/5 readout). Do not cite matcher\'s 70.8% census figure against',
-  '# this population — the census ran on a different, D1-derived proxy.',
+  `# PROVISIONAL drip-priority list v2 — still NOT matcher's official ranked money-tier list.`,
+  noPrice
+    ? '# Ran with --no-price: v1-parity, NO real price/demand signal in this output.'
+    : `# Ranked on: enriched-copy gate, then REAL R2 price/demand (${pricedCount}/${rows.filter(r => r.enriched).length} enriched figures priced, ${((100 * pricedCount) / (rows.filter(r => r.enriched).length || 1)).toFixed(1)}% coverage), then comp-recency fallback, image, key_features, copy length.`,
+  `# Do not cite matcher's 70.8% census figure against this population — the census ran on a`,
+  `# different, D1-derived proxy over a different population.`,
   `# ordering: ${flat ? 'FLAT global rank' : 'fandom round-robin (copy-first rank preserved WITHIN each fandom)'}`,
-  '# columns: rank  figure_id  url  enriched  last_comp  has_image  has_key_features  fandom  line',
+  '# columns: rank  figure_id  url  enriched  has_price  price  last_comp  has_image  has_key_features  fandom  line',
 ].join('\n')
 
 writeFileSync(outPath,
   HEADER + '\n' + picked.map((r, i) =>
-    [i + 1, r.fid, r.url, r.enriched ? 'yes' : 'no', r.lastComp || '-',
+    [i + 1, r.fid, r.url, r.enriched ? 'yes' : 'no', r.hasPrice ? 'yes' : 'no', r.price ?? '-', r.lastComp || '-',
      r.hasImage ? 'yes' : 'no', r.hasKeyFeatures ? 'yes' : 'no', r.fandom, r.line].join('\t')
   ).join('\n') + '\n')
 
@@ -207,20 +294,30 @@ console.log(`wrote ${picked.length} ranked rows -> ${outPath}`)
 // ── guardrail #4: top-20 handoff with per-signal columns ────────────────────
 if (handoffPath) {
   const top = picked.slice(0, 20)
+  const enrichedCount = rows.filter(r => r.enriched).length
+  const intro = noPrice
+    ? [
+        `**Not matcher's official ranked money-tier list.** Ranked on the copy-first gate, then comp-recency (--no-price run, no real price signal).`,
+      ]
+    : [
+        `**Not matcher's official ranked money-tier list.** Ranked on the copy-first gate, then REAL R2 price/demand where available.`,
+        `R2 price coverage this run: ${pricedCount}/${enrichedCount} enriched figures (${((100 * pricedCount) / (enrichedCount || 1)).toFixed(1)}%). \`price\` is blank where no valid comp was returned — those rows fall back to \`last_comp\`, the last sold-comp DATE (a liveness proxy, not price or demand volume).`,
+      ]
+  const footer = noPrice
+    ? 'Deterministic: same KB + census produces byte-identical output (--no-price run).'
+    : 'NOT byte-for-byte deterministic run-to-run: real sold prices move with the market, so rows near a price boundary can reorder on a later run. Hard filters and the copy-first gate stay fixed against a given KB snapshot.'
   const md = [
-    '# Drip-priority v1 — top 20 (PROVISIONAL)',
+    '# Drip-priority v2 — top 20 (PROVISIONAL)',
     '',
-    '**Not the official ranked money-tier list.** Ranked on local signals only; no price/demand',
-    'signal is included (v2, owed before 8/5). `last_comp` is the last sold-comp DATE — a liveness',
-    'proxy, NOT price and NOT demand volume.',
+    ...intro,
     '',
-    '| # | URL | enriched | last comp | image | key_features | fandom |',
-    '|---|---|---|---|---|---|---|',
+    '| # | URL | enriched | price | last comp | image | key_features | fandom |',
+    '|---|---|---|---|---|---|---|---|',
     ...top.map((r, i) =>
-      `| ${i + 1} | \`${r.url}\` | ${r.enriched ? '✅' : '—'} | ${r.lastComp || '—'} | ${r.hasImage ? '✅' : '—'} | ${r.hasKeyFeatures ? '✅' : '—'} | ${r.fandom} |`),
+      `| ${i + 1} | \`${r.url}\` | ${r.enriched ? '✅' : '—'} | ${r.hasPrice ? '$' + r.price : '—'} | ${r.lastComp || '—'} | ${r.hasImage ? '✅' : '—'} | ${r.hasKeyFeatures ? '✅' : '—'} | ${r.fandom} |`),
     '',
     `Generated from ${rows.length} eligible figures (above-bar + unambiguous pretty URL).`,
-    'Deterministic: same KB + census produces byte-identical output.',
+    footer,
   ].join('\n')
   writeFileSync(handoffPath, md + '\n')
   console.log(`wrote top-20 handoff -> ${handoffPath}`)
