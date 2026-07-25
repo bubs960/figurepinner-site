@@ -30,9 +30,24 @@ type SparkPrice = { median: number | null; soldCount: number; stat?: 'median' | 
 const THUMB_SIZE = 64
 const THUMB_CDN_WIDTH = 128
 
-/** Desktop-pointer gate for the takeover + hover zoom (D3: touch keeps the plain dropdown). */
+/**
+ * Desktop-pointer gate for the takeover + hover zoom (D3: touch keeps the plain
+ * dropdown). `(hover: hover) and (pointer: fine)` alone is NOT a reliable touch
+ * exclusion — it can report true on devices/browsers that also have touch
+ * (hybrid laptops, some Android/embedded-webview combinations), letting a
+ * touch user into the desktop takeover: a fixed, viewport-locking dark
+ * backdrop (`.fp-search-backdrop`) with no visible close affordance beyond
+ * "tap outside it," which on a touch device with no cursor reads as the
+ * whole screen going dark with no way out (2026-07-25, Steve-relayed user
+ * report: "when you click search the box goes dark... x is too small to
+ * hit"). Explicitly requiring NO touch capability closes that gap — a
+ * device reporting touch of any kind gets the plain dropdown, full stop.
+ */
 function isDesktopPointer(): boolean {
-  return typeof window !== 'undefined' && window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  if (typeof window === 'undefined') return false
+  const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+  return hasFinePointer && !hasTouch
 }
 
 function resultHref(r: SearchResult): string {
