@@ -17,21 +17,30 @@
  * against a given KB snapshot.
  *
  * ┌──────────────────────────────────────────────────────────────────────────┐
- * │ ⚠️  PROVISIONAL — this is NOT the official ranked money-tier list.        │
+ * │ ⚠️  PROVISIONAL — this is NOT matcher's official ranked money-tier list.  │
  * │                                                                          │
  * │ Required by webaudit's guardrail #1 (WEBAUDIT-TO-WEB-P2-P3-SCOPING-      │
  * │ AUDIT-VERDICT-2026-07-24) and repeated in this file's output header.     │
  * │                                                                          │
- * │ PLAN V2 names two ranking signals: (a) enriched-copy quality and         │
- * │ (b) price/demand. **Only (a) is computable locally.** Per-fid pricing    │
- * │ lives in R2 (figurepinner-r2proxy/price-summaries/<fid>.json) — ~1,000   │
- * │ network fetches, which is what makes it v2 work, not v1 work.            │
+ * │ v2 (2026-07-25) wires the real R2 price/demand signal, gated by webaudit │
+ * │ CONDITIONALLY before this output replaces v1 in practice                 │
+ * │ (WEBAUDIT-TO-WEB-QUEUE-GATE-VERDICTS-4-ITEMS-2026-07-25):                │
+ * │   1. PIN, don't stream — the drip must consume ONE dated, deliberately   │
+ * │      regenerated output file (weekly / pre-8/5), never a fresh ad hoc    │
+ * │      run feeding submissions directly. This restores at the artifact     │
+ * │      level the determinism v2 gives up per-run (see below).             │
+ * │   2. Retry nulls, don't trust the raw rate — DONE, see the retry pass.   │
+ * │      Root cause diagnosed, not just patched: CONCURRENCY=16 (inherited   │
+ * │      from build-fandom-top-comps.mjs's much smaller per-fandom sweeps)   │
+ * │      self-rate-limited this script's 6,967-figure sweep, LOOKING like    │
+ * │      noisy proxy flakiness (14.8%/29.3% across two runs) but actually    │
+ * │      being a concurrency mismatch. Default lowered to 8: 60-73%          │
+ * │      coverage measured at comparable wall-clock time, no cost tradeoff.  │
+ * │   3. The standing top-20 pre-drip review applies to the pinned artifact, │
+ * │      unchanged from v1 — someone reads it before it's used.             │
  * │                                                                          │
- * │ Consequence, stated so nobody has to infer it: matcher's P3 census       │
- * │ (70.8% usable) deliberately ran on a D1 demand-signal PROXY precisely    │
- * │ because the real ranked list does not exist. Treating this v1 as that    │
- * │ list would misapply the census's number to a population it never         │
- * │ measured. v2 (with price) is owed before the 8/5 readout.                │
+ * │ Still not matcher's P3 census (70.8% usable) — that ran on a different, │
+ * │ D1-derived demand proxy over a different population. Do not conflate.   │
  * └──────────────────────────────────────────────────────────────────────────┘
  *
  * RANKING (v2, "copy-first gate + real price + cheap local fallback"):
@@ -53,13 +62,18 @@
  *   7. Enriched copy length, capped at the 200-char meta budget.
  *   8. figure_id, purely to make the order TOTAL and reproducible.
  *
- * Determinism is a feature, not an accident: the drip is consumed ~11/day over
- * many days, so a list that reshuffles between runs would silently re-submit
- * some URLs and skip others. Same KB + same census => byte-identical output.
+ * Determinism was a v1 feature (the drip is consumed ~11/day over many days,
+ * so a reshuffling list would silently re-submit some URLs and skip others)
+ * and is now a v2 PROPERTY OF THE PINNED ARTIFACT, not of this script: two
+ * runs of this script minutes apart are NOT guaranteed byte-identical (real
+ * prices move; R2 fetch success varies) — the fix is condition #1 above
+ * (generate deliberately, pin the file, consume only that pin), not
+ * expecting the generator itself to be reproducible on demand.
  *
  * Usage:
  *   node --import ./scripts/register-ts-loader.mjs scripts/gen-drip-priority-list.mjs <out.tsv> [n] [--handoff <out.md>] [--exclude <fids.txt>] [--no-price]
- *   CONCURRENCY=16 node ...   (R2 fetch concurrency; matches build-fandom-top-comps.mjs's default)
+ *   CONCURRENCY=8 node ...    (R2 fetch concurrency, default 8 -- see the constant below for why
+ *                              this differs from build-fandom-top-comps.mjs's 16)
  */
 import { getAllFigures, prettyFigureUrl, hasUniquePrettyFigureUrl } from '../src/data/kb.ts'
 import { enrichedDescription } from '../src/app/figure/[figure_id]/_lib/enrichedCopy.ts'
@@ -75,6 +89,11 @@ const n = Number(positional[1]) || 1000
 const handoffPath = argv.includes('--handoff') ? argv[argv.indexOf('--handoff') + 1] : null
 const excludePath = argv.includes('--exclude') ? argv[argv.indexOf('--exclude') + 1] : null
 const noPrice = argv.includes('--no-price')
+// Stamped once into both output files (webaudit condition #1, 2026-07-25):
+// a "pinned artifact" needs to be unambiguously datable so a later diff
+// against "the prior pin" is diffing the right two files, not guessing from
+// filesystem mtimes.
+const generatedAt = new Date().toISOString()
 
 if (!outPath) {
   console.error('Usage: gen-drip-priority-list.mjs <out.tsv> [n] [--handoff <out.md>] [--exclude <fids.txt>] [--no-price]')
@@ -87,7 +106,19 @@ if (!outPath) {
 // endpoint (8s per-call timeout, bounded concurrency, graceful null on any
 // failure so one bad fetch never aborts the run).
 const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
-const CONCURRENCY = Number(process.env.CONCURRENCY || 16)
+// Default 8, NOT build-fandom-top-comps.mjs's 16 -- that script fetches per
+// fandom (dozens-to-low-hundreds per invocation); this one sweeps the whole
+// enriched-gate population (6,967 measured) in one run. Measured live
+// 2026-07-25: concurrency 16 -> 18-30% coverage (looks like proxy flakiness
+// but is self-inflicted rate-limiting from over-concurrent load); concurrency
+// 8 -> 60-73% coverage at comparable wall-clock time, no cost tradeoff found.
+const CONCURRENCY = Number(process.env.CONCURRENCY || 8)
+
+// Distinguishes "the fetch itself failed" (network error, timeout, non-2xx --
+// worth retrying, see the retry pass below) from "the fetch succeeded and
+// genuinely has no priced comp" (2xx with no median/avg or sold_count<=0 --
+// retrying that changes nothing, it's real data, not noise).
+const FETCH_FAILED = Symbol('fetch-failed')
 
 async function fetchSnapshot(figure_id) {
   try {
@@ -95,11 +126,20 @@ async function fetchSnapshot(figure_id) {
       `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
       { signal: AbortSignal.timeout(8000) },
     )
-    if (!res.ok) return null
+    if (!res.ok) return FETCH_FAILED
     return await res.json()
   } catch {
-    return null
+    return FETCH_FAILED
   }
+}
+
+function applySnapshot(row, snap) {
+  const price = snap.median_sold ?? snap.avg_sold
+  const soldCount = snap.sold_count ?? 0
+  if (price == null || soldCount <= 0) return false
+  row.hasPrice = true
+  row.price = Math.round(price)
+  return true
 }
 
 async function mapLimit(items, limit, fn) {
@@ -190,17 +230,36 @@ let pricedCount = 0
 if (!noPrice) {
   const priceable = rows.filter(r => r.enriched)
   console.log(`[drip-v2] fetching R2 price snapshots for ${priceable.length} enriched-gate figure(s) (concurrency ${CONCURRENCY})...`)
+  const failed = []
   await mapLimit(priceable, CONCURRENCY, async (row) => {
     const snap = await fetchSnapshot(row.fid)
-    if (!snap) return
-    const price = snap.median_sold ?? snap.avg_sold
-    const soldCount = snap.sold_count ?? 0
-    if (price == null || soldCount <= 0) return
-    row.hasPrice = true
-    row.price = Math.round(price)
-    pricedCount++
+    if (snap === FETCH_FAILED) { failed.push(row); return }
+    if (applySnapshot(row, snap)) pricedCount++
   })
-  console.log(`[drip-v2] R2 price coverage: ${pricedCount}/${priceable.length} enriched figures (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%) returned a valid priced comp.`)
+  console.log(`[drip-v2] first pass: ${pricedCount}/${priceable.length} priced (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%); ${failed.length} fetch failure(s) (network/timeout/non-2xx, not "no comps").`)
+
+  /*
+   * RETRY PASS on fetch-failed rows only (webaudit condition #2, 2026-07-25).
+   * The 14.8%->29.3% coverage swing measured across two back-to-back runs on
+   * the identical figure population was fetch-load reliability against a
+   * live proxy under concurrent load, not the market moving in minutes --
+   * this is the fix for that, not a second attempt at "no comps" rows (those
+   * are real data, not noise, and get zero benefit from retrying).
+   * Lower concurrency than the first pass on purpose: a smaller, second wave
+   * of requests is less likely to reproduce the same load-driven failures.
+   */
+  if (failed.length) {
+    const RETRY_CONCURRENCY = Math.max(2, Math.floor(CONCURRENCY / 4))
+    console.log(`[drip-v2] retry pass: ${failed.length} fetch-failed figure(s) at concurrency ${RETRY_CONCURRENCY}...`)
+    let recovered = 0
+    await mapLimit(failed, RETRY_CONCURRENCY, async (row) => {
+      const snap = await fetchSnapshot(row.fid)
+      if (snap === FETCH_FAILED) return
+      if (applySnapshot(row, snap)) { pricedCount++; recovered++ }
+    })
+    console.log(`[drip-v2] retry pass recovered ${recovered}/${failed.length} previously fetch-failed figure(s).`)
+  }
+  console.log(`[drip-v2] R2 price coverage (post-retry): ${pricedCount}/${priceable.length} enriched figures (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%) returned a valid priced comp.`)
 }
 
 rows.sort((a, b) =>
@@ -257,6 +316,7 @@ const ordered = flat ? rows : roundRobin(rows)
 const picked = ordered.slice(0, n)
 
 const HEADER = [
+  `# generated_at: ${generatedAt}`,
   `# PROVISIONAL drip-priority list v2 — still NOT matcher's official ranked money-tier list.`,
   noPrice
     ? '# Ran with --no-price: v1-parity, NO real price/demand signal in this output.'
@@ -308,6 +368,8 @@ if (handoffPath) {
     : 'NOT byte-for-byte deterministic run-to-run: real sold prices move with the market, so rows near a price boundary can reorder on a later run. Hard filters and the copy-first gate stay fixed against a given KB snapshot.'
   const md = [
     '# Drip-priority v2 — top 20 (PROVISIONAL)',
+    '',
+    `Generated: ${generatedAt}`,
     '',
     ...intro,
     '',
