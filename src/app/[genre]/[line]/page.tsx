@@ -12,9 +12,11 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, type KBFigure } from '@/data/kb'
+import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl, type KBFigure } from '@/data/kb'
 import { fandomsForGenre, genreSlugForFandom, getFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
+import INDEX_VALUE_CENSUS from '@/data/index-value-census.json'
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
 import FigureThumb from '@/app/components/FigureThumb'
@@ -151,6 +153,66 @@ function groupByWave(figures: KBFigure[]): Array<{ wave: string; label: string; 
     }))
 }
 
+// ─── P2 Item 3 — "Featured from this line" (webaudit-approved 2026-07-24,
+// WEBAUDIT-TO-WEB-P2-P3-SCOPING-AUDIT-VERDICT / WEBAUDIT-TO-WEB-OMNIBUS-VERDICT) ──
+//
+// Reuses the drip-priority ranking (scripts/gen-drip-priority-list.mjs)
+// restricted to this line, per the approved spec. Mirrored rather than
+// imported: that script runs offline via a Node ts-loader against the full
+// KB; this needs the exact same signals inside the page's server-render
+// path. Keep both in sync if the ranking signals change.
+//
+// Naming is fixed as "Featured from this line", NOT "most valuable" — v1 has
+// no price/demand signal (see that script's PROVISIONAL header), so a value
+// claim isn't supportable yet. Caption text lives at the render site below.
+const BING_PROTECTED_FIDS = new Set(['fp_wrestling_mattel_basic_ex_mountain-dew-maj_cfec51'])
+const isAtOrAboveIndexBar = (fid: string): boolean =>
+  Object.prototype.hasOwnProperty.call(INDEX_VALUE_CENSUS, fid) || BING_PROTECTED_FIDS.has(fid)
+
+/** Census values are mixed 'YYYY-MM-DD' and 'YYYY-MM-DD HH:MM:SS'. */
+const compDate = (fid: string): string => {
+  const v = (INDEX_VALUE_CENSUS as Record<string, string>)[fid]
+  return typeof v === 'string' && v.length >= 10 ? v.slice(0, 10) : ''
+}
+
+const FEATURED_N = 4
+const FEATURED_MIN_LINE_SIZE = 8
+const FEATURED_MIN_ELIGIBLE = 4
+
+/** Returns null when the module should not render (line too small, or too
+ *  few eligible candidates) -- distinct from an empty array so the caller
+ *  can skip the section outright rather than rendering an empty shell. */
+function selectFeatured(figures: KBFigure[]): KBFigure[] | null {
+  if (figures.length < FEATURED_MIN_LINE_SIZE) return null
+
+  const ranked = figures
+    .filter(f => isAtOrAboveIndexBar(f.figure_id) && hasUniquePrettyFigureUrl(f))
+    .map(f => {
+      const enriched = enrichedDescription(f)
+      return {
+        figure: f,
+        enriched: enriched !== null,
+        enrichedLen: enriched ? enriched.length : 0,
+        lastComp: compDate(f.figure_id),
+        hasImage: !!f.canonical_image_url,
+        hasKeyFeatures: !!(f.key_features && String(f.key_features).trim()),
+      }
+    })
+
+  if (ranked.length < FEATURED_MIN_ELIGIBLE) return null
+
+  ranked.sort((a, b) =>
+    Number(b.enriched) - Number(a.enriched) ||             // 1. copy-first
+    b.lastComp.localeCompare(a.lastComp) ||                // 2. comp recency
+    Number(b.hasImage) - Number(a.hasImage) ||             // 3. complete page
+    Number(b.hasKeyFeatures) - Number(a.hasKeyFeatures) || // 4. more content
+    b.enrichedLen - a.enrichedLen ||                       // 5. copy depth
+    a.figure.figure_id.localeCompare(b.figure.figure_id)   // 6. total order
+  )
+
+  return ranked.slice(0, FEATURED_N).map(r => r.figure)
+}
+
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 export async function generateMetadata(
@@ -229,6 +291,8 @@ export default async function LineHubPage(
   const lineIntro = figures.length
     ? (LINE_INTROS[figures[0].fandom + '/' + figures[0].product_line] ?? null)
     : null
+
+  const featured = selectFeatured(figures)
 
   // Sample images for the hero (first 4 figures with images)
   const sampleImages = figures
@@ -397,6 +461,42 @@ export default async function LineHubPage(
           }}>
             <p style={{ margin: 0 }}>{lineIntro}</p>
           </div>
+        )}
+
+        {/* P2 Item 3 -- "Featured from this line" (webaudit-approved, static/ISR,
+            N=4 hard cap). Adds zero new edges to the link graph -- every figure
+            here is already linked from the wave grid below; this only changes
+            position, DOM order, and anchor context. See selectFeatured() above. */}
+        {featured && (
+          <section style={{ marginBottom: '2rem' }}>
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: '0.75rem',
+              marginBottom: '1rem',
+              paddingBottom: '0.5rem',
+              borderBottom: `2px solid ${accent}22`,
+            }}>
+              <div style={{
+                width: 3, height: '1.125rem', borderRadius: 2,
+                background: accent, flexShrink: 0,
+              }} />
+              <h2 style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: '1.0625rem', fontWeight: 700,
+                color: 'var(--text)', margin: 0,
+              }}>
+                Featured from this line
+              </h2>
+            </div>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+              gap: '0.5rem',
+            }}>
+              {featured.map(f => (
+                <FigureCard key={f.figure_id} figure={f} accent={accent} />
+              ))}
+            </div>
+          </section>
         )}
 
         {/* Series / wave sections */}
