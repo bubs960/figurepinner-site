@@ -104,6 +104,34 @@
  * writes), and escalation after many consecutive fully-failed runs (would
  * need an alerting channel this script doesn't have -- for now, repeated
  * failure is still visible as repeated console.warn output in deploy logs).
+ *
+ * WARM-THEN-RETRY (added 2026-07-25, webaudit ruling after a real incident):
+ * the keptCount===0 safety valve below used to just throw and skip cleanup,
+ * on the theory that it was a rare "very fresh low-traffic deploy" edge
+ * case. Live incident on the cb1ee06 deploy showed that's actually the
+ * ROUTINE starting state, not an edge case: with ~22,700 distinct
+ * figure-detail paths each getting very few individual visits, essentially
+ * nothing has been requested on a brand-new build yet, so keptCount==0 right
+ * after every deploy. Worse, Next's ISR stale-while-revalidate behavior
+ * means a path with NO current-build entry keeps serving the PRIOR build's
+ * cached HTML indefinitely until either something requests that exact path
+ * (triggering a background re-render) or this script deletes the old
+ * build's keys outright (forcing a true cache miss on next request) -- so a
+ * skipped purge doesn't just cost KV storage, it can leave whole route
+ * groups silently serving stale pre-deploy content. Confirmed live: a green
+ * `cb1ee06` deploy still served `b304ac3` HTML on figure-detail pages until
+ * this was caught by checking <meta fp-build> per route group (not just
+ * healthz + homepage) and the purge was re-run by hand after the site had
+ * taken some real traffic.
+ * Fix: instead of throwing immediately, actively fetch one representative
+ * URL per major route group against the LIVE site (see WARM_PATHS below),
+ * forcing a real render on the new build, then re-scan once. Only throw the
+ * anomaly if keptCount is STILL 0 after an active warm attempt -- at that
+ * point "hasn't been visited yet" is no longer a credible explanation and
+ * something is actually wrong (wrong build id, the warm requests didn't
+ * reach the site, a genuine race). This only fires in --execute mode --
+ * dry-run stays side-effect-free by design, so a dry run can still hit the
+ * immediate-throw path and that's expected, not a regression.
  */
 
 import { readFileSync, existsSync, writeFileSync, unlinkSync, renameSync } from 'node:fs'
@@ -157,6 +185,32 @@ const DELETE_CHUNK_SIZE = 1000
 const WRANGLER_CALLS_BUDGET_PER_RUN = 60
 const MAX_BUILDS_PER_RUN = 15
 const WALL_CLOCK_BUDGET_MS = 3 * 60 * 1000
+
+// Warm-then-retry target set (see file header, 2026-07-25). One representative
+// path per route group from the post-deploy verification protocol (homepage,
+// genre hub, line hub, figure detail, /today, guides) -- not exhaustive, just
+// enough to prove the new build CAN write ISR-KV entries across the major
+// route shapes, not only the homepage. Fixed to real, long-lived catalog
+// entries (Cohort A-1's line/figure; a stable evergreen guide slug) rather
+// than looked up dynamically -- this script deliberately has no KB
+// dependency, and a warm target only needs to exist, not be representative
+// of catalog content.
+const WARM_BASE_URL = 'https://figurepinner.com'
+const WARM_PATHS = [
+  '/',
+  '/wrestling',
+  '/wrestling/deluxe-aggression',
+  '/wrestling/deluxe-aggression/rob-conway',
+  '/today',
+  '/guides/most-valuable-star-wars-black-series',
+]
+// figurepinner.com's Bot Fight Mode 403s (and silently lies to) plain
+// non-browser HTTP clients -- verified recipe (post-deploy-smoke-probe.mjs,
+// check-kb-d1-canary-live.mjs) is a real desktop-Chrome User-Agent, curl.exe
+// on Windows. Duplicated here rather than shared to avoid coupling this
+// script's only job (KV cleanup) to another script's module surface.
+const WARM_BROWSER_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+const WARM_KV_CONSISTENCY_DELAY_MS = 5000
 
 // Distinguishes "something is actually wrong, a human should notice" from
 // routine non-fatal noise (missing .next/BUILD_ID on a standalone run, a
@@ -380,6 +434,34 @@ function discoverStaleBuilds(keepBuildId) {
   return { totalKeys: allKeys.length, keptCount, buildIds: [...buildIds] }
 }
 
+// Best-effort: fetch each WARM_PATHS entry against the live site to force a
+// real render (and therefore an ISR-KV write) under the current build.
+// Never throws -- a single warm request failing (timeout, transient 5xx,
+// Bot Fight hiccup) doesn't invalidate the attempt; the caller's re-scan is
+// the actual check, not this function's return value.
+async function warmCurrentBuild() {
+  console.log(`[kv-purge-stale-isr] keptCount is 0 -- warming ${WARM_PATHS.length} representative path(s) on ${WARM_BASE_URL} before treating this as an anomaly...`)
+  for (const path of WARM_PATHS) {
+    const url = `${WARM_BASE_URL}${path}`
+    try {
+      if (process.platform === 'win32') {
+        execFileSync('curl.exe', [
+          '-sS', '-o', 'NUL', '-w', '%{http_code}',
+          '-H', `User-Agent: ${WARM_BROWSER_UA}`,
+          url,
+        ], { encoding: 'utf8', windowsHide: true, timeout: 15000 })
+      } else {
+        await fetch(url, { headers: { 'user-agent': WARM_BROWSER_UA } })
+      }
+    } catch (err) {
+      console.warn(`[kv-purge-stale-isr] warm request to ${path} failed (non-fatal): ${String(err.message || err).split('\n')[0]}`)
+    }
+  }
+  // KV is eventually consistent -- give the writes a moment to become
+  // visible to a subsequent list call before re-scanning.
+  await new Promise((resolve) => setTimeout(resolve, WARM_KV_CONSISTENCY_DELAY_MS))
+}
+
 async function main() {
   const execute = process.argv.includes('--execute')
   const buildIdOverridePassed = process.argv.some((a) => a.startsWith('--build-id='))
@@ -402,7 +484,7 @@ async function main() {
 
   if (pending === null) {
     console.log(`[kv-purge-stale-isr] no persisted queue -- running a full namespace scan (keeping build ${keepBuildId})...`)
-    const { totalKeys, keptCount, buildIds } = await withRetry(
+    let { totalKeys, keptCount, buildIds } = await withRetry(
       () => discoverStaleBuilds(keepBuildId),
       { label: 'full scan (discoverStaleBuilds)' }
     )
@@ -411,13 +493,26 @@ async function main() {
     // while the namespace clearly isn't empty, something upstream MIGHT be
     // wrong (empty/wrong .next/BUILD_ID, a build-id race with a concurrent
     // deploy) -- refuse to queue anything for deletion rather than risk
-    // eventually wiping the live build's own cache. Known false-positive
-    // case (audit finding, 2026-07-09): on a very fresh, low-traffic deploy
-    // the new build may legitimately have written zero isr-cache keys yet
-    // -- that trips this same valve. Acceptable false positive: worst case
-    // is "skip cleanup this run, retry next deploy," never a wrong deletion.
+    // eventually wiping the live build's own cache. This is also the
+    // ROUTINE state right after every deploy (see file header, 2026-07-25)
+    // -- with this site's per-path traffic pattern, essentially nothing has
+    // been requested on a brand-new build yet. In --execute mode, warm a
+    // handful of representative paths and re-scan once before deciding this
+    // is a real anomaly; a dry run stays side-effect-free and hits the
+    // immediate throw, same as before.
     if (keptCount === 0 && totalKeys > 0) {
-      throw new AnomalyError(`keptCount is 0 out of ${totalKeys} keys for keep-build-id "${keepBuildId}" -- refusing to queue anything for deletion. Either the current build's own keys aren't recognized (wrong/stale/empty build id, or a concurrent deploy race) OR this is a very fresh low-traffic deploy that hasn't written any isr-cache keys yet -- verify .next/BUILD_ID matches the live deployed build before assuming the latter.`)
+      if (execute) {
+        await warmCurrentBuild()
+        ;({ totalKeys, keptCount, buildIds } = await withRetry(
+          () => discoverStaleBuilds(keepBuildId),
+          { label: 'post-warm rescan (discoverStaleBuilds)' }
+        ))
+      }
+      if (keptCount === 0) {
+        const afterWarm = execute ? ` after warming ${WARM_PATHS.length} representative path(s)` : ''
+        throw new AnomalyError(`keptCount is 0 out of ${totalKeys} keys for keep-build-id "${keepBuildId}"${afterWarm} -- refusing to queue anything for deletion. Either the current build's own keys aren't recognized (wrong/stale/empty build id, a concurrent deploy race, or ${WARM_BASE_URL} isn't actually serving this deploy) OR this is a dry run / a deploy that legitimately hasn't taken any traffic yet -- verify .next/BUILD_ID matches the live deployed build before assuming the latter.`)
+      }
+      if (execute) console.log(`[kv-purge-stale-isr] warm-then-retry succeeded: ${keptCount} key(s) now on the current build after warming.`)
     }
 
     console.log(`[kv-purge-stale-isr] full scan: ${totalKeys} total keys, ${keptCount} on current build, ${buildIds.length} stale build(s) discovered.`)
