@@ -17,6 +17,8 @@
  * block + register its nightly data — no component edits.
  */
 
+import { getFigureById, prettyFigureUrl } from '@/data/kb'
+
 // Precomputed top-comps JSON (nightly build-fandom-top-comps.mjs). STATIC imports —
 // register each fandom's file here once its data exists. See loadTopComps() below.
 import motuTopComps from '@/data/fandom-top-comps/masters-of-the-universe.json'
@@ -503,8 +505,28 @@ const VAULTS: Record<string, VaultPayload> = {
   'transformers': transformersVaults as unknown as VaultPayload,
 }
 
+// §0 canonical-link fix (2026-07-25): every `url` field baked into these
+// nightly-generated JSON payloads (build-fandom-{vaults,top-comps,heroes-villains}.mjs)
+// is the non-canonical /figure/<fid> form. Resolve from figure_id through kb.ts
+// at load time instead of regenerating the data -- keeps a single source of
+// truth rather than adding a second generated-URL artifact that can drift the
+// way figureIdToPrettyPath.generated.json already has. Falls back to the
+// baked url if the fid no longer resolves in the KB (dropped/renamed figure).
+function resolvedUrl(figureId: string, bakedUrl: string): string {
+  const kb = getFigureById(figureId)
+  return kb ? prettyFigureUrl(kb) : bakedUrl
+}
+
 export async function loadVaults(dataKey: string): Promise<VaultPayload | null> {
-  return VAULTS[dataKey] ?? null
+  const payload = VAULTS[dataKey]
+  if (!payload) return null
+  return {
+    ...payload,
+    vaults: payload.vaults.map((v) => ({
+      ...v,
+      top: v.top.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+    })),
+  }
 }
 
 /** Heroes-vs-Villains curated band — top hero-side grails facing villain-side across the seam. */
@@ -521,9 +543,20 @@ const HEROES_VILLAINS: Record<string, HeroesVillainsPayload> = {
 }
 
 export async function loadHeroesVillains(dataKey: string): Promise<HeroesVillainsPayload | null> {
-  return HEROES_VILLAINS[dataKey] ?? null
+  const payload = HEROES_VILLAINS[dataKey]
+  if (!payload) return null
+  return {
+    ...payload,
+    heroes: payload.heroes.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+    villains: payload.villains.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+  }
 }
 
 export async function loadTopComps(dataKey: string): Promise<TopCompPayload | null> {
-  return TOP_COMPS[dataKey] ?? null
+  const payload = TOP_COMPS[dataKey]
+  if (!payload) return null
+  return {
+    ...payload,
+    figures: payload.figures.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+  }
 }
