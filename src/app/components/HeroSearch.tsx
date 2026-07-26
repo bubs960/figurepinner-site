@@ -440,7 +440,11 @@ export default function HeroSearch({
           width: '100%',
           maxWidth: 720,
           margin: '0 auto 32px',
-          zIndex: takeover ? 200 : undefined,
+          // Elevated whenever a panel is on screen, not only during takeover.
+          // The in-place dropdown needs this too — it renders inside this
+          // wrapper, so leaving the wrapper unelevated let it sit under
+          // anything positioned nearby.
+          zIndex: takeover || showResults ? 200 : undefined,
         }}
       >
       {/* Focus bloom — a soft gold wash behind the whole box. Deliberately
@@ -516,6 +520,16 @@ export default function HeroSearch({
             setFocused(true)
             if (!disableTakeover && isDesktopPointer()) setTakeover(true)
             if (query.length >= 2 && results.length) setOpen(true)
+          }}
+          // Re-arm on click as well as focus. Escape closes the takeover but
+          // deliberately KEEPS focus in the input (see handleKeyDown), so a
+          // later click on an already-focused input fires no `focus` event at
+          // all and the takeover never came back — the user silently dropped
+          // onto the in-place dropdown for the rest of the session. Idempotent:
+          // if the takeover is already up this is a no-op re-render.
+          onClick={() => {
+            setFocused(true)
+            if (!disableTakeover && isDesktopPointer()) setTakeover(true)
           }}
           onKeyDown={handleKeyDown}
           aria-label="Search figures"

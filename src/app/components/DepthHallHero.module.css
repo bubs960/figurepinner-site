@@ -296,6 +296,18 @@
   width: min(620px, 88vw);
   margin: 0 auto;
   text-align: left;
+  /* Outranks .fpdh-hints, which follows it in the DOM (2026-07-26).
+     BOTH elements animate fpRise with fill-mode:both, and fpRise animates
+     `transform` — so the final transform persists and each becomes its own
+     STACKING CONTEXT at z-index:auto. Sibling stacking contexts at auto paint
+     in DOM order, so the chips row painted over the entire search subtree and
+     the in-place dropdown's own z-index:200 could never escape to beat it.
+     Steve saw the chips cutting through the results list; it reproduced only
+     on the plain-dropdown path because the takeover panel portals to <body>
+     and leaves the hero entirely. It also hit EVERY touch visitor, who never
+     get the takeover and so always render the dropdown in place. */
+  position: relative;
+  z-index: 20;
 }
 /* Dark-theme + glow overrides for HeroSearch's light inline styles, same
    scoped-override technique page.tsx already uses on the old hero. */
