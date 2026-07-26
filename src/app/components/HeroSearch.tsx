@@ -176,8 +176,9 @@ export default function HeroSearch({
       const t = e.target as Node
       if (wrapperRef.current?.contains(t)) return
       if (panelRef.current?.contains(t)) return
-      setOpen(false)
-      setTakeover(false)
+      // Route through close() rather than repeating its setters — it also
+      // clears the lit state, which this handler used to leave set.
+      close()
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
@@ -418,10 +419,20 @@ export default function HeroSearch({
 
   return (
     <>
-      {takeover && createPortal(
-        <div className="fp-search-backdrop" aria-hidden onMouseDown={close} />,
-        document.body,
-      )}
+      {/* The full-viewport scrim was REMOVED 2026-07-26. It portaled to
+          <body>, so its z-index lived in the ROOT stacking context — while
+          this wrapper's z-index:200 is scoped inside DepthHallHero's
+          `parallax` element, which has a transform and therefore forms its own
+          stacking context. Net effect: a z-150 body-level scrim painted ON TOP
+          of the z-200 search box. Confirmed with elementsFromPoint, which
+          returned .fp-search-backdrop first (topmost) at the text's own
+          coordinates. White text under the 0.22 veil rendered as
+          rgb(200,200,201) -- the "active text is still a shade or 2 darker"
+          report, exactly. It had been muting the box it was meant to spotlight
+          since the feature shipped, and worse at the original 0.62.
+          Dismissal never depended on it: the document-level mousedown handler
+          above owns outside-click. The ring and bloom carry focus isolation
+          on their own now. */}
       <div
         ref={wrapperRef}
         style={{

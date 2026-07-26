@@ -1766,23 +1766,11 @@ a:hover {
 
 /* ── Search takeover backdrop (desktop only — HeroSearch gates activation on
       (hover:hover)+(pointer:fine); touch keeps the plain dropdown per D3) ── */
-.fp-search-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 150; /* above SiteHeader (100), below the search wrapper (200) */
-  /* 0.62 -> 0.45 -> 0.22. The original scrim did ALL the focus work while the
-     box did none. Now the ring and bloom carry the signal entirely, so this is
-     only a hint of separation — at 0.45 the surrounding hero still visibly
-     "went dark" on every click, which is the half of the original complaint
-     that survived the first fix (Steve, 2026-07-26: "the text and area is just
-     darker"). */
-  background: rgba(5, 5, 8, 0.22);
-  animation: fp-backdrop-in 0.2s ease;
-}
-@keyframes fp-backdrop-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+/* .fp-search-backdrop REMOVED 2026-07-26 — it portaled to <body>, so its
+   z-index sat in the ROOT stacking context and painted OVER the search box,
+   whose own z-index is scoped inside DepthHallHero's transformed `parallax`
+   context. It muted the very element it was meant to spotlight. See the
+   comment at the old mount site in HeroSearch.tsx. */
 
 /* ── Search box: spinning aurora ring + lit state (2026-07-26) ──
    Ported from Steve's Claude Design comp. A conic-gradient square spins behind
@@ -1923,7 +1911,6 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fp-search-backdrop { animation: none; }
   .fp-note-shimmer::after { display: none; }
   /* Lit state still applies — it just snaps instead of crossfading. */
   .fp-search-box { transition: background 0s, border-color 0s, box-shadow 0s, filter 0s; }
