@@ -114,6 +114,53 @@ const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 // 8 -> 60-73% coverage at comparable wall-clock time, no cost tradeoff found.
 const CONCURRENCY = Number(process.env.CONCURRENCY || 8)
 
+// Retry pass tuning (2026-07-26). Sequential + spaced, NOT concurrent-at-a-
+// lower-number: webaudit measured the proxy returning 403 (a refusal, not a
+// timeout) on 103/103 requests at concurrency 4, while a sequential sweep at
+// ~1.5s spacing recovered every target in <=3 tries. Rounds loop until one
+// recovers nothing new; the cap only exists so a genuinely dead proxy can't
+// hang a full-population run.
+const RETRY_SPACING_MS = Number(process.env.RETRY_SPACING_MS || 1500)
+const MAX_RETRY_ROUNDS = Number(process.env.MAX_RETRY_ROUNDS || 5)
+const sleep = ms => new Promise(r => setTimeout(r, ms))
+
+/*
+ * GLOBAL RATE LIMIT (2026-07-26) — the actual fix, replacing the concurrency knob.
+ *
+ * webaudit's conclusion from 103 live probes was "this is a rate problem, not a
+ * parallelism problem; spacing beats lowering the worker count." A run on
+ * 2026-07-26 measured how right that is: the FIRST pass at the tuned
+ * CONCURRENCY=8 returned 776/6967 priced — **11.1% coverage, 6,094 fetch
+ * failures** — against 84.6% from the same code the previous evening. Nothing
+ * changed but the proxy's mood, which is the whole point: a concurrency setting
+ * tuned against one evening's rate ceiling is not a fix, it's a lucky guess that
+ * silently degrades into "this figure has no comps" for 87% of the catalog.
+ *
+ * So every request in this file — first pass and retries alike — now goes
+ * through one global minimum-interval gate. Workers still exist (they overlap
+ * latency, which spacing alone wastes), but they can never issue requests faster
+ * than MIN_REQUEST_INTERVAL_MS apart in aggregate.
+ *
+ * Default 700ms: measured the same day, 125 sequential snapshot fetches at 700ms
+ * spacing returned **0 failures** (the offers-suppression census). That is the
+ * only spacing figure in evidence with a zero-failure result behind it; webaudit's
+ * own verified figure is 1500ms, which is strictly safer and slower. Raise it if
+ * a run still reports a high still_failed count — that number is now in the
+ * output header precisely so this is tunable against evidence instead of vibes.
+ */
+const MIN_REQUEST_INTERVAL_MS = Number(process.env.MIN_REQUEST_INTERVAL_MS || 700)
+let _nextSlot = 0
+async function rateLimit() {
+  const now = Date.now()
+  const slot = Math.max(now, _nextSlot)
+  _nextSlot = slot + MIN_REQUEST_INTERVAL_MS
+  if (slot > now) await sleep(slot - now)
+}
+
+// Rows whose fetch never succeeded even after the retry loop. Reported in the
+// output header so a coverage delta between two runs is interpretable.
+let stillFailedCount = 0
+
 // Distinguishes "the fetch itself failed" (network error, timeout, non-2xx --
 // worth retrying, see the retry pass below) from "the fetch succeeded and
 // genuinely has no priced comp" (2xx with no median/avg or sold_count<=0 --
@@ -121,6 +168,7 @@ const CONCURRENCY = Number(process.env.CONCURRENCY || 8)
 const FETCH_FAILED = Symbol('fetch-failed')
 
 async function fetchSnapshot(figure_id) {
+  await rateLimit()
   try {
     const res = await fetch(
       `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
@@ -210,6 +258,8 @@ for (const f of getAllFigures()) {
     line: f.product_line,
     hasPrice: false, // filled in by the R2 fetch pass below (v2), unless --no-price
     price: null,
+    fetchFailed: false, // R2 never answered for this fid, even after the retry loop
+
   })
 }
 
@@ -239,27 +289,60 @@ if (!noPrice) {
   console.log(`[drip-v2] first pass: ${pricedCount}/${priceable.length} priced (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%); ${failed.length} fetch failure(s) (network/timeout/non-2xx, not "no comps").`)
 
   /*
-   * RETRY PASS on fetch-failed rows only (webaudit condition #2, 2026-07-25).
+   * RETRY PASS on fetch-failed rows only (webaudit condition #2, 2026-07-25;
+   * REWRITTEN 2026-07-26 per webaudit's Item 4 verification).
+   *
    * The 14.8%->29.3% coverage swing measured across two back-to-back runs on
    * the identical figure population was fetch-load reliability against a
    * live proxy under concurrent load, not the market moving in minutes --
    * this is the fix for that, not a second attempt at "no comps" rows (those
    * are real data, not noise, and get zero benefit from retrying).
-   * Lower concurrency than the first pass on purpose: a smaller, second wave
-   * of requests is less likely to reproduce the same load-driven failures.
+   *
+   * Two corrections webaudit's independent probe forced, both from evidence
+   * outside this script (103 live requests, WEBAUDIT-TO-WEB-ITEM4-VERIFY-FALSE-
+   * BLANKS-2026-07-25):
+   *
+   *  1. ONE retry round is not enough. 23 of the 58 unpriced enriched rows in
+   *     the 7/25 pin had real comps in R2 the whole time -- ~40% of the
+   *     "unpriced" remainder was instrument failure, silently ranked as if it
+   *     were "no demand". So: loop until a full round recovers NOTHING new
+   *     (loop-until-dry), capped so a genuinely dead proxy can't hang a run.
+   *  2. It is a RATE problem, not a parallelism problem. The proxy answers a
+   *     single request 200 and then returns 403 -- not a timeout -- for every
+   *     request at concurrency 4. Lowering the worker count from 8 to 2 still
+   *     leaves requests concurrent. Spacing is what actually works: webaudit's
+   *     sequential probe at ~1.5s spacing recovered all 58 targets in <=3 tries.
+   *     So the retry pass is now strictly SEQUENTIAL with deliberate spacing,
+   *     not "the same shape at lower concurrency".
    */
   if (failed.length) {
-    const RETRY_CONCURRENCY = Math.max(2, Math.floor(CONCURRENCY / 4))
-    console.log(`[drip-v2] retry pass: ${failed.length} fetch-failed figure(s) at concurrency ${RETRY_CONCURRENCY}...`)
-    let recovered = 0
-    await mapLimit(failed, RETRY_CONCURRENCY, async (row) => {
-      const snap = await fetchSnapshot(row.fid)
-      if (snap === FETCH_FAILED) return
-      if (applySnapshot(row, snap)) { pricedCount++; recovered++ }
-    })
-    console.log(`[drip-v2] retry pass recovered ${recovered}/${failed.length} previously fetch-failed figure(s).`)
+    console.log(`[drip-v2] retry: ${failed.length} fetch-failed figure(s), sequential @ ${RETRY_SPACING_MS}ms extra spacing on top of the ${MIN_REQUEST_INTERVAL_MS}ms global rate limit, looping until a round recovers nothing new (max ${MAX_RETRY_ROUNDS} rounds)...`)
+    let pending = failed
+    for (let round = 1; round <= MAX_RETRY_ROUNDS && pending.length; round++) {
+      const stillFailing = []
+      let recovered = 0
+      for (const row of pending) {
+        // Extra spacing beyond the global limiter: these fids already failed
+        // once, so back further off rather than re-hammering at the same rate
+        // that lost them.
+        if (RETRY_SPACING_MS > 0) await sleep(RETRY_SPACING_MS)
+        const snap = await fetchSnapshot(row.fid)
+        if (snap === FETCH_FAILED) { stillFailing.push(row); continue }
+        recovered++
+        if (applySnapshot(row, snap)) pricedCount++
+      }
+      console.log(`[drip-v2] retry round ${round}: recovered ${recovered}/${pending.length}; ${stillFailing.length} still failing.`)
+      pending = stillFailing
+      if (recovered === 0) break   // dry round -- further rounds are wasted requests
+    }
+    stillFailedCount = pending.length
+    // A row whose fetch never succeeded is NOT the same thing as a figure with
+    // no comps, and until now both emitted `has_price=no` + a last_comp
+    // fallback -- indistinguishable to every downstream reader. Mark them so
+    // "coverage" stops conflating data absence with instrument failure.
+    for (const row of pending) row.fetchFailed = true
   }
-  console.log(`[drip-v2] R2 price coverage (post-retry): ${pricedCount}/${priceable.length} enriched figures (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%) returned a valid priced comp.`)
+  console.log(`[drip-v2] R2 price coverage (post-retry): ${pricedCount}/${priceable.length} enriched figures (${((100 * pricedCount) / (priceable.length || 1)).toFixed(1)}%) returned a valid priced comp; ${stillFailedCount} still fetch-failed after retry (reported in the output header, NOT counted as "no comps").`)
 }
 
 rows.sort((a, b) =>
@@ -315,21 +398,40 @@ const flat = argv.includes('--flat')
 const ordered = flat ? rows : roundRobin(rows)
 const picked = ordered.slice(0, n)
 
+// Non-enriched rows in the emitted slice. The `enriched` sort key is tiebreak
+// #1, NOT a hard filter -- once a fandom's enriched supply is exhausted the
+// round-robin pulls its non-enriched rows in to keep the fandom represented.
+// webaudit found 15 such rows in the 7/25 top-1000 while the header said
+// "gate", and a reader dripping from the tail on that wording would submit
+// exactly the arm the cohort experiment is measuring as the loser. The column
+// was always honest; the prose was not. Stated as a count, computed, never
+// asserted.
+const nonEnrichedInSlice = picked.filter(r => !r.enriched).length
+
 const HEADER = [
   `# generated_at: ${generatedAt}`,
   `# PROVISIONAL drip-priority list v2 — still NOT matcher's official ranked money-tier list.`,
   noPrice
     ? '# Ran with --no-price: v1-parity, NO real price/demand signal in this output.'
-    : `# Ranked on: enriched-copy gate, then REAL R2 price/demand (${pricedCount}/${rows.filter(r => r.enriched).length} enriched figures priced, ${((100 * pricedCount) / (rows.filter(r => r.enriched).length || 1)).toFixed(1)}% coverage), then comp-recency fallback, image, key_features, copy length.`,
+    : `# Ranked on: enriched-copy RANKING KEY (not a hard filter — see below), then REAL R2 price/demand (${pricedCount}/${rows.filter(r => r.enriched).length} enriched figures priced, ${((100 * pricedCount) / (rows.filter(r => r.enriched).length || 1)).toFixed(1)}% coverage), then comp-recency fallback, image, key_features, copy length.`,
+  `# enriched=no rows CAN appear, in the tail, where a fandom's enriched supply runs short under`,
+  `# round-robin: ${nonEnrichedInSlice} of the ${picked.length} rows below are enriched=no. Filter on the column, not the wording.`,
+  ...(noPrice ? [] : [
+    `# still_failed_after_retry: ${stillFailedCount} — R2 never answered for these fids. They carry`,
+    `# has_price=fetch_failed, NOT has_price=no: instrument failure, not "this figure has no comps".`,
+    `# A coverage delta between two runs is only interpretable against this number.`,
+  ]),
   `# Do not cite matcher's 70.8% census figure against this population — the census ran on a`,
   `# different, D1-derived proxy over a different population.`,
   `# ordering: ${flat ? 'FLAT global rank' : 'fandom round-robin (copy-first rank preserved WITHIN each fandom)'}`,
   '# columns: rank  figure_id  url  enriched  has_price  price  last_comp  has_image  has_key_features  fandom  line',
+  '#   has_price: yes | no (real: R2 answered, zero priced comps) | fetch_failed (R2 never answered)',
 ].join('\n')
 
 writeFileSync(outPath,
   HEADER + '\n' + picked.map((r, i) =>
-    [i + 1, r.fid, r.url, r.enriched ? 'yes' : 'no', r.hasPrice ? 'yes' : 'no', r.price ?? '-', r.lastComp || '-',
+    [i + 1, r.fid, r.url, r.enriched ? 'yes' : 'no',
+     r.hasPrice ? 'yes' : (r.fetchFailed ? 'fetch_failed' : 'no'), r.price ?? '-', r.lastComp || '-',
      r.hasImage ? 'yes' : 'no', r.hasKeyFeatures ? 'yes' : 'no', r.fandom, r.line].join('\t')
   ).join('\n') + '\n')
 
@@ -360,8 +462,9 @@ if (handoffPath) {
         `**Not matcher's official ranked money-tier list.** Ranked on the copy-first gate, then comp-recency (--no-price run, no real price signal).`,
       ]
     : [
-        `**Not matcher's official ranked money-tier list.** Ranked on the copy-first gate, then REAL R2 price/demand where available.`,
+        `**Not matcher's official ranked money-tier list.** Ranked on the copy-first **ranking key** — a tiebreak, **not a hard filter**. Non-enriched rows can surface in the tail where a fandom's enriched supply runs short under round-robin (${nonEnrichedInSlice} of ${picked.length} in the full list this run). Then REAL R2 price/demand where available.`,
         `R2 price coverage this run: ${pricedCount}/${enrichedCount} enriched figures (${((100 * pricedCount) / (enrichedCount || 1)).toFixed(1)}%). \`price\` is blank where no valid comp was returned — those rows fall back to \`last_comp\`, the last sold-comp DATE (a liveness proxy, not price or demand volume).`,
+        `**${stillFailedCount} fid(s) still fetch-failed after the retry loop** and carry \`has_price=fetch_failed\` in the TSV — R2 never answered for them, which is instrument failure, not "no comps". Coverage above excludes them from the numerator but not the denominator, so it is a floor, not a point estimate.`,
       ]
   const footer = noPrice
     ? 'Deterministic: same KB + census produces byte-identical output (--no-price run).'
