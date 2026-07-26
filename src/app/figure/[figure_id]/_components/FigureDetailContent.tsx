@@ -9,7 +9,6 @@ import { notFound } from 'next/navigation'
 import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl, isNumericWave } from '@/data/kb'
 import { genreSlugForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
-import SocialBarAd from '@/app/components/SocialBarAd'
 import HeroBand from './HeroBand'
 import BidCheck from './BidCheck'
 import LoreBand from './LoreBand'
@@ -835,7 +834,18 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           line: local.product_line,
         }}
       />
-      <SocialBarAd />
+      {/* Adsterra Social Bar — REMOVED 2026-07-26 (Steve's decision: "kill social bar,
+          damage risk not worth small cost"). Do NOT re-add without reading
+          WEB-ANDROID-REDIRECT-ROOTCAUSE-2026-07-26.md first. Reason, in short: the unit's
+          own script carries an explicit Android branch —
+            if (/android/i.test(navigator.userAgent)) { e.preventDefault(); window.open(url,'_blank') }
+          — which on Android Chrome is a full-screen takeover with no tab strip and no working
+          Back, i.e. the "your site redirected me" report we got from a real user. The same
+          script owns `blinkDocumentTitle`, the "(1) New Message!" title hijack logged 7/24.
+          It ran TOP-LEVEL (no iframe), so no sandbox or CSP could ever have contained it —
+          deletion was the only available fix. Its creative and settings are fetched at runtime
+          from Adsterra's sbar.json, so past good behaviour was never a guarantee of future
+          behaviour. Banner AdSlot units are unaffected and still monetise this page (below). */}
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
         { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },
