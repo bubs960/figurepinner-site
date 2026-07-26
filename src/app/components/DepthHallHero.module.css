@@ -299,19 +299,20 @@
 }
 /* Dark-theme + glow overrides for HeroSearch's light inline styles, same
    scoped-override technique page.tsx already uses on the old hero. */
+/* 2026-07-26: the search box now carries its own surface + animated ring
+   (.fp-search-panel / .fp-search-ring in globals.css), so this rule no longer
+   paints a background or runs its own pulse — an opaque background here would
+   sit ON TOP of that panel as a visible rectangle, and a second gold animation
+   on the inner <input> competed with the ring for the same signal. Only the
+   text colour is still ours. The old `border-color` line was always inert:
+   HeroSearch sets the input's border-width to 0 inline, so that gold edge
+   never rendered. */
 .parallax :global(.fpdh-search input) {
-  background: rgba(22, 21, 34, 0.9) !important;
-  border-color: rgba(224, 168, 62, 0.55) !important;
+  background: transparent !important;
   color: #eeeef5 !important;
-  backdrop-filter: blur(10px);
-  animation: fpSearchPulse 2.6s ease-in-out infinite;
 }
 .parallax :global(.fpdh-search input::placeholder) {
   color: rgba(238, 238, 245, 0.66) !important;
-}
-.parallax :global(.fpdh-search input:hover) {
-  border-color: rgba(245, 196, 98, 0.9) !important;
-  background: rgba(26, 25, 40, 0.95) !important;
 }
 /* Submit button: the approved gold gradient (the old hero restyled this via
    a .fph-hero-search selector that died in the swap — live incident
@@ -596,10 +597,8 @@
   100% { transform: scale(1.55); opacity: 0; }
 }
 @keyframes fpTwinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
-@keyframes fpSearchPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 168, 62, 0.32), 0 10px 40px -8px rgba(224, 168, 62, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
-  50% { box-shadow: 0 0 0 7px rgba(224, 168, 62, 0), 0 10px 46px -6px rgba(224, 168, 62, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
-}
+/* fpSearchPulse removed 2026-07-26 — its only consumer was the search input's
+   ambient glow, which the .fp-search-ring in globals.css replaced. */
 
 /* ── responsive ── */
 @media (max-width: 720px) {
@@ -620,10 +619,12 @@
    at opacity 0, so they stay hidden — every card's figure remains
    reachable via search and the shelf below. ── */
 @media (prefers-reduced-motion: reduce) {
+  /* .fpdh-search input dropped from this list 2026-07-26 — it no longer runs
+     an animation. The search box's own reduced-motion handling lives with the
+     ring, in globals.css. */
   .starLayer, .star, .blobA, .blobB, .blobC, .liquid, .shaft, .floor,
   .mote, .tickerTrack,
-  .parallax :global(.fpdh-grail),
-  .parallax :global(.fpdh-search input) {
+  .parallax :global(.fpdh-grail) {
     animation: none !important;
   }
   .curtain { display: none; }

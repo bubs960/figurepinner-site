@@ -1770,12 +1770,101 @@ a:hover {
   position: fixed;
   inset: 0;
   z-index: 150; /* above SiteHeader (100), below the search wrapper (200) */
-  background: rgba(5, 5, 8, 0.62);
+  /* Was 0.62. Reduced 2026-07-26: the scrim was doing ALL the focus work and
+     the box itself did none, so clicking search dropped the headline to 13% of
+     its luminance while the search box changed by literally nothing — it ended
+     up the darkest thing on screen. The box now brightens on its own
+     (.fp-search-box), so the scrim only has to isolate, not carry the signal. */
+  background: rgba(5, 5, 8, 0.45);
   animation: fp-backdrop-in 0.2s ease;
 }
 @keyframes fp-backdrop-in {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+/* ── Search box: spinning aurora ring + lit state (2026-07-26) ──
+   Ported from Steve's Claude Design comp. A conic-gradient square spins behind
+   an inset panel; the 3px gap between box and panel is what reads as an
+   animated gradient border. Focus stacks a second, brighter, faster ring on
+   the ambient one and blooms a soft glow behind the whole thing.
+
+   The state-driven values (panel background, brightness) stay inline in
+   HeroSearch.tsx alongside the layout they belong to; this block owns the
+   ring geometry, the keyframes, and the media-query fallbacks inline styles
+   can't express. */
+.fp-search-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160%;
+  aspect-ratio: 1;
+  z-index: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(from 0deg,
+    rgba(245,196,98,0) 0deg, rgba(245,196,98,.30) 50deg, #ffedbe 95deg,
+    #f5c462 125deg, rgba(245,196,98,0) 205deg, rgba(224,168,62,.15) 250deg,
+    rgba(255,231,178,.85) 300deg, rgba(245,196,98,0) 345deg);
+  animation: fp-ring-spin 3.4s linear infinite;
+}
+.fp-search-ring-lit {
+  background: conic-gradient(from 0deg,
+    rgba(255,237,190,0) 0deg, #fff3d6 70deg, #f5c462 130deg,
+    rgba(245,196,98,0) 195deg, rgba(255,243,214,.9) 285deg,
+    rgba(255,237,190,0) 340deg);
+  animation-duration: 1.4s;
+}
+@keyframes fp-ring-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.fp-search-panel {
+  position: absolute;
+  inset: 3px;
+  z-index: 1;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+  transition: background 0.18s ease;
+}
+/* Hover lift. The old per-page rules did this on the <input> itself and were
+   removed with their backgrounds, which would have left the box with no hover
+   affordance at all; the source comp has one, so it moves here — one rule for
+   all three mounts instead of two divergent per-page ones. Inline styles win
+   over this, so it's scoped to :not(:focus-within) rather than fighting the
+   lit state's own background. */
+.fp-search-box:not(:focus-within):hover .fp-search-panel {
+  background: var(--s2) !important;
+}
+
+.fp-search-bloom {
+  position: absolute;
+  inset: -52px -70px;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(50% 58% at 46% 50%,
+    rgba(224,168,62,.40), rgba(224,168,62,.12) 55%, transparent 76%);
+  filter: blur(24px);
+  animation: fp-glow-breathe 2.6s ease-in-out infinite;
+}
+@keyframes fp-glow-breathe {
+  0%, 100% { opacity: .6; transform: scale(1); }
+  50%      { opacity: 1;  transform: scale(1.14); }
+}
+
+.fp-search-box {
+  transition: filter 0.15s ease;
+}
+
+/* Windows High Contrast / forced-colors flattens box-shadow and border-color,
+   which is every channel the lit state uses. outline survives — so it's the
+   guaranteed-visible fallback there. */
+@media (forced-colors: active) {
+  .fp-search-box:focus-within {
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+  }
 }
 
 /* ── Forgiveness note ("Showing results for …") — one subtle sweep on mount ── */
@@ -1824,6 +1913,16 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .fp-search-backdrop { animation: none; }
   .fp-note-shimmer::after { display: none; }
+  /* Lit state still applies — it just snaps instead of crossfading. */
+  .fp-search-box { transition: background 0s, border-color 0s, box-shadow 0s, filter 0s; }
+  .fp-search-panel { transition: background 0s; }
+  /* Rings and bloom stop MOVING but stay VISIBLE — the focus indicator must
+     never be carried by animation alone (SC 2.4.11). Frozen, the lit ring is
+     still a brighter gradient stacked on the ambient one, and the panel's
+     --s1 -> --s3 step plus brightness(1.06) are unaffected either way. */
+  .fp-search-ring,
+  .fp-search-bloom { animation: none; }
+  .fp-search-bloom { opacity: .85; }
 }
 
 /* ── Quick-look card for tile rails + compact figure cards (S54 follow-up).

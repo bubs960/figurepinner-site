@@ -411,13 +411,13 @@ export default async function GenrePage(
           background: linear-gradient(180deg, #f5c462, #e0a83e) !important;
           color: #1a1206 !important;
         }
+        /* 2026-07-26: the search box owns its own surface + animated focus
+           ring now (.fp-search-panel / .fp-search-ring, globals.css). An
+           opaque background here would cover that panel, and the old faint
+           :focus shadow is superseded by the ring — keeping it just drew a
+           second, much weaker gold edge inside the new one. */
         .fpg-mast-search input {
-          border-color: rgba(242,232,213,.13) !important;
-          background: rgba(242,232,213,.04) !important;
-        }
-        .fpg-mast-search input:focus {
-          border-color: rgba(224,168,62,.55) !important;
-          box-shadow: 0 0 0 3px rgba(224,168,62,.10) !important;
+          background: transparent !important;
         }
         .fpg-hints { margin-top: 13px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
         .fpg-hints span { font-size: 11.5px; font-weight: 300; color: var(--fph-cream-mut); margin-right: 2px; letter-spacing: .02em; }

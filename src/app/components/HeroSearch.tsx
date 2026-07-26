@@ -93,6 +93,14 @@ export default function HeroSearch({
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
   const [takeover, setTakeover] = useState(false)
+  // Real focus state, tracked on the WRAPPER not the input, so focus moving
+  // between the input, the Clear button and the Submit button (all inside the
+  // same visual box) doesn't flicker the lit state off. Drives the "search is
+  // focused" brightening — which was previously keyed to `showResults`, i.e.
+  // 2+ typed chars AND returned results, so clicking an empty box changed
+  // nothing at all while the takeover backdrop darkened everything around it
+  // (2026-07-26, Steve: "when you click it goes dark... limiting focus").
+  const [focused, setFocused] = useState(false)
   const [activeIdx, setActiveIdx] = useState(-1)
   const [exampleIdx, setExampleIdx] = useState(0)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -317,6 +325,13 @@ export default function HeroSearch({
   function close() {
     setOpen(false)
     setTakeover(false)
+    // Backstop against a stuck-lit box if the wrapper's onBlur relatedTarget
+    // check misfires (it can be null on some virtual keyboards/extensions).
+    // Guarded on real DOM focus because Escape deliberately KEEPS focus in the
+    // input (see handleKeyDown) — a blinking caret in a box that renders as
+    // inactive would be its own bug, so only drop the lit state once focus has
+    // genuinely left the box.
+    if (!wrapperRef.current?.contains(document.activeElement)) setFocused(false)
   }
 
   function handleKeyDown(e: React.KeyboardEvent) {
@@ -350,6 +365,9 @@ export default function HeroSearch({
     : basePlaceholder
 
   const showResults = open && results.length > 0
+  // The lit state. Deliberately NOT `showResults` alone — an empty focused box
+  // is exactly the case that had zero feedback on every device.
+  const isActive = focused || takeover || showResults
   // Takeover: a body-portaled FIXED panel floating detached under the input
   // (immune to ancestor overflow/transform — the homepage hero clips in-place
   // absolutes). Plain dropdown stays attached-absolute (unchanged mobile/touch
@@ -414,16 +432,57 @@ export default function HeroSearch({
           zIndex: takeover ? 200 : undefined,
         }}
       >
-      <div style={{
+      {/* Focus bloom — a soft gold wash behind the whole box. Deliberately
+          focus-only rather than always-on like the source design: it's a
+          blur(24px) layer sitting on the LCP region, and making it arrive on
+          click is both cheaper and a bigger delta for the thing that was
+          actually reported. */}
+      {isActive && <span className="fp-search-bloom" aria-hidden />}
+      <div
+        className="fp-search-box"
+        onFocus={() => setFocused(true)}
+        onBlur={e => {
+          // Only unlight when focus leaves the box entirely — tabbing from the
+          // input to Clear/Submit keeps it lit.
+          if (!e.currentTarget.contains(e.relatedTarget as Node)) setFocused(false)
+        }}
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          // The 3px pad IS the ring band — the panel below sits at inset:3px,
+          // so the spinning conic behind it only shows through as a border.
+          padding: 3,
+          borderRadius: showResults && !takeover ? '14px 14px 0 0' : '14px',
+          overflow: 'hidden',
+          transition: 'filter 0.15s ease',
+          filter: isActive ? 'brightness(1.06)' : 'none',
+        }}
+      >
+        {/* Ambient ring — slow and dim, keeps the box alive at rest. */}
+        <span className="fp-search-ring" aria-hidden />
+        {/* Lit ring — brighter, 2.4x faster, STACKED on the ambient one rather
+            than replacing it, so focus reads as more light arriving rather
+            than a swap. This is the change Steve asked for. */}
+        {isActive && <span className="fp-search-ring fp-search-ring-lit" aria-hidden />}
+        {/* Inner panel — masks the conic down to a band and carries the
+            surface-brightness channel (--s1 -> --s3). Kept as a sibling
+            element rather than a background on the box itself, because the
+            box has to stay overflow:hidden to clip the spinning ring. */}
+        <span
+          className="fp-search-panel"
+          aria-hidden
+          style={{
+            borderRadius: showResults && !takeover ? '11px 11px 0 0' : '11px',
+            background: isActive ? 'var(--s3)' : 'var(--s1)',
+          }}
+        />
+        <div style={{
         display: 'flex',
         alignItems: 'center',
-        background: 'var(--s1)',
-        border: `1px solid ${showResults ? 'var(--blue)' : 'var(--border)'}`,
-        borderRadius: showResults && !takeover ? '10px 10px 0 0' : '10px',
+        position: 'relative',
+        zIndex: 2,
         padding: '0 8px 0 16px',
         gap: 10,
-        transition: 'border-color 0.15s',
-        boxShadow: showResults ? '0 0 0 3px rgba(0,102,255,0.12)' : 'none',
       }}>
         <input
           ref={inputRef}
@@ -437,6 +496,7 @@ export default function HeroSearch({
           value={query}
           onChange={e => setQuery(e.target.value)}
           onFocus={() => {
+            setFocused(true)
             if (!disableTakeover && isDesktopPointer()) setTakeover(true)
             if (query.length >= 2 && results.length) setOpen(true)
           }}
@@ -482,6 +542,7 @@ export default function HeroSearch({
             {buttonLabel}
           </button>
         )}
+      </div>
       </div>
 
       {/* Results panel — plain dropdown in place, or the rich takeover panel
