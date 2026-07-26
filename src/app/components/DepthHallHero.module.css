@@ -309,7 +309,11 @@
    never rendered. */
 .parallax :global(.fpdh-search input) {
   background: transparent !important;
-  color: #eeeef5 !important;
+  /* `color` deliberately NOT set here any more. It forced #eeeef5 !important,
+     which was identical to HeroSearch's own idle colour (var(--text)) and so
+     did nothing at rest — but it beat the inline style and silently blocked
+     the focused pure-white, capping the typing contrast at 17.2:1 instead of
+     ~19.7:1. The component owns this colour now, in both states. */
 }
 .parallax :global(.fpdh-search input::placeholder) {
   color: rgba(238, 238, 245, 0.66) !important;

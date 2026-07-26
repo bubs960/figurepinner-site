@@ -1770,12 +1770,13 @@ a:hover {
   position: fixed;
   inset: 0;
   z-index: 150; /* above SiteHeader (100), below the search wrapper (200) */
-  /* Was 0.62. Reduced 2026-07-26: the scrim was doing ALL the focus work and
-     the box itself did none, so clicking search dropped the headline to 13% of
-     its luminance while the search box changed by literally nothing — it ended
-     up the darkest thing on screen. The box now brightens on its own
-     (.fp-search-box), so the scrim only has to isolate, not carry the signal. */
-  background: rgba(5, 5, 8, 0.45);
+  /* 0.62 -> 0.45 -> 0.22. The original scrim did ALL the focus work while the
+     box did none. Now the ring and bloom carry the signal entirely, so this is
+     only a hint of separation — at 0.45 the surrounding hero still visibly
+     "went dark" on every click, which is the half of the original complaint
+     that survived the first fix (Steve, 2026-07-26: "the text and area is just
+     darker"). */
+  background: rgba(5, 5, 8, 0.22);
   animation: fp-backdrop-in 0.2s ease;
 }
 @keyframes fp-backdrop-in {
@@ -1806,14 +1807,19 @@ a:hover {
     rgba(245,196,98,0) 0deg, rgba(245,196,98,.30) 50deg, #ffedbe 95deg,
     #f5c462 125deg, rgba(245,196,98,0) 205deg, rgba(224,168,62,.15) 250deg,
     rgba(255,231,178,.85) 300deg, rgba(245,196,98,0) 345deg);
-  animation: fp-ring-spin 3.4s linear infinite;
+  /* Slowed from 3.4s (Steve, 2026-07-26: "outline is fine and should slow down
+     a bit"). The gradient carries several bright arcs, so it reads faster than
+     its rotation period suggests. */
+  animation: fp-ring-spin 6.5s linear infinite;
 }
 .fp-search-ring-lit {
   background: conic-gradient(from 0deg,
     rgba(255,237,190,0) 0deg, #fff3d6 70deg, #f5c462 130deg,
     rgba(245,196,98,0) 195deg, rgba(255,243,214,.9) 285deg,
     rgba(255,237,190,0) 340deg);
-  animation-duration: 1.4s;
+  /* Slowed from 1.4s, keeping it ~2.3x the ambient ring so focus still reads
+     as a step-change in pace rather than a speed swap. */
+  animation-duration: 2.8s;
 }
 @keyframes fp-ring-spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
@@ -1825,7 +1831,10 @@ a:hover {
   inset: 3px;
   z-index: 1;
   pointer-events: none;
-  backdrop-filter: blur(10px);
+  /* No backdrop-filter here. It was blur(10px) until 2026-07-26 and was a pure
+     no-op — the panel background is opaque, so there is nothing behind it to
+     show through — while still forcing a per-frame backdrop-root rasterisation
+     on the LCP element. */
   transition: background 0.18s ease;
 }
 /* Hover lift. The old per-page rules did this on the <input> itself and were
@@ -1835,7 +1844,10 @@ a:hover {
    over this, so it's scoped to :not(:focus-within) rather than fighting the
    lit state's own background. */
 .fp-search-box:not(:focus-within):hover .fp-search-panel {
-  background: var(--s2) !important;
+  /* Previews the focus surface (recedes toward --bg) rather than lifting to
+     --s2. Lifting was the opposite direction from what focus now does, so
+     hover-then-click read as the box getting darker on engage. */
+  background: var(--bg) !important;
 }
 
 .fp-search-bloom {

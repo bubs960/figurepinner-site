@@ -454,8 +454,6 @@ export default function HeroSearch({
           padding: 3,
           borderRadius: showResults && !takeover ? '14px 14px 0 0' : '14px',
           overflow: 'hidden',
-          transition: 'filter 0.15s ease',
-          filter: isActive ? 'brightness(1.06)' : 'none',
         }}
       >
         {/* Ambient ring — slow and dim, keeps the box alive at rest. */}
@@ -465,15 +463,23 @@ export default function HeroSearch({
             than a swap. This is the change Steve asked for. */}
         {isActive && <span className="fp-search-ring fp-search-ring-lit" aria-hidden />}
         {/* Inner panel — masks the conic down to a band and carries the
-            surface-brightness channel (--s1 -> --s3). Kept as a sibling
-            element rather than a background on the box itself, because the
-            box has to stay overflow:hidden to clip the spinning ring. */}
+            surface channel. Kept as a sibling element rather than a background
+            on the box itself, because the box has to stay overflow:hidden to
+            clip the spinning ring.
+
+            The surface goes DARKER on focus (--s1 -> --bg), not lighter. The
+            first cut stepped it up to --s3 on the theory that "focused = a
+            brighter box", but measuring it showed that lifting the surface
+            toward the text DROPS text contrast 15.8:1 -> 14.9:1, which is what
+            made the box read washed-out mid-typing (Steve, 2026-07-26: "the
+            text and area is just darker"). Light belongs on the ring and the
+            text; the surface should recede so they separate. */}
         <span
           className="fp-search-panel"
           aria-hidden
           style={{
             borderRadius: showResults && !takeover ? '11px 11px 0 0' : '11px',
-            background: isActive ? 'var(--s3)' : 'var(--s1)',
+            background: isActive ? 'var(--bg)' : 'var(--s1)',
           }}
         />
         <div style={{
@@ -507,7 +513,12 @@ export default function HeroSearch({
             background: 'transparent',
             border: 'none',
             outline: 'none',
-            color: 'var(--text)',
+            // Pure white while engaged, not --text (#EEEEF5). Paired with the
+            // panel receding to --bg this takes what you're typing from
+            // 15.8:1 to ~19.7:1 against its own surface — the text gets
+            // CRISPER as you type instead of washing out.
+            color: isActive ? '#FFFFFF' : 'var(--text)',
+            transition: 'color 0.15s ease',
             fontSize: '1rem',
             padding: '14px 0',
             fontFamily: 'var(--font-ui)',
