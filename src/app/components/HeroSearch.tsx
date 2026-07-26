@@ -243,6 +243,36 @@ export default function HeroSearch({
     }
   }, [takeover])
 
+  // Escape closes the takeover from ANYWHERE on the page, not just from inside
+  // the input (overlay/trap audit, 2026-07-26).
+  //
+  // The input's own onKeyDown (handleKeyDown below) was the ONLY Escape handler
+  // in this file, so it only fired while focus sat in the field. One press of
+  // Tab moved focus out and left the 62%-black backdrop AND the scroll-lock
+  // above it with no keyboard exit at all — the only way out was a mouse click
+  // on the backdrop.
+  //
+  // That is the same failure shape as the touch bug this component already
+  // carries a comment about (see isDesktopPointer above, and the user report it
+  // quotes): a full-screen dark lock whose only remaining exit requires a
+  // modality the user might not have. That fix covered the touch case; this
+  // covers the keyboard case. DepthHallHero.tsx does the same thing for its own
+  // inspect panel — this is that pattern, not a new one.
+  //
+  // Focus returns to the input on close so a keyboard user isn't dumped
+  // somewhere arbitrary, matching handleKeyDown's own "focus stays in the
+  // input" behaviour.
+  useEffect(() => {
+    if (!takeover) return
+    function onKey(e: KeyboardEvent) {
+      if (e.key !== 'Escape' || e.isComposing) return
+      close()
+      inputRef.current?.focus()
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [takeover])
+
   // "/" focuses the search from anywhere on the page (homepage copy promises
   // this — keep the hotkey and the micro-line in sync). Cmd+K / Ctrl+K is an
   // alias (S54 Phase 5 — the full palette UI stays out of scope). Ignored
