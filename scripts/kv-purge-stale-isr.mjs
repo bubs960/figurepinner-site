@@ -137,7 +137,7 @@
 import { readFileSync, existsSync, writeFileSync, unlinkSync, renameSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { join } from 'node:path'
-import { tmpdir } from 'node:os'
+import { tmpdir, homedir } from 'node:os'
 
 const NAMESPACE_ID = 'e1858bb16a4f41f5b81afe8cf53519f5' // FP_KV, shared PRO_KV/NEXT_INC_CACHE_KV
 const KEEP_PREFIX = 'isr-cache/'
@@ -211,6 +211,70 @@ const WARM_PATHS = [
 // script's only job (KV cleanup) to another script's module surface.
 const WARM_BROWSER_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 const WARM_KV_CONSISTENCY_DELAY_MS = 5000
+
+// ── Self-purge of warmed URLs (webaudit ruling, 2026-07-26) ──
+// The warm fetches above go through the Cloudflare edge, so their RESPONSES
+// get cached there. When this script ran after purge-cache in the deploy
+// chain, that re-cached whatever the origin served mid-deploy — stale content,
+// AFTER the purge, with nothing purging again. Live incident 2026-07-26:
+// rob-conway (WARM_PATHS[203]'s successor) served the previous build with
+// cf-cache-status: HIT on the exact deploy meant to prove the Social Bar gone.
+// The chain is now reordered (purge-cache runs after this script), but this
+// targeted purge is NOT redundant belt-and-braces: this script ALSO runs
+// STANDALONE (nightly auto-retry), where no purge-cache follows it in any
+// order. Without this, the nightly path can silently re-poison the edge.
+//
+// Token/zone loading duplicated from purge-cache.mjs rather than imported —
+// same reasoning as WARM_BROWSER_UA above: this script's only job is KV
+// cleanup, and coupling it to another script's module surface is worse than
+// 15 duplicated lines. Purge-by-URL is exact-match, available on all CF plans.
+const CF_ZONE_ID_FALLBACK = '66a98bfaa6a2992c9ed3c32f9f3c1702'
+
+function loadPurgeCreds() {
+  const out = {}
+  try {
+    const txt = readFileSync(join(homedir(), '.figurepinner-secrets.env'), 'utf8')
+    for (const line of txt.split(/\r?\n/)) {
+      const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/)
+      if (m) out[m[1]] = m[2].replace(/^["']|["']$/g, '')
+    }
+  } catch { /* optional — env vars alone are enough */ }
+  return {
+    token: process.env.CF_PURGE_TOKEN || out.CF_PURGE_TOKEN,
+    zoneId: process.env.CF_ZONE_ID || out.CF_ZONE_ID || CF_ZONE_ID_FALLBACK,
+  }
+}
+
+/**
+ * Purge exactly the URLs the warm pass just fetched, so the edge never keeps
+ * what warming cached. Warn-and-continue on any failure — this script must
+ * never fail `npm run deploy` (see AnomalyError note below), and a missed
+ * targeted purge is recoverable (deploy chain: purge-cache still runs after;
+ * standalone: next deploy's purge_everything clears it).
+ */
+async function purgeWarmedUrls() {
+  const { token, zoneId } = loadPurgeCreds()
+  if (!token) {
+    console.warn('[kv-purge-stale-isr] CF_PURGE_TOKEN not found -- skipping the warmed-URL purge. In the deploy chain purge-cache covers this; on a STANDALONE run the 6 warmed URLs may serve the pre-warm edge copy until the next purge.')
+    return
+  }
+  const files = WARM_PATHS.map((p) => `${WARM_BASE_URL}${p}`)
+  try {
+    const res = await fetch(`https://api.cloudflare.com/client/v4/zones/${zoneId}/purge_cache`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ files }),
+    })
+    const body = await res.json().catch(() => null)
+    if (res.ok && body?.success) {
+      console.log(`[kv-purge-stale-isr] purged the ${files.length} warmed URL(s) from the edge -- warming can no longer re-poison the cache.`)
+    } else {
+      console.warn(`[kv-purge-stale-isr] warmed-URL purge returned HTTP ${res.status}${body?.errors?.length ? ' -- ' + JSON.stringify(body.errors) : ''} (non-fatal, see note above).`)
+    }
+  } catch (err) {
+    console.warn(`[kv-purge-stale-isr] warmed-URL purge failed to send (non-fatal): ${String(err?.message || err).split('\n')[0]}`)
+  }
+}
 
 // Distinguishes "something is actually wrong, a human should notice" from
 // routine non-fatal noise (missing .next/BUILD_ID on a standalone run, a
@@ -457,6 +521,10 @@ async function warmCurrentBuild() {
       console.warn(`[kv-purge-stale-isr] warm request to ${path} failed (non-fatal): ${String(err.message || err).split('\n')[0]}`)
     }
   }
+  // The warm fetches just seeded the edge with whatever the origin served —
+  // purge those exact URLs immediately so the cache can't keep a mid-deploy
+  // stale copy (the 2026-07-26 re-poisoning defect).
+  await purgeWarmedUrls()
   // KV is eventually consistent -- give the writes a moment to become
   // visible to a subsequent list call before re-scanning.
   await new Promise((resolve) => setTimeout(resolve, WARM_KV_CONSISTENCY_DELAY_MS))
