@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
-import { figureUrl, prettyFigureUrlKey, genreSlugForFandom, SLUG_TO_FANDOM } from '../src/data/kbTypes.ts'
+import { figureUrl, prettyFigureUrlKey, prettyUrlRouterLookupKey, genreSlugForFandom, SLUG_TO_FANDOM } from '../src/data/kbTypes.ts'
 import { getAllFigures, hasUniquePrettyFigureUrl, prettyFigureUrl } from '../src/data/kb.ts'
 import { buildPrettyUrlMap, prettyFigureUrlFromMap } from '../src/data/kbDb.ts'
 
@@ -68,18 +68,69 @@ describe('prettyFigureUrl (real KB, structural invariants)', () => {
     }
   })
 
-  test('hasUniquePrettyFigureUrl agrees with a from-scratch count over the same key', () => {
+  test('hasUniquePrettyFigureUrl agrees with a from-scratch ROUTER-semantics count', () => {
+    // 2026-07-27: rewritten twice over. It used to recompute with the exact
+    // key, which is the predicate that shipped 6 bad sitemap URLs. Worse, it
+    // kept PASSING after the fix — a stride of 45 simply never sampled any of
+    // the 6 figures whose verdict changed. A test that agrees with the code
+    // only because it never looks at the disputed cases is false assurance,
+    // so the sweep below is FULL, not sampled.
+    //
+    // Recomputed from the router's rule directly rather than by calling the
+    // shared helper, so a wrong-but-shared predicate cannot validate itself
+    // (feedback_guardrail_circular_validation).
+    const n = s => String(s ?? '').toLowerCase().trim()
     const counts = new Map()
     for (const f of figures) {
-      const key = prettyFigureUrlKey(f)
-      counts.set(key, (counts.get(key) ?? 0) + 1)
+      const base = `${f.fandom}|${n(f.character_canonical)}|`
+      const keys = new Set([base + n(f.product_line), base + `${n(f.manufacturer)}-${n(f.product_line)}`])
+      for (const k of keys) counts.set(k, (counts.get(k) ?? 0) + 1)
     }
-    const stride = Math.max(1, Math.floor(figures.length / 500))
-    for (let i = 0; i < figures.length; i += stride) {
-      const f = figures[i]
-      const expected = counts.get(prettyFigureUrlKey(f)) === 1
+    for (const f of figures) {
+      const expected = counts.get(`${f.fandom}|${n(f.character_canonical)}|${n(f.product_line)}`) === 1
       assert.equal(hasUniquePrettyFigureUrl(f), expected, `${f.figure_id}: uniqueness mismatch`)
     }
+  })
+
+  test('the 6 known cross-figure collisions are NOT treated as unique', () => {
+    // Pinned by name. These are the exact URLs the 2026-07-27 sitemap census
+    // caught 308ing to a different figure: a row with product_line
+    // "neca-ultimate" has a unique exact key, but at request time it also
+    // matches every manufacturer "neca" + product_line "ultimate" row for the
+    // same character. Naming them means a regression says WHICH URL broke.
+    const collisions = [
+      'fp_horror_neca_neca-ultimate_horror_chucky_be2481',
+      'fp_horror_neca_neca-ultimate_horror_ghostface_c9729d',
+      'fp_horror_neca_neca-ultimate_horror_pinhead_7f9764',
+      'fp_horror_neca_neca-ultimate_horror_bride-of-frankenstein_abcdcf',
+      'fp_horror_neca_neca-ultimate_horror_creature-from-the-black-lagoon_2d02d3',
+      'fp_horror_neca_neca-ultimate_horror_phantom-of-the-opera_dad2ef',
+    ]
+    for (const id of collisions) {
+      const f = figures.find(x => x.figure_id === id)
+      if (!f) continue // KB may legitimately drop a row; the sweep above still guards the class
+      assert.equal(hasUniquePrettyFigureUrl(f), false,
+        `${id} must NOT get a pretty URL — it 308s to a different figure at request time`)
+      assert.equal(prettyFigureUrl(f), `/figure/${id}`,
+        `${id} must fall back to its stable /figure/ URL`)
+    }
+  })
+
+  test('switching to router semantics only REMOVED pretty URLs, never added any', () => {
+    // The safety property that made this change shippable: measured over all
+    // 22,725 figures, exact-key-unique was 11,331 and router-unique is 11,325.
+    // Every changed verdict went unique -> ambiguous. If a future edit ever
+    // makes a figure pretty that the exact key called ambiguous, that is a NEW
+    // URL entering the crawl graph and wants a deliberate decision.
+    const exact = new Map()
+    for (const f of figures) {
+      const k = prettyFigureUrlKey(f)
+      exact.set(k, (exact.get(k) ?? 0) + 1)
+    }
+    const gained = figures.filter(f => exact.get(prettyFigureUrlKey(f)) !== 1 && hasUniquePrettyFigureUrl(f))
+    assert.deepEqual(gained.map(f => f.figure_id), [],
+      'these figures GAINED a pretty URL under router semantics — that adds URLs to the crawl graph, ' +
+      'which this change was never supposed to do')
   })
 })
 
@@ -105,8 +156,13 @@ describe('kb vs kbDb pretty-URL parity (Option E migration guard)', () => {
   // expected URL is reconstructed from genreSlugForFandom directly, never
   // read back from either prettyFigureUrl/prettyFigureUrlFromMap under test
   // — so a shared-but-wrong implementation in both modules can't pass silently.
+  // 2026-07-27: reconstructed with the ROUTER's predicate, not the exact key.
+  // Uniqueness is now decided the way `/[genre]/[line]/[slug]` actually
+  // resolves a URL (line segment matches product_line OR
+  // manufacturer-product_line), because the exact-key test called 6 URLs
+  // unique that 308 to a different figure at request time.
   function expectedUrl(f) {
-    return counts.get(prettyFigureUrlKey(f)) === 1
+    return counts.get(prettyUrlRouterLookupKey(f)) === 1
       ? `/${genreSlugForFandom(f.fandom)}/${f.product_line}/${f.character_canonical}`
       : `/figure/${f.figure_id}`
   }

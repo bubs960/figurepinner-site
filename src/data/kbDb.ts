@@ -18,7 +18,7 @@
  */
 
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { deriveName, figureUrl, prettyFigureUrlKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
+import { deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
 
 // Re-export the pure parts so a converted surface can import everything from
 // one place (`import { getFigureById, deriveName } from '@/data/kbDb'`).
@@ -186,17 +186,38 @@ export async function getLinesByFandom(fandom: string): Promise<string[]> {
 //   • bulk (sitemap) → scan a narrow projection once, build the map in-handler
 //     (buildPrettyUrlMap + prettyFigureUrlFromMap below).
 
-/** True if (fandom, product_line, character_canonical) maps to exactly one figure. */
+/**
+ * True if this figure's pretty URL resolves to exactly one figure AT REQUEST
+ * TIME — i.e. under the router's own match semantics, not exact field equality.
+ *
+ * 2026-07-27: this previously asked `product_line = ?`, which is the wrong
+ * question. `/[genre]/[line]/[slug]` accepts a line segment matching EITHER
+ * product_line OR the manufacturer-product_line compound (findFigureMatches.ts,
+ * and the identical OR-branch in getFiguresByLine above), so a row whose exact
+ * key is unique can still be ambiguous at request time and 308 away to a
+ * different figure. That divergence put 6 bad URLs in the live sitemap via the
+ * bundled-array twin of this function. Kept byte-aligned with
+ * prettyUrlRouterCountKeys in kbTypes.ts — one predicate, three implementations
+ * (array, SQL COUNT, SQL bulk map); they must agree.
+ *
+ * LOWER() on both sides mirrors the normalizeSlug(toLowerCase) the router
+ * applies; the OR-branch is copied from getFiguresByLine so the two D1 paths
+ * cannot disagree about what "the same line" means.
+ */
 export async function isPrettyUrlUnique(
   f: Pick<KBFigure, 'fandom' | 'product_line' | 'character_canonical'>,
 ): Promise<boolean> {
+  const line = f.product_line.toLowerCase().trim()
+  const char = f.character_canonical.toLowerCase().trim()
   const db = await getKbDb()
   const row = await db
     .prepare(
       `SELECT COUNT(*) AS c FROM kb_figures
-       WHERE fandom = ? AND product_line = ? AND character_canonical = ?`,
+       WHERE fandom = ?
+         AND (LOWER(product_line) = ? OR LOWER(manufacturer || '-' || product_line) = ?)
+         AND LOWER(character_canonical) = ?`,
     )
-    .bind(f.fandom, f.product_line, f.character_canonical)
+    .bind(f.fandom, line, line, char)
     .first<{ c: number }>()
   return (row?.c ?? 0) === 1
 }
@@ -238,14 +259,32 @@ export interface SitemapRow {
   fandom: string
   product_line: string
   character_canonical: string
+  // Added 2026-07-27: required by the router-semantics uniqueness predicate —
+  // the router matches a URL's line segment against `manufacturer-product_line`
+  // as well as `product_line`, so uniqueness cannot be decided without it.
+  // Optional so existing callers still typecheck; absent manufacturer simply
+  // degrades to the bare-product_line token. When the Option E cutover happens,
+  // the D1 SELECT feeding these rows MUST include manufacturer or this path
+  // silently reverts to the exact-key behaviour that shipped the 6 bad URLs.
+  manufacturer?: string
 }
 
-/** Count map keyed by fandom/product_line/character_canonical for the sitemap. */
+/**
+ * Count map for pretty-URL uniqueness, using the ROUTER's match semantics.
+ *
+ * Shares prettyUrlRouterCountKeys with kb.ts deliberately: these two modules
+ * answering the same question differently is exactly the defect this replaced
+ * (build-time counted exact field equality, request-time matched the
+ * mfr-line compound, and 6 sitemap URLs 308'd to a different figure). One
+ * predicate, both callers — the parity test in tests/prettyFigureUrl.test.mjs
+ * fails the build if they drift.
+ */
 export function buildPrettyUrlMap(rows: SitemapRow[]): Map<string, number> {
   const counts = new Map<string, number>()
   for (const r of rows) {
-    const key = prettyFigureUrlKey(r)
-    counts.set(key, (counts.get(key) ?? 0) + 1)
+    for (const key of prettyUrlRouterCountKeys(r)) {
+      counts.set(key, (counts.get(key) ?? 0) + 1)
+    }
   }
   return counts
 }
@@ -258,7 +297,7 @@ export function buildPrettyUrlMap(rows: SitemapRow[]): Map<string, number> {
  * figure's canonical in one pass).
  */
 export function prettyFigureUrlFromMap(r: SitemapRow, counts: Map<string, number>): string {
-  if (counts.get(prettyFigureUrlKey(r)) === 1) {
+  if (counts.get(prettyUrlRouterLookupKey(r)) === 1) {
     return `/${genreSlugForFandom(r.fandom)}/${r.product_line}/${r.character_canonical}`
   }
   return `/figure/${r.figure_id}`

@@ -147,6 +147,50 @@ export function prettyFigureUrlKey(
   return `${f.fandom}/${f.product_line}/${f.character_canonical}`
 }
 
+// ── Pretty-URL uniqueness, using the ROUTER's own match semantics ────────────
+// Added 2026-07-27. prettyFigureUrlKey above answers "same exact field values",
+// which is NOT the question that decides whether a pretty URL resolves to one
+// figure. The router (findFigureMatches.ts) accepts a URL's line segment if it
+// equals EITHER `product_line` OR the `manufacturer-product_line` compound,
+// lowercased. Build-time and request-time therefore disagreed, and the sitemap
+// emitted 6 pretty URLs that 308 to a DIFFERENT figure — all
+// /horror/neca-ultimate/*, because a row with product_line "neca-ultimate" has
+// a unique exact key while also colliding at request time with every
+// manufacturer "neca" + product_line "ultimate" row for the same character.
+//
+// Three consumers answer "which URL is this figure's real one" — router,
+// canonical, sitemap. The canonical layer already resolved these to a single
+// winner; the sitemap was the lone dissenter. These two helpers exist so kb.ts
+// and kbDb.ts cannot drift apart again: one predicate, both callers.
+//
+// Measured before adoption, over all 22,725 figures: exact-key unique 11,331 →
+// router-unique 11,325. Exactly 6 verdicts change, all unique→ambiguous, none
+// the other way — so this can only ever REMOVE a pretty URL, never mint one.
+const normSeg = (s: string | undefined | null) => String(s ?? '').toLowerCase().trim()
+
+type RouterKeyFields =
+  Pick<KBFigure, 'fandom' | 'product_line' | 'character_canonical'> & { manufacturer?: string }
+
+/**
+ * Every key a figure must be COUNTED under: one per line token the router
+ * would accept for it. Deduped, because a figure with no manufacturer would
+ * otherwise be counted twice under near-identical keys.
+ */
+export function prettyUrlRouterCountKeys(f: RouterKeyFields): string[] {
+  const base = `${f.fandom}|${normSeg(f.character_canonical)}|`
+  const pl = normSeg(f.product_line)
+  const compound = `${normSeg(f.manufacturer)}-${pl}`
+  return compound === pl ? [base + pl] : [base + pl, base + compound]
+}
+
+/**
+ * The single key to LOOK UP for a figure — keyed on the line segment its own
+ * pretty URL would emit, which is always the bare `product_line`.
+ */
+export function prettyUrlRouterLookupKey(f: RouterKeyFields): string {
+  return `${f.fandom}|${normSeg(f.character_canonical)}|${normSeg(f.product_line)}`
+}
+
 // ── URL genre slug ↔ KB fandom mapping ──────────────────────────────────────
 // Moved here from lib/genreFigures.ts (2026-07-12 Google-zero root-cause fix)
 // so kb.ts can consume it without a circular import — genreFigures.ts imports

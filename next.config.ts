@@ -77,8 +77,20 @@ const nextConfig: NextConfig = {
   // ISR routes, which is why the known set lives here instead).
   async redirects() {
     const legacyLines: Array<[string, string]> = [
+      // ⚠️ Every entry here must be a slug that does NOT exist in the KB.
+      // A redirect whose SOURCE is a real product_line silently buries that
+      // line's hub and tells Google two distinct lines are the same page.
+      // tests/legacyLineRedirects.test.mjs fails the build if one slips in.
+      //
+      // Removed 2026-07-27: ['/wrestling/legends', '/wrestling/elite-legends'].
+      // It was not a legacy typo. `legends` is Jakks Pacific's WWE Legends line
+      // (3 figures — Andre the Giant, Classy Freddie Blassie, Jimmy Snuka,
+      // Series 1); `elite-legends` is Mattel's, 181 figures. Different
+      // manufacturers, different lines. The redirect made a real hub
+      // unreachable while the sitemap kept submitting it, so Google was handed
+      // a 308 into another company's product line — found by the 2026-07-27
+      // sitemap census and mis-attributed to the pretty→ugly 308 class for a day.
       ['/dc/dc-multiverse', '/dc/multiverse'],
-      ['/wrestling/legends', '/wrestling/elite-legends'],
       ['/wrestling/retro', '/wrestling/wwe-retro'],
       ['/wrestling/hasbro-wwf', '/wrestling/wwf-hasbro'],
       ['/transformers/g1-transformers', '/transformers/g1'],

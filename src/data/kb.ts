@@ -9,7 +9,7 @@
  * It never ships to the client bundle.
  */
 
-import { figureUrl, prettyFigureUrlKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
+import { figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
 export { deriveName, figureUrl, isNumericWave } from './kbTypes'
 export type { KBFigure } from './kbTypes'
 
@@ -63,17 +63,23 @@ export function getFiguresByFandom(fandom: string): KBFigure[] {
   return FIGURES_V2.filter((f: KBFigure) => f.fandom === fandom)
 }
 
+// Counted under the ROUTER's match semantics, not exact field equality — see
+// prettyUrlRouterCountKeys in kbTypes.ts for why the two disagreed and what it
+// cost. A figure is indexed under every line token the router would accept for
+// it, so a lookup by the URL's own line segment returns exactly the set the
+// router would resolve.
 const prettyFigureUrlCounts: Map<string, number> = (() => {
   const counts = new Map<string, number>()
   for (const f of FIGURES_V2) {
-    const key = prettyFigureUrlKey(f)
-    counts.set(key, (counts.get(key) ?? 0) + 1)
+    for (const key of prettyUrlRouterCountKeys(f)) {
+      counts.set(key, (counts.get(key) ?? 0) + 1)
+    }
   }
   return counts
 })()
 
 export function hasUniquePrettyFigureUrl(f: KBFigure): boolean {
-  return prettyFigureUrlCounts.get(prettyFigureUrlKey(f)) === 1
+  return prettyFigureUrlCounts.get(prettyUrlRouterLookupKey(f)) === 1
 }
 
 /**
