@@ -211,6 +211,12 @@ const WARM_PATHS = [
 // script's only job (KV cleanup) to another script's module surface.
 const WARM_BROWSER_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 const WARM_KV_CONSISTENCY_DELAY_MS = 5000
+// Cloudflare's purge API returns before every colo has dropped the object.
+// The pre-warm purge (see warmCurrentBuild) is pointless if the warm fetch
+// races ahead of propagation and still gets an edge HIT, so wait briefly
+// between them. Purges are typically sub-second; this is deliberate slack on a
+// step that already costs ~6 sequential HTTP fetches.
+const PURGE_PROPAGATION_DELAY_MS = 3000
 
 // ── Self-purge of warmed URLs (webaudit ruling, 2026-07-26) ──
 // The warm fetches above go through the Cloudflare edge, so their RESPONSES
@@ -505,6 +511,29 @@ function discoverStaleBuilds(keepBuildId) {
 // the actual check, not this function's return value.
 async function warmCurrentBuild() {
   console.log(`[kv-purge-stale-isr] keptCount is 0 -- warming ${WARM_PATHS.length} representative path(s) on ${WARM_BASE_URL} before treating this as an anomaly...`)
+  // ── Purge BEFORE warming (2026-07-27) ──────────────────────────────────────
+  // Without this the warm step cannot do its job, and the evidence is a deploy
+  // log: on a46d987 the warm ran, the post-warm rescan still reported
+  // `keptCount is 0 out of 229 keys`, the anomaly fired, and 229 stale ISR keys
+  // went uncleaned -- the same outcome the 2026-07-25 warm-then-retry fix was
+  // built to prevent.
+  //
+  // Why it cannot work unpurged: in the npm deploy chain, purge-cache's
+  // purge_everything runs AFTER this whole script. So at this moment the edge
+  // still holds the PREVIOUS build's objects, and these warm fetches carry no
+  // cache-buster -- they get an edge HIT, never reach the origin Worker, and
+  // therefore write no isr-cache entry for the current build. keptCount stays
+  // 0 no matter how many times we warm.
+  //
+  // Purging these 6 URLs first forces the warm fetches through to origin. The
+  // existing post-warm purge below still runs and is still needed -- it clears
+  // whatever the warm just seeded (the 2026-07-26 re-poisoning defect). Both
+  // calls are required; neither replaces the other.
+  //
+  // Degrades safely: purgeWarmedUrls() warns and no-ops without CF_PURGE_TOKEN,
+  // which leaves exactly today's behaviour rather than making anything worse.
+  await purgeWarmedUrls()
+  await new Promise((resolve) => setTimeout(resolve, PURGE_PROPAGATION_DELAY_MS))
   for (const path of WARM_PATHS) {
     const url = `${WARM_BASE_URL}${path}`
     try {
