@@ -69,3 +69,10 @@ npm-debug.log*
 # Plugin/skill artifacts dropped into .claude/ by Cowork sessions - never ship, never commit
 .claude/*
 !.claude/launch.json
+
+# Dated sync-backup copy of the KB reference file -- 28 commits of drift, pure
+# safety-copy noise from the nightly auto-sync job. Identified 2026-07-27
+# (MASTER-FIX-BLUEPRINT Phase 4). Leaving figures-reference-v2.js and
+# figures-reference-v2.slim.js tracked -- both look like real build inputs,
+# not backups; not touching those without confirming the build actually needs them.
+src/data/figures-reference-v2.js.backup-pre-sync
