@@ -37,11 +37,21 @@ APP_URL = "https://figurepinner.com"
 # into a Worker secret 2026-07-27: this repo is PUBLIC, so a plain admin address
 # here is a personal email published on the open internet for scraping. It is
 # not a credential, but it is PII and it does not belong in tracked config.
-#   Set with: npx wrangler secret put SENTINEL_EMAIL --config wrangler.alerts.toml
-# REQUIRED before the next alerts-worker deploy — site-sentinel.ts:112-116 fails
-# CLOSED without it (logs "[sentinel] SENTINEL_EMAIL not set" and sends nothing),
-# so an unset secret means the 15-minute revenue-path probes still RUN but
-# silently stop reporting failures. Read identically from env either way, so no
-# code change accompanies this move.
+#
+# ⚠️ ORDER MATTERS, AND IT IS THE OPPOSITE OF WHAT YOU'D EXPECT. The secret
+# CANNOT be created while the previous deploy's plain-text var of the same name
+# is still live — Cloudflare rejects it with:
+#     Binding name 'SENTINEL_EMAIL' already in use  [code: 10053]
+# A Worker cannot hold a var and a secret under one name. So:
+#   1. npx wrangler deploy --config wrangler.alerts.toml     (drops the var)
+#   2. npx wrangler secret put SENTINEL_EMAIL --config wrangler.alerts.toml
+#      (run it interactively and paste the address at the prompt — piping via
+#       PowerShell appends a newline into the secret value)
+#
+# Run step 2 IMMEDIATELY after step 1. In between, site-sentinel.ts:112-116
+# fails CLOSED: it logs "[sentinel] SENTINEL_EMAIL not set" and sends nothing,
+# so the 15-minute revenue-path probes keep running while silently reporting
+# no failures. Read identically from env either way, so no code change is
+# needed — this is purely a binding-type migration.
 # UNSUBSCRIBE_SECRET — set via: npx wrangler secret put UNSUBSCRIBE_SECRET --config wrangler.alerts.toml
 # Use the same value in Cloudflare dashboard env vars for the main site (UNSUBSCRIBE_SECRET)
