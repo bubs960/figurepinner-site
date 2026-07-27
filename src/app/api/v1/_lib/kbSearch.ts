@@ -14,6 +14,7 @@
  */
 
 import { getAllFigures, deriveName, type KBFigure } from '@/data/kb'
+import { searchGenreForFandom } from '@/lib/genreFigures'
 
 export const MAX_RESULTS = 300
 
@@ -190,16 +191,28 @@ export interface KbSearchResult {
 }
 
 /**
- * Aggregate fandom (genre) counts over a scored pool — powers the search
- * takeover panel's genre pills (S54). Pure single-pass function; callers pass
- * the FULL pool (pre-limit) so counts reflect everything the query matched,
- * not just the returned page.
+ * Aggregate genre counts over a scored pool — powers the search takeover
+ * panel's genre pills (S54). Pure single-pass function; callers pass the FULL
+ * pool (pre-limit) so counts reflect everything the query matched, not just
+ * the returned page.
+ *
+ * Keys are search-genre keys, not raw KB fandoms: the NECA family rolls up to
+ * 'neca' via searchGenreForFandom. 2026-07-27 — these keys are handed straight
+ * to /search as `?genre=<key>` by the hero pill (HeroSearch.tsx:602), and
+ * SearchInterface validates that value against its own GENRES list before
+ * applying it. A raw 'aliens-predator' key therefore produced a pill with a
+ * real count that silently filtered nothing when clicked. Must stay in step
+ * with the `genre` field in api/v1/search/route.ts — same namespace, two
+ * consumers.
  */
 export function aggregateGenreFacets(
   scored: { f: Pick<KBFigure, 'fandom'> }[],
 ): Record<string, number> {
   const counts: Record<string, number> = {}
-  for (const { f } of scored) counts[f.fandom] = (counts[f.fandom] ?? 0) + 1
+  for (const { f } of scored) {
+    const key = searchGenreForFandom(f.fandom)
+    counts[key] = (counts[key] ?? 0) + 1
+  }
   return counts
 }
 

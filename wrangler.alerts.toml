@@ -33,7 +33,15 @@ database_id = "dd036916-a729-4999-b5ca-8f5287800b23"
 FIGUREPINNER_API_URL = "https://figurepinner-api.bubs960.workers.dev"
 FROM_EMAIL = "alerts@figurepinner.com"
 APP_URL = "https://figurepinner.com"
-# Where sentinel failure emails go (not a secret — plain admin address).
-SENTINEL_EMAIL = "bubs960@gmail.com"
+# SENTINEL_EMAIL — where sentinel failure emails go. Moved out of [vars] and
+# into a Worker secret 2026-07-27: this repo is PUBLIC, so a plain admin address
+# here is a personal email published on the open internet for scraping. It is
+# not a credential, but it is PII and it does not belong in tracked config.
+#   Set with: npx wrangler secret put SENTINEL_EMAIL --config wrangler.alerts.toml
+# REQUIRED before the next alerts-worker deploy — site-sentinel.ts:112-116 fails
+# CLOSED without it (logs "[sentinel] SENTINEL_EMAIL not set" and sends nothing),
+# so an unset secret means the 15-minute revenue-path probes still RUN but
+# silently stop reporting failures. Read identically from env either way, so no
+# code change accompanies this move.
 # UNSUBSCRIBE_SECRET — set via: npx wrangler secret put UNSUBSCRIBE_SECRET --config wrangler.alerts.toml
 # Use the same value in Cloudflare dashboard env vars for the main site (UNSUBSCRIBE_SECRET)

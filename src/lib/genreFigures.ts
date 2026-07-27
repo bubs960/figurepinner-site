@@ -70,6 +70,34 @@ export function hubGenreForFandom(fandom: string): string | null {
   return GENRE_HUB_SLUGS.has(slug) ? slug : null
 }
 
+const NECA_FANDOM_SET: ReadonlySet<string> = new Set(NECA_FANDOMS)
+
+/**
+ * The genre key the SEARCH surfaces use for a fandom — raw KB fandom for
+ * everything except the NECA family, which rolls up to 'neca'.
+ *
+ * ⚠️ This is deliberately NOT hubGenreForFandom(). The search client's own
+ * genre list (`GENRES` in src/app/search/_components/SearchInterface.tsx) is
+ * keyed by RAW KB fandoms for 14 of its 16 entries — 'marvel-comics', 'gi-joe',
+ * 'tmnt', not the hub slugs 'marvel', 'gijoe',
+ * 'teenage-mutant-ninja-turtles' — plus 'neca', which is a UI-only rollup no KB
+ * fandom is ever equal to. Routing search through hubGenreForFandom() would
+ * "fix" NECA and simultaneously break the three pills that work today.
+ *
+ * Added 2026-07-27. /api/v1/search assigned `genre: f.fandom` raw and never
+ * called any rollup, so the four NECA fandoms could never match a pill:
+ * searching "predator" returned 298 results all tagged 'aliens-predator',
+ * the NECA pill never appeared in availableGenres, the row badge printed the
+ * raw fandom with a fallback accent, and the hero facet pill handed
+ * `?genre=aliens-predator` to /search, where SearchInterface validates against
+ * GENRES and silently dropped the prefilter — the reported "counts 297 then
+ * drops the filter". Third instance of one-truth-many-consumers after the
+ * sitemap and the IndexNow queue.
+ */
+export function searchGenreForFandom(fandom: string): string {
+  return NECA_FANDOM_SET.has(fandom) ? 'neca' : fandom
+}
+
 /** KB fandom(s) a URL genre slug resolves to, handling the NECA rollup. */
 export function fandomsForGenre(genre: string): string[] {
   if (genre === 'neca') return NECA_FANDOMS

@@ -12,8 +12,20 @@
  */
 export const SOLD_COUNT_CONFIDENCE_FLOOR = 5
 
-/** KB fandom slug → collector-facing display name (search genre pills). */
+/**
+ * Search-genre slug → collector-facing display name (search genre pills).
+ *
+ * Keys are mostly raw KB fandoms, plus 'neca' — the one UI-level rollup, which
+ * no KB fandom is ever equal to. Added 2026-07-27 alongside the search rollup:
+ * the hero facet pill is fandomName()'s only caller, and without this entry a
+ * rolled-up NECA pill fell through to the generic title-caser and rendered
+ * "Neca" instead of the brand's actual capitalisation. The four rolled-up
+ * members below (horror / aliens-predator / terminator / robocop) no longer
+ * reach the pill, but their entries stay — they are still the correct display
+ * names anywhere a raw fandom is shown.
+ */
 export const FANDOM_DISPLAY: Record<string, string> = {
+  neca: 'NECA',
   wrestling: 'Wrestling',
   'star-wars': 'Star Wars',
   'marvel-comics': 'Marvel',

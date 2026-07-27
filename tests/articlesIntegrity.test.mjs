@@ -22,24 +22,23 @@ describe('articles.ts integrity', () => {
     assert.deepEqual(dupes, [], `duplicate article slugs found: ${dupes.join('; ')}`)
   })
 
-  // Known-missing further-reading targets from webaudit's 2026-07-17 integrity
-  // probe (WEBAUDIT-TO-WEB-ARTICLES-INTEGRITY-ADDENDUM-2026-07-17.md item 2) —
-  // titles the hub authors clearly intended to write, not yet written. Webaudit's
-  // own recommendation: fold into round-3 guide research rather than delete the
-  // links or fake a redirect. Grandfathered here so the guard still hard-fails
-  // on any NEW dead link (the regression class this test exists to catch)
-  // without blocking today's deploy on content that doesn't exist yet. Shrink
-  // this list as each guide gets written or the link gets re-slugged.
-  const KNOWN_MISSING_GUIDE_LINKS = new Set([
-    'wwe-elite-hub -> /guides/wwe-elite-price-guide-2026',
-    'wwe-elite-hub -> /guides/classic-superstars-vs-elite-legends',
-    'star-wars-black-series-hub -> /guides/star-wars-black-series-price-guide-2026',
-    'star-wars-black-series-hub -> /guides/star-wars-vintage-collection-price-guide',
-    'star-wars-black-series-hub -> /guides/haslab-star-wars-price-guide',
-    'dc-multiverse-hub -> /guides/dc-multiverse-price-guide-2026',
-    'dc-multiverse-hub -> /guides/batman-animated-series-figure-guide',
-    'dc-multiverse-hub -> /guides/dc-universe-classics-price-guide',
-  ])
+  // Grandfather list for further-reading targets that are intentionally dead —
+  // titles a hub author intends to write but hasn't yet. NOW EMPTY.
+  //
+  // It held 8 entries from webaudit's 2026-07-17 integrity probe
+  // (WEBAUDIT-TO-WEB-ARTICLES-INTEGRITY-ADDENDUM-2026-07-17.md item 2), whose
+  // recommendation was to fold them into round-3 guide research rather than
+  // delete the links. 2026-07-27, Steve chose the other branch and had the 8
+  // links deleted instead — so the intended-guide titles now survive only in
+  // that relay and in the removal comments in articles.ts, NOT as live links.
+  // Two hubs (star-wars-black-series-hub, dc-multiverse-hub) lost their whole
+  // "Further reading" section as a result; wwe-elite-hub kept one entry.
+  //
+  // This test is what forced the trim: it hard-fails when a grandfathered link
+  // stops being broken, so the list can't silently rot. Keep the mechanism —
+  // if a future article again links a guide that's written-but-not-yet-shipped,
+  // add it here rather than weakening the guard below.
+  const KNOWN_MISSING_GUIDE_LINKS = new Set([])
 
   test('every internal [[label|/guides/slug]] further-reading link resolves to a real slug (except the known-missing grandfather list above)', () => {
     const knownSlugs = new Set(ARTICLES.map((a) => a.slug))

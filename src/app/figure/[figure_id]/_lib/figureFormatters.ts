@@ -121,13 +121,36 @@ export function formatCurrency(n: number): string {
   return `$${n.toFixed(n % 1 === 0 ? 0 : 2)}`
 }
 
-/** Format an ISO date string as "Apr 18" */
-export function formatDate(iso: string): string {
-  try {
-    return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-  } catch {
-    return iso
-  }
+// eBay did not exist before 1995, so a comp timestamp at or before the Unix
+// epoch — or anywhere in the decades before eBay — is upstream null/0 coercion
+// rather than a sale. Used as the plausibility floor in formatDate below.
+const EARLIEST_PLAUSIBLE_COMP_MS = Date.UTC(1995, 0, 1)
+
+/**
+ * Format an ISO date string as "Apr 18", or '' when the input is not a usable
+ * date. The only caller renders this straight into a comp row
+ * (`MarketPanel.tsx:234`), so a blank cell is the honest output for a comp
+ * whose sold_date never arrived.
+ *
+ * 2026-07-27: the previous body was `try { new Date(iso)... } catch { return iso }`,
+ * which FABRICATED dates instead of failing, on a surface whose entire pitch is
+ * "real eBay sold prices":
+ *   - `new Date(null)` is epoch 0, not an error. It formatted as a real-looking
+ *     "Dec 31" (1969, in any negative UTC offset) — observed on 19/19 comps of
+ *     one figure, presented as a genuine sold date.
+ *   - `new Date(undefined)` / `new Date('')` are Invalid Date, whose
+ *     toLocaleDateString returns the literal string "Invalid Date".
+ * Neither path throws, so the catch was dead code guarding nothing. The
+ * parameter is widened to accept null/undefined because that is what actually
+ * arrives at runtime — the old `string` annotation is what hid this.
+ * Guard shape ported from the sibling that already got it right:
+ * `src/data/indexValueCensus.ts:48`.
+ */
+export function formatDate(iso: string | null | undefined): string {
+  if (!iso) return ''
+  const ms = new Date(iso).getTime()
+  if (Number.isNaN(ms) || ms < EARLIEST_PLAUSIBLE_COMP_MS) return ''
+  return new Date(ms).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
 }
 
 /** Derive confidence level (1–5) from comp count */

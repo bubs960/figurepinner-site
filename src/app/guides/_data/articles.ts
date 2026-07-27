@@ -2099,10 +2099,14 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: '[[FigurePinner|/]] tracks 805 Elite figures, 175 Elite Legends, 364 Classic Superstars, and 316 Ruthless Aggression figures with eBay sold comp data. Search any wrestler by name to see what their figures actually cleared — not asking prices, actual sales from the last 90 days. The difference between what a seller lists and what a buyer paid is 40–60% on most wrestling figures.' },
 
       { type: 'h2', text: 'Further reading' },
+      // 2026-07-27: dropped 2 entries, to slugs wwe-elite-price-guide-2026 and
+      // classic-superstars-vs-elite-legends. Neither guide has ever existed;
+      // renderText() emits [[label|/path]] as a real <a href> with no existence
+      // check, so both were live crawlable links into a 404. (Slugs written
+      // bare, without the guides path prefix, so dead-link sweeps of this repo
+      // do not flag this comment as a live reference.)
       { type: 'ul', items: [
-        '[[WWE Elite Price Guide 2026: Series by Series Values|/guides/wwe-elite-price-guide-2026]] — series breakdown with comp data',
         '[[Most Valuable WWE Figures: Elite, Classic Superstars, and Vintage|/guides/most-valuable-wwe-elite-figures]] — the figures actually worth money',
-        '[[Classic Superstars vs. Elite Legends: Which Vintage Line Is Worth Collecting|/guides/classic-superstars-vs-elite-legends]] — buying guide for classic-era collectors',
       ]},
     ],
   }
@@ -2151,12 +2155,11 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Check any Black Series figure price' },
       { type: 'p', text: '[[FigurePinner|/]] tracks all 838 Black Series figures plus the full Star Wars library with eBay sold comp data. Search any character to see actual sold prices -- not asking prices, not guide estimates, real cleared transactions from the last 90 days.' },
 
-      { type: 'h2', text: 'Further reading' },
-      { type: 'ul', items: [
-        '[[Star Wars Black Series Price Guide 2026: Most Valuable Figures by Phase|/guides/star-wars-black-series-price-guide-2026]] -- phase breakdown with comp data',
-        '[[Star Wars Vintage Collection Price Guide|/guides/star-wars-vintage-collection-price-guide]] -- the 3.75-inch collector market',
-        '[[HasLab Star Wars: Every Project, Every Price|/guides/haslab-star-wars-price-guide]] -- the top-tier Black Series market',
-      ]},
+      // 2026-07-27: the entire "Further reading" block was removed -- all three
+      // entries (star-wars-black-series-price-guide-2026,
+      // star-wars-vintage-collection-price-guide, haslab-star-wars-price-guide)
+      // pointed at guides that have never existed. The heading goes with them
+      // rather than being left over an empty list.
     ],
   }
 
@@ -2204,12 +2207,11 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Check any DC Multiverse figure price' },
       { type: 'p', text: '[[FigurePinner|/]] tracks all 1,508 DC Multiverse figures plus DC Universe Classics, Batman Animated Series, Super Powers, and the full DC catalog with eBay sold comp data. The Gold Label tier, the CnC wave figures, the animated-series sub-markets -- all covered with real sold prices.' },
 
-      { type: 'h2', text: 'Further reading' },
-      { type: 'ul', items: [
-        '[[DC Multiverse Price Guide 2026: Gold Label vs. Standard Values|/guides/dc-multiverse-price-guide-2026]] -- tier breakdown with comp data',
-        '[[Batman Animated Series Figure Guide: Kenner vs. DC Collectibles vs. McFarlane|/guides/batman-animated-series-figure-guide]] -- the three-era collector market',
-        '[[DC Universe Classics: The Collector Guide to DCUC Values|/guides/dc-universe-classics-price-guide]] -- pre-McFarlane era values',
-      ]},
+      // 2026-07-27: the entire "Further reading" block was removed -- all three
+      // entries (dc-multiverse-price-guide-2026,
+      // batman-animated-series-figure-guide, dc-universe-classics-price-guide)
+      // pointed at guides that have never existed. The heading goes with them
+      // rather than being left over an empty list.
     ],
   }
   ,

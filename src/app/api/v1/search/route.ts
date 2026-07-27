@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { deriveName } from '@/data/kb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb, aggregateGenreFacets, MAX_RESULTS } from '../_lib/kbSearch'
+import { searchGenreForFandom } from '@/lib/genreFigures'
 import { checkRateLimit } from '@/lib/rateLimit'
 
 /**
@@ -44,11 +45,22 @@ export async function GET(req: NextRequest) {
   }
 
   const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
-  // limit defaults to the full pool; capped at MAX_RESULTS so a hand-crafted
-  // ?limit=99999 can't force an unbounded payload.
+  // limit defaults to the full pool and is clamped to [1, MAX_RESULTS].
+  //
+  // 2026-07-27: this was a bare `Math.min(parseInt(...), MAX_RESULTS)` — a
+  // ceiling with no floor and no NaN check, so the two ends leaked:
+  //   ?limit=-1  → slice(0,-1) returned the pool MINUS its last row
+  //                (measured: total 1620, figures 1619 — "all but last")
+  //   ?limit=abc → NaN through slice() returned an EMPTY figures[] against a
+  //                nonzero total, which reads to a client as "no matches"
+  // Neither is a security hole (the pool is already bounded by MAX_RESULTS)
+  // but both are wrong answers served with a 200. Clamp shape matches the
+  // sibling that already had it right: api/daily-uniques/route.ts:132.
+  // parseInt also now pins radix 10 rather than letting '0x…' reinterpret.
+  const limitParam = parseInt(req.nextUrl.searchParams.get('limit') ?? '', 10)
   const limit = Math.min(
-    parseInt(req.nextUrl.searchParams.get('limit') ?? String(MAX_RESULTS)),
     MAX_RESULTS,
+    Math.max(1, Number.isFinite(limitParam) ? limitParam : MAX_RESULTS),
   )
 
   // Edge cache headers — search is read-only over a static KB, fine to share
@@ -73,10 +85,16 @@ export async function GET(req: NextRequest) {
         brand:              prettifySlug(f.manufacturer),
         line:               prettifySlug(f.product_line),
         series:             f.release_wave,
-        genre:              f.fandom,
+        // Rolled up so the NECA family ('horror', 'aliens-predator',
+        // 'terminator', 'robocop') matches the client's 'neca' genre pill —
+        // see searchGenreForFandom's comment for why this is NOT
+        // hubGenreForFandom. Every other fandom passes through unchanged.
+        genre:              searchGenreForFandom(f.fandom),
         year:               null,
         image:              f.canonical_image_url ?? null,
-        // Raw slugs — used by the client to build keyword-rich pretty URLs
+        // Raw slugs — used by the client to build keyword-rich pretty URLs.
+        // Deliberately NOT rolled up: these build /[genre]/[line]/[character]
+        // paths, where the raw fandom is the correct segment.
         fandom_slug:        f.fandom,
         line_slug:          f.product_line,
         character_slug:     f.character_canonical,
