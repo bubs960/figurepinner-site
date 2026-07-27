@@ -20,7 +20,29 @@ import { getFandom, genreSlugForFandom } from '@/data/kbTypes'
 
 // The 'neca' (Horror & Film) UI genre rolls up several KB fandoms — same
 // rollup kb-stats uses for the homepage count.
-export const NECA_FANDOMS = ['horror', 'aliens-predator', 'terminator', 'robocop']
+//
+// 2026-07-27: added 'scifi' (170 figures) and 'pop-culture' (57). Both are
+// **100% NECA-manufactured** per webaudit's D1 triage
+// (WEBAUDIT-TO-WEB-ORPHANED-NAMESPACES-TRIAGE-2026-07-26.md), and both were
+// orphaned — no genre hub of their own (`/scifi` and `/pop-culture` 404'd)
+// while sitting next to the NECA rollup that should have covered them. The
+// original 4 entries answered "which fandoms does the /neca hub already show",
+// where the correct question was "which fandoms does NECA manufacture"; that
+// gap is what left them out.
+//
+// Two consequences, both intended: the /neca hub grows by ~227 figures
+// (748 → ~975) and gains line entries it didn't carry (neca-godzilla,
+// neca-video-games, legacy); and searchGenreForFandom() below now maps them to
+// 'neca', which is what stops a "godzilla" search rendering no genre pill row
+// at all (measured pre-fix: q=godzilla → 49 results tagged raw 'scifi').
+//
+// 'generic-fantasy' (141) is deliberately NOT here — only 37 of its 141 are
+// NECA (the rest LJN 67 / Hasbro 21 / Super7 16, ~62% D&D-adjacent), so it is
+// a real dedicated-hub question, not a rollup. It stays on the annotated
+// exclusion list in tests/searchGenreCoverage.test.mjs until that call is made.
+export const NECA_FANDOMS = [
+  'horror', 'aliens-predator', 'terminator', 'robocop', 'scifi', 'pop-culture',
+]
 
 /**
  * Genre slugs with a hub-page ENTRY. Mirrors the keys of GENRE_META in

@@ -18,8 +18,29 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
    (build git sha); `/api/healthz` reports the deployed sha. Meta ≠ healthz
    sha ⇒ you are looking at pre-deploy cached HTML (figure pages: up to 24h).
    Verify UI changes on LOCAL PREVIEW, not by hitting prod.
-3. **curl/PowerShell CANNOT probe figurepinner.com** — CF TLS-fingerprint/WAF
-   403s them and LIES to you. Live-verify in a real browser (Chrome MCP).
+3. **Probing figurepinner.com: `curl.exe` + a real Chrome UA WORKS. PowerShell
+   and Node `fetch` do not.** (Corrected 2026-07-27 — this line previously read
+   "curl/PowerShell CANNOT probe figurepinner.com," which was over-broad and
+   cost real work; the sitemap-wide 404 census sat undelivered partly because it
+   looked like it needed thousands of manual browser checks. Ruling +
+   independent PowerShell/curl side-by-side:
+   `Bridge/STANDALONE-TO-WEB-SHELL-PROBE-LAW-NARROWED-2026-07-27.md`.)
+   - ✅ `curl.exe` with `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36`
+     → **200**. This is the supported path for bulk status sweeps; verified over
+     1,889 URLs with `--parallel`. Same recipe `kv-purge-stale-isr.mjs:212` has
+     used in the deploy chain all along.
+   - ❌ PowerShell `Invoke-WebRequest`/`Invoke-RestMethod` → **403 regardless of
+     headers.** This is what the original 7/17 finding actually measured; the
+     blanket "no shell probe works" wording was introduced later by summarising.
+   - ❌ Node `fetch`/undici → **403 even with the Chrome UA** (its TLS
+     fingerprint, not the UA, is what Bot Fight rejects).
+   - ⚠️ A **default-UA** probe from any tool 403s on a perfectly healthy page —
+     so a shell 403 is a NON-SIGNAL, never evidence about the site. That half of
+     the original rule stands unchanged.
+   - Still use a real browser for anything needing rendered DOM, JS execution or
+     layout: a string probe is not rendered output. Sweeping figure pages? Pace
+     under 100 req/min/IP (`--rate 85/m`) or the middleware throttles you — see
+     truth #7.
 4. **tsc clean is not "it works"** — Workers runtime cancels floating
    promises (`void cache.put` killed the rate limiter silently); `'use client'`
    at file top makes EVERY export client-only (broke a server fetcher).
@@ -29,6 +50,15 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
 6. **KB sync direction is ROOT → API → site** (`sync_kb.py`). Never sync from
    this repo's copy backwards; never hand-edit `src/data/figures-reference-v2*.js`
    (18MB — Edit tool banned; they arrive via sync + commit).
+7. **Figure pages are rate-limited at 100 req/min/IP and it FIRES.**
+   `src/middleware.ts:87` (`FIGURE_PAGE_RATE_LIMIT_PER_MINUTE`, Data Defense
+   Layer 2) throttles `/figure/<id>` and `/[genre]/[line]/[slug]` — measured
+   2026-07-27: a 1,889-URL sweep at only 6 concurrent produced **786 real 429s**,
+   tripping ~100 figure pages in. Hubs, guides and the homepage are NOT limited.
+   A 429 here is the defense working, **not** a site error: the same URL returns
+   200 when fetched alone. Pace any bulk figure-page sweep under the limit
+   (`curl --rate 85/m` is clean). Verified bots (Googlebot etc.) are exempt
+   unconditionally via `checkRateLimit`'s `.cf.verifiedBotCategory` check.
 
 ## Repo facts
 

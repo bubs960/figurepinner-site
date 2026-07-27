@@ -55,8 +55,16 @@ describe('genre hub slugs', () => {
     }
   })
 
-  test('fandoms with no hub return null rather than a dead slug', () => {
-    for (const fandom of ['generic-fantasy', 'pop-culture', 'scifi']) {
+  // 2026-07-27: 'pop-culture' and 'scifi' were REMOVED from this list. They used
+  // to belong here — both 404 at their own genre URL — but they are now in
+  // NECA_FANDOMS (both are 100% NECA-manufactured), so hubGenreForFandom()
+  // resolves them to 'neca', which is a real 200 hub. The test above already
+  // covers them via the NECA_FANDOMS loop. The invariant this file protects is
+  // unchanged: never emit a slug whose hub 404s. 'generic-fantasy' still has no
+  // hub anywhere and is not a NECA rollup candidate (only 37 of its 141 figures
+  // are NECA), so it stays.
+  test('a fandom with no hub anywhere returns null rather than a dead slug', () => {
+    for (const fandom of ['generic-fantasy']) {
       assert.equal(hubGenreForFandom(fandom), null,
         `${fandom} has no hub page; emitting /${fandom} would be a 404 in the sitemap`)
     }
