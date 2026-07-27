@@ -168,8 +168,21 @@ export function getFandom(slug: string): string {
 }
 
 // Inverse of SLUG_TO_FANDOM: KB fandom → genre URL slug. Identity fallback
-// covers fandoms whose slug already matches (wrestling, dc, …) and the
-// NECA-rollup fandoms (horror, terminator, …), which resolve at /<fandom>.
+// covers fandoms whose slug already matches (wrestling, dc, …).
+//
+// ⚠️ 2026-07-27: this comment used to claim the NECA-rollup fandoms "resolve at
+// /<fandom>". That was MEASURED FALSE — all seven of /horror /aliens-predator
+// /terminator /robocop /scifi /pop-culture /generic-fantasy return 404; only
+// the /neca rollup hub serves. The false comment sat on the exact function the
+// breadcrumb trusted, telling every reader the bug wasn't there while ~1,922
+// live pages linked into those 404s from both the visible crumb and
+// BreadcrumbJsonLd.
+//
+// The identity fallback itself is CORRECT here and load-bearing for tens of
+// thousands of working figure/line/character canonicals — do not "fix" it.
+// This function answers "what URL segment does this fandom use", which is a
+// different question from "is there a hub page to link to". For the latter use
+// hubGenreForFandom() / genreCrumbForFandom() in @/lib/genreFigures.
 const FANDOM_TO_SLUG: Record<string, string> = Object.fromEntries(
   Object.entries(SLUG_TO_FANDOM).map(([slug, fandom]) => [fandom, slug]),
 )

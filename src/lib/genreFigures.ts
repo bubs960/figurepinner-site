@@ -69,12 +69,29 @@ export const NECA_FANDOMS = [
  * built in the genre->fandom direction (fandomsForGenre below) and never its
  * inverse. Google was being handed all 7.
  */
-export const GENRE_HUB_SLUGS: ReadonlySet<string> = new Set([
-  'wrestling', 'marvel', 'star-wars', 'dc', 'transformers', 'gijoe',
-  'masters-of-the-universe', 'teenage-mutant-ninja-turtles', 'power-rangers',
-  'indiana-jones', 'ghostbusters', 'mythic-legions', 'thundercats',
-  'action-force', 'dungeons-dragons', 'neca', 'spawn',
-])
+export const GENRE_HUB_LABELS: Readonly<Record<string, string>> = {
+  'wrestling': 'Wrestling',
+  'marvel': 'Marvel',
+  'star-wars': 'Star Wars',
+  'dc': 'DC',
+  'transformers': 'Transformers',
+  'gijoe': 'G.I. Joe',
+  'masters-of-the-universe': 'Masters of the Universe',
+  'teenage-mutant-ninja-turtles': 'TMNT',
+  'power-rangers': 'Power Rangers',
+  'indiana-jones': 'Indiana Jones',
+  'ghostbusters': 'Ghostbusters',
+  'mythic-legions': 'Mythic Legions',
+  'thundercats': 'Thundercats',
+  'action-force': 'Action Force',
+  'dungeons-dragons': 'Dungeons & Dragons',
+  'neca': 'Horror & Film',
+  'spawn': 'Spawn',
+}
+
+// Derived, not a second hand-maintained list: a slug is a hub iff it has a
+// label. The drift test asserts both halves against GENRE_META in one pass.
+export const GENRE_HUB_SLUGS: ReadonlySet<string> = new Set(Object.keys(GENRE_HUB_LABELS))
 
 /**
  * Inverse of fandomsForGenre: the genre slug whose hub should REPRESENT this
@@ -90,6 +107,43 @@ export function hubGenreForFandom(fandom: string): string | null {
   if (NECA_FANDOMS.includes(fandom)) return 'neca'
   const slug = genreSlugForFandom(fandom)
   return GENRE_HUB_SLUGS.has(slug) ? slug : null
+}
+
+/**
+ * The genre-hub BREADCRUMB for a fandom: the slug that actually serves a 200,
+ * plus the label that hub calls itself. Returns null when no hub represents the
+ * fandom — callers must then OMIT the genre crumb, never fall back to the raw
+ * fandom slug.
+ *
+ * Added 2026-07-27. The breadcrumb was the last consumer still on
+ * genreSlugForFandom()'s identity fallback while the sitemap had already moved
+ * to hubGenreForFandom(). Measured consequence: all 7 hub-less fandom hubs
+ * (/horror /aliens-predator /terminator /robocop /scifi /pop-culture
+ * /generic-fantasy) return 404, while ~1,922 live pages — 1,116 figure pages,
+ * 40 line hubs, 766 character hubs — carried BOTH a visible crumb anchor and a
+ * BreadcrumbJsonLd url pointing at them. Dead URLs inside the structured data
+ * Google parses, on the exact surface the indexing program is about.
+ *
+ * The label matters as much as the slug: six of those fandoms roll up to
+ * /neca, so a crumb reading "Pop Culture" that lands on the Horror & Film hub
+ * would be a second inconsistency in the same structured-data field. A crumb
+ * names its destination.
+ *
+ * Only the GENRE crumb was ever dead — measured 2026-07-27, /horror/<line> and
+ * /horror/character/<slug> both return 200 (the [genre]/[line] and
+ * [genre]/character routes never required a GENRE_META entry). Do NOT rewrite
+ * the line or character crumbs through this helper: both URL forms resolve, so
+ * swapping them would inject a second live URL form into the crawl graph for
+ * pages that already self-canonicalize.
+ */
+export function genreCrumbForFandom(fandom: string): { slug: string; label: string } | null {
+  const slug = hubGenreForFandom(fandom)
+  if (!slug) return null
+  const label = GENRE_HUB_LABELS[slug]
+  // Unreachable while the drift test passes: every hub slug has a label by
+  // construction. Guarded rather than non-null-asserted so a future hand-edit
+  // degrades to a working crumb instead of rendering "undefined" to Google.
+  return label ? { slug, label } : null
 }
 
 const NECA_FANDOM_SET: ReadonlySet<string> = new Set(NECA_FANDOMS)

@@ -22,7 +22,7 @@ import {
   prettyFigureUrl,
   type KBFigure,
 } from '@/data/kb'
-import { fandomsForGenre, getFandom, genreSlugForFandom } from '@/lib/genreFigures'
+import { fandomsForGenre, getFandom, genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
@@ -201,6 +201,10 @@ export default async function CharacterHubPage({
 
   const charName = prettifySlug(character_slug)
   const genreName = prettifySlug(genre)
+  // Same split as the line hub: /horror/character/freddy-krueger serves 200
+  // while /horror is a 404, so the crumb must resolve through the hub-existence
+  // question, not the route param. null => omit the genre crumb.
+  const genreCrumb = genreCrumbForFandom(getFandom(genre))
   const accent = GENRE_ACCENT[genre] ?? '#FF5F00'
   const lineGroups = groupByLineAndWave(figures)
   const lineCount = lineGroups.length
@@ -243,7 +247,9 @@ export default async function CharacterHubPage({
       <JsonLd data={jsonLd} />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
-        { name: genreName, url: `https://figurepinner.com/${genre}` },
+        ...(genreCrumb
+          ? [{ name: genreCrumb.label, url: `https://figurepinner.com/${genreCrumb.slug}` }]
+          : []),
         { name: charName, url: `https://figurepinner.com/${genre}/character/${character_slug}` },
       ]} />
       <style>{`
@@ -272,7 +278,7 @@ export default async function CharacterHubPage({
 
       <SiteHeader
         crumbs={[
-          { label: genreName, href: `/${genre}` },
+          ...(genreCrumb ? [{ label: genreCrumb.label, href: `/${genreCrumb.slug}` }] : []),
           { label: charName },
         ]}
       />
@@ -302,20 +308,24 @@ export default async function CharacterHubPage({
           )}
 
           <div style={{ flex: 1 }}>
-            {/* Genre pill */}
-            <a
-              href={`/${genre}`}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
-                fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em',
-                textTransform: 'uppercase', color: accent, textDecoration: 'none',
-                background: `${accent}15`, border: `1px solid ${accent}30`,
-                borderRadius: '9999px', padding: '0.2rem 0.625rem',
-                marginBottom: '1rem',
-              }}
-            >
-              {genreName}
-            </a>
+            {/* Genre pill — same hub-existence gate as the SiteHeader trail and
+                BreadcrumbJsonLd above. Rendered `/${genre}` before 2026-07-27,
+                a live 404 for the 7 hub-less fandoms. */}
+            {genreCrumb && (
+              <a
+                href={`/${genreCrumb.slug}`}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
+                  fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em',
+                  textTransform: 'uppercase', color: accent, textDecoration: 'none',
+                  background: `${accent}15`, border: `1px solid ${accent}30`,
+                  borderRadius: '9999px', padding: '0.2rem 0.625rem',
+                  marginBottom: '1rem',
+                }}
+              >
+                {genreCrumb.label}
+              </a>
+            )}
 
             <h1
               style={{

@@ -7,7 +7,7 @@
 
 import { notFound } from 'next/navigation'
 import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl, isNumericWave } from '@/data/kb'
-import { genreSlugForFandom } from '@/lib/genreFigures'
+import { genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
 import BidCheck from './BidCheck'
@@ -240,6 +240,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // route segment (marvel-comics→marvel, tmnt→teenage-mutant-ninja-turtles,
   // gi-joe→gijoe). Crumb links MUST use the slug or they 404. (SEO fix 2026-06-25.)
   const genreSlug    = genreSlugForFandom(local.fandom)
+  // The genre CRUMB is a separate question from the genre URL SEGMENT above:
+  // genreSlugForFandom() identity-falls-back, so for the 7 hub-less fandoms it
+  // produced a crumb href to a live 404 (measured 2026-07-27, ~1,922 pages).
+  // null => omit the crumb entirely. Line and character crumbs keep genreSlug —
+  // both those routes serve 200 under the raw fandom. See genreCrumbForFandom().
+  const genreCrumb   = genreCrumbForFandom(local.fandom)
   const localAny     = local as Record<string, unknown>
   const releaseYear  = typeof localAny.release_year === 'number' ? localAny.release_year : null
   // Matcher bug report 2026-07-12: raw parseInt() stops at the first
@@ -848,7 +854,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           behaviour. Banner AdSlot units are unaffected and still monetise this page (below). */}
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
-        { name: prettifySlug(genreSlug), url: `https://figurepinner.com/${genreSlug}` },
+        ...(genreCrumb
+          ? [{ name: genreCrumb.label, url: `https://figurepinner.com/${genreCrumb.slug}` }]
+          : []),
         { name: line, url: `https://figurepinner.com/${genreSlug}/${local.product_line}` },
         { name: characterH1, url: `https://figurepinner.com${characterHubHref}` },
         { name: displayName, url: `https://figurepinner.com${prettyFigureUrl(local)}` },
@@ -875,7 +883,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       `}</style>
 
       <SiteHeader crumbs={[
-        { label: prettifySlug(genreSlug), href: `/${genreSlug}` },
+        ...(genreCrumb ? [{ label: genreCrumb.label, href: `/${genreCrumb.slug}` }] : []),
         { label: line, href: `/${genreSlug}/${local.product_line}` },
         { label: characterH1, href: characterHubHref },
         { label: displayName },

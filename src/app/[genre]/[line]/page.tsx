@@ -13,7 +13,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl, type KBFigure } from '@/data/kb'
-import { fandomsForGenre, genreSlugForFandom, getFandom } from '@/lib/genreFigures'
+import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
 import INDEX_VALUE_CENSUS from '@/data/index-value-census.json'
@@ -279,6 +279,11 @@ export default async function LineHubPage(
 
   const lineName    = buildLineDisplayName(line, figures)
   const genreName   = prettifySlug(genre)
+  // Crumb target, distinct from genreName (a display string for meta/eBay copy):
+  // this route serves 200 for genre segments that have NO hub page — /scifi/
+  // neca-godzilla is live while /scifi is a 404 — so the crumb has to ask
+  // "does a hub exist" rather than reuse the route param. null => omit.
+  const genreCrumb  = genreCrumbForFandom(getFandom(genre))
   const accent      = GENRE_ACCENT[genre] ?? '#FF5F00'
   const waves       = groupByWave(figures)
   const totalCount  = figures.length
@@ -325,7 +330,9 @@ export default async function LineHubPage(
       <JsonLd data={jsonLd} />
       <BreadcrumbJsonLd crumbs={[
         { name: 'Home', url: 'https://figurepinner.com' },
-        { name: genreName, url: `https://figurepinner.com/${genre}` },
+        ...(genreCrumb
+          ? [{ name: genreCrumb.label, url: `https://figurepinner.com/${genreCrumb.slug}` }]
+          : []),
         { name: lineName, url: `https://figurepinner.com/${genre}/${line}` },
       ]} />
       {/* Hover styles — server-safe CSS, no client JS needed.
@@ -367,7 +374,10 @@ export default async function LineHubPage(
         }
       `}</style>
 
-      <SiteHeader crumbs={[{ label: genreName, href: `/${genre}` }, { label: lineName }]} />
+      <SiteHeader crumbs={[
+        ...(genreCrumb ? [{ label: genreCrumb.label, href: `/${genreCrumb.slug}` }] : []),
+        { label: lineName },
+      ]} />
 
       {/* ── Hero ── */}
       <header style={{
@@ -377,17 +387,22 @@ export default async function LineHubPage(
       }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
-          {/* Breadcrumb genre pill */}
-          <a href={`/${genre}`} style={{
-            display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
-            fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em',
-            textTransform: 'uppercase', color: accent, textDecoration: 'none',
-            background: `${accent}15`, border: `1px solid ${accent}30`,
-            borderRadius: '9999px', padding: '0.2rem 0.625rem',
-            marginBottom: '1rem',
-          }}>
-            {genreName}
-          </a>
+          {/* Breadcrumb genre pill — a THIRD breadcrumb implementation on this
+              page (SiteHeader trail and BreadcrumbJsonLd are the other two), so
+              it needs the same hub-existence gate. Rendered `/${genre}` before
+              2026-07-27, which is a live 404 for the 7 hub-less fandoms. */}
+          {genreCrumb && (
+            <a href={`/${genreCrumb.slug}`} style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
+              fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.08em',
+              textTransform: 'uppercase', color: accent, textDecoration: 'none',
+              background: `${accent}15`, border: `1px solid ${accent}30`,
+              borderRadius: '9999px', padding: '0.2rem 0.625rem',
+              marginBottom: '1rem',
+            }}>
+              {genreCrumb.label}
+            </a>
+          )}
 
           <h1 style={{
             fontFamily: 'var(--font-display)',
