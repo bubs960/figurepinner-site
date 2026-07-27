@@ -1,5 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth, clerkClient } from '@clerk/nextjs/server'
+import { checkRateLimit } from '@/lib/rateLimit'
+
+/**
+ * Deliberately tight: a real user clicks "upgrade" once, maybe retries twice.
+ * Anything past 5 in a rolling minute from one IP is scripted.
+ *
+ * ⚠️ Scope, stated accurately because the shorthand for this work is misleading:
+ * this is NOT card-testing prevention. No card data reaches this route — it
+ * creates a Stripe *Checkout Session* and hands back a URL; the card is entered
+ * on Stripe's own hosted page, where Stripe Radar and Stripe's own limits are
+ * the actual card-testing control. What this guard buys is protection against
+ * session-creation abuse: burning our Stripe API quota, filling the dashboard
+ * with abandoned sessions, and hammering the Clerk lookup below. Worth having,
+ * cheap to add, and not a substitute for Radar.
+ */
+const STRIPE_ROUTE_RATE_LIMIT_PER_MINUTE = 5
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY
 const STRIPE_PRO_MONTHLY_PRICE_ID = process.env.STRIPE_PRO_MONTHLY_PRICE_ID ?? process.env.STRIPE_PRO_PRICE_ID ?? ''
@@ -35,17 +51,33 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  // Ahead of auth() on purpose: auth() and the clerkClient lookup below are
+  // both network calls, so the limiter is worth more in front of them than
+  // behind them. The 503 guard stays first because it costs nothing.
+  //
+  // Note the limiter FAILS OPEN when the Cache API is unavailable or the IP
+  // header is missing (see rateLimit.ts) — correct for a revenue path: a
+  // broken limiter must never be what stops someone paying us.
+  const rl = await checkRateLimit(req, 'stripe-checkout', STRIPE_ROUTE_RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    // no-store is load-bearing, not boilerplate: the limiter keys on IP, so a
+    // cacheable 429 could be replayed to a different visitor who is not rate
+    // limited. Two other routes were caught attaching `public, max-age=300` to
+    // their 429s (board, 2026-07-26) — do not repeat it here of all places.
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const { userId } = await auth()
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  if (!STRIPE_SECRET_KEY) {
-    return NextResponse.json(
-      { error: 'Stripe not configured — add STRIPE_SECRET_KEY to environment' },
-      { status: 503 }
-    )
-  }
+  // NOTE: a second `if (!STRIPE_SECRET_KEY)` block sat here and was DEAD —
+  // unreachable behind the identical guard at the top of the handler. Removed
+  // 2026-07-27 along with its twin in the portal route.
 
   let billing: 'annual' | 'monthly' = 'annual'
   try {

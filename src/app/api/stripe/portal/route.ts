@@ -1,5 +1,13 @@
 import { NextResponse } from 'next/server'
 import { auth, clerkClient } from '@clerk/nextjs/server'
+import { checkRateLimit } from '@/lib/rateLimit'
+
+/**
+ * Same tight limit as the checkout route, its own bucket so abuse of one
+ * cannot lock a paying customer out of the other. See that route's comment for
+ * why this is session-abuse protection rather than card-testing prevention.
+ */
+const STRIPE_ROUTE_RATE_LIMIT_PER_MINUTE = 5
 
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://figurepinner.com'
@@ -13,7 +21,9 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://figurepinner.com'
  * Requires STRIPE_SECRET_KEY env var and stripeCustomerId stored in
  * Clerk publicMetadata (written by webhook on checkout.session.completed).
  */
-export async function POST() {
+// `req` added 2026-07-27 purely so the rate limiter can read cf-connecting-ip;
+// the handler took no argument before. Next passes the Request either way.
+export async function POST(req: Request) {
   // Pre-launch guard: portal makes no sense without active subscriptions.
   if (!STRIPE_SECRET_KEY) {
     return NextResponse.json(
@@ -25,16 +35,21 @@ export async function POST() {
     )
   }
 
+  // Ahead of auth() for the same reason as the checkout route: auth() and the
+  // clerkClient lookup below are network calls. Fails open by design.
+  const rl = await checkRateLimit(req, 'stripe-portal', STRIPE_ROUTE_RATE_LIMIT_PER_MINUTE)
+  if (rl.limited) {
+    // no-store: an IP-keyed 429 must never be cached and replayed to another
+    // visitor. Same reasoning as the checkout route.
+    return NextResponse.json(
+      { error: 'rate_limited' },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
+    )
+  }
+
   const { userId } = await auth()
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-
-  if (!STRIPE_SECRET_KEY) {
-    return NextResponse.json(
-      { error: 'Stripe not configured' },
-      { status: 503 }
-    )
   }
 
   // Fetch stripeCustomerId from Clerk metadata

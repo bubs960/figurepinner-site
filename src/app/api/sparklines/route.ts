@@ -24,7 +24,12 @@ export async function GET(req: NextRequest) {
   if (rl.limited) {
     return NextResponse.json(
       { error: 'rate_limited' },
-      { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } },
+      // no-store added 2026-07-27: this was the last 429 in the codebase with
+      // no Cache-Control. The limiter keys on IP, so any cacheable 429 risks
+      // being replayed to a visitor who is not rate limited. Same class as the
+      // two `public, max-age=300` 429s already fixed elsewhere; a class test
+      // (tests/rateLimit429NoStore.test.mjs) now fails the build on a repeat.
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
     )
   }
 
