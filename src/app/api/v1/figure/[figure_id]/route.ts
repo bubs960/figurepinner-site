@@ -22,9 +22,14 @@ export async function GET(
 ) {
   const rl = await checkRateLimit(req, 'v1-figure', RATE_LIMIT_PER_MINUTE)
   if (rl.limited) {
+    // no-store, NOT CACHE_HEADERS. This response is per-IP and lives for one
+    // minute; CACHE_HEADERS says `public, max-age=300, s-maxage=600`, which
+    // invites a browser or shared cache node to serve one client's throttle
+    // to everyone behind it for up to 10x its real lifetime. Matches the
+    // pattern already used by the search and upc routes.
     return NextResponse.json(
       { error: 'rate_limited' },
-      { status: 429, headers: { ...CACHE_HEADERS, 'Retry-After': String(rl.retryAfter) } },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
     )
   }
 

@@ -25,7 +25,13 @@ export async function GET(req: NextRequest) {
   const genre = params.get('genre')?.trim() || null
   const figureId = params.get('figure_id')?.trim() || null
   const pinnedOnly = params.get('pinned_only') === 'true'
-  const limit = Math.min(parseInt(params.get('limit') ?? '20'), 100)
+  // Floor as well as cap. Math.min alone let `?limit=-1` through to SQLite,
+  // which treats a NEGATIVE LIMIT as unlimited — an unbounded table scan once
+  // news_events has rows (it's empty today, so this never bit). NaN from a
+  // non-numeric param also fell through, since every Math.min comparison with
+  // NaN yields NaN. Clamp to [1, 100] and fall back to the default on garbage.
+  const rawLimit = parseInt(params.get('limit') ?? '20', 10)
+  const limit = Number.isFinite(rawLimit) ? Math.min(Math.max(rawLimit, 1), 100) : 20
 
   const where: string[] = ['published_at <= datetime(\'now\')']
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

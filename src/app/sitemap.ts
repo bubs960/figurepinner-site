@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
-import { genreSlugForFandom as fandomToGenre } from '@/lib/genreFigures'
+import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
 import { isAtOrAboveIndexBar, censusLastCompDate } from '@/data/indexValueCensus'
 
@@ -111,8 +111,23 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const genrePages: MetadataRoute.Sitemap = getAllFandoms().map(fandom => ({
-    url: `${BASE}/${fandomToGenre(fandom)}`,
+  // Only emit genre hubs that actually exist. This used to map EVERY KB fandom
+  // through fandomToGenre() with no existence check, so 7 of 22 genre entries
+  // (32%) were live 404s in the sitemap Google reads: the 3 fandoms with no hub
+  // at all (generic-fantasy, pop-culture, scifi) plus the 4 NECA-family ones
+  // (horror, aliens-predator, terminator, robocop), whose rollup had only ever
+  // been built in the genre->fandom direction. hubGenreForFandom() is that
+  // missing inverse; it returns 'neca' for the NECA family and null for
+  // hub-less fandoms. Deduped because the 4 NECA fandoms now collapse to one
+  // URL. Figure/line/character pages under those fandoms are unaffected — they
+  // resolve 200 and live in the per-fandom sitemap children, not here.
+  const hubSlugs = [...new Set(
+    getAllFandoms()
+      .map(hubGenreForFandom)
+      .filter((slug): slug is string => slug !== null),
+  )]
+  const genrePages: MetadataRoute.Sitemap = hubSlugs.map(slug => ({
+    url: `${BASE}/${slug}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.9,

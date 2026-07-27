@@ -64,9 +64,12 @@ const RATE_LIMIT_PER_MINUTE = 30
 export async function GET(req: NextRequest) {
   const rl = await checkRateLimit(req, 'price-check', RATE_LIMIT_PER_MINUTE)
   if (rl.limited) {
+    // no-store, NOT CACHE_HEADERS — see the identical note in the sibling
+    // v1/figure route. A per-IP, one-minute throttle must never be cached
+    // publicly for 5-10 minutes.
     return NextResponse.json(
       { error: 'rate_limited' },
-      { status: 429, headers: { ...CACHE_HEADERS, 'Retry-After': String(rl.retryAfter) } },
+      { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
     )
   }
 
