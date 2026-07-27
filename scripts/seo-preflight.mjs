@@ -454,10 +454,32 @@ async function checkSitemapPrefixCensus(localChildren) {
     const localPrefixes = new Set()
     for (const [, counts] of localPrefixByChild) for (const p of counts.keys()) localPrefixes.add(p)
 
-    // Non-fandom feature routes (not KB-driven, never a twin-namespace risk)
-    // that are expected to appear as a new sitemap prefix once, on the deploy
-    // that ships them. 'today' = Daily Grail Spotlight (4286507, 2026-07-13).
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today'])
+    // Prefixes expected to appear as a NEW top-level sitemap prefix exactly
+    // once, on the deploy that ships them, and verified NOT to be a
+    // twin-namespace risk. Each entry is a one-shot: once the prefix is live in
+    // prod's sitemap it is in prodPrefixes anyway and the entry is a no-op,
+    // safe to delete on any later pass.
+    //
+    // 'today' = Daily Grail Spotlight (4286507, 2026-07-13). Non-fandom feature
+    //   route, not KB-driven.
+    //
+    // 'neca'  = the NECA rollup hub (2026-07-26, Steve-authorised). This one IS
+    //   KB-driven, which the original wording of this list excluded — widened
+    //   deliberately, on evidence, not to make a red gate go green:
+    //     - The generated sitemap contains EXACTLY ONE URL under /neca (the hub
+    //       itself) out of 28,721. Measured, not assumed.
+    //     - No /neca/<line>/<slug> namespace is created. Figure, line and
+    //       character URLs stay under /horror, /aliens-predator, /terminator and
+    //       /robocop, unchanged, one canonical each.
+    //     - /neca returns 200 live and is the canonical hub for those 748
+    //       figures. Every other genre hub was already in the sitemap; this was
+    //       the only live hub absent, while its 4 dead stand-ins were present.
+    //   The 2026-07-12 bug this gate exists to catch was the SAME CONTENT
+    //   reachable under TWO namespaces (/marvel and /marvel-comics), splitting
+    //   crawl budget. Adding one hub page is a different shape. If a future
+    //   change ever emits /neca/<something>, the child-purity check above (one
+    //   logical section per child) is the guard that still applies.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
