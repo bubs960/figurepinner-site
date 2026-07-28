@@ -20,14 +20,22 @@ const STATIC_ID = 'static'
  * a self-contained chunk a crawler can re-fetch on its own schedule, instead
  * of re-downloading everything to catch one changed fandom.
  *
- * lastModified honesty (D3): guide pages already use their real `a.updated`
- * date. Static/genre/line/character/figure pages have NO per-entity freshness
- * field anywhere in KBFigure or the build pipeline — there is no
- * enrichment/price-refresh timestamp to read. Rather than fabricate one,
- * these still stamp `now` (same behavior as before the split). Closing the
- * "everything changed today" signal for real requires the KB to start
- * carrying a per-figure last-updated field — flagged to matcher, not solved
- * here.
+ * lastModified honesty (D3): guide pages use their real `a.updated` date;
+ * figure pages use `censusLastCompDate`; and as of 2026-07-27 line, character
+ * and genre hubs use the newest such date among the figures they contain
+ * (`maxCensusDate` below).
+ *
+ * This docblock previously stated that no per-entity freshness field existed
+ * anywhere in KBFigure or the build pipeline, so everything but guides had to
+ * stamp `now`. That was true when written and stopped being true when
+ * `censusLastCompDate` landed — figure pages were migrated to it, the hub
+ * routes were simply never revisited, and this paragraph kept asserting the
+ * old premise. Corrected rather than deleted, because "the comment outlived
+ * the constraint it described" is the failure worth remembering.
+ *
+ * Only the 9 hand-listed STATIC_PAGES and the /guides index still stamp `now`:
+ * those genuinely have no per-entity freshness source, and inventing a date for
+ * /privacy would be the same fabrication in the other direction.
  */
 // Safety net, not a behavior change today: with no revalidate/dynamic export
 // this route is static until the next deploy anyway (fine at 2-3 deploys/day
@@ -35,6 +43,35 @@ const STATIC_ID = 'static'
 // if deploy frequency ever drops (WEBAUDIT-FINAL-CYCLE-PLAN-2026-07-12.md §4
 // tail).
 export const revalidate = 86400
+
+/**
+ * Newest real last-comp-change date among a group of figures, or null when none
+ * of them carries a census entry. The hub-route counterpart to the per-figure
+ * `censusLastCompDate` used below.
+ *
+ * Why this exists (measured, 2026-07-27, not theorised): every hub URL was
+ * stamping a fresh build timestamp on every deploy, which is the exact signal
+ * the figure-page comment below already warns teaches Google to distrust and
+ * lazily recrawl our lastmod. Observed consequence in GSC the same day —
+ * Google had not re-read 10 of the 23 fandom sitemaps since Jul 2 (star-wars
+ * 6,028 pages, transformers 2,589, masters-of-the-universe 2,033), and had not
+ * crawled /wrestling/deluxe-aggression since Jun 30, 27 days. The hub routes
+ * are precisely the ones that were still fabricating freshness.
+ *
+ * A hub is "modified" when something it lists changed, so max() is the honest
+ * aggregate: it moves when a member figure gets new comp data and holds still
+ * otherwise. Falls back to `now` at the call sites only when no member has a
+ * census entry at all (small/below-bar lines), which is the same
+ * fall-back-rather-than-invent rule the figure pages use.
+ */
+function maxCensusDate(figureIds: Iterable<string>): Date | null {
+  let newest: Date | null = null
+  for (const id of figureIds) {
+    const d = censusLastCompDate(id)
+    if (d && (!newest || d > newest)) newest = d
+  }
+  return newest
+}
 
 export async function generateSitemaps(): Promise<{ id: string }[]> {
   return [{ id: STATIC_ID }, ...getAllFandoms().map(fandom => ({ id: fandom }))]
@@ -121,14 +158,22 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
   // hub-less fandoms. Deduped because the 4 NECA fandoms now collapse to one
   // URL. Figure/line/character pages under those fandoms are unaffected — they
   // resolve 200 and live in the per-fandom sitemap children, not here.
-  const hubSlugs = [...new Set(
-    getAllFandoms()
-      .map(hubGenreForFandom)
-      .filter((slug): slug is string => slug !== null),
-  )]
-  const genrePages: MetadataRoute.Sitemap = hubSlugs.map(slug => ({
+  // Newest member-figure comp date per genre hub. Accumulated ACROSS fandoms
+  // rather than per-fandom because a hub slug can aggregate several (the 4
+  // NECA-family fandoms all roll up to /neca) — taking one fandom's date would
+  // under-report the hub's real freshness.
+  const genreNewest = new Map<string, Date>()
+  for (const fandom of getAllFandoms()) {
+    const slug = hubGenreForFandom(fandom)
+    if (slug === null) continue
+    if (!genreNewest.has(slug)) genreNewest.set(slug, new Date(0))
+    const d = maxCensusDate(getFiguresByFandom(fandom).map(f => f.figure_id))
+    if (d && d > genreNewest.get(slug)!) genreNewest.set(slug, d)
+  }
+
+  const genrePages: MetadataRoute.Sitemap = [...genreNewest].map(([slug, newest]) => ({
     url: `${BASE}/${slug}`,
-    lastModified: now,
+    lastModified: newest.getTime() === 0 ? now : newest,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }))
@@ -140,11 +185,26 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   const figs = getFiguresByFandom(fandom)
   const genre = fandomToGenre(fandom)
 
+  // Group member figures once, then reuse for both hub types below. Keyed
+  // insertion order reproduces the previous `[...new Set(figs.map(...))]`
+  // exactly, so the emitted URL set and its order are unchanged — only
+  // lastModified moves.
+  const lineFids = new Map<string, string[]>()
+  const charFids = new Map<string, string[]>()
+  const pushTo = (m: Map<string, string[]>, key: string, fid: string) => {
+    const bucket = m.get(key)
+    if (bucket) bucket.push(fid)
+    else m.set(key, [fid])
+  }
+  for (const f of figs) {
+    pushTo(lineFids, f.product_line, f.figure_id)
+    pushTo(charFids, f.character_canonical, f.figure_id)
+  }
+
   // ── Line hub pages (/[genre]/[line]) ────────────────────────────────────
-  const lines = [...new Set(figs.map(f => f.product_line))]
-  const linePages: MetadataRoute.Sitemap = lines.map(line => ({
+  const linePages: MetadataRoute.Sitemap = [...lineFids].map(([line, fids]) => ({
     url: `${BASE}/${genre}/${line}`,
-    lastModified: now,
+    lastModified: maxCensusDate(fids) ?? now,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
@@ -152,10 +212,9 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   // ── Character hub pages (/[genre]/character/[character_slug]) ───────────
   // One page per unique character_canonical within the fandom. High-value SEO
   // pages: "[Character] action figure" queries.
-  const chars = [...new Set(figs.map(f => f.character_canonical))]
-  const characterPages: MetadataRoute.Sitemap = chars.map(char => ({
+  const characterPages: MetadataRoute.Sitemap = [...charFids].map(([char, fids]) => ({
     url: `${BASE}/${genre}/character/${char}`,
-    lastModified: now,
+    lastModified: maxCensusDate(fids) ?? now,
     changeFrequency: 'weekly' as const,
     priority: 0.75,
   }))
