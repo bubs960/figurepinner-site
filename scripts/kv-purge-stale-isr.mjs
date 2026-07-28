@@ -317,6 +317,21 @@ function currentBuildId() {
 
 // ── Persisted queue state ────────────────────────────────────────────────
 
+// Run diagnostics (2026-07-27): the warm-then-retry fix (51c10e1) could not be
+// ATTRIBUTED after the fact -- its branch only runs when keptCount===0, and the
+// only evidence it ran was a console line in a deploy log nobody captured. The
+// outcome was good (a46d987: anomaly, 0 cleaned -> 2bea32c: ok, 516 deleted)
+// but "the fix caused it" and "traffic happened to warm the build first" were
+// indistinguishable from any durable artifact. That's the same
+// evidence-is-transient failure shape the lastRun field itself was added to
+// close (2026-07-11), one level deeper: lastRun recorded THAT a run succeeded,
+// never WHICH PATH it took to succeed.
+//
+// These four fields make the branch decision a recorded fact. keptAtScan===0
+// with warmed===true and keptAfterWarm>0 is the warm valve working, stated by
+// the run itself rather than inferred by a later reader.
+const runDiag = { fullScan: false, keptAtScan: null, warmed: false, keptAfterWarm: null }
+
 // pendingBuildIds: null means "no queue -- do a fresh full scan"; an array
 // (possibly empty) means "resume this exact queue, don't rescan." A missing
 // or corrupt/unreadable state file is treated the same as null -- the safe
@@ -585,6 +600,8 @@ async function main() {
       () => discoverStaleBuilds(keepBuildId),
       { label: 'full scan (discoverStaleBuilds)' }
     )
+    runDiag.fullScan = true
+    runDiag.keptAtScan = keptCount
 
     // Safety valve: if NONE of the listed keys matched the current build id
     // while the namespace clearly isn't empty, something upstream MIGHT be
@@ -599,11 +616,13 @@ async function main() {
     // immediate throw, same as before.
     if (keptCount === 0 && totalKeys > 0) {
       if (execute) {
+        runDiag.warmed = true
         await warmCurrentBuild()
         ;({ totalKeys, keptCount, buildIds } = await withRetry(
           () => discoverStaleBuilds(keepBuildId),
           { label: 'post-warm rescan (discoverStaleBuilds)' }
         ))
+        runDiag.keptAfterWarm = keptCount
       }
       if (keptCount === 0) {
         const afterWarm = execute ? ` after warming ${WARM_PATHS.length} representative path(s)` : ''
@@ -639,7 +658,7 @@ async function main() {
 
   if (!pending.length) {
     console.log('[kv-purge-stale-isr] nothing to do.')
-    if (execute) await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId, lastRun: { at: new Date().toISOString(), status: 'ok', deleted: 0, calls: 0, queueDepth: 0 } })
+    if (execute) await saveState({ pendingBuildIds: null, lastKeptBuildId: keepBuildId, lastRun: { at: new Date().toISOString(), status: 'ok', deleted: 0, calls: 0, queueDepth: 0, ...runDiag } })
     return
   }
 
@@ -738,7 +757,7 @@ async function main() {
   await saveState({
     pendingBuildIds: nextQueue.length ? nextQueue : null,
     lastKeptBuildId: keepBuildId,
-    lastRun: { at: new Date().toISOString(), status: 'ok', deleted: deletedThisRun, calls: callsThisRun, queueDepth: nextQueue.length },
+    lastRun: { at: new Date().toISOString(), status: 'ok', deleted: deletedThisRun, calls: callsThisRun, queueDepth: nextQueue.length, ...runDiag },
   })
 }
 
@@ -759,6 +778,10 @@ await main().catch(async (err) => {
         deleted: 0,
         calls: 0,
         queueDepth: prior.pendingBuildIds?.length ?? 0,
+        // An anomaly is the case where the branch history matters MOST: it
+        // distinguishes "warm ran and still recovered nothing" (the fix is
+        // insufficient) from "warm never ran" (a different problem entirely).
+        ...runDiag,
       },
     }).catch(() => {})
   }
