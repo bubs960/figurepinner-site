@@ -7,8 +7,28 @@ import { trackFunnel } from '@/app/_lib/funnelClient'
 /**
  * AdSlot — Adsterra iframe banner unit (AD STANDARD v2, 2026-07-19; iframe
  * namespace-isolation fix 2026-07-19 same day (separate `window` scope per
- * mount, not a security sandbox -- there is no `sandbox` attribute), see
- * WEBAUDIT-TO-WEB-ADSLOT-COLLAPSE-BUG-LIVE-2026-07-19.md).
+ * mount), see WEBAUDIT-TO-WEB-ADSLOT-COLLAPSE-BUG-LIVE-2026-07-19.md).
+ *
+ * SANDBOXED (2026-07-27): the iframe below carries
+ * `sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"` and
+ * deliberately OMITS `allow-same-origin`. Root cause + evidence:
+ * WEB-ANDROID-REDIRECT-ROOTCAUSE-2026-07-26.md §4. A `srcDoc` iframe with no
+ * sandbox inherits the PARENT's origin, so `invoke.js` ran same-origin with
+ * figurepinner.com and could read our DOM/cookies and set
+ * `window.top.location` -- verified live pre-fix (`sameOrigin: true`,
+ * `canReachTop: true`). The sandbox strips exactly that: scripts still run
+ * (`allow-scripts`) and a click-through popup still opens normally
+ * (`allow-popups` + `allow-popups-to-escape-sandbox`, so the POPUP itself
+ * isn't also sandboxed), but the frame is now a real cross-origin boundary.
+ * This is also why the privacy-page copy calling these ads "a cross-origin
+ * iframe FigurePinner does not control" is accurate again -- it was wrong
+ * about the OUTER frame before this fix (right about the inner one Adsterra
+ * injects), and needed no edit once the outer frame actually became one.
+ *
+ * Consequence, not a side effect: sandboxing makes `contentDocument` return
+ * null cross-origin, so the old fill-detection (read the injected markup
+ * directly) went with it -- see the fill-detection effect below for what
+ * replaced it and why.
  *
  * Usage:
  *   <AdSlot slot="adsterra-banner" /> // 300×250, live, no approval needed
@@ -30,20 +50,21 @@ import { trackFunnel } from '@/app/_lib/funnelClient'
  * requirement, merged with figurepinner's existing Pro-gate/funnel tracking,
  * which are both untouched below).
  *
- * The ad markup (atOptions + invoke.js) renders inside a same-origin `srcDoc`
- * iframe we own, NOT via next/script. Two reasons, both root-caused live in
- * prod: (1) next/script's lazyOnload strategy portals its <script> tags to the
- * end of <body>, decoupled from JSX position, so Adsterra's injected iframe
+ * The ad markup (atOptions + invoke.js) renders inside a `srcDoc` iframe we
+ * own, NOT via next/script. Two reasons, both root-caused live in prod:
+ * (1) next/script's lazyOnload strategy portals its <script> tags to the end
+ * of <body>, decoupled from JSX position, so Adsterra's injected iframe
  * landed as a body-root sibling — never inside our reserved frame, and always
  * past <footer>, i.e. real ads rendered but were nearly unreachable by scroll.
  * (2) Both figure-page AdSlot instances shared the same next/script id, so
  * Next's page-wide script dedup silently dropped the second instance's tags
- * entirely — one of the two "ad units" never had a chance to fill. A same-origin
- * srcDoc iframe sidesteps both: the ad markup parses as part of THIS iframe's
- * own initial document (so injection lands inside it, at the position we
- * control), and each AdSlot mount gets its own iframe with its own
- * `window`/`atOptions` scope, so there's no cross-instance dedup or global
- * collision to worry about.
+ * entirely — one of the two "ad units" never had a chance to fill. A `srcDoc`
+ * iframe sidesteps both regardless of sandboxing: the ad markup parses as
+ * part of THIS iframe's own initial document (so injection lands inside it,
+ * at the position we control), and each AdSlot mount gets its own iframe with
+ * its own `window`/`atOptions` scope, so there's no cross-instance dedup or
+ * global collision to worry about. (It was same-origin, not just its own
+ * iframe, until the sandboxing above — see that note for why and what changed.)
  */
 
 const FILL_TIMEOUT_MS = 4000
@@ -104,55 +125,51 @@ export default function AdSlot({ slot, className }: Props) {
     trackFunnel('ad_impression', { target: slot })
   }, [proState, slot])
 
-  // Reserve + collapse-when-unfilled (AD STANDARD v2 Phase 2): watch for the
-  // iframe Adsterra injects inside OUR srcDoc iframe's own document. If it
-  // never shows up within FILL_TIMEOUT_MS, stop reserving space instead of
-  // leaving a permanent gap. Must watch the srcDoc iframe's contentDocument,
-  // not the parent-page DOM — see the file-header comment for why.
+  // Reserve + collapse-when-unfilled (AD STANDARD v2 Phase 2).
+  //
+  // Fill signal, REPLACED 2026-07-27 when the iframe was sandboxed (see file
+  // header): the old version read `iframeEl.contentDocument` and watched for
+  // Adsterra's injected ad iframe to appear via MutationObserver. Sandboxing
+  // makes contentDocument return null cross-origin (the DOM spec's own
+  // behavior for a browsing context that's no longer same-origin-domain with
+  // the accessor) -- so that path would silently never fire, and the ORIGINAL
+  // logic below it would then read every ad as permanently 'pending' and
+  // collapse ALL of them to 'unfilled' after FILL_TIMEOUT_MS. That is a much
+  // worse failure mode than the one being fixed: it would have hidden 100% of
+  // ad impressions, not zero, the moment the sandbox landed.
+  //
+  // Replacement: the outer iframe's own native `load` event, which still
+  // fires normally regardless of cross-origin-ness (it's dispatched by the
+  // PARENT's browsing context, not something the sandboxed document could
+  // suppress) once the srcDoc document and its synchronous `<script src>`
+  // (invoke.js itself) finish loading. This does NOT prove the ad's actual
+  // creative rendered -- that can still happen asynchronously after invoke.js
+  // runs its own further network calls, invisible to us now -- so it is
+  // deliberately optimistic: biased toward 'filled' rather than 'unfilled',
+  // because a false unfilled-collapse hides a real, paying impression, while
+  // false filled-optimism only reserves space an ad was going to fill anyway
+  // in the overwhelming common case. Scoped as "zero revenue cost" in
+  // WEB-ANDROID-REDIRECT-ROOTCAUSE-2026-07-26.md §7.1 on exactly that basis.
+  //
+  // FILL_TIMEOUT_MS is kept as a safety net for the one failure mode this
+  // signal still can't see coming: the srcDoc document never loading at all
+  // (the iframe itself failing outright) -- not "the ad network chose not to
+  // serve a creative this impression," which real ad networks do sometimes
+  // and which this can no longer distinguish from a normal fill.
   useEffect(() => {
     if (proState !== 'free') return
     const iframeEl = iframeRef.current
     if (!iframeEl) return
 
-    let observer: MutationObserver | null = null
-    let attachedDoc: Document | null = null
-
-    // Keyed to document identity, not a one-shot flag: an <iframe srcDoc> starts
-    // on an empty placeholder document before the browser navigates it to the
-    // real srcDoc content (a genuine document replacement, not a mutation). If
-    // this runs before that navigation completes, contentDocument is still the
-    // placeholder -- rebinding on every call (fallback AND every 'load' event)
-    // whenever the document object has changed means the real navigation's
-    // 'load' event always gets a chance to correct onto the real document,
-    // instead of a one-shot flag permanently locking onto whichever document
-    // happened to be current on the first call (see
-    // WEBAUDIT-TO-WEB-ADSLOT-FIX-RACE-CONDITION-ADDENDUM-2026-07-19.md).
-    const attach = () => {
-      const doc = iframeEl.contentDocument
-      if (!doc || !doc.body) return
-      if (doc === attachedDoc) return
-      observer?.disconnect()
-      attachedDoc = doc
-
-      const checkForAd = () => {
-        if (doc.body.querySelector('iframe')) setAdState('filled')
-      }
-      checkForAd()
-
-      observer = new MutationObserver(checkForAd)
-      observer.observe(doc.body, { childList: true, subtree: true })
-    }
-
-    iframeEl.addEventListener('load', attach)
-    attach() // covers the case where the srcDoc document is already loaded by the time this effect runs
+    const onLoad = () => setAdState('filled')
+    iframeEl.addEventListener('load', onLoad)
 
     const timeout = setTimeout(() => {
       setAdState(current => (current === 'pending' ? 'unfilled' : current))
     }, FILL_TIMEOUT_MS)
 
     return () => {
-      iframeEl.removeEventListener('load', attach)
-      observer?.disconnect()
+      iframeEl.removeEventListener('load', onLoad)
       clearTimeout(timeout)
     }
   }, [proState])
@@ -197,6 +214,7 @@ export default function AdSlot({ slot, className }: Props) {
           ref={iframeRef}
           srcDoc={adHtml}
           title="Advertisement"
+          sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
           style={{ width: config.width, height: config.height, border: 'none', maxWidth: '100%' }}
         />
       </div>
