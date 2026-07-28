@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * run-seo-preflight.mjs — build+serve+run+teardown wrapper for the G1 SEO
- * guardrail (scripts/seo-preflight.mjs).
+ * guardrail (scripts/seo-preflight.mjs), plus the ISR declaration audit.
  *
  * WHY THIS FILE EXISTS: seo-preflight.mjs's own header comment says it needs
  * a locally-running server at --base to test against, but flags that nothing
@@ -9,6 +9,16 @@
  * left for whoever wires it in. This script is that missing piece: it builds
  * a fresh server, serves it, runs the guardrail against it, and tears it
  * down again, all as one deploy-chain step.
+ *
+ * ── ALSO RUNS isr-declaration-audit.mjs (added 2026-07-27) ──────────────────
+ * Straight off the `next build` output, before the server even spawns: it
+ * sweeps every `src/app/**\/page.tsx` for `export const revalidate` on a
+ * dynamic path segment that ISN'T registered in the prerender-manifest --
+ * the bug class that left /[genre] and /[genre]/[line] serving uncached SSR
+ * for ~6 weeks with no test, type error, or lint catching it. See that
+ * script's own header for the full mechanism. A FAIL here exits 1 (a real
+ * finding, same STOP semantics as G1) before the more expensive build+serve
+ * steps below even start.
  *
  * ── WHY PLAIN `next build` / `next start`, NOT `@opennextjs/cloudflare build` ──
  * The deploy chain's own Workers build (`npx @opennextjs/cloudflare build`)
@@ -132,6 +142,7 @@ import { dirname, join } from 'node:path'
 const REPO_ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
 const NEXT_BIN = join(REPO_ROOT, 'node_modules', 'next', 'dist', 'bin', 'next')
 const PREFLIGHT_SCRIPT = join(REPO_ROOT, 'scripts', 'seo-preflight.mjs')
+const ISR_AUDIT_SCRIPT = join(REPO_ROOT, 'scripts', 'isr-declaration-audit.mjs')
 
 const PORT = Number(process.env.SEO_PREFLIGHT_PORT || 4791)
 const HOST = '127.0.0.1'
@@ -323,6 +334,36 @@ async function main() {
   }
   log(`next build finished in ${(timings['next-build'] / 1000).toFixed(1)}s.`)
 
+  // 2b) ISR declaration audit (2026-07-27) -- catches the WHOLE "revalidate is
+  // a no-op on a dynamic segment" bug class (root cause of the /[genre] and
+  // /[genre]/[line] hubs serving uncached SSR for ~6 weeks). Runs HERE,
+  // straight off the manifest the build above just produced, deliberately
+  // BEFORE spawning next start: it's read-only and cheap, so a route that
+  // silently regressed to inert should fail the deploy immediately rather
+  // than after paying for a server boot + full G1 run. Real defect, not an
+  // orchestration failure -- exit 1, same STOP semantics as G1 itself, so
+  // `&&` deploy chaining halts on it identically.
+  log('running ISR declaration audit (bare-revalidate-on-dynamic-segment sweep) ...')
+  const auditStart = Date.now()
+  const audit = spawnSync(process.execPath, [ISR_AUDIT_SCRIPT], {
+    cwd: REPO_ROOT,
+    stdio: 'inherit',
+    env: process.env,
+  })
+  mark('isr-declaration-audit', auditStart)
+  if (audit.status !== 0) {
+    banner(
+      'G1 PREFLIGHT STOP (real finding, not an orchestration failure)',
+      'isr-declaration-audit.mjs found a route that declares `revalidate` on a',
+      'dynamic segment but is NOT registered in the prerender-manifest -- the',
+      'exact defect class that left /[genre] and /[genre]/[line] serving',
+      'uncached SSR for ~6 weeks (see the audit output above for which route).',
+      'Fix: add `export const dynamic = \'force-static\'` or generateStaticParams.',
+    )
+    process.exit(1)
+  }
+  log(`ISR declaration audit passed in ${timings['isr-declaration-audit']}ms.`)
+
   // 3) Spawn `next start -p PORT` as a background child. Captured (not
   //    inherited) stdio so a failed readiness wait can print recent output
   //    for debugging without letting the server's ongoing request logs spam
@@ -395,6 +436,7 @@ async function main() {
   mark('total', t0)
   banner(
     `TIMING -- port-check ${timings['port-check']}ms, build ${(timings['next-build'] / 1000).toFixed(1)}s, ` +
+    `isr-audit ${timings['isr-declaration-audit']}ms, ` +
     `server-ready ${(timings['server-ready-wait'] / 1000).toFixed(1)}s, preflight ${(timings['preflight-run'] / 1000).toFixed(1)}s, ` +
     `teardown ${timings['teardown']}ms, TOTAL ${(timings['total'] / 1000).toFixed(1)}s`,
     `G1 preflight exited with code ${preflightExitCode} (0=PASS, 1=STOP) -- passing that code through unchanged.`,

@@ -66,6 +66,12 @@ npm-debug.log*
 /.kv-purge-state.json
 /.kv-purge-state.json.tmp-*
 
+# hub-isr-check.mjs output — machine-local scratch, mode-specific by design
+# (2026-07-27: a shared filename between baseline/verify runs once silently
+# overwrote the pre-fix baseline with post-fix data).
+/hub-isr-baseline.json
+/hub-isr-verify.json
+
 # Plugin/skill artifacts dropped into .claude/ by Cowork sessions - never ship, never commit
 .claude/*
 !.claude/launch.json
