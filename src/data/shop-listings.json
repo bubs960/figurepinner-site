@@ -1,15 +1,919 @@
 {
-  "generated_at": "2026-07-11T15:37:43+00:00",
-  "source_snapshot_fetched_at": "2026-07-07T03:17:11+00:00",
-  "total_published_live": 213,
-  "exported_count": 105,
+  "generated_at": "2026-07-28T19:13:14+00:00",
+  "source_snapshot_fetched_at": "2026-07-28T19:13:12+00:00",
+  "total_published_live": 217,
+  "exported_count": 146,
   "skipped": {
-    "no_log_row_unadopted": 102,
+    "no_log_row_unadopted": 66,
     "log_row_no_fid": 0,
     "fid_not_in_kb": 0,
-    "logged_as_sold": 6
+    "logged_as_sold": 5
   },
   "items": [
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_1_jake-roberts_1a95f3",
+      "price": 12.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147418336366"
+    },
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_2_bushwhackers-but_92e802",
+      "price": 25.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461048754"
+    },
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_2_rockers-marty-ja_bfa43d",
+      "price": 19.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461048241"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_unchained-fury_1_ric-flair_47e4b8",
+      "price": 15.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461043551"
+    },
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_2_honky-tonk-man_17d67a",
+      "price": 15.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461040606"
+    },
+    {
+      "figure_id": "fp_wrestling_marvel-toys_tna-marvel-toys_5_lance-hoyt_141989",
+      "price": 33.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461031974"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_66_nikki-cross_88b3a7",
+      "price": 18.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461029062"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_7_ultimate-warrior_8d697f",
+      "price": 12.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461027225"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_shawn-michaels_31dab5",
+      "price": 22.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461023835"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_smackdown-draft_1_al-snow_ba55d2",
+      "price": 14.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461019369"
+    },
+    {
+      "figure_id": "fp_wrestling_jazwares_aew-unmatched_3_mr-brodie-lee_19be98",
+      "price": 10.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461018157"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_bca_6_mark-henry_4d3caf",
+      "price": 16.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461017458"
+    },
+    {
+      "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_adam-page_cbef2e",
+      "price": 16.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461016960"
+    },
+    {
+      "figure_id": "fp_wrestling_jazwares_aew-unrivaled_ex_walmart-exclusiv_76179f",
+      "price": 12.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461015816"
+    },
+    {
+      "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_santana_178e6c",
+      "price": 15.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461015303"
+    },
+    {
+      "figure_id": "fp_wrestling_jazwares_aew-unrivaled_6_jake-hager_e46b7c",
+      "price": 14.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461013731"
+    },
+    {
+      "figure_id": "fp_wrestling_osftm_ecw_4_taz_bf8bad",
+      "price": 10.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147461011576"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_basic_127_joaquin-wilde_f7da84",
+      "price": 14.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147460973439"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_rob-van-dam_0a515f",
+      "price": 24.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147460971692"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_68_pat-patterson_bc4634b0d3a3",
+      "price": 28.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147460970089"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ufc-series_0_brock-lesnar_e32d59",
+      "price": 30.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147460967627"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_62_roman-reigns_836ce2",
+      "price": 24.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147460966495"
+    },
+    {
+      "figure_id": "fp_wrestling_toy-biz_wcw-toy-biz_bru_disco-inferno_28c4d1",
+      "price": 18.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393547483"
+    },
+    {
+      "figure_id": "fp_wrestling_osftm_ecw_1_shane-douglas_78d5a0",
+      "price": 15.2,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393550723"
+    },
+    {
+      "figure_id": "fp_wrestling_osftm_wcw-osftm_4-5in-solo_kevin-nash_a93f96",
+      "price": 9.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147377051128"
+    },
+    {
+      "figure_id": "fp_wrestling_osftm_wcw-osftm_6-5in-articulated_chris-benoit_caace8",
+      "price": 17.1,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384048210"
+    },
+    {
+      "figure_id": "fp_wrestling_osftm_ecw_6_balls-mahoney_efe4cb",
+      "price": 20.9,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147382151867"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_15_ultimate-warrior_a47c9b",
+      "price": 28.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147383933492"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366",
+      "price": 28.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393495855"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_111_sandman_1c53d8",
+      "price": 38.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384277722"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-greatest-hits_gh7_ron-simmons_c9c033b7926b",
+      "price": 33.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147386264084"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_104_rick-steiner_8b9053",
+      "price": 33.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147386270725"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_lgh3_red-rooster_118177",
+      "price": 28.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147383933710"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_110_kit-wilson_273ab5",
+      "price": 28.49,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393552050"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition-coliseum_7_honky-tonk-man_be045b",
+      "price": 38.94,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147386261245"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_4_hillbilly-jim_779f2e",
+      "price": 56.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147383977565"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_wwe-retro_7_chris-jericho_9ec542",
+      "price": 19.94,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147377048394"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_27_cm-punk_56683b",
+      "price": 39.9,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147379225233"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_18_brodus-clay_d080d3f4698a",
+      "price": 28.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147383977086"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_wwe-retro_16_british-bulldog_9fc06c",
+      "price": 14.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384046160"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_basic_18_34-cm-punk_a8eb2d",
+      "price": 14.24,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393551379"
+    },
+    {
+      "figure_id": "fp_wrestling_jazwares_aew-unrivaled_6_mjf_612271",
+      "price": 21.84,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147379208540"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_7_tito-santana_93ddce",
+      "price": 33.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147377124882"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_smackdown-series_1_shane-mcmahon_036888",
+      "price": 15.2,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384048794"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_10_sabu_4c2e43",
+      "price": 38.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384259282"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_1_rowdy-roddy-pipe_84a622",
+      "price": 24.7,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147336017754"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_9_ric-flair_72ce59",
+      "price": 31.34,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393546680"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_1_ric-flair_a67306",
+      "price": 37.04,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393501407"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_17_nunzio_9c9a8c",
+      "price": 18.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384260370"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8",
+      "price": 21.84,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393565586"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_13_john-cena_60409d",
+      "price": 24.69,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393502967"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_35_joey-styles_8479b8",
+      "price": 19.94,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384279444"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_2_hulk-hogan_985e05",
+      "price": 28.49,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147382134107"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-legends-of-the-ring_1_hulk-hogan_7e1217",
+      "price": 47.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147382133745"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_bca_7_edge_8592e3",
+      "price": 10.44,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384258645"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_6_earthquake_ecbb3d",
+      "price": 23.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147377122394"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_5_diamond-dallas-p_755710",
+      "price": 41.8,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147386279436"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_4p_colonel-mustafa-_634ffc",
+      "price": 24.69,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393540443"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_22_cm-punk_3babe4",
+      "price": 17.1,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393546008"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_12_brooklyn-brawler_3ab632",
+      "price": 32.29,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147383976282"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_11_barry-windham_ad50a5",
+      "price": 23.74,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147382142231"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_11_1-2-3-kid_8b5553",
+      "price": 20.9,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147382118777"
+    },
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_5_warlord_ec2506",
+      "price": 17.1,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393497490"
+    },
+    {
+      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_tom-zenk_9bd88a",
+      "price": 20.9,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384048436"
+    },
+    {
+      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_scott-steiner_c5978a",
+      "price": 19.94,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384065216"
+    },
+    {
+      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_barry-windham_f6fb5e",
+      "price": 23.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147384047804"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_1_ronda-rousey_e4d827",
+      "price": 23.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147337666129"
+    },
+    {
+      "figure_id": "fp_wrestling_marvel-toys_tna-marvel-toys_3_monty-brown_e8a9c6",
+      "price": 14.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147337868834"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_2_mr-perfect_9ab3d0",
+      "price": 17.1,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147339652438"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_7_bobby-roode_9295c5",
+      "price": 19.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147347998666"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_25_brian-kendrick_fc96f4",
+      "price": 17.1,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348001416"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_38_bradshaw_ff7a8a",
+      "price": 20.9,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348006170"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_2_bret-hart_0a1c00",
+      "price": 19.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348052190"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-monday-night-war_7_albert_3d4131",
+      "price": 27.55,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348053315"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_defining-moments_4_undertaker_4e13ae",
+      "price": 80.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348065570"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_19_brother-love_b05462",
+      "price": 24.69,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348078195"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_11_wade-barrett_99e6dc",
+      "price": 23.74,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348086215"
+    },
+    {
+      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_rick-steiner_348574",
+      "price": 17.1,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348096222"
+    },
+    {
+      "figure_id": "fp_wrestling_chella-toys_wrestling-megastars_1_josh-shernoff_1d7f3c",
+      "price": 28.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147348103051"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_17_curt-hawkins_756464",
+      "price": 27.54,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147356736402"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_1_gene-okerlund_a89338",
+      "price": 33.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147356829999"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_wrestlemania_41_howard-finkel_f1bb86",
+      "price": 80.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147356837890"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_wwe-superstars_15_george-steele_fecd96",
+      "price": 19.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147356840423"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_4_jbl_3889ad",
+      "price": 18.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147356841325"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_23_big-bubba-rogers_c42dcc",
+      "price": 11.4,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147356890783"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_6_terry-taylor_c16439",
+      "price": 38.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147360762720"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_3_kevin-nash_6d1ba6",
+      "price": 24.7,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147360763950"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_80_kyle-oreilly_8acbd0",
+      "price": 23.74,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147360764305"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_defining-moments_6_hulk-hogan_8f9875",
+      "price": 42.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147360818983"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_entrance-greats_2_ted-dibiase_f85261",
+      "price": 42.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147360819608"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_10_miss-tessmacher_2dae8c",
+      "price": 71.25,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "See photos",
+      "item_url": "https://www.ebay.com/itm/147363662095"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_elite_elite_darth-vader_3c35b2",
+      "price": 28.5,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147386265778"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_origins_turtles-of-grayskull_mutated-king-hiss-as-foot-soldier_75a45a",
+      "price": 23.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147379207829"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_origins_turtles-of-grayskull_donatello_9763f1",
+      "price": 23.74,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147379210335"
+    },
+    {
+      "figure_id": "fp_dc_mcfarlane_multiverse_king-shark-baf_peacemaker_ae0bec",
+      "price": 23.75,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147393604241"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_defining-moments_2026-w2_penta_935c0ffa77c1",
+      "price": 129.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147434384420"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_classified-series_classified_sgt-slaughter_079922",
+      "price": 35.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147434383467"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_18_sunny_3ac4ae",
+      "price": 85.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147434382284"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_12_handsome-jimmy-v_a4a43c",
+      "price": 85.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147434381505"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_125_koko-b-ware_dc2323cdc805",
+      "price": 30.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Factory Sealed",
+      "item_url": "https://www.ebay.com/itm/147434363113"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_wwe-superstars_3_million-dollar-m_fed384",
+      "price": 25.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147408074600"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_1_samoa-joe_c4ea91",
+      "price": 24.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147405588986"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_31_kevin-thorn_f3777c",
+      "price": 14.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147405587104"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_x-men-age-of-apocalypse_shadowcat_68213c",
+      "price": 15.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431124456"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_11_undertaker_74b4dd",
+      "price": 18.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431119097"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_24_kane_a67a89",
+      "price": 18.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431118076"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_2_iron-sheik_4b5d1c",
+      "price": 22.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431116657"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_32_daniel-bryan_0de7c8",
+      "price": 18.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431114495"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_edge_e9632b",
+      "price": 12.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431111727"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_8_aj-styles_287c09",
+      "price": 30.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431104782"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_2_bret-hart_530561",
+      "price": 38.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431102170"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_26_ultimate-warrior_fae3eb",
+      "price": 24.99,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147431098593"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_basic_146_shayna-baszler_66cd68",
+      "price": 8.0,
+      "quantity": 1,
+      "status": "PUBLISHED",
+      "condition": "Loose (out of package)",
+      "item_url": "https://www.ebay.com/itm/147418421049"
+    },
     {
       "figure_id": "fp_masters-of-the-universe_mattel_masterverse_revelation-action-figure_andra_8855c9",
       "price": 12.0,
@@ -19,28 +923,12 @@
       "item_url": "https://www.ebay.com/itm/147418502879"
     },
     {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_spider-man_gwenpool_931c23",
-      "price": 20.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147418500024"
-    },
-    {
       "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression-ppv_8_eugene_879d98",
       "price": 14.0,
       "quantity": 1,
       "status": "PUBLISHED",
       "condition": "Loose (out of package)",
       "item_url": "https://www.ebay.com/itm/147418497160"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_34_great-khali_7a5639",
-      "price": 20.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147418470192"
     },
     {
       "figure_id": "fp_wrestling_osftm_ecw_1_sabu_c37f96",
@@ -57,14 +945,6 @@
       "status": "PUBLISHED",
       "condition": "Loose (out of package)",
       "item_url": "https://www.ebay.com/itm/147418421923"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_basic_146_shayna-baszler_66cd68",
-      "price": 8.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147418421049"
     },
     {
       "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_8_cm-punk_1a96ba",
@@ -155,14 +1035,6 @@
       "item_url": "https://www.ebay.com/itm/147418349887"
     },
     {
-      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_1_jake-roberts_1a95f3",
-      "price": 12.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147418336366"
-    },
-    {
       "figure_id": "fp_wrestling_mattel_elite_82_rob-gronkowski_1555ab31dbb7",
       "price": 18.0,
       "quantity": 1,
@@ -185,14 +1057,6 @@
       "status": "PUBLISHED",
       "condition": "Loose (out of package)",
       "item_url": "https://www.ebay.com/itm/147408088038"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_wwe-superstars_3_million-dollar-m_fed384",
-      "price": 25.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147408074600"
     },
     {
       "figure_id": "fp_wrestling_mattel_elite_1_rey-mysterio_6df631",
@@ -267,14 +1131,6 @@
       "item_url": "https://www.ebay.com/itm/147405611407"
     },
     {
-      "figure_id": "fp_wrestling_mattel_defining-moments_6_randy-savage_f460f5",
-      "price": 29.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147405611036"
-    },
-    {
       "figure_id": "fp_wrestling_jakks-pacific_r3-tech_ex_edge_8232e7",
       "price": 15.99,
       "quantity": 1,
@@ -291,28 +1147,12 @@
       "item_url": "https://www.ebay.com/itm/147405605882"
     },
     {
-      "figure_id": "fp_wrestling_mattel_basic_81_rhyno_69b860",
-      "price": 14.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147405594475"
-    },
-    {
       "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_4_jim-duggan_8e41c6",
       "price": 25.0,
       "quantity": 1,
       "status": "PUBLISHED",
       "condition": "Loose (out of package)",
       "item_url": "https://www.ebay.com/itm/147405593918"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_1_samoa-joe_c4ea91",
-      "price": 24.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147405588986"
     },
     {
       "figure_id": "fp_wrestling_mattel_elite_55_big-cass_21301d",
@@ -331,524 +1171,12 @@
       "item_url": "https://www.ebay.com/itm/147405587602"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_31_kevin-thorn_f3777c",
-      "price": 14.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147405587104"
-    },
-    {
       "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_1_bret-hart_3e4b8d",
       "price": 20.0,
       "quantity": 1,
       "status": "PUBLISHED",
       "condition": "Loose (out of package)",
       "item_url": "https://www.ebay.com/itm/147405586686"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite_25_brodus-clay_1f34c9b02823",
-      "price": 32.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393653630"
-    },
-    {
-      "figure_id": "fp_dc_mcfarlane_multiverse_king-shark-baf_peacemaker_ae0bec",
-      "price": 25.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393604241"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8",
-      "price": 22.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393565586"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite_110_kit-wilson_273ab5",
-      "price": 29.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393552050"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_basic_18_34-cm-punk_a8eb2d",
-      "price": 14.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393551379"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_ecw_1_shane-douglas_78d5a0",
-      "price": 16.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393550723"
-    },
-    {
-      "figure_id": "fp_wrestling_toy-biz_wcw-toy-biz_bru_disco-inferno_28c4d1",
-      "price": 19.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393547483"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_9_ric-flair_72ce59",
-      "price": 32.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393546680"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_22_cm-punk_3babe4",
-      "price": 18.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393546008"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_4p_colonel-mustafa-_634ffc",
-      "price": 25.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393540443"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_11_elijah-burke_a3818a",
-      "price": 15.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393533250"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_13_john-cena_60409d",
-      "price": 25.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393502967"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_27_kona-crush_a4548f",
-      "price": 49.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393502300"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_1_ric-flair_a67306",
-      "price": 38.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393501407"
-    },
-    {
-      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_5_warlord_ec2506",
-      "price": 18.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393497490"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147393495855"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_5_diamond-dallas-p_755710",
-      "price": 44.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147386279436"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite_104_rick-steiner_8b9053",
-      "price": 35.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147386270725"
-    },
-    {
-      "figure_id": "fp_star-wars_hasbro_elite_elite_darth-vader_3c35b2",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147386265778"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite-greatest-hits_gh7_ron-simmons_c9c033b7926b",
-      "price": 35.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147386264084"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition-coliseum_7_honky-tonk-man_be045b",
-      "price": 40.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147386261245"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_35_joey-styles_8479b8",
-      "price": 20.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384279444"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite_111_sandman_1c53d8",
-      "price": 40.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384277722"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_17_nunzio_9c9a8c",
-      "price": 19.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384260370"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_10_sabu_4c2e43",
-      "price": 40.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384259282"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_bca_7_edge_8592e3",
-      "price": 10.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384258645"
-    },
-    {
-      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_scott-steiner_c5978a",
-      "price": 20.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384065216"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_smackdown-series_1_shane-mcmahon_036888",
-      "price": 16.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384048794"
-    },
-    {
-      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_tom-zenk_9bd88a",
-      "price": 22.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384048436"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_wcw-osftm_6-5in-articulated_chris-benoit_caace8",
-      "price": 18.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384048210"
-    },
-    {
-      "figure_id": "fp_wrestling_galoob_wcw-galoob_1_barry-windham_f6fb5e",
-      "price": 25.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384047804"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_wwe-superstars_12_cactus-jack_62f5a6",
-      "price": 32.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384046836"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_wwe-retro_16_british-bulldog_9fc06c",
-      "price": 15.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384046160"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_wwe-superstars_7_captain-lou-alba_708ef4",
-      "price": 19.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384045442"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_wwe-superstars_8_doink-the-clown_f5a760",
-      "price": 32.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147384027596"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite-legends_4_hillbilly-jim_779f2e",
-      "price": 59.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383977565"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite_18_brodus-clay_d080d3f4698a",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383977086"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_12_brooklyn-brawler_3ab632",
-      "price": 33.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383976282"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite-legends_lgh3_red-rooster_118177",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383933710"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition_15_ultimate-warrior_a47c9b",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383933492"
-    },
-    {
-      "figure_id": "fp_wrestling_powertown_powertown-ultras_1_verne-gagne_673646",
-      "price": 45.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383932551"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_5_jimmy-snuka_713a81",
-      "price": 35.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147383930596"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_ecw_6_balls-mahoney_efe4cb",
-      "price": 22.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382151867"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_ecw_4_balls-mahoney_3ab812",
-      "price": 18.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382148224"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_11_barry-windham_ad50a5",
-      "price": 24.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382142231"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_wcw-osftm_ljn-style-s3_big-bubba-rogers_076080",
-      "price": 15.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382141691"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_ecw_5_nova_621ec1",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382140889"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_ecw_5_steve-corino_0953a4",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382140280"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_tna-deluxe-impact_2_hulk-hogan_985e05",
-      "price": 29.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382134107"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_tna-legends-of-the-ring_1_hulk-hogan_7e1217",
-      "price": 50.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382133745"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_11_1-2-3-kid_8b5553",
-      "price": 22.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147382118777"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition_tgt_bray-wyatt_f349a1",
-      "price": 45.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Factory Sealed",
-      "item_url": "https://www.ebay.com/itm/147379226555"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition_27_cm-punk_56683b",
-      "price": 42.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Factory Sealed",
-      "item_url": "https://www.ebay.com/itm/147379225233"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_23_shelton-benjamin_150505",
-      "price": 29.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Factory Sealed",
-      "item_url": "https://www.ebay.com/itm/147379210909"
-    },
-    {
-      "figure_id": "fp_masters-of-the-universe_mattel_origins_turtles-of-grayskull_donatello_9763f1",
-      "price": 24.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Factory Sealed",
-      "item_url": "https://www.ebay.com/itm/147379210335"
-    },
-    {
-      "figure_id": "fp_wrestling_jazwares_aew-unrivaled_6_mjf_612271",
-      "price": 22.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Factory Sealed",
-      "item_url": "https://www.ebay.com/itm/147379208540"
-    },
-    {
-      "figure_id": "fp_masters-of-the-universe_mattel_origins_turtles-of-grayskull_mutated-king-hiss-as-foot-soldier_75a45a",
-      "price": 25.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Factory Sealed",
-      "item_url": "https://www.ebay.com/itm/147379207829"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_7_tito-santana_93ddce",
-      "price": 35.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147377124882"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_6_earthquake_ecbb3d",
-      "price": 25.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147377122394"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_1_rowdy-roddy-pipe_84a622",
-      "price": 26.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147336017754"
-    },
-    {
-      "figure_id": "fp_wrestling_osftm_wcw-osftm_4-5in-solo_kevin-nash_a93f96",
-      "price": 10.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147377051128"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_wwe-retro_7_chris-jericho_9ec542",
-      "price": 20.99,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147377048394"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition_30_seth-rollins_6dfa66",
-      "price": 30.0,
-      "quantity": 1,
-      "status": "PUBLISHED",
-      "condition": "Loose (out of package)",
-      "item_url": "https://www.ebay.com/itm/147365593928"
     }
   ]
 }
