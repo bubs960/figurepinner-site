@@ -26,6 +26,11 @@ import JsonLd from '@/app/_components/JsonLd'
 
 // ISR — KB-only line hub, no user-specific data. "Fast, cacheable, crawlable"
 // (header above) requires this. Was force-dynamic; restored per Genta audit 2026-06-06 P1.
+// force-static added 2026-07-27 (hub-ISR root cause): on a dynamic segment,
+// `revalidate` alone never registers the route in the prerender-manifest, so
+// OpenNext served every line hub as uncached SSR (`no-store`) since 6/14.
+// See [genre]/page.tsx for the full mechanism note; same fix, same pair.
+export const dynamic = 'force-static'
 export const revalidate = 3600
 
 // ─── Genre config (accent colors) ─────────────────────────────────────────────

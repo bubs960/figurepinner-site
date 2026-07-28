@@ -105,6 +105,19 @@ const GENRE_META: Record<string, { label: string; title: string; description: st
   },
 }
 
+// force-static is the load-bearing half of this pair on a dynamic segment
+// (2026-07-27, hub-ISR root cause): without generateStaticParams or
+// `dynamic = 'force-static'`, Next never registers the route in the
+// prerender-manifest, OpenNext's cache interceptor gates ISR purely on
+// manifest membership, and every request falls through to full SSR with
+// `private, no-cache, no-store` — `revalidate` alone is silently inert.
+// Option E (below) removed GSP and carried over only the revalidate half, so
+// every genre and line hub served uncached SSR from 6/14 to now. Same pattern
+// as [line]/[slug]/page.tsx, in production since bc7d221. Build-heap safety
+// (the reason GSP was removed) re-verified on a disposable checkout
+// 2026-07-27: 139/139 pages, default heap, no OOM — force-static does not
+// enumerate genres at build time, so the OOM multiplier never returns.
+export const dynamic = 'force-static'
 export const revalidate = 3600
 
 // On-demand ISR (no generateStaticParams) — Option E (2026-06-14). Prerendering
