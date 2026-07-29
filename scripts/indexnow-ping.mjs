@@ -95,22 +95,61 @@ async function getSitemapUrls() {
   return [...PRIORITY_URLS]
 }
 
+// 429 retry-with-backoff (2026-07-29): IndexNow 429'd on 2 consecutive deploys
+// (b304ac3, cb1ee06) even at 8-URL priority-mode batches, well under
+// BATCH_SIZE — not a batch-size problem, a rate-limit-on-the-endpoint problem.
+// Bing is the working traffic channel (webaudit, WEBAUDIT-BING-CHANNEL-LOG.md),
+// so a submitter that silently 429s every deploy is quietly throttling the
+// channel that pays. Retries respect `Retry-After` when the endpoint sends
+// one; falls back to a short fixed backoff otherwise. Still fully non-fatal —
+// callers already treat every outcome as a warning, never a thrown error, so
+// this can't break the deploy chain regardless of how IndexNow responds.
+const RETRY_DELAYS_MS = [3000, 8000] // 2 retries after the first attempt = 3 tries total
+
+function retryDelayMs(res, attempt) {
+  const header = res?.headers?.get?.('retry-after')
+  const headerSeconds = header ? Number(header) : NaN
+  if (Number.isFinite(headerSeconds) && headerSeconds > 0) return headerSeconds * 1000
+  return RETRY_DELAYS_MS[attempt] ?? RETRY_DELAYS_MS[RETRY_DELAYS_MS.length - 1]
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
 async function submitBatch(urlList, idx, total) {
   const body = { host: HOST, key: KEY, keyLocation: 'https://' + HOST + '/' + KEY + '.txt', urlList }
-  try {
-    const res = await fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      body: JSON.stringify(body),
-    })
-    if (res.ok || res.status === 202) {
-      console.log('[IndexNow] batch ' + idx + '/' + total + ' accepted (' + res.status + ') - ' + urlList.length + ' URLs')
-    } else {
-      const text = await res.text()
-      console.warn('[IndexNow] batch ' + idx + '/' + total + ' response ' + res.status + ': ' + text.slice(0, 200))
+  const maxAttempts = RETRY_DELAYS_MS.length + 1
+
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    let res
+    try {
+      res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify(body),
+      })
+    } catch (err) {
+      console.warn('[IndexNow] batch ' + idx + '/' + total + ' network error (non-fatal): ' + err.message)
+      return
     }
-  } catch (err) {
-    console.warn('[IndexNow] batch ' + idx + '/' + total + ' network error (non-fatal): ' + err.message)
+
+    if (res.ok || res.status === 202) {
+      const retriedNote = attempt > 0 ? ' (after ' + attempt + ' retry/retries)' : ''
+      console.log('[IndexNow] batch ' + idx + '/' + total + ' accepted (' + res.status + ')' + retriedNote + ' - ' + urlList.length + ' URLs')
+      return
+    }
+
+    if (res.status === 429 && attempt < maxAttempts - 1) {
+      const delay = retryDelayMs(res, attempt)
+      console.warn('[IndexNow] batch ' + idx + '/' + total + ' got 429, retrying in ' + Math.round(delay / 1000) + 's (attempt ' + (attempt + 2) + '/' + maxAttempts + ')')
+      await sleep(delay)
+      continue
+    }
+
+    const text = await res.text()
+    console.warn('[IndexNow] batch ' + idx + '/' + total + ' response ' + res.status + ' (non-fatal, giving up after ' + (attempt + 1) + ' attempt(s)): ' + text.slice(0, 200))
+    return
   }
 }
 
@@ -131,12 +170,29 @@ async function ping() {
     await submitBatch(batch, Math.floor(i / BATCH_SIZE) + 1, batches)
   }
 
-  try {
-    const r = await fetch(ENDPOINT + '?url=' + encodeURIComponent(SITEMAP) + '&key=' + KEY, { method: 'GET' })
-    const ok = r.ok || r.status === 202
-    console.log('[IndexNow] sitemap ping ' + (ok ? 'OK' : 'FAIL') + ' (' + r.status + ')')
-  } catch (err) {
-    console.warn('[IndexNow] sitemap ping error (non-fatal): ' + err.message)
+  const sitemapPingUrl = ENDPOINT + '?url=' + encodeURIComponent(SITEMAP) + '&key=' + KEY
+  const maxSitemapAttempts = RETRY_DELAYS_MS.length + 1
+  for (let attempt = 0; attempt < maxSitemapAttempts; attempt++) {
+    let r
+    try {
+      r = await fetch(sitemapPingUrl, { method: 'GET' })
+    } catch (err) {
+      console.warn('[IndexNow] sitemap ping error (non-fatal): ' + err.message)
+      break
+    }
+    if (r.ok || r.status === 202) {
+      const retriedNote = attempt > 0 ? ' (after ' + attempt + ' retry/retries)' : ''
+      console.log('[IndexNow] sitemap ping OK (' + r.status + ')' + retriedNote)
+      break
+    }
+    if (r.status === 429 && attempt < maxSitemapAttempts - 1) {
+      const delay = retryDelayMs(r, attempt)
+      console.warn('[IndexNow] sitemap ping got 429, retrying in ' + Math.round(delay / 1000) + 's (attempt ' + (attempt + 2) + '/' + maxSitemapAttempts + ')')
+      await sleep(delay)
+      continue
+    }
+    console.warn('[IndexNow] sitemap ping FAIL (' + r.status + ', non-fatal, giving up after ' + (attempt + 1) + ' attempt(s))')
+    break
   }
 
   console.log('[IndexNow] Done.')
