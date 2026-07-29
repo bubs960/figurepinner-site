@@ -44,9 +44,12 @@ function git(args) {
 // modification (" M") counts; an unexpected untracked/deleted/staged state
 // on these paths is NOT auto-committed, it falls through to the normal
 // refuse-and-decide path like anything else.
+// figures-reference-v2.js.backup-pre-sync removed 2026-07-29 (Phase 4
+// follow-up to d9d7840, 7/27): that file is untracked + gitignored now, so
+// it can never appear as a tracked " M " change again and this entry could
+// never match anything — dead, not just redundant.
 const KB_SYNC_AUTOCOMMIT_PATHS = new Set([
   'src/data/figures-reference-v2.js',
-  'src/data/figures-reference-v2.js.backup-pre-sync',
   'src/data/figures-reference-v2.slim.js',
 ])
 
