@@ -20,13 +20,19 @@
  *   1. /api/healthz              — ok/db true, captures the deployed build sha
  *   2. /                         — <meta name="fp-build"> matches healthz's
  *                                   build (catches stale ISR HTML post-deploy)
- *   3. /api/v1/search (2 queries)— KB search + typo-forgiveness ladder alive
+ *   3. /wrestling                — genre hub, same fp-build staleness check
+ *   4. /wrestling/deluxe-aggression — genre/line hub, same check (Option A,
+ *      2026-07-30: hub routes had ZERO post-deploy coverage; targets the
+ *      acb159b bug class directly — hub-ISR revalidate inert on a dynamic
+ *      segment for ~6 weeks, live-serving, unseen by any prod-facing check.
+ *      See WEB-TO-STANDALONE-HUB-ROUTE-SMOKE-CHECK-SCOPE-OPTIONS-2026-07-29.md)
+ *   5. /api/v1/search (2 queries)— KB search + typo-forgiveness ladder alive
  *      (same "wwe elite 11" case that went silently broken for an unknown
  *      period before site-sentinel existed — S15)
- *   4. /api/v1/price-check       — Siri/voice price-lookup path, D1 read
- *   5. /api/waitlist/count       — cheap D1-reachability canary, distinct
+ *   6. /api/v1/price-check       — Siri/voice price-lookup path, D1 read
+ *   7. /api/waitlist/count       — cheap D1-reachability canary, distinct
  *                                   from healthz's bare SELECT 1
- *   6. one figure page           — renders + eBay affiliate campid present
+ *   8. one figure page           — renders + eBay affiliate campid present
  *
  * Usage:
  *   node scripts/post-deploy-smoke-probe.mjs
@@ -101,6 +107,21 @@ function searchCount(body) {
   }
 }
 
+/** Same fp-build-vs-healthz staleness check the homepage check uses,
+ * parameterized by label so hub routes can reuse it verbatim. */
+function fpBuildCheck(label, getHealthzBuild) {
+  return (status, body) => {
+    if (status !== 200) return `status ${status}`
+    const m = /<meta[^>]*name="fp-build"[^>]*content="([^"]+)"/i.exec(body)
+    const pageBuild = m ? m[1] : null
+    if (!pageBuild) return `no <meta name="fp-build"> found on ${label}`
+    const healthzBuild = getHealthzBuild()
+    if (!healthzBuild || healthzBuild === 'unknown') return `healthz build unknown, page reports ${pageBuild} (cannot compare)`
+    if (pageBuild !== healthzBuild) return `STALE: page fp-build=${pageBuild} != healthz build=${healthzBuild} (ISR cache serving pre-deploy HTML)`
+    return null
+  }
+}
+
 async function main() {
   let healthzBuild = null
 
@@ -122,15 +143,11 @@ async function main() {
     return null
   }))
 
-  results.push(await probe('homepage fp-build matches healthz', `${BASE}/`, (status, body) => {
-    if (status !== 200) return `status ${status}`
-    const m = /<meta[^>]*name="fp-build"[^>]*content="([^"]+)"/i.exec(body)
-    const pageBuild = m ? m[1] : null
-    if (!pageBuild) return 'no <meta name="fp-build"> found on homepage'
-    if (!healthzBuild || healthzBuild === 'unknown') return `healthz build unknown, page reports ${pageBuild} (cannot compare)`
-    if (pageBuild !== healthzBuild) return `STALE: page fp-build=${pageBuild} != healthz build=${healthzBuild} (ISR cache serving pre-deploy HTML)`
-    return null
-  }))
+  results.push(await probe('homepage fp-build matches healthz', `${BASE}/`, fpBuildCheck('homepage', () => healthzBuild)))
+
+  results.push(await probe('genre hub fp-build matches healthz (/wrestling)', `${BASE}/wrestling`, fpBuildCheck('/wrestling', () => healthzBuild)))
+
+  results.push(await probe('genre/line hub fp-build matches healthz (/wrestling/deluxe-aggression)', `${BASE}/wrestling/deluxe-aggression`, fpBuildCheck('/wrestling/deluxe-aggression', () => healthzBuild)))
 
   results.push(await probe('search: "wwe elite 11" > 0', `${BASE}/api/v1/search?q=wwe%20elite%2011`, (status, body) => {
     if (status !== 200) return `status ${status}`
