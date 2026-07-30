@@ -12,6 +12,14 @@ function buildSql(hours: number): string {
   // caller before this ever runs -- interpolated directly (Analytics
   // Engine's SQL API has no parameterized-query support), safe only
   // because it can never be anything but that validated integer.
+  // webaudit finding, 2026-07-30: this had LIMIT 200 with no ORDER BY. A real
+  // pull (936h window) came back at exactly 200 rows -- a strong sign more
+  // distinct event/source/route/target combinations existed and were being
+  // silently dropped, non-deterministically (which 200 came back could vary
+  // call to call). ORDER BY count DESC makes the truncation deterministic and
+  // puts anything dropped at the low-signal tail; LIMIT raised 10x as a cheap
+  // margin -- this is a manual, key-gated diagnostic endpoint, not a hot path,
+  // so full pagination would be over-engineering for what it's actually used for.
   return `SELECT
   index1 AS event,
   blob2 AS source,
@@ -21,7 +29,8 @@ function buildSql(hours: number): string {
 FROM fp_funnel
 WHERE timestamp > NOW() - INTERVAL '${hours}' HOUR
 GROUP BY index1, blob2, blob3, blob8
-LIMIT 200
+ORDER BY count DESC
+LIMIT 2000
 FORMAT JSON`
 }
 
