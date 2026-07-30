@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { getFigureById, getFigureByStableSuffix, deriveName } from '@/data/kb'
 import { fetchFigurePageData } from './_components/FigureDetailContent'
 import { derivePriceContract } from './_lib/priceContract'
-import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts } from './_lib/ogCard'
+import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from './_lib/ogCard'
 
 export const contentType = 'image/png'
 export const dynamic = 'force-static' // matches the page's explicit config — don't rely on inference
@@ -71,6 +71,6 @@ export default async function Image({ params }: Props) {
         }}
       />
     ),
-    { ...OG_SIZE, fonts }
+    withCardFonts(OG_SIZE, fonts)
   )
 }

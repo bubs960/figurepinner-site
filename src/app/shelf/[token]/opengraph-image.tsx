@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { ShelfCard, FallbackOGCard, OG_SIZE, loadCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
+import { ShelfCard, FallbackOGCard, OG_SIZE, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
 import { getShelfShareStats } from '../_lib/shelfShareData'
 
 export const contentType = 'image/png'
@@ -30,6 +30,6 @@ export default async function Image({ params }: Props) {
 
   return new ImageResponse(
     <ShelfCard grails={stats.grails} gaps={stats.gaps} />,
-    { ...OG_SIZE, fonts }
+    withCardFonts(OG_SIZE, fonts)
   )
 }

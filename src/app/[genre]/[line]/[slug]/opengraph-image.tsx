@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { deriveName } from '@/data/kb'
 import { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
-import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
+import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
 import { findFigureMatches } from './_lib/findFigureMatches'
 
 export const contentType = 'image/png'
@@ -63,6 +63,6 @@ export default async function Image({ params }: Props) {
         }}
       />
     ),
-    { ...OG_SIZE, fonts }
+    withCardFonts(OG_SIZE, fonts)
   )
 }

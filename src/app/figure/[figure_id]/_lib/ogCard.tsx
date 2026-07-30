@@ -54,6 +54,23 @@ function arrayBufferToBase64(buf: ArrayBuffer): string {
   return btoa(binary)
 }
 
+// satori/resvg (next/og's renderer) can only decode JPEG/PNG. Found live
+// 2026-07-30: some `canonical.jpg` assets in the photo pipeline are actually
+// WebP bytes served with `Content-Type: image/jpeg` (a real upstream
+// mislabeling, not a client bug) — e.g. the aew-supreme britt-baker and
+// rey-fenix listing photos both start with a `RIFF....WEBP` header despite
+// the jpeg content-type. Feeding that through as a `data:image/jpeg;...` URI
+// crashed ImageResponse with an out-of-bounds DataView read deep in its PNG
+// encoder, 500ing the whole OG image. Sniff real magic bytes instead of
+// trusting the header — same fail-soft posture as the eBay-placeholder check
+// below, just keyed on what satori can actually decode rather than what the
+// server claims.
+function sniffImageType(bytes: Uint8Array): 'image/jpeg' | 'image/png' | null {
+  if (bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return 'image/jpeg'
+  if (bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47) return 'image/png'
+  return null
+}
+
 /**
  * Fetch + validate a figure photo for card rendering. Bounded latency (satori's
  * own internal <img> fetch has no timeout and never checks response.ok — this
@@ -75,7 +92,9 @@ export async function resolveCardPhoto(url: string | null | undefined): Promise<
     if (buf.byteLength === EBAY_PLACEHOLDER_BYTES) return null
     if (buf.byteLength < 200) return null
     if (buf.byteLength > MAX_PHOTO_BYTES) return null
-    return `data:${contentType};base64,${arrayBufferToBase64(buf)}`
+    const sniffed = sniffImageType(new Uint8Array(buf))
+    if (!sniffed) return null
+    return `data:${sniffed};base64,${arrayBufferToBase64(buf)}`
   } catch {
     return null
   }
@@ -86,11 +105,21 @@ type CardFont = { name: string; data: ArrayBuffer; weight: 400 | 700 | 900; styl
 let fontsPromise: Promise<CardFont[]> | null = null
 
 async function loadInterWeight(weight: 400 | 700 | 900): Promise<ArrayBuffer> {
-  // Standard next/og pattern: Google's CSS2 endpoint serves ttf/otf (not woff2)
-  // to a plain server-side fetch with no browser UA — satori needs ttf/otf.
+  // Standard next/og pattern: Google's CSS2 endpoint serves ttf/otf (not woff2,
+  // which satori/@vercel/og's bundled build can't parse) to a request it can't
+  // identify as a modern browser. This used to happen with NO User-Agent header
+  // at all — broke live 2026-07-30 when Cloudflare Workers' fetch() started
+  // attaching a browser-shaped default UA, so Google switched to serving woff2
+  // and every OG image on the site 500'd (loadCardFonts' catch below made it
+  // fail soft to [], but ImageResponse throws "No fonts are loaded" on an empty
+  // array instead of using next/og's bundled default — see withCardFonts).
+  // Explicit non-browser UA verified live via curl.exe against fonts.googleapis.com
+  // to reliably get `format('truetype')`; a real Chrome UA gets woff2, an old
+  // Chrome UA gets woff (still wrong) — only an unrecognized UA gets ttf.
   // Bounded like resolveCardPhoto's fetch — a hung fonts.googleapis.com must
   // not stall the render; the timeout flows into loadCardFonts' own catch.
   const css = await fetch(`https://fonts.googleapis.com/css2?family=Inter:wght@${weight}`, {
+    headers: { 'User-Agent': 'FigurePinner-OGCard/1.0 (+https://figurepinner.com)' },
     signal: AbortSignal.timeout(4000),
   }).then(r => r.text())
   const match = css.match(/src: url\(([^)]+)\) format\('(?:opentype|truetype)'\)/)
@@ -120,6 +149,20 @@ export function loadCardFonts(): Promise<CardFont[]> {
     ).catch(() => [])
   }
   return fontsPromise
+}
+
+/**
+ * next/og's ImageResponse only falls back to its bundled default font when the
+ * `fonts` option is OMITTED entirely — passing `fonts: []` (loadCardFonts'
+ * documented fail-soft result) throws "No fonts are loaded. At least one font
+ * is required to calculate the layout." instead, which is exactly what broke
+ * every OG image site-wide on 2026-07-30 when the Google Fonts fetch started
+ * failing. Use this instead of spreading `{ ...size, fonts }` directly at any
+ * ImageResponse call site so a font-load failure degrades to next/og's bundled
+ * font (readable, un-branded) rather than a 500.
+ */
+export function withCardFonts(size: typeof OG_SIZE, fonts: CardFont[]) {
+  return fonts.length ? { ...size, fonts } : size
 }
 
 const FONT_STACK = 'Inter, sans-serif'
