@@ -156,6 +156,34 @@ describe('derivePriceContract -- pooled fallback (no condition buckets exist at 
     assert.equal(c.pooled.median, 58)
     assert.equal(c.pooled.isAvg, true)
   })
+
+  // webaudit gate, 2026-07-30 -- offers-suppression fix. Regression case:
+  // a present-but-suppressed 1-2-comp bucket used to block the pooled
+  // fallback even though the bucket itself renders nothing, so the page
+  // showed no price at all despite a real, well-supported pooled median.
+  test('a suppressed sealed bucket (n=1) does NOT block a usable pooled fallback', () => {
+    const c = derivePriceContract({
+      soldCount: 20, medianSold: 44, avgSold: 44, segmentation: 'pooled',
+      sealed: { median: 999, count: 1 },
+      loose: null,
+    })
+    assert.equal(c.sealed.tier, 'suppress')
+    assert.equal(c.sealed.median, null, 'the suppressed bucket itself must still render nothing')
+    assert.notEqual(c.pooled, null, 'the well-supported pooled median must NOT be blocked by the suppressed bucket')
+    assert.equal(c.pooled.median, 44, 'pooled falls back to the real medianSold')
+    assert.equal(c.pooled.tier, 'trustworthy')
+  })
+
+  test('a usable (non-suppressed) sealed bucket DOES still block the pooled fallback', () => {
+    const c = derivePriceContract({
+      soldCount: 20, medianSold: 44, avgSold: 44, segmentation: 'pooled',
+      sealed: { median: 180, count: 8 },
+      loose: null,
+    })
+    assert.equal(c.sealed.tier, 'thin')
+    assert.equal(c.sealed.median, 180, 'the usable thin bucket still renders its own number')
+    assert.equal(c.pooled, null, 'pooled must stay null when a real condition bucket is usable -- unchanged prior behavior')
+  })
 })
 
 describe('derivePriceContract -- zero-data case', () => {

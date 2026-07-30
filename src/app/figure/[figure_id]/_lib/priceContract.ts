@@ -74,11 +74,16 @@ export type PriceContract = {
    *  at all (falls back to the legacy pooled fields, see `pooled` below). */
   sealed: ConditionPrice | null
   loose: ConditionPrice | null
-  /** Legacy pooled fallback (medianSold/avgSold) -- ONLY used when NEITHER
-   *  sealed nor loose has a bucket at all (old snapshots, pre-condition-
-   *  split figures). Also tiered by soldCount. Never used when sealed
-   *  and/or loose buckets exist, even under 'pooled' segmentation -- a
-   *  present-but-thin bucket is still more honest than the blended figure.
+  /** Legacy pooled fallback (medianSold/avgSold) -- used when neither sealed
+   *  nor loose has a USABLE bucket (old snapshots, pre-condition-split
+   *  figures, or a bucket that exists but is suppressed for <3 comps).
+   *  Also tiered by soldCount. Never used when a sealed and/or loose bucket
+   *  actually RENDERS a number, even under 'pooled' segmentation -- a
+   *  present-and-visible thin bucket is still more honest than the blended
+   *  figure. A present-but-suppressed 1-2-comp bucket renders nothing on its
+   *  own, though, so it must not block a real, well-supported pooled median
+   *  sitting right there unused (webaudit gate, 2026-07-30 -- offers-
+   *  suppression fix, FPPS-01 follow-up).
    */
   pooled: { median: number | null; tier: PriceCompTier; needsThinDataLabel: boolean; isAvg: boolean } | null
 }
@@ -117,8 +122,15 @@ export function derivePriceContract(price: PriceContractInput | null | undefined
   const looseBucketPresent = price.loose != null && price.loose.median != null && price.loose.count >= 1
   const hasBothConditions = sealedBucketPresent && looseBucketPresent
 
-  // Pooled fallback only when NEITHER bucket exists at all.
-  const pooled = (!sealedBucketPresent && !looseBucketPresent)
+  // Pooled fallback gates on USABLE, not merely present: a bucket that
+  // exists but is suppressed (<3 comps, sealed.median/loose.median === null
+  // above) renders nothing on its own, so it must not block a real, usable
+  // pooled median. Without this, a figure with soldCount=20/medianSold=$44
+  // and a stray sealed{count:1} bucket showed NO price anywhere, even
+  // though a well-supported pooled number was sitting right there unused.
+  const sealedUsable = sealed != null && sealed.median != null
+  const looseUsable = loose != null && loose.median != null
+  const pooled = (!sealedUsable && !looseUsable)
     ? (() => {
         const median = price.medianSold ?? price.avgSold ?? null
         if (median == null) return null
