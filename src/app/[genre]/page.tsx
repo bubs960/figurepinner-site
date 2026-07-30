@@ -90,8 +90,8 @@ const GENRE_META: Record<string, { label: string; title: string; description: st
   },
   'dungeons-dragons': {
     label: 'Dungeons & Dragons',
-    title: 'Dungeons & Dragons Figure Price Guide — Golden Archive & Vintage',
-    description: 'Dungeons & Dragons action figure price guide. Real eBay sold prices for Golden Archive and vintage D&D figures. Updated daily.',
+    title: 'Fantasy Action Figure Price Guide — D&D, LJN, Hasbro & Super7',
+    description: 'Fantasy action figure price guide with real eBay sold prices — D&D-adjacent LJN Advanced Dungeons & Dragons figures plus Hasbro and Super7 fantasy lines. Updated daily.',
   },
   'neca': {
     label: 'Horror & Film',

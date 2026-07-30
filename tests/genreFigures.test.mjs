@@ -4,7 +4,9 @@ import {
   getFandom,
   genreSlugForFandom,
   fandomsForGenre,
+  hubGenreForFandom,
   NECA_FANDOMS,
+  DUNGEONS_DRAGONS_FANDOMS,
   cardName,
   groupAndSortLines,
 } from '../src/lib/genreFigures.ts'
@@ -29,11 +31,10 @@ function fig(overrides = {}) {
 }
 
 describe('getFandom (URL genre slug -> KB fandom slug)', () => {
-  test('remaps the 4 known slugs', () => {
+  test('remaps the 3 known slugs', () => {
     assert.equal(getFandom('gijoe'), 'gi-joe')
     assert.equal(getFandom('marvel'), 'marvel-comics')
     assert.equal(getFandom('teenage-mutant-ninja-turtles'), 'tmnt')
-    assert.equal(getFandom('dungeons-and-dragons'), 'dungeons-dragons')
   })
 
   test('falls back to identity for slugs that already match (wrestling, dc, ...)', () => {
@@ -41,14 +42,25 @@ describe('getFandom (URL genre slug -> KB fandom slug)', () => {
     assert.equal(getFandom('star-wars'), 'star-wars')
     assert.equal(getFandom('unknown-genre'), 'unknown-genre')
   })
+
+  // Regression, 2026-07-30: SLUG_TO_FANDOM used to carry a stray
+  // 'dungeons-and-dragons': 'dungeons-dragons' entry with no KB fandom behind
+  // it. Its auto-derived inverse made genreSlugForFandom('dungeons-dragons')
+  // return 'dungeons-and-dragons' -- a slug with no GENRE_META entry -- so
+  // the real, live 'dungeons-dragons' hub permanentRedirect()'d to a dead URL
+  // on every single hit. Removed; both slugs now correctly fall back to
+  // identity, matching what GENRE_META/GENRE_HUB_LABELS actually key on.
+  test('dungeons-dragons and dungeons-and-dragons are NOT cross-mapped (the fixed redirect bug)', () => {
+    assert.equal(getFandom('dungeons-dragons'), 'dungeons-dragons')
+    assert.equal(getFandom('dungeons-and-dragons'), 'dungeons-and-dragons')
+  })
 })
 
 describe('genreSlugForFandom (inverse: KB fandom -> URL genre slug)', () => {
-  test('is the exact inverse of getFandom for the 4 remapped fandoms', () => {
+  test('is the exact inverse of getFandom for the 3 remapped fandoms', () => {
     assert.equal(genreSlugForFandom('gi-joe'), 'gijoe')
     assert.equal(genreSlugForFandom('marvel-comics'), 'marvel')
     assert.equal(genreSlugForFandom('tmnt'), 'teenage-mutant-ninja-turtles')
-    assert.equal(genreSlugForFandom('dungeons-dragons'), 'dungeons-and-dragons')
   })
 
   test('falls back to identity for fandoms with no remap entry', () => {
@@ -57,9 +69,13 @@ describe('genreSlugForFandom (inverse: KB fandom -> URL genre slug)', () => {
   })
 
   test('round-trips through getFandom for every remapped slug', () => {
-    for (const slug of ['gijoe', 'marvel', 'teenage-mutant-ninja-turtles', 'dungeons-and-dragons']) {
+    for (const slug of ['gijoe', 'marvel', 'teenage-mutant-ninja-turtles']) {
       assert.equal(genreSlugForFandom(getFandom(slug)), slug)
     }
+  })
+
+  test('dungeons-dragons round-trips as identity (the fixed redirect bug, inverse direction)', () => {
+    assert.equal(genreSlugForFandom('dungeons-dragons'), 'dungeons-dragons')
   })
 })
 
@@ -72,6 +88,26 @@ describe('fandomsForGenre (NECA rollup)', () => {
   test('every other genre resolves to exactly one fandom', () => {
     assert.deepEqual(fandomsForGenre('gijoe'), ['gi-joe'])
     assert.deepEqual(fandomsForGenre('wrestling'), ['wrestling'])
+  })
+})
+
+// generic-fantasy fold-in, 2026-07-30 (webaudit-routed Steve decision):
+// previously-dead 'dungeons-dragons' hub slot (GENRE_META/GENRE_HUB_LABELS
+// entry existed, zero KB figures ever mapped to it) now serves the
+// generic-fantasy fandom as a rollup, same shape as NECA but covering
+// exactly one fandom instead of several.
+describe('dungeons-dragons rollup (generic-fantasy fold-in)', () => {
+  test('hubGenreForFandom routes generic-fantasy to the dungeons-dragons hub', () => {
+    assert.equal(hubGenreForFandom('generic-fantasy'), 'dungeons-dragons')
+  })
+
+  test('fandomsForGenre("dungeons-dragons") resolves to generic-fantasy', () => {
+    assert.deepEqual(fandomsForGenre('dungeons-dragons'), DUNGEONS_DRAGONS_FANDOMS)
+    assert.deepEqual(fandomsForGenre('dungeons-dragons'), ['generic-fantasy'])
+  })
+
+  test('hubGenreForFandom is null for a fandom with no hub (no false positive)', () => {
+    assert.equal(hubGenreForFandom('not-a-real-fandom'), null)
   })
 })
 

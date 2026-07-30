@@ -50,11 +50,10 @@ describe('search genre coverage', () => {
    * oversight. Shrink it; do not grow it to make a failure go away.
    */
   const KNOWN_UNMAPPED = new Map([
-    ['generic-fantasy',
-     'No hub anywhere and NOT a NECA rollup candidate — only 37 of its 141 figures are ' +
-     'NECA (LJN 67 / Hasbro 21 / Super7 16), ~62% D&D-adjacent. Needs its own dedicated ' +
-     'hub decision (a /dungeons-and-dragons framing was proposed 2026-07-26); until then ' +
-     'its 141 figures render a raw-slug badge and no working pill. Tracked on the board.'],
+    // generic-fantasy REMOVED 2026-07-30 -- folded into the 'dungeons-dragons'
+    // hub (genreFigures.ts DUNGEONS_DRAGONS_FANDOMS) and given a search pill
+    // (SearchInterface.tsx GENRES, slug 'generic-fantasy') per Steve's
+    // decision, routed via WEBAUDIT-TO-WEB-GENERIC-FANTASY-DECISION-2026-07-30.md.
   ])
 
   test('the GENRES parser actually parsed something', () => {

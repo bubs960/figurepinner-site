@@ -200,11 +200,20 @@ export function prettyUrlRouterLookupKey(f: RouterKeyFields): string {
 // namespace with no hub and no internal links (the 2026-07 index collapse).
 
 // URL slug → KB fandom slug mapping (URL slugs are pretty; KB slugs are canonical)
+//
+// 'dungeons-and-dragons': 'dungeons-dragons' REMOVED 2026-07-30. No KB fandom
+// named 'dungeons-dragons' has ever existed, so this entry only ever fired
+// its identity-fallback inverse: genreSlugForFandom('dungeons-dragons') (via
+// the auto-derived FANDOM_TO_SLUG below) returned 'dungeons-and-dragons',
+// which has no GENRE_META entry — so /dungeons-dragons (the REAL, live hub
+// slug both GENRE_META and GENRE_HUB_LABELS use) permanentRedirect()'d to a
+// dead URL on every hit. Dead config since whenever it was added; removing
+// it makes /dungeons-dragons self-canonical, which the generic-fantasy
+// hub-fold-in (genreFigures.ts DUNGEONS_DRAGONS_FANDOMS) now depends on.
 export const SLUG_TO_FANDOM: Record<string, string> = {
   'teenage-mutant-ninja-turtles': 'tmnt',
   'gijoe': 'gi-joe',
   'marvel': 'marvel-comics',
-  'dungeons-and-dragons': 'dungeons-dragons',
 }
 
 export function getFandom(slug: string): string {

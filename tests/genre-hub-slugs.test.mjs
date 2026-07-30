@@ -1,7 +1,7 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { GENRE_HUB_SLUGS, NECA_FANDOMS, hubGenreForFandom } from '../src/lib/genreFigures.ts'
+import { GENRE_HUB_SLUGS, NECA_FANDOMS, DUNGEONS_DRAGONS_FANDOMS, hubGenreForFandom } from '../src/lib/genreFigures.ts'
 
 /**
  * Drift guard for the genre-hub slug list.
@@ -55,16 +55,26 @@ describe('genre hub slugs', () => {
     }
   })
 
-  // 2026-07-27: 'pop-culture' and 'scifi' were REMOVED from this list. They used
-  // to belong here — both 404 at their own genre URL — but they are now in
-  // NECA_FANDOMS (both are 100% NECA-manufactured), so hubGenreForFandom()
-  // resolves them to 'neca', which is a real 200 hub. The test above already
-  // covers them via the NECA_FANDOMS loop. The invariant this file protects is
-  // unchanged: never emit a slug whose hub 404s. 'generic-fantasy' still has no
-  // hub anywhere and is not a NECA rollup candidate (only 37 of its 141 figures
-  // are NECA), so it stays.
+  // 2026-07-30: 'generic-fantasy' REMOVED from this list — folded into the
+  // 'dungeons-dragons' hub (Steve's decision, routed via
+  // WEBAUDIT-TO-WEB-GENERIC-FANTASY-DECISION-2026-07-30.md). Same pattern as
+  // the 7/27 NECA additions above: covered by its own rollup-membership test
+  // below instead of the "no hub anywhere" list.
+  test('every dungeons-dragons-family fandom maps to the /dungeons-dragons hub, not its own dead URL', () => {
+    for (const fandom of DUNGEONS_DRAGONS_FANDOMS) {
+      assert.equal(hubGenreForFandom(fandom), 'dungeons-dragons',
+        `${fandom} must roll up to /dungeons-dragons — its own genre URL 404s`)
+    }
+  })
+
+  // 2026-07-27: 'pop-culture' and 'scifi' were REMOVED from this list (folded
+  // into NECA_FANDOMS, both 100% NECA-manufactured). The invariant this file
+  // protects is unchanged: never emit a slug whose hub 404s. Empty for now —
+  // every currently-known hub-less fandom has since been given a real hub;
+  // kept as a live assertion (not deleted) so the NEXT one found has a place
+  // to go and this test starts failing loudly instead of silently vacuous.
   test('a fandom with no hub anywhere returns null rather than a dead slug', () => {
-    for (const fandom of ['generic-fantasy']) {
+    for (const fandom of []) {
       assert.equal(hubGenreForFandom(fandom), null,
         `${fandom} has no hub page; emitting /${fandom} would be a 404 in the sitemap`)
     }

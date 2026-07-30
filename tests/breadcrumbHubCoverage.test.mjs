@@ -83,12 +83,10 @@ describe('breadcrumb hub coverage', () => {
    * oversight. Shrink it; do not grow it to make a failure go away.
    */
   const KNOWN_NO_CRUMB = new Map([
-    ['generic-fantasy',
-     'No hub anywhere (/generic-fantasy 404s) and NOT a NECA rollup candidate — only ' +
-     '37 of its 141 figures are NECA (LJN 67 / Hasbro 21 / Super7 16), ~62% D&D-adjacent. ' +
-     'Needs its own dedicated-hub decision (a /dungeons-and-dragons framing was proposed ' +
-     '2026-07-26). Until then its pages show line > character and no genre crumb. ' +
-     'Paired with the same fandom in searchGenreCoverage.test.mjs KNOWN_UNMAPPED.'],
+    // generic-fantasy REMOVED 2026-07-30 -- folded into the 'dungeons-dragons'
+    // hub (genreFigures.ts DUNGEONS_DRAGONS_FANDOMS), same as its pair in
+    // searchGenreCoverage.test.mjs KNOWN_UNMAPPED. Now covered by the
+    // dungeons-dragons-rollup assertion below instead of an omission.
   ])
 
   test('every KB fandom gets a working genre crumb, or is a recorded exception', () => {
@@ -143,9 +141,10 @@ describe('breadcrumb hub coverage', () => {
       `these fandoms no longer exist in the KB — remove them from KNOWN_NO_CRUMB: ${gone.join(', ')}`)
   })
 
-  test('the 7 hub-less fandoms resolve or omit, and never fall back to their raw slug', () => {
-    // The exact seven measured 404 on 2026-07-27. Six roll up to /neca; only
-    // generic-fantasy has no destination and must omit.
+  test('the 7 originally hub-less fandoms all resolve now, and never fall back to their raw slug', () => {
+    // The exact seven measured 404 on 2026-07-27. Six roll up to /neca;
+    // generic-fantasy (the 7th) was the last holdout, folded into
+    // /dungeons-dragons 2026-07-30 -- all seven now resolve.
     const rollup = ['horror', 'aliens-predator', 'terminator', 'robocop', 'scifi', 'pop-culture']
     for (const fandom of rollup) {
       const crumb = genreCrumbForFandom(fandom)
@@ -159,11 +158,14 @@ describe('breadcrumb hub coverage', () => {
         `precondition changed — ${fandom} no longer identity-falls-back, re-read this test`)
     }
 
-    assert.equal(genreCrumbForFandom('generic-fantasy'), null,
-      `generic-fantasy has no hub (/generic-fantasy 404s) and is NOT a NECA rollup ` +
-      `candidate — only 37 of its 141 figures are NECA. Its genre crumb must be OMITTED ` +
-      `until the dedicated-hub decision is made. If a hub now exists, add it to ` +
-      `GENRE_HUB_LABELS and delete this assertion.`)
+    const gfCrumb = genreCrumbForFandom('generic-fantasy')
+    assert.notEqual(gfCrumb, null, 'generic-fantasy should now crumb to the /dungeons-dragons hub, not omit')
+    assert.equal(gfCrumb.slug, 'dungeons-dragons',
+      `generic-fantasy crumbs to /${gfCrumb.slug}, which is wrong — it must roll up to /dungeons-dragons`)
+    assert.equal(gfCrumb.label, 'Dungeons & Dragons',
+      `generic-fantasy crumb reads '${gfCrumb.label}' but lands on the Dungeons & Dragons hub`)
+    assert.equal(genreSlugForFandom('generic-fantasy'), 'generic-fantasy',
+      'precondition changed — generic-fantasy no longer identity-falls-back on its OWN figure/line/character URLs, re-read this test')
   })
 
   test('a hub that keeps its slug still gets a working crumb', () => {

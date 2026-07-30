@@ -57,7 +57,12 @@ const GENRES = [
   { slug: 'mythic-legions',             name: 'Mythic Legions',    accent: '#546E7A' },
   { slug: 'thundercats',                name: 'ThunderCats',       accent: '#E65100' },
   { slug: 'action-force',               name: 'Action Force',      accent: '#1565C0' },
-  // D&D omitted — no 'dungeons-dragons' figures in KB (excluded 2026-06-06); re-add chip when ingested.
+  // Folded into the 'dungeons-dragons' hub 2026-07-30 (generic-fantasy fandom,
+  // 141 figures, mixed D&D/LJN/Hasbro/Super7 — see genreFigures.ts
+  // DUNGEONS_DRAGONS_FANDOMS). Slug is the raw KB fandom 'generic-fantasy',
+  // not the hub slug 'dungeons-dragons' -- matches searchGenreForFandom(),
+  // which deliberately leaves this fandom unrolled (see its comment).
+  { slug: 'generic-fantasy',            name: 'Fantasy',           accent: '#5E35B1' },
   { slug: 'neca',                       name: 'NECA',              accent: '#37474F' },
   { slug: 'spawn',                      name: 'Spawn',             accent: '#212121' },
 ] as const

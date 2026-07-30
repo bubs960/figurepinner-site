@@ -44,6 +44,18 @@ export const NECA_FANDOMS = [
   'horror', 'aliens-predator', 'terminator', 'robocop', 'scifi', 'pop-culture',
 ]
 
+// 'generic-fantasy' (141 figures: 37 NECA / 67 LJN ~62% D&D-adjacent / 21
+// Hasbro / 16 Super7 — three manufacturers, no shared theme beyond "fantasy")
+// folded into the existing (previously dead-config, zero-figure)
+// 'dungeons-dragons' hub slot 2026-07-30 — Steve's call, routed via webaudit
+// (WEBAUDIT-TO-WEB-GENERIC-FANTASY-DECISION-2026-07-30.md): its LJN/D&D
+// slice is the largest coherent sub-group, the natural anchor if a fitting
+// hub exists, and one already did. Unlike NECA_FANDOMS this rolls up exactly
+// ONE fandom — hub-mapping is at fandom granularity, so the whole 141-figure
+// bucket moves as a unit; it cannot be split by manufacturer within one
+// fandom without a KB-level change, which is out of scope here.
+export const DUNGEONS_DRAGONS_FANDOMS = ['generic-fantasy']
+
 /**
  * Genre slugs with a hub-page ENTRY. Mirrors the keys of GENRE_META in
  * src/app/[genre]/page.tsx, which is the source of truth.
@@ -105,6 +117,7 @@ export const GENRE_HUB_SLUGS: ReadonlySet<string> = new Set(Object.keys(GENRE_HU
  */
 export function hubGenreForFandom(fandom: string): string | null {
   if (NECA_FANDOMS.includes(fandom)) return 'neca'
+  if (DUNGEONS_DRAGONS_FANDOMS.includes(fandom)) return 'dungeons-dragons'
   const slug = genreSlugForFandom(fandom)
   return GENRE_HUB_SLUGS.has(slug) ? slug : null
 }
@@ -170,13 +183,21 @@ const NECA_FANDOM_SET: ReadonlySet<string> = new Set(NECA_FANDOMS)
  * drops the filter". Third instance of one-truth-many-consumers after the
  * sitemap and the IndexNow queue.
  */
+// generic-fantasy deliberately has NO entry here, unlike DUNGEONS_DRAGONS_FANDOMS
+// in hubGenreForFandom()/fandomsForGenre() above — it needs no rollup because
+// the raw fandom slug 'generic-fantasy' already IS its search pill's slug
+// (SearchInterface.tsx's GENRES, matching the "14 of 16 raw-fandom-slug"
+// pattern this function's docstring describes), unlike NECA's several
+// fandoms collapsing into one 'neca' pill that no raw fandom equals.
 export function searchGenreForFandom(fandom: string): string {
   return NECA_FANDOM_SET.has(fandom) ? 'neca' : fandom
 }
 
-/** KB fandom(s) a URL genre slug resolves to, handling the NECA rollup. */
+/** KB fandom(s) a URL genre slug resolves to, handling the NECA and
+ *  dungeons-dragons rollups. */
 export function fandomsForGenre(genre: string): string[] {
   if (genre === 'neca') return NECA_FANDOMS
+  if (genre === 'dungeons-dragons') return DUNGEONS_DRAGONS_FANDOMS
   return [getFandom(genre)]
 }
 
