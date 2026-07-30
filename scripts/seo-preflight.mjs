@@ -479,7 +479,18 @@ async function checkSitemapPrefixCensus(localChildren) {
     //   crawl budget. Adding one hub page is a different shape. If a future
     //   change ever emits /neca/<something>, the child-purity check above (one
     //   logical section per child) is the guard that still applies.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca'])
+    //
+    // 'dungeons-dragons' = the generic-fantasy hub fold-in (96a5c77,
+    //   2026-07-30, Steve-authorised via webaudit, gate PASS on the commit).
+    //   Same shape as 'neca', verified the same way before this entry was
+    //   added — measured against the local build, not assumed:
+    //     - static.xml gains EXACTLY ONE URL under /dungeons-dragons (the hub
+    //       itself). generic-fantasy.xml's 154 URLs stay 147 under
+    //       /generic-fantasy + 7 under /figure, unchanged — zero
+    //       /dungeons-dragons/<line>/<slug> twin URLs, zero canonical churn.
+    //     - genreSlugForFandom('generic-fantasy') still identity-falls-back,
+    //       so figure/line/character canonicals are untouched by design.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
