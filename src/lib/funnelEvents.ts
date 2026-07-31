@@ -11,6 +11,7 @@ export const FUNNEL_EVENTS = [
   'ebay_exit',
   'price_receipt_open',
   'ad_impression',
+  'ad_viewable',
   'shelf_ticker_open',
   'sparkline_drawn',
   'collection_claim_ritual_played',

@@ -125,6 +125,50 @@ export default function AdSlot({ slot, className }: Props) {
     trackFunnel('ad_impression', { target: slot })
   }, [proState, slot])
 
+  // Viewability instrument (spec: WEBAUDIT-TO-WEB-AD-VIEWABILITY-INSTRUMENT-SPEC-2026-07-31.md).
+  // ad_impression above fires on MOUNT and is the render denominator -- unchanged.
+  // This fires only on the IAB/MRC display standard: >=50% of pixels in the
+  // viewport for >=1 continuous second. Scroll-away under 1s cancels; fires at
+  // most once per mount. Same Pro gate and payload shape as ad_impression so
+  // the pair shares a denominator.
+  const viewableFiredRef = useRef(false)
+
+  useEffect(() => {
+    if (proState !== 'free') return
+    if (slot !== 'adsterra-banner') return
+    if (viewableFiredRef.current) return
+    const el = iframeRef.current
+    if (!el) return
+    if (typeof IntersectionObserver === 'undefined') return
+
+    let dwell: ReturnType<typeof setTimeout> | null = null
+
+    const obs = new IntersectionObserver(entries => {
+      const e = entries[0]
+      if (!e) return
+      if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+        if (dwell == null) {
+          dwell = setTimeout(() => {
+            if (!viewableFiredRef.current) {
+              viewableFiredRef.current = true
+              trackFunnel('ad_viewable', { target: slot })
+            }
+            obs.disconnect()
+          }, 1000)
+        }
+      } else if (dwell != null) {
+        clearTimeout(dwell)
+        dwell = null
+      }
+    }, { threshold: [0, 0.5, 1] })
+
+    obs.observe(el)
+    return () => {
+      if (dwell != null) clearTimeout(dwell)
+      obs.disconnect()
+    }
+  }, [proState, slot])
+
   // Reserve + collapse-when-unfilled (AD STANDARD v2 Phase 2).
   //
   // Fill signal, REPLACED 2026-07-27 when the iframe was sandboxed (see file
