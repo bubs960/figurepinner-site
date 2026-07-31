@@ -196,12 +196,19 @@ const WALL_CLOCK_BUDGET_MS = 3 * 60 * 1000
 // dependency, and a warm target only needs to exist, not be representative
 // of catalog content.
 const WARM_BASE_URL = 'https://figurepinner.com'
+// /today was removed from this set 2026-07-30: it is `private, no-cache,
+// no-store` (dynamic route, verified live 7/27 and again 7/30) so it can
+// never write an ISR-KV entry — warming it proved nothing. Its slot went to
+// a character hub, an ISR route group (s-maxage=86400) the set didn't cover.
+// /wrestling and /wrestling/deluxe-aggression, flagged dead in the same 7/27
+// finding, became genuinely warmable when hub ISR shipped (acb159b) —
+// re-verified live 7/30 (s-maxage=1 + x-opennext-cache) and kept.
 const WARM_PATHS = [
   '/',
   '/wrestling',
   '/wrestling/deluxe-aggression',
   '/wrestling/deluxe-aggression/rob-conway',
-  '/today',
+  '/wrestling/character/rob-conway',
   '/guides/most-valuable-star-wars-black-series',
 ]
 // figurepinner.com's Bot Fight Mode 403s (and silently lies to) plain
