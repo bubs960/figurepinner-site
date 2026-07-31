@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { permanentRedirect } from 'next/navigation'
 import { getFigureById, getFigureByStableSuffix, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
+import { FIGURE_ID_REDIRECTS } from '@/data/figure-id-redirects'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
 import { enrichedDescription } from './_lib/enrichedCopy'
@@ -29,7 +30,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { figure_id } = await params
   const local = getFigureById(figure_id)
   if (!local) {
-    const canonical = getFigureByStableSuffix(figure_id)
+    // Rekey/merge map first (exact old fid), then the stable-suffix fallback.
+    const canonical = getFigureById(FIGURE_ID_REDIRECTS[figure_id] ?? '') ?? getFigureByStableSuffix(figure_id)
     if (canonical) permanentRedirect(figureUrl(canonical))
     return { title: 'Figure Not Found' }
   }
@@ -122,7 +124,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function FigureDetailPage({ params }: PageProps) {
   const { figure_id } = await params
   if (!getFigureById(figure_id)) {
-    const canonical = getFigureByStableSuffix(figure_id)
+    const canonical = getFigureById(FIGURE_ID_REDIRECTS[figure_id] ?? '') ?? getFigureByStableSuffix(figure_id)
     if (canonical) permanentRedirect(figureUrl(canonical))
   }
   return <FigureDetailContent figureId={figure_id} />

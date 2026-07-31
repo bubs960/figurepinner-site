@@ -31,6 +31,7 @@
  */
 
 import { execSync } from 'node:child_process'
+import { readFileSync, writeFileSync } from 'node:fs'
 
 function git(args) {
   try {
@@ -55,6 +56,31 @@ const KB_SYNC_AUTOCOMMIT_PATHS = new Set([
 
 const line = '='.repeat(66)
 
+// Matcher relay 2026-07-31 (470b230 close-out): the generic auto-sync commit
+// message hid a 3-figure duplicate merge for 4 days. Name the fid delta in the
+// commit body so a removal/add is visible in `git log` without diffing an 18MB
+// file. Computed here (HEAD vs working tree) rather than read from the
+// extension repo's sync log — self-contained, works even if that log moves.
+function kbFidDelta() {
+  const FID_RE = /"figure_id"\s*:\s*"([^"]+)"/g
+  const extract = (text) => {
+    const ids = new Set()
+    for (const m of text.matchAll(FID_RE)) ids.add(m[1])
+    return ids
+  }
+  const path = 'src/data/figures-reference-v2.slim.js'
+  const before = extract(git(`show HEAD:${path}`))
+  const after = extract(readFileSync(path, 'utf8'))
+  if (before.size === 0 || after.size === 0) return null // parse failure — don't report a bogus wipe
+  const added = [...after].filter(id => !before.has(id))
+  const removed = [...before].filter(id => !after.has(id))
+  const list = (ids) => ids.slice(0, 20).join('\n  ') + (ids.length > 20 ? `\n  ... and ${ids.length - 20} more` : '')
+  let body = `KB fid delta vs previous commit: +${added.length} / -${removed.length} (${after.size} total)`
+  if (added.length) body += `\nAdded:\n  ${list(added)}`
+  if (removed.length) body += `\nRemoved:\n  ${list(removed)}`
+  return body
+}
+
 function tryAutoCommitKbSync(changes) {
   const onlyKbSyncMods = changes.every(c => {
     const m = /^ M (.+)$/.exec(c)
@@ -68,7 +94,16 @@ function tryAutoCommitKbSync(changes) {
   for (const c of changes) console.log('  ' + c)
   try {
     execSync(`git add -- ${[...KB_SYNC_AUTOCOMMIT_PATHS].map(p => `"${p}"`).join(' ')}`, { stdio: ['ignore', 'pipe', 'pipe'] })
-    execSync('git commit -m "chore: auto-sync KB data files (predeploy guard, nightly rehost)"', { stdio: ['ignore', 'pipe', 'pipe'] })
+    let delta = null
+    try { delta = kbFidDelta() } catch { /* delta is best-effort; never block the commit */ }
+    if (delta) {
+      // Body via a temp -F file would be overkill; -m accepts multiline but
+      // shell-quoting ids is fragile — write through git's message file instead.
+      writeFileSync('.git/FP_AUTOSYNC_MSG', `chore: auto-sync KB data files (predeploy guard, nightly rehost)\n\n${delta}\n`)
+      execSync('git commit -F .git/FP_AUTOSYNC_MSG', { stdio: ['ignore', 'pipe', 'pipe'] })
+    } else {
+      execSync('git commit -m "chore: auto-sync KB data files (predeploy guard, nightly rehost)"', { stdio: ['ignore', 'pipe', 'pipe'] })
+    }
   } catch (err) {
     console.log('[clean-check] Auto-commit FAILED -- falling back to the normal refuse/override path.')
     console.log('              ' + String(err.message || err).split('\n')[0])
