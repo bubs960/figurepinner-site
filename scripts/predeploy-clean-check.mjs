@@ -69,7 +69,11 @@ function kbFidDelta() {
     return ids
   }
   const path = 'src/data/figures-reference-v2.slim.js'
-  const before = extract(git(`show HEAD:${path}`))
+  // NOT the git() helper: execSync's default 1MB maxBuffer throws ENOBUFS on
+  // this 18MB file, and git() swallows that into '' — which silently disabled
+  // the delta on its first live run (8b69e82, 2026-07-31). Errors here
+  // propagate to the caller's catch, which logs the failure visibly.
+  const before = extract(execSync(`git show HEAD:${path}`, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 128 * 1024 * 1024 }))
   const after = extract(readFileSync(path, 'utf8'))
   if (before.size === 0 || after.size === 0) return null // parse failure — don't report a bogus wipe
   const added = [...after].filter(id => !before.has(id))
@@ -95,7 +99,11 @@ function tryAutoCommitKbSync(changes) {
   try {
     execSync(`git add -- ${[...KB_SYNC_AUTOCOMMIT_PATHS].map(p => `"${p}"`).join(' ')}`, { stdio: ['ignore', 'pipe', 'pipe'] })
     let delta = null
-    try { delta = kbFidDelta() } catch { /* delta is best-effort; never block the commit */ }
+    try { delta = kbFidDelta() } catch (e) {
+      // Best-effort: never block the commit, but never fail silently either.
+      console.log('[clean-check] fid-delta computation failed (commit proceeds with plain message): ' + String(e.message || e).split('\n')[0])
+    }
+    if (delta === null) console.log('[clean-check] NOTE: auto-sync commit will have NO fid-delta body this run.')
     if (delta) {
       // Body via a temp -F file would be overkill; -m accepts multiline but
       // shell-quoting ids is fragile — write through git's message file instead.
