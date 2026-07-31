@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import HeroSearch from './HeroSearch'
@@ -200,10 +200,10 @@ const CSS = `
      comment on why this is not a repeat of the tap-outside-only pattern. */
   .fp-header-search-close {
     position: absolute;
-    top: -14px;
-    right: -14px;
-    width: 40px;
-    height: 40px;
+    top: -16px;
+    right: -16px;
+    width: 44px;
+    height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -225,13 +225,46 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
   const hasCrumbs = Boolean(crumbs && crumbs.length > 0)
   const [searchOpen, setSearchOpen] = useState(false)
 
+  // The overlay declares aria-modal="true", so it has to actually behave
+  // modally: Tab cycles within the dialog instead of escaping into the
+  // page behind the backdrop, and focus returns to the trigger on close
+  // (7/26 overlay audit — the declaration existed without the behavior).
+  const dialogRef = useRef<HTMLDivElement | null>(null)
+  const triggerRef = useRef<HTMLButtonElement | null>(null)
+
   // Escape closes it — same convention as the homepage takeover's own
-  // outside-click dismiss, plus a real keyboard path.
+  // outside-click dismiss, plus a real keyboard path. Tab is trapped here
+  // too so both handlers share one listener and one open/close lifecycle.
   useEffect(() => {
     if (!searchOpen) return
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setSearchOpen(false) }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setSearchOpen(false); return }
+      if (e.key !== 'Tab') return
+      const dialog = dialogRef.current
+      if (!dialog) return
+      const focusables = dialog.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      )
+      if (focusables.length === 0) return
+      const first = focusables[0]
+      const last = focusables[focusables.length - 1]
+      const active = document.activeElement
+      // Focus outside the dialog (or about to wrap) → pull it back in.
+      if (e.shiftKey) {
+        if (active === first || !dialog.contains(active)) { e.preventDefault(); last.focus() }
+      } else {
+        if (active === last || !dialog.contains(active)) { e.preventDefault(); first.focus() }
+      }
+    }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
+  }, [searchOpen])
+
+  // Focus restoration: whatever way the overlay closes, the keyboard user
+  // lands back on the button that opened it, not at document top.
+  useEffect(() => {
+    if (!searchOpen) return
+    return () => { triggerRef.current?.focus() }
   }, [searchOpen])
 
   // Scroll lock while open, released unconditionally on close/unmount —
@@ -278,6 +311,7 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
       <div className="fp-sitenav-actions">
         <button
           type="button"
+          ref={triggerRef}
           className="fp-sitenav-search-btn"
           aria-label="Search figures"
           aria-haspopup="dialog"
@@ -313,7 +347,7 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
           aria-label="Search figures"
           onMouseDown={(e) => { if (e.target === e.currentTarget) setSearchOpen(false) }}
         >
-          <div className="fp-header-search-panel">
+          <div className="fp-header-search-panel" ref={dialogRef}>
             <button
               type="button"
               className="fp-header-search-close"

@@ -128,8 +128,14 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
 
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current) }, [])
 
+  // Same gate as HeroSearch's isDesktopPointer(): fine pointer AND no touch
+  // capability at all. matchMedia alone passes hybrid (touch-screen laptop)
+  // devices, where a hover card can ambush a touch interaction — the exact
+  // gate shape the 7/25 search-takeover bug came from (7/26 overlay audit).
   function desktopPointer(): boolean {
-    return window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+    return hasFinePointer && !hasTouch
   }
 
   const anchorHandlers = {

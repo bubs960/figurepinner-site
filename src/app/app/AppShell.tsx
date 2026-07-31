@@ -30,6 +30,17 @@ export default function AppShell({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  // Body scroll lock while the mobile drawer is open (7/26 overlay audit —
+  // this was the one overlay in the app without it). Save/restore pattern
+  // copied from SiteHeader: released unconditionally however the drawer
+  // closes (Escape, overlay tap, X, route change, unmount).
+  useEffect(() => {
+    if (!sidebarOpen) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = prev }
+  }, [sidebarOpen])
+
   // The Vault wears the shelf design full-bleed (own nav, no sidebar) —
   // S22 port. Other /app surfaces keep the dashboard shell until ported.
   if (pathname?.startsWith('/app/vault')) {
@@ -133,8 +144,11 @@ function Sidebar({ open, onClose, isPro }: { open: boolean; onClose: () => void;
           onClick={onClose}
           style={{
             display: 'none',
+            // 44px min mobile tap target (7/26 overlay audit)
+            width: '44px', height: '44px', margin: '-10px -10px -10px 0',
+            alignItems: 'center', justifyContent: 'center',
             background: 'none', border: 'none', color: 'var(--muted)',
-            cursor: 'pointer', padding: '4px', borderRadius: '4px',
+            cursor: 'pointer', padding: 0, borderRadius: '8px',
           }}
           className="fp-sidebar-close"
           aria-label="Close menu"

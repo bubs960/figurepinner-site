@@ -555,8 +555,10 @@
 .inspectBack:hover { color: #eeeef5; }
 .inspectClose {
   position: absolute;
-  top: 12px; right: 12px;
-  width: 34px; height: 34px;
+  top: 8px; right: 8px;
+  /* 44px min mobile tap target (7/26 overlay audit — "x too small to hit"
+     was the original user report's literal text) */
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.16);

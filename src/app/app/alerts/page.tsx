@@ -160,6 +160,14 @@ function NewAlertModal({
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
 
+  // Escape closes, same as every other overlay in the app (7/26 overlay
+  // audit — this modal was the only one without it).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!name.trim()) { setError('Figure name is required'); return }
@@ -201,13 +209,16 @@ function NewAlertModal({
       display: 'flex', alignItems: 'center', justifyContent: 'center',
       zIndex: 100, padding: '1rem',
     }}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="fp-new-alert-title"
       onClick={e => { if (e.target === e.currentTarget) onClose() }}
     >
       <div style={{
         background: 'var(--s1)', border: '1px solid var(--border)', borderRadius: '12px',
         padding: '2rem', width: '100%', maxWidth: '440px',
       }}>
-        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', marginBottom: '1.5rem' }}>
+        <h2 id="fp-new-alert-title" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', letterSpacing: '0.04em', marginBottom: '1.5rem' }}>
           NEW DEAL ALERT
         </h2>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
