@@ -49,7 +49,7 @@ export default function WhatnotSellersPage() {
             marginBottom: '1.25rem',
             lineHeight: '1.1',
           }}>
-            WHATNOT SELLERS<br />WE TRUST.
+            WHATNOT SELLERS
           </h1>
           <p style={{ fontSize: '1.0625rem', color: 'var(--muted)', lineHeight: '1.75', maxWidth: '580px', marginBottom: '1.75rem' }}>
             Live action figure auctions and breaks — a few sellers worth watching.
