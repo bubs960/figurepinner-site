@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Bebas_Neue, Inter, Cinzel } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { GENRE_TAXONOMY } from '@/data/genre-lines'
 import Footer from './components/Footer'
 import FunnelTracker from './_components/FunnelTracker'
 import CfBeacon from './_components/CfBeacon'
@@ -78,7 +79,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FigurePinner — Action Figure Price Intelligence',
-    description: `Real sold prices for ${TOTAL_FIGURES_LABEL} action figures across 16 genres.`,
+    description: `Real sold prices for ${TOTAL_FIGURES_LABEL} action figures across ${GENRE_TAXONOMY.length} genres.`,
     // Twitter card image auto-pulled from opengraph-image.tsx
   },
   robots: {
