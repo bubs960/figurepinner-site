@@ -490,7 +490,22 @@ async function checkSitemapPrefixCensus(localChildren) {
     //       /dungeons-dragons/<line>/<slug> twin URLs, zero canonical churn.
     //     - genreSlugForFandom('generic-fantasy') still identity-falls-back,
     //       so figure/line/character canonicals are untouched by design.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons'])
+    // 'gargoyles' = 22 fids reclassified out of 'generic-fantasy' into their own
+    //   fandom (2026-08-01, matcher retag, Steve-ratified 7/31 own-fandom
+    //   ruling; MATCHER-TO-WEB-GENERIC-FANTASY-27-RETAG-APPLIED-2026-08-01.md).
+    //   Unlike 'neca'/'dungeons-dragons' (single hub URL grafted onto an
+    //   existing namespace), this is a genuine full section — its own hub,
+    //   line, and character URLs — because it is a clean fandom CUTOVER, not
+    //   an addition alongside old URLs. Verified before adding this entry:
+    //     - getFiguresByFandom('gargoyles').length === 22,
+    //       getFiguresByFandom('generic-fantasy').length === 114 (141 - 27,
+    //       matches matcher's retag note), zero fid overlap between the two.
+    //     - generic-fantasy.xml (the OLD fandom's sitemap child) contains
+    //       ZERO '/gargoyles/' URLs and zero 'goliath' (a retagged character) —
+    //       the 22 figures' old URLs are gone, not duplicated.
+    //   Same guard as always: if a future change ever splits /gargoyles across
+    //   two sitemap children, the child-purity check above still catches it.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
