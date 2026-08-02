@@ -3,11 +3,11 @@ import SiteHeader from '@/app/components/SiteHeader'
 import { WHATNOT_SELLERS, WHATNOT_INVITE } from './_data/sellers'
 
 export const metadata: Metadata = {
-  title: 'Whatnot Sellers We Trust — Live Action Figure Auctions',
+  title: 'Whatnot Sellers — Live Action Figure Auctions',
   description: 'Whatnot sellers worth watching for live action figure auctions and breaks — plus how to join Whatnot yourself.',
   alternates: { canonical: 'https://figurepinner.com/whatnot' },
   openGraph: {
-    title: 'Whatnot Sellers We Trust',
+    title: 'Whatnot Sellers',
     description: 'Live action figure auctions and breaks — a few sellers worth watching.',
     url: 'https://figurepinner.com/whatnot',
   },
