@@ -124,7 +124,15 @@ const nextConfig: NextConfig = {
       { source: '/checklists', destination: '/guides', permanent: true },
     ]
 
-    return [...legacyLineRedirects, ...checklistRedirects]
+    // Guide-slug rename (webaudit A1, 2026-08-02): Bing already ranks and sends
+    // clicks to the old slug, which 404s live — same intent, so redirect rather
+    // than orphan the earned ranking. See articles.ts id-15 comment + the linked
+    // relay note there for the full evidence chain.
+    const guideRenameRedirects = [
+      { source: '/guides/condition-grading-for-collectors', destination: '/guides/how-action-figure-conditions-are-graded', permanent: true },
+    ]
+
+    return [...legacyLineRedirects, ...checklistRedirects, ...guideRenameRedirects]
   },
 
   // /sitemap.xml → the sitemapindex route handler (S55, 2026-07-03). The

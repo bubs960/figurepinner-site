@@ -950,8 +950,12 @@ export const ARTICLES: Article[] = [
     },
   
     // ─── id 15 ───────────────────────────────────────────────────────────────────
+    // Renamed 2026-08-02 from 'condition-grading-for-collectors' (webaudit A1: Bing
+    // was earning clicks at 'how-action-figure-conditions-are-graded', a 404 today --
+    // same intent, so this is a rename not a new article). 301 old -> new in
+    // next.config.ts. See WEBAUDIT-TO-WEB-GUIDES-404-MAP-BING-EARNING-2026-08-02.md.
     {
-      slug: 'condition-grading-for-collectors',
+      slug: 'how-action-figure-conditions-are-graded',
       title: 'Grading and Condition: What Collectors Actually Care About',
       metaTitle: 'Action Figure Condition Grading Guide for Collectors | FigurePinner',
       metaDescription:
@@ -2502,6 +2506,135 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'The honest limit here' },
       { type: 'p', text: 'FigurePinner\'s sold data comes from eBay, not from Whatnot\'s own closed shows, so a figure that trades mostly on Whatnot may show thinner eBay comps than its real live-auction demand. Treat a thin eBay comp set on a Whatnot-heavy figure as a floor, not the whole picture, and set your ceiling a little looser than you would for a figure that trades everywhere.' },
       { type: 'p', text: '[[Pull the real sold median for anything on your watchlist|/]] before the next stream starts, and decide your ceiling in a quiet room, not a live one with someone else\'s excitement in your ear.' },
+    ],
+  },
+
+  // ─── Bing-earning orphan recovery, 2026-08-02 (webaudit A1 map) ──────────────────────────
+  {
+    slug: 'afa-grading-action-figures-worth-it',
+    title: 'Is AFA Grading Worth It? When to Pay, When to Skip It',
+    metaTitle: 'Is AFA Grading Worth It for Action Figures? | FigurePinner',
+    metaDescription:
+      'AFA grading costs real money and takes real time. Here is when the premium it adds is worth paying for, and the much larger set of figures where it is a waste.',
+    dek: 'A grading fee is a bet that the market pays more for a plastic slab than a sealed box. That bet only wins on specific figures.',
+    readingMinutes: 6,
+    updated: '2026-08-02',
+    body: [
+      { type: 'p', text: 'AFA (Action Figure Authority) will grade a sealed or carded figure, seal it in a hard plastic case, and put a number on it — usually 10 to 100, occasionally with qualifiers like Archival or Uncirculated. That number costs money to get, takes weeks to months depending on the service tier, and permanently locks the figure inside the case. Before any of that happens, it is worth asking the only question that actually matters: does grading make the figure worth more than it already was?' },
+      { type: 'p', text: 'The honest answer is that grading helps a specific, narrow slice of the hobby and does very little for the rest of it. Knowing which slice you are in saves you a real amount of money.' },
+
+      { type: 'h2', text: 'What grading actually does' },
+      { type: 'p', text: 'A numeric AFA grade does two things for a buyer that raw condition claims cannot: it standardizes the assessment (a third party looked at this specific figure, not just the seller\'s word), and it locks the item so the grade cannot degrade between the sale and the buyer\'s hands. For a sealed vintage figure changing hands for real money, both of those are worth something to a buyer who was never going to inspect the item in person anyway.' },
+      { type: 'p', text: 'What grading does not do is create value out of nothing. A common figure with a mountain of surviving sealed stock does not become scarce because it is in a graded case. The case adds a service fee and a standardized condition claim on top of whatever the figure was already worth. If the figure was not worth much sealed, it is still not worth much sealed-and-graded, minus the grading fee.' },
+      { type: 'callout', text: 'The grading fee is not optional context, it is a real cost that has to clear before the figure is ahead. Standard-tier services commonly run somewhere in the $15 to $30 range per item depending on declared value and turnaround, with premium/expedited tiers costing meaningfully more. That has to come out of the sale price before grading was worth doing.' },
+
+      { type: 'h2', text: 'When grading is worth it' },
+      { type: 'ul', items: [
+        'Genuine vintage scarcity — figures where the surviving sealed population is small and shrinking (people open the rest over time), and where the ungraded sealed comps already sell for real money. Grading a figure like this adds buyer confidence to an already-thin, already-valuable market.',
+        'Grail-tier pieces you plan to sell, not display — if the entire point of owning the figure is eventual resale rather than looking at it on a shelf, a graded case is a selling tool. It removes the buyer\'s biggest objection (how do I know this is really sealed and undamaged) at the cost of the fee.',
+        'High first-print or short-run releases with a documented collector premium — where the community already treats a graded example as the reference point for what "top condition" means for that specific release.',
+        'Anything you are buying already graded at a fair spread over raw — if the graded premium in the market already exceeds what regrading or buying raw-and-grading yourself would cost, buying pre-graded from a reputable service is often the more efficient path.',
+      ]},
+
+      { type: 'h2', text: 'When it is a waste' },
+      { type: 'p', text: 'Most modern retail figures are the wrong candidate. Anything still on shelves, anything with an active reissue or re-release, and anything where sealed examples are common rather than scarce will not clear the fee in added value. A modern mainline figure that sells sealed for $25 raw is not going to sell for meaningfully more graded — the case just adds a cost floor the buyer has to pay past, and most buyers of a $25 figure are not shopping in the graded-collectible market at all.' },
+      { type: 'p', text: 'It is also a poor fit for anything you intend to open. Grading is a one-way door — a graded case is meant to stay sealed, and cracking it out to display or play with the figure destroys the thing you paid for. If there is any real chance you will want the figure out of the package eventually, do not grade it first.' },
+      { type: 'callout', text: 'Before paying a grading fee on anything, check the sold comps for that exact figure already graded — most grading services\' population reports or completed eBay listings will show you whether graded examples of that release actually command a premium over raw sealed. If they do not, the fee buys you a nicer-looking box and nothing else.' },
+
+      { type: 'h2', text: 'The test to run before you send anything in' },
+      { type: 'p', text: 'Pull the real sold comps for the figure raw-and-sealed, then pull comps for the same figure already graded at a comparable grade tier. If the graded premium clearly exceeds the grading fee plus turnaround risk, it is worth doing. If the two numbers are close, or if you cannot find enough graded comps to know, treat that thin data as its own answer — a market too small to price reliably is not a market you should be paying a fee to enter.' },
+      { type: 'p', text: '[[Look up any figure\'s real sold history|/]] before you decide whether it is a grading candidate. The comps will tell you far more honestly than a case with a number on it ever will.' },
+    ],
+  },
+
+  {
+    slug: 'most-valuable-wrestling-action-figures',
+    title: 'The Most Valuable Wrestling Action Figures — Across Every Era',
+    metaTitle: 'Most Valuable Wrestling Action Figures Ever Made | FigurePinner',
+    metaDescription:
+      'From vintage LJN rubber figures to modern Mattel Elite exclusives, here is what actually drives the highest wrestling figure prices — and the pattern behind every one of them.',
+    dek: 'Different eras, different companies, same rule: the figures that carry the most money are the ones that got made the least.',
+    readingMinutes: 7,
+    updated: '2026-08-02',
+    body: [
+      { type: 'p', text: 'Ask ten wrestling figure collectors which figures are the "most valuable" and you will get ten different answers, because the question spans four decades, at least five major manufacturers, and collecting cultures that barely overlap. A vintage LJN buyer and a modern Mattel Elite chase-variant hunter are not competing for the same plastic, and the two markets do not move together.' },
+      { type: 'p', text: 'What ties every high-value wrestling figure together, across every era, is not fame. It is the same rule that governs value in every collecting category: the figures worth the most are the ones where demand outran supply, permanently. Here is where that shows up.' },
+
+      { type: 'h2', text: 'Vintage LJN (1984–1989) — the category vintage collectors chase first' },
+      { type: 'p', text: 'LJN\'s rubber WWF Wrestling Superstars line is the foundation of the entire hobby\'s high end. These figures are 40 years old, made of a soft rubber compound that degrades — cracks, splits, loses paint — in a way modern plastic does not, and the surviving clean, complete population shrinks every year regardless of how many collectors want one. That combination — genuine age, genuine material fragility, and a fixed original print run that will never be added to — is the textbook scarcity case. The rarest characters and the cleanest surviving examples, especially with original accessories and belts, are where the vintage market\'s real money lives.' },
+      { type: 'h2', text: 'Jakks Classic Superstars and the bridge era (1996–2010)' },
+      { type: 'p', text: 'The Jakks era produced figures for a much wider character pool than LJN ever attempted — mid-card and tag-team wrestlers who never got a vintage figure at all sometimes only exist from this era. That matters because a character with exactly one figure made of them, even a mid-card name, can out-price a modern figure of a bigger star for the simple reason that collectors chasing that specific character have exactly one option and nowhere else to look.' },
+      { type: 'h2', text: 'Modern Mattel Elite chase variants and exclusives' },
+      { type: 'p', text: 'The active market has its own version of the same rule. Mattel\'s Elite line runs mainline releases in high volume, but chase variants — short-packed alternate paint or attire versions within a case — and true retail exclusives (convention-only, single-retailer, WrestleMania Axxess) are deliberately produced in smaller numbers. A chase figure that packed roughly one-in-six in a case, or an exclusive limited to a specific event\'s attendance, is the modern equivalent of the vintage scarcity story, just compressed into months instead of decades.' },
+      { type: 'callout', text: 'The word "rare" gets attached to almost every wrestling figure listing regardless of whether it is true. The real signal is not the seller\'s language, it is sales frequency in the actual sold data. A figure with a thin, consistent sold history over months is genuinely scarce. A figure that never appears in sold listings at all might be scarce, or might simply be a figure nobody wants — those look identical until you check demand separately from supply.' },
+
+      { type: 'h2', text: 'Why fame is the weakest predictor' },
+      { type: 'p', text: 'The single biggest mistake new collectors make is assuming the biggest star has the most valuable figure. It is almost always backwards. A wrestler who headlined for decades — Hogan, Cena, Undertaker — got figures in nearly every wave of nearly every line for years, and that volume is exactly why their common mainline releases trade cheap. The companies made money printing them precisely because demand was high enough to support enormous supply, and enormous supply is the one thing that keeps a price down no matter how famous the name is.' },
+      { type: 'p', text: 'The wrestlers whose figures carry real money tend to be the opposite case: short-tenured, cult-followed, or from an era or company that only ran one or two waves before the license changed or the company folded. Scarcity, not stardom, is the variable that decides the price.' },
+
+      { type: 'h2', text: 'How to actually check before you buy or sell' },
+      { type: 'p', text: 'None of the above is a substitute for pulling the actual sold comps on the specific figure you have or want. Era, manufacturer, and character explain why a figure tends to be valuable or common, but the real number comes from what buyers actually paid recently, in the condition you are looking at. [[Look up any wrestling figure\'s real sold history|/wrestling]] before you assume a name is worth what its fame suggests — the data settles it either way.' },
+    ],
+  },
+
+  {
+    slug: 'most-valuable-action-force-figures',
+    title: 'The Most Valuable Action Force Figures — Palitoy\'s UK G.I. Joe',
+    metaTitle: 'Most Valuable Action Force Figures | FigurePinner',
+    metaDescription:
+      'Action Force was Palitoy\'s UK line built on the same 3.75-inch scale as G.I. Joe, with its own exclusive characters. Here is what actually drives value across the vintage and modern lines.',
+    dek: 'Same scale as G.I. Joe, same era of demand — but a smaller, UK-specific print run that makes scarcity a different equation entirely.',
+    readingMinutes: 6,
+    updated: '2026-08-02',
+    body: [
+      { type: 'p', text: 'Action Force is Palitoy\'s UK-market answer to the same 3.75-inch small-scale military-action-figure format that Hasbro built G.I. Joe: A Real American Hero around in the US. The original 1980s Palitoy line shared some tooling and characters with G.I. Joe but also ran its own exclusive figures never sold in the American market, and a more recent Valaverse-led revival has restarted the name for a modern collector audience. Both eras have their own distinct value drivers, and they do not track each other.' },
+
+      { type: 'h2', text: 'The vintage Palitoy line (1980s)' },
+      { type: 'p', text: 'The original UK Action Force line ran on a smaller, regionally-limited print scale than its US G.I. Joe counterpart — the entire toy market it sold into was one country instead of the US\'s much larger retail footprint. That alone means fewer of every figure exist today than the equivalent-era G.I. Joe release, before any character-specific scarcity is even considered.' },
+      { type: 'ul', items: [
+        'UK-exclusive characters carry the real premium — figures that were never released as part of the mainline US G.I. Joe catalog and only existed in the Palitoy line are the ones vintage UK-market collectors specifically hunt, because there is no substitute figure to chase instead.',
+        'Card and packaging survival is a bigger factor than for G.I. Joe — UK carded vintage figures are scarcer in high grade than their US counterparts simply because fewer were produced and fewer collectors preserved them at the time.',
+        'Vehicles and larger playsets follow the same rule at a steeper angle — bulkier items have a lower survival rate than individual carded figures, and complete, working examples with all original accessories are meaningfully harder to find than the figures themselves.',
+      ]},
+      { type: 'callout', text: 'A figure being "the UK version" of a G.I. Joe character is not automatically worth more — plenty of shared-tooling figures are common in both markets. The premium belongs specifically to the figures and characters that were unique to Action Force and never had a direct US release.' },
+
+      { type: 'h2', text: 'The modern Valaverse revival' },
+      { type: 'p', text: 'The relaunched Action Force line targets today\'s premium collector-figure market — higher articulation counts, more detailed sculpting, and a release cadence built around crowdfunding and limited convention drops rather than mass retail. That production model creates its own scarcity mechanics: early crowdfunded releases, convention exclusives, and low-print-run character variants can carry real secondary-market premiums almost immediately after release, well before any vintage-style aging effect comes into play.' },
+      { type: 'p', text: 'The modern and vintage lines are effectively separate collecting hobbies wearing the same name. A vintage-focused UK collector and a modern Valaverse backer are not chasing the same shelf, and a figure\'s value in one line says nothing about value in the other.' },
+
+      { type: 'h2', text: 'What actually moves the number' },
+      { type: 'p', text: 'As with every collecting category on this site, the pattern is the same one regardless of era: exclusivity to a specific market or release, low surviving population, and genuine collector demand for that specific character or variant. Fame of the underlying character concept helps far less than whether that exact figure was made in a small run and stayed that way.' },
+      { type: 'p', text: '[[Check the real sold history for any Action Force figure|/action-force]] before pricing one — vintage UK exclusives and modern limited variants both trade in genuinely thin markets where a guess and a real comp can be far apart.' },
+    ],
+  },
+
+  {
+    slug: 'most-valuable-g1-transformers',
+    title: 'The Most Valuable G1 Transformers — What Actually Carries the Money',
+    metaTitle: 'Most Valuable G1 Transformers Figures | FigurePinner',
+    metaDescription:
+      'G1 Transformers span mainline Hasbro releases, mail-away exclusives, and figures that only existed for one region or one catalog year. Here is what actually separates the common from the grail.',
+    dek: 'The original 1984–1990 run is where Transformers collecting started — and where the widest gap between common and grail still lives.',
+    readingMinutes: 7,
+    updated: '2026-08-02',
+    body: [
+      { type: 'p', text: 'G1 — Generation 1, the original 1984 through 1990 Hasbro run — is the source material every later Transformers line (Masterpiece, Studio Series, Generations) is either reissuing, reimagining, or paying tribute to. It is also where the collecting market\'s widest value spread lives, because a single toy line running for six years across an era before the internet standardized information produced enormous variance in what actually survived in good shape.' },
+
+      { type: 'h2', text: 'Mail-away and catalog exclusives — the top of the market' },
+      { type: 'p', text: 'The G1 line\'s highest-value pieces are overwhelmingly the ones that were never available on a standard retail shelf at all. Mail-away premiums that required cutting proof-of-purchase seals and sending them in with a check, and figures sold only through specific retailer catalogs for one holiday season, had print runs governed by how many people actually completed the redemption process rather than how many the factory could sell. That is a fundamentally smaller and less predictable number than any mainline retail release, and it is the single biggest reason certain G1 figures command prices far above anything else in the line.' },
+      { type: 'h2', text: 'Early-year mainline figures in genuinely complete condition' },
+      { type: 'p', text: 'G1 predates the modern collecting habit of buying a second example specifically to keep sealed. Most G1 figures that exist today were bought to be played with by a child, and small accessories — guns, Nebulon-style attaching heads, rub-sign stickers, tech specs — are exactly the parts that get lost first. A genuinely complete example of an early-catalog-year figure, with every original small part present and the stickers not aged out, is scarcer than the character\'s fame alone would suggest, simply because completeness did not survive childhood.' },
+      { type: 'h2', text: 'Regional exclusives and short international runs' },
+      { type: 'p', text: 'Not every G1 figure sold in every market, and some releases were regionally limited to Japan, Europe, or specific years within a single territory. A figure that never had a wide US retail release is scarcer by default to the much larger pool of US-based collectors, the same dynamic that drives value in the vintage Action Force line relative to mainline G.I. Joe.' },
+      { type: 'ul', items: [
+        'Larger, more mechanically complex figures had a lower survival rate — more moving parts and more play-stress points means more that could break, and broken examples do not command grail prices regardless of the character.',
+        'Original packaging survival is scarcer for G1 than almost any later line — vintage 1980s cardboard and blister packaging from a toy bought to be opened does not survive at the same rate collector-market toys from later decades do.',
+        'Character prominence in the original cartoon still matters at the margin — an obscure figure with genuine print-run scarcity and zero name recognition has a real but smaller ceiling than a recognizable character with the same scarcity, because demand is part of the equation too, not just supply.',
+      ]},
+      { type: 'callout', text: 'A common trap: assuming every G1 figure is automatically valuable because the line is 40 years old. Age alone is not scarcity. Plenty of mainline G1 figures from the line\'s biggest sales years are genuinely common in loose condition and trade for modest sums — the grails are a specific, identifiable subset, not the whole catalog.' },
+
+      { type: 'h2', text: 'Checking before you buy or sell' },
+      { type: 'p', text: 'G1\'s combination of age, small original parts, and genuinely rare exclusives makes it one of the categories where the gap between an asking price and a real sold comp can be largest. [[Look up any G1 Transformers figure\'s real sold history|/transformers/g1]] before assuming a name or an "exclusive" label in a listing title means what it says — the sold data is the only honest check.' },
     ],
   },
 ]
