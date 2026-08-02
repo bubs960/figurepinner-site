@@ -60,4 +60,5 @@ export const WHATNOT_INVITE = {
   handle: 'bubs960',
   profileUrl: 'https://www.whatnot.com/user/bubs960',
   inviteUrl: 'https://www.whatnot.com/invite/bubs960',
+  photoUrl: 'https://images.whatnot.com/eyJidWNrZXQiOiAid2hhdG5vdC1pbWFnZXMiLCAia2V5IjogInVzZXJzLzkxNzM3Mi9kNzkxZmIzZi0xNjYwLTRhM2ItYTAxNS0zYTczOWY3ODQ2ZjguanBlZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDI1MCwgImhlaWdodCI6IG51bGwsICJmaXQiOiAiY29udGFpbiIsICJiYWNrZ3JvdW5kIjogeyJyIjogMjU1LCAiZyI6IDI1NSwgImIiOiAyNTUsICJhbHBoYSI6IDF9fX19?signature=73d6bc70302b9206c114daedb6774b4680dcef026700a42a82f454bb13cf5dde',
 }

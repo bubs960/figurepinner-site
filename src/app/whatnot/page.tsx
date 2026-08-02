@@ -54,7 +54,18 @@ export default function WhatnotSellersPage() {
           <p style={{ fontSize: '1.0625rem', color: 'var(--muted)', lineHeight: '1.75', maxWidth: '580px', marginBottom: '1.75rem' }}>
             Live action figure auctions and breaks — a few sellers worth watching.
           </p>
-          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element -- raw <img> throughout this app, unoptimized:true in next.config.ts */}
+            <img
+              src={WHATNOT_INVITE.photoUrl}
+              alt={WHATNOT_INVITE.handle}
+              width={40}
+              height={40}
+              style={{
+                flexShrink: 0, width: '40px', height: '40px', borderRadius: '50%',
+                objectFit: 'cover', background: 'var(--s2)', border: '1px solid var(--border)',
+              }}
+            />
             <a
               href={trackedWhatnotUrl(WHATNOT_INVITE.inviteUrl, 'whatnot-page-invite')}
               target="_blank"
