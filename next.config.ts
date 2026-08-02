@@ -173,7 +173,7 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.highperformanceformat.com https://*.effectivecpmnetwork.com https://static.cloudflareinsights.com https://clerk.figurepinner.com",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https://cdn.shopify.com https://bubs960collectibles.myshopify.com https://actionfigure411.com https://*.actionfigure411.com https://img.clerk.com https://pagead2.googlesyndication.com",
+              "img-src 'self' data: https://cdn.shopify.com https://bubs960collectibles.myshopify.com https://actionfigure411.com https://*.actionfigure411.com https://img.clerk.com https://pagead2.googlesyndication.com https://images.whatnot.com",
               "font-src 'self' data:",
               "connect-src 'self' https://figurepinner-api.bubs960.workers.dev https://clerk.figurepinner.com https://static.cloudflareinsights.com https://cloudflareinsights.com",
               "frame-src 'self' https://clerk.figurepinner.com https://*.effectivecpmnetwork.com https://www.highperformanceformat.com",

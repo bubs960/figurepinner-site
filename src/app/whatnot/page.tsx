@@ -4,11 +4,11 @@ import { WHATNOT_SELLERS, WHATNOT_INVITE } from './_data/sellers'
 
 export const metadata: Metadata = {
   title: 'Whatnot Sellers We Trust — Live Action Figure Auctions',
-  description: 'A permission-first list of Whatnot sellers FigurePinner collectors watch for live action figure auctions and breaks — plus how to join Whatnot yourself.',
+  description: 'Whatnot sellers worth watching for live action figure auctions and breaks — plus how to join Whatnot yourself.',
   alternates: { canonical: 'https://figurepinner.com/whatnot' },
   openGraph: {
     title: 'Whatnot Sellers We Trust',
-    description: 'Live action figure auctions and breaks, sold by sellers FigurePinner has vetted directly.',
+    description: 'Live action figure auctions and breaks — a few sellers worth watching.',
     url: 'https://figurepinner.com/whatnot',
   },
 }
@@ -52,9 +52,7 @@ export default function WhatnotSellersPage() {
             WHATNOT SELLERS<br />WE TRUST.
           </h1>
           <p style={{ fontSize: '1.0625rem', color: 'var(--muted)', lineHeight: '1.75', maxWidth: '580px', marginBottom: '1.75rem' }}>
-            Live auctions and breaks move fast, and not every seller is worth your time.
-            Here are the ones FigurePinner has vetted directly — sellers we watch, buy from,
-            and are comfortable pointing collectors toward.
+            Live action figure auctions and breaks — a few sellers worth watching.
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
             <a
@@ -78,13 +76,9 @@ export default function WhatnotSellersPage() {
 
         {/* Seller list */}
         <section style={{ maxWidth: '760px', margin: '0 auto', padding: '3rem 1.5rem 5rem' }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '0.75rem' }}>
-            APPROVED SELLERS
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', letterSpacing: '0.04em', marginBottom: '1.75rem' }}>
+            FEATURED SELLERS
           </h2>
-          <p style={{ color: 'var(--muted)', fontSize: '0.9375rem', lineHeight: '1.75', marginBottom: '1.75rem' }}>
-            Every seller listed here gave permission to be featured before we linked to them.
-            This list grows slowly and on purpose.
-          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '0.875rem' }}>
             {WHATNOT_SELLERS.map(seller => (
               <a
@@ -100,14 +94,17 @@ export default function WhatnotSellersPage() {
                   transition: 'border-color 0.15s',
                 }}
               >
-                <div style={{
-                  flexShrink: 0, width: '36px', height: '36px', borderRadius: '50%',
-                  background: 'var(--s2)', border: '1px solid var(--border)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontFamily: 'var(--font-display)', fontSize: '0.9rem', color: 'var(--blue)',
-                }}>
-                  {seller.handle.charAt(0).toUpperCase()}
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element -- raw <img> throughout this app, unoptimized:true in next.config.ts. No onError fallback: this is a Server Component and event handlers can't cross to client-rendered img props here. */}
+                <img
+                  src={seller.photoUrl}
+                  alt={seller.handle}
+                  width={36}
+                  height={36}
+                  style={{
+                    flexShrink: 0, width: '36px', height: '36px', borderRadius: '50%',
+                    objectFit: 'cover', background: 'var(--s2)', border: '1px solid var(--border)',
+                  }}
+                />
                 <div style={{ minWidth: 0 }}>
                   <div style={{ fontWeight: '600', fontSize: '0.9375rem', color: 'var(--fp-text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                     @{seller.handle}
