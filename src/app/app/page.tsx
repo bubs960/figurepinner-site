@@ -360,4 +360,5 @@ const GENRES = [
   // D&D omitted — no figures in KB yet (excluded 2026-06-06); re-add when ingested.
   { slug: 'neca', label: 'Horror & Film' },
   { slug: 'spawn', label: 'Spawn' },
+  { slug: 'gargoyles', label: 'Gargoyles' }, // added 2026-08-02, matcher 8/1 retag
 ]

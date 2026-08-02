@@ -68,6 +68,10 @@ const GENRE_UI: Array<{ slug: string; name: string; accent: string }> = [
   // (figures live in the mixed `generic-fantasy` bucket). Restore once the
   // KB tags D&D properly. See WEB-W3 relay.
   { slug: 'spawn',                        name: 'Spawn',          accent: '#37474F' },
+  // Added 2026-08-02: matcher's 8/1 retag split 22 NECA figures into their own
+  // 'gargoyles' fandom (Steve's 7/31 own-fandom ruling). Identity slug, no
+  // UI_SLUG_TO_FANDOM remap needed — see genreFigures.ts GENRE_HUB_LABELS.
+  { slug: 'gargoyles',                    name: 'Gargoyles',      accent: '#4E342E' },
 ]
 
 type Editorial = Partial<Pick<LineTile, 'name' | 'years' | 'badge' | 'desc'>> & {

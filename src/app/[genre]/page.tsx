@@ -103,6 +103,11 @@ const GENRE_META: Record<string, { label: string; title: string; description: st
     title: 'Spawn Figure Price Guide — McFarlane Toys Series 1–40',
     description: 'Spawn action figure price guide. Real eBay sold prices for McFarlane Toys Spawn series from Series 1 through modern releases. Updated daily.',
   },
+  'gargoyles': {
+    label: 'Gargoyles',
+    title: 'Gargoyles Figure Price Guide — NECA & More',
+    description: 'Gargoyles action figure price guide. Real eBay sold prices for NECA Gargoyles figures. Updated daily.',
+  },
 }
 
 // force-static is the load-bearing half of this pair on a dynamic segment

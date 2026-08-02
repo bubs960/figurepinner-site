@@ -65,6 +65,10 @@ const GENRES = [
   { slug: 'generic-fantasy',            name: 'Fantasy',           accent: '#5E35B1' },
   { slug: 'neca',                       name: 'NECA',              accent: '#37474F' },
   { slug: 'spawn',                      name: 'Spawn',             accent: '#212121' },
+  // Added 2026-08-02: matcher's 8/1 retag split 22 NECA Gargoyles figures into
+  // their own 'gargoyles' fandom (Steve's 7/31 ruling). Raw fandom slug already
+  // equals the pill slug — no rollup needed (same as 'generic-fantasy').
+  { slug: 'gargoyles',                  name: 'Gargoyles',         accent: '#4E342E' },
 ] as const
 
 type GenreSlug = typeof GENRES[number]['slug']

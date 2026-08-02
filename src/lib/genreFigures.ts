@@ -99,6 +99,12 @@ export const GENRE_HUB_LABELS: Readonly<Record<string, string>> = {
   'dungeons-dragons': 'Dungeons & Dragons',
   'neca': 'Horror & Film',
   'spawn': 'Spawn',
+  // Added 2026-08-02: matcher's 27-fid generic-fantasy retag (8/1) split 22
+  // Gargoyles fids into their own 'gargoyles' fandom per Steve's 7/31 ruling.
+  // Fandom slug already IS the genre slug (identity fallback in kbTypes.ts,
+  // same pattern as most non-remapped fandoms) — no SLUG_TO_FANDOM entry
+  // needed. See MATCHER-TO-WEB-GENERIC-FANTASY-27-RETAG-APPLIED-2026-08-01.md.
+  'gargoyles': 'Gargoyles',
 }
 
 // Derived, not a second hand-maintained list: a slug is a hub iff it has a
