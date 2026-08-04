@@ -51,6 +51,16 @@ export const WHATNOT_SELLERS: WhatnotSeller[] = [
     profileUrl: 'https://www.whatnot.com/user/lillysinc',
     photoUrl: 'https://images.whatnot.com/eyJidWNrZXQiOiAid2hhdG5vdC1pbWFnZXMiLCAia2V5IjogInVzZXJzLzQ0NjMxMTA4LzViOWIwYjhlLTg3MmYtNDM1NS1iNjRmLTNkZjU0NzVmODFkYi5qcGVnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogMjUwLCAiaGVpZ2h0IjogbnVsbCwgImZpdCI6ICJjb250YWluIiwgImJhY2tncm91bmQiOiB7InIiOiAyNTUsICJnIjogMjU1LCAiYiI6IDI1NSwgImFscGhhIjogMX19fX0=?signature=3db305631115a92fd2cb89068f60c1495a01a2857d0da78dad2f88f74d26959e',
   },
+  {
+    handle: 'dakotascollection',
+    profileUrl: 'https://www.whatnot.com/user/dakotascollection',
+    photoUrl: 'https://images.whatnot.com/eyJidWNrZXQiOiAid2hhdG5vdC1pbWFnZXMiLCAia2V5IjogInVzZXJzLzI5NTY0MjI4LzMyMTlhNmIyLWFkZTEtNDE2Yi04NzExLTY2YTZkOWY3ZTllNS5qcGVnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogMjUwLCAiaGVpZ2h0IjogbnVsbCwgImZpdCI6ICJjb250YWluIiwgImJhY2tncm91bmQiOiB7InIiOiAyNTUsICJnIjogMjU1LCAiYiI6IDI1NSwgImFscGhhIjogMX19fX0=?signature=1ef8d284e65e9e9ce7042c3a1b4298327bd7feef22c011bb52d5fc635072565a',
+  },
+  {
+    handle: '_twc_',
+    profileUrl: 'https://www.whatnot.com/user/_twc_',
+    photoUrl: 'https://images.whatnot.com/eyJidWNrZXQiOiAid2hhdG5vdC1pbWFnZXMiLCAia2V5IjogInVzZXJzLzQ1Njg1MDcvYTlhZWY4ZDAtYTA5OC00ZGE4LWI1YmItYzgyZWIzNWQzNzliLmpwZWciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiAyNTAsICJoZWlnaHQiOiBudWxsLCAiZml0IjogImNvbnRhaW4iLCAiYmFja2dyb3VuZCI6IHsiciI6IDI1NSwgImciOiAyNTUsICJiIjogMjU1LCAiYWxwaGEiOiAxfX19fQ==?signature=17ed9b1dab3f4f07b42b630372785efc058025a7e042450544a67158cf5c84fc',
+  },
 ]
 
 // Steve's own Whatnot profile + referral invite — separate CTA, not part of
