@@ -61,6 +61,11 @@ export const WHATNOT_SELLERS: WhatnotSeller[] = [
     profileUrl: 'https://www.whatnot.com/user/_twc_',
     photoUrl: 'https://images.whatnot.com/eyJidWNrZXQiOiAid2hhdG5vdC1pbWFnZXMiLCAia2V5IjogInVzZXJzLzQ1Njg1MDcvYTlhZWY4ZDAtYTA5OC00ZGE4LWI1YmItYzgyZWIzNWQzNzliLmpwZWciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiAyNTAsICJoZWlnaHQiOiBudWxsLCAiZml0IjogImNvbnRhaW4iLCAiYmFja2dyb3VuZCI6IHsiciI6IDI1NSwgImciOiAyNTUsICJiIjogMjU1LCAiYWxwaGEiOiAxfX19fQ==?signature=17ed9b1dab3f4f07b42b630372785efc058025a7e042450544a67158cf5c84fc',
   },
+  {
+    handle: 'mrmcmahon',
+    profileUrl: 'https://www.whatnot.com/user/mrmcmahon',
+    photoUrl: 'https://images.whatnot.com/eyJidWNrZXQiOiAid2hhdG5vdC1pbWFnZXMiLCAia2V5IjogInVzZXJzLzU0NTMwMTkwL2YyMTkzZTMyLWQ0ZjctNGI2Yy05ODA0LTA2ZDc4MzM1NWUxOC5qcGVnIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogMjUwLCAiaGVpZ2h0IjogbnVsbCwgImZpdCI6ICJjb250YWluIiwgImJhY2tncm91bmQiOiB7InIiOiAyNTUsICJnIjogMjU1LCAiYiI6IDI1NSwgImFscGhhIjogMX19fX0=?signature=57a33d74f003456faabe00bd2b19e674b50c486a2ddfa52a36dcaed450fad5e8',
+  },
 ]
 
 // Steve's own Whatnot profile + referral invite — separate CTA, not part of
