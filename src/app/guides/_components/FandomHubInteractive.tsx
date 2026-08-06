@@ -16,6 +16,17 @@
 
 import { useState, useMemo } from 'react'
 
+// 2026-08-06 preventive fix (same root cause as the figure-page #418 bug,
+// see project_web_status_log.md and figureFormatters.ts's formatDate): this
+// is a 'use client' component, so it re-executes on hydration, and
+// toLocaleDateString('en-US', {month:'short', day:'numeric'}) is exactly the
+// call that produced a different string on Cloudflare Workers' V8/ICU build
+// than on the browser's. A hardcoded month table sidesteps ICU entirely.
+const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+function formatShortDate(d: Date): string {
+  return `${SHORT_MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`
+}
+
 export type TopComp = {
   figure_id: string
   name: string
@@ -183,7 +194,7 @@ export default function FandomHubInteractive({
           </ol>
           {shown.length === 0 && <p className="fh-intel-empty">No ranked comps in {activeLine} yet.</p>}
           <p className="fh-intel-foot">
-            Updated {new Date(generatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} · real eBay sold comps · every name opens its figure page
+            Updated {formatShortDate(new Date(generatedAt))} · real eBay sold comps · every name opens its figure page
           </p>
         </>
       ) : (

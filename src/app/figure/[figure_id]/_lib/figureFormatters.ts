@@ -145,12 +145,30 @@ const EARLIEST_PLAUSIBLE_COMP_MS = Date.UTC(1995, 0, 1)
  * arrives at runtime — the old `string` annotation is what hid this.
  * Guard shape ported from the sibling that already got it right:
  * `src/data/indexValueCensus.ts:48`.
+ *
+ * 2026-08-06 root-cause fix (see project_web_status_log.md): was
+ * `toLocaleDateString('en-US', {...})`. Root-caused via bisection with real
+ * comp data (never reproduced against the empty local dataset): Cloudflare
+ * Workers' V8/ICU build and Chrome's ship different CLDR data for this exact
+ * locale/option pair, and at least one of them separates month and day with
+ * U+202F (narrow no-break space) where the other uses a plain space —
+ * invisible on screen, but a different string. `formatDate` runs inside
+ * MarketPanel.tsx, a 'use client' component that re-executes on hydration,
+ * so server (Workers) and client (browser) independently called
+ * `toLocaleDateString` and got back two byte-different strings for the same
+ * date — a textbook React #418 hydration mismatch, firing on every figure
+ * page with at least one real dated comp. A hardcoded month-name table
+ * sidesteps ICU/CLDR entirely: same three ASCII characters, every runtime,
+ * forever.
  */
+const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
 export function formatDate(iso: string | null | undefined): string {
   if (!iso) return ''
-  const ms = new Date(iso).getTime()
+  const d = new Date(iso)
+  const ms = d.getTime()
   if (Number.isNaN(ms) || ms < EARLIEST_PLAUSIBLE_COMP_MS) return ''
-  return new Date(ms).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+  return `${SHORT_MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`
 }
 
 /** Derive confidence level (1–5) from comp count */
