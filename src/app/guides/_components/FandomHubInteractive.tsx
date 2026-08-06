@@ -15,17 +15,15 @@
  */
 
 import { useState, useMemo } from 'react'
+import { formatShortDate } from '@/lib/safeDate'
+import { formatGroupedNumber } from '@/lib/safeNumber'
 
-// 2026-08-06 preventive fix (same root cause as the figure-page #418 bug,
-// see project_web_status_log.md and figureFormatters.ts's formatDate): this
-// is a 'use client' component, so it re-executes on hydration, and
+// 2026-08-06 preventive fix (same root cause as the figure-page #418 bug —
+// see src/lib/safeDate.ts for the full incident writeup): this is a 'use
+// client' component, so it re-executes on hydration, and
 // toLocaleDateString('en-US', {month:'short', day:'numeric'}) is exactly the
 // call that produced a different string on Cloudflare Workers' V8/ICU build
-// than on the browser's. A hardcoded month table sidesteps ICU entirely.
-const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-function formatShortDate(d: Date): string {
-  return `${SHORT_MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`
-}
+// than on the browser's.
 
 export type TopComp = {
   figure_id: string
@@ -144,7 +142,7 @@ export default function FandomHubInteractive({
             <a className="fh-check-hit" href={result.url ?? '/search'}>
               <span className="fh-check-name">{result.name}<span className="fh-check-line">{result.brand} {result.line}</span></span>
               <span className="fh-check-price">
-                {result.price != null ? `$${result.price.toLocaleString('en-US')}` : 'No comps yet'}
+                {result.price != null ? `$${formatGroupedNumber(result.price)}` : 'No comps yet'}
                 {result.price != null && <span className="fh-check-sample">{result.sample} sold</span>}
               </span>
             </a>
@@ -174,7 +172,7 @@ export default function FandomHubInteractive({
           <ol className="fh-intel-list">
             {shown.map((f, i) => (
               <li key={f.figure_id} className="fh-intel-row">
-                <a href={f.url} className="fh-intel-link" title={`${f.name} — ${f.sold_count} sold, median $${f.price.toLocaleString('en-US')}`}>
+                <a href={f.url} className="fh-intel-link" title={`${f.name} — ${f.sold_count} sold, median $${formatGroupedNumber(f.price)}`}>
                   <span className="fh-intel-rank" aria-hidden="true">{i + 1}</span>
                   <span className={`fh-intel-thumb${f.image ? '' : ' is-empty'}`}>
                     {f.image && <img src={f.image} alt="" width={42} height={42} loading="lazy" decoding="async" />}
@@ -185,7 +183,7 @@ export default function FandomHubInteractive({
                   </span>
                   {flagLabel(f.flag, voice.flag) && <span className="fh-intel-flag">{flagLabel(f.flag, voice.flag)}</span>}
                   <span className="fh-intel-price">
-                    ${f.price.toLocaleString('en-US')}
+                    ${formatGroupedNumber(f.price)}
                     <span className="fh-intel-date">{f.last_sold ? f.last_sold : `${f.sold_count} sold`}</span>
                   </span>
                 </a>

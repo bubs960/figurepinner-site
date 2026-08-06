@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation'
 import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import NewsForm from './_components/NewsForm'
+import { formatShortDate } from '@/lib/safeDate'
 
 /**
  * /admin/news — minimal authoring UI.
@@ -138,8 +139,11 @@ export default async function AdminNewsPage() {
                       {e.genre}
                     </span>
                   )}
+                  {/* Server Component (server-only Clerk auth() above), safe by
+                      mechanism today — uses the shared safeDate util anyway per
+                      src/lib/safeDate.ts's rule. */}
                   <time style={{ fontSize: '0.7rem', color: 'var(--dim)' }}>
-                    {new Date(e.published_at.replace(' ', 'T') + 'Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                    {formatShortDate(new Date(e.published_at.replace(' ', 'T') + 'Z'))}
                   </time>
                 </li>
               ))}

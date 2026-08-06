@@ -24,13 +24,13 @@
 
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import type { PriceSnap } from '../_lib/priceSnaps'
+import { formatGroupedNumber } from '@/lib/safeNumber'
 
+// 2026-08-06: was `n.toLocaleString('en-US', {...})` -- flagged by
+// scripts/predeploy-clean-check.mjs's ICU-risk scan (see src/lib/safeNumber.ts).
 function fmtMoney(n: number): string {
   const hasCents = Math.round(n * 100) % 100 !== 0
-  return `$${n.toLocaleString('en-US', {
-    minimumFractionDigits: hasCents ? 2 : 0,
-    maximumFractionDigits: hasCents ? 2 : 0,
-  })}`
+  return `$${formatGroupedNumber(n, hasCents ? 2 : 0)}`
 }
 
 export default function LiveMedian({

@@ -51,12 +51,30 @@
  *     needs bypassing, that's a sign the check itself needs revisiting, not
  *     a routine escape hatch like FP_ALLOW_DIRTY above.
  *
+ * THIRD, UNRELATED CHECK (2026-08-06, same session, Steve: "make sure we
+ * don't see this or have ability to find this faster next time"): a
+ * non-blocking scan for the SAME bug's underlying pattern recurring
+ * anywhere else -- a 'use client' component calling toLocaleDateString /
+ * toLocaleTimeString / toLocaleString / Intl.DateTimeFormat /
+ * Intl.NumberFormat / Intl.RelativeTimeFormat directly (outside the shared
+ * src/lib/safeDate.ts util). This CANNOT be a hard grep-based pass/fail the
+ * way the NEXT_PUBLIC_* check is -- telling render-body usage (risky) apart
+ * from useEffect/event-handler usage (safe, runs post-hydration only,
+ * ClaimRitual.tsx's showNameplate() is a real confirmed-safe example) needs
+ * actual code understanding a line-based scan can't do reliably. So this
+ * stays a LOUD, always-exit-0 reminder, same philosophy as the uncommitted-
+ * changes check -- it puts the short list of matches in front of a human
+ * (or the next session) every single deploy, rather than relying on anyone
+ * remembering to grep for it. A KNOWN_SAFE allowlist keeps it from crying
+ * wolf on the one already-audited-safe case.
+ *
  * Pure-stdlib, ASCII-only (PowerShell cp1252-safe). Wired as the first step
  * of the "deploy" script in package.json.
  */
 
 import { execSync } from 'node:child_process'
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs'
+import { join, extname } from 'node:path'
 
 // ── NEXT_PUBLIC_* build-time vs runtime drift check ─────────────────────────
 
@@ -121,6 +139,77 @@ function checkNextPublicDrift() {
   console.log('              (same value as wrangler.toml), then rerun: npm run deploy')
   console.log('')
   return false
+}
+
+// ── ICU/Intl hydration-risk scan (see file header, third check) ────────────
+
+const ICU_RISK_PATTERN = /\b(?:toLocaleDateString|toLocaleTimeString|toLocaleString|Intl\.DateTimeFormat|Intl\.NumberFormat|Intl\.RelativeTimeFormat)\b/
+const SCAN_EXTENSIONS = new Set(['.ts', '.tsx'])
+const SCAN_SKIP_DIRS = new Set(['node_modules', '.next', '.open-next', '.wrangler', '.git'])
+
+// Confirmed-safe by manual code-level audit (2026-08-06, StructuredOutput
+// agent, see project_web_status_log.md) -- runs strictly inside a
+// useEffect-registered event-handler / imperative-DOM path, never during
+// initial render or hydration, so there is no server value for it to
+// disagree with. Re-verify by reading the surrounding function before
+// adding anything else here; this allowlist is a claim, not a proof.
+const ICU_RISK_KNOWN_SAFE = new Set([
+  'src/app/components/ClaimRitual.tsx',
+])
+
+function walkFiles(dir, out) {
+  let entries
+  try { entries = readdirSync(dir, { withFileTypes: true }) } catch { return out }
+  for (const entry of entries) {
+    if (entry.name.startsWith('.') || SCAN_SKIP_DIRS.has(entry.name)) continue
+    const full = join(dir, entry.name)
+    if (entry.isDirectory()) { walkFiles(full, out); continue }
+    if (SCAN_EXTENSIONS.has(extname(entry.name))) out.push(full)
+  }
+  return out
+}
+
+function checkIcuHydrationRisk() {
+  const files = walkFiles('src', [])
+  const flagged = []
+
+  for (const file of files) {
+    const relPath = file.split('\\').join('/')
+    if (ICU_RISK_KNOWN_SAFE.has(relPath)) continue
+    if (relPath.endsWith('/lib/safeDate.ts') || relPath === 'src/lib/safeDate.ts') continue
+
+    let content
+    try { content = readFileSync(file, 'utf8') } catch { continue }
+
+    // 'use client' must be the effective first statement (allow a leading
+    // blank line, matches every real file in this repo) -- a file WITHOUT
+    // it is a Server Component and categorically safe from this mechanism
+    // (see src/lib/safeDate.ts's header for why).
+    const firstStatementLine = content.split(/\r?\n/).find(l => l.trim().length > 0) ?? ''
+    const isClientComponent = /^['"]use client['"]/.test(firstStatementLine.trim())
+    if (!isClientComponent) continue
+
+    const lines = content.split(/\r?\n/)
+    lines.forEach((lineText, i) => {
+      if (ICU_RISK_PATTERN.test(lineText) && !lineText.trim().startsWith('//') && !lineText.trim().startsWith('*')) {
+        flagged.push({ file: relPath, lineNo: i + 1, text: lineText.trim() })
+      }
+    })
+  }
+
+  if (flagged.length === 0) return
+
+  console.log('\n' + line)
+  console.log(`[clean-check] REMINDER: ${flagged.length} Intl/toLocale* call(s) found in 'use client' files.`)
+  console.log('              Not a pass/fail check -- a grep can\'t tell render-body usage (risky:')
+  console.log('              re-executes on hydration, server/client can disagree, see the #418')
+  console.log('              incident in project_web_status_log.md) from useEffect/event-handler')
+  console.log('              usage (safe: runs post-hydration only). Verify each one by hand; if')
+  console.log('              it is date formatting in a render body, use src/lib/safeDate.ts instead.')
+  console.log(line)
+  for (const f of flagged.slice(0, 15)) console.log(`  ${f.file}:${f.lineNo}  ${f.text}`)
+  if (flagged.length > 15) console.log(`  ... and ${flagged.length - 15} more`)
+  console.log('')
 }
 
 function git(args) {
@@ -214,6 +303,9 @@ function tryAutoCommitKbSync(changes) {
 // Independent of tree cleanliness -- runs first so a drift failure is never
 // masked by an unrelated dirty-tree pass/refuse decision below.
 if (!checkNextPublicDrift()) process.exit(1)
+
+// Non-blocking reminder, always runs regardless of the checks above.
+checkIcuHydrationRisk()
 
 const porcelain = git('status --porcelain')
 

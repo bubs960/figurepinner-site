@@ -31,6 +31,7 @@ import FactionSeamAtmosphere from './FactionSeamAtmosphere'
 import EraMapGrid from './EraMapGrid'
 import FaqSection from './FaqSection'
 import JsonLd from '@/app/_components/JsonLd'
+import { formatShortDate } from '@/lib/safeDate'
 
 function renderText(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
@@ -300,8 +301,14 @@ function IntelTable({ data, theme }: { data: TopCompPayload | null; theme: HubTh
               </li>
             ))}
           </ol>
+          {/* Server Component today, so this Intl-shaped call is safe by
+              mechanism (renders once, never re-executed client-side) — but
+              uses the shared safeDate util anyway, since a future refactor
+              into a client boundary would otherwise reproduce the exact
+              #418 bug this same option shape caused elsewhere. See
+              src/lib/safeDate.ts. */}
           <p className="fh-intel-foot">
-            Updated {new Date(data.generated_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} · real eBay sold comps
+            Updated {formatShortDate(new Date(data.generated_at))} · real eBay sold comps
           </p>
         </>
       ) : (

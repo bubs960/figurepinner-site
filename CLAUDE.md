@@ -59,6 +59,34 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
    200 when fetched alone. Pace any bulk figure-page sweep under the limit
    (`curl --rate 85/m` is clean). Verified bots (Googlebot etc.) are exempt
    unconditionally via `checkRateLimit`'s `.cf.verifiedBotCategory` check.
+8. **`toLocaleDateString`/`Intl.DateTimeFormat`/`toLocaleString` in a 'use
+   client' render body CAN cause a React #418 hydration error, invisibly,
+   only in production.** Cloudflare Workers' V8/ICU build and the browser's
+   disagree on the exact byte output for some locale/option pairs (the
+   2026-08-06 incident: a month/day date separator differed by one
+   whitespace character, invisible on screen). A client component
+   re-executes its render function on hydration, so server (Workers) and
+   client (browser) call the same Intl function and can get back two
+   different strings for the same input — the page still works (React
+   discards and re-renders), but throws a console error on every load.
+   **Always use `src/lib/safeDate.ts` / `src/lib/safeNumber.ts` for date/number
+   formatting in a client component instead of calling Intl/toLocale*
+   directly** — both are ICU-free by construction, so this class of bug is
+   structurally impossible through them. `scripts/predeploy-clean-check.mjs`
+   scans for direct Intl/toLocale* calls in `'use client'` files on every
+   deploy and prints a reminder (non-blocking — it can't tell render-body
+   risk from safe post-hydration usage by itself, a human still has to look).
+   **If a hydration bug won't reproduce locally** (`next dev`, `next build
+   && next start`, or the default `wrangler dev`) **but IS live in
+   production, don't conclude "can't reproduce, not a real bug."** The
+   default `wrangler dev` runs in `--local` mode with empty simulated D1/KV
+   — any data-dependent render path (real comps, real prices) never
+   executes, so a data-dependent bug is invisible there too. Reach for
+   `wrangler dev --remote` (real D1/KV bindings, still locally
+   rebuildable/debuggable) FIRST when a bug is real in prod but silent
+   everywhere else — that's what actually found this one, after several
+   hours of reading code that all looked correct in isolation. Full
+   incident: `project_web_status_log.md`, 2026-08-05/06 entries.
 
 ## Repo facts
 

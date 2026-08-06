@@ -30,6 +30,7 @@ import { getSellerListings } from '@/data/bubs-inventory'
 import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
 import { derivePriceContract } from '../_lib/priceContract'
 import { thumb } from '@/lib/imageUrl'
+import { formatShortDateWithYear } from '@/lib/safeDate'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 import JsonLd from '@/app/_components/JsonLd'
@@ -155,14 +156,12 @@ function latestSoldDate(soldHistory: PriceData['soldHistory']): { iso: string; l
     date.getTime() > best.getTime() ? date : best
   ))
 
+  // Server Component (this whole file has no 'use client'), safe by
+  // mechanism today — uses the shared safeDate util anyway per
+  // src/lib/safeDate.ts's rule (same option shape as the confirmed #418 bug).
   return {
     iso: latest.toISOString(),
-    label: new Intl.DateTimeFormat('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      timeZone: 'UTC',
-    }).format(latest),
+    label: formatShortDateWithYear(latest),
   }
 }
 

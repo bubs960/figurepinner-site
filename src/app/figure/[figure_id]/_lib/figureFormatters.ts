@@ -3,6 +3,8 @@
  * Pure formatting utilities for figure display — no side effects, unit-testable.
  */
 
+import { formatShortDate } from '@/lib/safeDate'
+
 /** Strip null/None/undefined variant artifacts from figure names. */
 function cleanFigureName(raw: string): string {
   return raw
@@ -146,7 +148,9 @@ const EARLIEST_PLAUSIBLE_COMP_MS = Date.UTC(1995, 0, 1)
  * Guard shape ported from the sibling that already got it right:
  * `src/data/indexValueCensus.ts:48`.
  *
- * 2026-08-06 root-cause fix (see project_web_status_log.md): was
+ * 2026-08-06 root-cause fix, moved to the shared util 2026-08-06 same day
+ * (see src/lib/safeDate.ts for the full incident writeup — every future
+ * date-format call in a client component should read that file first): was
  * `toLocaleDateString('en-US', {...})`. Root-caused via bisection with real
  * comp data (never reproduced against the empty local dataset): Cloudflare
  * Workers' V8/ICU build and Chrome's ship different CLDR data for this exact
@@ -157,18 +161,14 @@ const EARLIEST_PLAUSIBLE_COMP_MS = Date.UTC(1995, 0, 1)
  * so server (Workers) and client (browser) independently called
  * `toLocaleDateString` and got back two byte-different strings for the same
  * date — a textbook React #418 hydration mismatch, firing on every figure
- * page with at least one real dated comp. A hardcoded month-name table
- * sidesteps ICU/CLDR entirely: same three ASCII characters, every runtime,
- * forever.
+ * page with at least one real dated comp.
  */
-const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
 export function formatDate(iso: string | null | undefined): string {
   if (!iso) return ''
   const d = new Date(iso)
   const ms = d.getTime()
   if (Number.isNaN(ms) || ms < EARLIEST_PLAUSIBLE_COMP_MS) return ''
-  return `${SHORT_MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`
+  return formatShortDate(d)
 }
 
 /** Derive confidence level (1–5) from comp count */
