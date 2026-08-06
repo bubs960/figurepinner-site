@@ -5,6 +5,24 @@ import { createPortal } from 'react-dom'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import HeroSearch from './HeroSearch'
 
+// Hydration guard for the Clerk auth block below (2026-08-05 root-cause fix,
+// see project_web_status_log.md). Public pages have no ClerkProvider auth
+// context server-side (S70 — deliberate, keeps pages static/ISR'd), so
+// <SignedIn>/<SignedOut> have nothing to agree on between the server render
+// and Clerk's client-side resolution. Live-verified via a local Workers
+// (wrangler dev) build — the ONLY environment that reproduced React error
+// #418 at all (never on plain Node `next dev`/`next start`) — that removing
+// this block removes the error, and restoring it behind `mounted` keeps it
+// gone: both the server render and React's first client render (pre-effect)
+// render null, so hydration has nothing to compare; the real auth UI mounts
+// in a separate, post-hydration commit. Same idiom as AdSlot's `proState`
+// gate and CfBeacon's `shouldRender` gate elsewhere in this file tree.
+function useMounted(): boolean {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  return mounted
+}
+
 // Unified site header — the single nav for every public page.
 // Visuals extracted from the homepage nav (Steve-approved S20 redesign):
 // 56px sticky bar, blur backdrop, FP mark + wordmark, standard link set,
@@ -224,6 +242,7 @@ const CSS = `
 export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
   const hasCrumbs = Boolean(crumbs && crumbs.length > 0)
   const [searchOpen, setSearchOpen] = useState(false)
+  const mounted = useMounted()
 
   // The overlay declares aria-modal="true", so it has to actually behave
   // modally: Tab cycles within the dialog instead of escaping into the
@@ -328,15 +347,22 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
             regardless of session — root layout had no ClerkProvider so this
             couldn't reflect real auth state. Client-side check now, reads
             Clerk's session after hydration — no middleware coverage needed,
-            public pages stay static/ISR'd (see root layout.tsx). */}
-        <SignedOut>
-          <a href="/sign-in">Log in</a>
-          <a className="fp-sitenav-join" href="/sign-up">Sign up free</a>
-        </SignedOut>
-        <SignedIn>
-          <a href="/app">My Collection</a>
-          <UserButton afterSignOutUrl="/" />
-        </SignedIn>
+            public pages stay static/ISR'd (see root layout.tsx).
+            `mounted` guard added 2026-08-05 (root-cause fix for the site-wide
+            React #418 hydration error this block was causing — see
+            useMounted() doc above and project_web_status_log.md). */}
+        {mounted && (
+          <>
+            <SignedOut>
+              <a href="/sign-in">Log in</a>
+              <a className="fp-sitenav-join" href="/sign-up">Sign up free</a>
+            </SignedOut>
+            <SignedIn>
+              <a href="/app">My Collection</a>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+          </>
+        )}
       </div>
 
       {searchOpen && typeof document !== 'undefined' && createPortal(

@@ -34,6 +34,22 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
   // Feature flag — off by default until verified on a real phone.
   const enabled = process.env.NEXT_PUBLIC_MOBILE_ACTION_BAR === '1'
 
+  // Hydration guard (2026-08-05 root-cause fix, see project_web_status_log.md).
+  // `enabled` reads a NEXT_PUBLIC_* var, which Next.js inlines at CLIENT BUILD
+  // TIME from .env.local — a different mechanism than wrangler.toml's [vars],
+  // which only sets the RUNTIME value SSR sees. Those two drifted out of sync
+  // (wrangler.toml="1", .env.local unset) since 2026-07-01: the server always
+  // rendered this bar, the client's first hydration pass always expected
+  // nothing, and every figure page threw React error #418 in production.
+  // .env.local is now fixed to match, but this `mounted` gate is the durable
+  // fix — it makes the SAME class of future drift (anyone adding a wrangler.toml
+  // var without updating .env.local, for this flag or a new one copy-pasted
+  // from it) degrade to a harmless post-hydration pop-in instead of a repeat
+  // of this bug. Same idiom as AdSlot's `proState` gate and CfBeacon's
+  // `shouldRender` gate elsewhere in this app.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
   // Suppress while the in-page eBay CTA (CollectionPanel) is visible, so the user
   // never sees two sponsored eBay links on one screen.
   const [hideForInlineCta, setHideForInlineCta] = useState(false)
@@ -63,7 +79,7 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
     return () => mq.removeEventListener('change', onChange)
   }, [enabled])
 
-  if (!enabled) return null
+  if (!mounted || !enabled) return null
 
   return (
     <div

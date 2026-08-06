@@ -1,5 +1,7 @@
 /**
- * predeploy-clean-check.mjs — REFUSE to deploy from a dirty working tree.
+ * predeploy-clean-check.mjs — REFUSE to deploy from a dirty working tree,
+ * or from an environment where a NEXT_PUBLIC_* var will drift between what
+ * SSR sees and what the client bundle gets built with.
  *
  * WHY (2026-07-03, web S52): `npm run deploy` builds from the WORKING TREE,
  * not from git. On 7/3 a deploy shipped modified-but-uncommitted KB data files
@@ -26,12 +28,100 @@
  * The override still exists for the genuinely unusual case — but the common,
  * expected KB-sync case no longer needs it.
  *
+ * SECOND, UNRELATED CHECK (2026-08-06, standalone ruling on
+ * WEB-TO-STANDALONE-HYDRATION-ALERT-CLASS-QUESTION-2026-08-05.md): NEXT_PUBLIC_*
+ * env-var drift between wrangler.toml's [vars] (RUNTIME value, what SSR sees
+ * inside the deployed Worker) and .env.local (BUILD-TIME value, what Next.js
+ * actually inlines into the CLIENT bundle). These are two unrelated
+ * mechanisms that only coexist on the machine running `npm run deploy` — a
+ * key can be "1" at runtime and simultaneously absent at build time with no
+ * error anywhere, no diff, nothing to catch it, because .env.local is
+ * gitignored and invisible to any Bridge-side or git-based check. That's
+ * exactly how NEXT_PUBLIC_MOBILE_ACTION_BAR drifted for 5 weeks
+ * (2026-07-01 to 2026-08-06) and threw React error #418 on every figure page
+ * in production the whole time (see MobileActionBar.tsx, project_web_status_log.md
+ * 2026-08-05 entry) — a console error, not a visible break, so nothing forced
+ * anyone to notice. This is the mechanism-correct place for the check per
+ * standalone's ruling: it runs on every deploy, on the one machine where both
+ * files exist, before the build step that would bake the drift in.
+ *   - every NEXT_PUBLIC_* key in wrangler.toml's [vars] is present in the
+ *     build env (.env.local or already-exported shell env) -> pass silently
+ *   - any is missing                       -> print the missing keys, refuse (exit 1)
+ *   - no built-in override. The fix is one line in .env.local; if this ever
+ *     needs bypassing, that's a sign the check itself needs revisiting, not
+ *     a routine escape hatch like FP_ALLOW_DIRTY above.
+ *
  * Pure-stdlib, ASCII-only (PowerShell cp1252-safe). Wired as the first step
  * of the "deploy" script in package.json.
  */
 
 import { execSync } from 'node:child_process'
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+
+// ── NEXT_PUBLIC_* build-time vs runtime drift check ─────────────────────────
+
+/** Extract KEY = "value" (or bare KEY = value) entries from wrangler.toml's
+ *  [vars] table only -- stops at the next [section] header so a same-named
+ *  key under a different table (e.g. an env-specific override block) never
+ *  gets mixed in. Deliberately line-based, not a real TOML parser: this repo
+ *  has no TOML dependency and the [vars] shape here is simple enough that a
+ *  full parser would be pure weight for zero extra correctness. */
+function readWranglerVars(path) {
+  if (!existsSync(path)) return {}
+  const lines = readFileSync(path, 'utf8').split(/\r?\n/)
+  const vars = {}
+  let inVars = false
+  for (const raw of lines) {
+    const line = raw.trim()
+    if (/^\[.*\]$/.test(line)) { inVars = (line === '[vars]'); continue }
+    if (!inVars || !line || line.startsWith('#')) continue
+    const m = /^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*"?([^"]*)"?\s*$/.exec(line)
+    if (m) vars[m[1]] = m[2]
+  }
+  return vars
+}
+
+/** Parse KEY=value lines from a dotenv-style file. No quoting/escaping
+ *  support beyond simple double-quote stripping -- matches this repo's own
+ *  .env.local, which only ever holds plain URLs/ids/flags (see its own
+ *  header: "Never put live secret keys in env files"). */
+function readDotEnv(path) {
+  if (!existsSync(path)) return {}
+  const lines = readFileSync(path, 'utf8').split(/\r?\n/)
+  const vars = {}
+  for (const raw of lines) {
+    const line = raw.trim()
+    if (!line || line.startsWith('#')) continue
+    const m = /^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*"?([^"]*)"?\s*$/.exec(line)
+    if (m) vars[m[1]] = m[2]
+  }
+  return vars
+}
+
+function checkNextPublicDrift() {
+  const wranglerVars = readWranglerVars('wrangler.toml')
+  const buildEnv = { ...readDotEnv('.env.local'), ...process.env }
+  const nextPublicKeys = Object.keys(wranglerVars).filter(k => k.startsWith('NEXT_PUBLIC_'))
+  const missing = nextPublicKeys.filter(k => buildEnv[k] === undefined || buildEnv[k] === '')
+
+  if (missing.length === 0) return true
+
+  console.log('\n' + line)
+  console.log(`[clean-check] ${missing.length} NEXT_PUBLIC_* var(s) set in wrangler.toml's [vars]`)
+  console.log('              (the RUNTIME value SSR sees) but missing from the BUILD env')
+  console.log('              (.env.local -- what Next.js inlines into the CLIENT bundle).')
+  console.log('              Server and client will disagree on every render, throwing a')
+  console.log('              React hydration error (#418) in production -- exactly how')
+  console.log('              NEXT_PUBLIC_MOBILE_ACTION_BAR drifted for 5 weeks, 2026-07-01')
+  console.log('              to 2026-08-06 (see project_web_status_log.md).')
+  console.log(line)
+  for (const k of missing) console.log(`  ${k} = "${wranglerVars[k]}"  (wrangler.toml)  ->  missing from .env.local`)
+  console.log(line)
+  console.log('[clean-check] REFUSING to deploy. Add the missing key(s) above to .env.local')
+  console.log('              (same value as wrangler.toml), then rerun: npm run deploy')
+  console.log('')
+  return false
+}
 
 function git(args) {
   try {
@@ -120,6 +210,10 @@ function tryAutoCommitKbSync(changes) {
   console.log('[clean-check] Committed. Proceeding with a clean tree.\n')
   return true
 }
+
+// Independent of tree cleanliness -- runs first so a drift failure is never
+// masked by an unrelated dirty-tree pass/refuse decision below.
+if (!checkNextPublicDrift()) process.exit(1)
 
 const porcelain = git('status --porcelain')
 
