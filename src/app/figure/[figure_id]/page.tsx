@@ -107,7 +107,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // hint alone — Google may keep serving fid pages until it trusts the
     // pretty set, which is the desired behavior while domain authority is
     // thin. See WEBAUDIT-TO-WEB-GOOGLE-ZERO-ROOTCAUSE-2026-07-12.md (FIX-4).
-    ...(hasConfirmedZeroSoldData
+    // is_canary belt+suspenders noindex (Data Defense Layer 3, 2026-08-07) —
+    // redundant with the sitemap exclusion, kept in case a canary URL is ever
+    // reached directly.
+    ...(hasConfirmedZeroSoldData || local.is_canary
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same

@@ -23,6 +23,7 @@
 const STANDARD_LINKS: ReadonlyArray<[label: string, href: string]> = [
   ['Price Guide', '/guides'],
   ['Scan a Barcode', '/scan'],
+  ['Whatnot Sellers', '/whatnot'],
   ['About', '/about'],
   ['Methodology', '/methodology'],
   ['Privacy', '/privacy'],

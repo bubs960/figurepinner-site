@@ -115,7 +115,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ? `${displayName} ${lineName} sells for ~${priceFragment} (eBay sold data). Check current prices free — FigurePinner tracks real sold data.`
         : `${displayName} ${lineName} price — check what it actually sold for on eBay. FigurePinner tracks real sold comps free.`,
     alternates: { canonical },
-    ...(hasConfirmedZeroSoldData
+    // is_canary belt+suspenders noindex (Data Defense Layer 3, 2026-08-07) —
+    // redundant with the sitemap exclusion + findFigureMatches never resolving
+    // a pretty URL for one, kept in case a canary is ever reached directly.
+    ...(hasConfirmedZeroSoldData || figure.is_canary
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same

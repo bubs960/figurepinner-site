@@ -79,7 +79,9 @@ let INDEX: IndexEntry[] | null = null
 
 function getIndex(): IndexEntry[] {
   if (!INDEX) {
-    INDEX = getAllFigures().map(f => ({
+    // is_canary figures never rank in search or price-check (both funnel
+    // through this index) — Data Defense Layer 3, 2026-08-07. See kbTypes.ts.
+    INDEX = getAllFigures().filter(f => !f.is_canary).map(f => ({
       f,
       bag: {
         char: f.character_canonical.toLowerCase(),

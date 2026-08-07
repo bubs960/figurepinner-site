@@ -114,6 +114,9 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
     // links at all until S52).
     { path: '/methodology', changeFrequency: 'monthly', priority: 0.6 },
     { path: '/scan',        changeFrequency: 'monthly', priority: 0.5 },
+    // /whatnot added 2026-08-07: fully built (invite CTA + 9 featured sellers)
+    // but had no footer link and no sitemap entry — pure orphan since S52.
+    { path: '/whatnot',     changeFrequency: 'weekly',  priority: 0.5 },
     { path: '/privacy',  changeFrequency: 'yearly',  priority: 0.2 },
     { path: '/terms',    changeFrequency: 'yearly',  priority: 0.2 },
   ]
@@ -167,7 +170,10 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
     const slug = hubGenreForFandom(fandom)
     if (slug === null) continue
     if (!genreNewest.has(slug)) genreNewest.set(slug, new Date(0))
-    const d = maxCensusDate(getFiguresByFandom(fandom).map(f => f.figure_id))
+    // is_canary fids excluded — Data Defense Layer 3, see kbTypes.ts.
+    const d = maxCensusDate(
+      getFiguresByFandom(fandom).filter(f => !f.is_canary).map(f => f.figure_id),
+    )
     if (d && d > genreNewest.get(slug)!) genreNewest.set(slug, d)
   }
 
@@ -182,7 +188,10 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
 }
 
 function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
-  const figs = getFiguresByFandom(fandom)
+  // is_canary fids excluded entirely — Data Defense Layer 3 (2026-08-07): they
+  // must never appear in a line hub, character hub, or figure-page sitemap
+  // entry. See kbTypes.ts.
+  const figs = getFiguresByFandom(fandom).filter(f => !f.is_canary)
   const genre = fandomToGenre(fandom)
 
   // Group member figures once, then reuse for both hub types below. Keyed

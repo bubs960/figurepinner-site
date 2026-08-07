@@ -20,6 +20,11 @@ export type KBFigure = {
   v1_series?: string
   match_represented?: string
   key_features?: string
+  // Data Defense Layer 3 (2026-08-07, ratified option A): sealed registry of
+  // fictitious figures that prove database theft if a competitor's catalog
+  // ever contains one. Never index, search, or list-render these — see every
+  // is_canary check in sitemap.ts / kbSearch.ts / figure page metadata.
+  is_canary?: boolean
 }
 
 export function stableIdSuffix(figure_id: string): string | null {
