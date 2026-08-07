@@ -100,6 +100,17 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
         // all left untouched — a real "claim" only happened here. Wrapped in
         // try/catch so a ritual-side failure can never break the save.
         try {
+          // Return-visit marker (webaudit ask, 2026-08-06): the ONLY write
+          // site for 'fp_has_saved' — a real successful save, not the demo
+          // shelf pin. ReturnVisitTracker reads this on a later homepage
+          // landing to fire 'return_visit_after_save'. localStorage can throw
+          // in private-browsing/storage-restricted contexts — same try/catch
+          // as the ritual dispatch below, must never break the core save.
+          window.localStorage.setItem('fp_has_saved', '1')
+        } catch {
+          // Marker write must never break the core save-to-vault flow.
+        }
+        try {
           const heroImg = document.getElementById('fp-hero-photo') as HTMLImageElement | null
           const rect = heroImg?.getBoundingClientRect() ?? null
           window.dispatchEvent(new CustomEvent('figure:claimed', {

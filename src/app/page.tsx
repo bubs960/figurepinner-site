@@ -6,6 +6,8 @@ import ScrollReveal from './components/ScrollReveal'
 import SpotlightVitrine from './components/SpotlightVitrine'
 import GalleryTypeLayer from './components/GalleryTypeLayer'
 import SiteHeader from './components/SiteHeader'
+import TrackedLink from './components/TrackedLink'
+import ReturnVisitTracker from './components/ReturnVisitTracker'
 import AdSlot from '@/app/components/AdSlot'
 import { fetchHomeMarket, type TapeItem, type ReceiptFigure } from './_lib/homeReceipt'
 import ProvenanceTypeScrollDriver from './components/ProvenanceTypeScrollDriver'
@@ -16,8 +18,8 @@ import { getFandom } from '@/lib/genreFigures'
 import { thumb } from '@/lib/imageUrl'
 
 export const metadata: Metadata = {
-  title: { absolute: 'FigurePinner - Action Figure Price Guide' },
-  description: `Real sold-price data for ${TOTAL_FIGURES_LABEL} action figures. Know what any figure is worth before you bid, buy, or sell.`,
+  title: { absolute: 'Action Figure Price Guide — Real Sold Prices | FigurePinner' },
+  description: `Search real eBay sold prices for ${TOTAL_FIGURES_LABEL} action figures across WWE, Star Wars, Marvel, DC and more. Know what yours is worth before you buy or sell.`,
   alternates: { canonical: 'https://figurepinner.com' },
 }
 
@@ -303,6 +305,7 @@ export default async function HomePage() {
 
   return (
     <main className="fph">
+      <ReturnVisitTracker />
       <style>{`
         .fph {
           --fph-cream: #f2e8d5;
@@ -1254,7 +1257,13 @@ export default async function HomePage() {
               when a grail&apos;s comps move, you hear about it.
             </p>
             <div className="fph-closer-cta-row">
-              <a className="fph-btn-gold" href="/sign-up">Start your free Vault</a>
+              <TrackedLink
+                className="fph-btn-gold"
+                href="/sign-up"
+                funnelEvent="homepage_vault_signup_click"
+              >
+                Start your free Vault
+              </TrackedLink>
               <a className="fph-btn-ghost" href="/methodology">How pricing works</a>
             </div>
           </div>

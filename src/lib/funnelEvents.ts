@@ -16,6 +16,9 @@ export const FUNNEL_EVENTS = [
   'sparkline_drawn',
   'collection_claim_ritual_played',
   'shelf_shared',
+  'homepage_pin_click',
+  'homepage_vault_signup_click',
+  'return_visit_after_save',
 ] as const
 
 export type FunnelEvent = typeof FUNNEL_EVENTS[number]

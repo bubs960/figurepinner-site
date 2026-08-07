@@ -12,6 +12,7 @@
 // imperative class toggles are safe and cheap.
 
 import { useEffect, useRef } from 'react'
+import { trackFunnel } from '@/app/_lib/funnelClient'
 
 export type ShelfFigure = {
   fid: string
@@ -150,6 +151,7 @@ export default function ShelfCase({ figures, label, priorityFirstImage = true }:
           removeFromTray(idx)
         } else {
           fig.classList.add('pinned')
+          trackFunnel('homepage_pin_click')
           const img = fig.querySelector<HTMLImageElement>('.fph-mount img')
           if (img) flyToTray(fig, () => addToTray(img.src, idx))
         }

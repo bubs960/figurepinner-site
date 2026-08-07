@@ -13,6 +13,7 @@
 import type { KBFigure } from '@/data/kb'
 import { deriveName } from '@/data/kb'
 import { prettifySlug } from './figureFormatters'
+import { thumb } from '@/lib/imageUrl'
 
 export const OG_SIZE = { width: 1200, height: 630 }
 
@@ -80,9 +81,15 @@ function sniffImageType(bytes: Uint8Array): 'image/jpeg' | 'image/png' | null {
  * clean wordmark fallback for a null photo.
  */
 export async function resolveCardPhoto(url: string | null | undefined): Promise<string | null> {
-  if (!url) return null
+  // Card renders the photo into a 400x400 box — fetch a resized rendition
+  // (thumb() is a no-op passthrough on hosts it doesn't know how to resize)
+  // instead of the raw original. A full-resolution phone photo run through
+  // arrayBufferToBase64 + Satori for a 400px box is exactly the kind of
+  // oversized decode that spikes memory in a Workers isolate.
+  const resized = thumb(url, 800)
+  if (!resized) return null
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(4000) })
+    const res = await fetch(resized, { signal: AbortSignal.timeout(4000) })
     if (!res.ok) return null
     const contentType = res.headers.get('content-type') ?? ''
     if (!contentType.startsWith('image/')) return null
