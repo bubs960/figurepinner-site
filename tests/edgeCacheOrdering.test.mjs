@@ -109,6 +109,27 @@ describe('edge cache ordering fix — skip-check runs against the ORIGINAL respo
     assert.equal(skip, 'status', 'non-200/404 status must be skipped from caching')
   })
 
+  test('KV-consolidation known bug (2026-08-07): private HTML at the raw /figure/:id shape is NOT skipped -- gets synthesized to public, same as a genuinely public figure page', () => {
+    const original = htmlResponse(200, { 'cache-control': 'private, no-cache, no-store, max-age=0, must-revalidate' })
+    const { skip, res2 } = simulateHandlerOrdering(original, req('/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22'))
+    assert.equal(skip, null, 'the raw /figure/:id shape must be allowed through despite a private header (known OpenNext rewrite-vs-ISR bug, not a real privacy signal)')
+    assert.equal(res2.headers.get('cache-control'), 'public, s-maxage=3600, stale-while-revalidate=86400')
+  })
+
+  test('KV-consolidation allowance stays scoped: the 3-segment pretty-path figure route is UNAFFECTED (private there still skips, as it should)', () => {
+    const original = htmlResponse(200, { 'cache-control': 'private' })
+    const { skip, res2 } = simulateHandlerOrdering(original, req('/wrestling/elite-legends/michelle-mccool'))
+    assert.equal(skip, 'cc-private', 'the allowance must only apply to the raw /figure/:id shape, never the pretty-path route')
+    assert.equal(res2.headers.get('cache-control'), 'private')
+  })
+
+  test('KV-consolidation allowance stays scoped: set-cookie on the /figure/:id shape still skips (auth gate runs first, unaffected)', () => {
+    const original = htmlResponse(200, { 'set-cookie': '__session=abc123; Path=/', 'cache-control': 'private' })
+    const { skip, res2 } = simulateHandlerOrdering(original, req('/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22'))
+    assert.equal(skip, 'set-cookie', 'set-cookie must still take priority over the known-bug allowance')
+    assert.equal(res2.headers.get('set-cookie'), '__session=abc123; Path=/')
+  })
+
   test('non-HTML content-type is never touched by synthesis (API JSON routes stay as OpenNext returns them)', () => {
     const original = new Response('{}', { status: 200, headers: { 'content-type': 'application/json', 'cache-control': 'private' } })
     const { skip, res2 } = simulateHandlerOrdering(original, req('/api/some-endpoint'))

@@ -36,10 +36,31 @@ export function isPublicHtmlNotFound(response, request) {
   return true
 }
 
+// KV-consolidation known-bug allowance (2026-08-07): middleware.ts rewrites
+// /figure/:id -> a figure's pretty path when one exists (rewriteFigureIdToPrettyPath,
+// added 2026-07-22 to make both URL shapes share one cache entry). The REWRITTEN
+// render comes back from OpenNext as Cache-Control: private/no-store/no-cache
+// instead of inheriting the pretty page's real public s-maxage -- verified live,
+// 100% reproducible, zero relation to auth (confirmed with cookie-free requests).
+// The identical content hit directly at its pretty URL caches correctly, so this
+// is an OpenNext rewrite-vs-ISR quirk, not a genuine privacy signal: figure detail
+// pages never depend on auth/session state at render time (middleware.ts bypasses
+// Clerk entirely for this exact route class, Data Defense Layer 2). Scoped to
+// EXACTLY the raw-ID shape (2 segments, first is "figure") so it can never touch
+// the pretty-path route itself (already correct) or any other route -- the
+// set-cookie gate above still runs first and is untouched by this allowance.
+// Full investigation: board/OPEN-ITEMS-web.md (2026-08-07),
+// WEB-TO-STANDALONE-DAILY-HEALTH-CHECK6-FALSE-DIAGNOSIS-2026-08-07.md.
+function isKnownSafeDespitePrivate(request) {
+  const { pathname } = new URL(request.url)
+  const segments = pathname.split('/').filter(Boolean)
+  return segments[0] === 'figure' && segments.length === 2
+}
+
 export function storeSkipReason(response, request) {
   if (response.headers.has('set-cookie')) return 'set-cookie'
   const cc = response.headers.get('cache-control') ?? ''
-  if (/private|no-store|no-cache/i.test(cc)) return 'cc-private'
+  if (/private|no-store|no-cache/i.test(cc) && !isKnownSafeDespitePrivate(request)) return 'cc-private'
   if (isPublicHtmlNotFound(response, request)) return null
   if (response.status !== 200) return 'status'
   // s-maxage missing on public HTML is synthesized below -- not a skip reason
