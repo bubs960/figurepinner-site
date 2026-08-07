@@ -505,7 +505,18 @@ async function checkSitemapPrefixCensus(localChildren) {
     //       the 22 figures' old URLs are gone, not duplicated.
     //   Same guard as always: if a future change ever splits /gargoyles across
     //   two sitemap children, the child-purity check above still catches it.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles'])
+    //
+    // 'whatnot' = /whatnot (2026-08-07), a static utility page (Whatnot invite
+    //   CTA + featured-seller list) that shipped fully built back in S52 but
+    //   was never added to the footer or sitemap — a pure orphan, not a new
+    //   feature. Not KB-driven, no fandom relationship. Verified before adding
+    //   this entry:
+    //     - Appears ONLY in static.xml (the STATIC_ID child), as exactly one
+    //       URL: /whatnot. No /whatnot/<anything> nested namespace.
+    //     - No existing route or sitemap child references 'whatnot' today, so
+    //       this cannot be the twin-namespace shape (there is no old form to
+    //       twin against) — it is a single page appearing for the first time.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
