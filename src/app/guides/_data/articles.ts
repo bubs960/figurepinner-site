@@ -34,6 +34,34 @@ export interface Article {
 export const ARTICLES: Article[] = [
   ...BIDCHECK_ARTICLES,
   {
+    slug: 'most-valuable-star-wars-action-figures',
+    title: 'Most Valuable Star Wars Action Figures: What the Con Exclusives Actually Sell For',
+    metaTitle: 'Most Valuable Star Wars Action Figures \u2014 Real Sold Prices | FigurePinner',
+    metaDescription:
+      'What Star Wars Black Series SDCC and Celebration exclusives actually sell for, from a $32 median set to sealed sales past $500 \u2014 real eBay sold data, not auction-house folklore.',
+    dek: 'One-time convention exclusives, never reissued. The sold data explains exactly why that matters to the price.',
+    readingMinutes: 6,
+    updated: '2026-08-07',
+    body: [
+      { type: 'p', text: 'Modern Star Wars collecting has one category that behaves almost nothing like the rest of the line: convention exclusives. Hasbro ships them once, in a limited run, tied to a specific SDCC or Celebration, and then never touches that exact figure again. That scarcity shows up directly in the sold data, and it shows up fast.' },
+      { type: 'h2', text: 'What the exclusives actually sell for' },
+      { type: 'ul', items: [
+        'Jabba the Hutt, SDCC exclusive: median $137.99 across 15 sold, range $39.99-$169.95. A deluxe-scale exclusive with real production cost behind it, and the sold range stays tight \u2014 there is no cheap tier for this one.',
+        'Boba Fett & Han Solo in Carbonite, SDCC 2013 exclusive 2-pack: median $31.95 across 50 sold, but the top of that range is $527.81, and every one of the high sales is a genuine sealed listing for this exact set. That is not a data error \u2014 it is one of the widest sealed/loose splits in modern Star Wars collecting.',
+        'Cantina Showdown, Celebration exclusive multi-figure set: median $49.98 across 14 sold, up to $129.33.',
+        'Kylo Ren Unmasked, SDCC exclusive: median $40 across 50 sold, up to $169.99 \u2014 the widest sample size on this list, and still a real spread between loose and sealed.',
+        'Jyn Erso, SDCC exclusive: median $31.99 across 33 sold, up to $120.',
+      ]},
+      { type: 'callout', text: 'The Boba Fett & Han Carbonite set is the one to look at closely if you only remember one number from this list. A $31.95 median next to a $527.81 real sealed sale is not noise \u2014 it is the entire sealed-versus-loose story for con exclusives in a single figure, and it means the loose median is not the price to anchor on if you are chasing a mint one.' },
+      { type: 'h2', text: 'Why a one-time run holds value better than a mainline figure' },
+      { type: 'p', text: 'A mainline Black Series figure gets reissued, repainted, and re-released across years of assortments \u2014 supply keeps pace with demand the way it does for any of the common wrestling or Marvel figures we track elsewhere on this site. A convention exclusive breaks that pattern on purpose. Hasbro prints a fixed run tied to a single show, sells it there and through a brief online drop, and the mold does not come back. Every sale after that first window is drawing from a pool that stopped growing years ago.' },
+      { type: 'h2', text: 'The vintage market question we are not answering yet' },
+      { type: 'p', text: 'Ask a longtime collector for the single most valuable Star Wars figure and you will hear the same answer inside five seconds: the early rocket-firing Boba Fett, a piece that has sold at major auction houses for well into six figures depending on grade. That reputation is real and well documented.' },
+      { type: 'p', text: 'We are not printing a sold-comp number for the wider vintage Kenner market on this page. Our own comp data for that era currently has a known query-matching issue that pulls in listings for the wrong product \u2014 caught it mid-research for this article, and this site does not publish a price it cannot stand behind. The fix is scoped and in progress. When it ships, the vintage side of this guide gets its own real numbers instead of a placeholder.' },
+      { type: 'p', text: 'Until then: if you are chasing a convention exclusive, buy sealed if you want to hold value, and treat any loose sale under the sealed range as a real discount, not a sign the figure is common \u2014 the sold data above says otherwise.' },
+    ],
+  },
+  {
     slug: 'how-to-spot-fake-action-figures',
     title: 'How to Spot a Fake Action Figure Before You Pay For It',
     metaTitle: 'How to Spot Fake Action Figures — Bootleg Warning Signs | FigurePinner',
