@@ -723,6 +723,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       image:       imageUrlFinal ?? undefined,
       category:    prettifySlug(genre),
       additionalProperty: valueProperties.length ? valueProperties : undefined,
+      // Real GTIN identifier (figure-page-v3 Module 1, 2026-08-08) — UPC-A is
+      // 12 digits, maps to schema.org's gtin12. Most figures don't have one
+      // yet (455/22,777 KB-wide); omitted entirely when absent, never guessed.
+      ...(local.upc ? { gtin12: local.upc } : {}),
     },
   }
 
@@ -978,6 +982,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               exclusiveTo={exclusiveToClean}
               imgSrc={thumb(imageUrlFinal, 760)}
               whisper={jsonLdEnriched}
+              upc={local.upc}
             />
           </div>
         </div>

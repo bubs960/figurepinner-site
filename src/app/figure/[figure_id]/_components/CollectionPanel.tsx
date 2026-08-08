@@ -30,6 +30,9 @@ interface CollectionPanelProps {
   series: number | null
   packSize: number
   exclusiveTo: string | null
+  /** Real UPC from the master KB (figure-page-v3 Module 1, 2026-08-08) — most
+   *  figures won't have one yet (455 of 22,777 KB-wide); render only when present. */
+  upc?: string | null
   /** Hero photo URL, threaded down to FigureActions for the Claiming Ritual
    *  spike's photo-flight (Session 1 de-risk gate) — see ClaimRitual.tsx. */
   imgSrc?: string | null
@@ -44,7 +47,7 @@ interface CollectionPanelProps {
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, scale, series, packSize, exclusiveTo, imgSrc, whisper,
+  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, scale, series, packSize, exclusiveTo, imgSrc, whisper, upc,
 }: CollectionPanelProps) {
   return (
     <div className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column' }}>
@@ -185,6 +188,7 @@ export default function CollectionPanel({
             {scale && <Row label="Scale" value={scale} />}
             {packSize > 1 && <Row label="Pack" value={`${packSize}-pack`} />}
             {exclusiveTo && exclusiveTo !== 'None' && <Row label="Exclusive" value={exclusiveTo} />}
+            {upc && <Row label="UPC" value={upc} />}
           </div>
         </div>
       </div>

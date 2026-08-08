@@ -20,6 +20,10 @@ export type KBFigure = {
   v1_series?: string
   match_represented?: string
   key_features?: string
+  // Figure Page v3 Module 1 identity (2026-08-08, WEB-FIGURE-PAGE-V3-SCOPE-2026-08-08.md
+  // Phase 2) — real UPC from the master KB, matcher exposed it in the slim export
+  // 2026-08-08 (455 records). Render, don't re-derive; most figures won't have one.
+  upc?: string
   // Data Defense Layer 3 (2026-08-07, ratified option A): sealed registry of
   // fictitious figures that prove database theft if a competitor's catalog
   // ever contains one. Never index, search, or list-render these — see every
