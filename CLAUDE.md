@@ -1,4 +1,4 @@
-# CLAUDE.md — figurepinner-site (auto-loads for every session in this repo)
+﻿# CLAUDE.md — figurepinner-site (auto-loads for every session in this repo)
 
 Created S52 (2026-07-03) to close the "knowledge lives in EOCs, not where it
 fires" hole. Keep this SHORT — pointers, not prose. The canonical deploy doc is:
@@ -121,3 +121,8 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
   first, don't block on a specific digest filename.
 - Update memory (`project_web_status_log.md`) after every work block, and
   commit your work before session close.
+
+## LIVE OPERATIONAL STATE -- never delete in cleanup (added 2026-08-08, standalone, per Steve directive + R18)
+
+See Bridge\TEAM-GROUND-RULES.md R18: before deleting/pruning anything you did not create this session, name what READS it (watcher, nightly task, boot step, another lane). Gitignored / stale-looking / uncommitted is NOT evidence of disposability. Cannot name a consumer -> move to _to_delete/ instead of deleting.
+Known protected in THIS repo (extend as learned): `.env.local` (gitignored AND load-bearing -- NEXT_PUBLIC_* build-time inlining; its absence caused the 5-week hydration bug found 8/5), `.kv-purge-state.json` (deploy-state marker other sessions read to date deploys), `scripts/` predeploy checks (scar tissue per R16).
