@@ -1,4 +1,4 @@
-﻿# CLAUDE.md — figurepinner-site (auto-loads for every session in this repo)
+# CLAUDE.md — figurepinner-site (auto-loads for every session in this repo)
 
 Created S52 (2026-07-03) to close the "knowledge lives in EOCs, not where it
 fires" hole. Keep this SHORT — pointers, not prose. The canonical deploy doc is:
