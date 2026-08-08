@@ -29,7 +29,7 @@ export default function LoreBand({ loreInput }: LoreBandProps) {
           color: var(--shelf-cream, #f2e8d5);
         }
       `}</style>
-      <div
+      <h2
         style={{
           fontFamily: 'var(--fp-font-body)',
           fontSize: '10px',
@@ -37,11 +37,11 @@ export default function LoreBand({ loreInput }: LoreBandProps) {
           letterSpacing: '0.2em',
           textTransform: 'uppercase',
           color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
-          marginBottom: '0.875rem',
+          margin: '0 0 0.875rem',
         }}
       >
         About This Figure
-      </div>
+      </h2>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
         {sentences.map((sentence, i) => (
           <p

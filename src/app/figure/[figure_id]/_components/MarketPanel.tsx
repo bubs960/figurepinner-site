@@ -164,13 +164,14 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         paddingBottom: '0.55rem',
         borderBottom: '1px solid var(--shelf-line-gold, rgba(224,168,62,.20))',
       }}>
-        <div style={{
+        <h2 style={{
           fontFamily: 'var(--fp-font-body)',
           fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em',
           color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', textTransform: 'uppercase',
+          margin: 0,
         }}>
           Recent eBay Sales
-        </div>
+        </h2>
         <div style={{
           fontSize: '12px', fontWeight: 400,
           color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',

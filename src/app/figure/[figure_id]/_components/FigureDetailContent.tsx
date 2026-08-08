@@ -693,53 +693,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       : null,
   ].filter(Boolean)
 
-  // AggregateOffer — required by Google for Product rich results.
-  // FPPS-01 (2026-07-15, Steve's decision 5): AggregateOffer.price is a
-  // SINGLE representative value by spec -- it cannot honestly represent two
-  // condition-specific medians. When both sealed and loose have real data,
-  // omit `price` entirely (lowPrice/highPrice still ship -- that's a genuine
-  // range across all comps, not a misleading single figure) rather than
-  // picking one condition to report as "the" price, which is exactly the
-  // price/page mismatch Google's own Product-schema guidance penalizes.
-  // Single-condition or pooled figures keep `price` as before, still gated
-  // on the same tier: <3 total comps still omits offers entirely.
-  const jsonLdOfferPrice = jsonLdPriceContract.hasBothConditions
-    ? null // both conditions honest, but AggregateOffer can't say "two prices"
-    : (jsonLdPriceContract.sealed?.median ?? jsonLdPriceContract.loose?.median ?? jsonLdPriceContract.pooled?.median ?? null)
-  // GAP 1 fix (webaudit structured-data gate verdict, 2026-07-17): itemCondition
-  // was hardcoded to UsedCondition on every figure, including sealed-headline
-  // ones -- confirmed live on 2 real pages, a genuine schema/page mismatch, not
-  // cosmetic. Keys on `headlineCondition` (NOT jsonLdPriceContract.hasBothConditions
-  // -- webaudit's amendment: those are different notions of "both conditions",
-  // and only headlineCondition is the one that actually scopes low/high below).
-  // Pooled/unknown -> omit entirely (Google: itemCondition is Recommended, not
-  // Required -- omission costs enrichment only, never eligibility).
-  const jsonLdItemCondition =
-    headlineCondition === 'sealed' ? 'https://schema.org/NewCondition'
-    : headlineCondition === 'loose' ? 'https://schema.org/UsedCondition'
-    : null
-  const jsonLdOffers =
-    !jsonLdPriceContract.hasNoData && (price?.soldCount ?? 0) >= 3 && (jsonLdOfferPrice != null || jsonLdPriceContract.hasBothConditions)
-      ? {
-          '@type': 'AggregateOffer',
-          priceCurrency: 'USD',
-          ...(jsonLdOfferPrice != null ? { price: jsonLdOfferPrice.toFixed(2) } : {}),
-          ...(valuePricing?.low != null ? { lowPrice: valuePricing.low.toFixed(2) } : {}),
-          ...(valuePricing?.high != null ? { highPrice: valuePricing.high.toFixed(2) } : {}),
-          // GAP 2 fix (webaudit, 2026-07-17): offerCount used to be the POOLED
-          // total (price.soldCount) while lowPrice/highPrice describe only the
-          // headline bucket whenever headlineCondition != null -- confirmed live
-          // on 2 pages (offerCount:50 beside a sealed-only 97.49-324.75 range).
-          // valuePricing.comp_count already IS the headline-bucket count in that
-          // branch (and a harmless no-op, same value as before, in the pooled
-          // branch) -- same ternary population as low/high in every branch, by
-          // construction. Not a new variable.
-          offerCount: valuePricing?.comp_count ?? price!.soldCount,
-          ...(jsonLdItemCondition != null ? { itemCondition: jsonLdItemCondition } : {}),
-          availability: 'https://schema.org/InStock',
-          seller: { '@type': 'Organization', name: 'FigurePinner', url: 'https://figurepinner.com' },
-        }
-      : undefined
+  // AggregateOffer/InStock/seller REMOVED (figure-page-v3 scope, 2026-08-08,
+  // WEB-FIGURE-PAGE-V3-SCOPE-2026-08-08.md Phase 1): this page's own comment
+  // two paragraphs up already said "this is a price-guide page, not a
+  // merchant product page" -- the AggregateOffer block contradicted it by
+  // claiming FigurePinner as `seller` and `availability: InStock` on data
+  // that is historical sold-comp stats, never a live purchasable offer.
+  // additionalProperty (valueProperties above) already carries the same
+  // sold-comp numbers honestly, as properties of the page's subject rather
+  // than an active Offer. No replacement offers object; schema.org does not
+  // require Product pages to declare offers.
 
   // Gated enrichment prose replaces the templated boilerplate when present
   // (S52 meta wiring — same gate as generateMetadata, so meta description and
@@ -760,7 +723,6 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       image:       imageUrlFinal ?? undefined,
       category:    prettifySlug(genre),
       additionalProperty: valueProperties.length ? valueProperties : undefined,
-      ...(jsonLdOffers ? { offers: jsonLdOffers } : {}),
     },
   }
 

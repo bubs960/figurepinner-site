@@ -80,7 +80,7 @@ export default function FigureEnrichment({ matchRepresented, keyFeatures }: Figu
         <div className="fp-enrich-rise">
           <div style={{ ...kickerRowStyle, marginBottom: '0.9rem' }}>
             <span aria-hidden="true" style={kickerDashStyle} />
-            <span style={kickerTextStyle}>What This Figure Represents</span>
+            <h2 style={{ ...kickerTextStyle, margin: 0 }}>What This Figure Represents</h2>
           </div>
           <p
             style={{
@@ -109,7 +109,7 @@ export default function FigureEnrichment({ matchRepresented, keyFeatures }: Figu
             }}
           >
             <span aria-hidden="true" style={kickerDashStyle} />
-            <span style={kickerTextStyle}>Key Features</span>
+            <h2 style={{ ...kickerTextStyle, margin: 0 }}>Key Features</h2>
           </div>
           <ul
             style={{

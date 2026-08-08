@@ -74,12 +74,13 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
           width: '26px', height: '1px', background: accentColor,
           flexShrink: 0, alignSelf: 'center',
         }} />
-        <span style={{
+        <h2 style={{
           fontSize: '0.625rem', fontWeight: 500, letterSpacing: '0.22em',
           color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', textTransform: 'uppercase',
+          margin: 0,
         }}>
           {label}
-        </span>
+        </h2>
         {headerLink && (
           <a
             href={headerLink.href}
