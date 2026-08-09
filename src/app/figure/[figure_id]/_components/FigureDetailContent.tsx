@@ -28,6 +28,7 @@ import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
 import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
+import DecisionPassportPreview, { type IdentityRow } from './DecisionPassportPreview'
 import { derivePriceContract } from '../_lib/priceContract'
 import { thumb } from '@/lib/imageUrl'
 import { formatShortDateWithYear } from '@/lib/safeDate'
@@ -794,6 +795,27 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     return { median: null, medianIsAvg: false, compCount: 0, conditionLabel: null, needsThinDataLabel: false }
   })()
 
+  // ── Decision Passport preview (figure-page-v3, 2026-08-08) — identity rows ──
+  // Only real, per-figure or confirmed-source data. UNRESOLVED fields are never
+  // rendered (same "don't publish what you can't source" rule as everywhere
+  // else on this page) rather than shown as a fabricated/empty row.
+  const dpIdentity: IdentityRow[] = [
+    { label: 'Name', value: displayName, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
+    { label: 'Manufacturer', value: brand, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
+    { label: 'Product line', value: line, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
+    { label: 'Franchise', value: prettifySlug(genre), badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
+    ...(seriesNum != null ? [{ label: 'Series', value: String(seriesNum), badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
+    ...(releaseYear != null ? [{ label: 'Release year', value: String(releaseYear), badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
+    ...(scaleClean ? [{ label: 'Scale', value: scaleClean, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
+    ...(exclusiveToClean ? [{ label: 'Retailer exclusive', value: exclusiveToClean, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
+    ...(local.pack_size > 1 ? [{ label: 'Pack size', value: `${local.pack_size}-pack`, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
+    ...(local.upc ? [{ label: 'UPC / GTIN', value: local.upc, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
+    // Retail price is a line-level reference dict, not a per-figure master-record
+    // field yet (WEB-FIGURE-PAGE-V3-SCOPE-2026-08-08.md) — labeled distinctly so
+    // it doesn't read as more certain than it is.
+    ...(jsonLdRetailPrice != null ? [{ label: 'Original retail', value: formatCurrency(jsonLdRetailPrice), badge: 'LINE REFERENCE', badgeColor: 'var(--dp-gold)' }] : []),
+  ]
+
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       <JsonLd data={jsonLd} />
@@ -897,6 +919,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             />
           </div>
         )}
+
+        {/* Zone 2c — Decision Passport preview (figure-page-v3, 2026-08-08).
+            Visual redesign shell: real identity + market-evidence data now,
+            honest "coming soon" states for Complete Check / wave-BAF map /
+            comparison until matcher's per-figure data exists. Steve's call
+            2026-08-08: ship the shape now, populate with matcher iteratively. */}
+        <DecisionPassportPreview
+          identity={dpIdentity}
+          sealed={price?.sealed ?? null}
+          loose={price?.loose ?? null}
+        />
 
         {/* Zone 3 — Lore band */}
         <div style={{ marginBottom: '1.5rem' }}>
