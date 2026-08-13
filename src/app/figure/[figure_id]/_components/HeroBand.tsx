@@ -7,6 +7,8 @@
 import ClaimPin from '@/app/components/ClaimPin'
 import ConditionShineBox from './ConditionShineBox'
 import NoUpscalePhoto from './NoUpscalePhoto'
+import PriceBlock from './PriceBlock'
+import type { CondBucket } from './FigureDetailContent'
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
@@ -75,6 +77,13 @@ interface HeroBandProps {
   secondary?: { label: string; median: number; count: number } | null
   /** Honesty footnote, e.g. "Includes N comps classified from the listing title." */
   inferenceNote?: string | null
+  /** v4 price block (build plan §1): when either condition bucket has a
+   *  usable median, the two-bucket PriceBlock replaces the legacy placard.
+   *  Pooled-only figures (neither bucket) keep the placard unchanged. */
+  buckets?: { sealed: CondBucket | null; loose: CondBucket | null } | null
+  /** Page renders a #receipts section (golden-corpus passport) — gates the
+   *  price block's "how we price ↓" anchor so plain pages get no dead link. */
+  hasReceipts?: boolean
 }
 
 const RARITY_CONFIG = {
@@ -96,7 +105,11 @@ export default function HeroBand({
   eraLabel, releaseYear, rarityTier, genre, className,
   valuePricing, loreText, underPhoto, ticks, lastSale,
   conditionLabel, conditionRows, secondary, inferenceNote,
+  buckets, hasReceipts,
 }: HeroBandProps) {
+  const showPriceBlock = buckets != null &&
+    ((buckets.sealed?.median != null && buckets.sealed.count >= 1) ||
+     (buckets.loose?.median != null && buckets.loose.count >= 1))
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
   const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 
@@ -346,8 +359,33 @@ export default function HeroBand({
           </p>
         )}
 
-        {/* THE PLACARD — median, range, confidence, last sale. Quiet by design. */}
-        {p && p.median !== null && (
+        {/* v4 PRICE BLOCK — two condition buckets, Bebas faces, confidence
+            chips (build plan §1). Fires whenever a real sealed/loose bucket
+            exists; the legacy placard below stays the pooled-only fallback so
+            no page loses its price surface. */}
+        {showPriceBlock && (
+          <>
+            <PriceBlock
+              sealed={buckets!.sealed}
+              loose={buckets!.loose}
+              hasReceipts={hasReceipts}
+            />
+            {inferenceNote && (
+              <div style={{
+                marginTop: '8px',
+                fontSize: '0.62rem', fontWeight: 400, letterSpacing: '0.04em',
+                color: 'var(--shelf-cream-mut, rgba(242,232,213,0.38))',
+              }}>
+                {inferenceNote}
+              </div>
+            )}
+          </>
+        )}
+
+        {/* THE PLACARD — median, range, confidence, last sale. Quiet by design.
+            Since v4 §1: pooled-only fallback (renders only when no condition
+            bucket exists — see showPriceBlock). */}
+        {!showPriceBlock && p && p.median !== null && (
           <div style={{
             marginTop: '24px',
             border: '1px solid var(--shelf-line-gold, rgba(224,168,62,0.2))',

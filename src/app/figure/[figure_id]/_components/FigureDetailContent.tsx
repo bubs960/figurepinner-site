@@ -925,6 +925,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             conditionRows={placardConditionRows}
             secondary={placardSecondary}
             inferenceNote={inferenceNote}
+            buckets={{ sealed: price?.sealed ?? null, loose: price?.loose ?? null }}
+            hasReceipts={!!goldenCorpusDoc}
           />
         </div>
 

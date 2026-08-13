@@ -12,6 +12,7 @@
 // formats a date.
 
 import type { CondBucket } from './FigureDetailContent'
+import { confidenceForCount } from '../_lib/confidence'
 
 export type IdentityRow = { label: string; value: string; badge: string; badgeColor: string }
 
@@ -24,10 +25,13 @@ interface DecisionPassportProps {
   children?: React.ReactNode
 }
 
+// Thresholds live in _lib/confidence.ts (shared with the v4 PriceBlock —
+// build plan §1: "extract to a shared helper, don't fork the thresholds").
+// This maps the shared tier onto the passport card's own --dp-* palette.
 function confidenceLabel(count: number): { label: string; color: string } {
-  if (count >= 8) return { label: 'HIGH CONFIDENCE', color: 'var(--dp-green)' }
-  if (count >= 4) return { label: 'MEDIUM — n<8', color: 'var(--dp-gold)' }
-  return { label: 'LOW — thin bucket', color: 'var(--dp-pink)' }
+  const conf = confidenceForCount(count)
+  const color = conf.tier === 'high' ? 'var(--dp-green)' : conf.tier === 'medium' ? 'var(--dp-gold)' : 'var(--dp-pink)'
+  return { label: conf.passportLabel, color }
 }
 
 function BucketCard({ label, bucket }: { label: string; bucket: CondBucket | null }) {
