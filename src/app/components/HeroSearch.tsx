@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, startTransition } from 'react'
 import { createPortal } from 'react-dom'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import { thumb } from '@/lib/imageUrl'
@@ -518,7 +518,13 @@ export default function HeroSearch({
           onChange={e => setQuery(e.target.value)}
           onFocus={() => {
             setFocused(true)
-            if (!disableTakeover && isDesktopPointer()) setTakeover(true)
+            // INP mitigation (2026-08-13, CF real-user INP 1,120ms on this
+            // input): the takeover mount is the expensive half of this
+            // interaction — portal + scroll-lock body padding forces a
+            // full-page reflow under DepthHallHero's live SVG filter stack.
+            // startTransition lets the cheap "lit" state paint first and
+            // moves the heavy mount off the interaction's blocking frame.
+            if (!disableTakeover && isDesktopPointer()) startTransition(() => setTakeover(true))
             if (query.length >= 2 && results.length) setOpen(true)
           }}
           // Re-arm on click as well as focus. Escape closes the takeover but
@@ -529,7 +535,8 @@ export default function HeroSearch({
           // if the takeover is already up this is a no-op re-render.
           onClick={() => {
             setFocused(true)
-            if (!disableTakeover && isDesktopPointer()) setTakeover(true)
+            // Same INP deferral as onFocus above.
+            if (!disableTakeover && isDesktopPointer()) startTransition(() => setTakeover(true))
           }}
           onKeyDown={handleKeyDown}
           aria-label="Search figures"
