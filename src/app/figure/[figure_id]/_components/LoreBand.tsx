@@ -3,6 +3,7 @@
 // Returns null when hasContent is false — nothing renders, no empty panel
 
 import { renderLoreBand, renderSentenceToHtml, type LoreInput } from '../_lib/loreRenderer'
+import SectionH2 from './SectionH2'
 
 interface LoreBandProps {
   loreInput: LoreInput
@@ -29,19 +30,7 @@ export default function LoreBand({ loreInput }: LoreBandProps) {
           color: var(--shelf-cream, #f2e8d5);
         }
       `}</style>
-      <h2
-        style={{
-          fontFamily: 'var(--fp-font-body)',
-          fontSize: '10px',
-          fontWeight: 500,
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
-          margin: '0 0 0.875rem',
-        }}
-      >
-        About This Figure
-      </h2>
+      <SectionH2 lead="About" accent="This Figure" style={{ margin: '0 0 0.875rem' }} />
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
         {sentences.map((sentence, i) => (
           <p

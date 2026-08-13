@@ -9,6 +9,7 @@
 import type { CSSProperties } from 'react'
 import type { SellerListing } from '@/data/bubs-inventory'
 import TrackedLink from '@/app/components/TrackedLink'
+import SectionH2 from './SectionH2'
 
 interface SellerCardProps {
   listings: SellerListing[]
@@ -42,16 +43,7 @@ export default function SellerCard({ listings }: SellerCardProps) {
           gap: '0.625rem',
           padding: '0.8rem 1.125rem 0.7rem',
         }}>
-          <h2 style={{
-            fontSize: '10px',
-            fontWeight: 500,
-            letterSpacing: '0.22em',
-            textTransform: 'uppercase',
-            color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
-            margin: 0,
-          }}>
-            Available In Store
-          </h2>
+          <SectionH2 lead="Available" accent="In Store" />
           {/* Live dot */}
           <span style={{
             display: 'inline-flex',

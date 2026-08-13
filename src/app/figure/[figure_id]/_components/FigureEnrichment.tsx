@@ -17,6 +17,8 @@ interface FigureEnrichmentProps {
   keyFeatures?: string | null
 }
 
+import SectionH2 from './SectionH2'
+
 const CREAM_DIM = 'var(--shelf-cream-dim, rgba(242,232,213,.60))'
 const CREAM_MUT = 'var(--shelf-cream-mut, rgba(242,232,213,.38))'
 const GOLD = 'var(--shelf-gold, #e0a83e)'
@@ -80,7 +82,7 @@ export default function FigureEnrichment({ matchRepresented, keyFeatures }: Figu
         <div className="fp-enrich-rise">
           <div style={{ ...kickerRowStyle, marginBottom: '0.9rem' }}>
             <span aria-hidden="true" style={kickerDashStyle} />
-            <h2 style={{ ...kickerTextStyle, margin: 0 }}>What This Figure Represents</h2>
+            <SectionH2 lead="What This Figure" accent="Represents" />
           </div>
           <p
             style={{
@@ -109,7 +111,7 @@ export default function FigureEnrichment({ matchRepresented, keyFeatures }: Figu
             }}
           >
             <span aria-hidden="true" style={kickerDashStyle} />
-            <h2 style={{ ...kickerTextStyle, margin: 0 }}>Key Features</h2>
+            <SectionH2 lead="Key" accent="Features" />
           </div>
           <ul
             style={{

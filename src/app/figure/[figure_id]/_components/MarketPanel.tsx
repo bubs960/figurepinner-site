@@ -20,6 +20,7 @@ import { formatCurrency, formatDate } from '../_lib/figureFormatters'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import LiquidSparkline from './LiquidSparkline'
 import { derivePriceContract, INSUFFICIENT_COMPS_LABEL } from '../_lib/priceContract'
+import SectionH2 from './SectionH2'
 
 interface Comp {
   title: string
@@ -164,14 +165,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         paddingBottom: '0.55rem',
         borderBottom: '1px solid var(--shelf-line-gold, rgba(224,168,62,.20))',
       }}>
-        <h2 style={{
-          fontFamily: 'var(--fp-font-body)',
-          fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em',
-          color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', textTransform: 'uppercase',
-          margin: 0,
-        }}>
-          Recent eBay Sales
-        </h2>
+        <SectionH2 lead="Recent" accent="eBay Sales" />
         <div style={{
           fontSize: '12px', fontWeight: 400,
           color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',

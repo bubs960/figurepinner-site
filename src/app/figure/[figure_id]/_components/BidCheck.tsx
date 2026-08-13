@@ -31,6 +31,7 @@
 
 import { useState } from 'react'
 import { formatCurrency } from '../_lib/figureFormatters'
+import SectionH2 from './SectionH2'
 
 interface Comp {
   price: number
@@ -194,11 +195,7 @@ export default function BidCheck({
       `}</style>
 
       <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem', flexWrap: 'wrap' }}>
-        <h2 style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.2em',
-                     textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
-                     margin: 0, lineHeight: 1.6 }}>
-          Bid Check
-        </h2>
+        <SectionH2 lead="Bid" accent="Check" />
         <span style={{ fontSize: '0.8125rem', fontWeight: 300, color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))' }}>
           what&rsquo;s the current bid?
         </span>

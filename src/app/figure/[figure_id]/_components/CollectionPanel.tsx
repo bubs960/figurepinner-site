@@ -4,6 +4,7 @@
 import FigureActions from '@/app/components/FigureActions'
 import TrackedLink from '@/app/components/TrackedLink'
 import { formatCurrency } from '../_lib/figureFormatters'
+import SectionH2 from './SectionH2'
 
 interface CollectionPanelProps {
   figureId: string
@@ -174,13 +175,7 @@ export default function CollectionPanel({
           marginTop: '1.25rem', paddingTop: '1rem',
           borderTop: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
         }}>
-          <h2 style={{
-            fontSize: '0.625rem', fontWeight: 500, letterSpacing: '0.24em',
-            color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
-            textTransform: 'uppercase', margin: '0 0 0.875rem',
-          }}>
-            Details
-          </h2>
+          <SectionH2 lead="Details" style={{ margin: '0 0 0.875rem' }} />
           <div className="fp-cpanel-spec" style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
             <Row label="Brand" value={brand} />
             <Row label="Line" value={line} />
