@@ -50,14 +50,15 @@ export default function GoldenCorpusAtAGlance({ doc }: { doc: FigureClaimsDoc })
         }}>
           At a Glance
         </span>
-        <span style={{
+        {/* Real anchor to the receipts section, not a static chip (v4 pass). */}
+        <a href="#receipts" style={{
           fontSize: '0.56rem', fontWeight: 700, letterSpacing: '0.06em',
-          color: 'var(--shelf-gold-hi, #f5c462)',
+          color: 'var(--shelf-gold-hi, #f5c462)', textDecoration: 'none',
           border: '1px solid rgba(224,168,62,0.4)', borderRadius: '100px',
           padding: '2px 8px', whiteSpace: 'nowrap',
         }}>
           SOURCED ↓
-        </span>
+        </a>
       </div>
       {rows.map(r => (
         <div key={r.label} style={{

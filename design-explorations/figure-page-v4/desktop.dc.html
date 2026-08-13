@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #09090F; }
+    @keyframes fpBlobA { 0%,100% { transform:translate(-8%,-4%) scale(1) rotate(0deg); } 33% { transform:translate(6%,8%) scale(1.15) rotate(40deg); } 66% { transform:translate(-4%,12%) scale(.92) rotate(-30deg); } }
+    @keyframes fpBlobB { 0%,100% { transform:translate(4%,6%) scale(1.05) rotate(0deg); } 50% { transform:translate(-10%,-6%) scale(.9) rotate(60deg); } }
+    @keyframes fpBlobC { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(8%,-10%) scale(1.2); } }
+    @keyframes fpSheen { 0%,100% { transform:translateX(-12%) skewX(-8deg); opacity:.5; } 50% { transform:translateX(10%) skewX(6deg); opacity:1; } }
+    a { color: #4ecde6; text-decoration: none; }
+    a:hover { color: #f5c462; }
+  </style>
+</helmet>
+<div style="position:relative; background:#09090F; color:#f2e8d5; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; min-height:100vh; padding-bottom:60px; overflow:hidden;">
+  {{ liquidBg }}
+  <div style="position:relative; z-index:1;">
+
+  <div data-screen-label="Review notes" style="background:linear-gradient(180deg, #141126, #0d0b16); border-bottom:1px solid rgba(224,168,62,.3);">
+    <div style="max-width:1200px; margin:0 auto; padding:18px 28px;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:.05em; color:#f5c462;">V4 DESIGN POLISH — SENIOR PASS ON THE SHIPPED V3</div>
+      <div style="margin-top:8px; font-size:12.5px; line-height:1.65; color:rgba(242,232,213,.65); max-width:120ch;">Same structure and evidence system as your build — this pass fixes hierarchy, rhythm, and the placeholder-heavy above-fold. Cyan notes mark each change; the list is in chat.</div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px; margin:0 auto; padding:0 28px;">
+
+    <header style="display:flex; align-items:center; justify-content:space-between; padding:18px 0 14px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="width:26px; height:26px; border-radius:50%; background:#e0a83e; position:relative; display:inline-block;"><span style="position:absolute; width:8px; height:8px; border-radius:50%; background:#09090F; top:50%; left:50%; transform:translate(-50%,-50%);"></span></span>
+        <span style="font-weight:800; letter-spacing:.02em;">FIGUREPINNER</span>
+      </div>
+      <nav style="display:flex; gap:22px; font-size:12.5px;">
+        <a href="#" style="color:rgba(242,232,213,.55);">Marvel Legends</a><a href="#" style="color:rgba(242,232,213,.55);">Black Series</a><a href="#" style="color:rgba(242,232,213,.55);">WWE Elite</a><a href="#" style="color:#f5c462;">Track a figure</a>
+      </nav>
+    </header>
+
+    <nav data-screen-label="Breadcrumb" style="display:flex; align-items:center; gap:8px; padding:2px 0 14px; font-size:12px; color:rgba(242,232,213,.45);">
+      <a href="#" style="color:rgba(242,232,213,.55);">Marvel Legends</a><span>›</span><a href="#" style="color:rgba(242,232,213,.55);">Thor: Ragnarok wave</a><span>›</span><span style="color:rgba(242,232,213,.85);">Hela</span>
+      <span style="{{ note }}">+ breadcrumb (was missing) — crawl path + BreadcrumbList schema</span>
+    </nav>
+
+    <main style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap:32px; align-items:start;">
+      <div style="max-width:380px;">
+        <div style="position:relative; border:1px solid rgba(242,232,213,.08); border-radius:16px; padding:26px 22px 20px; background:linear-gradient(180deg, rgba(242,232,213,.03), rgba(242,232,213,.008) 60%, transparent); box-shadow:0 24px 60px rgba(0,0,0,.45), inset 0 0 60px rgba(224,168,62,.035); overflow:hidden;">
+          <div style="position:absolute; left:50%; top:-10%; width:90%; height:75%; transform:translateX(-50%); clip-path:polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%); background:linear-gradient(180deg, rgba(255,246,218,.16), rgba(255,238,196,.04) 70%, transparent); mix-blend-mode:screen; pointer-events:none;"></div>
+          <div style="position:relative; z-index:1; background:linear-gradient(180deg, #fbf7ee 0%, #efe5d0 100%); border-radius:8px 8px 4px 4px; padding:7px 7px 8px; box-shadow:0 18px 34px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.4);">
+            <div style="width:100%; aspect-ratio:4/4.7; border-radius:4px; background:#e9e0cd; display:flex; align-items:center; justify-content:center; color:#8a7e63; font-size:12.5px;">Hela — carded photo</div>
+          </div>
+          <div style="position:relative; z-index:1; margin:16px -14px 0; height:1px; background:linear-gradient(90deg, transparent, rgba(245,196,98,.45), transparent); box-shadow:0 5px 16px rgba(245,196,98,.14);"></div>
+        </div>
+        <div style="margin-top:4px;"><span style="{{ note }}">+ case-light beam restored from the vitrine hero — ties figure pages to the homepage identity</span></div>
+
+        <div style="margin-top:18px; border:1px solid rgba(224,168,62,.2); border-radius:12px; padding:14px 16px 12px; background:linear-gradient(180deg, rgba(224,168,62,.05), rgba(224,168,62,.012) 70%, transparent);">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px;">
+            <span style="font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#e0a83e;">At a Glance</span>
+            <a href="#receipts" style="font-size:9px; font-weight:700; letter-spacing:.06em; color:#f5c462; border:1px solid rgba(224,168,62,.4); border-radius:100px; padding:2px 8px; white-space:nowrap;">SOURCED ↓</a>
+          </div>
+          <sc-for list="{{ glance }}" as="g" hint-placeholder-count="4">
+            <div style="display:grid; grid-template-columns:96px minmax(0,1fr); gap:10px; padding:6px 0; border-top:1px solid rgba(242,232,213,.06); font-size:12.5px; align-items:baseline;">
+              <span style="color:rgba(242,232,213,.55);">{{ g.k }}</span>
+              <span style="font-weight:600; line-height:1.45;">{{ g.v }}</span>
+            </div>
+          </sc-for>
+          <div style="margin-top:8px; font-size:10px; color:rgba(242,232,213,.45); line-height:1.5;">Every fact sourced — receipts below.</div>
+        </div>
+        <div style="margin-top:4px;"><span style="{{ note }}">SOURCED ↓ is now a real anchor to #receipts, not a static chip</span></div>
+      </div>
+
+      <div style="min-width:0;">
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+          <span style="{{ chipGold }}">MARVEL LEGENDS</span><span style="{{ chipGold }}">THOR: RAGNAROK WAVE</span><span style="{{ chipGreen }}">HULK BAF — ARM</span>
+        </div>
+        <h1 style="font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:56px; line-height:.96; letter-spacing:.015em; margin:0 0 8px;">HELA <span style="color:#f5c462;">— MARVEL LEGENDS PRICE GUIDE</span></h1>
+        <div style="font-size:13.5px; color:rgba(242,232,213,.55); margin-bottom:8px;">Thor: Ragnarok wave · Hasbro · SKU HSC1802 · on shelves by August 2017</div>
+        <div style="margin-bottom:20px;"><span style="{{ note }}">H1 moves to the display face (Bebas, like the rest of the site) — v3's 2.4rem system-ui H1 was quieter than the price block it sat above; a price guide's title and its number should share one voice</span></div>
+
+        <div style="border:1px solid rgba(224,168,62,.35); border-radius:16px; background:linear-gradient(160deg, #16131f 0%, #0b0a12 65%); overflow:hidden;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr));">
+            <div style="padding:22px 26px; border-right:1px solid rgba(242,232,213,.08);">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <span style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,232,213,.55);">Loose / complete</span>
+                <span style="{{ chipGreen }}">HIGH · 11 comps</span>
+              </div>
+              <div style="font-family:'Bebas Neue',sans-serif; font-size:64px; color:#f5c462; line-height:1;">$34</div>
+              <div style="font-size:11.5px; color:rgba(242,232,213,.55); margin-top:6px;">median, last 90 days · ▲ $3 vs prior 90 · <a href="#receipts">how we price ↓</a></div>
+            </div>
+            <div style="padding:22px 26px;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <span style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,232,213,.55);">Mint on card</span>
+                <span style="{{ chipGold }}">MEDIUM · 6 comps</span>
+              </div>
+              <div style="font-family:'Bebas Neue',sans-serif; font-size:64px; color:#f2e8d5; line-height:1;">$58</div>
+              <div style="font-size:11.5px; color:rgba(242,232,213,.55); margin-top:6px;">sealed carries the BAF arm — the premium is partly the arm</div>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(242,232,213,.08); padding:14px 26px; background:rgba(224,168,62,.03);">
+            <div style="display:flex; align-items:flex-end; gap:3px; height:44px;">
+              <sc-for list="{{ spark }}" as="s" hint-placeholder-count="12">
+                <span style="flex:1; height:{{ s.h }}%; border-radius:2px 2px 0 0; background:{{ s.c }};"></span>
+              </sc-for>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:9.5px; color:rgba(242,232,213,.35); margin-top:6px;"><span>MAY 15</span><span>weekly medians · loose</span><span>AUG 13</span></div>
+          </div>
+        </div>
+        <div style="margin-top:6px;"><span style="{{ note }}">numbers shown in designed state (sample values, not $— placeholders) + confidence chip and 90-day delta beside each price; chart slot becomes a real bar-sparkline spec with date bounds</span></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;">
+          <a href="#" style="flex:2; min-width:200px; text-align:center; background:linear-gradient(180deg, #f5c462, #dd9f2e); color:#141414; font-weight:800; font-size:14px; letter-spacing:.03em; border-radius:10px; padding:15px 18px;">TRACK THIS FIGURE — FREE</a>
+          <a href="#" style="flex:1; min-width:180px; text-align:center; border:1px solid rgba(224,168,62,.5); color:#f5c462; font-weight:700; font-size:13.5px; letter-spacing:.03em; border-radius:10px; padding:15px 18px;">SOLD LISTINGS ON EBAY ↗</a>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:12px; font-size:10px; color:rgba(242,232,213,.35); margin-top:8px;">
+          <span>eBay link is an affiliate link — costs you nothing, keeps the data free.</span>
+          <span style="{{ note }}">CTA weights split 2:1 — one primary action, gradient fill matching site buttons</span>
+        </div>
+      </div>
+    </main>
+
+    <section data-screen-label="Below fold pair" style="margin-top:56px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap:28px;">
+      <div style="background:linear-gradient(160deg, #16131f 0%, #0b0a12 65%); border:1px solid rgba(242,232,213,.08); border-radius:16px; padding:20px 22px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+          <h2 style="font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:26px; letter-spacing:.02em; margin:0;">RECENT <span style="color:#f5c462;">SOLD LISTINGS</span></h2>
+          <span style="{{ chipGreen }}">LIVE DATA</span>
+        </div>
+        <div style="border:1px solid rgba(242,232,213,.08); border-radius:10px; overflow:hidden;">
+          <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(64px,auto) minmax(64px,auto); gap:10px; padding:9px 14px; font-size:10px; letter-spacing:.1em; color:rgba(242,232,213,.35); text-transform:uppercase; background:rgba(242,232,213,.03);"><span>Listing</span><span>Cond.</span><span style="text-align:right;">Sold</span></div>
+          <sc-for list="{{ comps }}" as="c" hint-placeholder-count="4">
+            <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(64px,auto) minmax(64px,auto); gap:10px; padding:11px 14px; border-top:1px solid rgba(242,232,213,.06); font-size:12.5px; align-items:center;">
+              <span style="color:rgba(242,232,213,.8); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ c.title }}</span>
+              <span style="{{ c.chip }}">{{ c.cond }}</span>
+              <span style="text-align:right; font-weight:700; color:{{ c.priceColor }}; white-space:nowrap;">{{ c.price }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex; gap:18px; margin-top:12px; font-size:11.5px; color:rgba(242,232,213,.55);"><span>Median <strong style="color:#f2e8d5;">$34</strong></span><span>Low <strong style="color:#f2e8d5;">$27</strong></span><span>High <strong style="color:#f2e8d5;">$41</strong></span><span>Count <strong style="color:#f2e8d5;">11</strong></span><span style="color:#e05a7a;">7 excluded — <a href="#receipts">why</a></span></div>
+      </div>
+
+      <div style="background:linear-gradient(160deg, #16131f 0%, #0b0a12 65%); border:1px solid rgba(242,232,213,.08); border-radius:16px; padding:20px 22px;">
+        <h2 style="font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:26px; letter-spacing:.02em; margin:0 0 12px;">WHY THIS ONE <span style="color:#f5c462;">STILL MOVES</span></h2>
+        <div style="font-size:13.5px; line-height:1.7; color:rgba(242,232,213,.85);">
+          <p style="margin:0 0 12px;">The Ragnarok wave had one job: get the Hulk BAF into as many carts as possible. Hela did it better than anyone else in the case. Un-helmeted Blanchett head, halftone face printing back when that was still new for Hasbro, and the arm — the piece everybody needed to finish the Hulk.</p>
+          <p style="margin:0 0 12px;">That BAF arm is doing real work in the price. Sealed examples carry the arm; loose ones usually don't, and the comps split accordingly. If a loose listing claims "complete," ask about the arm before you pay MOC money.</p>
+          <p style="margin:0;">Street date is the one thing we can't pin exactly — reviews put it on shelves by August 2017, and that's as precise as the record gets. We'd rather say so than make up a date.</p>
+        </div>
+      </div>
+    </section>
+    <div style="margin-top:6px;"><span style="{{ note }}">section rhythm normalized to a 56px scale (v3 mixed 34/28/28) · comp table gains the excluded-count link — the trust device the receipts section already earns</span></div>
+
+    <section data-screen-label="Receipts" id="receipts" style="margin-top:56px;">
+      <div style="background:linear-gradient(160deg, #16131f 0%, #0b0a12 65%); border:1px solid rgba(224,168,62,.3); border-radius:16px; padding:22px 24px;">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:6px;">
+          <h2 style="font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:26px; letter-spacing:.02em; margin:0;">DOCUMENTED FACTS, <span style="color:#f5c462;">WITH RECEIPTS</span></h2>
+          <span style="{{ chipGreen }}">EVIDENCE-LOCKED</span>
+        </div>
+        <div style="font-size:11.5px; color:rgba(242,232,213,.55); line-height:1.6; margin-bottom:14px;">Every fact below is backed by a verbatim quote from a named source — expand any row to see where it came from. Fields we couldn't verify say so.</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap:22px;">
+          <div>
+            <div style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,232,213,.55); margin-bottom:10px;">Figure fingerprint</div>
+            <div style="border:1px solid rgba(255,255,255,.1); border-radius:12px; overflow:hidden;">
+              <sc-for list="{{ fingerprint }}" as="f" hint-placeholder-count="3">
+                <div style="display:grid; grid-template-columns:minmax(96px,130px) minmax(0,1fr); gap:10px; padding:10px 14px; border-top:1px solid rgba(255,255,255,.06); font-size:12.5px;">
+                  <span style="color:rgba(242,232,213,.55);">{{ f.k }}</span>
+                  <div>
+                    <span style="font-weight:600; font-style:{{ f.italic }};">{{ f.v }}</span> <span style="{{ f.chip }}">{{ f.badge }}</span>
+                    <sc-if value="{{ f.quote }}" hint-placeholder-val="{{ false }}">
+                      <div style="margin-top:6px; padding:8px 10px; border-radius:8px; background:rgba(78,205,230,.05); border:1px solid rgba(78,205,230,.2); font-size:11.5px; line-height:1.5;">“{{ f.quote }}”<div style="margin-top:4px; color:rgba(242,232,213,.55);"><a href="#">{{ f.src }}</a> · retrieved 2026-08-13</div></div>
+                    </sc-if>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,232,213,.55); margin-bottom:10px;">Release details</div>
+            <div style="border:1px solid rgba(255,255,255,.1); border-radius:12px; overflow:hidden;">
+              <sc-for list="{{ release }}" as="r" hint-placeholder-count="4">
+                <div style="display:grid; grid-template-columns:minmax(96px,130px) minmax(0,1fr); gap:10px; padding:10px 14px; border-top:1px solid rgba(255,255,255,.06); font-size:12.5px;">
+                  <span style="color:rgba(242,232,213,.55);">{{ r.k }}</span>
+                  <div><span style="font-weight:600; font-style:{{ r.italic }}; color:{{ r.vColor }};">{{ r.v }}</span> <sc-if value="{{ r.badge }}" hint-placeholder-val="{{ false }}"><span style="{{ r.chip }}">{{ r.badge }}</span></sc-if></div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="{{ note }}">INFERRED badge recolored amber-outline (was pink) — pink now means only SOURCES DISAGREE, so red = conflict is unambiguous</span>
+          <span style="{{ note }}">first receipt shown expanded by default — teaches the interaction without a click</span>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Related" style="margin-top:56px;">
+      <div style="font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,232,213,.55); margin-bottom:10px;">Same wave · complete the Hulk BAF</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap:16px;">
+        <sc-for list="{{ related }}" as="rel" hint-placeholder-count="4">
+          <a href="#" style="display:block; border:1px solid rgba(242,232,213,.08); border-radius:12px; padding:14px; color:#f2e8d5; background:rgba(242,232,213,.015);" style-hover="border-color:rgba(224,168,62,.4);">
+            <div style="aspect-ratio:1; border-radius:8px; background:rgba(242,232,213,.05); margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:rgba(242,232,213,.35); font-size:11px;">photo</div>
+            <div style="font-weight:700; font-size:13px;">{{ rel.name }}</div>
+            <div style="font-size:11px; color:rgba(242,232,213,.55); margin:2px 0 6px;">{{ rel.piece }}</div>
+            <div style="font-size:12px; font-weight:700; color:#f5c462;">{{ rel.price }}</div>
+          </a>
+        </sc-for>
+      </div>
+      <div style="margin-top:6px;"><span style="{{ note }}">related cards gain a live median price — turns navigation into information and doubles the internal-link click reason</span></div>
+    </section>
+
+    <section data-screen-label="Every version rail" style="margin-top:56px;">
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:14px; margin-bottom:12px;">
+        <span style="display:inline-flex; align-items:center; gap:10px; font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(242,232,213,.55);"><span style="width:26px; height:2px; background:#e0a83e; display:inline-block;"></span>Every version of Hela</span>
+        <a href="#" style="font-size:13px; font-weight:700; color:#f5c462;">See all 6 Hela figures →</a>
+        <span style="margin-left:auto; font-size:10.5px; letter-spacing:.14em; color:rgba(242,232,213,.35);">6 FIGURES</span>
+      </div>
+      <div style="display:flex; gap:14px; overflow-x:auto; padding-bottom:8px;">
+        <sc-for list="{{ versions }}" as="v" hint-placeholder-count="6">
+          <a href="#" style="flex:0 0 132px; display:block; color:#f2e8d5;">
+            <div style="width:132px; aspect-ratio:4/5; border-radius:10px; background:linear-gradient(180deg, #fbf7ee, #efe5d0); border:1px solid rgba(242,232,213,.12); display:flex; align-items:center; justify-content:center; color:#8a7e63; font-size:10px; text-align:center; padding:6px; box-shadow:{{ v.shadow }};">{{ v.photo }}</div>
+            <div style="margin-top:8px; font-size:12px; font-weight:700; line-height:1.35; color:{{ v.nameColor }};">{{ v.name }}</div>
+            <div style="font-size:10.5px; color:rgba(242,232,213,.5);">{{ v.meta }}</div>
+          </a>
+        </sc-for>
+      </div>
+      <div style="margin-top:4px;"><span style="{{ note }}">+ character version rail (per attached ref) — cream photo tiles echo the vitrine card; current figure highlighted; horizontal scroll past 6</span></div>
+    </section>
+
+    <section data-screen-label="Browse track learn" style="margin-top:56px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap:20px;">
+        <sc-for list="{{ hubCards }}" as="h" hint-placeholder-count="3">
+          <div style="border:1px solid rgba(242,232,213,.1); border-radius:14px; padding:24px 26px; background:rgba(242,232,213,.015); display:flex; flex-direction:column; gap:12px;">
+            <div style="font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:rgba(242,232,213,.45);">{{ h.eyebrow }}</div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:27px; letter-spacing:.02em; line-height:1;">{{ h.title }}</div>
+            <div style="font-size:13.5px; line-height:1.65; color:rgba(242,232,213,.7); flex:1;">{{ h.body }}</div>
+            <a href="#" style="font-size:13.5px; font-weight:700; color:#f5c462;">{{ h.cta }} →</a>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top:6px;"><span style="{{ note }}">+ Browse / Track / Learn strip (per ref) — article links live under LEARN; guides are the article-content surface Google wants</span></div>
+    </section>
+
+    <section data-screen-label="Bottom CTA" style="margin-top:56px;">
+      <div style="border:1px dashed rgba(242,232,213,.2); border-radius:12px; padding:26px; text-align:center; color:rgba(242,232,213,.35); font-size:11px; letter-spacing:.14em;">ADSENSE SLOT — 970×250 / responsive</div>
+      <div style="margin-top:20px; background:linear-gradient(120deg, rgba(224,168,62,.08), rgba(224,168,62,.015)); border:1px solid rgba(224,168,62,.35); border-radius:16px; padding:20px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
+        <div style="min-width:240px;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:24px; letter-spacing:.02em;">WATCHING THIS ONE? LET THE EXTENSION WATCH IT FOR YOU.</div>
+          <div style="font-size:12.5px; color:rgba(242,232,213,.55); margin-top:4px;">Live sold comps on every eBay page, price alerts when your grail dips. Free.</div>
+        </div>
+        <a href="#" style="background:linear-gradient(180deg, #f5c462, #dd9f2e); color:#141414; font-weight:800; font-size:13.5px; letter-spacing:.03em; border-radius:10px; padding:14px 22px; white-space:nowrap;">ADD TO CHROME — FREE</a>
+      </div>
+      <div style="margin-top:18px; font-size:10px; color:rgba(242,232,213,.35); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;"><span>Powered by FigurePinner · affiliate disclosure</span><span>Prices update nightly from real sold data</span></div>
+    </section>
+
+  </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review&quot;},&quot;liquidBackground&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Atmosphere&quot;}}">
+const GOLD = '#f5c462', GREEN = '#4ec98c', PINK = '#e05a7a', CYAN = '#4ecde6', AMBER = '#e0a83e';
+
+const GLANCE = [
+  ['In the box', 'Hela figure · Sword · Alternate head'],
+  ['Build-a-Figure', 'Hulk — Arm'],
+  ['Original retail', '$19.99'],
+  ['SKU', 'HSC1802'],
+];
+const SPARK = [42, 40, 45, 38, 44, 48, 46, 52, 49, 55, 58, 61, 57, 63];
+const COMPS = [
+  ['Marvel Legends Hela Ragnarok loose complete w/ sword', 'LOOSE', '$36', true],
+  ['Hela Marvel Legends MOC sealed Hulk BAF arm', 'MOC', '$58', false],
+  ['Marvel Legends Hela figure loose no BAF', 'LOOSE', '$31', true],
+  ['Hela Thor Ragnarok Hasbro complete both heads', 'LOOSE', '$34', true],
+];
+const FINGERPRINT = [
+  ['Attire', 'Flat black, chest plate, dark metallic green accents', 'SINGLE SOURCE', GOLD, 'flat black, with the chest plate and some accents done in a dark metallic green', 'reviewsite.example', false],
+  ['Head sculpt', 'Un-helmeted, Cate Blanchett likeness', 'SINGLE SOURCE', GOLD, null, null, false],
+  ['Face technology', 'Halftone printing', 'SINGLE SOURCE', GOLD, null, null, false],
+];
+const RELEASE = [
+  ['Build-a-Figure', 'Hulk — Arm', 'CORROBORATED', GREEN, false, null],
+  ['Street date', 'by August 2017', 'INFERRED FROM DATED SOURCE', AMBER, true, null],
+  ['Original retail', '$19.99', 'PRIMARY SOURCE', GREEN, false, null],
+];
+const VERSIONS = [
+  ['Hela (Ragnarok wave)', 'Elite · 2017 · this page', true],
+  ['Hela (Corrupted)', 'What If? wave · 2021', false],
+  ['Hela (Comic)', 'A-Force box set · 2017', false],
+  ['Hela (Love & Thunder)', 'Marvel Legends · 2022', false],
+  ['Hela', 'Minimates · 2017', false],
+  ['Hela', 'Funko Pop 358 · 2017', false],
+];
+const HUB_CARDS = [
+  ['BROWSE', 'MORE RAGNAROK WAVE', 'Every figure in the wave, with real sold pricing on each — and which Hulk BAF piece it carries.', 'Browse the wave'],
+  ['TRACK', 'BUILD YOUR COLLECTION', 'Own it, want it, track it. Unlimited vault, alerts, and price history. Free, forever.', 'Sign up free'],
+  ['LEARN', 'HOW TO PRICE MARVEL LEGENDS', 'Guides on reading comps, condition premiums, spotting fakes, and when to sell — by collectors, not content farms.', 'Read the guides'],
+];
+const RELATED = [
+  ['Thor (Gladiator)', 'Hulk BAF — Head', '$29 loose'],
+  ['Loki', 'Hulk BAF — Leg', '$26 loose'],
+  ['Ares', 'Hulk BAF — Torso', '$38 loose'],
+  ['Hela — other releases', 'Same character, all lines', '3 figures'],
+];
+
+class Component extends DCLogic {
+  _chip(color) {
+    return {
+      display: 'inline-block', padding: '2px 8px', borderRadius: '100px', fontSize: '9.5px',
+      fontWeight: 700, letterSpacing: '.05em', lineHeight: 1.4, whiteSpace: 'nowrap',
+      border: `1px solid ${color}`, color, verticalAlign: 'middle',
+    };
+  }
+  _liquidBg() {
+    if (this._liquidEl) return this._liquidEl;
+    const h = React.createElement;
+    const blob = (anim, dur, style) => h('div', {
+      style: Object.assign({
+        position: 'absolute', borderRadius: '50%', filter: 'blur(90px)',
+        animation: `${anim} ${dur}s ease-in-out infinite`, willChange: 'transform',
+      }, style),
+    });
+    this._liquidEl = h('div', { 'aria-hidden': true, style: { position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' } },
+      // deep ink pools
+      blob('fpBlobA', 46, { left: '-12%', top: '-6%', width: '55vw', height: '55vw', background: 'radial-gradient(circle at 38% 35%, rgba(224,168,62,.10), rgba(224,168,62,.03) 55%, transparent 72%)' }),
+      blob('fpBlobB', 58, { right: '-15%', top: '14%', width: '48vw', height: '48vw', background: 'radial-gradient(circle at 60% 40%, rgba(78,205,230,.07), rgba(78,205,230,.02) 55%, transparent 72%)' }),
+      blob('fpBlobC', 52, { left: '18%', bottom: '-14%', width: '60vw', height: '44vw', background: 'radial-gradient(circle at 50% 50%, rgba(90,60,160,.09), rgba(90,60,160,.025) 55%, transparent 75%)' }),
+      // light refraction sheen — a thin moving caustic band
+      h('div', { style: {
+        position: 'absolute', left: '10%', top: 0, width: '34%', height: '140%',
+        background: 'linear-gradient(100deg, transparent 40%, rgba(245,196,98,.035) 48%, rgba(255,246,218,.06) 50%, rgba(245,196,98,.035) 52%, transparent 60%)',
+        mixBlendMode: 'screen', animation: 'fpSheen 26s ease-in-out infinite', willChange: 'transform', filter: 'blur(6px)',
+      } }),
+      h('div', { style: {
+        position: 'absolute', right: '4%', top: '-10%', width: '26%', height: '140%',
+        background: 'linear-gradient(80deg, transparent 42%, rgba(78,205,230,.04) 50%, transparent 58%)',
+        mixBlendMode: 'screen', animation: 'fpSheen 38s ease-in-out infinite reverse', willChange: 'transform', filter: 'blur(8px)',
+      } }),
+      // vignette keeps edges dark so content stays readable
+      h('div', { style: { position: 'absolute', inset: 0, background: 'radial-gradient(120% 90% at 50% 30%, transparent 55%, rgba(9,9,15,.85) 100%)' } })
+    );
+    return this._liquidEl;
+  }
+  renderVals() {
+    const note = {
+      display: (this.props.showNotes ?? true) ? 'inline-block' : 'none',
+      padding: '3px 9px', borderRadius: '100px', fontSize: '10px', fontWeight: 700,
+      letterSpacing: '.04em', lineHeight: 1.45, whiteSpace: 'normal', maxWidth: '100%',
+      background: '#09090F', border: `1px solid rgba(78,205,230,.5)`, color: CYAN, verticalAlign: 'middle',
+    };
+    return {
+      note,
+      liquidBg: (this.props.liquidBackground ?? true) ? this._liquidBg() : null,
+      chipGold: this._chip(GOLD),
+      chipGreen: this._chip(GREEN),
+      glance: GLANCE.map((g, i) => ({ id: i, k: g[0], v: g[1] })),
+      spark: SPARK.map((h, i) => ({ id: i, h, c: i === SPARK.length - 1 ? GOLD : 'rgba(224,168,62,.35)' })),
+      comps: COMPS.map((c, i) => ({ id: i, title: c[0], cond: c[1], price: c[2], chip: this._chip(c[3] ? GOLD : GREEN), priceColor: c[3] ? GOLD : '#f2e8d5' })),
+      fingerprint: FINGERPRINT.map((f, i) => ({ id: i, k: f[0], v: f[1], badge: f[2], chip: this._chip(f[3]), quote: f[4], src: f[5], italic: f[6] ? 'italic' : 'normal' })),
+      release: RELEASE.map((r, i) => ({ id: i, k: r[0], v: r[1], badge: r[2], chip: r[3] ? this._chip(r[3]) : null, italic: r[4] ? 'italic' : 'normal', vColor: r[5] || '#f2e8d5' })),
+      related: RELATED.map((r, i) => ({ id: i, name: r[0], piece: r[1], price: r[2] })),
+      versions: VERSIONS.map((v, i) => ({
+        id: i, name: v[0], meta: v[1], photo: 'carded photo',
+        nameColor: v[2] ? GOLD : '#f2e8d5',
+        shadow: v[2] ? '0 0 0 2px rgba(224,168,62,.55)' : 'none',
+      })),
+      hubCards: HUB_CARDS.map((h, i) => ({ id: i, eyebrow: h[0], title: h[1], body: h[2], cta: h[3] })),
+    };
+  }
+}
+</script>
+</body>
+</html>

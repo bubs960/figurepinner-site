@@ -53,8 +53,10 @@ function evidenceBadge(cls: string | undefined): { label: string; color: string;
   if (cls === 'corroborated_exact') return { label: 'CORROBORATED', color: 'var(--dp-green)' }
   // Steve-approved class (8/13): the value is an inference from a dated source
   // (e.g. street date bounded by a review's dateline). MUST NOT read as a
-  // stated fact — distinct badge + italic value carry that.
-  if (cls === 'inferred_from_dated_source') return { label: 'INFERRED FROM DATED SOURCE', color: 'var(--dp-pink)', inferred: true }
+  // stated fact — distinct badge + italic value carry that. Amber, not pink,
+  // per the v4 design pass: pink now means ONLY "SOURCES DISAGREE", so
+  // red = conflict stays unambiguous.
+  if (cls === 'inferred_from_dated_source') return { label: 'INFERRED FROM DATED SOURCE', color: '#e0a83e', inferred: true }
   return { label: 'SOURCED', color: 'var(--dp-cyan)' }
 }
 
@@ -66,11 +68,11 @@ function hostname(url: string): string {
   }
 }
 
-function ShowSource({ doc, quoteIds }: { doc: FigureClaimsDoc; quoteIds: string[] | undefined }) {
+function ShowSource({ doc, quoteIds, defaultOpen }: { doc: FigureClaimsDoc; quoteIds: string[] | undefined; defaultOpen?: boolean }) {
   const evidence = resolveEvidence(doc, quoteIds)
   if (evidence.length === 0) return null
   return (
-    <details style={{ marginTop: '4px' }}>
+    <details open={defaultOpen} style={{ marginTop: '4px' }}>
       <summary style={{
         cursor: 'pointer', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '.06em',
         color: 'var(--dp-cyan)', listStyle: 'none',
@@ -105,7 +107,7 @@ function ShowSource({ doc, quoteIds }: { doc: FigureClaimsDoc; quoteIds: string[
   )
 }
 
-function ClaimRow({ doc, claim }: { doc: FigureClaimsDoc; claim: Claim }) {
+function ClaimRow({ doc, claim, firstEvidence }: { doc: FigureClaimsDoc; claim: Claim; firstEvidence?: boolean }) {
   const label = labelFor(claim.field_path)
 
   let body: React.ReactNode
@@ -123,7 +125,7 @@ function ClaimRow({ doc, claim }: { doc: FigureClaimsDoc; claim: Claim }) {
             {badge.label}
           </span>
         </div>
-        <ShowSource doc={doc} quoteIds={claim.evidence_quote_ids} />
+        <ShowSource doc={doc} quoteIds={claim.evidence_quote_ids} defaultOpen={firstEvidence} />
       </div>
     )
   } else if (claim.status === 'conflict') {
@@ -164,9 +166,21 @@ function ClaimRow({ doc, claim }: { doc: FigureClaimsDoc; claim: Claim }) {
   )
 }
 
+// STRETCH fields (8/13 tiering ruling + v4 design pass): unresolved stretch
+// rows are OMITTED, not shown as "Not yet documented" — stretch absence is
+// noise, core absence is information. packaging_style is dropped ENTIRELY
+// (v4 product decision, design-explorations/figure-page-v4/README.md).
+const DROP_ENTIRELY = /^fingerprint\.packaging_style$/
+const STRETCH_OMIT_WHEN_UNRESOLVED = /^(fingerprint\.known_variants|identity_bonus\.(manufacturer_sku|street_date))/
+
 export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) {
+  // First claim (in render order) that carries receipts opens expanded —
+  // teaches the show-source interaction without a click (v4 design pass).
+  const firstEvidenceField = GROUPS
+    .flatMap(g => doc.claims.filter(c => g.prefixes.some(p => c.field_path.startsWith(p))))
+    .find(c => c.status === 'resolved' && c.evidence_quote_ids?.length)?.field_path
   return (
-    <div style={{ marginTop: '1.75rem' }}>
+    <div id="receipts" style={{ marginTop: '1.75rem' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '0.6rem' }}>
         <h2 style={{
           fontFamily: 'var(--font-display)', fontWeight: 400, letterSpacing: '.02em',
@@ -187,7 +201,10 @@ export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) 
         exactly where it came from. Fields we couldn&apos;t verify say so.
       </div>
       {GROUPS.map(group => {
-        const claims = doc.claims.filter(c => group.prefixes.some(p => c.field_path.startsWith(p)))
+        const claims = doc.claims
+          .filter(c => group.prefixes.some(p => c.field_path.startsWith(p)))
+          .filter(c => !DROP_ENTIRELY.test(c.field_path))
+          .filter(c => !(c.status === 'unresolved' && STRETCH_OMIT_WHEN_UNRESOLVED.test(c.field_path)))
         if (claims.length === 0) return null
         return (
           <div key={group.title} style={{ marginBottom: '0.9rem' }}>
@@ -198,7 +215,7 @@ export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) 
               {group.title.toUpperCase()}
             </div>
             <div style={{ borderRadius: '12px', border: '1px solid rgba(255,255,255,.1)', overflow: 'hidden' }}>
-              {claims.map(c => <ClaimRow key={c.field_path} doc={doc} claim={c} />)}
+              {claims.map(c => <ClaimRow key={c.field_path} doc={doc} claim={c} firstEvidence={c.field_path === firstEvidenceField} />)}
             </div>
           </div>
         )

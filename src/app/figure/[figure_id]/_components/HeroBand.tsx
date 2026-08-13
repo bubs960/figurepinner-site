@@ -199,6 +199,18 @@ export default function HeroBand({
             overflow: 'hidden',
           }}
         >
+          {/* Case-light beam — restored from the homepage vitrine hero (v4
+              design pass, design-explorations/figure-page-v4/README.md): a
+              static clip-path cone of light over the photo card, ties figure
+              pages to the homepage identity. Pure CSS, no animation. */}
+          <div aria-hidden style={{
+            position: 'absolute', left: '50%', top: '-10%', width: '90%', height: '75%',
+            transform: 'translateX(-50%)',
+            clipPath: 'polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%)',
+            background: 'linear-gradient(180deg, rgba(255,246,218,0.16), rgba(255,238,196,0.04) 70%, transparent)',
+            mixBlendMode: 'screen', pointerEvents: 'none',
+          }} />
+
           {/* Cream mount the photo sits on */}
           <div style={{
             position: 'relative', zIndex: 1,
