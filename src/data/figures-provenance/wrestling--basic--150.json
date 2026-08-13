@@ -1,0 +1,2064 @@
+{
+ "fp_wrestling_mattel_basic_150_cm-punk_358563": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_basic_150_cm-punk_358563",
+  "identity_hash": "f457a1d5c54b1b38",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_basic_150_cm-punk_358563",
+   "character_canonical": "cm-punk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "basic",
+   "release_wave": "150",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "CM Punk"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-complete-set-mfa150-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfd_cmpunk",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-main-event-series-150-cm-punk",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s3_wfd_lita",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-main-event-series-150-lita",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-basic-mainline-101-current",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s5_toywiz",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-basic-action-figures/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s6_figurerealm",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=6100&ssid=179",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s7_ebay_listing",
+     "url": "https://www.ebay.com/itm/335677865771",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-cm-punk-mfa150-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "This set includes: Stone Cold Steve Austin, The Rock, CM Punk, Rey Mysterio & Lita!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_title",
+     "source_id": "w_s7_ebay_listing",
+     "text": "WWE Series 150 - Set of 5 Figures Rey Mysterio LITA Rock CM PUNK Stone Cold NEW",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Series 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": "NEW",
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_price",
+     "source_id": "w_s1_ringside_set",
+     "text": "$67.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cmpunk_release_year",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5_cmpunk_series_name",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "2024 WWE Mattel Main Event Series 150 CM Punk Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6_release_date_caveat",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7_lita_year_series",
+     "source_id": "w_s3_wfd_lita",
+     "text": "2024 WWE Mattel Main Event Series 150 Lita Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "Lita",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8_series_count",
+     "source_id": "w_s5_toywiz",
+     "text": "150 (6)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Basic Action Figures",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black trunks with blue-and-yellow Chicago flag star design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "black knee pads and kickpad boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "determined headscan with mutton chop beard style",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$16.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black trunks with blue-and-yellow Chicago flag star design",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black knee pads and kickpad boots",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "determined headscan with mutton chop beard style",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "determined headscan with mutton chop beard style",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "black trunks with blue-and-yellow Chicago flag star design",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2024",
+    "evidence_quote_ids": [
+     "w_q4_cmpunk_release_year"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$16.99",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 16.99,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_basic_150_lita_bcd94d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_basic_150_lita_bcd94d",
+  "identity_hash": "c87093bffdcfdd3d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_basic_150_lita_bcd94d",
+   "character_canonical": "lita",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "basic",
+   "release_wave": "150",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Lita"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-complete-set-mfa150-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfd_cmpunk",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-main-event-series-150-cm-punk",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s3_wfd_lita",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-main-event-series-150-lita",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-basic-mainline-101-current",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s5_toywiz",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-basic-action-figures/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s6_figurerealm",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=6100&ssid=179",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s7_ebay_listing",
+     "url": "https://www.ebay.com/itm/335677865771",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-lita-mfa150-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-main-event-series-150-lita-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "This set includes: Stone Cold Steve Austin, The Rock, CM Punk, Rey Mysterio & Lita!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_title",
+     "source_id": "w_s7_ebay_listing",
+     "text": "WWE Series 150 - Set of 5 Figures Rey Mysterio LITA Rock CM PUNK Stone Cold NEW",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Series 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": "NEW",
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_price",
+     "source_id": "w_s1_ringside_set",
+     "text": "$67.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cmpunk_release_year",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5_cmpunk_series_name",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "2024 WWE Mattel Main Event Series 150 CM Punk Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6_release_date_caveat",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7_lita_year_series",
+     "source_id": "w_s3_wfd_lita",
+     "text": "2024 WWE Mattel Main Event Series 150 Lita Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "Lita",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8_series_count",
+     "source_id": "w_s5_toywiz",
+     "text": "150 (6)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Basic Action Figures",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black top with mesh detailing and asymmetric mesh sleeve, as well as low-rise black pants with gold trim and detailing down the legs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "iconic long red hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "hands designed for screen-accurate entrance poses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$33.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "lita",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black top with mesh detailing and asymmetric mesh sleeve, low-rise black pants with gold trim and detailing down the legs",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black and gold",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "iconic long red hairstyle",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "iconic long red hairstyle",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "hands designed for screen-accurate entrance poses",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$33.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ],
+      "price_detail": {
+       "amount": 33.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_basic_150_rey-mysterio_704c5a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_basic_150_rey-mysterio_704c5a",
+  "identity_hash": "85a98c8c8c70983d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_basic_150_rey-mysterio_704c5a",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "basic",
+   "release_wave": "150",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-complete-set-mfa150-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfd_cmpunk",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-main-event-series-150-cm-punk",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s3_wfd_lita",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-main-event-series-150-lita",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-basic-mainline-101-current",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s5_toywiz",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-basic-action-figures/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s6_figurerealm",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=6100&ssid=179",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s7_ebay_listing",
+     "url": "https://www.ebay.com/itm/335677865771",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-rey-mysterio-mfa150-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-main-event-series-150-rey-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "This set includes: Stone Cold Steve Austin, The Rock, CM Punk, Rey Mysterio & Lita!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_title",
+     "source_id": "w_s7_ebay_listing",
+     "text": "WWE Series 150 - Set of 5 Figures Rey Mysterio LITA Rock CM PUNK Stone Cold NEW",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Series 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": "NEW",
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_price",
+     "source_id": "w_s1_ringside_set",
+     "text": "$67.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cmpunk_release_year",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5_cmpunk_series_name",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "2024 WWE Mattel Main Event Series 150 CM Punk Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6_release_date_caveat",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7_lita_year_series",
+     "source_id": "w_s3_wfd_lita",
+     "text": "2024 WWE Mattel Main Event Series 150 Lita Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "Lita",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8_series_count",
+     "source_id": "w_s5_toywiz",
+     "text": "150 (6)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Basic Action Figures",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Mysterio reaches the sky a bright yellow take on his iconic mask featuring black-and-white detailing.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "He comes wearing bright yellow tights with black-and-white panels and question mark pattern, as well as white laced boots and yellow arm bands.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "features articulation",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "approximately 6-inch",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$14.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "Main Event Series 150",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Bright yellow take on his iconic mask featuring black-and-white detailing",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Bright yellow tights with black-and-white panels and question mark pattern, white laced boots, yellow arm bands",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Bright yellow mask with black-and-white detailing",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White laced boots and yellow arm bands",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$17.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 17.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$14.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 14.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_basic_150_stone-cold-steve_9498ea": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_basic_150_stone-cold-steve_9498ea",
+  "identity_hash": "a686bce2e68d3fca",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_basic_150_stone-cold-steve_9498ea",
+   "character_canonical": "stone-cold-steve-austin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "basic",
+   "release_wave": "150",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stone Cold Steve Austin"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-complete-set-mfa150-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfd_cmpunk",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-main-event-series-150-cm-punk",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s3_wfd_lita",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-main-event-series-150-lita",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-basic-mainline-101-current",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s5_toywiz",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-basic-action-figures/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s6_figurerealm",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=6100&ssid=179",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s7_ebay_listing",
+     "url": "https://www.ebay.com/itm/335677865771",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-stone-cold-mfa150-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-main-event-series-150-stone-cold-steve-austin-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "This set includes: Stone Cold Steve Austin, The Rock, CM Punk, Rey Mysterio & Lita!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_title",
+     "source_id": "w_s7_ebay_listing",
+     "text": "WWE Series 150 - Set of 5 Figures Rey Mysterio LITA Rock CM PUNK Stone Cold NEW",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Series 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": "NEW",
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_price",
+     "source_id": "w_s1_ringside_set",
+     "text": "$67.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cmpunk_release_year",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5_cmpunk_series_name",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "2024 WWE Mattel Main Event Series 150 CM Punk Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6_release_date_caveat",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7_lita_year_series",
+     "source_id": "w_s3_wfd_lita",
+     "text": "2024 WWE Mattel Main Event Series 150 Lita Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "Lita",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8_series_count",
+     "source_id": "w_s5_toywiz",
+     "text": "150 (6)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Basic Action Figures",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "classic black trunks, knee pads, and laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "removable knee braces",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a smiling headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$14.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": "2024",
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "ring gear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "classic black trunks, knee pads, and laced boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "a smiling headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "removable knee braces",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "smiling headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "ring gear",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$14.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 14.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 24.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_basic_150_the-rock_7e732c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_basic_150_the-rock_7e732c",
+  "identity_hash": "d8b36cd59c57a924",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_basic_150_the-rock_7e732c",
+   "character_canonical": "the-rock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "basic",
+   "release_wave": "150",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Rock"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-complete-set-mfa150-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfd_cmpunk",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-main-event-series-150-cm-punk",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s3_wfd_lita",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-main-event-series-150-lita",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-basic-mainline-101-current",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s5_toywiz",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-basic-action-figures/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s6_figurerealm",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=6100&ssid=179",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s7_ebay_listing",
+     "url": "https://www.ebay.com/itm/335677865771",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-series-150-toy-figures-the-rock-mfa150-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-main-event-series-the-rock",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "This set includes: Stone Cold Steve Austin, The Rock, CM Punk, Rey Mysterio & Lita!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_title",
+     "source_id": "w_s7_ebay_listing",
+     "text": "WWE Series 150 - Set of 5 Figures Rey Mysterio LITA Rock CM PUNK Stone Cold NEW",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Series 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": "NEW",
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_price",
+     "source_id": "w_s1_ringside_set",
+     "text": "$67.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Main Event 150",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cmpunk_release_year",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5_cmpunk_series_name",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "2024 WWE Mattel Main Event Series 150 CM Punk Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "CM Punk",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6_release_date_caveat",
+     "source_id": "w_s2_wfd_cmpunk",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7_lita_year_series",
+     "source_id": "w_s3_wfd_lita",
+     "text": "2024 WWE Mattel Main Event Series 150 Lita Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Basic Mainline / Main Event",
+      "character_canonical": "Lita",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8_series_count",
+     "source_id": "w_s5_toywiz",
+     "text": "150 (6)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Basic Action Figures",
+      "character_canonical": null,
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black 'The Rock' logo trunks with Brahma Bull emblem on the rear, as well as black elbow pads, knee pads, and laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a focused headscan featuring his classic Attitude Era haircut and sideburns",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$14.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Line: Basic Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Series: 150",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "basic",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black 'The Rock' logo trunks with Brahma Bull emblem on the rear, black elbow pads, knee pads, and laced boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Focused headscan featuring his classic Attitude Era haircut and sideburns",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Brahma Bull emblem on the rear of the trunks",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Classic Attitude Era haircut and sideburns",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2024",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$14.99",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 14.99,
+     "currency": null,
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ }
+}

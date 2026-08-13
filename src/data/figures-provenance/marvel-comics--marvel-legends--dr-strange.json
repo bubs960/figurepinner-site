@@ -1,0 +1,2920 @@
+{
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_astral-dr-strange_c5380d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_astral-dr-strange_c5380d",
+  "identity_hash": "1a35f6193f337747",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_astral-dr-strange_c5380d",
+   "character_canonical": "astral-dr-strange",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Astral Dr. Strange"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://figurefanzero.com/2017/01/30/marvel-legends-dormammu-wave-doctor-strange-and-astral-doctor-strange-by-hasbro/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lameazoid.com/marvel-legends-dormammu-wave-doctor-strange-movie/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://thefwoosh.com/2016/11/hasbro-marvel-legends-dormammu-series-doctors-strange/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "It's a straight re-cast of the figure I just looked at only in a rather striking pearlescent plastic.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "He doesn't come with the Cloak, but he does have a repainted Amulet of Agamotto.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "I think this idea sounds good on paper, but in practice, it just isn't a very interesting figure, much less one that I would have purchased if not for needing the BAF piece.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "all translucent plastic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "has no accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "extremely mediocre Astral Movie Strange, which is a clear version of the normal version",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "would probably have been better done with clear colored plastic matching his normal form, though I imagine the cost there would have been too much vs the basic transparent that we got",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "molded in a milky clear white-pinkish plastic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "the same exact figure as the regular Movie Doctor Strange minus the cape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "astral-dr-strange",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "the same exact figure as the regular Movie Doctor Strange minus the cape",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "pearlescent plastic",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "all translucent plastic",
+      "evidence_quote_ids": [
+       "f_q4"
+      ]
+     },
+     {
+      "value": "milky clear white-pinkish plastic",
+      "evidence_quote_ids": [
+       "f_q8"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "a straight re-cast of the figure in pearlescent plastic",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "does not come with the Cloak",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "molded in a milky clear white-pinkish plastic",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "repainted Amulet of Agamotto",
+      "evidence_quote_ids": [
+       "f_q2"
+      ]
+     },
+     {
+      "value": "no accessories",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_dormammu_beb3d3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_dormammu_beb3d3",
+  "identity_hash": "0a3e91e0a975c521",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_dormammu_beb3d3",
+   "character_canonical": "dormammu",
+   "character_variant": "baf",
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dormammu (BAF)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://marveltoynews.com/doctor-strange-marvel-legends-dormammu-build-figure-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lameazoid.com/marvel-legends-dormammu-wave-doctor-strange-movie/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Excellent sculpting, terrific paint choices (and translucent parts), huge, well-articulated and all-around fun.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "dormammu",
+      "character_variant": "baf",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The deco on this figure is jaw-dropping...the red paint on his skirt is metallic with little flecks of sparkles in it.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "dormammu",
+      "character_variant": "baf",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "The use of colored translucent plastic on this figure is also a huge win. The flaming head with painted on opaque face looks ridiculously cool.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "dormammu",
+      "character_variant": "baf",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "The articulation on Dormammu is still solid, and features a ball-jointed head and hips, ab crunch, swivel waist and biceps, ball-hinge shoulders and wrists, hinge elbows, double-jointed knees, swivel thighs and boots and ankle rockers.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "dormammu",
+      "character_variant": "baf",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "I flipping love the repainted flaming skulls Dormammu comes with this time out!",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "dormammu",
+      "character_variant": "baf",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Posted on September 16, 2016",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "dormammu",
+      "character_variant": "baf",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "the one with the Dormammu Build a Figure",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Metallic red skirt paint with little flecks of sparkles in it; colored translucent plastic",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Flaming head with painted-on opaque face",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "Colored translucent plastic",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Ball-jointed head and hips, ab crunch, swivel waist and biceps, ball-hinge shoulders and wrists, hinge elbows, double-jointed knees, swivel thighs and boots, ankle rockers",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Repainted flaming skulls",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Colored translucent plastic",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Repainted flaming skulls",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by September 2016",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q1"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-enchantress_e3ba25": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-enchantress_e3ba25",
+  "identity_hash": "ea5af9c5e367c5ed",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-enchantress_e3ba25",
+   "character_canonical": "mystic-rivals-enchantress",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mystic Rivals - Enchantress"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://figurefanzero.com/2016/12/19/marvel-legends-dormammu-wave-the-enchantress-by-hasbro/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dormammu-mystic-rivals-enchantress-405.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Her painted top is dark green and her painted arm bracers are metallic green to match those leg rings.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-enchantress",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "I really dig the portrait here. The paint work on her lips, eyes, mascara, and eye brows is all nice and clean.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-enchantress",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "The arms have rotating hinges in the shoulders, elbows, and wrists. The legs are ball jointed at the hips, double hinged at the knees, and have swivels in the thighs.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-enchantress",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Enchantress comes with the same magic effect parts we saw with Scarlet Witch...cast in a wonderful neon green plastic.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-enchantress",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Retail: $19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-enchantress",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Part: Torso",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-enchantress",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Neon green magic effect parts; metallic green arm bracers to match those leg rings",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Rotating hinges in shoulders, elbows, and wrists; ball-jointed hips, double-hinged knees, swivel thighs",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Painted top is dark green and painted arm bracers are metallic green to match those leg rings",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Clean paint work on lips, eyes, mascara, and eye brows",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Torso",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Magic effect parts",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q1",
+     "w_q2"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "resolved",
+    "value": "Torso",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$19.99",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 19.99,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_iron-fist_6014da": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_iron-fist_6014da",
+  "identity_hash": "4c2a374161a1967c",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_iron-fist_6014da",
+   "character_canonical": "iron-fist",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Iron Fist"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://figurefanzero.com/2017/01/16/marvel-legends-dormammu-wave-iron-fist-by-hasbro/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2017/03/25/marvel-legends-iron-fist-figure-review-2016/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "You get a mostly green body with yellow painted boots and his emblem printed on his chest.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The exposed lower half of the face features some sharp detail and the mask looks great and features the long, loose ties streaming off the back.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "The arms feature rotating hinges in the shoulders and wrists, double hinged elbows, and swivels in the biceps and about halfway through the forearms.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "You do get a pair of glowing fists, achieved through translucent yellow plastic. You also get two translucent yellow effect parts, which can be used over either pairs of fists to give him flaming fists of fury!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "This more modern costume choice actually is a pretty good second choice. It has the classic color scheme and makes sense for a lithe, martial artist.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "This is a superb head sculpt and one of my favorites of the modern Marvel Legends era.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The Pizza Spidey buck is great for flexible poses and is ideal for a martial artist.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Iron Fist hasn't fallen to clearance prices and still ranges at $20.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": "iron-fist",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Modern costume choice with the classic color scheme, mostly green body with yellow painted boots, good for a lithe martial artist",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Mostly green body with yellow painted boots, translucent yellow glowing fists, and translucent yellow effect parts for flaming fists of fury",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The exposed lower half of the face features some sharp detail and the mask looks great and features the long, loose ties streaming off the back; a superb head sculpt",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Rotating shoulder and wrist hinges, double-hinged elbows, bicep swivels, and forearm swivels",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Mask with long, loose ties streaming off the back",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Translucent yellow glowing fists with translucent yellow effect parts used over either pair of fists to give flaming fists of fury",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Mostly green body with yellow painted boots and emblem printed on chest",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Pair of glowing fists achieved through translucent yellow plastic; two translucent yellow effect parts used over either pairs of fists to give flaming fists of fury",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q1",
+     "w_q2"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$20",
+    "price_detail": {
+     "amount": 20,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    },
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_karl-mordo_8f846c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_karl-mordo_8f846c",
+  "identity_hash": "862e8663b3a42c35",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_karl-mordo_8f846c",
+   "character_canonical": "karl-mordo",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Karl Mordo"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.mephitsu.co.uk/post/review-marvel-legends-karl-mordo-doctor-strange",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40306",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "This orange is used as the backing colour for the name plate and in the side panel artwork",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Mordo is a pretty good likeness to actor Chiwetel Ejiofor",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Articulatio for Mordo is a total of 18 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Mordo is armed with his staff as his sole accessory",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "The staff is warped on review figures, and this looks to be a common issue on others, potentially due how it is packed and secured in the inner tray of the packaging",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "The packaging for Mordo is standard to the Legends line with scooped sides and hanging tab. The base colour is black, with a deep orange tone chosen as the highlight colour for the Doctor Strange movie figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Aug 25, 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "karl-mordo",
+      "character_variant": null,
+      "manufacturer": null,
+      "product_line": null,
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Good likeness to actor Chiwetel Ejiofor",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "18 points of articulation",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "resolved",
+    "value": "Standard to the Legends line with scooped sides and hanging tab; the base colour is black, with a deep orange tone chosen as the highlight colour for the Doctor Strange movie figures",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Included staff accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Orange used as the backing colour for the name plate and in the side panel artwork",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Staff (accessory)",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q1",
+     "w_q2"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-nico-minoru_930df5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-nico-minoru_930df5",
+  "identity_hash": "3b59a76bc8e9d3e7",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-nico-minoru_930df5",
+   "character_canonical": "mystic-rivals-nico-minoru",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mystic Rivals - Nico Minoru"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://marveltoynews.com/marvel-legends-nico-minoru-review-photos-doctor-strange/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://figurefanzero.com/2017/01/02/marvel-legends-dormammu-wave-nico-minoru-by-hasbro/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Gothic Lolita style dress",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "black and pink",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "gravity-defying (or is it gel-enabled) stylin' ponytail, which looks amazing authentic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "The articulation on this 6″ Marvel Legends Nico figure is strong--not perfect--but strong.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "partially translucent pink alternate arm",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "opaque pink effects piece that wraps around Nico's staff",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Posted on September 23, 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "black dress, chunky belted boots, black and purple striped tights, and long black gloves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "painted lace on her sleeve and the sculpted fringe at the hem of her dress",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "rows of buckles on each of her boots are individually painted silver",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "beautiful face sculpt with some very sharp paint for her lips and eyes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Her red pupils and heavy mascara are totally Goth Chic! The hair is also particularly well sculpted.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "rotating hinges in the shoulders, elbows, and wrists",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "ball jointed at the hips, have double hinges in the knees, and swivels in the thighs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s2",
+     "text": "ankles are hinged and have lateral rockers",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s2",
+     "text": "interchangeable left arm, which is the same sculpt, but this time partially cast in purple translucent plastic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q17",
+     "source_id": "f_s2",
+     "text": "Staff of One, which has a removable effect part cast in the same purple plastic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q18",
+     "source_id": "f_s2",
+     "text": "Jan 2 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "mystic-rivals-nico-minoru",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black Gothic Lolita-style dress with chunky belted boots, black and purple striped tights, and long black gloves",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "Pink translucent alternate arm and effects",
+      "evidence_quote_ids": [
+       "f_q5",
+       "f_q2",
+       "f_q6"
+      ]
+     },
+     {
+      "value": "Purple translucent left arm and removable effect part",
+      "evidence_quote_ids": [
+       "f_q16",
+       "f_q17"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Beautiful face sculpt with sharp paint for lips and eyes, red pupils, heavy mascara, and well sculpted hair",
+    "evidence_quote_ids": [
+     "f_q11",
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Rotating hinges in shoulders, elbows, and wrists; ball-jointed hips with double-hinged knees and thigh swivels; hinged ankles with lateral rockers",
+    "evidence_quote_ids": [
+     "f_q13",
+     "f_q14",
+     "f_q15"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Gravity-defying stylin' ponytail",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Painted lace on sleeve and sculpted fringe at hem of dress",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Individually painted silver buckles on each boot",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Staff of One with removable effect part cast in purple plastic",
+    "evidence_quote_ids": [
+     "f_q17"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Interchangeable left arm partially cast in purple translucent plastic",
+    "evidence_quote_ids": [
+     "f_q16"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by January 2017",
+    "evidence_quote_ids": [
+     "f_q18",
+     "f_q8"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501",
+  "identity_hash": "0b401e1a4e60b0a7",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501",
+   "character_canonical": "masters-of-magic-dr-strange",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Masters of Magic - Dr. Strange"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://figurefanzero.com/2016/12/26/marvel-legends-dormammu-wave-masters-of-magic-doctor-strange-and-brother-voodoo-by-hasbro/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/marvel-legends-dormammu-series-dr-strange-comic-version-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Strange has been reunited with the Amulet of Agamotto and the Cloak of Levitation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-dr-strange",
+      "character_variant": "masters-of-magic",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "the red paint on this new figure is a little brighter",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-dr-strange",
+      "character_variant": "masters-of-magic",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "You get the same pair of magical effect parts that were included with the last release, only this time they're molded in orange plastic instead of green",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-dr-strange",
+      "character_variant": "masters-of-magic",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "you still need both of these figures to complete the Dormammu BAF",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "this is still the last Marvel Monday of 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "These sorcerers combine their distinctive forms of spellbinding to keep evil at bay.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Reunited with the Amulet of Agamotto and the Cloak of Levitation",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Magical effect parts molded in orange plastic instead of green",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The red paint on this new figure is a little brighter",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Reunited with the Amulet of Agamotto and the Cloak of Levitation",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Magical effect parts (orange plastic, pair)",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q1",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-brother-voodoo_41e56b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-brother-voodoo_41e56b",
+  "identity_hash": "088c4098e7c1ee61",
+  "target": {
+   "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-brother-voodoo_41e56b",
+   "character_canonical": "masters-of-magic-brother-voodoo",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "marvel-legends",
+   "release_wave": "dr-strange",
+   "fandom": "marvel-comics",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Masters of Magic - Brother Voodoo"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_af411_visual",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-visual-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_af411_price",
+     "url": "https://www.actionfigure411.com/marvel/marvel-legends-dr-strange-dormammu-baf-wave-1-price-guide.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ffz_review",
+     "url": "https://figurefanzero.com/2017/01/31/marvel-legends-dormammu-wave-dormammu-build-a-figure-by-hasbro/",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_bbts_product",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/40287",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://jessehechtcreative.com/2017/01/24/marvel-legends-dormammu-baf-wave-brother-voodoo-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://figurefanzero.com/2016/12/26/marvel-legends-dormammu-wave-masters-of-magic-doctor-strange-and-brother-voodoo-by-hasbro/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_af411_price",
+     "text": "Marvel Legends price guide for Dr. Strange Dormammu BAF wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_af411_visual",
+     "text": "Astral Dr. Strange, Dormammu (BAF), Mystic Rivals - Enchantress, Iron Fist, Karl Mordo, Mystic Rivals - Nico Minoru, Dr. Strange, Masters of Magic - Dr. Strange, Masters of Magic - Brother Voodoo",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ffz_review",
+     "text": "The Dormammu BAF is actually comprised of eleven pieces. You have the arms, the legs, the upper torso, the pelvis, the skirt, the head, the shoulder armor, and the two skull accessories.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ffz_review",
+     "text": "A variant of Dormammu was previously available in an SDCC exclusive set. The figure represents the comic book version of the character rather than his film adaptation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "Marvel Legends",
+      "year": 2016,
+      "character_canonical": "Dormammu"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "January 24, 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2017,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The SDCC variant is more cream-colored and the sash is a darker green compared to the white bone paint and olive green sash on the DBAF variant.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "The SDCC version also has skull facepaint, green eyes, and a green symbol on the forehead, compared to the white eyes, eyeshadow, and white symbol on the DBAF variant.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "The capes are both different, with the DBAF variant having a tattered cape and the SDCC variant having a more regal cape with added decoration in the front.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "expertly molded tendrils of hair swooping back on the head",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Brother Voodoo also comes with a staff, green for the SDCC variant, and blue for the DBAF variant.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Head on a Ball Joint (360 degree movement)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "Hinged Double-Jointed Elbows (normal human range)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Voodoo features a basic black buck with the white skeletal motif painted onto it.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "gold wrist bracers, the long green belt with skulls hanging off the back, and the ragged red cape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "The portrait here is also superb. I love the grim countenance they gave him and his features are well defined.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Brother Voodoo includes a pretty cool staff, which I do remember him having in The New Avengers, although not quite looking exactly like this.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "the transition from painted wood to translucent blue plastic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": "dbaf-wave",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "looks absolutely fantastic and is a fine example of how easy it is to build a great looking figure off a standard buck and some additional parts",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "marvel-legends",
+      "year": 2016,
+      "character_canonical": "masters-of-magic-brother-voodoo",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue staff (DBAF version), gold wrist bracers, green belt with skulls, red ragged cape",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Expertly molded tendrils of hair swooping back on the head; grim countenance with features well defined",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Head on a ball joint (360 degree movement); hinged double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Basic black buck with white skeletal motif painted onto it",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White bone-paint facepaint with white eyes and white forehead symbol, olive green sash (DBAF version)",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Tattered cape (DBAF variant), different from the SDCC variant's more regal cape with added decoration in the front",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "Staff has the transition from painted wood to translucent blue plastic, blue for the DBAF variant",
+    "evidence_quote_ids": [
+     "f_q13",
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "SDCC variant: cream-colored bone paint, darker green sash, skull facepaint, green eyes, green symbol on the forehead, green staff, and a more regal cape with added decoration in the front",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3",
+     "f_q4",
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Staff (blue, DBAF version)",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Dormammu",
+    "evidence_quote_ids": [
+     "w_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by January 2017",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

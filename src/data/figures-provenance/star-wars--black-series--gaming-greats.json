@@ -1,0 +1,2797 @@
+{
+ "fp_star-wars_hasbro_black-series_gaming-greats_heavy-battle-droid_c59428": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_heavy-battle-droid_c59428",
+  "identity_hash": "1ab01b935b1f1064",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_heavy-battle-droid_c59428",
+   "character_canonical": "heavy-battle-droid",
+   "character_variant": "battlefront-ii",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Heavy Battle Droid (Battlefront II)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "http://www.actionfigurebarbecue.com/2020/02/action-figure-review-heavy-battle-droid.html",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.mephitsu.co.uk/post/review-star-wars-black-series-gaming-greats-heavy-battle-droid-battlefront-2",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The slightly metallic reddish-brown color scheme looks fantastic!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The Battle Droid has a pretty recognizable head and Hasbro has done a great job with it here.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Swivel/hinge ankles, 'boot' swivels, hinged knees, balljointed hips, balljointed mid-torso, swivel/hinge shoulders, bicep swivels, hinged elbows, swivel/hinge wrists, swivel/hinge neck, balljointed head, and hinged movement processors.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "E-5 blaster rifle, DLT-19 heavy blaster, Sonn-Blass FWMB-10 blaster, backpack, and command officer antenna.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Non-Scalper Price: $25-$30 dollars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Saturday, February 15, 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The main body is a brown colouring with a grey arms and legs as well as a grey midsection.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "The sculpt is excellent for the Heavy Battle Droid, with good proportions and accuracy to the shape and build of the panels.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "All in all there are 20 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "two back pack options",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Command Droid aerials",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "priced around £5 more than a standard figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "Apr 21, 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "I score the Gaming Greats Heavy Battle Droid 3 out of 5.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "heavy-battle-droid",
+      "character_variant": "battlefront-ii",
+      "condition": null,
+      "year": 2020
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "conflict",
+    "evidence_class": "single_secondary",
+    "conflicting_values": [
+     {
+      "value": "Slightly metallic reddish-brown color scheme",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "Brown body with grey arms, legs, and midsection",
+      "evidence_quote_ids": [
+       "f_q7"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Recognizable Battle Droid head",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "20 points of articulation",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Two back pack options",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Command Droid aerials",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Swivel/hinge ankles, boot swivels, hinged knees, balljointed hips, balljointed mid-torso, swivel/hinge shoulders, bicep swivels, hinged elbows, swivel/hinge wrists, swivel/hinge neck, balljointed head, and hinged movement processors",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "E-5 blaster rifle",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "DLT-19 heavy blaster",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Sonn-Blass FWMB-10 blaster",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "backpack",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "command officer antenna",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "Saturday, February 15, 2020",
+      "evidence_quote_ids": [
+       "f_q6"
+      ]
+     },
+     {
+      "value": "Apr 21, 2020",
+      "evidence_quote_ids": [
+       "f_q13"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$25-$30 (non-scalper price)",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": null,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2020-02-15",
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ },
+ "fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1",
+  "identity_hash": "ef1c2100f90e3a97",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1",
+   "character_canonical": "jedi-knight-revan",
+   "character_variant": "galaxy-heroes",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jedi Knight Revan (Galaxy Heroes)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://thefwoosh.com/2019/11/hasbro-gamestop-exclusive-star-wars-black-series-jedi-revan/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toyhypeusa.com/2019/11/10/hasbro-star-wars-tbs-gamestop-exclusive-darth-revan-heavy-battle-droid-figures/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.amazon.com/Star-Wars-Gaming-Gamestop-Exclusive/dp/B084LM7T45",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.gamestop.com/collectibles/figures/products/star-wars-jedi-revan-the-black-series-action-figure-only-at-gamestop/11098336.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "white Jedi robes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": "jedi-knight-revan",
+      "character_variant": "galaxy-heroes",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a purple-bladed Lightsaber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": "jedi-knight-revan",
+      "character_variant": "galaxy-heroes",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "4 fully articulated limbs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": "jedi-knight-revan",
+      "character_variant": "galaxy-heroes",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "premium detail and multiple points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": "jedi-knight-revan",
+      "character_variant": "galaxy-heroes",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "purple-bladed Lightsaber while cloaked in white Jedi robes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": "jedi-knight-revan",
+      "character_variant": "galaxy-heroes",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "premium detail and multiple points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": "jedi-knight-revan",
+      "character_variant": "galaxy-heroes",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "published on November 10, 2019, and the figure was expected for release starting February 15th, 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2019,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "white Jedi robes",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "purple-bladed lightsaber",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "4 fully articulated limbs",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "premium detail and multiple points of articulation",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "purple-bladed lightsaber while cloaked in white Jedi robes",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "a purple-bladed Lightsaber",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_star-wars_hasbro_black-series_gaming-greats_darth-nihilus_884f50": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_darth-nihilus_884f50",
+  "identity_hash": "ba293b3e7b9ef33e",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_darth-nihilus_884f50",
+   "character_canonical": "darth-nihilus",
+   "character_variant": "kotr-ii",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Darth Nihilus (KOTR II)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://thefwoosh.com/2020/10/hasbro-star-wars-black-series-gaming-greats-darth-nihilus/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.gamestop.com/collectibles/figures/products/hasbro-star-wars-the-black-series-star-wars-knights-of-the-old-republic-darth-nihilus-6-in-action-figure/20015521.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The body re-uses a lot of Darth Maul parts from wave one with new arms, head, and skirt piece.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "darth-nihilus",
+      "character_variant": "kotr-ii",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "I keep seeing a silly clown or kitty-cat in that face (thanks, Veebs), so I'm not feeling the cool factor.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "darth-nihilus",
+      "character_variant": "kotr-ii",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Swivel/hinge shoulders, elbows, wrists, hips, and ankles",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "darth-nihilus",
+      "character_variant": "kotr-ii",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Double hinged knees",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "darth-nihilus",
+      "character_variant": "kotr-ii",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Ball and socket head and mid-torso",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "darth-nihilus",
+      "character_variant": "kotr-ii",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Nihilus comes with a saber with removeable blade.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "darth-nihilus",
+      "character_variant": "kotr-ii",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "I keep seeing a silly clown or kitty-cat in that face, so I'm not feeling the cool factor",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Swivel/hinge shoulders, elbows, wrists, hips, and ankles",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The body re-uses a lot of Darth Maul parts from wave one with new arms, head, and skirt piece",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Nihilus comes with a saber with removeable blade",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "A saber with removeable blade",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_star-wars_hasbro_black-series_gaming-greats_electrostaff-purge-trooper_5d61ba": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_electrostaff-purge-trooper_5d61ba",
+  "identity_hash": "40d040ff80438475",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_electrostaff-purge-trooper_5d61ba",
+   "character_canonical": "electrostaff-purge-trooper",
+   "character_variant": "fallen-order",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Electrostaff Purge Trooper (Fallen Order)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://thefwoosh.com/2020/10/hasbro-star-wars-black-series-gaming-greats-electrostaff-purge-trooper-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.gamestop.com/toys-collectibles/collectibles/figures/products/star-wars-jedi-fallen-order-electrostaff-purge-trooper-the-black-series-figure-only-at-gamestop/218023.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/electrostaff-purge-trooper-fallen-order-1511.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Paint is pretty good here with a lot of gloss black and sharp detail on some of the symbols.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": "fallen-order",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The head looks like an appropriate re-use of the original Purge Trooper figure head.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": "fallen-order",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Swivel/hinge shoulders, wrists, hips, and ankles / Double hinged knees / Thigh and bicep swivel / Ball and socket mid-torso and head / Hinged neck",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": "fallen-order",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "The trooper comes with a long staff and two translucent energy effects. The staff has a nice gun metal finish to it with sharp detail.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": "fallen-order",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "added on August 2020 and also released in 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": "fallen-order",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "retail price of $24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": "fallen-order",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Purge Troopers are a specialized class of Imperial soldier trained and equipped to assist the Inquisitors in hunting down Jedi.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": null,
+      "character_canonical": "electrostaff-purge-trooper",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Electrostaff: gun metal finish",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Re-use of the original Purge Trooper figure head",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Swivel/hinge shoulders, wrists, hips, and ankles; double hinged knees; thigh and bicep swivel; ball and socket mid-torso and head; hinged neck",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Gloss black paint with sharp detail on symbols",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Comes with a long staff and two translucent energy effects",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Staff (gun metal finish)",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Two translucent energy effects",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2020",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$24.99",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 24.99,
+     "currency": null,
+     "price_kind": "msrp",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s3"
+    }
+   }
+  ]
+ },
+ "fp_star-wars_hasbro_black-series_gaming-greats_scout-trooper_fbe997": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_scout-trooper_fbe997",
+  "identity_hash": "bde8265bee5f884e",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_scout-trooper_fbe997",
+   "character_canonical": "scout-trooper",
+   "character_variant": "fallen-order",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Scout Trooper (Fallen Order)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.myshinytoyrobots.com/2021/01/black-series-gaming-greats-scout-trooper.html",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.toyark.com/2020/10/06/star-wars-jedi-fallen-order-scout-trooper-the-black-series-figure-gamestop-exclusive-404793",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "January 15, 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": 2021
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$24.99/£24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "This version gets rid of all the weathering from the previous version(s), retaining the armour's bright white finish.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "The helmet sculpt is unchanged, but the paint apps are a little bit sharper and the gloss that's been added to the visor makes a world of difference.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Ball jointed head and torso",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Swivel hinge shoulders, wrists, hips and ankles",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Double hinge elbows and knees",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "The Scout Trooper is armed with an extendable electro-baton and EC-17 blaster, which when not in use can be stored in the holster fitted to the scout's right leg.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "scout-trooper",
+      "character_variant": "fallen-order",
+      "condition": null,
+      "year": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Gets rid of all the weathering from the previous version(s), retaining the armour's bright white finish",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The helmet sculpt is unchanged, but the paint apps are a little bit sharper and the gloss that's been added to the visor makes a world of difference",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Ball jointed head and torso; swivel hinge shoulders, wrists, hips and ankles; double hinge elbows and knees",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Extendable electro-baton and EC-17 blaster stored in a holster on the right leg",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Gloss that's been added to the visor makes a world of difference",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Extendable electro-baton",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "EC-17 blaster",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 15, 2021",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$24.99/£24.99",
+    "price_detail": {
+     "amount": 24.99,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    },
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   }
+  ]
+ },
+ "fp_star-wars_hasbro_black-series_gaming-greats_shadow-stormtrooper_1ff0fc": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_shadow-stormtrooper_1ff0fc",
+  "identity_hash": "fb21b89d7267405d",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_shadow-stormtrooper_1ff0fc",
+   "character_canonical": "shadow-stormtrooper",
+   "character_variant": "force-unleashed",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shadow Stormtrooper (Force Unleashed)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.gamestop.com/collectibles/figures/products/star-wars-the-force-unleashed-shadow-stormtrooper-the-black-series-action-figure-only-at-gamestop/11100147.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/shadow-stormtrooper-force-unleashed-1438.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toy-wizards.com/2020/05/22/star-wars-the-force-unleashed-shadow-stormtrooper-only-at-gamestop/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "Shadow Stormtroopers utilize cloaking devices to ambush their enemies in the Star Wars: The Force Unleashed video game.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "shadow-stormtrooper",
+      "character_variant": "force-unleashed",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "premium detail and multiple points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "shadow-stormtrooper",
+      "character_variant": "force-unleashed",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "4 fully articulated limbs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "character_canonical": "shadow-stormtrooper",
+      "character_variant": "force-unleashed",
+      "year": 2020,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "4 fully articulated limbs",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Shadow Stormtroopers utilize cloaking devices to ambush their enemies in the Star Wars: The Force Unleashed video game.",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "premium detail and multiple points of articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_star-wars_hasbro_black-series_gaming-greats_stormtrooper-commander_69f444": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_stormtrooper-commander_69f444",
+  "identity_hash": "a00deaf80db0cfd4",
+  "target": {
+   "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_stormtrooper-commander_69f444",
+   "character_canonical": "stormtrooper-commander",
+   "character_variant": "force-unleashed",
+   "manufacturer": "hasbro",
+   "product_line": "black-series",
+   "release_wave": "gaming-greats",
+   "fandom": "star-wars",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stormtrooper Commander (Force Unleashed)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411_nihilus",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/darth-nihilus-kotr-ii-1528.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_starwarscollector_gaminggreats",
+     "url": "https://starwarscollector.com/hasbro-star-wars-toy-lines/the-black-series-2013-current/the-black-series-action-figures-6-inch-gaming-greats-exclusive/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_figurerealm_checklist",
+     "url": "https://www.figurerealm.com/actionfigure?action=seriesitemlist&id=5050&ssid=17",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_jedinews_revan_reveal",
+     "url": "https://www.jedinews.com/collecting/articles/gamestop-reveal-two-new-black-series-figures-jedi-knight-revan-and-heavy-battle-droid/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_gaming_greats_general",
+     "url": "https://www.laughingplace.com/w/news/2022/09/02/star-wars-the-black-series-gaming-greats-gamestop-exclusive/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_websearch_nihilus_purge_search",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/jedi-knight-revan-galaxy-heroes-1347.php",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toysnowman_nihilus_rerun",
+     "url": "https://toysnowman.com/products/star-wars-the-black-series-gaming-greats-darth-nihilus-rerun-preorder-june-2025",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.actionfigure411.com/star-wars/6-black-series/gaming-greats/stormtrooper-commander-force-unleashed-1408.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.gamestop.com/collectibles/figures/products/star-wars-the-force-unleashed-stormtrooper-commander-the-black-series-action-figure-only-at-gamestop/213691.html?bt=true",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "http://www.toyhypeusa.com/2020/03/26/gamestop-exclusive-star-wars-tbs-the-force-unleashed-stormtrooper-commander-figure-pre-orders/",
+     "source_type": "toy_news",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "added on September 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Darth Nihilus",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411_nihilus",
+     "text": "6\"",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "The Black Series – Action Figures – 6-Inch – Gaming Greats – Exclusive",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Darth Nihilus, Heavy Battle Droid, Inferno Squadron Agent, Jedi Knight Revan, Purge Stormtrooper, Shadow Stormtrooper, Stormtrooper Commander",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_starwarscollector_gaminggreats",
+     "text": "Coming Soon: Electrostaff Purge Trooper, Imperial Jumptrooper, and Scout Trooper",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "both expected to ship in February 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jedi Knight Revan",
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars Gaming Greats",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_jedinews_revan_reveal",
+     "text": "Star Wars Gaming Greats",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Hasbro",
+      "product_line": "Star Wars: The Black Series - Gaming Greats",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "added on March 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "stormtrooper-commander",
+      "character_variant": "force-unleashed",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "retail price of $24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "stormtrooper-commander",
+      "character_variant": "force-unleashed",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "exclusive to Gamestop",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "stormtrooper-commander",
+      "character_variant": "force-unleashed",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Stormtrooper Commanders lead Imperial troops into battle",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "stormtrooper-commander",
+      "character_variant": "force-unleashed",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "GameStop was accepting pre-orders for this exclusive Star Wars The Black Series - The Force Unleashed Stormtrooper Commander figure for $24.99.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "stormtrooper-commander",
+      "character_variant": "force-unleashed",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "This trooper included a special paint scheme that features a blue streak over the right eye on the helmet, multiple points of articulation, and comes with two different blasters.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "stormtrooper-commander",
+      "character_variant": "force-unleashed",
+      "manufacturer": "hasbro",
+      "product_line": "black-series",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Special paint scheme that features a blue streak over the right eye on the helmet",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Blue streak over the right eye on the helmet",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Comes with two different blasters",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two different blasters",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2020",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$24.99",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact",
+    "price_detail": {
+     "amount": 24.99,
+     "currency": "USD",
+     "price_kind": "msrp",
+     "region": null,
+     "as_of": null,
+     "source_id": null
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,4407 @@
+{
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-marine-sniper_233267": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-marine-sniper_233267",
+  "identity_hash": "009bd2f22512315b",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-marine-sniper_233267",
+   "character_canonical": "action-marine-sniper",
+   "character_variant": "deluxe",
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Action Marine - Sniper (Deluxe)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://xcalibar25.wordpress.com/2024/10/23/review-g-i-joe-classified-series-60th-anniversary-action-marine-sniper/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "http://www.oafe.net/yo/gij60ams.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://surveillance-port.com/2024/09/24/g-i-joe-classified-series-60th-anniversary-action-marine-sniper-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.fulguropop.com/en/2025/02/15/gijoe-classified-review-60th-anniversary-action-marine-sniper/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Her uniform is green and black camouflage, with a lighter green on the chest and back of her shirt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Both heads are all-new sculpts.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "For articulation, her head is on a ball joint...butterfly joints at the shoulders...ball joints with bicep swivel, double elbows...double knees, rotation at the boots and hinged ankles.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "She comes with a sniper rifle with a removable scope, bipod and silencer...green backpack...pistol, silencer and a knife...Uzi-style weapon...machine pistol...range finder device...Ghillies suit.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "The G.I. Joe Classified Series 60th Anniversary Action Marine- Sniper is out now.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "her shirt is simply cloth, with no gauntlets or body armor or any of that. There's a harness with some pockets",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "dark skin and straight black hair held back by a green bandana. She also has camo paint on her face",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "sniper rifle...a separate bipod, suppressor, and scope that can all be stored inside a carrying case...machine pistol, knife, and the big, padded backpack...Uzi and a pistol with a silencer...a full ghillie suit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "01/03/25",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "19 character-inspired accessory pieces including alternate head and hands, backpack, 2 swappable hat and hair pieces, handheld device, knife, backpack, rifle case, figure stand, and multiple weapon accessories; plus a Ghillie Suit!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "multiple points of articulation for high poseability",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "The figure is fun, but the gear? Eh, I could take it or leave it.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s4",
+     "text": "Le camouflage reste basique",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s4",
+     "text": "Les proportions me semblent presque parfaites, à mille lieues de la figurine de Shooter",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s4",
+     "text": "Les articulations sont au top comme toujours avec cette gamme. Mention spéciale pour les hanches à détente et les doubles charnières aux coudes et aux genoux",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s4",
+     "text": "l'impossibilité de tous les ranger sur la figurine",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-marine-sniper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Green and black camouflage uniform with a lighter green on the chest and back of her shirt; shirt is simply cloth with no gauntlets or body armor; a harness with some pockets; black hair held back by a green bandana; camo paint on her face",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Green backpack; green Ghillie suit",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Both included heads are all-new sculpts",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Head is on a ball joint, butterfly joints at the shoulders, ball joints with bicep swivel, double elbows, double knees, rotation at the boots and hinged ankles",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q15"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Dark skin, straight black hair held back by a green bandana, with camo face paint",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Comes with a full Ghillie suit",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q8",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Sniper rifle with removable scope, bipod, and silencer",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Sniper rifle with removable scope, bipod and silencer",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Green backpack",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Pistol with silencer",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Knife",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "Uzi-style machine pistol",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "Range finder device",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "Ghillie suit",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q8",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "Rifle carrying case",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[9]",
+    "status": "resolved",
+    "value": "Alternate head and hands",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[10]",
+    "status": "resolved",
+    "value": "Figure stand",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[11]",
+    "status": "resolved",
+    "value": "2 swappable hat and hair pieces",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542",
+  "identity_hash": "7c520fcc10e88daf",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542",
+   "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+   "character_variant": "deluxe",
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://surveillance-port.com/2024/10/31/g-i-joe-classified-series-60th-anniversary-halo-jumper-review-2/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://xcalibar25.wordpress.com/2024/11/18/review-g-i-joe-classified-series-60th-anniversary-action-pilot-halo-high-altitude-low-opening-jumper/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-pilot-halo-high-altitude-low-opening-jumper-deluxe-8767.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "multiple points of articulation for high poseability",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "18 character-inspired accessory pieces including visored helmet with air hose, alternate helmet with night vision goggles, removable pouch, wrist altimeter, goggles, figure stand, and multiple weapon accessories; plus a foldable soft goods display parachute",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "October 31, 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "His uniform is in a woodland camouflage pattern with his tac vest being light and dark green.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "His hair is brown, and the skin is covered in green cam paint",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "He has butterfly joints at the shoulders, arms on ball joints with an upper arm cut, double elbows, rotation at the wrists, and a hinge at the wrists.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "He has a sniper rifle, assault rifle and submachine gun that we've seen with the Steel Corp figures. He has two helmets...",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Posted November 18, 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "This Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe) toy was added on July 2024 and also released in 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "retail price of $34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "an average selling price of $21.96",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": "secondary_market_average"
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "18 character-inspired accessory pieces including visored helmet with air hose, alternate helmet with night vision goggles, removable pouch, wrist altimeter, goggles, figure stand, and multiple weapon accessories; plus a foldable soft goods display parachute",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "character_canonical": "action-pilot-halo-high-altitude-low-opening-jumper",
+      "character_variant": "deluxe",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Woodland camouflage uniform with a tac vest in light and dark green",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Brown hair with skin covered in green cam paint",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Butterfly joints at the shoulders, arms on ball joints with an upper arm cut, double elbows, rotation at the wrists, and a hinge at the wrists",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Woodland camouflage uniform with light and dark green tac vest",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Brown hair with skin covered in green cam paint",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Two helmets and a sniper rifle, assault rifle, and submachine gun",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Visored helmet with air hose",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Alternate helmet with night vision goggles",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Removable pouch",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Wrist altimeter",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "Goggles",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "Figure stand",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "Multiple weapon accessories (sniper rifle, assault rifle, submachine gun)",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "Foldable soft goods display parachute",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "October 31, 2024",
+      "evidence_quote_ids": [
+       "f_q3"
+      ]
+     },
+     {
+      "value": "added on July 2024",
+      "evidence_quote_ids": [
+       "f_q9"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$34.99",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 34.99,
+     "currency": "USD",
+     "price_kind": "msrp",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s3"
+    }
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-infantry_7c7ca9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-infantry_7c7ca9",
+  "identity_hash": "572e5a155895f6aa",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-infantry_7c7ca9",
+   "character_canonical": "action-soldier-infantry",
+   "character_variant": "deluxe",
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Action Soldier - Infantry (Deluxe)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://xcalibar25.wordpress.com/2024/03/16/review-g-i-joe-classified-series-60th-anniversary-action-soldier-infantry/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/gi-joe-classified-60th-anniversary-action-soldier-infantry-deluxe-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://hk.hasbropulse.com/en/product/2000002160/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "source_type": "official_manufacturer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.danstoybox.com/post/let-s-discuss-hasbro-g-i-joe-classified-60th-anniversary-infantry-action-figure",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Posted March 16, 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "He comes wearing a cloth poncho and a plastic hood. Underneath, he is wearing a tan balaclava and desert pattern BDUs. Over that is a brown tac vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "He has two heads (white and black,) with a matching set of trigger hands for both.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "his head is on a dumbbell joint, with unhindered movement up, down, and all around. He has butterfly joints at the shoulders, with the arms on ball joints",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "His weapons include a double-barrel assault rifle, a light machine gun (looks like the M249) and a heavy machine gun with a tripod.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "He has a radio that can plug into his belt and a rucksack that plugs into his back. Finally, he has a bunch of pouches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "G.I. Joe Classified Series 60th Anniversary Action Soldier - Infantry, Collectible 6 Inch Action Figure with 25 Accessories",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-soldier-infantry",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Cloth poncho and plastic hood over tan balaclava and desert pattern BDUs, with brown tac vest",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Tan, desert pattern, brown",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Two heads (white and black) with a matching set of trigger hands for both",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Head on dumbbell joint with unhindered movement up, down, and all around; butterfly joints at shoulders; arms on ball joints",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Cloth poncho with plastic hood over desert BDUs and tac vest",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two heads (white and black) with matching trigger hands",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Double-barrel assault rifle, light machine gun (looks like the M249), and heavy machine gun with a tripod",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Cloth poncho with plastic hood",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Two heads (white and black) with matching set of trigger hands",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Double-barrel assault rifle, light machine gun (looks like the M249), and heavy machine gun with a tripod",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Radio that plugs into his belt, rucksack that plugs into his back, and a bunch of pouches",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by March 2024",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-sailor-recon-diver_f75400": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-sailor-recon-diver_f75400",
+  "identity_hash": "ecea123ecb1920be",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-sailor-recon-diver_f75400",
+   "character_canonical": "action-sailor-recon-diver",
+   "character_variant": "deluxe",
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Action Sailor - Recon Diver (Deluxe)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.actionfigurebarbecue.com/2024/03/action-figure-review-action-sailor.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://xcalibar25.wordpress.com/2024/06/23/review-g-i-joe-classified-series-60th-anniversary-action-sailor-recon-diver/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "mostly black swimsuit with OD green gear",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "sleek uniform that captures a very real world military aesthetic",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "lot of character in the Action Sailor's portrait. He looks like a really tough and determined guy",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "hood of the wetsuit with just his face poking out",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "swivel/ hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "2 swappable heads, dog tags, submersible scooter, diving navigator, 2 fins, knife, sheathe, thigh pouch, rifle, magazine, speargun, pistol, suppressor, dive computer, rebreather pack with mask, vest, backpack, satchel, and display stand",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Thursday, March 21, 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "The Action Sailor Recon Diver is in a black wet suit. He has an African American head with the wet suit hood up on the body. He is wearing dark green web gear and a dark green live preserver on his torso.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "He has a spare Caucasian head",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "For articulation, his head is on a dumbbell joint, with unhindered movement up, down, and all around. He has butterfly joints at the shoulders the arms are on ball joints with an upper arm cut, double elbows, rotation at the hands, and a hinge at the wrists.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "He has a submachine gun with a suppressor, a pistol and a spear gun for weapons. He also has a knife that goes on his right leg. He has a dark green explosives satchel and an air tank backpack.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Posted June 23, 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-sailor-recon-diver",
+      "character_variant": "deluxe",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2024,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black wetsuit with hood up, dark green web gear and dark green live preserver, very real world military aesthetic",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2",
+     "f_q4",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black swimsuit/wet suit with OD green gear, dark green web gear and dark green live preserver",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "African American head with the wet suit hood up, and a spare Caucasian head",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Swivel/hinge ankles, boot swivels, double-hinged knees, swivel thighs, ball-jointed drop-down hips; head on dumbbell joint, butterfly shoulder joints, ball-jointed arms with upper-arm cut, double elbows, hand rotation, hinged wrists",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Mostly black swimsuit with OD green gear",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Hood of the wetsuit with just his face poking out",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "A lot of character in the portrait; he looks like a really tough and determined guy",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "2 swappable heads (spare Caucasian)",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q9"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Dog tags",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Submersible scooter",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Diving navigator",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "2 fins",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "Knife",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "Sheathe",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "Thigh pouch",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[9]",
+    "status": "resolved",
+    "value": "Rifle/submachine gun",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[10]",
+    "status": "resolved",
+    "value": "Magazine",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[11]",
+    "status": "resolved",
+    "value": "Speargun",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[12]",
+    "status": "resolved",
+    "value": "Pistol",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[13]",
+    "status": "resolved",
+    "value": "Suppressor",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[14]",
+    "status": "resolved",
+    "value": "Dive computer",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[15]",
+    "status": "resolved",
+    "value": "Rebreather pack with mask",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[16]",
+    "status": "resolved",
+    "value": "Vest",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[17]",
+    "status": "resolved",
+    "value": "Backpack (air tank)",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[18]",
+    "status": "resolved",
+    "value": "Satchel (explosives)",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q11"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[19]",
+    "status": "resolved",
+    "value": "Display stand",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by March 2024",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q1"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_police-emergency-service-unit_8e0b2a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_police-emergency-service-unit_8e0b2a",
+  "identity_hash": "79d07f26a997bc3f",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_police-emergency-service-unit_8e0b2a",
+   "character_canonical": "police-emergency-service-unit",
+   "character_variant": "esu",
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Police Emergency Service Unit (ESU)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://xcalibar25.wordpress.com/2025/11/17/review-g-i-joe-classified-series-legacy-collection-police-emergency-service-unit-esu/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/police-emergency-service-unit-esu-12093.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing a blue police uniform under a black tactical vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "blue pants and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "African American male with short, black hair, a mustache, and a goatee",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "head is on a dumbbell joint, with unhindered movement up, down, and all around",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "butterfly joints at the shoulders",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "double elbows, rotation at the hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "comes with an alternate, Caucasian head, and neck. He comes with a pistol...a flare gun...and a yellow taser",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "police baton, the combat shotgun, the shooting glasses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "riot helmet, riot shield, police cap and the coffee cut with 'Joe'",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "stealth-release this figure with preorders through other online shops",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s1",
+     "text": "Posted November 17, 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "multiple points of articulation for high poseability",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "14 character-inspired accessory pieces including alternate head, hat, handcuffs, nightstick, riot helmet and shield, 2 pairs of glasses, coffee cup, taser, flare gun, weapon accessories, and softgoods poncho as well as attached two-way radio transmitted",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "character_canonical": "police-emergency-service-unit",
+      "character_variant": "esu",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Blue police uniform under a black tactical vest, with blue pants and black boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "African American male with short, black hair, a mustache, and a goatee",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Head is on a dumbbell joint, with unhindered movement up, down, and all around",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Blue police uniform under a black tactical vest with blue pants and black boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "African American male with short, black hair, a mustache, and a goatee",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Includes an alternate Caucasian head and neck",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate Caucasian head",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Police cap",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Handcuffs",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Police baton/nightstick",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "Riot helmet",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "Riot shield",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "2 pairs of shooting glasses",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "Coffee cup",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[9]",
+    "status": "resolved",
+    "value": "Yellow taser",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[10]",
+    "status": "resolved",
+    "value": "Flare gun",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q13"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[11]",
+    "status": "resolved",
+    "value": "Pistol",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[12]",
+    "status": "resolved",
+    "value": "Combat shotgun",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[13]",
+    "status": "resolved",
+    "value": "Softgoods poncho",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[14]",
+    "status": "resolved",
+    "value": "Attached two-way radio",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by November 2025",
+    "evidence_quote_ids": [
+     "f_q11",
+     "f_q1"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$34.99",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 34.99,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_search-rescue-firefighter_0188b8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_search-rescue-firefighter_0188b8",
+  "identity_hash": "1d67637dbbbb402c",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_search-rescue-firefighter_0188b8",
+   "character_canonical": "search-rescue-firefighter",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Search & Rescue Firefighter"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.actionfigurebarbecue.com/2025/10/action-figure-review-firefighter-search.html",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/search-rescue-firefighter-10247.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Saturday, October 4, 2025",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "While he's mostly wearing black, the yellow and silver reflective trim are eye-catching and really make this guy standout.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Both portraits have the firefighters wearing hoods to protect their heads and hair with only the face visible.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Swivel/hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips, ball jointed waist, balljointed mid-torso, butterfly pecs, swivel/hinge shoulders, bicep swivels, double hinged elbows, swivel/hinge wrists, ball jointed neck base, and a barbell jointed head.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "2 Swappable portraits, goggles, helmet, oxygen mask, oxygen hose, oxygen tank, emergency blanket, 2 hand axes, large axe, sledgehammer, mallet, Halligan bar, and Jaws of Life.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "$35 dollars",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "14 character-inspired accessory pieces including alternate head, helmet, mask, air tank, hose, goggles, hydraulic rescue tool, 2 hand axes, fire axe, pry bar, hammer, sledgehammer, and softgoods emergency blanket.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Retail: $34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$24.75",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "search-rescue-firefighter",
+      "character_variant": null,
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2025,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Mostly black, with yellow and silver reflective trim",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Swappable portraits wearing hoods to protect their heads and hair with only the face visible",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Swivel/hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips, ball jointed waist, ball jointed mid-torso, butterfly pecs, swivel/hinge shoulders, bicep swivels, double hinged elbows, swivel/hinge wrists, ball jointed neck base, and a barbell jointed head",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Mostly wearing black, with yellow and silver reflective trim that is eye-catching",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Portraits wearing hoods to protect their heads and hair with only the face visible",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "2 swappable portraits",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Goggles",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Helmet",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Oxygen mask",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "Oxygen hose",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "Oxygen tank",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "Emergency blanket",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "2 hand axes",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[9]",
+    "status": "resolved",
+    "value": "Large axe",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[10]",
+    "status": "resolved",
+    "value": "Sledgehammer",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[11]",
+    "status": "resolved",
+    "value": "Mallet",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[12]",
+    "status": "resolved",
+    "value": "Halligan bar",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[13]",
+    "status": "resolved",
+    "value": "Jaws of Life",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by October 2025",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$35",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 35,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$34.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 34.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-special-forces_07c66b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-special-forces_07c66b",
+  "identity_hash": "ea7462cd90d5b1dd",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-special-forces_07c66b",
+   "character_canonical": "action-soldier-special-forces",
+   "character_variant": null,
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Action Soldier - Special Forces"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "http://www.actionfigurebarbecue.com/2026/05/action-figure-review-action-soldier.html",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://surveillance-port.com/2026/03/09/g-i-joe-classified-series-action-soldier-special-forces-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing camo pants and a tactical sweater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "face, neck, and hands are green",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "short, dark hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "green and brown camo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "shorter, curlier hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "skull-like face paint",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Swivel/hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips, ball jointed waist, mid-torso hinge, butterfly pecs, swivel/hinge shoulders, bicep swivels, double hinged elbows, swivel/hinge wrists, ball jointed neck base, and a ball jointed head",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "2 swappable heads, helmet, beret, 2 bandannas, dog tags, glasses, 2 side pouches, 2 piece Android tactical assault kit, back pouch, knife, pistol, 2 rifles, 2 magazines, bipod, rocket, and launcher",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "$43 dollars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "Wednesday, May 27, 2026",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Official product details haven't dropped as of yet, but there are a few official images to check out from New York Toy Fair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": 2026,
+      "character_canonical": "action-soldier-special-forces",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "wearing camo pants and a tactical sweater",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "green and brown camo",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "short, dark hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Swivel/hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips, ball jointed waist, mid-torso hinge, butterfly pecs, swivel/hinge shoulders, bicep swivels, double hinged elbows, swivel/hinge wrists, ball jointed neck base, and a ball jointed head",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "face, neck, and hands are green",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "skull-like face paint",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "2 swappable heads",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Helmet",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Beret",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "2 bandannas",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "dog tags",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "glasses",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "2 side pouches",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "2 piece Android tactical assault kit",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[9]",
+    "status": "resolved",
+    "value": "back pouch",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[10]",
+    "status": "resolved",
+    "value": "knife",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[11]",
+    "status": "resolved",
+    "value": "pistol",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[12]",
+    "status": "resolved",
+    "value": "2 rifles",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[13]",
+    "status": "resolved",
+    "value": "2 magazines",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[14]",
+    "status": "resolved",
+    "value": "bipod",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[15]",
+    "status": "resolved",
+    "value": "rocket",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[16]",
+    "status": "resolved",
+    "value": "launcher",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by May 2026",
+    "evidence_quote_ids": [
+     "f_q10",
+     "f_q1"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-jumper_cdc0fb": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-jumper_cdc0fb",
+  "identity_hash": "c9e8456ae3764338",
+  "target": {
+   "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-jumper_cdc0fb",
+   "character_canonical": "action-pilot-halo-jumper",
+   "character_variant": "High Altitude Low Opening; Deluxe",
+   "manufacturer": "hasbro",
+   "product_line": "classified-series",
+   "release_wave": "60th-anniversary",
+   "fandom": "gi-joe",
+   "year": "2024",
+   "scale": "None",
+   "pack_size": "1",
+   "v1_name": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_actionfigure411",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-soldier-infantry-deluxe-7713.php",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hisstank_forum",
+     "url": "https://www.hisstank.com/forum/g-i-joe-toys-modern-general-discussion/522832-classified-60th-anniversary-action-soldier-infantry.html",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbro_shop",
+     "url": "https://shop.hasbro.com/en-us/product/g-i-joe-classified-series-60-th-anniversary-action-soldier-infantry-6-action-figure/0AF027E1-F821-488C-A4C9-7329BB060BCF",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toynewsi_review",
+     "url": "https://toynewsi.com/75-52052",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_hasbropulse_sg",
+     "url": "https://sg.hasbropulse.com/en/product/2000002178/gi-joe-classified-series-60th-anniversary-action-soldier-infantry-collectible-6-inch-action-figure-with-25-accessories",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://surveillance-port.com/2024/10/31/g-i-joe-classified-series-60th-anniversary-halo-jumper-review-2/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigure411.com/gijoe/6-classified-series/60th-anniversary/action-pilot-halo-high-altitude-low-opening-jumper-deluxe-8767.php",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://xcalibar25.wordpress.com/2024/11/18/review-g-i-joe-classified-series-60th-anniversary-action-pilot-halo-high-altitude-low-opening-jumper/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_actionfigure411",
+     "text": "25 character-inspired accessory pieces including helmet, dog tags, alternate head and hands, backpack, camouflaged cloth poncho, walkie-talkie, ammo belt, figure stand, vest with 5 removable pouches, and multiple weapon accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Soldier - Infantry",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Deluxe"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_actionfigure411",
+     "text": "Action Marine - Sniper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Marine",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Sniper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_actionfigure411",
+     "text": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Pilot",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Halo Jumper (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_actionfigure411",
+     "text": "Action Sailor - Recon Diver (Deluxe)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": "Action Sailor",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Recon Diver (Deluxe)"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_actionfigure411",
+     "text": "averages $65.42 in secondary market sales, approximately 87% above retail",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toynewsi_review",
+     "text": "I really like these 60th anniversary figs",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toynewsi_review",
+     "text": "look like any other modern 'Classified' figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Hasbro",
+      "product_line": "G.I. Joe Classified Series 60th Anniversary",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "October 31, 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "18 character-inspired accessory pieces including visored helmet with air hose, alternate helmet with night vision goggles, removable pouch, wrist altimeter, goggles, figure stand, and multiple weapon accessories; plus a foldable soft goods display parachute",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "multiple points of articulation for high poseability",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Retail: $34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "18 character-inspired accessory pieces including visored helmet with air hose, alternate helmet with night vision goggles, removable pouch, wrist altimeter, goggles, figure stand, and multiple weapon accessories; plus a foldable soft goods display parachute that can stow in the backpack.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "average selling price of $21.96",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "His uniform is in a woodland camouflage pattern with his tac vest being light and dark green.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "His hair is brown, and the skin is covered in green cam paint.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "He has butterfly joints at the shoulders, arms on ball joints with an upper arm cut, double elbows, rotation at the wrists.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "The Action Pilot is a straight-up repaint of the Classified Series Airborne figure.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Posted November 18, 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "action-pilot-halo-jumper",
+      "manufacturer": "hasbro",
+      "product_line": "classified-series",
+      "year": "2024",
+      "character_variant": "High Altitude Low Opening; Deluxe",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Woodland camouflage uniform with a light and dark green tac vest",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Light and dark green tac vest",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Butterfly joints at the shoulders, arms on ball joints with an upper-arm cut, double elbows, and rotation at the wrists",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Woodland camouflage uniform with light and dark green tac vest",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Brown hair with skin covered in green cam paint",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "A straight repaint of the Classified Series Airborne figure",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Visored helmet with air hose",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Alternate helmet with night vision goggles",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Removable pouch",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Wrist altimeter",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "resolved",
+    "value": "Goggles",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[6]",
+    "status": "resolved",
+    "value": "Figure stand",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[7]",
+    "status": "resolved",
+    "value": "Multiple weapon accessories",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[8]",
+    "status": "resolved",
+    "value": "Foldable soft goods display parachute that can stow in the backpack",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by October 2024",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$34.99",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 34.99,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ }
+}
