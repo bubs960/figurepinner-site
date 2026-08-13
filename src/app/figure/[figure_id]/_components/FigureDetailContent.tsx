@@ -23,7 +23,7 @@ import MobileActionBar from './MobileActionBar'
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
-import { enrichedDescription } from '../_lib/enrichedCopy'
+import { enrichedDescription, gatedLoreText } from '../_lib/enrichedCopy'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
@@ -911,7 +911,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             rarityTier={null}
             genre={genre}
             valuePricing={valuePricing}
-            loreText={local.match_represented ?? null}
+            loreText={gatedLoreText(local)}
             ticks={placardTicks}
             lastSale={lastSale}
             conditionLabel={placardConditionLabel}

@@ -34,6 +34,33 @@ export interface Article {
 export const ARTICLES: Article[] = [
   ...BIDCHECK_ARTICLES,
   {
+    slug: 'dungeons-dragons-action-figures-guide',
+    title: 'Dungeons & Dragons Action Figures: From LJN’s Warduke to Super7 Ultimates',
+    metaTitle: 'Dungeons & Dragons Action Figures Guide — Values & Lines | FigurePinner',
+    metaDescription:
+      'The D&D figure lines that matter: LJN’s 1983 vintage run, Super7’s cartoon Ultimates with real sold data, and Hasbro’s Golden Archive — what to collect and what it costs.',
+    dek: 'Forty years of D&D plastic, three very different markets, one guide.',
+    readingMinutes: 5,
+    updated: '2026-08-13',
+    body: [
+      { type: 'p', text: 'Dungeons & Dragons figures come in three distinct generations, and they barely share a collector base: LJN’s 1983–84 vintage line, Super7’s current cartoon-based Ultimates, and Hasbro’s Golden Archive tied to the Honor Among Thieves movie. Each prices on completely different logic.' },
+      { type: 'h2', text: 'The vintage LJN line: where the legends live' },
+      { type: 'p', text: 'LJN — the same company making rubber WWF wrestlers a year later — produced the Advanced Dungeons & Dragons line in 1983–84: Strongheart the paladin, Elkhorn the dwarf, Kelek the sorcerer, and the breakout star nobody planned, Warduke. A henchman design invented for the toy line, Warduke’s horned helmet and half-exposed face made him the most remembered figure in it, to the point that Wizards of the Coast has repeatedly canonized him in actual game products since. Battle-Matic action arms, the Fortress of Fangs playset, and a short shelf life as the line died with the mid-80s D&D moral panic round out the story. We carry 67 LJN vintage entries in the database; we are not printing sold medians for them today because comp-matching on generic fantasy names currently pulls in unrelated products (a “Nightmare” search finds VHS board games before it finds a dragon), a defect we caught building this guide and have queued for a fix. Documented auction behavior is directional: carded examples of the popular characters trade in the hundreds, and Warduke carded is the line’s marquee lot.' },
+      { type: 'h2', text: 'Super7 Ultimates: the cartoon crew, with real numbers' },
+      { type: 'ul', items: [
+        'Hank the Ranger: $47.50 median across 20 sold, with a top sale at $195.',
+        'Efreeti (ReAction wave): $46 median across 11 sold.',
+        'Sheila the Thief: $38 median across 20 sold — with one genuine $726.75 outlier sale that we read as a signed or lot listing, not the market.',
+        'Shadow Demons set: $36 median across 19 sold.',
+        'Dekkion the Skeleton Warrior, glow-in-the-dark exclusive: around $28–$30 across a deep sample.',
+      ]},
+      { type: 'p', text: 'Super7’s line covers the 1983 animated series cast — the property a generation actually grew up on — at the usual Ultimates price of about $55 retail. Most figures trading under retail on the sold screen is the familiar Super7 pattern: preorder-driven supply roughly matches demand, so the aftermarket discounts. Hank holding near $50 while others drift to the $30s tells you the party leader moves in a way the Shadow Demons do not.' },
+      { type: 'callout', text: 'The buy-side read on Super7 D&D: patience pays on everything except exclusives. Store-exclusive variants like the glow Dekkion hold their price band; standard waves can be had below retail if you wait out a preorder cycle.' },
+      { type: 'h2', text: 'Hasbro’s Golden Archive and where this fandom goes next' },
+      { type: 'p', text: 'The Golden Archive six-inch line shipped around the 2023 movie and quietly faded with it — our comp buckets for it are thin, and the figures trade in the $25–$35 band when they trade at all. The interesting question is whether Hasbro returns to the well now that D&D’s brand is bigger than it has been since the LJN era. If they ever produce a modern Warduke at mass retail, the vintage LJN one gets more famous, not less — reissues historically spotlight the originals. Collect the era that means something to you, but know which market you are walking into: vintage LJN is auction-house archaeology, Super7 is a patience game, and Golden Archive is clearance-rack roulette.' },
+    ],
+  },
+  {
     slug: 'most-valuable-dc-action-figures',
     title: 'Most Valuable DC Action Figures: Kenner Super Powers Still Runs the Table',
     metaTitle: 'Most Valuable DC Action Figures — Real Sold Prices | FigurePinner',

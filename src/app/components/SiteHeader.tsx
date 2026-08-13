@@ -52,6 +52,15 @@ export type Crumb = { label: string; href?: string }
 
 const NAV_LINKS = [
   { label: 'Search', href: '/search' },
+  // Genre hubs added 2026-08-13 (closes the 8/4 board finding: hubs had no
+  // persistent nav entry point — homepage lanes + search pills only). Top 4
+  // by catalog size; crumbed pages already surface the genre in the crumb
+  // trail, so this only needed the no-crumbs (homepage) branch. The whole
+  // link row already hides under 920px, so mobile is unaffected.
+  { label: 'Wrestling', href: '/wrestling' },
+  { label: 'Star Wars', href: '/star-wars' },
+  { label: 'Marvel', href: '/marvel' },
+  { label: 'DC', href: '/dc' },
   { label: "Today's Pick", href: '/today' },
   { label: 'Guides', href: '/guides' },
   // 'News' removed 2026-06-25 (Steve: "we don't have news"). The public /news

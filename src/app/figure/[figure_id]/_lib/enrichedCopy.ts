@@ -72,3 +72,21 @@ export function enrichedDescription(f: KBFigure): string | null {
   if (DUPLICATE_TEXTS.has(raw)) return null
   return truncateAtSentence(raw, META_BUDGET)
 }
+
+/**
+ * Body-copy variant for on-page surfaces (HeroBand lore slot). Same safety
+ * gates as enrichedDescription — internal-QA hedge language, placeholder
+ * artifacts, exact-duplicate text — but no meta-length truncation, since the
+ * hero paragraph is body copy, not a snippet. Added 2026-08-13 to close the
+ * 7/24 board finding: HeroBand rendered raw match_represented, bypassing the
+ * gate this module exists to enforce (the catchall-085/IRS incident class).
+ */
+export function gatedLoreText(f: KBFigure): string | null {
+  const raw = f.match_represented?.trim()
+  if (!raw) return null
+  if (raw.length < MIN_LEN) return null
+  if (HEDGE_RE.test(raw)) return null
+  if (ARTIFACT_RE.test(raw)) return null
+  if (DUPLICATE_TEXTS.has(raw)) return null
+  return raw
+}
