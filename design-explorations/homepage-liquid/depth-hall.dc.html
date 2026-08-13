@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #09090F; }
+    a { color: #f5c462; text-decoration: none; }
+    a:hover { color: #e0a83e; }
+    @keyframes fpHallL {
+      0% { transform: translateX(-590px) translateZ(-4400px) rotateY(36deg); opacity: 0; }
+      10% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(-590px) translateZ(560px) rotateY(36deg); opacity: 0; }
+    }
+    @keyframes fpHallR {
+      0% { transform: translateX(590px) translateZ(-4400px) rotateY(-36deg); opacity: 0; }
+      10% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translateX(590px) translateZ(560px) rotateY(-36deg); opacity: 0; }
+    }
+    @keyframes fpFloor { from { background-position: 0 0, 0 0; } to { background-position: 0 150px, 0 0; } }
+    @keyframes fpTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes fpMoteUp {
+      0% { transform: translateY(0); opacity: 0; }
+      15% { opacity: .7; }
+      70% { opacity: .5; }
+      100% { transform: translateY(-46vh); opacity: 0; }
+    }
+    @keyframes fpSheen { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    @keyframes fpRise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fpFadeOut { to { opacity: 0; } }
+    @keyframes fpSway { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+    @keyframes fpBlobA { from { transform: translate(0, 0) scale(1); } to { transform: translate(9%, 14%) scale(1.25); } }
+    @keyframes fpBlobB { from { transform: translate(0, 0) scale(1.15); } to { transform: translate(-12%, -8%) scale(.9); } }
+    @keyframes fpBlobC { from { transform: translate(0, 0) scale(1); } to { transform: translate(-8%, -12%) scale(1.3); } }
+    @keyframes fpLiquidDrift { from { transform: translate3d(-2.5%, -2%, 0) scale(1.08); } to { transform: translate3d(2.5%, 2%, 0) scale(1.16); } }
+    @keyframes fpStarZoom {
+      0% { transform: scale(1); opacity: 0; }
+      12% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: scale(1.55); opacity: 0; }
+    }
+    @keyframes fpTwinkle { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+    @keyframes fpSearchPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245,196,98,.55), 0 0 28px 2px rgba(224,168,62,.55), 0 0 90px 10px rgba(224,168,62,.3), 0 18px 70px -6px rgba(224,168,62,.45); }
+      50% { box-shadow: 0 0 0 16px rgba(245,196,98,0), 0 0 48px 8px rgba(224,168,62,.8), 0 0 140px 20px rgba(224,168,62,.5), 0 18px 84px -2px rgba(224,168,62,.65); }
+    }
+    @keyframes fpRingSpin { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
+    @keyframes fpGlowBreathe { 0%, 100% { opacity: .6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.14); } }
+    @keyframes fpWrapGlint { 0% { transform: translateX(-150%) skewX(-16deg); } 42% { transform: translateX(360%) skewX(-16deg); } 100% { transform: translateX(360%) skewX(-16deg); } }
+    @keyframes fpBtnSheen { 0% { transform: translateX(-160%) skewX(-18deg); } 55% { transform: translateX(220%) skewX(-18deg); } 100% { transform: translateX(220%) skewX(-18deg); } }
+    @keyframes fpCaret { 0%, 45% { opacity: 1; } 55%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      [data-fpanim] { animation-play-state: paused !important; }
+    }
+  </style>
+</helmet>
+<div style="background:#09090F; color:#EEEEF5; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+  <template id="__bundler_thumbnail" data-bg-color="#09090F">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70">
+      <rect width="100" height="70" fill="#09090F"></rect>
+      <polygon points="46,21 54,21 66,49 34,49" fill="#f5c462" opacity=".22"></polygon>
+      <circle cx="50" cy="21" r="3.4" fill="#f5c462"></circle>
+      <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f5c462">FP</text>
+    </svg>
+  </template>
+  <section onMouseMove="{{ onMove }}" onMouseLeave="{{ onLeave }}" style="{{ sceneVars }}">
+    <div style="position:absolute; inset:0; overflow:hidden; background:radial-gradient(130% 100% at 50% 0%, #141126 0%, #0a0913 46%, #060509 100%);">
+      <sc-for list="{{ starLayers }}" as="layer" hint-placeholder-count="2">
+        <div data-fpanim="1" style="position:absolute; inset:0; animation:fpStarZoom {{ layer.duration }}s linear {{ layer.delay }}s infinite; will-change:transform,opacity; pointer-events:none;">
+          <sc-for list="{{ layer.stars }}" as="s" hint-placeholder-count="10">
+            <div data-fpanim="1" style="position:absolute; left:{{ s.left }}%; top:{{ s.top }}%; width:{{ s.size }}px; height:{{ s.size }}px; border-radius:50%; background:{{ s.color }}; animation:fpTwinkle {{ s.twinkle }}s ease-in-out {{ s.delay }}s infinite;"></div>
+          </sc-for>
+        </div>
+      </sc-for>
+      <div data-fpanim="1" style="position:absolute; left:-22%; top:-30%; width:75%; height:85%; border-radius:50%; background:radial-gradient(50% 50% at 50% 50%, rgba(88,64,150,.30), rgba(88,64,150,0) 70%); filter:blur(70px); animation:fpBlobA 26s ease-in-out infinite alternate; pointer-events:none;"></div>
+      <div data-fpanim="1" style="position:absolute; right:-25%; top:6%; width:70%; height:80%; border-radius:50%; background:radial-gradient(50% 50% at 50% 50%, rgba(224,168,62,.16), rgba(224,168,62,0) 70%); filter:blur(80px); animation:fpBlobB 32s ease-in-out infinite alternate; pointer-events:none;"></div>
+      <div data-fpanim="1" style="position:absolute; left:16%; bottom:-38%; width:68%; height:75%; border-radius:50%; background:radial-gradient(50% 50% at 50% 50%, rgba(46,74,140,.26), rgba(46,74,140,0) 70%); filter:blur(75px); animation:fpBlobC 38s ease-in-out infinite alternate; pointer-events:none;"></div>
+      <div data-fpanim="1" style="position:absolute; inset:-8%; animation:fpLiquidDrift 24s ease-in-out infinite alternate; mix-blend-mode:screen; opacity:.5; pointer-events:none;">
+        <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <filter id="fpLiquidSheen" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.0035 0.008" numOctaves="3" seed="11" result="noise">
+                <animate attributeName="baseFrequency" values="0.0035 0.008;0.0055 0.012;0.0035 0.008" dur="26s" repeatCount="indefinite"></animate>
+              </feTurbulence>
+              <feSpecularLighting in="noise" surfaceScale="5" specularConstant="0.85" specularExponent="16" lighting-color="#8f9dd8" result="spec">
+                <feDistantLight azimuth="235" elevation="60">
+                  <animate attributeName="azimuth" values="235;255;235" dur="30s" repeatCount="indefinite"></animate>
+                </feDistantLight>
+              </feSpecularLighting>
+              <feComposite in="spec" in2="SourceAlpha" operator="in"></feComposite>
+            </filter>
+            <filter id="fpLiquidGold" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.0022 0.005" numOctaves="2" seed="4" result="noise2">
+                <animate attributeName="baseFrequency" values="0.0022 0.005;0.0034 0.0075;0.0022 0.005" dur="34s" repeatCount="indefinite"></animate>
+              </feTurbulence>
+              <feSpecularLighting in="noise2" surfaceScale="6" specularConstant="0.6" specularExponent="22" lighting-color="#e0a83e" result="spec2">
+                <feDistantLight azimuth="120" elevation="55"></feDistantLight>
+              </feSpecularLighting>
+              <feComposite in="spec2" in2="SourceAlpha" operator="in"></feComposite>
+            </filter>
+            <linearGradient id="fpLiquidMask" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity=".9"></stop>
+              <stop offset=".45" stop-color="#fff" stop-opacity=".35"></stop>
+              <stop offset="1" stop-color="#fff" stop-opacity=".75"></stop>
+            </linearGradient>
+            <mask id="fpLiquidFade"><rect width="100%" height="100%" fill="url(#fpLiquidMask)"></rect></mask>
+          </defs>
+          <g mask="url(#fpLiquidFade)">
+            <rect width="100%" height="100%" fill="#000" filter="url(#fpLiquidSheen)" opacity=".55"></rect>
+            <rect width="100%" height="100%" fill="#000" filter="url(#fpLiquidGold)" opacity=".4"></rect>
+          </g>
+        </svg>
+      </div>
+
+      <div data-fpanim="1" style="position:absolute; left:50%; top:-12%; width:900px; height:88%; margin-left:-450px; transform-origin:top center; clip-path:polygon(44% 0%, 56% 0%, 96% 100%, 4% 100%); background:linear-gradient(180deg, rgba(255,247,222,.28) 0%, rgba(255,242,208,.14) 30%, rgba(255,236,190,.055) 62%, rgba(255,230,180,0) 92%); mix-blend-mode:screen; animation:fpSway 11s ease-in-out infinite alternate; pointer-events:none;"></div>
+
+      <div style="position:absolute; inset:0; perspective:1150px; perspective-origin:50% 44%;">
+        <div style="{{ cameraStyle }}">
+          <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
+            <div data-fpanim="1" data-card="{{ c.id }}" onClick="{{ onCardClick }}" style="position:absolute; left:50%; top:44%; width:252px; height:388px; margin:-194px 0 0 -126px; animation:{{ c.anim }} var(--fp-dur,17s) linear infinite; animation-delay:{{ c.delay }}s; animation-play-state:{{ hallPlay }}; will-change:transform,opacity; opacity:0; cursor:pointer;">
+              <div style="position:absolute; left:50%; top:-118px; width:300px; height:150px; margin-left:-150px; clip-path:polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%); background:linear-gradient(180deg, rgba(255,246,218,.5), rgba(255,238,196,.12) 70%, rgba(255,238,196,0)); mix-blend-mode:screen; pointer-events:none;"></div>
+              <div style="position:relative; width:100%; height:100%; border-radius:12px; overflow:hidden; background:radial-gradient(120% 85% at 50% 20%, #1b1826 0%, #0c0b14 60%, #06050b 100%); border:1px solid rgba(224,168,62,.42); box-shadow:0 24px 50px -18px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.06); transition:border-color 200ms ease, box-shadow 200ms ease;" style-hover="border-color:rgba(245,196,98,.95); box-shadow:0 24px 60px -14px rgba(0,0,0,.9), 0 0 34px -4px rgba(224,168,62,.45), inset 0 1px 0 rgba(255,255,255,.1);">
+                <div style="position:absolute; inset:0; background:radial-gradient(60% 42% at 50% 30%, rgba(245,196,98,.18), transparent 75%);"></div>
+                <div style="position:absolute; left:0; right:0; top:16px; bottom:86px; display:flex; align-items:flex-end; justify-content:center;">
+                  <div role="img" aria-label="{{ c.name }} action figure" style="{{ c.photoStyle }}"></div>
+                </div>
+                <div style="position:absolute; left:0; right:0; bottom:0; padding:12px 16px 13px; background:linear-gradient(180deg, rgba(6,5,9,0), rgba(6,5,9,.95) 40%); text-align:center;">
+                  <div style="font-family:'Bebas Neue',sans-serif; font-size:23px; letter-spacing:.04em; color:#f5c462; line-height:1;">{{ c.name }}</div>
+                  <div style="margin-top:5px; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:rgba(238,238,245,.55);">{{ c.tag }}</div>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div data-fpanim="1" style="position:absolute; left:-50%; bottom:-6%; width:200%; height:58%; transform:rotateX(63deg); transform-origin:bottom center; background:repeating-linear-gradient(0deg, rgba(224,168,62,.14) 0 1px, transparent 1px 150px), repeating-linear-gradient(90deg, rgba(224,168,62,.10) 0 1px, transparent 1px 130px); animation:fpFloor 1.35s linear infinite; -webkit-mask-image:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%); mask-image:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.6) 45%, #000 100%); pointer-events:none;"></div>
+
+      <div style="position:absolute; inset:0; pointer-events:none;">
+        <sc-for list="{{ motes }}" as="m" hint-placeholder-count="4">
+          <div data-fpanim="1" style="position:absolute; left:{{ m.left }}%; bottom:{{ m.bottom }}%; width:{{ m.size }}px; height:{{ m.size }}px; border-radius:50%; background:rgba(255,244,214,.9); filter:blur(.5px); animation:fpMoteUp {{ m.duration }}s ease-in-out {{ m.delay }}s infinite;"></div>
+        </sc-for>
+      </div>
+
+      <div style="position:absolute; inset:0; pointer-events:none; background:radial-gradient(46% 34% at 50% 42%, rgba(6,5,10,.62) 0%, rgba(6,5,10,.22) 55%, transparent 78%);"></div>
+      <div style="position:absolute; inset:0; pointer-events:none; box-shadow:inset 0 0 160px 50px rgba(3,3,6,.9);"></div>
+
+      <div style="position:relative; z-index:5; min-height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:64px 28px 96px;">
+        <div style="{{ contentParallaxStyle }}">
+          <div data-fpanim="1" style="animation:fpRise .7s cubic-bezier(.2,.8,.25,1) .25s both; font-size:19px; font-weight:800; letter-spacing:.01em; color:#e0a83e; margin-bottom:18px; text-shadow:0 2px 18px rgba(224,168,62,.35);">The collector&apos;s price guide — not another marketplace.</div>
+          <h1 data-fpanim="1" style="animation:fpRise .8s cubic-bezier(.2,.8,.25,1) .4s both; margin:0 auto 18px; max-width:11.5em; font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:clamp(34px,4.6vw,68px); line-height:1.04; letter-spacing:.015em;">
+            <span>Every <span data-fpanim="1" style="background:linear-gradient(105deg, #f5c462 0%, #fff3d6 28%, #e0a83e 55%, #f5c462 100%); background-size:220% 100%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; animation:fpSheen 7s ease-in-out infinite;">grail</span> starts as a gap on the shelf.</span>
+          </h1>
+          <p data-fpanim="1" style="animation:fpRise .8s cubic-bezier(.2,.8,.25,1) .55s both; margin:0 auto 34px; max-width:560px; font-size:18px; line-height:1.55; color:rgba(238,238,245,.82);"><strong style="color:#EEEEF5;">22,500+ figures</strong> across <strong style="color:#EEEEF5;">16 fandoms</strong> — priced from <strong style="color:#EEEEF5;">real eBay solds</strong>, not hopeful asks.</p>
+          <div data-fpanim="1" data-fpsearch="1" style="animation:fpRise .8s cubic-bezier(.2,.8,.25,1) .7s both; position:relative; display:flex; gap:12px; width:min(640px, 88vw); margin:0 auto;">
+            <div data-fpanim="1" style="position:absolute; inset:-52px -70px; background:radial-gradient(50% 58% at 46% 50%, rgba(224,168,62,.4), rgba(224,168,62,.12) 55%, transparent 76%); filter:blur(24px); animation:fpGlowBreathe 2.6s ease-in-out infinite; pointer-events:none;"></div>
+            <div data-fpanim="1" onClick="{{ focusInput }}" style="position:relative; flex:1; height:64px; border-radius:16px; overflow:hidden; animation:fpSearchPulse 2.4s ease-in-out infinite; cursor:text;" style-active="transform:scale(.985);">
+              <div data-fpanim="1" style="position:absolute; left:50%; top:50%; width:160%; aspect-ratio:1; background:conic-gradient(from 0deg, rgba(245,196,98,0) 0deg, rgba(245,196,98,.3) 50deg, #ffedbe 95deg, #f5c462 125deg, rgba(245,196,98,0) 205deg, rgba(224,168,62,.15) 250deg, rgba(255,231,178,.85) 300deg, rgba(245,196,98,0) 345deg); animation:fpRingSpin 3.4s linear infinite; pointer-events:none;"></div>
+              <sc-if value="{{ isFocused }}" hint-placeholder-val="{{ false }}">
+                <div data-fpanim="1" style="position:absolute; left:50%; top:50%; width:160%; aspect-ratio:1; background:conic-gradient(from 0deg, rgba(255,237,190,0) 0deg, #fff3d6 70deg, #f5c462 130deg, rgba(245,196,98,0) 195deg, rgba(255,243,214,.9) 285deg, rgba(255,237,190,0) 340deg); animation:fpRingSpin 1.4s linear infinite; pointer-events:none;"></div>
+              </sc-if>
+              <div style="position:absolute; inset:3px; border-radius:13px; background:rgba(17,16,28,.97); backdrop-filter:blur(10px); display:flex; align-items:center; gap:11px; padding:0 19px; font-size:17px;" style-hover="background:rgba(25,24,40,.97);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5c462" stroke-width="2.2" stroke-linecap="round" style="flex-shrink:0; filter:drop-shadow(0 0 6px rgba(245,196,98,.8));"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg>
+                <input ref="{{ setInputRef }}" value="{{ queryText }}" onChange="{{ onQueryChange }}" onFocus="{{ onSearchFocus }}" onBlur="{{ onSearchBlur }}" onKeyDown="{{ onSearchKeyDown }}" aria-label="Search the guide" style="flex:1; min-width:0; height:100%; background:transparent; border:none; outline:none; color:#EEEEF5; font-size:17px; font-weight:600; font-family:inherit; caret-color:#f5c462; text-shadow:0 0 14px rgba(245,196,98,.35); padding:0;" />
+                <div style="{{ attractOverlayStyle }}">
+                  <span style="display:flex; align-items:baseline; overflow:hidden; white-space:nowrap;"><span style="color:rgba(238,238,245,.6);">Try&nbsp;&quot;</span><span style="color:#f5c462; font-weight:600; text-shadow:0 0 14px rgba(245,196,98,.55);">{{ typedText }}</span></span>
+                  <span data-fpanim="1" style="width:2.5px; height:24px; border-radius:2px; background:#f5c462; box-shadow:0 0 10px rgba(245,196,98,.9); flex-shrink:0; animation:fpCaret 1.1s step-end infinite;"></span>
+                  <span style="color:rgba(238,238,245,.6);">&quot;</span>
+                </div>
+              </div>
+              <span data-fpanim="1" style="position:absolute; top:0; bottom:0; left:0; width:34%; background:linear-gradient(100deg, transparent, rgba(255,255,255,.34) 48%, rgba(255,255,255,.06) 55%, transparent); mix-blend-mode:screen; animation:fpWrapGlint 4.6s ease-in-out 1.2s infinite; pointer-events:none;"></span>
+            </div>
+            <sc-if value="{{ showDropdown }}" hint-placeholder-val="{{ false }}">
+              <div data-fpanim="1" style="position:absolute; left:0; right:0; top:calc(100% + 12px); z-index:12; border-radius:16px; overflow:hidden; background:rgba(12,11,20,.97); backdrop-filter:blur(14px); border:1px solid rgba(224,168,62,.45); box-shadow:0 30px 70px -18px rgba(0,0,0,.9), 0 0 44px -6px rgba(224,168,62,.35); animation:fpRise .25s cubic-bezier(.2,.8,.25,1) both; text-align:left;">
+                <div style="padding:12px 18px 8px; font-size:10.5px; font-weight:700; letter-spacing:.16em; color:rgba(224,168,62,.85);">{{ dropdownLabel }}</div>
+                <sc-for list="{{ suggestions }}" as="sg" hint-placeholder-count="3">
+                  <div data-card="{{ sg.id }}" onMouseDown="{{ preventDefault }}" onClick="{{ onCardClick }}" style="display:flex; align-items:center; gap:14px; padding:9px 18px; cursor:pointer;" style-hover="background:rgba(224,168,62,.1);">
+                    <div style="width:44px; height:52px; flex-shrink:0; border-radius:8px; background:radial-gradient(120% 85% at 50% 20%, #1b1826, #08070e); border:1px solid rgba(224,168,62,.3); overflow:hidden;">
+                      <div style="{{ sg.thumbStyle }}"></div>
+                    </div>
+                    <div style="flex:1; min-width:0;">
+                      <div style="font-family:'Bebas Neue',sans-serif; font-size:21px; letter-spacing:.03em; color:#f5c462; line-height:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ sg.name }}</div>
+                      <div style="margin-top:4px; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:rgba(238,238,245,.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ sg.tag }}</div>
+                    </div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(245,196,98,.7)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ hasNoMatches }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:6px 18px 14px; font-size:13.5px; color:rgba(238,238,245,.55);">No match in the hall — press Enter to search all 22,500+ figures.</div>
+                </sc-if>
+                <div style="display:flex; align-items:center; gap:9px; padding:11px 18px; border-top:1px solid rgba(255,255,255,.07); background:rgba(224,168,62,.06);">
+                  <span style="display:inline-flex; align-items:center; justify-content:center; height:22px; padding:0 8px; border-radius:6px; border:1px solid rgba(245,196,98,.5); font-size:11px; font-weight:700; color:#f5c462;">↵ Enter</span>
+                  <span style="font-size:12.5px; color:rgba(238,238,245,.6);">{{ enterHint }}</span>
+                </div>
+              </div>
+            </sc-if>
+            <div style="position:relative; flex-shrink:0; display:flex; align-items:center; gap:8px; justify-content:center; height:64px; padding:0 32px; background:linear-gradient(180deg, #f5c462, #dd9f2e); color:#09090F; font-weight:800; font-size:16.5px; border-radius:16px; overflow:hidden; box-shadow:0 0 30px 2px rgba(224,168,62,.55), 0 14px 44px -4px rgba(224,168,62,.7), inset 0 1px 0 rgba(255,255,255,.45); cursor:pointer;" style-hover="transform:translateY(-2px) scale(1.02); box-shadow:0 0 44px 6px rgba(224,168,62,.75), 0 20px 54px -4px rgba(224,168,62,.85), inset 0 1px 0 rgba(255,255,255,.45);" style-active="transform:translateY(1px) scale(.99);">
+              <span style="position:relative; z-index:1;">Search</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#09090F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="position:relative; z-index:1;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span data-fpanim="1" style="position:absolute; top:0; bottom:0; left:0; width:46%; background:linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent); animation:fpBtnSheen 2.8s ease-in-out infinite;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ showTicker }}" hint-placeholder-val="{{ true }}">
+        <div style="position:absolute; left:0; right:0; bottom:0; z-index:6; display:flex; align-items:stretch; border-top:1px solid rgba(224,168,62,.28); background:rgba(8,8,13,.78); backdrop-filter:blur(10px);">
+          <div style="flex-shrink:0; display:flex; align-items:center; gap:8px; padding:0 18px; background:rgba(224,168,62,.12); border-right:1px solid rgba(224,168,62,.28); font-size:11px; font-weight:700; letter-spacing:.14em; color:#f5c462;"><span style="width:7px; height:7px; border-radius:50%; background:#f5c462; display:inline-block;"></span>LIVE COMPS</div>
+          <div style="flex:1; overflow:hidden; display:flex; align-items:center;">
+            <div data-fpanim="1" style="display:flex; gap:52px; width:max-content; padding:14px 0; animation:fpTicker 36s linear infinite;">
+              <sc-for list="{{ tickerItems }}" as="t" hint-placeholder-count="4">
+                <span style="white-space:nowrap; font-size:12.5px; letter-spacing:.06em; color:rgba(238,238,245,.62);">SOLD · <span style="color:#EEEEF5;">{{ t.name }}</span> <span style="font-weight:700; color:#f5c462;">{{ t.price }}</span> <span style="color:rgba(238,238,245,.4);">{{ t.cond }}</span></span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ hasSelected }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ closeInspect }}" style="position:absolute; inset:0; z-index:8; display:flex; align-items:center; justify-content:center; padding:28px; background:rgba(5,4,9,.72); backdrop-filter:blur(14px); cursor:pointer;">
+          <div onClick="{{ stopProp }}" data-fpanim="1" style="animation:fpRise .35s cubic-bezier(.2,.8,.25,1) both; position:relative; width:min(720px, 92vw); display:grid; grid-template-columns:minmax(220px, 300px) 1fr; gap:0; border-radius:18px; overflow:hidden; background:linear-gradient(160deg, #16131f 0%, #0b0a12 60%, #070609 100%); border:1px solid rgba(224,168,62,.5); box-shadow:0 40px 90px -20px rgba(0,0,0,.9), 0 0 60px -10px rgba(224,168,62,.25); cursor:default;">
+            <div style="position:relative; background:radial-gradient(110% 80% at 50% 24%, #1d1a29 0%, #0c0b14 70%); display:flex; align-items:flex-end; justify-content:center; padding:26px 18px 22px; min-height:340px;">
+              <div style="position:absolute; left:50%; top:0; width:78%; height:72%; transform:translateX(-50%); clip-path:polygon(44% 0%, 56% 0%, 100% 100%, 0% 100%); background:linear-gradient(180deg, rgba(255,246,218,.4), rgba(255,238,196,.08) 70%, rgba(255,238,196,0)); mix-blend-mode:screen; pointer-events:none;"></div>
+              <div role="img" aria-label="{{ selectedName }} action figure" style="{{ selectedPhotoStyle }}"></div>
+            </div>
+            <div style="padding:34px 34px 30px; display:flex; flex-direction:column; justify-content:center; gap:0;">
+              <div style="font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(224,168,62,.85); margin-bottom:12px;">From the guide</div>
+              <div style="font-family:'Bebas Neue',sans-serif; font-size:44px; letter-spacing:.02em; line-height:.98; color:#f5c462;">{{ selected.name }}</div>
+              <div style="margin-top:10px; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:rgba(238,238,245,.6);">{{ selected.tag }}</div>
+              <div style="margin-top:16px; font-size:14.5px; line-height:1.55; color:rgba(238,238,245,.75);">Live value, sold comps, and variant checklist — priced from real eBay solds.</div>
+              <div style="display:flex; align-items:center; gap:14px; margin-top:24px; flex-wrap:wrap;">
+                <a href="{{ selectedUrl }}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; height:48px; padding:0 24px; background:linear-gradient(180deg, #f5c462, #dd9f2e); color:#09090F; font-weight:800; font-size:14.5px; border-radius:12px; box-shadow:0 10px 30px -8px rgba(224,168,62,.6);" style-hover="transform:translateY(-2px); color:#09090F;">View price guide<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#09090F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+                <span onClick="{{ closeInspect }}" style="font-size:13.5px; font-weight:600; color:rgba(238,238,245,.55); cursor:pointer;" style-hover="color:#EEEEF5;">Back to the hall</span>
+              </div>
+            </div>
+            <div onClick="{{ closeInspect }}" title="Close" style="position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16); display:flex; align-items:center; justify-content:center; cursor:pointer;" style-hover="background:rgba(255,255,255,.14);">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EEEEF5" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <div data-fpanim="1" style="position:absolute; inset:0; z-index:9; background:#060509; animation:fpFadeOut 1s ease .3s forwards; pointer-events:none;"></div>
+    </div>
+  </section>
+
+  <p style="max-width:720px; margin:0 auto; padding:36px 32px 64px; font-size:13px; line-height:1.6; color:rgba(238,238,245,.4);">Prototype: full-viewport hall-flythrough hero — two colonnades of spotlit figures (real KB photos from the shelf pool) glide past on an infinite dolly, mouse steers the camera, floor grid and dust reinforce motion. Ticker prices are sample data — wire to /api/v1/deals. Motion honors prefers-reduced-motion.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;speed&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;standard&quot;,&quot;tsType&quot;:&quot;'slow'|'standard'|'fast'&quot;,&quot;options&quot;:[&quot;slow&quot;,&quot;standard&quot;,&quot;fast&quot;],&quot;section&quot;:&quot;Motion&quot;},&quot;mouseTilt&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showTicker&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+const IMG = (fid) => `https://figurepinner-images.bubs960.workers.dev/listing-photos/${fid}/canonical.jpg`;
+const LEFT = [
+  ['fp_wrestling_mattel_elite_1_undertaker_6eadf3', 'UNDERTAKER', 'Elite 1 · Mattel'],
+  ['fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_darth-vader_a039ff', 'DARTH VADER', 'Vintage Collection · Hasbro'],
+  ['fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_snake-eyes_c47357', 'SNAKE EYES', 'Real American Hero · Hasbro'],
+  ['fp_masters-of-the-universe_mattel_origins_origins-action-figures_skeletor_87c6a1', 'SKELETOR', 'Origins · Mattel'],
+  ['fp_transformers_hasbro_war-for-cybertron-kingdom_leader_optimus-prime_9524b9', 'OPTIMUS PRIME', 'Kingdom · Leader Class'],
+  ['fp_marvel-comics_hasbro_marvel-legends_sentinel-baf_wolverine_c8b1f7', 'WOLVERINE', 'Marvel Legends · Sentinel BAF'],
+  ['fp_dc_mcfarlane_multiverse_mcfarlane_batman_5efc4c', 'BATMAN', 'DC Multiverse · McFarlane'],
+];
+const RIGHT = [
+  ['fp_wrestling_mattel_ultimate-edition_9_stone-cold-steve_41cafb', 'STONE COLD', 'Ultimate Edition 9 · Mattel'],
+  ['fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_boba-fett_3bc65d', 'BOBA FETT', 'Vintage Collection · Hasbro'],
+  ['fp_gi-joe_hasbro_classified-series_classified_storm-shadow_e06f94', 'STORM SHADOW', 'Classified Series · Hasbro'],
+  ['fp_masters-of-the-universe_mattel_origins_origins-action-figures_he-man_6814e4', 'HE-MAN', 'Origins · Mattel'],
+  ['fp_transformers_hasbro_studio-series_leader-class_megatron_58242f', 'MEGATRON', 'Studio Series · Leader Class'],
+  ['fp_marvel-comics_hasbro_marvel-legends_giant-man-baf_captain-america_7ae598', 'CAPTAIN AMERICA', 'Marvel Legends · Giant-Man BAF'],
+  ['fp_tmnt_neca_ultimate_2024_leonardo_a6f2d6', 'LEONARDO', 'NECA Ultimate · TMNT'],
+];
+const TICKER = [
+  ['Stone Cold — Ultimate Ed. 9', '$38', 'loose'],
+  ['Darth Vader — Vintage Collection', '$28', 'MOC'],
+  ['Snake Eyes — RAH \'85', '$95', 'MOC'],
+  ['Skeletor — Origins', '$18', 'loose'],
+  ['Wolverine — Sentinel BAF', '$41', 'complete'],
+  ['Boba Fett — Vintage Collection', '$46', 'MOC'],
+  ['Optimus Prime — Kingdom Leader', '$52', 'MISB'],
+  ['Batman — DC Multiverse', '$19', 'loose'],
+];
+
+function buildCards() {
+  const cards = [];
+  const n = LEFT.length, step = 17 / n;
+  const photoStyle = (img) => ({
+    width: '78%', height: '100%',
+    backgroundImage: `url(${img})`, backgroundSize: 'contain',
+    backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat',
+    filter: 'brightness(1.04) saturate(1.05) drop-shadow(0 14px 16px rgba(0,0,0,.6))',
+  });
+  LEFT.forEach(([fid, name, tag], i) => cards.push({ id: 'L' + i, fid, img: IMG(fid), photoStyle: photoStyle(IMG(fid)), name, tag, anim: 'fpHallL', delay: (-i * step).toFixed(2) }));
+  RIGHT.forEach(([fid, name, tag], i) => cards.push({ id: 'R' + i, fid, img: IMG(fid), photoStyle: photoStyle(IMG(fid)), name, tag, anim: 'fpHallR', delay: (-(i * step + step / 2)).toFixed(2) }));
+  return cards;
+}
+function seedStars(n, seedOffset) {
+  const stars = [];
+  for (let i = 0; i < n; i++) {
+    const gold = Math.random() < 0.12;
+    stars.push({
+      id: seedOffset + i,
+      left: (Math.random() * 100).toFixed(2),
+      top: (Math.random() * 100).toFixed(2),
+      size: (0.8 + Math.random() * 1.6).toFixed(2),
+      color: gold ? 'rgba(245,196,98,.85)' : 'rgba(226,232,255,.75)',
+      twinkle: (2.5 + Math.random() * 4).toFixed(2),
+      delay: (Math.random() * 5).toFixed(2),
+    });
+  }
+  return stars;
+}
+function seedMotes(n) {
+  const arr = [];
+  for (let i = 0; i < n; i++) arr.push({
+    id: i,
+    left: (6 + Math.random() * 88).toFixed(1),
+    bottom: (4 + Math.random() * 30).toFixed(1),
+    size: (1.6 + Math.random() * 2.4).toFixed(1),
+    delay: (Math.random() * 6).toFixed(2),
+    duration: (6 + Math.random() * 5).toFixed(2),
+  });
+  return arr;
+}
+
+class Component extends DCLogic {
+  state = { rx: 0, ry: 0, px: 0, py: 0, broken: {}, selected: null, typed: '', focused: false, query: '' };
+  _phrases = ['Batman DC Multiverse', 'Seth Rollins Ultimate Edition', 'Boba Fett Vintage Collection', 'Skeletor Origins', 'Snake Eyes Classified', 'Optimus Prime Kingdom'];
+  _cards = buildCards();
+  _motes = seedMotes(9);
+  _starLayers = [
+    { id: 0, duration: 44, delay: -22, stars: seedStars(55, 0) },
+    { id: 1, duration: 44, delay: 0, stars: seedStars(55, 100) },
+  ];
+  _ticking = false;
+
+  componentDidMount() {
+    this._reduced = typeof window !== 'undefined' && window.matchMedia
+      && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.addEventListener('mousedown', this._onDocMouseDown);
+    document.addEventListener('keydown', this._onDocKeyDown);
+    // Preload photos; bg-image divs fire no error events, so guard here.
+    this._cards.forEach((c) => {
+      const im = new Image();
+      im.onerror = () => this.setState((s) => ({ broken: { ...s.broken, [c.id]: true } }));
+      im.src = c.img;
+    });
+    if (this._reduced) { this.setState({ typed: this._phrases[0] }); return; }
+    this._pi = 0; this._ci = 0; this._deleting = false;
+    this._typeTimer = setTimeout(this._typeTick, 1400);
+  }
+
+  componentWillUnmount() {
+    if (this._typeTimer) clearTimeout(this._typeTimer);
+    document.removeEventListener('mousedown', this._onDocMouseDown);
+    document.removeEventListener('keydown', this._onDocKeyDown);
+  }
+
+  _typeTick = () => {
+    const phrase = this._phrases[this._pi];
+    let next;
+    if (!this._deleting) {
+      this._ci++;
+      this.setState({ typed: phrase.slice(0, this._ci) });
+      if (this._ci >= phrase.length) { this._deleting = true; next = 2100; }
+      else next = 55 + Math.random() * 65;
+    } else {
+      this._ci--;
+      this.setState({ typed: phrase.slice(0, this._ci) });
+      if (this._ci <= 0) { this._deleting = false; this._pi = (this._pi + 1) % this._phrases.length; next = 500; }
+      else next = 26;
+    }
+    this._typeTimer = setTimeout(this._typeTick, next);
+  };
+
+  _onMove = (e) => {
+    if (this._reduced || (this.props.mouseTilt ?? true) === false) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    this._mx = (e.clientX - rect.left) / rect.width - 0.5;
+    this._my = (e.clientY - rect.top) / rect.height - 0.5;
+    if (this._ticking) return;
+    this._ticking = true;
+    requestAnimationFrame(() => {
+      this._ticking = false;
+      this.setState({ rx: this._my * -3.4, ry: this._mx * 5.5, px: this._mx * -14, py: this._my * -10 });
+    });
+  };
+
+  _onLeave = () => this.setState({ rx: 0, ry: 0, px: 0, py: 0 });
+
+  _onCardClick = (e) => {
+    const id = e.currentTarget.getAttribute('data-card');
+    const card = this._cards.find((c) => c.id === id);
+    if (card) {
+      this.setState({ selected: card, focused: false });
+      if (this._input) this._input.blur();
+    }
+  };
+
+  _setInputRef = (n) => { this._input = n; };
+  _focusInput = () => {
+    if (this._input) this._input.focus();
+    this.setState({ focused: true });
+  };
+  _onSearchFocus = () => this.setState({ focused: true });
+  _onSearchBlur = () => this.setState({ focused: false });
+  // Runtime doesn't deliver focus/blur props or reliable input refs — close the
+  // dropdown via document-level listeners instead.
+  _onDocMouseDown = (e) => {
+    if (this.state.focused && !(e.target && e.target.closest && e.target.closest('[data-fpsearch]'))) {
+      this.setState({ focused: false });
+    }
+  };
+  _onDocKeyDown = (e) => {
+    if (e.key === 'Escape' && this.state.focused) this.setState({ focused: false });
+  };
+  _onQueryChange = (e) => this.setState({ query: e.target.value });
+  _preventDefault = (e) => e.preventDefault();
+
+  _suggestionsFor(q) {
+    const base = this._cards.filter((c) => !this.state.broken[c.id]);
+    const ql = q.toLowerCase();
+    const list = q ? base.filter((c) => (c.name + ' ' + c.tag).toLowerCase().includes(ql)) : base;
+    return list.slice(0, 5).map((c) => ({
+      ...c,
+      thumbStyle: {
+        width: '100%', height: '100%',
+        backgroundImage: `url(${c.img})`, backgroundSize: 'contain',
+        backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat',
+      },
+    }));
+  }
+
+  _onSearchKeyDown = (e) => {
+    if (e.key === 'Escape') { this.setState({ focused: false }); e.target.blur(); return; }
+    if (e.key === 'Enter') {
+      const top = this._suggestionsFor(this.state.query.trim())[0];
+      if (top) {
+        this.setState({ selected: top, focused: false });
+        e.target.blur();
+      }
+    }
+  };
+
+  _closeInspect = () => this.setState({ selected: null });
+
+  _stopProp = (e) => e.stopPropagation();
+
+  _onImgError = (e) => {
+    const id = e.target && e.target.getAttribute('data-cid');
+    if (id) this.setState((s) => ({ broken: { ...s.broken, [id]: true } }));
+  };
+
+  renderVals() {
+    const speed = this.props.speed ?? 'standard';
+    const dur = speed === 'slow' ? '24s' : speed === 'fast' ? '12s' : '17s';
+    return {
+      cards: this._cards.filter((c) => !this.state.broken[c.id]),
+      starLayers: this._starLayers,
+      onCardClick: this._onCardClick,
+      closeInspect: this._closeInspect,
+      stopProp: this._stopProp,
+      selected: this.state.selected,
+      hasSelected: !!this.state.selected,
+      selectedName: this.state.selected ? this.state.selected.name : '',
+      selectedPhotoStyle: {
+        position: 'relative', width: '100%', height: '300px',
+        backgroundImage: this.state.selected ? `url(${this.state.selected.img})` : 'none',
+        backgroundSize: 'contain', backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat',
+        filter: 'brightness(1.06) saturate(1.06)',
+      },
+      selectedUrl: this.state.selected ? `https://figurepinner.com/figure/${this.state.selected.fid}` : '#',
+      hallPlay: this.state.selected ? 'paused' : 'running',
+      motes: this._motes,
+      tickerItems: TICKER.concat(TICKER).map((t, i) => ({ id: i, name: t[0], price: t[1], cond: t[2] })),
+      showTicker: this.props.showTicker ?? true,
+      typedText: this.state.typed,
+      focusInput: this._focusInput,
+      setInputRef: this._setInputRef,
+      onSearchFocus: this._onSearchFocus,
+      onSearchBlur: this._onSearchBlur,
+      onQueryChange: this._onQueryChange,
+      onSearchKeyDown: this._onSearchKeyDown,
+      preventDefault: this._preventDefault,
+      queryText: this.state.query,
+      isFocused: this.state.focused,
+      showDropdown: this.state.focused,
+      attractOverlayStyle: {
+        position: 'absolute', left: '50px', right: '19px', top: 0, bottom: 0,
+        display: 'flex', alignItems: 'center', pointerEvents: 'none',
+        opacity: (this.state.focused || this.state.query) ? 0 : 1,
+        transition: 'opacity 200ms ease',
+      },
+      suggestions: this._suggestionsFor(this.state.query.trim()),
+      dropdownLabel: this.state.query.trim() ? 'MATCHES IN THE HALL' : 'TRENDING IN THE GUIDE',
+      hasNoMatches: !!this.state.query.trim() && this._suggestionsFor(this.state.query.trim()).length === 0,
+      enterHint: this.state.query.trim() ? `Search the full guide for "${this.state.query.trim()}"` : 'Start typing — 22,500+ figures indexed',
+      onMove: this._onMove,
+      onLeave: this._onLeave,
+      sceneVars: { position: 'relative', height: '100vh', minHeight: '660px', '--fp-dur': dur },
+      cameraStyle: {
+        position: 'absolute', inset: 0, transformStyle: 'preserve-3d',
+        transform: `rotateX(${this.state.rx}deg) rotateY(${this.state.ry}deg)`,
+        transition: 'transform 500ms cubic-bezier(.2,.8,.3,1)',
+      },
+      contentParallaxStyle: {
+        transform: `translate3d(${this.state.px}px, ${this.state.py}px, 0)`,
+        transition: 'transform 600ms cubic-bezier(.2,.8,.3,1)',
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

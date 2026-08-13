@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #09090F; }
+    a { color: #f5c462; text-decoration: none; }
+    a:hover { color: #e0a83e; }
+    @keyframes fpBlobA { 0%,100% { transform:translate(-8%,-4%) scale(1) rotate(0deg); } 33% { transform:translate(6%,8%) scale(1.15) rotate(40deg); } 66% { transform:translate(-4%,12%) scale(.92) rotate(-30deg); } }
+    @keyframes fpBlobB { 0%,100% { transform:translate(4%,6%) scale(1.05) rotate(0deg); } 50% { transform:translate(-10%,-6%) scale(.9) rotate(60deg); } }
+    @keyframes fpBlobC { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(8%,-10%) scale(1.2); } }
+    @keyframes fpSheenBand { 0%,100% { transform:translateX(-12%) skewX(-8deg); opacity:.5; } 50% { transform:translateX(10%) skewX(6deg); opacity:1; } }
+    @media (prefers-reduced-motion: reduce) {
+      #fp-liquid-layer * { animation-play-state: paused !important; }
+    }
+  </style>
+</helmet>
+<div style="position:relative; background:#09090F; color:#EEEEF5; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; overflow:hidden;">
+
+  <div id="fp-liquid-layer" aria-hidden="true" style="position:absolute; left:0; right:0; top:820px; bottom:0; z-index:0; pointer-events:none; overflow:hidden;">
+    <div data-fpanim="1" style="position:absolute; left:-12%; top:-4%; width:55vw; height:55vw; border-radius:50%; filter:blur(90px); background:radial-gradient(circle at 38% 35%, rgba(224,168,62,.10), rgba(224,168,62,.03) 55%, transparent 72%); animation:fpBlobA 46s ease-in-out infinite; will-change:transform;"></div>
+    <div data-fpanim="1" style="position:absolute; right:-15%; top:22%; width:48vw; height:48vw; border-radius:50%; filter:blur(90px); background:radial-gradient(circle at 60% 40%, rgba(78,205,230,.07), rgba(78,205,230,.02) 55%, transparent 72%); animation:fpBlobB 58s ease-in-out infinite; will-change:transform;"></div>
+    <div data-fpanim="1" style="position:absolute; left:18%; bottom:-14%; width:60vw; height:44vw; border-radius:50%; filter:blur(90px); background:radial-gradient(circle at 50% 50%, rgba(90,60,160,.09), rgba(90,60,160,.025) 55%, transparent 75%); animation:fpBlobC 52s ease-in-out infinite; will-change:transform;"></div>
+    <div data-fpanim="1" style="position:absolute; left:10%; top:0; width:34%; height:120%; background:linear-gradient(100deg, transparent 40%, rgba(245,196,98,.035) 48%, rgba(255,246,218,.06) 50%, rgba(245,196,98,.035) 52%, transparent 60%); mix-blend-mode:screen; filter:blur(6px); animation:fpSheenBand 26s ease-in-out infinite; will-change:transform;"></div>
+    <div data-fpanim="1" style="position:absolute; right:4%; top:-10%; width:26%; height:120%; background:linear-gradient(80deg, transparent 42%, rgba(78,205,230,.04) 50%, transparent 58%); mix-blend-mode:screen; filter:blur(8px); animation:fpSheenBand 38s ease-in-out infinite reverse; will-change:transform;"></div>
+    <div style="position:absolute; inset:0; background:radial-gradient(120% 90% at 50% 30%, transparent 55%, rgba(9,9,15,.85) 100%);"></div>
+  </div>
+
+  <div style="position:relative; z-index:1;">
+
+    <dc-import name="Homepage Depth Hall" show-ticker="{{ true }}" hint-size="100%,820px" style="display:block; min-height:820px;"></dc-import>
+
+    <section data-screen-label="Below-fold lanes (stand-in)" style="max-width:1200px; margin:0 auto; padding:64px 28px 80px;">
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:16px;">
+        <span style="display:inline-flex; align-items:center; gap:10px; font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,238,245,.55); white-space:nowrap;"><span style="width:26px; height:2px; background:#e0a83e; display:inline-block;"></span>Trending this week</span>
+        <a href="#" style="font-size:13px; font-weight:700; white-space:nowrap;">See all →</a>
+        <span style="margin-left:auto; font-size:10px; letter-spacing:.12em; color:rgba(78,205,230,.7); border:1px solid rgba(78,205,230,.4); border-radius:100px; padding:2px 9px; white-space:nowrap;">STAND-IN LANE — real content unchanged</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap:16px;">
+        <sc-for list="{{ laneA }}" as="c" hint-placeholder-count="5">
+          <a href="#" style="display:block; border:1px solid rgba(224,168,62,.25); border-radius:12px; padding:12px; color:#EEEEF5; background:linear-gradient(160deg, #16131f 0%, #0b0a12 65%);" style-hover="border-color:rgba(245,196,98,.7);">
+            <div style="aspect-ratio:4/5; border-radius:8px; background:linear-gradient(180deg, #fbf7ee, #efe5d0); margin-bottom:10px; display:flex; align-items:center; justify-content:center; color:#8a7e63; font-size:10.5px;">photo</div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:19px; letter-spacing:.03em; color:#f5c462; line-height:1;">{{ c.name }}</div>
+            <div style="font-size:10.5px; color:rgba(238,238,245,.5); margin:3px 0 6px;">{{ c.tag }}</div>
+            <div style="font-size:13px; font-weight:700;">{{ c.price }}</div>
+          </a>
+        </sc-for>
+      </div>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:56px 0 16px;">
+        <span style="display:inline-flex; align-items:center; gap:10px; font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,238,245,.55);"><span style="width:26px; height:2px; background:#e0a83e; display:inline-block;"></span>Browse by fandom</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap:16px;">
+        <sc-for list="{{ laneB }}" as="f" hint-placeholder-count="4">
+          <a href="#" style="display:block; border:1px solid rgba(238,238,245,.1); border-radius:14px; padding:20px 22px; color:#EEEEF5; background:rgba(238,238,245,.02);" style-hover="border-color:rgba(224,168,62,.5);">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:24px; letter-spacing:.02em; color:#f5c462; line-height:1;">{{ f.name }}</div>
+            <div style="font-size:11.5px; color:rgba(238,238,245,.55); margin-top:5px;">{{ f.count }}</div>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+const LANE_A = [
+  ['Hela (Ragnarok)', 'Marvel Legends · 2017', '$34 loose'],
+  ['Michelle McCool', 'Elite Legends 30 · Target', '$42 sealed'],
+  ['Darth Revan', 'Black Series · 2020', '$58 sealed'],
+  ['Cody Rhodes', 'Elite Series 111', '$29 loose'],
+  ['Leonardo', 'TMNT Classics · 2023', '$31 sealed'],
+];
+const LANE_B = [
+  ['Wrestling', '6,200+ figures'],
+  ['Marvel Legends', '4,800+ figures'],
+  ['Star Wars', '3,900+ figures'],
+  ['TMNT', '1,100+ figures'],
+];
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      laneA: LANE_A.map((c, i) => ({ id: i, name: c[0], tag: c[1], price: c[2] })),
+      laneB: LANE_B.map((f, i) => ({ id: i, name: f[0], count: f[1] })),
+    };
+  }
+}
+</script>
+</body>
+</html>
