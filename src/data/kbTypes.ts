@@ -1,5 +1,30 @@
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
+/** One resolved passport field: the value plus its evidence class (`ec`,
+ *  e.g. "corroborated_exact" | "single_secondary" | "inferred-evidence") —
+ *  the render-badge hook. Kept as string: matcher owns the vocabulary. */
+export interface PassportField {
+  value: string
+  ec: string
+}
+
+/** Slim passport block poured into the KB (figure-claims-2 schema). */
+export interface PassportBlock {
+  v: string
+  identity_hash: string
+  poured_at: string
+  /** Basename of the per-wave provenance sidecar carrying the receipts. */
+  sidecar: string
+  fields: Record<string, PassportField>
+  /** Pour-derived rows (closed whitelist, not evidence-locked claims). */
+  derived?: Record<string, string>
+}
+
+/** Resolved passport value for a field key, or null when absent. */
+export function passportValue(fig: KBFigure, key: string): string | null {
+  return fig.passport?.fields[key]?.value ?? null
+}
+
 export type KBFigure = {
   figure_id: string
   v1_figure_id: string
@@ -35,6 +60,11 @@ export type KBFigure = {
   /** INTERNAL provenance slug ("af411", "kb-pm-d1-extracted-…") — never render
    *  to users; values are pipeline identifiers, not human-readable sources. */
   source?: string
+  // Passport pour (2026-08-13, matcher v4.2 — ENRICH-V42-POUR-SCHEMA-DESIGN):
+  // slim resolved-values block. Receipts live in the per-wave sidecar named
+  // by `sidecar` (src/data/figures-provenance/<sidecar>.json) — render values
+  // and evidence-class badges from here; quote sources only from the sidecar.
+  passport?: PassportBlock
   // Data Defense Layer 3 (2026-08-07, ratified option A): sealed registry of
   // fictitious figures that prove database theft if a competitor's catalog
   // ever contains one. Never index, search, or list-render these — see every

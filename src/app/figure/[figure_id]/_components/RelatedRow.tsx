@@ -8,12 +8,19 @@
 import type { CSSProperties } from 'react'
 import WaveProgress from './WaveProgress'
 import QuickLookAnchor from '@/app/components/QuickLookAnchor'
+import CardMedian from '@/app/components/CardMedian'
 
 interface RelatedFigure {
   figure_id: string
   href: string
   name: string           // display name shown on card
   imageUrl: string | null
+  /** v4 Phase 4: gold-rings the card ("you are here" in the version rail). */
+  isCurrent?: boolean
+  /** v4 Phase 4: BAF-piece sublabel on same-wave cards. Poured passport data
+   *  only (matcher's wave_context is the sole source) — omitted otherwise,
+   *  never fabricated. */
+  subLabel?: string | null
 }
 
 interface RelatedRowProps {
@@ -142,7 +149,7 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
               color: 'inherit',
             }}
           >
-            {/* Cream photo mount */}
+            {/* Cream photo mount — current figure gets the v4 gold ring */}
             <div
               className="fp-relrow-mount"
               style={{
@@ -150,7 +157,9 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
                 border: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
                 borderRadius: '6px 6px 3px 3px',
                 padding: '5px 5px 6px',
-                boxShadow: '0 10px 18px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.3)',
+                boxShadow: fig.isCurrent
+                  ? '0 0 0 2px rgba(224,168,62,.55), 0 10px 18px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.3)'
+                  : '0 10px 18px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.3)',
               }}
             >
               <div style={{
@@ -199,6 +208,36 @@ export default function RelatedRow({ label, figures, accentColor = 'var(--shelf-
             >
               {fig.name}
             </span>
+
+            {/* BAF-piece sublabel — poured passport data only. Quiet body
+                case + 2-line clamp: values are matcher's verbatim phrases and
+                can run long on a 96px card. */}
+            {fig.subLabel && (
+              <span style={{
+                fontSize: '0.6rem', fontWeight: 500, letterSpacing: '0.05em',
+                color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+                lineHeight: 1.25,
+                overflow: 'hidden',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+              }}>
+                {fig.subLabel}
+              </span>
+            )}
+
+            {/* Live median (batched client fetch — one request per page) */}
+            {fig.isCurrent
+              ? (
+                <span style={{
+                  fontSize: '0.58rem', fontWeight: 600, letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--shelf-gold, #e0a83e)', lineHeight: 1.2,
+                }}>
+                  This page
+                </span>
+              )
+              : <CardMedian figureId={fig.figure_id} />}
           </QuickLookAnchor>
         ))}
       </div>

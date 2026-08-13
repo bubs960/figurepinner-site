@@ -7,6 +7,7 @@
 
 import { notFound } from 'next/navigation'
 import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl, isNumericWave } from '@/data/kb'
+import { passportValue, type KBFigure } from '@/data/kbTypes'
 import { genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
@@ -587,6 +588,18 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   )
   const waveFids = fullWave.map(f => f.figure_id)
 
+  // v4 Phase 4: BAF-piece sublabel from the poured passport block — matcher's
+  // wave_context is the only source; figures without a pour get no sublabel.
+  const bafSubLabel = (f: KBFigure): string | null => {
+    const piece = passportValue(f, 'wave_context.baf_piece')
+    if (!piece) return null
+    // Presentation only, value untouched otherwise: the "BAF ·" prefix
+    // already says build-a-figure, so the phrase inside the value is
+    // redundant on a 96px card ("Left Leg of the Build-a-Figure" → "Left Leg").
+    const cleaned = piece.replace(/\s*(of the )?build.?a.?figure('s)?\s*/gi, ' ').replace(/\s{2,}/g, ' ').trim()
+    return cleaned ? `BAF · ${cleaned}` : `BAF · ${piece}`
+  }
+
   const seriesCompanions = fullWave
     .filter(f => f.figure_id !== figureId)
     .slice(0, 12)
@@ -595,20 +608,34 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       href: prettyFigureUrl(f),
       name: f.character_canonical.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
       imageUrl: thumb(f.canonical_image_url, 180),
+      subLabel: bafSubLabel(f),
     }))
 
   const characterVariantsAll = allInGenre.filter(f =>
     f.figure_id !== figureId &&
     f.character_canonical === local.character_canonical
   )
-  const characterVariants = characterVariantsAll
-    .slice(0, 12)
-    .map(f => ({
-      figure_id: f.figure_id,
-      href: prettyFigureUrl(f),
-      name: deriveName(f),
-      imageUrl: thumb(f.canonical_image_url, 180),
-    }))
+  // v4 Phase 4: the version rail leads with the current figure, gold-ringed
+  // ("you are here") — matches the design's every-version rail. Only when
+  // other versions exist: a one-card rail of just this page is noise (and
+  // RelatedRow's empty-guard previously hid it entirely).
+  const characterVariants = characterVariantsAll.length === 0 ? [] : [
+    {
+      figure_id: figureId,
+      href: prettyFigureUrl(local),
+      name: deriveName(local),
+      imageUrl: thumb(imageUrlFinal, 180),
+      isCurrent: true,
+    },
+    ...characterVariantsAll
+      .slice(0, 12)
+      .map(f => ({
+        figure_id: f.figure_id,
+        href: prettyFigureUrl(f),
+        name: deriveName(f),
+        imageUrl: thumb(f.canonical_image_url, 180),
+      })),
+  ]
   const characterHubHref = `/${genreSlug}/character/${local.character_canonical}`
 
   // ── JSON-LD ─────────────────────────────────────────────────────────────────
