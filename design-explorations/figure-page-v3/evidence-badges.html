@@ -1,0 +1,19 @@
+<!-- @dsCard group="Figure Page v3" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Evidence-class badges — vocabulary</title>
+<style>
+  body { margin:0; padding:28px; background:#09090F; font-family: system-ui, sans-serif; color:#EEEEF5; }
+  .badge { display:inline-block; font-size:0.58rem; font-weight:700; letter-spacing:.05em; border-radius:100px; padding:2px 8px; white-space:nowrap; border:1px solid; }
+  .row { display:flex; align-items:center; gap:14px; padding:10px 0; border-top:1px solid rgba(255,255,255,.07); font-size:0.78rem; }
+  .desc { color:rgba(238,238,245,.55); line-height:1.5; max-width:420px; }
+</style></head>
+<body>
+<h3 style="font-weight:400;margin:0 0 4px;">Evidence-class badge vocabulary</h3>
+<div class="desc" style="margin-bottom:10px;">Maps 1:1 to matcher's figure-claims-2 evidence classes. Fixed meanings — never re-style one class to look like another.</div>
+<div class="row"><span class="badge" style="color:#4ec98c;border-color:#4ec98c;">PRIMARY SOURCE</span><span class="desc">primary_exact — verbatim from an official/primary product page.</span></div>
+<div class="row"><span class="badge" style="color:#f5c462;border-color:#f5c462;">SINGLE SOURCE</span><span class="desc">single_secondary — one secondary source states it; honest about the count.</span></div>
+<div class="row"><span class="badge" style="color:#4ec98c;border-color:#4ec98c;">CORROBORATED</span><span class="desc">corroborated_exact — multiple pages agree; label deliberately does NOT claim "independent" (can be same publisher).</span></div>
+<div class="row"><span class="badge" style="color:#e05a7a;border-color:#e05a7a;">INFERRED FROM DATED SOURCE</span><span class="desc">inferred_from_dated_source — a bounded inference (e.g. street date from a review dateline). Value renders italic; must never read as a stated fact.</span></div>
+<div class="row"><span class="badge" style="color:#e05a7a;border-color:#e05a7a;">SOURCES DISAGREE</span><span class="desc">conflict — both values render, each with its own receipts; the page does not pick a winner.</span></div>
+<div class="row"><span style="color:rgba(238,238,245,.55);font-size:0.8rem;">Not yet documented</span><span class="desc">unresolved — muted text, no badge. Core-field absence is information; stretch fields omit the row entirely (8/13 tiering ruling).</span></div>
+</body></html>
