@@ -58,6 +58,10 @@ interface HeroBandProps {
   valueStripClassName?: string
   /** KB enrichment sentence (match_represented) — renders as the hero lore paragraph. */
   loreText?: string | null
+  /** Optional content rendered under the photo vitrine, filling the left
+   *  column's dead space when the right column runs long (Steve, 2026-08-13).
+   *  Used for the golden-corpus "At a Glance" card. */
+  underPhoto?: React.ReactNode
   /** Normalized 0–1 positions of recent comps within [low, high] for the range-bar ticks. */
   ticks?: number[]
   /** Most recent individual sale, if known. */
@@ -90,7 +94,7 @@ function fmt(n: number): string {
 export default function HeroBand({
   figureId, imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
-  valuePricing, loreText, ticks, lastSale,
+  valuePricing, loreText, underPhoto, ticks, lastSale,
   conditionLabel, conditionRows, secondary, inferenceNote,
 }: HeroBandProps) {
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
@@ -270,6 +274,8 @@ export default function HeroBand({
         )}
 
         <ClaimPin figureId={figureId} />
+
+        {underPhoto}
       </div>
 
       {/* Identity + placard */}

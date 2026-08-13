@@ -30,6 +30,7 @@ import { getSellerListings } from '@/data/bubs-inventory'
 import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
 import DecisionPassportPreview, { type IdentityRow } from './DecisionPassportPreview'
 import GoldenCorpusPassport from './GoldenCorpusPassport'
+import GoldenCorpusAtAGlance from './GoldenCorpusAtAGlance'
 import { getGoldenCorpusClaims } from '../_lib/goldenCorpus'
 import { derivePriceContract } from '../_lib/priceContract'
 import { thumb } from '@/lib/imageUrl'
@@ -917,6 +918,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             genre={genre}
             valuePricing={valuePricing}
             loreText={gatedLoreText(local)}
+            underPhoto={goldenCorpusDoc ? <GoldenCorpusAtAGlance doc={goldenCorpusDoc} /> : null}
             ticks={placardTicks}
             lastSale={lastSale}
             conditionLabel={placardConditionLabel}
