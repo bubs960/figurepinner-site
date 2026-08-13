@@ -204,7 +204,7 @@ export default function HeroBand({
       `}</style>
 
       {/* Vitrine — outer wrapper reserves space before image loads, preventing CLS */}
-      <div style={{ position: 'relative', minHeight: '325px' }}>
+      <div className="fp-hero-photo-col" style={{ position: 'relative', minHeight: '325px' }}>
         <div
           className="fp-vit-sweep"
           style={{
@@ -309,7 +309,7 @@ export default function HeroBand({
       </div>
 
       {/* Identity + placard */}
-      <div style={{ paddingTop: '0.25rem', display: 'flex', flexDirection: 'column' }}>
+      <div className="fp-hero-id-col" style={{ paddingTop: '0.25rem', display: 'flex', flexDirection: 'column' }}>
         {/* Eyebrow — genre + maker + line, gold ruled */}
         <div style={{
           fontSize: '0.84rem', fontWeight: 500, letterSpacing: '0.22em',

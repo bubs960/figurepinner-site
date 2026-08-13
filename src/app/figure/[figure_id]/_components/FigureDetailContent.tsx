@@ -888,6 +888,33 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           .fp-main-grid  { grid-template-columns: 1fr !important; }
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
           .fp-right-col  { position: static !important; }
+          /* v4 Phase 3 — deliberate mobile section order (build plan §3,
+             design README "Mobile deltas"): price-first hero, comps before
+             prose, receipts after prose. Single flow + CSS order, never
+             duplicated markup (duplicate sections = duplicate funnel events).
+             Desktop keeps source order — these rules bind only here.
+             Deviation from the mockup, on purpose: ad unit 1 stays after the
+             comps panel instead of joining unit 2 at page bottom — adjacent
+             ad units is exactly what the AD STANDARD thin-page rule forbids. */
+          .fp-page-main { display: flex; flex-direction: column; }
+          .fp-z-hero      { order: 1; }
+          .fp-z-bidcheck  { order: 2; }
+          .fp-z-comps     { order: 3; }
+          .fp-z-seller    { order: 4; }
+          .fp-z-ad1       { order: 5; }
+          .fp-z-lore      { order: 6; }
+          .fp-z-enrich    { order: 7; }
+          .fp-z-passport  { order: 8; }
+          .fp-z-seo       { order: 9; }
+          .fp-z-versions  { order: 10; }
+          .fp-z-wave      { order: 11; }
+          .fp-z-hubs      { order: 12; }
+          .fp-z-ad2       { order: 13; }
+          /* Hero-internal reorder: identity column (chips/H1/price/CTAs)
+             above the photo vitrine + At a Glance. */
+          .fp-hero-grid { display: flex !important; flex-direction: column; }
+          .fp-hero-photo-col { order: 2; }
+          .fp-hero-id-col    { order: 1; }
         }
       `}</style>
 
@@ -899,10 +926,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       ]} />
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
-      <main style={{ maxWidth: '1040px', margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
+      <main className="fp-page-main" style={{ maxWidth: '1040px', margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
 
         {/* Zone 1 — Hero: image + identity + price strip (inline at wide viewports) */}
-        <div style={{ marginBottom: '1.75rem' }}>
+        <div className="fp-z-hero" style={{ marginBottom: '1.75rem' }}>
           <HeroBand
             className="fp-hero-grid"
             figureId={figureId}
@@ -934,7 +961,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         {/* Zone 2b — Bid Check verdict widget (S16, north star). Renders only
             when sold comps exist; zero-comp figures keep the EmptyState flow. */}
         {marketPricing && marketPricing.recent_comps.length > 0 && (
-          <div style={{ marginBottom: '1.5rem' }}>
+          <div className="fp-z-bidcheck" style={{ marginBottom: '1.5rem' }}>
             <BidCheck
               comps={marketPricing.recent_comps.map(c => ({ price: c.price, condition: c.condition }))}
               segmentation={segmentation}
@@ -951,6 +978,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             honest "coming soon" states for Complete Check / wave-BAF map /
             comparison until matcher's per-figure data exists. Steve's call
             2026-08-08: ship the shape now, populate with matcher iteratively. */}
+        <div className="fp-z-passport">
         <DecisionPassportPreview
           identity={dpIdentity}
           sealed={price?.sealed ?? null}
@@ -962,15 +990,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
               pour. */}
           {goldenCorpusDoc && <GoldenCorpusPassport doc={goldenCorpusDoc} />}
         </DecisionPassportPreview>
+        </div>
 
         {/* Zone 3 — Lore band */}
-        <div style={{ marginBottom: '1.5rem' }}>
+        <div className="fp-z-lore" style={{ marginBottom: '1.5rem' }}>
           <LoreBand loreInput={loreInput} />
         </div>
 
         {/* Zone 3b — Per-figure enrichment (match represented + key features).
             Render-safe: shows only for fids matcher has enriched. */}
-        <div style={{ marginBottom: '1.5rem' }}>
+        <div className="fp-z-enrich" style={{ marginBottom: '1.5rem' }}>
           {/* match_represented renders in the hero lore slot now — features only here */}
           <FigureEnrichment
             matchRepresented={null}
@@ -981,12 +1010,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
         {/* Seller listing */}
         {sellerListings.length > 0 && (
-          <SellerCard listings={sellerListings} />
+          <div className="fp-z-seller">
+            <SellerCard listings={sellerListings} />
+          </div>
         )}
 
         {/* Zones 4 + 5 — Market panel + collection panel */}
         <div
-          className="fp-main-grid"
+          className="fp-main-grid fp-z-comps"
           style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: '1.5rem', alignItems: 'start', marginBottom: '2rem' }}
         >
           <div>
@@ -1054,11 +1085,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
         {/* Ad — Adsterra Banner (468×60), below the price/comps panel
             (ad-revenue plan S4: unit 1 of 2 on figure pages) */}
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '0.5rem 0' }}>
+        <div className="fp-z-ad1" style={{ display: 'flex', justifyContent: 'center', padding: '0.5rem 0' }}>
           <AdSlot slot="adsterra-banner" />
         </div>
 
         {/* SEO Summary — natural language paragraph + retail vs market + velocity */}
+        <div className="fp-z-seo">
         <SeoSummary
           displayName={displayName}
           brand={brand}
@@ -1081,15 +1113,19 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           trendPct={valuePricing?.trend_90d_pct ?? null}
           soldHistory={price?.soldHistory ?? []}
         />
+        </div>
 
         {/* Zone 6 — Series companions */}
+        <div className="fp-z-wave">
         <RelatedRow
           label={`Complete the Wave — ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
           figures={seriesCompanions}
           ownershipFids={waveFids}
         />
+        </div>
 
         {/* Zone 7 — Character thread */}
+        <div className="fp-z-versions">
         <RelatedRow
           label={`Every Version of ${characterH1}`}
           figures={characterVariants}
@@ -1099,9 +1135,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             label: `See all ${characterVariantsAll.length + 1} ${characterH1} figures →`,
           }}
         />
+        </div>
 
         {/* Zone 8 — CTA rail */}
-        <CtaRail genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
+        <div className="fp-z-hubs">
+          <CtaRail genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
+        </div>
 
         {/* Ad — Adsterra Banner (468×60), page bottom after related figures
             (ad-revenue plan S4: unit 2 of 2 — native slot converts to banner,
@@ -1109,7 +1148,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             AD STANDARD v2 thin-page rule: skipped on thin no-comp pages where
             it would land within ~1 viewport of unit 1 — see showUnitTwo above. */}
         {showUnitTwo && (
-          <div style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0 0.5rem' }}>
+          <div className="fp-z-ad2" style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0 0.5rem' }}>
             <AdSlot slot="adsterra-banner" />
           </div>
         )}

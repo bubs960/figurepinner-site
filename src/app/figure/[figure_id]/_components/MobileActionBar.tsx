@@ -21,16 +21,16 @@ interface Props {
   figureId: string
   ebaySearchUrl: string
   figureName: string
-  /** Median sold price, already formatted (e.g. "$30"), or null when no comps. */
+  /** Median sold price, already formatted (e.g. "$30"), or null when no comps.
+   *  v4 Phase 3: no longer rendered (the bar is now the TRACK/EBAY CTA pair
+   *  per the mobile design) — props kept so call sites and the FPPS-01
+   *  honesty plumbing don't churn if the price cell ever returns. */
   priceLabel: string | null
-  /** FPPS-01 (2026-07-15): which condition/stat priceLabel represents --
-   *  "Sealed" | "Loose" | "Median sold" (pooled) | "Average sold" (pooled,
-   *  no median in the snapshot). Never blank when priceLabel is set -- this
-   *  bar shows one number, but it must always say honestly what it is. */
+  /** See priceLabel — unrendered since v4 Phase 3. */
   priceSubLabel?: string | null
 }
 
-export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, priceLabel, priceSubLabel }: Props) {
+export default function MobileActionBar({ figureId, ebaySearchUrl, figureName }: Props) {
   // Feature flag — off by default until verified on a real phone.
   const enabled = process.env.NEXT_PUBLIC_MOBILE_ACTION_BAR === '1'
 
@@ -79,6 +79,15 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
     return () => mq.removeEventListener('change', onChange)
   }, [enabled])
 
+  // v4 Phase 3: body clearance (~96px) so the last content (bottom ad) never
+  // hides under the fixed bar. Applied only while the bar actually renders.
+  useEffect(() => {
+    if (!mounted || !enabled) return
+    const prev = document.body.style.paddingBottom
+    document.body.style.paddingBottom = '96px'
+    return () => { document.body.style.paddingBottom = prev }
+  }, [mounted, enabled])
+
   if (!mounted || !enabled) return null
 
   return (
@@ -98,33 +107,40 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
         gap: '0.75rem',
         padding: '0.625rem 1rem',
         paddingBottom: 'calc(0.625rem + env(safe-area-inset-bottom))',
-        background: 'var(--fp-surface-0)',
-        borderTop: '1px solid var(--fp-border)',
-        boxShadow: '0 -4px 16px rgba(0,0,0,0.25)',
+        // v4 Phase 3 (design README "Mobile deltas"): gradient scrim instead
+        // of the flat surface — content fades out under the bar.
+        background: 'linear-gradient(180deg, rgba(9,9,15,0) 0%, rgba(9,9,15,.88) 28%, #09090f 100%)',
+        paddingTop: '1.25rem',
         transform: hideForInlineCta ? 'translateY(110%)' : 'translateY(0)',
         transition: reducedMotion ? 'none' : 'transform 0.2s ease',
       }}
     >
-      {/* Left: price */}
-      <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, flexShrink: 0 }}>
-        {priceLabel ? (
-          <>
-            <span style={{
-              fontFamily: 'var(--font-display)', fontSize: '1.35rem',
-              color: 'var(--fp-success)', letterSpacing: '0.02em',
-            }}>
-              {priceLabel}
-            </span>
-            <span style={{ fontSize: '0.62rem', color: 'var(--fp-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-              {priceSubLabel ?? 'Median sold'}
-            </span>
-          </>
-        ) : (
-          <span style={{ fontSize: '0.78rem', color: 'var(--fp-muted)' }}>No sold data yet</span>
-        )}
-      </div>
+      {/* v4 CTA pair, 2:1 — same weights and roles as the hero rail. */}
+      <TrackedLink
+        href="/sign-up"
+        aria-label={`Track ${figureName} in your free collection`}
+        funnelEvent="figure_track_cta_click"
+        funnelDetail={{ figureId, target: 'mobile_bar' }}
+        style={{
+          flex: 2,
+          textAlign: 'center',
+          padding: '0.8rem 0.75rem',
+          borderRadius: '10px',
+          background: 'linear-gradient(180deg, #f5c462, #dd9f2e)',
+          color: '#141414',
+          fontSize: '0.82rem',
+          fontWeight: 800,
+          letterSpacing: '.03em',
+          textDecoration: 'none',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        }}
+      >
+        TRACK — FREE
+      </TrackedLink>
 
-      {/* Right: eBay CTA — href is the parent-built, campid-guarded URL */}
+      {/* eBay CTA — href is the parent-built, campid-guarded URL */}
       <TrackedLink
         href={ebaySearchUrl}
         target="_blank"
@@ -133,23 +149,22 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName, p
         funnelEvent="ebay_exit"
         funnelDetail={{ figureId, target: 'mobile_bar' }}
         style={{
-          marginLeft: 'auto',
-          flex: 1,
-          maxWidth: '60%',
+          flex: 1.4,
           textAlign: 'center',
-          padding: '0.75rem 1rem',
-          borderRadius: 'var(--fp-radius-sm)',
-          background: 'var(--fp-ebay)',
-          color: '#fff',
-          fontSize: '0.9rem',
+          padding: '0.8rem 0.75rem',
+          borderRadius: '10px',
+          border: '1px solid rgba(224,168,62,.5)',
+          color: '#f5c462',
+          fontSize: '0.8rem',
           fontWeight: 700,
+          letterSpacing: '.03em',
           textDecoration: 'none',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
         }}
       >
-        See it on eBay
+        EBAY SOLDS ↗
       </TrackedLink>
     </div>
   )
