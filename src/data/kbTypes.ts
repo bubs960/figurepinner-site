@@ -24,6 +24,17 @@ export type KBFigure = {
   // Phase 2) — real UPC from the master KB, matcher exposed it in the slim export
   // 2026-08-08 (455 records). Render, don't re-derive; most figures won't have one.
   upc?: string
+  // Slim-export fill (2026-08-11, MATCHER-TO-WEB-FIELD-COVERAGE-CENSUS-SHIPPED):
+  // matcher whitelisted year/retail_price/source after web's 8/8 census found
+  // them real in the master KB but never exported. Coverage at ship time:
+  // year 52.8%, retail_price 25.4%, source 18.7% — render only when present.
+  /** Release year of the figure (number, e.g. 2005). */
+  year?: number
+  /** Per-figure original retail as a display string incl. currency ("$14.99"). */
+  retail_price?: string
+  /** INTERNAL provenance slug ("af411", "kb-pm-d1-extracted-…") — never render
+   *  to users; values are pipeline identifiers, not human-readable sources. */
+  source?: string
   // Data Defense Layer 3 (2026-08-07, ratified option A): sealed registry of
   // fictitious figures that prove database theft if a competitor's catalog
   // ever contains one. Never index, search, or list-render these — see every

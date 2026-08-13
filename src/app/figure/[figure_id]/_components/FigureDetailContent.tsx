@@ -247,7 +247,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // both those routes serve 200 under the raw fandom. See genreCrumbForFandom().
   const genreCrumb   = genreCrumbForFandom(local.fandom)
   const localAny     = local as Record<string, unknown>
-  const releaseYear  = typeof localAny.release_year === 'number' ? localAny.release_year : null
+  // Per-figure year shipped in the slim export 2026-08-11 (52.8% coverage);
+  // the legacy release_year read stays as fallback for any record shape drift.
+  const releaseYear  = typeof local.year === 'number'
+    ? local.year
+    : typeof localAny.release_year === 'number' ? localAny.release_year : null
   // Matcher bug report 2026-07-12: raw parseInt() stops at the first
   // non-digit, so a mangled release_wave slug like "3-75-orange-2013" (scale
   // + color-line + year, not a series number) parsed as "3" and the page
@@ -611,8 +615,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // Offer from FigurePinner.
 
   // ── JSON-LD additional properties ──────────────────────────────────────────
-  // Retail price from line-level defaults (same source as SeoSummary).
-  const jsonLdRetailPrice = LINE_RETAIL_PRICE[local.product_line] ?? null
+  // Retail price: per-figure `retail_price` (slim export, 2026-08-11, 25.4%
+  // coverage — a "$14.99"-style display string, parsed defensively) beats the
+  // line-level reference dict; the dict stays as fallback. `figureRetailPrice`
+  // being non-null is what upgrades the passport badge LINE REFERENCE → KB RECORD.
+  const figureRetailPrice = (() => {
+    if (typeof local.retail_price !== 'string') return null
+    const n = Number(local.retail_price.replace(/[^0-9.]/g, ''))
+    return Number.isFinite(n) && n > 0 ? n : null
+  })()
+  const jsonLdRetailPrice = figureRetailPrice ?? LINE_RETAIL_PRICE[local.product_line] ?? null
 
   // Sales velocity for JSON-LD — mirrors SeoSummary logic.
   const jsonLdVelocity = (() => {
@@ -810,10 +822,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     ...(exclusiveToClean ? [{ label: 'Retailer exclusive', value: exclusiveToClean, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
     ...(local.pack_size > 1 ? [{ label: 'Pack size', value: `${local.pack_size}-pack`, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
     ...(local.upc ? [{ label: 'UPC / GTIN', value: local.upc, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }] : []),
-    // Retail price is a line-level reference dict, not a per-figure master-record
-    // field yet (WEB-FIGURE-PAGE-V3-SCOPE-2026-08-08.md) — labeled distinctly so
-    // it doesn't read as more certain than it is.
-    ...(jsonLdRetailPrice != null ? [{ label: 'Original retail', value: formatCurrency(jsonLdRetailPrice), badge: 'LINE REFERENCE', badgeColor: 'var(--dp-gold)' }] : []),
+    // Retail price: per-figure KB value when the record carries one (KB RECORD),
+    // else the line-level reference dict, labeled distinctly so it doesn't read
+    // as more certain than it is (WEB-FIGURE-PAGE-V3-SCOPE-2026-08-08.md).
+    ...(jsonLdRetailPrice != null ? [
+      figureRetailPrice != null
+        ? { label: 'Original retail', value: formatCurrency(figureRetailPrice), badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' }
+        : { label: 'Original retail', value: formatCurrency(jsonLdRetailPrice), badge: 'LINE REFERENCE', badgeColor: 'var(--dp-gold)' },
+    ] : []),
   ]
 
   return (
