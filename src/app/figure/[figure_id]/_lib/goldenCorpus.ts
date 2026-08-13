@@ -6,7 +6,12 @@
 // carry its verbatim quote + source URL; fields the pipeline could not support
 // stay unresolved and the page renders that honestly.
 
-import claimsDocRaw from '../_data/golden-corpus-me149-2026-08-12.json'
+// Candidate #2 (Hela, ML Thor Ragnarok) — the first to pass web's full
+// acceptance gate (MATCHER-TO-WEB-GOLDEN-CORPUS-HELA-NOMINATION-2026-08-13:
+// 11/11 fields, claim-by-claim receipt verification, clean wave). The rejected
+// ME149 doc is deliberately NOT loaded — Steve's 8/13 bar: golden corpus =
+// complete best-possible example only.
+import claimsDocRaw from '../_data/golden-corpus-hela-2026-08-13.json'
 
 export type EvidenceClass = 'primary_exact' | 'single_secondary' | string
 

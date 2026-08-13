@@ -19,6 +19,9 @@ interface DecisionPassportProps {
   identity: IdentityRow[]
   sealed: CondBucket | null
   loose: CondBucket | null
+  /** Evidence-locked golden-corpus section (Hela pilot, 2026-08-13) — rendered
+   *  inside the passport card, between market evidence and coming-soon. */
+  children?: React.ReactNode
 }
 
 function confidenceLabel(count: number): { label: string; color: string } {
@@ -90,7 +93,7 @@ function ComingSoon({ title, note }: { title: string; note: string }) {
   )
 }
 
-export default function DecisionPassportPreview({ identity, sealed, loose }: DecisionPassportProps) {
+export default function DecisionPassportPreview({ identity, sealed, loose, children }: DecisionPassportProps) {
   return (
     <section style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
       <style>{`
@@ -151,6 +154,8 @@ export default function DecisionPassportPreview({ identity, sealed, loose }: Dec
             and wrong-variant listings before this shows a number — until then, treat thin buckets with extra caution.
           </div>
         </div>
+
+        {children}
 
         <ComingSoon
           title="Complete Check"

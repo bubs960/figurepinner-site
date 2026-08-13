@@ -29,6 +29,8 @@ import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
 import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
 import DecisionPassportPreview, { type IdentityRow } from './DecisionPassportPreview'
+import GoldenCorpusPassport from './GoldenCorpusPassport'
+import { getGoldenCorpusClaims } from '../_lib/goldenCorpus'
 import { derivePriceContract } from '../_lib/priceContract'
 import { thumb } from '@/lib/imageUrl'
 import { formatShortDateWithYear } from '@/lib/safeDate'
@@ -811,6 +813,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // Only real, per-figure or confirmed-source data. UNRESOLVED fields are never
   // rendered (same "don't publish what you can't source" rule as everywhere
   // else on this page) rather than shown as a fabricated/empty row.
+  // Golden-corpus claims doc lookup (null for every fid outside the doc).
+  const goldenCorpusDoc = getGoldenCorpusClaims(figureId)
+
   const dpIdentity: IdentityRow[] = [
     { label: 'Name', value: displayName, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
     { label: 'Manufacturer', value: brand, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
@@ -945,7 +950,13 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           identity={dpIdentity}
           sealed={price?.sealed ?? null}
           loose={price?.loose ?? null}
-        />
+        >
+          {/* Golden-corpus evidence-locked passport (Hela, 2026-08-13 — first
+              candidate to pass web's full acceptance gate). Doc presence is
+              the render gate; reads matcher's claims doc directly, NOT a KB
+              pour. */}
+          {goldenCorpusDoc && <GoldenCorpusPassport doc={goldenCorpusDoc} />}
+        </DecisionPassportPreview>
 
         {/* Zone 3 — Lore band */}
         <div style={{ marginBottom: '1.5rem' }}>

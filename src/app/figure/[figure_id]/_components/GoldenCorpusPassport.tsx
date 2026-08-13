@@ -44,9 +44,17 @@ function labelFor(fieldPath: string): string {
   return FIELD_LABELS.find(f => f.match.test(fieldPath))?.label ?? fieldPath
 }
 
-function evidenceBadge(cls: string | undefined): { label: string; color: string } {
+function evidenceBadge(cls: string | undefined): { label: string; color: string; inferred?: boolean } {
   if (cls === 'primary_exact') return { label: 'PRIMARY SOURCE', color: 'var(--dp-green)' }
   if (cls === 'single_secondary') return { label: 'SINGLE SOURCE', color: 'var(--dp-gold)' }
+  // Per the Hela nomination's own caveat: corroborated_exact can be two pages
+  // of the same publisher, so the label deliberately says "corroborated", not
+  // "two independent sources".
+  if (cls === 'corroborated_exact') return { label: 'CORROBORATED', color: 'var(--dp-green)' }
+  // Steve-approved class (8/13): the value is an inference from a dated source
+  // (e.g. street date bounded by a review's dateline). MUST NOT read as a
+  // stated fact — distinct badge + italic value carry that.
+  if (cls === 'inferred_from_dated_source') return { label: 'INFERRED FROM DATED SOURCE', color: 'var(--dp-pink)', inferred: true }
   return { label: 'SOURCED', color: 'var(--dp-cyan)' }
 }
 
@@ -106,7 +114,7 @@ function ClaimRow({ doc, claim }: { doc: FigureClaimsDoc; claim: Claim }) {
     body = (
       <div>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
-          <span style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{claim.value}</span>
+          <span style={{ color: 'var(--dp-text)', fontWeight: 600, fontStyle: badge.inferred ? 'italic' : undefined }}>{claim.value}</span>
           <span style={{
             fontSize: '0.58rem', fontWeight: 700, letterSpacing: '.05em',
             color: badge.color, border: `1px solid ${badge.color}`,
