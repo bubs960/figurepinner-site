@@ -8,6 +8,7 @@ import ClaimPin from '@/app/components/ClaimPin'
 import ConditionShineBox from './ConditionShineBox'
 import NoUpscalePhoto from './NoUpscalePhoto'
 import PriceBlock from './PriceBlock'
+import HeroCtaRail from './HeroCtaRail'
 import type { CondBucket } from './FigureDetailContent'
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
@@ -84,6 +85,10 @@ interface HeroBandProps {
   /** Page renders a #receipts section (golden-corpus passport) — gates the
    *  price block's "how we price ↓" anchor so plain pages get no dead link. */
   hasReceipts?: boolean
+  /** v4 Phase 2: campid-guarded eBay affiliate search URL, built ONCE by
+   *  FigureDetailContent (never constructed here — bceb185 lesson). Renders
+   *  the 2:1 hero CTA pair under the price surface when present. */
+  ebaySearchUrl?: string | null
 }
 
 const RARITY_CONFIG = {
@@ -105,7 +110,7 @@ export default function HeroBand({
   eraLabel, releaseYear, rarityTier, genre, className,
   valuePricing, loreText, underPhoto, ticks, lastSale,
   conditionLabel, conditionRows, secondary, inferenceNote,
-  buckets, hasReceipts,
+  buckets, hasReceipts, ebaySearchUrl,
 }: HeroBandProps) {
   const showPriceBlock = buckets != null &&
     ((buckets.sealed?.median != null && buckets.sealed.count >= 1) ||
@@ -707,6 +712,16 @@ export default function HeroBand({
               </div>
             )}
           </div>
+        )}
+
+        {/* v4 Phase 2 — hero CTA pair (2:1) + affiliate disclosure, under
+            whichever price surface rendered above. */}
+        {ebaySearchUrl && (
+          <HeroCtaRail
+            figureId={figureId}
+            ebaySearchUrl={ebaySearchUrl}
+            figureName={characterName}
+          />
         )}
       </div>
     </div>

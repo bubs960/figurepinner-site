@@ -9,6 +9,7 @@ export const FUNNEL_EVENTS = [
   'search_result_click',
   'figure_view',
   'ebay_exit',
+  'figure_track_cta_click',
   'price_receipt_open',
   'ad_impression',
   'ad_viewable',

@@ -927,6 +927,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             inferenceNote={inferenceNote}
             buckets={{ sealed: price?.sealed ?? null, loose: price?.loose ?? null }}
             hasReceipts={!!goldenCorpusDoc}
+            ebaySearchUrl={ebayUrl}
           />
         </div>
 
