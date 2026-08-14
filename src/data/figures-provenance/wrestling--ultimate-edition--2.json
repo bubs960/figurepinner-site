@@ -1,0 +1,884 @@
+{
+ "fp_wrestling_mattel_ultimate-edition_2_shinsuke-nakamur_006030": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_2_shinsuke-nakamur_006030",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_2_shinsuke-nakamur_006030",
+   "character_canonical": "shinsuke-nakamura",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shinsuke Nakamura"
+  },
+  "identity_hash": "10416868ebfe2f25",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-wrestling-figures-set-ult-004.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s2_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s3_forum_stock",
+     "url": "https://forum.wrestlingfigs.com/thread/358372/mattel-ultimate-edition-series-stock",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s4_wfd_bret_product",
+     "url": "https://wrestlingfiguredatabase.com/products/ue2-bret",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s5_toywiz_legends_bret",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-legends-bret-hit-man-hart-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ue2-shinsuke",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-shinsuke-ult-005.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "WWE Ultimate Edition 2 - Complete Set of 2 Toy Wrestling Action Figures by Mattel! This set includes: Shinsuke Nakamura & Bret Hart!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_msrp",
+     "source_id": "w_s1_ringside_set",
+     "text": "$59.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_swap_parts",
+     "source_id": "w_s1_ringside_set",
+     "text": "Each Ultimate figure includes over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows for authentic poses and incredible signature moves. The figures also include swappable parts, including heads, arms, hands, and attire to recreate WWE Superstar moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_series2_titles",
+     "source_id": "w_s2_wfd_collection",
+     "text": "2019 WWE Mattel Ultimate Edition Series 2 Bret \"Hit Man\" Hart",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Bret Hart",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": "Hit Man",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_series2_titles_nakamura",
+     "source_id": "w_s2_wfd_collection",
+     "text": "2019 WWE Mattel Ultimate Edition Series 2 Shinsuke Nakamura",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Shinsuke Nakamura",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_forum_swap_parts",
+     "source_id": "w_s3_forum_stock",
+     "text": "Figure also includes swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE® Superstar moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_forum_articulation",
+     "source_id": "w_s3_forum_stock",
+     "text": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows for authentic poses, incredible signature moves.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_bret_attire_date",
+     "source_id": "w_s4_wfd_bret_product",
+     "text": "2019 WWE Mattel Ultimate Edition Series 2 Bret 'Hit Man' Hart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bret Hart",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": "Hit Man",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_legends_reissue_price",
+     "source_id": "w_s5_toywiz_legends_bret",
+     "text": "WWE Wrestling Ultimate Edition Legends Bret \"Hit Man\" Hart Exclusive Action Figure ... $52.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bret Hart",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition Legends",
+      "year": 2023,
+      "character_variant": "Hit Man",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "authentic ring gear including posable red faux leather jacket with double-jointed elbows, red pants, arm scarf and wrist bands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "includes swappable heads, arms and hands to recreate and relive even more favorite WWE® Superstar moments",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "TrueFX™ enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 8, 2018 @ WWE WrestleMania 34",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 8, 2018 @ WWE WrestleMania 34",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red faux leather jacket and red pants",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Posable red faux leather jacket with double-jointed elbows, arm scarf and wrist bands",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Swappable heads, arms and hands",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_ultimate-edition_2_bret-hart_0a1c00": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_2_bret-hart_0a1c00",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_2_bret-hart_0a1c00",
+   "character_canonical": "bret-hart",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bret Hart"
+  },
+  "identity_hash": "94ddfe5124e9399b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-wrestling-figures-set-ult-004.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s2_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s3_forum_stock",
+     "url": "https://forum.wrestlingfigs.com/thread/358372/mattel-ultimate-edition-series-stock",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s4_wfd_bret_product",
+     "url": "https://wrestlingfiguredatabase.com/products/ue2-bret",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_s5_toywiz_legends_bret",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-legends-bret-hit-man-hart-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-bret-hart-ult-006.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://freaktoyz.com/products/bret-the-hitman-hart-ultimate-e",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside_set",
+     "text": "WWE Ultimate Edition 2 - Complete Set of 2 Toy Wrestling Action Figures by Mattel! This set includes: Shinsuke Nakamura & Bret Hart!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_msrp",
+     "source_id": "w_s1_ringside_set",
+     "text": "$59.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_swap_parts",
+     "source_id": "w_s1_ringside_set",
+     "text": "Each Ultimate figure includes over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows for authentic poses and incredible signature moves. The figures also include swappable parts, including heads, arms, hands, and attire to recreate WWE Superstar moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_series2_titles",
+     "source_id": "w_s2_wfd_collection",
+     "text": "2019 WWE Mattel Ultimate Edition Series 2 Bret \"Hit Man\" Hart",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Bret Hart",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": "Hit Man",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_series2_titles_nakamura",
+     "source_id": "w_s2_wfd_collection",
+     "text": "2019 WWE Mattel Ultimate Edition Series 2 Shinsuke Nakamura",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Shinsuke Nakamura",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_forum_swap_parts",
+     "source_id": "w_s3_forum_stock",
+     "text": "Figure also includes swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE® Superstar moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_forum_articulation",
+     "source_id": "w_s3_forum_stock",
+     "text": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows for authentic poses, incredible signature moves.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_bret_attire_date",
+     "source_id": "w_s4_wfd_bret_product",
+     "text": "2019 WWE Mattel Ultimate Edition Series 2 Bret 'Hit Man' Hart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bret Hart",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_variant": "Hit Man",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_legends_reissue_price",
+     "source_id": "w_s5_toywiz_legends_bret",
+     "text": "WWE Wrestling Ultimate Edition Legends Bret \"Hit Man\" Hart Exclusive Action Figure ... $52.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bret Hart",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition Legends",
+      "year": 2023,
+      "character_variant": "Hit Man",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Bret 'Hitman' Hart™",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "signature pink in-ring gear, white lace up boots, arm, wrist and knee bands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "posable black faux leather jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "swappable heads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "TrueFX™ enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "swappable heads, arms and hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "sunglasses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Bret The Hitman Hart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Regular price $30.00",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "bret-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Signature pink in-ring gear with white lace-up boots, arm/wrist/knee bands, and a posable black faux leather jacket",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Pink",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Posable black faux leather jacket",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Swappable heads",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Swappable heads, arms, and hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$49.99",
+      "evidence_quote_ids": [
+       "f_q9"
+      ],
+      "price_detail": {
+       "amount": 49.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$30.00",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 30,
+       "currency": "USD",
+       "price_kind": "sale",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

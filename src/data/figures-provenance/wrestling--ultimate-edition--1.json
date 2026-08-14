@@ -1,0 +1,921 @@
+{
+ "fp_wrestling_mattel_ultimate-edition_1_ultimate-warrior_b4a497": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_1_ultimate-warrior_b4a497",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_1_ultimate-warrior_b4a497",
+   "character_canonical": "ultimate-warrior",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "1",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ultimate Warrior"
+  },
+  "identity_hash": "b65b65e7b4e8b493",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374363/wwe-ultimate-edition-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_toywiz_rousey",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-elite-ronda-rousey-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_toywiz_warrior",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-ultimate-warrior-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-warrior-ult-003.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/ue1-warrior",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_collection",
+     "text": "Each highly detailed 6-inch tall action figure features TrueFX™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection",
+     "text": "Play out signature moves and expressions with swappable heads, interchangeable hands, an ab-crunch torso, double-jointed arms and knees, articulated toes, and more!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "I've honestly lost track about what is available and when, so I've figured to start a list.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_rousey",
+     "text": "WWE Wrestling Ultimate Edition Ronda Rousey Action Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_rousey",
+     "text": "Approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_rousey",
+     "text": "3 swappable heads, swappable arms, and 2 pairs of swappable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_rousey",
+     "text": "authentic ring gear including top with printed 'Rowdy' Ronda Rousey graphic, trunks, removeable red plaid entrance skirt and posable faux black leather jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_warrior",
+     "text": "WWE Wrestling Ultimate Edition Ultimate Warrior Action Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_warrior",
+     "text": "2 swappable heads and 3 pairs of swappable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_warrior",
+     "text": "authentic ring gear including soft goods entrance duster, and removable arm and boot tassels",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_warrior",
+     "text": "over 30 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Halloween Havoc 1998 attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Fabric OWN Duster Jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "2 Heads (1 with mid-match faded face paint",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "New articulated toes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Ab-crunch torsos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "swivel wrists",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "2 sets of alternate hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "Fabric OWN Duster Jacket and 2 sets of tassels for the armbands and kneepads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Oct. 25, 1998 @ WCW Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Halloween Havoc 1998 attire",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "2 heads, one with mid-match faded face paint",
+    "evidence_quote_ids": [
+     "f_q3",
+     "w_q9"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Double-jointed elbows, articulated toes, ab-crunch torso, swivel wrists",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fabric OWN Duster Jacket",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "2 heads (1 with mid-match faded face paint)",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "2 sets of alternate hands",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Fabric OWN Duster Jacket and 2 sets of tassels for the armbands and kneepads",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_ultimate-edition_1_ronda-rousey_e4d827": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_1_ronda-rousey_e4d827",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_1_ronda-rousey_e4d827",
+   "character_canonical": "ronda-rousey",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "1",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ronda Rousey"
+  },
+  "identity_hash": "c5b591f2ece018f6",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374363/wwe-ultimate-edition-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_toywiz_rousey",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-elite-ronda-rousey-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "w_toywiz_warrior",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-ultimate-warrior-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ue1-ronda",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://needlessthingspodcast.wordpress.com/2019/06/03/toy-review-wwe-ultimate-edition-ronda-rousey-from-mattel/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_collection",
+     "text": "Each highly detailed 6-inch tall action figure features TrueFX™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection",
+     "text": "Play out signature moves and expressions with swappable heads, interchangeable hands, an ab-crunch torso, double-jointed arms and knees, articulated toes, and more!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "I've honestly lost track about what is available and when, so I've figured to start a list.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_rousey",
+     "text": "WWE Wrestling Ultimate Edition Ronda Rousey Action Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_rousey",
+     "text": "Approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_rousey",
+     "text": "3 swappable heads, swappable arms, and 2 pairs of swappable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_rousey",
+     "text": "authentic ring gear including top with printed 'Rowdy' Ronda Rousey graphic, trunks, removeable red plaid entrance skirt and posable faux black leather jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ronda Rousey"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_warrior",
+     "text": "WWE Wrestling Ultimate Edition Ultimate Warrior Action Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_warrior",
+     "text": "2 swappable heads and 3 pairs of swappable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_warrior",
+     "text": "authentic ring gear including soft goods entrance duster, and removable arm and boot tassels",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_warrior",
+     "text": "over 30 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Apr. 8, 2018 @ WWE WrestleMania 34",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Series: 1",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "white with red trim",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black shorts, black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "braided and pulled back",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "perfect",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "turned right around and ordered",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "June 3, 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "ronda-rousey",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Authentic ring gear including top with printed 'Rowdy' Ronda Rousey graphic, trunks, removeable red plaid entrance skirt and posable faux black leather jacket",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White top with red trim, black shorts, black boots",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Braided and pulled back",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "3 swappable heads, swappable arms, and 2 pairs of swappable hands",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removeable red plaid entrance skirt",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Posable faux black leather jacket",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Braided and pulled back",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "3 swappable heads",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "2 pairs of swappable hands",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Removeable red plaid entrance skirt",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Posable faux black leather jacket",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2201 @@
+{
+ "fp_wrestling_mattel_elite_35_diego_16eff2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_35_diego_16eff2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_35_diego_16eff2",
+   "character_canonical": "diego",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "35",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Diego"
+  },
+  "identity_hash": "428854307040d431",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside-blog-elite35",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-wwe-elite-35-shakes-the-ground/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-elite35-orton",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-randyorton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-elite35-tripleh",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-triple-h-action-figure-entrance-armor-crown/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-search-elite35",
+     "url": "https://www.google.com/search?q=site:toywiz.com+%22WWE+Elite+Collection+35%22",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-search-elite35",
+     "url": "https://www.google.com/search?q=site:wrestlingfiguredatabase.com+%22Series+35%22+WWE+Elite",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-diego-action-figure-matador-jacket-hat-cape/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-35-diego-los-matadores-figure-elite35-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "Luke Harper, Diego (Los Matadores), Fernando (Los Matadores), Randy Orton, Triple H, Earthquake",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "the Mattel WWE Elite 35 Flashback",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "a removable Evolution shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "entrance gear fit for the King of Kings and Triple H in his wrestling attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "2015 WWE Mattel Elite Collection Series 35 Randy Orton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "Attire Date: July 20, 2014 @ WWE Battleground",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "WWE Wrestling Elite Collection Series 35 Triple H Action Figure [Entrance Armor & Crown]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Release Date: April 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Diego 6 Action Figure Matador Jacket, Hat Cape Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Diego"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Luke Harper 6 Action Figure Entrance Vest 2 Alligators Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Luke Harper"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Earthquake 6 Action Figure Damien Snake Bag Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$9.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Matador Jacket, Hat & Cape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "RAW 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "LOS MATADORES",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "PLAZA DE TOROS",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "5'10\"/1.78M",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "215 LBS/97.5 KG",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "April 2015",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "diego",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Diego action figure",
+    "evidence_quote_ids": [
+     "w_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_35_luke-harper_531471": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_35_luke-harper_531471",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_35_luke-harper_531471",
+   "character_canonical": "luke-harper",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "35",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Luke Harper"
+  },
+  "identity_hash": "55802adbf11a6798",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside-blog-elite35",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-wwe-elite-35-shakes-the-ground/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-elite35-orton",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-randyorton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-elite35-tripleh",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-triple-h-action-figure-entrance-armor-crown/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-search-elite35",
+     "url": "https://www.google.com/search?q=site:toywiz.com+%22WWE+Elite+Collection+35%22",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-search-elite35",
+     "url": "https://www.google.com/search?q=site:wrestlingfiguredatabase.com+%22Series+35%22+WWE+Elite",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-lukeharper",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-35-luke-harper-action-figure-entrance-vest-2-alligators/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-35-luke-harper-toy-figure-elite35-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "Luke Harper, Diego (Los Matadores), Fernando (Los Matadores), Randy Orton, Triple H, Earthquake",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "the Mattel WWE Elite 35 Flashback",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "a removable Evolution shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "entrance gear fit for the King of Kings and Triple H in his wrestling attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "2015 WWE Mattel Elite Collection Series 35 Randy Orton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "Attire Date: July 20, 2014 @ WWE Battleground",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "WWE Wrestling Elite Collection Series 35 Triple H Action Figure [Entrance Armor & Crown]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Release Date: April 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Diego 6 Action Figure Matador Jacket, Hat Cape Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Diego"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Luke Harper 6 Action Figure Entrance Vest 2 Alligators Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Luke Harper"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Earthquake 6 Action Figure Damien Snake Bag Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2015",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": "wrestlemania-xxx",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Collection Series 35 Luke Harper 6 Action Figure Entrance Vest 2 Alligators Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "RING ATTIRE: WRESTLEMANIA 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": "wrestlemania-xxx",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Entrance Vest & 2 Alligators",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Undershirt Accessory does not come off of figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "THE WYATT FAMILY",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "6'5\"/1.96M",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "275 LBS/124.7 KG",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "WWE DEBUT: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "luke-harper",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WrestleMania XXX ring attire",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Entrance Vest & 2 Alligators",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Undershirt accessory does not come off of figure",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Entrance Vest & 2 Alligators",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_35_fernando_1ed8d2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_35_fernando_1ed8d2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_35_fernando_1ed8d2",
+   "character_canonical": "fernando",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "35",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Fernando"
+  },
+  "identity_hash": "150588628316ecda",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside-blog-elite35",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-wwe-elite-35-shakes-the-ground/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-elite35-orton",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-randyorton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-elite35-tripleh",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-triple-h-action-figure-entrance-armor-crown/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-search-elite35",
+     "url": "https://www.google.com/search?q=site:toywiz.com+%22WWE+Elite+Collection+35%22",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-search-elite35",
+     "url": "https://www.google.com/search?q=site:wrestlingfiguredatabase.com+%22Series+35%22+WWE+Elite",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-fernando-action-figure-matador-jacket-hat-cape/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-35-fernando-los-matadores-toy-elite35-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-fernando",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "Luke Harper, Diego (Los Matadores), Fernando (Los Matadores), Randy Orton, Triple H, Earthquake",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "the Mattel WWE Elite 35 Flashback",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "a removable Evolution shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "entrance gear fit for the King of Kings and Triple H in his wrestling attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "2015 WWE Mattel Elite Collection Series 35 Randy Orton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "Attire Date: July 20, 2014 @ WWE Battleground",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "WWE Wrestling Elite Collection Series 35 Triple H Action Figure [Entrance Armor & Crown]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Release Date: April 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Diego 6 Action Figure Matador Jacket, Hat Cape Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Diego"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Luke Harper 6 Action Figure Entrance Vest 2 Alligators Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Luke Harper"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Earthquake 6 Action Figure Damien Snake Bag Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "WWE Wrestling Elite Series 35 Fernando 6\" Action Figure Matador Jacket, Hat & Cape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "fernando",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Fernando (of Los Matadores) - WWE Elite 35 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "fernando",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Matador Jacket, Hat & Cape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "fernando",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$5.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "fernando",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Attire Date: May 9, 2014 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "fernando",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Release Date: 2015",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "fernando",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: May 9, 2014 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Matador jacket, hat, and cape",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Matador jacket, hat & cape",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_35_triple-h_0adc1a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_35_triple-h_0adc1a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_35_triple-h_0adc1a",
+   "character_canonical": "triple-h",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "35",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Triple H"
+  },
+  "identity_hash": "f7a011ba963eef59",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside-blog-elite35",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-wwe-elite-35-shakes-the-ground/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-elite35-orton",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-randyorton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-elite35-tripleh",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-triple-h-action-figure-entrance-armor-crown/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-search-elite35",
+     "url": "https://www.google.com/search?q=site:toywiz.com+%22WWE+Elite+Collection+35%22",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-search-elite35",
+     "url": "https://www.google.com/search?q=site:wrestlingfiguredatabase.com+%22Series+35%22+WWE+Elite",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "http://www.actionfigurebarbecue.com/2015/11/action-figure-review-triple-h-series-35.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://thefwoosh.com/2015/07/mattel-wwe-triple-h-elite-35/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "Luke Harper, Diego (Los Matadores), Fernando (Los Matadores), Randy Orton, Triple H, Earthquake",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "the Mattel WWE Elite 35 Flashback",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "a removable Evolution shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "entrance gear fit for the King of Kings and Triple H in his wrestling attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "2015 WWE Mattel Elite Collection Series 35 Randy Orton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "Attire Date: July 20, 2014 @ WWE Battleground",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "WWE Wrestling Elite Collection Series 35 Triple H Action Figure [Entrance Armor & Crown]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Release Date: April 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Diego 6 Action Figure Matador Jacket, Hat Cape Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Diego"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Luke Harper 6 Action Figure Entrance Vest 2 Alligators Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Luke Harper"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Earthquake 6 Action Figure Damien Snake Bag Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Triple H has a very distinctive look, particularly with his short haircut and his beard.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "This definitely looks like him, particularly the nose.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Hinged ankles w/ lateral rocker hinges, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, hinged abdomen, swivel/hinged shoulders, swivel biceps, hinged elbows, swivel/hinged wrists, and a ball jointed head.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Entrance robe and helmet.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "This is a figure released earlier this that I just recently picked up.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "This head sculpt is definitely a 'you're not main-eventing Wrestlemania, Daniel Bryan!' sculpt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Triple H does whatever an Elite figure can, but those pesky leg sleeve-style knee pads make some poses more difficult than you'd like.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "The crown/face mask is a separate piece, which is a nice touch and Mattel paid extra attention on the outfit to even capture the curved nature of the horns from the shoulder armor.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Entrance robe and helmet / entrance gear",
+    "evidence_quote_ids": [
+     "w_q4",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Distinctive look particularly with short haircut and beard; definitely looks like him, particularly the nose",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Hinged ankles w/ lateral rocker hinges, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, hinged abdomen, swivel/hinged shoulders, swivel biceps, hinged elbows, swivel/hinged wrists, and a ball jointed head",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Crown/face mask is a separate piece with curved horns from the shoulder armor",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Leg sleeve-style knee pads make some poses more difficult than you'd like",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Entrance robe and helmet",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Crown/face mask separate piece",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_35_earthquake_3cf156": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_35_earthquake_3cf156",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_35_earthquake_3cf156",
+   "character_canonical": "earthquake",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "35",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Earthquake"
+  },
+  "identity_hash": "22ac23aec917ae97",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside-blog-elite35",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-wwe-elite-35-shakes-the-ground/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-elite35-orton",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-randyorton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-elite35-tripleh",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-triple-h-action-figure-entrance-armor-crown/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-search-elite35",
+     "url": "https://www.google.com/search?q=site:toywiz.com+%22WWE+Elite+Collection+35%22",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-search-elite35",
+     "url": "https://www.google.com/search?q=site:wrestlingfiguredatabase.com+%22Series+35%22+WWE+Elite",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-earthquake-action-figure-damien-snake-bag/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://zappcomics.com/products/mattel-wwe-elite-collection-series-35-earthquake",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-35-earthquake-toy-figure-elite35-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "Luke Harper, Diego (Los Matadores), Fernando (Los Matadores), Randy Orton, Triple H, Earthquake",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "the Mattel WWE Elite 35 Flashback",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "a removable Evolution shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside-blog-elite35",
+     "text": "entrance gear fit for the King of Kings and Triple H in his wrestling attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "2015 WWE Mattel Elite Collection Series 35 Randy Orton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-elite35-orton",
+     "text": "Attire Date: July 20, 2014 @ WWE Battleground",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2015,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "WWE Wrestling Elite Collection Series 35 Triple H Action Figure [Entrance Armor & Crown]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite35-tripleh",
+     "text": "Release Date: April 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Diego 6 Action Figure Matador Jacket, Hat Cape Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Diego"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Luke Harper 6 Action Figure Entrance Vest 2 Alligators Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Luke Harper"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz-search-elite35",
+     "text": "WWE Wrestling Elite Collection Series 35 Earthquake 6 Action Figure Damien Snake Bag Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "exclusive accessories like Damien & Snake Bag, masks, armbands, and costumes.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$69.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$29.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Sold out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Damien & Snake Bag",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "RING ATTIRE: CIRCA 1991",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": "circa-1991",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "EARTHQUAKE SPLASH",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Secondary Market Item",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "earthquake",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Ring attire circa 1991",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Earthquake Splash",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Damien & Snake Bag",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2124 @@
+{
+ "fp_wrestling_mattel_elite_23_jbl_4962f0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_23_jbl_4962f0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_23_jbl_4962f0",
+   "character_canonical": "jbl",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "23",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "JBL"
+  },
+  "identity_hash": "08c19eb1e4111f60",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_cesaro_elite23",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-antoniocesaro",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_series23_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-23-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cesaro_elite23",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-antonio-cesaro-action-figure-flag-united-states-championship-belt/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-jbl",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-jbl-action-figure-hat-jacket-towel/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_toywiz_series23_case",
+     "text": "Includes Cena, Undertaker, JBL, Macho Man, Cesaro & Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_scale_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "September 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_wfd_release",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_line_series",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_num",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_attire",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Attire Date: Oct. 28, 2012 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2012,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_cesaro_accessories",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "Includes Flag & United States Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_cesaro_scale",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": null,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_cesaro_release",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "jbl",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 3, 2005 @ WWE WrestleMania 21",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "jbl",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "jbl",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Collection Series 23 JBL Action Figure Hat, Jacket Towel Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "jbl",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release Date: September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "jbl",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 3, 2005 @ WWE WrestleMania 21",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Towel",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2013",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_23_john-cena_60fe2f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_23_john-cena_60fe2f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_23_john-cena_60fe2f",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "23",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "c30c5544af0de9a3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_cesaro_elite23",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-antoniocesaro",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_series23_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-23-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cesaro_elite23",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-antonio-cesaro-action-figure-flag-united-states-championship-belt/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-johncena",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-john-cena-action-figure-cap-dog-tags-t-shirt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_toywiz_series23_case",
+     "text": "Includes Cena, Undertaker, JBL, Macho Man, Cesaro & Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_scale_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "September 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_wfd_release",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_line_series",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_num",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_attire",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Attire Date: Oct. 28, 2012 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2012,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_cesaro_accessories",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "Includes Flag & United States Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_cesaro_scale",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": null,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_cesaro_release",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 18, 2012 @ WWE Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Collection Series 23 John Cena Action Figure [Cap, Dog Tags & T-Shirt]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 18, 2012 @ WWE Survivor Series",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Cap, Dog Tags & T-Shirt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Dog Tags",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "T-Shirt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_23_undertaker_4027da": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_23_undertaker_4027da",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_23_undertaker_4027da",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "23",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "d582d875646a75c7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_cesaro_elite23",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-antoniocesaro",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_series23_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-23-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cesaro_elite23",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-antonio-cesaro-action-figure-flag-united-states-championship-belt/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-undertaker-action-figure-jacket-mask-hat-tie/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-23-undertaker-elite23-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_toywiz_series23_case",
+     "text": "Includes Cena, Undertaker, JBL, Macho Man, Cesaro & Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_scale_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "September 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_wfd_release",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_line_series",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_num",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_attire",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Attire Date: Oct. 28, 2012 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2012,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_cesaro_accessories",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "Includes Flag & United States Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_cesaro_scale",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": null,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_cesaro_release",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Release Date: September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "UPC: 746775181895",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Attire Date: Nov. 19, 1995 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Undertaker - WWE Elite 23 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Nov. 19, 1995 @ WWF Survivor Series",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "UPC: 746775181895",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2013",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 59.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$49.99",
+      "evidence_quote_ids": [
+       "f_q9"
+      ],
+      "price_detail": {
+       "amount": 49.99,
+       "currency": "USD",
+       "price_kind": "resale_current",
+       "region": null,
+       "as_of": "2026-08-14",
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_23_macho-man-randy-savage_127720a0cb31": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_23_macho-man-randy-savage_127720a0cb31",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_23_macho-man-randy-savage_127720a0cb31",
+   "character_canonical": "macho-man-randy-savage",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "23",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Macho Man Randy Savage"
+  },
+  "identity_hash": "ae6827424be841a5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_cesaro_elite23",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-antoniocesaro",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_series23_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-23-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cesaro_elite23",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-antonio-cesaro-action-figure-flag-united-states-championship-belt/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-machoman",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-macho-man-randy-savage-action-figure-shirt-wwe-championship-winged-eagle-belt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_toywiz_series23_case",
+     "text": "Includes Cena, Undertaker, JBL, Macho Man, Cesaro & Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_scale_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "September 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_wfd_release",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_line_series",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_num",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_attire",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Attire Date: Oct. 28, 2012 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2012,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_cesaro_accessories",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "Includes Flag & United States Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_cesaro_scale",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": null,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_cesaro_release",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "macho-man-randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 5, 1992 @ WWF WrestleMania VIII",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "macho-man-randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "macho-man-randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Collection Series 23 Macho Man Randy Savage Action Figure [Shirt & WWE Championship Winged Eagle Belt]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "macho-man-randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Shirt & WWE Championship Winged Eagle Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "macho-man-randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 5, 1992 @ WWF WrestleMania VIII",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Shirt & WWE Championship Winged Eagle Belt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Shirt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "WWE Championship Winged Eagle Belt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_23_antonio-cesaro_436665": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_23_antonio-cesaro_436665",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_23_antonio-cesaro_436665",
+   "character_canonical": "antonio-cesaro",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "23",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Antonio Cesaro"
+  },
+  "identity_hash": "4e7a8f0ff8ad020f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_cesaro_elite23",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-antoniocesaro",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_series23_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-23-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cesaro_elite23",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-antonio-cesaro-action-figure-flag-united-states-championship-belt/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "http://aretukjawe.blogspot.com/2014/02/antonio-cesaro-wwe-mattel-elite-series.html?m=1",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://amoktime.com/mattel-wwe-elite-collection-series-23-antonio-cesaro-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-14"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_toywiz_series23_case",
+     "text": "Includes Cena, Undertaker, JBL, Macho Man, Cesaro & Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_scale_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_case",
+     "source_id": "w_toywiz_series23_case",
+     "text": "September 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_wfd_release",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_line_series",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_num",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_attire",
+     "source_id": "w_wfd_cesaro_elite23",
+     "text": "Attire Date: Oct. 28, 2012 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2012,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_cesaro_accessories",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "Includes Flag & United States Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_cesaro_scale",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": null,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_cesaro_release",
+     "source_id": "w_toywiz_cesaro_elite23",
+     "text": "September 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 23",
+      "year": 2013,
+      "character_canonical": "Antonio Cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black, red and white color scheme",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a red and white shield symbol with alphabet 'A' and 'C' inside",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "white wrestling tape",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "two black stripe on it",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "high black boots with white shoelace",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "long red socks with two white stripe at the top",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "the smiley face looks very cool",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "a perfect headscan",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "very thin layer of hair and got an empty area at the top",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "America's Flag",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s1",
+     "text": "printed at the both sides",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s1",
+     "text": "United State Championship title belt",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s1",
+     "text": "All plates is molded include the side plates",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s1",
+     "text": "looks shines under the light",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s1",
+     "text": "Perfect headscan.. perfect body sculpt.... perfect accessories... perfect detail",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s1",
+     "text": "Wednesday, February 5, 2014",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q17",
+     "source_id": "f_s2",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q18",
+     "source_id": "f_s2",
+     "text": "Originally released in 2013.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "antonio-cesaro",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black, red and white color scheme",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A perfect headscan with a very thin layer of hair and an empty area at the top",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Red and white shield symbol with alphabet 'A' and 'C' inside",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White wrestling tape with two black stripe on it",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "High black boots with white shoelace",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "Long red socks with two white stripe at the top",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[4]",
+    "status": "resolved",
+    "value": "The smiley face looks very cool",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Flag",
+    "evidence_quote_ids": [
+     "w_q8_cesaro_accessories"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "United States Championship title belt",
+    "evidence_quote_ids": [
+     "w_q8_cesaro_accessories",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2013",
+    "evidence_quote_ids": [
+     "w_q10_cesaro_release"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}
