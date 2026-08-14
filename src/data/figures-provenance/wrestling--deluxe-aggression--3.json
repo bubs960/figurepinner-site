@@ -1,0 +1,1626 @@
+{
+ "fp_wrestling_jakks-pacific_deluxe-aggression_3_batista_b0c4e1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_batista_b0c4e1",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_batista_b0c4e1",
+   "character_canonical": "batista",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "deluxe-aggression",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2006,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Batista"
+  },
+  "identity_hash": "36106569e0d69989",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-batista",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-benoit",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-chrisbenoit",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-cena",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.collectors.com/action-item/wwe-batista-deluxe-aggression-series-3/-6249367731743134135",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-batista",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Batista"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-benoit",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Chris Benoit"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Bobby Lashley"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Kurt Angle"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-cena",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-cena",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": "John Cena"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jakks-pacific_deluxe-aggression_3_kurt-angle_29551c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_kurt-angle_29551c",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_kurt-angle_29551c",
+   "character_canonical": "kurt-angle",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "deluxe-aggression",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2006,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kurt Angle"
+  },
+  "identity_hash": "b447a2703ad89a1d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-batista",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-benoit",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-chrisbenoit",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-cena",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-kurtangle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://prowrestling.fandom.com/wiki/Kurt_Angle_(WWE_Deluxe_Aggression_3)",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-batista",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Batista"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-benoit",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Chris Benoit"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Bobby Lashley"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Kurt Angle"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-cena",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-cena",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3 Kurt Angle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Jakks Pacific",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Deluxe Aggression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jakks-pacific_deluxe-aggression_3_bobby-lashley_81b8a5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_bobby-lashley_81b8a5",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_bobby-lashley_81b8a5",
+   "character_canonical": "bobby-lashley",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "deluxe-aggression",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2006,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bobby Lashley"
+  },
+  "identity_hash": "e92be15e37f9198b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-batista",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-benoit",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-chrisbenoit",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-cena",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-bobbylashley",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfiguresandcomics.com/products/wrestling-wwe-action-figures-bobby-lashley-deluxe-aggression-series-3-jakks",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-bobby-lashley-deluxe-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-batista",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Batista"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-benoit",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Chris Benoit"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Bobby Lashley"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Kurt Angle"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-cena",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-cena",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3 Bobby Lashley",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Wrestling WWE action figures BOBBY LASHLEY deluxe aggression series 3 jakks",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "includes: both knee and elbow pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "overall excellent with nice paint detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$12.95",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Knee pads and elbow pads",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jakks-pacific_deluxe-aggression_3_shawn-michaels_31dab5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_shawn-michaels_31dab5",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_shawn-michaels_31dab5",
+   "character_canonical": "shawn-michaels",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "deluxe-aggression",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2006,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shawn Michaels"
+  },
+  "identity_hash": "4c9dff87d4af4df2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-batista",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-benoit",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-chrisbenoit",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-cena",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-shawnmichaels",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.actionfiguresandcomics.com/products/wrestling-wwe-action-figures-shawn-michaels-deluxe-aggression-series-3-jakks",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.houseofcarsvirginia.com/products/jakks-pacific-wwe-deluxe-aggression-series-3-shawn-michaels",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-batista",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Batista"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-benoit",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Chris Benoit"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Bobby Lashley"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Kurt Angle"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-cena",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-cena",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "overall excellent",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "shawn-michaels",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "approx. 6 - 7 inch",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "shawn-michaels",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jakks-pacific_deluxe-aggression_3_chris-benoit_f9d4d8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_chris-benoit_f9d4d8",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_chris-benoit_f9d4d8",
+   "character_canonical": "chris-benoit",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "deluxe-aggression",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Chris Benoit"
+  },
+  "identity_hash": "2411ec5e819a7210",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-batista",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-benoit",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-chrisbenoit",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-cena",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://pwcatalog.com/products/da3-chrisbenoit",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-batista",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Batista"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-benoit",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Chris Benoit"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Bobby Lashley"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Kurt Angle"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-cena",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-cena",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Line: Deluxe Aggression",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "chris-benoit",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "chris-benoit",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: 2006",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "chris-benoit",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Jakks Pacific",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": "chris-benoit",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2006",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   }
+  ]
+ },
+ "fp_wrestling_jakks-pacific_deluxe-aggression_3_john-cena_d1bd1d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_john-cena_d1bd1d",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_john-cena_d1bd1d",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "deluxe-aggression",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2006,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "e445b5a84d345e10",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-batista",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-benoit",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-chrisbenoit",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwe-deluxe-aggression",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-cena",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/da3-johncena",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-series-3-john-cena-deluxe-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-batista",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Batista"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-benoit",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Chris Benoit"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Bobby Lashley"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Kurt Angle"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-collection",
+     "text": "2006 WWE Jakks Pacific Deluxe Aggression Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": "2006",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-cena",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-cena",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jakks Pacific",
+      "product_line": "Deluxe Aggression",
+      "year": null,
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2006",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Jakks Pacific",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Deluxe Aggression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Price: $99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "UPC: 039897933726",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": 2006,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "This new release of Jakks Pacific WWE Figures are the next big deal for the WWE Figures Collectors. With 6 newly articulated action figures to the line no wonder why they called them DELUXE!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": "deluxe-aggression",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ }
+}
