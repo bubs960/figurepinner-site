@@ -1,0 +1,1453 @@
+{
+ "fp_wrestling_mattel_wwe-superstars_15_stone-cold-steve_59eb17": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_wwe-superstars_15_stone-cold-steve_59eb17",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_wwe-superstars_15_stone-cold-steve_59eb17",
+   "character_canonical": "stone-cold-steve-austin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "wwe-superstars",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stone Cold Steve Austin"
+  },
+  "identity_hash": "2d087553be44a653",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_steele",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-george-the-animal-steele-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_volkoff",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-nikolai-volkoff-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toyhabits_series15",
+     "url": "https://toyhabits.com/wwe-superstars-series-15-official-images/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wrestlingshop_warrior",
+     "url": "https://wrestlingshop.com/en-us/products/ultimate-warrior-wwe-superstars-series-15-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_forum_wfigs_motu_thread",
+     "url": "https://forum.wrestlingfigs.com/thread/379532/mattel-superstars-motu-style-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/stone-cold-steve-austin-wwe-superstars-series-15-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-basic-championship-showdown-series-15-stone-cold-steve-austin-vs-triple-h",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toyhabits_series15",
+     "text": "Series 15 is no exception! Official images have just been revealed for the next wave, featuring four legendary icons: Stone Cold Steve Austin, Ultimate Warrior, Nikolai Volkoff, and George \"The Animal\" Steele.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_steele",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_steele",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_steele",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_volkoff",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_volkoff",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_volkoff",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Price: $29.00 USD",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Retro nostalgia meets in-ring action",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Includes Intercontinental Championship\" plus \"trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toyhabits_series15",
+     "text": "Fans got their first up-close look at these retro-styled figures at WrestleMania 41, where they were proudly displayed in all their throwback glory.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$33.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": 2025,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Includes Entrance Gear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": 2025,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Retro nostalgia meets in-ring action",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "JCK08",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": 2025,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Entrance Gear",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "JCK08",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_wwe-superstars_15_ultimate-warrior_81ef61": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_wwe-superstars_15_ultimate-warrior_81ef61",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_wwe-superstars_15_ultimate-warrior_81ef61",
+   "character_canonical": "ultimate-warrior",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "wwe-superstars",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ultimate Warrior"
+  },
+  "identity_hash": "f9743e4cfae2ba5d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_steele",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-george-the-animal-steele-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_volkoff",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-nikolai-volkoff-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toyhabits_series15",
+     "url": "https://toyhabits.com/wwe-superstars-series-15-official-images/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wrestlingshop_warrior",
+     "url": "https://wrestlingshop.com/en-us/products/ultimate-warrior-wwe-superstars-series-15-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_forum_wfigs_motu_thread",
+     "url": "https://forum.wrestlingfigs.com/thread/379532/mattel-superstars-motu-style-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/ultimate-warrior-wwe-superstars-series-15-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toyhabits_series15",
+     "text": "Series 15 is no exception! Official images have just been revealed for the next wave, featuring four legendary icons: Stone Cold Steve Austin, Ultimate Warrior, Nikolai Volkoff, and George \"The Animal\" Steele.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_steele",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_steele",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_steele",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_volkoff",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_volkoff",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_volkoff",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Price: $29.00 USD",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Retro nostalgia meets in-ring action",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Includes Intercontinental Championship\" plus \"trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toyhabits_series15",
+     "text": "Fans got their first up-close look at these retro-styled figures at WrestleMania 41, where they were proudly displayed in all their throwback glory.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$29.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Includes Intercontinental Championship",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "WWE Superstars series action figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Retro-themed collector based figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Intercontinental Championship",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_wwe-superstars_15_nikolai-volkoff_5f6ae8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_wwe-superstars_15_nikolai-volkoff_5f6ae8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_wwe-superstars_15_nikolai-volkoff_5f6ae8",
+   "character_canonical": "nikolai-volkoff",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "wwe-superstars",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Nikolai Volkoff"
+  },
+  "identity_hash": "56109a3b5430ceb7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_steele",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-george-the-animal-steele-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_volkoff",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-nikolai-volkoff-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toyhabits_series15",
+     "url": "https://toyhabits.com/wwe-superstars-series-15-official-images/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wrestlingshop_warrior",
+     "url": "https://wrestlingshop.com/en-us/products/ultimate-warrior-wwe-superstars-series-15-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_forum_wfigs_motu_thread",
+     "url": "https://forum.wrestlingfigs.com/thread/379532/mattel-superstars-motu-style-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/nikolai-volkoff-wwe-superstars-series-15-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://forum.wrestlingfigs.com/thread/379638/folks-said",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toyhabits_series15",
+     "text": "Series 15 is no exception! Official images have just been revealed for the next wave, featuring four legendary icons: Stone Cold Steve Austin, Ultimate Warrior, Nikolai Volkoff, and George \"The Animal\" Steele.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_steele",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_steele",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_steele",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_volkoff",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_volkoff",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_volkoff",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Price: $29.00 USD",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Retro nostalgia meets in-ring action",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Includes Intercontinental Championship\" plus \"trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toyhabits_series15",
+     "text": "Fans got their first up-close look at these retro-styled figures at WrestleMania 41, where they were proudly displayed in all their throwback glory.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Step back into the golden age of wrestling with WWE Superstars series action figures and bring home the excitement with these Retro-themed collector based figures.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Includes Soft Goods Gear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": 2025,
+      "character_canonical": "nikolai-volkoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each WWE Superstars figure includes trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Sale price: $18.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": 2025,
+      "character_canonical": "nikolai-volkoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Regular price: $29.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "year": 2025,
+      "character_canonical": "nikolai-volkoff",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Soft Goods Gear",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_wwe-superstars_15_george-steele_fecd96": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_wwe-superstars_15_george-steele_fecd96",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_wwe-superstars_15_george-steele_fecd96",
+   "character_canonical": "george-steele",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "wwe-superstars",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "George Steele"
+  },
+  "identity_hash": "1009b1f318f8efd7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_steele",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-george-the-animal-steele-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_volkoff",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-superstars-series-tbd-nikolai-volkoff-exclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toyhabits_series15",
+     "url": "https://toyhabits.com/wwe-superstars-series-15-official-images/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wrestlingshop_warrior",
+     "url": "https://wrestlingshop.com/en-us/products/ultimate-warrior-wwe-superstars-series-15-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_forum_wfigs_motu_thread",
+     "url": "https://forum.wrestlingfigs.com/thread/379532/mattel-superstars-motu-style-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/george-the-animal-steele-wwe-superstars-series-15-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toyhabits.com/wwe-superstars-series-15-in-hand-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toyhabits_series15",
+     "text": "Series 15 is no exception! Official images have just been revealed for the next wave, featuring four legendary icons: Stone Cold Steve Austin, Ultimate Warrior, Nikolai Volkoff, and George \"The Animal\" Steele.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_steele",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_steele",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_steele",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "George Steele"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_volkoff",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_volkoff",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_volkoff",
+     "text": "Exclusive Retailer: Walmart, Wrestling Shop",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Nikolai Volkoff"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Price: $29.00 USD",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Retro nostalgia meets in-ring action",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wrestlingshop_warrior",
+     "text": "Includes Intercontinental Championship\" plus \"trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toyhabits_series15",
+     "text": "Fans got their first up-close look at these retro-styled figures at WrestleMania 41, where they were proudly displayed in all their throwback glory.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Superstars",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "George \"The Animal\" Steele WWE Superstars Series #15",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Sale price $18.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Regular price $29.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Includes Soft Goods Gear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Retro nostalgia meets in-ring action.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "iconic WWE Legends complete with retro-inspired packaging",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "trademark accessories, from soft-goods entrance gear to championship titles",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "wearing his signature white 'I'm an Animal Lover' shirt with a caricature of his face printed below the text",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "wide-eyed and wild, complete with a green tongue",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "detailed hairy arms, red laced boots, and black pants",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "four interchangeable hands, allowing for a variety of expressive poses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "exaggerated hairy detailing that wraps completely around his back, faithfully capturing his famously wild look",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe-superstars",
+      "character_canonical": "george-steele",
+      "character_variant": null,
+      "year": 2025,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "White I'm an Animal Lover shirt with a caricature of his face printed below the text",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red laced boots and black pants",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Wide-eyed and wild, complete with a green tongue",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Four interchangeable hands allowing a variety of expressive poses",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "White I'm an Animal Lover shirt with a caricature of his face printed below the text",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Wide-eyed and wild, complete with a green tongue",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Detailed hairy arms, red laced boots, and black pants, with exaggerated hairy detailing that wraps completely around his back",
+    "evidence_quote_ids": [
+     "f_q10",
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Soft Goods Gear",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

@@ -1,0 +1,712 @@
+{
+ "fp_wrestling_mattel_elite-royal-rumble_2_stone-cold-steve-a_fd168a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-royal-rumble_2_stone-cold-steve-a_fd168a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-royal-rumble_2_stone-cold-steve-a_fd168a",
+   "character_canonical": "stone-cold-steve-austin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-royal-rumble",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": null
+  },
+  "identity_hash": "ef20a8166cbdc3ff",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-umaga",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-rr2-umaga",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-ultimatewarrior",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-rr2-ultimatewarrior",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-titus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-royal-rumble-titus-oneil-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-rr-set",
+     "url": "https://www.ringsidecollectibles.com/mattel-wwe-royal-rumble-set-mmisc-758.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/mattel-wwe-royal-rumble-austin-mmisc-760.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-rr2-scsa",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-umaga",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-umaga",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-ultimatewarrior",
+     "text": "Series: 2",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-ultimatewarrior",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-titus",
+     "text": "This 6-in / 15.24-cm scale figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": "Titus O'Neil"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-titus",
+     "text": "$29.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": "Titus O'Neil"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-titus",
+     "text": "May 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-titus",
+     "text": "This highly articulated figure features detailed True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": "Titus O'Neil"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-rr-set",
+     "text": "WWE Elite Royal Rumble 2021 - Complete Set of 4 WWE Toy Wrestling Action Figures by Mattel! This set includes: Umaga, Stone Cold Steve Austin, Ultimate Warrior & Titus O'Neil!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black wrist tape, trunks, knee pads and boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "black and gold SCSA 101 vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a tough SOB headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "interchangeable hands and a black and gold SCSA 101 vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$10.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black wrist tape, trunks, knee pads and boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black and gold",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "a tough SOB headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "black and gold SCSA 101 vest",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-royal-rumble_2_titus-oneil_df1d05": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-royal-rumble_2_titus-oneil_df1d05",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-royal-rumble_2_titus-oneil_df1d05",
+   "character_canonical": "titus-oneil",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-royal-rumble",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Titus O'Neil"
+  },
+  "identity_hash": "95836b47562b2dd2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-umaga",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-rr2-umaga",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd-ultimatewarrior",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-rr2-ultimatewarrior",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz-titus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-royal-rumble-titus-oneil-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-rr-set",
+     "url": "https://www.ringsidecollectibles.com/mattel-wwe-royal-rumble-set-mmisc-758.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://lylesmoviefiles.com/2025/06/08/wwe-royal-rumble-titus-oneil-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-rr2-titusoneil",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-umaga",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-umaga",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-ultimatewarrior",
+     "text": "Series: 2",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-ultimatewarrior",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-titus",
+     "text": "This 6-in / 15.24-cm scale figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": "Titus O'Neil"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-titus",
+     "text": "$29.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": "Titus O'Neil"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-titus",
+     "text": "May 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-titus",
+     "text": "This highly articulated figure features detailed True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": "Titus O'Neil"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-rr-set",
+     "text": "WWE Elite Royal Rumble 2021 - Complete Set of 4 WWE Toy Wrestling Action Figures by Mattel! This set includes: Umaga, Stone Cold Steve Austin, Ultimate Warrior & Titus O'Neil!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Royal Rumble Series 2",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "June 8, 2025",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "titus-oneil",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Mattel's True FX sculpting resulted in an amazing head sculpt that really nailed his likeness.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "titus-oneil",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "The tampo on his tights is applied cleanly. As usual the trick is getting the yellow strong enough to not have the black bleeding though.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "titus-oneil",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Naturally, his trademark whistle is included. He's also got a cloth T-shirt of his saving face Rumble, Stumble, Slide catchphrase. He also has a pair of gripping hands.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "titus-oneil",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "I got him for $17 although I've seen him as cheap as $8 during the Christmas holiday.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "titus-oneil",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Titus O'Neil has: neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, knees (double-jointed), ankles",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "titus-oneil",
+      "manufacturer": "mattel",
+      "product_line": "elite-royal-rumble",
+      "year": 2021,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Yellow tampo on black tights",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "True FX sculpting resulted in an amazing head sculpt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX sculpting",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, double-jointed knees, ankles",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Cloth T-shirt of his saving face Rumble, Stumble, Slide catchphrase",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Trademark whistle",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Whistle",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Cloth T-shirt (Rumble, Stumble, Slide catchphrase)",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Pair of gripping hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

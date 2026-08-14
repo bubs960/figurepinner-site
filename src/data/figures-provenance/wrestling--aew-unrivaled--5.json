@@ -1,0 +1,1824 @@
+{
+ "fp_wrestling_jazwares_aew-unrivaled_5_jungle-boy_b301b4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_jungle-boy_b301b4",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_jungle-boy_b301b4",
+   "character_canonical": "jungle-boy",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jungle Boy"
+  },
+  "identity_hash": "3566374e10b3258a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "w_s2_toywiz_moxley",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-jon-moxley-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s3_wfd_collection_p5",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection?page=5",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "url": "https://us.amazon.com/AEW-Figure-Pack-Unrivaled-W5/dp/B08SSWN4CN",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-jungle-boy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled5-jungleboy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#37: Jon Moxley (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_sky",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#38: Scorpio Sky (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Scorpio Sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_kazarian",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#39: Frankie Kazarian (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Frankie Kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_page",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#40: Hangman Adam Page (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_lineup_luchasaurus",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#41: Luchasaurus (AEW Double or Nothing 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Luchasaurus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_lineup_jungleboy",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#42: Jungle Boy (attire date listed as \"TBD\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jungle Boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_chase_page_rare",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#43: Hangman Adam Page \"Rare 1 of 3000\" (AEW All Out 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page Rare 1 of 3000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_chase_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#44: Jon Moxley \"Chase 1 of 5000\" (AEW Dynamite #19)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": "Jon Moxley Chase 1 of 5000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_no_baf",
+     "source_id": "w_s1_forum_checklist",
+     "text": "No Build-A-Figure (BAF) components are mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "6.5-inch collectible figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11_articulation",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q12_release_date",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "September 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q13_accessory",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "The AEW collectible also includes a chair accessory.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q14_title_scale_series",
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "text": "All Elite Wrestling Unrivaled Collection Jon Moxley - 6.5-Inch AEW Action Figure - Series 5",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "6.5-inch action figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "jungle-boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "jungle-boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$31.34",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "jungle-boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Attire Date: Oct. 16, 2019 @ AEW Dynamite",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "jungle-boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": "2021",
+      "character_canonical": "jungle-boy",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 16, 2019 @ AEW Dynamite",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2021",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_5_adam-page_cbef2e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_adam-page_cbef2e",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_adam-page_cbef2e",
+   "character_canonical": "adam-page",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Adam Page"
+  },
+  "identity_hash": "06936631d2a6b246",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "w_s2_toywiz_moxley",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-jon-moxley-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s3_wfd_collection_p5",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection?page=5",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "url": "https://us.amazon.com/AEW-Figure-Pack-Unrivaled-W5/dp/B08SSWN4CN",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-adam-page-aewu5-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.amazon.com/AEW-Figure-Pack-Unrivaled-W5/dp/B08SSX2C4K",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled5-rarehangman",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#37: Jon Moxley (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_sky",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#38: Scorpio Sky (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Scorpio Sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_kazarian",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#39: Frankie Kazarian (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Frankie Kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_page",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#40: Hangman Adam Page (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_lineup_luchasaurus",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#41: Luchasaurus (AEW Double or Nothing 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Luchasaurus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_lineup_jungleboy",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#42: Jungle Boy (attire date listed as \"TBD\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jungle Boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_chase_page_rare",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#43: Hangman Adam Page \"Rare 1 of 3000\" (AEW All Out 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page Rare 1 of 3000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_chase_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#44: Jon Moxley \"Chase 1 of 5000\" (AEW Dynamite #19)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": "Jon Moxley Chase 1 of 5000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_no_baf",
+     "source_id": "w_s1_forum_checklist",
+     "text": "No Build-A-Figure (BAF) components are mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "6.5-inch collectible figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11_articulation",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q12_release_date",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "September 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q13_accessory",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "The AEW collectible also includes a chair accessory.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q14_title_scale_series",
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "text": "All Elite Wrestling Unrivaled Collection Jon Moxley - 6.5-Inch AEW Action Figure - Series 5",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Page has a removable black and white bandana, revealing a serious headscan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "adam-page",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "He also has a black elbow pad, black wrist tape and a removable black cowboy style fringed vest.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "adam-page",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "His molded brown and gold belt connects with black and white ring tights that have a white \"Hangman\" design on the back and matching knee pads with white designs on the sides.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "adam-page",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "He is wearing dark cowboy style boots that have designs on the sides.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "adam-page",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "This figure includes beer mug, shot glass and finger gun accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "adam-page",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "adam-page",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Removable black and white bandana with black cowboy-style fringed vest, black elbow pad, black wrist tape, molded brown and gold belt, black and white ring tights with white \"Hangman\" back design, matching knee pads, dark cowboy-style boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2",
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Removable black and white bandana revealing a serious headscan",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable black and white bandana revealing a serious headscan",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White \"Hangman\" design on the back of the black and white ring tights, matching knee pads with white designs on the sides",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Dark cowboy-style boots with designs on the sides",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable black and white bandana",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable black cowboy-style fringed vest",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Beer mug",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Shot glass",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Finger gun",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_5_luchasaurus_ffbc03": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_luchasaurus_ffbc03",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_luchasaurus_ffbc03",
+   "character_canonical": "luchasaurus",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Luchasaurus"
+  },
+  "identity_hash": "9a8b5a414948813a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "w_s2_toywiz_moxley",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-jon-moxley-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s3_wfd_collection_p5",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection?page=5",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "url": "https://us.amazon.com/AEW-Figure-Pack-Unrivaled-W5/dp/B08SSWN4CN",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled5-luchasaurus",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-luchasaurus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://lylesmoviefiles.com/2022/09/01/aew-unrivaled-series-5-jungle-boy-and-luchasaurus-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#37: Jon Moxley (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_sky",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#38: Scorpio Sky (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Scorpio Sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_kazarian",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#39: Frankie Kazarian (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Frankie Kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_page",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#40: Hangman Adam Page (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_lineup_luchasaurus",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#41: Luchasaurus (AEW Double or Nothing 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Luchasaurus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_lineup_jungleboy",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#42: Jungle Boy (attire date listed as \"TBD\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jungle Boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_chase_page_rare",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#43: Hangman Adam Page \"Rare 1 of 3000\" (AEW All Out 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page Rare 1 of 3000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_chase_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#44: Jon Moxley \"Chase 1 of 5000\" (AEW Dynamite #19)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": "Jon Moxley Chase 1 of 5000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_no_baf",
+     "source_id": "w_s1_forum_checklist",
+     "text": "No Build-A-Figure (BAF) components are mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "6.5-inch collectible figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11_articulation",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q12_release_date",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "September 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q13_accessory",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "The AEW collectible also includes a chair accessory.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q14_title_scale_series",
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "text": "All Elite Wrestling Unrivaled Collection Jon Moxley - 6.5-Inch AEW Action Figure - Series 5",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 25, 2019 @ AEW Double or Nothing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "2021 AEW Jazwares Unrivaled Collection Series 5 #41 Luchasaurus",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Each collectible boasts 25 points of articulation",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "His mask has all the detail with the scales and horns, combined with the tongue sticking out and long beard and braid.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "sculpting the belt and skirt piece and getting the long kick pads with his unique boots with the toes visible under the scaly material.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Then there's the laced-up gauntlets and the painted nails.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Luchasaurus has a lot of paint applications.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "The different shades of green in the mask, braids, beard and tongue.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "luchasaurus",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "swappable set of clutching hands",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "AEW Double or Nothing 2019 (May 25, 2019)",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Different shades of green in the mask, braids, beard and tongue",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Mask has all the detail with the scales and horns, combined with the tongue sticking out and long beard and braid",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Long kick pads with unique boots with the toes visible under the scaly material",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Laced-up gauntlets and painted nails",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Belt and skirt piece",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_5_frankie-kazarian_c2bc93": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_frankie-kazarian_c2bc93",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_5_frankie-kazarian_c2bc93",
+   "character_canonical": "frankie-kazarian",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Frankie Kazarian"
+  },
+  "identity_hash": "1840a6e3a208a1cb",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "w_s2_toywiz_moxley",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-jon-moxley-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s3_wfd_collection_p5",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection?page=5",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "url": "https://us.amazon.com/AEW-Figure-Pack-Unrivaled-W5/dp/B08SSWN4CN",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-5-frankie-kazarian-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection?page=5",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#37: Jon Moxley (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_lineup_sky",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#38: Scorpio Sky (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Scorpio Sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_kazarian",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#39: Frankie Kazarian (AEW Dynamite #5: Halloween 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Frankie Kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_page",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#40: Hangman Adam Page (AEW All Out 2020)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2020,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_lineup_luchasaurus",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#41: Luchasaurus (AEW Double or Nothing 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Luchasaurus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_lineup_jungleboy",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#42: Jungle Boy (attire date listed as \"TBD\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jungle Boy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_chase_page_rare",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#43: Hangman Adam Page \"Rare 1 of 3000\" (AEW All Out 2019)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2019,
+      "character_canonical": "Adam Page",
+      "character_variant": "Hangman Adam Page Rare 1 of 3000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_chase_moxley",
+     "source_id": "w_s1_forum_checklist",
+     "text": "#44: Jon Moxley \"Chase 1 of 5000\" (AEW Dynamite #19)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": "Jon Moxley Chase 1 of 5000",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9_no_baf",
+     "source_id": "w_s1_forum_checklist",
+     "text": "No Build-A-Figure (BAF) components are mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "6.5-inch collectible figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11_articulation",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q12_release_date",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "September 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q13_accessory",
+     "source_id": "w_s2_toywiz_moxley",
+     "text": "The AEW collectible also includes a chair accessory.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q14_title_scale_series",
+     "source_id": "w_s4_amazon_moxley_listing_title",
+     "text": "All Elite Wrestling Unrivaled Collection Jon Moxley - 6.5-Inch AEW Action Figure - Series 5",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Jon Moxley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "AEW Unrivaled Collection Series 5 ups the ante with the hottest lineup in pro wrestling!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Frankie Kazarians likeness features character-authentic details, including his traditional SCU ring attire.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "frankie-kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "AEW World Tag Team Championship Title",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "frankie-kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "entrance jacket accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "frankie-kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "his first ever AEW action figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "frankie-kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Price: $20.89",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "frankie-kazarian",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Traditional SCU ring attire",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "AEW World Tag Team Championship Title",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Entrance jacket accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

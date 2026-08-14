@@ -1,0 +1,2630 @@
+{
+ "fp_wrestling_jazwares_aew-unrivaled_16_matt-hardy_022c3a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_matt-hardy_022c3a",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_matt-hardy_022c3a",
+   "character_canonical": "matt-hardy",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Matt Hardy"
+  },
+  "identity_hash": "284dd3b34c0b1aca",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-16-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-matt-hardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Twist the hand of fate with AEW Unrivaled Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Inspired by Matt's match gear from AEW Dynamite 3/16/22",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Includes alternate head and two alternate fists",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$36.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Inspired by Matt's match gear from AEW Dynamite 3/16/22",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate head",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two alternate fists",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_16_orange-cassidy_81bae4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_orange-cassidy_81bae4",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_orange-cassidy_81bae4",
+   "character_canonical": "orange-cassidy",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Orange Cassidy"
+  },
+  "identity_hash": "dc645e6be39d4c66",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-orange-cassidy-aewu16-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/orange-cassidy-aew-unrivaled-collection-series-16-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://bkcollectables.com/products/aew-unrivaled-series-16-orange-cassidy",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black stretch jeans and white-and-gray hi-top sneakers",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "orange-cassidy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "removable black fabric trucker jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "orange-cassidy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "stoic headscan with removable sunglasses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "orange-cassidy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$23.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "orange-cassidy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$44.99 CAD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "orange-cassidy",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "B&K Collectables cannot guarantee mint packaging.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "orange-cassidy",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black stretch jeans and white-and-gray hi-top sneakers, with a removable black fabric trucker jacket",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black, white-and-gray",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "stoic headscan with removable sunglasses",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "removable sunglasses",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "removable black fabric trucker jacket",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "white-and-gray hi-top sneakers",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Rare 1 of 3000",
+    "evidence_quote_ids": [
+     "w_q3_cassidy_rare"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "removable black fabric trucker jacket",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "removable sunglasses",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_16_jeff-hardy_55b0f1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_jeff-hardy_55b0f1",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_jeff-hardy_55b0f1",
+   "character_canonical": "jeff-hardy",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jeff Hardy"
+  },
+  "identity_hash": "04949d70cc22ced6",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-jeff-hardy-aewu16-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-jeff-hardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black long-sleeve shirt, black cargo jeans, and white-and-black boots, as well as his signature back pocket towel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "two unique headscans featuring full face paint, one with a glaring expression and the other with a fierce roar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "an extra set of hands for screen-accurate signature poses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Manufacturer: Jazwares",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Series: 16",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black long-sleeve shirt, black cargo jeans, and white-and-black boots, with signature back pocket towel",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Two unique headscans featuring full face paint, one with a glaring expression and the other with a fierce roar",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Signature back pocket towel",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two unique headscans featuring full face paint, one with a glaring expression and the other with a fierce roar",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Extra set of hands for screen-accurate signature poses",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2024",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_16_colten-gunn_d4a99f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_colten-gunn_d4a99f",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_colten-gunn_d4a99f",
+   "character_canonical": "colten-gunn",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Colten Gunn"
+  },
+  "identity_hash": "0f77aab03a25d9b7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-colten-gunn-aewu16-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-colten-gunn",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/colten-gunn-aew-unrivaled-collection-series-16-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Colten arrives with a high-energy headscan featuring a top knot hairstyle.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "colten-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "He matches his brother Austin in aquamarine tights with all-over paisley print, zebra stripe details, and 'Gunn' logo at the waist. His look is complete with a matching aquamarine arm sleeve, white boots, and accurate tattoos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "colten-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Gunn's accessories include an additional pair of hands for on-point entrance poses and the AEW World Tag Team Championship title belt!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "colten-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$13.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "colten-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #159 Colten Gunn",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "colten-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$29.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "colten-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Matches his brother Austin in aquamarine tights with all-over paisley print, zebra stripe details, and 'Gunn' logo at the waist. His look is complete with a matching aquamarine arm sleeve, white boots, and accurate tattoos.",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Aquamarine tights and arm sleeve, white boots",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "High-energy headscan featuring a top knot hairstyle",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of hands for on-point entrance poses",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "AEW World Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$13.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ]
+     },
+     {
+      "value": "$29.00 USD",
+      "evidence_quote_ids": [
+       "f_q6"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_16_konosuke-takeshi_48032f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_konosuke-takeshi_48032f",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_konosuke-takeshi_48032f",
+   "character_canonical": "konosuke-takeshita",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Konosuke Takeshita"
+  },
+  "identity_hash": "2eb0a79e11769784",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/konosuke-takeshita-aew-unrivaled-collection-series-16-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.popcultcha.com.au/aew-all-elite-wrestling-konosuke-takeshita-unrivalled-collection-chase-edition-6-5-scale-action-figure-series-16.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.comixoasis.com/products/aew-unrivaled-series-16-konosuke-takeshita-1-of-5-000-chase",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Chase (1 of 5000)",
+    "evidence_quote_ids": [
+     "w_q2_takeshita_chase"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_16_julia-hart_4257d4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_julia-hart_4257d4",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_julia-hart_4257d4",
+   "character_canonical": "julia-hart",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Julia Hart"
+  },
+  "identity_hash": "6ff9dcb7cd64ff4e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-julia-hart",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-julia-hart-aewu16-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/julia-hart-aew-unrivaled-collection-series-16-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #160 Julia Hart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2024,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "black bodysuit with cut-out mesh heart design on the chest, torso straps, and cut-out thigh panels with fishnet detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black 'Heartless' print sleeves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "glowering headscan featuring long blonde hair and dark makeup",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "her signature black hat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "a black mask and an alternate set of hands for ominous entrance poses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "julia-hart",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black bodysuit with cut-out mesh heart design on the chest, torso straps, and cut-out thigh panels with fishnet detailing",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Glowering headscan featuring long blonde hair and dark makeup",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Signature black hat",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black 'Heartless' print sleeves",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Black mask",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate set of hands (ominous entrance poses)",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_16_austin-gunn_ca1d99": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_austin-gunn_ca1d99",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_16_austin-gunn_ca1d99",
+   "character_canonical": "austin-gunn",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "16",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Austin Gunn"
+  },
+  "identity_hash": "26e18773006008e3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-orange-cassidy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_takeshita_s16",
+     "url": "https://wrestlingfiguredatabase.com/products/aew-jazwares-unrivaled-collection-series-16-konosuke-takeshita",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_collection_page",
+     "url": "https://wrestlingfiguredatabase.com/collections/jazwares-all-elite-wrestling-unrivaled-collection",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/364990/official-jazwares-aew-checklist",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_amoktime_jericho_s8",
+     "url": "https://amoktime.com/jazwares-aew-unrivaled-series-8-chris-jericho-collection-6-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_checklist_query",
+     "url": "https://www.google.com/search?q=Jazwares+AEW+Unrivaled+Collection+Series+16+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_wfd_series16_query",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase.com+Series+16+AEW+Unrivaled+Orange+Cassidy+Konosuke+Takeshita",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_websearch_line_facts_query",
+     "url": "https://www.google.com/search?q=AEW+Unrivaled+Collection+Jazwares+6-inch+scale+figures+MSRP+packaging+card+back",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-16-austin-gunn-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlrs.com/products/austin-gunn-aew-unrivaled-series-16",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-austin-gunn-aewu16-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy, Jeff Hardy, Matt Hardy, Austin Gunn, Colten Gunn, Julia Hart, Konosuke Takeshita",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_takeshita_chase",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Konosuke Takeshita (Chase 1 of 5000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Konosuke Takeshita",
+      "character_variant": "Chase 1 of 5000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_cassidy_rare",
+     "source_id": "w_wrestlingfigs_forum_checklist",
+     "text": "Orange Cassidy (Rare 1 of 3000)",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Orange Cassidy",
+      "character_variant": "Rare 1 of 3000",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_cassidy_wave_id",
+     "source_id": "w_wfd_orange_cassidy_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #155 Orange Cassidy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Orange Cassidy",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q5_takeshita_wave_id",
+     "source_id": "w_wfd_takeshita_s16",
+     "text": "2024 AEW Jazwares Unrivaled Collection Series 16 #161 Konosuke Takeshi[ta]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Konosuke Takeshita",
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "w_q6_scale",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6\" Scale",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_scale_metric",
+     "source_id": "w_amoktime_jericho_s8",
+     "text": "6-inch / 15.24-cm tall figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Jazwares",
+      "product_line": "AEW Unrivaled Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "The sixteenth series of these highly articulated and collectible action figures, each boasts 25 points of articulation and are authentically styled from actual from the AEW Dynamite and PPV events!!!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Manufacturer: Jazwares",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Barcode: 191726485346",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Product Code: AEW0396",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Join the Bang Bang Gang with the action figure debut of Austin Gunn in Jazwares AEW Unrivaled Series 16! Austin comes ready to Quickdraw with a high-energy headscan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "aquamarine tights with all-over paisley print, zebra stripe details, and 'Gunn' logo at the waist",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "a matching aquamarine headband, sunglasses, white boots, and accurate tattoos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "An additional pair of hands for on-point entrance poses and the AEW World Tag Team Championship title belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "SKU: AEWU16-04",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "austin-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "Become a Man of the Year with AEW Unrivaled Ethan Page. Featuring 25 points of articulation to land the Ego's Edge, this deluxe 6-inch action figure is inspired by Ethan's match gear from AEW Dynamite 3/10/21.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "ethan-page",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "aquamarine tights with all-over paisley print, zebra stripe details, and 'Gunn' logo at the waist",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "aquamarine",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "high-energy headscan",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "aquamarine tights with all-over paisley print, zebra stripe details, and 'Gunn' logo at the waist",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "matching aquamarine headband, sunglasses, white boots, and accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "An additional pair of hands for on-point entrance poses",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "AEW World Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "AEW0396",
+      "evidence_quote_ids": [
+       "f_q4"
+      ]
+     },
+     {
+      "value": "AEWU16-04",
+      "evidence_quote_ids": [
+       "f_q9"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

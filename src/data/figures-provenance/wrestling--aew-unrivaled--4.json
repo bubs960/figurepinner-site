@@ -1,0 +1,2694 @@
+{
+ "fp_wrestling_jazwares_aew-unrivaled_4_ortiz_792235": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_ortiz_792235",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_ortiz_792235",
+   "character_canonical": "ortiz",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "4",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ortiz"
+  },
+  "identity_hash": "1f3ade21991df028",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_omega",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-omega",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_s4_lineup",
+     "url": "https://wrestlingfigurenews.com/2021/01/19/aew-unrivaled-series-4-lineup-kenny-omega-cody-rhodes-matt-hardy-proud-and-powerful-sammy-guevara/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374037/complete-jazwares-checklist-order-organized",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_omega",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ringside_s4_set",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-set-aewu4-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-oritz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.toy-wrangler.com/products/aew-ortiz-jazwares-unrivaled-collection-series-4-action-figure-33",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_omega",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_omega",
+     "text": "Series: 4",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_omega",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_omega",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "Santana, Ortiz, Matt Hardy, Sammy Guevara, Cody Rhodes, Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "first-time figures of Santana and Ortiz (aka Proud and Powerful) and Sammy Guevara, as well as new versions of Cody Rhodes and Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "the first AEW figure of Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Matt Hardy"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_forum_checklist",
+     "text": "#28 Kenny Omega, #29 Cody, #30 Sammy Guevara \"Hit Me Up\", #30 Sammy Guevara \"Inner Circle Forever\", #31 Matt Hardy, #32 Santana, #33 Ortiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_forum_checklist",
+     "text": "#34 Cody (Chase variant), #35 Matt Hardy (Rare variant), #36 Jurassic Express (two versions: A and B)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_omega",
+     "text": "6.5-Inch Collectible AEW Action Figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_omega",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_omega",
+     "text": "AEW Unrivaled Collection captures the excitement and action of All Elite Wrestling in authentically detailed and scaled figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_s4_set",
+     "text": "AEW Unrivaled 4 - Set of 6 AEW Toy Wrestling Action Figures by Jazwares includes: Kenny Omega, Cody, Sammy Guevara, Matt Hardy, Santana & Ortiz!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Pro-wrestling is back with AEW! The AEW Unrivaled Collection figures capture the excitement and action of All Elite Wrestling in authentically detailed and scaled 6.5 collectible action figures.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "ortiz",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Release Date: June 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "ortiz",
+      "character_variant": null,
+      "year": "2021",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "The All Elite Wrestling Unrivaled Assortment features the highly detailed 6.5-inch pro-wrestling Ortiz action figure, making it an incredible addition to any collection!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "ortiz",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Sold out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "character_canonical": "ortiz",
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "June 2021",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_4_cody-rhodes_4231c8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_cody-rhodes_4231c8",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_cody-rhodes_4231c8",
+   "character_canonical": "cody-rhodes",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "4",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cody Rhodes"
+  },
+  "identity_hash": "3f3317c633f9bf4c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_omega",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-omega",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_s4_lineup",
+     "url": "https://wrestlingfigurenews.com/2021/01/19/aew-unrivaled-series-4-lineup-kenny-omega-cody-rhodes-matt-hardy-proud-and-powerful-sammy-guevara/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374037/complete-jazwares-checklist-order-organized",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_omega",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ringside_s4_set",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-set-aewu4-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-cody-aewu4-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/cody-rhodes-aew-unrivaled-series-4-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-cody",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_omega",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_omega",
+     "text": "Series: 4",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_omega",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_omega",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "Santana, Ortiz, Matt Hardy, Sammy Guevara, Cody Rhodes, Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "first-time figures of Santana and Ortiz (aka Proud and Powerful) and Sammy Guevara, as well as new versions of Cody Rhodes and Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "the first AEW figure of Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Matt Hardy"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_forum_checklist",
+     "text": "#28 Kenny Omega, #29 Cody, #30 Sammy Guevara \"Hit Me Up\", #30 Sammy Guevara \"Inner Circle Forever\", #31 Matt Hardy, #32 Santana, #33 Ortiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_forum_checklist",
+     "text": "#34 Cody (Chase variant), #35 Matt Hardy (Rare variant), #36 Jurassic Express (two versions: A and B)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_omega",
+     "text": "6.5-Inch Collectible AEW Action Figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_omega",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_omega",
+     "text": "AEW Unrivaled Collection captures the excitement and action of All Elite Wrestling in authentically detailed and scaled figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_s4_set",
+     "text": "AEW Unrivaled 4 - Set of 6 AEW Toy Wrestling Action Figures by Jazwares includes: Kenny Omega, Cody, Sammy Guevara, Matt Hardy, Santana & Ortiz!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "His tights are black with green and silver animal print designs and he's wearing white boots with 'Elite' 'Lone Wolf' symbols on the sides.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Cody has two interchangeable head scans - one determined and one with a wide smile.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "He also includes one white wrapped hand and black, molded belt accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a removable 'Throne Breaker' t-shirt accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "This AEW® Unrivaled Collection Cody Rhodes figure is based from specific Dynamite, Rampage, and Pay-Per-View Events.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Attire Date: June 29, 2019 @ AEW Fyter Fest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "June 29, 2019 – AEW Fyter Fest",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black tights with green and silver animal print designs; white boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Two interchangeable head scans - one determined and one with a wide smile",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "White boots with 'Elite' and 'Lone Wolf' symbols on the sides",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable 'Throne Breaker' t-shirt accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable head scan - determined",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable head scan - wide smile",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "White wrapped hand accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Black molded belt accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Removable 'Throne Breaker' t-shirt accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_4_sammy-guevara_399767": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_sammy-guevara_399767",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_sammy-guevara_399767",
+   "character_canonical": "sammy-guevara",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "4",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sammy Guevara"
+  },
+  "identity_hash": "442c487c60b5b9f7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_omega",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-omega",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_s4_lineup",
+     "url": "https://wrestlingfigurenews.com/2021/01/19/aew-unrivaled-series-4-lineup-kenny-omega-cody-rhodes-matt-hardy-proud-and-powerful-sammy-guevara/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374037/complete-jazwares-checklist-order-organized",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_omega",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ringside_s4_set",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-set-aewu4-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-sammy-guevara-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-sammy-aewu4-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_omega",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_omega",
+     "text": "Series: 4",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_omega",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_omega",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "Santana, Ortiz, Matt Hardy, Sammy Guevara, Cody Rhodes, Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "first-time figures of Santana and Ortiz (aka Proud and Powerful) and Sammy Guevara, as well as new versions of Cody Rhodes and Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "the first AEW figure of Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Matt Hardy"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_forum_checklist",
+     "text": "#28 Kenny Omega, #29 Cody, #30 Sammy Guevara \"Hit Me Up\", #30 Sammy Guevara \"Inner Circle Forever\", #31 Matt Hardy, #32 Santana, #33 Ortiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_forum_checklist",
+     "text": "#34 Cody (Chase variant), #35 Matt Hardy (Rare variant), #36 Jurassic Express (two versions: A and B)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_omega",
+     "text": "6.5-Inch Collectible AEW Action Figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_omega",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_omega",
+     "text": "AEW Unrivaled Collection captures the excitement and action of All Elite Wrestling in authentically detailed and scaled figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_s4_set",
+     "text": "AEW Unrivaled 4 - Set of 6 AEW Toy Wrestling Action Figures by Jazwares includes: Kenny Omega, Cody, Sammy Guevara, Matt Hardy, Santana & Ortiz!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Each figure features realistic ring wear, accessories, and 25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "1 6.5-Inch Collectible AEW Action Figure, Realistic Ring Wear, Accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "gold and black trunks with an all seeing eye in the front and black wrist tape.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Sammy's gear is rounded out with black knee pads and black and gold kick pad style boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "protruding tongue and slicked back hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "removable leather jacket, 'Hit Me Up' sign and sunglasses accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "sammy-guevara",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Gold and black trunks with an all seeing eye in the front and black wrist tape, black knee pads, and black and gold kick pad style boots",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Protruding tongue and slicked back hair",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable leather jacket",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "\"Hit Me Up\" sign",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable leather jacket",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "\"Hit Me Up\" sign",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$44.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 44.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_4_matt-hardy_dca0a3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_matt-hardy_dca0a3",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_matt-hardy_dca0a3",
+   "character_canonical": "matt-hardy",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "4",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Matt Hardy"
+  },
+  "identity_hash": "ba13027c9ae40352",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_omega",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-omega",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_s4_lineup",
+     "url": "https://wrestlingfigurenews.com/2021/01/19/aew-unrivaled-series-4-lineup-kenny-omega-cody-rhodes-matt-hardy-proud-and-powerful-sammy-guevara/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374037/complete-jazwares-checklist-order-organized",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_omega",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ringside_s4_set",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-set-aewu4-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-rarematt",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.toyfarce.com/news/review-jazwares-aew-unrivaled-series-4",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_omega",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_omega",
+     "text": "Series: 4",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_omega",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_omega",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "Santana, Ortiz, Matt Hardy, Sammy Guevara, Cody Rhodes, Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "first-time figures of Santana and Ortiz (aka Proud and Powerful) and Sammy Guevara, as well as new versions of Cody Rhodes and Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "the first AEW figure of Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Matt Hardy"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_forum_checklist",
+     "text": "#28 Kenny Omega, #29 Cody, #30 Sammy Guevara \"Hit Me Up\", #30 Sammy Guevara \"Inner Circle Forever\", #31 Matt Hardy, #32 Santana, #33 Ortiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_forum_checklist",
+     "text": "#34 Cody (Chase variant), #35 Matt Hardy (Rare variant), #36 Jurassic Express (two versions: A and B)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_omega",
+     "text": "6.5-Inch Collectible AEW Action Figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_omega",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_omega",
+     "text": "AEW Unrivaled Collection captures the excitement and action of All Elite Wrestling in authentically detailed and scaled figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_s4_set",
+     "text": "AEW Unrivaled 4 - Set of 6 AEW Toy Wrestling Action Figures by Jazwares includes: Kenny Omega, Cody, Sammy Guevara, Matt Hardy, Santana & Ortiz!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "matt-hardy",
+      "character_variant": "rare-edition",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "May 6, 2020 @ AEW Dynamite",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "matt-hardy",
+      "character_variant": "rare-edition",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "1 of 500",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "matt-hardy",
+      "character_variant": "rare-edition",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "'Broken' Matt Hardy comes with his glorious Broken attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "matt-hardy",
+      "character_variant": "broken",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "but also with his trusted accomplice, the drone Vanguard-1, which also has a Matt Hardy hologram.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "matt-hardy",
+      "character_variant": "broken",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "The hologram's neck is also articulated!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "matt-hardy",
+      "character_variant": "broken",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_4_kenny-omega_74d4a1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_kenny-omega_74d4a1",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_kenny-omega_74d4a1",
+   "character_canonical": "kenny-omega",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "4",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kenny Omega"
+  },
+  "identity_hash": "c9ecaf293689ab5f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_omega",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-omega",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_s4_lineup",
+     "url": "https://wrestlingfigurenews.com/2021/01/19/aew-unrivaled-series-4-lineup-kenny-omega-cody-rhodes-matt-hardy-proud-and-powerful-sammy-guevara/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374037/complete-jazwares-checklist-order-organized",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_omega",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ringside_s4_set",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-set-aewu4-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2021/07/15/aew-unrivaled-kenny-omega-review-wave-4/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_omega",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_omega",
+     "text": "Series: 4",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_omega",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_omega",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "Santana, Ortiz, Matt Hardy, Sammy Guevara, Cody Rhodes, Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "first-time figures of Santana and Ortiz (aka Proud and Powerful) and Sammy Guevara, as well as new versions of Cody Rhodes and Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "the first AEW figure of Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Matt Hardy"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_forum_checklist",
+     "text": "#28 Kenny Omega, #29 Cody, #30 Sammy Guevara \"Hit Me Up\", #30 Sammy Guevara \"Inner Circle Forever\", #31 Matt Hardy, #32 Santana, #33 Ortiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_forum_checklist",
+     "text": "#34 Cody (Chase variant), #35 Matt Hardy (Rare variant), #36 Jurassic Express (two versions: A and B)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_omega",
+     "text": "6.5-Inch Collectible AEW Action Figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_omega",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_omega",
+     "text": "AEW Unrivaled Collection captures the excitement and action of All Elite Wrestling in authentically detailed and scaled figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_s4_set",
+     "text": "AEW Unrivaled 4 - Set of 6 AEW Toy Wrestling Action Figures by Jazwares includes: Kenny Omega, Cody, Sammy Guevara, Matt Hardy, Santana & Ortiz!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Pro-wrestling is back with AEW! The AEW Unrivaled Collection figures capture the excitement and action of All Elite Wrestling in authentically detailed and scaled 6.5 collectible action figures.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each figure features realistic ring wear, accessories, and 25 points of articulation!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "1 6.5-Inch Collectible AEW Action Figure, Realistic Ring Wear, Accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Release Date: June 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "I like the detailing on this attire and the subtle airbrush-style application of the gold, silver, white and dark blue.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "This is one of those cases where it's so off it kinda messes up everything. It's sculpted too high and poofs up in a way to give Omega helmet hair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "I really appreciate the extra poseability offered with the Unrivaled line. Double-jointed elbows seems so obvious, but they're a gamechanger.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "He also has swappable grappling hands. I always appreciate those options.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "This time he just has a basic vest that accurately has little detail.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "kenny-omega",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Airbrush-style attire detailing in gold, silver, white and dark blue",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Gold, silver, white, dark blue",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Sculpted too high and poofs up in a way to give Omega helmet hair",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Swappable grappling hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Basic vest with little detail",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Swappable grappling hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "June 2021",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_jazwares_aew-unrivaled_4_santana_178e6c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_santana_178e6c",
+  "target": {
+   "figure_id": "fp_wrestling_jazwares_aew-unrivaled_4_santana_178e6c",
+   "character_canonical": "santana",
+   "character_variant": null,
+   "manufacturer": "jazwares",
+   "product_line": "aew-unrivaled",
+   "release_wave": "4",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Santana"
+  },
+  "identity_hash": "f67519378ba3900b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_omega",
+     "url": "https://wrestlingfiguredatabase.com/products/unrivaled4-omega",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_s4_lineup",
+     "url": "https://wrestlingfigurenews.com/2021/01/19/aew-unrivaled-series-4-lineup-kenny-omega-cody-rhodes-matt-hardy-proud-and-powerful-sammy-guevara/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_forum_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/374037/complete-jazwares-checklist-order-organized",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_omega",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-kenny-omega-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_ringside_s4_set",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-set-aewu4-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/aew-all-elite-wrestling-unrivaled-collection-series-4-santana-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/aew-wrestling-figures-santana-aewu4-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_omega",
+     "text": "Line: Unrivaled Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_omega",
+     "text": "Series: 4",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_omega",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_omega",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "Santana, Ortiz, Matt Hardy, Sammy Guevara, Cody Rhodes, Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "first-time figures of Santana and Ortiz (aka Proud and Powerful) and Sammy Guevara, as well as new versions of Cody Rhodes and Kenny Omega",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_s4_lineup",
+     "text": "the first AEW figure of Matt Hardy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": 2021,
+      "character_canonical": "Matt Hardy"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_forum_checklist",
+     "text": "#28 Kenny Omega, #29 Cody, #30 Sammy Guevara \"Hit Me Up\", #30 Sammy Guevara \"Inner Circle Forever\", #31 Matt Hardy, #32 Santana, #33 Ortiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_forum_checklist",
+     "text": "#34 Cody (Chase variant), #35 Matt Hardy (Rare variant), #36 Jurassic Express (two versions: A and B)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_omega",
+     "text": "6.5-Inch Collectible AEW Action Figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_omega",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": "Kenny Omega"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_omega",
+     "text": "AEW Unrivaled Collection captures the excitement and action of All Elite Wrestling in authentically detailed and scaled figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_s4_set",
+     "text": "AEW Unrivaled 4 - Set of 6 AEW Toy Wrestling Action Figures by Jazwares includes: Kenny Omega, Cody, Sammy Guevara, Matt Hardy, Santana & Ortiz!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Jazwares",
+      "product_line": "Unrivaled Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "June 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": 2021,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black ring pants, knee pads and black kick pad style boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black and gold to accent",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "two interchangeable head scans - both featuring Puerto Rican bandana and one with the bandana over his eye",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "interchangeable hand, Puerto Rican flag and sock accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jazwares",
+      "product_line": "aew-unrivaled",
+      "year": null,
+      "character_canonical": "santana",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black ring pants, knee pads and black kick pad style boots, black and gold to accent",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Puerto Rican bandana",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "interchangeable head scan with the bandana over his eye",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "interchangeable hand",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Puerto Rican flag",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "sock",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "June 2021",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q2"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 21.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}
