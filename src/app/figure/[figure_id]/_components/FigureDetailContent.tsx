@@ -21,6 +21,7 @@ import EmptyState from './EmptyState'
 import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
 import MobileActionBar from './MobileActionBar'
+import LiquidBackground from './LiquidBackground'
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
@@ -867,6 +868,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
+      {/* v4 Phase 6 — liquid bg (flag-gated, renders null unless
+          NEXT_PUBLIC_LIQUID_BG === '1'; CWV canary gate binds, plan §6).
+          Layer is fixed z-0; the sibling wrapper below lifts all page content
+          to z-1 so the drift never paints over text. */}
+      <LiquidBackground />
       <JsonLd data={jsonLd} />
       <FunnelEvent
         event="figure_view"
@@ -876,6 +882,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           line: local.product_line,
         }}
       />
+      {/* v4 §6 content wrapper — z-1 above the liquid layer; no visual effect
+          when the flag is off (static positioning context only). */}
+      <div style={{ position: 'relative', zIndex: 1 }}>
       {/* Adsterra Social Bar — REMOVED 2026-07-26 (Steve's decision: "kill social bar,
           damage risk not worth small cost"). Do NOT re-add without reading
           WEB-ANDROID-REDIRECT-ROOTCAUSE-2026-07-26.md first. Reason, in short: the unit's
@@ -1191,6 +1200,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       />
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}
+      </div>
     </div>
   )
 }

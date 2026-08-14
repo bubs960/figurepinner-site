@@ -18,6 +18,13 @@ function gitSha(): string {
 const nextConfig: NextConfig = {
   poweredByHeader: false,
 
+  // Durable fix for the recurring `.next` corruption (3 occurrences through
+  // 2026-08-13, root cause: TWO chats' dev servers sharing one `.next`).
+  // A session that needs its own dev server sets FP_DIST_DIR (e.g.
+  // "next-dev-b") so concurrent servers never share build artifacts.
+  // Unset = ".next" exactly as before — deploy pipeline unaffected.
+  distDir: process.env.FP_DIST_DIR || '.next',
+
   // WO-2 correction (2026-07-17): adding a real eslint.config.mjs (to make
   // `npm run lint` a real command instead of the interactive setup prompt)
   // had an undiscovered side effect -- Next.js's OWN build-time lint step

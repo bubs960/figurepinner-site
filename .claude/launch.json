@@ -24,6 +24,15 @@
       "port": 8123
     },
     {
+      "name": "figurepinner-liquid-canary",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-Command",
+        "$env:FP_DIST_DIR='.next-liquid-canary'; $env:NEXT_PUBLIC_LIQUID_BG='1'; npx next dev -p 3007"
+      ],
+      "port": 3007
+    },
+    {
       "name": "figurepinner-site-alt",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
