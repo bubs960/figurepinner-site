@@ -221,6 +221,23 @@
   animation: fpMoteUp 8s ease-in-out infinite;
 }
 
+/* ── scroll-calm (jank fix, 2026-08-14) ──
+   While the page is actively scrolling (and whenever the hero is fully
+   off-screen) the scene gets this class: the decorative always-running
+   layers pause so the main thread/compositor is free for the scroll
+   itself. 150ms pauses on 8-44s loops are imperceptible. The ticker
+   marquee deliberately KEEPS running (transform-only, cheap — and a
+   visibly frozen ticker would read as a glitch). SMIL turbulence is
+   paused from JS (svg.pauseAnimations()) since SMIL ignores CSS. */
+.scrollCalm .blob,
+.scrollCalm .starLayer,
+.scrollCalm .star,
+.scrollCalm .floor,
+.scrollCalm .mote,
+.scrollCalm .liquid {
+  animation-play-state: paused !important;
+}
+
 /* ── vignette ── */
 .vignetteSoft {
   position: absolute;
@@ -387,8 +404,11 @@
   display: flex;
   align-items: stretch;
   border-top: 1px solid rgba(224, 168, 62, 0.28);
-  background: rgba(8, 8, 13, 0.78);
-  backdrop-filter: blur(10px);
+  /* Scroll-jank fix (Steve report 2026-08-14): backdrop-filter here re-blurred
+     the animated hero behind the bar on EVERY scrolled frame — the seam
+     between hero and shelf is exactly where the stutter showed. Near-opaque
+     bg over an already-dark scene is visually equivalent and free. */
+  background: rgba(8, 8, 13, 0.92);
 }
 .tickerLabel {
   flex-shrink: 0;

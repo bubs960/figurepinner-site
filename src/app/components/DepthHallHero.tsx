@@ -108,6 +108,7 @@ export default function DepthHallHero({
   const mouseRef = useRef({ mx: 0, my: 0 })
   const panelRef = useRef<HTMLDivElement>(null)
   const openerRef = useRef<HTMLElement | null>(null)
+  const sceneRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const prefersReduced =
@@ -117,6 +118,44 @@ export default function DepthHallHero({
     reducedRef.current = prefersReduced
     if (prefersReduced) setReduced(true)
   }, [])
+
+  // Scroll-jank fix (Steve report, 2026-08-14 — stutter at the hero/shelf
+  // seam): pause the hero's decorative animation stack while the page is
+  // actively scrolling, and keep it paused whenever the hero is fully
+  // off-screen. CSS layers pause via the scrollCalm class; the SMIL
+  // turbulence filters must be paused via svg.pauseAnimations() because
+  // SMIL ignores CSS animation-play-state.
+  useEffect(() => {
+    if (reduced) return // reduced-motion already renders everything static
+    const scene = sceneRef.current
+    if (!scene) return
+    const svgs = scene.querySelectorAll('svg')
+
+    let scrolling = false
+    let offscreen = false
+    let idleTimer: ReturnType<typeof setTimeout> | undefined
+    const apply = () => {
+      const calm = scrolling || offscreen
+      scene.classList.toggle(styles.scrollCalm, calm)
+      svgs.forEach(s => { calm ? s.pauseAnimations() : s.unpauseAnimations() })
+    }
+    const onScroll = () => {
+      if (!scrolling) { scrolling = true; apply() }
+      clearTimeout(idleTimer)
+      idleTimer = setTimeout(() => { scrolling = false; apply() }, 150)
+    }
+    const io = new IntersectionObserver(
+      entries => { offscreen = !entries[0].isIntersecting; apply() },
+      { threshold: 0 },
+    )
+    io.observe(scene)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      clearTimeout(idleTimer)
+      io.disconnect()
+    }
+  }, [reduced])
 
   // Inspect panel focus management (review finding, 2026-07-24): dialog
   // semantics need initial focus, a Tab trap, and focus restoration —
@@ -202,6 +241,7 @@ export default function DepthHallHero({
 
   return (
     <section
+      ref={sceneRef}
       className={styles.scene}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
