@@ -1,0 +1,1460 @@
+{
+ "fp_wrestling_mattel_ultimate-edition_7_fiend-bray-wyatt_53a30d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_7_fiend-bray-wyatt_53a30d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_7_fiend-bray-wyatt_53a30d",
+   "character_canonical": "fiend-bray-wyatt",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "7",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Fiend Bray Wyatt"
+  },
+  "identity_hash": "f761bb625c7ca48b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_ue_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_ue7_fiend",
+     "url": "https://wrestlingfiguredatabase.com/products/ue7-fiend",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_hogan_ue7",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-hulk-hogan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_fiend_ue7",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-the-fiend-bray-wyatt-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_ue7_fiend",
+     "url": "https://pwcatalog.com/products/ue7-fiend",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-the-fiend-ult-020.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.toyfarce.com/news/review-mattels-wwe-ultimate-the-fiend",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_ue_collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"Hollywood\" Hulk Hogan",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_ue_collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"The Fiend\" Bray Wyatt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_ue7_fiend",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"The Fiend\" Bray Wyatt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ue7_fiend",
+     "text": "Line: Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_pwcatalog_ue7_fiend",
+     "text": "Line: Ultimate Edition | Series: 7 | Promotion: World Wrestling Entertainment | Release Date: 2021 | Released In: United States | Made In: China | Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "swappable heads, interchangeable hands\" and \"authentic entrance gear\"; \"ab-crunch torso, double-jointed arms and knees, articulated toes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "Authentic entrance gear helps pose each as they make their way to the ring",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "Each figure sold separately, subject to availability; colors and decorations may vary",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "$69.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "The Fiend Bray Wyatt",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "UPC: 194735020546 | Stock #: 411474",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "UPC: 194735020591",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE® Superstar moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "authentic ring gear and entrance attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$23.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "The 2 heads are perfectly creepy.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Like all Ultimates before him, the Fiend has some decent articulation.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The figure comes with his jacket and extra arms to go with it, a second head with the tongue out, and his Fiend-designed belt from when he was the WWE Champion.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "The detail on all the tattoos is really good, it was nice to be able to look at exactly what he has on his arms.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "I do prefer the look with the jacket, but he also looks great without.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Apr 7",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "fiend-bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "authentic ring gear and entrance attire",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The 2 heads are perfectly creepy",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Like all Ultimates before him, the Fiend has some decent articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The figure comes with his jacket and extra arms to go with it, a second head with the tongue out, and his Fiend-designed belt from when he was the WWE Champion",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "The detail on all the tattoos is really good, it was nice to be able to look at exactly what he has on his arms",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Jacket",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Extra arms to go with it (the jacket)",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Second head with the tongue out",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Fiend-designed belt from when he was the WWE Champion",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_ultimate-edition_7_hollywood-hulk-hogan_2d0540": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_7_hollywood-hulk-hogan_2d0540",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_7_hollywood-hulk-hogan_2d0540",
+   "character_canonical": "hollywood-hulk-hogan",
+   "character_variant": "hollywood",
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "7",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Hollywood Hulk Hogan"
+  },
+  "identity_hash": "dbe1a69a318c6244",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_ue_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_ue7_fiend",
+     "url": "https://wrestlingfiguredatabase.com/products/ue7-fiend",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_hogan_ue7",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-hulk-hogan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_fiend_ue7",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-the-fiend-bray-wyatt-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_ue7_fiend",
+     "url": "https://pwcatalog.com/products/ue7-fiend",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.wrestlezone.com/news/1213283-collectors-corner-mattel-wwe-ultimate-edition-series-7-hollywood-hogan-the-fiend-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-hulk-hogan-ult-021.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://lylesmoviefiles.com/2025/04/28/ultimate-edition-hollywood-hogan/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_ue_collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"Hollywood\" Hulk Hogan",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_ue_collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"The Fiend\" Bray Wyatt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_ue7_fiend",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"The Fiend\" Bray Wyatt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ue7_fiend",
+     "text": "Line: Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_pwcatalog_ue7_fiend",
+     "text": "Line: Ultimate Edition | Series: 7 | Promotion: World Wrestling Entertainment | Release Date: 2021 | Released In: United States | Made In: China | Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "swappable heads, interchangeable hands\" and \"authentic entrance gear\"; \"ab-crunch torso, double-jointed arms and knees, articulated toes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "Authentic entrance gear helps pose each as they make their way to the ring",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "Each figure sold separately, subject to availability; colors and decorations may vary",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "$69.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "The Fiend Bray Wyatt",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "UPC: 194735020546 | Stock #: 411474",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "UPC: 194735020591",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "$54.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "authentic ring gear and entrance attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "authentic poses, incredible signature moves and the ultimate pose-and-play action",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "He's sporting the touched-up lightning along his tights with the blue airbrushing for extra detail.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "My favorite is the work on the boots with the airbrushed Hollywood on the outside and nWo on the inner portion.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Per the norm with the UE figures, we get two additional head sculpts. One is a hyped-up angry face and the other is a neutral expression.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Mattel continues to push the limits with this line as Hollywood gets the new addition of butterfly joints.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Naturally he has the nWo spray painted WCW world title.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Mattel might eventually change up the packaging, but for now they're sticking with the stark white with red accents.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Hollywood Hogan clocks in at the standard Ultimate Edition price of $30.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "April 28, 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2025,
+      "character_canonical": "hollywood-hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Authentic ring gear and entrance attire",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Touched-up lightning along the tights with blue airbrushing",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Two additional head sculpts included: a hyped-up angry face and a neutral expression",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation with ab-crunch torso, double-jointed elbows and knees, plus new butterfly joints",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "resolved",
+    "value": "Stark white packaging with red accents",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "nWo spray painted WCW world title",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Airbrushed Hollywood on the outside and nWo on the inner portion of the boots",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Touched-up lightning along the tights with the blue airbrushing",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "UPC: 194735020546 | Stock #: 411474",
+    "evidence_quote_ids": [
+     "w_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$30 (standard Ultimate Edition price)",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 30,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     },
+     {
+      "value": "$54.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 54.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_ultimate-edition_7_hulk-hogan_cdeae8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_7_hulk-hogan_cdeae8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_7_hulk-hogan_cdeae8",
+   "character_canonical": "hulk-hogan",
+   "character_variant": "hollywood",
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "7",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Hollywood Hulk Hogan"
+  },
+  "identity_hash": "2d0fe7f41a033b67",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_ue_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_ue7_fiend",
+     "url": "https://wrestlingfiguredatabase.com/products/ue7-fiend",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_hogan_ue7",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-hulk-hogan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_fiend_ue7",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-the-fiend-bray-wyatt-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_ue7_fiend",
+     "url": "https://pwcatalog.com/products/ue7-fiend",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-hulk-hogan-ult-021.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shumistore.com/products/mattel-wwe-ultimate-edition-hollywood-hulk-hogan-wave-7-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.wrestlezone.com/news/1213283-collectors-corner-mattel-wwe-ultimate-edition-series-7-hollywood-hogan-the-fiend-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_ue_collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"Hollywood\" Hulk Hogan",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_ue_collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"The Fiend\" Bray Wyatt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_ue7_fiend",
+     "text": "2021 WWE Mattel Ultimate Edition Series 7 \"The Fiend\" Bray Wyatt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ue7_fiend",
+     "text": "Line: Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_pwcatalog_ue7_fiend",
+     "text": "Line: Ultimate Edition | Series: 7 | Promotion: World Wrestling Entertainment | Release Date: 2021 | Released In: United States | Made In: China | Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "swappable heads, interchangeable hands\" and \"authentic entrance gear\"; \"ab-crunch torso, double-jointed arms and knees, articulated toes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "Authentic entrance gear helps pose each as they make their way to the ring",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "Each figure sold separately, subject to availability; colors and decorations may vary",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "$69.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "The Fiend Bray Wyatt",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_hogan_ue7",
+     "text": "UPC: 194735020546 | Stock #: 411474",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "Hollywood Hulk Hogan"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_fiend_ue7",
+     "text": "UPC: 194735020591",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "character_canonical": "The Fiend Bray Wyatt"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "authentic ring gear and entrance attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE Superstar moments.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows for authentic poses, incredible signature moves and the ultimate pose-and-play action.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$54.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "authentic ring gear and entrance attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "TrueFX enhanced facial detailing for life-like authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE Superstar moments.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$49.95",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "hulk-hogan",
+      "character_variant": "hollywood",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "authentic ring gear and entrance attire",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Swappable parts, including heads, arms, hands, and attire to recreate favorite WWE Superstar moments",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$54.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 54.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$49.95",
+      "evidence_quote_ids": [
+       "f_q9"
+      ],
+      "price_detail": {
+       "amount": 49.95,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

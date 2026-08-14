@@ -1,0 +1,993 @@
+{
+ "fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00",
+   "character_canonical": "brock-lesnar",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Brock Lesnar"
+  },
+  "identity_hash": "a5ef0c2e1f962086",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_lesnar",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-ultimate-edition-series-15-brock-lesnar",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_warrior",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-ultimate-edition-series-14-ultimate-warrior",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_lesnar",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-wave-15-brock-lesnar-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-brock-lesnar-ult-048.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://popfreakcollectibles.com/products/mattel-wwe-ultimate-edition-wave-15-brock-lesnar",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_lesnar",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_lesnar",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_lesnar",
+     "text": "Attire Date: Jan. 1, 2022 @ WWE Day 1",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_warrior",
+     "text": "2022 WWE Mattel Ultimate Edition Series 15 Ultimate Warrior",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ultimate Warrior",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_warrior",
+     "text": "Attire Date Reference: The figure represents gear worn on \"Mar. 24, 1991 @ WWF WrestleMania VII\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ultimate Warrior",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "Series 15 (2)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "swappable heads, interchangeable hands, an ab-crunch torso, double-jointed arms and knees, articulated toes, and more.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_lesnar",
+     "text": "WWE Wrestling Ultimate Edition Wave 15 Brock Lesnar Action Figure",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_lesnar",
+     "text": "6-inch Ultimate Edition figures",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_lesnar",
+     "text": "Release Date: January 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_lesnar",
+     "text": "extra heads, interchangeable arms, swappable hands, and authentic entrance gear",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_lesnar",
+     "text": "TrueFX life-like detailing and more than 30 points of articulation.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Fight shorts featuring the beast symbol",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "short, laced black boots",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "three interchangeable bearded head scans",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "interchangeable, gloved 'Lesnar' hands",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Swappable parts, including heads, arms, hands, and attire",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Highly detailed with TrueFX life-like detailing and featuring more than 30 points of articulation, these 6-inch Ultimate Edition figures let WWE collectors and kids recreate everything from entrance poses to in-ring finishers for the ultimate play-and-display experience.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "multiple heads, swappable hands, and authentic attire",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Jan. 1, 2022 @ WWE Day 1",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black fight shorts featuring the beast symbol; short, laced black boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Three interchangeable bearded head scans with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fight shorts featuring the beast symbol",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Three interchangeable bearded head scans",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Interchangeable, gloved 'Lesnar' hands",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Three interchangeable bearded head scans",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable, gloved 'Lesnar' hands",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2022",
+    "evidence_quote_ids": [
+     "w_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_ultimate-edition_15_ultimate-warrior_a47c9b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_15_ultimate-warrior_a47c9b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_15_ultimate-warrior_a47c9b",
+   "character_canonical": "ultimate-warrior",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ultimate Warrior"
+  },
+  "identity_hash": "04d2bf2e12510695",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_lesnar",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-ultimate-edition-series-15-brock-lesnar",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_warrior",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-ultimate-edition-series-14-ultimate-warrior",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_lesnar",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-wave-15-brock-lesnar-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-ultimate-ult-047.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlrs.com/products/ultimate-warrior-wwe-ultimate-edition-series-15",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-wave-15-ultimate-warrior-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_lesnar",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_lesnar",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_lesnar",
+     "text": "Attire Date: Jan. 1, 2022 @ WWE Day 1",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_warrior",
+     "text": "2022 WWE Mattel Ultimate Edition Series 15 Ultimate Warrior",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ultimate Warrior",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_warrior",
+     "text": "Attire Date Reference: The figure represents gear worn on \"Mar. 24, 1991 @ WWF WrestleMania VII\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ultimate Warrior",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "Series 15 (2)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "swappable heads, interchangeable hands, an ab-crunch torso, double-jointed arms and knees, articulated toes, and more.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_lesnar",
+     "text": "WWE Wrestling Ultimate Edition Wave 15 Brock Lesnar Action Figure",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_lesnar",
+     "text": "6-inch Ultimate Edition figures",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_lesnar",
+     "text": "Release Date: January 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Brock Lesnar",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_lesnar",
+     "text": "extra heads, interchangeable arms, swappable hands, and authentic entrance gear",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_lesnar",
+     "text": "TrueFX life-like detailing and more than 30 points of articulation.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "removable blue and yellow tasseled 'Ultimate Warrior' jacket and pink, yellow and black ring gear featuring the visages of Warrior himself and 'Macho Man' Randy Savage",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "two interchangeable headsculpts - one with a painted face and the other 'Dingo' style",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "TrueFX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Approximately 6-inches tall",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "the knee pads are pieces of artwork in their own right",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "January 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "$32.29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "extra heads, interchangeable arms, swappable hands, and authentic entrance gear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Represents gear worn on Mar. 24, 1991 @ WWF WrestleMania VII",
+    "evidence_quote_ids": [
+     "w_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Removable blue and yellow tasseled jacket; pink, yellow and black ring gear featuring the visages of Warrior and 'Macho Man' Randy Savage",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Two interchangeable headsculpts - one with a painted face and the other 'Dingo' style",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Knee pads are pieces of artwork in their own right",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable jacket and ring gear featuring the visages of Warrior himself and 'Macho Man' Randy Savage",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable 'Dingo' style headsculpt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2023",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$32.29",
+      "evidence_quote_ids": [
+       "f_q9"
+      ],
+      "price_detail": {
+       "amount": 32.29,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

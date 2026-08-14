@@ -1,0 +1,937 @@
+{
+ "fp_wrestling_mattel_ultimate-edition_3_finn-balor_a7ea9c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_3_finn-balor_a7ea9c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_3_finn-balor_a7ea9c",
+   "character_canonical": "finn-balor",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Finn Balor"
+  },
+  "identity_hash": "613fdbb80b4402c8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_ue3_finn",
+     "url": "https://wrestlingfiguredatabase.com/products/ue3-finn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_ue3_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_ult007",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-wrestling-figures-set-ult-007.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_finn_demon",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-ultimate-finn-balor-demon-action-figure/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-finn-balor-ult-008.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.wrestlezone.com/news/1142601-collectors-corner-wwe-ultimate-edition-series-3-finn-balor-and-triple-h-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_ult007",
+     "text": "WWE Ultimate Edition Wrestling Figures Set - ULT-007. This set includes: Demon Finn Balor & Triple H (HHH)!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_ult007",
+     "text": "$59.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_ult007",
+     "text": "authentic ring gear and entrance attire",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_ult007",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_ult007",
+     "text": "swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE Superstar moments",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_ue3_finn",
+     "text": "2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_ue3_finn",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_ue3_collection",
+     "text": "Each highly detailed 6-inch tall action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_ue3_collection",
+     "text": "TrueFX technology and 30+ points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ue3_collection",
+     "text": "swappable heads, interchangeable hands, an ab-crunch torso, double-jointed arms and knees, articulated toes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing red and black trunks, black teeth knee pads and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "removable red drape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "two interchangeable heads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "body paint, more demonic than ever with teeth, tongue and rip designs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "tassels, an entrance headdress, interchangeable hand accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red and black trunks, black teeth knee pads, black boots, with a removable red drape",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red and black",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Demonic body paint with teeth, tongue and rip designs",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable red drape",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable red drape",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Entrance headdress",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_ultimate-edition_3_triple-h_9364e6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_3_triple-h_9364e6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_3_triple-h_9364e6",
+   "character_canonical": "triple-h",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Triple H"
+  },
+  "identity_hash": "0899643892a486c9",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_ue3_finn",
+     "url": "https://wrestlingfiguredatabase.com/products/ue3-finn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_ue3_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_ult007",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-wrestling-figures-set-ult-007.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_finn_demon",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-ultimate-finn-balor-demon-action-figure/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ue3-tripleh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-triple-h-action-figure-monday-night-war/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toyhypeusa.com/2020/01/10/mattel-wwe-ultimate-edition-triple-h-figure-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_ult007",
+     "text": "WWE Ultimate Edition Wrestling Figures Set - ULT-007. This set includes: Demon Finn Balor & Triple H (HHH)!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_ult007",
+     "text": "$59.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_ult007",
+     "text": "authentic ring gear and entrance attire",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_ult007",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_ult007",
+     "text": "swappable parts, including heads, arms, hands, and attire to recreate and relive even more favorite WWE Superstar moments",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_ue3_finn",
+     "text": "2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_ue3_finn",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_ue3_collection",
+     "text": "Each highly detailed 6-inch tall action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_ue3_collection",
+     "text": "TrueFX technology and 30+ points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ue3_collection",
+     "text": "swappable heads, interchangeable hands, an ab-crunch torso, double-jointed arms and knees, articulated toes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 22, 1999 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "2019 WWE Mattel Ultimate Edition Series 3 Triple H was also rereleased in April 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": "monday-night-war",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "More than 30 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": "monday-night-war",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "black trunks with the Triple H symbols on the front and back of it, black elbow pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "black knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "white wrist bands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "a white glove on his right hand, and white stripes on his index fingers.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Each of the head sculpts are given a unique facial expression and tooling, and the hair is different on each one.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "ball-jointed head and torso, ball-hinged shoulders, swivel biceps, double-hinged elbows, swivel-hinged wrists, swivel waist, ball-jointed hips, swivel thighs, double-hinged knees, swivel boots, hinged and rocker ankles, and hinged toes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "a sledgehammer, water bottle, dark grey textured shirt, WWE Championship belt, three sets of interchangeable hands (gripping, fisted, open), and a hat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "January 10, 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "year": 2019,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Aug. 22, 1999 @ WWF SummerSlam",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black trunks with Triple H symbols, black elbow pads, black knee pads, black boots, white wrist bands, white glove on right hand with white stripes on index fingers",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6",
+     "f_q7",
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Unique facial expression, tooling, and hair sculpt",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Ball-jointed head and torso, ball-hinged shoulders, swivel biceps, double-hinged elbows, swivel-hinged wrists, swivel waist, ball-jointed hips, swivel thighs, double-hinged knees, swivel boots, hinged and rocker ankles, hinged toes",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black trunks with the Triple H symbols on the front and back",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Rereleased in April 2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Sledgehammer",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Water bottle",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Dark grey textured shirt",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "WWE Championship belt",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Three sets of interchangeable hands (gripping, fisted, open)",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[5]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by January 2020",
+    "evidence_quote_ids": [
+     "f_q14",
+     "f_q5"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ }
+}

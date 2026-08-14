@@ -1,0 +1,425 @@
+{
+ "fp_wrestling_mattel_ultimate-edition_11_undertaker_74b4dd": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_ultimate-edition_11_undertaker_74b4dd",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_ultimate-edition_11_undertaker_74b4dd",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "ultimate-edition",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "41bfa2c08222c305",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-kane",
+     "url": "https://wrestlingfiguredatabase.com/products/ue11-kane",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-ultimate-edition",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-kane",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-wave-11-kane-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-ultimate-edition-wave-11-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-checklist",
+     "url": "https://wrestlingfigs.com/ab/wwe-ultimate-edition/",
+     "source_type": "forum",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-toywiz-set",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-wrestling-figures-set-ult-031.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-ultimate-edition-figures-undertaker-ult-033.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-ultimate-edition-series-20-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-kane",
+     "text": "Ultimate Edition Series 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-kane",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Kane"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 11 Kane",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Kane"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-collection",
+     "text": "2021 WWE Mattel Ultimate Edition Series 11 Undertaker",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-kane",
+     "text": "WWE Wrestling Ultimate Edition Kane Action Figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Kane"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-kane",
+     "text": "authentic ring gear and entrance attire; swappable parts, including heads, arms, hands, and attire",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-kane",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-kane",
+     "text": "TrueFX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-kane",
+     "text": "Approximately 6 inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-kane",
+     "text": "$74.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Kane"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-kane",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz-undertaker",
+     "text": "WWE Wrestling Ultimate Edition Undertaker Action Figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz-undertaker",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz-undertaker",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz-undertaker",
+     "text": "authentic ring gear and entrance attire; swappable parts, including heads, arms, hands, and attire for customization and recreation of various WWE moments",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Ultimate Edition",
+      "year": 2021,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "dark lord style entrance coat with silver straps and is rounded out with tall black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "three interchangeable head scans with white eyes and a protruding tongue, a determined look and a long haired, Attitude-Era style ministry look",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "swappable parts, including heads, arms, hands, and attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$31.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "ultimate-edition",
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Dark lord style entrance coat with silver straps and is rounded out with tall black boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Three interchangeable head scans with white eyes and a protruding tongue, a determined look and a long haired, Attitude-Era style ministry look",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Swappable parts, including heads, arms, hands, and attire",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Three interchangeable head scans",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Swappable parts, including heads, arms, hands, and attire",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ }
+}

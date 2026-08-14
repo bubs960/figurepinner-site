@@ -1,0 +1,2245 @@
+{
+ "fp_wrestling_mattel_elite-monday-night-war_3_the-disciple_3f3c3a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_the-disciple_3f3c3a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_the-disciple_3f3c3a",
+   "character_canonical": "the-disciple",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": null,
+   "pack_size": null,
+   "v1_name": null
+  },
+  "identity_hash": "f2f8bb316029ac84",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_disciple",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-the-disciple-build-a-figure",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_rvd",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-rob-van-dam-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_full_set",
+     "url": "https://wrestlingfigurenews.com/2024/03/17/more-wwe-elite-monday-night-war-3-images-full-set-disciple-harlem-heat-variants-in-package-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_booker_t",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toynewsi.com/241-51908",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-figure-part/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-stevie-ray-action-figure-build-figure-part/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_disciple",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_disciple",
+     "text": "Line: Monday Night War / Series: 3 / Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_disciple",
+     "text": "The Disciple character is assembled from parts included with four figures: 2024 WWE Mattel Elite Collection Monday Night War Series 3 Booker T [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Stevie Ray [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 The Rock [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rvd",
+     "text": "2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive] — Manufacturing Country: Vietnam, Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Rob Van Dam",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_full_set",
+     "text": "The figures included are: Rob Van Dam, Booker T, Stevie Ray, and The Rock, with variants available for Booker T and Stevie Ray (referred to as \"Harlem Heat variants\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_full_set",
+     "text": "The Disciple (build-a-figure)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_booker_t",
+     "text": "6-inch scale figures with deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_booker_t",
+     "text": "Build Disciple Figure! Chase Version — each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_booker_t",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "nWo Disciple",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "the-disciple",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "are not yet available to purchase",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "March 15th during the Walmart Collector Con event",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "The Disciple",
+    "evidence_quote_ids": [
+     "w_q3",
+     "w_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_3_the-rock_c973d0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_the-rock_c973d0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_the-rock_c973d0",
+   "character_canonical": "the-rock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Rock"
+  },
+  "identity_hash": "ed04f214604c8590",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_disciple",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-the-disciple-build-a-figure",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_rvd",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-rob-van-dam-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_full_set",
+     "url": "https://wrestlingfigurenews.com/2024/03/17/more-wwe-elite-monday-night-war-3-images-full-set-disciple-harlem-heat-variants-in-package-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_booker_t",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-the-rock-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-monday-night-war-the-rock-action-figure-jhx31",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_disciple",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_disciple",
+     "text": "Line: Monday Night War / Series: 3 / Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_disciple",
+     "text": "The Disciple character is assembled from parts included with four figures: 2024 WWE Mattel Elite Collection Monday Night War Series 3 Booker T [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Stevie Ray [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 The Rock [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rvd",
+     "text": "2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive] — Manufacturing Country: Vietnam, Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Rob Van Dam",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_full_set",
+     "text": "The figures included are: Rob Van Dam, Booker T, Stevie Ray, and The Rock, with variants available for Booker T and Stevie Ray (referred to as \"Harlem Heat variants\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_full_set",
+     "text": "The Disciple (build-a-figure)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_booker_t",
+     "text": "6-inch scale figures with deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_booker_t",
+     "text": "Build Disciple Figure! Chase Version — each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_booker_t",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 27, 1997 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Relive the Monday Night War with WWE Elite Collection action figures! Play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Featuring deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Each collectible Superstar figure and accessories set includes interchangeable hands for recreating different poses",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Highly detailed TrueFX technology brings WWE Superstars to life with authentic facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Includes 1 WWE Monday Night War Elite Collection action figure, accessories and 1 Build-a-Figure part",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$24.83",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 27, 1997 @ WWF Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Accessories",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "1 Build-a-Figure part",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "The Disciple",
+    "evidence_quote_ids": [
+     "w_q3",
+     "w_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_3_rob-van-dam_0a515f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_rob-van-dam_0a515f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_rob-van-dam_0a515f",
+   "character_canonical": "rob-van-dam",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rob Van Dam"
+  },
+  "identity_hash": "176fd11f1f34c91f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_disciple",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-the-disciple-build-a-figure",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_rvd",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-rob-van-dam-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_full_set",
+     "url": "https://wrestlingfigurenews.com/2024/03/17/more-wwe-elite-monday-night-war-3-images-full-set-disciple-harlem-heat-variants-in-package-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_booker_t",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-rvd-rob-van-dam-action-figure-build-figure-part/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfigurenews.com/2024/03/07/wwe-elite-monday-night-war-photos-harlem-heat-rob-van-dam-the-rock/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/figure-1-monday-night-wars-wwe-elite-collection-series-3-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_disciple",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_disciple",
+     "text": "Line: Monday Night War / Series: 3 / Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_disciple",
+     "text": "The Disciple character is assembled from parts included with four figures: 2024 WWE Mattel Elite Collection Monday Night War Series 3 Booker T [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Stevie Ray [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 The Rock [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rvd",
+     "text": "2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive] — Manufacturing Country: Vietnam, Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Rob Van Dam",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_full_set",
+     "text": "The figures included are: Rob Van Dam, Booker T, Stevie Ray, and The Rock, with variants available for Booker T and Stevie Ray (referred to as \"Harlem Heat variants\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_full_set",
+     "text": "The Disciple (build-a-figure)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_booker_t",
+     "text": "6-inch scale figures with deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_booker_t",
+     "text": "Build Disciple Figure! Chase Version — each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_booker_t",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Featuring deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "interchangeable hands for different power moves",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "6-inch scale",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "August 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX details for life-like looks and posing",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Walmart exclusive release",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "The Disciple",
+    "evidence_quote_ids": [
+     "w_q3",
+     "w_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "August 2024",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_3_booker-t_d1646d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_booker-t_d1646d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_booker-t_d1646d",
+   "character_canonical": "booker-t",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Booker T"
+  },
+  "identity_hash": "efdc029394c49046",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_disciple",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-the-disciple-build-a-figure",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_rvd",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-rob-van-dam-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_full_set",
+     "url": "https://wrestlingfigurenews.com/2024/03/17/more-wwe-elite-monday-night-war-3-images-full-set-disciple-harlem-heat-variants-in-package-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_booker_t",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-booker-t-exclusive-chase",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-figure-part/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-booker-t-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_disciple",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_disciple",
+     "text": "Line: Monday Night War / Series: 3 / Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_disciple",
+     "text": "The Disciple character is assembled from parts included with four figures: 2024 WWE Mattel Elite Collection Monday Night War Series 3 Booker T [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Stevie Ray [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 The Rock [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rvd",
+     "text": "2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive] — Manufacturing Country: Vietnam, Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Rob Van Dam",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_full_set",
+     "text": "The figures included are: Rob Van Dam, Booker T, Stevie Ray, and The Rock, with variants available for Booker T and Stevie Ray (referred to as \"Harlem Heat variants\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_full_set",
+     "text": "The Disciple (build-a-figure)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_booker_t",
+     "text": "6-inch scale figures with deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_booker_t",
+     "text": "Build Disciple Figure! Chase Version — each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_booker_t",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 19, 1996 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "August 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "interchangeable hands for different power moves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "May 19, 1996 @ WCW Slamboree",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands for different power moves",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "The Disciple",
+    "evidence_quote_ids": [
+     "w_q3",
+     "w_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "August 2024",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 59.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$99.99",
+      "evidence_quote_ids": [
+       "w_q9"
+      ],
+      "price_detail": {
+       "amount": 99.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "w_toywiz_booker_t"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_3_stevie-ray_9803e9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_stevie-ray_9803e9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_stevie-ray_9803e9",
+   "character_canonical": "stevie-ray",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stevie Ray"
+  },
+  "identity_hash": "ef4def20c267e4ab",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_disciple",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-the-disciple-build-a-figure",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_rvd",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-rob-van-dam-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_full_set",
+     "url": "https://wrestlingfigurenews.com/2024/03/17/more-wwe-elite-monday-night-war-3-images-full-set-disciple-harlem-heat-variants-in-package-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_booker_t",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-stevie-ray-exclusive-chase",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-stevie-ray-action-figure-build-figure-part/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forums.toynewsi.com/forums/topic/2144818-mattel-wwe-walmart-exclusive-wwe-monday-night-wars-elite-wave-3/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_disciple",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_disciple",
+     "text": "Line: Monday Night War / Series: 3 / Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_disciple",
+     "text": "The Disciple character is assembled from parts included with four figures: 2024 WWE Mattel Elite Collection Monday Night War Series 3 Booker T [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Stevie Ray [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 The Rock [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rvd",
+     "text": "2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive] — Manufacturing Country: Vietnam, Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Rob Van Dam",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_full_set",
+     "text": "The figures included are: Rob Van Dam, Booker T, Stevie Ray, and The Rock, with variants available for Booker T and Stevie Ray (referred to as \"Harlem Heat variants\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_full_set",
+     "text": "The Disciple (build-a-figure)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_booker_t",
+     "text": "6-inch scale figures with deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_booker_t",
+     "text": "Build Disciple Figure! Chase Version — each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_booker_t",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Monday Night War",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$61.74",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Relive the Monday Night War with WWE Elite Collection action figures! Play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Featuring deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Each collectible Superstar figure and accessories set includes interchangeable hands for different power moves",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "next week on 3/15 starting at 10am ET for the Walmart Collector Con",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "The Disciple",
+    "evidence_quote_ids": [
+     "w_q3",
+     "w_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_3_disciple_eae085": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_disciple_eae085",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_3_disciple_eae085",
+   "character_canonical": "disciple",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Disciple"
+  },
+  "identity_hash": "37386d19dd1a70cb",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_disciple",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-monday-night-war-series-3-the-disciple-build-a-figure",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_rvd",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-monday-night-war-series-3-rob-van-dam-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfn_full_set",
+     "url": "https://wrestlingfigurenews.com/2024/03/17/more-wwe-elite-monday-night-war-3-images-full-set-disciple-harlem-heat-variants-in-package-images/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_booker_t",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-rvd-rob-van-dam-action-figure-build-figure-part/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_disciple",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_disciple",
+     "text": "Line: Monday Night War / Series: 3 / Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_disciple",
+     "text": "The Disciple character is assembled from parts included with four figures: 2024 WWE Mattel Elite Collection Monday Night War Series 3 Booker T [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Stevie Ray [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive], 2024 WWE Mattel Elite Collection Monday Night War Series 3 The Rock [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rvd",
+     "text": "2024 WWE Mattel Elite Collection Monday Night War Series 3 Rob Van Dam [Exclusive] — Manufacturing Country: Vietnam, Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Rob Van Dam",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_full_set",
+     "text": "The figures included are: Rob Van Dam, Booker T, Stevie Ray, and The Rock, with variants available for Booker T and Stevie Ray (referred to as \"Harlem Heat variants\")",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_full_set",
+     "text": "The Disciple (build-a-figure)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "The Disciple",
+      "year": 2024,
+      "condition": null,
+      "character_variant": "Build-A-Figure"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_booker_t",
+     "text": "6-inch scale figures with deluxe articulation and TrueFX details for life-like looks and posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": null,
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_booker_t",
+     "text": "Build Disciple Figure! Chase Version — each figure comes with iconic accessories and pieces to build another Elite figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_booker_t",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "character_canonical": "Booker T",
+      "year": 2024,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "each figure comes with iconic accessories and pieces to build another Elite figure.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Relive the Monday Night War with WWE Elite Collection action figures! Play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

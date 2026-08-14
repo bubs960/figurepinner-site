@@ -1,0 +1,2035 @@
+{
+ "fp_wrestling_mattel_elite-monday-night-war_8_eric-bischoff_b888ce": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_eric-bischoff_b888ce",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_eric-bischoff_b888ce",
+   "character_canonical": "eric-bischoff",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "8",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Eric Bischoff"
+  },
+  "identity_hash": "3fbb6aea5bc5d4e2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_undertaker",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-undertaker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_michael_cole_baf",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-michael-cole-build-a-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_brian_pillman",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-brian-pillman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-eric-bischoff",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-eric-bischoff-action-figure-build-michael-cole/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://shop.mattel.com/products/wwe-monday-night-war-eric-bischoff-action-figure-jfm52",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Country: United States, United Kingdom",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_undertaker",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_undertaker",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_undertaker",
+     "text": "Attire Date: May 22, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_undertaker",
+     "text": "Exclusive Retailer: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Release Year: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "The figure assembles from parts included with five wrestlers: The Shark, The Shark [Chase variant], Eric Bischoff, Brian Pillman, Undertaker",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Aug. 30, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Exclusive Retailers: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "May 5, 1997 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Brian Pillman"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans to relive the Monday Night War and play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 10, 2000 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2025,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2025,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2025,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2025,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "September 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2025,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Highly detailed TrueFX technology brings WWE Superstars to life with authentic facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "deluxe articulation on the 6-inch-scale figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "elite articulation for dynamic posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "interchangeable hands for recreating different poses",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "interchangeable hands and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 10, 2000 @ WCW Nitro",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2025",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_8_michael-cole_afa154": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_michael-cole_afa154",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_michael-cole_afa154",
+   "character_canonical": "michael-cole",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "8",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Michael Cole"
+  },
+  "identity_hash": "f7b4f9034014e70e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_undertaker",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-undertaker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_michael_cole_baf",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-michael-cole-build-a-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_brian_pillman",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-brian-pillman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toynewsi.com/241-62536",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-undertaker-action-figure-build-michael-cole/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-eric-bischoff-action-figure-build-michael-cole/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Country: United States, United Kingdom",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_undertaker",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_undertaker",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_undertaker",
+     "text": "Attire Date: May 22, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_undertaker",
+     "text": "Exclusive Retailer: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Release Year: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "The figure assembles from parts included with five wrestlers: The Shark, The Shark [Chase variant], Eric Bischoff, Brian Pillman, Undertaker",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Aug. 30, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Exclusive Retailers: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "May 5, 1997 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Brian Pillman"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans to relive the Monday Night War and play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Booker T, Randy Orton, The Undertaker and Jey Uso with Build-a-Figure Michael Cole",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "WWE Elite Monday Night War action figures recreate moments from the battle between WWE Superstars and WCW Legends!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Includes interchangeable hands and accessories for dynamic poses and play scenarios",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Combine building pieces from the series to assemble a custom WWE or WCW figure",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "a 6-inch Eric Bischoff action figure with elite articulation for dynamic posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "eric-bischoff",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "TrueFX technology for highly detailed, authentic facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 30, 1999 @ WWF Raw",
+    "evidence_quote_ids": [
+     "w_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "Michael Cole",
+    "evidence_quote_ids": [
+     "w_q10",
+     "f_q1"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366",
+   "character_canonical": "shark",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "8",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Shark"
+  },
+  "identity_hash": "dd2cc01867778ff8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_undertaker",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-undertaker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_michael_cole_baf",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-michael-cole-build-a-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_brian_pillman",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-brian-pillman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-the-shark",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-monday-night-war-shark-action-figure-jfm51",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-shark-action-figure-build-michael-cole/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://wrestlingshop.com/en-us/products/shark-wwe-monday-night-wars-elite-collection-series-8-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Country: United States, United Kingdom",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_undertaker",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_undertaker",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_undertaker",
+     "text": "Attire Date: May 22, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_undertaker",
+     "text": "Exclusive Retailer: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Release Year: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "The figure assembles from parts included with five wrestlers: The Shark, The Shark [Chase variant], Eric Bischoff, Brian Pillman, Undertaker",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Aug. 30, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Exclusive Retailers: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "May 5, 1997 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Brian Pillman"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans to relive the Monday Night War and play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 27, 1996 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": "2025",
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": "2025",
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "WWE Elite Monday Night War action figures recreate moments from the battle between WWE Superstars and WCW Legends!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Highly detailed TrueFX technology brings WWE Superstars to life with authentic facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$36.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s4",
+     "text": "Representing The Dungeon Of Doom, The Shark Challenged The Giant For The WCW Heavyweight Championship In A Battle Of The Big Men.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s4",
+     "text": "extreme articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s4",
+     "text": "unmatched attention to detail with entrance accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s4",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s4",
+     "text": "$33.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "shark",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "May 27, 1996 @ WCW Nitro",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Unmatched attention to detail with entrance accessories",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Representing The Dungeon Of Doom, The Shark Challenged The Giant For The WCW Heavyweight Championship In A Battle Of The Big Men",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$36.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 36.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     },
+     {
+      "value": "$33.00 USD",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 33,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s4"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-monday-night-war_8_undertaker_187d5c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_undertaker_187d5c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-monday-night-war_8_undertaker_187d5c",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-monday-night-war",
+   "release_wave": "8",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "4473d87a6ba4ba12",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_undertaker",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-undertaker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_michael_cole_baf",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-michael-cole-build-a-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_brian_pillman",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-monday-night-war-series-8-brian-pillman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-booker-t-action-figure-build-disciple-figure-chase/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://shop.mattel.com/products/wwe-monday-night-war-undertaker-action-figure-jfm49",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/undertaker-wwe-monday-night-wars-elite-collection-series-8-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-8-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-monday-night-war-undertaker-exclusive-action-figure-lex-luger-baf/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_undertaker",
+     "text": "Release Country: United States, United Kingdom",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_undertaker",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_undertaker",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_undertaker",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_undertaker",
+     "text": "Attire Date: May 22, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_undertaker",
+     "text": "Exclusive Retailer: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Release Year: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "The figure assembles from parts included with five wrestlers: The Shark, The Shark [Chase variant], Eric Bischoff, Brian Pillman, Undertaker",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Aug. 30, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Michael Cole"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_michael_cole_baf",
+     "text": "Exclusive Retailers: Walmart, Smyths Toys",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "May 5, 1997 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": "Brian Pillman"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Line: Monday Night War",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_brian_pillman",
+     "text": "Series: 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans to relive the Monday Night War and play out iconic moments from the battle for Monday Night supremacy with WWE Superstars and WCW Legends in 6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_snippet",
+     "text": "fans can collect them and combine the building pieces from all in the series to build another WWE Elite Collection action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Monday Night War",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "The McMahon-Helmsley Faction Found Out The True Meaning Of Judgment Day When The Phenom Returned To Raw With A New Look, A New Entrance, And The Same Defiance Of Authority.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "RAW - May 22, 2000",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "extreme articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "entrance accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": null,
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": null,
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s4",
+     "text": "WWE Wrestling Elite Collection Monday Night War Undertaker Exclusive Action Figure [Build Lex Luger Figure!]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "undertaker",
+      "character_variant": "lex-luger-baf-exclusive",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s4",
+     "text": "Highly detailed TrueFX technology for life-like faces",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-monday-night-war",
+      "year": 2024,
+      "character_canonical": "undertaker",
+      "character_variant": "lex-luger-baf-exclusive",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "RAW - May 22, 2000",
+    "evidence_quote_ids": [
+     "f_q2",
+     "w_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "extreme articulation",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The Phenom Returned To Raw With A New Look, A New Entrance, And The Same Defiance Of Authority",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Entrance accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ }
+}

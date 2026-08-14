@@ -1,0 +1,1846 @@
+{
+ "fp_wrestling_mattel_elite-legends_2_jimmy-snuka_c55a13": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_2_jimmy-snuka_c55a13",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_2_jimmy-snuka_c55a13",
+   "character_canonical": "jimmy-snuka",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2010,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jimmy Snuka"
+  },
+  "identity_hash": "0b33427bb11cff1d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_legends2",
+     "url": "https://toynewsi.com/15-16135",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sheik",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-sheik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sublines",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-sublines",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_keckcollects_s1_6",
+     "url": "https://keckcollects.com/wwe-legends-series-1-6/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_snake",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snake",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snuka",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-legends-series-2-jimmy-superfly-snuka-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, \"Ravishing\" Rick Rude, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Look for these on shelves by September 2010.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sheik",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": "Iron Sheik"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sheik",
+     "text": "Line: Legends / Series: 2",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sublines",
+     "text": "\"Ravishing\" Rick Rude, Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Jake The Snake Roberts, Ravishing Rick Rude, The Iron Sheik, Superfly Jimmy Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Heel Jake the Snake, Short Haired Rick Rude, and alternative attires for Sheik, Funk, and Snuka.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_snake",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 17, 1991 @ WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jimmy-snuka",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jimmy-snuka",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Here's your chance to get Jimmy Snuka! the WWE Superstar!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jimmy-snuka",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Aug. 17, 1991 @ WWF Superstars",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2010",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_2_jake-roberts_902fef": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_2_jake-roberts_902fef",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_2_jake-roberts_902fef",
+   "character_canonical": "jake-roberts",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2010,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jake Roberts"
+  },
+  "identity_hash": "06005aff1c833e56",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_legends2",
+     "url": "https://toynewsi.com/15-16135",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sheik",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-sheik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sublines",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-sublines",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_keckcollects_s1_6",
+     "url": "https://keckcollects.com/wwe-legends-series-1-6/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_snake",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snake",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-legends-2-jake-roberts-wl2-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigurecellar.com/product-page/loose-jake-the-snake-roberts-wwe-legends-series-2",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://manofactionfigures.com/products/wwe-legends-series-2-jake-snake-roberts-mattel-toy",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://toywiz.com/wwe-wrestling-legends-series-2-jake-the-snake-roberts-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, \"Ravishing\" Rick Rude, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Look for these on shelves by September 2010.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sheik",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": "Iron Sheik"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sheik",
+     "text": "Line: Legends / Series: 2",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sublines",
+     "text": "\"Ravishing\" Rick Rude, Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Jake The Snake Roberts, Ravishing Rick Rude, The Iron Sheik, Superfly Jimmy Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Heel Jake the Snake, Short Haired Rick Rude, and alternative attires for Sheik, Funk, and Snuka.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_snake",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Jake \"The Snake\" Roberts - WWE Legends 2 WWE Toy Wrestling Action Figure by Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "features added Elite style articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s4",
+     "text": "Here's your chance to get the Snake! the WWE Superstar!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s4",
+     "text": "WWE Wrestling Legends Series 2 Jake \"The Snake\" Roberts Action Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Added Elite-style articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_2_kamala_7b7028": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_2_kamala_7b7028",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_2_kamala_7b7028",
+   "character_canonical": "kamala",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kamala"
+  },
+  "identity_hash": "d75418e638da46ce",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_legends2",
+     "url": "https://toynewsi.com/15-16135",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sheik",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-sheik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sublines",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-sublines",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_keckcollects_s1_6",
+     "url": "https://keckcollects.com/wwe-legends-series-1-6/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_snake",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snake",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-kamala",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-legends-series-2-kamala-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.infinitehollywood.com/figure-review-wwe-legends-kamala/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://pwcatalog.com/products/legends2-kamala",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, \"Ravishing\" Rick Rude, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Look for these on shelves by September 2010.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sheik",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": "Iron Sheik"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sheik",
+     "text": "Line: Legends / Series: 2",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sublines",
+     "text": "\"Ravishing\" Rick Rude, Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Jake The Snake Roberts, Ravishing Rick Rude, The Iron Sheik, Superfly Jimmy Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Heel Jake the Snake, Short Haired Rick Rude, and alternative attires for Sheik, Funk, and Snuka.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_snake",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 29, 1992 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2010,
+      "character_canonical": "kamala",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Here's your chance to get Jimmy Snuka! the WWE Superstar!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2010,
+      "character_canonical": "jimmy snuka",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 29, 1992 @ WWF SummerSlam",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_2_iron-sheik_4b5d1c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_2_iron-sheik_4b5d1c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_2_iron-sheik_4b5d1c",
+   "character_canonical": "iron-sheik",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Iron Sheik"
+  },
+  "identity_hash": "fe9805a135f22f0d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_legends2",
+     "url": "https://toynewsi.com/15-16135",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sheik",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-sheik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sublines",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-sublines",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_keckcollects_s1_6",
+     "url": "https://keckcollects.com/wwe-legends-series-1-6/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_snake",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snake",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-legends-series-2-iron-sheik-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.wrestlingcollectorshop.com/products/wwe-mattel-elite-legends-series-2-iron-sheik",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://manofactionfigures.com/products/wwe-legends-series-2-iron-sheik-figure-mattel-toy",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, \"Ravishing\" Rick Rude, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Look for these on shelves by September 2010.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sheik",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": "Iron Sheik"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sheik",
+     "text": "Line: Legends / Series: 2",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sublines",
+     "text": "\"Ravishing\" Rick Rude, Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Jake The Snake Roberts, Ravishing Rick Rude, The Iron Sheik, Superfly Jimmy Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Heel Jake the Snake, Short Haired Rick Rude, and alternative attires for Sheik, Funk, and Snuka.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_snake",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "iron-sheik",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "iron-sheik",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: August 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "iron-sheik",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Here's your chance to get Iron Shiek! the WWE Superstar!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "iron-sheik",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Brand: WWE Wrestling",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Company: Mattel Toys",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Series: Legends Series 2",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "UPC: 027084786644",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "iron-sheik",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "027084786644",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "August 2010",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_2_rick-rude_609fef": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_2_rick-rude_609fef",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_2_rick-rude_609fef",
+   "character_canonical": "rick-rude",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2010,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rick Rude"
+  },
+  "identity_hash": "017239b17591e4ce",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_legends2",
+     "url": "https://toynewsi.com/15-16135",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sheik",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-sheik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sublines",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-sublines",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_keckcollects_s1_6",
+     "url": "https://keckcollects.com/wwe-legends-series-1-6/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_snake",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snake",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-legends-2-rick-rude-wl2-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-rude",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, \"Ravishing\" Rick Rude, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Look for these on shelves by September 2010.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sheik",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": "Iron Sheik"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sheik",
+     "text": "Line: Legends / Series: 2",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sublines",
+     "text": "\"Ravishing\" Rick Rude, Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Jake The Snake Roberts, Ravishing Rick Rude, The Iron Sheik, Superfly Jimmy Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Heel Jake the Snake, Short Haired Rick Rude, and alternative attires for Sheik, Funk, and Snuka.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_snake",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe legends 2",
+      "year": null,
+      "character_canonical": "rick-rude",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "features added Elite style articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "wwe legends 2",
+      "year": null,
+      "character_canonical": "rick-rude",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2010,
+      "character_canonical": "rick-rude",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Attire Date: Aug. 27, 1990 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2010,
+      "character_canonical": "rick-rude",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Series: 2",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2010,
+      "character_canonical": "rick-rude",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 27, 1990 @ WWF SummerSlam",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Elite-style articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2010",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_2_terry-funk_80268a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_2_terry-funk_80268a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_2_terry-funk_80268a",
+   "character_canonical": "terry-funk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2010,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Terry Funk"
+  },
+  "identity_hash": "11b460fe40ba4043",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_legends2",
+     "url": "https://toynewsi.com/15-16135",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sheik",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-sheik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_sublines",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-sublines",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_keckcollects_s1_6",
+     "url": "https://keckcollects.com/wwe-legends-series-1-6/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_snake",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-snake",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/legends2-funk",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-legends-series-2-terry-funk-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-legends-2-terry-funk-wl2-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://lylesmoviefiles.com/2016/06/10/wwe-terry-funk-elite-41-figure-review-mattel/",
+     "source_type": "forum",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, \"Ravishing\" Rick Rude, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toynewsi_legends2",
+     "text": "Look for these on shelves by September 2010.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sheik",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": "Iron Sheik"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sheik",
+     "text": "Line: Legends / Series: 2",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sublines",
+     "text": "\"Ravishing\" Rick Rude, Iron Sheik, Jake \"The Snake\" Roberts, Jimmy \"Superfly\" Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Jake The Snake Roberts, Ravishing Rick Rude, The Iron Sheik, Superfly Jimmy Snuka, Kamala, Terry Funk",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_keckcollects_s1_6",
+     "text": "Heel Jake the Snake, Short Haired Rick Rude, and alternative attires for Sheik, Funk, and Snuka.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_snake",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Legends Series 2",
+      "year": 2010,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Jan. 4, 1986 @ WWF Saturday Night's Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "terry-funk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Here's your chance to get Terry Funk, the WWE Superstar!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "terry-funk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "terry-funk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "terry-funk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "This figure features added Elite style articulation!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2010,
+      "character_canonical": "terry-funk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s4",
+     "text": "WWE Terry Funk Elite 41 figure review",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-41",
+      "year": 2016,
+      "character_canonical": "terry-funk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "added Elite style articulation",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 59.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$19.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 19.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

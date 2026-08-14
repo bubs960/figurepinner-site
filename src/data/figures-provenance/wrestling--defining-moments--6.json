@@ -1,0 +1,5021 @@
+{
+ "fp_wrestling_mattel_defining-moments_6_john-cena_ae572d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_john-cena_ae572d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_john-cena_ae572d",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "728414877a071600",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-series-5-john-cena-action-figure-2003-word-life/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-johncena",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE Wrestling Defining Moments Figure Collection",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "authentic, elite-level detailing",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2011,
+      "character_canonical": "john-cena",
+      "character_variant": "2003-word-life",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "molded and soft goods ring attire",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2011,
+      "character_canonical": "john-cena",
+      "character_variant": "2003-word-life",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a collectible figure stand commemorating a defining moment in a Superstar's career",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_hulk-hogan_8f9875": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_hulk-hogan_8f9875",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_hulk-hogan_8f9875",
+   "character_canonical": "hulk-hogan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Hulk Hogan"
+  },
+  "identity_hash": "bc39c97a2bef8903",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-hogan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-defining-moments-series-6-hulk-hogan",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-hulk-hogan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 29, 1987 @ WWF WrestleMania III",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "deluxe articulation for dynamic posing and realistic wrestling moves",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Includes accessories to recreate epic WWE moments and battles",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "the very first release of a Superstar scale Hulk Hogan figure from Mattel",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Mar. 29, 1987 @ WWF WrestleMania III",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "deluxe articulation for dynamic posing and realistic wrestling moves",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "the very first release of a Superstar scale Hulk Hogan figure from Mattel",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Accessories to recreate epic WWE moments and battles",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_shinsuke-nakamur_2f4a13": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_shinsuke-nakamur_2f4a13",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_shinsuke-nakamur_2f4a13",
+   "character_canonical": "shinsuke-nakamura",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shinsuke Nakamura"
+  },
+  "identity_hash": "e110f483fb5b0176",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-shinsuke-nakamura-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://forum.wrestlingfigs.com/thread/342575/defining-moments-shinsuke-nakamura",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The removable black entrance vest with gold buttons is included and also includes a red entrance vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "ring-ready with a red arm scarf and molded red ring pants with a studded belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "spot on headsculpt with mouth guard painted inside",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Elite articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black entrance vest with gold buttons (removable, red entrance vest also included), red arm scarf, red ring pants with studded belt",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Spot-on headsculpt with mouth guard painted inside",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Elite articulation",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable black entrance vest with gold buttons",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Ring-ready with red arm scarf and molded red ring pants with studded belt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "red entrance vest",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_razor-ramon_c01a9e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_razor-ramon_c01a9e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_razor-ramon_c01a9e",
+   "character_canonical": "razor-ramon",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Razor Ramon"
+  },
+  "identity_hash": "ef4802f1bf0817b8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://lylesmoviefiles.com/2015/05/26/razor-ramon-figure-review-mattel-wwe-defining-moments/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://thefwoosh.com/2015/06/mattel-wwe-defining-moment-razor-ramon/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Razor wore a deep, royal shade of purple",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "razor-ramon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "This looks like Razor. No questionable ponytail sculpt like the Jakks version and the hair sculpt... arcs down and includes the Superman swirl.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "razor-ramon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Here's where the Elite articulation really shines to the point where it's hard to imagine a time of getting excited for wrestling figures that couldn't actually perform their signature moves.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "razor-ramon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Based solely on value... Razor's probably not worth the $26 price tag.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "razor-ramon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Razor comes with his signature gold chains...The removable vest...Also included is an Intercontinental title.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "razor-ramon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Regular Elites range in prices these days from $16 to $21.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": null,
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 25, 1992 @ WWF Survivor Series",
+    "evidence_quote_ids": [
+     "w_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Deep, royal shade of purple",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Deep, royal shade of purple",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_ric-flair_9e505d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_ric-flair_9e505d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_ric-flair_9e505d",
+   "character_canonical": "ric-flair",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ric Flair"
+  },
+  "identity_hash": "bcee0b089298da58",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-defining-moments-series-6-ric-flair-1",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "http://actionfigureimagerytoyreviews.blogspot.com/2017/07/wwe-mattel-defining-moments-ric-flair.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Excellent - Little to no flaws",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Complete",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "The robe is outstanding. It fells and looks like the real thing. Notice the fur around the shoulder areas and at the base.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "As you can see, the robe is the only accessory that comes with Flair, unless you count his knee pads.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Excellent all around. Only limited point is upward head movement but the figure is so cool that I'm not bothered by it.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "The face sculpt is a perfect match and Mattel did a great job in showing the age in his face.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Two of his right middle fingers are wrapped in sporting tape, which is nicely done.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Sunday, July 16, 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Face sculpt is a perfect match, showing the age in his face",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fur around the shoulder areas and at the base",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two of his right middle fingers are wrapped in sporting tape",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "With Robe Open",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[1]",
+    "status": "resolved",
+    "value": "With Robe Closed",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Robe accessory",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2016",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_chris-jericho_03afaa": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_chris-jericho_03afaa",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_chris-jericho_03afaa",
+   "character_canonical": "chris-jericho",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Chris Jericho"
+  },
+  "identity_hash": "1f322c639552f569",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-jericho",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2018/06/03/wwe-defining-moments-chris-jericho-figure-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Dec. 9, 2001 @ WWF Vengeance",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Jericho's tights had this great metallic gradient that looked so eye catching. Mattel opted for a flat design that really looks dull.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "This figure looks like Chris Jericho, but more from 2009 than 2001.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "No changes from the usual Elite formula. Jericho can hit his Walls of Jericho, Lionsault and any of his moves without any problems.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Jericho gets two belts. If for some reason you've managed to avoid getting a figure with the NWA/WCW Big Gold Belt or the Eagle WWF title these are very useful.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "I absolutely can't sign off on that $25 price point.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2018,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Dec. 9, 2001 @ WWF Vengeance",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "NWA/WCW Big Gold Belt and Eagle WWF title (two belts)",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_sting_fcc81c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_sting_fcc81c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_sting_fcc81c",
+   "character_canonical": "sting",
+   "character_variant": "crow",
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": null
+  },
+  "identity_hash": "3788a2ce5ffee009",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-crowsting",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-sting-action-figure-black-trench-coat-bat/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Crow Edition]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "sting",
+      "character_variant": "crow",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Dec. 28, 1997 @ WCW Starrcade",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "sting",
+      "character_variant": "crow",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capture the explosive drama and unforgettable action of the WWE with the very first release of a Superstar scale Sting figure from Mattel.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "sting",
+      "character_variant": "crow",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$209.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "sting",
+      "character_variant": "crow",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "UPC: 887961099768",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2015,
+      "character_canonical": "sting",
+      "character_variant": "crow",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Dec. 28, 1997 @ WCW Starrcade",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_sting_a96b83": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_sting_a96b83",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_sting_a96b83",
+   "character_canonical": "sting",
+   "character_variant": "surfer",
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sting"
+  },
+  "identity_hash": "a46fdd67c6d4dd15",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/sting-usa-wwe-defining-moments-series-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-sting-action-figure-red-white-blue/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wcwworldwide.com/2016/05/toyspotting-defining-moments-sting/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Featuring deluxe articulation, incredible life-like detail, authentic ring attire and accessories, Sting is re-created in fierce Superstar style.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "sting",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "$119.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "sting",
+      "character_variant": "surfer",
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "July 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "sting",
+      "character_variant": "surfer",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "very first release of a Superstar scale Sting figure from Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "sting",
+      "character_variant": "surfer",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "May 16, 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "sting",
+      "character_variant": "surfer",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Armed with a patriotic red, white and blue jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "sting",
+      "character_variant": "surfer",
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "a mug that looks more like Mr. Anderson dressed as the Stinger rather than Steve Borden",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "sting",
+      "character_variant": "surfer",
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Patriotic red, white and blue jacket",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Looks more like Mr. Anderson dressed as the Stinger rather than Steve Borden",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Armed with a patriotic red, white and blue jacket",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "July 2016",
+      "evidence_quote_ids": [
+       "f_q3"
+      ]
+     },
+     {
+      "value": "May 16, 2016",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_randy-savage_f460f5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_randy-savage_f460f5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_randy-savage_f460f5",
+   "character_canonical": "randy-savage",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Randy Savage"
+  },
+  "identity_hash": "a1ed23aefa9c0179",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://lylesmoviefiles.com/2017/10/12/wwe-defining-moments-macho-man-randy-savage-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/macho-man-savage-wwe-toy-wrestling-figure-dm-006.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "October 12, 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Macho's tights don't quite match up to the more salmon color he wore at Wrestlemania 3. This is more of a light purple/lavender.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a classic looking Macho Man robe with white trim, shiny, glittery material",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a half smile/half grimace",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Mattel keeps giving Macho Man overly muscular arms",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "his iconic sunglasses with a sharp paintjob and his early 80s headband",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "overly thick leg sleeves, which make bended knee poses more work",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "light pink trunks and yellow boots based on the same event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Includes a headband, sunglasses and a full cloth robe",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "randy-savage",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Light pink trunks, yellow boots, and light purple/lavender tights",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Classic Macho Man robe with white trim, shiny glittery material",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Iconic sunglasses with sharp paintjob and early 80s headband",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Headband",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Full cloth robe",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by October 2017",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_stone-cold-steve-a_3a88fa": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_stone-cold-steve-a_3a88fa",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_stone-cold-steve-a_3a88fa",
+   "character_canonical": "stone-cold-steve-austin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Steve Austin"
+  },
+  "identity_hash": "c283cc2eddbf8e95",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://service.mattel.com/us/productDetail.aspx?prodno=DTD95&siteid=27",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-toy-figure-stone-cold-steve-austin-mmisc-339.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-scsa",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the explosive drama and unforgettable action of WWE® with figures in 6-inch Superstar scale. Featuring deluxe articulation, incredible life-like detail, authentic ring",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "8 years and up",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "No batteries required",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Austin 3:16 vest featuring 'Stone Cold' and a skull on the back",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "two knee braces",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Vest, 2 Knee Braces, WWE Attitude World Heavyweight Belt, Smoking Skull Championship Belt & Winged Eagle Championship Title Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "one of the most definitive versions of Steve Austin during his absolute pique",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Attire Date: Mar. 29, 1998 @ WWF WrestleMania XIV",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWF WrestleMania XIV attire (Mar. 29, 1998)",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Austin 3:16 vest featuring 'Stone Cold' and a skull on the back",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two knee braces",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "WWE Attitude World Heavyweight Belt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Smoking Skull Championship Belt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Winged Eagle Championship Title Belt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2016",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_undertaker_51c9b1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_undertaker_51c9b1",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_undertaker_51c9b1",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "2c9f55f59e40f641",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://manofactionfigures.com/products/wwe-elite-collector-defining-moments-undertaker-figure-mattel",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.ringsidecollectibles.com/wwe-defining-moments-undertaker-mmisc-252.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 28, 1999 @ WWF WrestleMania XV",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Defining Moments",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 6",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$79.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "For months leading up to WrestleMania XV, a heated rivalry developed between Undertaker and Mr. McMahon.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "performed his signature Tombstone Piledriver on the Boss Man and Pinned him for the Victory.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s4",
+     "text": "Undertaker - WWE Defining Moments WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s4",
+     "text": "Big Boss Man handcuffed Undertaker to the cage",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s4",
+     "text": "$17.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Mar. 28, 1999 @ WWF WrestleMania XV",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_ric-flair_e71ea9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_ric-flair_e71ea9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_ric-flair_e71ea9",
+   "character_canonical": "ric-flair",
+   "character_variant": "retirement-v2",
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": null
+  },
+  "identity_hash": "66b5a8a2e035dd26",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-defining-moments-exclusive-ric-flair-mmisc-220.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-defining-moments-series-6-ric-flair-1",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-ric-flair-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "http://actionfigureimagerytoyreviews.blogspot.com/2017/07/wwe-mattel-defining-moments-ric-flair.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Excellent - Little to no flaws",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Complete",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ric-flair",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Features Ric Flair in his iconic blue robe, capturing his defining wrestling moments.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Made by Mattel with poseable joints for dynamic display and play.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Precisely sculpted for authentic details, representing Flair's legendary career.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s4",
+     "text": "the face sculpt is a perfect match and Mattel did a great job in showing the age in his face. Look closely and you'll see all kinds of wrinkles in his face.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s4",
+     "text": "The robe is outstanding. It fells and looks like the real thing. Notice the fur around the shoulder areas and at the base.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s4",
+     "text": "Two of his right middle fingers are wrapped in sporting tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s4",
+     "text": "his initials are on the right side of his trunks.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s4",
+     "text": "Excellent all around. Only limited point is upward head movement but the figure is so cool that I'm not bothered by it.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s4",
+     "text": "the robe is the only accessory that comes with Flair. unless you count his knee pads.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s4",
+     "text": "Sunday, July 16, 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2017,
+      "character_canonical": "ric-flair",
+      "character_variant": "retirement-v2",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue robe",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The face sculpt is a perfect match, showing the age in his face with all kinds of wrinkles in his face",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Poseable joints for dynamic display and play; only limited point is upward head movement",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q12"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fur around the shoulder areas and at the base of the robe",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two of his right middle fingers are wrapped in sporting tape",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "His initials are on the right side of his trunks",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Robe",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by July 2017",
+    "evidence_quote_ids": [
+     "f_q14",
+     "f_q8"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_defining-moments_6_ultimate-warrior_b0cbe3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_defining-moments_6_ultimate-warrior_b0cbe3",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_defining-moments_6_ultimate-warrior_b0cbe3",
+   "character_canonical": "ultimate-warrior",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "defining-moments",
+   "release_wave": "6",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ultimate Warrior"
+  },
+  "identity_hash": "4c896f128b5a33e5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-dm6-razor",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-razor",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-usasting",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-usasting",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd-dm6-flairretire1",
+     "url": "https://wrestlingfiguredatabase.com/products/dm6-flairretire1",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wff-thread-336435",
+     "url": "https://forum.wrestlingfigs.com/thread/336435/listing-all-defining-moments-figures",
+     "fetch_status": "fetched",
+     "source_type": "forum",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz-savage-dm",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-randy-savage-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_search-dm6-general",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Defining+Moments+Series+6+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/blog/the-ultimate-maniacs-ride-again-with-mattel-wwe-defining-moments/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-defining-moments-ultimate-warrior-action-figure-orange-yellow/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "2015 WWE Mattel Elite Collection Defining Moments Series 6 Razor Ramon",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-dm6-razor",
+     "text": "Nov. 25, 1992 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Razor Ramon",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2015
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Sting [Surfer Edition]",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-dm6-usasting",
+     "text": "Attire Date: July 7, 1990 @ WCW The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sting",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "2016 WWE Mattel Elite Collection Defining Moments Series 6 Ric Flair",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Mar. 30, 2008 @ WWE WrestleMania XXIV",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-dm6-flairretire1",
+     "text": "Available variants: \"With Robe Open\" and \"With Robe Closed\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ric Flair",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments Series 6",
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wff-thread-336435",
+     "text": "Too bad the next one is rumored to be cena",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-savage-dm",
+     "text": "WWE Wrestling Defining Moments \"Macho Man\" Randy Savage Action Figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Randy Savage",
+      "manufacturer": "Mattel",
+      "product_line": "Defining Moments",
+      "year": "June 2017"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Ultimate Warrior's ring gear reflected the same type as Macho Man's, with a brick pattern and yellow and red color scheme.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "His upcoming figure will include removable shades, tassels and gauntlets.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "His knee pads also have Ultimate Maniacs logos and he's sporting yellow and red face paint.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": null,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": "ultimate-maniacs",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Defining Moments Ultimate Warrior Action Figure [Orange & Yellow]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$52.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "August 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "defining-moments",
+      "year": 2016,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Ultimate Warrior's ring gear reflected the same type as Macho Man's, with a brick pattern.",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Yellow and red color scheme",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable shades, tassels, and gauntlets included with the figure",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "WWE Wrestling Defining Moments Ultimate Warrior Action Figure [Orange & Yellow]",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable shades",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Tassels",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Gauntlets",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "August 2016",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ }
+}

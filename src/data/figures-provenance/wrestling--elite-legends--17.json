@@ -1,0 +1,1506 @@
+{
+ "fp_wrestling_mattel_elite-legends_17_aj-styles_d4149a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_17_aj-styles_d4149a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_17_aj-styles_d4149a",
+   "character_canonical": "aj-styles",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "17",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "AJ Styles"
+  },
+  "identity_hash": "8fe75b1ddb54ddf0",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-16-air-styles-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_ken_shamrock",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-ken-shamrock-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_shawn_michaels",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-shawn-michaels-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_ultimate_warrior",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-ultimate-warrior-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_search_summary",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-exclusive-series/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-aj-styles-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-16-air-styles-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Exclusive to Target",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Mar. 5, 2001 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "AJ Styles"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Oct. 12, 1998 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ken Shamrock"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Jan. 19, 1992 @ WWF Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "highly articulated action figure features detailed TrueFX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "$24.36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "Release Date: November 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$26.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "November 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "6-inch scale WWE figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "highly articulated action figure features detailed TrueFX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Attire Date: Mar. 5, 2001 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Legends",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Series: 17",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": null,
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "year": 2022,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Mar. 5, 2001 @ WCW Nitro",
+    "evidence_quote_ids": [
+     "f_q6",
+     "w_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "authentic ring gear with iconic accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2022",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_17_shawn-michaels_fbcfc5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_17_shawn-michaels_fbcfc5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_17_shawn-michaels_fbcfc5",
+   "character_canonical": "shawn-michaels",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "17",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shawn Michaels"
+  },
+  "identity_hash": "08ee5a6971dab2c2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-16-air-styles-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_ken_shamrock",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-ken-shamrock-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_shawn_michaels",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-shawn-michaels-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_ultimate_warrior",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-ultimate-warrior-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_search_summary",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-exclusive-series/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-shawn-michaels-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://bkcollectables.com/products/wwe-elite-legends-series-17-shawn-michaels",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wertoys.com/wwe-legends-elite-collection-shawn-michaels-action-figure-series-17-mattel-hlp42/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Exclusive to Target",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Mar. 5, 2001 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "AJ Styles"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Oct. 12, 1998 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ken Shamrock"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Jan. 19, 1992 @ WWF Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "highly articulated action figure features detailed TrueFX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "$24.36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "Release Date: November 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$48.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "November 2022",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "highly articulated",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "detailed TrueFX technology",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Elite Collection - WWE Legends - True FX life-like details - Series 17 - Ages 8+",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Brand new, NRFP. The package has light wear in the form of scuffs, scratches, bends, creases, and edge wear.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Now: $34.95",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "shawn-michaels",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jan. 19, 1992 @ WWF Royal Rumble",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "detailed TrueFX technology",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "authentic ring gear with iconic accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Elite Collection - WWE Legends - True FX life-like details - Series 17 - Ages 8+",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2022",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_17_ultimate-warrior_05fcb7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_17_ultimate-warrior_05fcb7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_17_ultimate-warrior_05fcb7",
+   "character_canonical": "ultimate-warrior",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "17",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ultimate Warrior"
+  },
+  "identity_hash": "0067ee7e7ec2deeb",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-16-air-styles-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_ken_shamrock",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-ken-shamrock-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_shawn_michaels",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-shawn-michaels-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_ultimate_warrior",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-ultimate-warrior-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_search_summary",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-exclusive-series/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-dingo-warrior-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-ultimate-warrior-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://alltimetoys.com/mattel-wwe-elite-collection-legends-series-17-ultimate-warrior-6-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Exclusive to Target",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Mar. 5, 2001 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "AJ Styles"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Oct. 12, 1998 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ken Shamrock"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Jan. 19, 1992 @ WWF Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "highly articulated action figure features detailed TrueFX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "$24.36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "Release Date: November 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Circa 1980s @ WCCW",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$24.36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "November 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "character_canonical": "ultimate-warrior",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The legacy lives on! These 6-inch scale WWE figures are must-haves for kids and collectors to play out classic moments from legendary WWE Superstars and Hall of Famers.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Each highly articulated action figure features detailed TrueFX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Circa 1980s @ WCCW",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2022",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite-legends_17_ken-shamrock_4fb8ef": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite-legends_17_ken-shamrock_4fb8ef",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite-legends_17_ken-shamrock_4fb8ef",
+   "character_canonical": "ken-shamrock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite-legends",
+   "release_wave": "17",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ken Shamrock"
+  },
+  "identity_hash": "8ab94b66e227fb4d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-16-air-styles-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_ken_shamrock",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-ken-shamrock-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_wfd_shawn_michaels",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-legends-series-17-shawn-michaels-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_ultimate_warrior",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-ultimate-warrior-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "w_toywiz_search_summary",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-exclusive-series/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-17-ken-shamrock-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://forum.wrestlingfigs.com/thread/375776/ken-shamrock",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-13"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Exclusive to Target",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Mar. 5, 2001 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "AJ Styles"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Oct. 12, 1998 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ken Shamrock"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_ken_shamrock",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Jan. 19, 1992 @ WWF Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_shawn_michaels",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "6-inch scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "highly articulated action figure features detailed TrueFX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "$24.36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": "Ultimate Warrior"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ultimate_warrior",
+     "text": "Release Date: November 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Legends",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "November 2022",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite-legends",
+      "year": 2022,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "They already made him in red, green & blue",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": null,
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 12, 1998 @ WWF Raw",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2022",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "evidence_quote_ids": []
+   }
+  ]
+ }
+}
