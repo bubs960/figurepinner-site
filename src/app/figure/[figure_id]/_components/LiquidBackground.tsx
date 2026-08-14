@@ -53,7 +53,13 @@ export default function LiquidBackground() {
         @keyframes fpBlobC { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(8%,-10%) scale(1.2); } }
         @keyframes fpSheen { 0%,100% { transform:translateX(-12%) skewX(-8deg); opacity:.5; } 50% { transform:translateX(10%) skewX(6deg); opacity:1; } }
         .fp-liquid-blob { position:absolute; border-radius:50%; filter:blur(90px); will-change:transform; }
-        @media (max-width: 768px) { .fp-liquid-blob { filter:blur(70px); } }
+        /* Mobile is deliberately LIGHTER per the mobile.dc.html mockup (paint
+           cost lives on phones): softer blur, capped blob sizes, and the
+           second sheen band dropped entirely. */
+        @media (max-width: 768px) {
+          .fp-liquid-blob { filter:blur(70px); max-width:480px; max-height:420px; }
+          .fp-liquid-sheen-2 { display:none; }
+        }
         @media (prefers-reduced-motion: reduce) {
           .fp-liquid-bg * { animation-play-state: paused !important; }
         }
@@ -67,7 +73,7 @@ export default function LiquidBackground() {
         background: 'linear-gradient(100deg, transparent 40%, rgba(245,196,98,.035) 48%, rgba(255,246,218,.06) 50%, rgba(245,196,98,.035) 52%, transparent 60%)',
         mixBlendMode: 'screen', animation: 'fpSheen 26s ease-in-out infinite', willChange: 'transform', filter: 'blur(6px)',
       }} />
-      <div style={{
+      <div className="fp-liquid-sheen-2" style={{
         position: 'absolute', right: '4%', top: '-10%', width: '26%', height: '140%',
         background: 'linear-gradient(80deg, transparent 42%, rgba(78,205,230,.04) 50%, transparent 58%)',
         mixBlendMode: 'screen', animation: 'fpSheen 38s ease-in-out infinite reverse', willChange: 'transform', filter: 'blur(8px)',
