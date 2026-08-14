@@ -44,7 +44,9 @@ function labelFor(fieldPath: string): string {
   return FIELD_LABELS.find(f => f.match.test(fieldPath))?.label ?? fieldPath
 }
 
-function evidenceBadge(cls: string | undefined): { label: string; color: string; inferred?: boolean } {
+// Exported for ScalePassport (2026-08-15): the scale render shares this badge
+// vocabulary — matcher owns the ec strings, one mapping keeps the two in step.
+export function evidenceBadge(cls: string | undefined): { label: string; color: string; inferred?: boolean } {
   if (cls === 'primary_exact') return { label: 'PRIMARY SOURCE', color: 'var(--dp-green)' }
   if (cls === 'single_secondary') return { label: 'SINGLE SOURCE', color: 'var(--dp-gold)' }
   // Per the Hela nomination's own caveat: corroborated_exact can be two pages

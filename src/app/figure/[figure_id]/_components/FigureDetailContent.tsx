@@ -32,6 +32,7 @@ import { getSellerListings } from '@/data/bubs-inventory'
 import SeoSummary, { LINE_RETAIL_PRICE } from './SeoSummary'
 import DecisionPassportPreview, { type IdentityRow } from './DecisionPassportPreview'
 import GoldenCorpusPassport from './GoldenCorpusPassport'
+import ScalePassport from './ScalePassport'
 import GoldenCorpusAtAGlance from './GoldenCorpusAtAGlance'
 import { getGoldenCorpusClaims } from '../_lib/goldenCorpus'
 import { derivePriceContract } from '../_lib/priceContract'
@@ -1028,7 +1029,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             inferenceNote={inferenceNote}
             buckets={{ sealed: price?.sealed ?? null, loose: price?.loose ?? null }}
             history={priceHistory}
-            hasReceipts={!!goldenCorpusDoc}
+            hasReceipts={!!goldenCorpusDoc || !!local.passport}
             ebaySearchUrl={ebayUrl}
           />
         </div>
@@ -1062,8 +1063,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           {/* Golden-corpus evidence-locked passport (Hela, 2026-08-13 — first
               candidate to pass web's full acceptance gate). Doc presence is
               the render gate; reads matcher's claims doc directly, NOT a KB
-              pour. */}
-          {goldenCorpusDoc && <GoldenCorpusPassport doc={goldenCorpusDoc} />}
+              pour. Scale figures (poured passport block, 8/13 tiering ruling)
+              fall through to ScalePassport — CORE rows + honest gaps. */}
+          {goldenCorpusDoc
+            ? <GoldenCorpusPassport doc={goldenCorpusDoc} />
+            : local.passport && <ScalePassport fig={local} fullWave={fullWave} />}
         </DecisionPassportPreview>
         </div>
 
