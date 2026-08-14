@@ -9,7 +9,7 @@ import ConditionShineBox from './ConditionShineBox'
 import NoUpscalePhoto from './NoUpscalePhoto'
 import PriceBlock from './PriceBlock'
 import HeroCtaRail from './HeroCtaRail'
-import type { CondBucket } from './FigureDetailContent'
+import type { CondBucket, PriceHistory } from './FigureDetailContent'
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
@@ -82,6 +82,9 @@ interface HeroBandProps {
    *  usable median, the two-bucket PriceBlock replaces the legacy placard.
    *  Pooled-only figures (neither bucket) keep the placard unchanged. */
   buckets?: { sealed: CondBucket | null; loose: CondBucket | null } | null
+  /** v4 weekly-median history (matcher's price-history emitter, 2026-08-14).
+   *  Null while the backfill cycle hasn't reached this fid — strip stays off. */
+  history?: PriceHistory | null
   /** Page renders a #receipts section (golden-corpus passport) — gates the
    *  price block's "how we price ↓" anchor so plain pages get no dead link. */
   hasReceipts?: boolean
@@ -110,7 +113,7 @@ export default function HeroBand({
   eraLabel, releaseYear, rarityTier, genre, className,
   valuePricing, loreText, underPhoto, ticks, lastSale,
   conditionLabel, conditionRows, secondary, inferenceNote,
-  buckets, hasReceipts, ebaySearchUrl,
+  buckets, history, hasReceipts, ebaySearchUrl,
 }: HeroBandProps) {
   const showPriceBlock = buckets != null &&
     ((buckets.sealed?.median != null && buckets.sealed.count >= 1) ||
@@ -373,6 +376,7 @@ export default function HeroBand({
             <PriceBlock
               sealed={buckets!.sealed}
               loose={buckets!.loose}
+              history={history}
               hasReceipts={hasReceipts}
             />
             {inferenceNote && (

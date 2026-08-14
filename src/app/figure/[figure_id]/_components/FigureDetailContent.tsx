@@ -89,6 +89,41 @@ type PriceData = {
 
 const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 
+/** Weekly-median history (matcher's price-history emitter, live 2026-08-14 —
+ *  MATCHER-TO-WEB-PRICE-HISTORY-EMITTER-LIVE-2026-08-14.md). Contract: exactly
+ *  13 weeks oldest-first; sparse weeks are real (render gaps, never suppress);
+ *  delta_90d is authoritative — NEVER compute a delta from the weeks array
+ *  (it's deliberately null when window_truncated). Absent object = the
+ *  backfill cycle hasn't reached this fid yet → render the strip off. */
+export type PriceHistoryWeek = {
+  week: string
+  loose_median: number | null
+  sealed_median: number | null
+  n: number
+}
+export type PriceHistory = {
+  figure_id: string
+  generated_at: string
+  weeks: PriceHistoryWeek[]
+  delta_90d: { loose: number | null; sealed: number | null }
+  window_truncated: boolean
+}
+
+export async function fetchPriceHistory(figure_id: string): Promise<PriceHistory | null> {
+  try {
+    const res = await fetch(
+      `${R2_PROXY_BASE}/price-history/${encodeURIComponent(figure_id)}.json`,
+      { next: { revalidate: 3600 } }
+    )
+    if (!res.ok) return null
+    const data = (await res.json()) as PriceHistory
+    if (!Array.isArray(data.weeks) || data.weeks.length === 0) return null
+    return data
+  } catch {
+    return null
+  }
+}
+
 type R2Snapshot = {
   figure_id: string; avg_sold: number | null; median_sold: number | null
   min_sold: number | null; max_sold: number | null; sold_count: number
@@ -231,7 +266,10 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // Google without an explicit X-Robots-Tag header. (SEO verify 2026-06-25, R5.)
   if (!local) notFound()
 
-  const { price, imageUrl } = await fetchFigurePageData(figureId)
+  const [{ price, imageUrl }, priceHistory] = await Promise.all([
+    fetchFigurePageData(figureId),
+    fetchPriceHistory(figureId),
+  ])
   const latestCompDate = price ? latestSoldDate(price.soldHistory) : null
 
   // ── Derived display values ──────────────────────────────────────────────────
@@ -989,6 +1027,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             secondary={placardSecondary}
             inferenceNote={inferenceNote}
             buckets={{ sealed: price?.sealed ?? null, loose: price?.loose ?? null }}
+            history={priceHistory}
             hasReceipts={!!goldenCorpusDoc}
             ebaySearchUrl={ebayUrl}
           />
