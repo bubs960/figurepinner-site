@@ -21,6 +21,7 @@ import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
 import GuidesStickySearch from './GuidesStickySearch'
+import HubAnswerCard from './HubAnswerCard'
 import FandomLineSections from './FandomLineSections'
 import GiJoeSeamAtmosphere from './GiJoeSeamAtmosphere'
 import WweRingAtmosphere from './WweRingAtmosphere'
@@ -390,16 +391,7 @@ export default function FandomHub({
           <div className="fh-kicker">{v.kicker}</div>
           <h1 className="fh-title">{article.title}</h1>
           <p className="fh-lead">{v.heroLead}</p>
-          <form action="/search" method="get" className="fh-search" role="search">
-            <input
-              type="search"
-              name="q"
-              className="fh-search-input"
-              placeholder={v.searchPlaceholder}
-              aria-label={v.searchPlaceholder}
-            />
-            <button type="submit" className="fh-search-btn">{v.ctaLabel}</button>
-          </form>
+          <HubAnswerCard headline={v.answerHeadline} searchPlaceholder={v.searchPlaceholder} />
         </div>
       </section>
 

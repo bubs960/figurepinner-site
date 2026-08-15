@@ -87,6 +87,11 @@ export type VoicePack = {
   storyLabel: string      // collapsed story expander summary
   statsAria: string       // "by the numbers" strip aria-label
   statsLinesLabel: string // stat label for the line count
+  /** Guides-conversion Phase 3 (design-explorations/guides-conversion-v1): the hero
+   *  answer card's headline, e.g. "WHAT'S YOUR ELITE WORTH?". Optional -- HubAnswerCard
+   *  falls back to a fandom-neutral default when absent, so this ships across every
+   *  hub without requiring copy for all of them up front. */
+  answerHeadline?: string
 }
 
 /** Easter-egg fact pool (Skeletor / Cobra Commander). Every item is ledger-sourced. */
