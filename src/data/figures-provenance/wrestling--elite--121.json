@@ -1,0 +1,2560 @@
+{
+ "fp_wrestling_mattel_elite_121_cm-punk_b7b245": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_121_cm-punk_b7b245",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_121_cm-punk_b7b245",
+   "character_canonical": "cm-punk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "121",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "CM Punk"
+  },
+  "identity_hash": "e798f0a79ee88970",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_series121_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-complete-set-elite121-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_gunther_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-gunther-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_obafemi_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "url": "https://wrestlingfigurenews.com/2025/07/25/photos-wwe-elite-121-ft-oba-femi-cm-punk-gunther-alba-fyre-carmelo-hayes-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_s121_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-action-figure-case-of-8/mtgdf60b4",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_s121_page_blocked",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_legendsverse_obafemi_blocked",
+     "url": "https://legendsverse.com/checklist/wwe-elite/figures/wwe-elite-collection-series-121-oba-femi-260602011656",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-cm-punk-elite121-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-cm-punk-action-figure/mtjht46",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk, Gunther, Carmelo Hayes, Austin Theory, Oba Femi & Alba Fyre",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_series121_set",
+     "text": "$143.99 for the complete set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_series121_set",
+     "text": "Optional Figure Defender Case available for +$28.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Price: $29.99 / Release Date: December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk: $24.99; Austin Theory: $25.99; Carmelo Hayes: $34.99; Oba Femi: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_entertainmentearth_s121_case",
+     "text": "WWE Elite Collection Series 121 Action Figure Case of 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "text": "Photos: WWE Elite 121 ft. Oba Femi, CM Punk, Gunther, Alba Fyre, Carmelo Hayes & Austin Theory",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "white trunks with a red-and-blue Chicago flag star design as well as matching white kickpad boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "focused headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "vivid tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "two interchangeable pairs of wrapped hands with red straight-edge X's, and a black fabric Best in the World sleeveless tee",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "White trunks with a red-and-blue Chicago flag star design and matching white kickpad boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White trunks and boots with red-and-blue Chicago flag star design",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Focused headscan",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Vivid tattoos",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black fabric Best in the World sleeveless tee",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Two interchangeable pairs of wrapped hands with red straight-edge X's",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_121_austin-theory_eda04ce9edfb": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_121_austin-theory_eda04ce9edfb",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_121_austin-theory_eda04ce9edfb",
+   "character_canonical": "austin-theory",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "121",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Austin Theory"
+  },
+  "identity_hash": "beba2105ccd27021",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_series121_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-complete-set-elite121-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_gunther_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-gunther-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_obafemi_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "url": "https://wrestlingfigurenews.com/2025/07/25/photos-wwe-elite-121-ft-oba-femi-cm-punk-gunther-alba-fyre-carmelo-hayes-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_s121_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-action-figure-case-of-8/mtgdf60b4",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_s121_page_blocked",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_legendsverse_obafemi_blocked",
+     "url": "https://legendsverse.com/checklist/wwe-elite/figures/wwe-elite-collection-series-121-oba-femi-260602011656",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-austin-theory-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-theory-elite121-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk, Gunther, Carmelo Hayes, Austin Theory, Oba Femi & Alba Fyre",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_series121_set",
+     "text": "$143.99 for the complete set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_series121_set",
+     "text": "Optional Figure Defender Case available for +$28.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Price: $29.99 / Release Date: December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk: $24.99; Austin Theory: $25.99; Carmelo Hayes: $34.99; Oba Femi: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_entertainmentearth_s121_case",
+     "text": "WWE Elite Collection Series 121 Action Figure Case of 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "text": "Photos: WWE Elite 121 ft. Oba Femi, CM Punk, Gunther, Alba Fyre, Carmelo Hayes & Austin Theory",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$38.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Features TrueFX technology for lifelike facial details and expressions.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Highly detailed Austin Theory action figure with authentic ring gear and accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Highly articulated for dynamic play and poseability.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Ages 8 and up.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "white-and-teal tights with a unique rear Liberty Bell-style All Day Austin Theory logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "black laced boots and white knee pads with All Day and monogram logos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Theory has a confident headscan, ready to win tag team gold with his A-Town Down Under partner Grayson Waller.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "His accessories include a WWE Tag Team Championship title belt and an interchangeable pair of unique A-Town gesture hands for screen-accurate posing!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "$25.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "White-and-teal tights with a unique rear Liberty Bell-style All Day Austin Theory logo",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White and teal tights; black laced boots with white knee pads",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident headscan",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX technology for lifelike facial details and expressions",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Liberty Bell-style All Day Austin Theory logo on rear of tights",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White knee pads and black laced boots with All Day and monogram logos",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable pair of unique A-Town gesture hands",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "December 2025",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$38.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 38.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$25.99",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 25.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_121_gunther_484a2b0f51c4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_121_gunther_484a2b0f51c4",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_121_gunther_484a2b0f51c4",
+   "character_canonical": "gunther",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "121",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Gunther"
+  },
+  "identity_hash": "4e207a80afc82b3f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_series121_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-complete-set-elite121-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_gunther_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-gunther-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_obafemi_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "url": "https://wrestlingfigurenews.com/2025/07/25/photos-wwe-elite-121-ft-oba-femi-cm-punk-gunther-alba-fyre-carmelo-hayes-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_s121_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-action-figure-case-of-8/mtgdf60b4",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_s121_page_blocked",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_legendsverse_obafemi_blocked",
+     "url": "https://legendsverse.com/checklist/wwe-elite/figures/wwe-elite-collection-series-121-oba-femi-260602011656",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-gunther-action-figure-jht47",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-gunther-elite121-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk, Gunther, Carmelo Hayes, Austin Theory, Oba Femi & Alba Fyre",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_series121_set",
+     "text": "$143.99 for the complete set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_series121_set",
+     "text": "Optional Figure Defender Case available for +$28.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Price: $29.99 / Release Date: December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk: $24.99; Austin Theory: $25.99; Carmelo Hayes: $34.99; Oba Femi: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_entertainmentearth_s121_case",
+     "text": "WWE Elite Collection Series 121 Action Figure Case of 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "text": "Photos: WWE Elite 121 ft. Oba Femi, CM Punk, Gunther, Alba Fyre, Carmelo Hayes & Austin Theory",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "6-inch-tall figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "interchangeable hands and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Each figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories for collectors to display in authentic poses or kids to play out memorable matches.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "$24.83",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "maroon trunks with Ring General rear logo and matching maroon laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "double-breasted maroon fabric trenchcoat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "determined headscan ready to defend his World Heavyweight Championship",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "WWE World Heavyweight Championship title belt with special Gunther logo side plates",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "interchangeable pair of hands for powerful chopping",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Double-breasted maroon fabric trenchcoat; maroon trunks with Ring General rear logo and matching maroon laced boots",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Maroon",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Determined headscan ready to defend his World Heavyweight Championship",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE World Heavyweight Championship title belt with special Gunther logo side plates",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable pair of hands for powerful chopping",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE World Heavyweight Championship title belt with special Gunther logo side plates",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable pair of hands (chopping hands)",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$24.83",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 24.83,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$27.99",
+      "evidence_quote_ids": [
+       "f_q12"
+      ],
+      "price_detail": {
+       "amount": 27.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_121_alba-fyre_cf5177f6d2e5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_121_alba-fyre_cf5177f6d2e5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_121_alba-fyre_cf5177f6d2e5",
+   "character_canonical": "alba-fyre",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "121",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Alba Fyre"
+  },
+  "identity_hash": "011edc9cbe93523f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_series121_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-complete-set-elite121-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_gunther_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-gunther-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_obafemi_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "url": "https://wrestlingfigurenews.com/2025/07/25/photos-wwe-elite-121-ft-oba-femi-cm-punk-gunther-alba-fyre-carmelo-hayes-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_s121_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-action-figure-case-of-8/mtgdf60b4",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_s121_page_blocked",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_legendsverse_obafemi_blocked",
+     "url": "https://legendsverse.com/checklist/wwe-elite/figures/wwe-elite-collection-series-121-oba-femi-260602011656",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-tbd-tbd",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-alba-fyre-elite121-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-alba-fyre-action-figure-jht51",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk, Gunther, Carmelo Hayes, Austin Theory, Oba Femi & Alba Fyre",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_series121_set",
+     "text": "$143.99 for the complete set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_series121_set",
+     "text": "Optional Figure Defender Case available for +$28.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Price: $29.99 / Release Date: December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk: $24.99; Austin Theory: $25.99; Carmelo Hayes: $34.99; Oba Femi: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_entertainmentearth_s121_case",
+     "text": "WWE Elite Collection Series 121 Action Figure Case of 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "text": "Photos: WWE Elite 121 ft. Oba Femi, CM Punk, Gunther, Alba Fyre, Carmelo Hayes & Austin Theory",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 24, 2024 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "studded yellow-and-black top with textured panels as well as matching studded yellow-and-black pants with molded hanging chain details",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "a confident headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "an additional pair of hands for screen-accurate posing and a WWE Women's Tag Team Championship title belt with unique Alba Fyre side plates",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "directly from Clash at the Castle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "interchangeable hands and iconic accessories for play and display",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "1 WWE Elite Collection 6-inch action figure and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "$24.83",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alba-fyre",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Directly from Clash at the Castle",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A confident headscan",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX technology for life-like facial features",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Molded hanging chain details on studded yellow-and-black top and pants",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of hands for screen-accurate posing",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE Women's Tag Team Championship title belt with unique Alba Fyre side plates",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_121_oba-femi_497e9371b768": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_121_oba-femi_497e9371b768",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_121_oba-femi_497e9371b768",
+   "character_canonical": "oba-femi",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "121",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Oba Femi"
+  },
+  "identity_hash": "43a700bbaaefd01b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_series121_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-complete-set-elite121-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_gunther_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-gunther-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_obafemi_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "url": "https://wrestlingfigurenews.com/2025/07/25/photos-wwe-elite-121-ft-oba-femi-cm-punk-gunther-alba-fyre-carmelo-hayes-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_s121_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-action-figure-case-of-8/mtgdf60b4",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_s121_page_blocked",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_legendsverse_obafemi_blocked",
+     "url": "https://legendsverse.com/checklist/wwe-elite/figures/wwe-elite-collection-series-121-oba-femi-260602011656",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-120-oba-femi",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-oba-femi-action-figure-jht50",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk, Gunther, Carmelo Hayes, Austin Theory, Oba Femi & Alba Fyre",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_series121_set",
+     "text": "$143.99 for the complete set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_series121_set",
+     "text": "Optional Figure Defender Case available for +$28.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Price: $29.99 / Release Date: December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk: $24.99; Austin Theory: $25.99; Carmelo Hayes: $34.99; Oba Femi: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_entertainmentearth_s121_case",
+     "text": "WWE Elite Collection Series 121 Action Figure Case of 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "text": "Photos: WWE Elite 121 ft. Oba Femi, CM Punk, Gunther, Alba Fyre, Carmelo Hayes & Austin Theory",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "highly articulated for dynamic posing and recreating memorable wrestling moments.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "oba-femi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "advanced TrueFX technology for realistic facial features and expressions.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "oba-femi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "authentic WWE ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "oba-femi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "oba-femi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "oba-femi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Attire date best estimate based on when majority of gear/accessories were worn or most memorable event",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX technology for life-like facial features",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Highly articulated for dynamic posing and recreating memorable wrestling moments",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_121_carmelo-hayes_0497bd73e7c7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_121_carmelo-hayes_0497bd73e7c7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_121_carmelo-hayes_0497bd73e7c7",
+   "character_canonical": "carmelo-hayes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "121",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Carmelo Hayes"
+  },
+  "identity_hash": "d70675f9671954b3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_series121_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-complete-set-elite121-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_gunther_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-gunther-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_obafemi_s121",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-121-oba-femi-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "url": "https://wrestlingfigurenews.com/2025/07/25/photos-wwe-elite-121-ft-oba-femi-cm-punk-gunther-alba-fyre-carmelo-hayes-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_s121_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-action-figure-case-of-8/mtgdf60b4",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_s121_page_blocked",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_legendsverse_obafemi_blocked",
+     "url": "https://legendsverse.com/checklist/wwe-elite/figures/wwe-elite-collection-series-121-oba-femi-260602011656",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-121-toy-figures-carmelo-elite121-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-carmelo-hayes-action-figure-jht48",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-121-carmelo-hayes-action-figure/mtjht48",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk, Gunther, Carmelo Hayes, Austin Theory, Oba Femi & Alba Fyre",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_series121_set",
+     "text": "$143.99 for the complete set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_series121_set",
+     "text": "Optional Figure Defender Case available for +$28.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_cmpunk_s121",
+     "text": "Price: $29.99 / Release Date: December 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "CM Punk",
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_series121_set",
+     "text": "CM Punk: $24.99; Austin Theory: $25.99; Carmelo Hayes: $34.99; Oba Femi: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_entertainmentearth_s121_case",
+     "text": "WWE Elite Collection Series 121 Action Figure Case of 8",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wrestlingfigurenews_s121_photos",
+     "text": "Photos: WWE Elite 121 ft. Oba Femi, CM Punk, Gunther, Alba Fyre, Carmelo Hayes & Austin Theory",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2025
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "bold blue tights with red-and-white graffiti-style design work and Him rear logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "black kickpad boots with Melo logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "molded black sunglasses, silver Him neckchain, and a black fabric Melo Don't Miss sleeveless bullseye design tee",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "confident smiling headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Bold blue tights with red-and-white graffiti-style design and Him rear logo",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue tights with red-and-white graffiti-style design work; black kickpad boots",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident smiling headscan",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "Highly detailed TrueFX technology for life-like facial features",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black kickpad boots with Melo logo",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Molded black sunglasses and silver Him neckchain",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Black fabric Melo Don't Miss sleeveless bullseye design tee",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Black fabric Melo Don't Miss sleeveless bullseye design tee",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

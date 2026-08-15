@@ -1,0 +1,2705 @@
+{
+ "fp_wrestling_mattel_elite_124_alex-shelley_1725abbb5b12": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_124_alex-shelley_1725abbb5b12",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_124_alex-shelley_1725abbb5b12",
+   "character_canonical": "alex-shelley",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "124",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Alex Shelley"
+  },
+  "identity_hash": "c0206dacc502795d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz-jeyuso",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-jey-uso-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-shelley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-alex-shelley-action-figure-motor-city-machine-guns/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-set124",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-complete-set-elite124-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_websearch-toywiz-lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-chris-sabin-action-figure-motor-city-machine-guns/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-alex-shelley-elite124-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-alex-shelly-figure-jht71",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-set124",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_websearch-toywiz-lineup",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Release Date: March 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Price: $39.99 USD",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-shelley",
+     "text": "This action figure represents Alex Shelley from the Motor City Machine Guns tag team.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-shelley",
+     "text": "Release Date: May 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-shelley",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-set124",
+     "text": "$123.99 for the complete set",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_ringside-set124",
+     "text": "No BAF (Build-A-Figure) information provided",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black tights with vivid yellow design work and rear Skull and Bones logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a removable jean vest with fur collar, studded details, and bold yellow back design panels",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "removable elbow pad and an additional pair of interchangeable hands for screen-accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "black kickpad boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "dogtags",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "confident headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "interchangeable hands and iconic accessories for play and display",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "1 WWE Elite Collection 6-inch action figure and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "$24.83",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "alex-shelley",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black tights with vivid yellow design work and rear Skull and Bones logo, removable jean vest with fur collar and studded details",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black tights with vivid yellow design work; black kickpad boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "confident headscan",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "dogtags",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "removable elbow pad",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "additional pair of interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ]
+     },
+     {
+      "value": "$24.83",
+      "evidence_quote_ids": [
+       "f_q12"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_124_jey-uso_4e012c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_124_jey-uso_4e012c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_124_jey-uso_4e012c",
+   "character_canonical": "jey-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "124",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jey Uso"
+  },
+  "identity_hash": "e21a31822992982a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz-jeyuso",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-jey-uso-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-shelley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-alex-shelley-action-figure-motor-city-machine-guns/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-set124",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-complete-set-elite124-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_websearch-toywiz-lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-chris-sabin-action-figure-motor-city-machine-guns/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-tbd-jey-uso",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-jey-uso-figure-jht68",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-set124",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_websearch-toywiz-lineup",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Release Date: March 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Price: $39.99 USD",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-shelley",
+     "text": "This action figure represents Alex Shelley from the Motor City Machine Guns tag team.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-shelley",
+     "text": "Release Date: May 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-shelley",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-set124",
+     "text": "$123.99 for the complete set",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_ringside-set124",
+     "text": "No BAF (Build-A-Figure) information provided",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Feb. 1, 2025 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2026",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Includes interchangeable hands and iconic accessories for play and display",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "1 WWE Elite Collection 6-inch action figure and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Feb. 1, 2025 @ WWE Royal Rumble",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2026",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_124_chris-sabin_05e8624a3264": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_124_chris-sabin_05e8624a3264",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_124_chris-sabin_05e8624a3264",
+   "character_canonical": "chris-sabin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "124",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Chris Sabin"
+  },
+  "identity_hash": "12e11171f8d8c801",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz-jeyuso",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-jey-uso-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-shelley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-alex-shelley-action-figure-motor-city-machine-guns/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-set124",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-complete-set-elite124-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_websearch-toywiz-lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-chris-sabin-action-figure-motor-city-machine-guns/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-chris-sabin-figure-jht72",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-chris-sabin-elite124-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-set124",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_websearch-toywiz-lineup",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Release Date: March 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Price: $39.99 USD",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-shelley",
+     "text": "This action figure represents Alex Shelley from the Motor City Machine Guns tag team.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-shelley",
+     "text": "Release Date: May 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-shelley",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-set124",
+     "text": "$123.99 for the complete set",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_ringside-set124",
+     "text": "No BAF (Build-A-Figure) information provided",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "TrueFX detailing for life-like facial features",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Interchangeable hands and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "1 WWE Elite Collection 6-inch action figure and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$24.83",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "black shorts with vivid yellow design work and matching black-and-yellow kickpad boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "a black fabric hooded biker jacket, dog tags, and an additional pair of interchangeable hands for screen-accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Hail Sabin! The Motor City Machine Guns make their long-awaited WWE figure debut with Chris Sabin in Mattel WWE Elite Series 124!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Sabin joins his MCMGs tag team partner Alex Shelley in the Elite line with a focused headscan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "He's ready to deliver a Skull & Bones to his opponents",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "chris-sabin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black shorts with vivid yellow design work and matching black-and-yellow kickpad boots",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black and yellow",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Focused headscan",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX detailing for life-like facial features",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black fabric hooded biker jacket and dog tags",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Black fabric hooded biker jacket",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Dog tags",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Additional pair of interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$24.83",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 24.83,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 24.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_124_cm-punk_c31fc2c73828": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_124_cm-punk_c31fc2c73828",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_124_cm-punk_c31fc2c73828",
+   "character_canonical": "cm-punk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "124",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "CM Punk"
+  },
+  "identity_hash": "8af96946bdaee05f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz-jeyuso",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-jey-uso-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-shelley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-alex-shelley-action-figure-motor-city-machine-guns/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-set124",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-complete-set-elite124-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_websearch-toywiz-lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-chris-sabin-action-figure-motor-city-machine-guns/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-cm-punk-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-cm-punk-elite124-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-set124",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_websearch-toywiz-lineup",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Release Date: March 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Price: $39.99 USD",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-shelley",
+     "text": "This action figure represents Alex Shelley from the Motor City Machine Guns tag team.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-shelley",
+     "text": "Release Date: May 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-shelley",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-set124",
+     "text": "$123.99 for the complete set",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_ringside-set124",
+     "text": "No BAF (Build-A-Figure) information provided",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "May 2026",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Comes with authentic ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black trunks with white Chicago flag stars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "matching black kickpad boots with white stars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "black-and-white fabric entrance jacket with skull-and-crossbones design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "determined headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "a pair of interchangeable taped hands with his iconic straight edge X design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black trunks with white Chicago flag stars, matching black kickpad boots with white stars, black-and-white fabric entrance jacket with skull-and-crossbones design",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black and white",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Determined headscan",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black-and-white fabric entrance jacket with skull-and-crossbones design",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable taped hands with iconic straight edge X design",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable taped hands with straight edge X design",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2026",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$27.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 27.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 21.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_124_lyra-valkyria_6dc356f55ebd": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_124_lyra-valkyria_6dc356f55ebd",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_124_lyra-valkyria_6dc356f55ebd",
+   "character_canonical": "lyra-valkyria",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "124",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Lyra Valkyria"
+  },
+  "identity_hash": "d880f36ca9b92d38",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz-jeyuso",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-jey-uso-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-shelley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-alex-shelley-action-figure-motor-city-machine-guns/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-set124",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-complete-set-elite124-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_websearch-toywiz-lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-chris-sabin-action-figure-motor-city-machine-guns/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-tbd-lyra-valkyria",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-lyra-elite124-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-set124",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_websearch-toywiz-lineup",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Release Date: March 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Price: $39.99 USD",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-shelley",
+     "text": "This action figure represents Alex Shelley from the Motor City Machine Guns tag team.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-shelley",
+     "text": "Release Date: May 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-shelley",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-set124",
+     "text": "$123.99 for the complete set",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_ringside-set124",
+     "text": "No BAF (Build-A-Figure) information provided",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2026",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 124",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jan. 13, 2025 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "vivid metallic blue-and-black strapped top with feather details and black trunks with metallic blue studded details and feathers",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "confident, smiling headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "an additional pair of interchangeable hands for screen-accurate posing and the line debut of the WWE Women's Intercontinental Championship title belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "character_canonical": "lyra-valkyria",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jan. 13, 2025 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "vivid metallic blue-and-black strapped top with feather details and black trunks with metallic blue studded details and feathers",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "confident, smiling headscan",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "vivid metallic blue-and-black strapped top with feather details",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE Women's Intercontinental Championship title belt (line debut)",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_124_rey-mysterio_2b040991acaa": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_124_rey-mysterio_2b040991acaa",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_124_rey-mysterio_2b040991acaa",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "124",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "ad02d76a48ce96ec",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz-jeyuso",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-jey-uso-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz-shelley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-alex-shelley-action-figure-motor-city-machine-guns/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside-set124",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-complete-set-elite124-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_websearch-toywiz-lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-chris-sabin-action-figure-motor-city-machine-guns/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-124-rey-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-124-toy-figures-rey-mysterio-elite124-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside-set124",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_websearch-toywiz-lineup",
+     "text": "WWE Elite 124 Toy Wrestling Action Figures by Mattel! This set includes: Jey Uso, Rey Mysterio, CM Punk, Motor City Machine Guns (Chris Sabin & Alex Shelley) & Lyra Valkyria!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Release Date: March 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz-jeyuso",
+     "text": "Price: $39.99 USD",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Jey Uso",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz-shelley",
+     "text": "This action figure represents Alex Shelley from the Motor City Machine Guns tag team.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-shelley",
+     "text": "Release Date: May 2026",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-shelley",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Alex Shelley",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside-set124",
+     "text": "$123.99 for the complete set",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_ringside-set124",
+     "text": "No BAF (Build-A-Figure) information provided",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "May 2026",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "advanced True FX technology for realistic facial expressions and paintwork",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Fully articulated for dynamic posing and playability, capturing signature moves",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "white-and-red version of his iconic mask",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "white tights with red-and-black logos and matching white boots",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "an additional pair of interchangeable white gloved hands and a black molded LWO cutoff tee",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2026,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "white-and-red version of his iconic mask, white tights with red-and-black logos and matching white boots",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White, red, and black",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "Advanced True FX technology for realistic facial expressions and paintwork",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "White-and-red iconic mask",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White tights with red-and-black logos and matching white boots",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of interchangeable white gloved hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Black molded LWO cutoff tee",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2026",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 21.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

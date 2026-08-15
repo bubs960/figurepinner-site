@@ -1,0 +1,2779 @@
+{
+ "fp_wrestling_mattel_elite_116_brian-pillman_3d8315": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_116_brian-pillman_3d8315",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_116_brian-pillman_3d8315",
+   "character_canonical": "brian-pillman",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "116",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Brian Pillman"
+  },
+  "identity_hash": "4447fb6614c4dbb2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-aj-styles",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_series116_landing",
+     "url": "https://www.ringsidecollectibles.com/mattel-toy-wrestling-action-figures-wwe-elite-116.html",
+     "fetch_status": "unreachable",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-complete-set-elite116-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_randy_orton",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_checklist",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+116+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_baf",
+     "url": "https://www.google.com/search?q=%22WWE+Elite+116%22+%22Build-A-Figure%22+OR+BAF+piece",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-brian-pillman",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-brian-elite116-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "WWE Wrestling Elite Collection Series 116 Randy Orton Action Figure (Pre-Order ships August)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 116 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_complete_set",
+     "text": "$109.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "text": "Series 116 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_web_search_checklist",
+     "text": "WWE Elite Collection Series 116 includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman. Additionally, there is a Chase Variant Randy Orton Figure in this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$22.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "black trunks with a three-star design as well as white-and-black laced boots and black knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "molded silver entrance vest, monogrammed with 'FB' initials and red three-star design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "smiling, long-haired headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "an additional pair of hands, film-set clapboard, and WCW World Tag Team Championship title belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brian-pillman",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: May 23, 1993 @ WCW Slamboree",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black trunks with a three-star design as well as white-and-black laced boots and black knee pads",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "smiling, long-haired headscan",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "molded silver entrance vest, monogrammed with 'FB' initials and red three-star design",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "additional pair of hands",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "film-set clapboard",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "WCW World Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_116_aj-styles_f185bf": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_116_aj-styles_f185bf",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_116_aj-styles_f185bf",
+   "character_canonical": "aj-styles",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "116",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "AJ Styles"
+  },
+  "identity_hash": "63a167443ebf1951",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-aj-styles",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_series116_landing",
+     "url": "https://www.ringsidecollectibles.com/mattel-toy-wrestling-action-figures-wwe-elite-116.html",
+     "fetch_status": "unreachable",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-complete-set-elite116-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_randy_orton",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_checklist",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+116+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_baf",
+     "url": "https://www.google.com/search?q=%22WWE+Elite+116%22+%22Build-A-Figure%22+OR+BAF+piece",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-aj-styles-elite116-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-aj-styles-action-figure-jcj05",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-116-aj-styles-action-figure/mtjcj05",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "WWE Wrestling Elite Collection Series 116 Randy Orton Action Figure (Pre-Order ships August)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 116 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_complete_set",
+     "text": "$109.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "text": "Series 116 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_web_search_checklist",
+     "text": "WWE Elite Collection Series 116 includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman. Additionally, there is a Chase Variant Randy Orton Figure in this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "all-black gear, including black belted pants, boots, and his signature gloves with white 'P1' logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a grim headscan featuring a beard and long hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a black fabric hooded robe and an additional pair of gloved hands for screen-accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "The Phenomenal One returns as part of Mattel's WWE Elite Series 116, ready for dynamic ring recreation.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "aj-styles",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "All-black gear, including black belted pants, boots, and signature gloves with white 'P1' logo",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "All-black gear with white 'P1' logo",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A grim headscan featuring a beard and long hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black fabric hooded robe",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White 'P1' logo gloves",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Grim headscan with beard and long hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Black fabric hooded robe",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional pair of gloved hands for screen-accurate posing",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_116_kevin-owens_83fab3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_116_kevin-owens_83fab3",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_116_kevin-owens_83fab3",
+   "character_canonical": "kevin-owens",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "116",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kevin Owens"
+  },
+  "identity_hash": "d746063111b880b6",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-aj-styles",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_series116_landing",
+     "url": "https://www.ringsidecollectibles.com/mattel-toy-wrestling-action-figures-wwe-elite-116.html",
+     "fetch_status": "unreachable",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-complete-set-elite116-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_randy_orton",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_checklist",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+116+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_baf",
+     "url": "https://www.google.com/search?q=%22WWE+Elite+116%22+%22Build-A-Figure%22+OR+BAF+piece",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-kevin-owens",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-kevin-owens-elite116-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-series-116-kevin-owens-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "WWE Wrestling Elite Collection Series 116 Randy Orton Action Figure (Pre-Order ships August)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 116 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_complete_set",
+     "text": "$109.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "text": "Series 116 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_web_search_checklist",
+     "text": "WWE Elite Collection Series 116 includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman. Additionally, there is a Chase Variant Randy Orton Figure in this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 7, 2024 @ WrestleMania XL",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "black shorts with a purple-and-red 'FIGHT' block logo, as well as black tights and a cutoff black tee with event-specific 'KO-Mania VII' fight card design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "black kickpad boots with red trim",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "wrapped fists",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "a confident, bearded headscan and accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "an additional pair of wrapped hands and a black fabric 'KO' logo shirt with 'Just Keep Fighting' print on the back",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$26.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "approximately 6-inch action figure in 'Superstar scale'",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": null,
+      "year": null,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WrestleMania XL (Apr. 7, 2024) attire",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black shorts with a purple-and-red 'FIGHT' block logo, black tights, and a cutoff black tee with 'KO-Mania VII' fight card design",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident, bearded headscan with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black kickpad boots with red trim",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Wrapped fists",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional pair of wrapped hands and a black fabric 'KO' logo shirt with 'Just Keep Fighting' print on the back",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_116_lexis-king_8c81d0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_116_lexis-king_8c81d0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_116_lexis-king_8c81d0",
+   "character_canonical": "lexis-king",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "116",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Lexis King"
+  },
+  "identity_hash": "abf65d33be573cab",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-aj-styles",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_series116_landing",
+     "url": "https://www.ringsidecollectibles.com/mattel-toy-wrestling-action-figures-wwe-elite-116.html",
+     "fetch_status": "unreachable",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-complete-set-elite116-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_randy_orton",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_checklist",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+116+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_baf",
+     "url": "https://www.google.com/search?q=%22WWE+Elite+116%22+%22Build-A-Figure%22+OR+BAF+piece",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-lexis-king",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.mattel.com/products/wwe-elite-collection-lexis-king-action-figure-jcj09",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-lexis-king-elite116-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://alltimetoys.com/mattel-wwe-elite-collection-series-116-lexis-king-6-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s5",
+     "url": "https://wrestlingshop.com/en-us/products/lexis-king-wwe-elite-collection-series-116-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "WWE Wrestling Elite Collection Series 116 Randy Orton Action Figure (Pre-Order ships August)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 116 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_complete_set",
+     "text": "$109.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "text": "Series 116 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_web_search_checklist",
+     "text": "WWE Elite Collection Series 116 includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman. Additionally, there is a Chase Variant Randy Orton Figure in this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s3",
+     "text": "serious bearded headscan featuring a patterned headband and feathered blond hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "black tights with gold design work",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "black kickpad boots and illustrated logo knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "black fabric entrance jacket with gold cuff detailing and gold marching-band style piping",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$23.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s5",
+     "text": "$29.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s5",
+     "text": "Extreme articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s5",
+     "text": "Unmatched attention to detail with entrance accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s5",
+     "text": "Second Generation Superstar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s5",
+     "text": "The Son Of Brian Pillman",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "lexis-king",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "serious bearded headscan featuring a patterned headband and feathered blond hairstyle",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black tights with gold design work; black kickpad boots and illustrated logo knee pads",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black fabric entrance jacket with gold cuff detailing and gold marching-band style piping",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "black kickpad boots and illustrated logo knee pads",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "black fabric entrance jacket with gold cuff detailing and gold marching-band style piping",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$23.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 23.99,
+       "currency": "USD",
+       "price_kind": "resale_current",
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s3"
+      }
+     },
+     {
+      "value": "$29.00 USD",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 29,
+       "currency": "USD",
+       "price_kind": "resale_current",
+       "region": null,
+       "as_of": "2026-08-15",
+       "source_id": "f_s5"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_116_jade-cargill_dd785b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_116_jade-cargill_dd785b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_116_jade-cargill_dd785b",
+   "character_canonical": "jade-cargill",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "116",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jade Cargill"
+  },
+  "identity_hash": "6f608d66c3e44cfa",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-aj-styles",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_series116_landing",
+     "url": "https://www.ringsidecollectibles.com/mattel-toy-wrestling-action-figures-wwe-elite-116.html",
+     "fetch_status": "unreachable",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-complete-set-elite116-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_randy_orton",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_checklist",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+116+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_baf",
+     "url": "https://www.google.com/search?q=%22WWE+Elite+116%22+%22Build-A-Figure%22+OR+BAF+piece",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-jade-cargill-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-jade-cargill",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-jade-cargill-elite116-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "WWE Wrestling Elite Collection Series 116 Randy Orton Action Figure (Pre-Order ships August)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 116 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_complete_set",
+     "text": "$109.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "text": "Series 116 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_web_search_checklist",
+     "text": "WWE Elite Collection Series 116 includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman. Additionally, there is a Chase Variant Randy Orton Figure in this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Fully articulated for dynamic posing and authentic WWE mini-moments",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Jan. 27, 2024 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire date best estimate based on when majority of gear/accessories were worn or most memorable event.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "She comes wearing a silver athletic top with shattered-glass style paneled texture and feathered detailing, as well as silver athletic shorts with red shattered-glass deco.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Cargill also comes wearing silver boots and 'Jade' logo paneled knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "a molded silver cropped jacket with paneled texture and feathered detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Cargill stands tall with a confident headscan featuring silver hair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "$26.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jade-cargill",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWE Royal Rumble, Jan. 27, 2024",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Silver with red shattered-glass deco",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident headscan featuring silver hair",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Silver athletic top with shattered-glass style paneled texture and feathered detailing",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Silver athletic shorts with red shattered-glass deco",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Molded silver cropped jacket with paneled texture and feathered detailing",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "Silver boots and 'Jade' logo paneled knee pads",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_116_randy-orton_ff5622": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_116_randy-orton_ff5622",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_116_randy-orton_ff5622",
+   "character_canonical": "randy-orton",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "116",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Randy Orton"
+  },
+  "identity_hash": "17b39a7720bfbcba",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_aj_styles",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-aj-styles",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_series116_landing",
+     "url": "https://www.ringsidecollectibles.com/mattel-toy-wrestling-action-figures-wwe-elite-116.html",
+     "fetch_status": "unreachable",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-complete-set-elite116-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_randy_orton",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_checklist",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+116+checklist",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_web_search_baf",
+     "url": "https://www.google.com/search?q=%22WWE+Elite+116%22+%22Build-A-Figure%22+OR+BAF+piece",
+     "fetch_status": "snippet_only",
+     "source_type": null,
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-116-randy-orton",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://alltimetoys.com/mattel-wwe-elite-collection-series-116-randy-orton-6-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-116-randy-orton-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-116-toy-figures-randy-orton-elite116-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_aj_styles",
+     "text": "Series: 116",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "AJ Styles",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "WWE Wrestling Elite Collection Series 116 Randy Orton Action Figure (Pre-Order ships August)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_randy_orton",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 116 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_complete_set",
+     "text": "$109.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mainline_101_150_collection",
+     "text": "Series 116 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_web_search_checklist",
+     "text": "WWE Elite Collection Series 116 includes: AJ Styles, Randy Orton, Kevin Owens, Jade Cargill, Lexis King & Brian Pillman. Additionally, there is a Chase Variant Randy Orton Figure in this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Nov. 25, 2023 @ WWE Survivor Series: WarGames",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "25 points of deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s4",
+     "text": "$25.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": "black-daddys-home"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s4",
+     "text": "black trunks, knee pads, boots, and wrapped fists",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": "black-daddys-home"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s4",
+     "text": "black fabric \"Daddy's Home\" illustrated t-shirt",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": "black-daddys-home"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s4",
+     "text": "confident headscan and accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": "black-daddys-home"
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s4",
+     "text": "an additional pair of hands for iconic poses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "randy-orton",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "condition": null,
+      "character_variant": "black-daddys-home"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}
