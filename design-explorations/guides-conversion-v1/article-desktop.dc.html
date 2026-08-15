@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#09090F;color:#f2e8d5;font-family:-apple-system,'Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4ecde6;text-decoration:none}a:hover{color:#f5c462}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<!-- ============ PLAIN ARTICLE — DESKTOP (adapts from mobile) ============
+SAMPLE prices. 680px reading column; persistent search lives in the sticky header. -->
+<div data-screen-label="Article Desktop" style="min-width:1100px;background:#09090F;min-height:100vh">
+
+  <!-- STICKY HEADER + persistent search chip → search_submit -->
+  <div style="position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:14px 48px;background:rgba(9,9,15,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(242,232,213,.08)">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="font-family:'Bebas Neue';font-size:24px;color:#f5c462">FP</div>
+      <div style="font-size:11px;color:rgba(242,232,213,.45);letter-spacing:.14em">FIGUREPINNER</div>
+    </div>
+    <div style="font-size:12px;color:rgba(242,232,213,.5)">› <a href="#g">Guides</a> › How to Price a Wrestling Figure</div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:10px;background:#16131f;border:1px solid rgba(245,196,98,.3);border-radius:999px;padding:9px 18px;min-width:320px">
+      <div style="color:#f5c462;font-size:14px">⌕</div>
+      <div style="font-size:13px;color:rgba(242,232,213,.45)">Check any figure's value — free</div>
+    </div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+    <div style="padding-top:56px">
+      <div style="font-size:11px;letter-spacing:.2em;color:rgba(242,232,213,.45);margin-bottom:12px">COLLECTOR GUIDE · 7 MIN READ</div>
+      <h1 style="font-family:'Bebas Neue';font-size:52px;line-height:.98;margin:0 0 14px;color:#f2e8d5">HOW TO PRICE A WRESTLING FIGURE (WITHOUT GETTING WORKED)</h1>
+      <p style="font-size:17px;line-height:1.6;color:rgba(242,232,213,.65);margin:0">The asking price is a wish. The sold price is the truth. Here is how to tell them apart.</p>
+    </div>
+
+    <!-- ANSWER-FIRST BOX → search_submit -->
+    <div style="margin-top:24px;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(245,196,98,.35);border-radius:16px;padding:22px 24px">
+      <div style="font-size:11px;letter-spacing:.18em;color:#e0a83e;margin-bottom:8px">THE SHORT VERSION</div>
+      <div style="font-size:14.5px;line-height:1.6;color:#f2e8d5;margin-bottom:14px">Your figure's value = the <strong>median of its last 5–10 sold listings</strong>, in your condition. Skip the homework — we pull the sold comps for you:</div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;background:#09090F;border:1px solid rgba(242,232,213,.15);border-radius:10px;padding:13px 16px;font-size:14px;color:rgba(242,232,213,.4)">⌕&nbsp; Which figure do you have?</div>
+        <div style="background:linear-gradient(180deg,#f5c462,#dd9f2e);color:#1a1408;border-radius:10px;padding:13px 22px;font-size:14px;font-weight:700;display:grid;place-items:center;white-space:nowrap">SEE ITS VALUE — FREE</div>
+      </div>
+    </div>
+
+    <div style="padding-top:40px;font-size:16px;line-height:1.7;color:rgba(242,232,213,.75)">
+      <p style="margin:0 0 16px">Here is the mistake almost everyone makes. They look up a figure, see three listings at $90, $110, and $135, and decide it is "worth about a hundred bucks." [...] Those listings are not prices. They are asking prices — what a seller hopes to get.</p>
+      <h2 style="font-family:'Bebas Neue';font-size:30px;color:#f2e8d5;margin:40px 0 12px;font-weight:400">RULE ONE: ONLY SOLD COMPS COUNT</h2>
+      <p style="margin:0 0 16px">A "comp" is a comparable sale — a recent, completed transaction for the same figure in the same condition. Active listings tell you what sellers want. Sold listings tell you what buyers paid. [...] The median of that range is your honest market value.</p>
+    </div>
+
+    <!-- INLINE COMP CARD: whole card → figure_view; small link → ebay_exit -->
+    <div style="margin-top:16px">
+      <a href="#figure" style="display:block;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(242,232,213,.12);border-radius:16px;padding:18px 22px">
+        <div style="display:flex;align-items:center;gap:16px">
+          <div style="width:60px;height:60px;border-radius:12px;background:linear-gradient(160deg,#241e33,#131020);display:grid;place-items:center;font-family:'Bebas Neue';font-size:24px;color:rgba(242,232,213,.2)">SC</div>
+          <div style="flex:1">
+            <div style="font-size:11px;letter-spacing:.14em;color:#4ec98c;margin-bottom:2px">LIVE MEDIAN · SAMPLE</div>
+            <div style="font-size:15.5px;font-weight:700;color:#f2e8d5">Stone Cold — Elite 90 Flashback</div>
+            <div style="font-size:11.5px;color:rgba(242,232,213,.45)">7 sold in 90 days · updated Aug 12</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-family:'Bebas Neue';font-size:38px;color:#f5c462;line-height:1">$24</div>
+            <div style="font-size:11px;color:#4ecde6;font-weight:600">Full comps ›</div>
+          </div>
+        </div>
+      </a>
+      <div style="text-align:right;padding:6px 4px 0"><a href="#ebay" style="font-size:11px;color:rgba(242,232,213,.4)">sold listings on eBay ↗</a></div>
+    </div>
+
+    <!-- MID-ARTICLE CONVERSION BREAK (after each rule section) → search_submit -->
+    <div style="margin-top:40px;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border-left:3px solid #f5c462;border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:20px">
+      <div style="font-size:14px;font-weight:700;color:#f2e8d5;flex:1">Have the figure in front of you? Pull its real comps now.</div>
+      <div style="display:flex;gap:8px;min-width:300px">
+        <div style="flex:1;background:#09090F;border:1px solid rgba(242,232,213,.15);border-radius:9px;padding:10px 12px;font-size:13px;color:rgba(242,232,213,.4)">⌕ Figure name…</div>
+        <div style="background:linear-gradient(180deg,#f5c462,#dd9f2e);color:#1a1408;border-radius:9px;padding:10px 16px;font-size:13px;font-weight:700;display:grid;place-items:center">GO</div>
+      </div>
+    </div>
+
+    <div style="padding-top:40px;font-size:16px;line-height:1.7;color:rgba(242,232,213,.75)">
+      <h2 style="font-family:'Bebas Neue';font-size:30px;color:#f2e8d5;margin:0 0 12px;font-weight:400">RULE TWO: CONDITION IS A FORK IN THE ROAD</h2>
+      <p style="margin:0 0 16px">A wrestling figure does not have "a price." It has at least two, and they can differ by 40% or more. [...]</p>
+      <ul style="margin:0 0 16px;padding-left:20px">
+        <li style="margin-bottom:8px"><strong style="color:#f2e8d5">MOC / sealed</strong> — commands a premium; fewer every year.</li>
+        <li style="margin-bottom:8px"><strong style="color:#f2e8d5">Loose, complete</strong> — the baseline most comps represent.</li>
+        <li><strong style="color:#f2e8d5">Loose, incomplete</strong> — routinely 30–50% of a complete example.</li>
+      </ul>
+      <p style="margin:0;color:rgba(242,232,213,.45);font-size:13px">[Rules three &amp; four continue with the same rhythm: section → comp card → conversion break]</p>
+    </div>
+
+    <!-- END BLOCK → search_submit + figure_track_cta_click -->
+    <div style="margin-top:56px;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(245,196,98,.35);border-radius:16px;padding:28px;text-align:center">
+      <div style="font-family:'Bebas Neue';font-size:32px;color:#f2e8d5;margin-bottom:4px">PRICE LIKE A PRO — IN 10 SECONDS</div>
+      <div style="font-size:13px;color:rgba(242,232,213,.55);margin-bottom:18px">Real sold comps, median, range, and sale count on every figure page. Free.</div>
+      <div style="display:inline-block;background:linear-gradient(180deg,#f5c462,#dd9f2e);color:#1a1408;border-radius:10px;padding:14px 40px;font-size:15px;font-weight:700">LOOK UP YOUR FIGURE →</div>
+      <div style="margin-top:12px;font-size:13px;color:#4ec98c">or <a href="#track" style="color:#4ec98c;text-decoration:underline">track it free</a> and we'll ping you when comps move</div>
+    </div>
+
+    <div style="padding-top:56px">
+      <div style="font-size:11px;letter-spacing:.18em;color:rgba(242,232,213,.4);margin-bottom:12px">MORE GUIDES</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="#g" style="font-size:14px">Most Valuable DC Figures: Super Powers Runs the Table <span style="color:rgba(242,232,213,.35)">· 6 min</span></a>
+        <a href="#g" style="font-size:14px">Most Valuable Vintage MOTU Figures <span style="color:rgba(242,232,213,.35)">· 5 min</span></a>
+      </div>
+    </div>
+
+    <!-- AD SLOT: single, bottom, unchanged -->
+    <div style="margin-top:56px;height:120px;border:1px dashed rgba(242,232,213,.15);border-radius:12px;display:grid;place-items:center;font-size:11px;letter-spacing:.14em;color:rgba(242,232,213,.3)">AD SLOT (UNCHANGED · 1 PER PAGE)</div>
+
+    <div style="padding:56px 0 40px;font-size:11px;color:rgba(242,232,213,.3);line-height:1.7">© 2026 Bubs960 Collectibles · FigurePinner · Not affiliated with or endorsed by eBay.</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}"></script>
+</body>
+</html>

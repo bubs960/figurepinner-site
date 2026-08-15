@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#09090F;color:#f2e8d5;font-family:-apple-system,'Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4ecde6;text-decoration:none}a:hover{color:#f5c462}
+::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<!-- ============ FANDOM HUB — MOBILE (primary artifact) ============
+All prices/counts are SAMPLE data. Atmosphere stays CSS-only (radial glows),
+per-fandom palette layers over base tokens exactly as production does today. -->
+<div data-screen-label="Hub Mobile" style="width:390px;margin:0 auto;background:#09090F;min-height:100vh;position:relative;overflow:hidden">
+
+  <!-- HEADER: unchanged chrome, but search icon added so search is reachable at scroll-top on every guide. Tap → focuses hero search (search_submit funnel entry) -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid rgba(242,232,213,.08)">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="font-family:'Bebas Neue';font-size:20px;color:#f5c462;letter-spacing:.04em">FP</div>
+      <div style="font-size:10px;color:rgba(242,232,213,.45);letter-spacing:.12em">FIGUREPINNER</div>
+    </div>
+    <div style="width:34px;height:34px;border:1px solid rgba(242,232,213,.18);border-radius:8px;display:grid;place-items:center;color:#f5c462;font-size:15px">⌕</div>
+  </div>
+
+  <!-- HERO, ANSWER-FIRST. The lore kicker + title stay (fandom identity = trust), but
+       compressed to ~40% of current height so the SEARCH CARD lands inside viewport 1.
+       Conversion: the value prop is now stated as a direct ask. Event: search_submit -->
+  <div style="position:relative;padding:26px 16px 0">
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 60% at 50% -10%,rgba(245,196,98,.13),transparent 60%);pointer-events:none"></div>
+    <div style="position:relative">
+      <div style="font-size:10px;letter-spacing:.22em;color:#e0a83e;margin-bottom:8px">STEP INTO THE SQUARED CIRCLE</div>
+      <h1 style="font-family:'Bebas Neue';font-size:38px;line-height:.95;margin:0 0 8px;color:#f2e8d5;letter-spacing:.01em">WWE ELITE: A COLLECTOR'S GUIDE TO THE SQUARED CIRCLE</h1>
+      <p style="font-size:13px;line-height:1.5;color:rgba(242,232,213,.6);margin:0 0 16px">Sixteen years of the squared circle in plastic — the Elite core, Ultimate Edition, and the grails every shelf chases.</p>
+      <!-- THE ANSWER CARD: first conversion moment, above the fold -->
+      <div style="background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(245,196,98,.35);border-radius:14px;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,.4)">
+        <div style="font-family:'Bebas Neue';font-size:22px;color:#f5c462;letter-spacing:.02em;margin-bottom:2px">WHAT'S YOUR ELITE WORTH?</div>
+        <div style="font-size:11.5px;color:rgba(242,232,213,.55);margin-bottom:12px">Free · real eBay sold comps · answer in 10 seconds</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="background:#09090F;border:1px solid rgba(242,232,213,.15);border-radius:10px;padding:12px 14px;font-size:14px;color:rgba(242,232,213,.4)">⌕&nbsp; Search 1,432 Superstars…</div>
+          <div style="background:linear-gradient(180deg,#f5c462,#dd9f2e);color:#1a1408;border-radius:10px;padding:13px;font-size:14px;font-weight:700;text-align:center;letter-spacing:.03em">CHECK THE COMP — FREE</div>
+        </div>
+      </div>
+      <!-- Stat chips: kept, compressed to one row (credibility, not a section) -->
+      <div style="display:flex;gap:8px;margin:12px 0 0">
+        <div style="flex:1;text-align:center;padding:8px 4px;border:1px solid rgba(242,232,213,.08);border-radius:10px"><div style="font-family:'Bebas Neue';font-size:17px;color:#f2e8d5">1,432</div><div style="font-size:9px;color:rgba(242,232,213,.45);letter-spacing:.06em">CATALOGED</div></div>
+        <div style="flex:1;text-align:center;padding:8px 4px;border:1px solid rgba(242,232,213,.08);border-radius:10px"><div style="font-family:'Bebas Neue';font-size:17px;color:#4ec98c">1,167</div><div style="font-size:9px;color:rgba(242,232,213,.45);letter-spacing:.06em">LIVE COMPS</div></div>
+        <div style="flex:1;text-align:center;padding:8px 4px;border:1px solid rgba(242,232,213,.08);border-radius:10px"><div style="font-family:'Bebas Neue';font-size:17px;color:#f5c462">$378</div><div style="font-size:9px;color:rgba(242,232,213,.45);letter-spacing:.06em">TOP GRAIL</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOST-CHECKED RAIL: replaces the Babyfaces/Heels double grail wall as the FIRST tile
+       surface. Ranked by lookup demand, not price — a visitor's common figure is far more
+       likely to appear here. Horizontal scroll, whole tile = figure-page link → figure_view.
+       CSS placeholder thumbs in mockup: production uses lazy-loaded imgs (below fold, LCP-safe) -->
+  <div style="padding:26px 0 0">
+    <div style="padding:0 16px;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px">
+      <div style="font-family:'Bebas Neue';font-size:22px;color:#f2e8d5">MOST-CHECKED THIS WEEK</div>
+      <div style="font-size:10px;color:rgba(242,232,213,.4)">SAMPLE</div>
+    </div>
+    <div style="display:flex;gap:10px;overflow-x:auto;padding:0 16px 4px">
+      <sc-for list="{{ mostChecked }}" as="f" hint-placeholder-count="6">
+        <a href="#figure" style="flex:0 0 108px;display:block;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(242,232,213,.08);border-radius:12px;overflow:hidden">
+          <div style="height:96px;background:linear-gradient(160deg,#241e33,#131020);display:grid;place-items:center;font-family:'Bebas Neue';font-size:30px;color:rgba(242,232,213,.18)">{{ f.init }}</div>
+          <div style="padding:8px 9px 10px">
+            <div style="font-size:11px;color:#f2e8d5;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ f.name }}</div>
+            <div style="font-family:'Bebas Neue';font-size:16px;color:#f5c462">{{ f.price }}</div>
+            <div style="font-size:9px;color:rgba(242,232,213,.4)">{{ f.sold }}</div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <!-- The escape hatch the current page lacks: every tile surface ends with a search path -->
+    <div style="margin:10px 16px 0;padding:10px 14px;border:1px dashed rgba(78,205,230,.3);border-radius:10px;display:flex;align-items:center;justify-content:space-between">
+      <div style="font-size:12px;color:rgba(242,232,213,.65)">Not seeing yours?</div>
+      <a href="#search" style="font-size:12px;color:#4ecde6;font-weight:600">Search all 1,432 →</a>
+    </div>
+  </div>
+
+  <!-- THE CARD (intel table): kept, two changes. (1) whole row is the link and the PRICE is
+       the dominant glyph (Bebas gold) — it was one link among several; (2) rows carry the
+       sold-count so thin comps read honest. Row tap → figure_view -->
+  <div style="padding:26px 16px 0">
+    <div style="font-family:'Bebas Neue';font-size:22px;color:#f2e8d5;margin-bottom:2px">THE CARD — WHAT COLLECTORS CHASE</div>
+    <div style="font-size:11px;color:rgba(242,232,213,.5);margin-bottom:12px">Real eBay sold comps · every row opens the figure page · SAMPLE</div>
+    <div style="display:flex;gap:6px;margin-bottom:10px">
+      <div style="padding:5px 12px;border-radius:999px;background:rgba(245,196,98,.14);border:1px solid rgba(245,196,98,.4);font-size:11px;color:#f5c462">All</div>
+      <div style="padding:5px 12px;border-radius:999px;border:1px solid rgba(242,232,213,.12);font-size:11px;color:rgba(242,232,213,.5)">Elite</div>
+      <div style="padding:5px 12px;border-radius:999px;border:1px solid rgba(242,232,213,.12);font-size:11px;color:rgba(242,232,213,.5)">Legends</div>
+      <div style="padding:5px 12px;border-radius:999px;border:1px solid rgba(242,232,213,.12);font-size:11px;color:rgba(242,232,213,.5)">Ultimate</div>
+    </div>
+    <div style="background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(242,232,213,.08);border-radius:14px;overflow:hidden">
+      <sc-for list="{{ card }}" as="r" hint-placeholder-count="5">
+        <a href="#figure" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid rgba(242,232,213,.06)">
+          <div style="font-family:'Bebas Neue';font-size:16px;color:rgba(242,232,213,.35);width:16px">{{ r.rank }}</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;color:#f2e8d5;font-weight:600">{{ r.name }}</div>
+            <div style="font-size:10px;color:rgba(242,232,213,.45)">{{ r.line }} · {{ r.sold }}</div>
+          </div>
+          <div style="font-family:'Bebas Neue';font-size:22px;color:#f5c462">{{ r.price }}</div>
+          <div style="color:rgba(242,232,213,.3);font-size:13px">›</div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- CONVERSION BREAK: repeats after every ~2 sections down the page (fandom voice frames
+       the ask). This is the fix for "reader can finish the guide without being asked".
+       Event: search_submit -->
+  <div style="margin:26px 16px 0;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border-left:3px solid #f5c462;border-radius:12px;padding:14px 16px">
+    <div style="font-family:'Bebas Neue';font-size:18px;color:#f2e8d5;margin-bottom:8px">GOT ONE ON THE SHELF? DON'T GUESS THE PRICE.</div>
+    <div style="display:flex;gap:8px">
+      <div style="flex:1;background:#09090F;border:1px solid rgba(242,232,213,.15);border-radius:9px;padding:10px 12px;font-size:13px;color:rgba(242,232,213,.4)">⌕ Your Superstar…</div>
+      <div style="background:linear-gradient(180deg,#f5c462,#dd9f2e);color:#1a1408;border-radius:9px;padding:10px 16px;font-size:13px;font-weight:700;display:grid;place-items:center">GO</div>
+    </div>
+  </div>
+
+  <!-- SUB-LINE LIBRARY: kept (it's the SEO/browse spine) but tightened — 3 grail tiles not 6,
+       and the "View all" browse link is promoted to the dominant per-section action.
+       Pattern repeats for all 10 lines; a conversion break slots in after lines 3 and 7 -->
+  <div style="padding:26px 16px 0">
+    <div style="font-family:'Bebas Neue';font-size:22px;color:#f2e8d5;margin-bottom:14px">THE ELITE LIBRARY, LINE BY LINE</div>
+    <sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+      <div style="background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(242,232,213,.08);border-radius:14px;padding:16px;margin-bottom:12px">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="font-family:'Bebas Neue';font-size:26px;color:#4ecde6">{{ l.count }}</div>
+          <div style="font-family:'Bebas Neue';font-size:20px;color:#f2e8d5">{{ l.name }}</div>
+          <div style="margin-left:auto;font-family:'Bebas Neue';font-size:15px;color:#f5c462">{{ l.range }}</div>
+        </div>
+        <div style="font-size:12px;line-height:1.5;color:rgba(242,232,213,.55);margin:6px 0 12px">{{ l.desc }}</div>
+        <div style="display:flex;gap:8px;margin-bottom:12px">
+          <sc-for list="{{ l.grails }}" as="g" hint-placeholder-count="3">
+            <a href="#figure" style="flex:1;display:block;background:#09090F;border:1px solid rgba(242,232,213,.08);border-radius:10px;overflow:hidden">
+              <div style="height:64px;background:linear-gradient(160deg,#241e33,#131020);display:grid;place-items:center;font-family:'Bebas Neue';font-size:22px;color:rgba(242,232,213,.18)">{{ g.init }}</div>
+              <div style="padding:6px 8px"><div style="font-size:10px;color:#f2e8d5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ g.name }}</div><div style="font-family:'Bebas Neue';font-size:14px;color:#f5c462">{{ g.price }}</div></div>
+            </a>
+          </sc-for>
+        </div>
+        <a href="#browse" style="display:block;text-align:center;background:linear-gradient(180deg,#f5c462,#dd9f2e);color:#1a1408;border-radius:10px;padding:11px;font-size:13px;font-weight:700;letter-spacing:.03em">{{ l.cta }}</a>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- TRACK STRIP: the retention hook, absent from guides today. Placed after the library
+       (reader has now seen prices move). Event: figure_track_cta_click -->
+  <div style="margin:26px 16px 0;background:linear-gradient(160deg,#16131f,#0b0a12 65%);border:1px solid rgba(78,201,140,.3);border-radius:14px;padding:16px">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="width:7px;height:7px;border-radius:50%;background:#4ec98c"></div><div style="font-family:'Bebas Neue';font-size:20px;color:#f2e8d5">TRACK A FIGURE — FREE</div></div>
+    <div style="font-size:12px;color:rgba(242,232,213,.55);line-height:1.5;margin-bottom:12px">Pin any figure and we'll tell you when its sold comps move. No account fee, no spam.</div>
+    <div style="display:inline-block;border:1px solid #4ec98c;color:#4ec98c;border-radius:10px;padding:10px 18px;font-size:13px;font-weight:700">START TRACKING</div>
+  </div>
+
+  <!-- FAQ: kept, but every named figure becomes a figure-page link (cyan) — the current page
+       names grails in prose and links none of them -->
+  <div style="padding:26px 16px 0">
+    <div style="font-family:'Bebas Neue';font-size:22px;color:#f2e8d5;margin-bottom:12px">COLLECTOR QUESTIONS</div>
+    <div style="border-top:1px solid rgba(242,232,213,.08)">
+      <div style="padding:14px 0;border-bottom:1px solid rgba(242,232,213,.08)">
+        <div style="font-size:13.5px;font-weight:700;color:#f2e8d5;margin-bottom:6px">What is the most valuable WWE Elite figure?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:rgba(242,232,213,.6)">The marquee grail is the <a href="#figure">Ultimate Warrior 'Granite'</a> (2014 Defining Moments) — never released, reported around $20,000. Active chases: <a href="#figure">CM Punk SES</a> (~$132) and <a href="#figure">Bret Hart Pink &amp; Black</a> (~$112). <span style="color:rgba(242,232,213,.4)">SAMPLE</span></div>
+      </div>
+      <div style="padding:14px 0;border-bottom:1px solid rgba(242,232,213,.08)">
+        <div style="font-size:13.5px;font-weight:700;color:#f2e8d5;margin-bottom:6px">Basic vs Elite vs Ultimate Edition?</div>
+        <div style="font-size:12.5px;line-height:1.55;color:rgba(242,232,213,.6)">Mattel's ladder: Basic is budget articulation, <a href="#browse">Elite</a> is the 30-POA collector core, <a href="#browse">Ultimate Edition</a> is the premium tier with entrance gear.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MORE GUIDES: kept but demoted to text list — guide→guide recirculation is the weakest
+       loop on the page and should not outrank guide→figure surfaces -->
+  <div style="padding:26px 16px 0">
+    <div style="font-size:10px;letter-spacing:.18em;color:rgba(242,232,213,.4);margin-bottom:10px">MORE GUIDES</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="#g" style="font-size:13px">D&amp;D Action Figures: LJN Warduke to Super7 <span style="color:rgba(242,232,213,.35)">· 5 min</span></a>
+      <a href="#g" style="font-size:13px">Most Valuable DC Figures: Super Powers Runs the Table <span style="color:rgba(242,232,213,.35)">· 6 min</span></a>
+    </div>
+  </div>
+
+  <!-- AD SLOT: single, bottom — unchanged position per constraint #2 -->
+  <div style="margin:26px 16px 0;height:100px;border:1px dashed rgba(242,232,213,.15);border-radius:10px;display:grid;place-items:center;font-size:10px;letter-spacing:.14em;color:rgba(242,232,213,.3)">AD SLOT (UNCHANGED · 1 PER PAGE)</div>
+
+  <div style="padding:26px 16px 120px;font-size:10px;color:rgba(242,232,213,.3);line-height:1.6">© 2026 Bubs960 Collectibles · FigurePinner<br>Not affiliated with or endorsed by eBay.</div>
+
+  <!-- STICKY SEARCH BAR: the persistent conversion path. Fixed bottom; in production it
+       hides via IntersectionObserver when the ad slot or footer is on screen (never overlaps
+       the ad) and respects safe-area-inset-bottom. Tap → search_submit -->
+  <div style="position:fixed;left:0;right:0;bottom:0;max-width:390px;margin:0 auto;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(9,9,15,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(242,232,213,.1)">
+    <div style="display:flex;align-items:center;gap:10px;background:linear-gradient(180deg,#f5c462,#dd9f2e);border-radius:12px;padding:13px 16px;box-shadow:0 -4px 24px rgba(245,196,98,.15)">
+      <div style="font-size:16px;color:#1a1408">⌕</div>
+      <div style="font-size:14px;font-weight:700;color:#1a1408">Check your figure's value — free</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      mostChecked: [
+        {init:'HH', name:'Hulk Hogan', price:'$38', sold:'13 sold'},
+        {init:'SC', name:'Stone Cold', price:'$24', sold:'31 sold'},
+        {init:'JC', name:'John Cena', price:'$200', sold:'4 sold'},
+        {init:'RR', name:'Rhea Ripley', price:'$40', sold:'50 sold'},
+        {init:'BL', name:'Brock Lesnar', price:'$68', sold:'50 sold'},
+        {init:'CJ', name:'Chris Jericho', price:'$60', sold:'21 sold'}
+      ],
+      card: [
+        {rank:'1', name:'One Man Gang', line:'Legends', sold:'3 sold', price:'$378'},
+        {rank:'2', name:'Evan Bourne', line:'Elite 8', sold:'2 sold', price:'$371'},
+        {rank:'3', name:'Chief Jay Strongbow', line:'Elite', sold:'5 sold', price:'$325'},
+        {rank:'4', name:'MVP', line:'Elite 1', sold:'1 sold', price:'$209'},
+        {rank:'5', name:'John Cena', line:'Elite 7', sold:'4 sold', price:'$200'}
+      ],
+      lines: [
+        {count:'849', name:'ELITE', range:'$200–371', desc:'The collector core. 30+ POA, TrueFX deco — this is where the real money moves.', cta:'VIEW ALL 849 ELITE →', grails:[{init:'EB',name:'Evan Bourne',price:'$371'},{init:'CS',name:'Strongbow',price:'$325'},{init:'MV',name:'MVP',price:'$209'}]},
+        {count:'182', name:'ELITE LEGENDS', range:'$74–378', desc:'The Elite spec aimed at the legends — retired names the mainline skips.', cta:'VIEW ALL 182 LEGENDS →', grails:[{init:'OG',name:'One Man Gang',price:'$378'},{init:'MJ',name:'Jannetty',price:'$169'},{init:'RS',name:'Steamboat',price:'$130'}]}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

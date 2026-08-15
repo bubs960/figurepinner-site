@@ -20,6 +20,7 @@ import type { HubTheme, TopCompPayload, VaultPayload, HeroesVillainsPayload } fr
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
+import GuidesStickySearch from './GuidesStickySearch'
 import FandomLineSections from './FandomLineSections'
 import GiJoeSeamAtmosphere from './GiJoeSeamAtmosphere'
 import WweRingAtmosphere from './WweRingAtmosphere'
@@ -503,7 +504,7 @@ export default function FandomHub({
             other 3 were dead AdSense-branch code and never rendered. AdSlot
             reserves height + is Pro-aware (ad-free for Pro), so no CLS for
             free users. */}
-        <div className="fh-ad fh-ad-reserve"><AdSlot slot="adsterra-banner" /></div>
+        <div id="guides-ad-slot" className="fh-ad fh-ad-reserve"><AdSlot slot="adsterra-banner" /></div>
 
         {isSeam && <FaqSection faqs={theme.faqs} />}
 
@@ -546,6 +547,7 @@ export default function FandomHub({
           </div>
         )}
       </article>
+      <GuidesStickySearch />
     </main>
   )
 }

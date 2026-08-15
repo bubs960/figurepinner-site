@@ -13,6 +13,7 @@ import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import LiveMedian from '../_components/LiveMedian'
 import CountdownTimer from '../_components/CountdownTimer'
+import GuidesStickySearch from '../_components/GuidesStickySearch'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
 import { getFigureById, prettyFigureUrl } from '@/data/kb'
@@ -209,7 +210,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
 
         {article.body.map((block, i) => <Block key={i} block={block} comps={comps} ebayUrls={ebayUrls} />)}
 
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+        <div id="guides-ad-slot" style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <AdSlot slot="adsterra-banner" />
         </div>
 
@@ -221,6 +222,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
 
         <MoreGuides current={article.slug} />
       </article>
+      <GuidesStickySearch />
     </main>
   )
 }
