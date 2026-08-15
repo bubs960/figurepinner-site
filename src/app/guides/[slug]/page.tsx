@@ -14,6 +14,8 @@ import AdSlot from '@/app/components/AdSlot'
 import LiveMedian from '../_components/LiveMedian'
 import CountdownTimer from '../_components/CountdownTimer'
 import GuidesStickySearch from '../_components/GuidesStickySearch'
+import ArticleAnswerBox from '../_components/ArticleAnswerBox'
+import ArticleEndCta from '../_components/ArticleEndCta'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
 import { getFigureById, prettyFigureUrl } from '@/data/kb'
@@ -208,17 +210,15 @@ export default async function GuideArticlePage({ params }: PageProps) {
           {article.dek}
         </p>
 
+        {article.shortVersion && <ArticleAnswerBox shortVersion={article.shortVersion} />}
+
         {article.body.map((block, i) => <Block key={i} block={block} comps={comps} ebayUrls={ebayUrls} />)}
 
         <div id="guides-ad-slot" style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <AdSlot slot="adsterra-banner" />
         </div>
 
-        <div style={{ marginTop: '1rem', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
-          <a href="/search" style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', textDecoration: 'none', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600 }}>
-            Look up a figure&apos;s real value →
-          </a>
-        </div>
+        <ArticleEndCta />
 
         <MoreGuides current={article.slug} />
       </article>

@@ -29,6 +29,12 @@ export interface Article {
   readingMinutes: number
   updated: string        // ISO date
   body: ArticleBlock[]
+  /** Guides-conversion Phase 2 (design-explorations/guides-conversion-v1): the
+   *  answer-first box's method-conclusion line. Optional -- only articles whose
+   *  content is genuinely a pricing method get the box; ArticleAnswerBox is
+   *  skipped entirely when this is absent rather than showing generic copy on
+   *  an unrelated article (e.g. an authentication guide). */
+  shortVersion?: string
 }
 
 export const ARTICLES: Article[] = [
@@ -587,12 +593,14 @@ export const ARTICLES: Article[] = [
     dek: 'The asking price is a wish. The sold price is the truth. Here is how to tell them apart.',
     readingMinutes: 7,
     updated: '2026-06-06',
+    shortVersion:
+      "Your figure's value is the median of its last 5-10 sold comps, in your condition. Skip the homework -- we pull them for you:",
     body: [
       { type: 'p', text: 'Here is the mistake almost everyone makes. They look up a figure, see three listings at $90, $110, and $135, and decide it is "worth about a hundred bucks." Then they either overpay buying one or sit forever trying to sell theirs at a number nobody pays. Those listings are not prices. They are asking prices — what a seller hopes to get. The real number is what the last several actually sold for, and it is almost always lower than the wall of active listings suggests.' },
       { type: 'p', text: 'Pricing a wrestling figure well is a skill, and it is mostly about ignoring the noise. Here is the method collectors who flip for a living actually use.' },
 
       { type: 'h2', text: 'Rule one: only sold comps count' },
-      { type: 'p', text: 'A "comp" is a comparable sale — a recent, completed transaction for the same figure in the same condition. On eBay, the toggle that matters is "Sold Items." Active listings tell you what sellers want. Sold listings tell you what buyers paid. The gap between those two numbers is where beginners lose money.' },
+      { type: 'p', text: 'A "comp" is a comparable sale — a recent, completed transaction for the same figure in the same condition. Active listings tell you what sellers want. Sold listings tell you what buyers paid, and the gap between those two numbers is where beginners lose money. We pull the sold comps for you on every figure page, already split by condition — if you would rather dig through eBay yourself, the toggle you want is "Sold Items," buried under "Show only" on the left rail.' },
       { type: 'p', text: 'Pull the last five to ten sold comps. Throw out the obvious outliers — the $5 one that was missing an arm, the $200 one that was a bundle of four figures. What is left is your range. The median of that range is your honest market value. Not the high. Not the low. The middle of what real people actually paid.' },
       { type: 'callout', text: 'A single sale is an anecdote. Five sales is a market. If a figure only has one comp in 90 days, you are not looking at a price — you are looking at a guess, and you should treat the value as uncertain.' },
 
