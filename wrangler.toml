@@ -113,6 +113,12 @@ NEXT_PUBLIC_ADSENSE_CLIENT = "ca-pub-1062337951127266"
 # Flip to "0" + redeploy for instant rollback. See MobileActionBar.tsx.
 NEXT_PUBLIC_MOBILE_ACTION_BAR = "1"
 
+# v4 Phase 6 liquid background — CWV canary, 2026-08-15. "1" = on, unset/"0" = off.
+# Must match .env.local's NEXT_PUBLIC_LIQUID_BG (see that file's comment for why —
+# same class of bug MOBILE_ACTION_BAR above already caused once). Flip to "0" in
+# BOTH files + redeploy for instant rollback if mobile CWV regresses.
+NEXT_PUBLIC_LIQUID_BG = "1"
+
 # Salt for per-IP rate-limit bucket keys. Any 16+ char string.
 # Rotating this invalidates all current rate-limit buckets (useful if a
 # scraper reverse-engineers the bucket pattern). Not a secret — safe to commit.
