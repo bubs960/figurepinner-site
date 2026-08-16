@@ -17,6 +17,7 @@ import GuidesStickySearch from '../_components/GuidesStickySearch'
 import ArticleAnswerBox from '../_components/ArticleAnswerBox'
 import ArticleEndCta from '../_components/ArticleEndCta'
 import ConversionBreak from '../_components/ConversionBreak'
+import { renderInlineLinks as renderText } from '../_lib/renderInlineLinks'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
 import { getFigureById, prettyFigureUrl } from '@/data/kb'
@@ -66,26 +67,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 // Inline link syntax: [[label|/path]] — used in article body text and ul items.
-// renderText() parses this into styled <a> tags at render time.
-
-function renderText(text: string): React.ReactNode {
-  const parts: React.ReactNode[] = []
-  let last = 0
-  let match: RegExpExecArray | null
-  const re = /\[\[(.+?)\|(.+?)\]\]/g
-  while ((match = re.exec(text)) !== null) {
-    if (match.index > last) parts.push(<span key={`t${match.index}`}>{text.slice(last, match.index)}</span>)
-    parts.push(
-      <a key={`a${match.index}`} href={match[2]} style={{ color: 'var(--fp-accent)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-        {match[1]}
-      </a>
-    )
-    last = match.index + match[0].length
-  }
-  if (parts.length === 0) return text
-  if (last < text.length) parts.push(<span key="tail">{text.slice(last)}</span>)
-  return <>{parts}</>
-}
+// renderInlineLinks() parses this into styled <a> tags at render time.
 
 function Block({ block, comps, ebayUrls }: { block: ArticleBlock; comps: Map<string, PriceSnap>; ebayUrls: Map<string, string> }) {
   switch (block.type) {

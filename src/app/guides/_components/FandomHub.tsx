@@ -22,6 +22,7 @@ import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
 import GuidesStickySearch from './GuidesStickySearch'
 import HubAnswerCard from './HubAnswerCard'
+import EscapeHatch from './EscapeHatch'
 import FandomLineSections from './FandomLineSections'
 import GiJoeSeamAtmosphere from './GiJoeSeamAtmosphere'
 import WweRingAtmosphere from './WweRingAtmosphere'
@@ -35,24 +36,7 @@ import FaqSection from './FaqSection'
 import JsonLd from '@/app/_components/JsonLd'
 import { formatShortDate } from '@/lib/safeDate'
 
-function renderText(text: string): React.ReactNode {
-  const parts: React.ReactNode[] = []
-  let last = 0
-  let match: RegExpExecArray | null
-  const re = /\[\[(.+?)\|(.+?)\]\]/g
-  while ((match = re.exec(text)) !== null) {
-    if (match.index > last) parts.push(<span key={`t${match.index}`}>{text.slice(last, match.index)}</span>)
-    parts.push(
-      <a key={`a${match.index}`} href={match[2]} style={{ color: 'var(--fp-accent)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-        {match[1]}
-      </a>,
-    )
-    last = match.index + match[0].length
-  }
-  if (parts.length === 0) return text
-  if (last < text.length) parts.push(<span key="tail">{text.slice(last)}</span>)
-  return <>{parts}</>
-}
+import { renderInlineLinks as renderText } from '../_lib/renderInlineLinks'
 
 /**
  * SeamHeroAtmosphere — the good/evil VERTICAL SEAM behind the MOTU hero (Gate 1).
@@ -424,14 +408,17 @@ export default function FandomHub({
         )}
 
         {isSeam && heroesVillains && (
-          <HeroesVillainsBand
-            data={heroesVillains}
-            title={v.hvTitle}
-            sub={v.hvSub}
-            heroesLabel={v.heroesLabel}
-            villainsLabel={v.villainsLabel}
-            flag={v.flag}
-          />
+          <>
+            <HeroesVillainsBand
+              data={heroesVillains}
+              title={v.hvTitle}
+              sub={v.hvSub}
+              heroesLabel={v.heroesLabel}
+              villainsLabel={v.villainsLabel}
+              flag={v.flag}
+            />
+            <EscapeHatch totalFigs={totalFigs} />
+          </>
         )}
 
         {/* Seam hub (R2): the Heroes-vs-Villains split is the figure module; keep
@@ -477,6 +464,7 @@ export default function FandomHub({
         ) : (
           <IntelTable data={topComps} theme={theme} />
         )}
+        <EscapeHatch totalFigs={totalFigs} />
 
         {vaults && vaults.vaults.length > 0 ? (
           <FandomLineSections

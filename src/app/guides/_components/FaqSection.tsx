@@ -10,6 +10,14 @@
 
 import type { HubFaq } from '../_data/fandomHubs'
 import JsonLd from '@/app/_components/JsonLd'
+import { renderInlineLinks } from '../_lib/renderInlineLinks'
+
+// FAQPage JSON-LD needs the RAW answer text (search engines don't parse our
+// [[label|/path]] link syntax) — strip it back to plain prose for the schema
+// while the rendered <p> below gets the real inline links.
+function stripInlineLinkSyntax(text: string): string {
+  return text.replace(/\[\[(.+?)\|.+?\]\]/g, '$1')
+}
 
 export default function FaqSection({ faqs, title = 'Collector questions' }: { faqs: HubFaq[]; title?: string }) {
   if (!faqs.length) return null
@@ -19,7 +27,7 @@ export default function FaqSection({ faqs, title = 'Collector questions' }: { fa
     mainEntity: faqs.map(f => ({
       '@type': 'Question',
       name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      acceptedAnswer: { '@type': 'Answer', text: stripInlineLinkSyntax(f.a) },
     })),
   }
   return (
@@ -30,7 +38,7 @@ export default function FaqSection({ faqs, title = 'Collector questions' }: { fa
         {faqs.map((f, i) => (
           <div key={i} className="fh-faq-item">
             <h3 className="fh-faq-q">{f.q}</h3>
-            <p className="fh-faq-a">{f.a}</p>
+            <p className="fh-faq-a">{renderInlineLinks(f.a)}</p>
           </div>
         ))}
       </div>

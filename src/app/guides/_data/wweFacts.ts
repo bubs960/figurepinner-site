@@ -27,7 +27,7 @@ export const WWE_FAQS: { q: string; a: string }[] = [
   },
   {
     q: 'What is the most valuable WWE Elite figure?',
-    a: "The marquee grail is the Ultimate Warrior 'Granite' figure from the 2014 Defining Moments series -- it was never released, and reported values reach around $20,000. Beyond that, Ringside Collectibles exclusives (CM Punk Straight Edge Society around $132, Bret Hart Pink & Black Attack around $112) and early prototypes like the Jeff Hardy Series 1 prototype are the active secondary-market chases.",
+    a: "The marquee grail is the Ultimate Warrior 'Granite' figure from the 2014 Defining Moments series -- it was never released, and reported values reach around $20,000. Beyond that, Ringside Collectibles exclusives (CM Punk Straight Edge Society around $132, [[Bret Hart Pink & Black Attack|/figure/fp_wrestling_mattel_defining-moments_rse_bret-hart_051ccb]] around $112) and early prototypes like the Jeff Hardy Series 1 prototype are the active secondary-market chases.",
   },
   {
     q: 'Why are Ringside Collectibles exclusives worth more?',
