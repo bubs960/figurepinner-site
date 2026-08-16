@@ -1,0 +1,63 @@
+{
+  "fandom": "thundercats",
+  "generated_at": "2026-08-16T02:04:06.202Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_thundercats_ljn_ljn_action-figures_cheetara_cfd45b",
+      "name": "Cheetara",
+      "line": "LJN",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_thundercats_ljn_ljn_action-figures_cheetara_cfd45b/canonical.jpg",
+      "url": "/figure/fp_thundercats_ljn_ljn_action-figures_cheetara_cfd45b"
+    },
+    {
+      "figure_id": "fp_thundercats_ljn_ljn_vehicles_thunder-wings_c85746",
+      "name": "Thunder Wings",
+      "line": "LJN",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_thundercats_ljn_ljn_vehicles_thunder-wings_c85746/canonical.jpg",
+      "url": "/figure/fp_thundercats_ljn_ljn_vehicles_thunder-wings_c85746"
+    },
+    {
+      "figure_id": "fp_thundercats_super7_super7_vehicles-and-playsets_thundertank_ea9551",
+      "name": "ThunderTank",
+      "line": "Super7",
+      "price": 200,
+      "sold_count": 29,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_thundercats_super7_super7_vehicles-and-playsets_thundertank_ea9551/canonical.jpg",
+      "url": "/figure/fp_thundercats_super7_super7_vehicles-and-playsets_thundertank_ea9551"
+    },
+    {
+      "figure_id": "fp_thundercats_super7_super7_action-figures_lion-o_5494ee",
+      "name": "Lion-O (Mirror)",
+      "line": "Super7",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_thundercats_super7_super7_action-figures_lion-o_5494ee/canonical.jpg",
+      "url": "/figure/fp_thundercats_super7_super7_action-figures_lion-o_5494ee"
+    },
+    {
+      "figure_id": "fp_thundercats_ljn_ljn_action-figures_ben-gali_e7cf20",
+      "name": "Ben Gali",
+      "line": "LJN",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_thundercats_ljn_ljn_action-figures_ben-gali_e7cf20/canonical.jpg",
+      "url": "/figure/fp_thundercats_ljn_ljn_action-figures_ben-gali_e7cf20"
+    }
+  ]
+}

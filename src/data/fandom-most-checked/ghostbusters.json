@@ -1,0 +1,30 @@
+{
+  "fandom": "ghostbusters",
+  "generated_at": "2026-08-16T02:04:06.928Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-2_dbc7af",
+      "name": "ECTO-2",
+      "line": "Kenner Ghostbusters",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-2_dbc7af/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-2_dbc7af"
+    },
+    {
+      "figure_id": "fp_ghostbusters_hasbro_hasbro-ghostbusters_roleplay_spengler-s-proton-pack_b0c177",
+      "name": "Spengler’s Proton Pack",
+      "line": "Hasbro Ghostbusters",
+      "price": 790,
+      "sold_count": 20,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_hasbro_hasbro-ghostbusters_roleplay_spengler-s-proton-pack_b0c177/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_hasbro_hasbro-ghostbusters_roleplay_spengler-s-proton-pack_b0c177"
+    }
+  ]
+}

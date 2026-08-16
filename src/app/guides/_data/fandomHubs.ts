@@ -24,22 +24,28 @@ import { getFigureById, prettyFigureUrl } from '@/data/kb'
 import motuTopComps from '@/data/fandom-top-comps/masters-of-the-universe.json'
 import motuVaults from '@/data/fandom-vaults/masters-of-the-universe.json'
 import motuHeroesVillains from '@/data/fandom-heroes-villains/masters-of-the-universe.json'
+import motuMostChecked from '@/data/fandom-most-checked/masters-of-the-universe.json'
 import gijoeTopComps from '@/data/fandom-top-comps/gi-joe.json'
 import gijoeVaults from '@/data/fandom-vaults/gi-joe.json'
 import gijoeHeroesVillains from '@/data/fandom-heroes-villains/gi-joe.json'
+import gijoeMostChecked from '@/data/fandom-most-checked/gi-joe.json'
 import wweTopComps from '@/data/fandom-top-comps/wwe-elite.json'
 import wweVaults from '@/data/fandom-vaults/wwe-elite.json'
 import wweHeroesVillains from '@/data/fandom-heroes-villains/wwe-elite.json'
+import wweMostChecked from '@/data/fandom-most-checked/wwe-elite.json'
 import jakksTopComps from '@/data/fandom-top-comps/wrestling-jakks.json'
 import wrestlingTopComps from '@/data/fandom-top-comps/wrestling.json'
 import starWarsTopComps from '@/data/fandom-top-comps/star-wars.json'
 import starWarsVaults from '@/data/fandom-vaults/star-wars.json'
 import starWarsHeroesVillains from '@/data/fandom-heroes-villains/star-wars.json'
+import starWarsMostChecked from '@/data/fandom-most-checked/star-wars.json'
 import transformersTopComps from '@/data/fandom-top-comps/transformers.json'
 import transformersVaults from '@/data/fandom-vaults/transformers.json'
 import transformersHeroesVillains from '@/data/fandom-heroes-villains/transformers.json'
+import transformersMostChecked from '@/data/fandom-most-checked/transformers.json'
 import jakksVaults from '@/data/fandom-vaults/wrestling-jakks.json'
 import jakksHeroesVillains from '@/data/fandom-heroes-villains/wrestling-jakks.json'
+import jakksMostChecked from '@/data/fandom-most-checked/wrestling-jakks.json'
 
 import type { EraCard } from '../_components/EraMapGrid'
 import { MOTU_VAULT_LORE, type VaultLore } from './motuVaultLore'
@@ -554,6 +560,36 @@ export async function loadHeroesVillains(dataKey: string): Promise<HeroesVillain
     ...payload,
     heroes: payload.heroes.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
     villains: payload.villains.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+  }
+}
+
+/**
+ * Most-checked rail (guides-conversion v1 Phase 8, 2026-08-15) — demand-ranked,
+ * replaces the Heroes-vs-Villains wall as the hub's primary tile surface.
+ * Source: scripts/build-fandom-most-checked.mjs, Analytics Engine `figure_view`
+ * events (NOT a matcher/KB data dependency — figure_view already fires today).
+ * price/sold_count are null/0 when the figure has no comp data yet — deliberately
+ * NOT filtered out, since a high-demand figure with thin data is the gap this
+ * rail exists to surface (Steve, 2026-08-15: "help us see at scale any gaps").
+ */
+export type MostCheckedFigure = { figure_id: string; name: string; line: string; price: number | null; sold_count: number; views: number; flag: string; image?: string | null; url: string }
+export type MostCheckedPayload = { fandom: string; generated_at: string; window_days: number; source: string; figures: MostCheckedFigure[] }
+
+const MOST_CHECKED: Record<string, MostCheckedPayload> = {
+  'masters-of-the-universe': motuMostChecked as unknown as MostCheckedPayload,
+  'gi-joe': gijoeMostChecked as unknown as MostCheckedPayload,
+  'wwe-elite': wweMostChecked as unknown as MostCheckedPayload,
+  'wrestling-jakks': jakksMostChecked as unknown as MostCheckedPayload,
+  'star-wars': starWarsMostChecked as unknown as MostCheckedPayload,
+  'transformers': transformersMostChecked as unknown as MostCheckedPayload,
+}
+
+export async function loadMostChecked(dataKey: string): Promise<MostCheckedPayload | null> {
+  const payload = MOST_CHECKED[dataKey]
+  if (!payload) return null
+  return {
+    ...payload,
+    figures: payload.figures.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
   }
 }
 

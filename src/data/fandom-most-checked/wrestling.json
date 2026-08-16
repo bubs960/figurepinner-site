@@ -1,0 +1,96 @@
+{
+  "fandom": "wrestling",
+  "generated_at": "2026-08-16T02:04:04.130Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22",
+      "name": "Michelle McCool",
+      "line": "Elite Legends",
+      "price": 25,
+      "sold_count": 50,
+      "views": 28,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22"
+    },
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_1_hulk-hogan_474714",
+      "name": "Hulk Hogan",
+      "line": "WWF Hasbro",
+      "price": 23,
+      "sold_count": 50,
+      "views": 13,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_hasbro_wwf-hasbro_1_hulk-hogan_474714/canonical.jpg",
+      "url": "/figure/fp_wrestling_hasbro_wwf-hasbro_1_hulk-hogan_474714"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_4_rob-conway_cab575",
+      "name": "Rob Conway",
+      "line": "Deluxe Aggression",
+      "price": 9,
+      "sold_count": 17,
+      "views": 13,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s4-conway.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_4_rob-conway_cab575"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_18_hulk-hogan_7702b9",
+      "name": "Hulk Hogan",
+      "line": "Elite Legends",
+      "price": 22,
+      "sold_count": 30,
+      "views": 5,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/HLP46_PIP_23_012--ded05f5f81170669e839736a341bcf8a.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite-legends_18_hulk-hogan_7702b9"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_17_repo-man_cee8b8",
+      "name": "Repo Man",
+      "line": "Classic Superstars",
+      "price": 60,
+      "sold_count": 7,
+      "views": 5,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/img-6293.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_17_repo-man_cee8b8"
+    },
+    {
+      "figure_id": "fp_wrestling_powertown_powertown-ultras_1_lou-thesz_3191cf",
+      "name": "Lou Thesz",
+      "line": "PowerTown Ultras",
+      "price": 130,
+      "sold_count": 3,
+      "views": 5,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/LouforWebsite.jpg?v=1689610564",
+      "url": "/figure/fp_wrestling_powertown_powertown-ultras_1_lou-thesz_3191cf"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_basic_167_asuka_e15da7",
+      "name": "Asuka",
+      "line": "Basic",
+      "price": 30,
+      "sold_count": 50,
+      "views": 5,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_basic_167_asuka_e15da7/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_basic_167_asuka_e15da7"
+    },
+    {
+      "figure_id": "fp_wrestling_hasbro_wwf-hasbro_3_earthquake_97a529",
+      "name": "Earthquake",
+      "line": "WWF Hasbro",
+      "price": 17,
+      "sold_count": 43,
+      "views": 4,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_cbe00fb7-cbde-47b9-b2d9-2af386115c5d.webp",
+      "url": "/figure/fp_wrestling_hasbro_wwf-hasbro_3_earthquake_97a529"
+    }
+  ]
+}

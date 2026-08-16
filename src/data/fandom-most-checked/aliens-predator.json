@@ -1,0 +1,96 @@
+{
+  "fandom": "aliens-predator",
+  "generated_at": "2026-08-16T02:04:07.285Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_scifi_neca_ultimate_2021_battle-damage-city-hunter_e1aea4",
+      "name": "Battle Damage City Hunter",
+      "line": "Ultimate, 30th Anniversary",
+      "price": 85,
+      "sold_count": 20,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_scifi_neca_ultimate_2021_battle-damage-city-hunter_e1aea4/canonical.jpg",
+      "url": "/figure/fp_scifi_neca_ultimate_2021_battle-damage-city-hunter_e1aea4"
+    },
+    {
+      "figure_id": "fp_scifi_neca_general_2010_predator_4e45e6",
+      "name": "Predator",
+      "line": "Toys R Us",
+      "price": 60,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_scifi_neca_general_2010_predator_4e45e6/canonical.jpg",
+      "url": "/figure/fp_scifi_neca_general_2010_predator_4e45e6"
+    },
+    {
+      "figure_id": "fp_aliens-predator_neca_neca-predator_predator_elder-predator_960938",
+      "name": "Elder Predator",
+      "line": "NECA Predator",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://static.wixstatic.com/media/adc447_25fe49a099654d9b98b5d42e04523d2f~mv2.jpg/v1/fill/w_1040,h_1300,al_c,q_85/NECA%20Predator%20Ultimate%20Golden%20Angel%20(1)..jpg",
+      "url": "/figure/fp_aliens-predator_neca_neca-predator_predator_elder-predator_960938"
+    },
+    {
+      "figure_id": "fp_aliens-predator_neca_neca-aliens_aliens_alien-vs-predator-celtic_595e73",
+      "name": "Alien vs Predator Celtic",
+      "line": "NECA Aliens",
+      "price": 104,
+      "sold_count": 41,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_aliens-predator_neca_neca-aliens_aliens_alien-vs-predator-celtic_595e73/canonical.jpg",
+      "url": "/figure/fp_aliens-predator_neca_neca-aliens_aliens_alien-vs-predator-celtic_595e73"
+    },
+    {
+      "figure_id": "fp_scifi_neca_general_2019_warrior-predator_f4ae7e",
+      "name": "Warrior Predator",
+      "line": "general",
+      "price": 60,
+      "sold_count": 8,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_scifi_neca_general_2019_warrior-predator_f4ae7e/canonical.jpg",
+      "url": "/figure/fp_scifi_neca_general_2019_warrior-predator_f4ae7e"
+    },
+    {
+      "figure_id": "fp_scifi_neca_general_2019_hunter-predator_4fd72a",
+      "name": "Hunter Predator",
+      "line": "general",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_scifi_neca_general_2019_hunter-predator_4fd72a/canonical.jpg",
+      "url": "/figure/fp_scifi_neca_general_2019_hunter-predator_4fd72a"
+    },
+    {
+      "figure_id": "fp_scifi_neca_ultimate_2025_samurai-predator_46402d",
+      "name": "Samurai Predator",
+      "line": "Ultimate",
+      "price": 56,
+      "sold_count": 36,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_scifi_neca_ultimate_2025_samurai-predator_46402d/canonical.jpg",
+      "url": "/figure/fp_scifi_neca_ultimate_2025_samurai-predator_46402d"
+    },
+    {
+      "figure_id": "fp_scifi_neca_ultimate_2020_lost-tribe-scout-predator_2f79be",
+      "name": "Lost Tribe Scout Predator",
+      "line": "Ultimate, 30th Anniversary",
+      "price": 60,
+      "sold_count": 20,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_scifi_neca_ultimate_2020_lost-tribe-scout-predator_2f79be/canonical.jpg",
+      "url": "/figure/fp_scifi_neca_ultimate_2020_lost-tribe-scout-predator_2f79be"
+    }
+  ]
+}

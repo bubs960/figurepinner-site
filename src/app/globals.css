@@ -967,6 +967,15 @@ a:hover {
   .fh-hv-name { max-width: none; white-space: normal; }
 }
 
+/* Most-checked rail (Phase 8, 2026-08-15) -- reuses .fh-hv-card's tile look,
+   a single flowing rank-ordered grid instead of the hero/villain 2-column
+   split. .fh-hv-head/-title/-sub are shared as-is (generic heading style). */
+.fh-mc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.6rem; }
+.fh-mc-unpriced { font-style: italic; opacity: 0.75; }
+@media (max-width: 640px) {
+  .fh-mc-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
+
 /* ── MOTU lines — always-open SSR'd sections (Gate 3, replaces the vaults) ──
    Carved-stone surface (layered gradient + faint striation, pure CSS), gold
    left-edge "aim-to-stun" accent, grails with real R2 photos, deep-linked. */

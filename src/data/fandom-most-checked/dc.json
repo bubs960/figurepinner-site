@@ -1,0 +1,96 @@
+{
+  "fandom": "dc",
+  "generated_at": "2026-08-16T02:04:05.201Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_dc_mcfarlane_multiverse_mcfarlane_batman_5efc4c",
+      "name": "Batman (Arkham Asylum)",
+      "line": "Multiverse",
+      "price": 25,
+      "sold_count": 11,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_mcfarlane_multiverse_mcfarlane_batman_5efc4c/canonical.jpg",
+      "url": "/figure/fp_dc_mcfarlane_multiverse_mcfarlane_batman_5efc4c"
+    },
+    {
+      "figure_id": "fp_dc_mcfarlane_multiverse_mcfarlane_the-flash_acd878",
+      "name": "The Flash (Batman Costume - The Flash Movie)",
+      "line": "Multiverse",
+      "price": 28,
+      "sold_count": 20,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_mcfarlane_multiverse_mcfarlane_the-flash_acd878/canonical.jpg",
+      "url": "/figure/fp_dc_mcfarlane_multiverse_mcfarlane_the-flash_acd878"
+    },
+    {
+      "figure_id": "fp_dc_mafex_mafex_action-figures_batman_7d4efc",
+      "name": "Batman (The Dark Knight Rises - v3.0)",
+      "line": "Mafex DC Comics",
+      "price": 77,
+      "sold_count": 18,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_mafex_mafex_action-figures_batman_7d4efc/canonical.jpg",
+      "url": "/figure/fp_dc_mafex_mafex_action-figures_batman_7d4efc"
+    },
+    {
+      "figure_id": "fp_dc_mafex_mafex_action-figures_black-adam_8005cf",
+      "name": "Black Adam (Gold Suit)",
+      "line": "Mafex DC Comics",
+      "price": 60,
+      "sold_count": 7,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_mafex_mafex_action-figures_black-adam_8005cf/canonical.jpg",
+      "url": "/figure/fp_dc_mafex_mafex_action-figures_black-adam_8005cf"
+    },
+    {
+      "figure_id": "fp_dc_mcfarlane_multiverse_mcfarlane_jim-gordon-as-batman_972868",
+      "name": "Jim Gordon as Batman (Batman: Endgame)",
+      "line": "Multiverse",
+      "price": 12,
+      "sold_count": 35,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_mcfarlane_multiverse_mcfarlane_jim-gordon-as-batman_972868/canonical.jpg",
+      "url": "/figure/fp_dc_mcfarlane_multiverse_mcfarlane_jim-gordon-as-batman_972868"
+    },
+    {
+      "figure_id": "fp_dc_kenner_kenner-batman-animated_action-figures_dick-grayson_316f59",
+      "name": "Dick Grayson",
+      "line": "Kenner Batman Animated",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_kenner_kenner-batman-animated_action-figures_dick-grayson_316f59/canonical.jpg",
+      "url": "/figure/fp_dc_kenner_kenner-batman-animated_action-figures_dick-grayson_316f59"
+    },
+    {
+      "figure_id": "fp_dc_mattel_multiverse_mattel_doctor-sivana_5ed93a",
+      "name": "Doctor Sivana (Shazam)",
+      "line": "Multiverse",
+      "price": 25,
+      "sold_count": 22,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_mattel_multiverse_mattel_doctor-sivana_5ed93a/canonical.jpg",
+      "url": "/figure/fp_dc_mattel_multiverse_mattel_doctor-sivana_5ed93a"
+    },
+    {
+      "figure_id": "fp_dc_kenner_super-powers_vehicles-and-playsets_darkseid-destroyer_aa77b5",
+      "name": "Darkseid Destroyer",
+      "line": "Kenner Super Powers Collection",
+      "price": 22,
+      "sold_count": 50,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_dc_kenner_super-powers_vehicles-and-playsets_darkseid-destroyer_aa77b5/canonical.jpg",
+      "url": "/figure/fp_dc_kenner_super-powers_vehicles-and-playsets_darkseid-destroyer_aa77b5"
+    }
+  ]
+}

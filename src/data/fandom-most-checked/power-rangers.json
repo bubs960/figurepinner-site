@@ -1,0 +1,19 @@
+{
+  "fandom": "power-rangers",
+  "generated_at": "2026-08-16T02:04:07.364Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_power-rangers_hasbro_lightning_roleplay_yellow-ranger-power-daggers_40a32f",
+      "name": "Yellow Ranger Power Daggers",
+      "line": "Lightning",
+      "price": 130,
+      "sold_count": 30,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_roleplay_yellow-ranger-power-daggers_40a32f/canonical.jpg",
+      "url": "/figure/fp_power-rangers_hasbro_lightning_roleplay_yellow-ranger-power-daggers_40a32f"
+    }
+  ]
+}

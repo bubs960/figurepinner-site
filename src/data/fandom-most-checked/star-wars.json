@@ -1,0 +1,96 @@
+{
+  "fandom": "star-wars",
+  "generated_at": "2026-08-16T02:04:06.536Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_deluxe-sets_jabba-the-hutt_49ad57",
+      "name": "Jabba The Hutt",
+      "line": "6\" Black Series",
+      "price": 60,
+      "sold_count": 41,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_deluxe-sets_jabba-the-hutt_49ad57/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_deluxe-sets_jabba-the-hutt_49ad57"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_3-75-playsets_at-st-walker-with-driver_db7858",
+      "name": "AT-ST Walker With Driver",
+      "line": "3.75 Black Series",
+      "price": 60,
+      "sold_count": 29,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_3-75-playsets_at-st-walker-with-driver_db7858/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_3-75-playsets_at-st-walker-with-driver_db7858"
+    },
+    {
+      "figure_id": "fp_star-wars_kenner_vintage-collection_return-of-the-jedi-actio_b-wing-pilot_46e752",
+      "name": "B-Wing Pilot",
+      "line": "Kenner Vintage Collection",
+      "price": 60,
+      "sold_count": 48,
+      "views": 3,
+      "flag": "VINTAGE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_kenner_vintage-collection_return-of-the-jedi-actio_b-wing-pilot_46e752/canonical.jpg",
+      "url": "/figure/fp_star-wars_kenner_vintage-collection_return-of-the-jedi-actio_b-wing-pilot_46e752"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_archive-collection_archive-collection_ahsoka-tano_0bf52e",
+      "name": "Ahsoka Tano",
+      "line": "Archive Collection",
+      "price": 103,
+      "sold_count": 24,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_archive-collection_archive-collection_ahsoka-tano_0bf52e/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_archive-collection_archive-collection_ahsoka-tano_0bf52e"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791",
+      "name": "Galaxy Edge - Droid Depot",
+      "line": "6\" Black Series",
+      "price": 60,
+      "sold_count": 9,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_senni-tonnika_8da620",
+      "name": "Senni Tonnika",
+      "line": "The Vintage Collection",
+      "price": 150,
+      "sold_count": 7,
+      "views": 2,
+      "flag": "VINTAGE",
+      "image": null,
+      "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_senni-tonnika_8da620"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_ahsoka_5d7c1d",
+      "name": "Ahsoka",
+      "line": "The Clone Wars",
+      "price": 20,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_ahsoka_5d7c1d/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_ahsoka_5d7c1d"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c",
+      "name": "Boba Fett (ESB) Foil",
+      "line": "The Vintage Collection",
+      "price": 66,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "VINTAGE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c"
+    }
+  ]
+}

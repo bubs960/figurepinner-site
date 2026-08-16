@@ -1,0 +1,96 @@
+{
+  "fandom": "masters-of-the-universe",
+  "generated_at": "2026-08-16T02:04:06.367Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_classics_heroic-warriors_king-grayskull_ed1386",
+      "name": "King Grayskull (SDCC)",
+      "line": "Mattel Classics",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "MOTUC",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_heroic-warriors_king-grayskull_ed1386/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_classics_heroic-warriors_king-grayskull_ed1386"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-exclusives_hurricane-hordak_71a700",
+      "name": "Hurricane Hordak (Collector's Edition)",
+      "line": "Origins",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-exclusives_hurricane-hordak_71a700/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-exclusives_hurricane-hordak_71a700"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_621d46",
+      "name": "Sorceress (Revelation)",
+      "line": "Eternia Minis",
+      "price": 15,
+      "sold_count": 7,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_621d46/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_621d46"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_classics_creatures_gygor_0810d1",
+      "name": "Gygor",
+      "line": "Mattel Classics",
+      "price": 69,
+      "sold_count": 28,
+      "views": 2,
+      "flag": "MOTUC",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_creatures_gygor_0810d1/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_classics_creatures_gygor_0810d1"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_fright-zone-playset_dd578d",
+      "name": "Fright Zone Playset",
+      "line": "Origins",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_fright-zone-playset_dd578d/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_fright-zone-playset_dd578d"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_prince-adam-cringer_dfc011",
+      "name": "Prince Adam & Cringer (Cartoon Collection)",
+      "line": "Origins",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_prince-adam-cringer_dfc011/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_prince-adam-cringer_dfc011"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_original_original-vehicles-and-pl_fright-zone_188f57",
+      "name": "Fright Zone",
+      "line": "Original",
+      "price": 55,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "VINTAGE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_original_original-vehicles-and-pl_fright-zone_188f57/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_original_original-vehicles-and-pl_fright-zone_188f57"
+    },
+    {
+      "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_fisto-and-stridor_d175c9",
+      "name": "Fisto and Stridor (Revelation)",
+      "line": "Eternia Minis",
+      "price": 14,
+      "sold_count": 1,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_fisto-and-stridor_d175c9/canonical.jpg",
+      "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_fisto-and-stridor_d175c9"
+    }
+  ]
+}

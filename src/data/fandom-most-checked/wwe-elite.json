@@ -1,0 +1,96 @@
+{
+  "fandom": "wwe-elite",
+  "generated_at": "2026-08-16T02:04:04.349Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22",
+      "name": "Michelle McCool",
+      "line": "Elite Legends",
+      "price": 25,
+      "sold_count": 50,
+      "views": 28,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_18_hulk-hogan_7702b9",
+      "name": "Hulk Hogan",
+      "line": "Elite Legends",
+      "price": 22,
+      "sold_count": 30,
+      "views": 5,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/HLP46_PIP_23_012--ded05f5f81170669e839736a341bcf8a.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite-legends_18_hulk-hogan_7702b9"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_basic_167_asuka_e15da7",
+      "name": "Asuka",
+      "line": "Basic",
+      "price": 30,
+      "sold_count": 50,
+      "views": 5,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_basic_167_asuka_e15da7/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_basic_167_asuka_e15da7"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00",
+      "name": "Brock Lesnar",
+      "line": "Ultimate Edition",
+      "price": 120,
+      "sold_count": 50,
+      "views": 4,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20230720_165820095.jpg",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-legends_5_macho-man-randy-_2a55c6",
+      "name": "Macho Man Randy Savage",
+      "line": "Elite Legends",
+      "price": 40,
+      "sold_count": 15,
+      "views": 4,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1948_i1_w256.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite-legends_5_macho-man-randy-_2a55c6"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_128_randy-orton_b68b3e",
+      "name": "Randy Orton",
+      "line": "Elite",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_elite_128_randy-orton_b68b3e/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite_128_randy-orton_b68b3e"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_25_seth-rollins_4f0cf5",
+      "name": "Seth Rollins",
+      "line": "Elite",
+      "price": 18,
+      "sold_count": 2,
+      "views": 3,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/apivpeslg-77416-1550283967.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite_25_seth-rollins_4f0cf5"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-royal-rumble_3_yokozuna_719a6c",
+      "name": "Yokozuna",
+      "line": "elite-royal-rumble",
+      "price": null,
+      "sold_count": 0,
+      "views": 3,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_elite-royal-rumble_3_yokozuna_719a6c/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite-royal-rumble_3_yokozuna_719a6c"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "fandom": "gi-joe",
+  "generated_at": "2026-08-16T02:04:04.725Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_gi-joe_hasbro_25th-anniversary_action-figures_snake-eyes_b55e36",
+      "name": "Snake Eyes (v3)",
+      "line": "25th Anniversary",
+      "price": 25,
+      "sold_count": 29,
+      "views": 6,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_25th-anniversary_action-figures_snake-eyes_b55e36/canonical.jpg",
+      "url": "/figure/fp_gi-joe_hasbro_25th-anniversary_action-figures_snake-eyes_b55e36"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_beach-head_6c1c00",
+      "name": "Beach Head (Ranger)",
+      "line": "A Real American Hero",
+      "price": 20,
+      "sold_count": 20,
+      "views": 4,
+      "flag": "",
+      "image": null,
+      "url": "/figure/fp_gi-joe_hasbro_a-real-american-hero_3-75-action-figures_beach-head_6c1c00"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_collectors-club_action-figures_frostbite_e52ffa",
+      "name": "Frostbite (Arctic Operations Specialist)",
+      "line": "Collector's Club",
+      "price": 61,
+      "sold_count": 6,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_collectors-club_action-figures_frostbite_e52ffa/canonical.jpg",
+      "url": "/figure/fp_gi-joe_hasbro_collectors-club_action-figures_frostbite_e52ffa"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_classified-series_classified-retro_duke_f92c1f",
+      "name": "Duke (Retro)",
+      "line": "6\" Classified Series",
+      "price": 52,
+      "sold_count": 50,
+      "views": 3,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_classified-series_classified-retro_duke_f92c1f/canonical.jpg",
+      "url": "/figure/fp_gi-joe_hasbro_classified-series_classified-retro_duke_f92c1f"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_classified-series_classified_cobra-h-i-s-s-tank_d4f0bd",
+      "name": "Cobra H.I.S.S. Tank",
+      "line": "6\" Classified Series",
+      "price": 250,
+      "sold_count": 49,
+      "views": 3,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_classified-series_classified_cobra-h-i-s-s-tank_d4f0bd/canonical.jpg",
+      "url": "/figure/fp_gi-joe_hasbro_classified-series_classified_cobra-h-i-s-s-tank_d4f0bd"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542",
+      "name": "Action Pilot - Halo (High Altitude Low Opening) Jumper (Deluxe)",
+      "line": "6\" Classified Series",
+      "price": 24,
+      "sold_count": 50,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542/canonical.jpg",
+      "url": "/figure/fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542"
+    },
+    {
+      "figure_id": "fp_gi-joe_hasbro_classified-series_classified_albert-alpine-pine_c4a6ca",
+      "name": "Albert “Alpine” Pine",
+      "line": "6\" Classified Series",
+      "price": 22,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_hasbro_classified-series_classified_albert-alpine-pine_c4a6ca/canonical.jpg",
+      "url": "/figure/fp_gi-joe_hasbro_classified-series_classified_albert-alpine-pine_c4a6ca"
+    },
+    {
+      "figure_id": "fp_gi-joe_super7_super7-reaction_reaction_cobra-commander_19fe65",
+      "name": "Cobra Commander (Cartoon)",
+      "line": "Super7 ReAction",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_gi-joe_super7_super7-reaction_reaction_cobra-commander_19fe65/canonical.jpg",
+      "url": "/figure/fp_gi-joe_super7_super7-reaction_reaction_cobra-commander_19fe65"
+    }
+  ]
+}

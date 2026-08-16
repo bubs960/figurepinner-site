@@ -1,0 +1,30 @@
+{
+  "fandom": "scifi",
+  "generated_at": "2026-08-16T02:04:07.456Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_other_neca_neca-godzilla_godzilla_godzilla-1954_01dbd7",
+      "name": "Godzilla 1954",
+      "line": "NECA Godzilla",
+      "price": 30,
+      "sold_count": 1,
+      "views": 1,
+      "flag": "",
+      "image": "https://static.wixstatic.com/media/adc447_ca1ebff7ec8743b99fc64de14cf1a3e3~mv2.jpg/v1/fill/w_658,h_710,al_c,q_85/NECA%20Godzilla%201954%20from%202016%20(1).jpg",
+      "url": "/figure/fp_other_neca_neca-godzilla_godzilla_godzilla-1954_01dbd7"
+    },
+    {
+      "figure_id": "fp_neca_neca_general_2024_flash-gordon_2cd1c4",
+      "name": "Flash Gordon 'Wood Beast Challenge'",
+      "line": "SDCC 2024 NECA Store",
+      "price": 130,
+      "sold_count": 2,
+      "views": 1,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_neca_neca_general_2024_flash-gordon_2cd1c4/canonical.jpg",
+      "url": "/figure/fp_neca_neca_general_2024_flash-gordon_2cd1c4"
+    }
+  ]
+}

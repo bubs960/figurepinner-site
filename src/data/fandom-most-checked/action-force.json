@@ -1,0 +1,63 @@
+{
+  "fandom": "action-force",
+  "generated_at": "2026-08-16T02:04:07.092Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_riot-warfare-republic-guard_1ca79c",
+      "name": "Riot Warfare Republic Guard",
+      "line": "Action Force",
+      "price": 55,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_riot-warfare-republic-guard_1ca79c/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_riot-warfare-republic-guard_1ca79c"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-bravo_d0f7b4",
+      "name": "Weapons Pack Bravo",
+      "line": "Action Force",
+      "price": 35,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-bravo_d0f7b4/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-bravo_d0f7b4"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_desert-rat_a48b4e",
+      "name": "Desert Rat",
+      "line": "Action Force",
+      "price": 135,
+      "sold_count": 1,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_desert-rat_a48b4e/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_desert-rat_a48b4e"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_swarm-gear-set_307c5f",
+      "name": "Swarm Gear Set",
+      "line": "Action Force",
+      "price": 40,
+      "sold_count": 3,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_swarm-gear-set_307c5f/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_swarm-gear-set_307c5f"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-foxtrot_cbebe2",
+      "name": "Weapons Pack Foxtrot",
+      "line": "Action Force",
+      "price": 35,
+      "sold_count": 50,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-foxtrot_cbebe2/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-foxtrot_cbebe2"
+    }
+  ]
+}

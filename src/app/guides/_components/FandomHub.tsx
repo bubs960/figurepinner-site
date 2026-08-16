@@ -16,7 +16,7 @@
  */
 
 import type { Article, ArticleBlock } from '../_data/articles'
-import type { HubTheme, TopCompPayload, VaultPayload, HeroesVillainsPayload } from '../_data/fandomHubs'
+import type { HubTheme, TopCompPayload, VaultPayload, HeroesVillainsPayload, MostCheckedPayload } from '../_data/fandomHubs'
 import SiteHeader from '@/app/components/SiteHeader'
 import AdSlot from '@/app/components/AdSlot'
 import FandomHubInteractive from './FandomHubInteractive'
@@ -29,6 +29,7 @@ import WweRingAtmosphere from './WweRingAtmosphere'
 import SeamScrollDriver from './SeamScrollDriver'
 import FandomFacts from './FandomFacts'
 import HeroesVillainsBand from './HeroesVillainsBand'
+import MostCheckedRail from './MostCheckedRail'
 import SaberClashAtmosphere from './SaberClashAtmosphere'
 import FactionSeamAtmosphere from './FactionSeamAtmosphere'
 import EraMapGrid from './EraMapGrid'
@@ -310,6 +311,7 @@ export default function FandomHub({
   topComps,
   vaults,
   heroesVillains,
+  mostChecked,
   moreGuides,
 }: {
   article: Article
@@ -317,6 +319,7 @@ export default function FandomHub({
   topComps: TopCompPayload | null
   vaults: VaultPayload | null
   heroesVillains?: HeroesVillainsPayload | null
+  mostChecked?: MostCheckedPayload | null
   moreGuides: { slug: string; title: string; readingMinutes: number }[]
 }) {
   const v = theme.voice
@@ -324,6 +327,25 @@ export default function FandomHub({
   // GI Joe templatized (S40). theme.seam opts a fandom in; theme.centerpiece
   // picks which inline-SVG hero it renders.
   const isSeam = theme.seam
+
+  // Phase 8 (2026-08-15): Most-checked rail replaces Heroes-vs-Villains as the
+  // primary tile surface when demand data exists; H-vs-V relocates below the
+  // sub-line library instead of disappearing (Steve's culture content, kept —
+  // design brief's own "if the owner wants it kept" option, taken by default
+  // rather than deleting fandom identity content unasked). If most-checked
+  // data is ever stale/absent for a fandom, H-vs-V gracefully reclaims the
+  // primary slot instead of leaving it empty.
+  const mcTookPrimary = isSeam && !!mostChecked?.figures.length
+  const hvNode = heroesVillains && (
+    <HeroesVillainsBand
+      data={heroesVillains}
+      title={v.hvTitle}
+      sub={v.hvSub}
+      heroesLabel={v.heroesLabel}
+      villainsLabel={v.villainsLabel}
+      flag={v.flag}
+    />
+  )
 
   // "By the numbers" stats — all derived from real data (no fabrication).
   const totalFigs = vaults ? vaults.vaults.reduce((s, x) => s + x.count, 0) : 0
@@ -407,19 +429,17 @@ export default function FandomHub({
           <EraMapGrid title={theme.eramapTitle ?? 'Pick your era'} sub={theme.eramapSub ?? ''} cards={theme.eraMap} />
         )}
 
-        {isSeam && heroesVillains && (
+        {isSeam && (mcTookPrimary ? (
           <>
-            <HeroesVillainsBand
-              data={heroesVillains}
-              title={v.hvTitle}
-              sub={v.hvSub}
-              heroesLabel={v.heroesLabel}
-              villainsLabel={v.villainsLabel}
-              flag={v.flag}
-            />
+            <MostCheckedRail data={mostChecked!} flag={v.flag} />
             <EscapeHatch totalFigs={totalFigs} />
           </>
-        )}
+        ) : heroesVillains ? (
+          <>
+            {hvNode}
+            <EscapeHatch totalFigs={totalFigs} />
+          </>
+        ) : null)}
 
         {/* Seam hub (R2): the Heroes-vs-Villains split is the figure module; keep
             ONLY the price-checker tool here (the ranked "Power Level" intel table
@@ -478,6 +498,11 @@ export default function FandomHub({
         ) : (
           article.body.map((block, i) => <Block key={i} block={block} />)
         )}
+
+        {/* H-vs-V relocated here (culture content, not deleted) only when
+            Most-checked took the primary slot above — avoids rendering it
+            twice when it's still the primary surface via the fallback path. */}
+        {mcTookPrimary && hvNode}
 
         {/* AD STANDARD v2: FandomHub is the ARTICLE class (tiebreaker vs GRID),
             1 unit — this is it. Sole survivor of the old 4-slot layout; the

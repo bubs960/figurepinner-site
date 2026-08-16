@@ -1,0 +1,96 @@
+{
+  "fandom": "marvel-comics",
+  "generated_at": "2026-08-16T02:04:05.902Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_fantastic-four_mole-man_45f684",
+      "name": "Mole Man",
+      "line": "Marvel Legends",
+      "price": 50,
+      "sold_count": 5,
+      "views": 4,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_fantastic-four_mole-man_45f684/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_fantastic-four_mole-man_45f684"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895",
+      "name": "Hela",
+      "line": "Marvel Legends",
+      "price": 25,
+      "sold_count": 17,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_spider-man_jack-olantern_01bf79",
+      "name": "Jack O'Lantern",
+      "line": "Marvel Legends",
+      "price": 19,
+      "sold_count": 1,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_spider-man_jack-olantern_01bf79/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_spider-man_jack-olantern_01bf79"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_x-men-x-force_boom-boom_5c8829",
+      "name": "Boom-Boom",
+      "line": "Marvel Legends",
+      "price": 30,
+      "sold_count": 12,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_x-men-x-force_boom-boom_5c8829/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_x-men-x-force_boom-boom_5c8829"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange-multiverse-of_doctor-strange_92ab5b",
+      "name": "Doctor Strange (Astral Form)",
+      "line": "Marvel Legends",
+      "price": 30,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_dr-strange-multiverse-of_doctor-strange_92ab5b/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_dr-strange-multiverse-of_doctor-strange_92ab5b"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_ant-man_wasp_183736",
+      "name": "Wasp",
+      "line": "Marvel Legends",
+      "price": 25,
+      "sold_count": 38,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_ant-man_wasp_183736/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_ant-man_wasp_183736"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_exclusive-multi-packs_spider-man-and-his-amazing-friends-3-pack_a69b7d",
+      "name": "Spider-Man and His Amazing Friends 3 Pack",
+      "line": "Marvel Legends Exclusives",
+      "price": 140,
+      "sold_count": 6,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_exclusive-multi-packs_spider-man-and-his-amazing-friends-3-pack_a69b7d/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_exclusive-multi-packs_spider-man-and-his-amazing-friends-3-pack_a69b7d"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_x-men_shatterstar_6e61df",
+      "name": "Shatterstar",
+      "line": "Marvel Legends",
+      "price": 31,
+      "sold_count": 50,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_x-men_shatterstar_6e61df/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_x-men_shatterstar_6e61df"
+    }
+  ]
+}

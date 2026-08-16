@@ -1,0 +1,96 @@
+{
+  "fandom": "mythic-legions",
+  "generated_at": "2026-08-16T02:04:06.756Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_snagg_593dd1",
+      "name": "Snagg",
+      "line": "Mythic Legions",
+      "price": 130,
+      "sold_count": 19,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_snagg_593dd1/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_snagg_593dd1"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_dorina-onoris_e13bde",
+      "name": "Dorina Onoris",
+      "line": "Mythic Legions",
+      "price": 72,
+      "sold_count": 28,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_dorina-onoris_e13bde/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_dorina-onoris_e13bde"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_ragna-stormforger_ca3797",
+      "name": "Ragna Stormforger",
+      "line": "Mythic Legions",
+      "price": 180,
+      "sold_count": 15,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_ragna-stormforger_ca3797/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_ragna-stormforger_ca3797"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_sir-galeron_32df69",
+      "name": "Sir Galeron",
+      "line": "Mythic Legions",
+      "price": 250,
+      "sold_count": 8,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_sir-galeron_32df69/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_sir-galeron_32df69"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_gold-skeleton-2_6c1971",
+      "name": "Gold Skeleton 2",
+      "line": "Mythic Legions",
+      "price": 60,
+      "sold_count": 30,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_gold-skeleton-2_6c1971/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_gold-skeleton-2_6c1971"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_sir-valgard-2_b500b2",
+      "name": "Sir Valgard 2",
+      "line": "Mythic Legions",
+      "price": 250,
+      "sold_count": 23,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_sir-valgard-2_b500b2/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_sir-valgard-2_b500b2"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_myria-goldenbranch_7716a6",
+      "name": "Myria Goldenbranch",
+      "line": "Mythic Legions",
+      "price": 183,
+      "sold_count": 7,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_myria-goldenbranch_7716a6/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_myria-goldenbranch_7716a6"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_baron-volligar-2_8b12b3",
+      "name": "Baron Volligar 2",
+      "line": "Mythic Legions",
+      "price": 95,
+      "sold_count": 25,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_baron-volligar-2_8b12b3/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_baron-volligar-2_8b12b3"
+    }
+  ]
+}

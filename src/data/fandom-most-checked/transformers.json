@@ -1,0 +1,96 @@
+{
+  "fandom": "transformers",
+  "generated_at": "2026-08-16T02:04:05.529Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_transformers_hasbro_legacy-united_deluxe-class_infernac-universe-shard_0e6237",
+      "name": "Infernac Universe Shard",
+      "line": "Legacy United",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_deluxe-class_infernac-universe-shard_0e6237/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_legacy-united_deluxe-class_infernac-universe-shard_0e6237"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_studio-series_voyager-class_sentinel-prime_117a20",
+      "name": "Sentinel Prime",
+      "line": "Studio Series",
+      "price": 25,
+      "sold_count": 8,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_studio-series_voyager-class_sentinel-prime_117a20/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_studio-series_voyager-class_sentinel-prime_117a20"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_g1_autobots_omega-supreme_07716f",
+      "name": "Omega Supreme",
+      "line": "G1",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_autobots_omega-supreme_07716f/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_g1_autobots_omega-supreme_07716f"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_studio-series_commander-class_energon-universe-optimus-prime_11fe54",
+      "name": "Energon Universe Optimus Prime",
+      "line": "Studio Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_studio-series_commander-class_energon-universe-optimus-prime_11fe54/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_studio-series_commander-class_energon-universe-optimus-prime_11fe54"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_legacy-series_exclusives_troop-builder-multipack_934745",
+      "name": "Troop Builder Multipack",
+      "line": "Legacy Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_troop-builder-multipack_934745/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_troop-builder-multipack_934745"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_g1_decepticons_ramjet_cf1a07",
+      "name": "Ramjet",
+      "line": "G1",
+      "price": 30,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_decepticons_ramjet_cf1a07/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_g1_decepticons_ramjet_cf1a07"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_universe_micromasters_midnight-express_4bd7af",
+      "name": "Midnight Express",
+      "line": "Universe",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_micromasters_midnight-express_4bd7af/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_universe_micromasters_midnight-express_4bd7af"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_perceptor_22d2b7",
+      "name": "Perceptor (Movie)",
+      "line": "Vintage G1 Reissue",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "VINTAGE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_perceptor_22d2b7/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_perceptor_22d2b7"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "fandom": "spawn",
+  "generated_at": "2026-08-16T02:04:06.083Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_1_medieval-spawn_d30e7e",
+      "name": "Medieval Spawn",
+      "line": "Spawn",
+      "price": 10,
+      "sold_count": 1,
+      "views": 4,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s01/thumb_medieval01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_1_medieval-spawn_d30e7e"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_2_angela_5d5c47",
+      "name": "Angela",
+      "line": "Spawn",
+      "price": 10,
+      "sold_count": 1,
+      "views": 3,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s02/thumb_angela02.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_2_angela_5d5c47"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_8_curse-of-the-spawn_a5771f",
+      "name": "Curse of the Spawn",
+      "line": "Spawn",
+      "price": 25,
+      "sold_count": 20,
+      "views": 3,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s08/thumb_curseofthespawn01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_8_curse-of-the-spawn_a5771f"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_6_sansker_925275",
+      "name": "Sansker",
+      "line": "Spawn",
+      "price": 37,
+      "sold_count": 20,
+      "views": 3,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s06/thumb_sansker01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_6_sansker_925275"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_2_chapel_07d412",
+      "name": "Chapel",
+      "line": "Spawn",
+      "price": 10,
+      "sold_count": 26,
+      "views": 2,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s02/thumb_chapel02.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_2_chapel_07d412"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_17_malebolgia-ii_4b69f4",
+      "name": "Malebolgia II",
+      "line": "Spawn",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s17/thumb_malebolgiaii02.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_17_malebolgia-ii_4b69f4"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_3_vertebreaker_a0fb3f",
+      "name": "Vertebreaker",
+      "line": "Spawn",
+      "price": 29,
+      "sold_count": 18,
+      "views": 2,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s03/thumb_vertebreaker01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_3_vertebreaker_a0fb3f"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn_3_violator-ii_f5a2de",
+      "name": "Violator II",
+      "line": "Spawn",
+      "price": 29,
+      "sold_count": 23,
+      "views": 2,
+      "flag": "",
+      "image": "https://www.spawnworld.com/images/toys/s03/thumb_violatorii01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_3_violator-ii_f5a2de"
+    }
+  ]
+}
