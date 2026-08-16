@@ -21,6 +21,13 @@
 // (ad units only), so there was nothing to compare against ad performance.
 // This is the instrumentation the comparison needs; the comparison itself
 // waits on a real data-collection window.
+//
+// 2026-08-15 (guides-conversion Phase 6, "comp-card dominance flip"): the whole
+// card is now the figure-page link (fires figure_view) instead of a small
+// secondary text link inside it — the design brief's fix for "the eBay link and
+// the figure link competed at equal visual weight; the affiliate exit must not
+// outweigh the figure page." eBay stays real revenue, demoted to a small line
+// below the card rather than removed.
 
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import type { PriceSnap } from '../_lib/priceSnaps'
@@ -59,14 +66,17 @@ export default function LiveMedian({
     trackFunnel('ebay_exit', { figureId: figureId ?? '', target: 'guide_bidcheck' })
   }
 
-  return (
+  function onCardClick() {
+    trackFunnel('figure_view', { figureId: figureId ?? '', target: 'guide_comp_card' })
+  }
+
+  const card = (
     <div
       style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: '1rem',
-        margin: '0 0 0.875rem',
         padding: '0.875rem 1.125rem',
         border: '1px solid var(--border)',
         borderRadius: 'var(--fp-radius, 10px)',
@@ -78,33 +88,12 @@ export default function LiveMedian({
         {sublabel && (
           <div style={{ fontSize: '0.82rem', color: 'var(--fp-muted)', marginTop: '0.15rem' }}>{sublabel}</div>
         )}
-        <div style={{ display: 'flex', gap: '0.9rem', marginTop: '0.35rem' }}>
-          {href && (
-            <a
-              href={href}
-              style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--fp-accent)', textDecoration: 'none' }}
-            >
-              See every sold &rarr;
-            </a>
-          )}
-          {ebayUrl && (
-            <a
-              href={ebayUrl}
-              target="_blank"
-              rel="sponsored nofollow noopener noreferrer"
-              onClick={onEbayClick}
-              style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--fp-muted)', textDecoration: 'none' }}
-            >
-              Shop similar on eBay &rarr;
-            </a>
-          )}
-        </div>
       </div>
 
       <div style={{ textAlign: 'right', flexShrink: 0 }}>
         {hasData ? (
           <>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', lineHeight: 1, color: 'var(--green, var(--fp-accent))' }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.9rem', lineHeight: 1, color: 'var(--green, var(--fp-accent))' }}>
               {fmtMoney(median as number)}
             </div>
             <div style={{ fontSize: '0.66rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--fp-muted)', marginTop: '0.3rem' }}>
@@ -115,6 +104,31 @@ export default function LiveMedian({
           <div style={{ fontSize: '0.82rem', color: 'var(--fp-muted)', fontStyle: 'italic' }}>No sold comps yet</div>
         )}
       </div>
+    </div>
+  )
+
+  return (
+    <div style={{ margin: '0 0 0.875rem' }}>
+      {href ? (
+        <a href={href} onClick={onCardClick} style={{ display: 'block', textDecoration: 'none' }}>
+          {card}
+        </a>
+      ) : (
+        card
+      )}
+      {ebayUrl && (
+        <div style={{ textAlign: 'right', padding: '0.35rem 0.25rem 0' }}>
+          <a
+            href={ebayUrl}
+            target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
+            onClick={onEbayClick}
+            style={{ fontSize: '0.75rem', color: 'var(--fp-muted)', textDecoration: 'none' }}
+          >
+            sold listings on eBay &#8599;
+          </a>
+        </div>
+      )}
     </div>
   )
 }
