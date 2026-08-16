@@ -281,7 +281,7 @@ function IntelTable({ data, theme }: { data: TopCompPayload | null; theme: HubTh
                   {flagLabel(f.flag, theme) && <span className="fh-intel-flag">{flagLabel(f.flag, theme)}</span>}
                   <span className="fh-intel-price">
                     ${f.price.toLocaleString('en-US')}
-                    {f.last_sold && <span className="fh-intel-date">{f.last_sold}</span>}
+                    <span className="fh-intel-date">{f.sold_count} sold{f.last_sold ? ` · ${f.last_sold}` : ''}</span>
                   </span>
                 </a>
               </li>

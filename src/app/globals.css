@@ -567,7 +567,7 @@ a:hover {
   padding: 0.12rem 0.5rem;
   white-space: nowrap;
 }
-.fh-intel-price { display: flex; flex-direction: column; align-items: flex-end; font-family: var(--fh-display); font-size: 1.02rem; color: var(--fh-hot); }
+.fh-intel-price { display: flex; flex-direction: column; align-items: flex-end; font-family: var(--fh-display); font-size: 1.5rem; line-height: 1; color: var(--fh-hot); }
 .fh-intel-date { font-family: var(--font-body); font-size: 0.7rem; font-weight: 400; color: var(--fh-muted); margin-top: 1px; }
 .fh-intel-foot { font-size: 0.74rem; color: var(--fh-muted); margin: 0.7rem 0 0.2rem; font-style: italic; }
 .fh-intel-empty { font-size: 0.95rem; color: var(--fh-muted); font-style: italic; padding: 0.4rem 0.2rem 0.6rem; margin: 0; }
@@ -628,7 +628,8 @@ a:hover {
     radial-gradient(70% 50% at 10% 110%, rgba(0,0,0,0.45), transparent 60%);
 }
 .fh-main[data-fandom="masters-of-the-universe"] .fh-search-btn,
-.fh-main[data-fandom="masters-of-the-universe"] .fh-cta { color: #14100b; }
+.fh-main[data-fandom="masters-of-the-universe"] .fh-cta,
+.fh-main[data-fandom="masters-of-the-universe"] .fh-line-all { color: #14100b; }
 
 /* Scoped chrome tint — ONLY the nav INSIDE this hub's [data-fandom] wrapper
    (the SiteHeader renders inside .fh-main). The shared SiteHeader defaults and
@@ -1029,8 +1030,8 @@ a:hover {
 .fh-line-fig-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 11rem; }
 .fh-line-fig-price { font-size: 0.98rem; color: var(--fh-hot); display: flex; align-items: baseline; gap: 0.4rem; }
 .fh-line-fig-sold { font-family: var(--font-body); font-size: 0.68rem; font-weight: 400; color: var(--fh-muted); }
-.fh-line-all { display: flex; align-items: center; justify-content: center; padding: 0.4rem 0.7rem; color: var(--fh-accent); font-weight: 600; font-size: 0.84rem; text-decoration: none; border: 1px dashed var(--fh-line); border-radius: var(--fp-radius-sm); }
-.fh-line-all:hover { color: var(--fh-text); border-color: var(--fh-accent2); }
+.fh-line-all { display: flex; align-items: center; justify-content: center; padding: 0.7rem 0.7rem; margin-top: 0.75rem; width: 100%; box-sizing: border-box; background: var(--fh-accent); color: #fff; font-weight: 700; font-size: 0.86rem; letter-spacing: 0.02em; text-decoration: none; border-radius: var(--fp-radius-sm); }
+.fh-line-all:hover { filter: brightness(1.08); }
 
 @media (max-width: 520px) {
   .fh-line-fig-name { white-space: normal; max-width: none; }
@@ -1095,7 +1096,8 @@ a:hover {
 }
 /* dark text on the light brass primary; white on the red alert (AA) */
 .fh-main[data-fandom="gi-joe"] .fh-search-btn,
-.fh-main[data-fandom="gi-joe"] .fh-cta { color: #14160f; }
+.fh-main[data-fandom="gi-joe"] .fh-cta,
+.fh-main[data-fandom="gi-joe"] .fh-line-all { color: #14160f; }
 .fh-main[data-fandom="gi-joe"] .fh-check-btn,
 .fh-main[data-fandom="gi-joe"] .fh-filter-pill.is-active { color: #fff; }
 
@@ -1234,7 +1236,8 @@ a:hover {
 }
 /* dark text on the gold primary; white on the crimson alert (AA) */
 .fh-main[data-fandom="wwe-elite"] .fh-search-btn,
-.fh-main[data-fandom="wwe-elite"] .fh-cta { color: #0c0e12; }
+.fh-main[data-fandom="wwe-elite"] .fh-cta,
+.fh-main[data-fandom="wwe-elite"] .fh-line-all { color: #0c0e12; }
 .fh-main[data-fandom="wwe-elite"] .fh-check-btn,
 .fh-main[data-fandom="wwe-elite"] .fh-filter-pill.is-active { color: #fff; }
 
@@ -1383,7 +1386,8 @@ a:hover {
 }
 /* dark text on gold; white on crimson */
 .fh-main[data-fandom="wrestling-jakks"] .fh-search-btn,
-.fh-main[data-fandom="wrestling-jakks"] .fh-cta { color: #14110a; }
+.fh-main[data-fandom="wrestling-jakks"] .fh-cta,
+.fh-main[data-fandom="wrestling-jakks"] .fh-line-all { color: #14110a; }
 .fh-main[data-fandom="wrestling-jakks"] .fh-check-btn,
 .fh-main[data-fandom="wrestling-jakks"] .fh-filter-pill.is-active { color: #fff; }
 /* scoped nav tint */
@@ -1485,7 +1489,8 @@ a:hover {
     radial-gradient(80% 55% at 50% 120%, rgba(232,185,78,0.07), transparent 60%);
 }
 .fh-main[data-fandom="wrestling"] .fh-search-btn,
-.fh-main[data-fandom="wrestling"] .fh-cta { color: #0c0e12; }
+.fh-main[data-fandom="wrestling"] .fh-cta,
+.fh-main[data-fandom="wrestling"] .fh-line-all { color: #0c0e12; }
 .fh-main[data-fandom="wrestling"] .fh-check-btn { color: #0c0e12; }
 .fh-main[data-fandom="wrestling"] .fp-sitenav { background: rgba(12, 14, 18, 0.93); border-bottom-color: var(--fh-accent); }
 .fh-main[data-fandom="wrestling"] .fp-sitenav-mark { background: var(--fh-accent); color: #0c0e12; }
@@ -1594,7 +1599,8 @@ a:hover {
     radial-gradient(80% 60% at 50% 120%, rgba(0,0,0,0.5), transparent 60%);
 }
 .fh-main[data-fandom="star-wars-black-series"] .fh-search-btn,
-.fh-main[data-fandom="star-wars-black-series"] .fh-cta { color: #07090f; }
+.fh-main[data-fandom="star-wars-black-series"] .fh-cta,
+.fh-main[data-fandom="star-wars-black-series"] .fh-line-all { color: #07090f; }
 .fh-main[data-fandom="star-wars-black-series"] .fh-check-btn,
 .fh-main[data-fandom="star-wars-black-series"] .fh-filter-pill.is-active { color: #07090f; }
 .fh-main[data-fandom="star-wars-black-series"] .fp-sitenav { background: rgba(7, 9, 15, 0.93); border-bottom-color: var(--fh-accent); }
@@ -1691,7 +1697,8 @@ a:hover {
     radial-gradient(80% 60% at 50% 120%, rgba(0,0,0,0.5), transparent 60%);
 }
 .fh-main[data-fandom="transformers"] .fh-search-btn,
-.fh-main[data-fandom="transformers"] .fh-cta { color: #0a0c11; }
+.fh-main[data-fandom="transformers"] .fh-cta,
+.fh-main[data-fandom="transformers"] .fh-line-all { color: #0a0c11; }
 .fh-main[data-fandom="transformers"] .fh-check-btn,
 .fh-main[data-fandom="transformers"] .fh-filter-pill.is-active { color: #0a0c11; }
 .fh-main[data-fandom="transformers"] .fp-sitenav { background: rgba(10, 12, 17, 0.93); border-bottom-color: var(--fh-accent); }

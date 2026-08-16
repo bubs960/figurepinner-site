@@ -84,7 +84,10 @@ export default function FandomLineSections({
                     <>
                       <div className="fh-line-grails-label">Grails of this line</div>
                       <div className="fh-line-figs">
-                        {v.top.map(f => (
+                        {/* Tightened to 3 grail tiles (guides-conversion Phase 10) —
+                            was showing every precomputed top figure (up to 6),
+                            competing with the promoted "View all" button below. */}
+                        {v.top.slice(0, 3).map(f => (
                           <a key={f.figure_id} href={f.url} className="fh-line-fig">
                             <span className={`fh-line-fig-thumb${f.image ? '' : ' is-empty'}`}>
                               {f.image && <img src={f.image} alt="" width={48} height={48} loading="lazy" decoding="async" />}

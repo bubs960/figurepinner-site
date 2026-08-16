@@ -184,7 +184,7 @@ export default function FandomHubInteractive({
                   {flagLabel(f.flag, voice.flag) && <span className="fh-intel-flag">{flagLabel(f.flag, voice.flag)}</span>}
                   <span className="fh-intel-price">
                     ${formatGroupedNumber(f.price)}
-                    <span className="fh-intel-date">{f.last_sold ? f.last_sold : `${f.sold_count} sold`}</span>
+                    <span className="fh-intel-date">{f.sold_count} sold{f.last_sold ? ` · ${f.last_sold}` : ''}</span>
                   </span>
                 </a>
               </li>
