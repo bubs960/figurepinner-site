@@ -1,0 +1,2972 @@
+{
+ "fp_wrestling_mattel_elite_98_big-e_007ba6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_98_big-e_007ba6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_98_big-e_007ba6",
+   "character_canonical": "big-e",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "98",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Big E"
+  },
+  "identity_hash": "4c4f2589091614d5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_randy_orton_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-randy-orton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-97-faarooq-asad",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_mandy_rose_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-mandy-rose",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_big_e_s98",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_big_e_s98",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-98-big-e-action-figure/mthkn67",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-98-toy-figures-big-e-elite98-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Attire Date: Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "Oct. 26, 2021 @ NXT Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Make your WWE collection elite with the WWE Elite Collection Series 98 Action Figure Case of 8! Case includes fan-favorite Superstars like Big E, \"The Viper\" Randy Orton, \"The Prince\" Finn Balor and many more!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Approximately 6 inches tall x 3 1/4 inches long x 2 inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "$39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "January 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Rick Boogs (grey overalls with guitar, plus red overalls variant)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Rick Boogs"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Features True FX technology and authentic ring gear; recommended for ages 8+",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The Big E figure wears a red, white and blue outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "features a new head sculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE Championship Title accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "January 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Figures measure approximately 6-inches tall x 3 1/4-inches long x 2-inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "He's wearing a white singlet with bold geometric designs in red, blue, and black, and his look is complete with white boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-e",
+      "character_variant": "white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "updated wide-smiling headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-e",
+      "character_variant": "white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-e",
+      "character_variant": "white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Mattel WWE Elite Series 98",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-e",
+      "character_variant": "white-gear",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red, white and blue outfit",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red, white and blue",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New head sculpt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Includes WWE Championship Title accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "White singlet with bold geometric designs in red, blue, and black, white boots, and an updated wide-smiling headsculpt (Mattel WWE Elite Series 98)",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q9",
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE Championship Title accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2023",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_98_mandy-rose_aeb59a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_98_mandy-rose_aeb59a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_98_mandy-rose_aeb59a",
+   "character_canonical": "mandy-rose",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "98",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mandy Rose"
+  },
+  "identity_hash": "fe98f6c303e86c4b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_randy_orton_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-randy-orton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-97-faarooq-asad",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_mandy_rose_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-mandy-rose",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_big_e_s98",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_big_e_s98",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-98-big-e-action-figure/mthkn67",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-mandy-rose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-98-toy-figures-mandy-rose-elite98-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Attire Date: Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "Oct. 26, 2021 @ NXT Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Make your WWE collection elite with the WWE Elite Collection Series 98 Action Figure Case of 8! Case includes fan-favorite Superstars like Big E, \"The Viper\" Randy Orton, \"The Prince\" Finn Balor and many more!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Approximately 6 inches tall x 3 1/4 inches long x 2 inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "$39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "January 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Rick Boogs (grey overalls with guitar, plus red overalls variant)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Rick Boogs"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Features True FX technology and authentic ring gear; recommended for ages 8+",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mandy-rose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Figures measure approximately 6-inches tall x 3 1/4-inches long x 2-inches wide.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "January 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mandy-rose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "red bustier-style top with black laces at the sides, black shorts with a grommet belt, and black laced boots with fishnet stockings",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mandy-rose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "alternate hands to strike the perfect pose and a pair of devilish wings from her NXT Women's Championship win at Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mandy-rose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "updated headsculpt with a disdainful stare and her new, darker hair color",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mandy-rose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mandy-rose",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red bustier-style top with black laces at the sides, black shorts with a grommet belt, and black laced boots with fishnet stockings",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red and black",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Updated headsculpt with a disdainful stare and darker hair color",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Pair of devilish wings from her NXT Women's Championship win at Halloween Havoc",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Alternate hands to strike the perfect pose",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Pair of devilish wings from her NXT Women's Championship win at Halloween Havoc",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2023",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_98_finn-balor_3c31f4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_98_finn-balor_3c31f4",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_98_finn-balor_3c31f4",
+   "character_canonical": "finn-balor",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "98",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Finn Balor"
+  },
+  "identity_hash": "824f43d6614daeaa",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_randy_orton_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-randy-orton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-97-faarooq-asad",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_mandy_rose_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-mandy-rose",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_big_e_s98",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_big_e_s98",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-98-big-e-action-figure/mthkn67",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-finn-balor",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-finn-balor-action-figure-the-prince/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-98-toy-figures-finn-balor-elite98-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Attire Date: Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "Oct. 26, 2021 @ NXT Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Make your WWE collection elite with the WWE Elite Collection Series 98 Action Figure Case of 8! Case includes fan-favorite Superstars like Big E, \"The Viper\" Randy Orton, \"The Prince\" Finn Balor and many more!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Approximately 6 inches tall x 3 1/4 inches long x 2 inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "$39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "January 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Rick Boogs (grey overalls with guitar, plus red overalls variant)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Rick Boogs"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Features True FX technology and authentic ring gear; recommended for ages 8+",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 26, 2021 @ WWE Extreme Rules",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Finn Balor is in his demon look and includes spiked entrance head gear.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figures measure approximately 6-inches tall x 3 1/4-inches long x 2-inches wide.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "For ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "$37.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "black 'Summon the Demon' trunks with kneepads to match",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "black kickpad-style boots, white finger tape, red forearm tape, and black-and-red tassels",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "snarling headsculpt, coal-black face paint, and blood-red eye makeup",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "startling torso design that features sharp, bared teeth and a long, pointed tongue",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "fearsome black headdress and an alternate set of hands in a harrowing claw gesture",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Sept. 26, 2021 @ WWE Extreme Rules",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black 'Summon the Demon' trunks with kneepads to match; black kickpad-style boots, white finger tape, red forearm tape, and black-and-red tassels",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Snarling headsculpt with coal-black face paint and blood-red eye makeup",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Demon look with spiked entrance head gear",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Torso design that features sharp, bared teeth and a long, pointed tongue",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Fearsome black headdress",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Alternate set of hands in a harrowing claw gesture",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_98_randy-orton_90c470": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_98_randy-orton_90c470",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_98_randy-orton_90c470",
+   "character_canonical": "randy-orton",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "98",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Randy Orton"
+  },
+  "identity_hash": "1ea17f7e296be41e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_randy_orton_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-randy-orton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-97-faarooq-asad",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_mandy_rose_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-mandy-rose",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_big_e_s98",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_big_e_s98",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-98-big-e-action-figure/mthkn67",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-randy-orton-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-98-toy-figures-randy-orton-elite98-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Attire Date: Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "Oct. 26, 2021 @ NXT Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Make your WWE collection elite with the WWE Elite Collection Series 98 Action Figure Case of 8! Case includes fan-favorite Superstars like Big E, \"The Viper\" Randy Orton, \"The Prince\" Finn Balor and many more!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Approximately 6 inches tall x 3 1/4 inches long x 2 inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "$39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "January 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Rick Boogs (grey overalls with guitar, plus red overalls variant)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Rick Boogs"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Features True FX technology and authentic ring gear; recommended for ages 8+",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Randy Orton wears a black and red outfit with white logos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "features a new head sculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "comes with a WWE RAW Tag Team Championship Title accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "January 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black trunks with red-and-white tattoo detailing and the 'RKO' logo on the rear. Rounding out his look are matching 'RKO' kneepads, black wrist and hand tape, and black laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "triumphant headscan with updated facial hair and accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "alternate hands for spot-on entrance posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 21, 2021 @ WWE SummerSlam",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black and red outfit with white logos; black trunks with red-and-white tattoo detailing and 'RKO' logo on the rear, matching 'RKO' kneepads, black wrist and hand tape, black laced boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New head sculpt; triumphant headscan with updated facial hair and accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Alternate hands for spot-on entrance posing",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE RAW Tag Team Championship Title accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2023",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_98_faarooq-asad_6d444d71f47f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_98_faarooq-asad_6d444d71f47f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_98_faarooq-asad_6d444d71f47f",
+   "character_canonical": "faarooq-asad",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "98",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Faarooq Asad"
+  },
+  "identity_hash": "a6bc015ea7c728cd",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_randy_orton_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-randy-orton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-97-faarooq-asad",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_mandy_rose_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-mandy-rose",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_big_e_s98",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_big_e_s98",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-98-big-e-action-figure/mthkn67",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://amoktime.com/wwe-elite-collection-series-98-faarooq-asad-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-98-farooq-asad/",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.wrestlingshop.com/faarooq-asad-wwe-elite-collection-series-98-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Attire Date: Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "Oct. 26, 2021 @ NXT Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Make your WWE collection elite with the WWE Elite Collection Series 98 Action Figure Case of 8! Case includes fan-favorite Superstars like Big E, \"The Viper\" Randy Orton, \"The Prince\" Finn Balor and many more!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Approximately 6 inches tall x 3 1/4 inches long x 2 inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "$39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "January 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Rick Boogs (grey overalls with guitar, plus red overalls variant)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Rick Boogs"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Features True FX technology and authentic ring gear; recommended for ages 8+",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "faarooq-asad",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Hall of Famer, and the first African American World Champion, Farooq Asad in his gladiator outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "faarooq-asad",
+      "character_variant": "gladiator-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Includes a swappable head piece with an alternate deco'd helmet.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "faarooq-asad",
+      "character_variant": "gladiator-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "deluxe articulation, TrueFX detailing, and iconic accessories for collectors to display or kids to play matches.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "faarooq-asad",
+      "character_variant": "gladiator-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Figure measures approximately 6-inches tall x 3 1/4-inches long x 2-inches wide.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "faarooq-asad",
+      "character_variant": "gladiator-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$22.99 Original price was: $22.99.$18.99Current price is: $18.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "faarooq-asad",
+      "character_variant": "gladiator-outfit",
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Gladiator outfit",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Gladiator outfit",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Swappable head piece with alternate deco'd helmet",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Swappable alternate deco'd helmet head piece",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_98_rick-boogs_89328a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_98_rick-boogs_89328a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_98_rick-boogs_89328a",
+   "character_canonical": "rick-boogs",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "98",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rick Boogs"
+  },
+  "identity_hash": "cb8ff20865688b7d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_randy_orton_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-randy-orton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-97-faarooq-asad",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_mandy_rose_s98",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-mandy-rose",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_big_e_s98",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-big-e-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_big_e_s98",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-98-big-e-action-figure/mthkn67",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-98-rick-boogs",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-98-rick-boogs-action-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-98-toy-figures-rick-boogs-elite98-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_randy_orton_s98",
+     "text": "Attire Date: Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Series: 98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Faarooq Asad"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_faarooq_asad_s98",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "98",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_mandy_rose_s98",
+     "text": "Oct. 26, 2021 @ NXT Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": "Mandy Rose"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Make your WWE collection elite with the WWE Elite Collection Series 98 Action Figure Case of 8! Case includes fan-favorite Superstars like Big E, \"The Viper\" Randy Orton, \"The Prince\" Finn Balor and many more!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Approximately 6 inches tall x 3 1/4 inches long x 2 inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "$39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "January 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Rick Boogs (grey overalls with guitar, plus red overalls variant)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Rick Boogs"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_big_e_s98",
+     "text": "Features True FX technology and authentic ring gear; recommended for ages 8+",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "Rick Boogs figure with grey overalls and an electric guitar accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Figures measure approximately 6-inches tall x 3 1/4-inches long x 2-inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "There is also a chase variant of this figure with Boogs wearing red overalls.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "chase-red",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$45.12",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "chase-red",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "gray 'Let's Ride' singlet with denim overall-style details above a black-and-red striped top, and the Boogs Cruise emblem on the back. His look is complete with white wrist tape, gray kneepads, and white high-top boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "grey",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "smiling headsculpt, high ponytail, and white headband",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "grey",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "two sets of alternate hands, including a pair that can throw up the horns, and a V-shaped electric guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "grey",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "grey",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "rick-boogs",
+      "character_variant": "grey",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Gray 'Let's Ride' singlet with denim overall-style details above a black-and-red striped top, with the Boogs Cruise emblem on the back",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Gray singlet with black-and-red striped top, white wrist tape, gray kneepads, white high-top boots",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Smiling headsculpt with high ponytail and white headband",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "V-shaped electric guitar",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White headband and high ponytail",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Chase variant with red overalls",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two sets of alternate hands, including a horns-up pair",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "V-shaped electric guitar",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2308 @@
+{
+ "fp_wrestling_mattel_elite_79_bobby-fish_aa31c0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_79_bobby-fish_aa31c0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_79_bobby-fish_aa31c0",
+   "character_canonical": "bobby-fish",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "79",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bobby Fish"
+  },
+  "identity_hash": "8835486ffee1dd7d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-bige",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_taker",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-taker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-complete-set-elite79-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_reigns",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-fish",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-bobby-fish-action-figure-camo/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_bige",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_bige",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_bige",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_taker",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_set",
+     "text": "Roman Reigns, Daniel Bryan, Io Shirai, Big E (New Day), Xavier Woods (New Day), Bobby Fish (Camo Trunks)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_set",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_reigns",
+     "text": "November 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_reigns",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_reigns",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_reigns",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Roman Reigns"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Nov. 17, 2018 @ NXT TakOver: War Games",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": "camo",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": "camo",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": "camo",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": "camo",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "bobby-fish",
+      "character_variant": "camo",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "amazing detail capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_79_xavier-woods_c88c1c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_79_xavier-woods_c88c1c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_79_xavier-woods_c88c1c",
+   "character_canonical": "xavier-woods",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "79",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Xavier Woods"
+  },
+  "identity_hash": "4198edb58bb0a1f5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-bige",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_taker",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-taker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-complete-set-elite79-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_reigns",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.entertainmentearth.com/product/wwe-xavier-woods-elite-series-79-action-figure/mtgky27",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-woods",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-xavier-elite79-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_bige",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_bige",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_bige",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_taker",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_set",
+     "text": "Roman Reigns, Daniel Bryan, Io Shirai, Big E (New Day), Xavier Woods (New Day), Bobby Fish (Camo Trunks)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_set",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_reigns",
+     "text": "November 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_reigns",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_reigns",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_reigns",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Roman Reigns"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The figure has deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories-all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The figure includes the first ever Up Up Down Down Title Belt, Trombone, and interchangeable hands and head.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "The Xavier Woods action figure was manufactured by Mattel in 2020. The product code is GKY27.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Oct. 11, 2019 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release date may vary from copyright date on packaging",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$47.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Ship in Figure Defender Case (+$4.99)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": null,
+      "product_line": null,
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 11, 2019 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "First ever Up Up Down Down Title Belt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Trombone",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Xavier Woods action figure",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Up Up Down Down Title Belt (first ever)",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Trombone",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Interchangeable hands and head",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "GKY27",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_79_daniel-bryan_9160e00685f9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_79_daniel-bryan_9160e00685f9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_79_daniel-bryan_9160e00685f9",
+   "character_canonical": "daniel-bryan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "79",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Daniel Bryan"
+  },
+  "identity_hash": "c4e70fbec27c859c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-bige",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_taker",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-taker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-complete-set-elite79-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_reigns",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-daniel-bryan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-dbry",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-daniel-elite79-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_bige",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_bige",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_bige",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_taker",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_set",
+     "text": "Roman Reigns, Daniel Bryan, Io Shirai, Big E (New Day), Xavier Woods (New Day), Bobby Fish (Camo Trunks)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_set",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_reigns",
+     "text": "November 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_reigns",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_reigns",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_reigns",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Roman Reigns"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "bold and colorful figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: May 19, 2019 @ WWE Money in the Bank",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Daniel Bryan - WWE Elite 79 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "May 19, 2019 @ WWE Money in the Bank",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "bold and colorful figure",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$44.99",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 44.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2026-08-16",
+     "source_id": "f_s3"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_79_big-e_dddf1a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_79_big-e_dddf1a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_79_big-e_dddf1a",
+   "character_canonical": "big-e",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "79",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Big E"
+  },
+  "identity_hash": "f0753498baaf5973",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-bige",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_taker",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-taker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-complete-set-elite79-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_reigns",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toynewsi.com/241-36814",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.reigncitytoys.com/products/copy-of-wwe-elite-collection-series-79-big-e",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-big-e-elite79-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_bige",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_bige",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_bige",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_taker",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_set",
+     "text": "Roman Reigns, Daniel Bryan, Io Shirai, Big E (New Day), Xavier Woods (New Day), Bobby Fish (Camo Trunks)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_set",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_reigns",
+     "text": "November 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_reigns",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_reigns",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_reigns",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Roman Reigns"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s3",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "WWE Toy Wrestling Action Figure by Mattel",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_79_io-shirai_c9a153d46af7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_79_io-shirai_c9a153d46af7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_79_io-shirai_c9a153d46af7",
+   "character_canonical": "io-shirai",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "79",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Io Shirai"
+  },
+  "identity_hash": "35c3a8d106a487e4",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-bige",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_taker",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-taker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-complete-set-elite79-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_reigns",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-shirai",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-io-shirai-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-io-shirai-elite79-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_bige",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_bige",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_bige",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_taker",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_set",
+     "text": "Roman Reigns, Daniel Bryan, Io Shirai, Big E (New Day), Xavier Woods (New Day), Bobby Fish (Camo Trunks)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_set",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_reigns",
+     "text": "November 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_reigns",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_reigns",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_reigns",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Roman Reigns"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box! Figure has deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "io-shirai",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "io-shirai",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$49.99",
+      "evidence_quote_ids": [
+       "f_q2"
+      ],
+      "price_detail": {
+       "amount": 49.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$34.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 34.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_79_roman-reigns_7dc894": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_79_roman-reigns_7dc894",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_79_roman-reigns_7dc894",
+   "character_canonical": "roman-reigns",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "79",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Roman Reigns"
+  },
+  "identity_hash": "96a8bb65bb052f06",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-bige",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_taker",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-taker",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-79-toy-figures-complete-set-elite79-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_reigns",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite79-reigns",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-79-roman-reigns-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/roman-reigns-wwe-elite-collection-series-79-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_bige",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_bige",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_bige",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_taker",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Undertaker"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_set",
+     "text": "Roman Reigns, Daniel Bryan, Io Shirai, Big E (New Day), Xavier Woods (New Day), Bobby Fish (Camo Trunks)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_set",
+     "text": "$99.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_reigns",
+     "text": "November 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_reigns",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_reigns",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_reigns",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Roman Reigns"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 24, 2019 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 79",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "November 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Interchangeable hands let you pose this WWE Elite figure in-ring or coming down the aisle with added authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "This WWE figure is approximately 6-inches in scale and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Sept. 24, 2019 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands let you pose this WWE Elite figure in-ring or coming down the aisle with added authenticity.",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2020",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

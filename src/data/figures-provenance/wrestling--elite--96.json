@@ -1,0 +1,2329 @@
+{
+ "fp_wrestling_mattel_elite_96_shinsuke-nakamur_bdf6fd": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_96_shinsuke-nakamur_bdf6fd",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_96_shinsuke-nakamur_bdf6fd",
+   "character_canonical": "shinsuke-nakamura",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "96",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shinsuke Nakamura"
+  },
+  "identity_hash": "d3fb2658f01ba68c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_hogan_s96",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-hulk-hogan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite96_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-complete-set-elite96-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfn_elite96_preorders",
+     "url": "https://wrestlingfigurenews.com/2022/07/02/wwe-elite-96-pre-orders-hulk-hogan-doudrop-king-nakamura-ilja-dragunov-brock-lesnar-kofi-kingston/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-shinsuke-nakamura",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-shinsuke-elite96-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite96_set",
+     "text": "WWE Elite 96 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Brock Lesnar, Hulk Hogan, King Shinsuke Nakamura, IIja Dragunov, Kofi Kingston & Doudrop!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_elite96_set",
+     "text": "$104.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Both are expected to ship in September",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Hulk Hogan (1988 Hulk Rules with War Bonnet and California license plate), King Nakamura (white gear with soft goods jacket and crown), Ilja Dragunov (red/black gear with soft goods jacket and NXT Championship), Brock Lesnar (2021 look with camera and ring steps), Kofi Kingston (Skeletor gear), and Doudrop in blue gear plus a metallic green chase variant",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$25.99-$26.99, with the chase going for $34.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$169.99 plus shipping",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$28.99 or $39.99 for the chase",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 18, 2021 @ WWE Money in the Bank",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "wearing a removable white jacket with gold buttons painted on and white ring pants",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "white boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "smiling headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "a removable molded crown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "interchangeable hand accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "July 18, 2021 @ WWE Money in the Bank",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White jacket with gold buttons, white ring pants, white boots",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Smiling headsculpt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable molded crown",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Removable white jacket with gold buttons painted on",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable molded crown",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_96_doudrop_ae098e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_96_doudrop_ae098e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_96_doudrop_ae098e",
+   "character_canonical": "doudrop",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "96",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Doudrop"
+  },
+  "identity_hash": "b8c91525605c2eb7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_hogan_s96",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-hulk-hogan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite96_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-complete-set-elite96-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfn_elite96_preorders",
+     "url": "https://wrestlingfigurenews.com/2022/07/02/wwe-elite-96-pre-orders-hulk-hogan-doudrop-king-nakamura-ilja-dragunov-brock-lesnar-kofi-kingston/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-doudrop",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-96-doudrop-action-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite96_set",
+     "text": "WWE Elite 96 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Brock Lesnar, Hulk Hogan, King Shinsuke Nakamura, IIja Dragunov, Kofi Kingston & Doudrop!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_elite96_set",
+     "text": "$104.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Both are expected to ship in September",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Hulk Hogan (1988 Hulk Rules with War Bonnet and California license plate), King Nakamura (white gear with soft goods jacket and crown), Ilja Dragunov (red/black gear with soft goods jacket and NXT Championship), Brock Lesnar (2021 look with camera and ring steps), Kofi Kingston (Skeletor gear), and Doudrop in blue gear plus a metallic green chase variant",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$25.99-$26.99, with the chase going for $34.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$169.99 plus shipping",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$28.99 or $39.99 for the chase",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Aug. 21, 2021 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "doudrop",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_96_brock-lesnar_718f69": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_96_brock-lesnar_718f69",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_96_brock-lesnar_718f69",
+   "character_canonical": "brock-lesnar",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "96",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Brock Lesnar"
+  },
+  "identity_hash": "dde07e8e0a1fe9c1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_hogan_s96",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-hulk-hogan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite96_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-complete-set-elite96-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfn_elite96_preorders",
+     "url": "https://wrestlingfigurenews.com/2022/07/02/wwe-elite-96-pre-orders-hulk-hogan-doudrop-king-nakamura-ilja-dragunov-brock-lesnar-kofi-kingston/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-brock-lesnar",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-96-brock-lesnar-action-figure-new-sculpt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite96_set",
+     "text": "WWE Elite 96 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Brock Lesnar, Hulk Hogan, King Shinsuke Nakamura, IIja Dragunov, Kofi Kingston & Doudrop!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_elite96_set",
+     "text": "$104.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Both are expected to ship in September",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Hulk Hogan (1988 Hulk Rules with War Bonnet and California license plate), King Nakamura (white gear with soft goods jacket and crown), Ilja Dragunov (red/black gear with soft goods jacket and NXT Championship), Brock Lesnar (2021 look with camera and ring steps), Kofi Kingston (Skeletor gear), and Doudrop in blue gear plus a metallic green chase variant",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$25.99-$26.99, with the chase going for $34.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$169.99 plus shipping",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$28.99 or $39.99 for the chase",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 21, 2021 @ WWE Crown Jewel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Features 'The Conqueror' with a new, smiling head sculpt, complete with his signature beard and ponytail.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "This 6-inch tall figure features deluxe articulation, TrueFX detailing, swappable hands.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Accessories include a video camera and ring steps.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$74.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "November 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 21, 2021 @ WWE Crown Jewel",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New smiling head sculpt with signature beard and ponytail",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX detailing",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "New smiling head sculpt with beard and ponytail",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Includes video camera and ring steps accessories",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Video camera",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Ring steps",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2022",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_96_kofi-kingston_5228a52f0438": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_96_kofi-kingston_5228a52f0438",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_96_kofi-kingston_5228a52f0438",
+   "character_canonical": "kofi-kingston",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "96",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Kofi Kingston"
+  },
+  "identity_hash": "b3c268925d506292",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_hogan_s96",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-hulk-hogan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite96_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-complete-set-elite96-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfn_elite96_preorders",
+     "url": "https://wrestlingfigurenews.com/2022/07/02/wwe-elite-96-pre-orders-hulk-hogan-doudrop-king-nakamura-ilja-dragunov-brock-lesnar-kofi-kingston/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-kofi-kingston",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-96-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite96_set",
+     "text": "WWE Elite 96 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Brock Lesnar, Hulk Hogan, King Shinsuke Nakamura, IIja Dragunov, Kofi Kingston & Doudrop!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_elite96_set",
+     "text": "$104.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Both are expected to ship in September",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Hulk Hogan (1988 Hulk Rules with War Bonnet and California license plate), King Nakamura (white gear with soft goods jacket and crown), Ilja Dragunov (red/black gear with soft goods jacket and NXT Championship), Brock Lesnar (2021 look with camera and ring steps), Kofi Kingston (Skeletor gear), and Doudrop in blue gear plus a metallic green chase variant",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$25.99-$26.99, with the chase going for $34.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$169.99 plus shipping",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$28.99 or $39.99 for the chase",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 18, 2021 @ WWE Money in the Bank",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Features Kofi Kingston in his Skeletor gear and includes an entrance vest.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "This 6-inch tall figure features deluxe articulation, TrueFX detailing, swappable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Figure measures approximately 6-inches tall x 3 1/4-inches long x 2-inches wide.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Skeletor gear; Attire Date: July 18, 2021 @ WWE Money in the Bank",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX detailing",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Skeletor gear",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Entrance vest",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Swappable hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_96_hulk-hogan_b132b9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_96_hulk-hogan_b132b9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_96_hulk-hogan_b132b9",
+   "character_canonical": "hulk-hogan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "96",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Hulk Hogan"
+  },
+  "identity_hash": "dcfea5b044735ce6",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_hogan_s96",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-hulk-hogan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite96_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-complete-set-elite96-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfn_elite96_preorders",
+     "url": "https://wrestlingfigurenews.com/2022/07/02/wwe-elite-96-pre-orders-hulk-hogan-doudrop-king-nakamura-ilja-dragunov-brock-lesnar-kofi-kingston/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-96-hulk-hogan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-hulk-hogan-elite96-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_hogan_s96",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite96_set",
+     "text": "WWE Elite 96 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Brock Lesnar, Hulk Hogan, King Shinsuke Nakamura, IIja Dragunov, Kofi Kingston & Doudrop!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_elite96_set",
+     "text": "$104.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Both are expected to ship in September",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "Hulk Hogan (1988 Hulk Rules with War Bonnet and California license plate), King Nakamura (white gear with soft goods jacket and crown), Ilja Dragunov (red/black gear with soft goods jacket and NXT Championship), Brock Lesnar (2021 look with camera and ring steps), Kofi Kingston (Skeletor gear), and Doudrop in blue gear plus a metallic green chase variant",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$25.99-$26.99, with the chase going for $34.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$169.99 plus shipping",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfn_elite96_preorders",
+     "text": "$28.99 or $39.99 for the chase",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 96",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Recreate signature moves and ring entrances with this WWE Elite Collection Series 96 Hulk Hogan Action Figure!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Features 'The Hulkster' in his red and yellow look from 1988",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "6-inch tall figure features deluxe articulation, TrueFX detailing, swappable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Figure measures approximately 6-inches tall x 3 1/4-inches long x 2-inches wide",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "war bonnet and license plate necklace accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Hulkamania is as popular as ever with Hulk Hogan in Mattel WWE Elite 96, brother! This version of Hogan has a wild eyed headscan and removable 'Hulkster' red and yellow fist helmet. He's also wearing a molded cross chain, white wrist tape and classic yellow trunks with red knee pads and tall, yellow boots!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "hulk-hogan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red and yellow look from 1988",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Yellow trunks with red knee pads and yellow boots",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Wild-eyed headscan",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX detailing",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable 'Hulkster' red and yellow fist helmet",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Molded cross chain and white wrist tape",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "War bonnet and license plate necklace accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "War bonnet accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "License plate necklace accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$42.99",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 42.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_96_ilja-dragunov_00e264": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_96_ilja-dragunov_00e264",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_96_ilja-dragunov_00e264",
+   "character_canonical": "ilja-dragunov",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "96",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ilja Dragunov"
+  },
+  "identity_hash": "92334160db8cc351",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s96_ilja",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-96-ilja-dragunov",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_s96_ilja",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-96-ilja-dragunov-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_s96_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-complete-set-elite96-00.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_s96_preorders",
+     "url": "https://wrestlingfigurenews.com/2022/07/02/wwe-elite-96-pre-orders-hulk-hogan-doudrop-king-nakamura-ilja-dragunov-brock-lesnar-kofi-kingston/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfn_s96_photos",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-96-photos-hulk-hogan-kofi-kingston-brock-lesnar-doudrop-ilja-dragunov-shinsuke-nakamura/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-96-toy-figures-ilja-dragunov-elite96-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.thirdeyecomics.com/products/mattel-wwe-elite-ilja-dragunov-series-96",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s96_ilja",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s96_ilja",
+     "text": "Series: 96",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s96_ilja",
+     "text": "November 2022",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s96_ilja",
+     "text": "Figure measures approximately 6-inches tall x 3 1/4-inches long x 2-inches wide",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": "Ilja Dragunov"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s96_ilja",
+     "text": "includes an NXT UK Title accessory and soft goods entrance jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": "Ilja Dragunov"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s96_ilja",
+     "text": "6-inch tall figure features deluxe articulation, TrueFX detailing, swappable hands, and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_s96_set",
+     "text": "WWE Elite 96 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Brock Lesnar, Hulk Hogan, King Shinsuke Nakamura, IIja Dragunov, Kofi Kingston & Doudrop!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_s96_preorders",
+     "text": "WWE Elite 96 Pre-Orders: Hulk Hogan, Doudrop, King Nakamura, Ilja Dragunov, Brock Lesnar & Kofi Kingston",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfn_s96_photos",
+     "text": "WWE Elite 96 Photos: Hulk Hogan, Kofi Kingston, Brock Lesnar, Doudrop, Ilja Dragunov, Shinsuke Nakamura",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "red and black trunks",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ilja-dragunov",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "removable red and black entrance robe, black laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ilja-dragunov",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "smiling headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ilja-dragunov",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "interchangeable hand accessories and a WWE UK Championship belt accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ilja-dragunov",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ilja-dragunov",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Sale price$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ilja-dragunov",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "red and black trunks; red and black entrance robe; black laced boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "smiling headsculpt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "removable red and black entrance robe",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "WWE UK Championship belt accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable soft-goods entrance robe/jacket",
+    "evidence_quote_ids": [
+     "f_q2",
+     "w_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "NXT UK / WWE UK Championship belt accessory",
+    "evidence_quote_ids": [
+     "f_q4",
+     "w_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

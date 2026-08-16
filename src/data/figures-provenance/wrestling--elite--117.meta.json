@@ -1,13 +1,18 @@
 {
- "md5": "D05D5F115CB9CC3175A9F3593B82C0F0",
- "doc_count": 4,
- "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
+ "md5": "928DB55C4407533FE691C62BFF45ABCF",
+ "doc_count": 6,
+ "source_batches": [
+  "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
+  "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
+ ],
  "poured_at": "2026-08-15",
- "warn_count_at_pour": 11,
+ "warn_count_at_pour": 10,
  "identity_hashes": {
   "fp_wrestling_mattel_elite_117_roman-reigns_9baba3": "978115bb31b4d0cf",
   "fp_wrestling_mattel_elite_117_naomi_2f946b": "b3ed5c51c37c7ac7",
   "fp_wrestling_mattel_elite_117_seth-rollins_6c6db9": "c43bec30be0dfd70",
-  "fp_wrestling_mattel_elite_117_grayson-waller_a0c582": "20e498594f9692a2"
+  "fp_wrestling_mattel_elite_117_grayson-waller_a0c582": "20e498594f9692a2",
+  "fp_wrestling_mattel_elite_117_rhea-ripley_cd53b0": "ed44f5f464c12acf",
+  "fp_wrestling_mattel_elite_117_axiom_76cb51": "66a2195de00d6641"
  }
 }

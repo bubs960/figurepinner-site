@@ -1,0 +1,2449 @@
+{
+ "fp_wrestling_mattel_elite_105_carmelo-hayes_4a0246": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_105_carmelo-hayes_4a0246",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_105_carmelo-hayes_4a0246",
+   "character_canonical": "carmelo-hayes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "105",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Carmelo Hayes"
+  },
+  "identity_hash": "67967be93e3aacaa",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_gargano_105",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-105-johnny-gargano",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_strowman_105",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_series_category",
+     "url": "https://toywiz.com/wwe-wrestling/elite-action-figures/elite-collection-series-101-110/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_105_106_reveal",
+     "url": "https://wrestlingfigurenews.com/2023/07/20/wwe-elite-105-106-107-108-109-wrestlemania-40-build-a-figure-reveals/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toybook_105",
+     "url": "https://toybook.com/products/wwe-elite-figure-assortment-series-no-105/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-carmelo-hayes-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-undetermined-carmelo-hayes",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-105-toy-figures-carmelo-elite105-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Elite Collection Mainline — Series 105 — Release Year: 2023 — Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Attire Date: Sept. 12, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_101_150_collection",
+     "text": "Series 105 (7): Braun Strowman; Carmelo Hayes; Carmelo Hayes [Chase]; Dominik Mysterio; Iyo Sky; Johnny Gargano; Scott Steiner",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Release Date: September 2023; Price: $119.99; Series: Series 105; UPC: 194735199426",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toybook_105",
+     "text": "WWE ELITE FIGURE ASSORTMENT SERIES NO. 105 — MSRP $22.99 — deluxe articulation, TrueFX detailing, and iconic accessories — Ages 8+ — Manufacturer: Mattel — published October 1, 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_105_106_reveal",
+     "text": "WWE Elite 105, 106, 107, 108, 109, WrestleMania 40 & Build-a-Figure Reveals — only Johnny Gargano shown for Elite 105, with no Build-A-Figure piece mentioned for that series (BAF pieces named for WrestleMania 40 and other waves in the same article, none attributed to Series 105)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s3",
+     "text": "Melo don't miss, and neither does the WWE line with the first-ever action figure of Carmello Hayes in Mattel WWE Elite Series 105!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": "purple-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "The NXT Champion struts into the line with a confident, goateed headscan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": "purple-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "He's wearing purple trunks with ornate gold detailing, as well as matching purple boots and knee pads, both with similar gold print.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": "purple-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "His nothing-but-net look is complete with sunglasses and a fabric fur-style coat!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": "purple-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "carmelo-hayes",
+      "character_variant": "purple-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Purple trunks with ornate gold detailing, as well as matching purple boots and knee pads, both with similar gold print",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident, goateed headscan as the NXT Champion",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "His nothing-but-net look is complete with sunglasses and a fabric fur-style coat",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_105_iyo-sky_faa185": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_105_iyo-sky_faa185",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_105_iyo-sky_faa185",
+   "character_canonical": "iyo-sky",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "105",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Iyo Sky"
+  },
+  "identity_hash": "a6d8f32a947b2594",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_gargano_105",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-105-johnny-gargano",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_strowman_105",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_series_category",
+     "url": "https://toywiz.com/wwe-wrestling/elite-action-figures/elite-collection-series-101-110/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_105_106_reveal",
+     "url": "https://wrestlingfigurenews.com/2023/07/20/wwe-elite-105-106-107-108-109-wrestlemania-40-build-a-figure-reveals/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toybook_105",
+     "url": "https://toybook.com/products/wwe-elite-figure-assortment-series-no-105/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-iyo-sky-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-undetermined-iyo-sky",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-105-toy-figures-iyo-elite105-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Elite Collection Mainline — Series 105 — Release Year: 2023 — Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Attire Date: Sept. 12, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_101_150_collection",
+     "text": "Series 105 (7): Braun Strowman; Carmelo Hayes; Carmelo Hayes [Chase]; Dominik Mysterio; Iyo Sky; Johnny Gargano; Scott Steiner",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Release Date: September 2023; Price: $119.99; Series: Series 105; UPC: 194735199426",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toybook_105",
+     "text": "WWE ELITE FIGURE ASSORTMENT SERIES NO. 105 — MSRP $22.99 — deluxe articulation, TrueFX detailing, and iconic accessories — Ages 8+ — Manufacturer: Mattel — published October 1, 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_105_106_reveal",
+     "text": "WWE Elite 105, 106, 107, 108, 109, WrestleMania 40 & Build-a-Figure Reveals — only Johnny Gargano shown for Elite 105, with no Build-A-Figure piece mentioned for that series (BAF pieces named for WrestleMania 40 and other waves in the same article, none attributed to Series 105)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Attire Date: Oct. 14, 2022 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Series: 105",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "She's wearing a white-and-gold top with white fur trim, silver stud detailing, and black straps, as well as white shorts with a black, fur-lined belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Her look is complete with black boots featuring gold-and-white vertical stripes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "an all-new smiling headscan with flowing black-and-red hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Sky comes with the WWE Women's Tag Team Championship title belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "iyo-sky",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 14, 2022 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White-and-gold top with white fur trim, silver stud detailing, and black straps; white shorts with a black, fur-lined belt; black boots with gold-and-white vertical stripes",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new smiling headscan with flowing black-and-red hairstyle",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX technology",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Comes with the WWE Women's Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE Women's Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_105_johnny-gargano_325279": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_105_johnny-gargano_325279",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_105_johnny-gargano_325279",
+   "character_canonical": "johnny-gargano",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "105",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Johnny Gargano"
+  },
+  "identity_hash": "d4a3ab25d8ff1310",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_gargano_105",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-105-johnny-gargano",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_strowman_105",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_series_category",
+     "url": "https://toywiz.com/wwe-wrestling/elite-action-figures/elite-collection-series-101-110/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_105_106_reveal",
+     "url": "https://wrestlingfigurenews.com/2023/07/20/wwe-elite-105-106-107-108-109-wrestlemania-40-build-a-figure-reveals/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toybook_105",
+     "url": "https://toybook.com/products/wwe-elite-figure-assortment-series-no-105/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-johnny-gargano-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-105-toy-figures-johnny-elite105-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Elite Collection Mainline — Series 105 — Release Year: 2023 — Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Attire Date: Sept. 12, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_101_150_collection",
+     "text": "Series 105 (7): Braun Strowman; Carmelo Hayes; Carmelo Hayes [Chase]; Dominik Mysterio; Iyo Sky; Johnny Gargano; Scott Steiner",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Release Date: September 2023; Price: $119.99; Series: Series 105; UPC: 194735199426",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toybook_105",
+     "text": "WWE ELITE FIGURE ASSORTMENT SERIES NO. 105 — MSRP $22.99 — deluxe articulation, TrueFX detailing, and iconic accessories — Ages 8+ — Manufacturer: Mattel — published October 1, 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_105_106_reveal",
+     "text": "WWE Elite 105, 106, 107, 108, 109, WrestleMania 40 & Build-a-Figure Reveals — only Johnny Gargano shown for Elite 105, with no Build-A-Figure piece mentioned for that series (BAF pieces named for WrestleMania 40 and other waves in the same article, none attributed to Series 105)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "September 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "bold red trunks with black-and-yellow striping, as well as a black city skyline design and face logo.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "His red boots have a matching black skyscraper design with yellow outline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "black wrist tape and black knee pads with polka dots and face logo.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "His look is complete with a molded black entrance vest with white panels and white face logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "all-new smiling head scan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "alternate hands for accurate entrance poses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-gargano",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Bold red trunks with black-and-yellow striping and a black city skyline design with face logo; red boots with matching black skyscraper design and yellow outline; black wrist tape and black knee pads with polka dots and face logo",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new smiling head scan",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Molded black entrance vest with white panels and white face logo",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Alternate hands for accurate entrance poses",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate hands (entrance pose)",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2023",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$99.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 99.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$34.99",
+      "evidence_quote_ids": [
+       "f_q12"
+      ],
+      "price_detail": {
+       "amount": 34.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_105_dominik-mysterio_b947d4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_105_dominik-mysterio_b947d4",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_105_dominik-mysterio_b947d4",
+   "character_canonical": "dominik-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "105",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dominik Mysterio"
+  },
+  "identity_hash": "93eea1ae41b33252",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_gargano_105",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-105-johnny-gargano",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_strowman_105",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_series_category",
+     "url": "https://toywiz.com/wwe-wrestling/elite-action-figures/elite-collection-series-101-110/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_105_106_reveal",
+     "url": "https://wrestlingfigurenews.com/2023/07/20/wwe-elite-105-106-107-108-109-wrestlemania-40-build-a-figure-reveals/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toybook_105",
+     "url": "https://toybook.com/products/wwe-elite-figure-assortment-series-no-105/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-dominik-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-undetermined-dominik-mysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-105-toy-figures-dominik-elite105-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Elite Collection Mainline — Series 105 — Release Year: 2023 — Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Attire Date: Sept. 12, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_101_150_collection",
+     "text": "Series 105 (7): Braun Strowman; Carmelo Hayes; Carmelo Hayes [Chase]; Dominik Mysterio; Iyo Sky; Johnny Gargano; Scott Steiner",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Release Date: September 2023; Price: $119.99; Series: Series 105; UPC: 194735199426",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toybook_105",
+     "text": "WWE ELITE FIGURE ASSORTMENT SERIES NO. 105 — MSRP $22.99 — deluxe articulation, TrueFX detailing, and iconic accessories — Ages 8+ — Manufacturer: Mattel — published October 1, 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_105_106_reveal",
+     "text": "WWE Elite 105, 106, 107, 108, 109, WrestleMania 40 & Build-a-Figure Reveals — only Johnny Gargano shown for Elite 105, with no Build-A-Figure piece mentioned for that series (BAF pieces named for WrestleMania 40 and other waves in the same article, none attributed to Series 105)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Attire Date: Sept. 12, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Black tights with purple-and-white wing print as well as black kickpad boots with white skull-and-scales design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "black fabric Judgment Day logo t-shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "an all-new serious headscan with slicked-back hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "Dirty Dom",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black tights with purple-and-white wing print, black kickpad boots with white skull-and-scales design, and a black fabric Judgment Day logo t-shirt",
+    "evidence_quote_ids": [
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black tights with purple-and-white wing print; black kickpad boots with white skull-and-scales design",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new serious headscan with slicked-back hair",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX technology",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2023",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 59.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q12"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_105_scott-steiner_5a7eba": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_105_scott-steiner_5a7eba",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_105_scott-steiner_5a7eba",
+   "character_canonical": "scott-steiner",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "105",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Scott Steiner"
+  },
+  "identity_hash": "040a975e96a61e13",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_gargano_105",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-105-johnny-gargano",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_strowman_105",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_series_category",
+     "url": "https://toywiz.com/wwe-wrestling/elite-action-figures/elite-collection-series-101-110/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_105_106_reveal",
+     "url": "https://wrestlingfigurenews.com/2023/07/20/wwe-elite-105-106-107-108-109-wrestlemania-40-build-a-figure-reveals/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toybook_105",
+     "url": "https://toybook.com/products/wwe-elite-figure-assortment-series-no-105/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-105-scott-steiner",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-scott-steiner-action-figure-big-poppa-pump/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Elite Collection Mainline — Series 105 — Release Year: 2023 — Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_gargano_105",
+     "text": "Attire Date: Sept. 12, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Johnny Gargano",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_101_150_collection",
+     "text": "Series 105 (7): Braun Strowman; Carmelo Hayes; Carmelo Hayes [Chase]; Dominik Mysterio; Iyo Sky; Johnny Gargano; Scott Steiner",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_strowman_105",
+     "text": "Release Date: September 2023; Price: $119.99; Series: Series 105; UPC: 194735199426",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toybook_105",
+     "text": "WWE ELITE FIGURE ASSORTMENT SERIES NO. 105 — MSRP $22.99 — deluxe articulation, TrueFX detailing, and iconic accessories — Ages 8+ — Manufacturer: Mattel — published October 1, 2023",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_105_106_reveal",
+     "text": "WWE Elite 105, 106, 107, 108, 109, WrestleMania 40 & Build-a-Figure Reveals — only Johnny Gargano shown for Elite 105, with no Build-A-Figure piece mentioned for that series (BAF pieces named for WrestleMania 40 and other waves in the same article, none attributed to Series 105)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 105",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 15, 2003 @ WWE Bad Blood",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "scott-steiner",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "scott-steiner",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 105",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "scott-steiner",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "scott-steiner",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "June 15, 2003 @ WWE Bad Blood",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "None (no Build-A-Figure piece attributed to Series 105)",
+    "evidence_quote_ids": [
+     "w_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_105_braun-strowman_60aa58": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_105_braun-strowman_60aa58",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_105_braun-strowman_60aa58",
+   "character_canonical": "braun-strowman",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "105",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Braun Strowman"
+  },
+  "identity_hash": "e40597d12ef8b12a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_series_index",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braun_s105",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-105-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_braun_product",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-undetermined-braun-strowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-105-toy-figures-braun-elite105-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/braun-strowman-wwe-elite-collection-series-105-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_series_index",
+     "text": "Series 105 contains the following figures: Braun Strowman, Carmelo Hayes, Carmelo Hayes [Chase variant], Dominik Mysterio, Iyo Sky, Johnny Gargano, Scott Steiner",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_year",
+     "source_id": "w_wfd_series_index",
+     "text": "Release Year: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_scale",
+     "source_id": "w_wfd_series_index",
+     "text": "6-inch tall action figure with 30+ points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_release_date",
+     "source_id": "w_toywiz_braun_s105",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 105",
+      "year": 2023,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q5_price",
+     "source_id": "w_toywiz_braun_s105",
+     "text": "Price: $119.99 (Availability: Currently out of stock)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 105",
+      "year": 2023,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q6_tech",
+     "source_id": "w_toywiz_braun_s105",
+     "text": "highly detailed with True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_baf_absence",
+     "source_id": "w_wfd_braun_product",
+     "text": "Build-A-Figure: No BAF component mentioned or indicated",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 105",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_series_name",
+     "source_id": "w_wfd_braun_product",
+     "text": "2023 WWE Mattel Elite Collection Series 105 - Braun Strowman; Series/Wave Name: \"Elite Collection Mainline\" Series 105",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2023,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "vivid red tights with jagged black and white stripe designs on the legs as well as black laced boots and black wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "fabric olive green \"Monster of All Monsters\" logo shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "glowering, bearded headscan and accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Featuring extreme articulation, unmatched attention to detail with entrance accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Get out of my way or you're gonna get these hands!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Vivid red tights with jagged black and white stripe designs on the legs, black laced boots, and black wrist tape",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red tights with black and white stripe designs; olive green shirt",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Glowering, bearded headscan with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Vivid red tights with jagged black and white stripe designs",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Fabric olive green \"Monster of All Monsters\" logo shirt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Glowering, bearded headscan with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "resolved",
+    "value": "No BAF component mentioned or indicated",
+    "evidence_quote_ids": [
+     "w_q7_baf_absence"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$119.99",
+      "evidence_quote_ids": [
+       "w_q5_price"
+      ],
+      "price_detail": {
+       "amount": 119.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "w_toywiz_braun_s105"
+      }
+     },
+     {
+      "value": "$27.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 27.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

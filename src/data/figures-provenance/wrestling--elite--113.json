@@ -1,0 +1,2414 @@
+{
+ "fp_wrestling_mattel_elite_113_tiffany-stratton_b8e8cc": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_113_tiffany-stratton_b8e8cc",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_113_tiffany-stratton_b8e8cc",
+   "character_canonical": "tiffany-stratton",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "113",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Tiffany Stratton"
+  },
+  "identity_hash": "e27fce040740364f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cmpunk_113",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-cm-punk-chase",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_trickwilliams_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-trick-williams-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_carlito_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-carlito-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_dragonlee_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-dragon-lee-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_tiffanystratton_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-tiffany-stratton-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_kofikingston_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-kofi-kingston-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-tiffany-stratton",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-113-toy-figures-tiffany-elite113-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_release_year",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_release_month",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month_dup",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": "Trick Williams"
+     }
+    },
+    {
+     "quote_id": "w_q4_line_description",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_line_description_short",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_series_count_filter",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Series 113 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_cmpunk_attire_ref",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Attire Date: May 23, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "white-and-pink top with a choker, both decorated in Western-style stars and rhinestones, and matching white-and-pink trunks.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "tiffany-stratton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "She's also wearing white laced boots, white-and-pink knee pads, and pink studded straps. Her look is complete with a tall white cowboy hat!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "tiffany-stratton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "all-new smiling headscan featuring long blonde hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "tiffany-stratton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "tiffany-stratton",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "white-and-pink top with a choker (Western-style stars and rhinestones) and matching white-and-pink trunks",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "all-new smiling headscan featuring long blonde hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "white laced boots, white-and-pink knee pads, and pink studded straps with a tall white cowboy hat",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_113_dragon-lee_acd30b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_113_dragon-lee_acd30b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_113_dragon-lee_acd30b",
+   "character_canonical": "dragon-lee",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "113",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dragon Lee"
+  },
+  "identity_hash": "af1e3c7f2fceb6c2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cmpunk_113",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-cm-punk-chase",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_trickwilliams_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-trick-williams-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_carlito_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-carlito-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_dragonlee_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-dragon-lee-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_tiffanystratton_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-tiffany-stratton-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_kofikingston_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-kofi-kingston-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-dragon-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-dragon-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-113-toy-figures-dragon-lee-elite113-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_release_year",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_release_month",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month_dup",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": "Trick Williams"
+     }
+    },
+    {
+     "quote_id": "w_q4_line_description",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_line_description_short",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_series_count_filter",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Series 113 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_cmpunk_attire_ref",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Attire Date: May 23, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 30, 2023 @ NXT The Great American Bash",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "He comes wearing white trunks and fringed white boots. Lee's dynamic look is complete with a bold red entrance jacket featuring a high collar, extended shoulder pads, white panels, and red and white scales!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "The luchador is ready to fly with a determined headscan featuring his fierce white lucha mask with blue and pink detailing and horned design.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "dragon-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: July 30, 2023 @ NXT The Great American Bash",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White trunks and fringed white boots with a red entrance jacket (high collar, extended shoulder pads, white panels, red and white scales)",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "White lucha mask with blue and pink detailing and a horned design",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Bold red entrance jacket with high collar, extended shoulder pads, white panels, and red and white scales",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Fierce white lucha mask with blue and pink detailing and horned design",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 59.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q12"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_113_cm-punk_56aaad": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_113_cm-punk_56aaad",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_113_cm-punk_56aaad",
+   "character_canonical": "cm-punk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "113",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "CM Punk"
+  },
+  "identity_hash": "14b46f151681179a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cmpunk_113",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-cm-punk-chase",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_trickwilliams_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-trick-williams-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_carlito_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-carlito-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_dragonlee_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-dragon-lee-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_tiffanystratton_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-tiffany-stratton-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_kofikingston_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-kofi-kingston-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-cm-punk-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.thetoybunker.com/product-page/wwe-elite-collection-series-113-cm-punk",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/cm-punk-wwe-elite-collection-series-113-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_release_year",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_release_month",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month_dup",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": "Trick Williams"
+     }
+    },
+    {
+     "quote_id": "w_q4_line_description",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_line_description_short",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_series_count_filter",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Series 113 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_cmpunk_attire_ref",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Attire Date: May 23, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$29.00 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "extreme articulation, unmatched attention to detail with entrance accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Extreme articulation with entrance accessories",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Ready to wreak havoc right out of the box",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$29.00 USD",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 29,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_113_trick-williams_c085ff": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_113_trick-williams_c085ff",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_113_trick-williams_c085ff",
+   "character_canonical": "trick-williams",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "113",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Trick Williams"
+  },
+  "identity_hash": "0ba25cf081c82f62",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cmpunk_113",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-cm-punk-chase",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_trickwilliams_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-trick-williams-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_carlito_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-carlito-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_dragonlee_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-dragon-lee-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_tiffanystratton_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-tiffany-stratton-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_kofikingston_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-kofi-kingston-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-trick-williams",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-113-toy-figures-trick-elite113-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_release_year",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_release_month",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month_dup",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": "Trick Williams"
+     }
+    },
+    {
+     "quote_id": "w_q4_line_description",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_line_description_short",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_series_count_filter",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Series 113 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_cmpunk_attire_ref",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Attire Date: May 23, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 30, 2023 @ NXT No Mercy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Series: 113",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "white trunks with multicolored waist stripes, Trick Williams logo design, and gold portrait illustration",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "white kickpad boots with gold trim and 'TW' monogram logo, as well as white knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "confident, smiling headscan featuring tied-back locs hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "additional pair of hands, chain necklace, and his signature sunglasses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "trick-williams",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Sept. 30, 2023 @ NXT No Mercy",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White trunks with multicolored waist stripes, Trick Williams logo design, and gold portrait illustration; white kickpad boots with gold trim and 'TW' monogram logo; white knee pads",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident, smiling headscan featuring tied-back locs hairstyle",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "White kickpad boots with gold trim and 'TW' monogram logo",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White trunks with gold portrait illustration and Trick Williams logo design",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of hands",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Chain necklace",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Signature sunglasses",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2024",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_113_kofi-kingston_7c6d90": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_113_kofi-kingston_7c6d90",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_113_kofi-kingston_7c6d90",
+   "character_canonical": "kofi-kingston",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "113",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kofi Kingston"
+  },
+  "identity_hash": "69e3c8b411878e63",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cmpunk_113",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-cm-punk-chase",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_cmpunk_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_trickwilliams_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-trick-williams-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_carlito_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-carlito-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_dragonlee_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-dragon-lee-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_tiffanystratton_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-tiffany-stratton-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_kofikingston_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-kofi-kingston-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-kofi-kingston",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-113-toy-figures-kofi-elite113-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_release_year",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_release_month",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month_dup",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2024,
+      "character_canonical": "Trick Williams"
+     }
+    },
+    {
+     "quote_id": "w_q4_line_description",
+     "source_id": "w_toywiz_cmpunk_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_line_description_short",
+     "source_id": "w_toywiz_trickwilliams_113",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_series_count_filter",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Series 113 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_cmpunk_attire_ref",
+     "source_id": "w_wfd_cmpunk_113",
+     "text": "Attire Date: May 23, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 7, 2023 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$30.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Highly articulated Superstar figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "white, belted tights with blue linework and all-over flower pattern, as well as blue-and-white hi-top sneakers.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "His look is complete with blue-and-black knee pads and a removable molded white vest with blue linework and flower pattern",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "smiling headscan featuring a beard and pulled-back locs hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 7, 2023 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White, belted tights with blue linework and all-over flower pattern; blue-and-white hi-top sneakers; blue-and-black knee pads; removable molded white vest with blue linework and flower pattern",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Smiling headscan featuring a beard and pulled-back locs hairstyle",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable molded white vest with blue linework and flower pattern",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Blue-and-white hi-top sneakers",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable molded vest",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$30.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 30.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_113_carlito_d4b891": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_113_carlito_d4b891",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_113_carlito_d4b891",
+   "character_canonical": "carlito",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "113",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Carlito"
+  },
+  "identity_hash": "2785b72b85136a40",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_carlito_113",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-113-carlito",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_carlito_113",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-113-carlito-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_elite113_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-113-toy-figures-complete-set-elite113-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_113_114_lineups",
+     "url": "https://wrestlingfigurenews.com/2024/05/14/wwe-elite-113-elite-114-lineups-revealed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-113-toy-figures-carlito-elite113-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.bigbadtoystore.com/product/wwe-elite-collection-series-113-carlito-142593?variation=281990",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toynewsi.com/241-55673",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_carlito_113",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_carlito_113",
+     "text": "Series: 113",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_carlito_113",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_carlito_113",
+     "text": "$31.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": "Carlito"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_elite113_set",
+     "text": "CM Punk (Macho Gear), Carlito (White), Kofi Kingston, Dragon Lee, Trick Williams, Tiffany Stratton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite113_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfn_113_114_lineups",
+     "text": "CM Punk, Carlito (with chase), Kofi Kingston, Dragon Lee, Trick Williams, Tiffany Stratton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfn_113_114_lineups",
+     "text": "The lineups include several first-time-in-the-line figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "white trunks with 'Carlito' palm tree logo, as well as black laced boots and white knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "carlito",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "all-new headscan featuring a raised eyebrow, goatee, and afro hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "carlito",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "black fabric 'Carlito' shirt with white apple and flag-stripe logo design, as well as interchangeable hands, including one holding his iconic apple",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "carlito",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "carlito",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "White trunks with 'Carlito' palm tree logo, black fabric 'Carlito' shirt with white apple and flag-stripe logo design, black laced boots, and white knee pads",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White trunks and knee pads, black laced boots, black shirt with white logo",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new headscan featuring a raised eyebrow, goatee, and afro hairstyle",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands, including one holding his iconic apple",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White trunks with 'Carlito' palm tree logo",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands, including one holding his iconic apple",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$31.99",
+      "evidence_quote_ids": [
+       "w_q4"
+      ],
+      "price_detail": {
+       "amount": 31.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "w_toywiz_carlito_113"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

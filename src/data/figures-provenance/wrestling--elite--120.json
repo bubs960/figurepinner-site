@@ -1386,5 +1386,208 @@
     ]
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_120_cody-rhodes_0e4c65b35006": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_120_cody-rhodes_0e4c65b35006",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_120_cody-rhodes_0e4c65b35006",
+   "character_canonical": "cody-rhodes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "120",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Cody Rhodes"
+  },
+  "identity_hash": "06385bcab25e74aa",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_cody_rhodes_120",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-120-cody-rhodes",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_series_101_150_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_ringside_cody_rhodes_120",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-120-toy-figures-cody-elite120-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search_result_snippets_series120",
+     "url": "https://www.google.com/search?q=%22WWE+Elite%22+%22Series+120%22+Cody+Rhodes+toywiz",
+     "source_type": "toy_news",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/313711",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-greatest-hits-2025-cody-rhodes-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://shop.wwe.com/en/mattel-cody-rhodes-elite-collection-series-120-action-figure/p-351181895801369619+z-91-2699778019",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.smythstoys.com/uk/en-gb/toys/action-figures-and-playsets/wwe-wrestling/wwe-elite-figures/wwe-elite-collection-series-120-action-figure-the-american-nightmare-cody-rhodes-chase-assortme/p/248236",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_series_facet_count",
+     "source_id": "w_wfd_series_101_150_collection",
+     "text": "Series 120 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_release_date_field",
+     "source_id": "w_wfd_cody_rhodes_120",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3_line_and_series_field",
+     "source_id": "w_wfd_cody_rhodes_120",
+     "text": "Line: Elite Collection Mainline\nSeries: 120",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q4_release_country",
+     "source_id": "w_wfd_cody_rhodes_120",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_msrp_retailer",
+     "source_id": "w_ringside_cody_rhodes_120",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite 120",
+      "year": 2025,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q6_attire_date_context",
+     "source_id": "w_wfd_cody_rhodes_120",
+     "text": "Attire Date: June 28, 2024 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Cody Rhodes"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "June 28, 2024 WWE SmackDown attire",
+    "evidence_quote_ids": [
+     "w_q6_attire_date_context"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
  }
 }

@@ -1,0 +1,2613 @@
+{
+ "fp_wrestling_mattel_elite_89_bobby-lashley_5b27ad": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_bobby-lashley_5b27ad",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_bobby-lashley_5b27ad",
+   "character_canonical": "bobby-lashley",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bobby Lashley"
+  },
+  "identity_hash": "d99540f1122750b6",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite89_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figures-complete-set-elite89-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlezone_elite89_proto",
+     "url": "https://www.wrestlezone.com/news/1257172-mattel-wwe-elite-89-action-figure-prototype-images-revealed-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_goon_elite89",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-goon",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_goon_elite89",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "url": "https://wrestlingfigurenews.com/2021/07/23/wwe-elite-89-reveals-the-goon-sgt-slaughter-nia-jax-damian-priest-dominik-mysterio-drew-mcintyre-bobby-lashley/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-bobby-lashley-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figure-bobby-lashley-elite89-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite89_set",
+     "text": "WWE Elite 89 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Drew McIntyre, Dominik Mysterio, Bobby Lashley, Damian Priest, Nia Jax & Sgt. Slaughter!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite89_set",
+     "text": "$114.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_goon_year_series",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "2021 WWE Mattel Elite Collection Series 89 The Goon [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q4_goon_walmart_exclusive",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "Walmart exclusive, manufactured by Mattel in China, representing an attire from July 20, 1996 at WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q5_goon_release_month",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q6_goon_scale",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_goon_price",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q8_reveal_title",
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "text": "WWE Elite 89 Reveals: The Goon, Sgt. Slaughter, Nia Jax, Damian Priest, Dominik Mysterio, Drew McIntyre, Bobby Lashley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "gold and black ring tights with 'Hurt Business' on one side and a Lashley silhouette design on the other",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black and white boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black wrist tape, a black hand wrap",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "single black elbow pad",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "an angry headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "includes a WWE Championship accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "gold and black ring tights with 'Hurt Business' on one side and a Lashley silhouette design on the other, black and white boots, black wrist tape/hand wrap, single black elbow pad",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "an angry headsculpt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "gold and black 'Hurt Business' ring tights with Lashley silhouette design",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "angry headsculpt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE Championship accessory",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_89_nia-jax_5fb41e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_nia-jax_5fb41e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_nia-jax_5fb41e",
+   "character_canonical": "nia-jax",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Nia Jax"
+  },
+  "identity_hash": "8fde0a2da2624086",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite89_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figures-complete-set-elite89-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlezone_elite89_proto",
+     "url": "https://www.wrestlezone.com/news/1257172-mattel-wwe-elite-89-action-figure-prototype-images-revealed-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_goon_elite89",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-goon",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_goon_elite89",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "url": "https://wrestlingfigurenews.com/2021/07/23/wwe-elite-89-reveals-the-goon-sgt-slaughter-nia-jax-damian-priest-dominik-mysterio-drew-mcintyre-bobby-lashley/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-jaxchase",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figure-nia-jax-elite89-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite89_set",
+     "text": "WWE Elite 89 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Drew McIntyre, Dominik Mysterio, Bobby Lashley, Damian Priest, Nia Jax & Sgt. Slaughter!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite89_set",
+     "text": "$114.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_goon_year_series",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "2021 WWE Mattel Elite Collection Series 89 The Goon [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q4_goon_walmart_exclusive",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "Walmart exclusive, manufactured by Mattel in China, representing an attire from July 20, 1996 at WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q5_goon_release_month",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q6_goon_scale",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_goon_price",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q8_reveal_title",
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "text": "WWE Elite 89 Reveals: The Goon, Sgt. Slaughter, Nia Jax, Damian Priest, Dominik Mysterio, Drew McIntyre, Bobby Lashley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "nia-jax",
+      "character_variant": "chase-purple",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 14, 2020 @ WWE Backlash",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "nia-jax",
+      "character_variant": "chase-purple",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "red and black ring top with gold trim and molded pockets",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "nia-jax",
+      "character_variant": "red-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black ring tights with lace designs in the front",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "nia-jax",
+      "character_variant": "red-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "long haired headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "nia-jax",
+      "character_variant": "red-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "nia-jax",
+      "character_variant": "red-gear",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[1]",
+    "status": "resolved",
+    "value": "red and black ring top with gold trim and molded pockets",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_89_dominik-mysterio_7be0a988cc6a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_dominik-mysterio_7be0a988cc6a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_dominik-mysterio_7be0a988cc6a",
+   "character_canonical": "dominik-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Dominik Mysterio"
+  },
+  "identity_hash": "9b193e99bf0cdd18",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite89_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figures-complete-set-elite89-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlezone_elite89_proto",
+     "url": "https://www.wrestlezone.com/news/1257172-mattel-wwe-elite-89-action-figure-prototype-images-revealed-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_goon_elite89",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-goon",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_goon_elite89",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "url": "https://wrestlingfigurenews.com/2021/07/23/wwe-elite-89-reveals-the-goon-sgt-slaughter-nia-jax-damian-priest-dominik-mysterio-drew-mcintyre-bobby-lashley/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-dominik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-figure-dominik-mysterio-elite89-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-dominik-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite89_set",
+     "text": "WWE Elite 89 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Drew McIntyre, Dominik Mysterio, Bobby Lashley, Damian Priest, Nia Jax & Sgt. Slaughter!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite89_set",
+     "text": "$114.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_goon_year_series",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "2021 WWE Mattel Elite Collection Series 89 The Goon [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q4_goon_walmart_exclusive",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "Walmart exclusive, manufactured by Mattel in China, representing an attire from July 20, 1996 at WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q5_goon_release_month",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q6_goon_scale",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_goon_price",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q8_reveal_title",
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "text": "WWE Elite 89 Reveals: The Goon, Sgt. Slaughter, Nia Jax, Damian Priest, Dominik Mysterio, Drew McIntyre, Bobby Lashley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Sept. 7, 2020 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "blue, red and yellow ring top",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "blue, yellow and red kick pad style boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "determined headsculpt and neat haircut",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "interchangeable hand and kendo stick accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$48.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dominik-mysterio",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Sept. 7, 2020 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "blue, red and yellow ring top; blue, yellow and red kick pad style boots",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "determined headsculpt and neat haircut",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "determined headsculpt and neat haircut",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "kendo stick accessories",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_89_drew-mcintyre_833c15": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_drew-mcintyre_833c15",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_drew-mcintyre_833c15",
+   "character_canonical": "drew-mcintyre",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Drew McIntyre"
+  },
+  "identity_hash": "5cf686aafd1850d0",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite89_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figures-complete-set-elite89-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlezone_elite89_proto",
+     "url": "https://www.wrestlezone.com/news/1257172-mattel-wwe-elite-89-action-figure-prototype-images-revealed-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_goon_elite89",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-goon",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_goon_elite89",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "url": "https://wrestlingfigurenews.com/2021/07/23/wwe-elite-89-reveals-the-goon-sgt-slaughter-nia-jax-damian-priest-dominik-mysterio-drew-mcintyre-bobby-lashley/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-drew",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite89_set",
+     "text": "WWE Elite 89 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Drew McIntyre, Dominik Mysterio, Bobby Lashley, Damian Priest, Nia Jax & Sgt. Slaughter!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite89_set",
+     "text": "$114.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_goon_year_series",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "2021 WWE Mattel Elite Collection Series 89 The Goon [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q4_goon_walmart_exclusive",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "Walmart exclusive, manufactured by Mattel in China, representing an attire from July 20, 1996 at WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q5_goon_release_month",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q6_goon_scale",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_goon_price",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q8_reveal_title",
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "text": "WWE Elite 89 Reveals: The Goon, Sgt. Slaughter, Nia Jax, Damian Priest, Dominik Mysterio, Drew McIntyre, Bobby Lashley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 22, 2020 @ WWE Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$32.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 22, 2020 @ WWE Survivor Series",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_89_the-goon_8a031b14e13d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_the-goon_8a031b14e13d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_the-goon_8a031b14e13d",
+   "character_canonical": "the-goon",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "The Goon"
+  },
+  "identity_hash": "8fdef1bff1f2aabf",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite89_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figures-complete-set-elite89-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlezone_elite89_proto",
+     "url": "https://www.wrestlezone.com/news/1257172-mattel-wwe-elite-89-action-figure-prototype-images-revealed-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_goon_elite89",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-goon",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_goon_elite89",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "url": "https://wrestlingfigurenews.com/2021/07/23/wwe-elite-89-reveals-the-goon-sgt-slaughter-nia-jax-damian-priest-dominik-mysterio-drew-mcintyre-bobby-lashley/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/wwe-elite-collection-series-89-the-goon",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.wrestlingcollectorshop.com/products/wwe-mattel-elite-collection-series-89-the-goon-collector-s-edition",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite89_set",
+     "text": "WWE Elite 89 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Drew McIntyre, Dominik Mysterio, Bobby Lashley, Damian Priest, Nia Jax & Sgt. Slaughter!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite89_set",
+     "text": "$114.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_goon_year_series",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "2021 WWE Mattel Elite Collection Series 89 The Goon [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q4_goon_walmart_exclusive",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "Walmart exclusive, manufactured by Mattel in China, representing an attire from July 20, 1996 at WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q5_goon_release_month",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q6_goon_scale",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_goon_price",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q8_reveal_title",
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "text": "WWE Elite 89 Reveals: The Goon, Sgt. Slaughter, Nia Jax, Damian Priest, Dominik Mysterio, Drew McIntyre, Bobby Lashley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "bold and colorful figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-goon",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "bold and colorful figure",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2021",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_89_damian-priest_c1a78e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_damian-priest_c1a78e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_damian-priest_c1a78e",
+   "character_canonical": "damian-priest",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Damian Priest"
+  },
+  "identity_hash": "38b53b4f1cac8c47",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite89_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figures-complete-set-elite89-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlezone_elite89_proto",
+     "url": "https://www.wrestlezone.com/news/1257172-mattel-wwe-elite-89-action-figure-prototype-images-revealed-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_goon_elite89",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-goon",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_goon_elite89",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "url": "https://wrestlingfigurenews.com/2021/07/23/wwe-elite-89-reveals-the-goon-sgt-slaughter-nia-jax-damian-priest-dominik-mysterio-drew-mcintyre-bobby-lashley/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-priest",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figure-damian-priest-elite89-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite89_set",
+     "text": "WWE Elite 89 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Drew McIntyre, Dominik Mysterio, Bobby Lashley, Damian Priest, Nia Jax & Sgt. Slaughter!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite89_set",
+     "text": "$114.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_goon_year_series",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "2021 WWE Mattel Elite Collection Series 89 The Goon [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q4_goon_walmart_exclusive",
+     "source_id": "w_wfd_goon_elite89",
+     "text": "Walmart exclusive, manufactured by Mattel in China, representing an attire from July 20, 1996 at WWF Superstars",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q5_goon_release_month",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q6_goon_scale",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_goon_price",
+     "source_id": "w_toywiz_goon_elite89",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021",
+      "character_canonical": "The Goon"
+     }
+    },
+    {
+     "quote_id": "w_q8_reveal_title",
+     "source_id": "w_wrestlingfigurenews_elite89_reveal",
+     "text": "WWE Elite 89 Reveals: The Goon, Sgt. Slaughter, Nia Jax, Damian Priest, Dominik Mysterio, Drew McIntyre, Bobby Lashley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Oct. 4, 2020 @ NXT TakeOver 31",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Purple, grey and black ring tights",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black and grey kick pad style boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "removable black vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "accurate tattoos and purple and grey wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "confident headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Molded cross accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "interchangeable hand accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "damian-priest",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 4, 2020 @ NXT TakeOver 31",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Purple, grey and black ring tights; black and grey kick pad style boots",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "confident headscan",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "removable black vest",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "accurate tattoos and purple and grey wrist tape",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Molded cross accessory",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Molded cross accessory",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_89_sgt-slaughter_071e384bee5d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_89_sgt-slaughter_071e384bee5d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_89_sgt-slaughter_071e384bee5d",
+   "character_canonical": "sgt-slaughter",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "89",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sgt. Slaughter"
+  },
+  "identity_hash": "113972f8ca1b2719",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_slaughter",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-slaughter",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dominik",
+     "url": "https://wrestlingfiguredatabase.com/products/elite89-dominik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_niajax",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-nia-jax-action-figure-regular/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_1",
+     "url": "https://www.bigbadtoystore.com/product/variationdetails/176628",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_goon",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-89-the-goon-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.google.com/search?q=Sgt.+Slaughter+Mattel+WWE+Elite+Collection+Series+89",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-89-toy-figure-sgt-slaughter-elite89-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.google.com/search?q=Sgt+Slaughter+Elite+89+toywiz+price+accessories",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://toywiz.com/wwe-wrestling-elite-hall-of-fame-sergeant-slaughter-exclusive-action-figure-hat-whistle-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s5",
+     "url": "https://www.bigbadtoystore.com/product/variationdetails/176628",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_slaughter",
+     "text": "Series: 89",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_slaughter",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_slaughter",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "$32.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_niajax",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Nia Jax",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_niajax",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_dominik",
+     "text": "Series: 89",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Dominik Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_dominik",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Dominik Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_search_lineup_1",
+     "text": "WWE Elite Collection Series 89 Sgt. Slaughter Wrestling Figure WWF Legend",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sgt. Slaughter",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search_toywiz_goon",
+     "text": "WWE Wrestling Elite Collection Series 89 The Goon Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Goon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 89",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sgt-slaughter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sgt-slaughter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "ELITE89-06",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sgt-slaughter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s4",
+     "text": "WWE Wrestling Elite Collection Hall of Fame Sergeant Slaughter Exclusive 6 Action Figure Hat, Whistle Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sgt-slaughter",
+      "character_variant": "hall-of-fame-exclusive",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "WWE Elite Hall of Fame Sergeant Slaughter Exclusive with hat, whistle, sunglasses",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE89-06",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$27.99",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 27.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ }
+}

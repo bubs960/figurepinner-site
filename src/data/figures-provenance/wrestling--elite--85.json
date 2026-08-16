@@ -1,0 +1,3921 @@
+{
+ "fp_wrestling_mattel_elite_85_aleister-black_78030f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_aleister-black_78030f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_aleister-black_78030f",
+   "character_canonical": "aleister-black",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Aleister Black"
+  },
+  "identity_hash": "165244cf01a78b35",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-aleister-black-action-figure-regular/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-85-toy-figure-aleister-black-elite85-07.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Aleister Black emerges from the darkness in this Mattel WWE Elite 85 Chase variant! Black has a stern headsculpt with piercings included and features detailed and accurate tattoos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": "chase",
+      "year": 2021,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "a detailed, sinister and thorny entrance coat and a pair of interchangeable hands.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "aleister-black",
+      "character_variant": "chase",
+      "year": 2021,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Bold and colorful figure, approximately 6-inches, ready to wreak havoc right out of the box",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Chase variant: stern headsculpt with piercings, detailed/accurate tattoos, sinister entrance coat, interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2021",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_85_becky-lynch_08cde5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_becky-lynch_08cde5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_becky-lynch_08cde5",
+   "character_canonical": "becky-lynch",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Becky Lynch"
+  },
+  "identity_hash": "4f3ffe00a3cd9f74",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-becky-lynch-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-85-toy-figure-becky-lynch-elite85-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "March 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "black ring suit with a strapped design on the top",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "black arm bands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "black boots with white trim and kick pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "painted black knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "red hair and a confident headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "two pairs of interchangeable hands, the RAW Women's Championship and a Money in the Bank Briefcase accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s2",
+     "text": "'The Man' is back to let you know the deal with Becky Lynch in Mattel WWE Elite 85!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black ring suit with a strapped design on the top",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q10",
+     "f_q11",
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "red hair and a confident headscan",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "black boots with white trim and kick pads",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "painted black knee pads",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "black arm bands",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "RAW Women's Championship",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Money in the Bank Briefcase accessory",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "two pairs of interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 59.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$19.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ],
+      "price_detail": {
+       "amount": 19.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_85_bray-wyatt_c60620": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_bray-wyatt_c60620",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_bray-wyatt_c60620",
+   "character_canonical": "bray-wyatt",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bray Wyatt"
+  },
+  "identity_hash": "fddf4321b18f4cd9",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-85-toy-figures-complete-set-elite85-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-bray",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "WWE Elite 85 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Bray Wyatt, Karrion Kross, Aleister Black, Liv Morgan, Undertaker, Becky Lynch",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Huskus",
+    "evidence_quote_ids": [
+     "w_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_85_karrion-kross_eff4c8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_karrion-kross_eff4c8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_karrion-kross_eff4c8",
+   "character_canonical": "karrion-kross",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Karrion Kross"
+  },
+  "identity_hash": "a3bb53d7e7bde578",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-85-toy-figure-karrion-kross-elite85-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlrs.com/products/karrion-kross-wwe-elite-series-85",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "white hand wraps",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "black trunks with a 'Kross' symbol on the left side, black knee pads and black kick pad style boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a determined, wild eyed headscan with accurate tattoos on his left side",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a removable leather jacket and two pairs of interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Black Jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Figure period: NXT 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "First time Karrion Kross has been in the WWE Elite figure line up",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black jacket, black trunks with a 'Kross' symbol on the left side, black knee pads and black kick pad style boots, white hand wraps",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2",
+     "f_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Determined, wild eyed headscan with accurate tattoos on his left side",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable leather jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two pairs of interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable leather jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Two pairs of interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_85_kama-mustafa_aee2d4150199": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_kama-mustafa_aee2d4150199",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_kama-mustafa_aee2d4150199",
+   "character_canonical": "kama-mustafa",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Kama Mustafa"
+  },
+  "identity_hash": "380f5d534a09dc40",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/kama-wwe-elite-collection-series-85-exclusive",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2021/10/25/wwe-elite-85-kama-figure-review/",
+     "source_type": "video",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Bring home the action of WWE! Recreate your favourite matches in Superstar scale with WWE Elite Collection figures. Featuring extreme articulation and unmatched attention to detail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Capture all the action of WWE and it's Superstars with this Elite Collection figure! This WWE Elite figure comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "The top half of his singlet is sculpted",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Kama's head sculpt turned out nicely with the True FX paint work getting all the appropriate details",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Clearly the highlight of the figure is the crazy hairstyle with the three striped Mohawk.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Mattel even went the extra route to get Kama's unique \"UFC\" style boots correct.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Kama has: neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, knees (double-jointed), ankles",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "he gets swappable grip hands. He does come with a thick chain represented the melted down urn.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Wal-Mart has the $16 price tag for Elites",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "October 25, 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "kama-mustafa",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Top half of singlet is sculpted",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Head sculpt turned out nicely with the True FX paint work getting all the appropriate details; crazy hairstyle with three striped Mohawk",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX paint work",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, double-jointed knees, ankles",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Three-striped Mohawk hairstyle",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Unique UFC-style boots",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Swappable grip hands",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Thick chain represented the melted down urn",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by October 2021",
+    "evidence_quote_ids": [
+     "f_q10",
+     "f_q3"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_85_undertaker_b6538d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_undertaker_b6538d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_undertaker_b6538d",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "2b788e9ff58fd275",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-85-toy-figure-undertaker-elite85-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing a badass black, molded biker vest with strap designs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "molded biker pants and black boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "removable black bandana",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "veteran headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "two pairs of interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Attire Date: Mar. 25, 2020 @ WWE WrestleMania 36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Boneyard Match attire from WWE WrestleMania 36 (Mar. 25, 2020)",
+    "evidence_quote_ids": [
+     "f_q8",
+     "w_q17"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "887961922363",
+    "evidence_quote_ids": [
+     "w_q16"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2021",
+    "evidence_quote_ids": [
+     "w_q15"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_85_liv-morgan_a01a6b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_85_liv-morgan_a01a6b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_85_liv-morgan_a01a6b",
+   "character_canonical": "liv-morgan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "85",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Liv Morgan"
+  },
+  "identity_hash": "7d8d47cd50e0d778",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_kama",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-kama",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite85_liv",
+     "url": "https://wrestlingfiguredatabase.com/products/elite85-liv",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bray_wyatt",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-bray-wyatt-action-figure-w-huskus/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_undertaker",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-kama-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-85-liv-morgan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-85-toy-figure-liv-morgan-elite85-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Series: 85",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite85_kama",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite85_liv",
+     "text": "Jan. 26, 2020 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "with Huskus",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Bray Wyatt",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_bray_wyatt",
+     "text": "Released in March 2021 (Series 85)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_undertaker",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_undertaker",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Release Date: March 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toywiz_undertaker",
+     "text": "UPC: 887961922363",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_undertaker",
+     "text": "Boneyard Match",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Undertaker",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Kama Exclusive 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Kama Mustafa",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Aleister Black 7 Action Figure Chase Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Aleister Black",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 85 Becky Lynch 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2021"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "March 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Black, strapped ring top and ring jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "black ring trunks and a molded belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "hand wraps and painted black nails",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "silver chain designs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Ravishing white-cloth entrance coat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Confident head sculpt with detailed makeup and a choker",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "$25.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black, strapped ring top and ring jacket with black ring trunks and a molded belt",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black ring top and ring jacket with silver chain designs and a white-cloth entrance coat",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q9",
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident head sculpt with detailed makeup and a choker",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Ravishing white-cloth entrance coat",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Silver chain designs",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Confident head sculpt with a choker",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "Hand wraps and painted black nails",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2021",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

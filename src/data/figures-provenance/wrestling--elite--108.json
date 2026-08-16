@@ -1,0 +1,2086 @@
+{
+ "fp_wrestling_mattel_elite_108_omos_4881fc": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_108_omos_4881fc",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_108_omos_4881fc",
+   "character_canonical": "omos",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "108",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Omos"
+  },
+  "identity_hash": "cbd8c43d7f750785",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_s108",
+     "url": "https://toynewsi.com/241-51392",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_laknight_s108",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-la-knight",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-108-omos-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-108-toy-figures-omos-elite108-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_s108",
+     "text": "Chelsea Green (Blue), Chelsea Green (Variant Orange), Omos, LA Knight, Cowboy Brock Lesnar, Big Bronson Reed and The Executioner/Terry Gordy",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "LA Knight"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_s108",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "The Nigerian Giant looks down on his competition with a glowering bearded head scan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "omos",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Omos towers over the ring wearing a black tank top with olive tactical detailing and V-design on the back, as well as black pants with red panel design.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "omos",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "He's also wearing black boots, white wrist wraps, and a removable black entrance hood with red \"Omos\" target logo.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "omos",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Omos is ready to choke out his opponents with an additional pair of hands!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "omos",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Price: $14.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "omos",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "Price: $27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "omos",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "The Nigerian Giant looks down on his competition with a glowering bearded head scan",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black tank top with olive tactical detailing and V-design on the back; black pants with red panel design; black boots; white wrist wraps",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Glowering bearded head scan",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable black entrance hood with red \"Omos\" target logo",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Ready to choke out his opponents with an additional pair of hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional pair of hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Removable black entrance hood",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$14.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     },
+     {
+      "value": "$27.99",
+      "evidence_quote_ids": [
+       "f_q8"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_108_brock-lesnar_dc6139": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_108_brock-lesnar_dc6139",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_108_brock-lesnar_dc6139",
+   "character_canonical": "brock-lesnar",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "108",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Brock Lesnar"
+  },
+  "identity_hash": "188c67f86f973d2c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_s108",
+     "url": "https://toynewsi.com/241-51392",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_laknight_s108",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-la-knight",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-108-brock-lesnar-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-108-toy-figures-brock-lesnar-elite108-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_s108",
+     "text": "Chelsea Green (Blue), Chelsea Green (Variant Orange), Omos, LA Knight, Cowboy Brock Lesnar, Big Bronson Reed and The Executioner/Terry Gordy",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "LA Knight"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_s108",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: April 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "UPC: 194735199846",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Take a trip to Suplex City with Brock Lesnar in Mattel WWE Elite Series 108! The Beast Incarnate is ready for battle with a dynamic, smiling headscan featuring his signature topknot hairstyles.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "MMA-style shorts with Beast emblem on both legs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Black laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Two sets of black MMA-style \"Lesnar\" gloves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Removable denim vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Black cowboy hat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brock-lesnar",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black laced boots",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Dynamic, smiling headscan featuring his signature topknot hairstyle",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black cowboy hat and removable denim vest",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two sets of black MMA-style Lesnar gloves",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Two sets of black MMA-style Lesnar gloves",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable denim vest",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Black cowboy hat",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "April 2024",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_108_terry-gordy_39486a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_108_terry-gordy_39486a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_108_terry-gordy_39486a",
+   "character_canonical": "terry-gordy",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "108",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Terry Gordy"
+  },
+  "identity_hash": "cf58850cab929337",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_s108",
+     "url": "https://toynewsi.com/241-51392",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_laknight_s108",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-la-knight",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-108-terry-gordy-action-figure-the-executioner/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/copy-of-wwe-mattel-elite-collection-series-108-terry-gordy-the-executioner",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-108-toy-figures-terry-gordy-elite108-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_s108",
+     "text": "Chelsea Green (Blue), Chelsea Green (Variant Orange), Omos, LA Knight, Cowboy Brock Lesnar, Big Bronson Reed and The Executioner/Terry Gordy",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "LA Knight"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_s108",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$149.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "April 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "black trunks, boots, and knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": "bam-bam-gordy",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "black fabric jumpsuit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": "executioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "black-and-red, hooded fabric robe",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": "executioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "confident, long-haired head scan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": "bam-bam-gordy",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "sinister hooded head scan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": "executioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "an additional set of hands and his Executioner axe",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": "executioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "2-in-1",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "terry-gordy",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.known_variants[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "April 2024",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$149.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_108_bronson-reed_c3105d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_108_bronson-reed_c3105d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_108_bronson-reed_c3105d",
+   "character_canonical": "bronson-reed",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "108",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bronson Reed"
+  },
+  "identity_hash": "2b317fa8572b7e5e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_s108",
+     "url": "https://toynewsi.com/241-51392",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_laknight_s108",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-la-knight",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-108-bronson-reed-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-109-bronson-reed",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-108-toy-figures-bronson-reed-elite108-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_s108",
+     "text": "Chelsea Green (Blue), Chelsea Green (Variant Orange), Omos, LA Knight, Cowboy Brock Lesnar, Big Bronson Reed and The Executioner/Terry Gordy",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "LA Knight"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_s108",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: April 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "UPC: 194735199969",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: May 6, 2023 @ WWE Backlash",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "black singlet with green-and-white flame design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "matching green-and-white flame fabric entrance coat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "intimidating bearded head scan featuring his signature long mohawk hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "additional pair of hands in a claw gesture for screen-accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bronson-reed",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: May 6, 2023 @ WWE Backlash",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black singlet with green-and-white flame design, matching green-and-white flame fabric entrance coat",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Intimidating bearded head scan featuring signature long mohawk hairstyle",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Matching green-and-white flame fabric entrance coat",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Additional pair of hands in a claw gesture for screen-accurate posing",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of hands in a claw gesture for screen-accurate posing",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "UPC 194735199969",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "April 2024",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_108_la-knight_924a1a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_108_la-knight_924a1a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_108_la-knight_924a1a",
+   "character_canonical": "la-knight",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "108",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "LA Knight"
+  },
+  "identity_hash": "5ea19ecf5567f6b3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_s108",
+     "url": "https://toynewsi.com/241-51392",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_laknight_s108",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-la-knight",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-108-la-knight-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-108-toy-figures-la-knight-elite108-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_s108",
+     "text": "Chelsea Green (Blue), Chelsea Green (Variant Orange), Omos, LA Knight, Cowboy Brock Lesnar, Big Bronson Reed and The Executioner/Terry Gordy",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "LA Knight"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_s108",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$23.74",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "la-knight",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "April 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "la-knight",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "He comes wearing red trunks with black 'LA' knight helmet logo on the front and LA Knight name logo on the rear. Knight's look is complete with black-and-red boots, black elbow and knee pads, and removable red 'Defiant' entrance vest with stud detailing and LA Knight name logo on the back.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "la-knight",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Knight grabs the mic with a bold, smirking head scan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "la-knight",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "His accessories include a microphone and an additional set of pointing hands for screen-accurate posing!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "la-knight",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "la-knight",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red trunks with black 'LA' knight helmet logo on the front and LA Knight name logo on the rear, black-and-red boots, black elbow and knee pads, and a removable red 'Defiant' entrance vest with stud detailing and LA Knight name logo on the back.",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red and black",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Knight grabs the mic with a bold, smirking head scan",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable red 'Defiant' entrance vest with stud detailing and LA Knight name logo on the back",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black 'LA' knight helmet logo on the front of the trunks",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Microphone",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional set of pointing hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "April 2024",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$23.74",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "$19.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_108_chelsea-green_e6af57": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_108_chelsea-green_e6af57",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_108_chelsea-green_e6af57",
+   "character_canonical": "chelsea-green",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "108",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Chelsea Green"
+  },
+  "identity_hash": "88fbf88b4e0f332f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toynewsi_s108",
+     "url": "https://toynewsi.com/241-51392",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_laknight_s108",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-la-knight",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-108-chelsea-green",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-108-chelsea-green-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-108-toy-figures-chelsea-elite108-07.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toynewsi_s108",
+     "text": "Chelsea Green (Blue), Chelsea Green (Variant Orange), Omos, LA Knight, Cowboy Brock Lesnar, Big Bronson Reed and The Executioner/Terry Gordy",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "LA Knight"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_laknight_s108",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_s108",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: 108",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 27, 2023 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "UPC: 194735199860",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "asymmetrical pink-and-orange top with studded black trim and a single sleeve",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "matching trunks and knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "knee high black boots with flared tops, a detached pink-and-orange sleeve, and a removable black fabric skirt train",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "a long hairstyle with highlights",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "a black monogrammed cap and an additional set of shushing hands for screen-accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "chelsea-green",
+      "character_variant": "chase",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Mar. 27, 2023 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "194735199860",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

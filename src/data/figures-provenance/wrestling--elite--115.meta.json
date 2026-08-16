@@ -1,14 +1,18 @@
 {
- "md5": "2FFCC8E79E3E888705216B649880030E",
- "doc_count": 5,
- "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
+ "md5": "DA051E12FC80562E3F79DF45745A4F26",
+ "doc_count": 6,
+ "source_batches": [
+  "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
+  "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
+ ],
  "poured_at": "2026-08-15",
- "warn_count_at_pour": 11,
+ "warn_count_at_pour": 10,
  "identity_hashes": {
   "fp_wrestling_mattel_elite_115_r-truth_bc9595": "9268d88d9525cefd",
   "fp_wrestling_mattel_elite_115_tyler-bate_5d2776": "a68a36b29a62cca9",
   "fp_wrestling_mattel_elite_115_kairi-sane_3519cf": "c6289cc6a53cb607",
   "fp_wrestling_mattel_elite_115_drew-mcintyre_ea9ce3": "5d513d5b54b8414f",
-  "fp_wrestling_mattel_elite_115_the-rock_67e46d": "2c7d8c80c94f2496"
+  "fp_wrestling_mattel_elite_115_the-rock_67e46d": "2c7d8c80c94f2496",
+  "fp_wrestling_mattel_elite_115_cm-punk_9d6391": "16d830dfc246675a"
  }
 }

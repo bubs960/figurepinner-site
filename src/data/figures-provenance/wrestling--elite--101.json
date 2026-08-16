@@ -1,0 +1,2039 @@
+{
+ "fp_wrestling_mattel_elite_101_johnny-knoxville_ed25ae": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_101_johnny-knoxville_ed25ae",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_101_johnny-knoxville_ed25ae",
+   "character_canonical": "johnny-knoxville",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "101",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Johnny Knoxville"
+  },
+  "identity_hash": "ff3edee756fe3629",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s101",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_s101_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-complete-set-elite101-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_ricochet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-101-johnny-knoxville",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-johnny-knoxville-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_s101",
+     "text": "\"The American Nightmare\" Cody Rhodes; Johnny Knoxville; Kevin Owens; Mr. America; Mr. America (Chase variant); Ricochet; Sonya Deville",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_specs",
+     "source_id": "w_wfd_s101",
+     "text": "highly detailed 6-inch tall action figure[s] featuring TrueFX™ technology and 30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_lineup",
+     "source_id": "w_ringside_s101_set",
+     "text": "Cody Rhodes, Kevin Owens, Johnny Knoxville, Mr. America Hulk Hogan, Sonya Deville & Ricochet",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_desc",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5_features",
+     "source_id": "w_toywiz_ricochet",
+     "text": "highly articulated ... True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6_release",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Release Date: June 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 101",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 3, 2022 @ WWE WrestleMania 38",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": "wrestlemania-38",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "highly articulated Superstar figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "johnny-knoxville",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WrestleMania 38 attire (Apr. 3, 2022)",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "authentic ring gear with iconic accessories",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "highly articulated Superstar figure",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "WrestleMania 38 attire (Apr. 3, 2022)",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Iconic accessories",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_101_kevin-owens_fefa72": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_101_kevin-owens_fefa72",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_101_kevin-owens_fefa72",
+   "character_canonical": "kevin-owens",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "101",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kevin Owens"
+  },
+  "identity_hash": "37ca8e6abe0d5960",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s101",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_s101_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-complete-set-elite101-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_ricochet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-101-kevin-owens",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/kevin-owens-wwe-elite-collection-series-101-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://stores.comichub.com/buybigbang/products/wwe-elite-collection-series-101-kevin-owens",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/231510",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_s101",
+     "text": "\"The American Nightmare\" Cody Rhodes; Johnny Knoxville; Kevin Owens; Mr. America; Mr. America (Chase variant); Ricochet; Sonya Deville",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_specs",
+     "source_id": "w_wfd_s101",
+     "text": "highly detailed 6-inch tall action figure[s] featuring TrueFX™ technology and 30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_lineup",
+     "source_id": "w_ringside_s101_set",
+     "text": "Cody Rhodes, Kevin Owens, Johnny Knoxville, Mr. America Hulk Hogan, Sonya Deville & Ricochet",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_desc",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5_features",
+     "source_id": "w_toywiz_ricochet",
+     "text": "highly articulated ... True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6_release",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Release Date: June 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: [As Austin] Mar. 21, 2022 @ WWE Raw; [As Self] Apr. 2, 2022 @ WWE WrestleMania 38",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 101",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Bring home the excitement of WWE®. Recreate your favourite matches in Superstar scale with this Kevin Owens WWE Elite Collection figure. Featuring extreme articulation, unmatched attention to detail with entrance accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Capture all the action of WWE® and it's Superstars with this Kevin Owens WWE Elite figure, which comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_101_the-americanightmare-cody-rhodes_690f8adc11fe": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_101_the-americanightmare-cody-rhodes_690f8adc11fe",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_101_the-americanightmare-cody-rhodes_690f8adc11fe",
+   "character_canonical": "the-americanightmare-cody-rhodes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "101",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "\"The AmericaNightmare\" Cody Rhodes"
+  },
+  "identity_hash": "4280be9f1133c45d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s101",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_s101_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-complete-set-elite101-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_ricochet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-101-cody-rhodes",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-cody-rhodes-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-cody-elite101-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_s101",
+     "text": "\"The American Nightmare\" Cody Rhodes; Johnny Knoxville; Kevin Owens; Mr. America; Mr. America (Chase variant); Ricochet; Sonya Deville",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_specs",
+     "source_id": "w_wfd_s101",
+     "text": "highly detailed 6-inch tall action figure[s] featuring TrueFX™ technology and 30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_lineup",
+     "source_id": "w_ringside_s101_set",
+     "text": "Cody Rhodes, Kevin Owens, Johnny Knoxville, Mr. America Hulk Hogan, Sonya Deville & Ricochet",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_desc",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5_features",
+     "source_id": "w_toywiz_ricochet",
+     "text": "highly articulated ... True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6_release",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Release Date: June 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "the-americanightmare-cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 18, 2022 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "the-americanightmare-cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Rhodes comes wearing blue tights with intricate bronze detailing on the legs and knees, as well as white laced boots with the iconic American Nightmare logo.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "the-americanightmare-cody-rhodes",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "featuring a determined headscan and accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "the-americanightmare-cody-rhodes",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "His accessories include a removable 'Nightmare' weight belt also displaying the American Nightmare emblem!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "the-americanightmare-cody-rhodes",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 18, 2022 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue tights with intricate bronze detailing on the legs and knees, white laced boots with the American Nightmare logo",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Determined headscan with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable 'Nightmare' weight belt displaying the American Nightmare emblem",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable 'Nightmare' weight belt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_101_sonya-deville_960452": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_101_sonya-deville_960452",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_101_sonya-deville_960452",
+   "character_canonical": "sonya-deville",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "101",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sonya Deville"
+  },
+  "identity_hash": "c6aca286b9bf5920",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s101",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_s101_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-complete-set-elite101-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_ricochet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-101-sonya-deville",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-sonya-elite101-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_s101",
+     "text": "\"The American Nightmare\" Cody Rhodes; Johnny Knoxville; Kevin Owens; Mr. America; Mr. America (Chase variant); Ricochet; Sonya Deville",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_specs",
+     "source_id": "w_wfd_s101",
+     "text": "highly detailed 6-inch tall action figure[s] featuring TrueFX™ technology and 30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_lineup",
+     "source_id": "w_ringside_s101_set",
+     "text": "Cody Rhodes, Kevin Owens, Johnny Knoxville, Mr. America Hulk Hogan, Sonya Deville & Ricochet",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_desc",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5_features",
+     "source_id": "w_toywiz_ricochet",
+     "text": "highly articulated ... True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6_release",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Release Date: June 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 101",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black sleeveless catsuit that features a choker, belt, and buckled straps, as well as black laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black fabric coat with plastic bands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "new headscan with a sneering expression, dark lipstick, and long hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "alternate pair of hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "fingerless gloves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$7.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New headscan with a sneering expression, dark lipstick, and long hair",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fingerless gloves",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black fabric coat with plastic bands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Black sleeveless catsuit that features a choker, belt, and buckled straps, as well as black laced boots",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate pair of hands",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_101_ricochet_a55076": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_101_ricochet_a55076",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_101_ricochet_a55076",
+   "character_canonical": "ricochet",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "101",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ricochet"
+  },
+  "identity_hash": "c58e96f943e7ab23",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s101",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_s101_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-complete-set-elite101-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_ricochet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-101-ricochet",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-ricochet-elite101-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_s101",
+     "text": "\"The American Nightmare\" Cody Rhodes; Johnny Knoxville; Kevin Owens; Mr. America; Mr. America (Chase variant); Ricochet; Sonya Deville",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_specs",
+     "source_id": "w_wfd_s101",
+     "text": "highly detailed 6-inch tall action figure[s] featuring TrueFX™ technology and 30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_lineup",
+     "source_id": "w_ringside_s101_set",
+     "text": "Cody Rhodes, Kevin Owens, Johnny Knoxville, Mr. America Hulk Hogan, Sonya Deville & Ricochet",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_desc",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5_features",
+     "source_id": "w_toywiz_ricochet",
+     "text": "highly articulated ... True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6_release",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Release Date: June 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$129.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Take flight with Ricochet in Mattel WWE Elite Series 101! The One and Only has an all-new confident headscan and accurate tattoos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "black tights emblazoned with a red-and-yellow flame motif on the right left and 'Ricochet' logo on the left",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "black-and-yellow martial arts belt, contrasting yellow and black boots, and contrasting black and yellow knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Ricochet's accessories include the WWE Intercontinental Championship belt!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black tights emblazoned with a red-and-yellow flame motif and a 'Ricochet' logo on the left",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black-and-yellow martial arts belt, contrasting yellow and black boots, and contrasting black and yellow knee pads, with black tights emblazoned with a red-and-yellow flame motif",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new confident headscan with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "All-new confident headscan with accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black tights with red-and-yellow flame motif and 'Ricochet' logo",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Included WWE Intercontinental Championship belt accessories",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE Intercontinental Championship belt",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_101_mr-america_1eb9fadba86e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_101_mr-america_1eb9fadba86e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_101_mr-america_1eb9fadba86e",
+   "character_canonical": "mr-america",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "101",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Mr. America"
+  },
+  "identity_hash": "9f440f3903d1cdc7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s101",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_s101_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-101-toy-figures-complete-set-elite101-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_ricochet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-ricochet-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-101-mr-america",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-101-mr-america-hulk-hogan-action-figure-chase-stars-and-stripes/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_wfd_s101",
+     "text": "\"The American Nightmare\" Cody Rhodes; Johnny Knoxville; Kevin Owens; Mr. America; Mr. America (Chase variant); Ricochet; Sonya Deville",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_specs",
+     "source_id": "w_wfd_s101",
+     "text": "highly detailed 6-inch tall action figure[s] featuring TrueFX™ technology and 30+ points of articulation for true-to-life posing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_set_lineup",
+     "source_id": "w_ringside_s101_set",
+     "text": "Cody Rhodes, Kevin Owens, Johnny Knoxville, Mr. America Hulk Hogan, Sonya Deville & Ricochet",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_desc",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5_features",
+     "source_id": "w_toywiz_ricochet",
+     "text": "highly articulated ... True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Ricochet",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6_release",
+     "source_id": "w_toywiz_ricochet",
+     "text": "Release Date: June 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: 101",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "chase stars & stripes design",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": "chase-stars-and-stripes",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "authentic ring gear",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": "chase-stars-and-stripes",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX technology for realistic facial features and expressions",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Fully articulated for dynamic posing and play scenarios",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "highly articulated Superstar figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": "chase-stars-and-stripes",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Includes iconic accessories and ring gear authentic to WWE appearances",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": "chase-stars-and-stripes",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "June 2023",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "mr-america",
+      "character_variant": "chase-stars-and-stripes",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "chase stars & stripes design",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

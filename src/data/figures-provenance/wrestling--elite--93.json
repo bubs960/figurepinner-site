@@ -1,0 +1,2178 @@
+{
+ "fp_wrestling_mattel_elite_93_seth-rollins_42ca7c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_93_seth-rollins_42ca7c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_93_seth-rollins_42ca7c",
+   "character_canonical": "seth-rollins",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "93",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Seth Rollins"
+  },
+  "identity_hash": "9f542f780bde74b2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite93_rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-rollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite93_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-complete-set-elite93-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_elite93_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/12/28/wwe-elite-93-reveals-seth-rollins-cesaro-raquel-gonzalez-ricky-steamboat-t-bar/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-93-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-seth-rollins-elite93-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Elite Collection Mainline\" series number 93, released in 2022 by Mattel and manufactured in China for the United States market.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite93_set",
+     "text": "Seth Rollins, T-Bar, Karrion Kross, Cesaro, Ricky Steamboat & Raquel Gonzalez.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn_elite93_reveals",
+     "text": "Seth Rollins and Cesaro, the first Elite figure of former NXT Women's Champion Raquel Gonzalez, the first Elite figure of T-Bar, and the regular series and chase variant of Ricky 'The Dragon' Steamboat from his mid-1990s run in WCW with the TV Championship.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "bold and colorful figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "April 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "194735021574",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "sporting a single black glove, chest hair, and a removable red and black jacket.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "He's also wearing black ring tights with red 'SR' symbols and a 'Rollins' image featured on the side!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "He's rounded out with black and red kick pad style boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "open-mouthed head sculpt and man-bun",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_93_ricky-the-dragon-steamboat_44f992ba13da": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_93_ricky-the-dragon-steamboat_44f992ba13da",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_93_ricky-the-dragon-steamboat_44f992ba13da",
+   "character_canonical": "ricky-the-dragon-steamboat",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "93",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ricky \"The Dragon\" Steamboat"
+  },
+  "identity_hash": "fc5f2f60c3e7e482",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite93_rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-rollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite93_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-complete-set-elite93-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_elite93_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/12/28/wwe-elite-93-reveals-seth-rollins-cesaro-raquel-gonzalez-ricky-steamboat-t-bar/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-steamboatchase",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-93-ricky-the-dragon-steamboat-action-figure-regular/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Elite Collection Mainline\" series number 93, released in 2022 by Mattel and manufactured in China for the United States market.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite93_set",
+     "text": "Seth Rollins, T-Bar, Karrion Kross, Cesaro, Ricky Steamboat & Raquel Gonzalez.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn_elite93_reveals",
+     "text": "Seth Rollins and Cesaro, the first Elite figure of former NXT Women's Champion Raquel Gonzalez, the first Elite figure of T-Bar, and the regular series and chase variant of Ricky 'The Dragon' Steamboat from his mid-1990s run in WCW with the TV Championship.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 93",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 17, 1994 @ WCW Spring Stampede",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "regular-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "regular-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "regular-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$28.49",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "ricky-the-dragon-steamboat",
+      "character_variant": "regular-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "ready to wreak havoc right out of the box.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_93_karrion-kross_626ea3282f93": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_93_karrion-kross_626ea3282f93",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_93_karrion-kross_626ea3282f93",
+   "character_canonical": "karrion-kross",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "93",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Karrion Kross"
+  },
+  "identity_hash": "40265b91061338e5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite93_rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-rollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite93_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-complete-set-elite93-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_elite93_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/12/28/wwe-elite-93-reveals-seth-rollins-cesaro-raquel-gonzalez-ricky-steamboat-t-bar/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-karrion-elite93-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-kross",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Elite Collection Mainline\" series number 93, released in 2022 by Mattel and manufactured in China for the United States market.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite93_set",
+     "text": "Seth Rollins, T-Bar, Karrion Kross, Cesaro, Ricky Steamboat & Raquel Gonzalez.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn_elite93_reveals",
+     "text": "Seth Rollins and Cesaro, the first Elite figure of former NXT Women's Champion Raquel Gonzalez, the first Elite figure of T-Bar, and the regular series and chase variant of Ricky 'The Dragon' Steamboat from his mid-1990s run in WCW with the TV Championship.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "clenched teeth headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "maroon and black ring gear and boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "white hand wraps and black kneepads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "accurate arm, shoulder and chest tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "an NXT Championship accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Attire Date: Apr. 8, 2021 @ NXT TakOver: Stand & Deliver",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "karrion-kross",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 8, 2021 @ NXT TakOver: Stand & Deliver",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "maroon and black ring gear and boots",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "clenched teeth headscan",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "white hand wraps and black kneepads",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "accurate arm, shoulder and chest tattoos",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "NXT Championship accessory",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_93_cesaro_58b57d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_93_cesaro_58b57d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_93_cesaro_58b57d",
+   "character_canonical": "cesaro",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "93",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cesaro"
+  },
+  "identity_hash": "f2188ed4be919736",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite93_rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-rollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite93_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-complete-set-elite93-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_elite93_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/12/28/wwe-elite-93-reveals-seth-rollins-cesaro-raquel-gonzalez-ricky-steamboat-t-bar/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-cesaro",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-93-cesaro-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-cesaro-elite93-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Elite Collection Mainline\" series number 93, released in 2022 by Mattel and manufactured in China for the United States market.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite93_set",
+     "text": "Seth Rollins, T-Bar, Karrion Kross, Cesaro, Ricky Steamboat & Raquel Gonzalez.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn_elite93_reveals",
+     "text": "Seth Rollins and Cesaro, the first Elite figure of former NXT Women's Champion Raquel Gonzalez, the first Elite figure of T-Bar, and the regular series and chase variant of Ricky 'The Dragon' Steamboat from his mid-1990s run in WCW with the TV Championship.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 10, 2021 @ WWE WrestleMania 37",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 93",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "April 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "black wrist tape on one arm",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "removable black, white and yellow 'back in the swing' 'Cesaro' entrance jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "black and yellow 'Cesaro' knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s3",
+     "text": "black, yellow and white 'Cesaro' ring boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s3",
+     "text": "confident head scan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q17",
+     "source_id": "f_s3",
+     "text": "chest hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q18",
+     "source_id": "f_s3",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Cesaro's back in the swing attire from WrestleMania 37, Apr. 10, 2021",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black, white and yellow",
+    "evidence_quote_ids": [
+     "f_q13",
+     "f_q14",
+     "f_q15"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "confident head scan",
+    "evidence_quote_ids": [
+     "f_q16"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "black wrist tape on one arm",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "chest hair",
+    "evidence_quote_ids": [
+     "f_q17"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "removable black, white and yellow back in the swing Cesaro entrance jacket",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable black, white and yellow back in the swing Cesaro entrance jacket",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Black and yellow Cesaro knee pads",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Black, yellow and white Cesaro ring boots",
+    "evidence_quote_ids": [
+     "f_q15"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by April 2021",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     },
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q18"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_93_raquel-gonzalez_f99c60": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_93_raquel-gonzalez_f99c60",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_93_raquel-gonzalez_f99c60",
+   "character_canonical": "raquel-gonzalez",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "93",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Raquel Gonzalez"
+  },
+  "identity_hash": "ee2ef958f8cfd85d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite93_rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-rollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite93_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-complete-set-elite93-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_elite93_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/12/28/wwe-elite-93-reveals-seth-rollins-cesaro-raquel-gonzalez-ricky-steamboat-t-bar/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-gonzalez",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-raquel-elite93-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Elite Collection Mainline\" series number 93, released in 2022 by Mattel and manufactured in China for the United States market.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite93_set",
+     "text": "Seth Rollins, T-Bar, Karrion Kross, Cesaro, Ricky Steamboat & Raquel Gonzalez.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn_elite93_reveals",
+     "text": "Seth Rollins and Cesaro, the first Elite figure of former NXT Women's Champion Raquel Gonzalez, the first Elite figure of T-Bar, and the regular series and chase variant of Ricky 'The Dragon' Steamboat from his mid-1990s run in WCW with the TV Championship.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 7, 2021 @ NXT TakOver: Stand & Deliver",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Orange and black molded ring top",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black ring pants, molded and studded black boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "dark makeup and a cold headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "a huge ponytail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "a removable black jacket and NXT Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "First Time in the Line",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "raquel-gonzalez",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 7, 2021",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Orange and black molded ring top, black ring pants, black wrist tape",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Dark makeup and a cold headscan",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "A huge ponytail",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "A removable black jacket and NXT Women's Championship",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "A removable black jacket and NXT Women's Championship",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_93_t-bar_549bc7a17af1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_93_t-bar_549bc7a17af1",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_93_t-bar_549bc7a17af1",
+   "character_canonical": "t-bar",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "93",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "T-BAR"
+  },
+  "identity_hash": "c77f6885bd5e1c2a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite93_rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-rollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite93_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-complete-set-elite93-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_elite93_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/12/28/wwe-elite-93-reveals-seth-rollins-cesaro-raquel-gonzalez-ricky-steamboat-t-bar/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite93-tbar",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.bigbadtoystore.com/Product/VariationDetails/194158",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-93-toy-figures-t-bar-elite93-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://outruncollectibles.ca/products/wwe-elite-collection-series-93-t-bar-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Elite Collection Mainline\" series number 93, released in 2022 by Mattel and manufactured in China for the United States market.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite93_rollins",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite93_set",
+     "text": "Seth Rollins, T-Bar, Karrion Kross, Cesaro, Ricky Steamboat & Raquel Gonzalez.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn_elite93_reveals",
+     "text": "Seth Rollins and Cesaro, the first Elite figure of former NXT Women's Champion Raquel Gonzalez, the first Elite figure of T-Bar, and the regular series and chase variant of Ricky 'The Dragon' Steamboat from his mid-1990s run in WCW with the TV Championship.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 19, 2020 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 93",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$16.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "black gloves, black elbow pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "black 'Retribution' style ring pants and black laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "removable black jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "interchangeable headsculpts, one featuring a mask and the other with face paint",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "t-bar",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 19, 2020 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black gloves, black elbow pads, black 'Retribution' style ring pants, and black laced boots",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Interchangeable headsculpts, one featuring a mask and the other with face paint",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable black jacket",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable mask and face-paint headsculpts",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable black jacket",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ }
+}

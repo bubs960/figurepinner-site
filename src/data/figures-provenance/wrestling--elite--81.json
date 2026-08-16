@@ -1,0 +1,3399 @@
+{
+ "fp_wrestling_mattel_elite_81_montez-ford_a743d5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_montez-ford_a743d5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_montez-ford_a743d5",
+   "character_canonical": "montez-ford",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Montez Ford"
+  },
+  "identity_hash": "9d9a9d3100fc9ec1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-montez-ford-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-81-toy-figures-montez-elite81-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches and comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Montez Ford (Street Profits) - WWE Elite 81 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "montez-ford",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories with amazing detail capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_81_angelo-dawkins_e96aaf": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_angelo-dawkins_e96aaf",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_angelo-dawkins_e96aaf",
+   "character_canonical": "angelo-dawkins",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Angelo Dawkins"
+  },
+  "identity_hash": "ec99de226c66ce0b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-81-toy-figures-angelo-elite81-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-81-angelo-dawkins-action-figure/mtgvb36",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-angelo-dawkins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Angelo Dawkins (Street Profits) - WWE Elite 81 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "angelo-dawkins",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "July 1, 2019 @ WWE Raw",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2021",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$18.99",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 18.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_81_the-rock_14e8c8aa50e7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_the-rock_14e8c8aa50e7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_the-rock_14e8c8aa50e7",
+   "character_canonical": "the-rock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "The Rock"
+  },
+  "identity_hash": "5ab9cba3979405f1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-81-toy-figures-rock-elite81-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://creations.mattel.com/products/wwe-elite-collection-the-rock-action-figure-hkn81",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "25 points of articulation for extreme posability!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Recreate signature moves and ring entrances with the WWE® Elite Collection™ action figures.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_81_mae-young_0cd3b6445725": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_mae-young_0cd3b6445725",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_mae-young_0cd3b6445725",
+   "character_canonical": "mae-young",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Mae Young"
+  },
+  "identity_hash": "3666b9b9b62814e8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-mae-young-exclusive-action-figure-exclusive/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-81-toy-figures-mae-young-elite81-09.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.gapthefigure.com/products/mattel-wwe-elite-series-collectors-edition-mae-young",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mae-young",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mae-young",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mae-young",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mae-young",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Mae Young Exclusive - WWE Elite 81 WWE Toy Wrestling Action Figure by Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mae-young",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mae-young",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 11, 1999 @ WWF Raw",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_81_bianca-belair_786a59": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_bianca-belair_786a59",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_bianca-belair_786a59",
+   "character_canonical": "bianca-belair",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bianca Belair"
+  },
+  "identity_hash": "01bf5509d0f88b7b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-bianca-bel-air-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-81-toy-figures-bianca-elite81-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "bold and colorful",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$22.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "WWE Elite 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "ELITE81-05",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bianca-belair",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "Ship in Figure Defender Case (+$4.99)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "bold and colorful",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE81-05",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$64.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 64.99,
+       "currency": null,
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$22.99",
+      "evidence_quote_ids": [
+       "f_q9"
+      ],
+      "price_detail": {
+       "amount": 22.99,
+       "currency": null,
+       "price_kind": "resale_current",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_81_stunning-steve-austin_e228f054b70d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_stunning-steve-austin_e228f054b70d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_stunning-steve-austin_e228f054b70d",
+   "character_canonical": "stunning-steve-austin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "\"Stunning\" Steve Austin"
+  },
+  "identity_hash": "b6e7ae4925e7ced5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-stunning-steve-austin-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2020/12/31/wwe-elite-81-stunning-steve-austin-figure-review/",
+     "source_type": "video",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forum.wrestlingfigs.com/thread/335828/elite-flashback-stunning-steve-austin",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessoriesall with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Get all the WWE Elite Collection figures and let the collecting and battles begin!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Austin had a brash, cocky smile for most of this time period and the wide smile was a great choice.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Austin's facial hair looks great and the shade of blonde used for his hair turned out nice as well.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "December 31, 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "May 23, 1993 @ WCW Slamboree",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Bold and colorful figure, approximately 6-inches, comes ready to wreak havoc right out of the box",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_81_shinsuke-nakamur_8bbbe0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_81_shinsuke-nakamur_8bbbe0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_81_shinsuke-nakamur_8bbbe0",
+   "character_canonical": "shinsuke-nakamura",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "81",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shinsuke Nakamura"
+  },
+  "identity_hash": "cd37b8aeb4bf5647",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_austin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-stunningsteve",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_maeyoung",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-maeyoung",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-dawkins",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rock",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-the-rock-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_series81-90_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-81-90/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_ford_search_snippet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite81-ford",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-81-toy-figures-shinsuke-elite81-07.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-81-shinsuke-nakamura-action-figure-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlrs.com/products/shinsuke-nakamura-wwe-elite-series-81",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_austin",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_austin",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_austin",
+     "text": "Series: 81",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_austin",
+     "text": "Attire Date: May 23, 1993 @ WCW Slamboree",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "\"Stunning\" Steve Austin"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_maeyoung",
+     "text": "Attire Date: Oct. 11, 1999 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Mae Young"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_dawkins",
+     "text": "Attire Date: July 1, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Angelo Dawkins"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_rock",
+     "text": "Price: $39.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_rock",
+     "text": "Scale: Approximately 6-inches tall",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_rock",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_rock",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_rock",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_rock",
+     "text": "No Build-A-Figure component mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_series81-90_category",
+     "text": "Loading... (0 matching)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 81-90",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_nakamura_search_snippet",
+     "text": "WWE Wrestling Elite Collection Series 81 Shinsuke Nakamura 7\" Action Figure Blue Gear, Regular Version Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": "2021",
+      "character_canonical": "Shinsuke Nakamura"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_ford_search_snippet",
+     "text": "2021 WWE Mattel Elite Collection Series 81 Montez Ford – Wrestling Figure Database",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Montez Ford"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Black Gear, Chase Version",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "chase-black-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "WWE Intercontinental Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Figure period: Survivor Series 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "£2495 £24.95",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "shinsuke-nakamura",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Survivor Series 2019",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue",
+    "evidence_quote_ids": [
+     "w_q15"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE Intercontinental Championship Belt",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Black Gear, Chase Version",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE Intercontinental Championship Belt",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,2939 @@
+{
+ "fp_wrestling_mattel_elite_102_edge_12ade7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_edge_12ade7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_edge_12ade7",
+   "character_canonical": "edge",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Edge"
+  },
+  "identity_hash": "7376e4347372a138",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-edge-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-edge-elite102-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$74.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "July 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black tights with bold purple print, including a fanged skull and scales logo on the left leg.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Edge also features black kneepads with matching fanged skull logos, and black kickpad-style boots with purple design work.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "all-new headsculpt featuring a sinister smile",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "extra set of hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "a long black molded coat with chest panels, shoulderpads, and studded collar and sleeves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black tights with bold purple print (fanged skull and scales logo on left leg), black kneepads with matching fanged skull logos, black kickpad-style boots with purple design work",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "all-new headsculpt featuring a sinister smile",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "extra set of hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "long black molded coat with chest panels, shoulderpads, and studded collar and sleeves",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Extra set of hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "July 2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_102_austin-theory_299c91": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_austin-theory_299c91",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_austin-theory_299c91",
+   "character_canonical": "austin-theory",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Austin Theory"
+  },
+  "identity_hash": "a01ae664496fbc0e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-austin-theory",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-austin-elite102-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "highly articulated Superstar figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "blue shorts with red-and-white 'T' emblem logos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "blue kneepads with red-and-white 'All Day' and 'T' logos as well as black laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "a red, white, and blue molded entrance vest with a 'T' chest emblem",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "two all-new expressive, gloriously obnoxious headscans",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "a smartphone accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "alternate open hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "$26.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "austin-theory",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jun. 6, 2022 @ WWE Hell in a Cell",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue shorts with red-and-white 'T' emblem logos; blue kneepads with red-and-white 'All Day' and 'T' logos; black laced boots; red, white, and blue molded entrance vest with a 'T' chest emblem",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Two all-new expressive, gloriously obnoxious headscans",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "A smartphone accessory",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Alternate open hands",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Smartphone accessory",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate open hands",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     },
+     {
+      "value": "$26.99",
+      "evidence_quote_ids": [
+       "f_q12"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_102_rhea-ripley_272f80": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_rhea-ripley_272f80",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_rhea-ripley_272f80",
+   "character_canonical": "rhea-ripley",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rhea Ripley"
+  },
+  "identity_hash": "973a662bb85b35c2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-rhea-ripley",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-rhea-ripley-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-rhea-ripley-elite102-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "July 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "asymmetrical, one-sleeved purple top layered over a mesh top, as well as black-and-purple shorts with chain detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "glowering headscan and accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "alternate metal-horn hands for posing as well as a molded black entrance coat with chain and stud detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "buckled choker and black boots with studded straps",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jun. 6, 2022 @ WWE Hell in a Cell",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Asymmetrical, one-sleeved purple top layered over a mesh top, as well as black-and-purple shorts with chain detailing",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Glowering headscan and accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Alternate metal-horn hands for posing as well as a molded black entrance coat with chain and stud detailing",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Buckled choker and black boots with studded straps",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate metal-horn hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Molded black entrance coat with chain and stud detailing",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "July 2023",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$79.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 79.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 24.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_102_sami-zayn_f368ab": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_sami-zayn_f368ab",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_sami-zayn_f368ab",
+   "character_canonical": "sami-zayn",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sami Zayn"
+  },
+  "identity_hash": "921da95798ef5178",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-sami-zayn",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-sami-zayn-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-sami-zayn-elite102-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 3, 2022 @ WWE WrestleMania 38",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "match-accurate black pants with 'Sami Zayn Forever' logo and white belt, as well as black-and-white laced boots and white hand and wrist tape",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "all-new, shocked headscan faithful to his appearance at WrestleMania 38",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "extra hands, his signature cap, and a giant mousetrap so you can recreate the infamous ending of one of WrestleMania's strangest matchups",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 3, 2022 @ WWE WrestleMania 38",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Match-accurate black pants with 'Sami Zayn Forever' logo and white belt, black-and-white laced boots, white hand and wrist tape",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new, shocked headscan faithful to his appearance at WrestleMania 38",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Signature cap",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Extra hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Signature cap",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Giant mousetrap",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_102_gunther_ec08a8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_gunther_ec08a8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_gunther_ec08a8",
+   "character_canonical": "gunther",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Gunther"
+  },
+  "identity_hash": "80174b1cf9f7fe9c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-gunther-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-gunther-elite102-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "UPC: 194735105564",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Restore honor to the ring with Gunther in Mattel WWE Elite Series 102! The Ring General marches back into the Elite line with an all-new stern headscan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Red trunks with Austrian flag emblem",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Black-and-white laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Alternate pair of chopping hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Fabric entrance coat included",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Price: $29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "gunther",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "April 8, 2022 WWE SmackDown",
+    "evidence_quote_ids": [
+     "w_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red trunks with Austrian flag emblem",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new stern headscan",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate pair of chopping hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Fabric entrance coat",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "194735105564",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "July 2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_102_mick-foley_71000e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_mick-foley_71000e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_mick-foley_71000e",
+   "character_canonical": "mick-foley",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": null,
+   "pack_size": null,
+   "v1_name": null
+  },
+  "identity_hash": "c23e2cdc4d0bd4fb",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-commissioner-mick-foley",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-mick-foley-elite102-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-commissioner-foley-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Jun. 26, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "black pants and shirt, white hi-top sneakers, and a molded black 'Commissioner' shirt with angled printing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "smiling, bearded headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "alternate hand holding his trusty gavel, and he also includes a potted cactus and alternate thumbs-up hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jun. 26, 2000 @ WWF Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black pants and shirt, white hi-top sneakers, and a molded black 'Commissioner' shirt with angled printing",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "smiling, bearded headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "molded black 'Commissioner' shirt with angled printing",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate hand holding gavel",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Potted cactus",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Alternate thumbs-up hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_102_mick-foley_9c010a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_102_mick-foley_9c010a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_102_mick-foley_9c010a",
+   "character_canonical": "mick-foley",
+   "character_variant": "commissioner",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "102",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Commissioner Mick Foley"
+  },
+  "identity_hash": "1b9c311f71781ad5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_gunther",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-gunther",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_austin_theory",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-austin-theory-action-figure-regular/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-complete-set-elite102-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_search_wrestlingfigurenews",
+     "url": "https://wrestlingfigurenews.com/2023/03/31/wwe-elite-102-on-display-at-wrestlemania-superstore-gunther-edge-rhea-ripley-sami-zayn-commissioner-foley-austin-theory/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-102-commissioner-mick-foley",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-102-toy-figures-mick-foley-elite102-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-102-commissioner-foley-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 102 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel Includes: Edge, Austin Theory, Gunther (Walter), Sami Zayn, Rhea Ripley, Commissioner Mick Foley",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "Austin Theory - 2023 release; Austin Theory [Chase] - 2023 release; Commissioner Mick Foley - 2023 release; Edge - 2023 release; Gunther - 2023 release; Rhea Ripley - 2023 release; Sami Zayn - 2023 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "$59.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Austin Theory",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_complete_set",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_edge",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Edge) — Manufacturer: Mattel; Release Year: 2023; Manufacturing Country: China; Release Country: United States; Attire Reference: Edge's outfit from Jun. 6, 2022 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Edge",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_gunther",
+     "text": "2023 WWE Mattel Elite Collection Series 102 (Gunther) — Attire Reference: April 8, 2022 WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": "Gunther",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_austin_theory",
+     "text": "Release Date: July 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 102",
+      "character_canonical": null,
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jun. 26, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 102",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Black pants and shirt, white hi-top sneakers, and a molded black 'Commissioner' shirt with angled printing.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "an alternate hand holding his trusty gavel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "UPC: 194735105281",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "Stock #: 421902",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "mick-foley",
+      "character_variant": "commissioner",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jun. 26, 2000 @ WWF Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black pants and shirt, white hi-top sneakers, and a molded black 'Commissioner' shirt with angled printing.",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Molded black 'Commissioner' shirt with angled printing",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Alternate hand holding his trusty gavel",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate hand holding gavel",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "421902",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

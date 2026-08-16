@@ -1,13 +1,18 @@
 {
- "md5": "D302716F5D8B18ACFD76D250AF0A4F88",
- "doc_count": 4,
- "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
+ "md5": "36C47893139A6FA979617F1494064038",
+ "doc_count": 6,
+ "source_batches": [
+  "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
+  "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
+ ],
  "poured_at": "2026-08-15",
- "warn_count_at_pour": 11,
+ "warn_count_at_pour": 10,
  "identity_hashes": {
   "fp_wrestling_mattel_elite_119_bron-breakker_11bf8c": "e01ebf3b28bea67b",
   "fp_wrestling_mattel_elite_119_dominik-mysterio_7a5c69": "e1f6286acae0653e",
   "fp_wrestling_mattel_elite_119_ethan-page_de1200": "bed373f44d08545a",
-  "fp_wrestling_mattel_elite_119_john-cena_bcb770809ebb": "27054375657e4af6"
+  "fp_wrestling_mattel_elite_119_john-cena_bcb770809ebb": "27054375657e4af6",
+  "fp_wrestling_mattel_elite_119_liv-morgan_6f1207": "99fa8feefb9aa3e2",
+  "fp_wrestling_mattel_elite_119_dexter-lumis_308581": "c5a548f110e32f36"
  }
 }

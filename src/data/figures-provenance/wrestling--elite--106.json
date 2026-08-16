@@ -1,0 +1,3022 @@
+{
+ "fp_wrestling_mattel_elite_106_paul-bearer_2f8fb2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_106_paul-bearer_2f8fb2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_106_paul-bearer_2f8fb2",
+   "character_canonical": "paul-bearer",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "106",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Paul Bearer"
+  },
+  "identity_hash": "1143ac6df25a0160",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_zayn",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-sami-zayn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_bearer",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_gable",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toyhypeusa_s106",
+     "url": "https://toyhypeusa.com/2023/10/02/mattel-wwe-elite-collection-series-106-figures-pre-orders/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-paul-bearer-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-106-toy-figures-paul-bearer-elite106-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_zayn",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_zayn",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_zayn",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bearer",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_collection",
+     "text": "2023 WWE Mattel Elite Collection Series 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "TrueFx™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "Chad Gable",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "Jey Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jey Uso"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_collection",
+     "text": "Jimmy Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jimmy Uso"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer (standard version)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer [Chase variant]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_collection",
+     "text": "Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Roxanne Perez"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_collection",
+     "text": "Sami Zayn",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_gable",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_gable",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "Sami Zayn, Jimmy Uso, Jey Uso, Paul Bearer, Chad Gable, Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "$23.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "scheduled to ship in March 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "paul-bearer",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "paul-bearer",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "highly articulated Superstar figure",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "True FX technology",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "paul-bearer",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "unnerving, pale headscan featuring his famous parted pencil mustache, black hair, and dark-circled eyes",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "paul-bearer",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "wearing a somber black suit and dress shoes, as well as a bold, patterned tie",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "paul-bearer",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "comes with two different golden urns, as well as two additional sets of hands for channeling the power of the Undertaker",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "paul-bearer",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Wearing a somber black suit and dress shoes, with a bold, patterned tie",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black suit, patterned tie",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Unnerving, pale headscan featuring his famous parted pencil mustache, black hair, and dark-circled eyes",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Comes with two different golden urns and two additional sets of hands for channeling the power of the Undertaker",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Pale headscan with dark-circled eyes and parted pencil mustache",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Two golden urns",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two additional sets of hands",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_106_chad-gable_2db510": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_106_chad-gable_2db510",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_106_chad-gable_2db510",
+   "character_canonical": "chad-gable",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "106",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Chad Gable"
+  },
+  "identity_hash": "dd86caac4fda4165",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_zayn",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-sami-zayn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_bearer",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_gable",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toyhypeusa_s106",
+     "url": "https://toyhypeusa.com/2023/10/02/mattel-wwe-elite-collection-series-106-figures-pre-orders/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-chad-gable",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-106-toy-figures-chad-gable-elite106-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_zayn",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_zayn",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_zayn",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bearer",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_collection",
+     "text": "2023 WWE Mattel Elite Collection Series 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "TrueFx™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "Chad Gable",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "Jey Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jey Uso"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_collection",
+     "text": "Jimmy Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jimmy Uso"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer (standard version)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer [Chase variant]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_collection",
+     "text": "Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Roxanne Perez"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_collection",
+     "text": "Sami Zayn",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_gable",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_gable",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "Sami Zayn, Jimmy Uso, Jey Uso, Paul Bearer, Chad Gable, Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "$23.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "scheduled to ship in March 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 27, 2023 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "bright blue wrestling singlet with black and gold abstract pattern",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "layered blue V-shaped knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "black-and-white laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "red fabric 'SHOOOOOOOOOOOSH' Alpha Academy cutoff shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "smiling, confident headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "includes two additional sets of hands for accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "chad-gable",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Mar. 27, 2023 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Bright blue wrestling singlet with black and gold abstract pattern, layered blue V-shaped knee pads, black-and-white laced boots",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Smiling, confident headscan",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Red fabric 'SHOOOOOOOOOOOSH' Alpha Academy cutoff shirt",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black-and-white laced boots",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Two additional sets of hands for accurate posing",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_106_jimmy-uso_e0e872": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_106_jimmy-uso_e0e872",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_106_jimmy-uso_e0e872",
+   "character_canonical": "jimmy-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "106",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jimmy Uso"
+  },
+  "identity_hash": "ae657cbd57654f98",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_zayn",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-sami-zayn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_bearer",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_gable",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toyhypeusa_s106",
+     "url": "https://toyhypeusa.com/2023/10/02/mattel-wwe-elite-collection-series-106-figures-pre-orders/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-jimmy-uso-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-106-toy-figures-jimmy-uso-elite106-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_zayn",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_zayn",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_zayn",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bearer",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_collection",
+     "text": "2023 WWE Mattel Elite Collection Series 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "TrueFx™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "Chad Gable",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "Jey Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jey Uso"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_collection",
+     "text": "Jimmy Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jimmy Uso"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer (standard version)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer [Chase variant]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_collection",
+     "text": "Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Roxanne Perez"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_collection",
+     "text": "Sami Zayn",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_gable",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_gable",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "Sami Zayn, Jimmy Uso, Jey Uso, Paul Bearer, Chad Gable, Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "$23.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "scheduled to ship in March 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite. These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Survive with the Bloodline with Jimmy Uso in Mattel WWE Elite Series 106! Uso's ready to stand beside his family with a headscan featuring a fierce, scowling expression and long hair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "he also includes two additional sets of hands for accurate posing.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Headscan featuring a fierce, scowling expression and long hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fierce, scowling expression with long hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two additional sets of hands for accurate posing",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two additional sets of hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_106_sami-zayn_7bf3b0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_106_sami-zayn_7bf3b0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_106_sami-zayn_7bf3b0",
+   "character_canonical": "sami-zayn",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "106",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sami Zayn"
+  },
+  "identity_hash": "886c6308dab3d391",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_zayn",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-sami-zayn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_bearer",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_gable",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toyhypeusa_s106",
+     "url": "https://toyhypeusa.com/2023/10/02/mattel-wwe-elite-collection-series-106-figures-pre-orders/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-106-toy-figures-sami-zayn-elite106-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-sami-zayn-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_zayn",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_zayn",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_zayn",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bearer",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_collection",
+     "text": "2023 WWE Mattel Elite Collection Series 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "TrueFx™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "Chad Gable",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "Jey Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jey Uso"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_collection",
+     "text": "Jimmy Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jimmy Uso"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer (standard version)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer [Chase variant]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_collection",
+     "text": "Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Roxanne Perez"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_collection",
+     "text": "Sami Zayn",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_gable",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_gable",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "Sami Zayn, Jimmy Uso, Jey Uso, Paul Bearer, Chad Gable, Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "$23.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "scheduled to ship in March 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wide-legged black pants with 'Sami Zayn' duct tape logo on the legs, as well as black-and-white laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "determined headscan featuring his long red hair and beard",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "comes with an alternate set of hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "sami-zayn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Wide-legged black pants with 'Sami Zayn' duct tape logo on the legs, black-and-white laced boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black and white",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Determined headscan featuring his long red hair and beard",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Comes with an alternate set of hands",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate set of hands",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_106_jey-uso_42d3ad": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_106_jey-uso_42d3ad",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_106_jey-uso_42d3ad",
+   "character_canonical": "jey-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "106",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jey Uso"
+  },
+  "identity_hash": "848b8a5ab73123ee",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_zayn",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-sami-zayn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_bearer",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_gable",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toyhypeusa_s106",
+     "url": "https://toyhypeusa.com/2023/10/02/mattel-wwe-elite-collection-series-106-figures-pre-orders/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-series-106-jey-uso",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-106-toy-figures-jey-elite106-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-jey-uso-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_zayn",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_zayn",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_zayn",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bearer",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_collection",
+     "text": "2023 WWE Mattel Elite Collection Series 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "TrueFx™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "Chad Gable",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "Jey Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jey Uso"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_collection",
+     "text": "Jimmy Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jimmy Uso"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer (standard version)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer [Chase variant]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_collection",
+     "text": "Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Roxanne Perez"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_collection",
+     "text": "Sami Zayn",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_gable",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_gable",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "Sami Zayn, Jimmy Uso, Jey Uso, Paul Bearer, Chad Gable, Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "$23.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "scheduled to ship in March 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 26, 2022 @ WWE Survivor Series: WarGames",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": "survivor-series-wargames-2022",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "event-specific red pants with 'Bloodline' print and black detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": "survivor-series-wargames-2022",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "red hi-tops, red arm sleeve, red lei, and fabric red 'We the Ones' cutoff shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": "survivor-series-wargames-2022",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "headscan featuring a fearsome, snarling expression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": "survivor-series-wargames-2022",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "two additional sets of hands for accurate posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": "survivor-series-wargames-2022",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "September 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 26, 2022 @ WWE Survivor Series: WarGames",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red (event-specific pants with 'Bloodline' print and black detailing; red hi-tops, arm sleeve, lei)",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Headscan featuring a fearsome, snarling expression",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Fabric red 'We the Ones' cutoff shirt",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two additional sets of hands for accurate posing",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two additional sets of hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2023",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$27.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ]
+     },
+     {
+      "value": "$59.99",
+      "evidence_quote_ids": [
+       "f_q11"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_106_roxanne-perez_8349c5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_106_roxanne-perez_8349c5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_106_roxanne-perez_8349c5",
+   "character_canonical": "roxanne-perez",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "106",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Roxanne Perez"
+  },
+  "identity_hash": "baade88147e159ac",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_zayn",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-sami-zayn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_bearer",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_gable",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-chad-gable-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toyhypeusa_s106",
+     "url": "https://toyhypeusa.com/2023/10/02/mattel-wwe-elite-collection-series-106-figures-pre-orders/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-roxanne-perez",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-106-toy-figures-roxanne-elite106-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_zayn",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_zayn",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_zayn",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bearer",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_collection",
+     "text": "2023 WWE Mattel Elite Collection Series 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collection",
+     "text": "TrueFx™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_collection",
+     "text": "Chad Gable",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection",
+     "text": "Jey Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jey Uso"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_collection",
+     "text": "Jimmy Uso",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Jimmy Uso"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer (standard version)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_collection",
+     "text": "Paul Bearer [Chase variant]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Paul Bearer"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_collection",
+     "text": "Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Roxanne Perez"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_collection",
+     "text": "Sami Zayn",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Sami Zayn"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_gable",
+     "text": "Release Date: September 2023",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": "Chad Gable"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_gable",
+     "text": "These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "Sami Zayn, Jimmy Uso, Jey Uso, Paul Bearer, Chad Gable, Roxanne Perez",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2023",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "$23.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toyhypeusa_s106",
+     "text": "scheduled to ship in March 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2024",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Dec. 13, 2022 @ NXT",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 106",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black-and-white striped top with color splatter design featuring asymmetrical laced sleeve, as well as matching black-and-white trunks. The Prodigy's look is complete with black knee pads and black buckled boots with neon green laces",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "wide-smiling headscan with long hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "additional set of hands and a brand-new version of the NXT Women's Championship title belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "roxanne-perez",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Dec. 13, 2022 @ NXT",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black-and-white striped top with color splatter design featuring asymmetrical laced sleeve, matching black-and-white trunks, black knee pads, and black buckled boots with neon green laces",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "wide-smiling headscan with long hair",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional set of hands",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Brand-new version of the NXT Women's Championship title belt",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

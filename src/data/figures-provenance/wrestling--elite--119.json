@@ -1715,5 +1715,1061 @@
     "status": "unresolved"
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_119_liv-morgan_6f1207": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_119_liv-morgan_6f1207",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_119_liv-morgan_6f1207",
+   "character_canonical": "liv-morgan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "119",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Liv Morgan"
+  },
+  "identity_hash": "99fa8feefb9aa3e2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_dominik_119",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-119-dominik-mysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series119_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_dexter_119",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-119-dexter-lumis-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_liv_morgan_119",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-119-liv-morgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ee_case_119",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-119-action-figure-case-of-8/mtgdf60h3",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_photos_119",
+     "url": "https://wrestlingfigurenews.com/2025/06/13/photos-wwe-elite-119-dominik-mysterio-liv-morgan-bron-breakker-dexter-lumis-ethan-page-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-119-toy-figures-liv-elite119-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingcollectorshop.com/product/wwe-mattel-elite-collection-series-119-liv-morgan/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-119-liv-morgan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Series: 119",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Attire Date: July 8, 2024 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "Dominik Mysterio"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Series: Series 119",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Release Date: June 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Price: $69.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": "2025",
+      "character_canonical": "Dexter Lumis"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "highly articulated for dynamic poses and action play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_liv_morgan_119",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_liv_morgan_119",
+     "text": "Attire Date: July 8, 2024 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "Liv Morgan"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_liv_morgan_119",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfn_photos_119",
+     "text": "Photos: WWE Elite 119 Dominik Mysterio, Liv Morgan, Bron Breakker, Dexter Lumis, Ethan Page & John Cena",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfn_photos_119",
+     "text": "expected to ship in late July",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfn_photos_119",
+     "text": "Pre-Order: WWE Elite 119 on Ringside ft. Dominik Mysterio, Liv Morgan, Bron Breakker, Dexter Lumis & Ethan Page",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "She's ready to stand by her man in a black cutoff Dirty Dom logo top.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Judgment Day look includes white shorts with a chain belt and hanging chain details, black gloves, and black-and-white banded boots with eye symbol.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Liv arrives with an all-new smiling headscan.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Her accessories include the WWE Women's World Championship title belt with unique Liv Morgan logo side plates!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "fully articulated for dynamic posing and recreating memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Includes iconic accessories for an authentic wrestling experience.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Judgment Day look: black cutoff \"Dirty Dom\" logo top, white shorts with chain belt and hanging chain details, black gloves, black-and-white banded boots with eye symbol",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black and white",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new smiling headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE Women's World Championship title belt with unique Liv Morgan logo side plates",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE Women's World Championship title belt (Liv Morgan logo side plates)",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_119_dexter-lumis_308581": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_119_dexter-lumis_308581",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_119_dexter-lumis_308581",
+   "character_canonical": "dexter-lumis",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "119",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dexter Lumis"
+  },
+  "identity_hash": "c5a548f110e32f36",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_dominik_119",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-119-dominik-mysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series119_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_dexter_119",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-119-dexter-lumis-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_liv_morgan_119",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-119-liv-morgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ee_case_119",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-119-action-figure-case-of-8/mtgdf60h3",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_photos_119",
+     "url": "https://wrestlingfigurenews.com/2025/06/13/photos-wwe-elite-119-dominik-mysterio-liv-morgan-bron-breakker-dexter-lumis-ethan-page-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-tbd-dexter-lumis",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-119-dexter-lumis-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-119-toy-figures-dexter-elite119-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Series: 119",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_dominik_119",
+     "text": "Attire Date: July 8, 2024 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "Dominik Mysterio"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Series: Series 119",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Release Date: June 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "Price: $69.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": "2025",
+      "character_canonical": "Dexter Lumis"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_dexter_119",
+     "text": "highly articulated for dynamic poses and action play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_liv_morgan_119",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_liv_morgan_119",
+     "text": "Attire Date: July 8, 2024 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2025",
+      "character_canonical": "Liv Morgan"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_liv_morgan_119",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfn_photos_119",
+     "text": "Photos: WWE Elite 119 Dominik Mysterio, Liv Morgan, Bron Breakker, Dexter Lumis, Ethan Page & John Cena",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfn_photos_119",
+     "text": "expected to ship in late July",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfn_photos_119",
+     "text": "Pre-Order: WWE Elite 119 on Ringside ft. Dominik Mysterio, Liv Morgan, Bron Breakker, Dexter Lumis & Ethan Page",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2025",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 17, 2024 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$69.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: June 2025",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "UPC: 194735271146",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "patchwork jeans with snakeskin leg textures, work boots, and brown gloves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "molded black entrance vest with feathered collar and shoulders as well as a red aloha shirt underneath",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "ominous headscan featuring long braided hair, a beard, and black eye makeup",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "an additional set of hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "Mercy the Buzzard mask, straight from the FIrefly Funhouse",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "dexter-lumis",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: June 17, 2024 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Molded black entrance vest with feathered collar and shoulders as well as a red aloha shirt underneath; patchwork jeans with snakeskin leg textures, work boots, and brown gloves",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Ominous headscan featuring long braided hair, a beard, and black eye makeup",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional set of hands",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Mercy the Buzzard mask, straight from the Firefly Funhouse",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "194735271146",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "June 2025",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$69.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 69.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
  }
 }

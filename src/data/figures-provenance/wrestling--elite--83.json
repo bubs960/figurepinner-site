@@ -1,0 +1,2750 @@
+{
+ "fp_wrestling_mattel_elite_83_edge_9c4008": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_83_edge_9c4008",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_83_edge_9c4008",
+   "character_canonical": "edge",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "83",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Edge"
+  },
+  "identity_hash": "611aecd55cd6812c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_corbin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-corbin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dusty",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-dusty",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/matte-elite-collection-elite-collection-series-83-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_wfd_series83",
+     "url": "https://wrestlingfiguredatabase.com/",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_series83",
+     "url": "https://toywiz.com/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-edge",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-edge-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_corbin",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dusty",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Dusty Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Dusty Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Edge – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Edge"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Michael P.S. Hayes [Exclusi – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Michael P.S. Hayes"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Sasha Banks – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Sasha Banks"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_series83",
+     "text": "WWE Wrestling Elite Collection Series 83 Drew Mcintyre 7 Action Figure Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Part of Elite Collection Series 83, released January 2021.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "No Build-A-Figure component is mentioned in this product listing.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 25, 2020 @ WWE WrestleMania 36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWE WrestleMania 36 attire (Mar. 25, 2020)",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WrestleMania 36 attire (Mar. 25, 2020)",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_83_sasha-banks_efd4d2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_83_sasha-banks_efd4d2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_83_sasha-banks_efd4d2",
+   "character_canonical": "sasha-banks",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "83",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sasha Banks"
+  },
+  "identity_hash": "fab02e447b71f664",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_corbin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-corbin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dusty",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-dusty",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/matte-elite-collection-elite-collection-series-83-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_wfd_series83",
+     "url": "https://wrestlingfiguredatabase.com/",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_series83",
+     "url": "https://toywiz.com/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-sasha",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-sasha-banks-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_corbin",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dusty",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Dusty Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Dusty Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Edge – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Edge"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Michael P.S. Hayes [Exclusi – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Michael P.S. Hayes"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Sasha Banks – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Sasha Banks"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_series83",
+     "text": "WWE Wrestling Elite Collection Series 83 Drew Mcintyre 7 Action Figure Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Part of Elite Collection Series 83, released January 2021.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "No Build-A-Figure component is mentioned in this product listing.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 26, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: 83",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$52.24 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "sasha-banks",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 26, 2019 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2021",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_83_king-corbin_35b3c7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_83_king-corbin_35b3c7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_83_king-corbin_35b3c7",
+   "character_canonical": "king-corbin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "83",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "King Corbin"
+  },
+  "identity_hash": "96a30ec70962b30b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_corbin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-corbin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dusty",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-dusty",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/matte-elite-collection-elite-collection-series-83-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_wfd_series83",
+     "url": "https://wrestlingfiguredatabase.com/",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_series83",
+     "url": "https://toywiz.com/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-king-corbin-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toyhypeusa.com/2021/03/22/mattel-wwe-elite-collection-series-83-king-corbin-figure-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_corbin",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dusty",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Dusty Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Dusty Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Edge – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Edge"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Michael P.S. Hayes [Exclusi – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Michael P.S. Hayes"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Sasha Banks – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Sasha Banks"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_series83",
+     "text": "WWE Wrestling Elite Collection Series 83 Drew Mcintyre 7 Action Figure Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Part of Elite Collection Series 83, released January 2021.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "No Build-A-Figure component is mentioned in this product listing.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches and comes ready to wreak havoc right out of the box! Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "The figure includes a full length multi-color fur coat that is made of plastic, a scepter, a pair of gripping hands, and a second pair of hands with the fingers sculpted apart.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "March 22, 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Availability: March 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "king-corbin",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Full length multi-color fur coat and scepter",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Multi-color fur coat",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Full length multi-color plastic fur coat and scepter",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Full length multi-color fur coat (plastic)",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Scepter",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Pair of gripping hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Second pair of hands with fingers sculpted apart",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "January 2021",
+      "evidence_quote_ids": [
+       "f_q2"
+      ]
+     },
+     {
+      "value": "March 2021",
+      "evidence_quote_ids": [
+       "f_q8"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_83_drew-mcintyre_e5893a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_83_drew-mcintyre_e5893a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_83_drew-mcintyre_e5893a",
+   "character_canonical": "drew-mcintyre",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "83",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Drew McIntyre"
+  },
+  "identity_hash": "4164511b39d45b4e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_corbin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-corbin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dusty",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-dusty",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/matte-elite-collection-elite-collection-series-83-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_wfd_series83",
+     "url": "https://wrestlingfiguredatabase.com/",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_series83",
+     "url": "https://toywiz.com/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-83-toy-figures-drew-mcintyre-elite83-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_corbin",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dusty",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Dusty Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Dusty Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Edge – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Edge"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Michael P.S. Hayes [Exclusi – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Michael P.S. Hayes"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Sasha Banks – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Sasha Banks"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_series83",
+     "text": "WWE Wrestling Elite Collection Series 83 Drew Mcintyre 7 Action Figure Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Part of Elite Collection Series 83, released January 2021.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "No Build-A-Figure component is mentioned in this product listing.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "one of WWE's biggest personalities and champions",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_83_dusty-rhodes_e18929": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_83_dusty-rhodes_e18929",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_83_dusty-rhodes_e18929",
+   "character_canonical": "dusty-rhodes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "83",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dusty Rhodes"
+  },
+  "identity_hash": "855d2b4ead72f38c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_corbin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-corbin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dusty",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-dusty",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/matte-elite-collection-elite-collection-series-83-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_wfd_series83",
+     "url": "https://wrestlingfiguredatabase.com/",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_series83",
+     "url": "https://toywiz.com/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toyhypeusa.com/2021/04/06/mattel-wwe-elite-collection-series-83-dusty-rhodes-figure-video-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/dusty-rhodes-wwe-elite-collection-series-83-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-83-dusty-rhodes-action-figure/mtgvb51",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_corbin",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dusty",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Dusty Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Dusty Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Edge – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Edge"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Michael P.S. Hayes [Exclusi – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Michael P.S. Hayes"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Sasha Banks – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Sasha Banks"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_series83",
+     "text": "WWE Wrestling Elite Collection Series 83 Drew Mcintyre 7 Action Figure Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Part of Elite Collection Series 83, released January 2021.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "No Build-A-Figure component is mentioned in this product listing.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Dusty Rhodes includes his entrance gear consisting of a black and red polka dot poncho, a voodoo hatter top hat, and three sets of interchangeable hands.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Availability: March 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "black and red polka dots in-ring gear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "cowboy boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Dusty's signature polka dot ring coat, black ring hat and two different interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "led the Dream Team against the Million Dollar Team in a traditional Survivor Series match",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Currently unavailable",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "GVB51",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dusty-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black and red polka dot poncho and top hat entrance gear; black and red polka dots in-ring gear",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black and red (polka dot)",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black and red polka dot poncho",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Voodoo hatter top hat",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Cowboy boots",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Black and red polka dot poncho",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Voodoo hatter top hat",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "Three sets of interchangeable hands",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "Two different interchangeable hands",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "GVB51",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_83_michael-ps-hayes_25c6ebcb4c04": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_83_michael-ps-hayes_25c6ebcb4c04",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_83_michael-ps-hayes_25c6ebcb4c04",
+   "character_canonical": "michael-ps-hayes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "83",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Michael P.S. Hayes"
+  },
+  "identity_hash": "e3444afd59ebd6d2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_corbin",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-corbin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_dusty",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-dusty",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_mcintyre",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-83-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/matte-elite-collection-elite-collection-series-83-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_wfd_series83",
+     "url": "https://wrestlingfiguredatabase.com/",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_series83",
+     "url": "https://toywiz.com/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite83-hayes",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/michael-hayes-headlines-wwe-elite-83-with-edge-drew-mcintyre-dusty-rhodes-sasha-banks-king-corbin/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_corbin",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_dusty",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Dusty Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Dusty Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 King Corbin – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "King Corbin"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Edge – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Edge"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Michael P.S. Hayes [Exclusi – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Michael P.S. Hayes"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_search_wfd_series83",
+     "text": "2021 WWE Mattel Elite Collection Series 83 Sasha Banks – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Sasha Banks"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_series83",
+     "text": "WWE Wrestling Elite Collection Series 83 Drew Mcintyre 7 Action Figure Mattel Toys - ToyWiz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Part of Elite Collection Series 83, released January 2021.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "Price: $42.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_mcintyre",
+     "text": "No Build-A-Figure component is mentioned in this product listing.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 11, 1985 @ WCCW",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "michael-ps-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Hayes is the Collectors' Edition figure, which is exclusive to Walmart stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "michael-ps-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "He comes with sunglasses that aren't accurate to his ring garb from his World Class Championship Wrestling days in the mid-1980s.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "michael-ps-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "the sunglasses were from WCW TV studio shots from October 1991",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "michael-ps-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "also expected to come with a cloth shirt — hopefully Badstreet U.S.A.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "michael-ps-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "available now for pre-order from Ringside Collectibles ($29.99, with an early January ship date)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "michael-ps-hayes",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "May 11, 1985 @ WCCW",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "resolved",
+    "value": "Collectors' Edition figure, exclusive to Walmart stores",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2929 @@
+{
+ "fp_wrestling_mattel_elite_94_british-bulldog_f3743a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_british-bulldog_f3743a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_british-bulldog_f3743a",
+   "character_canonical": "british-bulldog",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "British Bulldog"
+  },
+  "identity_hash": "a3ef951f2597a38d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge_s94",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_stephanie_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-stephanie-mcmahon-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "url": "https://wrestlingfigurenews.com/2022/03/31/wwe-elite-94-pre-orders-live-bret-hart-british-bulldog-stephanie-mcmahon-helmsley-msk-edge-mace/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toywiz_nashcarter_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-nash-carter-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/british-bulldog-exclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-british-elite94-08.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_series_name",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2_series_number_year",
+     "source_id": "w_wfd_edge_s94",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_set_price",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_debuts_and_lineup_detail",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_scale_price_single",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Price: $26.99 ... Scale: Approximately 6 inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_product_description",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8_features",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_toywiz_release_date_field",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Release Date: April 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2021
+     }
+    },
+    {
+     "quote_id": "w_q10_manufacturer_country",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Manufacturer: Mattel; Manufacturing Country: China; Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11_no_baf_search_context",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 29, 1992 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "His right leg of his tights feature a Union Jack style and 'Bulldog' text and his right leg is colored blue and red.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "His white boots feature 'B B' in red and blue",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "red and blue stylized wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Davey Boy Smith has a smiling headscan and braided locks, a molded choker",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "he also includes a Union Jack accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "british-bulldog",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 29, 1992 @ WWF SummerSlam",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Union Jack style tights with 'Bulldog' text, right leg colored blue and red; white boots feature 'B B' in red and blue; red and blue stylized wrist tape",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Smiling headscan with braided locks and a molded choker",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Union Jack style tights with 'Bulldog' text on right leg",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White boots feature 'B B' in red and blue",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Union Jack accessory",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_94_nash-carter_091aba": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_nash-carter_091aba",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_nash-carter_091aba",
+   "character_canonical": "nash-carter",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Nash Carter"
+  },
+  "identity_hash": "05443a181783a284",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge_s94",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_stephanie_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-stephanie-mcmahon-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "url": "https://wrestlingfigurenews.com/2022/03/31/wwe-elite-94-pre-orders-live-bret-hart-british-bulldog-stephanie-mcmahon-helmsley-msk-edge-mace/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toywiz_nashcarter_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-nash-carter-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-nash-carter",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-nash-carter-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_series_name",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2_series_number_year",
+     "source_id": "w_wfd_edge_s94",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_set_price",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_debuts_and_lineup_detail",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_scale_price_single",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Price: $26.99 ... Scale: Approximately 6 inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_product_description",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8_features",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_toywiz_release_date_field",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Release Date: April 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2021
+     }
+    },
+    {
+     "quote_id": "w_q10_manufacturer_country",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Manufacturer: Mattel; Manufacturing Country: China; Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11_no_baf_search_context",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2022",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 7, 2021 @ NXT TakOver: Stand & Deliver",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "nash-carter",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 7, 2021 @ NXT TakOver: Stand & Deliver",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_94_bret-hit-man-hart_25e94cd98c25": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_bret-hit-man-hart_25e94cd98c25",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_bret-hit-man-hart_25e94cd98c25",
+   "character_canonical": "bret-hit-man-hart",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Bret \"Hit Man\" Hart"
+  },
+  "identity_hash": "f66f84961841ce21",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge_s94",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_stephanie_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-stephanie-mcmahon-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "url": "https://wrestlingfigurenews.com/2022/03/31/wwe-elite-94-pre-orders-live-bret-hart-british-bulldog-stephanie-mcmahon-helmsley-msk-edge-mace/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toywiz_nashcarter_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-nash-carter-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-bret-hart-action-figure-regular/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-bret-hart-elite94-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_series_name",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2_series_number_year",
+     "source_id": "w_wfd_edge_s94",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_set_price",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_debuts_and_lineup_detail",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_scale_price_single",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Price: $26.99 ... Scale: Approximately 6 inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_product_description",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8_features",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_toywiz_release_date_field",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Release Date: April 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2021
+     }
+    },
+    {
+     "quote_id": "w_q10_manufacturer_country",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Manufacturer: Mattel; Manufacturing Country: China; Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11_no_baf_search_context",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "April 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$25.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "black and pink with a pink and white Hart symbol in the front and also includes pink tights with black heart symbols and black designs on the side. He's rounded out with pink and white boots with black tips",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "removable pink sunglasses",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "black elbow pads, pink wrist tape and matching black knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Intercontinental Championship accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "This attire is from SummerSlam 1992 in the match for the Intercontinental Championship against British Bulldog",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "bret-hit-man-hart",
+      "character_variant": "pink-tights",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Pink and black attire from SummerSlam 1992 against British Bulldog, with pink and white Hart symbol, pink tights with black heart symbols, pink and white boots with black tips, removable pink sunglasses, and Intercontinental Championship accessory",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q10",
+     "f_q12",
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "April 2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_94_wes-lee_0d428f300b4d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_wes-lee_0d428f300b4d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_wes-lee_0d428f300b4d",
+   "character_canonical": "wes-lee",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Wes Lee"
+  },
+  "identity_hash": "3e76d36e8be4505c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge_s94",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_stephanie_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-stephanie-mcmahon-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "url": "https://wrestlingfigurenews.com/2022/03/31/wwe-elite-94-pre-orders-live-bret-hart-british-bulldog-stephanie-mcmahon-helmsley-msk-edge-mace/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toywiz_nashcarter_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-nash-carter-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-wes-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-wes-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-wes-lee-elite94-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_series_name",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2_series_number_year",
+     "source_id": "w_wfd_edge_s94",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_set_price",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_debuts_and_lineup_detail",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_scale_price_single",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Price: $26.99 ... Scale: Approximately 6 inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_product_description",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8_features",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_toywiz_release_date_field",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Release Date: April 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2021
+     }
+    },
+    {
+     "quote_id": "w_q10_manufacturer_country",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Manufacturer: Mattel; Manufacturing Country: China; Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11_no_baf_search_context",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 7, 2021 @ NXT TakeOver: Stand & Deliver",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "black, white and green ring shorts with MSK in the front",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "black knee pads, black kick pad style boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "removable black, white, blue, green and purple ring jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "a modern hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "white wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "interchangeable hand accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "wes-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 7, 2021 @ NXT TakeOver: Stand & Deliver",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black, white and green ring shorts with MSK in the front; black knee pads, black kick pad style boots; removable black, white, blue, green and purple ring jacket",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "a modern hairstyle",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "white wrist tape",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_94_edge_d5ad31": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_edge_d5ad31",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_edge_d5ad31",
+   "character_canonical": "edge",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Edge"
+  },
+  "identity_hash": "f689b143dc43d695",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_edge_s94",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-94-edge",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_stephanie_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-stephanie-mcmahon-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "url": "https://wrestlingfigurenews.com/2022/03/31/wwe-elite-94-pre-orders-live-bret-hart-british-bulldog-stephanie-mcmahon-helmsley-msk-edge-mace/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toywiz_nashcarter_s94",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-nash-carter-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-edge-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-edge-elite94-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_series_name",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q2_series_number_year",
+     "source_id": "w_wfd_edge_s94",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4_set_price",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_debuts_and_lineup_detail",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_scale_price_single",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Price: $26.99 ... Scale: Approximately 6 inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7_product_description",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8_features",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_toywiz_release_date_field",
+     "source_id": "w_toywiz_stephanie_s94",
+     "text": "Release Date: April 2021",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Stephanie McMahon",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2021
+     }
+    },
+    {
+     "quote_id": "w_q10_manufacturer_country",
+     "source_id": "w_wfd_edge_s94",
+     "text": "Manufacturer: Mattel; Manufacturing Country: China; Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": 2022
+     }
+    },
+    {
+     "quote_id": "w_q11_no_baf_search_context",
+     "source_id": "w_wrestlingfigurenews_s94_preorder",
+     "text": "WWE Elite 94 Pre-Orders Live: Bret Hart, British Bulldog, Stephanie McMahon-Helmsley, MSK, Edge & Mace",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 94",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "removable white, black and red entrance coat",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "white, black and red 'Rated R' style ring tights",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Red and white 'Rated R' style knee pads and kickpad boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "serious headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "accurate tattoos",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "interchangeable hand accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Serious headsculpt",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable white, black and red entrance coat",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable white, black and red entrance coat",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hand accessories",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_94_mace_8b30b35b06b6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_mace_8b30b35b06b6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_mace_8b30b35b06b6",
+   "character_canonical": "mace",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "MACE"
+  },
+  "identity_hash": "d212eae02f1f7ea9",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite94_mace",
+     "url": "https://wrestlingfiguredatabase.com/products/elite94-mace",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite94_stephanie",
+     "url": "https://wrestlingfiguredatabase.com/products/stephanie-mcmahon",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite94_mace",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-mace-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite94_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/02/12/wwe-elite-94-image-reveals-stephanie-mcmahon-bret-hart-british-bulldog-mace/",
+     "source_type": "toy_news",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-mace-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://bkcollectables.com/products/wwe-elite-series-94-mace",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite94_mace",
+     "text": "2022 WWE Mattel Elite Collection Series 94 MACE",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022,
+      "character_canonical": "Mace"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite94_stephanie",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Stephanie McMahon",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022,
+      "character_canonical": "Stephanie McMahon"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite94_mace",
+     "text": "WWE Wrestling Elite Collection Series 94 Mace 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Mace"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite94_mace",
+     "text": "WWE ring gear and iconic accessories\" with \"amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Mace"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wrestlingfigurenews_elite94_reveal",
+     "text": "WWE Elite 94 Image Reveals: Stephanie McMahon, Bret Hart, British Bulldog, Mace",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mace",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mace",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mace",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$44.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mace",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$44.99 CAD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "mace",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_94_stephanie-mcmaho_570466": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_94_stephanie-mcmaho_570466",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_94_stephanie-mcmaho_570466",
+   "character_canonical": "stephanie-mcmahon",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "94",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stephanie McMahon"
+  },
+  "identity_hash": "ad86339093f919a1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite94_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-94-toy-figures-complete-set-elite94-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite94_mace",
+     "url": "https://wrestlingfiguredatabase.com/products/elite94-mace",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite94_stephanie",
+     "url": "https://wrestlingfiguredatabase.com/products/stephanie-mcmahon",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite94_mace",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-mace-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlingfigurenews_elite94_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/02/12/wwe-elite-94-image-reveals-stephanie-mcmahon-bret-hart-british-bulldog-mace/",
+     "source_type": "toy_news",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-94-stephanie-mcmahon-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/stephanie-mcmahon",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite94_set",
+     "text": "WWE Elite 94 - Complete Set of 7 WWE Toy Wrestling Action Figures by Mattel! This set includes: British Bulldog, Edge, Mace, Nash Carter, Wes Lee, Bret Hart & Stephanie McMahon!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite94_set",
+     "text": "$147.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite94_mace",
+     "text": "2022 WWE Mattel Elite Collection Series 94 MACE",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022,
+      "character_canonical": "Mace"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite94_stephanie",
+     "text": "2022 WWE Mattel Elite Collection Series 94 Stephanie McMahon",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022,
+      "character_canonical": "Stephanie McMahon"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite94_mace",
+     "text": "WWE Wrestling Elite Collection Series 94 Mace 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Mace"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite94_mace",
+     "text": "WWE ring gear and iconic accessories\" with \"amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Mace"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wrestlingfigurenews_elite94_reveal",
+     "text": "WWE Elite 94 Image Reveals: Stephanie McMahon, Bret Hart, British Bulldog, Mace",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2022,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "stephanie-mcmahon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessoriesall with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "stephanie-mcmahon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Get all the WWE Elite Collection figures and let the collecting and battles begin!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Retail: $26.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "stephanie-mcmahon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: Aug. 21, 2000 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2022,
+      "character_canonical": "stephanie-mcmahon",
+      "character_variant": "attire-aug-21-2000-wwf-raw",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 21, 2000 @ WWF Raw",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$26.99",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 26.99,
+     "currency": null,
+     "price_kind": "msrp",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ }
+}

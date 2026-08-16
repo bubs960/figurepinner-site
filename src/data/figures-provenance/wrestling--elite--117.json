@@ -2016,5 +2016,1060 @@
     "status": "unresolved"
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_117_rhea-ripley_cd53b0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_117_rhea-ripley_cd53b0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_117_rhea-ripley_cd53b0",
+   "character_canonical": "rhea-ripley",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "117",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rhea Ripley"
+  },
+  "identity_hash": "ed44f5f464c12acf",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_axiom",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-117-axiom",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_ripley",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-117-rhea-ripley",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_ripley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-117-rhea-ripley-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_fandomcomicshop_s117",
+     "url": "https://fandomcomicshop.com/products/wwe-elite-collection-series-117-action-figure-select-figures",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-117-toy-figures-rhea-ripley-elite117-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.maziply.com/products/wwe-wrestling-elite-collection-series-117-rhea-ripley-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_axiom",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_axiom",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_axiom",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_axiom",
+     "text": "Line: Elite Collection Mainline; Series: 117",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_ripley",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rhea Ripley",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_ripley",
+     "text": "Line: Elite Collection Mainline; Series: 117",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Rhea Ripley",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_ripley",
+     "text": "July 2025",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_ripley",
+     "text": "True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_ripley",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_ripley",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rhea Ripley",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "Seth \"Freaking\" Rollins, Roman Reigns, Grayson Waller, Rhea Ripley, Naomi, Axiom",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 117",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "6-inch tall scale figures",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "25 points of articulation, additional hands and accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "$25.67",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 117",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "Designed for recreating matches from Monday Night Raw, Friday Night Smackdown, NXT, and WWE Network PPVs",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "117 (7)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Black singlet with corset-style top and stud detailing, as well as thigh-high black boots and fishnet stockings",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a black entrance vest with stud detailing and Australian flag",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "long black hair, black eye makeup and lipstick, and a sinister smile",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "an additional pair of hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$ 24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Sold out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Year Released: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "rhea-ripley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Made In: Vietnam",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black singlet with corset-style top and stud detailing, as well as thigh-high black boots and fishnet stockings, and a black entrance vest with stud detailing and Australian flag",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Long black hair, black eye makeup and lipstick, sinister smile",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Australian flag on entrance vest",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Fishnet stockings",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional pair of hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$79.99",
+      "evidence_quote_ids": [
+       "w_q10"
+      ],
+      "price_detail": {
+       "amount": 79.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "w_toywiz_ripley"
+      }
+     },
+     {
+      "value": "$34.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 34.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_117_axiom_76cb51": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_117_axiom_76cb51",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_117_axiom_76cb51",
+   "character_canonical": "axiom",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "117",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Axiom"
+  },
+  "identity_hash": "66a2195de00d6641",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_axiom",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-117-axiom",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_ripley",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-117-rhea-ripley",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd_collection_101_150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toywiz_ripley",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-117-rhea-ripley-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_fandomcomicshop_s117",
+     "url": "https://fandomcomicshop.com/products/wwe-elite-collection-series-117-action-figure-select-figures",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-117-axiom-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-117-axiom",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-117-toy-figures-axiom-elite117-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_axiom",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_axiom",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_axiom",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_axiom",
+     "text": "Line: Elite Collection Mainline; Series: 117",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_ripley",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rhea Ripley",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_ripley",
+     "text": "Line: Elite Collection Mainline; Series: 117",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "Rhea Ripley",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_ripley",
+     "text": "July 2025",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_ripley",
+     "text": "True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_ripley",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_ripley",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rhea Ripley",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "Seth \"Freaking\" Rollins, Roman Reigns, Grayson Waller, Rhea Ripley, Naomi, Axiom",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 117",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "6-inch tall scale figures",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "25 points of articulation, additional hands and accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "$25.67",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 117",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_fandomcomicshop_s117",
+     "text": "Designed for recreating matches from Monday Night Raw, Friday Night Smackdown, NXT, and WWE Network PPVs",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd_collection_101_150",
+     "text": "117 (7)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Fully articulated for dynamic posing and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "axiom",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "signature ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "axiom",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "advanced TrueFX technology for realistic facial details",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Retail: $34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "axiom",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "blue version of his lucha-style mask, featuring elaborate red and gold detailing and a black face screen.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "axiom",
+      "character_variant": "blue",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "He's ready to hit the Golden Ratio with blue tights featuring ornate gold and red detailing, as well as blue sleeves, blue-and-gold kickpad boots, and blue knee pads with golden skull emblem.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "axiom",
+      "character_variant": "blue",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "His accessories include an additional pair of hands for versatile posing options and an NXT Tag Team Championship title belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "axiom",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Signature ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Blue version of his lucha-style mask, featuring elaborate red and gold detailing and a black face screen; blue tights featuring ornate gold and red detailing, blue sleeves, blue-and-gold kickpad boots, and blue knee pads with golden skull emblem.",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional pair of hands for posing",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "NXT Tag Team Championship title belt",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$34.99",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 34.99,
+     "currency": "USD",
+     "price_kind": null,
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    }
+   }
+  ]
  }
 }

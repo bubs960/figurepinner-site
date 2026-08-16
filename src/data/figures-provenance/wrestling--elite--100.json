@@ -1,0 +1,2503 @@
+{
+ "fp_wrestling_mattel_elite_100_andre-the-giant_16c1c6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_100_andre-the-giant_16c1c6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_100_andre-the-giant_16c1c6",
+   "character_canonical": "andre-the-giant",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "100",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Andre the Giant"
+  },
+  "identity_hash": "d87efa7e3ab2114d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=8",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite100",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-complete-set-elite100-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-100-revealed-andre-the-giant-stunning-steve-austin-becky-lynch-the-rock-rey-mysterio-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_ee_case_blocked",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-100-action-figure-case-of-8/mtgdf60d2",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_404",
+     "url": "https://www.toywiz.com/wwe-elite-collection-series-100-set-of-6-figures/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-100-andre-the-giant",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-100-andre-the-giant-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s100",
+     "text": "\"Stunning\" Steve Austin (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Steve Austin",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant [Chase] (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "character_variant": "Chase",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s100",
+     "text": "Becky Lynch (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s100",
+     "text": "John Cena (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "John Cena",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s100",
+     "text": "Rey Mysterio (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s100",
+     "text": "The Rock (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Rock",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_elite100",
+     "text": "WWE Elite 100 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Andre the Giant, John Cena, The Rock, Rey Mysterio, Becky Lynch & Stunning Steve Austin!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside_elite100",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfn_reveal",
+     "text": "The lineup includes: NWA/WCW era 'Stunning' Steve Austin, with red strap NWA TV Championship; Becky Lynch, with WWE SmackDown Women's Championship; John Cena with WWE spinner Championship; Rey Mysterio with WCW Cruiserweight Championship; The Rock with his never released custom Brahma Bull WWE Championship; Andre the Giant with his WWE Championship; Andre the Giant (Chase)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2022 WWE Mattel Elite Collection Series 100 Andre the Giant",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "andre-the-giant",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "$54.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "andre-the-giant",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "March 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "andre-the-giant",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2023",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_100_becky-lynch_827a94": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_100_becky-lynch_827a94",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_100_becky-lynch_827a94",
+   "character_canonical": "becky-lynch",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "100",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Becky Lynch"
+  },
+  "identity_hash": "f6327ede5214c9b4",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=8",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite100",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-complete-set-elite100-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-100-revealed-andre-the-giant-stunning-steve-austin-becky-lynch-the-rock-rey-mysterio-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_ee_case_blocked",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-100-action-figure-case-of-8/mtgdf60d2",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_404",
+     "url": "https://www.toywiz.com/wwe-elite-collection-series-100-set-of-6-figures/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-100-becky-lynch",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://creations.mattel.com/products/wwe-elite-collection-becky-lynch-action-figure-hkn83",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s100",
+     "text": "\"Stunning\" Steve Austin (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Steve Austin",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant [Chase] (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "character_variant": "Chase",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s100",
+     "text": "Becky Lynch (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s100",
+     "text": "John Cena (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "John Cena",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s100",
+     "text": "Rey Mysterio (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s100",
+     "text": "The Rock (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Rock",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_elite100",
+     "text": "WWE Elite 100 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Andre the Giant, John Cena, The Rock, Rey Mysterio, Becky Lynch & Stunning Steve Austin!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside_elite100",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfn_reveal",
+     "text": "The lineup includes: NWA/WCW era 'Stunning' Steve Austin, with red strap NWA TV Championship; Becky Lynch, with WWE SmackDown Women's Championship; John Cena with WWE spinner Championship; Rey Mysterio with WCW Cruiserweight Championship; The Rock with his never released custom Brahma Bull WWE Championship; Andre the Giant with his WWE Championship; Andre the Giant (Chase)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 26, 2021 @ WWE Extreme Rules",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 100",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Price: $23.00",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Each WWE® figure features highly detailed TrueFX™ technology for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "25 points of articulation for extreme posability",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Includes interchangeable hands and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Sept. 26, 2021 @ WWE Extreme Rules",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_100_rey-mysterio_7fd343": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_100_rey-mysterio_7fd343",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_100_rey-mysterio_7fd343",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "100",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "ed52564c9adff8e3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=8",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite100",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-complete-set-elite100-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-100-revealed-andre-the-giant-stunning-steve-austin-becky-lynch-the-rock-rey-mysterio-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_ee_case_blocked",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-100-action-figure-case-of-8/mtgdf60d2",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_404",
+     "url": "https://www.toywiz.com/wwe-elite-collection-series-100-set-of-6-figures/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-100-rey-mysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-rey-mysterio-elite100-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s100",
+     "text": "\"Stunning\" Steve Austin (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Steve Austin",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant [Chase] (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "character_variant": "Chase",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s100",
+     "text": "Becky Lynch (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s100",
+     "text": "John Cena (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "John Cena",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s100",
+     "text": "Rey Mysterio (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s100",
+     "text": "The Rock (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Rock",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_elite100",
+     "text": "WWE Elite 100 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Andre the Giant, John Cena, The Rock, Rey Mysterio, Becky Lynch & Stunning Steve Austin!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside_elite100",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfn_reveal",
+     "text": "The lineup includes: NWA/WCW era 'Stunning' Steve Austin, with red strap NWA TV Championship; Becky Lynch, with WWE SmackDown Women's Championship; John Cena with WWE spinner Championship; Rey Mysterio with WCW Cruiserweight Championship; The Rock with his never released custom Brahma Bull WWE Championship; Andre the Giant with his WWE Championship; Andre the Giant (Chase)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Rey's jumping out the sky and into this line with his iconic red mask with white and green detailing!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Mysterio's wearing red tights with yellow cross and triangle designs, as well as white and green question-mark patterns!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "His look is complete with white laced boots, red armbands, and red wristbands with white and green details.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Mysterio's accessories include alternate hands and the line debut of the classic WCW Cruiserweight Championship title belt!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Iconic red mask with white and green detailing",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red mask with white and green detailing; red tights with yellow cross and triangle designs, white and green question-mark patterns; white laced boots; red armbands and red wristbands with white and green details",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Red mask with white and green detailing",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Red tights with yellow cross and triangle designs and white/green question-mark patterns",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "White laced boots, red armbands, and red wristbands with white and green details",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Alternate hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WCW Cruiserweight Championship title belt (line debut)",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_100_stunning-steve-a_e9a710": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_100_stunning-steve-a_e9a710",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_100_stunning-steve-a_e9a710",
+   "character_canonical": "stunning-steve-austin",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "100",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "\"Stunning\" Steve Austin"
+  },
+  "identity_hash": "10267a02a5f2852e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=8",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite100",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-complete-set-elite100-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-100-revealed-andre-the-giant-stunning-steve-austin-becky-lynch-the-rock-rey-mysterio-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_ee_case_blocked",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-100-action-figure-case-of-8/mtgdf60d2",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_404",
+     "url": "https://www.toywiz.com/wwe-elite-collection-series-100-set-of-6-figures/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-100-stunning-steve-austin",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-steve-austin-elite100-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-100-stunning-steve-austin-action-figure-w-television-title-belt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s100",
+     "text": "\"Stunning\" Steve Austin (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Steve Austin",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant [Chase] (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "character_variant": "Chase",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s100",
+     "text": "Becky Lynch (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s100",
+     "text": "John Cena (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "John Cena",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s100",
+     "text": "Rey Mysterio (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s100",
+     "text": "The Rock (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Rock",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_elite100",
+     "text": "WWE Elite 100 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Andre the Giant, John Cena, The Rock, Rey Mysterio, Becky Lynch & Stunning Steve Austin!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside_elite100",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfn_reveal",
+     "text": "The lineup includes: NWA/WCW era 'Stunning' Steve Austin, with red strap NWA TV Championship; Becky Lynch, with WWE SmackDown Women's Championship; John Cena with WWE spinner Championship; Rey Mysterio with WCW Cruiserweight Championship; The Rock with his never released custom Brahma Bull WWE Championship; Andre the Giant with his WWE Championship; Andre the Giant (Chase)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 27, 1991 @ WCW Halloween Havoc",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Austin's wearing black trunks with a vivid, multicolored allover print, as well as black knee pads, and white boots and wrist tape. His look is complete with a red fabric robe with black belt and detailing.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "he swaggers into this series with a sneering headscan and blond hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "His accessories include alternate hands and the line debut of the classic, red-strap design of the WCW Television Championship title belt!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$42.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "stunning-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 27, 1991 @ WCW Halloween Havoc",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black trunks with vivid multicolored allover print, black knee pads, white boots, white wrist tape, red fabric robe with black belt and detailing",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Sneering headscan with blond hair",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Red-strap design of the classic WCW Television Championship title belt (line debut)",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "WCW Television Championship title belt (red-strap design)",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ],
+      "price_detail": {
+       "amount": 21.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$42.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 42.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_100_the-rock_3c447b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_100_the-rock_3c447b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_100_the-rock_3c447b",
+   "character_canonical": "the-rock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "100",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Rock"
+  },
+  "identity_hash": "a85cc6cfe102c6ba",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=8",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite100",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-complete-set-elite100-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-100-revealed-andre-the-giant-stunning-steve-austin-becky-lynch-the-rock-rey-mysterio-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_ee_case_blocked",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-100-action-figure-case-of-8/mtgdf60d2",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_404",
+     "url": "https://www.toywiz.com/wwe-elite-collection-series-100-set-of-6-figures/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-100-the-rock",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-100-the-rock-action-figure-w-brahma-bull-belt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-the-rock-elite100-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s100",
+     "text": "\"Stunning\" Steve Austin (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Steve Austin",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant [Chase] (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "character_variant": "Chase",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s100",
+     "text": "Becky Lynch (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s100",
+     "text": "John Cena (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "John Cena",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s100",
+     "text": "Rey Mysterio (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s100",
+     "text": "The Rock (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Rock",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_elite100",
+     "text": "WWE Elite 100 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Andre the Giant, John Cena, The Rock, Rey Mysterio, Becky Lynch & Stunning Steve Austin!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside_elite100",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfn_reveal",
+     "text": "The lineup includes: NWA/WCW era 'Stunning' Steve Austin, with red strap NWA TV Championship; Becky Lynch, with WWE SmackDown Women's Championship; John Cena with WWE spinner Championship; Rey Mysterio with WCW Cruiserweight Championship; The Rock with his never released custom Brahma Bull WWE Championship; Andre the Giant with his WWE Championship; Andre the Giant (Chase)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 100",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "highly articulated",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "He's wearing black trunks with red 'The Rock' logo, as well as black elbow pads, knee pads, and boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "His look is complete with a black fabric jersey featuring blue-and-silver stripes and 'The Rock' Brahma Bull logo.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "featuring a smiling headscan and his classic sideburns",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "The Rock's accessories include The Rock's famous sunglasses, two sets of alternate hands, and the long-demanded line debut of The Rock's legendary Brahma Bull version of the WWE Championship title belt!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": "null"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black fabric jersey featuring blue-and-silver stripes and 'The Rock' Brahma Bull logo; black trunks with red 'The Rock' logo, black elbow pads, knee pads, and boots",
+    "evidence_quote_ids": [
+     "f_q10",
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black trunks with red logo, black elbow pads, knee pads, and boots",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Smiling headscan with classic sideburns",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The Rock's famous sunglasses",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Two sets of alternate hands",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "long-demanded line debut of The Rock's legendary Brahma Bull version of the WWE Championship title belt",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "The Rock's sunglasses",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Two sets of alternate hands",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Brahma Bull version of the WWE Championship title belt",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2023",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$64.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 64.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q9"
+      ],
+      "price_detail": {
+       "amount": 29.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_100_john-cena_c7882a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_100_john-cena_c7882a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_100_john-cena_c7882a",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "100",
+   "fandom": "wrestling",
+   "year": 2023,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "1a178755897a0bcf",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=8",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite100",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-100-toy-figures-complete-set-elite100-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfn_reveal",
+     "url": "https://wrestlingfigurenews.com/2022/07/21/wwe-elite-100-revealed-andre-the-giant-stunning-steve-austin-becky-lynch-the-rock-rey-mysterio-john-cena/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_ee_case_blocked",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-100-action-figure-case-of-8/mtgdf60d2",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_404",
+     "url": "https://www.toywiz.com/wwe-elite-collection-series-100-set-of-6-figures/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2022-wwe-mattel-elite-collection-series-100-john-cena",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://forum.wrestlingfigs.com/thread/372293/elite-series-100-thread",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-100-john-cena-action-figure-w-spinner-belt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s100",
+     "text": "\"Stunning\" Steve Austin (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Steve Austin",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s100",
+     "text": "Andre the Giant [Chase] (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Andre the Giant",
+      "character_variant": "Chase",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s100",
+     "text": "Becky Lynch (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Becky Lynch",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s100",
+     "text": "John Cena (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "John Cena",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s100",
+     "text": "Rey Mysterio (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s100",
+     "text": "The Rock (2023)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "The Rock",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2023
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_ringside_elite100",
+     "text": "WWE Elite 100 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes: Andre the Giant, John Cena, The Rock, Rey Mysterio, Becky Lynch & Stunning Steve Austin!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_ringside_elite100",
+     "text": "$139.99",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfn_reveal",
+     "text": "The lineup includes: NWA/WCW era 'Stunning' Steve Austin, with red strap NWA TV Championship; Becky Lynch, with WWE SmackDown Women's Championship; John Cena with WWE spinner Championship; Rey Mysterio with WCW Cruiserweight Championship; The Rock with his never released custom Brahma Bull WWE Championship; Andre the Giant with his WWE Championship; Andre the Giant (Chase)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2023",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2023,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "WWE Wrestling Elite Collection Series 100 John Cena Action Figure w Spinner Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Ages 8 and up",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "John Cena",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Spinner Belt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Spinner Belt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Spinner Belt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

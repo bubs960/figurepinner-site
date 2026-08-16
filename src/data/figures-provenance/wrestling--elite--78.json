@@ -1,0 +1,3400 @@
+{
+ "fp_wrestling_mattel_elite_78_randy-orton_ebf517": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_randy-orton_ebf517",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_randy-orton_ebf517",
+   "character_canonical": "randy-orton",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Randy Orton"
+  },
+  "identity_hash": "96153898c51df67a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_riddle",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-riddle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_comicbook_elite78",
+     "url": "https://comicbook.com/wwe/news/wwe-figures-kofi-kingston-naomi-comic-con-elite-78/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kofi",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_toywiz_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlezone_review",
+     "url": "https://www.wrestlezone.com/news/1198174-collectors-corner-mattel-wwe-elite-78-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-randy-orton-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-randyorton",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_riddle",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_riddle",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_riddle",
+     "text": "Attire Date: June 1, 2019 @ NXT Takeover: XXV.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_comicbook_elite78",
+     "text": "Kofi Kingston, Naomi, Matt Riddle, Randy Orton, and R-Truth",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_comicbook_elite78",
+     "text": "Elite Collection Series 78 Action Figure Case (999W)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_comicbook_elite78",
+     "text": "8 individually packaged figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_comicbook_elite78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_comicbook_elite78",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_comicbook_elite78",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_comicbook_elite78",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_comicbook_elite78",
+     "text": "one half of the SmackDown Tag Team Championships",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kofi Kingston",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_comicbook_elite78",
+     "text": "SmackDown Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_comicbook_elite78",
+     "text": "that killer green glow effect",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_comicbook_elite78",
+     "text": "the 24/7 Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_comicbook_elite78",
+     "text": "a removable jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_comicbook_elite78",
+     "text": "swappable hands and a removable vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Randy Orton",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_kofi",
+     "text": "October 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_kofi",
+     "text": "Elite Collection Series 71-80",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_kofi",
+     "text": "deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_wfd_graham",
+     "text": "Release Date: \"2020\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q21",
+     "source_id": "w_wfd_graham",
+     "text": "Retailer Exclusivity: \"Walmart\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: Aug. 11, 2019 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 11, 2019 @ WWE SummerSlam",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "swappable hands and a removable vest",
+    "evidence_quote_ids": [
+     "w_q16"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_78_r-truth_2faa23": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_r-truth_2faa23",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_r-truth_2faa23",
+   "character_canonical": "r-truth",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "R-Truth"
+  },
+  "identity_hash": "7dd38d271036edda",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_riddle",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-riddle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_comicbook_elite78",
+     "url": "https://comicbook.com/wwe/news/wwe-figures-kofi-kingston-naomi-comic-con-elite-78/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kofi",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_toywiz_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlezone_review",
+     "url": "https://www.wrestlezone.com/news/1198174-collectors-corner-mattel-wwe-elite-78-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-truth",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-78-toy-figures-r-truth-elite78-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_riddle",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_riddle",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_riddle",
+     "text": "Attire Date: June 1, 2019 @ NXT Takeover: XXV.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_comicbook_elite78",
+     "text": "Kofi Kingston, Naomi, Matt Riddle, Randy Orton, and R-Truth",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_comicbook_elite78",
+     "text": "Elite Collection Series 78 Action Figure Case (999W)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_comicbook_elite78",
+     "text": "8 individually packaged figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_comicbook_elite78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_comicbook_elite78",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_comicbook_elite78",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_comicbook_elite78",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_comicbook_elite78",
+     "text": "one half of the SmackDown Tag Team Championships",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kofi Kingston",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_comicbook_elite78",
+     "text": "SmackDown Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_comicbook_elite78",
+     "text": "that killer green glow effect",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_comicbook_elite78",
+     "text": "the 24/7 Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_comicbook_elite78",
+     "text": "a removable jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_comicbook_elite78",
+     "text": "swappable hands and a removable vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Randy Orton",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_kofi",
+     "text": "October 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_kofi",
+     "text": "Elite Collection Series 71-80",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_kofi",
+     "text": "deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_wfd_graham",
+     "text": "Release Date: \"2020\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q21",
+     "source_id": "w_wfd_graham",
+     "text": "Retailer Exclusivity: \"Walmart\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "bold and colorful",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "October 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Attire Date: Jan. 29, 2019 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Series: 78",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "the 24/7 Championship",
+    "evidence_quote_ids": [
+     "w_q14"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "bold and colorful",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "the 24/7 Championship",
+    "evidence_quote_ids": [
+     "w_q14"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "October 2020",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$89.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 89.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q13"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_78_kofi-kingston_162501": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_kofi-kingston_162501",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_kofi-kingston_162501",
+   "character_canonical": "kofi-kingston",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kofi Kingston"
+  },
+  "identity_hash": "c349193e88de098a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_riddle",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-riddle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_comicbook_elite78",
+     "url": "https://comicbook.com/wwe/news/wwe-figures-kofi-kingston-naomi-comic-con-elite-78/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kofi",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_toywiz_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlezone_review",
+     "url": "https://www.wrestlezone.com/news/1198174-collectors-corner-mattel-wwe-elite-78-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-kofi",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_riddle",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_riddle",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_riddle",
+     "text": "Attire Date: June 1, 2019 @ NXT Takeover: XXV.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_comicbook_elite78",
+     "text": "Kofi Kingston, Naomi, Matt Riddle, Randy Orton, and R-Truth",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_comicbook_elite78",
+     "text": "Elite Collection Series 78 Action Figure Case (999W)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_comicbook_elite78",
+     "text": "8 individually packaged figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_comicbook_elite78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_comicbook_elite78",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_comicbook_elite78",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_comicbook_elite78",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_comicbook_elite78",
+     "text": "one half of the SmackDown Tag Team Championships",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kofi Kingston",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_comicbook_elite78",
+     "text": "SmackDown Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_comicbook_elite78",
+     "text": "that killer green glow effect",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_comicbook_elite78",
+     "text": "the 24/7 Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_comicbook_elite78",
+     "text": "a removable jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_comicbook_elite78",
+     "text": "swappable hands and a removable vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Randy Orton",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_kofi",
+     "text": "October 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_kofi",
+     "text": "Elite Collection Series 71-80",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_kofi",
+     "text": "deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_wfd_graham",
+     "text": "Release Date: \"2020\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q21",
+     "source_id": "w_wfd_graham",
+     "text": "Retailer Exclusivity: \"Walmart\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Release Date: October 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Attire Date: Oct. 4, 2019 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Series: 78",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 4, 2019 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Amazing detail capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "October 2020",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_78_naomi_71eccd": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_naomi_71eccd",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_naomi_71eccd",
+   "character_canonical": "naomi",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Naomi"
+  },
+  "identity_hash": "577d63d0c0c1705a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_riddle",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-riddle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_comicbook_elite78",
+     "url": "https://comicbook.com/wwe/news/wwe-figures-kofi-kingston-naomi-comic-con-elite-78/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kofi",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_toywiz_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlezone_review",
+     "url": "https://www.wrestlezone.com/news/1198174-collectors-corner-mattel-wwe-elite-78-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-naomi-action-figure-feel-the-glow/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-naomi",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_riddle",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_riddle",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_riddle",
+     "text": "Attire Date: June 1, 2019 @ NXT Takeover: XXV.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_comicbook_elite78",
+     "text": "Kofi Kingston, Naomi, Matt Riddle, Randy Orton, and R-Truth",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_comicbook_elite78",
+     "text": "Elite Collection Series 78 Action Figure Case (999W)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_comicbook_elite78",
+     "text": "8 individually packaged figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_comicbook_elite78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_comicbook_elite78",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_comicbook_elite78",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_comicbook_elite78",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_comicbook_elite78",
+     "text": "one half of the SmackDown Tag Team Championships",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kofi Kingston",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_comicbook_elite78",
+     "text": "SmackDown Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_comicbook_elite78",
+     "text": "that killer green glow effect",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_comicbook_elite78",
+     "text": "the 24/7 Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_comicbook_elite78",
+     "text": "a removable jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_comicbook_elite78",
+     "text": "swappable hands and a removable vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Randy Orton",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_kofi",
+     "text": "October 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_kofi",
+     "text": "Elite Collection Series 71-80",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_kofi",
+     "text": "deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_wfd_graham",
+     "text": "Release Date: \"2020\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q21",
+     "source_id": "w_wfd_graham",
+     "text": "Retailer Exclusivity: \"Walmart\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$119.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Attire Date: Apr. 2, 2017 @ WWE WrestleMania 33",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "naomi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Series: 78",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 2, 2017 @ WWE WrestleMania 33",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "That killer green glow effect",
+    "evidence_quote_ids": [
+     "w_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "SmackDown Women's Championship",
+    "evidence_quote_ids": [
+     "w_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "SmackDown Women's Championship",
+    "evidence_quote_ids": [
+     "w_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2020",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_78_drake-maverick_9a6059": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_drake-maverick_9a6059",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_drake-maverick_9a6059",
+   "character_canonical": "drake-maverick",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Drake Maverick"
+  },
+  "identity_hash": "3f2777121fa1ad9e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_riddle",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-riddle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_comicbook_elite78",
+     "url": "https://comicbook.com/wwe/news/wwe-figures-kofi-kingston-naomi-comic-con-elite-78/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kofi",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_toywiz_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlezone_review",
+     "url": "https://www.wrestlezone.com/news/1198174-collectors-corner-mattel-wwe-elite-78-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-maverick",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-drake-maverick-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://pwcatalog.com/products/elite78-maverick",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_riddle",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_riddle",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_riddle",
+     "text": "Attire Date: June 1, 2019 @ NXT Takeover: XXV.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_comicbook_elite78",
+     "text": "Kofi Kingston, Naomi, Matt Riddle, Randy Orton, and R-Truth",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_comicbook_elite78",
+     "text": "Elite Collection Series 78 Action Figure Case (999W)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_comicbook_elite78",
+     "text": "8 individually packaged figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_comicbook_elite78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_comicbook_elite78",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_comicbook_elite78",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_comicbook_elite78",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_comicbook_elite78",
+     "text": "one half of the SmackDown Tag Team Championships",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kofi Kingston",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_comicbook_elite78",
+     "text": "SmackDown Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_comicbook_elite78",
+     "text": "that killer green glow effect",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_comicbook_elite78",
+     "text": "the 24/7 Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_comicbook_elite78",
+     "text": "a removable jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_comicbook_elite78",
+     "text": "swappable hands and a removable vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Randy Orton",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_kofi",
+     "text": "October 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_kofi",
+     "text": "Elite Collection Series 71-80",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_kofi",
+     "text": "deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_wfd_graham",
+     "text": "Release Date: \"2020\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q21",
+     "source_id": "w_wfd_graham",
+     "text": "Retailer Exclusivity: \"Walmart\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 29, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$31.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "drake-maverick",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: July 29, 2019 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_78_matt-riddle_a03682": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_matt-riddle_a03682",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_matt-riddle_a03682",
+   "character_canonical": "matt-riddle",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Matt Riddle"
+  },
+  "identity_hash": "5a8175f52c774dd3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_riddle",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-riddle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collection51_100",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_comicbook_elite78",
+     "url": "https://comicbook.com/wwe/news/wwe-figures-kofi-kingston-naomi-comic-con-elite-78/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kofi",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_toywiz_case",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-r-truth-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wrestlezone_review",
+     "url": "https://www.wrestlezone.com/news/1198174-collectors-corner-mattel-wwe-elite-78-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-matt-riddle-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2021/03/19/wwe-elite-78-matt-riddle-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_riddle",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_riddle",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_riddle",
+     "text": "Attire Date: June 1, 2019 @ NXT Takeover: XXV.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_comicbook_elite78",
+     "text": "Kofi Kingston, Naomi, Matt Riddle, Randy Orton, and R-Truth",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_comicbook_elite78",
+     "text": "Elite Collection Series 78 Action Figure Case (999W)",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_comicbook_elite78",
+     "text": "8 individually packaged figures",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_comicbook_elite78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_comicbook_elite78",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_comicbook_elite78",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_comicbook_elite78",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_comicbook_elite78",
+     "text": "one half of the SmackDown Tag Team Championships",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Kofi Kingston",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_comicbook_elite78",
+     "text": "SmackDown Women's Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_comicbook_elite78",
+     "text": "that killer green glow effect",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Naomi",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_comicbook_elite78",
+     "text": "the 24/7 Championship",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_comicbook_elite78",
+     "text": "a removable jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Matt Riddle",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_comicbook_elite78",
+     "text": "swappable hands and a removable vest",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Randy Orton",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_toywiz_kofi",
+     "text": "October 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_toywiz_kofi",
+     "text": "Elite Collection Series 71-80",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_toywiz_kofi",
+     "text": "deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q20",
+     "source_id": "w_wfd_graham",
+     "text": "Release Date: \"2020\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "w_q21",
+     "source_id": "w_wfd_graham",
+     "text": "Retailer Exclusivity: \"Walmart\"",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Series 78",
+      "year": "2020"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "I don't think photos really do this head sculpt justice. It's one that's easier to appreciate in person to see that half baked expression with the hazy eyes and crooked smile.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Getting Riddle's submission moves executed properly is a challenge thanks to the single jointed elbows — this is an area Mattel might need to address beyond the Ultimate Edition figures soon.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The highlight is his cloth jacket. It's tailored properly and is a good fit with clean applications of the logos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "He also has his headband, which actually has a great paintjob.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Finally, he's got his flip flops — fling off action feature not included.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "matt-riddle",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire from NXT TakeOver: XXV, June 1, 2019",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Half-baked expression with hazy eyes and a crooked smile",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable cloth jacket, tailored with clean logo applications",
+    "evidence_quote_ids": [
+     "w_q15",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Headband with a great paintjob",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Flip flops",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable cloth jacket",
+    "evidence_quote_ids": [
+     "w_q15",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Headband",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Flip flops",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

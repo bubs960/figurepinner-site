@@ -2125,5 +2125,384 @@
     ]
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_115_cm-punk_9d6391": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_115_cm-punk_9d6391",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_115_cm-punk_9d6391",
+   "character_canonical": "cm-punk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "115",
+   "fandom": "wrestling",
+   "year": 2025,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "CM Punk"
+  },
+  "identity_hash": "16d830dfc246675a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_s115_cmpunk",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-115-cm-punk",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_s101_150_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_s115_cmpunk",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-115-cm-punk-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-115-toy-figures-cm-punk-elite115-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://alltimetoys.com/mattel-wwe-elite-collection-series-115-cm-punk-6-5-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forum.wrestlingfigs.com/search?q=Elite%20115%20CM%20Punk",
+     "source_type": "forum",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_s115_cmpunk",
+     "text": "Release Date: 2025",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_s115_cmpunk",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_s115_cmpunk",
+     "text": "Series: 115",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_s115_cmpunk",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_s115_cmpunk",
+     "text": "Attire Date: Jan. 27, 2024 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "CM Punk - 2025 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "Drew McIntyre - 2025 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "Drew McIntyre [Chase] - 2025 release variant",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Drew McIntyre"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "Kairi Sane - 2025 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "R-Truth - 2025 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "R-Truth"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "The Rock - 2025 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "Tyler Bate - 2025 release",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": "Tyler Bate"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_s101_150_p3",
+     "text": "Each highly detailed 6-inch tall action figure features TrueFX™ technology and 30+ points of articulation for true-to-life posing!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2025,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_s115_cmpunk",
+     "text": "$29.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_s115_cmpunk",
+     "text": "September 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "CM Punk"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black trunks with red Chicago flag stars and blue stripes, as well as black kickpad boots with matching blue-and-red Chicago flag design",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "brand new, modern, bearded headscan featuring a focused expression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "vivid tattoos and wrapped fists with straight-edge X designs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2025,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black trunks with red Chicago flag stars and blue stripes; black kickpad boots with matching blue-and-red Chicago flag design",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire from Jan. 27, 2024 WWE Royal Rumble",
+    "evidence_quote_ids": [
+     "w_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Brand new, modern, bearded headscan featuring a focused expression",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Vivid tattoos and wrapped fists with straight-edge X designs",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
  }
 }

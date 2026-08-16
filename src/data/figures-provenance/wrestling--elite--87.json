@@ -1,0 +1,2645 @@
+{
+ "fp_wrestling_mattel_elite_87_asuka_bdb98ce8fb33": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_asuka_bdb98ce8fb33",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_asuka_bdb98ce8fb33",
+   "character_canonical": "asuka",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Asuka"
+  },
+  "identity_hash": "d363f57ac00582f5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figures-complete-set-elite87-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfn_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/06/28/wwe-reveals-elite-87-photos-of-candice-lerae-warlord-santos-escobar-apollo-crews-braun-otis-asuka/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_s3_wfd_collections",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_search_results",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-87-action-figure-case-of-8/mtgdf60r1",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite87-asuka",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-asuka-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside",
+     "text": "Santos Escobar, Otis, Braun Strowman, Apollo Crews (Blue Trunks), Candice LeRae, Asuka",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_price",
+     "source_id": "w_s1_ringside",
+     "text": "$68.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_detail",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "several figures in E87 feature double-jointed elbows",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_firsttime",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "First-time-in-the-line figures of Candice LeRae and Santos Escobar",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_crews_variant",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "An updated Apollo Crews figure that comes with a new version of the U.S. Championship, with Crews in white also being the chase figure in the wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Apollo Crews"
+     }
+    },
+    {
+     "quote_id": "w_q6_otis_asuka_repeat",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "Repeat figures of Otis and Asuka, now with face paint",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Asuka"
+     }
+    },
+    {
+     "quote_id": "w_q7_strowman_headsculpt",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "The Braun Strowman figure features the first Elite with the bald head sculpt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q8_warlord_exclusive",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "the Collectors' Edition figure is the Warlord, in Powers of Pain gear, exclusive to Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "asuka",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Mar. 25, 2020 @ WWE WrestleMania 36",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "asuka",
+      "character_variant": "wrestlemania-36",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "asuka",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 87",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "asuka",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box! Figure has deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "asuka",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "asuka",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2021",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_87_otis_86c958": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_otis_86c958",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_otis_86c958",
+   "character_canonical": "otis",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Otis"
+  },
+  "identity_hash": "c74653459907fafb",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figures-complete-set-elite87-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfn_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/06/28/wwe-reveals-elite-87-photos-of-candice-lerae-warlord-santos-escobar-apollo-crews-braun-otis-asuka/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_s3_wfd_collections",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_search_results",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-87-action-figure-case-of-8/mtgdf60r1",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite87-otis",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.trgtoys.com/products/wwe-elite-collection-series-87-otis",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside",
+     "text": "Santos Escobar, Otis, Braun Strowman, Apollo Crews (Blue Trunks), Candice LeRae, Asuka",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_price",
+     "source_id": "w_s1_ringside",
+     "text": "$68.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_detail",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "several figures in E87 feature double-jointed elbows",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_firsttime",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "First-time-in-the-line figures of Candice LeRae and Santos Escobar",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_crews_variant",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "An updated Apollo Crews figure that comes with a new version of the U.S. Championship, with Crews in white also being the chase figure in the wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Apollo Crews"
+     }
+    },
+    {
+     "quote_id": "w_q6_otis_asuka_repeat",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "Repeat figures of Otis and Asuka, now with face paint",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Asuka"
+     }
+    },
+    {
+     "quote_id": "w_q7_strowman_headsculpt",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "The Braun Strowman figure features the first Elite with the bald head sculpt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q8_warlord_exclusive",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "the Collectors' Edition figure is the Warlord, in Powers of Pain gear, exclusive to Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 28, 2020 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "otis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "otis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$22.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "otis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "otis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play, True FX enhanced facial detailing for life-like authenticity, WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "otis",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "2 in stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "otis",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date Aug. 28, 2020 WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Approximately 6-inches, bold and colorful figure",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2021",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_87_apollo-crews_875352": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_apollo-crews_875352",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_apollo-crews_875352",
+   "character_canonical": "apollo-crews",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Apollo Crews"
+  },
+  "identity_hash": "ec2c6ffb3b66206e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figures-complete-set-elite87-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfn_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/06/28/wwe-reveals-elite-87-photos-of-candice-lerae-warlord-santos-escobar-apollo-crews-braun-otis-asuka/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_s3_wfd_collections",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_search_results",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-87-action-figure-case-of-8/mtgdf60r1",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite87-crewschase",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-apollo-crews-action-figure-chase-white-gear/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-apollo-crews-action-figure-regular-blue-gear-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside",
+     "text": "Santos Escobar, Otis, Braun Strowman, Apollo Crews (Blue Trunks), Candice LeRae, Asuka",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_price",
+     "source_id": "w_s1_ringside",
+     "text": "$68.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_detail",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "several figures in E87 feature double-jointed elbows",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_firsttime",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "First-time-in-the-line figures of Candice LeRae and Santos Escobar",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_crews_variant",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "An updated Apollo Crews figure that comes with a new version of the U.S. Championship, with Crews in white also being the chase figure in the wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Apollo Crews"
+     }
+    },
+    {
+     "quote_id": "w_q6_otis_asuka_repeat",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "Repeat figures of Otis and Asuka, now with face paint",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Asuka"
+     }
+    },
+    {
+     "quote_id": "w_q7_strowman_headsculpt",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "The Braun Strowman figure features the first Elite with the bald head sculpt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q8_warlord_exclusive",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "the Collectors' Edition figure is the Warlord, in Powers of Pain gear, exclusive to Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "apollo-crews",
+      "character_variant": "chase-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "apollo-crews",
+      "character_variant": "chase-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "apollo-crews",
+      "character_variant": "chase-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "comes ready to wreak havoc right out of the box.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "apollo-crews",
+      "character_variant": "chase-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "apollo-crews",
+      "character_variant": "chase-white-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 23, 2020 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "apollo-crews",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Aug. 23, 2020 @ WWE SummerSlam",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_87_braun-strowman_f6c414": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_braun-strowman_f6c414",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_braun-strowman_f6c414",
+   "character_canonical": "braun-strowman",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Braun Strowman"
+  },
+  "identity_hash": "c79fdcf42235f12d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figures-complete-set-elite87-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfn_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/06/28/wwe-reveals-elite-87-photos-of-candice-lerae-warlord-santos-escobar-apollo-crews-braun-otis-asuka/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_s3_wfd_collections",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_search_results",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-87-action-figure-case-of-8/mtgdf60r1",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figure-braun-elite87-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside",
+     "text": "Santos Escobar, Otis, Braun Strowman, Apollo Crews (Blue Trunks), Candice LeRae, Asuka",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_price",
+     "source_id": "w_s1_ringside",
+     "text": "$68.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_detail",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "several figures in E87 feature double-jointed elbows",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_firsttime",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "First-time-in-the-line figures of Candice LeRae and Santos Escobar",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_crews_variant",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "An updated Apollo Crews figure that comes with a new version of the U.S. Championship, with Crews in white also being the chase figure in the wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Apollo Crews"
+     }
+    },
+    {
+     "quote_id": "w_q6_otis_asuka_repeat",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "Repeat figures of Otis and Asuka, now with face paint",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Asuka"
+     }
+    },
+    {
+     "quote_id": "w_q7_strowman_headsculpt",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "The Braun Strowman figure features the first Elite with the bald head sculpt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q8_warlord_exclusive",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "the Collectors' Edition figure is the Warlord, in Powers of Pain gear, exclusive to Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Includes WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Features Braun Strowman in a 7-inch Elite Collection figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "$114.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The Monster Among Men arrives to raise hell with Braun Strowman in Mattel WWE Elite 87!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Strowman has an angry headsculpt and is sporting accurate tattoos.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "He's also wearing custom made camo-style ring pants, light brown ring boots and includes a removable camo vest and interchangeable hands!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "custom made camo-style ring pants, light brown ring boots and includes a removable camo vest and interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Camo (pants and vest), light brown (boots)",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Strowman has an angry headsculpt and is sporting accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "angry headsculpt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable camo vest",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$114.99",
+      "evidence_quote_ids": [
+       "f_q6"
+      ]
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_87_santos-escobar_4af48f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_santos-escobar_4af48f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_santos-escobar_4af48f",
+   "character_canonical": "santos-escobar",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Santos Escobar"
+  },
+  "identity_hash": "6b94274f07a88051",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figures-complete-set-elite87-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfn_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/06/28/wwe-reveals-elite-87-photos-of-candice-lerae-warlord-santos-escobar-apollo-crews-braun-otis-asuka/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_s3_wfd_collections",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_search_results",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-87-action-figure-case-of-8/mtgdf60r1",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-santos-escobar-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite87-santos",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://pwcatalog.com/products/elite87-santos",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside",
+     "text": "Santos Escobar, Otis, Braun Strowman, Apollo Crews (Blue Trunks), Candice LeRae, Asuka",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_price",
+     "source_id": "w_s1_ringside",
+     "text": "$68.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_detail",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "several figures in E87 feature double-jointed elbows",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_firsttime",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "First-time-in-the-line figures of Candice LeRae and Santos Escobar",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_crews_variant",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "An updated Apollo Crews figure that comes with a new version of the U.S. Championship, with Crews in white also being the chase figure in the wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Apollo Crews"
+     }
+    },
+    {
+     "quote_id": "w_q6_otis_asuka_repeat",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "Repeat figures of Otis and Asuka, now with face paint",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Asuka"
+     }
+    },
+    {
+     "quote_id": "w_q7_strowman_headsculpt",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "The Braun Strowman figure features the first Elite with the bald head sculpt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q8_warlord_exclusive",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "the Collectors' Edition figure is the Warlord, in Powers of Pain gear, exclusive to Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "santos-escobar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "santos-escobar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "santos-escobar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "santos-escobar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "santos-escobar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Attire Date: June 24, 2020 @ NXT",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "santos-escobar",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: June 24, 2020 @ NXT",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_87_candice-lerae_a06530": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_candice-lerae_a06530",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_candice-lerae_a06530",
+   "character_canonical": "candice-lerae",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Candice LeRae"
+  },
+  "identity_hash": "52e21a528a043910",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_ringside",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figures-complete-set-elite87-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_s2_wfn_reveals",
+     "url": "https://wrestlingfigurenews.com/2021/06/28/wwe-reveals-elite-87-photos-of-candice-lerae-warlord-santos-escobar-apollo-crews-braun-otis-asuka/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_s3_wfd_collections",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_s4_search_results",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-87-action-figure-case-of-8/mtgdf60r1",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite87-candice",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-candice-lerae-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-87-toy-figure-candice-elite87-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s1_ringside",
+     "text": "Santos Escobar, Otis, Braun Strowman, Apollo Crews (Blue Trunks), Candice LeRae, Asuka",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_price",
+     "source_id": "w_s1_ringside",
+     "text": "$68.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_lineup_detail",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "several figures in E87 feature double-jointed elbows",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_firsttime",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "First-time-in-the-line figures of Candice LeRae and Santos Escobar",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_crews_variant",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "An updated Apollo Crews figure that comes with a new version of the U.S. Championship, with Crews in white also being the chase figure in the wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Apollo Crews"
+     }
+    },
+    {
+     "quote_id": "w_q6_otis_asuka_repeat",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "Repeat figures of Otis and Asuka, now with face paint",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Asuka"
+     }
+    },
+    {
+     "quote_id": "w_q7_strowman_headsculpt",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "The Braun Strowman figure features the first Elite with the bald head sculpt",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q8_warlord_exclusive",
+     "source_id": "w_s2_wfn_reveals",
+     "text": "the Collectors' Edition figure is the Warlord, in Powers of Pain gear, exclusive to Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "candice-lerae",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "June 7, 2020 @ NXT TakOver: In Your House",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "candice-lerae",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Candice LeRae is cooler than ever in Mattel WWE Elite 87! She's sporting a confident head sculpt and periwinkle hair and has a purple, pink, black and grey studded stretch-design ring top.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "candice-lerae",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "She has purple and pink wrist tape, a purple, pink and green studded stretch-design pair of trunks and is wearing purple knee pads and black and white laced ring shoes.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "candice-lerae",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "LeRae also includes interchangeable hands with painted nails and a removable entrance jacket with blue and purple winged designs in the back and purple and green sleeveless studs in the front!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "candice-lerae",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Price: $19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "candice-lerae",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Purple, pink, black and grey studded stretch-design ring top and trunks with purple knee pads, black and white laced ring shoes, and a removable entrance jacket",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Purple, pink, black, grey, and green",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident head sculpt with periwinkle hair",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Periwinkle hair",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Purple, pink, black and grey studded stretch-design ring top",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Removable entrance jacket with blue and purple winged designs on the back",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands with painted nails",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable entrance jacket with blue and purple winged designs",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_87_warlord_13c79a01331f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_87_warlord_13c79a01331f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_87_warlord_13c79a01331f",
+   "character_canonical": "warlord",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "87",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Warlord"
+  },
+  "identity_hash": "1e66c3363cf8b230",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite87_warlord",
+     "url": "https://wrestlingfiguredatabase.com/products/elite87-warlord",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite87_warlord",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-warlord-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite_exclusive_series_index",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-exclusive-series/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite87_strowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-87-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_roguetoys_elite87_warlord",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-87-warlord-walmart-exclusive",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_snippet_general_series87",
+     "url": "https://www.ebay.com/itm/285665888212",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toynewsi_elite87_images",
+     "url": "https://toynewsi.com/241-39412",
+     "source_type": "toy_news",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://lylesmoviefiles.com/2021/10/18/wwe-elite-87-warlord-figure-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-87-warlord-walmart-exclusive",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite87_warlord",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite87_warlord",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite87_warlord",
+     "text": "Series: 87",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_elite87_warlord",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_elite87_warlord",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite87_warlord",
+     "text": "Each 6-inch / 15.24-cm tall figure features deluxe articulation, True FX detailing, swappable hands, and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_elite87_warlord",
+     "text": "25 points of articulation for extreme poseability",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_elite87_warlord",
+     "text": "Includes interchangeable hands and iconic accessories, including entrance gear or WWE championships",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_elite87_warlord",
+     "text": "iconic figures of favorite WWE Superstars from Monday Night RAW, Friday Night Smackdown, and NXT, plus WWE Legends and Hall of Famers",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_elite87_strowman",
+     "text": "March 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_elite87_strowman",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_elite87_strowman",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_elite87_strowman",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": "Braun Strowman"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_search_snippet_general_series87",
+     "text": "Mattel WWE Elite Series 87 Collector's Edition Warlord Action Figure Mint 887961922394",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection",
+      "year": null,
+      "character_canonical": "Warlord"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The Powers of Pain kept their attire simple going with a basic black with some red accents.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The gritted teeth expression feels about right for him even if it's not the most natural default for most figures.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "His neck is a little odd as the head keeps popping down without staying locked in place.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Warlord comes with his ring vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "chains on one side and intricate straps on the other",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "a set of gripping hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "The Walmart price of $16 for Elites is killer",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "Warlord is worth the $20 price so it's even better to get him for $5 cheaper.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "October 18, 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "warlord",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Basic black attire with red accents",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black with red accents",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Gritted teeth expression",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Neck is a little odd, head keeps popping down without staying locked in place",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Chains on one side and intricate straps on the other",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Ring vest",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Set of gripping hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by October 2021",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q4"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

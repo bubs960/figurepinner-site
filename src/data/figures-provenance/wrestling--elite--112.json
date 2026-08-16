@@ -1,0 +1,2854 @@
+{
+ "fp_wrestling_mattel_elite_112_bray-wyatt_ad1399": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_112_bray-wyatt_ad1399",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_112_bray-wyatt_ad1399",
+   "character_canonical": "bray-wyatt",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "112",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bray Wyatt"
+  },
+  "identity_hash": "5304bd9413de6b1e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-seth-rollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-collection-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-mcdonagh",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-jd-mcdonagh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toystlkr-woods",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-112-xavier-woods/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-lineup-summary",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase+%22Elite+Collection+Series+112%22+Bray+Wyatt+OR+%22Xavier+Woods%22+OR+%22JD+McDonagh%22",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-checklist-summary",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+112+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/2023-wwe-mattel-elite-collection-greatest-hits-series-3-bray-wyatt",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-112-toy-figures-bray-wyatt-elite112-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-rollins",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-rollins",
+     "text": "Series: 112",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "JD McDonagh"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toystlkr-woods",
+     "text": "Recreate signature moves and ring entrances with the WWE Elite Collection action figures. Each 6-inch-tall figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toystlkr-woods",
+     "text": "$22.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd-collection-101-150",
+     "text": "112 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search-lineup-summary",
+     "text": "WWE Elite Collection Series 112 includes figures for Seth Rollins, Bray Wyatt, Xavier Woods, Becky Lynch, JD McDonagh, and Channing Stacks Lorenzo. ... Each figure is 6 inches tall and features deluxe articulation, TrueFX detailing, and swappable hands.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toystlkr-woods",
+     "text": "No Build-A-Figure components mentioned",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "tan pants with banded patchwork detailing, as well as a black sleeveless tee, black hand wraps, and tan boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "wild smiling headscan with long hair and beard",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "an additional set of hands and a molded lantern for screen-accurate entrances",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Mar. 19, 2018 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "bray-wyatt",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Tan pants with banded patchwork detailing, black sleeveless tee, black hand wraps, and tan boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Tan and black",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Wild smiling headscan with long hair and beard",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Includes molded lantern for screen-accurate entrances",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional set of hands",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Molded lantern",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_112_becky-lynch_3d7e12": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_112_becky-lynch_3d7e12",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_112_becky-lynch_3d7e12",
+   "character_canonical": "becky-lynch",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "112",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Becky Lynch"
+  },
+  "identity_hash": "d13c5cd4690e3dc8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-seth-rollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-collection-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-mcdonagh",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-jd-mcdonagh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toystlkr-woods",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-112-xavier-woods/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-lineup-summary",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase+%22Elite+Collection+Series+112%22+Bray+Wyatt+OR+%22Xavier+Woods%22+OR+%22JD+McDonagh%22",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-checklist-summary",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+112+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-112-becky-lynch-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-112-toy-figures-becky-lynch-elite112-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-rollins",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-rollins",
+     "text": "Series: 112",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "JD McDonagh"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toystlkr-woods",
+     "text": "Recreate signature moves and ring entrances with the WWE Elite Collection action figures. Each 6-inch-tall figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toystlkr-woods",
+     "text": "$22.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd-collection-101-150",
+     "text": "112 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search-lineup-summary",
+     "text": "WWE Elite Collection Series 112 includes figures for Seth Rollins, Bray Wyatt, Xavier Woods, Becky Lynch, JD McDonagh, and Channing Stacks Lorenzo. ... Each figure is 6 inches tall and features deluxe articulation, TrueFX detailing, and swappable hands.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toystlkr-woods",
+     "text": "No Build-A-Figure components mentioned",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments. Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories. Ages 8 and up.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Stock #: 503172",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Evolve to the next level with Becky Lynch in Mattel WWE Elite Series 112!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "The Man is ready to fly with a focused headscan featuring her signature long red hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "yellow and green bodysuit with black design work",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "green knee-high boots with kickpads and yellow striping",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "an additional set of hands and a ladder for screen-accurate Money in the Bank moments",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "year": 2024,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Yellow and green bodysuit with black design work, green knee-high boots with kickpads and yellow striping",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Yellow and green with black design work",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Focused headscan featuring her signature long red hair",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Focused headscan with signature long red hair",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Yellow and green bodysuit with black design work",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Green knee-high boots with kickpads and yellow striping",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Additional set of hands",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Ladder for screen-accurate Money in the Bank moments",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "503172",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_112_seth-rollins_f09c72": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_112_seth-rollins_f09c72",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_112_seth-rollins_f09c72",
+   "character_canonical": "seth-rollins",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "112",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Seth Rollins"
+  },
+  "identity_hash": "ccc68b823c63e98b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-seth-rollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-collection-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-mcdonagh",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-jd-mcdonagh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toystlkr-woods",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-112-xavier-woods/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-lineup-summary",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase+%22Elite+Collection+Series+112%22+Bray+Wyatt+OR+%22Xavier+Woods%22+OR+%22JD+McDonagh%22",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-checklist-summary",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+112+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-112-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-112-toy-figures-seth-rollins-elite112-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-rollins",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-rollins",
+     "text": "Series: 112",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "JD McDonagh"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toystlkr-woods",
+     "text": "Recreate signature moves and ring entrances with the WWE Elite Collection action figures. Each 6-inch-tall figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toystlkr-woods",
+     "text": "$22.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd-collection-101-150",
+     "text": "112 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search-lineup-summary",
+     "text": "WWE Elite Collection Series 112 includes figures for Seth Rollins, Bray Wyatt, Xavier Woods, Becky Lynch, JD McDonagh, and Channing Stacks Lorenzo. ... Each figure is 6 inches tall and features deluxe articulation, TrueFX detailing, and swappable hands.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toystlkr-woods",
+     "text": "No Build-A-Figure components mentioned",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black and gold lined tights with ornate banded detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "gold knee pads and kickpad-style boots in a dotted texture",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "high-energy headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "additional sets of hands to conduct the crowd during his entrance",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$23.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "black and gold lined tights with ornate banded detailing",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black and gold",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "high-energy headscan",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "gold knee pads and kickpad-style boots in a dotted texture",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "additional sets of hands to conduct the crowd during his entrance",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$49.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 49.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$23.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 23.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_112_xavier-woods_41fbe0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_112_xavier-woods_41fbe0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_112_xavier-woods_41fbe0",
+   "character_canonical": "xavier-woods",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "112",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Xavier Woods"
+  },
+  "identity_hash": "69ba9bacf23f6646",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-seth-rollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-collection-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-mcdonagh",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-jd-mcdonagh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toystlkr-woods",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-112-xavier-woods/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-lineup-summary",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase+%22Elite+Collection+Series+112%22+Bray+Wyatt+OR+%22Xavier+Woods%22+OR+%22JD+McDonagh%22",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-checklist-summary",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+112+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-112-xavier-woods-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-112-toy-figures-xavier-woods-elite112-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-rollins",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-rollins",
+     "text": "Series: 112",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "JD McDonagh"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toystlkr-woods",
+     "text": "Recreate signature moves and ring entrances with the WWE Elite Collection action figures. Each 6-inch-tall figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toystlkr-woods",
+     "text": "$22.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd-collection-101-150",
+     "text": "112 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search-lineup-summary",
+     "text": "WWE Elite Collection Series 112 includes figures for Seth Rollins, Bray Wyatt, Xavier Woods, Becky Lynch, JD McDonagh, and Channing Stacks Lorenzo. ... Each figure is 6 inches tall and features deluxe articulation, TrueFX detailing, and swappable hands.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toystlkr-woods",
+     "text": "No Build-A-Figure components mentioned",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Each highly articulated Superstar figure features True FX technology and authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "UPC: 194735199938",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Feel the power of the New Day with Xavier Woods in Mattel WWE Elite Series 112!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Woods stays positive with an all-new smiling headscan with long hair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "black belted tights with blue linework and all-over flower pattern",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "black kickpad-style boots with blue linework",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "black sleeves and a removable molded black vest, both with matching blue linework and flower pattern",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Woods' accessories include an additional set of hands for dynamic posing!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "xavier-woods",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black belted tights and removable vest with blue linework and all-over flower pattern; black kickpad-style boots with blue linework",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8",
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "All-new smiling headscan with long hair",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black belted tights with blue linework and all-over flower pattern",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black kickpad-style boots with blue linework",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Removable molded black vest and black sleeves, both with matching blue linework and flower pattern",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "All-new smiling headscan with long hair",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Additional set of hands for dynamic posing",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "UPC 194735199938",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 24.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$27.99",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 27.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_112_jd-mcdonagh_ddc961": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_112_jd-mcdonagh_ddc961",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_112_jd-mcdonagh_ddc961",
+   "character_canonical": "jd-mcdonagh",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "112",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "JD McDonagh"
+  },
+  "identity_hash": "f7e25e4ed0b4412a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-seth-rollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-collection-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-mcdonagh",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-jd-mcdonagh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toystlkr-woods",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-112-xavier-woods/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-lineup-summary",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase+%22Elite+Collection+Series+112%22+Bray+Wyatt+OR+%22Xavier+Woods%22+OR+%22JD+McDonagh%22",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-checklist-summary",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+112+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-112-jd-mcdonagh-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-112-toy-figures-jd-mcdonagh-elite112-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-rollins",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-rollins",
+     "text": "Series: 112",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "JD McDonagh"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toystlkr-woods",
+     "text": "Recreate signature moves and ring entrances with the WWE Elite Collection action figures. Each 6-inch-tall figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toystlkr-woods",
+     "text": "$22.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd-collection-101-150",
+     "text": "112 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search-lineup-summary",
+     "text": "WWE Elite Collection Series 112 includes figures for Seth Rollins, Bray Wyatt, Xavier Woods, Becky Lynch, JD McDonagh, and Channing Stacks Lorenzo. ... Each figure is 6 inches tall and features deluxe articulation, TrueFX detailing, and swappable hands.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toystlkr-woods",
+     "text": "No Build-A-Figure components mentioned",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Make your WWE collection elite! These highly detailed action figures are must-haves for kids and collectors to play out memorable WWE moments.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Highly articulated Superstar figure",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX technology",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Authentic ring gear with iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$32.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Release Date: September 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "UPC: 194735199990",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "McDonagh arrives with two scowling facescans that feature distinct slicked-back and tied-back hairstyles.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "black and green tights in a diagonal banded style with 'JD' spade logo, as well as matching 'JD' spade logo knee pads and kickpad boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Molded, white hooded entrance vest with black 'JD' spade logo and strap detailing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "jd-mcdonagh",
+      "character_variant": null,
+      "condition": null,
+      "year": 2024
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Molded, white hooded entrance vest with black 'JD' spade logo and strap detailing",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black and green tights in a diagonal banded style with 'JD' spade logo, as well as matching 'JD' spade logo knee pads and kickpad boots",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "McDonagh arrives with two scowling facescans that feature distinct slicked-back and tied-back hairstyles",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "McDonagh arrives with two scowling facescans that feature distinct slicked-back and tied-back hairstyles",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "black and green tights in a diagonal banded style with 'JD' spade logo, as well as matching 'JD' spade logo knee pads and kickpad boots",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Molded, white hooded entrance vest with black 'JD' spade logo and strap detailing",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "194735199990",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2024",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$32.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 32.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_112_channing-stacks-_459267": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_112_channing-stacks-_459267",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_112_channing-stacks-_459267",
+   "character_canonical": "channing-stacks-lorenzo",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "112",
+   "fandom": "wrestling",
+   "year": 2024,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Channing \"Stacks\" Lorenzo"
+  },
+  "identity_hash": "fff08dab77293f45",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd-rollins",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-seth-rollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-collection-101-150",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-101-150",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_wfd-mcdonagh",
+     "url": "https://wrestlingfiguredatabase.com/products/2024-wwe-mattel-elite-collection-series-112-jd-mcdonagh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_toystlkr-woods",
+     "url": "https://toystlkr.com/product/wwe-elite-collection-series-112-xavier-woods/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-lineup-summary",
+     "url": "https://www.google.com/search?q=wrestlingfiguredatabase+%22Elite+Collection+Series+112%22+Bray+Wyatt+OR+%22Xavier+Woods%22+OR+%22JD+McDonagh%22",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "w_search-checklist-summary",
+     "url": "https://www.google.com/search?q=Mattel+WWE+Elite+Collection+Series+112+checklist",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-112-channing-lorenzo",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-112-toy-figures-stacks-elite112-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-15"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd-rollins",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd-rollins",
+     "text": "Manufacturing Country: Vietnam",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd-rollins",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd-rollins",
+     "text": "Series: 112",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd-mcdonagh",
+     "text": "2024",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "JD McDonagh"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toystlkr-woods",
+     "text": "Recreate signature moves and ring entrances with the WWE Elite Collection action figures. Each 6-inch-tall figure features deluxe articulation, TrueFX detailing, swappable hands and iconic accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toystlkr-woods",
+     "text": "$22.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": "Xavier Woods"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd-collection-101-150",
+     "text": "112 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_search-lineup-summary",
+     "text": "WWE Elite Collection Series 112 includes figures for Seth Rollins, Bray Wyatt, Xavier Woods, Becky Lynch, JD McDonagh, and Channing Stacks Lorenzo. ... Each figure is 6 inches tall and features deluxe articulation, TrueFX detailing, and swappable hands.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toystlkr-woods",
+     "text": "No Build-A-Figure components mentioned",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2024,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2024",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "channing-stacks-lorenzo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 1, 2023 @ NXT",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "channing-stacks-lorenzo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black belted pants and tan laced boots, as well as black wrist wraps",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "channing-stacks-lorenzo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "cocky, smirking headscan with a high, curly fade hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "channing-stacks-lorenzo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "two additional sets of hands for dynamic action posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "channing-stacks-lorenzo",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2024,
+      "character_canonical": "channing-stacks-lorenzo",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Aug. 1, 2023 @ NXT",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black belted pants and tan laced boots, as well as black wrist wraps",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "cocky, smirking headscan with a high, curly fade hairstyle",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "black wrist wraps",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "high, curly fade hairstyle",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two additional sets of hands for dynamic action posing",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

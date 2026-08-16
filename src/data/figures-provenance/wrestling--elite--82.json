@@ -1,0 +1,3691 @@
+{
+ "fp_wrestling_mattel_elite_82_finn-balor_461585": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_finn-balor_461585",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_finn-balor_461585",
+   "character_canonical": "finn-balor",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Finn Balor"
+  },
+  "identity_hash": "c64fad1b2279e8ff",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-82-finn-balor",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "UPC: 887961922219",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Release Date: January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2021",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_82_alexa-bliss_e212e9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_alexa-bliss_e212e9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_alexa-bliss_e212e9",
+   "character_canonical": "alexa-bliss",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Alexa Bliss"
+  },
+  "identity_hash": "b80d7e1ee581fd32",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-alexa-bliss-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-82-toy-figures-alexa-bliss-elite82-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "bold and colorful figure is approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$35.14",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "January 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "ELITE82-04",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "bold and colorful figure is approximately 6-inches",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE82-04",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2021",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$35.14",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 35.14,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ],
+      "price_detail": {
+       "amount": 21.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_82_john-morrison_ac13f7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_john-morrison_ac13f7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_john-morrison_ac13f7",
+   "character_canonical": "john-morrison",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Morrison"
+  },
+  "identity_hash": "853b69729ed1be30",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-john-morrison-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-82-toy-figures-john-morrison-elite82-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "john-morrison",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "john-morrison",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "john-morrison",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "john-morrison",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "john-morrison",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_82_davey-boy-smith_4116ea19f6cb": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_davey-boy-smith_4116ea19f6cb",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_davey-boy-smith_4116ea19f6cb",
+   "character_canonical": "davey-boy-smith",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Davey Boy Smith"
+  },
+  "identity_hash": "015b8aa76a9efea0",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://lylesmoviefiles.com/2021/10/30/wwe-elite-british-bulldog-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/wwe-elite-collection-series-82-davey-boy-smith",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "white, red and blue tights featured with this figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "the three ring socks (that are just blue instead of a red ring)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Mattel's hairstyle choice was a little odd to me as this is latter era WWF Bulldogs as Davey has a mini-mullet.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Davey Boy's mold is one of the overall best in the line in terms of articulation and useful movement.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, knees (double-jointed), ankles",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Davey Boy comes with one of the best accessories Mattel has given us with the Matilda figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "a set of swappable fists.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "I got British Bulldogs Davey Boy for $20. That's the normal price for the line",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "October 30, 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "$41.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "New in box. May show signs of shelf wear",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "davey-boy-smith",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "white, red and blue tights",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "white, red and blue",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "latter era WWF Bulldogs hairstyle choice with a mini-mullet",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, double-jointed knees, ankles",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Three ring socks, blue instead of red",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "mini-mullet hairstyle, latter era WWF Bulldogs",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Matilda figure",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Set of swappable fists",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by October 2021",
+    "evidence_quote_ids": [
+     "f_q9",
+     "f_q4"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_82_rob-gronkowski_1555ab31dbb7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_rob-gronkowski_1555ab31dbb7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_rob-gronkowski_1555ab31dbb7",
+   "character_canonical": "rob-gronkowski",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Rob Gronkowski"
+  },
+  "identity_hash": "c256c292b2ce32ed",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-rob-gronkowski-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-82-toy-figures-rob-gronkowski-elite82-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "rob-gronkowski",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Rob Gronkowski - WWE Elite 82 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rob-gronkowski",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "rob-gronkowski",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$34.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 34.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ],
+      "price_detail": {
+       "amount": 24.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_82_jerry-the-king-lawler_851b429149f0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_jerry-the-king-lawler_851b429149f0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_jerry-the-king-lawler_851b429149f0",
+   "character_canonical": "jerry-the-king-lawler",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jerry \"The King\" Lawler"
+  },
+  "identity_hash": "66a5a1aa41c16150",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lawler",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-82-toy-figures-jerry-lawler-elite82-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toyfigz.com/product/wwe-elite-series-82-jerry-the-king-lawler-figure/",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "jerry-the-king-lawler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 30, 1993 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "jerry-the-king-lawler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jerry-the-king-lawler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 82",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "jerry-the-king-lawler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$13.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jerry-the-king-lawler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jerry-the-king-lawler",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 30, 1993 @ WWF SummerSlam",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2021",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_82_keith-lee_ffc581": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_82_keith-lee_ffc581",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_82_keith-lee_ffc581",
+   "character_canonical": "keith-lee",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "82",
+   "fandom": "wrestling",
+   "year": 2021,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Keith Lee"
+  },
+  "identity_hash": "b9ad123002efb94a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfn-elite82-photos",
+     "url": "https://wrestlingfigurenews.com/2020/11/17/wwe-elite-82-photos-keith-lee-jerry-lawler-alexa-bliss-john-morrison-finn-balor-gronk-davey-boy-smith/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs-preorder-elite82",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-82-up-for-pre-order-keith-lee-gronk-more/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz-elite82-lee",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-lee",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-lee",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-gronk",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-gronk",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-bliss",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-bliss",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-morrison",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-morrison",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-leechase",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-leechase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-balor",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-balor",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd-elite82-daveyboy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite82-daveyboy",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-82-keith-lee-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2021/04/25/wwe-elite-keith-lee-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "WWE Elite 82 includes: Alexa Bliss, Keith Lee, John Morrison, Finn Balor, Rob Gronkowski & Jerry \"The King\" Lawler.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The set retails for $169.99 with a mid-December ship date.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "The chase Keith Lee figure retails for $39.99.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Keith Lee is making his debut in the WWE Elite line with not one but two figures. Lee's pink and off-white attire will be the chase in the wave, while Lee's black and blue gear will be the regular release in the series.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Jerry \"The King\" Lawler comes with a soft goods cape for the first time.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Jerry Lawler"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfn-elite82-photos",
+     "text": "Alexa Bliss will be the first superstar to come with the WWE Women's Tag Team Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "January 2021",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz-elite82-lee",
+     "text": "True FX enhanced facial detailing",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Wrestling Elite Collection",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd-elite82-lee",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd-elite82-gronk",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Rob Gronkowski",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Rob Gronkowski"
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_wfd-elite82-bliss",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Alexa Bliss",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q16",
+     "source_id": "w_wfd-elite82-morrison",
+     "text": "2021 WWE Mattel Elite Collection Series 82 John Morrison",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "John Morrison"
+     }
+    },
+    {
+     "quote_id": "w_q17",
+     "source_id": "w_wfd-elite82-leechase",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Keith Lee [Chase]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Keith Lee"
+     }
+    },
+    {
+     "quote_id": "w_q18",
+     "source_id": "w_wfd-elite82-balor",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Finn Balor",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Finn Balor"
+     }
+    },
+    {
+     "quote_id": "w_q19",
+     "source_id": "w_wfd-elite82-daveyboy",
+     "text": "2021 WWE Mattel Elite Collection Series 82 Davey Boy Smith [Exclusive]",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2021,
+      "character_canonical": "Davey Boy Smith Jr."
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Mattel did an outstanding job on Lee's likeness.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The head sculpt really does a nice job of capturing his personality.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "His default figure has black tights with light blue accents.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "His goatee could stand to be a bit tighter as it's not properly lined up on the left side.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "He does have his ring gear hoodie",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "a set of slightly enclosed grasping hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2021,
+      "character_canonical": "keith-lee",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black tights with light blue accents",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Goatee not properly lined up on the left side",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "A set of slightly enclosed grasping hands",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Ring gear hoodie",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "A set of slightly enclosed grasping hands",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}
