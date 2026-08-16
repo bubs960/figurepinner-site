@@ -16,6 +16,7 @@ import CountdownTimer from '../_components/CountdownTimer'
 import GuidesStickySearch from '../_components/GuidesStickySearch'
 import ArticleAnswerBox from '../_components/ArticleAnswerBox'
 import ArticleEndCta from '../_components/ArticleEndCta'
+import ConversionBreak from '../_components/ConversionBreak'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
 import { getFigureById, prettyFigureUrl } from '@/data/kb'
@@ -212,7 +213,21 @@ export default async function GuideArticlePage({ params }: PageProps) {
 
         {article.shortVersion && <ArticleAnswerBox shortVersion={article.shortVersion} />}
 
-        {article.body.map((block, i) => <Block key={i} block={block} comps={comps} ebayUrls={ebayUrls} />)}
+        {(() => {
+          // Mid-page conversion break before every h2 after the first — the answer
+          // box already covers the opening section, so the first h2 needs no break
+          // ahead of it. "One after each major rule section" per the design brief.
+          let h2Seen = 0
+          return article.body.map((block, i) => {
+            const isBreakPoint = block.type === 'h2' && ++h2Seen > 1
+            return (
+              <div key={i}>
+                {isBreakPoint && <ConversionBreak headline="Have the figure in front of you? Pull its real comps now." />}
+                <Block block={block} comps={comps} ebayUrls={ebayUrls} />
+              </div>
+            )
+          })
+        })()}
 
         <div id="guides-ad-slot" style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
           <AdSlot slot="adsterra-banner" />

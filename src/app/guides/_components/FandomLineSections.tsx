@@ -14,6 +14,7 @@
 
 import type { Vault, HubFlagWording } from '../_data/fandomHubs'
 import type { VaultLore } from '../_data/motuVaultLore'
+import ConversionBreak from './ConversionBreak'
 
 function flagLabel(flag: string, fw: HubFlagWording): string {
   if (flag === 'VINTAGE') return fw.vintage ?? 'VINTAGE'
@@ -52,56 +53,63 @@ export default function FandomLineSections({
           const prices = v.top.map(f => f.price)
           const lo = prices.length ? Math.min(...prices) : 0
           const hi = prices.length ? Math.max(...prices) : 0
+          // Mid-page conversion break after every 4th line (index 3, 7, ...) — matches
+          // the design brief's "after lines 3 and 7" cadence, generalized so it scales
+          // to fandoms with fewer or more lines than the 10-line reference hub.
+          const showBreakAfter = (vi + 1) % 4 === 0 && vi + 1 < vaults.length
           return (
             // key by line_slug (unique) not display name — some fandoms have two
             // distinct product_lines that prettify to the same v1_line (e.g. TF
             // "Generations Selects"); falls back to index if a slug is ever absent.
-            <details key={v.line_slug || `${v.line}-${vi}`} className="fh-line">
-              <summary className="fh-line-head">
-                <span className="fh-line-count">{v.count}</span>
-                <span className="fh-line-headtext">
-                  <span className="fh-line-name">{v.line}</span>
-                  <span className="fh-line-era">{l.era ?? 'figures'}</span>
-                </span>
-                <span className="fh-line-stat">
-                  <span className="fh-line-stat-priced">{v.priced_count} priced</span>
-                  {hi > 0 && <span className="fh-line-stat-range">{lo === hi ? `$${hi.toLocaleString('en-US')}` : `$${lo.toLocaleString('en-US')}–$${hi.toLocaleString('en-US')}`}</span>}
-                </span>
-                <span className="fh-line-chevron" aria-hidden="true" />
-              </summary>
+            <div key={v.line_slug || `${v.line}-${vi}`}>
+              <details className="fh-line">
+                <summary className="fh-line-head">
+                  <span className="fh-line-count">{v.count}</span>
+                  <span className="fh-line-headtext">
+                    <span className="fh-line-name">{v.line}</span>
+                    <span className="fh-line-era">{l.era ?? 'figures'}</span>
+                  </span>
+                  <span className="fh-line-stat">
+                    <span className="fh-line-stat-priced">{v.priced_count} priced</span>
+                    {hi > 0 && <span className="fh-line-stat-range">{lo === hi ? `$${hi.toLocaleString('en-US')}` : `$${lo.toLocaleString('en-US')}–$${hi.toLocaleString('en-US')}`}</span>}
+                  </span>
+                  <span className="fh-line-chevron" aria-hidden="true" />
+                </summary>
 
-              <div className="fh-line-body">
-                {l.teaser && <p className="fh-line-teaser">{l.teaser}</p>}
-                {l.lore && <p className="fh-line-lore">{l.lore}</p>}
+                <div className="fh-line-body">
+                  {l.teaser && <p className="fh-line-teaser">{l.teaser}</p>}
+                  {l.lore && <p className="fh-line-lore">{l.lore}</p>}
 
-                {v.top.length > 0 && (
-                  <>
-                    <div className="fh-line-grails-label">Grails of this line</div>
-                    <div className="fh-line-figs">
-                      {v.top.map(f => (
-                        <a key={f.figure_id} href={f.url} className="fh-line-fig">
-                          <span className={`fh-line-fig-thumb${f.image ? '' : ' is-empty'}`}>
-                            {f.image && <img src={f.image} alt="" width={48} height={48} loading="lazy" decoding="async" />}
-                          </span>
-                          <span className="fh-line-fig-text">
-                            <span className="fh-line-fig-name">{f.name}</span>
-                            <span className="fh-line-fig-price">
-                              ${f.price.toLocaleString('en-US')}
-                              <span className="fh-line-fig-sold">{f.sold_count} sold</span>
+                  {v.top.length > 0 && (
+                    <>
+                      <div className="fh-line-grails-label">Grails of this line</div>
+                      <div className="fh-line-figs">
+                        {v.top.map(f => (
+                          <a key={f.figure_id} href={f.url} className="fh-line-fig">
+                            <span className={`fh-line-fig-thumb${f.image ? '' : ' is-empty'}`}>
+                              {f.image && <img src={f.image} alt="" width={48} height={48} loading="lazy" decoding="async" />}
                             </span>
-                            {flagLabel(f.flag, flag) && <span className="fh-line-fig-flag">{flagLabel(f.flag, flag)}</span>}
-                          </span>
-                        </a>
-                      ))}
-                    </div>
-                  </>
-                )}
+                            <span className="fh-line-fig-text">
+                              <span className="fh-line-fig-name">{f.name}</span>
+                              <span className="fh-line-fig-price">
+                                ${f.price.toLocaleString('en-US')}
+                                <span className="fh-line-fig-sold">{f.sold_count} sold</span>
+                              </span>
+                              {flagLabel(f.flag, flag) && <span className="fh-line-fig-flag">{flagLabel(f.flag, flag)}</span>}
+                            </span>
+                          </a>
+                        ))}
+                      </div>
+                    </>
+                  )}
 
-                {lineHref && (
-                  <a href={lineHref} className="fh-line-all">View all {v.count} {v.line} figures →</a>
-                )}
-              </div>
-            </details>
+                  {lineHref && (
+                    <a href={lineHref} className="fh-line-all">View all {v.count} {v.line} figures →</a>
+                  )}
+                </div>
+              </details>
+              {showBreakAfter && <ConversionBreak headline="Got one on the shelf? Don't guess the price." />}
+            </div>
           )
         })}
       </div>
