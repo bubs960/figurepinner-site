@@ -4,16 +4,24 @@
  * Sources, in order:
  *  - D1 (vault_items + wantlist_items) via getCloudflareContext — same access
  *    pattern as the /api/vault route.
- *  - KB (build-time bundle) for display names, line tags, images, hrefs.
- *    KB wins over the stored row copy (rows snapshot name/line at add time
- *    and go stale; the KB is re-synced on every deploy).
+ *  - KB via kbDb (D1 request-time reads, Option E) for display names, line
+ *    tags, images, hrefs. KB wins over the stored row copy (rows snapshot
+ *    name/line at add time and go stale; the KB is re-synced on every deploy).
+ *    Converted from the bundled @/data/kb 2026-08-16: this page is fully
+ *    dynamic (per-user, uncacheable) so it's the one live consumer that
+ *    forced the whole 20MB slim KB array into the runtime Worker bundle —
+ *    every other @/data/kb consumer is a static/prerendered page that gets
+ *    tree-shaken out. That single reachability pushed the Worker past
+ *    Cloudflare's 62 MiB deploy traversal limit (code 10027) once matcher's
+ *    passport pours grew the KB past the margin. See
+ *    Bridge/MATCHER-TO-WEB-OPTION-E-SPEC-2026-06-14.md for the kbDb design.
  *  - R2 price snapshots (r2proxy, same endpoint + revalidate the figure page
  *    uses) for median / comp counts. Fetches are parallel, individually
  *    timeboxed, and capped — a missing snapshot renders as "no recent solds",
  *    never an error.
  */
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { getFigureById, getAllFigures, figureUrl } from '@/data/kb'
+import { getFigureById, getFiguresByFandom, figureUrl, type KBFigure } from '@/data/kbDb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 
@@ -101,9 +109,11 @@ async function getDB(): Promise<D1Database> {
   return (env as any).DB as D1Database
 }
 
-/** Display name + line tag, KB-first with stored-row fallback. */
-function resolveDisplay(fid: string, storedName: string | null, storedLine: string | null) {
-  const kb = getFigureById(fid)
+/** Display name + line tag, KB-first with stored-row fallback. Sync — takes a
+ *  pre-fetched fid→KBFigure map (built once per request in getVaultShelfData)
+ *  rather than hitting D1 per row. */
+function resolveDisplaySync(fid: string, storedName: string | null, storedLine: string | null, kbByFid: Map<string, KBFigure | null>) {
+  const kb = kbByFid.get(fid)
   if (kb) {
     const name = prettifySlug(kb.character_canonical)
     const wave = kb.release_wave && /^\d+$/.test(kb.release_wave) ? ` ${kb.release_wave}` : ''
@@ -227,14 +237,18 @@ const NO_LINE: LineCompletion = { lineComplete: false, lineLabel: null, lineOwne
 
 /** Per-figure_id line-completion lookup for a set of owned rows. Two passes:
  *  one over the (small) owned set to find which line-groups are in play, one
- *  over the full KB to size only those groups — never an O(owned × KB) scan. */
-function computeLineCompletion(vaultRows: VaultRow[]): Map<string, LineCompletion> {
+ *  over just the fandom(s) actually in play to size only those groups — never
+ *  a scan of the whole KB (kbDb has no bulk getAllFigures; the owned set's
+ *  fandoms are typically 1-4, so per-fandom D1 reads stay small). */
+async function computeLineCompletion(vaultRows: VaultRow[], kbByFid: Map<string, KBFigure | null>): Promise<Map<string, LineCompletion>> {
   const result = new Map<string, LineCompletion>()
   const ownedByKey = new Map<string, string[]>() // lineKey -> owned figure_ids
+  const fandoms = new Set<string>()
 
   for (const r of vaultRows) {
-    const kb = getFigureById(r.figure_id)
+    const kb = kbByFid.get(r.figure_id)
     if (!kb || !kb.release_wave) continue
+    fandoms.add(kb.fandom)
     const key = lineGroupKey(kb.fandom, kb.product_line, kb.release_wave)
     const list = ownedByKey.get(key)
     if (list) list.push(r.figure_id)
@@ -243,11 +257,14 @@ function computeLineCompletion(vaultRows: VaultRow[]): Map<string, LineCompletio
   if (ownedByKey.size === 0) return result
 
   const totals = new Map<string, number>()
-  for (const f of getAllFigures()) {
-    if (!f.release_wave) continue
-    const key = lineGroupKey(f.fandom, f.product_line, f.release_wave)
-    if (!ownedByKey.has(key)) continue
-    totals.set(key, (totals.get(key) ?? 0) + 1)
+  const fandomFigureSets = await Promise.all([...fandoms].map(f => getFiguresByFandom(f)))
+  for (const figures of fandomFigureSets) {
+    for (const f of figures) {
+      if (!f.release_wave) continue
+      const key = lineGroupKey(f.fandom, f.product_line, f.release_wave)
+      if (!ownedByKey.has(key)) continue
+      totals.set(key, (totals.get(key) ?? 0) + 1)
+    }
   }
 
   for (const [key, fids] of ownedByKey) {
@@ -255,7 +272,7 @@ function computeLineCompletion(vaultRows: VaultRow[]): Map<string, LineCompletio
     if (total < LINE_GROUP_MIN || total > LINE_GROUP_MAX) continue
     const complete = fids.length >= total
     // Label from any one member of the group — they share fandom/line/wave.
-    const sample = getFigureById(fids[0])
+    const sample = kbByFid.get(fids[0])
     if (!sample) continue
     const label = `${prettifySlug(sample.product_line)} ${sample.release_wave}`
     for (const fid of fids) {
@@ -291,14 +308,17 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
     if (!seen.has(r.figure_id)) { seen.add(r.figure_id); fidOrder.push(r.figure_id) }
   }
   const toFetch = fidOrder.slice(0, MEDIAN_FETCH_CAP)
-  const snaps = new Map<string, Snapshot>(
-    await Promise.all(toFetch.map(async fid => [fid, await fetchSnapshot(fid)] as const))
-  )
+  const [snapEntries, kbEntries] = await Promise.all([
+    Promise.all(toFetch.map(async fid => [fid, await fetchSnapshot(fid)] as const)),
+    Promise.all(fidOrder.map(async fid => [fid, await getFigureById(fid)] as const)),
+  ])
+  const snaps = new Map<string, Snapshot>(snapEntries)
+  const kbByFid = new Map<string, KBFigure | null>(kbEntries)
 
-  const lineCompletion = computeLineCompletion(vaultRows)
+  const lineCompletion = await computeLineCompletion(vaultRows, kbByFid)
 
   const items: VaultShelfItem[] = vaultRows.map(r => {
-    const d = resolveDisplay(r.figure_id, r.name, r.line)
+    const d = resolveDisplaySync(r.figure_id, r.name, r.line, kbByFid)
     const condition = r.condition ?? 'Loose'
     const matched = conditionMatchedMedian(snaps.get(r.figure_id), condition)
     return {
@@ -314,7 +334,7 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
   })
 
   const hunt: HuntItem[] = wantRows.map(r => {
-    const d = resolveDisplay(r.figure_id, r.name, r.line)
+    const d = resolveDisplaySync(r.figure_id, r.name, r.line, kbByFid)
     const s = snaps.get(r.figure_id)
     const target = r.target_price ?? 0
     const median = s?.median ?? null
