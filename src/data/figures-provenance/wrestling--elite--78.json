@@ -3396,5 +3396,338 @@
     "status": "unresolved"
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_78_superstar-billy-graham_57c2afdca3e7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_78_superstar-billy-graham_57c2afdca3e7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_78_superstar-billy-graham_57c2afdca3e7",
+   "character_canonical": "superstar-billy-graham",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "78",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "\"Superstar\" Billy Graham"
+  },
+  "identity_hash": "5af103a6bad28372",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite78_graham",
+     "url": "https://wrestlingfiguredatabase.com/products/elite78-superstargraham",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toynewsi_wave78_79",
+     "url": "https://toynewsi.com/241-36814",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_toywiz_kofi_s78",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-78-kofi-kingston-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-78-toy-figures-billy-graham-elite78-08.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2020/11/21/wwe-elite-78-superstar-billy-graham-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite78_graham",
+     "text": "2020 WWE Mattel Elite Collection Series 78 - \"Superstar\" Billy Graham",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "\"Superstar\" Billy Graham",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite78_graham",
+     "text": "Wave Name: Elite Collection Mainline; Series Number: 78; Release Date: 2020; Release Country: United States; Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toynewsi_wave78_79",
+     "text": "Wave 78: Kofi Kingston, Matt Riddle, R-Truth, Naomi, Naomi (Chase variant), Drake Maverick, and 'Superstar' Billy Graham",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toynewsi_wave78_79",
+     "text": "Wave 79: Roman Reigns, Randy Orton, Daniel Bryan, Big E, Xavier Woods, Bobby Fish, Bobby Fish (Chase variant), and Bret Hart Vs Goldberg Elite Collection 2-Pack",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kofi_s78",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "tie-dye pants",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "white on purple",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "a cloth tie-dye t-shirt, which works for either era as well",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "a pair of sunglasses and a plastic boa",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "his earlier 1970s run when he was the WWWF champion",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, waist, hips, thighs, knees (double-jointed), ankles",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "one of the most impressive offerings from Mattel",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "superstar-billy-graham",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "his earlier 1970s run when he was the WWWF champion",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "tie-dye pants, white on purple",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, waist, hips, thighs, knees (double-jointed), ankles",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "a pair of sunglasses and a plastic boa",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "a cloth tie-dye t-shirt, which works for either era as well",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "sunglasses and a plastic boa",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "cloth tie-dye t-shirt",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
  }
 }

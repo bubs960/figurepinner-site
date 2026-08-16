@@ -1,14 +1,18 @@
 {
- "md5": "CB736FD31C0214B26BFD94B6FADF5623",
- "doc_count": 5,
- "source_batch": "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
- "poured_at": "2026-08-14",
- "warn_count_at_pour": 13,
+ "md5": "6D0C6C3308B53659E2C00373834B26D6",
+ "doc_count": 6,
+ "source_batches": [
+  "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
+  "enrich-v42-batch-elite19-REPAIRED-2026-08-16.json"
+ ],
+ "poured_at": "2026-08-16",
+ "warn_count_at_pour": 21,
  "identity_hashes": {
   "fp_wrestling_mattel_elite_35_diego_16eff2": "428854307040d431",
   "fp_wrestling_mattel_elite_35_luke-harper_531471": "55802adbf11a6798",
   "fp_wrestling_mattel_elite_35_fernando_1ed8d2": "150588628316ecda",
   "fp_wrestling_mattel_elite_35_triple-h_0adc1a": "f7a011ba963eef59",
-  "fp_wrestling_mattel_elite_35_earthquake_3cf156": "22ac23aec917ae97"
+  "fp_wrestling_mattel_elite_35_earthquake_3cf156": "22ac23aec917ae97",
+  "fp_wrestling_mattel_elite_35_randy-orton_da181e": "639f6ead9e33c02e"
  }
 }

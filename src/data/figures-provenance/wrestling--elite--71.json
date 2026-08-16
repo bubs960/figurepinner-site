@@ -1,0 +1,3026 @@
+{
+ "fp_wrestling_mattel_elite_71_drew-mcintyre_c47c9e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_drew-mcintyre_c47c9e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_drew-mcintyre_c47c9e",
+   "character_canonical": "drew-mcintyre",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Drew McIntyre"
+  },
+  "identity_hash": "27c9bf04fea792f9",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-drew-mcintyre-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "removable black entrance jacket and Raw Tag Team Championship Accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "black wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "black trunks and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "removable black entrance jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black wrist tape that matches his black trunks and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Raw Tag Team Championship Accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "mature, but kicking",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "drew-mcintyre",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "removable black entrance jacket",
+    "evidence_quote_ids": [
+     "w_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Raw Tag Team Championship Accessory",
+    "evidence_quote_ids": [
+     "w_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_jeff-hardy_bdd88a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_jeff-hardy_bdd88a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_jeff-hardy_bdd88a",
+   "character_canonical": "jeff-hardy",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jeff Hardy"
+  },
+  "identity_hash": "d7712f75c3708421",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-jeff-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-jeff-hardy-elite71-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Get wilder than ever with the 'Charismatic Enigma' as Jeff Hardy appears in Mattel WWE Elite 71!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "incredibly detailed pink, black and blue face paint",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a ring top featuring pink and black arm sleeves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "interchangeable hand molds with the 'Hardy' symbol and a pink belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "black ring pants",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "black ring boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "$129.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Get wilder than ever with the 'Charismatic Enigma' as Jeff Hardy appears in Mattel WWE Elite 71!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "ELITE71-02",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "jeff-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Pink, black and blue face paint; pink and black arm sleeves; black ring pants; black ring boots",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3",
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Pink, black and blue face paint",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable hand molds with the 'Hardy' symbol",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hand molds with the 'Hardy' symbol",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Pink belt",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE71-02",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$129.99",
+      "evidence_quote_ids": [
+       "f_q7"
+      ]
+     },
+     {
+      "value": "$18.99",
+      "evidence_quote_ids": [
+       "f_q9"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_john-cena_a381f8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_john-cena_a381f8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_john-cena_a381f8",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "8a25d87dcf33ac75",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-johncena",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-john-cena-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-john-cena-elite71-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jan. 7, 2019 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "blue ring shorts, black knee pads and blue and black ring shoes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "matching green 'Respect' shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "you can't see me' interchangeable hand",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "16-time champ",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "all smiles",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Hustle, loyalty, respect",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "a way of life",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Jan. 7, 2019 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "blue ring shorts, black knee pads and blue and black ring shoes",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "matching green 'Respect' shirt",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "'you can't see me' interchangeable hand",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "16-time champ",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable 'you can't see me' hand",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_big-show_30b3a9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_big-show_30b3a9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_big-show_30b3a9",
+   "character_canonical": "big-show",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Big Show"
+  },
+  "identity_hash": "ff79bb58470c28b0",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-bigshow",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-big-show-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-big-show-elite71-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 14, 1999 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Removable 'Big Show' black and red shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "singlet underneath is ring ready",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black ring boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "a brand new throwback headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "a classic late 90's rounded WWE Championship",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "removable 'Big Show' black and red shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "black ring boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "a brand new throwback headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "a classic late 90's rounded WWE Championship",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Nov. 14, 1999 @ WWF Survivor Series",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Removable black and red shirt, black ring boots",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q7",
+     "f_q4",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Brand new throwback headsculpt",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q9"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable 'Big Show' black and red shirt",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Classic late 90's rounded WWE Championship",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable black and red shirt",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Classic late 90's rounded WWE Championship",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q10"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_kassius-ohno_04a61eb1ee6f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_kassius-ohno_04a61eb1ee6f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_kassius-ohno_04a61eb1ee6f",
+   "character_canonical": "kassius-ohno",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Kassius Ohno"
+  },
+  "identity_hash": "5eb788e970d88415",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-kassiusexclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2020/02/06/wwe-elite-71-kassius-ohno-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jan. 27, 2018 @ NXT TakeOver: Philadelphia",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "The \"jersey\" paint came out fine — Mattel never seems to have a challenge with tampo paint applications, which carries through to the tights and boots complete with a Kassius along the sides.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "It's very easy to see Ohno in this sculpt.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "this works for good guy Ohno, but is too friendly for the heel version.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Ohno represents another instance where Mattel is improving with hair color shading as there's some black in the brown.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "neck, bicep, ball-jointed shoulders, elbows, wrists, waist, hips, thighs, knees (double-jointed), ankles.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "The shirt does create some restrictions with the torso's back and forth movement.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Ohno comes with his entrance robe. Fortunately, it's cloth as plastic on plastic attires would have been tricky to operate.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "He also comes with an alternate set of fists.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "February 6, 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kassius-ohno",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jan. 27, 2018 @ NXT TakeOver: Philadelphia",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "It's very easy to see Ohno in this sculpt",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, waist, hips, thighs, double-jointed knees, ankles",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Improving with hair color shading as there's some black in the brown",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "The shirt does create some restrictions with the torso's back and forth movement",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Cloth entrance robe",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Alternate set of fists",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by February 2020",
+    "evidence_quote_ids": [
+     "f_q12",
+     "f_q5"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_nikki-bella_ba1c5b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_nikki-bella_ba1c5b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_nikki-bella_ba1c5b",
+   "character_canonical": "nikki-bella",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Nikki Bella"
+  },
+  "identity_hash": "fc6da127c2809f90",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-nikkibella",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-nikki-bella-action-figure-fearless/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 28, 2018 @ WWE Evolution",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "nikki-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "nikki-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Nikki Bella leads a revolution in Mattel WWE Elite 71! She wears a 'Bella' red hat accessory and has a serious headsculpt with long hair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "nikki-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 28, 2018 @ WWE Evolution",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Serious headsculpt with long hair",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Red 'Bella' hat accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "'Bella' red hat accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_adam-cole_2911b8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_adam-cole_2911b8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_adam-cole_2911b8",
+   "character_canonical": "adam-cole",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Adam Cole"
+  },
+  "identity_hash": "3b110c61e33cfc3e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-adam-cole-elite71-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/adam-cole-wwe-elite-collection-series-71-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black knee pads and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Cole has a new headsculpt with his tongue out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "He's also sporting accurate tattoos and has a removable 'Adam Cole Bay Bay' shirt accessory. Cole includes the NXT North American Championship",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "interchangeable posed hand molds",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Prep a finishing move pose with 24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "adam-cole",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature for the first time individual stands, authentic costumes, extreme articulation and amazing accuracy",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black knee pads and black boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New headsculpt with tongue out",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable 'Adam Cole Bay Bay' shirt accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "NXT North American Championship",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Interchangeable posed hand molds",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Removable 'Adam Cole Bay Bay' shirt accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$39.99",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 39.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_71_paige_172214901c0e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_71_paige_172214901c0e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_71_paige_172214901c0e",
+   "character_canonical": "paige",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "71",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Paige"
+  },
+  "identity_hash": "035767e7a17ab98e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_adamcole",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-adamcole",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_adamcole",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-71-adam-cole-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_p3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=3",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_completeset",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-complete-set-elite71-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_drewmcintyre",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-71-toy-figures-drew-mcintyre-elite71-03.html",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwwiki_elite71",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_71",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite71-paigeexclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.reigncitytoys.com/products/wwe-elite-collection-series-71-paige",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_completeset",
+     "text": "WWE Elite 71 - Complete Set of 6 WWE Toy Wrestling Action Figures by Mattel! This set includes:John Cena, Jeff Hardy, Drew McIntyre, Adam Cole, Nikki Bella & Big Show!",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_adamcole",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Adam Cole",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_adamcole",
+     "text": "Series: 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_collection_p3",
+     "text": "2020 WWE Mattel Elite Collection Series 71",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_drewmcintyre",
+     "text": "The 'Chosen One' surges with more power than ever as Drew McIntyre arrives in Mattel WWE Elite 71 with a removable black entrance jacket and Raw Tag Team Championship Accessory.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Drew McIntyre",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_pwwiki_elite71",
+     "text": "WWE Elite 71 is the 75th series in the WWE Elite toy line.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "paige",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Dec. 11, 2017 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "paige",
+      "character_variant": "target-exclusive",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "best estimate based on when majority of gear/accessories were worn or most memorable event.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "paige",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$75.00",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "paige",
+      "character_variant": "target-exclusive",
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "paige",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "paige",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "paige",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "paige",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "brand new and comes in original packaging",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "paige",
+      "character_variant": "target-exclusive",
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,2766 @@
+{
+ "fp_wrestling_mattel_elite_68_brie-bella_4e6182033cf2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_brie-bella_4e6182033cf2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_brie-bella_4e6182033cf2",
+   "character_canonical": "brie-bella",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Brie Bella"
+  },
+  "identity_hash": "37b2e9e953c713fe",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-brie-bella-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-brie-bella-elite68-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection figure! Featuring one of the WWE's biggest personalities and champions, this bold and colorful figure comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "brie-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation, a detailed character expression, authentic ring attire and iconic accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "brie-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: September 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "brie-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "'Brie Mode' is in full effect with Brie Bella in Mattel WWE Elite 68! The Earth-conscious Bella twin has a bandana headsculpt with a big smile and red and black 'Brie Bella' ring gear.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "brie-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "It was as personal as it gets when Brie Bella challenged Stephanie McMahon at SummerSlam 2014, ending their year-long rivalry.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "brie-bella",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red and black ring gear",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Bandana headsculpt with a big smile",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Red and black 'Brie Bella' ring gear with bandana headsculpt",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2019",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_68_roman-reigns_8641cf": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_roman-reigns_8641cf",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_roman-reigns_8641cf",
+   "character_canonical": "roman-reigns",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Roman Reigns"
+  },
+  "identity_hash": "a17d623ba85ad63d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-roman-reigns-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-roman-reigns-elite68-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation, a detailed character expression, authentic ring attire and iconic accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$54.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: September 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black, blue and white chest protetor with his symbol in the front",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "accurate tattoos, a black glove and black wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "black ring pants and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "WWE Universal Championship accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "a determined headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "roman-reigns",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black, blue and white chest protetor with his symbol; black ring pants and black boots",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A determined headscan",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black, blue and white chest protetor with his symbol in the front",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Accurate tattoos, a black glove and black wrist tape",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Black ring pants and black boots",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE Universal Championship accessory",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2019",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_68_undertaker_e83977": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_undertaker_e83977",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_undertaker_e83977",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "794721847aaa781f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-undertaker-action-figure-american-badass/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection figure! Featuring one of the WWE's biggest personalities and champions, this bold and colorful figure comes ready to wreak havoc right out of the box! Figure has deluxe articulation, a detailed character expression, authentic ring attire and iconic accessories. Get all the WWE Elite Collection figures and let the collecting and battles begin!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Price: $69.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "UPC: 887961730340",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: September 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "887961730340",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2019",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_68_daniel-bryan_729efdf3b491": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_daniel-bryan_729efdf3b491",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_daniel-bryan_729efdf3b491",
+   "character_canonical": "daniel-bryan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Daniel Bryan"
+  },
+  "identity_hash": "00d6b6aa5e781cae",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-danielbryan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-daniel-bryan-elite68-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 19, 2018 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Price: $84.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release Date: September 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "authentic ring attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "a detailed character expression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "sporting green, white and blue ring gear featuring 'flame' style symbols in the front and on his green, blue and white boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "new headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s3",
+     "text": "pointed hand molds",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s3",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q17",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 19, 2018 @ WWE SummerSlam",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "green, white and blue ring gear with 'flame' style symbols, green/blue/white boots",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "new headscan",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "green, white and blue 'flame' style symbols on ring gear and boots",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "pointed hand molds",
+    "evidence_quote_ids": [
+     "f_q15"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2019",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$84.99",
+      "evidence_quote_ids": [
+       "f_q6"
+      ],
+      "price_detail": {
+       "amount": 84.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$19.99",
+      "evidence_quote_ids": [
+       "f_q16"
+      ],
+      "price_detail": {
+       "amount": 19.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_68_king-mabel_f4e3b2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_king-mabel_f4e3b2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_king-mabel_f4e3b2",
+   "character_canonical": "king-mabel",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "King Mabel"
+  },
+  "identity_hash": "b5acb61e57337677",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-kingmabel",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-kingmabelchase",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://lylesmoviefiles.com/2021/12/04/wwe-elite-68-king-mabel-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 26, 1995 @ WWF Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Attire Date: Aug. 27, 1995 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": "chase",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "gold and purple attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "shoulder fringes and baggy clothing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "This is a tremendous likeness",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "This is the complete opposite of the Shawn Michaels' dodgy head sculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "He does come with a crown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "fits well in hiding his Mohawk",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "I got King Mabel for $15. That's a killer price for a figure of this quality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "December 4, 2021",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "king-mabel",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: June 26, 1995 @ WWF Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Gold and purple attire",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A tremendous likeness, the complete opposite of the Shawn Michaels' dodgy head sculpt",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "He does come with a crown",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Fits well in hiding his Mohawk",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Shoulder fringes and baggy clothing",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Attire Date: Aug. 27, 1995 @ WWF SummerSlam, Series: 68",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Crown",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2019",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_68_pat-patterson_bc4634b0d3a3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_pat-patterson_bc4634b0d3a3",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_pat-patterson_bc4634b0d3a3",
+   "character_canonical": "pat-patterson",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Pat Patterson"
+  },
+  "identity_hash": "06e12f3d43f7f44a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://lylesmoviefiles.com/2019/09/24/wwe-elite-69-pat-patterson-figure-review/",
+     "source_type": "video",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.wrestlezone.com/news/1123099-collectors-corner-wwe-elite-68-collectors-edition-pat-patterson-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://service.mattel.com/us/productDetail.aspx?prodno=GFJ88&siteid=27",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Patterson has the hairy chest paint job and his hair even has a bit of a wash.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Patterson's likeness is spot-on",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a younger headsculpt as well",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Patterson doesn't need a ton of special articulation as the regular Elite.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "two open gripping hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "a riot helmet for extra protection",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "If you can find him at retail Patterson will only run you $20, the standard price for an Elite figure.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "pat-patterson",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Capture the blowout action of WWE® Superstars with this Elite Collection™ action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful fi [..More]",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Younger headsculpt with hairy chest paint job",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Hairy chest paint job, hair with a bit of a wash",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "A younger headsculpt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Riot helmet",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_68_braun-strowman_5c90f1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_68_braun-strowman_5c90f1",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_68_braun-strowman_5c90f1",
+   "character_canonical": "braun-strowman",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "68",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Braun Strowman"
+  },
+  "identity_hash": "4e3310ad54fafff9",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_braunstrowman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-braunstrowman",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-braun-strowman-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_kingmabel",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-king-mabel-action-figure-with-m-on-chest/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_kingmabel",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-king-mabel-elite68-06.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_toywiz_lineup",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-68-daniel-bryan-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_lineup_composite",
+     "url": "https://wrestlingfiguredatabase.com/products/elite68-patpattersonexclusive",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-68-toy-figures-braun-strowman-elite68-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.wwe.com/braun-strowman-elite-series-68-mattel-action-figure/281D73B5C8.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/braun-strowman-wwe-elite-collection-series-68-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Series: 68",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_braunstrowman",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_braunstrowman",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_kingmabel",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "King Mabel",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_kingmabel",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "King Mabel",
+      "character_variant": "Lightning Bolts Version",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_toywiz_lineup",
+     "text": "WWE Wrestling Elite Collection Series 68 Daniel Bryan 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Daniel Bryan",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_search_lineup_composite",
+     "text": "2019 WWE Mattel Elite Collection Series 68 Pat Patterson [Exclusive] – Wrestling Figure Database",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Pat Patterson",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing a black ring tank top, black wrist tape and brown, green and orange ring pants. His green ring boots have light brown laces",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "accurate tattoos and a big smile",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "includes a giant 'bass' accessory, perfect for starting trouble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Prep a finishing move pose with 24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "individual stands, authentic costumes, extreme articulation and amazing accuracy",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black ring tank top, black wrist tape, brown/green/orange ring pants, green ring boots with light brown laces",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black, brown, green, orange",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Accurate tattoos and a big smile",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Giant 'bass' accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "All swagger and muscle, sculpted in serious detail",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Giant 'bass' accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

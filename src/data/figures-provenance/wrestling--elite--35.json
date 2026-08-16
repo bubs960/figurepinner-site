@@ -2197,5 +2197,410 @@
     "status": "unresolved"
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_35_randy-orton_da181e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_35_randy-orton_da181e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_35_randy-orton_da181e",
+   "character_canonical": "randy-orton",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "35",
+   "fandom": "wrestling",
+   "year": 2015,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Randy Orton"
+  },
+  "identity_hash": "639f6ead9e33c02e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_orton_s35",
+     "url": "https://wrestlingfiguredatabase.com/products/elite35-randyorton",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_orton_s35",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-35-randy-orton-action-figure-entrance-shirt/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_series1-50_p5",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=5",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "http://www.actionfigurebarbecue.com/2015/06/action-figure-review-randy-orton-series.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-35-randy-orton",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_orton_s35",
+     "text": "Release Date: 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_orton_s35",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_orton_s35",
+     "text": "Series: 35",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_orton_s35",
+     "text": "Attire Date: July 20, 2014 @ WWE Battleground",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_orton_s35",
+     "text": "April 2015",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2015,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_orton_s35",
+     "text": "6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_orton_s35",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "35 (6)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "Diego",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Diego"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "Earthquake",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Earthquake"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "Fernando",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Fernando"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "Luke Harper",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Luke Harper"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "Randy Orton",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Randy Orton"
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_wfd_series1-50_p5",
+     "text": "Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "his gear from Extreme Rules 2014 when Evolution fought the Shield",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "there's some white paint on the lips that seem to be implying...a toothy grin maybe?",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "it looks less like Randy Orton is grinning and more like he's eaten a box of powdered donuts",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Hinged ankles with lateral rockers, boot swivels, double hinged knees, swivel thighs, T-bar hips, swivel waist, hinged abdomen, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "depicts three skeletons, representing Batista, Triple H, and Orton himself",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Non-Scalper Price: $20",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Friday, June 12, 2015",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2015,
+      "character_canonical": "randy-orton",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "his gear from Extreme Rules 2014 when Evolution fought the Shield",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "it looks less like Randy Orton is grinning and more like he's eaten a box of powdered donuts",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Hinged ankles with lateral rockers, boot swivels, double hinged knees, swivel thighs, T-bar hips, swivel waist, hinged abdomen, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head.",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "depicts three skeletons, representing Batista, Triple H, and Orton himself",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by June 2015",
+    "evidence_quote_ids": [
+     "f_q7",
+     "f_q4"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
  }
 }

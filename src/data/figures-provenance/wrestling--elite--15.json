@@ -1,0 +1,2060 @@
+{
+ "fp_wrestling_mattel_elite_15_mark-henry_f69695": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_15_mark-henry_f69695",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_15_mark-henry_f69695",
+   "character_canonical": "mark-henry",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mark Henry"
+  },
+  "identity_hash": "f509d5214630c415",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite15_reymysterio",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-reymysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_elite15_markhenry",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-mark-henry-action-figure-world-heavyweight-championship/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite15_sincara",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-sin-cara-action-figure-yellow-entrance-cloak/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_search_elite15",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_series1_50_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-markhenry",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-15-mark-henry-elite15-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-mark-henry-action-figure-world-heavyweight-championship/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Elite Collection Series 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Aug. 23, 2009 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "WWE Wrestling Elite Collection Series 15 Mark Henry Action Figure World Heavyweight Championship",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Mark Henry",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "WWE Wrestling Elite Collection Series 15 Sin Cara Action Figure Yellow Entrance Cloak",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "Includes Blue & Gold Entrance Cloak",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Collection Series 15 Yokozuna Action Figure Ceremonial Robe Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Yokozuna",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Series 15 R-Truth Action Figure Wristbands, Necklace Lil Jimmy Proof Vest Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50_collection",
+     "text": "Mattel WWE Elite Collection Mainline Series 1-50",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 18, 2011 @ WWE Night of Champions",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Mark Henry - WWE Elite 15 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "May 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Includes World Heavyweight Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "deluxe articulation, amazing detail",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Sept. 18, 2011 @ WWE Night of Champions",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Includes World Heavyweight Championship Belt",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "World Heavyweight Championship Belt",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2012",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$39.99",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 39.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_15_sin-cara_419370": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_15_sin-cara_419370",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_15_sin-cara_419370",
+   "character_canonical": "sin-cara",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sin Cara"
+  },
+  "identity_hash": "5c519cd90a8d66ed",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite15_reymysterio",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-reymysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_elite15_markhenry",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-mark-henry-action-figure-world-heavyweight-championship/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite15_sincara",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-sin-cara-action-figure-yellow-entrance-cloak/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_search_elite15",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_series1_50_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-sincarayellow",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-sin-cara-action-figure-yellow-entrance-cloak/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Elite Collection Series 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Aug. 23, 2009 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "WWE Wrestling Elite Collection Series 15 Mark Henry Action Figure World Heavyweight Championship",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Mark Henry",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "WWE Wrestling Elite Collection Series 15 Sin Cara Action Figure Yellow Entrance Cloak",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "Includes Blue & Gold Entrance Cloak",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Collection Series 15 Yokozuna Action Figure Ceremonial Robe Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Yokozuna",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Series 15 R-Truth Action Figure Wristbands, Necklace Lil Jimmy Proof Vest Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50_collection",
+     "text": "Mattel WWE Elite Collection Mainline Series 1-50",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Aug. 12, 2011 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "sin-cara",
+      "character_variant": "yellow",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Blue & Gold Entrance Cloak",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "sin-cara",
+      "character_variant": "yellow",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_15_evan-bourne_e7bd12": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_15_evan-bourne_e7bd12",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_15_evan-bourne_e7bd12",
+   "character_canonical": "evan-bourne",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Evan Bourne"
+  },
+  "identity_hash": "2022520cd1da7130",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite15_reymysterio",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-reymysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_elite15_markhenry",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-mark-henry-action-figure-world-heavyweight-championship/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite15_sincara",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-sin-cara-action-figure-yellow-entrance-cloak/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_search_elite15",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_series1_50_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-evan-bourne-action-figure-tag-team-championship-belt-fly-air-bourne-sleeveless-shirt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://pwcatalog.com/products/elite15-evanbourne",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-15-evan-bourne-elite15-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Elite Collection Series 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Aug. 23, 2009 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "WWE Wrestling Elite Collection Series 15 Mark Henry Action Figure World Heavyweight Championship",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Mark Henry",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "WWE Wrestling Elite Collection Series 15 Sin Cara Action Figure Yellow Entrance Cloak",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "Includes Blue & Gold Entrance Cloak",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Collection Series 15 Yokozuna Action Figure Ceremonial Robe Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Yokozuna",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Series 15 R-Truth Action Figure Wristbands, Necklace Lil Jimmy Proof Vest Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50_collection",
+     "text": "Mattel WWE Elite Collection Mainline Series 1-50",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Includes Tag Team Championship Belt & Fly Air Bourne Sleeveless Shirt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "evan-bourne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Evan Bourne - WWE Elite 15 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "evan-bourne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "evan-bourne",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Evan Bourne Action Figure",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Tag Team Championship Belt",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Fly Air Bourne Sleeveless Shirt",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_15_rey-mysterio_170dc0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_15_rey-mysterio_170dc0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_15_rey-mysterio_170dc0",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "59f4b6c465eedf2e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite15_reymysterio",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-reymysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_elite15_markhenry",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-mark-henry-action-figure-world-heavyweight-championship/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite15_sincara",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-sin-cara-action-figure-yellow-entrance-cloak/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_search_elite15",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_series1_50_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-15-rey-mysterio-elite15-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-rey-mysterio-action-figure-entrance-hood/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Elite Collection Series 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Aug. 23, 2009 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "WWE Wrestling Elite Collection Series 15 Mark Henry Action Figure World Heavyweight Championship",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Mark Henry",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "WWE Wrestling Elite Collection Series 15 Sin Cara Action Figure Yellow Entrance Cloak",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "Includes Blue & Gold Entrance Cloak",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Collection Series 15 Yokozuna Action Figure Ceremonial Robe Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Yokozuna",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Series 15 R-Truth Action Figure Wristbands, Necklace Lil Jimmy Proof Vest Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50_collection",
+     "text": "Mattel WWE Elite Collection Mainline Series 1-50",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Includes Entrance Hood",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "May 2012",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 23, 2009 @ WWE SummerSlam",
+    "evidence_quote_ids": [
+     "w_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Entrance Hood",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2012",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_15_r-truth_193520": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_15_r-truth_193520",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_15_r-truth_193520",
+   "character_canonical": "r-truth",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "R-Truth"
+  },
+  "identity_hash": "4f8ef6202aa327b4",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite15_reymysterio",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-reymysterio",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_elite15_markhenry",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-mark-henry-action-figure-world-heavyweight-championship/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite15_sincara",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-sin-cara-action-figure-yellow-entrance-cloak/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_search_elite15",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_series1_50_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-15-r-truth-action-figure-wristbands-necklace-lil-jimmy-proof-vest/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-rtruth",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Elite Collection Series 15",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite15_reymysterio",
+     "text": "Aug. 23, 2009 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Rey Mysterio",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2012"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "WWE Wrestling Elite Collection Series 15 Mark Henry Action Figure World Heavyweight Championship",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Mark Henry",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite15_markhenry",
+     "text": "6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "WWE Wrestling Elite Collection Series 15 Sin Cara Action Figure Yellow Entrance Cloak",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite15_sincara",
+     "text": "Includes Blue & Gold Entrance Cloak",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sin Cara",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Collection Series 15 Yokozuna Action Figure Ceremonial Robe Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Yokozuna",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_search_elite15",
+     "text": "WWE Wrestling Elite Series 15 R-Truth Action Figure Wristbands, Necklace Lil Jimmy Proof Vest Mattel Toys",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "R-Truth",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50_collection",
+     "text": "Mattel WWE Elite Collection Mainline Series 1-50",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Includes Wristbands, Necklace & Lil Jimmy Proof Vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: Oct. 10, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "r-truth",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 10, 2011 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Includes Wristbands, Necklace & Lil Jimmy Proof Vest",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Wristbands",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Necklace",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Lil Jimmy Proof Vest",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_15_yokozuna_237d26": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_15_yokozuna_237d26",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_15_yokozuna_237d26",
+   "character_canonical": "yokozuna",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "15",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Yokozuna"
+  },
+  "identity_hash": "559c19d716c63534",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite15_yokozuna",
+     "url": "https://wrestlingfiguredatabase.com/products/elite15-yokozuna",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_elite15_yokozuna",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-15-yokozuna-action-figure-ceremonial-robe/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_mainline_1-50_p5",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=5",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_forum_wrestlingfigs_elite_checklist",
+     "url": "https://forum.wrestlingfigs.com/thread/378420/official-elite-checklist-discussion-thread",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-15-yokozuna-elite15-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2015/06/13/yokozuna-figure-review-hall-of-fame/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite15_yokozuna",
+     "text": "2012 WWE Mattel Elite Collection Series 15 Yokozuna",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012,
+      "character_canonical": "Yokozuna"
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite15_yokozuna",
+     "text": "Series 15",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2012,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite15_yokozuna",
+     "text": "Attire Reference: June 13, 1993 @ WWF King of the Ring",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012,
+      "character_canonical": "Yokozuna"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite15_yokozuna",
+     "text": "May 2012",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite15_yokozuna",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite15_yokozuna",
+     "text": "6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_elite15_yokozuna",
+     "text": "First time in the line",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2012,
+      "character_canonical": "Yokozuna"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_mainline_1-50_p5",
+     "text": "15 (7)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2012,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$59.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "yokozuna",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Yokozuna - WWE Elite 15 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "yokozuna",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Mattel already released a Yokozuna way back in Elite 15 featuring the quintessential two-time WWF champ so is this HOF figure worthy of display induction?",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "yokozuna",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "I didn't think the first Yokozuna sculpt was bad, but this new sculpt is even better.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "yokozuna",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Besides, the Elite 15 and the HOF heads are easily swapped for those who want a bit more accuracy.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "yokozuna",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "If you have the first Yokozuna, this is really only worth it if you want an outfit to reflect his earlier WWF run, you want the new head sculpt or missed the tag titles.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "yokozuna",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "June 13, 1993 @ WWF King of the Ring",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "An outfit to reflect his earlier WWF run",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

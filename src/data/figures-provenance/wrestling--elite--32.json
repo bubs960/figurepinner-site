@@ -1,0 +1,2148 @@
+{
+ "fp_wrestling_mattel_elite_32_big-e_f84ed966d58a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_32_big-e_f84ed966d58a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_32_big-e_f84ed966d58a",
+   "character_canonical": "big-e",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "32",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Big E"
+  },
+  "identity_hash": "a70bbdd189d798c3",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_codyrhodes",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-codyrhodes",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_sincara",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-sincara",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-bige",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_danielbryan",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-daniel-bryan-elite32-01.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_elite32_general",
+     "url": "https://www.figurerealm.com/actionfigure?mode=3&action=seriesitemlist&id=6207&ssid=77&series=wweelitecollection",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-32-big-e-action-figure-intercontinental-championship/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-big-e-langston-elite32-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Jan. 26, 2014 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sincara",
+     "text": "Apr. 8, 2014 @ WWE Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Sin Cara"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_danielbryan",
+     "text": "includes Wyatt Family jumpsuit accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_danielbryan",
+     "text": "$9.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_danielbryan",
+     "text": "RAW MARCH, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation, amazing detail",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "WWE Intercontinental Championship Belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "WRESTLEMANIA 29 2013",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "big-e",
+      "character_variant": "wrestlemania-29-attire",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "THE BIG ENDING",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "FORMER AFFILIATIONS: AJ LEE; DOLPH ZIGGLER",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE Intercontinental Championship Belt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_32_cody-rhodes_f0e7df": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_32_cody-rhodes_f0e7df",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_32_cody-rhodes_f0e7df",
+   "character_canonical": "cody-rhodes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "32",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cody Rhodes"
+  },
+  "identity_hash": "14c2892960fa8141",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_codyrhodes",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-codyrhodes",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_sincara",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-sincara",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-bige",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_danielbryan",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-daniel-bryan-elite32-01.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_elite32_general",
+     "url": "https://www.figurerealm.com/actionfigure?mode=3&action=seriesitemlist&id=6207&ssid=77&series=wweelitecollection",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-cody-rhodes-elite32-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-32-cody-rhodes-action-figure-entrance-vest-sleeveless-shirt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Jan. 26, 2014 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sincara",
+     "text": "Apr. 8, 2014 @ WWE Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Sin Cara"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_danielbryan",
+     "text": "includes Wyatt Family jumpsuit accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_danielbryan",
+     "text": "$9.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_danielbryan",
+     "text": "RAW MARCH, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "RAW JANUARY, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Includes Entrance Vest & Sleeveless Shirt!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Includes Entrance Vest & Sleeveless Shirt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Entrance Vest & Sleeveless Shirt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_32_rey-mysterio_7db279": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_32_rey-mysterio_7db279",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_32_rey-mysterio_7db279",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "32",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "96ffe285853ee530",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_codyrhodes",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-codyrhodes",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_sincara",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-sincara",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-bige",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_danielbryan",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-daniel-bryan-elite32-01.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_elite32_general",
+     "url": "https://www.figurerealm.com/actionfigure?mode=3&action=seriesitemlist&id=6207&ssid=77&series=wweelitecollection",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-32-rey-mysterio-action-figure-cruiserweight-title-stand/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-rey-mysterio-elite32-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Jan. 26, 2014 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sincara",
+     "text": "Apr. 8, 2014 @ WWE Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Sin Cara"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_danielbryan",
+     "text": "includes Wyatt Family jumpsuit accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_danielbryan",
+     "text": "$9.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_danielbryan",
+     "text": "RAW MARCH, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$111.14",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "November 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Attire Date: Dec. 29, 1996 @ WCW Starrcade",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": "starrcade-1996",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Series: 32",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "RING ATTIRE: STARRCADE DECEMBER, 1996",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": "starrcade-1996",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "SIGNATURE MOVE: 619; WEST COAST POP",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2014",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q11"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     },
+     {
+      "value": "$111.14",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 111.14,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": "2026-08-16",
+       "source_id": "f_s1"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_32_daniel-bryan_0de7c8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_32_daniel-bryan_0de7c8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_32_daniel-bryan_0de7c8",
+   "character_canonical": "daniel-bryan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "32",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Daniel Bryan"
+  },
+  "identity_hash": "5f51b1cf37a67886",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_codyrhodes",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-codyrhodes",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_sincara",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-sincara",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-bige",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_danielbryan",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-daniel-bryan-elite32-01.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_elite32_general",
+     "url": "https://www.figurerealm.com/actionfigure?mode=3&action=seriesitemlist&id=6207&ssid=77&series=wweelitecollection",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-32-daniel-bryan-action-figure-wyatt-family-jumpsuit/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-danielbryan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Jan. 26, 2014 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sincara",
+     "text": "Apr. 8, 2014 @ WWE Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Sin Cara"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_danielbryan",
+     "text": "includes Wyatt Family jumpsuit accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_danielbryan",
+     "text": "$9.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_danielbryan",
+     "text": "RAW MARCH, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: Series 32",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "UPC: 887961197532",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Stock #: 89060",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "2014 WWE Mattel Elite Collection Series 32 Daniel Bryan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Attire Date: January 26, 2014 at WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Wyatt Family jumpsuit",
+    "evidence_quote_ids": [
+     "w_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Wyatt Family jumpsuit accessory",
+    "evidence_quote_ids": [
+     "w_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "Stock #89060 / UPC 887961197532",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_32_sin-cara_a66851aaaa91": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_32_sin-cara_a66851aaaa91",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_32_sin-cara_a66851aaaa91",
+   "character_canonical": "sin-cara",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "32",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Sin Cara"
+  },
+  "identity_hash": "74eb67df4aeaa062",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_codyrhodes",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-codyrhodes",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_sincara",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-sincara",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-bige",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_danielbryan",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-daniel-bryan-elite32-01.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_elite32_general",
+     "url": "https://www.figurerealm.com/actionfigure?mode=3&action=seriesitemlist&id=6207&ssid=77&series=wweelitecollection",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-32-sin-cara-action-figure-entrance-coat/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-sin-cara-elite32-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Jan. 26, 2014 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sincara",
+     "text": "Apr. 8, 2014 @ WWE Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Sin Cara"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_danielbryan",
+     "text": "includes Wyatt Family jumpsuit accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_danielbryan",
+     "text": "$9.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_danielbryan",
+     "text": "RAW MARCH, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation, amazing detail and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "UPC: 887961086720",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Stock #: 89063",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "RING ATTIRE: WWE MAIN EVENT APRIL, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "AKA: THE INTERNATIONAL SENSATION",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "SIGNATURE MOVE: MOONSAULT SIDE SLAM",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "SKU: ELITE32-04",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "sin-cara",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WWE Main Event April, 2014",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "AKA: The International Sensation",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Signature move: Moonsault Side Slam",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "Stock #: 89063",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     },
+     {
+      "value": "SKU: ELITE32-04",
+      "evidence_quote_ids": [
+       "f_q10"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_32_mark-henry_4b3577": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_32_mark-henry_4b3577",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_32_mark-henry_4b3577",
+   "character_canonical": "mark-henry",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "32",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mark Henry"
+  },
+  "identity_hash": "025d77faad8f8d0d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_codyrhodes",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-codyrhodes",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_sincara",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-sincara",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite32-bige",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_danielbryan",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-32-daniel-bryan-elite32-01.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_websearch_elite32_general",
+     "url": "https://www.figurerealm.com/actionfigure?mode=3&action=seriesitemlist&id=6207&ssid=77&series=wweelitecollection",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-legends-series-32-mark-henry",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-32-mark-henry-action-figure-table-shaver-steps/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "http://www.actionfigurebarbecue.com/2015/11/action-figure-review-mark-henry-series.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_codyrhodes",
+     "text": "Jan. 26, 2014 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_sincara",
+     "text": "Apr. 8, 2014 @ WWE Main Event",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Sin Cara"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_bige",
+     "text": "Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_danielbryan",
+     "text": "includes Wyatt Family jumpsuit accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_danielbryan",
+     "text": "$9.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_ringside_danielbryan",
+     "text": "RAW MARCH, 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2026 WWE Mattel Elite Collection Legends Series 32 Mark Henry",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2026,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2026,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Apr. 2, 2012 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "legends",
+      "year": 2026,
+      "character_canonical": "mark-henry",
+      "character_variant": "attire-reference-date",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Includes Table, Shaver & Ring Steps!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Mark Henry is decked out in a black and red outfit with some cool red, black, and white details.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Mark Henry's appearance is captured here and his build and epic beard are nicely captured.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Hinged ankles w/ lateral rockers, boot swivels, double hinges knees, swivel thighs, ball jointed hips, swivel waist, hinged abdomen, swivel/hinged shoulders, bicep swivels, hinged elbows, swivel hinge wrists, and a ball jointed head.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Mark also comes with an electric razor, the bottom set of ring steps, and a break apart table.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "I actually found Mark Henry on sale on Amazon for less than $20 (maybe around $15?)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "mark-henry",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

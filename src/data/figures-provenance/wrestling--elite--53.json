@@ -1,0 +1,2812 @@
+{
+ "fp_wrestling_mattel_elite_53_chris-jericho_235990": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_53_chris-jericho_235990",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_53_chris-jericho_235990",
+   "character_canonical": "chris-jericho",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "53",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Chris Jericho"
+  },
+  "identity_hash": "c74ba34b785bf641",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_owens",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-kevinowens",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_jericho",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-chrisjericho",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-bige",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_owens",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-kevin-owens-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_jericho",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-chris-jericho-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bliss",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-alexa-bliss-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_slater",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-heath-slater-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-miz-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-complete-set-elite53-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-chris-jericho-elite53-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://stores.comichub.com/buybigbang/products/wwe-elite-collection-series-53-chris-jericho-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 53 Toy Wrestling Action Figures by Mattel! This set includes: Kevin Owens, Big E (New Day), The Miz, Heath Slater, Chris Jericho & Alexa Bliss!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Alexa Bliss",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Big E",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Chris Jericho",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Chris Jericho"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Heath Slater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Heath Slater"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Kevin Owens",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Kevin Owens"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 The Miz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_owens",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_owens",
+     "text": "Series: 53",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_jericho",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bliss",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_jericho",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_bliss",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_jericho",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_owens",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "grey 'Jericho' trunks that match the grey 'Jericho' boot designs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a big smile",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a removable scarf",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "'The List of Jericho' accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "SMACKDOWN; JULY 7, 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "USD $29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "grey 'Jericho' trunks that match the grey 'Jericho' boot designs",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "a big smile",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "a removable scarf",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "'The List of Jericho' accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "a removable scarf",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "'The List of Jericho' accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_53_heath-slater_8beb19": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_53_heath-slater_8beb19",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_53_heath-slater_8beb19",
+   "character_canonical": "heath-slater",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "53",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Heath Slater"
+  },
+  "identity_hash": "133bc7015dd23956",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_owens",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-kevinowens",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_jericho",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-chrisjericho",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-bige",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_owens",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-kevin-owens-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_jericho",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-chris-jericho-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bliss",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-alexa-bliss-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_slater",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-heath-slater-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-miz-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-complete-set-elite53-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-heathslater",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.actionfigurecellar.com/product-page/heath-slater-wwe-elite-collection-series-53",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://shop.wwe.com/heath-slater-elite-series-53-mattel-action-figure/W13479.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://wrestlingshop.com/en-us/products/heath-slater-wwe-elite-collection-series-53",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 53 Toy Wrestling Action Figures by Mattel! This set includes: Kevin Owens, Big E (New Day), The Miz, Heath Slater, Chris Jericho & Alexa Bliss!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Alexa Bliss",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Big E",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Chris Jericho",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Chris Jericho"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Heath Slater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Heath Slater"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Kevin Owens",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Kevin Owens"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 The Miz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_owens",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_owens",
+     "text": "Series: 53",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_jericho",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bliss",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_jericho",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_bliss",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_jericho",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_owens",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 9, 2016 @ WWE No Mercy",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "heath-slater",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s4",
+     "text": "24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "heath-slater",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s4",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "heath-slater",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s4",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "heath-slater",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s4",
+     "text": "Prep a finishing move pose with 24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "heath-slater",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 9, 2016 @ WWE No Mercy",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "All swagger and muscle, sculpted in serious detail",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_53_miz_3ec114": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_53_miz_3ec114",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_53_miz_3ec114",
+   "character_canonical": "miz",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "53",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Miz"
+  },
+  "identity_hash": "30fc1f709c630080",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_owens",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-kevinowens",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_jericho",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-chrisjericho",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-bige",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_owens",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-kevin-owens-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_jericho",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-chris-jericho-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bliss",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-alexa-bliss-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_slater",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-heath-slater-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-miz-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-complete-set-elite53-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-the-miz-elite53-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-themiz",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 53 Toy Wrestling Action Figures by Mattel! This set includes: Kevin Owens, Big E (New Day), The Miz, Heath Slater, Chris Jericho & Alexa Bliss!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Alexa Bliss",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Big E",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Chris Jericho",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Chris Jericho"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Heath Slater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Heath Slater"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Kevin Owens",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Kevin Owens"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 The Miz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_owens",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_owens",
+     "text": "Series: 53",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_jericho",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bliss",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_jericho",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_bliss",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_jericho",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_owens",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "removable 'Phantom' mask and a removable blue jacket with ripples",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "wearing 'Miz' trunks and has silver patterns on his boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "RING ATTIRE: SUMMERSLAM; AUGUST 21, 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$11.49",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: Aug. 21, 2016 @ WWE SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Miz trunks with silver patterns on boots",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable 'Phantom' mask and removable blue jacket with ripples",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable 'Phantom' mask",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Removable blue jacket with ripples",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2017",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_53_kevin-owens_a748ae": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_53_kevin-owens_a748ae",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_53_kevin-owens_a748ae",
+   "character_canonical": "kevin-owens",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "53",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kevin Owens"
+  },
+  "identity_hash": "aa65ad4068db2c07",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_owens",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-kevinowens",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_jericho",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-chrisjericho",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-bige",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_owens",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-kevin-owens-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_jericho",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-chris-jericho-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bliss",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-alexa-bliss-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_slater",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-heath-slater-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-miz-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-complete-set-elite53-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-kevin-owens-elite53-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "http://www.actionfigurebarbecue.com/2016/09/action-figure-review-kevin-owens-from.html",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 53 Toy Wrestling Action Figures by Mattel! This set includes: Kevin Owens, Big E (New Day), The Miz, Heath Slater, Chris Jericho & Alexa Bliss!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Alexa Bliss",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Big E",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Chris Jericho",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Chris Jericho"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Heath Slater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Heath Slater"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Kevin Owens",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Kevin Owens"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 The Miz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_owens",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_owens",
+     "text": "Series: 53",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_jericho",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bliss",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_jericho",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_bliss",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_jericho",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_owens",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "black, red and white 'KO' fight shorts and a shirt that says 'The Kevin Owens Show' styled like the Raw Is War logo",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "His black boots and black wrist wraps make him agile and ready to battle.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a new, smug headsculpt",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$8.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "RING ATTIRE: CLASH OF CHAMPIONS; SEPTEMBER 25, 2016",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Hinged ankles w/ lateral rockers, boot swivels, double hinged knees, swivel thighs, balljointed hips, swivel waist, mid-torso hinge, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball-jointed head.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "I think there's some good work here, particularly in the eyes, the brow, and the nose. The cheeks look too large, though, and the facial hair just doesn't look like Kevin's.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Kevin Owens comes with the NXT Championship belt which he carried around with him on his earliest WWE appearances last year.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kevin-owens",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Clash of Champions ring attire",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black, red and white 'KO' fight shorts and a shirt that says 'The Kevin Owens Show' styled like the Raw Is War logo",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A new, smug headsculpt",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black boots and black wrist wraps",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_53_big-e_67351b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_53_big-e_67351b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_53_big-e_67351b",
+   "character_canonical": "big-e",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "53",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Big E"
+  },
+  "identity_hash": "aaf81d6790773f35",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_owens",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-kevinowens",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_jericho",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-chrisjericho",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-bige",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_owens",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-kevin-owens-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_jericho",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-chris-jericho-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bliss",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-alexa-bliss-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_slater",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-heath-slater-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-miz-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-complete-set-elite53-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-big-e-action-figure-unicorn-horn-entrance-jacket-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://shop.wwe.com/big-e-elite-series-53-mattel-action-figure/W13477.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 53 Toy Wrestling Action Figures by Mattel! This set includes: Kevin Owens, Big E (New Day), The Miz, Heath Slater, Chris Jericho & Alexa Bliss!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Alexa Bliss",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Big E",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Chris Jericho",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Chris Jericho"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Heath Slater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Heath Slater"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Kevin Owens",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Kevin Owens"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 The Miz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_owens",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_owens",
+     "text": "Series: 53",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_jericho",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bliss",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_jericho",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_bliss",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_jericho",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_owens",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Recreate your favourite WWE matches in Superstar scale",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "year": 2017,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE Wrestling Elite Collection Series 53 Big E 7\" Action Figure Unicorn Horn, Entrance Jacket, Damaged Package",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "big-e",
+      "character_variant": null,
+      "year": 2017,
+      "condition": "carded"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Unicorn Horn, Entrance Jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Unicorn Horn",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Entrance Jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Unicorn Horn",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Entrance Jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_53_alexa-bliss_058f09": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_53_alexa-bliss_058f09",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_53_alexa-bliss_058f09",
+   "character_canonical": "alexa-bliss",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "53",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Alexa Bliss"
+  },
+  "identity_hash": "efdb830e5fe18437",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_owens",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-kevinowens",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_jericho",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-chrisjericho",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_bige",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-bige",
+     "fetch_status": "snippet_only",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series_collection",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100",
+     "fetch_status": "fetched",
+     "source_type": "collector_database",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_owens",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-kevin-owens-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_jericho",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-chris-jericho-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_bliss",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-alexa-bliss-action-figure/",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_slater",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-53-heath-slater-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-53-miz-action-figure/",
+     "fetch_status": "snippet_only",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-complete-set-elite53-00.html",
+     "fetch_status": "fetched",
+     "source_type": "official_retailer",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-53-toy-figures-alexa-bliss-elite53-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite53-alexabliss",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_complete_set",
+     "text": "WWE Elite 53 Toy Wrestling Action Figures by Mattel! This set includes: Kevin Owens, Big E (New Day), The Miz, Heath Slater, Chris Jericho & Alexa Bliss!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Alexa Bliss",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Big E",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Big E"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Chris Jericho",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Chris Jericho"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Heath Slater",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Heath Slater"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 Kevin Owens",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Kevin Owens"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series_collection",
+     "text": "2017 WWE Mattel Elite Collection Series 53 The Miz",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_owens",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_owens",
+     "text": "Series: 53",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_jericho",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_bliss",
+     "text": "December 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Alexa Bliss"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_jericho",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_toywiz_bliss",
+     "text": "WWE Action figures are approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q14",
+     "source_id": "w_toywiz_jericho",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q15",
+     "source_id": "w_toywiz_owens",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Everyone fears a 'blissed off' Alexa Bliss in Mattel WWE Elite 53!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "pink, blue and black top, and a studded silver, blue and pink belt accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Her trunks are black and pink",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "blue and pink bows in her hair along with dyed tips",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "black and silver 'Alexa Bliss' boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "$8.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "NO MERCY; OCTOBER 9, 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Attire Date: Sept. 11, 2016 @ WWE Backlash",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "alexa-bliss",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "NO MERCY; OCTOBER 9, 2016",
+      "evidence_quote_ids": [
+       "f_q7"
+      ]
+     },
+     {
+      "value": "Attire Date: Sept. 11, 2016 @ WWE Backlash",
+      "evidence_quote_ids": [
+       "f_q8"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Pink, blue and black top; black and pink trunks; blue and pink bows in hair with dyed tips",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black and silver 'Alexa Bliss' boots",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Studded silver, blue and pink belt accessory",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Studded silver, blue and pink belt accessory",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

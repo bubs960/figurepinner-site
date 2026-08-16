@@ -1,0 +1,3136 @@
+{
+ "fp_wrestling_mattel_elite_64_jey-uso_9986a8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_jey-uso_9986a8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_jey-uso_9986a8",
+   "character_canonical": "jey-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jey Uso"
+  },
+  "identity_hash": "93760274e8920cbe",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite64",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-complete-set-elite64-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rollins64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_case64",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-64-action-figure-case/mtftd07b2",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_petedunne64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs_forum_elite64",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-64-first-shipment-has-arrived-new-images/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_curthawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-curthawkins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-jeyuso",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-jey-uso-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite64",
+     "text": "WWE Elite 64 Toy Wrestling Action Figures by Mattel! This set includes: Seth Rollins, John Cena, Samoa Joe, The Usos (Jimmy Uso & Jey Uso) & Curt Hawkins!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_hawkins_variant",
+     "source_id": "w_ringside_elite64",
+     "text": "Seth Rollins, John Cena, Samoa Joe, Jimmy Uso, Jey Uso, Curt Hawkins (Blue Gear)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q3_setprice",
+     "source_id": "w_ringside_elite64",
+     "text": "$127.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_rollins_scale",
+     "source_id": "w_toywiz_rollins64",
+     "text": "Highly detailed 7-inch figure of WWE Superstar Seth Rollins with authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5_rollins_release",
+     "source_id": "w_toywiz_rollins64",
+     "text": "March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2019",
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q6_rollins_price",
+     "source_id": "w_toywiz_rollins64",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q7_rollins_features",
+     "source_id": "w_toywiz_rollins64",
+     "text": "deluxe articulation with a detailed character expression, authentic ring attire and iconic accessories, interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_dunne_exclusive",
+     "source_id": "w_toywiz_petedunne64",
+     "text": "The WWE Elite Collection Series 64 features Pete Dunne as an exclusive character, this action figure stands at 6 inches tall and comes in original, unopened packaging... Mattel offered Pete Dunne this year as part of their WWE Elite Collection, and this figure was exclusively available at Target Stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q9_hawkins_year_series",
+     "source_id": "w_wfd_curthawkins",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Curt Hawkins",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q10_hawkins_attire",
+     "source_id": "w_wfd_curthawkins",
+     "text": "Feb. 12, 2017 @ WWE Elimination Chamber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 8, 2017 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 64",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection figure!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation, a detailed character expression, authentic ring attire and iconic accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Release Date: March 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "UPC: 887961730173",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 8, 2017 @ WWE Hell in a Cell",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2018",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_64_curt-hawkins_863d64": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_curt-hawkins_863d64",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_curt-hawkins_863d64",
+   "character_canonical": "curt-hawkins",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Curt Hawkins"
+  },
+  "identity_hash": "e9082e13771a8910",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite64",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-complete-set-elite64-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rollins64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_case64",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-64-action-figure-case/mtftd07b2",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_petedunne64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs_forum_elite64",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-64-first-shipment-has-arrived-new-images/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_curthawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-curthawkins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-curt-hawkins-action-figure-black-outfit/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-curt-hawkins-elite64-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite64",
+     "text": "WWE Elite 64 Toy Wrestling Action Figures by Mattel! This set includes: Seth Rollins, John Cena, Samoa Joe, The Usos (Jimmy Uso & Jey Uso) & Curt Hawkins!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_hawkins_variant",
+     "source_id": "w_ringside_elite64",
+     "text": "Seth Rollins, John Cena, Samoa Joe, Jimmy Uso, Jey Uso, Curt Hawkins (Blue Gear)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q3_setprice",
+     "source_id": "w_ringside_elite64",
+     "text": "$127.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_rollins_scale",
+     "source_id": "w_toywiz_rollins64",
+     "text": "Highly detailed 7-inch figure of WWE Superstar Seth Rollins with authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5_rollins_release",
+     "source_id": "w_toywiz_rollins64",
+     "text": "March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2019",
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q6_rollins_price",
+     "source_id": "w_toywiz_rollins64",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q7_rollins_features",
+     "source_id": "w_toywiz_rollins64",
+     "text": "deluxe articulation with a detailed character expression, authentic ring attire and iconic accessories, interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_dunne_exclusive",
+     "source_id": "w_toywiz_petedunne64",
+     "text": "The WWE Elite Collection Series 64 features Pete Dunne as an exclusive character, this action figure stands at 6 inches tall and comes in original, unopened packaging... Mattel offered Pete Dunne this year as part of their WWE Elite Collection, and this figure was exclusively available at Target Stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q9_hawkins_year_series",
+     "source_id": "w_wfd_curthawkins",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Curt Hawkins",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q10_hawkins_attire",
+     "source_id": "w_wfd_curthawkins",
+     "text": "Feb. 12, 2017 @ WWE Elimination Chamber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Black Outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "black-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "detailed character expression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "black-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "black-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "black-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "March 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "black-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "His ring gear has a blue and orange color scheme with his symbol in the front and 'Face the Facts' symbols on the side.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "He has tall, blue boots with orange kick pads that have white trim",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "brand new headsculpt and smile",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "comes with a cane and breakable wall accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "interchangeable versions of elbow pads and hand wraps",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "curt-hawkins",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Feb. 12, 2017 @ WWE Elimination Chamber",
+    "evidence_quote_ids": [
+     "w_q10_hawkins_attire"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue and orange color scheme with his symbol in front and 'Face the Facts' symbols on the side",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Brand new headsculpt and smile",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Tall, blue boots with orange kick pads that have white trim",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Blue and orange ring gear with his symbol on the front and 'Face the Facts' symbols on the side",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Cane accessory",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Breakable wall accessory",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Interchangeable elbow pads",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Interchangeable hand wraps",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_64_john-cena_d3d92d0f1960": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_john-cena_d3d92d0f1960",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_john-cena_d3d92d0f1960",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "2fc0f9e8e041170d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite64",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-complete-set-elite64-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rollins64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_case64",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-64-action-figure-case/mtftd07b2",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_petedunne64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs_forum_elite64",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-64-first-shipment-has-arrived-new-images/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_curthawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-curthawkins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-johncena",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-john-cena-action-figure-interchangeable-hands-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-john-cena-elite64-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite64",
+     "text": "WWE Elite 64 Toy Wrestling Action Figures by Mattel! This set includes: Seth Rollins, John Cena, Samoa Joe, The Usos (Jimmy Uso & Jey Uso) & Curt Hawkins!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_hawkins_variant",
+     "source_id": "w_ringside_elite64",
+     "text": "Seth Rollins, John Cena, Samoa Joe, Jimmy Uso, Jey Uso, Curt Hawkins (Blue Gear)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q3_setprice",
+     "source_id": "w_ringside_elite64",
+     "text": "$127.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_rollins_scale",
+     "source_id": "w_toywiz_rollins64",
+     "text": "Highly detailed 7-inch figure of WWE Superstar Seth Rollins with authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5_rollins_release",
+     "source_id": "w_toywiz_rollins64",
+     "text": "March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2019",
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q6_rollins_price",
+     "source_id": "w_toywiz_rollins64",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q7_rollins_features",
+     "source_id": "w_toywiz_rollins64",
+     "text": "deluxe articulation with a detailed character expression, authentic ring attire and iconic accessories, interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_dunne_exclusive",
+     "source_id": "w_toywiz_petedunne64",
+     "text": "The WWE Elite Collection Series 64 features Pete Dunne as an exclusive character, this action figure stands at 6 inches tall and comes in original, unopened packaging... Mattel offered Pete Dunne this year as part of their WWE Elite Collection, and this figure was exclusively available at Target Stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q9_hawkins_year_series",
+     "source_id": "w_wfd_curthawkins",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Curt Hawkins",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q10_hawkins_attire",
+     "source_id": "w_wfd_curthawkins",
+     "text": "Feb. 12, 2017 @ WWE Elimination Chamber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jan. 22, 2018 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "He's wearing dark blue ring jorts and blue and black ring shoes.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "interchangeable 'You Can't See Me' hands, a green 'Respect' shirt, removable 'Never Give Up' hat and dog tags",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "a removable, green 'Never Give Up' armband",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": "unknown (toywiz listing, damaged-package variant)"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Jan. 22, 2018 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Dark blue ring jorts and blue and black ring shoes",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Interchangeable 'You Can't See Me' hands, a green 'Respect' shirt, removable 'Never Give Up' hat and dog tags",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "A removable, green 'Never Give Up' armband",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable 'Never Give Up' hat",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Dog tags",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Interchangeable 'You Can't See Me' hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Removable green 'Never Give Up' armband",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_64_samoa-joe_a7665198d372": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_samoa-joe_a7665198d372",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_samoa-joe_a7665198d372",
+   "character_canonical": "samoa-joe",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Samoa Joe"
+  },
+  "identity_hash": "fa64072e607b6b07",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite64",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-complete-set-elite64-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rollins64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_case64",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-64-action-figure-case/mtftd07b2",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_petedunne64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs_forum_elite64",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-64-first-shipment-has-arrived-new-images/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_curthawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-curthawkins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-samoa-joe-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-samoajoe",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-samoa-joe-elite64-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite64",
+     "text": "WWE Elite 64 Toy Wrestling Action Figures by Mattel! This set includes: Seth Rollins, John Cena, Samoa Joe, The Usos (Jimmy Uso & Jey Uso) & Curt Hawkins!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_hawkins_variant",
+     "source_id": "w_ringside_elite64",
+     "text": "Seth Rollins, John Cena, Samoa Joe, Jimmy Uso, Jey Uso, Curt Hawkins (Blue Gear)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q3_setprice",
+     "source_id": "w_ringside_elite64",
+     "text": "$127.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_rollins_scale",
+     "source_id": "w_toywiz_rollins64",
+     "text": "Highly detailed 7-inch figure of WWE Superstar Seth Rollins with authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5_rollins_release",
+     "source_id": "w_toywiz_rollins64",
+     "text": "March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2019",
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q6_rollins_price",
+     "source_id": "w_toywiz_rollins64",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q7_rollins_features",
+     "source_id": "w_toywiz_rollins64",
+     "text": "deluxe articulation with a detailed character expression, authentic ring attire and iconic accessories, interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_dunne_exclusive",
+     "source_id": "w_toywiz_petedunne64",
+     "text": "The WWE Elite Collection Series 64 features Pete Dunne as an exclusive character, this action figure stands at 6 inches tall and comes in original, unopened packaging... Mattel offered Pete Dunne this year as part of their WWE Elite Collection, and this figure was exclusively available at Target Stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q9_hawkins_year_series",
+     "source_id": "w_wfd_curthawkins",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Curt Hawkins",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q10_hawkins_attire",
+     "source_id": "w_wfd_curthawkins",
+     "text": "Feb. 12, 2017 @ WWE Elimination Chamber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "bold and colorful figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "authentic ring attire",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "detailed character expression",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Release Date: March 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Attire Date: Mar. 13, 2017 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "red and black ring shorts",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "removable black shirt that says 'Joe' multiple times in the front",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "a brand new, spot on headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "white bands and tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "black, molded knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s3",
+     "text": "black boots with kick pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s3",
+     "text": "Interchangeable hands and a towel accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q17",
+     "source_id": "f_s3",
+     "text": "Price: $16.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "samoa-joe",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red and black",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A brand new, spot on headscan",
+    "evidence_quote_ids": [
+     "f_q12"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable black shirt that says 'Joe' multiple times in the front",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "White bands and tape",
+    "evidence_quote_ids": [
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Black molded knee pads",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "Black boots with kick pads",
+    "evidence_quote_ids": [
+     "f_q15"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q16"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Towel accessory",
+    "evidence_quote_ids": [
+     "f_q16"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2018",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_64_jimmy-uso_11fcc3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_jimmy-uso_11fcc3",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_jimmy-uso_11fcc3",
+   "character_canonical": "jimmy-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jimmy Uso"
+  },
+  "identity_hash": "38112f781204659a",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite64",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-complete-set-elite64-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rollins64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_case64",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-64-action-figure-case/mtftd07b2",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_petedunne64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs_forum_elite64",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-64-first-shipment-has-arrived-new-images/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_curthawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-curthawkins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-jimmy-usos-elite64-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-jimmyuso",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite64",
+     "text": "WWE Elite 64 Toy Wrestling Action Figures by Mattel! This set includes: Seth Rollins, John Cena, Samoa Joe, The Usos (Jimmy Uso & Jey Uso) & Curt Hawkins!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_hawkins_variant",
+     "source_id": "w_ringside_elite64",
+     "text": "Seth Rollins, John Cena, Samoa Joe, Jimmy Uso, Jey Uso, Curt Hawkins (Blue Gear)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q3_setprice",
+     "source_id": "w_ringside_elite64",
+     "text": "$127.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_rollins_scale",
+     "source_id": "w_toywiz_rollins64",
+     "text": "Highly detailed 7-inch figure of WWE Superstar Seth Rollins with authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5_rollins_release",
+     "source_id": "w_toywiz_rollins64",
+     "text": "March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2019",
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q6_rollins_price",
+     "source_id": "w_toywiz_rollins64",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q7_rollins_features",
+     "source_id": "w_toywiz_rollins64",
+     "text": "deluxe articulation with a detailed character expression, authentic ring attire and iconic accessories, interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_dunne_exclusive",
+     "source_id": "w_toywiz_petedunne64",
+     "text": "The WWE Elite Collection Series 64 features Pete Dunne as an exclusive character, this action figure stands at 6 inches tall and comes in original, unopened packaging... Mattel offered Pete Dunne this year as part of their WWE Elite Collection, and this figure was exclusively available at Target Stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q9_hawkins_year_series",
+     "source_id": "w_wfd_curthawkins",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Curt Hawkins",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q10_hawkins_attire",
+     "source_id": "w_wfd_curthawkins",
+     "text": "Feb. 12, 2017 @ WWE Elimination Chamber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "red ring pants and white shoes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a black and red, hooded sweatshirt that says 'Down Since Day One Ish' on the back",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "a brand new headsculpt and accurate tattoos on his chest and arms",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Jimmy Uso",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Oct. 8, 2017 @ WWE Hell in a Cell",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 8, 2017 @ WWE Hell in a Cell",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "red ring pants and white shoes",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "a brand new headsculpt and accurate tattoos on his chest and arms",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "black and red hooded sweatshirt that says 'Down Since Day One Ish' on the back",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_64_seth-rollins_c155b0": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_seth-rollins_c155b0",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_seth-rollins_c155b0",
+   "character_canonical": "seth-rollins",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Seth Rollins"
+  },
+  "identity_hash": "36b216df8e2fc849",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite64",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-complete-set-elite64-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_rollins64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_case64",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-64-action-figure-case/mtftd07b2",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_petedunne64",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfigs_forum_elite64",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-64-first-shipment-has-arrived-new-images/",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_curthawkins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-curthawkins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-seth-rollins-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-sethrollins",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-64-toy-figures-seth-rollins-elite64-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite64",
+     "text": "WWE Elite 64 Toy Wrestling Action Figures by Mattel! This set includes: Seth Rollins, John Cena, Samoa Joe, The Usos (Jimmy Uso & Jey Uso) & Curt Hawkins!",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_hawkins_variant",
+     "source_id": "w_ringside_elite64",
+     "text": "Seth Rollins, John Cena, Samoa Joe, Jimmy Uso, Jey Uso, Curt Hawkins (Blue Gear)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q3_setprice",
+     "source_id": "w_ringside_elite64",
+     "text": "$127.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_rollins_scale",
+     "source_id": "w_toywiz_rollins64",
+     "text": "Highly detailed 7-inch figure of WWE Superstar Seth Rollins with authentic ring attire and accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5_rollins_release",
+     "source_id": "w_toywiz_rollins64",
+     "text": "March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": "2019",
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q6_rollins_price",
+     "source_id": "w_toywiz_rollins64",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q7_rollins_features",
+     "source_id": "w_toywiz_rollins64",
+     "text": "deluxe articulation with a detailed character expression, authentic ring attire and iconic accessories, interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_dunne_exclusive",
+     "source_id": "w_toywiz_petedunne64",
+     "text": "The WWE Elite Collection Series 64 features Pete Dunne as an exclusive character, this action figure stands at 6 inches tall and comes in original, unopened packaging... Mattel offered Pete Dunne this year as part of their WWE Elite Collection, and this figure was exclusively available at Target Stores.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q9_hawkins_year_series",
+     "source_id": "w_wfd_curthawkins",
+     "text": "2018 WWE Mattel Elite Collection Series 64 Curt Hawkins",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "w_q10_hawkins_attire",
+     "source_id": "w_wfd_curthawkins",
+     "text": "Feb. 12, 2017 @ WWE Elimination Chamber",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2018",
+      "character_canonical": "Curt Hawkins"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection figure.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Interchangeable hands for dynamic posing and action scenes",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: Jan. 28, 2018 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "His tights are black with red, yellow and orange flame designs and an 'SR' symbol on his right kneepad! He's rounded out with tall, black boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "brand new headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "interchangeable hands for posing",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$18.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "seth-rollins",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black tights with red, yellow, and orange flame designs",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New headsculpt",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "'SR' symbol on right kneepad",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangeable hands for posing",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q9"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Tall black boots",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangeable hands",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q9"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$89.99",
+      "evidence_quote_ids": [
+       "f_q3",
+       "w_q6_rollins_price"
+      ],
+      "price_detail": {
+       "amount": 89.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$18.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 18.99,
+       "currency": "USD",
+       "price_kind": "msrp",
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_64_pete-dunne_5b5c54": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_64_pete-dunne_5b5c54",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_64_pete-dunne_5b5c54",
+   "character_canonical": "pete-dunne",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "64",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Pete Dunne"
+  },
+  "identity_hash": "0e984c8d2d51aff7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_petedunne",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-petedunneexclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_petedunne",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_sethrollins",
+     "url": "https://wrestlingfiguredatabase.com/products/elite64-sethrollins",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_samoajoe",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-64-samoa-joe-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_collection_51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toyhypeusa.com/2019/01/11/mattel-wwe-elite-collection-series-64-pete-dunne-figure-review/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-64-pete-dunne-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_petedunne",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_petedunne",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2018,
+      "character_canonical": "Pete Dunne"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_petedunne",
+     "text": "Release Date: March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 64",
+      "year": 2019,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_sethrollins",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "character_canonical": "Seth Rollins"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_sethrollins",
+     "text": "Series: 64",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_samoajoe",
+     "text": "Release Date: March 2019",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 64",
+      "year": 2019,
+      "character_canonical": "Samoa Joe"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_samoajoe",
+     "text": "interchangeable hands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 64",
+      "year": 2019,
+      "character_canonical": "Samoa Joe"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_collection_51_100_p4",
+     "text": "64 (8)",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "January 11, 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "The jacket/vest is purple with a grey textured edging that looks like fur",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "the Bruiser Weight logo, which is white and black.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a black shirt and shorts, with the Bruiser Weight logo on the left in purple and white.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "boots are painted in purple, with a bright red on the front, and the bottom are black.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "The head sculpt is nicely done and features a great likeness",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Mattel's design team have done a great job on the facial expression with the raised lip.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "the right side of his head is longer than the left side, which is shaved.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "Pete Dunne is also fully articulated, which includes a ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel-hinged wrists, ab crunch, swivel waist, ball jointed hips, double-hinged knees, swivel calves, hinged and rocker ankles.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s1",
+     "text": "Included with Pete Dunne is an extra set of open hands that can grab onto the ropes or a Championship belt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection figure! Featuring one of the WWE's biggest personalities and champions, this bold and colorful figure comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "pete-dunne",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Jacket/vest is purple with a grey textured edging; black shirt and shorts with the Bruiser Weight logo on the left in purple and white; boots are painted in purple, with a bright red on the front, and the bottom are black",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4",
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The head sculpt is nicely done and features a great likeness, with a great facial expression with the raised lip",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel-hinged wrists, ab crunch, swivel waist, ball jointed hips, double-hinged knees, swivel calves, hinged and rocker ankles",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The right side of his head is longer than the left side, which is shaved",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "The Bruiser Weight logo, which is white and black",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Target exclusive retailer release",
+    "evidence_quote_ids": [
+     "w_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Extra set of open hands that can grab onto the ropes or a Championship belt",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by January 2019",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q6"
+    ],
+    "evidence_class": "inferred_from_dated_source"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

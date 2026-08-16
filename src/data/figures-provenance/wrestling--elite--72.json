@@ -1,0 +1,2935 @@
+{
+ "fp_wrestling_mattel_elite_72_batista_e7e7ad": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_batista_e7e7ad",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_batista_e7e7ad",
+   "character_canonical": "batista",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Batista"
+  },
+  "identity_hash": "00524702fcdbef9c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wwe_com_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_batista",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_gorillamonsoon",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-gorillamonsoonexclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wrestlezone_collectors_corner",
+     "url": "https://www.wrestlezone.com/news/1158582-collectors-corner-mattel-wwe-elite-72-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-72-action-figure-case/mtgdf60l",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_websearch_series72",
+     "url": "https://www.google.com/search?q=%22Elite+72%22+WWE+Mattel+Batista+Becky+Lynch+Buddy+Murphy+Rey+Mysterio+Roderick+Strong+Velveteen+Dream+Gorilla+Monsoon",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": null
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-batista-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-72-toy-figures-batista-elite72-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_batista",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_batista",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_batista",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_batista",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_batista",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_becky",
+     "text": "Release Date: January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Exclusive To: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Promotion: World Wrestling Entertainment",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Made In: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_websearch_series72",
+     "text": "The series includes figures of Batista, Becky Lynch, Buddy Murphy, Rey Mysterio, Roderick Strong, and Velveteen Dream.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The Animal ALWAYS walks alone as Batista returns in Mattel WWE Elite 72! Batista has accurate tattoos and black elbow pads.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "batista",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: January 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "batista",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "UPC: 887961830026",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "batista",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "The Animal ALWAYS walks alone as Batista returns in Mattel WWE Elite 72! Batista has accurate tattoos and black elbow pads. He's wearing red, black and white 'Batista' ring trunks and has black knee pads and red boots!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "batista",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "batista",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red, black and white 'Batista' ring trunks, black knee pads, red boots, black elbow pads, accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red, black, and white",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Accurate tattoos",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black elbow pads",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Batista",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "UPC 887961830026",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2020",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_72_gorilla-monsoon_f169066e1e40": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_gorilla-monsoon_f169066e1e40",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_gorilla-monsoon_f169066e1e40",
+   "character_canonical": "gorilla-monsoon",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Gorilla Monsoon"
+  },
+  "identity_hash": "59dd3c559e233ed4",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wwe_com_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_batista",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_gorillamonsoon",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-gorillamonsoonexclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wrestlezone_collectors_corner",
+     "url": "https://www.wrestlezone.com/news/1158582-collectors-corner-mattel-wwe-elite-72-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-72-action-figure-case/mtgdf60l",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_websearch_series72",
+     "url": "https://www.google.com/search?q=%22Elite+72%22+WWE+Mattel+Batista+Becky+Lynch+Buddy+Murphy+Rey+Mysterio+Roderick+Strong+Velveteen+Dream+Gorilla+Monsoon",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": null
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-gorillamonsoonexclusive",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2020/06/08/wwe-elite-gorilla-monsoon-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_batista",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_batista",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_batista",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_batista",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_batista",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_becky",
+     "text": "Release Date: January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Exclusive To: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Promotion: World Wrestling Entertainment",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Made In: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_websearch_series72",
+     "text": "The series includes figures of Batista, Becky Lynch, Buddy Murphy, Rey Mysterio, Roderick Strong, and Velveteen Dream.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gorilla-monsoon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gorilla-monsoon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Nov. 26, 1987 @ WWF Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gorilla-monsoon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "wine colored jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gorilla-monsoon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "The smiling headsculpt is perfect and just feels authentic",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gorilla-monsoon",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "a really, really great likeness",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gorilla-monsoon",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Wine colored jacket, Nov. 26, 1987 @ WWF Survivor Series",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The smiling headsculpt is perfect and just feels authentic, a really, really great likeness",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Wine colored jacket",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Smiling headsculpt",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Walmart",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2020",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_72_buddy-murphy_314135": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_buddy-murphy_314135",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_buddy-murphy_314135",
+   "character_canonical": "buddy-murphy",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Buddy Murphy"
+  },
+  "identity_hash": "c487278daf6673c8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wwe_com_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_batista",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_gorillamonsoon",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-gorillamonsoonexclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wrestlezone_collectors_corner",
+     "url": "https://www.wrestlezone.com/news/1158582-collectors-corner-mattel-wwe-elite-72-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-72-action-figure-case/mtgdf60l",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_websearch_series72",
+     "url": "https://www.google.com/search?q=%22Elite+72%22+WWE+Mattel+Batista+Becky+Lynch+Buddy+Murphy+Rey+Mysterio+Roderick+Strong+Velveteen+Dream+Gorilla+Monsoon",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": null
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-buddymurphy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-buddy-murphy-action-figure-regular-version/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_batista",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_batista",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_batista",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_batista",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_batista",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_becky",
+     "text": "Release Date: January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Exclusive To: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Promotion: World Wrestling Entertainment",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Made In: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_websearch_series72",
+     "text": "The series includes figures of Batista, Becky Lynch, Buddy Murphy, Rey Mysterio, Roderick Strong, and Velveteen Dream.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 18, 2018 @ WWE Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "white wrist tape with red, white and black designed ring tights",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "white and red knee pads, white boots with kick pads",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "a frumpy headsculpt",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "includes interchangeable, pointing hands",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "buddy-murphy",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 18, 2018 @ WWE Survivor Series",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "White wrist tape with red, white and black designed ring tights; white and red knee pads; white boots with kick pads",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Frumpy headsculpt",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Interchangeable pointing hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_72_velveteen-dream_a94db8": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_velveteen-dream_a94db8",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_velveteen-dream_a94db8",
+   "character_canonical": "velveteen-dream",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Velveteen Dream"
+  },
+  "identity_hash": "93901efbe0ce6f43",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wwe_com_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_batista",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_gorillamonsoon",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-gorillamonsoonexclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wrestlezone_collectors_corner",
+     "url": "https://www.wrestlezone.com/news/1158582-collectors-corner-mattel-wwe-elite-72-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-72-action-figure-case/mtgdf60l",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_websearch_series72",
+     "url": "https://www.google.com/search?q=%22Elite+72%22+WWE+Mattel+Batista+Becky+Lynch+Buddy+Murphy+Rey+Mysterio+Roderick+Strong+Velveteen+Dream+Gorilla+Monsoon",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": null
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-velveteendream",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-velveteen-dream-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.wwe.com/inside/mattel/gallery/exclusive-reveal-velveteen-dreams-elite-collection-series-72-action-figure",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_batista",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_batista",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_batista",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_batista",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_batista",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_becky",
+     "text": "Release Date: January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Exclusive To: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Promotion: World Wrestling Entertainment",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Made In: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_websearch_series72",
+     "text": "The series includes figures of Batista, Becky Lynch, Buddy Murphy, Rey Mysterio, Roderick Strong, and Velveteen Dream.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "velveteen-dream",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 2, 2019 @ NXT",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "velveteen-dream",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "velveteen-dream",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Velveteen Dream - WWE Elite 72 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "velveteen-dream",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Retail: $64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "velveteen-dream",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "velveteen-dream",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 2, 2019 @ NXT",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "January 2020",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$64.99",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 64.99,
+     "currency": "USD",
+     "price_kind": "msrp",
+     "region": null,
+     "as_of": null,
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_72_roderick-strong_7283ad": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_roderick-strong_7283ad",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_roderick-strong_7283ad",
+   "character_canonical": "roderick-strong",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Roderick Strong"
+  },
+  "identity_hash": "c0e1b15d247403e1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wwe_com_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_wfd_batista",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-batista",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_gorillamonsoon",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-gorillamonsoonexclusive",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wrestlezone_collectors_corner",
+     "url": "https://www.wrestlezone.com/news/1158582-collectors-corner-mattel-wwe-elite-72-photos",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "w_entertainmentearth_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-72-action-figure-case/mtgdf60l",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_websearch_series72",
+     "url": "https://www.google.com/search?q=%22Elite+72%22+WWE+Mattel+Batista+Becky+Lynch+Buddy+Murphy+Rey+Mysterio+Roderick+Strong+Velveteen+Dream+Gorilla+Monsoon",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": null
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-roderickstrong",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-roderick-strong-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-72-toy-figures-roderick-elite72-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_batista",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_batista",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_batista",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_batista",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_batista",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_becky",
+     "text": "Release Date: January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Becky Lynch"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Exclusive To: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Promotion: World Wrestling Entertainment",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_wfd_gorillamonsoon",
+     "text": "Made In: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Gorilla Monsoon"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_websearch_series72",
+     "text": "The series includes figures of Batista, Becky Lynch, Buddy Murphy, Rey Mysterio, Roderick Strong, and Velveteen Dream.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 17, 2018 @ NXT TakeOver: War Games",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "roderick-strong",
+      "character_variant": null,
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "roderick-strong",
+      "character_variant": null,
+      "condition": null,
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "Make an immediate impact with Roderick Strong in Mattel WWE Elite 72! The NXT standout has an accurate headscan, black arm bands and wrist tape and sports camo, grey and white ring trunks.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "roderick-strong",
+      "character_variant": null,
+      "condition": null,
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "roderick-strong",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "SKU: ELITE72-05",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "roderick-strong",
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Camo, grey and white ring trunks",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Accurate headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black arm bands and wrist tape",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE72-05",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_72_rey-mysterio_9cc393": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_rey-mysterio_9cc393",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_rey-mysterio_9cc393",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "2b2091156dd32968",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_rey_elite72",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_rsc_elite72_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-72-toy-figures-complete-set-elite72-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_rsc_elite72_becky",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-72-toy-figures-becky-lynch-elite72-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite72_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_com_elite72_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-rey-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/rey-mysterio-wwe-elite-collection-series-72-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_rsc_elite72_set",
+     "text": "Rey Mysterio, Velveteen Dream, Batista, Buddy Murphy (Red Shorts), Roderick Strong, Becky Lynch",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite72_becky",
+     "text": "January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite72_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": 2020,
+      "character_canonical": "Becky Lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_rsc_elite72_becky",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Becky Lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_rsc_elite72_set",
+     "text": "$113.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wwe_com_elite72_gallery",
+     "text": "Becky features her latest head scan and comes with her The Man jacket made of cloth. She is the first WWE Elite female figure to feature swappable hands and double-jointed knees.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Becky Lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wwe_com_elite72_gallery",
+     "text": "Rey Mysterio is a colorful figure in this series featuring a new head scan as well as new, open hands molded to look like his unique gloves.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Rey Mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Attire Date: Oct. 16, 2018 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Rey Mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Oct. 16, 2018 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Rey Mysterio - WWE Elite 72 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "887961829990",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "realistic accessories complete his ring outfit.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Dozens of Elite Collection figures - collect them all!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Oct. 16, 2018 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "w_q11"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New head scan",
+    "evidence_quote_ids": [
+     "w_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "New, open hands molded to look like his unique gloves",
+    "evidence_quote_ids": [
+     "w_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "All swagger and muscle, sculpted in serious detail",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "887961829990",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_72_becky-lynch_f755ac": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_72_becky-lynch_f755ac",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_72_becky-lynch_f755ac",
+   "character_canonical": "becky-lynch",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "72",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Becky Lynch"
+  },
+  "identity_hash": "9944a5e075fc4b8c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_rey_elite72",
+     "url": "https://wrestlingfiguredatabase.com/products/elite72-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_rsc_elite72_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-72-toy-figures-complete-set-elite72-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_rsc_elite72_becky",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-72-toy-figures-becky-lynch-elite72-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite72_becky",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-72-becky-lynch-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_com_elite72_gallery",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-72-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/becky-lynch-wwe-elite-collection-series-72-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://creations.mattel.com/products/wwe-elite-collection-becky-lynch-action-figure-hkn83",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_rsc_elite72_set",
+     "text": "Rey Mysterio, Velveteen Dream, Batista, Buddy Murphy (Red Shorts), Roderick Strong, Becky Lynch",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Series: 72",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite72_becky",
+     "text": "January 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite72_becky",
+     "text": "$44.64",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": 2020,
+      "character_canonical": "Becky Lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_rsc_elite72_becky",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Becky Lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_rsc_elite72_set",
+     "text": "$113.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wwe_com_elite72_gallery",
+     "text": "Becky features her latest head scan and comes with her The Man jacket made of cloth. She is the first WWE Elite female figure to feature swappable hands and double-jointed knees.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Becky Lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wwe_com_elite72_gallery",
+     "text": "Rey Mysterio is a colorful figure in this series featuring a new head scan as well as new, open hands molded to look like his unique gloves.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Rey Mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_wfd_rey_elite72",
+     "text": "Attire Date: Oct. 16, 2018 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 72",
+      "year": null,
+      "character_canonical": "Rey Mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Approximately 6-inches in scale",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Currently unavailable",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "25 points of articulation for extreme posability",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Highly detailed TrueFX™ technology for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Pre-order Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "becky-lynch",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New head scan",
+    "evidence_quote_ids": [
+     "w_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "TrueFX enhanced facial detailing technology",
+    "evidence_quote_ids": [
+     "f_q3",
+     "f_q8"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "25 points of articulation",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "The Man jacket made of cloth",
+    "evidence_quote_ids": [
+     "w_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "First WWE Elite female figure with swappable hands and double-jointed knees",
+    "evidence_quote_ids": [
+     "w_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "The Man jacket made of cloth",
+    "evidence_quote_ids": [
+     "w_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ }
+}

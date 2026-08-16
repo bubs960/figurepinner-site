@@ -1,0 +1,2355 @@
+{
+ "fp_wrestling_mattel_elite_48_dolph-ziggler_d6e8d4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_48_dolph-ziggler_d6e8d4",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_48_dolph-ziggler_d6e8d4",
+   "character_canonical": "dolph-ziggler",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "48",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dolph Ziggler"
+  },
+  "identity_hash": "3a28b30bddff038d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-cactus-jack-action-figure-sleeveless-flannel-road-sign/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_s48_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-48-action-figure-case/mtp9647ay",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_hobbydb_s48",
+     "url": "https://www.hobbydb.com/marketplaces/hobbydb/subjects/wwe-elite-series-48-series",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cactusjack",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-cactusjack",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_boogeyman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-boogeyman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_s48_lineup",
+     "url": "https://gogts.net/toy-focus-wwe-elite-collection-series-48-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-dolphziggler",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-dolph-ziggler-action-figure-entrance-vest/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-48-dolph-ziggler",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_scale",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_features",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "March 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_hobbydb_year",
+     "source_id": "w_hobbydb_s48",
+     "text": "Released in 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_hobbydb_lineup",
+     "source_id": "w_hobbydb_s48",
+     "text": "Boogeyman (Flashback Series) (First Time in the Line), Cactus Jack (Flashback Series), Dean Ambrose, Dolph Ziggler, Erick Rowan, Kalisto",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_cactusjack_release",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Cactus Jack"
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_cactusjack_line",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_wfd_cactusjack_series",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Series: 48",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9_wfd_boogeyman_release",
+     "source_id": "w_wfd_boogeyman",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Boogeyman"
+     }
+    },
+    {
+     "quote_id": "w_q10_search_lineup",
+     "source_id": "w_search_snippet_s48_lineup",
+     "text": "WWE Elite Series 48 was released in 2017 and consists of 6 figures: 1. Boogeyman (Flashback Series) (First Time in the Line) 2. Cactus Jack (Flashback Series) 3. Dean Ambrose 4. Dolph Ziggler 5. Erick Rowan 6. Kalisto. The pre-order date was February 7th, 2017, with a release date of March 2017, and the configuration was 8 pieces per case.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 22, 2015 @ WWE Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "UPC: 887961397635",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 22, 2015 @ WWE Survivor Series",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "887961397635",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_48_cactus-jack_fe492d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_48_cactus-jack_fe492d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_48_cactus-jack_fe492d",
+   "character_canonical": "cactus-jack",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "48",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cactus Jack"
+  },
+  "identity_hash": "021df34c382498aa",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-cactus-jack-action-figure-sleeveless-flannel-road-sign/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_s48_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-48-action-figure-case/mtp9647ay",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_hobbydb_s48",
+     "url": "https://www.hobbydb.com/marketplaces/hobbydb/subjects/wwe-elite-series-48-series",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cactusjack",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-cactusjack",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_boogeyman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-boogeyman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_s48_lineup",
+     "url": "https://gogts.net/toy-focus-wwe-elite-collection-series-48-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-cactus-jack-elite48-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://zappcomics.com/products/mattel-wwe-elite-collection-series-48-cactus-jack",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_scale",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_features",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "March 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_hobbydb_year",
+     "source_id": "w_hobbydb_s48",
+     "text": "Released in 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_hobbydb_lineup",
+     "source_id": "w_hobbydb_s48",
+     "text": "Boogeyman (Flashback Series) (First Time in the Line), Cactus Jack (Flashback Series), Dean Ambrose, Dolph Ziggler, Erick Rowan, Kalisto",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_cactusjack_release",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Cactus Jack"
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_cactusjack_line",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_wfd_cactusjack_series",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Series: 48",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9_wfd_boogeyman_release",
+     "source_id": "w_wfd_boogeyman",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Boogeyman"
+     }
+    },
+    {
+     "quote_id": "w_q10_search_lineup",
+     "source_id": "w_search_snippet_s48_lineup",
+     "text": "WWE Elite Series 48 was released in 2017 and consists of 6 figures: 1. Boogeyman (Flashback Series) (First Time in the Line) 2. Cactus Jack (Flashback Series) 3. Dean Ambrose 4. Dolph Ziggler 5. Erick Rowan 6. Kalisto. The pre-order date was February 7th, 2017, with a release date of March 2017, and the configuration was 8 pieces per case.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "The former 'Cactus Jack' wears his outlaw gear here, complete with a red and black flannel and black and yellow 'Wanted, Dead or Alive' shirt.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "cactus-jack",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "His ring tights have designs along the sides and he's wearing animal pattern boots.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "cactus-jack",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "He also comes with a 'Do Not Enter' sign accessory to take the hardcore battle to another level!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "cactus-jack",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "cactus-jack",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$29.99 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "cactus-jack",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Sold out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "cactus-jack",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Red and black flannel with a black and yellow 'Wanted, Dead or Alive' shirt",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red and black flannel, black and yellow shirt, ring tights with side designs, animal pattern boots",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "'Do Not Enter' sign accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Animal pattern boots",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "'Do Not Enter' sign accessory",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ]
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q5"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_48_kalisto_6921c5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_48_kalisto_6921c5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_48_kalisto_6921c5",
+   "character_canonical": "kalisto",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "48",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kalisto"
+  },
+  "identity_hash": "5cbff6b92ba2db42",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-cactus-jack-action-figure-sleeveless-flannel-road-sign/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_s48_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-48-action-figure-case/mtp9647ay",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_hobbydb_s48",
+     "url": "https://www.hobbydb.com/marketplaces/hobbydb/subjects/wwe-elite-series-48-series",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cactusjack",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-cactusjack",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_boogeyman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-boogeyman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_s48_lineup",
+     "url": "https://gogts.net/toy-focus-wwe-elite-collection-series-48-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-kalisto",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-kalisto-action-figure-entrance-trampoline-entrance-mask/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-kalisto-elite48-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_scale",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_features",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "March 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_hobbydb_year",
+     "source_id": "w_hobbydb_s48",
+     "text": "Released in 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_hobbydb_lineup",
+     "source_id": "w_hobbydb_s48",
+     "text": "Boogeyman (Flashback Series) (First Time in the Line), Cactus Jack (Flashback Series), Dean Ambrose, Dolph Ziggler, Erick Rowan, Kalisto",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_cactusjack_release",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Cactus Jack"
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_cactusjack_line",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_wfd_cactusjack_series",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Series: 48",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9_wfd_boogeyman_release",
+     "source_id": "w_wfd_boogeyman",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Boogeyman"
+     }
+    },
+    {
+     "quote_id": "w_q10_search_lineup",
+     "source_id": "w_search_snippet_s48_lineup",
+     "text": "WWE Elite Series 48 was released in 2017 and consists of 6 figures: 1. Boogeyman (Flashback Series) (First Time in the Line) 2. Cactus Jack (Flashback Series) 3. Dean Ambrose 4. Dolph Ziggler 5. Erick Rowan 6. Kalisto. The pre-order date was February 7th, 2017, with a release date of March 2017, and the configuration was 8 pieces per case.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Feb. 21, 2016 @ WWE Fastlane",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "authentically sculpted 6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$149.62",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "March 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "green and gold ring gear, complete with molded silver designs in the front. His silver and gold boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "a removable entrance mask",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "trampoline replica accessory he comes with",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "kalisto",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Feb. 21, 2016 @ WWE Fastlane",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Green and gold ring gear with molded silver designs, silver and gold boots",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable entrance mask",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Trampoline replica accessory",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable entrance mask",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Trampoline replica accessory",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2017",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_48_erick-rowan_aedd420965ec": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_48_erick-rowan_aedd420965ec",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_48_erick-rowan_aedd420965ec",
+   "character_canonical": "erick-rowan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "48",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Erick Rowan"
+  },
+  "identity_hash": "6d8d989e5e8985a5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-cactus-jack-action-figure-sleeveless-flannel-road-sign/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ee_s48_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-48-action-figure-case/mtp9647ay",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_hobbydb_s48",
+     "url": "https://www.hobbydb.com/marketplaces/hobbydb/subjects/wwe-elite-series-48-series",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_cactusjack",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-cactusjack",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_boogeyman",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-boogeyman",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_s48_lineup",
+     "url": "https://gogts.net/toy-focus-wwe-elite-collection-series-48-action-figures/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "toy_news"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-erick-rowan-elite48-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-erick-rowan-action-figure-2-sheep-masks/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-erickrowan",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_scale",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_features",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_cactus_jack_s48",
+     "text": "March 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_hobbydb_year",
+     "source_id": "w_hobbydb_s48",
+     "text": "Released in 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5_hobbydb_lineup",
+     "source_id": "w_hobbydb_s48",
+     "text": "Boogeyman (Flashback Series) (First Time in the Line), Cactus Jack (Flashback Series), Dean Ambrose, Dolph Ziggler, Erick Rowan, Kalisto",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_cactusjack_release",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Cactus Jack"
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_cactusjack_line",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_wfd_cactusjack_series",
+     "source_id": "w_wfd_cactusjack",
+     "text": "Series: 48",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9_wfd_boogeyman_release",
+     "source_id": "w_wfd_boogeyman",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Boogeyman"
+     }
+    },
+    {
+     "quote_id": "w_q10_search_lineup",
+     "source_id": "w_search_snippet_s48_lineup",
+     "text": "WWE Elite Series 48 was released in 2017 and consists of 6 figures: 1. Boogeyman (Flashback Series) (First Time in the Line) 2. Cactus Jack (Flashback Series) 3. Dean Ambrose 4. Dolph Ziggler 5. Erick Rowan 6. Kalisto. The pre-order date was February 7th, 2017, with a release date of March 2017, and the configuration was 8 pieces per case.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 48",
+      "year": 2017,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Fear will always creep its way back into your life with Erick Rowan in Mattel WWE Elite 48!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "erick-rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Rowan includes a dark blue ring suit with patches sewn on for repair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "erick-rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "He also has a long, red beard and powerful physique!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "erick-rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Included with this Wyatt Family member are not one, but TWO lamb masks so he can scare the WWE Universe into following!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "erick-rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$36.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "erick-rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Attire Date: Jan. 24, 2016 @ WWE Royal Rumble",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "erick-rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Dark blue ring suit with patches sewn on for repair",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Dark blue",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Long, red beard and powerful physique",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Two lamb masks included",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Long red beard",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Erick Rowan in Mattel WWE Elite 48",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Two lamb masks",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_48_dean-ambrose_fccec5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_48_dean-ambrose_fccec5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_48_dean-ambrose_fccec5",
+   "character_canonical": "dean-ambrose",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "48",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dean Ambrose"
+  },
+  "identity_hash": "2d2d77f34e119456",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite48_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-complete-set-elite48-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite48_ambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-dean-ambrose-action-figure-entrance-shirt-fire-extinguisher/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite48_rowan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-erickrowan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_forum_baf_megathread",
+     "url": "https://forum.wrestlingfigs.com/thread/374077/complete-list-all-mattel-bafs",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-dean-ambrose-elite48-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite48_set",
+     "text": "Dean Ambrose, Dolph Ziggler, Kalisto, Erick Rowan (Wyatt Family), Boogeyman, Cactus Jack (Mick Foley)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite48_set",
+     "text": "$69.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month",
+     "source_id": "w_toywiz_elite48_ambrose",
+     "text": "Release Date: March 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Dean Ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite48_ambrose",
+     "text": "authentically sculpted 6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_series",
+     "source_id": "w_wfd_elite48_rowan",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Erick Rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_number",
+     "source_id": "w_wfd_elite48_rowan",
+     "text": "Series: 48",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Erick Rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_manufacture",
+     "source_id": "w_wfd_elite48_rowan",
+     "text": "Manufacturer: Mattel / Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_baf_sublines",
+     "source_id": "w_forum_baf_megathread",
+     "text": "Best of PPV Elite: Jim Ross, Michael Cole, Paul Heyman, John Laurinaitis, Corporate Kane, Ricardo Rodriguez",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing a 'DA' - anarchy styled shirt and has a black shirt beneath it. His ring jeans have a black and gold studded belt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "comes with a microphone to run his mouth and a fire extinguisher accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "RING ATTIRE: MAY 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "$14.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2017",
+    "evidence_quote_ids": [
+     "w_q3_release_month"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_48_boogeyman_bd33a5fe94d1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_48_boogeyman_bd33a5fe94d1",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_48_boogeyman_bd33a5fe94d1",
+   "character_canonical": "boogeyman",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "48",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Boogeyman"
+  },
+  "identity_hash": "413b04139bc54a18",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite48_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-complete-set-elite48-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite48_ambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-dean-ambrose-action-figure-entrance-shirt-fire-extinguisher/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite48_rowan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-erickrowan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_forum_baf_megathread",
+     "url": "https://forum.wrestlingfigs.com/thread/374077/complete-list-all-mattel-bafs",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "forum"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite48-boogeyman",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-48-boogeyman-action-figure-entrance-staff-clock/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-48-toy-figures-boogeyman-elite48-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite48_set",
+     "text": "Dean Ambrose, Dolph Ziggler, Kalisto, Erick Rowan (Wyatt Family), Boogeyman, Cactus Jack (Mick Foley)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q2_set_price",
+     "source_id": "w_ringside_elite48_set",
+     "text": "$69.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_month",
+     "source_id": "w_toywiz_elite48_ambrose",
+     "text": "Release Date: March 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2017,
+      "character_canonical": "Dean Ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite48_ambrose",
+     "text": "authentically sculpted 6 inch figures of the biggest WWE Superstars",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_series",
+     "source_id": "w_wfd_elite48_rowan",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Erick Rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_series_number",
+     "source_id": "w_wfd_elite48_rowan",
+     "text": "Series: 48",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": "Erick Rowan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q7_wfd_manufacture",
+     "source_id": "w_wfd_elite48_rowan",
+     "text": "Manufacturer: Mattel / Manufacturing Country: China",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2017,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "w_q8_baf_sublines",
+     "source_id": "w_forum_baf_megathread",
+     "text": "Best of PPV Elite: Jim Ross, Michael Cole, Paul Heyman, John Laurinaitis, Corporate Kane, Ricardo Rodriguez",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 10, 2006 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2017,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "IN STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "wild, red and black face paint and a black and brown molded accessory around his neck",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "molded black ring pants have brown straps designed on them",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "includes a clock and walking stick accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "RING ATTIRE: NOVEMBER 2006",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "boogeyman",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Nov. 10, 2006 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black ring pants with brown straps; black and brown molded neck accessory",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Wild red and black face paint",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Includes clock and walking stick accessory",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Clock accessory",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Walking stick accessory",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$49.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 49.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     },
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ],
+      "price_detail": {
+       "amount": 39.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

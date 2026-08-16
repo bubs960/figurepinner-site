@@ -1,0 +1,2296 @@
+{
+ "fp_wrestling_mattel_elite_73_gran-metalik_5c59b7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_gran-metalik_5c59b7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_gran-metalik_5c59b7",
+   "character_canonical": "gran-metalik",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Gran Metalik"
+  },
+  "identity_hash": "8ec1d95a4eb7a994",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_tripleh",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-tripleh",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_kairisane",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-kairisane",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_danielbryan",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_aleisterblack",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-aleister-black-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-granmetalik",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-gran-metalik-action-figure-blue-outfit/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-73-toy-figures-gran-metalik-elite73-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_checklist",
+     "source_id": "w_wfd_series51_100_p4",
+     "text": "2020 WWE Mattel Elite Collection Series 73 Aleister Black; 2020 WWE Mattel Elite Collection Series 73 Daniel Bryan; 2020 WWE Mattel Elite Collection Series 73 Elias; 2020 WWE Mattel Elite Collection Series 73 Gran Metalik; 2020 WWE Mattel Elite Collection Series 73 Gran Metalk [Chase]; 2020 WWE Mattel Elite Collection Series 73 Kairi Sane; 2020 WWE Mattel Elite Collection Series 73 Peyton Royce [Exclusive]; 2020 WWE Mattel Elite Collection Series 73 Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_tripleh_release",
+     "source_id": "w_wfd_tripleh",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q3_tripleh_series",
+     "source_id": "w_wfd_tripleh",
+     "text": "Series: 73",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q4_kairisane_release",
+     "source_id": "w_wfd_kairisane",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q5_kairisane_attire",
+     "source_id": "w_wfd_kairisane",
+     "text": "Attire Date: Aug. 18, 2018 @ NXT TakeOver: Brooklyn 4",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q6_bryan_release_month",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q7_bryan_title",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q8_black_release_month",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Aleister Black"
+     }
+    },
+    {
+     "quote_id": "w_q9_black_desc",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "The exciting over-the-top battle action of WWE is on! Relive all your favorite moments and matches and collect your favorite Superstars with this line of products featuring authentic detail, amazing design and awesome value the WWE Universe will love!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 19, 2016 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gran-metalik",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gran-metalik",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$90.24",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gran-metalik",
+      "character_variant": "blue-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gran-metalik",
+      "character_variant": "blue-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "UPC: 0609411419182",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gran-metalik",
+      "character_variant": "blue-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "gran-metalik",
+      "character_variant": "blue-gear",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Figure Defender Case",
+     "scope": null
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "$4.99",
+     "scope": null
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Sept. 19, 2016 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_73_elias_c35963": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_elias_c35963",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_elias_c35963",
+   "character_canonical": "elias",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Elias"
+  },
+  "identity_hash": "20c3a747e3e312a0",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_tripleh",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-tripleh",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_kairisane",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-kairisane",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_danielbryan",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_aleisterblack",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-aleister-black-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-elias-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-elias",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-73-toy-figures-elias-elite73-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_checklist",
+     "source_id": "w_wfd_series51_100_p4",
+     "text": "2020 WWE Mattel Elite Collection Series 73 Aleister Black; 2020 WWE Mattel Elite Collection Series 73 Daniel Bryan; 2020 WWE Mattel Elite Collection Series 73 Elias; 2020 WWE Mattel Elite Collection Series 73 Gran Metalik; 2020 WWE Mattel Elite Collection Series 73 Gran Metalk [Chase]; 2020 WWE Mattel Elite Collection Series 73 Kairi Sane; 2020 WWE Mattel Elite Collection Series 73 Peyton Royce [Exclusive]; 2020 WWE Mattel Elite Collection Series 73 Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_tripleh_release",
+     "source_id": "w_wfd_tripleh",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q3_tripleh_series",
+     "source_id": "w_wfd_tripleh",
+     "text": "Series: 73",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q4_kairisane_release",
+     "source_id": "w_wfd_kairisane",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q5_kairisane_attire",
+     "source_id": "w_wfd_kairisane",
+     "text": "Attire Date: Aug. 18, 2018 @ NXT TakeOver: Brooklyn 4",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q6_bryan_release_month",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q7_bryan_title",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q8_black_release_month",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Aleister Black"
+     }
+    },
+    {
+     "quote_id": "w_q9_black_desc",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "The exciting over-the-top battle action of WWE is on! Relive all your favorite moments and matches and collect your favorite Superstars with this line of products featuring authentic detail, amazing design and awesome value the WWE Universe will love!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Attire Date: June 17, 2018 @ WWE Money in the Bank",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "elias",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "June 17, 2018 @ WWE Money in the Bank",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "February 2020",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_73_kairi-sane_305041": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_kairi-sane_305041",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_kairi-sane_305041",
+   "character_canonical": "kairi-sane",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kairi Sane"
+  },
+  "identity_hash": "6407934bb0192173",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_tripleh",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-tripleh",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_kairisane",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-kairisane",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_danielbryan",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_aleisterblack",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-aleister-black-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.wrestlezone.com/news/1162020-collectors-corner-mattel-wwe-elite-73-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-73-toy-figures-kairi-sane-elite73-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-kairi-sane-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_checklist",
+     "source_id": "w_wfd_series51_100_p4",
+     "text": "2020 WWE Mattel Elite Collection Series 73 Aleister Black; 2020 WWE Mattel Elite Collection Series 73 Daniel Bryan; 2020 WWE Mattel Elite Collection Series 73 Elias; 2020 WWE Mattel Elite Collection Series 73 Gran Metalik; 2020 WWE Mattel Elite Collection Series 73 Gran Metalk [Chase]; 2020 WWE Mattel Elite Collection Series 73 Kairi Sane; 2020 WWE Mattel Elite Collection Series 73 Peyton Royce [Exclusive]; 2020 WWE Mattel Elite Collection Series 73 Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_tripleh_release",
+     "source_id": "w_wfd_tripleh",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q3_tripleh_series",
+     "source_id": "w_wfd_tripleh",
+     "text": "Series: 73",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q4_kairisane_release",
+     "source_id": "w_wfd_kairisane",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q5_kairisane_attire",
+     "source_id": "w_wfd_kairisane",
+     "text": "Attire Date: Aug. 18, 2018 @ NXT TakeOver: Brooklyn 4",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q6_bryan_release_month",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q7_bryan_title",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q8_black_release_month",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Aleister Black"
+     }
+    },
+    {
+     "quote_id": "w_q9_black_desc",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "The exciting over-the-top battle action of WWE is on! Relive all your favorite moments and matches and collect your favorite Superstars with this line of products featuring authentic detail, amazing design and awesome value the WWE Universe will love!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kairi-sane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kairi-sane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "ELITE73-06",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kairi-sane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kairi-sane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kairi-sane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "887961830125",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "kairi-sane",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE73-06",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "February 2020",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_73_triple-h_830eb7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_triple-h_830eb7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_triple-h_830eb7",
+   "character_canonical": "triple-h",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Triple H"
+  },
+  "identity_hash": "153f893e0f3234a1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_tripleh",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-tripleh",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_kairisane",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-kairisane",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_danielbryan",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_aleisterblack",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-aleister-black-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-73-toy-figures-triple-h-elite73-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/triple-h-wwe-elite-collection-series-73-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_checklist",
+     "source_id": "w_wfd_series51_100_p4",
+     "text": "2020 WWE Mattel Elite Collection Series 73 Aleister Black; 2020 WWE Mattel Elite Collection Series 73 Daniel Bryan; 2020 WWE Mattel Elite Collection Series 73 Elias; 2020 WWE Mattel Elite Collection Series 73 Gran Metalik; 2020 WWE Mattel Elite Collection Series 73 Gran Metalk [Chase]; 2020 WWE Mattel Elite Collection Series 73 Kairi Sane; 2020 WWE Mattel Elite Collection Series 73 Peyton Royce [Exclusive]; 2020 WWE Mattel Elite Collection Series 73 Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_tripleh_release",
+     "source_id": "w_wfd_tripleh",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q3_tripleh_series",
+     "source_id": "w_wfd_tripleh",
+     "text": "Series: 73",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q4_kairisane_release",
+     "source_id": "w_wfd_kairisane",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q5_kairisane_attire",
+     "source_id": "w_wfd_kairisane",
+     "text": "Attire Date: Aug. 18, 2018 @ NXT TakeOver: Brooklyn 4",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q6_bryan_release_month",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q7_bryan_title",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q8_black_release_month",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Aleister Black"
+     }
+    },
+    {
+     "quote_id": "w_q9_black_desc",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "The exciting over-the-top battle action of WWE is on! Relive all your favorite moments and matches and collect your favorite Superstars with this line of products featuring authentic detail, amazing design and awesome value the WWE Universe will love!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "This WWE figure is approximately 6-inches in scale",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "deluxe articulation for multiple ways to pose and play.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "True FX enhanced facial detailing for life-like authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Interchangable hands let you pose this WWE Elite figure in-ring or coming down the aisle with added authenticity.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Interchangable hands let you pose this WWE Elite figure in-ring or coming down the aisle with added authenticity",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Interchangable hands",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_73_daniel-bryan_1fe62d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_daniel-bryan_1fe62d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_daniel-bryan_1fe62d",
+   "character_canonical": "daniel-bryan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Daniel Bryan"
+  },
+  "identity_hash": "eef9b2551b315599",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_tripleh",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-tripleh",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_kairisane",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-kairisane",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_danielbryan",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_aleisterblack",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-aleister-black-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-73-toy-figures-daniel-bryan-elite73-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toysandmasks.com/wrestling/wwe-elite-series/elite-series-73/daniel-bryan-elite-73",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_checklist",
+     "source_id": "w_wfd_series51_100_p4",
+     "text": "2020 WWE Mattel Elite Collection Series 73 Aleister Black; 2020 WWE Mattel Elite Collection Series 73 Daniel Bryan; 2020 WWE Mattel Elite Collection Series 73 Elias; 2020 WWE Mattel Elite Collection Series 73 Gran Metalik; 2020 WWE Mattel Elite Collection Series 73 Gran Metalk [Chase]; 2020 WWE Mattel Elite Collection Series 73 Kairi Sane; 2020 WWE Mattel Elite Collection Series 73 Peyton Royce [Exclusive]; 2020 WWE Mattel Elite Collection Series 73 Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_tripleh_release",
+     "source_id": "w_wfd_tripleh",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q3_tripleh_series",
+     "source_id": "w_wfd_tripleh",
+     "text": "Series: 73",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q4_kairisane_release",
+     "source_id": "w_wfd_kairisane",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q5_kairisane_attire",
+     "source_id": "w_wfd_kairisane",
+     "text": "Attire Date: Aug. 18, 2018 @ NXT TakeOver: Brooklyn 4",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q6_bryan_release_month",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q7_bryan_title",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q8_black_release_month",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Aleister Black"
+     }
+    },
+    {
+     "quote_id": "w_q9_black_desc",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "The exciting over-the-top battle action of WWE is on! Relive all your favorite moments and matches and collect your favorite Superstars with this line of products featuring authentic detail, amazing design and awesome value the WWE Universe will love!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "WWE Toy Wrestling Action Figure by Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "daniel-bryan",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 24.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$99.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 99.99,
+       "currency": "USD",
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s3"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_73_aleister-black_f448d6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_aleister-black_f448d6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_aleister-black_f448d6",
+   "character_canonical": "aleister-black",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Aleister Black"
+  },
+  "identity_hash": "6b83809fedac7ae8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_tripleh",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-tripleh",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_kairisane",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-kairisane",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_series51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_danielbryan",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-daniel-bryan-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_aleisterblack",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-aleister-black-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-73-toy-figures-aleister-black-elite73-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/aleister-black-wwe-elite-collection-series-73-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_checklist",
+     "source_id": "w_wfd_series51_100_p4",
+     "text": "2020 WWE Mattel Elite Collection Series 73 Aleister Black; 2020 WWE Mattel Elite Collection Series 73 Daniel Bryan; 2020 WWE Mattel Elite Collection Series 73 Elias; 2020 WWE Mattel Elite Collection Series 73 Gran Metalik; 2020 WWE Mattel Elite Collection Series 73 Gran Metalk [Chase]; 2020 WWE Mattel Elite Collection Series 73 Kairi Sane; 2020 WWE Mattel Elite Collection Series 73 Peyton Royce [Exclusive]; 2020 WWE Mattel Elite Collection Series 73 Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_tripleh_release",
+     "source_id": "w_wfd_tripleh",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q3_tripleh_series",
+     "source_id": "w_wfd_tripleh",
+     "text": "Series: 73",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Triple H"
+     }
+    },
+    {
+     "quote_id": "w_q4_kairisane_release",
+     "source_id": "w_wfd_kairisane",
+     "text": "Release Date: 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q5_kairisane_attire",
+     "source_id": "w_wfd_kairisane",
+     "text": "Attire Date: Aug. 18, 2018 @ NXT TakeOver: Brooklyn 4",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2020,
+      "character_canonical": "Kairi Sane"
+     }
+    },
+    {
+     "quote_id": "w_q6_bryan_release_month",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q7_bryan_title",
+     "source_id": "w_toywiz_danielbryan",
+     "text": "WWE Elite 73 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Daniel Bryan"
+     }
+    },
+    {
+     "quote_id": "w_q8_black_release_month",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "Release Date: February 2020",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel Toys",
+      "product_line": "Elite Collection Series 71-80",
+      "year": 2020,
+      "character_canonical": "Aleister Black"
+     }
+    },
+    {
+     "quote_id": "w_q9_black_desc",
+     "source_id": "w_toywiz_aleisterblack",
+     "text": "The exciting over-the-top battle action of WWE is on! Relive all your favorite moments and matches and collect your favorite Superstars with this line of products featuring authentic detail, amazing design and awesome value the WWE Universe will love!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel Toys",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "aleister-black",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature for the first time individual stands, authentic costumes, extreme articulation and amazing accuracy",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "All swagger and muscle, sculpted in serious detail",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Realistic accessories complete his ring outfit",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_73_peyton-royce_cd6916260003": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_73_peyton-royce_cd6916260003",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_73_peyton-royce_cd6916260003",
+   "character_canonical": "peyton-royce",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "73",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Peyton Royce"
+  },
+  "identity_hash": "b832c42c0f664384",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite73_peytonroyce",
+     "url": "https://wrestlingfiguredatabase.com/products/elite73-peytonroyce",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite73_elias",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-73-elias-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_collections_mainline_51_100_p4",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-51-100?page=4",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wwe_com_gallery_s73_74",
+     "url": "https://www.wwe.com/inside/mattel/gallery/mattel-elite-collection-series-73-74-photos",
+     "source_type": "official_manufacturer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_search_s73",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-73-peyton-royce-target-exclusive",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://sportszonetoyscomics.com/products/peyton-royce-wwe-elite-collection-raw-collectors-edition-action-figure",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite73_peytonroyce",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite73_peytonroyce",
+     "text": "Oct. 28, 2018 @ WWE Evolution",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Peyton Royce"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite73_peytonroyce",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Peyton Royce"
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_elite73_elias",
+     "text": "February 2020",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Elias"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite73_elias",
+     "text": "UPC: 887961830118",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": "Elias"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_collections_mainline_51_100_p4",
+     "text": "Aleister Black, Daniel Bryan, Elias, Gran Metalik, Gran Metalik [Chase], Kairi Sane, Peyton Royce [Exclusive], Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2020,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "peyton-royce",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Package Grade: Great: Few minor flaws",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "peyton-royce",
+      "character_variant": null,
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Figure Grade: Excellent - Little to no flaws",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "peyton-royce",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Complete",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2020,
+      "character_canonical": "peyton-royce",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

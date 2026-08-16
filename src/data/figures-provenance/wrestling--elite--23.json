@@ -2120,5 +2120,347 @@
     "status": "unresolved"
    }
   ]
+ },
+ "fp_wrestling_mattel_elite_23_triple-h_3dd9c497809b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_23_triple-h_3dd9c497809b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_23_triple-h_3dd9c497809b",
+   "character_canonical": "triple-h",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "23",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Triple H"
+  },
+  "identity_hash": "18cec2b3ffa7f561",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_s1_wfd_elite23_jbl",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-jbl",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_s2_toywiz_series23_hub",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-23-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_s3_toywiz_jbl",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-jbl-action-figure-hat-jacket-towel/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_s4_search_wave_lineup",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-23-complete-set-elite23-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-23-triple-h-elite23-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite23-tripleh",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-23-triple-h-action-figure-shirt-megaphone-helmet/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_s2_toywiz_series23_hub",
+     "text": "Includes Cena, Undertaker, JBL, Macho Man, Cesaro & Triple H",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2_scale",
+     "source_id": "w_s2_toywiz_series23_hub",
+     "text": "6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_s2_toywiz_series23_hub",
+     "text": "September 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4_release_year",
+     "source_id": "w_s1_wfd_elite23_jbl",
+     "text": "Release Date: 2013",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": "JBL"
+     }
+    },
+    {
+     "quote_id": "w_q5_manufacturing",
+     "source_id": "w_s1_wfd_elite23_jbl",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6_line_series",
+     "source_id": "w_s1_wfd_elite23_jbl",
+     "text": "Line: Elite Collection Mainline / Series: 23",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2013,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7_accessories_desc",
+     "source_id": "w_s2_toywiz_series23_hub",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8_jbl_flashback_note",
+     "source_id": "w_s3_toywiz_jbl",
+     "text": "Includes Hat, Jacket & Towel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": "JBL"
+     }
+    },
+    {
+     "quote_id": "w_q9_lineup_confirm",
+     "source_id": "w_s4_search_wave_lineup",
+     "text": "WWE Elite 23 - Complete Set of 6",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2013,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "Includes Shirt, Megaphone & Helmet!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "$64.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Shirt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Megaphone",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Helmet",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$24.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "$64.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ]
+     }
+    ]
+   }
+  ]
  }
 }

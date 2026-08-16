@@ -1,0 +1,2222 @@
+{
+ "fp_wrestling_mattel_elite_46_booker-t_4145f6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_46_booker-t_4145f6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_46_booker-t_4145f6",
+   "character_canonical": "booker-t",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "46",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Booker T"
+  },
+  "identity_hash": "2aeae29dfb53b831",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_s46_bookert",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-booker-t-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_s46_finnbalor",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_mainline_1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_walmart_s46_set",
+     "url": "https://www.walmart.com/ip/WWE-Elite-Collection-Series-46-John-Cena-Demon-Finn-Balor-Sheamus-Rusev-Harlem-Heat-Booker-T-Stevie-Ray-Deluxe-Wrestling-Action-Figure-Toy-Set-WWF-Ra/766258054",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite46-bookert",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-46-toy-figures-booker-t-elite46-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "WWE Wrestling Elite Collection Series 46 Booker T 6\" Action Figure Sunglasses, Headwrap Do-Rag Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Booker T",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6\" Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "UPC: 887961397673",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_walmart_s46_set",
+     "text": "WWE Elite Series #46 Collection John Cena - Demon Finn Balor - Sheamus - Rusev - Harlem Heat Booker T - Stevie Ray Deluxe Wrestling Action Figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 15, 1996 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 46",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "His attire is based on his days as a member of the Harlem Heat with red base and yellow flames, complete with ring at the top. His black boots also have flame designs built in!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "removable bandanas, sunglasses and even has a detailed breathing strip across his nose!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$10.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "booker-t",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire based on July 15, 1996 @ WCW Nitro, Harlem Heat, red base with yellow flames",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red base with yellow flames; black boots with flame designs",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Attire based on his days as a member of the Harlem Heat with red base and yellow flames, complete with ring at the top; black boots also have flame designs built in",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable bandanas, sunglasses and a breathing strip across his nose",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable bandana/headwrap",
+    "evidence_quote_ids": [
+     "f_q6",
+     "w_q2"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable sunglasses",
+    "evidence_quote_ids": [
+     "f_q6",
+     "w_q2"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2016",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_46_john-cena_43efb2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_46_john-cena_43efb2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_46_john-cena_43efb2",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "46",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "9294655f15ae63b2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_s46_bookert",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-booker-t-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_s46_finnbalor",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_mainline_1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_walmart_s46_set",
+     "url": "https://www.walmart.com/ip/WWE-Elite-Collection-Series-46-John-Cena-Demon-Finn-Balor-Sheamus-Rusev-Harlem-Heat-Booker-T-Stevie-Ray-Deluxe-Wrestling-Action-Figure-Toy-Set-WWF-Ra/766258054",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-john-cena-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-46-toy-figures-john-cena-elite46-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "WWE Wrestling Elite Collection Series 46 Booker T 6\" Action Figure Sunglasses, Headwrap Do-Rag Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Booker T",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6\" Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "UPC: 887961397673",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_walmart_s46_set",
+     "text": "WWE Elite Series #46 Collection John Cena - Demon Finn Balor - Sheamus - Rusev - Harlem Heat Booker T - Stevie Ray Deluxe Wrestling Action Figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Hat, Dog Tags, Bicep Bands, Weights & Bar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "John Cena will rise again! The CeNation is as thrilled as can be with the return of their leader in Mattel WWE Elite 46! John Cena has a removable hat, armband and dog tags and is wearing accurate ring shorts and wrestling shoes. Cena also comes with a massive weight bar and weights. In addition, the figure comes with a piece of the 'live action diorama' build from the Elite 46 set with display stand and panel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable hat",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Dog tags",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Removable armband",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Weight bar and weights",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[4]",
+    "status": "resolved",
+    "value": "Piece of the 'live action diorama' build with display stand and panel",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "resolved",
+    "value": "Live action diorama build piece with display stand and panel",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2016",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_46_sheamus_508c8c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_46_sheamus_508c8c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_46_sheamus_508c8c",
+   "character_canonical": "sheamus",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "46",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sheamus"
+  },
+  "identity_hash": "df1d6c88241f4dfc",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_s46_bookert",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-booker-t-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_s46_finnbalor",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_mainline_1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_walmart_s46_set",
+     "url": "https://www.walmart.com/ip/WWE-Elite-Collection-Series-46-John-Cena-Demon-Finn-Balor-Sheamus-Rusev-Harlem-Heat-Booker-T-Stevie-Ray-Deluxe-Wrestling-Action-Figure-Toy-Set-WWF-Ra/766258054",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-sheamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite46-sheamus",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-46-toy-figures-sheamus-elite46-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "WWE Wrestling Elite Collection Series 46 Booker T 6\" Action Figure Sunglasses, Headwrap Do-Rag Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Booker T",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6\" Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "UPC: 887961397673",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_walmart_s46_set",
+     "text": "WWE Elite Series #46 Collection John Cena - Demon Finn Balor - Sheamus - Rusev - Harlem Heat Booker T - Stevie Ray Deluxe Wrestling Action Figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Attire Date: Mar. 30, 2015 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Series: 46",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "black ring gear with his symbols in the front",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "his new, wild hairstyle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "a piece of the \"live action diorama\" build from the Elite 46 set with display stand and panel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Mar. 30, 2015 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "New, wild hairstyle",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black ring gear with his symbols in the front",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "His new, wild hairstyle",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2016",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_46_finn-balor_31a8b9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_46_finn-balor_31a8b9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_46_finn-balor_31a8b9",
+   "character_canonical": "finn-balor",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "46",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Finn Balor"
+  },
+  "identity_hash": "215ae44fcf1f8e0b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_s46_bookert",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-booker-t-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_s46_finnbalor",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_mainline_1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_walmart_s46_set",
+     "url": "https://www.walmart.com/ip/WWE-Elite-Collection-Series-46-John-Cena-Demon-Finn-Balor-Sheamus-Rusev-Harlem-Heat-Booker-T-Stevie-Ray-Deluxe-Wrestling-Action-Figure-Toy-Set-WWF-Ra/766258054",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite46-finnbalor",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "WWE Wrestling Elite Collection Series 46 Booker T 6\" Action Figure Sunglasses, Headwrap Do-Rag Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Booker T",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6\" Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "UPC: 887961397673",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_walmart_s46_set",
+     "text": "WWE Elite Series #46 Collection John Cena - Demon Finn Balor - Sheamus - Rusev - Harlem Heat Booker T - Stevie Ray Deluxe Wrestling Action Figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 4, 2015 @ WWE Beast in the East",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$84.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6 Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "finn-balor",
+      "character_variant": "demon-entrance-outfit",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "finn-balor",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "July 4, 2015 @ WWE Beast in the East",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Demon Entrance Outfit",
+    "evidence_quote_ids": [
+     "f_q6",
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "887961397673",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2016",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$84.99",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 84.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2026-08-16",
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_46_rusev_519acc": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_46_rusev_519acc",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_46_rusev_519acc",
+   "character_canonical": "rusev",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "46",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rusev"
+  },
+  "identity_hash": "31ac1a2f7aa2608d",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_s46_bookert",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-booker-t-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_s46_finnbalor",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_mainline_1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_walmart_s46_set",
+     "url": "https://www.walmart.com/ip/WWE-Elite-Collection-Series-46-John-Cena-Demon-Finn-Balor-Sheamus-Rusev-Harlem-Heat-Booker-T-Stevie-Ray-Deluxe-Wrestling-Action-Figure-Toy-Set-WWF-Ra/766258054",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-rusev-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-46-toy-figures-rusev-elite46-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "WWE Wrestling Elite Collection Series 46 Booker T 6\" Action Figure Sunglasses, Headwrap Do-Rag Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Booker T",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6\" Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "UPC: 887961397673",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_walmart_s46_set",
+     "text": "WWE Elite Series #46 Collection John Cena - Demon Finn Balor - Sheamus - Rusev - Harlem Heat Booker T - Stevie Ray Deluxe Wrestling Action Figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "November 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "removable black, white, red and green jacket and ring trunks designed with the same colors",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "a piece of the 'live action diorama' build from the Elite 46 set with display stand and panel",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "serious headsculpt",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "This figure includes a black fabric accessory that can sometimes leave black marks on the figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$12.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "RING ATTIRE: DECEMBER 2015",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "SIGNATURE MOVE: THE ACCOLADE",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "rusev",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Removable black, white, red and green jacket and ring trunks designed with the same colors",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Serious headsculpt",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Black fabric accessory (can sometimes leave black marks on the figure)",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "resolved",
+    "value": "A piece of the 'live action diorama' build from the Elite 46 set, including display stand and panel",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2016",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$39.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ]
+     },
+     {
+      "value": "$12.99",
+      "evidence_quote_ids": [
+       "f_q9"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_46_stevie-ray_d41ed7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_46_stevie-ray_d41ed7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_46_stevie-ray_d41ed7",
+   "character_canonical": "stevie-ray",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "46",
+   "fandom": "wrestling",
+   "year": 2016,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stevie Ray"
+  },
+  "identity_hash": "3bced0cacd66186f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_s46_bookert",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-booker-t-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_s46_finnbalor",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-46-finn-balor-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_mainline_1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_search_walmart_s46_set",
+     "url": "https://www.walmart.com/ip/WWE-Elite-Collection-Series-46-John-Cena-Demon-Finn-Balor-Sheamus-Rusev-Harlem-Heat-Booker-T-Stevie-Ray-Deluxe-Wrestling-Action-Figure-Toy-Set-WWF-Ra/766258054",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite46-stevieray",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-46-toy-figures-stevie-ray-elite46-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "WWE Wrestling Elite Collection Series 46 Booker T 6\" Action Figure Sunglasses, Headwrap Do-Rag Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Booker T",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_s46_bookert",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "WWE Wrestling Elite Collection Series 46 Finn Balor 6\" Action Figure Demon Entrance Outfit Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "Release Date: November 2016",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2016
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_s46_finnbalor",
+     "text": "UPC: 887961397673",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Finn Balor",
+      "year": "2016"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_search_walmart_s46_set",
+     "text": "WWE Elite Series #46 Collection John Cena - Demon Finn Balor - Sheamus - Rusev - Harlem Heat Booker T - Stevie Ray Deluxe Wrestling Action Figures",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2016",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 15, 1996 @ WCW Nitro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "red and yellow ring gear including flame designs on the side",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "removable bandanas, sunglasses and his nasal breathing strip",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$9.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "RING ATTIRE: JUNE 1996",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "BICYCLE KICK; HIGH KNEE; INVERTED ATOMIC DROP",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "HEIGHT: 6'5\" / WEIGHT: 292 LBS. / FROM: HARLEM, NY",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "CAREER HIGHLIGHT: WCW WORLD TAG TEAM CHAMPIONSHIP",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2016,
+      "character_canonical": "stevie-ray",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "Attire Date: July 15, 1996 @ WCW Nitro",
+      "evidence_quote_ids": [
+       "f_q2"
+      ]
+     },
+     {
+      "value": "RING ATTIRE: JUNE 1996",
+      "evidence_quote_ids": [
+       "f_q7"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "red and yellow ring gear including flame designs on the side",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "removable bandanas, sunglasses and his nasal breathing strip",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "HEIGHT: 6'5\" / WEIGHT: 292 LBS. / FROM: HARLEM, NY",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "BICYCLE KICK; HIGH KNEE; INVERTED ATOMIC DROP",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "removable bandana(s)",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "sunglasses",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "nasal breathing strip",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

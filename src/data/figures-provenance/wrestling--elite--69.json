@@ -1,0 +1,3756 @@
+{
+ "fp_wrestling_mattel_elite_69_bobby-lashley_c6e4bc": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_bobby-lashley_c6e4bc",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_bobby-lashley_c6e4bc",
+   "character_canonical": "bobby-lashley",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Bobby Lashley"
+  },
+  "identity_hash": "96946a80ec2f6fe2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-bobby-lashley-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-69-toy-figures-bobby-lashley-elite69-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://pwcatalog.com/products/elite69-lashley",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "authentic ring attire and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "September 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black and white wrist tape and black, red and white 'Lashley' trunks",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "He's also wearing black boots, knee pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "confident headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "removable headband",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$49.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "bobby-lashley",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Black, red and white 'Lashley' trunks with black and white wrist tape",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black, red, white",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Confident headscan",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable headband",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black boots and knee pads",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2019",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_ricochet_f09cd1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_ricochet_f09cd1",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_ricochet_f09cd1",
+   "character_canonical": "ricochet",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ricochet"
+  },
+  "identity_hash": "4db3a16ce0602f2c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-69-toy-figures-ricochet-elite69-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/ricochet-wwe-elite-collection-series-69-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.wrestlezone.com/news/1117059-collectors-corner-mattel-wwe-elite-69-in-depth-review-photos",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "removable entrance cape-vest hybrid. He's also sporting long tights and has tall, laced boots",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "determined headsculpt",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Prep a finishing move pose with 24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "ricochet",
+      "character_variant": null,
+      "condition": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "removable entrance cape-vest hybrid. He's also sporting long tights and has tall, laced boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "determined headsculpt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Prep a finishing move pose with 24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "All swagger and muscle, sculpted in serious detail",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Realistic accessories complete his ring outfit",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_ali_d082ae": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_ali_d082ae",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_ali_d082ae",
+   "character_canonical": "ali",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ali"
+  },
+  "identity_hash": "76830f32b33f6dff",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ali",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-mustafa-ali-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 7, 2019 @ WWE Super ShowDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "ali",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "ali",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "ali",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "ali",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "authentic ring attire",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "ali",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "bold and colorful figure comes ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "ali",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "bold and colorful",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_sonya-deville_759228f50c2c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_sonya-deville_759228f50c2c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_sonya-deville_759228f50c2c",
+   "character_canonical": "sonya-deville",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Sonya Deville"
+  },
+  "identity_hash": "693f6fa0548264c2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://pwcatalog.com/products/elite69-sonyadeville",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure! Featuring one of WWE's biggest personalities and champions, this bold and colorful figure is approximately 6-inches and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$54.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "sonya-deville",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "resolved",
+    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Deluxe articulation for multiple ways to pose and play",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_liv-morgan_e71c51ee4084": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_liv-morgan_e71c51ee4084",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_liv-morgan_e71c51ee4084",
+   "character_canonical": "liv-morgan",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Liv Morgan"
+  },
+  "identity_hash": "48cffc43177de536",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toyhypeusa.com/2019/03/02/mattel-wwe-elite-series-69-liv-morgan-figure-revealed/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.reigncitytoys.com/products/wwe-elite-collection-series-69-liv-morgan",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toynewsi.com/15-32944",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE Elite Collection Series 69 Liv Morgan will be available late summer 2019 and is exclusive to Target.",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "March 2, 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capture the blowout action of WWE Superstars with this Elite Collection action figure!",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$130.00",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "will be available late summer 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "exclusive to Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "that face sculpt is unreal",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "liv-morgan",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "Late Summer 2019",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_rey-mysterio_5e407fa6394c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_rey-mysterio_5e407fa6394c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_rey-mysterio_5e407fa6394c",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "453c0782b451513b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-rey-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Jan. 22, 2019 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 69",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "authentic ring attire and iconic accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "detailed character expression",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_the-miz_0019a2c20ae5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_the-miz_0019a2c20ae5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_the-miz_0019a2c20ae5",
+   "character_canonical": "the-miz",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "The Miz"
+  },
+  "identity_hash": "372251c16a122252",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-themiz",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-69-toy-figures-the-miz-elite69-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 8, 2018 @ WWE WrestleMania 34",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "red, black and gold headband with his symbol in the front",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "red and gold ring trunks",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "red and gold 'AWESOME' boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "removable entrance goggles",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "removable, molded red entrance jacket",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "detailed character expression",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 8, 2018 @ WWE WrestleMania 34",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Red, black and gold headband with symbol; red and gold ring trunks; red and gold 'AWESOME' boots",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable entrance goggles",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Removable, molded red entrance jacket",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable entrance goggles",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Removable, molded red entrance jacket",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_the-rock_9c301a2d77ac": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_the-rock_9c301a2d77ac",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_the-rock_9c301a2d77ac",
+   "character_canonical": "the-rock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "The Rock"
+  },
+  "identity_hash": "db014638249e1d81",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-therock",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://theringreport.com/wwe/wwe-reveals-mattel-elite-collection-series-69-action-figures-including-bobby-lashley-and-the-rock-a10075",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 69",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 25, 2000 @ WWF King of the Ring",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "a classic version of The Rock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "The Rock (Walmart exclusive)",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "June 25, 2000 @ WWF King of the Ring",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Classic version of The Rock (Walmart exclusive)",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2019",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_69_tommaso-ciampa_f9481e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_69_tommaso-ciampa_f9481e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_69_tommaso-ciampa_f9481e",
+   "character_canonical": "tommaso-ciampa",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "69",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Tommaso Ciampa"
+  },
+  "identity_hash": "e2688cf23b7cad5f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-the-miz-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_livmorgan",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-livmorgan",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_deville",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-sonya-deville-exclusive-action-figure-collectors-edition/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_ricochet",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-ricochet",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_toywiz_search_results",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-ricochet-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_pwcatalog_search_results",
+     "url": "https://pwcatalog.com/products/elite69-livmorgan",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite69-tommasociampa",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-69-tommaso-ciampa-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-69-toy-figures-tommaso-ciampa-elite69-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_miz",
+     "text": "September 2019",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_miz",
+     "text": "The series includes five other wrestlers: Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_miz",
+     "text": "the Chase Variant Mustafa Ali Figure",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Mustafa Ali",
+      "character_variant": "Chase Variant",
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Series 69",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_livmorgan",
+     "text": "Exclusive retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_deville",
+     "text": "January 2020",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel",
+      "year": 2020
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_deville",
+     "text": "approximately 6-inches",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sonya Deville",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_deville",
+     "text": "Elite Collection Series 61-70",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "product_line": "WWE Elite Collection",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_ricochet",
+     "text": "Release Date: 2019",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "Elite Collection Mainline",
+      "manufacturer": "Mattel",
+      "year": 2019
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_search_results",
+     "text": "WWE Wrestling Elite Collection Series 69 Ricochet 7 Action Figure Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Ricochet",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_pwcatalog_search_results",
+     "text": "WWE Mattel Elite Collection Series 69 Liv Morgan [Exclusive]",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Liv Morgan",
+      "product_line": "WWE Elite Collection Series 69",
+      "manufacturer": "Mattel"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 7, 2018 @ NXT TakeOver: New Orleans",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Figure has deluxe articulation, a detailed character expression, authentic ring attire and iconic accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "This bold and colorful figure comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Elite Series 69 includes Bobby Lashley, Mustafa Ali, Tommaso Ciampa, The Miz, Ricochet & Rey Mysterio",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "cloth camouflage ring pants",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "laced black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "wild eyed headsculpt and molded beard",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "removable knee brace",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$29.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "2 Packaging Versions of this Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2019,
+      "character_canonical": "tommaso-ciampa",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 7, 2018 @ NXT TakeOver: New Orleans",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "cloth camouflage ring pants, laced black boots",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "wild eyed headsculpt and molded beard",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "resolved",
+    "value": "2 Packaging Versions of this Figure",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "cloth camouflage ring pants",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "laced black boots",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "wild eyed headsculpt and molded beard",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "removable knee brace",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "2 Packaging Versions of this Figure",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$89.99",
+      "evidence_quote_ids": [
+       "f_q2"
+      ]
+     },
+     {
+      "value": "$29.99",
+      "evidence_quote_ids": [
+       "f_q10"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,1833 @@
+{
+ "fp_wrestling_mattel_elite_11_cm-punk_23fa6d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_11_cm-punk_23fa6d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_11_cm-punk_23fa6d",
+   "character_canonical": "cm-punk",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": 2011,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "CM Punk"
+  },
+  "identity_hash": "8a18a6a772b8b2b2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_elite11_christian",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-christian-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite11-20_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-11-20/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "url": "https://wrestlingshop.com/en-us/products/christian-wwe-elite-collection-series-11-action-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite11_cena",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-johncena",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_elite11_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-themiz",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=2",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-cmpunk",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-cm-punk-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-11-cm-punk-elite11-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_toywiz_line_scale",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q2_toywiz_release_date",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q3_toywiz_series_id",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Series/Wave: Series 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Christian",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q4_wrestlingshop_scale",
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_cena_lineup",
+     "source_id": "w_wfd_elite11_cena",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "John Cena",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_miz_lineup",
+     "source_id": "w_wfd_elite11_miz",
+     "text": "2011 WWE Mattel Elite Collection Series 11 The Miz — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "The Miz",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q7_search_barrett_mysterio_titles",
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena; 2011 WWE Mattel Elite Collection Series 11 The Miz; Wade Barrett (WWE Elite 11); Rey Mysterio (WWE Elite 11)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 19, 2010 @ WWE Night of Champions",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2011",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "CM Punk - WWE Elite 11 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "$99.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "cm-punk",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Sept. 19, 2010 @ WWE Night of Champions",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "CM Punk - WWE Elite 11 action figure",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "by 2011",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_11_rey-mysterio_1fc214": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_11_rey-mysterio_1fc214",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_11_rey-mysterio_1fc214",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": 2011,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "7b65458bac02c45c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_elite11_christian",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-christian-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite11-20_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-11-20/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "url": "https://wrestlingshop.com/en-us/products/christian-wwe-elite-collection-series-11-action-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite11_cena",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-johncena",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_elite11_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-themiz",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=2",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://prowrestling.fandom.com/wiki/Rey_Mysterio_(WWE_Elite_11)",
+     "source_type": null,
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-rey-mysterio-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_toywiz_line_scale",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q2_toywiz_release_date",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q3_toywiz_series_id",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Series/Wave: Series 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Christian",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q4_wrestlingshop_scale",
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_cena_lineup",
+     "source_id": "w_wfd_elite11_cena",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "John Cena",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_miz_lineup",
+     "source_id": "w_wfd_elite11_miz",
+     "text": "2011 WWE Mattel Elite Collection Series 11 The Miz — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "The Miz",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q7_search_barrett_mysterio_titles",
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena; 2011 WWE Mattel Elite Collection Series 11 The Miz; Wade Barrett (WWE Elite 11); Rey Mysterio (WWE Elite 11)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 25, 2010 @ WWE Extreme Rules",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2011",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "SKU: mysterioelite11",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "condition": "new"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 25, 2010 @ WWE Extreme Rules",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "mysterioelite11",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2011",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_11_john-cena_194f4a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_11_john-cena_194f4a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_11_john-cena_194f4a",
+   "character_canonical": "john-cena",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": 2011,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "6a5aba79b2b32647",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_elite11_christian",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-christian-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite11-20_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-11-20/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "url": "https://wrestlingshop.com/en-us/products/christian-wwe-elite-collection-series-11-action-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite11_cena",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-johncena",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_elite11_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-themiz",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=2",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-11-john-cena-elite11-03.html",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-john-cena-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_toywiz_line_scale",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q2_toywiz_release_date",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q3_toywiz_series_id",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Series/Wave: Series 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Christian",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q4_wrestlingshop_scale",
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_cena_lineup",
+     "source_id": "w_wfd_elite11_cena",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "John Cena",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_miz_lineup",
+     "source_id": "w_wfd_elite11_miz",
+     "text": "2011 WWE Mattel Elite Collection Series 11 The Miz — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "The Miz",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q7_search_barrett_mysterio_titles",
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena; 2011 WWE Mattel Elite Collection Series 11 The Miz; Wade Barrett (WWE Elite 11); Rey Mysterio (WWE Elite 11)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "SKU: cenaelite11",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "cenaelite11",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "September 2011",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$79.99",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 79.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2026-08-16",
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_11_miz_53501a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_11_miz_53501a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_11_miz_53501a",
+   "character_canonical": "miz",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": 2011,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Miz"
+  },
+  "identity_hash": "1f14ae7985702c09",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_elite11_christian",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-christian-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite11-20_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-11-20/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "url": "https://wrestlingshop.com/en-us/products/christian-wwe-elite-collection-series-11-action-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite11_cena",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-johncena",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_elite11_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-themiz",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=2",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-11-the-miz-elite11-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_toywiz_line_scale",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q2_toywiz_release_date",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q3_toywiz_series_id",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Series/Wave: Series 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Christian",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q4_wrestlingshop_scale",
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_cena_lineup",
+     "source_id": "w_wfd_elite11_cena",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "John Cena",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_miz_lineup",
+     "source_id": "w_wfd_elite11_miz",
+     "text": "2011 WWE Mattel Elite Collection Series 11 The Miz — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "The Miz",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q7_search_barrett_mysterio_titles",
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena; 2011 WWE Mattel Elite Collection Series 11 The Miz; Wade Barrett (WWE Elite 11); Rey Mysterio (WWE Elite 11)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "miz",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$89.99",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 89.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2026-08-16",
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_11_wade-barrett_99e6dc": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_11_wade-barrett_99e6dc",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_11_wade-barrett_99e6dc",
+   "character_canonical": "wade-barrett",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": 2011,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Wade Barrett"
+  },
+  "identity_hash": "0e1661c33c40acf7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_elite11_christian",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-christian-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite11-20_category",
+     "url": "https://toywiz.com/wwe-wrestling/mattel-wwe-elite-action-figures/elite-collection-series-11-20/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "url": "https://wrestlingshop.com/en-us/products/christian-wwe-elite-collection-series-11-action-figure",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_elite11_cena",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-johncena",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_wfd_elite11_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-themiz",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50?page=2",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-wadebarrett",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-wade-barrett-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/wade-barrett-wwe-elite-collection-series-11-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_toywiz_line_scale",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q2_toywiz_release_date",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Release Date: September 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q3_toywiz_series_id",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Series/Wave: Series 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Christian",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q4_wrestlingshop_scale",
+     "source_id": "w_wrestlingshop_christian_elite11",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_wfd_cena_lineup",
+     "source_id": "w_wfd_elite11_cena",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "John Cena",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q6_wfd_miz_lineup",
+     "source_id": "w_wfd_elite11_miz",
+     "text": "2011 WWE Mattel Elite Collection Series 11 The Miz — Line: Elite Collection Mainline, Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "character_canonical": "The Miz",
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "w_q7_search_barrett_mysterio_titles",
+     "source_id": "w_search_snippet_elite11_barrett_mysterio",
+     "text": "2011 WWE Mattel Elite Collection Series 11 John Cena; 2011 WWE Mattel Elite Collection Series 11 The Miz; Wade Barrett (WWE Elite 11); Rey Mysterio (WWE Elite 11)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2011
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2011",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: July 12, 2010 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "UPC: 027084953312",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature for the first time individual stands, authentic costumes, extreme articulation and amazing accuracy",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2011,
+      "character_canonical": "wade-barrett",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "July 12, 2010 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "027084953312",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2011",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_11_christian_ea4139": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_11_christian_ea4139",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_11_christian_ea4139",
+   "character_canonical": "christian",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "11",
+   "fandom": "wrestling",
+   "year": 2011,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Christian"
+  },
+  "identity_hash": "c9d74f1fd6341655",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite11_christian",
+     "url": "https://wrestlingfiguredatabase.com/products/elite11-christian",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_ringside_elite11_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-11-set-elite11-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_toywiz_elite11_christian",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-11-christian-action-figure/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingshop.com/en-us/products/christian-wwe-elite-collection-series-11-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.reigncitytoys.com/products/wwe-elite-collection-series-11-christian",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite11_christian",
+     "text": "Release Date: 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2011,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_elite11_christian",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2011,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_elite11_christian",
+     "text": "Series: 11",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": 2011,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_elite11_set",
+     "text": "CM Punk, Christian, John Cena, The Miz, Rey Mysterio, Wade Barrett",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": "Christian"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_ringside_elite11_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "September 2011",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2011,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_elite11_christian",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature for the first time individual stands, authentic costumes, extreme articulation and amazing accuracy that even the most discerning collector will appreciate.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Unmatched attention to detail, fan-favorite ring attire, and a roster that includes some of the most popular superstars in the WWE",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

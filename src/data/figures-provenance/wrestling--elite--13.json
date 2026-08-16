@@ -1,0 +1,2064 @@
+{
+ "fp_wrestling_mattel_elite_13_dolph-ziggler_eb77ec": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_13_dolph-ziggler_eb77ec",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_13_dolph-ziggler_eb77ec",
+   "character_canonical": "dolph-ziggler",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "13",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dolph Ziggler"
+  },
+  "identity_hash": "633b0111610801a5",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_kingsheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-king-sheamus-action-figure-crown-scepter-imperial-robe-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_edge",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-edge-action-figure-trenchcoat-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_codyrhodes",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite13_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-set-elite13-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toyark_elite13_photos",
+     "url": "https://news.toyark.com/2011/12/09/new-official-photos-wwe-elite-collection-series-13-5093",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite13-dolphziggler",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-dolph-ziggler-action-figure-world-heavyweight-championship/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-dolph-ziggler-elite13-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "Authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "WWE Elite Collection Series 13 King Sheamus Action Figure Crown, Scepter Imperial Robe",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sheamus",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": "King Sheamus"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_edge",
+     "text": "WWE Wrestling Elite Collection Series 13 Edge Action Figure Trenchcoat Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "WWE Wrestling Elite Collection Series 13 Cody Rhodes Action Figure Mask, Paper Bag Jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Cody Rhodes",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "Randomly chosen package. Same exact figure and contents.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite13_set",
+     "text": "Dolph Ziggler, Cody Rhodes, Rey Mysterio, King Sheamus, Big Show, Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 30, 2011 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "UPC: 746775066987",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Release Date: February 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Price: $24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "SKU: ELITE13-01",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "dolph-ziggler",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: May 30, 2011 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE13-01",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "February 2012",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_13_big-show_05325f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_13_big-show_05325f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_13_big-show_05325f",
+   "character_canonical": "big-show",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "13",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Big Show"
+  },
+  "identity_hash": "b4c8d7e9cbda500e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_kingsheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-king-sheamus-action-figure-crown-scepter-imperial-robe-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_edge",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-edge-action-figure-trenchcoat-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_codyrhodes",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite13_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-set-elite13-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toyark_elite13_photos",
+     "url": "https://news.toyark.com/2011/12/09/new-official-photos-wwe-elite-collection-series-13-5093",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite13-bigshow",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-big-show-elite13-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "Authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "WWE Elite Collection Series 13 King Sheamus Action Figure Crown, Scepter Imperial Robe",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sheamus",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": "King Sheamus"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_edge",
+     "text": "WWE Wrestling Elite Collection Series 13 Edge Action Figure Trenchcoat Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "WWE Wrestling Elite Collection Series 13 Cody Rhodes Action Figure Mask, Paper Bag Jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Cody Rhodes",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "Randomly chosen package. Same exact figure and contents.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite13_set",
+     "text": "Dolph Ziggler, Cody Rhodes, Rey Mysterio, King Sheamus, Big Show, Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Sept. 8, 2010 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 13",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "ELITE13-06",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Sept. 8, 2010 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE13-06",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2012",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_13_sheamus_ec565c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_13_sheamus_ec565c",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_13_sheamus_ec565c",
+   "character_canonical": "sheamus",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "13",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sheamus"
+  },
+  "identity_hash": "bc884eda271d9930",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_kingsheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-king-sheamus-action-figure-crown-scepter-imperial-robe-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_edge",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-edge-action-figure-trenchcoat-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_codyrhodes",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite13_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-set-elite13-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toyark_elite13_photos",
+     "url": "https://news.toyark.com/2011/12/09/new-official-photos-wwe-elite-collection-series-13-5093",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-king-sheamus-elite13-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://forum.wrestlingfigs.com/thread/238448/elite-13-sheamus-detailed-pics",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "Authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "WWE Elite Collection Series 13 King Sheamus Action Figure Crown, Scepter Imperial Robe",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sheamus",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": "King Sheamus"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_edge",
+     "text": "WWE Wrestling Elite Collection Series 13 Edge Action Figure Trenchcoat Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "WWE Wrestling Elite Collection Series 13 Cody Rhodes Action Figure Mask, Paper Bag Jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Cody Rhodes",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "Randomly chosen package. Same exact figure and contents.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite13_set",
+     "text": "Dolph Ziggler, Cody Rhodes, Rey Mysterio, King Sheamus, Big Show, Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": "king-sheamus",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "King Sheamus - WWE Elite 13 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": "king-sheamus",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "a great representation of the King Sheamus gimmick",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "sheamus",
+      "character_variant": "king-sheamus",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "a good upgrade from the E8 version",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "sheamus",
+      "character_variant": "king-sheamus",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "When you remove the crown it leaves at least 9 stains of gold on his hair.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "sheamus",
+      "character_variant": "king-sheamus",
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_13_cody-rhodes_d2475a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_13_cody-rhodes_d2475a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_13_cody-rhodes_d2475a",
+   "character_canonical": "cody-rhodes",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "13",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cody Rhodes"
+  },
+  "identity_hash": "b07f6960388622a1",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_kingsheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-king-sheamus-action-figure-crown-scepter-imperial-robe-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_edge",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-edge-action-figure-trenchcoat-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_codyrhodes",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite13_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-set-elite13-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toyark_elite13_photos",
+     "url": "https://news.toyark.com/2011/12/09/new-official-photos-wwe-elite-collection-series-13-5093",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite13-codyrhodesoff",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.mtv.com/news/wxdg93/review-wwe-elite-13-cody-rhodes",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "Authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "WWE Elite Collection Series 13 King Sheamus Action Figure Crown, Scepter Imperial Robe",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sheamus",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": "King Sheamus"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_edge",
+     "text": "WWE Wrestling Elite Collection Series 13 Edge Action Figure Trenchcoat Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "WWE Wrestling Elite Collection Series 13 Cody Rhodes Action Figure Mask, Paper Bag Jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Cody Rhodes",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "Randomly chosen package. Same exact figure and contents.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite13_set",
+     "text": "Dolph Ziggler, Cody Rhodes, Rey Mysterio, King Sheamus, Big Show, Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 3, 2011 @ WWE WrestleMania XXVII",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Card Variants With Jacket On With Jacket Off [Upper Right] With Jacket Off [Lower Left]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Randomly chosen package. Same exact figure and contents",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "UPC: 027084953336",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "cody-rhodes",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 3, 2011 @ WWE WrestleMania XXVII",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "resolved",
+    "value": "Card Variants: With Jacket On, With Jacket Off",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Mask",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Paper Bag Jacket",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "Card Variant: With Jacket On",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[1]",
+    "status": "resolved",
+    "value": "Card Variant: With Jacket Off",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Mask",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Paper Bag Jacket",
+    "evidence_quote_ids": [
+     "w_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "027084953336",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_13_edge_740b4d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_13_edge_740b4d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_13_edge_740b4d",
+   "character_canonical": "edge",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "13",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Edge"
+  },
+  "identity_hash": "0cc6be5928bc4dbe",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_kingsheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-king-sheamus-action-figure-crown-scepter-imperial-robe-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_edge",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-edge-action-figure-trenchcoat-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_codyrhodes",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite13_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-set-elite13-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toyark_elite13_photos",
+     "url": "https://news.toyark.com/2011/12/09/new-official-photos-wwe-elite-collection-series-13-5093",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite13-edge",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-edge-elite13-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/edge-wwe-elite-collection-series-13-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "Authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "WWE Elite Collection Series 13 King Sheamus Action Figure Crown, Scepter Imperial Robe",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sheamus",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": "King Sheamus"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_edge",
+     "text": "WWE Wrestling Elite Collection Series 13 Edge Action Figure Trenchcoat Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "WWE Wrestling Elite Collection Series 13 Cody Rhodes Action Figure Mask, Paper Bag Jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Cody Rhodes",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "Randomly chosen package. Same exact figure and contents.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite13_set",
+     "text": "Dolph Ziggler, Cody Rhodes, Rey Mysterio, King Sheamus, Big Show, Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: May 24, 1999 @ WWF Raw Is War",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$24.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Edge - WWE Elite 13 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "Realistic accessories complete his ring outfit.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "24+ points of articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "individual stands, authentic costumes, extreme articulation and amazing accuracy",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "May 24, 1999 @ WWF Raw Is War",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Trenchcoat",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Trenchcoat",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "w_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2012",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_13_rey-mysterio_9cac63": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_13_rey-mysterio_9cac63",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_13_rey-mysterio_9cac63",
+   "character_canonical": "rey-mysterio",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "13",
+   "fandom": "wrestling",
+   "year": 2012,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rey Mysterio"
+  },
+  "identity_hash": "626b55950978b5ec",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_toywiz_kingsheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-king-sheamus-action-figure-crown-scepter-imperial-robe-damaged-package/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_edge",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-edge-action-figure-trenchcoat-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_codyrhodes",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-cody-rhodes-action-figure-mask-paper-bag-jacket/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite13_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-set-elite13-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toyark_elite13_photos",
+     "url": "https://news.toyark.com/2011/12/09/new-official-photos-wwe-elite-collection-series-13-5093",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-13-rey-mysterio-elite13-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite13-reymysterio",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-13-rey-mysterio-action-figure-hood-booyaka-619-t-shirt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "Authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_toywiz_kingsheamus",
+     "text": "WWE Elite Collection Series 13 King Sheamus Action Figure Crown, Scepter Imperial Robe",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Sheamus",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": "King Sheamus"
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_toywiz_edge",
+     "text": "WWE Wrestling Elite Collection Series 13 Edge Action Figure Trenchcoat Sunglasses",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Edge",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "WWE Wrestling Elite Collection Series 13 Cody Rhodes Action Figure Mask, Paper Bag Jacket",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "Cody Rhodes",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_codyrhodes",
+     "text": "Randomly chosen package. Same exact figure and contents.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": 2012,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite13_set",
+     "text": "Dolph Ziggler, Cody Rhodes, Rey Mysterio, King Sheamus, Big Show, Edge",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 13",
+      "year": null,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$17.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Release Date: 2012",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Attire Date: Jan. 7, 2011 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Series: 13",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "February 2012",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "rey-mysterio",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2012,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Jan. 7, 2011 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "February 2012",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$17.99",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact",
+    "price_detail": {
+     "amount": 17.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2026-08-16",
+     "source_id": "f_s1"
+    }
+   }
+  ]
+ }
+}

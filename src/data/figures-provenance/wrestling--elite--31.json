@@ -1,0 +1,2305 @@
+{
+ "fp_wrestling_mattel_elite_31_the-rock_bb4cde5ce02f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_31_the-rock_bb4cde5ce02f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_31_the-rock_bb4cde5ce02f",
+   "character_canonical": "the-rock",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "31",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "The Rock"
+  },
+  "identity_hash": "a431ca96b378b6cb",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite31_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-complete-set-elite31-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_deanambrose_elite31",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_therock_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_ambrose_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-31-dean-ambrose-action-figure-united-states-championship-dog-tag-camcorder/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite31",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-31/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_elite31_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-31-figure-case/mtp9647ad",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-therock",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite31_set",
+     "text": "Jimmy Uso, Jey Uso, Kane, Dean Ambrose, The Rock, Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite31_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Series: 31",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Attire Date: Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "6 inch figures\" part of the Elite Collection Series 31, released November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Microphone, Sunglasses, Breakable Guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "United States Championship, Dog Tag, Camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_blog_elite31",
+     "text": "Mattel WWE Elite 31 with The Rock, Jimmy Uso, Jey Uso, Kane, Dean Ambrose and Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 27, 2003 @ WWE Backlash",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Series 31 The Rock Action Figure Microphone, Sunglasses Breakable Guitar Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$69.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Microphone",
+    "evidence_quote_ids": [
+     "w_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Sunglasses",
+    "evidence_quote_ids": [
+     "w_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Breakable Guitar",
+    "evidence_quote_ids": [
+     "w_q10"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2014",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_31_jey-uso_718bce": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_31_jey-uso_718bce",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_31_jey-uso_718bce",
+   "character_canonical": "jey-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "31",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jey Uso"
+  },
+  "identity_hash": "fee08f2a38d83cb0",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite31_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-complete-set-elite31-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_deanambrose_elite31",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_therock_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_ambrose_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-31-dean-ambrose-action-figure-united-states-championship-dog-tag-camcorder/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite31",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-31/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_elite31_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-31-figure-case/mtp9647ad",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-jeyuso",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-jey-uso-action-figure-shirt-necklace/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite31_set",
+     "text": "Jimmy Uso, Jey Uso, Kane, Dean Ambrose, The Rock, Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite31_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Series: 31",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Attire Date: Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "6 inch figures\" part of the Elite Collection Series 31, released November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Microphone, Sunglasses, Breakable Guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "United States Championship, Dog Tag, Camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_blog_elite31",
+     "text": "Mattel WWE Elite 31 with The Rock, Jimmy Uso, Jey Uso, Kane, Dean Ambrose and Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Nov. 8, 2013 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "jey-uso",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 8, 2013 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_31_jimmy-uso_daac21": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_31_jimmy-uso_daac21",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_31_jimmy-uso_daac21",
+   "character_canonical": "jimmy-uso",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "31",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jimmy Uso"
+  },
+  "identity_hash": "0d7d52af8a80eaff",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite31_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-complete-set-elite31-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_deanambrose_elite31",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_therock_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_ambrose_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-31-dean-ambrose-action-figure-united-states-championship-dog-tag-camcorder/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite31",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-31/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_elite31_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-31-figure-case/mtp9647ad",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-jimmyuso",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-jimmy-uso-action-figure-shirt-necklace/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite31_set",
+     "text": "Jimmy Uso, Jey Uso, Kane, Dean Ambrose, The Rock, Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite31_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Series: 31",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Attire Date: Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "6 inch figures\" part of the Elite Collection Series 31, released November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Microphone, Sunglasses, Breakable Guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "United States Championship, Dog Tag, Camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_blog_elite31",
+     "text": "Mattel WWE Elite 31 with The Rock, Jimmy Uso, Jey Uso, Kane, Dean Ambrose and Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Nov. 8, 2013 @ WWE SmackDown",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "WWE Wrestling Elite Series 31 Jimmy Uso 6 Action Figure Shirt Necklace Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "jimmy-uso",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Nov. 8, 2013 @ WWE SmackDown",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Shirt",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Necklace",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_31_vader_a0a4fa": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_31_vader_a0a4fa",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_31_vader_a0a4fa",
+   "character_canonical": "vader",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "31",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Vader"
+  },
+  "identity_hash": "9dfa0cf555280b0b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite31_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-complete-set-elite31-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_deanambrose_elite31",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_therock_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_ambrose_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-31-dean-ambrose-action-figure-united-states-championship-dog-tag-camcorder/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite31",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-31/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_elite31_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-31-figure-case/mtp9647ad",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-vader-action-figure-helmet-mask/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-vader-elite31-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-vader",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite31_set",
+     "text": "Jimmy Uso, Jey Uso, Kane, Dean Ambrose, The Rock, Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite31_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Series: 31",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Attire Date: Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "6 inch figures\" part of the Elite Collection Series 31, released November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Microphone, Sunglasses, Breakable Guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "United States Championship, Dog Tag, Camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_blog_elite31",
+     "text": "Mattel WWE Elite 31 with The Rock, Jimmy Uso, Jey Uso, Kane, Dean Ambrose and Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$139.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "vader",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "November 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "vader",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "vader",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "vader",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Aug. 18, 1996 @ WWF SummerSlam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "vader",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "vader",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Aug. 18, 1996 @ WWF SummerSlam",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "November 2014",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$139.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 139.99,
+       "currency": null,
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$44.99",
+      "evidence_quote_ids": [
+       "f_q3"
+      ],
+      "price_detail": {
+       "amount": 44.99,
+       "currency": null,
+       "price_kind": null,
+       "region": null,
+       "as_of": null,
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_31_kane_a299bf": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_31_kane_a299bf",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_31_kane_a299bf",
+   "character_canonical": "kane",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "31",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kane"
+  },
+  "identity_hash": "576ef09035504a49",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite31_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-complete-set-elite31-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_deanambrose_elite31",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_therock_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_ambrose_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-31-dean-ambrose-action-figure-united-states-championship-dog-tag-camcorder/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite31",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-31/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_elite31_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-31-figure-case/mtp9647ad",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-kane",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/kane-wwe-elite-collection-series-31-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite31_set",
+     "text": "Jimmy Uso, Jey Uso, Kane, Dean Ambrose, The Rock, Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite31_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Series: 31",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Attire Date: Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "6 inch figures\" part of the Elite Collection Series 31, released November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Microphone, Sunglasses, Breakable Guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "United States Championship, Dog Tag, Camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_blog_elite31",
+     "text": "Mattel WWE Elite 31 with The Rock, Jimmy Uso, Jey Uso, Kane, Dean Ambrose and Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Oct. 28, 2013 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "7-inch action figures, created with the ultimate collector in mind",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Sold Out",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Oct. 28, 2013 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Realistic accessories complete his ring outfit",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_31_dean-ambrose_0cde44": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_31_dean-ambrose_0cde44",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_31_dean-ambrose_0cde44",
+   "character_canonical": "dean-ambrose",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "31",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dean Ambrose"
+  },
+  "identity_hash": "cd68e4e59d176c27",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite31_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-complete-set-elite31-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_deanambrose_elite31",
+     "url": "https://wrestlingfiguredatabase.com/products/elite31-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_therock_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-31-the-rock-action-figure-microphone-sunglasses-breakable-guitar/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_ambrose_elite31",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-31-dean-ambrose-action-figure-united-states-championship-dog-tag-camcorder/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite31",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-31/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ee_elite31_case",
+     "url": "https://www.entertainmentearth.com/product/wwe-elite-collection-series-31-figure-case/mtp9647ad",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://roguetoys.com/products/mattel-wwe-elite-collection-series-31-dean-ambrose",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-31-dean-ambrose-elite31-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forum.wrestlingfigs.com/thread/346962/dean-ambrose-masterlist",
+     "source_type": "forum",
+     "fetch_status": "fetched"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_ringside_elite31_set",
+     "text": "Jimmy Uso, Jey Uso, Kane, Dean Ambrose, The Rock, Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite31_set",
+     "text": "$119.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Series: 31",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_deanambrose_elite31",
+     "text": "Attire Date: Apr. 6, 2014 @ WWE WrestleMania XXX",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "6 inch figures\" part of the Elite Collection Series 31, released November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_toywiz_therock_elite31",
+     "text": "Microphone, Sunglasses, Breakable Guitar",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "The Rock"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "United States Championship, Dog Tag, Camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_ambrose_elite31",
+     "text": "Release Date: November 2014",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": "Dean Ambrose"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_ringside_blog_elite31",
+     "text": "Mattel WWE Elite 31 with The Rock, Jimmy Uso, Jey Uso, Kane, Dean Ambrose and Vader",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "year": 2014,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "When Dean Ambrose says, \"I like violence,\" he means it",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "Shield shirt with logo and dog tags and US title and camcorder",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "WrestleMania XXX attire (Apr. 6, 2014)",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "United States Championship",
+    "evidence_quote_ids": [
+     "w_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "resolved",
+    "value": "Camcorder",
+    "evidence_quote_ids": [
+     "w_q11",
+     "f_q4"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "included_items[3]",
+    "status": "resolved",
+    "value": "Shield shirt with logo",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}

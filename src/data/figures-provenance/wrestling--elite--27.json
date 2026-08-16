@@ -1,0 +1,2548 @@
+{
+ "fp_wrestling_mattel_elite_27_kofi-kingston_909880": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_27_kofi-kingston_909880",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_27_kofi-kingston_909880",
+   "character_canonical": "kofi-kingston",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "27",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kofi Kingston"
+  },
+  "identity_hash": "05869854377015ac",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-elite-27-wwe-figure-line-up-confirmed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-complete-set-elite27-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_billygunn_single",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-billy-gunn-elite27-05.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_billygunn",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-billygunn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_beckett_series27_loose",
+     "url": "https://www.beckett.com/action-figures/2014/mattel-wwe-elite-collection-series-27-loose/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet_scale",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-kofi-kingston-elite27-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-27-kofi-kingston-action-figure-shirt/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_blog",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Undertaker, Fandango, Rob Van Dam, Kofi Kingston, Billy Gunn, Rikishi",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q2_debut_note",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "RVD's first Mattel Elite Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rob Van Dam",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q3_rikishi_flashback",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Rikishi being featured as a \"Flashback figure.\"",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rikishi",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_complete_set",
+     "source_id": "w_ringside_complete_set",
+     "text": "Undertaker, Fandango, Rob Van Dam (RVD), Kofi Kingston, Billy Gunn, Rikishi (Entrance Gear on the Side)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_complete_set_price",
+     "source_id": "w_ringside_complete_set",
+     "text": "$107.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_billygunn_release_line",
+     "source_id": "w_wfd_billygunn",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": "Billy Gunn",
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q7_billygunn_series_tag",
+     "source_id": "w_wfd_billygunn",
+     "text": "Line: Elite Collection Mainline / Series: 27",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": null,
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q8_billygunn_manufacturing",
+     "source_id": "w_wfd_billygunn",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_billygunn_msrp",
+     "source_id": "w_ringside_billygunn_single",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Billy Gunn",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale_line",
+     "source_id": "w_toywiz_search_snippet_scale",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$21.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "ELITE27-04",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$81.99",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "March 2014",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Includes Shirt",
+     "scope": {
+      "kind": "figure",
+      "character_canonical": "kofi-kingston",
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Deluxe articulation allows for dynamic poses and realistic movement.",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "character_canonical": null,
+      "character_variant": null,
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Shirt",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "ELITE27-04",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2014",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "$21.99",
+      "evidence_quote_ids": [
+       "f_q1"
+      ],
+      "price_detail": {
+       "amount": 21.99,
+       "currency": "USD",
+       "price_kind": "resale_current",
+       "region": null,
+       "as_of": "2026-08-16",
+       "source_id": "f_s1"
+      }
+     },
+     {
+      "value": "$81.99",
+      "evidence_quote_ids": [
+       "f_q4"
+      ],
+      "price_detail": {
+       "amount": 81.99,
+       "currency": "USD",
+       "price_kind": "resale_current",
+       "region": null,
+       "as_of": "2026-08-16",
+       "source_id": "f_s2"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_27_undertaker_bac84a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_27_undertaker_bac84a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_27_undertaker_bac84a",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "27",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "identity_hash": "358e25ab5268e17c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-elite-27-wwe-figure-line-up-confirmed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-complete-set-elite27-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_billygunn_single",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-billy-gunn-elite27-05.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_billygunn",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-billygunn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_beckett_series27_loose",
+     "url": "https://www.beckett.com/action-figures/2014/mattel-wwe-elite-collection-series-27-loose/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet_scale",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-undertaker-elite27-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_blog",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Undertaker, Fandango, Rob Van Dam, Kofi Kingston, Billy Gunn, Rikishi",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q2_debut_note",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "RVD's first Mattel Elite Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rob Van Dam",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q3_rikishi_flashback",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Rikishi being featured as a \"Flashback figure.\"",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rikishi",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_complete_set",
+     "source_id": "w_ringside_complete_set",
+     "text": "Undertaker, Fandango, Rob Van Dam (RVD), Kofi Kingston, Billy Gunn, Rikishi (Entrance Gear on the Side)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_complete_set_price",
+     "source_id": "w_ringside_complete_set",
+     "text": "$107.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_billygunn_release_line",
+     "source_id": "w_wfd_billygunn",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": "Billy Gunn",
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q7_billygunn_series_tag",
+     "source_id": "w_wfd_billygunn",
+     "text": "Line: Elite Collection Mainline / Series: 27",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": null,
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q8_billygunn_manufacturing",
+     "source_id": "w_wfd_billygunn",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_billygunn_msrp",
+     "source_id": "w_ringside_billygunn_single",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Billy Gunn",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale_line",
+     "source_id": "w_toywiz_search_snippet_scale",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite collection mainline",
+      "year": 2014,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 7, 2013 @ WWE WrestleMania 29",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite collection mainline",
+      "year": 2014,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$39.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite collection legends series 27",
+      "year": 2025,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "highly detailed TrueFX technology for life-like facial features",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite collection legends series 27",
+      "year": 2025,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "25 points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite collection legends series 27",
+      "year": 2025,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "interchangeable hands and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite collection legends series 27",
+      "year": 2025,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "$34.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Apr. 7, 2013 @ WWE WrestleMania 29",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2014",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_27_fandango_a7ecf7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_27_fandango_a7ecf7",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_27_fandango_a7ecf7",
+   "character_canonical": "fandango",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "27",
+   "fandom": "wrestling",
+   "year": 2013,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Fandango"
+  },
+  "identity_hash": "5b35ddc1a7286432",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-elite-27-wwe-figure-line-up-confirmed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-complete-set-elite27-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_billygunn_single",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-billy-gunn-elite27-05.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_billygunn",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-billygunn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_beckett_series27_loose",
+     "url": "https://www.beckett.com/action-figures/2014/mattel-wwe-elite-collection-series-27-loose/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet_scale",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-27-fandango-action-figure-entrance-vest/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-fandango-elite27-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-fandango",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_blog",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Undertaker, Fandango, Rob Van Dam, Kofi Kingston, Billy Gunn, Rikishi",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q2_debut_note",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "RVD's first Mattel Elite Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rob Van Dam",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q3_rikishi_flashback",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Rikishi being featured as a \"Flashback figure.\"",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rikishi",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_complete_set",
+     "source_id": "w_ringside_complete_set",
+     "text": "Undertaker, Fandango, Rob Van Dam (RVD), Kofi Kingston, Billy Gunn, Rikishi (Entrance Gear on the Side)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_complete_set_price",
+     "source_id": "w_ringside_complete_set",
+     "text": "$107.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_billygunn_release_line",
+     "source_id": "w_wfd_billygunn",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": "Billy Gunn",
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q7_billygunn_series_tag",
+     "source_id": "w_wfd_billygunn",
+     "text": "Line: Elite Collection Mainline / Series: 27",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": null,
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q8_billygunn_manufacturing",
+     "source_id": "w_wfd_billygunn",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_billygunn_msrp",
+     "source_id": "w_ringside_billygunn_single",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Billy Gunn",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale_line",
+     "source_id": "w_toywiz_search_snippet_scale",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Includes Entrance Vest",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "$69.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "March 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "authentically sculpted 6 inch",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "amazing detail and accessories such as masks, armbands and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "$27.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Attire Date: May 19, 2013 @ WWE Extreme Rules",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Series: 27",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2013,
+      "character_canonical": "fandango",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: May 19, 2013 @ WWE Extreme Rules",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_27_rob-van-dam_017dcf2cb991": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_27_rob-van-dam_017dcf2cb991",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_27_rob-van-dam_017dcf2cb991",
+   "character_canonical": "rob-van-dam",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "27",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6-inch",
+   "pack_size": "single",
+   "v1_name": "Rob Van Dam"
+  },
+  "identity_hash": "98e8671e3ad64ad7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-elite-27-wwe-figure-line-up-confirmed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-complete-set-elite27-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_billygunn_single",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-billy-gunn-elite27-05.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_billygunn",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-billygunn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_beckett_series27_loose",
+     "url": "https://www.beckett.com/action-figures/2014/mattel-wwe-elite-collection-series-27-loose/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet_scale",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-27-rob-van-dam-action-figure-steel-chair/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-robvandam",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forum.wrestlingfigs.com/thread/295857/elite-rob-van-dam-attire",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_blog",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Undertaker, Fandango, Rob Van Dam, Kofi Kingston, Billy Gunn, Rikishi",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q2_debut_note",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "RVD's first Mattel Elite Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rob Van Dam",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q3_rikishi_flashback",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Rikishi being featured as a \"Flashback figure.\"",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rikishi",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_complete_set",
+     "source_id": "w_ringside_complete_set",
+     "text": "Undertaker, Fandango, Rob Van Dam (RVD), Kofi Kingston, Billy Gunn, Rikishi (Entrance Gear on the Side)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_complete_set_price",
+     "source_id": "w_ringside_complete_set",
+     "text": "$107.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_billygunn_release_line",
+     "source_id": "w_wfd_billygunn",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": "Billy Gunn",
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q7_billygunn_series_tag",
+     "source_id": "w_wfd_billygunn",
+     "text": "Line: Elite Collection Mainline / Series: 27",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": null,
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q8_billygunn_manufacturing",
+     "source_id": "w_wfd_billygunn",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_billygunn_msrp",
+     "source_id": "w_ringside_billygunn_single",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Billy Gunn",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale_line",
+     "source_id": "w_toywiz_search_snippet_scale",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Figures showcase deluxe articulation and amazing detail",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Includes accessories such as masks, armbands, and costumes",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Release Date: March 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "UPC: 746775340841",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "2014 WWE Mattel Elite Collection Series 27 Rob Van Dam",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "July 13, 2013 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "has multiple colors and full of detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "looks great",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "attire is a really nice, current look",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "I'm not sold on the headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "The scan unintentionally looks really young",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s3",
+     "text": "It looks a tad too small and too young",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q14",
+     "source_id": "f_s3",
+     "text": "comes with a chair which is the perfect RVD accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q15",
+     "source_id": "f_s3",
+     "text": "doesn't have his black shorts",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q16",
+     "source_id": "f_s3",
+     "text": "leg sleeves",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rob-van-dam",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "The headscan looks unintentionally young and too small",
+    "evidence_quote_ids": [
+     "f_q11",
+     "f_q12",
+     "f_q13"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Leg sleeves",
+    "evidence_quote_ids": [
+     "f_q16"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Doesn't have his black shorts",
+    "evidence_quote_ids": [
+     "f_q15"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Comes with a chair, the perfect RVD accessory",
+    "evidence_quote_ids": [
+     "f_q14"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "746775340841",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2014",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_27_billy-gunn_97d7d1": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_27_billy-gunn_97d7d1",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_27_billy-gunn_97d7d1",
+   "character_canonical": "billy-gunn",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "27",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Billy Gunn"
+  },
+  "identity_hash": "58c15ceb6daf9ae8",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-elite-27-wwe-figure-line-up-confirmed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-complete-set-elite27-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_billygunn_single",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-billy-gunn-elite27-05.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_billygunn",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-billygunn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_beckett_series27_loose",
+     "url": "https://www.beckett.com/action-figures/2014/mattel-wwe-elite-collection-series-27-loose/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet_scale",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-27-billy-gunn-action-figure-2-shirts-2-headbands/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingshop.com/en-us/products/billy-gunn-wwe-elite-collection-series-27-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_blog",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Undertaker, Fandango, Rob Van Dam, Kofi Kingston, Billy Gunn, Rikishi",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q2_debut_note",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "RVD's first Mattel Elite Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rob Van Dam",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q3_rikishi_flashback",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Rikishi being featured as a \"Flashback figure.\"",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rikishi",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_complete_set",
+     "source_id": "w_ringside_complete_set",
+     "text": "Undertaker, Fandango, Rob Van Dam (RVD), Kofi Kingston, Billy Gunn, Rikishi (Entrance Gear on the Side)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_complete_set_price",
+     "source_id": "w_ringside_complete_set",
+     "text": "$107.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_billygunn_release_line",
+     "source_id": "w_wfd_billygunn",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": "Billy Gunn",
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q7_billygunn_series_tag",
+     "source_id": "w_wfd_billygunn",
+     "text": "Line: Elite Collection Mainline / Series: 27",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": null,
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q8_billygunn_manufacturing",
+     "source_id": "w_wfd_billygunn",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_billygunn_msrp",
+     "source_id": "w_ringside_billygunn_single",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Billy Gunn",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale_line",
+     "source_id": "w_toywiz_search_snippet_scale",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Includes 2 Shirts & 2 Headbands",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Company: Mattel Toys",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: Series 27",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Release Date: March 2014",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "UPC: 746775340865",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Stock #: 83330",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature for the first time individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "All swagger and muscle, sculpted in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "Prep a finishing move pose with 24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "Dozens of Elite Collection figures - collect them all!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q13",
+     "source_id": "f_s2",
+     "text": "Product Code: GK-RI1F-0BTS",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q11"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "All swagger and muscle, sculpted in serious detail",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Realistic accessories complete his ring outfit",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "2 Shirts",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "2 Headbands",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "Stock #: 83330",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "March 2014",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_27_rikishi_e1760b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_27_rikishi_e1760b",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_27_rikishi_e1760b",
+   "character_canonical": "rikishi",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "27",
+   "fandom": "wrestling",
+   "year": 2014,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Rikishi"
+  },
+  "identity_hash": "fd268eeb4a6ddcb6",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "url": "https://www.ringsidecollectibles.com/blog/mattel-elite-27-wwe-figure-line-up-confirmed/",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_complete_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-complete-set-elite27-00.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_ringside_billygunn_single",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-27-billy-gunn-elite27-05.html",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "w_wfd_billygunn",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-billygunn",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16",
+     "source_type": "collector_database"
+    },
+    {
+     "source_id": "w_beckett_series27_loose",
+     "url": "https://www.beckett.com/action-figures/2014/mattel-wwe-elite-collection-series-27-loose/",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16",
+     "source_type": "secondary_market"
+    },
+    {
+     "source_id": "w_toywiz_search_snippet_scale",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-legends-series-27-undertaker-action-figure/",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16",
+     "source_type": "official_retailer"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite27-rikishioff",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-27-rikishi-action-figure-entrance-sarong-sunglasses/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://pwcatalog.com/products/elite27-rikishion",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup_blog",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Undertaker, Fandango, Rob Van Dam, Kofi Kingston, Billy Gunn, Rikishi",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q2_debut_note",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "RVD's first Mattel Elite Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rob Van Dam",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q3_rikishi_flashback",
+     "source_id": "w_ringside_blog_lineup_reveal",
+     "text": "Rikishi being featured as a \"Flashback figure.\"",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Rikishi",
+      "year": 2013
+     }
+    },
+    {
+     "quote_id": "w_q4_lineup_complete_set",
+     "source_id": "w_ringside_complete_set",
+     "text": "Undertaker, Fandango, Rob Van Dam (RVD), Kofi Kingston, Billy Gunn, Rikishi (Entrance Gear on the Side)",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q5_complete_set_price",
+     "source_id": "w_ringside_complete_set",
+     "text": "$107.99",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q6_billygunn_release_line",
+     "source_id": "w_wfd_billygunn",
+     "text": "Release Date: 2014",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": "Billy Gunn",
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q7_billygunn_series_tag",
+     "source_id": "w_wfd_billygunn",
+     "text": "Line: Elite Collection Mainline / Series: 27",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "character_canonical": null,
+      "year": 2014
+     }
+    },
+    {
+     "quote_id": "w_q8_billygunn_manufacturing",
+     "source_id": "w_wfd_billygunn",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q9_billygunn_msrp",
+     "source_id": "w_ringside_billygunn_single",
+     "text": "$44.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": "Billy Gunn",
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q10_scale_line",
+     "source_id": "w_toywiz_search_snippet_scale",
+     "text": "WWE Elite Collection are 7-inch action figures, created with the ultimate collector in mind and feature individual stands, authentic costumes, extreme articulation and amazing accuracy.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2014 WWE Mattel Elite Collection Series 27 Rikishi [With Sarong On]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rikishi",
+      "character_variant": "with-sarong-on",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 2, 2000 @ WWF WrestleMania 2000",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rikishi",
+      "character_variant": "with-sarong-on",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "$129.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rikishi",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Rikishi [With Sarong On]",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2014,
+      "character_canonical": "rikishi",
+      "character_variant": "with-sarong-on",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "With Sarong On",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q5"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$129.99",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 129.99,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": "2026-08-16",
+     "source_id": "f_s2"
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,4763 @@
+{
+ "fp_wrestling_mattel_elite_3_john-cena_b4720a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_john-cena_b4720a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_john-cena_b4720a",
+   "character_canonical": "john-cena",
+   "character_variant": "survivor-series-2008",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "John Cena"
+  },
+  "identity_hash": "1b999177cac8ffb7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite3-cena",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-john-cena-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Attire Date: Nov. 23, 2008 @ WWE Survivor Series",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "john-cena",
+      "character_variant": "survivor-series-2008",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "john-cena",
+      "character_variant": "survivor-series-2008",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Series: Series 3",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "UPC: 027084838459",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "john-cena",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Survivor Series 2008",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "027084838459",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2010",
+    "evidence_quote_ids": [
+     "f_q2",
+     "f_q6"
+    ],
+    "evidence_class": "corroborated_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_jake-roberts_955bc3": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_jake-roberts_955bc3",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_jake-roberts_955bc3",
+   "character_canonical": "jake-roberts",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Jake Roberts"
+  },
+  "identity_hash": "b93b2be4a776df70",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-flashback-jake-the-snake-roberts-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "authentic ring attire and iconic accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "October 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "jake-roberts",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "WWE legends in flashback moments from the '80s and '90s",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "authentic ring attire and iconic accessories",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "deluxe articulation",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "October 2018",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_shawn-michaels_306022": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_shawn-michaels_306022",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_shawn-michaels_306022",
+   "character_canonical": "shawn-michaels",
+   "character_variant": "hbk-chaps-2010",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Shawn Michaels"
+  },
+  "identity_hash": "5e10cac3617644ed",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-shawn-michaels-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/shawn-michaels-1",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "$174.99",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "shawn-michaels",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_miss-elizabeth_cce195": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_miss-elizabeth_cce195",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_miss-elizabeth_cce195",
+   "character_canonical": "miss-elizabeth",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2017,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Miss Elizabeth"
+  },
+  "identity_hash": "b3b9a64a86d0c81e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-tnf3-elizabeth",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-then-now-forever-miss-elizabeth-mmisc-483.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2017",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then, Now, Forever",
+      "year": 2017,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then, Now, Forever",
+      "year": 2017,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then, Now, Forever",
+      "year": 2017,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Attire Date: Aug. 31, 1985 @ WWF Championship Wrestling",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then, Now, Forever",
+      "year": 2017,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "black arm bands, a molded necklace and a green dress made from cloth",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then Now Forever Elite Exclusive Series",
+      "year": null,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "silver heels",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then Now Forever Elite Exclusive Series",
+      "year": null,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Includes Green Fabric Dress & Necklace accessories",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then Now Forever Elite Exclusive Series",
+      "year": null,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "$7.49",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Then Now Forever Elite Exclusive Series",
+      "year": null,
+      "character_canonical": "miss-elizabeth",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_cody-rhodes_5c414e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_cody-rhodes_5c414e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_cody-rhodes_5c414e",
+   "character_canonical": "cody-rhodes",
+   "character_variant": "legacy-2009",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cody Rhodes"
+  },
+  "identity_hash": "f5c97be03bcf7b1f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-cody-rhodes-elite3-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/2025-wwe-mattel-elite-collection-legends-greatest-hits-series-3-cody-rhodes-1",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_santino-marella_c3c8ac": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_santino-marella_c3c8ac",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_santino-marella_c3c8ac",
+   "character_canonical": "santino-marella",
+   "character_variant": "raw-comedy-2009",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Santino Marella"
+  },
+  "identity_hash": "c0e956444e3c797f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite3-santino",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-santino-marella-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://pwcatalog.com/products/elite3-santino",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": "2010",
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Attire Date: Feb. 23, 2009 @ WWE Raw",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": "raw-comedy-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "UPC: 027084838435",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "Stock #: 239485",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Promotion: World Wrestling Entertainment",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Made In: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "santino-marella",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Feb. 23, 2009 @ WWE Raw",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "Stock #: 239485",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2010",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_wendi-richter_e2f7d2": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_wendi-richter_e2f7d2",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_wendi-richter_e2f7d2",
+   "character_canonical": "wendi-richter",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2020,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Wendi Richter"
+  },
+  "identity_hash": "6e33b3e84b313f13",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.wrestlingfiguredatabase.com/en/figures/wwe-elite-collection-series-3-wendi-richter",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-3-wendi-richter-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_2026-new-york-toy-fair_09a43a": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_2026-new-york-toy-fair_09a43a",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_2026-new-york-toy-fair_09a43a",
+   "character_canonical": "2026-new-york-toy-fair",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2026,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "2026 New York Toy Fair"
+  },
+  "identity_hash": "d35e5f1a37e05748",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_christian_c0e6ac": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_christian_c0e6ac",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_christian_c0e6ac",
+   "character_canonical": "christian",
+   "character_variant": "ecw-champ-2009",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Christian"
+  },
+  "identity_hash": "8f6246a1ada7d7f2",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite3-christian",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-christian-elite3-01.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forum.wrestlingfigs.com/thread/177002/elite-cena-christian-reviews-pics",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://forum.wrestlingfigs.com/thread/155053/elite-series-3-christian",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s2",
+     "text": "$89.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "christian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "christian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Attire Date: Apr. 5, 2009 @ WWE WrestleMania 25; June 7, 2009 @ Extreme Rules",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "christian",
+      "character_variant": "ecw-champ-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "christian",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: Apr. 5, 2009 @ WWE WrestleMania 25; June 7, 2009 @ Extreme Rules",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "2010",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_queen-sherri_6ce4ea": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_queen-sherri_6ce4ea",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_queen-sherri_6ce4ea",
+   "character_canonical": "queen-sherri",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2022,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Queen Sherri"
+  },
+  "identity_hash": "61d011f36f9e570c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_billy-gunn_c30694": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_billy-gunn_c30694",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_billy-gunn_c30694",
+   "character_canonical": "billy-gunn",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Billy Gunn"
+  },
+  "identity_hash": "b1488031245c388f",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-hoc3-billygunn",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "2018 WWE Mattel Elite Collection Hall of Champions Series 3 Billy Gunn",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Release Country: United States",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Manufacturing Country: China",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s1",
+     "text": "Line: Hall of Champions",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "Hall of Champions",
+      "year": 2018,
+      "character_canonical": "billy-gunn",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers (e.g., Ringside Collectibles) receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": null,
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_paul-bearer_773485": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_paul-bearer_773485",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_paul-bearer_773485",
+   "character_canonical": "paul-bearer",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Paul Bearer"
+  },
+  "identity_hash": "2d84bfed3c43111b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/wwe-mattel-elite-collection-series-106-paul-bearer-chase",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-paul-bearer-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s4",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-106-paul-bearer-action-figure-blue-suit-chase/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s5",
+     "url": "https://toywiz.com/wwe-wrestling-elite-hall-of-champions-paul-bearer-exclusive-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s6",
+     "url": "https://wrestlingshop.com/en-us/products/paul-bearer-wwe-hall-of-champions-elite-collection-series-3-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s7",
+     "url": "https://forum.wrestlingfigs.com/thread/354213/mattel-champions-elite-series-images",
+     "source_type": "forum",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    },
+    {
+     "source_id": "f_s8",
+     "url": "https://m.service.mattel.com/us/Technical/productDetail?prodno=HTX34&siteid=27",
+     "source_type": "official_manufacturer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": null
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_road-dogg_df29b4": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_road-dogg_df29b4",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_road-dogg_df29b4",
+   "character_canonical": "road-dogg",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Road Dogg"
+  },
+  "identity_hash": "2e64069ac491029e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-hoc3-roaddogg",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-hall-of-champions-road-dogg-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": 2018,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Line: Hall of Champions",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": 2018,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": 2018,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Target",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": 2018,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "authentic ring attire",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": null,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "his WWE Championship Title",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": null,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": null,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "a detailed character expression",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": null,
+      "character_canonical": "road-dogg",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "WWE Title holders past and present",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "ready to wreak havoc right out of the box",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "hall of champions",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_harley-race_e2ad2d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_harley-race_e2ad2d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_harley-race_e2ad2d",
+   "character_canonical": "harley-race",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Harley Race"
+  },
+  "identity_hash": "c2efb8317a104c9e",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_ringside_elite3_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-complete-set.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite3_miz",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_fandom_elite3_blocked",
+     "url": "https://prowrestling.fandom.com/wiki/WWE_Elite_3",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite-fb3-harleyrace",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://lylesmoviefiles.com/2019/03/21/wwe-flashback-series-the-king-harley-race-figure-review/",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1_lineup",
+     "source_id": "w_ringside_elite3_set",
+     "text": "The set comprises six figures: \"Shawn Michaels,\" \"Christian,\" \"John Cena,\" \"The Miz,\" \"Cody Rhodes,\" and \"Santino Marella.\"",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q2_manufacturer",
+     "source_id": "w_ringside_elite3_set",
+     "text": "These are \"WWE Toy Wrestling Action Figures by Mattel.\"",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": null
+     }
+    },
+    {
+     "quote_id": "w_q3_release_date",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q4_scale",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection",
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "w_q5_no_baf",
+     "source_id": "w_toywiz_elite3_miz",
+     "text": "Build-A-Figure: Not applicable to this product",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 3",
+      "character_canonical": "The Miz",
+      "character_variant": null,
+      "condition": null,
+      "year": 2010
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Flashback Series",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "Exclusive Retailer: Walmart",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "The gold came out nice against the purple.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Harley boasts one of Mattel's best head sculpts this year.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "You won't have any trouble pulling off any of The King's moves thanks to the Elite articulation setup.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "He comes with a cloak that I don't think has been used before.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s2",
+     "text": "Race also comes with a crown. I assumed this was just a reuse from the Jerry Lawler figure, but it's actually a new mold.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s2",
+     "text": "I got Race for $18, a solid price for an Elite figure with such quality accessories.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s2",
+     "text": "March 21, 2019",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite flashback",
+      "year": 2018,
+      "character_canonical": "harley-race",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_the-miz_7770c5": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_the-miz_7770c5",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_the-miz_7770c5",
+   "character_canonical": "the-miz",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2010,
+   "scale": null,
+   "pack_size": null,
+   "v1_name": null
+  },
+  "identity_hash": "9a293f488ae486a7",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite3-miz",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_hbk",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-shawn-michaels-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite86_mustafa",
+     "url": "https://wrestlingfiguredatabase.com/products/elite86-mustafa",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-miz-elite3-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_miz",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_miz",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_miz",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_miz",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Christian",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Christian"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Cody Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 John Cena",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Santino Marella",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Santino Marella"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Shawn Michaels",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 The Miz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_hbk",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_hbk",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_elite86_mustafa",
+     "text": "2021 WWE Mattel Elite Collection Series 86 Colonel Mustafa",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Colonel Mustafa"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "May 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "OUT OF STOCK",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "UPC 027084838480",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Out of Stock",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Secondary Market Item",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "the-miz",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "027084838480",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2010",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_colonel-mustafa_5d29d6": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_colonel-mustafa_5d29d6",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_colonel-mustafa_5d29d6",
+   "character_canonical": "colonel-mustafa",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": 2019,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Colonel Mustafa"
+  },
+  "identity_hash": "fea146ce1d1d2794",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite3-miz",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_hbk",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-shawn-michaels-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite86_mustafa",
+     "url": "https://wrestlingfiguredatabase.com/products/elite86-mustafa",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite86-mustafa",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-collection-series-86-colonel-mustafa-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_miz",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_miz",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_miz",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_miz",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Christian",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Christian"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Cody Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 John Cena",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Santino Marella",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Santino Marella"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Shawn Michaels",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 The Miz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_hbk",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_hbk",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_elite86_mustafa",
+     "text": "2021 WWE Mattel Elite Collection Series 86 Colonel Mustafa",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Colonel Mustafa"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_3_miz_5d087e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_3_miz_5d087e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_3_miz_5d087e",
+   "character_canonical": "miz",
+   "character_variant": "raw-heel-2009",
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "3",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "The Miz"
+  },
+  "identity_hash": "aaae9038d03fb879",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_miz",
+     "url": "https://wrestlingfiguredatabase.com/products/elite3-miz",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_series1_50",
+     "url": "https://wrestlingfiguredatabase.com/collections/mattel-wwe-elite-collection-mainline-series-1-50",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_hbk",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-shawn-michaels-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_wfd_elite86_mustafa",
+     "url": "https://wrestlingfiguredatabase.com/products/elite86-mustafa",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-3-the-miz-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-3-miz-elite3-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://forum.wrestlingfigs.com/thread/178124/elite-miz-review-full-pics",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_miz",
+     "text": "Release Date: 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_wfd_miz",
+     "text": "Manufacturer: Mattel",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_wfd_miz",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_wfd_miz",
+     "text": "Series: 3",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Christian",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Christian"
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Cody Rhodes",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Cody Rhodes"
+     }
+    },
+    {
+     "quote_id": "w_q7",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 John Cena",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "John Cena"
+     }
+    },
+    {
+     "quote_id": "w_q8",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Santino Marella",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Santino Marella"
+     }
+    },
+    {
+     "quote_id": "w_q9",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 Shawn Michaels",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q10",
+     "source_id": "w_wfd_series1_50",
+     "text": "2010 WWE Mattel Elite Collection Series 3 The Miz",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "The Miz"
+     }
+    },
+    {
+     "quote_id": "w_q11",
+     "source_id": "w_toywiz_hbk",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": null,
+      "character_canonical": null
+     }
+    },
+    {
+     "quote_id": "w_q12",
+     "source_id": "w_toywiz_hbk",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2010",
+      "character_canonical": "Shawn Michaels"
+     }
+    },
+    {
+     "quote_id": "w_q13",
+     "source_id": "w_wfd_elite86_mustafa",
+     "text": "2021 WWE Mattel Elite Collection Series 86 Colonel Mustafa",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "Mattel",
+      "product_line": "Elite Collection Mainline",
+      "year": "2021",
+      "character_canonical": "Colonel Mustafa"
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Capturing all the action and dramatic exhibition of sports entertainment, the Mattel WWE Elite Collection features authentically sculpted 6 inch figures of the biggest WWE Superstars. Figures feature deluxe articulation, amazing detail and accessories such as masks, armbands and costumes.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Release Date: May 2010",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "UPC: 027084838480",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "The Miz - WWE Elite 3 WWE Toy Wrestling Action Figure by Mattel!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "$79.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "the shorts, LOADED TO THE MAX ON DETAIL! They've painted on the arm sleeve with 'I'M AWESOME'",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "the screen printed 'Chick Magnet' shirt looks incredible",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "The face is dead on accurate, his faux hawk with three lines shaved into the side of his head is there",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "the included a hat (which fits PERFECTLY) that is also deco'd out!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "my only minor complain is the 'I'M' word gets cut off at his wrist",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q11",
+     "source_id": "f_s3",
+     "text": "Posted May 26, 2010 17:47:14 GMT -5 by Chip",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q12",
+     "source_id": "f_s3",
+     "text": "Easily one of Mattel's best figures",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2010,
+      "character_canonical": "miz",
+      "character_variant": "raw-heel-2009",
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Arm sleeve painted with \"I'M AWESOME\"; screen printed \"Chick Magnet\" shirt",
+    "evidence_quote_ids": [
+     "f_q6",
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Face is dead on accurate; faux hawk with three lines shaved into the side of the head",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Arm sleeve painted with \"I'M AWESOME\"",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Screen printed \"Chick Magnet\" shirt",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Faux hawk with three lines shaved into the side of the head",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Hat that fits perfectly and is deco'd out",
+    "evidence_quote_ids": [
+     "f_q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "027084838480",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "resolved",
+    "value": "May 2010",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   }
+  ]
+ }
+}

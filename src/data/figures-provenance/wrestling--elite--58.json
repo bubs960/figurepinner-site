@@ -1,0 +1,2212 @@
+{
+ "fp_wrestling_mattel_elite_58_mickie-james_5e8e36": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_58_mickie-james_5e8e36",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_58_mickie-james_5e8e36",
+   "character_canonical": "mickie-james",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "58",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mickie James"
+  },
+  "identity_hash": "64192733e486993c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite58_matthardy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-matthardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite58_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-complete-set-elite58-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite58",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-58/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_matthardy",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_sheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-seamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_deanambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-dean-ambrose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-mickiejames",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-mickie-james-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-mickie-james-elite58-03.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s4",
+     "url": "http://actionfigureimagerytoyreviews.blogspot.com/2018/05/wwe-mattel-mickie-james-review-elite.html",
+     "source_type": "forum",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite58_matthardy",
+     "text": "2018 WWE Mattel Elite Collection Series 58 — Release Date: 2018; Series: 58; Manufacturer: Mattel; Line: Elite Collection Mainline; Manufacturing Country: China.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Dean Ambrose, Braun Strowman, Mickie James, Sheamus, Cesaro, Matt Hardy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite58_set",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_blog_elite58",
+     "text": "Elite articulation awaits as the following WWE Superstars make an appearance: Matt Hardy, Dean Ambrose, Mickie James, Sheamus, Cesaro, Braun Strowman",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "text": "WWE Wrestling Elite Collection Series 58 Braun Strowman Action Figure — approximately 7-inches tall in height. Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": "June 2018",
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Figures are shown in original packaging (MOC - Mint on Card format).",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s3",
+     "text": "a blue and pink designed top",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "mickie-james",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s3",
+     "text": "blue, white and pink ring pants which bear a yellow and pink symbol on each side and have wide, bell bottoms",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "mickie-james",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s3",
+     "text": "a brand new headscan",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "mickie-james",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "a WWE Women's Championship accessory",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "mickie-james",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "approximately 7-inches tall in height",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "A blue and pink designed top; blue, white and pink ring pants which bear a yellow and pink symbol on each side and have wide, bell bottoms",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Blue, pink, white, yellow",
+    "evidence_quote_ids": [
+     "f_q1",
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Brand new headscan",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "WWE Women's Championship accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "WWE Women's Championship accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_58_braun-strowman_34536f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_58_braun-strowman_34536f",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_58_braun-strowman_34536f",
+   "character_canonical": "braun-strowman",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "58",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Braun Strowman"
+  },
+  "identity_hash": "6cd7b8e68a33152c",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite58_matthardy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-matthardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite58_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-complete-set-elite58-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite58",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-58/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_matthardy",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_sheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-seamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_deanambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-dean-ambrose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-braun-strowman-elite58-02.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite58_matthardy",
+     "text": "2018 WWE Mattel Elite Collection Series 58 — Release Date: 2018; Series: 58; Manufacturer: Mattel; Line: Elite Collection Mainline; Manufacturing Country: China.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Dean Ambrose, Braun Strowman, Mickie James, Sheamus, Cesaro, Matt Hardy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite58_set",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_blog_elite58",
+     "text": "Elite articulation awaits as the following WWE Superstars make an appearance: Matt Hardy, Dean Ambrose, Mickie James, Sheamus, Cesaro, Braun Strowman",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "text": "WWE Wrestling Elite Collection Series 58 Braun Strowman Action Figure — approximately 7-inches tall in height. Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": "June 2018",
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Figures are shown in original packaging (MOC - Mint on Card format).",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Recreate your favourite WWE matches in Superstar scale. WWE Elite Action figures are approximately 7-inches tall in height.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": null,
+      "character_variant": null,
+      "year": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "887961573039",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "black tanktop and black wrist tape",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s2",
+     "text": "dark, camo-style ring pants",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "tall, black and laced boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "ambulance door accessory that he definitely ripped right off of the actual vehicle",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s2",
+     "text": "roaring headscan and tattoos on his huge arms",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s2",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "character_canonical": "braun-strowman",
+      "character_variant": null,
+      "year": 2018,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black tanktop and black wrist tape, dark, camo-style ring pants, tall, black and laced boots",
+    "evidence_quote_ids": [
+     "f_q4",
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "roaring headscan and tattoos on his huge arms",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "ambulance door accessory that he definitely ripped right off of the actual vehicle",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "ambulance door accessory",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "resolved",
+    "value": "887961573039",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_58_matt-hardy_21f6ba": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_58_matt-hardy_21f6ba",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_58_matt-hardy_21f6ba",
+   "character_canonical": "matt-hardy",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "58",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Matt Hardy"
+  },
+  "identity_hash": "f2b21357c0ebd34b",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite58_matthardy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-matthardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite58_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-complete-set-elite58-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite58",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-58/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_matthardy",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_sheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-seamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_deanambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-dean-ambrose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-matt-hardy-elite58-06.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.reigncitytoys.com/products/wwe-elite-collection-series-58-matt-hardy",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingfigs.com/figurenews/mattel-wwe-elite-58-is-new-in-stock-new-images/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite58_matthardy",
+     "text": "2018 WWE Mattel Elite Collection Series 58 — Release Date: 2018; Series: 58; Manufacturer: Mattel; Line: Elite Collection Mainline; Manufacturing Country: China.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Dean Ambrose, Braun Strowman, Mickie James, Sheamus, Cesaro, Matt Hardy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite58_set",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_blog_elite58",
+     "text": "Elite articulation awaits as the following WWE Superstars make an appearance: Matt Hardy, Dean Ambrose, Mickie James, Sheamus, Cesaro, Braun Strowman",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "text": "WWE Wrestling Elite Collection Series 58 Braun Strowman Action Figure — approximately 7-inches tall in height. Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": "June 2018",
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Figures are shown in original packaging (MOC - Mint on Card format).",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wearing green and gold ring pants and black boots",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "a big smile and the trademark hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "$19.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "matt-hardy",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Green and gold ring pants and black boots",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Big smile with trademark hair",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_58_dean-ambrose_2d305e": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_58_dean-ambrose_2d305e",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_58_dean-ambrose_2d305e",
+   "character_canonical": "dean-ambrose",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "58",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Dean Ambrose"
+  },
+  "identity_hash": "dd6990a9d9515b71",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite58_matthardy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-matthardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite58_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-complete-set-elite58-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite58",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-58/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_matthardy",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_sheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-seamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_deanambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-dean-ambrose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-deanambrose",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://www.wrestlingshop.com/wwe-action-figures/dean-ambrose-wwe-elite-collection-series-58.html",
+     "source_type": "official_retailer",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/dean-ambrose-wwe-elite-collection-series-58",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite58_matthardy",
+     "text": "2018 WWE Mattel Elite Collection Series 58 — Release Date: 2018; Series: 58; Manufacturer: Mattel; Line: Elite Collection Mainline; Manufacturing Country: China.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Dean Ambrose, Braun Strowman, Mickie James, Sheamus, Cesaro, Matt Hardy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite58_set",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_blog_elite58",
+     "text": "Elite articulation awaits as the following WWE Superstars make an appearance: Matt Hardy, Dean Ambrose, Mickie James, Sheamus, Cesaro, Braun Strowman",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "text": "WWE Wrestling Elite Collection Series 58 Braun Strowman Action Figure — approximately 7-inches tall in height. Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": "June 2018",
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Figures are shown in original packaging (MOC - Mint on Card format).",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Release Date: 2018",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Attire Date: June 4, 2017 @ WWE Extreme Rules",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "dean-ambrose",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s3",
+     "text": "This WWE figure is approximately 6-inches in scale and comes ready to wreak havoc right out of the box!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "Figure has deluxe articulation for multiple ways to pose and play",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "True FX enhanced facial detailing for life-like authenticity",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Attire Date: June 4, 2017 @ WWE Extreme Rules",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_58_sheamus_22526d": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_58_sheamus_22526d",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_58_sheamus_22526d",
+   "character_canonical": "sheamus",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "58",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Sheamus"
+  },
+  "identity_hash": "a25ff6f5688cb1d4",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite58_matthardy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-matthardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite58_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-complete-set-elite58-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite58",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-58/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_matthardy",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_sheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-seamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_deanambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-dean-ambrose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-sheamus-elite58-04.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://m.service.mattel.com/us/Technical/productDetail?prodno=GVB58&siteid=27",
+     "source_type": "official_manufacturer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://wrestlingshop.com/en-us/products/sheamus-wwe-elite-collection-series-58-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite58_matthardy",
+     "text": "2018 WWE Mattel Elite Collection Series 58 — Release Date: 2018; Series: 58; Manufacturer: Mattel; Line: Elite Collection Mainline; Manufacturing Country: China.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Dean Ambrose, Braun Strowman, Mickie James, Sheamus, Cesaro, Matt Hardy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite58_set",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_blog_elite58",
+     "text": "Elite articulation awaits as the following WWE Superstars make an appearance: Matt Hardy, Dean Ambrose, Mickie James, Sheamus, Cesaro, Braun Strowman",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "text": "WWE Wrestling Elite Collection Series 58 Braun Strowman Action Figure — approximately 7-inches tall in height. Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": "June 2018",
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Figures are shown in original packaging (MOC - Mint on Card format).",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "wild red hair and a huge beard",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "black, red and white ring trunks that bear his logo",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s1",
+     "text": "tall, black and white laced boots with a celtic cross on the backs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s1",
+     "text": "a removable tuxedo and 'skirt' accessory that look just like Sheamus' entrance gear with Cesaro",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s1",
+     "text": "$16.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s2",
+     "text": "Recreate signature poses and finishing moves with 25 points of articulation for extreme poseability!",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s2",
+     "text": "Includes interchangeable hands and iconic accessories, including entrance gear or WWE® championships.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "All swagger and muscle, sculled in serious detail",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Realistic accessories complete his ring outfit",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "Prep a finishing move pose with 24+ points of articulation",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": "sheamus",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "removable tuxedo and 'skirt' accessory that look just like Sheamus' entrance gear with Cesaro",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "black, red and white ring trunks that bear his logo",
+    "evidence_quote_ids": [
+     "f_q2"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "wild red hair and a huge beard",
+    "evidence_quote_ids": [
+     "f_q1"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "24+ points of articulation",
+    "evidence_quote_ids": [
+     "f_q10"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "resolved",
+    "value": "MOC (Mint on Card format)",
+    "evidence_quote_ids": [
+     "w_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "tall, black and white laced boots with a celtic cross on the backs",
+    "evidence_quote_ids": [
+     "f_q3"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "all swagger and muscle, sculled in serious detail",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "removable tuxedo and 'skirt' accessory",
+    "evidence_quote_ids": [
+     "f_q4"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[2]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ },
+ "fp_wrestling_mattel_elite_58_cesaro_59dad9": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_mattel_elite_58_cesaro_59dad9",
+  "target": {
+   "figure_id": "fp_wrestling_mattel_elite_58_cesaro_59dad9",
+   "character_canonical": "cesaro",
+   "character_variant": null,
+   "manufacturer": "mattel",
+   "product_line": "elite",
+   "release_wave": "58",
+   "fandom": "wrestling",
+   "year": 2018,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Cesaro"
+  },
+  "identity_hash": "44236380a837dd96",
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "w_wfd_elite58_matthardy",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-matthardy",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-braun-strowman-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_elite58_set",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-complete-set-elite58-00.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_ringside_blog_elite58",
+     "url": "https://www.ringsidecollectibles.com/blog/category/mattel-wwe-elite/wwe-elite-series-58/",
+     "source_type": "toy_news",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_matthardy",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-matt-hardy-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_sheamus",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-seamus-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "w_toywiz_elite58_deanambrose",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-dean-ambrose-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s1",
+     "url": "https://toywiz.com/wwe-wrestling-elite-series-58-cesaro-action-figure/",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s2",
+     "url": "https://wrestlingfiguredatabase.com/products/elite58-cesaro",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    },
+    {
+     "source_id": "f_s3",
+     "url": "https://www.ringsidecollectibles.com/wwe-elite-58-toy-figures-cesaro-elite58-05.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-08-16"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "w_q1",
+     "source_id": "w_wfd_elite58_matthardy",
+     "text": "2018 WWE Mattel Elite Collection Series 58 — Release Date: 2018; Series: 58; Manufacturer: Mattel; Line: Elite Collection Mainline; Manufacturing Country: China.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Mainline",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q2",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Dean Ambrose, Braun Strowman, Mickie James, Sheamus, Cesaro, Matt Hardy",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q3",
+     "source_id": "w_ringside_elite58_set",
+     "text": "No Build-A-Figure component is mentioned for this series.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q4",
+     "source_id": "w_ringside_blog_elite58",
+     "text": "Elite articulation awaits as the following WWE Superstars make an appearance: Matt Hardy, Dean Ambrose, Mickie James, Sheamus, Cesaro, Braun Strowman",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q5",
+     "source_id": "w_toywiz_elite58_braunstrowman",
+     "text": "WWE Wrestling Elite Collection Series 58 Braun Strowman Action Figure — approximately 7-inches tall in height. Deluxe articulation, incredible detail, authentic ring attire and accessories.",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": "Braun Strowman",
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": "June 2018",
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "w_q6",
+     "source_id": "w_ringside_elite58_set",
+     "text": "Figures are shown in original packaging (MOC - Mint on Card format).",
+     "scope": {
+      "kind": "wave",
+      "character_canonical": null,
+      "manufacturer": "Mattel",
+      "product_line": "WWE Elite Collection Series 58",
+      "year": 2018,
+      "condition": null,
+      "character_variant": null
+     }
+    },
+    {
+     "quote_id": "f_q1",
+     "source_id": "f_s1",
+     "text": "Recreate your favourite WWE matches in Superstar scale. WWE Elite Action figures are approximately 7-inches tall in height.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q2",
+     "source_id": "f_s1",
+     "text": "Deluxe articulation",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q3",
+     "source_id": "f_s2",
+     "text": "Attire Date: Apr. 2, 2017 @ WWE WrestleMania 33",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q4",
+     "source_id": "f_s2",
+     "text": "Line: Elite Collection Mainline",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q5",
+     "source_id": "f_s3",
+     "text": "His trunks are black with gold and white trim designs",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q6",
+     "source_id": "f_s3",
+     "text": "black and white cross elbow pads",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q7",
+     "source_id": "f_s3",
+     "text": "removable black and gold tuxedo and 'skirt' accessories to give him a grand entrance alongside Sheamus",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q8",
+     "source_id": "f_s3",
+     "text": "a big smile and a wrapped up shoulder along with painted chest hair",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q9",
+     "source_id": "f_s3",
+     "text": "Sheamus and Cesaro displayed their newly found Tag Team unity at WrestleMania 33",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "f_q10",
+     "source_id": "f_s3",
+     "text": "$12.99",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "mattel",
+      "product_line": "elite",
+      "year": 2018,
+      "character_canonical": "cesaro",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
+    "evidence_class": null
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "resolved",
+    "value": "Black trunks with gold and white trim; black and white cross elbow pads",
+    "evidence_quote_ids": [
+     "f_q5",
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "A big smile",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Black trunks with gold and white trim designs",
+    "evidence_quote_ids": [
+     "f_q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Black and white cross elbow pads",
+    "evidence_quote_ids": [
+     "f_q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[2]",
+    "status": "resolved",
+    "value": "Removable black and gold tuxedo and 'skirt' entrance accessories",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[3]",
+    "status": "resolved",
+    "value": "Painted chest hair and a wrapped up shoulder",
+    "evidence_quote_ids": [
+     "f_q8"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Removable black and gold tuxedo and 'skirt' entrance accessories",
+    "evidence_quote_ids": [
+     "f_q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ]
+ }
+}
