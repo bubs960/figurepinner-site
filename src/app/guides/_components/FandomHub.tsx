@@ -30,6 +30,7 @@ import SeamScrollDriver from './SeamScrollDriver'
 import FandomFacts from './FandomFacts'
 import HeroesVillainsBand from './HeroesVillainsBand'
 import MostCheckedRail from './MostCheckedRail'
+import HubTrackStrip from './HubTrackStrip'
 import SaberClashAtmosphere from './SaberClashAtmosphere'
 import FactionSeamAtmosphere from './FactionSeamAtmosphere'
 import EraMapGrid from './EraMapGrid'
@@ -503,6 +504,10 @@ export default function FandomHub({
             Most-checked took the primary slot above — avoids rendering it
             twice when it's still the primary surface via the fallback path. */}
         {mcTookPrimary && hvNode}
+
+        {/* Phase 9: TRACK strip — retention hook, placed after the reader has
+            seen the sub-line library (+ H-vs-V) prices move, before the ad. */}
+        <HubTrackStrip />
 
         {/* AD STANDARD v2: FandomHub is the ARTICLE class (tiebreaker vs GRID),
             1 unit — this is it. Sole survivor of the old 4-slot layout; the
