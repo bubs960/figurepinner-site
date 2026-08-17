@@ -3,7 +3,7 @@
 Created S52 (2026-07-03) to close the "knowledge lives in EOCs, not where it
 fires" hole. Keep this SHORT — pointers, not prose. The canonical deploy doc is:
 
-**`C:\Users\bubs9\Fig Pinner Dev - Claude\runbooks\deploy-guardrails.md`** —
+**`C:\Users\bubs9\FigurePinner-Ecosystem\Fig Pinner Dev - Claude\runbooks\deploy-guardrails.md`** —
 READ IT before proposing any deploy. Caps: figurepinner-site 2/day soft,
 3/day HARD, 30-min cool-down. Steve executes ALL deploys (author/execute
 split); give him two separate blocks: `cd` first, then `npm run deploy`.
