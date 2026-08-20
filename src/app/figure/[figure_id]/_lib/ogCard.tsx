@@ -43,7 +43,18 @@ function nameFontSize(name: string): number {
 // eBay's dead/purged thumb signature: HTTP 200 + image/jpeg + exactly 1,359
 // bytes (documented in project_photo_cleaning memory). Treat as no-photo.
 const EBAY_PLACEHOLDER_BYTES = 1359
-const MAX_PHOTO_BYTES = 5 * 1024 * 1024 // guard against an unexpectedly huge source photo
+// Cap sized to the render box, not to "huge": the card draws the photo into a
+// 400x400 box, so a legit rendition is tens-of-KB. The old 5MB cap let full-res
+// originals from hosts thumb() can't resize (e.g. spawnworld.com) through, and
+// a ~4MB JPEG decodes to far more than the Workers isolate's memory limit as
+// raw RGBA inside satori/resvg — 28 "Worker exceeded memory" errors on
+// 2026-08-20 (webaudit relay WEBAUDIT-TO-WEB-OG-IMAGE-MEMORY-RECURRENCE).
+// Over-cap photos fail soft to the wordmark fallback. Cap set at 1MB: a
+// verified member of the failing class (wwf-hasbro bushwhackers-butch
+// frame_1.jpg, served full-res by our own R2 images worker — the largest
+// non-resizable host, not a third party) measures 1,524,018 bytes, so the
+// known-OOM class must clear the cap with margin, not squeak past it.
+const MAX_PHOTO_BYTES = 1_000_000
 
 function arrayBufferToBase64(buf: ArrayBuffer): string {
   const bytes = new Uint8Array(buf)
