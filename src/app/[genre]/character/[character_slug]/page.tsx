@@ -23,6 +23,7 @@ import {
   type KBFigure,
 } from '@/data/kb'
 import { fandomsForGenre, getFandom, genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
+import { characterHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
@@ -160,12 +161,22 @@ export async function generateMetadata({
   const lineCount = new Set(figures.map(f => f.product_line)).size
   const year = new Date().getFullYear()
 
+  // Index gate (webaudit F2, 2026-08-20): must stay in LOCKSTEP with the
+  // sitemap's character-page filter — both call characterHubMeetsIndexBar on
+  // the non-canary member set (the sitemap builds its buckets from a
+  // !is_canary-filtered list, so the same filter applies here). Below-bar hubs
+  // stay live and followable; they just stop being submitted-and-indexable.
+  const indexWorthy = characterHubMeetsIndexBar(
+    figures.filter(f => !f.is_canary).map(f => f.figure_id)
+  )
+
   const title = `${charName} Action Figure Price Guide — All ${lineCount} Lines`
   const description = `${charName} action figure prices across ${figures.length} releases in ${lineCount} line${lineCount !== 1 ? 's' : ''}. Real eBay sold prices for ${genreName} figures. Updated daily — ${year}.`
 
   return {
     title,
     description,
+    ...(indexWorthy ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: `${title} | FigurePinner`,
       description: `Every ${charName} ${genreName} figure — ${figures.length} releases, ${lineCount} lines. Real eBay sold prices.`,

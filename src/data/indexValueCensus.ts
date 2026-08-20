@@ -40,6 +40,24 @@ export function isAtOrAboveIndexBar(figureId: string): boolean {
   return Object.prototype.hasOwnProperty.call(CENSUS, figureId) || BING_PROTECTED_FIDS.has(figureId)
 }
 
+/**
+ * Character-hub index gate (webaudit F1/F2, Steve-authorized 2026-08-20 as a
+ * narrow §7.4 stop-loss override — WEBAUDIT-CHARACTER-CLASS-ROOTCAUSE-AND-FIX-2026-08-20).
+ * A /[genre]/character/* page is index-worthy iff it has ≥2 member figures AND
+ * ≥1 of them clears the figure index bar. Below that, the page is either a
+ * one-figure wrapper duplicating an already-submitted figure page (69.6% of the
+ * class) or a wrapper around only below-bar figures (17.5%) — both read to
+ * Google as thin/duplicate and demoted the whole URL pattern.
+ *
+ * LOCKSTEP RULE (same contract as the figure bar above): the sitemap's
+ * character-page filter and the character page's own robots meta MUST both call
+ * THIS function — submitting a noindexed page is the exact mixed signal this
+ * file exists to prevent. Callers pass non-canary member fids only.
+ */
+export function characterHubMeetsIndexBar(memberFids: string[]): boolean {
+  return memberFids.length >= 2 && memberFids.some(isAtOrAboveIndexBar)
+}
+
 /** Real last-comp-change date for an at-bar fid, or null (below-bar / no census entry / exempted with no known date). */
 export function censusLastCompDate(figureId: string): Date | null {
   const raw = CENSUS[figureId]

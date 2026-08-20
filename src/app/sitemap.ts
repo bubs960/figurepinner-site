@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
 import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
-import { isAtOrAboveIndexBar, censusLastCompDate } from '@/data/indexValueCensus'
+import { isAtOrAboveIndexBar, censusLastCompDate, characterHubMeetsIndexBar } from '@/data/indexValueCensus'
 
 // Fandom slug (KB value) → genre slug (URL path segment used by the router).
 // The character hub page at /[genre]/character/[slug] resolves genre → fandom
@@ -219,14 +219,23 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   }))
 
   // ── Character hub pages (/[genre]/character/[character_slug]) ───────────
-  // One page per unique character_canonical within the fandom. High-value SEO
-  // pages: "[Character] action figure" queries.
-  const characterPages: MetadataRoute.Sitemap = [...charFids].map(([char, fids]) => ({
-    url: `${BASE}/${genre}/character/${char}`,
-    lastModified: maxCensusDate(fids) ?? now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.75,
-  }))
+  // One page per unique character_canonical within the fandom — but ONLY when
+  // the hub clears `characterHubMeetsIndexBar` (≥2 members, ≥1 above-bar).
+  // Ungated, this class was 9,611 URLs of which ~70% were one-figure wrappers
+  // and ~17.5% wrapped only below-bar figures; Google demoted the whole URL
+  // pattern to never-crawled (webaudit root cause, 2026-08-20). Excluded pages
+  // stay live and internally linked; their own robots meta goes
+  // noindex,follow in lockstep (character page generateMetadata calls the
+  // SAME helper). Priority 0.6: below figures (0.7) — a character hub should
+  // never outrank the figure pages it wraps (F3).
+  const characterPages: MetadataRoute.Sitemap = [...charFids]
+    .filter(([, fids]) => characterHubMeetsIndexBar(fids))
+    .map(([char, fids]) => ({
+      url: `${BASE}/${genre}/character/${char}`,
+      lastModified: maxCensusDate(fids) ?? now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
 
   // ── Figure detail pages ──────────────────────────────────────────────────
   // Use keyword-rich pretty URLs only when they map to one exact figure.
