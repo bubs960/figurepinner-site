@@ -34,6 +34,13 @@ const STANDARD_LINKS: ReadonlyArray<[label: string, href: string]> = [
   // CtaRail card + /pro page when the 3rd vertical ships.
 ]
 
+// Steve's Vinted storefront (LISTER-TO-WEB-VINTED-FOOTPRINT-LINK-REQUEST-2026-08-17):
+// point some site traffic at his Vinted listings while the US non-fashion category
+// is still young. Placement is web's call (footer, with the other outbound lines).
+// Empty string = the line renders nothing — fill in the real profile URL from Steve
+// to activate; no other change needed.
+const STEVE_VINTED_URL = ''
+
 export default function Footer() {
   return (
     <footer style={{ borderTop: '1px solid var(--border)', padding: '1.5rem', textAlign: 'center', minHeight: '120px' }}>
@@ -82,6 +89,15 @@ export default function Footer() {
           GrailGamer — video game price guide
         </a>
       </p>
+
+      {STEVE_VINTED_URL !== '' && (
+        <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: '0 0 0.75rem' }}>
+          Shop figures from our collection on{' '}
+          <a href={STEVE_VINTED_URL} style={{ color: 'var(--dim)', textDecoration: 'underline' }} rel="noopener">
+            Vinted ↗
+          </a>
+        </p>
+      )}
 
       <p style={{ fontSize: '0.75rem', color: 'var(--dim)', margin: 0 }}>
         © {new Date().getFullYear()} Bubs960 Collectibles · FigurePinner
