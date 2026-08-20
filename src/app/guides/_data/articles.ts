@@ -2708,11 +2708,15 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Check any DC Multiverse figure price' },
       { type: 'p', text: '[[FigurePinner|/]] tracks all 1,508 DC Multiverse figures plus DC Universe Classics, Batman Animated Series, Super Powers, and the full DC catalog with eBay sold comp data. The Gold Label tier, the CnC wave figures, the animated-series sub-markets -- all covered with real sold prices.' },
 
-      // 2026-07-27: the entire "Further reading" block was removed -- all three
-      // entries (dc-multiverse-price-guide-2026,
-      // batman-animated-series-figure-guide, dc-universe-classics-price-guide)
-      // pointed at guides that have never existed. The heading goes with them
-      // rather than being left over an empty list.
+      // 2026-07-27: "Further reading" removed -- all three entries pointed at
+      // guides that never existed. 2026-08-20: partially restored -- the BTAS
+      // guide now exists; dc-multiverse-price-guide-2026 and
+      // dc-universe-classics-price-guide still don't (see the parked 8-title
+      // brief on the web board), so only the live link returns.
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Batman: The Animated Series Figures: Kenner vs. DC Collectibles vs. McFarlane|/guides/batman-animated-series-figure-guide]] — the three Animated Series manufacturer eras and which one holds value',
+      ]},
     ],
   }
   ,
@@ -3132,6 +3136,45 @@ export const ARTICLES: Article[] = [
 
       { type: 'h2', text: 'Checking before you buy or sell' },
       { type: 'p', text: 'G1\'s combination of age, small original parts, and genuinely rare exclusives makes it one of the categories where the gap between an asking price and a real sold comp can be largest. [[Look up any G1 Transformers figure\'s real sold history|/transformers/g1]] before assuming a name or an "exclusive" label in a listing title means what it says — the sold data is the only honest check.' },
+    ],
+  },
+  {
+    slug: 'batman-animated-series-figure-guide',
+    title: 'Batman: The Animated Series Figures: Kenner vs. DC Collectibles vs. McFarlane',
+    metaTitle: 'Batman Animated Series Figure Guide — Kenner, DC Collectibles, McFarlane | FigurePinner',
+    metaDescription:
+      'Three manufacturers have made Batman: The Animated Series figures across three decades. Which Kenner figures carry premiums, why DC Collectibles is the shelf line, and what McFarlane\'s reissues actually are.',
+    dek: 'Three manufacturers, thirty years, one art style nobody has matched since.',
+    readingMinutes: 7,
+    updated: '2026-08-20',
+    body: [
+      { type: 'p', text: 'Batman: The Animated Series premiered in September 1992 and its figures have never really gone away: three separate manufacturer eras, three separate markets, and they barely price on the same logic. We track all three: 87 Kenner entries, 69 DC Collectibles entries, and 53 from the current McFarlane-era revival. Sorting out which era you are actually buying is most of the work, because a listing titled "Batman Animated Series figure" could be a 1993 kids\' toy, a 2015 adult collectible, or a 2024 reissue, and they are worth very different money.' },
+
+      { type: 'h2', text: 'Kenner, 1992–1994: the originals, and the original "another Batman" problem' },
+      { type: 'p', text: 'The cardbacks all say 1992, but Kenner\'s figures actually reached pegs closer to January 1993, a few months after the show debuted. The line ran four waves totaling 29 standard-release figures before Kenner rebranded it as The Adventures of Batman & Robin in 1995. Here is the stat that ages best: 11 of those 29 figures were Batman variants, with another 4 being Robins. Collectors treat "another Batman" as a McFarlane-era joke. Kenner was shipping Turbojet Batman and Infrared Batman against a one-per-line Riddler three decades before Todd got the license.' },
+      { type: 'p', text: 'Wave 1 was six figures: two Batmen, Robin, Two-Face, Riddler, and Penguin. The villains are where the money went, because the line died before the rogues gallery was anywhere near complete, and the late-wave villains shipped lighter than the endless Bat-variants. Our DC price-guide data has the desirable Kenner villains (Mr. Freeze, Ra\'s al Ghul, Talia) trading in the $35–$80 band for good loose examples, while most of the Batman variants are five-dollar bin material. "Heart of Ice" rebuilt Mr. Freeze into a tragedy and won the show an Emmy; the market has been agreeing ever since.' },
+      { type: 'p', text: 'The honest knock on the Kenner line: these were toys for eight-year-olds, and they look like it. Neon accessories, action features, and deco choices that have only a passing relationship with Bruce Timm\'s designs. That is exactly why they carry nostalgia value and exactly why nobody buys them for display accuracy.' },
+
+      { type: 'h2', text: 'DC Collectibles, 2014 onward: the definitive shelf line, ankles included' },
+      { type: 'p', text: 'DC Collectibles unveiled its Animated Series line in February 2014 ahead of New York Toy Fair, covering designs from both the original show and The New Batman Adventures at 6-inch scale. This is the line that finally took the source material seriously: show-accurate proportions, the actual Timm model sheets, characters nobody else would tool. It is also the line that taught a generation of collectors to check ankle joints before buying, because early figures (Batman and Catwoman were the notorious ones) had a real ankle-breakage defect, bad enough that DC Collectibles changed the plastic the joints were made from in later production.' },
+      { type: 'p', text: 'Two things we cannot give you precise numbers on, because nobody can: DC Collectibles never published production runs, and the exact wave boundary where the ankle fix landed is still argued about on collector forums without a definitive list. Buy loose examples standing, or ask the seller directly whether it has been out of the package on its own feet.' },
+      { type: 'p', text: 'DC shuttered its Collectibles arm in 2020, which made the line finite, and finite lines with designs people actually want hold value. The Harley Quinn and Poison Ivy releases have held the strongest secondary prices in the line, and the reason is simple: for Harley in particular, the animated series design is the character. There is no more definitive Harley figure to wait for.' },
+
+      { type: 'h2', text: 'McFarlane\'s DC Direct revival, 2023 onward: reissues with a condiment gun' },
+      { type: 'p', text: 'McFarlane Toys announced a Batman: The Animated Series build-a-figure wave under the DC Direct banner in August 2023: Batman, Robin, Scarecrow, and Mr. Freeze, each with 22 points of articulation, a trading card, and a piece of the wave\'s build-a-figure. Two details matter for pricing. First, these are 6-inch figures, not McFarlane\'s usual 7-inch Multiverse scale. They are deliberately compatible with the DC Collectibles line, not with the rest of a Multiverse shelf. Second, the wave is mostly reissued DC Direct tooling with a cell-shaded paint treatment; the only new sculpt in it is the build-a-figure.' },
+      { type: 'p', text: 'And that new sculpt is Condiment King. Thirty years of Animated Series plastic across three manufacturers, and the first all-new sculpt of the current era is the ketchup guy. As a statement of deep-cut confidence it is genuinely funny, and the wave structure means completing him requires buying a Batman and a Robin you may already own two other versions of. The BAF math never changes, only the sauce.' },
+      { type: 'p', text: 'The buying consequence: McFarlane-era Animated figures are current production at retail prices. They are the cheap way into the style, and they exert real price gravity on the DC Collectibles originals of the same characters — why pay a premium for a 2015 Mr. Freeze when a functionally similar reissue is on shelves? The DC Collectibles figures that hold value are the ones McFarlane has not reissued.' },
+
+      { type: 'h2', text: 'Which era to collect' },
+      { type: 'p', text: 'The verdict, since a comparison guide owes you one: DC Collectibles is the display line, and it is not close. If you want the show on a shelf, that is the line, ankle caveats and all. Kenner is a nostalgia market — buy it carded if you are buying it at all, because the loose figures deliver neither accuracy nor rarity outside the late villains. McFarlane\'s revival is the entry point and the parts bin: current, cheap, and scale-compatible with the DC Collectibles figures it reissues. Mixing Kenner into a modern display does not work; the early-90s figures are a full scale class smaller and stylized for a different job.' },
+      { type: 'callout', text: 'Listing-title trap: sellers routinely title 2014+ DC Collectibles and 2024 McFarlane reissues identically. Check the copyright stamp on the figure\'s foot or back before paying original-run money for a reissue.' },
+      { type: 'p', text: '[[FigurePinner|/]] tracks all three eras — 87 Kenner, 69 DC Collectibles, and 53 McFarlane-era entries — with real eBay sold comps on the figure pages, each stamped with the date of its latest sold comp so you know exactly how fresh the number is.' },
+
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[DC Multiverse Price Guide: 1,508 Figures, 457 Characters, and What They Actually Cost|/guides/dc-multiverse-hub]] — the modern McFarlane line in full, Gold Label tiers included',
+        '[[Most Valuable DC Action Figures: Kenner Super Powers Still Runs the Table|/guides/most-valuable-dc-action-figures]] — where the real DC money is, and it is older than this show',
+      ]},
     ],
   },
 ]
