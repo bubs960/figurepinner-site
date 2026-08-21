@@ -94,7 +94,11 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
-    // apple-touch-icon: add a 180×180 PNG to public/ once brand assets are ready
+    // 180×180 PNG rendered from favicon.svg (sharp, density 480, dark ground —
+    // iOS ignores transparency). Regenerate if favicon.svg changes. Its absence
+    // was a recurring "Revalidation failed ... 404" error in Workers logs
+    // (2026-08-21): every iOS/Safari visit probes this path unconditionally.
+    apple: '/apple-touch-icon.png',
   },
 }
 

@@ -163,8 +163,27 @@ function rewriteFigureIdToPrettyPath(req: NextRequest): NextResponse | null {
   return NextResponse.rewrite(url)
 }
 
+// ──────────────────────────────────────────────────────────────────────────────
+// JUNK-PROBE SHORT-CIRCUIT (2026-08-21)
+// ──────────────────────────────────────────────────────────────────────────────
+// Bot probes for WordPress/PHP surfaces (/wp-admin/install.php etc.) were
+// falling through to Next's 404 handling, getting an ISR cache entry, and then
+// generating "Revalidation failed ... with status 404" error-level noise in
+// Workers logs on every stale re-hit. Answering them here means they never
+// touch the ISR cache at all. Matched via the '/wp-admin/:path*' and
+// '/:probe*.php' entries in config.matcher below.
+function isJunkProbe(pathname: string): boolean {
+  return pathname.startsWith('/wp-admin') || pathname.endsWith('.php')
+}
+
 export default async function middleware(req: NextRequest, event: NextFetchEvent) {
   const pathname = req.nextUrl.pathname
+  if (isJunkProbe(pathname)) {
+    return new NextResponse('Not found', {
+      status: 404,
+      headers: { 'Cache-Control': 'no-store' },
+    })
+  }
   if (isFigurePageRoute(pathname)) {
     // Rate limit ALWAYS runs first and can always veto, regardless of
     // whether this request ends up rewritten below -- the KV-consolidation
@@ -220,6 +239,12 @@ export const config = {
     // regression (this traffic still never touches Clerk).
     '/figure/:figure_id',
     '/:genre/:line/:slug',
+    // Junk-probe short-circuit (2026-08-21): WordPress/PHP bot probes get an
+    // immediate no-store 404 here instead of an ISR-cached Next 404 that then
+    // spams "Revalidation failed" errors in Workers logs. The second entry is a
+    // path-to-regexp custom matcher: any path ending in .php, any depth.
+    '/wp-admin/:path*',
+    '/:probe(.*\\.php)',
   ],
 }
 // /sign-in and /sign-up added (S71, 2026-07-08): both layouts use

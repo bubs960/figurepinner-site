@@ -62,7 +62,12 @@ const GENRES = [
   // DUNGEONS_DRAGONS_FANDOMS). Slug is the raw KB fandom 'generic-fantasy',
   // not the hub slug 'dungeons-dragons' -- matches searchGenreForFandom(),
   // which deliberately leaves this fandom unrolled (see its comment).
-  { slug: 'generic-fantasy',            name: 'Fantasy',           accent: '#5E35B1' },
+  // `hub` overrides the browse-grid link target when the raw fandom slug has no
+  // genre page of its own (/generic-fantasy 404s; the hub is /dungeons-dragons —
+  // same mapping hubGenreForFandom() encodes, which can't be imported here
+  // without pulling KB code into the client bundle). Found via Workers logs
+  // 2026-08-21: real-user 404 on /generic-fantasy from this grid.
+  { slug: 'generic-fantasy',            name: 'Fantasy',           accent: '#5E35B1', hub: 'dungeons-dragons' },
   { slug: 'neca',                       name: 'NECA',              accent: '#37474F' },
   { slug: 'spawn',                      name: 'Spawn',             accent: '#212121' },
   // Added 2026-08-02: matcher's 8/1 retag split 22 NECA Gargoyles figures into
@@ -992,7 +997,7 @@ function IdlePrompt() {
           {GENRES.map(g => (
             <a
               key={g.slug}
-              href={`/${g.slug}`}
+              href={`/${'hub' in g ? g.hub : g.slug}`}
               style={{
                 display: 'flex',
                 alignItems: 'center',
