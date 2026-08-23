@@ -51,7 +51,7 @@ export default function CollectionPanel({
   median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, scale, series, packSize, exclusiveTo, imgSrc, whisper, upc,
 }: CollectionPanelProps) {
   return (
-    <div className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column' }}>
+    <div id="figure-actions" className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column', scrollMarginTop: '72px' }}>
       <style>{`
         @keyframes fpCpanelIn {
           from { opacity: 0; transform: translateY(14px); }
