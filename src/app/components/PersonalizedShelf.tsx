@@ -77,13 +77,20 @@ export default function PersonalizedShelf({
         )
         if (cancelled) return
         const resolved = results.filter((f): f is FigureApiResponse => f !== null).map(toShelfFigure).filter((f): f is ShelfFigure => f !== null)
-        // Require the same >=6 floor the caller applies to the default pool
-        // (page.tsx's `shelf.length >= 6` gate) -- a thin personalized shelf
-        // would look broken/sparse where the random one never does.
-        if (resolved.length >= 6) {
-          setPersonalized(resolved)
-          trackFunnel('personalized_shelf_shown', { figures: resolved.length })
-        }
+        if (!resolved.length) return // every fetch failed -- default shelf stands
+
+        // A real Vault is usually thin, especially early (Steve's own account
+        // live-checked 2026-08-23: 1 item). Requiring a full shelf's worth of
+        // real picks before showing ANY personalization would mean the
+        // feature almost never fires for a real early user -- backfill with
+        // the default random pool instead, so a 1-figure Vault still leads
+        // the shelf with that real figure and fills the rest normally.
+        const resolvedFids = new Set(resolved.map(f => f.fid))
+        const backfill = defaultFigures.filter(f => !resolvedFids.has(f.fid))
+        const finalFigures = [...resolved, ...backfill].slice(0, Math.max(defaultFigures.length, resolved.length))
+
+        setPersonalized(finalFigures)
+        trackFunnel('personalized_shelf_shown', { figures: resolved.length })
       } catch {
         // Network/parse failure -- default shelf stands, no error surfaced to the visitor.
       }
