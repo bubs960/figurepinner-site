@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import HeroSearch from './components/HeroSearch'
 import DepthHallHero, { type HallCard, type HallTickerItem } from './components/DepthHallHero'
-import ShelfCase, { type ShelfFigure } from './components/ShelfCase'
+import { type ShelfFigure } from './components/ShelfCase'
+import PersonalizedShelf from './components/PersonalizedShelf'
 import ScrollReveal from './components/ScrollReveal'
 import SpotlightVitrine from './components/SpotlightVitrine'
 import GalleryTypeLayer from './components/GalleryTypeLayer'
@@ -1093,7 +1094,7 @@ export default async function HomePage() {
       {shelf.length >= 6 && (
         <section className="fph-shelf-strip fph-seam">
           <div className="wrap">
-            <ShelfCase figures={shelf} priorityFirstImage={false} />
+            <PersonalizedShelf defaultFigures={shelf} priorityFirstImage={false} />
           </div>
         </section>
       )}

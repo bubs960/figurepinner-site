@@ -20,6 +20,7 @@ export const FUNNEL_EVENTS = [
   'homepage_pin_click',
   'homepage_vault_signup_click',
   'return_visit_after_save',
+  'personalized_shelf_shown',
 ] as const
 
 export type FunnelEvent = typeof FUNNEL_EVENTS[number]
