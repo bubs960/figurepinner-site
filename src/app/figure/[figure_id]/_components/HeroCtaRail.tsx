@@ -2,9 +2,19 @@
 // HeroCtaRail.tsx — v4 Phase 2 (build plan §2, design source
 // design-explorations/figure-page-v4/desktop.dc.html CTA row): the 2:1 hero
 // CTA pair under the price block. Primary CTA (gold gradient, flex 2);
-// secondary SOLD LISTINGS ON EBAY ↗ (gold outline, flex 1.4) → the
-// parent-built affiliate search URL. Affiliate disclosure line below, per
-// design.
+// secondary FIND IT ON EBAY ↗ (gold outline, flex 1.4) → the parent-built
+// affiliate search URL. Affiliate disclosure line below, per design.
+//
+// Label fix (2026-08-23, lister-routed Steve report): was "SOLD LISTINGS ON
+// EBAY", but `ebaySearchUrl`/buildEbaySearchUrl() is deliberately the ACTIVE-
+// listings base (`_sop=15`, no LH_Sold filter) -- see EmptyState.tsx's
+// separate `&LH_Sold=1&LH_Complete=1` variant for what an actually-sold-
+// filtered link looks like. Sending affiliate traffic to CLOSED/sold
+// listings would mostly be unbuyable and defeat the whole point of an EPN
+// link (no purchase = no commission) -- the active-listings URL is almost
+// certainly correct on purpose, the label was just wrong. Matches the
+// "Find It on eBay" wording already used correctly elsewhere on the site
+// for this same link (CollectionPanel's sidebar CTA).
 //
 // Shared with guides' ArticleEndCta.tsx/HubTrackStrip.tsx (a "figure
 // mentioned in this content" CTA, not the current page's own figure) --
@@ -124,7 +134,7 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
           href={ebaySearchUrl}
           target="_blank"
           rel="sponsored nofollow noopener noreferrer"
-          aria-label={`Search eBay sold listings for ${figureName}`}
+          aria-label={`Find ${figureName} for sale on eBay`}
           funnelEvent="ebay_exit"
           funnelDetail={{ figureId, target: 'hero_cta' }}
           style={{
@@ -135,7 +145,7 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
             padding: '15px 18px', textDecoration: 'none',
           }}
         >
-          SOLD LISTINGS ON EBAY ↗
+          FIND IT ON EBAY ↗
         </TrackedLink>
       </div>
       <div style={{
