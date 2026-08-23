@@ -725,6 +725,9 @@ export default function HeroBand({
             figureId={figureId}
             ebaySearchUrl={ebaySearchUrl}
             figureName={characterName}
+            brand={brand}
+            line={lineName}
+            genre={genre}
           />
         )}
       </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useOwnershipStatus } from '@/app/_lib/useOwnershipStatus'
+import { addFigureToVault } from '@/app/_lib/vaultAdd'
 
 type Props = {
   figure_id: string
@@ -67,72 +68,41 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
     setVaultStatus('loading')
     setVaultGate(null)
     setVaultWarn(null)
-    try {
-      const res = await fetch('/api/vault', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          figure_id, name, brand, line, genre,
-          paid: paidInput ? parseFloat(paidInput) : 0,
-          condition: conditionInput,
-        }),
-      })
-      if (res.status === 401) {
-        window.location.href = '/sign-in'
-        return
-      }
-      if (res.status === 402) {
-        const data = await res.json() as GatePayload
-        setVaultGate(data)
-        setVaultStatus('idle')
-        setShowVaultForm(false)
-        return
-      }
-      if (res.ok) {
-        const data = await res.json() as WarnPayload
-        setVaultStatus('done')
-        setShowVaultForm(false)
-        if (data.warning) setVaultWarn(data)
-        // Claiming Ritual trigger (Session 1 de-risk gate spike, bare
-        // photo-flight only — see ClaimRitual.tsx). Scoped deliberately to
-        // this success branch only: the 401 anonymous-user redirect, the 402
-        // gate, the 409 already-owned path, and the generic error path are
-        // all left untouched — a real "claim" only happened here. Wrapped in
-        // try/catch so a ritual-side failure can never break the save.
-        try {
-          // Return-visit marker (webaudit ask, 2026-08-06): the ONLY write
-          // site for 'fp_has_saved' — a real successful save, not the demo
-          // shelf pin. ReturnVisitTracker reads this on a later homepage
-          // landing to fire 'return_visit_after_save'. localStorage can throw
-          // in private-browsing/storage-restricted contexts — same try/catch
-          // as the ritual dispatch below, must never break the core save.
-          window.localStorage.setItem('fp_has_saved', '1')
-        } catch {
-          // Marker write must never break the core save-to-vault flow.
-        }
-        try {
-          const heroImg = document.getElementById('fp-hero-photo') as HTMLImageElement | null
-          const rect = heroImg?.getBoundingClientRect() ?? null
-          window.dispatchEvent(new CustomEvent('figure:claimed', {
-            detail: {
-              figureId: figure_id,
-              imgSrc: imgSrc ?? heroImg?.currentSrc ?? heroImg?.src ?? null,
-              rect: rect ? { left: rect.left, top: rect.top, width: rect.width, height: rect.height } : null,
-              whisper: whisper ?? null,
-            },
-          }))
-        } catch {
-          // Ritual trigger must never break the core save-to-vault flow.
-        }
-      } else if (res.status === 409) {
-        setVaultStatus('done')
-        setShowVaultForm(false)
-      } else {
-        setVaultStatus('error')
-      }
-    } catch {
-      setVaultStatus('error')
+    // Delegates the actual fetch + shared side effects (the 'fp_has_saved'
+    // marker, the 'figure:claimed' event that useOwnershipStatus/ClaimPin/
+    // ClaimRitual all listen for) to vaultAdd.ts, 2026-08-23 -- the SAME
+    // helper the hero CTA now calls directly, so both paths stay identical
+    // instead of two hand-copied fetches drifting apart.
+    const result = await addFigureToVault({
+      figure_id, name, brand, line, genre,
+      paid: paidInput ? parseFloat(paidInput) : 0,
+      condition: conditionInput,
+      imgSrc,
+      whisper,
+    })
+
+    if (result.status === 'unauthenticated') {
+      window.location.href = '/sign-in'
+      return
     }
+    if (result.status === 'gated') {
+      setVaultGate(result.gate)
+      setVaultStatus('idle')
+      setShowVaultForm(false)
+      return
+    }
+    if (result.status === 'ok') {
+      setVaultStatus('done')
+      setShowVaultForm(false)
+      if (result.warn) setVaultWarn(result.warn)
+      return
+    }
+    if (result.status === 'duplicate') {
+      setVaultStatus('done')
+      setShowVaultForm(false)
+      return
+    }
+    setVaultStatus('error')
   }
 
   async function setAlert() {
