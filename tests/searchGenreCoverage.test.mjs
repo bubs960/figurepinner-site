@@ -54,6 +54,9 @@ describe('search genre coverage', () => {
     // hub (genreFigures.ts DUNGEONS_DRAGONS_FANDOMS) and given a search pill
     // (SearchInterface.tsx GENRES, slug 'generic-fantasy') per Steve's
     // decision, routed via WEBAUDIT-TO-WEB-GENERIC-FANTASY-DECISION-2026-07-30.md.
+    ['ufc', 'Real, permanent fandom -- see the twin exception in ' +
+      'breadcrumbHubCoverage.test.mjs. No GENRES search pill yet; remove once ' +
+      'one ships.'],
   ])
 
   test('the GENRES parser actually parsed something', () => {
