@@ -22,6 +22,7 @@ import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
 import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import { findFigureMatches } from './_lib/findFigureMatches'
+import { isAtOrAboveIndexBar } from '@/data/indexValueCensus'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
 // client-side in FigureDetailContent so caching is safe. Was force-dynamic;
@@ -93,7 +94,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const compLabel = price?.soldCount
     ? `${price.soldCount} eBay sold comps.`
     : 'Recent eBay sold-comps context.'
-  const hasConfirmedZeroSoldData = price != null && price.soldCount === 0
+  // Sitemap/robots lockstep fix (2026-08-23) — see figure/[figure_id]/page.tsx's
+  // twin comment for the full rationale (fp-crawl finding, same fix shape as
+  // the character-hub lockstep).
+  const belowIndexBar = !isAtOrAboveIndexBar(figure.figure_id)
 
   const canonical = `${BASE}${prettyFigureUrl(figure)}`
 
@@ -118,7 +122,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // is_canary belt+suspenders noindex (Data Defense Layer 3, 2026-08-07) —
     // redundant with the sitemap exclusion + findFigureMatches never resolving
     // a pretty URL for one, kept in case a canary is ever reached directly.
-    ...(hasConfirmedZeroSoldData || figure.is_canary
+    ...(belowIndexBar || figure.is_canary
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same

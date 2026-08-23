@@ -6,6 +6,7 @@ import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDe
 import { prettifySlug } from './_lib/figureFormatters'
 import { enrichedDescription } from './_lib/enrichedCopy'
 import { derivePriceContract } from './_lib/priceContract'
+import { isAtOrAboveIndexBar } from '@/data/indexValueCensus'
 
 // ISR — figure detail re-rendered at most once per hour per figure_id.
 // Public, immutable-per-figure data; user-specific bits (vault status etc.)
@@ -77,7 +78,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const compLabel = price?.soldCount
     ? `${price.soldCount} eBay sold comps.`
     : 'Recent eBay sold-comps context.'
-  const hasConfirmedZeroSoldData = price != null && price.soldCount === 0
+  // Sitemap/robots lockstep fix (2026-08-23, fp-crawl finding: 505 fids
+  // noindex-in-sitemap + 3,625 linked-not-in-sitemap): this used to be
+  // `price.soldCount === 0`, a LIVE read that could disagree with the
+  // sitemap's `isAtOrAboveIndexBar` (a build-time census snapshot with its
+  // own confidence/quarantine/Bing-protection gates) -- two different tests
+  // for the "same" thing. Same fix shape as the character-hub lockstep
+  // (indexValueCensus.ts) -- one shared predicate, both surfaces call it.
+  const belowIndexBar = !isAtOrAboveIndexBar(figure_id)
 
   // Canonical points to the keyword-rich pretty URL
   const canonical = `${BASE}${prettyFigureUrl(local)}`
@@ -110,7 +118,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // is_canary belt+suspenders noindex (Data Defense Layer 3, 2026-08-07) —
     // redundant with the sitemap exclusion, kept in case a canary URL is ever
     // reached directly.
-    ...(hasConfirmedZeroSoldData || local.is_canary
+    ...(belowIndexBar || local.is_canary
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same

@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useRef, useEffect, startTransition } from 'react'
+import { useState, useRef, useEffect, useContext, startTransition } from 'react'
 import { createPortal } from 'react-dom'
+import { DepthHallSearchActiveContext } from '@/app/components/DepthHallHero'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import { thumb } from '@/lib/imageUrl'
 import { useQuickLook } from '@/app/components/QuickLookAnchor'
@@ -93,6 +94,15 @@ export default function HeroSearch({
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
   const [takeover, setTakeover] = useState(false)
+  const setDepthHallSearchActive = useContext(DepthHallSearchActiveContext)
+  // Reports takeover state up to DepthHallHero regardless of how it changed
+  // (focus/click open it; Escape/outside-click close it) -- one effect
+  // instead of duplicating the call at every setTakeover(true/false) site.
+  // No-op on SiteHeader/[genre] pages, which render outside any
+  // DepthHallHero provider (context default is a no-op setter).
+  useEffect(() => {
+    setDepthHallSearchActive(takeover)
+  }, [takeover, setDepthHallSearchActive])
   // Real focus state, tracked on the WRAPPER not the input, so focus moving
   // between the input, the Clear button and the Submit button (all inside the
   // same visual box) doesn't flicker the lit state off. Drives the "search is

@@ -20,8 +20,15 @@
  * stays reachable through search and the shelf section below the hero).
  */
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './DepthHallHero.module.css'
+
+// Lets a nested HeroSearch report its takeover-open state up to the liquid
+// background's animated filters (2026-08-23 INP investigation — see the
+// gate below). No-op default: HeroSearch also renders standalone on
+// SiteHeader and [genre] pages, outside any DepthHallHero provider, and
+// must work unchanged there.
+export const DepthHallSearchActiveContext = createContext<(active: boolean) => void>(() => {})
 
 export type HallCard = {
   fid: string
@@ -103,6 +110,13 @@ export default function DepthHallHero({
   // SMIL <animate> nodes ignore CSS animation:none, so reduced-motion must
   // also be React state that unmounts them (review finding, 2026-07-24).
   const [reduced, setReduced] = useState(false)
+  // Paused (not unmounted, unlike `reduced`) while the search takeover is
+  // open: the takeover's own backdrop fully covers this hero, so the
+  // animation is invisible but still costing continuous SMIL/filter
+  // recompute on the main thread -- exactly the paint-cost competitor the
+  // 2026-08-13 startTransition mitigation couldn't reach (that only
+  // reprioritizes React's own scheduling, not browser paint work).
+  const [searchActive, setSearchActive] = useState(false)
   const reducedRef = useRef(false)
   const tickingRef = useRef(false)
   const mouseRef = useRef({ mx: 0, my: 0 })
@@ -125,6 +139,14 @@ export default function DepthHallHero({
   // off-screen. CSS layers pause via the scrollCalm class; the SMIL
   // turbulence filters must be paused via svg.pauseAnimations() because
   // SMIL ignores CSS animation-play-state.
+  //
+  // Search-takeover extension (2026-08-23 INP investigation): the takeover's
+  // own backdrop fully covers this hero when open, so `searchActive` reuses
+  // the SAME pause path -- the animation is invisible either way, but
+  // pausing it here removes continuous filter-recompute paint work from
+  // competing with the takeover's own reflow. The startTransition mitigation
+  // (2026-08-13, HeroSearch.tsx) only reprioritizes React's scheduling; it
+  // can't touch this, which is why CF RUM showed no improvement.
   useEffect(() => {
     if (reduced) return // reduced-motion already renders everything static
     const scene = sceneRef.current
@@ -135,7 +157,7 @@ export default function DepthHallHero({
     let offscreen = false
     let idleTimer: ReturnType<typeof setTimeout> | undefined
     const apply = () => {
-      const calm = scrolling || offscreen
+      const calm = scrolling || offscreen || searchActive
       scene.classList.toggle(styles.scrollCalm, calm)
       svgs.forEach(s => { calm ? s.pauseAnimations() : s.unpauseAnimations() })
     }
@@ -150,12 +172,13 @@ export default function DepthHallHero({
     )
     io.observe(scene)
     window.addEventListener('scroll', onScroll, { passive: true })
+    apply() // searchActive can already be true on mount of this effect's deps change
     return () => {
       window.removeEventListener('scroll', onScroll)
       clearTimeout(idleTimer)
       io.disconnect()
     }
-  }, [reduced])
+  }, [reduced, searchActive])
 
   // Inspect panel focus management (review finding, 2026-07-24): dialog
   // semantics need initial focus, a Tab trap, and focus restoration —
@@ -407,7 +430,9 @@ export default function DepthHallHero({
             className={styles.parallax}
             style={{ transform: `translate3d(${tilt.px}px, ${tilt.py}px, 0)` }}
           >
-            {children}
+            <DepthHallSearchActiveContext.Provider value={setSearchActive}>
+              {children}
+            </DepthHallSearchActiveContext.Provider>
           </div>
         </div>
 

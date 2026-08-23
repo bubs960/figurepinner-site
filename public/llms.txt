@@ -1,0 +1,26 @@
+# FigurePinner
+
+> Action figure price guide — real eBay sold prices, not asking prices, for
+> 22,000+ figures across 17 fandoms (wrestling, Marvel, Star Wars, DC,
+> Transformers, G.I. Joe, Masters of the Universe, TMNT, and more).
+
+FigurePinner tracks real eBay sold-comp data per figure and surfaces it as a
+searchable price guide, so collectors can check what a figure actually sold
+for instead of relying on asking prices or memory.
+
+## Key pages
+
+- [Search](https://figurepinner.com/search): full-catalog figure search.
+- [Guides](https://figurepinner.com/guides): collector guides (price guides,
+  buying guides, line histories) per fandom.
+- Genre hubs (e.g. [/wrestling](https://figurepinner.com/wrestling),
+  [/star-wars](https://figurepinner.com/star-wars)): browse by fandom, line,
+  and character.
+
+## Notes for automated access
+
+- Each figure has one canonical URL; prices reflect real eBay sold-comp data,
+  refreshed on an ongoing basis — treat any cached price as a point-in-time
+  snapshot, not a live quote.
+- `/api/*` endpoints require authentication or are rate-limited; use the
+  public HTML pages for content, not the API.
