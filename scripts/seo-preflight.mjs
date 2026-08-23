@@ -516,7 +516,28 @@ async function checkSitemapPrefixCensus(localChildren) {
     //     - No existing route or sitemap child references 'whatnot' today, so
     //       this cannot be the twin-namespace shape (there is no old form to
     //       twin against) — it is a single page appearing for the first time.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot'])
+    // 'ufc' = /ufc (2026-08-23), a genuine new fandom Steve GO'd (matcher's
+    //   line-adds campaign): 99 fids, own manufacturer/product_line values
+    //   (jakks-pacific ufc-series, ufc-contenders, ufc-ultimate-battles,
+    //   jazwares ultimate-collection). Verified before adding this entry:
+    //     - Zero figure_id overlap with 'wrestling' or any other fandom (no
+    //       fid double-counted across two fandoms).
+    //     - The 2 character_canonical names that DO appear in both ufc and
+    //       wrestling (brock-lesnar, dan-severn) are real crossover fighters
+    //       with genuinely separate WWE-branded vs UFC-branded product lines
+    //       (e.g. Jakks Pacific's "ufc-series" is a distinct line from its
+    //       WWE "ruthless-aggression"/"titan-tron-live" lines for the same
+    //       person) -- not a duplicate/incomplete rekey artifact.
+    //     - Matcher's relay confirms 3 fids were rekeyed IN PLACE (fandom
+    //       field changed on the existing record, not duplicated) off
+    //       wrestling; the zero-figure_id-overlap check above is what would
+    //       have caught a botched rekey.
+    //   No genre hub/breadcrumb/search-pill built yet -- see the matching
+    //   dated exceptions in breadcrumbHubCoverage.test.mjs /
+    //   searchGenreCoverage.test.mjs. Remove this entry once /ufc has shipped
+    //   in a prod deploy at least once (this allowlist is for the FIRST
+    //   appearance only, same as every entry below).
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
