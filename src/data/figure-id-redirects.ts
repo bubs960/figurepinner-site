@@ -26,4 +26,14 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
   // MATCHER-DM-AUDIT-COMPLETE-2026-07-30.md
   'fp_wrestling_mattel_defining-moments_6_steve-austin_626ed8':
     'fp_wrestling_mattel_defining-moments_6_stone-cold-steve-a_3a88fa',
+
+  // 8/23 WM golden-corpus miscatalog cleanup — 3 phantom wrestlemania-line
+  // duplicates of existing elite-line records, removed from KB —
+  // MATCHER-TO-WEB-WM-MISCATALOG-REDIRECT-PAIRS-2026-08-23.md
+  'fp_wrestling_mattel_wrestlemania_40_becky-lynch_537e6e':
+    'fp_wrestling_mattel_elite_112_becky-lynch_3d7e12',
+  'fp_wrestling_mattel_wrestlemania_40_cody-rhodes_5fe261':
+    'fp_wrestling_mattel_elite_111_cody-rhodes_133ae0',
+  'fp_wrestling_mattel_wrestlemania_31_stardust_3cf429':
+    'fp_wrestling_mattel_elite_36_stardust_b73853',
 }
