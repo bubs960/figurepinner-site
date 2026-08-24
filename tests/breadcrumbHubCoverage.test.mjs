@@ -90,6 +90,11 @@ describe('breadcrumb hub coverage', () => {
     // ufc REMOVED 2026-08-24 -- genre hub built (GENRE_META/GENRE_HUB_LABELS/
     // GENRE_ACCENT/GENRE_TAXONOMY + a GENRES search pill), same pass as the
     // twin removal in searchGenreCoverage.test.mjs KNOWN_UNMAPPED.
+    ['metal-gear-solid', 'new fandom minted 2026-08-24 (matcher, 8 fids) -- ' +
+      'no genre hub built yet. Remove once a hub ships, same as ufc above.'],
+    ['defenders-of-the-earth', 'new fandom minted 2026-08-24 (matcher, 6 fids, ' +
+      'rekey off an old value) -- no genre hub built yet. Remove once a hub ' +
+      'ships, same as ufc above.'],
   ])
 
   test('every KB fandom gets a working genre crumb, or is a recorded exception', () => {

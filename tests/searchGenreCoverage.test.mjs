@@ -58,6 +58,11 @@ describe('search genre coverage', () => {
     // GENRE_ACCENT/GENRE_TAXONOMY) and given a search pill (SearchInterface.tsx
     // GENRES, slug 'ufc') in the same pass. See twin exception removal in
     // breadcrumbHubCoverage.test.mjs.
+    ['metal-gear-solid', 'new fandom minted 2026-08-24 (matcher, 8 fids) -- ' +
+      'no search pill built yet. Remove once a pill ships, same as ufc above.'],
+    ['defenders-of-the-earth', 'new fandom minted 2026-08-24 (matcher, 6 fids, ' +
+      'rekey off an old value) -- no search pill built yet. Remove once a pill ' +
+      'ships, same as ufc above.'],
   ])
 
   test('the GENRES parser actually parsed something', () => {
