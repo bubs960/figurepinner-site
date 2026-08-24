@@ -472,7 +472,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'whatnot-show-prep-checklist',
     title: 'How to Prep for a Whatnot Action Figure Show: The Pre-Stream Checklist',
-    metaTitle: 'Whatnot Show Prep Checklist for Action Figure Sellers | FigurePinner',
+    metaTitle: 'Whatnot Pre-Stream Checklist: What to Do Before You Go Live | FigurePinner',
     metaDescription:
       'What to do before you go live on Whatnot, not during \u2014 pricing your lots ahead of time, staging, tech checks, and the shipping/hold answers you need memorized before someone asks in chat.',
     dek: 'The countdown clock does not wait for you to find your price sheet. Do the work before you hit Go Live.',
@@ -1454,7 +1454,7 @@ export const ARTICLES: Article[] = [
     {
       slug: 'how-action-figure-conditions-are-graded',
       title: 'Grading and Condition: What Collectors Actually Care About',
-      metaTitle: 'Action Figure Condition Grading Guide for Collectors | FigurePinner',
+      metaTitle: 'Loose, Complete, MOC, Sealed: Condition Grading Explained | FigurePinner',
       metaDescription:
         'Why figures use a loose/complete/MOC/sealed ladder instead of numeric grades, what each tier actually means to buyers, and how condition gaps translate to real price differences.',
       dek: 'A 9.0 is a baseball card standard. Figures have their own condition language — and it maps directly to money.',
@@ -2434,7 +2434,7 @@ export const ARTICLES: Article[] = [
 
     slug: 'marvel-legends-hub',
     title: 'Marvel Legends Price Guide: 938 Characters, 125 Waves, and What They Actually Cost',
-    metaTitle: 'Marvel Legends Price Guide 2026 — Every Wave, BAF & Value | FigurePinner',
+    metaTitle: 'Marvel Legends Price Guide — 1,622 Figures, Real Sold Prices | FigurePinner',
     metaDescription: 'Marvel Legends price guide covering 1,622 figures across 125 waves. Most valuable figures, BAF wave breakdowns, and real eBay sold comps — updated 2026.',
     dek: '1,622 releases. 938 characters. One Terrax leg that nobody wanted. Here is what the line actually costs right now.',
     readingMinutes: 12,
@@ -2667,7 +2667,7 @@ export const ARTICLES: Article[] = [
   ,{
     slug: 'dc-multiverse-hub',
     title: 'DC Multiverse Price Guide: 1,508 Figures, 457 Characters, and What They Actually Cost',
-    metaTitle: 'DC Multiverse Price Guide 2026 -- Every Wave, Gold Label & Value | FigurePinner',
+    metaTitle: 'DC Multiverse Price Guide — 1,508 Figures, Real Sold Prices | FigurePinner',
     metaDescription: 'DC Multiverse price guide covering 1,508 figures. Gold Label rarity, Batman variant guide, CnC wave breakdown, and real eBay sold comps -- updated 2026.',
     dek: '1,508 figures. 457 characters. Batman has 235 of them. Here is what McFarlane Toys DC Multiverse actually costs.',
     readingMinutes: 10,
@@ -2723,7 +2723,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'masters-of-the-universe-hub',
     title: 'Masters of the Universe Price Guide: 1,497 Figures Across 40 Years of Eternia',
-    metaTitle: 'MOTU Price Guide 2026 -- Origins, Masterverse, Classics & Vintage Values | FigurePinner',
+    metaTitle: 'MOTU Price Guide — 1,497 Figures, Real Sold Prices | FigurePinner',
     metaDescription: 'Masters of the Universe price guide covering 1,497 figures across Origins, Masterverse, MOTUC, Super7, and 1982 vintage. Line-by-line value breakdown and real eBay sold comps -- updated 2026.',
     dek: '1,497 figures. 526 characters. Ten lines, three of them shipping right now, and a fandom that has been braced for cancellation since 2004. Here is what MOTU actually costs.',
     readingMinutes: 11,
@@ -2817,7 +2817,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'transformers-hub',
     title: 'Transformers Price Guide: 1,592 Figures From G1 to Studio Series',
-    metaTitle: 'Transformers Price Guide 2026 -- Masterpiece, Studio Series, G1 & Values | FigurePinner',
+    metaTitle: 'Transformers Price Guide — 1,592 Figures, Real Sold Prices | FigurePinner',
     metaDescription: 'Transformers price guide covering 1,592 figures across Masterpiece, Studio Series, Generations, and vintage G1. Line breakdown, Gold Plastic Syndrome warning, and real eBay sold comps -- updated 2026.',
     dek: '1,592 figures. 975 characters. The most lore-encrusted fandom in the hobby, a $400 Optimus problem, and a plastic disease that turns vintage gold to dust. Here is what Transformers actually costs.',
     readingMinutes: 11,
@@ -2851,7 +2851,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'gi-joe-hub',
     title: 'G.I. Joe Price Guide: 1,178 Figures From ARAH to Classified',
-    metaTitle: 'GI Joe Price Guide 2026 -- ARAH Vintage, Classified Series & Values | FigurePinner',
+    metaTitle: 'G.I. Joe Price Guide — 1,178 Figures, Real Sold Prices | FigurePinner',
     metaDescription: 'G.I. Joe price guide covering 1,178 figures across vintage A Real American Hero, Classified Series, 25th Anniversary, and Super7. Line breakdown, o-ring values, and real eBay sold comps -- updated 2026.',
     dek: '1,178 figures. 792 characters. A 40-year spine of o-ring nostalgia, a 6-inch revival, and a community that treats Larry Hama filecards as scripture. Here is what G.I. Joe actually costs.',
     readingMinutes: 11,
@@ -3014,7 +3014,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'afa-grading-action-figures-worth-it',
     title: 'Is AFA Grading Worth It? When to Pay, When to Skip It',
-    metaTitle: 'Is AFA Grading Worth It for Action Figures? | FigurePinner',
+    metaTitle: 'Is AFA Grading Worth It? When to Pay, When to Skip | FigurePinner',
     metaDescription:
       'AFA grading costs real money and takes real time. Here is when the premium it adds is worth paying for, and the much larger set of figures where it is a waste.',
     dek: 'A grading fee is a bet that the market pays more for a plastic slab than a sealed box. That bet only wins on specific figures.',
@@ -3051,7 +3051,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'most-valuable-wrestling-action-figures',
     title: 'The Most Valuable Wrestling Action Figures — Across Every Era',
-    metaTitle: 'Most Valuable Wrestling Action Figures Ever Made | FigurePinner',
+    metaTitle: 'Most Valuable Wrestling Action Figures — Real Sold Prices | FigurePinner',
     metaDescription:
       'From vintage LJN rubber figures to modern Mattel Elite exclusives, here is what actually drives the highest wrestling figure prices — and the pattern behind every one of them.',
     dek: 'Different eras, different companies, same rule: the figures that carry the most money are the ones that got made the least.',
