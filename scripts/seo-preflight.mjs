@@ -555,7 +555,16 @@ async function checkSitemapPrefixCensus(localChildren) {
     //   6" note exactly (flash-gordon, the-phantom, ming-the-merciless,
     //   mandrake-the-magician, lothar, garax). No fid overlap with any other
     //   fandom -- a rekey off an old fandom value, not a duplicate.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth'])
+    // 'soulcalibur' = new fandom (2026-08-24, matcher's KB sync commit
+    //   `6480892`, "96-figure obscure-enrich pour + new soulcalibur-ii
+    //   fandom, +7 fids"). Note the fandom slug itself is 'soulcalibur', not
+    //   'soulcalibur-ii' -- that's the product_line value (McFarlane
+    //   Soulcalibur II, First Wave). Verified before adding this entry:
+    //   getFiguresByFandom('soulcalibur').length === 7 (astaroth,
+    //   ivy-valentine, necrid, nightmare, voldo, + 2 UNRESOLVED-wave spawn
+    //   crossover singles), matching the commit's fid count exactly. No
+    //   overlap with any other fandom.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth', 'soulcalibur'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {

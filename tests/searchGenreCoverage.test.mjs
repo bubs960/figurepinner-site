@@ -63,6 +63,8 @@ describe('search genre coverage', () => {
     ['defenders-of-the-earth', 'new fandom minted 2026-08-24 (matcher, 6 fids, ' +
       'rekey off an old value) -- no search pill built yet. Remove once a pill ' +
       'ships, same as ufc above.'],
+    ['soulcalibur', 'new fandom minted 2026-08-24 (matcher, 7 fids) -- no ' +
+      'search pill built yet. Remove once a pill ships, same as ufc above.'],
   ])
 
   test('the GENRES parser actually parsed something', () => {

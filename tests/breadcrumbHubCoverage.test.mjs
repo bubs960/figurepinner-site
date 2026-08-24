@@ -95,6 +95,8 @@ describe('breadcrumb hub coverage', () => {
     ['defenders-of-the-earth', 'new fandom minted 2026-08-24 (matcher, 6 fids, ' +
       'rekey off an old value) -- no genre hub built yet. Remove once a hub ' +
       'ships, same as ufc above.'],
+    ['soulcalibur', 'new fandom minted 2026-08-24 (matcher, 7 fids) -- no ' +
+      'genre hub built yet. Remove once a hub ships, same as ufc above.'],
   ])
 
   test('every KB fandom gets a working genre crumb, or is a recorded exception', () => {
