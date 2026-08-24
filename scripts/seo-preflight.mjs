@@ -537,7 +537,25 @@ async function checkSitemapPrefixCensus(localChildren) {
     //   searchGenreCoverage.test.mjs. Remove this entry once /ufc has shipped
     //   in a prod deploy at least once (this allowlist is for the FIRST
     //   appearance only, same as every entry below).
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc'])
+    // 'metal-gear-solid' = new fandom (2026-08-24, matcher's MGS mint):
+    //   McFarlane Feb-1999 Series 1, 8 standard singles. Steve-authorised via
+    //   matcher relay `MATCHER-TO-WEB-METAL-GEAR-SOLID-POURED-2026-08-24.md`.
+    //   Verified before adding this entry: getFiguresByFandom('metal-gear-solid')
+    //   .length === 8, matching the relay's fid count and figure_id list
+    //   exactly (solid-snake, liquid-snake, meryl-silverburgh, revolver-ocelot,
+    //   psycho-mantis, sniper-wolf, vulcan-raven, gray-fox). No overlap with
+    //   any other fandom -- first appearance of this fandom in the data,
+    //   nothing to twin against (same shape as 'whatnot').
+    // 'defenders-of-the-earth' = new fandom (2026-08-24, matcher's DOTE
+    //   migration): NECA Series 1+2, 6 figures. Steve-authorised via matcher
+    //   relay `MATCHER-TO-WEB-ADRENALINE-ENRICH-W1-12-POURED-2026-08-24.md`
+    //   (folds in the "Defenders of the Earth migration (rekey 6)" note).
+    //   Verified before adding this entry: getFiguresByFandom
+    //   ('defenders-of-the-earth').length === 6, matching the relay's "rekey
+    //   6" note exactly (flash-gordon, the-phantom, ming-the-merciless,
+    //   mandrake-the-magician, lothar, garax). No fid overlap with any other
+    //   fandom -- a rekey off an old fandom value, not a duplicate.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
