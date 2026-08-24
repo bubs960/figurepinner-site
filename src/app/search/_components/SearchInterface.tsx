@@ -74,6 +74,9 @@ const GENRES = [
   // their own 'gargoyles' fandom (Steve's 7/31 ruling). Raw fandom slug already
   // equals the pill slug — no rollup needed (same as 'generic-fantasy').
   { slug: 'gargoyles',                  name: 'Gargoyles',         accent: '#4E342E' },
+  // Added 2026-08-24: matcher's 8/23 line-adds campaign minted UFC as its own
+  // fandom (99 fids, Jakks Pacific + Jazwares). Identity slug, no rollup.
+  { slug: 'ufc',                        name: 'UFC',               accent: '#141414' },
 ] as const
 
 type GenreSlug = typeof GENRES[number]['slug']

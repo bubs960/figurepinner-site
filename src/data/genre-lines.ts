@@ -72,6 +72,9 @@ const GENRE_UI: Array<{ slug: string; name: string; accent: string }> = [
   // 'gargoyles' fandom (Steve's 7/31 own-fandom ruling). Identity slug, no
   // UI_SLUG_TO_FANDOM remap needed — see genreFigures.ts GENRE_HUB_LABELS.
   { slug: 'gargoyles',                    name: 'Gargoyles',      accent: '#4E342E' },
+  // Added 2026-08-24: matcher's 8/23 line-adds campaign minted UFC as its own
+  // fandom (99 fids). Identity slug, no UI_SLUG_TO_FANDOM remap needed.
+  { slug: 'ufc',                          name: 'UFC',            accent: '#141414' },
 ]
 
 type Editorial = Partial<Pick<LineTile, 'name' | 'years' | 'badge' | 'desc'>> & {

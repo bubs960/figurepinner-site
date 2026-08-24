@@ -54,9 +54,10 @@ describe('search genre coverage', () => {
     // hub (genreFigures.ts DUNGEONS_DRAGONS_FANDOMS) and given a search pill
     // (SearchInterface.tsx GENRES, slug 'generic-fantasy') per Steve's
     // decision, routed via WEBAUDIT-TO-WEB-GENERIC-FANTASY-DECISION-2026-07-30.md.
-    ['ufc', 'Real, permanent fandom -- see the twin exception in ' +
-      'breadcrumbHubCoverage.test.mjs. No GENRES search pill yet; remove once ' +
-      'one ships.'],
+    // ufc REMOVED 2026-08-24 -- genre hub built (GENRE_META/GENRE_HUB_LABELS/
+    // GENRE_ACCENT/GENRE_TAXONOMY) and given a search pill (SearchInterface.tsx
+    // GENRES, slug 'ufc') in the same pass. See twin exception removal in
+    // breadcrumbHubCoverage.test.mjs.
   ])
 
   test('the GENRES parser actually parsed something', () => {

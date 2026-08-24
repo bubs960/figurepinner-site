@@ -53,6 +53,7 @@ const GENRE_ACCENT: Record<string, string> = {
   'dungeons-dragons':           '#7b2be2',
   'neca':                       '#37474f',
   'spawn':                      '#212121',
+  'ufc':                        '#141414',
 }
 
 // ─── Editorial intros for high-priority lines ─────────────────────────────────

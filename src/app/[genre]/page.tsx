@@ -108,6 +108,11 @@ const GENRE_META: Record<string, { label: string; title: string; description: st
     title: 'Gargoyles Figure Price Guide — NECA & More',
     description: 'Gargoyles action figure price guide. Real eBay sold prices for NECA Gargoyles figures. Updated daily.',
   },
+  'ufc': {
+    label: 'UFC',
+    title: 'UFC Action Figure Price Guide — Jakks Pacific & Jazwares',
+    description: 'UFC action figure price guide. Real eBay sold prices for Jakks Pacific and Jazwares UFC figures. Updated daily.',
+  },
 }
 
 // force-static is the load-bearing half of this pair on a dynamic segment

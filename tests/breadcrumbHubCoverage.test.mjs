@@ -87,12 +87,9 @@ describe('breadcrumb hub coverage', () => {
     // hub (genreFigures.ts DUNGEONS_DRAGONS_FANDOMS), same as its pair in
     // searchGenreCoverage.test.mjs KNOWN_UNMAPPED. Now covered by the
     // dungeons-dragons-rollup assertion below instead of an omission.
-    ['ufc', 'Real, permanent fandom -- Steve GO\'d it as its own KB fandom ' +
-      '2026-08-23 (matcher line-adds campaign, 99+ fids). No genre hub built ' +
-      'yet (icon/accent-color/positioning deserves its own pass, not a rushed ' +
-      'footnote to a late deploy) -- figures render fine without a crumb in ' +
-      'the meantime, just without a hub breadcrumb level. Remove this entry ' +
-      'once a real UFC hub ships.'],
+    // ufc REMOVED 2026-08-24 -- genre hub built (GENRE_META/GENRE_HUB_LABELS/
+    // GENRE_ACCENT/GENRE_TAXONOMY + a GENRES search pill), same pass as the
+    // twin removal in searchGenreCoverage.test.mjs KNOWN_UNMAPPED.
   ])
 
   test('every KB fandom gets a working genre crumb, or is a recorded exception', () => {

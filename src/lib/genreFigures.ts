@@ -105,6 +105,10 @@ export const GENRE_HUB_LABELS: Readonly<Record<string, string>> = {
   // same pattern as most non-remapped fandoms) — no SLUG_TO_FANDOM entry
   // needed. See MATCHER-TO-WEB-GENERIC-FANTASY-27-RETAG-APPLIED-2026-08-01.md.
   'gargoyles': 'Gargoyles',
+  // Added 2026-08-24: matcher's 8/23 line-adds campaign minted UFC as its own
+  // fandom (99 fids). Identity slug (KB fandom 'ufc' == URL slug 'ufc'), no
+  // SLUG_TO_FANDOM remap needed. See MATCHER-TO-WEB-UFC-FANDOM-REKEY-2026-08-23.md.
+  'ufc': 'UFC',
 }
 
 // Derived, not a second hand-maintained list: a slug is a hub iff it has a
