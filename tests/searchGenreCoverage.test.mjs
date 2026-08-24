@@ -65,6 +65,10 @@ describe('search genre coverage', () => {
       'ships, same as ufc above.'],
     ['soulcalibur', 'new fandom minted 2026-08-24 (matcher, 7 fids) -- no ' +
       'search pill built yet. Remove once a pill ships, same as ufc above.'],
+    ['onimusha', 'new fandom minted 2026-08-24 (matcher, 6 fids) -- no ' +
+      'search pill built yet. Remove once a pill ships, same as ufc above.'],
+    ['crouching-tiger-hidden-dragon', 'new fandom minted 2026-08-24 (matcher, ' +
+      '4 fids) -- no search pill built yet. Remove once a pill ships, same as ufc above.'],
   ])
 
   test('the GENRES parser actually parsed something', () => {

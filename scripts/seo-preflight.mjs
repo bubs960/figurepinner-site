@@ -564,7 +564,21 @@ async function checkSitemapPrefixCensus(localChildren) {
     //   ivy-valentine, necrid, nightmare, voldo, + 2 UNRESOLVED-wave spawn
     //   crossover singles), matching the commit's fid count exactly. No
     //   overlap with any other fandom.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth', 'soulcalibur'])
+    // 'onimusha' = new fandom (2026-08-24, matcher's KB sync commit
+    //   `b05cc33`, "new onimusha fandom mint, +6 fids"). McFarlane Jul-2002
+    //   Onimusha 2: Samurai's Destiny, all 6 figures. Verified before adding
+    //   this entry: getFiguresByFandom('onimusha').length === 6 (jubei-yagyu,
+    //   oyu, kotaro-fuma, magoichi-saiga, gogandantess, nobunaga-oda),
+    //   matching the commit's fid count exactly. No overlap with any other
+    //   fandom.
+    // 'crouching-tiger-hidden-dragon' = new fandom (2026-08-24, matcher's KB
+    //   sync commit `c400e13`, "UFC enrich round 3 + new
+    //   crouching-tiger-hidden-dragon fandom, +4 fids"). Art Asylum 2001
+    //   Deluxe Figures, all 4 figures. Verified before adding this entry:
+    //   getFiguresByFandom('crouching-tiger-hidden-dragon').length === 4
+    //   (li-mu-bai, yu-shu-lien, jen-yu, lo-dark-cloud), matching the
+    //   commit's fid count exactly. No overlap with any other fandom.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth', 'soulcalibur', 'onimusha', 'crouching-tiger-hidden-dragon'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {

@@ -97,6 +97,10 @@ describe('breadcrumb hub coverage', () => {
       'ships, same as ufc above.'],
     ['soulcalibur', 'new fandom minted 2026-08-24 (matcher, 7 fids) -- no ' +
       'genre hub built yet. Remove once a hub ships, same as ufc above.'],
+    ['onimusha', 'new fandom minted 2026-08-24 (matcher, 6 fids) -- no ' +
+      'genre hub built yet. Remove once a hub ships, same as ufc above.'],
+    ['crouching-tiger-hidden-dragon', 'new fandom minted 2026-08-24 (matcher, ' +
+      '4 fids) -- no genre hub built yet. Remove once a hub ships, same as ufc above.'],
   ])
 
   test('every KB fandom gets a working genre crumb, or is a recorded exception', () => {
