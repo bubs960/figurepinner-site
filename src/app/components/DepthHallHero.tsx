@@ -133,7 +133,7 @@ export default function DepthHallHero({
   const [heroInView, setHeroInView] = useState(false)
   const reducedRef = useRef(false)
   const tickingRef = useRef(false)
-  const mouseRef = useRef({ mx: 0, my: 0 })
+  const mouseRef = useRef({ clientX: 0, clientY: 0 })
   const panelRef = useRef<HTMLDivElement>(null)
   const openerRef = useRef<HTMLElement | null>(null)
   const sceneRef = useRef<HTMLElement>(null)
@@ -267,16 +267,28 @@ export default function DepthHallHero({
     return out
   }, [cards])
 
+  // INP review finding (2026-08-25, external-audit): getBoundingClientRect()
+  // used to run on every mousemove event BEFORE the tickingRef guard below,
+  // so the rAF coalescing never actually capped the forced-layout reads to
+  // one per frame -- moving the pointer toward the search box could pile up
+  // reflow work immediately ahead of the click. Now only the cheap client
+  // coordinates are captured synchronously; the rect read (and everything
+  // that depends on it) moves inside the already-guarded rAF callback, via
+  // sceneRef rather than e.currentTarget (which a later, deferred callback
+  // can't safely re-read off a synthetic event).
   const onMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
     if (reducedRef.current) return
-    const rect = e.currentTarget.getBoundingClientRect()
-    mouseRef.current.mx = (e.clientX - rect.left) / rect.width - 0.5
-    mouseRef.current.my = (e.clientY - rect.top) / rect.height - 0.5
+    mouseRef.current.clientX = e.clientX
+    mouseRef.current.clientY = e.clientY
     if (tickingRef.current) return
     tickingRef.current = true
     requestAnimationFrame(() => {
       tickingRef.current = false
-      const { mx, my } = mouseRef.current
+      const scene = sceneRef.current
+      if (!scene) return
+      const rect = scene.getBoundingClientRect()
+      const mx = (mouseRef.current.clientX - rect.left) / rect.width - 0.5
+      const my = (mouseRef.current.clientY - rect.top) / rect.height - 0.5
       setTilt({ rx: my * -3.4, ry: mx * 5.5, px: mx * -14, py: my * -10 })
     })
   }, [])

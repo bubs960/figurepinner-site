@@ -95,14 +95,26 @@ export default function HeroSearch({
   const [open, setOpen] = useState(false)
   const [takeover, setTakeover] = useState(false)
   const setDepthHallSearchActive = useContext(DepthHallSearchActiveContext)
+  // INP fix (2026-08-25, external-audit review of the 08-13/08-23 mitigations
+  // -- both confirmed by CF RUM to have NOT resolved this): gates the
+  // expensive side effects below (this context setter, body scroll-lock,
+  // panel-position measurement) on the panel actually being about to render,
+  // not on bare `takeover`. Focus/click already sets `takeover=true`
+  // immediately (pre-arming the panel for when results land), but until
+  // `open` also flips true -- which needs a 2-char query, the 260ms debounce
+  // below, and a completed fetch -- there is nothing to show and none of
+  // this work should run. Empty focus was paying for all of it anyway; the
+  // two prior mitigations only reprioritized or trimmed the work, neither
+  // stopped it from firing on a bare empty focus.
+  const panelVisible = takeover && open
   // Reports takeover state up to DepthHallHero regardless of how it changed
   // (focus/click open it; Escape/outside-click close it) -- one effect
   // instead of duplicating the call at every setTakeover(true/false) site.
   // No-op on SiteHeader/[genre] pages, which render outside any
   // DepthHallHero provider (context default is a no-op setter).
   useEffect(() => {
-    setDepthHallSearchActive(takeover)
-  }, [takeover, setDepthHallSearchActive])
+    setDepthHallSearchActive(panelVisible)
+  }, [panelVisible, setDepthHallSearchActive])
   // Real focus state, tracked on the WRAPPER not the input, so focus moving
   // between the input, the Clear button and the Submit button (all inside the
   // same visual box) doesn't flicker the lit state off. Drives the "search is
@@ -194,9 +206,19 @@ export default function HeroSearch({
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // Measure the panel anchor while the takeover is open; re-measure on resize.
+  // Measure the panel anchor once it's actually about to render (panelVisible,
+  // not bare takeover -- see the INP fix note above). The first measure is
+  // deferred one real frame past paint -- requestAnimationFrame ALONE still
+  // runs before the browser's next paint, not after, so pairing it with a 0ms
+  // setTimeout (web.dev's documented rAF+task pattern for keeping non-urgent
+  // work off an interaction's own frame) is what actually gets this outside
+  // it. In practice panelVisible doesn't flip true until the 260ms debounce
+  // below has already resolved, so this is defense in depth more than the
+  // load-bearing half of the fix -- gating on panelVisible is. Resize
+  // re-measures stay synchronous; that's a low-frequency event, not part of
+  // any interaction's input-to-paint window.
   useEffect(() => {
-    if (!takeover) { setPanelPos(null); return }
+    if (!panelVisible) { setPanelPos(null); return }
     function measure() {
       const el = wrapperRef.current
       if (!el) return
@@ -209,10 +231,15 @@ export default function HeroSearch({
         width: Math.min(720, r.width + 48, window.innerWidth * 0.92),
       })
     }
-    measure()
+    let timer: ReturnType<typeof setTimeout> | undefined
+    const raf = requestAnimationFrame(() => { timer = setTimeout(measure, 0) })
     window.addEventListener('resize', measure)
-    return () => window.removeEventListener('resize', measure)
-  }, [takeover])
+    return () => {
+      cancelAnimationFrame(raf)
+      if (timer !== undefined) clearTimeout(timer)
+      window.removeEventListener('resize', measure)
+    }
+  }, [panelVisible])
 
   // Keyboard-avoidance for the plain (non-takeover) dropdown — the mobile
   // path (S55 item 3). 8 rows ≈ 700px with no cap: on a phone the on-screen
@@ -246,11 +273,13 @@ export default function HeroSearch({
     }
   }, [open, takeover])
 
-  // Scroll-lock while the takeover is open. Compensate for the vanishing
-  // scrollbar with padding-right so the page behind does not shift (the
-  // plan's acceptance check measures hero getBoundingClientRect unchanged).
+  // Scroll-lock once the panel is actually visible (panelVisible, not bare
+  // takeover -- see the INP fix note above; empty focus has nothing to lock
+  // the scroll position FOR). Compensate for the vanishing scrollbar with
+  // padding-right so the page behind does not shift (the plan's acceptance
+  // check measures hero getBoundingClientRect unchanged).
   useEffect(() => {
-    if (!takeover) return
+    if (!panelVisible) return
     const scrollbar = window.innerWidth - document.documentElement.clientWidth
     const prevOverflow = document.body.style.overflow
     const prevPadding = document.body.style.paddingRight
@@ -260,7 +289,7 @@ export default function HeroSearch({
       document.body.style.overflow = prevOverflow
       document.body.style.paddingRight = prevPadding
     }
-  }, [takeover])
+  }, [panelVisible])
 
   // Escape closes the takeover from ANYWHERE on the page, not just from inside
   // the input (overlay/trap audit, 2026-07-26).

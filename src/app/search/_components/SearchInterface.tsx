@@ -10,7 +10,7 @@
  *   - No auth required
  */
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo, memo } from 'react'
 import Sparkline from '@/app/components/Sparkline'
 import FigureThumb from '@/app/components/FigureThumb'
 import { useQuickLook } from '@/app/components/QuickLookAnchor'
@@ -122,7 +122,12 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
     initialGenre && GENRES.some(g => g.slug === initialGenre) ? initialGenre as GenreSlug : null,
   )
 
-  async function handleTrack(r: SearchResult) {
+  // INP fix (2026-08-25, WEB-TO-WEBAUDIT-SEARCH-FACET-INP-FINDING): stable
+  // identity via useCallback so it can be passed straight to FigureResultCard
+  // (below, wrapped in React.memo) instead of a fresh per-card closure — a
+  // fresh closure on every render was the actual prop React.memo couldn't see
+  // past, defeating the memo boundary regardless of card-content changes.
+  const handleTrack = useCallback(async (r: SearchResult) => {
     if (!r.figure_id) return
     setTrackRecord(s => ({ ...s, [r.figure_id!]: 'loading' }))
     try {
@@ -153,7 +158,7 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
     } catch {
       setTrackRecord(s => ({ ...s, [r.figure_id!]: 'error' }))
     }
-  }
+  }, [query])
 
   // ── Focus input on mount
   useEffect(() => { inputRef.current?.focus() }, [])
@@ -247,36 +252,55 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
   // ── Facets compose left-to-right: genre → line → brand. Each facet's option
   //    list is derived from the set already narrowed by the facets above it, so
   //    you never see a line/brand that would yield zero results. (counts shown)
-  const afterGenre = activeGenre ? results.filter(r => r.genre === activeGenre) : results
+  // INP fix (2026-08-25, WEB-TO-WEBAUDIT-SEARCH-FACET-INP-FINDING): this whole
+  // chain used to recompute as plain consts on every render. That's cheap by
+  // itself, but combined with zero React.memo on FigureResultCard it meant a
+  // facet/sort/load-more click always looked like "everything changed" to
+  // React, forcing a full re-render of every mounted card (up to 96-192+ with
+  // load-more already clicked). useMemo here plus React.memo below are the
+  // two halves of the same fix — neither alone would have helped.
+  const afterGenre = useMemo(
+    () => activeGenre ? results.filter(r => r.genre === activeGenre) : results,
+    [results, activeGenre],
+  )
 
   // Reset a downstream facet if the upstream change made it invalid.
   useEffect(() => {
     if (activeLine && !afterGenre.some(r => r.line === activeLine)) setActiveLine(null)
   }, [activeGenre]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const afterLine = activeLine ? afterGenre.filter(r => r.line === activeLine) : afterGenre
+  const afterLine = useMemo(
+    () => activeLine ? afterGenre.filter(r => r.line === activeLine) : afterGenre,
+    [afterGenre, activeLine],
+  )
 
   useEffect(() => {
     if (activeBrand && !afterLine.some(r => r.brand === activeBrand)) setActiveBrand(null)
   }, [activeGenre, activeLine]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const afterBrand = activeBrand ? afterLine.filter(r => r.brand === activeBrand) : afterLine
+  const afterBrand = useMemo(
+    () => activeBrand ? afterLine.filter(r => r.brand === activeBrand) : afterLine,
+    [afterLine, activeBrand],
+  )
 
   // Sort the final set. 'relevance' keeps API order (already score-sorted);
   // 'az' sorts by display name. Sort is non-mutating (spread first).
-  const filtered = sortMode === 'az'
-    ? [...afterBrand].sort((a, b) => a.name.localeCompare(b.name))
-    : afterBrand
+  const filtered = useMemo(
+    () => sortMode === 'az'
+      ? [...afterBrand].sort((a, b) => a.name.localeCompare(b.name))
+      : afterBrand,
+    [afterBrand, sortMode],
+  )
 
   // Distinct line/brand options for the facet dropdowns, with counts, ranked
   // by frequency so the most common appear first.
-  const lineOptions = facetOptions(afterGenre, r => r.line)
-  const brandOptions = facetOptions(afterLine, r => r.brand)
+  const lineOptions = useMemo(() => facetOptions(afterGenre, r => r.line), [afterGenre])
+  const brandOptions = useMemo(() => facetOptions(afterLine, r => r.brand), [afterLine])
 
   // Reset pagination whenever the filtered set changes shape via a facet/sort.
   useEffect(() => { setVisibleCount(PAGE_SIZE) }, [activeGenre, activeLine, activeBrand, sortMode])
 
-  const paged = filtered.slice(0, visibleCount)
+  const paged = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount])
   const hasMore = filtered.length > visibleCount
 
   // ── Key handler (Esc clears; Enter runs search immediately)
@@ -526,7 +550,7 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
                 query={query}
                 sparkline={r.figure_id ? sparklines[r.figure_id] : undefined}
                 trackState={r.figure_id ? (trackRecord[r.figure_id] ?? 'idle') : 'idle'}
-                onTrack={() => handleTrack(r)}
+                onTrack={handleTrack}
                 eager={i < 6}
               />
               ))}
@@ -695,14 +719,20 @@ function SortToggle({ mode, onChange }: { mode: 'relevance' | 'az'; onChange: (m
   )
 }
 
-function FigureResultCard({
+// INP fix (2026-08-25, WEB-TO-WEBAUDIT-SEARCH-FACET-INP-FINDING): memo bails
+// out of re-rendering a card whose props are unchanged. Only effective
+// because `onTrack` is now the parent's stable useCallback reference instead
+// of a fresh per-card closure — memo does a shallow prop comparison, and a
+// fresh function identity every render would have made every card look
+// "changed" regardless of this wrapper.
+const FigureResultCard = memo(function FigureResultCard({
   result: r, query, sparkline, trackState, onTrack, eager = false,
 }: {
   result: SearchResult
   query: string
   sparkline?: { points: number[]; trend: 'up' | 'down' | 'flat'; median: number|null; soldCount: number; stat?: 'median' | 'avg' }
   trackState: 'idle' | 'loading' | 'added' | 'exists' | 'error'
-  onTrack: () => void
+  onTrack: (r: SearchResult) => void
   /** loading="eager" for the first above-the-fold cards (kills the gray-grid first impression). */
   eager?: boolean
 }) {
@@ -811,7 +841,7 @@ function FigureResultCard({
       {/* Track Price button — right side */}
       {r.figure_id && (
         <button
-          onClick={e => { e.stopPropagation(); if (!trackDone) onTrack() }}
+          onClick={e => { e.stopPropagation(); if (!trackDone) onTrack(r) }}
           disabled={trackState === 'loading' || trackDone}
           style={{
             flexShrink: 0,
@@ -853,7 +883,7 @@ function FigureResultCard({
       {quickLook}
     </div>
   )
-}
+})
 
 function EmptyState({ query }: { query: string }) {
   // Curated bounce-back suggestions — queries we know work because they're
