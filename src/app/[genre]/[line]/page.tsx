@@ -137,6 +137,39 @@ function buildLineDisplayName(lineSlug: string, figures: KBFigure[]): string {
   return prettifySlug(pl)
 }
 
+// Content-thinness fix (2026-08-25, WEBAUDIT-TO-WEB-TRACKB-CLOSED-NO-GATE):
+// webaudit's content audit found small (<=5 member) line hubs without a
+// curated LINE_INTROS entry render nothing but an H1, the stat line, wave
+// headings, and character links -- zero unique prose, genuinely thin. Ruled
+// NOT a duplication defect (so no index-gate change), but real and worth a
+// content fix. This targets exactly that population.
+const SMALL_LINE_THRESHOLD = 5
+
+/** Short, entirely KB-derived context sentence for small lines lacking a
+ *  curated intro. Every clause is included ONLY when the underlying field is
+ *  actually present on at least one figure in the line -- never fabricated,
+ *  same house rule the passport/golden-corpus render paths already follow.
+ *  manufacturer is a required KBFigure field (always present); year is
+ *  optional (~53% coverage site-wide) and is common but not universal for a
+ *  small line, so it's the one clause that can legitimately be absent. */
+function autoLineContext(figures: KBFigure[], genreName: string, waveCount: number): string {
+  const totalCount = figures.length
+  const manufacturers = [...new Set(figures.map(f => f.manufacturer).filter(Boolean))]
+  const mfrClause =
+    manufacturers.length === 1 ? ` from ${prettifySlug(manufacturers[0])}`
+    : manufacturers.length === 2 ? ` from ${prettifySlug(manufacturers[0])} and ${prettifySlug(manufacturers[1])}`
+    : '' // 3+ manufacturers on a 5-or-fewer-figure line is unusual; naming them all reads worse than omitting
+
+  const years = figures.map(f => f.year).filter((y): y is number => typeof y === 'number')
+  const yearClause = years.length === 0 ? ''
+    : Math.min(...years) === Math.max(...years) ? ` First released in ${Math.min(...years)}.`
+    : ` Released ${Math.min(...years)}–${Math.max(...years)}.`
+
+  const waveClause = waveCount > 1 ? ` across ${waveCount} series` : ''
+
+  return `A ${genreName} figure line${mfrClause} with ${totalCount} release${totalCount !== 1 ? 's' : ''}${waveClause}.${yearClause}`
+}
+
 /** Group figures by release_wave. Returns sorted array of [wave, figures[]] */
 function groupByWave(figures: KBFigure[]): Array<{ wave: string; label: string; figures: KBFigure[] }> {
   const map = new Map<string, KBFigure[]>()
@@ -315,10 +348,14 @@ export default async function LineHubPage(
   // Unique characters (for meta)
   const uniqueChars = new Set(figures.map(f => f.character_canonical)).size
 
-  // Editorial intro for priority lines
-  const lineIntro = figures.length
+  // Editorial intro for priority lines, falling back to a KB-derived context
+  // sentence for small lines that would otherwise render zero unique prose
+  // (webaudit content-thinness finding, 2026-08-25 -- see autoLineContext).
+  const curatedIntro = figures.length
     ? (LINE_INTROS[figures[0].fandom + '/' + figures[0].product_line] ?? null)
     : null
+  const lineIntro = curatedIntro
+    ?? (totalCount <= SMALL_LINE_THRESHOLD ? autoLineContext(figures, genreName, waves.length) : null)
 
   const featured = selectFeatured(figures)
 
@@ -486,7 +523,8 @@ export default async function LineHubPage(
       {/* ── Main content ── */}
       <main style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 5vw, 3rem) 5rem' }}>
 
-        {/* Editorial intro -- rendered for lines with curated content */}
+        {/* Editorial intro (curated) or a short KB-derived context sentence
+            for small lines that would otherwise render no unique prose. */}
         {lineIntro && (
           <div style={{
             background: 'var(--s1)',
