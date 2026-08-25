@@ -193,11 +193,35 @@ export function deriveName(f: KBFigure): string {
 // it, producing titles like "Cody Rhodes (Elite Series) — Elite Series Price &
 // Value". 22,496/23,239 titles exceeded 60 chars (median 91) partly because of
 // this. One shared helper so both templates can't drift back out of sync.
+//
+// v1_line correction (2026-08-25, webaudit review): the first version of this
+// fix checked displayName against a SEPARATELY recomputed
+// prettifySlug(product_line), not the string deriveName() actually embedded.
+// In the v1-branch (96.3% of figures) that embedded string is
+// `f.v1_line ?? prettifySlug(product_line)` -- when v1_line exists and
+// differs textually from the recomputation (quote marks, hyphenation: "3.75\"
+// Walmart" vs "3-75-walmart" -> "3 75 Walmart", "All-Star" vs "All Star"),
+// the substring check false-negatived and the duplicate-title bug survived
+// for 1,722/22,238 v1-branch figures (7.7%). deriveEmbeddedLine() mirrors
+// deriveName()'s own branch logic so the check always compares against
+// what was actually rendered, not a reconstruction of it.
+/** The line-name substring deriveName() actually embeds in its parenthetical,
+ *  or null when the plain-name branch (f.name) is used and no line is
+ *  embedded at all. */
+export function deriveEmbeddedLine(f: KBFigure): string | null {
+  if (f.name && !isGarbageName(f.name)) return null
+  if (f.v1_name) return f.v1_line ?? prettifySlug(f.product_line)
+  return prettifySlug(f.product_line)
+}
+
 /** SERP title for a figure page: appends the line only when deriveName()
- *  hasn't already embedded it (case-insensitive substring check, since the
- *  embedded form can carry a trailing " · Series N" the bare line doesn't). */
-export function figurePageTitle(displayName: string, line: string): string {
-  const alreadyHasLine = displayName.toLowerCase().includes(line.toLowerCase())
+ *  hasn't already embedded it. Checks against `embeddedLine` (what
+ *  deriveEmbeddedLine() says was actually rendered) when present, falling
+ *  back to the template's own `line` for the plain-name branch (which never
+ *  embeds a line, so the check is always a miss there, correctly). */
+export function figurePageTitle(displayName: string, line: string, embeddedLine: string | null): string {
+  const check = (embeddedLine ?? line).toLowerCase()
+  const alreadyHasLine = displayName.toLowerCase().includes(check)
   return alreadyHasLine ? `${displayName} Price & Value` : `${displayName} — ${line} Price & Value`
 }
 

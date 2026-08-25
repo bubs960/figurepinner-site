@@ -123,13 +123,19 @@ export default function DepthHallHero({
   // are near the camera at any moment in the loop. Native `loading="lazy"`
   // can't fix this (still the 2026-07-24 finding below — 3D transform breaks
   // the browser's own viewport check), so this reuses the scene-level
-  // IntersectionObserver's signal instead: cards past the first couple per
-  // side stay `src`-less (no fetch) until the hero itself is confirmed
-  // on-screen, then all load together. Trade-off stated per R16: a no-JS
-  // visitor never gets these deferred images (only the first-couple-per-side
-  // eager set) — acceptable because every card is already aria-hidden/
-  // tabIndex=-1 decoration, and every figure stays reachable via search and
-  // the shelf section below regardless.
+  // IntersectionObserver's signal instead: cards past the first of each side
+  // stay `src`-less (no fetch) until the hero itself is confirmed on-screen,
+  // then all load together. Trade-off stated per R16: a no-JS visitor (or a
+  // crawler reading raw pre-hydration SSR HTML) only gets the two eager cards
+  // — acceptable because every card is already aria-hidden/tabIndex=-1
+  // decoration, and every figure stays reachable via search and the shelf
+  // section below regardless. **Fixed 2026-08-25 (webaudit review):** the
+  // original `i < 2` flat-index check silently grabbed the first two LEFT
+  // cards only (laidOut below pushes the whole left side before the whole
+  // right side) — the right side got ZERO eager cards, contradicting this
+  // comment and the trade-off claim above. Now tagged explicitly per side at
+  // construction (`laidOut`'s `eager: i === 0`), one real eager card per
+  // side as stated.
   const [heroInView, setHeroInView] = useState(false)
   const reducedRef = useRef(false)
   const tickingRef = useRef(false)
@@ -260,10 +266,16 @@ export default function DepthHallHero({
     const half = Math.ceil(cards.length / 2)
     const left = cards.slice(0, half)
     const right = cards.slice(half)
-    const out: Array<HallCard & { side: 'L' | 'R'; delay: string }> = []
+    const out: Array<HallCard & { side: 'L' | 'R'; delay: string; eager: boolean }> = []
     const step = HALL_DURATION_S / Math.max(1, left.length)
-    left.forEach((c, i) => out.push({ ...c, side: 'L', delay: (-i * step).toFixed(2) }))
-    right.forEach((c, i) => out.push({ ...c, side: 'R', delay: (-(i * step + step / 2)).toFixed(2) }))
+    // Phase 9 eager fix (2026-08-25, webaudit): tag the first card of EACH
+    // side explicitly here, at construction, instead of a flat index check
+    // downstream (`i < 2`, which silently grabbed the first two LEFT cards
+    // only -- the right side got zero eager cards, contradicting both this
+    // code's own comment and the R16 no-JS trade-off claim it was shipped
+    // under).
+    left.forEach((c, i) => out.push({ ...c, side: 'L', delay: (-i * step).toFixed(2), eager: i === 0 }))
+    right.forEach((c, i) => out.push({ ...c, side: 'R', delay: (-(i * step + step / 2)).toFixed(2), eager: i === 0 }))
     return out
   }, [cards])
 
@@ -392,11 +404,11 @@ export default function DepthHallHero({
                 trap, and each spends 25% of its loop focusable-but-
                 invisible. Every figure stays reachable via search and the
                 shelf below. */}
-            {visibleCards.map((c, i) => {
-              // First card per side (delay 0, closest to the front of the
-              // loop on mount) stays eager; the rest wait on heroInView.
-              const eager = i < 2
-              const showImg = eager || heroInView
+            {visibleCards.map(c => {
+              // First card of each side (c.eager, tagged in laidOut above at
+              // delay 0 -- closest to the front of the loop on mount) stays
+              // eager; the rest wait on heroInView.
+              const showImg = c.eager || heroInView
               return (
               <button
                 type="button"

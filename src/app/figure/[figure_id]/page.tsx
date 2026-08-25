@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { permanentRedirect } from 'next/navigation'
-import { getFigureById, getFigureByStableSuffix, deriveName, figurePageTitle, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, getFigureByStableSuffix, deriveName, deriveEmbeddedLine, figurePageTitle, prettyFigureUrl } from '@/data/kb'
 import { FIGURE_ID_REDIRECTS } from '@/data/figure-id-redirects'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
@@ -101,7 +101,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // No '| FigurePinner' here — the root layout title template appends it;
     // hard-coding it too rendered 'Price & Value | FigurePinner | FigurePinner'
     // on every figure SERP title (S52 fix).
-    title: figurePageTitle(displayName, line),
+    title: figurePageTitle(displayName, line, deriveEmbeddedLine(local)),
     description: enriched
       ? `${enriched} ${priceTail}`
       : priceFragment

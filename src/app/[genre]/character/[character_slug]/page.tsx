@@ -355,7 +355,7 @@ export default async function CharacterHubPage({
                 margin: '0 0 0.625rem',
               }}
             >
-              {charName} Figure Price Guide
+              {charName} Figure Guide
             </h1>
 
             <p style={{ fontSize: '1rem', color: 'var(--fp-muted)', margin: '0 0 1.5rem', maxWidth: 540 }}>

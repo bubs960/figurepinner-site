@@ -10,7 +10,7 @@
  */
 
 import { figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey, stableIdSuffix, genreSlugForFandom, type KBFigure } from './kbTypes'
-export { deriveName, figurePageTitle, figureUrl, isNumericWave } from './kbTypes'
+export { deriveName, deriveEmbeddedLine, figurePageTitle, figureUrl, isNumericWave } from './kbTypes'
 export type { KBFigure } from './kbTypes'
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
