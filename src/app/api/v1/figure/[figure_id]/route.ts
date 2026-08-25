@@ -34,7 +34,22 @@ export async function GET(
   }
 
   const { figure_id } = await params
-  const f = await getFigureById(figure_id)
+  // D1 read error handling (2026-08-25, WEB-D1-SWAP-DESIGN-AUDIT finding #1):
+  // getFigureById was unguarded, so any D1 exception (a transient rename
+  // window during the pending table-swap, a connection blip, etc.) surfaced
+  // as an unhandled exception -- a raw 500 -- instead of a clean, retryable
+  // response. no-store: a transient failure must never get cached and
+  // re-served past the moment it clears.
+  let f
+  try {
+    f = await getFigureById(figure_id)
+  } catch (err) {
+    console.error('[v1/figure] D1 query failed', figure_id, err instanceof Error ? err.message : String(err))
+    return NextResponse.json(
+      { error: 'temporarily_unavailable' },
+      { status: 503, headers: { 'Cache-Control': 'no-store', 'Retry-After': '5' } },
+    )
+  }
 
   if (!f) {
     return NextResponse.json({ error: 'Not found' }, { status: 404, headers: NOT_FOUND_HEADERS })

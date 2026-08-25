@@ -257,7 +257,14 @@ async function computeLineCompletion(vaultRows: VaultRow[], kbByFid: Map<string,
   if (ownedByKey.size === 0) return result
 
   const totals = new Map<string, number>()
-  const fandomFigureSets = await Promise.all([...fandoms].map(f => getFiguresByFandom(f)))
+  // Same D1-error-handling fix as the getFigureById calls above: a fandom
+  // whose D1 read fails degrades to an empty set (that fandom's owned items
+  // just don't get a line-completion badge this load) rather than rejecting
+  // the whole Promise.all and losing line-completion for every owned item
+  // across every fandom over one transient error.
+  const fandomFigureSets = await Promise.all(
+    [...fandoms].map(f => getFiguresByFandom(f).catch(() => [] as KBFigure[]))
+  )
   for (const figures of fandomFigureSets) {
     for (const f of figures) {
       if (!f.release_wave) continue
@@ -308,9 +315,19 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
     if (!seen.has(r.figure_id)) { seen.add(r.figure_id); fidOrder.push(r.figure_id) }
   }
   const toFetch = fidOrder.slice(0, MEDIAN_FETCH_CAP)
+  // D1 read error handling (2026-08-25, WEB-D1-SWAP-DESIGN-AUDIT finding #1):
+  // getFigureById was unguarded -- one D1 exception (a transient rename
+  // window during the pending table-swap, a connection blip, etc.) would
+  // reject the WHOLE Promise.all and take down the entire Vault page for
+  // every item, not just the one fid that hit it. kbByFid is already typed
+  // KBFigure | null and resolveDisplaySync() already has a real fallback
+  // path for a missing KB entry (the stored row's own name/line) -- same
+  // "never an error" resilience this file's R2 snapshot fetches already
+  // follow (see file header). A per-fid catch reuses that existing fallback
+  // instead of adding a new one.
   const [snapEntries, kbEntries] = await Promise.all([
     Promise.all(toFetch.map(async fid => [fid, await fetchSnapshot(fid)] as const)),
-    Promise.all(fidOrder.map(async fid => [fid, await getFigureById(fid)] as const)),
+    Promise.all(fidOrder.map(async fid => [fid, await getFigureById(fid).catch(() => null)] as const)),
   ])
   const snaps = new Map<string, Snapshot>(snapEntries)
   const kbByFid = new Map<string, KBFigure | null>(kbEntries)
