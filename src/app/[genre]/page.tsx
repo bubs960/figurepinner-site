@@ -784,7 +784,7 @@ export default async function GenrePage(
             <p className="fpg-mast-sub">
               <strong>{totalFigures.toLocaleString()} figures</strong> across{' '}
               <strong>{totalLines} lines</strong> &mdash; every era of the aisle
-              under one light, priced from real eBay solds.
+              under one light. Real eBay sold prices on each figure&rsquo;s page.
             </p>
 
             <div className="fpg-mast-search">
