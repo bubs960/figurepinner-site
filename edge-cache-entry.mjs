@@ -49,6 +49,17 @@ import {
   synthesizeCacheControl,
   storeTtl,
 } from './edge-cache-policy.mjs'
+import { checkRateLimit } from './src/lib/rateLimit.ts'
+import { isFigurePageRoute } from './src/lib/routeClassification.ts'
+
+// Data Defense Layer 2 gap fix (2026-08-24): src/middleware.ts enforces this
+// same limit, but middleware never runs on a cache HIT (this Worker returns
+// straight from `caches.default` below, before `handler.fetch` -- which is
+// what invokes Next's middleware -- is ever called). That let a scraper hit
+// an already-warm figure page at unlimited volume. Same bucket/limit as
+// middleware.ts's `checkFigurePageRateLimit` so HIT and MISS traffic share
+// one counter instead of each getting its own 100/min allowance.
+const FIGURE_PAGE_RATE_LIMIT_PER_MINUTE = 100
 
 // OpenNext Durable Object classes must stay exported from the entry module.
 export { DOQueueHandler, DOShardedTagCache, BucketCachePurge } from './.open-next/worker.js'
@@ -190,6 +201,21 @@ export default {
 
     const hit = await cache.match(key)
     if (hit) {
+      if (isFigurePageRoute(url.pathname)) {
+        const rl = await checkRateLimit(request, 'figure-page', FIGURE_PAGE_RATE_LIMIT_PER_MINUTE)
+        if (rl.limited) {
+          recordEdge('HIT', { responseStatus: 429 })
+          return new Response('Too many requests', {
+            status: 429,
+            headers: {
+              'Retry-After': String(rl.retryAfter),
+              'Cache-Control': 'no-store',
+              'x-fp-edge': 'HIT',
+              'x-fp-edge-reason': 'rate-limited',
+            },
+          })
+        }
+      }
       recordEdge('HIT', { responseStatus: hit.status })
       return withEdgeHeader(hit, 'HIT')
     }

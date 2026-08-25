@@ -293,9 +293,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const localAny     = local as Record<string, unknown>
   // Per-figure year shipped in the slim export 2026-08-11 (52.8% coverage);
   // the legacy release_year read stays as fallback for any record shape drift.
+  // 2026-08-24: the KB stores `year` as a string for 32.6% of figures (7,577
+  // of 23,243, all clean 4-digit values) despite the type declaring `number`
+  // -- a bare `typeof === 'number'` guard silently dropped every one of them.
   const releaseYear  = typeof local.year === 'number'
     ? local.year
-    : typeof localAny.release_year === 'number' ? localAny.release_year : null
+    : typeof local.year === 'string' && /^\d{4}$/.test(local.year)
+      ? Number(local.year)
+      : typeof localAny.release_year === 'number' ? localAny.release_year : null
   // Matcher bug report 2026-07-12: raw parseInt() stops at the first
   // non-digit, so a mangled release_wave slug like "3-75-orange-2013" (scale
   // + color-line + year, not a series number) parsed as "3" and the page

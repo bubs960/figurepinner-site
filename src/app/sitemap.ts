@@ -43,6 +43,12 @@ const STATIC_ID = 'static'
 // if deploy frequency ever drops (WEBAUDIT-FINAL-CYCLE-PLAN-2026-07-12.md §4
 // tail).
 export const revalidate = 86400
+// An `id` not returned by generateSitemaps() below currently 200s with an
+// empty <urlset></urlset> instead of 404ing, since Next treats an unlisted
+// param as dynamically renderable by default. This route has no legitimate
+// dynamic id — every valid id is enumerated by generateSitemaps() — so an
+// unknown id should 404 (2026-08-24, webaudit-verified Phase 1 fix).
+export const dynamicParams = false
 
 /**
  * Newest real last-comp-change date among a group of figures, or null when none
