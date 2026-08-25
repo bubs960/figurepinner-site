@@ -15,13 +15,14 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getAllFandoms, deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
+import { deriveName, figureUrl, prettyFigureUrl } from '@/data/kb'
 import { getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
 import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import { findFigureMatches } from './_lib/findFigureMatches'
+import { resolveLegacyPrettyPath } from './_lib/resolveLegacyPrettyPath'
 import { isAtOrAboveIndexBar } from '@/data/indexValueCensus'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
@@ -49,7 +50,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const matches = findFigureMatches(genre, line, slug)
   const figure = matches[0]
-  if (!figure) return { title: 'Figure Not Found' }
+  if (!figure) {
+    // 2026-08-24 soft-404 fix: a verified former URL for this exact path
+    // redirects to its successor's current canonical; anything else falls
+    // through to a real 404 (thrown by the page body, not here — metadata
+    // alone can't emit notFound()). See resolveLegacyPrettyPath's doc.
+    const legacyTarget = resolveLegacyPrettyPath(genre, line, slug)
+    if (legacyTarget) permanentRedirect(legacyTarget)
+    return { title: 'Figure Not Found' }
+  }
 
   const displayName = deriveName(figure)
   const lineName = prettifySlug(figure.product_line)
@@ -163,15 +172,16 @@ export default async function PrettyFigurePage({ params }: PageProps) {
     return <FigureDetailContent figureId={figure.figure_id} />
   }
 
-  // No figure match — fall back to genre page if the genre resolves, else 404.
-  // Check the remapped fandom (getFandom) so remapped-slug genres (gijoe, marvel,
-  // teenage-mutant-ninja-turtles) redirect to their genre page instead of 404ing.
-  // Permanent per the 2026-07-18 INDEXING PROGRAM Part A fix -- same reasoning
-  // as above, this line/slug combination stably falls through to the genre hub.
-  const fandoms = getAllFandoms()
-  if (fandoms.includes(getFandom(genre))) {
-    permanentRedirect(`/${genre}`)
-  }
+  // No figure match. 2026-08-24 soft-404 fix: this used to redirect ANY
+  // unmatched line/slug (typos, delisted figures, garbage input, not just
+  // real renames) to the genre hub as a permanent 308 -- exactly the
+  // pattern Google's soft-404 guidance warns about (a broken-URL redirect
+  // to an unrelated hub/category page, regardless of intent). Only a
+  // VERIFIED former URL for a figure that genuinely moved gets a redirect
+  // now; everything else is a real 404. See resolveLegacyPrettyPath and
+  // the ledger it reads for the full rationale + external-audit decision.
+  const legacyTarget = resolveLegacyPrettyPath(genre, line, slug)
+  if (legacyTarget) permanentRedirect(legacyTarget)
 
   notFound()
 }

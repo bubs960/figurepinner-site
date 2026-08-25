@@ -15,7 +15,7 @@
  * This script is G1 from WEBAUDIT-GUARDRAILS-PROPOSAL-2026-07-12.md
  * (PROPOSED status, binds web lane immediately as discipline): before ANY
  * deploy touching URL/canonical/robots/sitemap/redirect logic, run this by
- * hand and get PASS on all three checks:
+ * hand and get PASS on all four checks:
  *
  *   1. Sample-URL matrix    — >=2 figures per fandom: served URL, meta
  *                             robots, canonical, and for the canonical
@@ -39,6 +39,10 @@
  *                             calling prettyFigureUrl(f) and trusting its
  *                             output — see the note in "HOW THE KB IS
  *                             IMPORTED" below for why.
+ *   4. Pretty-path redirects — every entry in src/data/pretty-path-
+ *                              redirects.ts (added 2026-08-24, the soft-404
+ *                              fix): single-hop 30x, target 200 and self-
+ *                              canonical, no chains. See checkPrettyPathRedirects.
  *
  * ── WHICH BASE EACH CHECK HITS, AND WHY ─────────────────────────────────
  * --base (default http://localhost:3000) is the NEW candidate build about to
@@ -155,8 +159,8 @@
  *
  *   node scripts/seo-preflight.mjs --base http://localhost:3000
  *
- * Exit 0 = all three checks pass. Exit 1 = at least one STOP (see printed
- * detail — every failure across all three checks is collected and printed
+ * Exit 0 = all four checks pass. Exit 1 = at least one STOP (see printed
+ * detail — every failure across all four checks is collected and printed
  * before exiting, not just the first one hit).
  * Pure Node stdlib + the repo's existing ts-loader machinery. No new npm
  * dependencies. ASCII-only output (PowerShell cp1252-safe).
@@ -169,10 +173,11 @@ register('./ts-loader.mjs', import.meta.url)
 
 // Dynamic import (not static) — see the header comment above: register()
 // must have already run before these resolve.
-const { getAllFandoms, getFiguresByFandom, prettyFigureUrl, hasUniquePrettyFigureUrl } =
+const { getAllFandoms, getFiguresByFandom, getFigureById, prettyFigureUrl, hasUniquePrettyFigureUrl } =
   await import('../src/data/kb.ts')
 const { SLUG_TO_FANDOM, genreSlugForFandom } = await import('../src/data/kbTypes.ts')
 const { isAtOrAboveIndexBar } = await import('../src/data/indexValueCensus.ts')
+const { PRETTY_PATH_REDIRECTS } = await import('../src/data/pretty-path-redirects.ts')
 
 // ── CLI ──────────────────────────────────────────────────────────────────
 
@@ -642,6 +647,86 @@ async function checkAliasProbe(base) {
   return { failures, infoLines }
 }
 
+/**
+ * Check 4: pretty-path historical redirect ledger (src/data/pretty-path-
+ * redirects.ts). Added 2026-08-24 alongside the soft-404 fix that replaced
+ * the blanket genre-hub fallback -- every entry here becomes a real,
+ * permanent 308 in production, so a bad entry (dead target, broken chain,
+ * an entry that no longer matters) ships as broken SEO signal, not just a
+ * test failure. Every entry must be:
+ *   - target fid exists in the CURRENT KB (a ledger entry pointing at a
+ *     removed fid would redirect to a dead page).
+ *   - single-hop: fetching the old path returns exactly one 30x, and the
+ *     Location it points to returns 200 directly (no second redirect).
+ *   - self-canonical: the target's own <link rel="canonical"> matches the
+ *     URL it was served at (same invariant check 1 enforces for real
+ *     figures -- a redirect into a NON-canonical URL just creates a new
+ *     twin-namespace problem instead of fixing one).
+ *   - no cycles: the target path is never itself a key in this same
+ *     ledger (a chain, however short, is still two hops from the crawler's
+ *     perspective and this ledger is scoped to single-hop only).
+ */
+async function checkPrettyPathRedirects(base) {
+  const failures = []
+  const infoLines = []
+
+  const entries = Object.entries(PRETTY_PATH_REDIRECTS)
+  if (!entries.length) {
+    infoLines.push('INFO [4:pretty-path-redirects] ledger is empty -- nothing to validate')
+    return { failures, infoLines }
+  }
+
+  const ledgerSourcePaths = new Set(Object.keys(PRETTY_PATH_REDIRECTS))
+
+  for (const [oldPath, successorFid] of entries) {
+    const successor = getFigureById(successorFid)
+    if (!successor) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" -> "${successorFid}": target fid does not exist in the current KB -- this entry would redirect to a dead page`)
+      continue
+    }
+
+    const res = await safeRequestText(`${base}${oldPath}`)
+    if (res.status < 300 || res.status >= 400) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" did not return a 30x redirect (got ${res.status})${res.error ? ' -- ' + res.error : ''} -- either the fallback logic regressed or this entry no longer matches the route's lookup key`)
+      continue
+    }
+    if (!res.location) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" returned ${res.status} with no Location header`)
+      continue
+    }
+
+    let targetPath
+    try { targetPath = new URL(res.location, base).pathname } catch { targetPath = res.location }
+
+    if (ledgerSourcePaths.has(targetPath)) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" -> "${targetPath}": target path is ITSELF a key in this ledger -- a redirect chain, not a single hop. Point "${oldPath}" directly at the final survivor instead.`)
+      continue
+    }
+
+    const target = await safeRequestText(`${base}${targetPath}`)
+    if (target.status !== 200) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" -> "${targetPath}": target did not return 200 (got ${target.status}) -- not a single clean hop`)
+      continue
+    }
+
+    const canonicalMatch = /<link[^>]*rel="canonical"[^>]*href="([^"]+)"/i.exec(target.body)
+    if (!canonicalMatch) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" -> "${targetPath}": target has NO <link rel="canonical"> tag`)
+      continue
+    }
+    let canonicalPath
+    try { canonicalPath = new URL(canonicalMatch[1]).pathname } catch { canonicalPath = canonicalMatch[1] }
+    if (canonicalPath !== targetPath) {
+      failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" -> "${targetPath}": target is NOT self-canonical (its canonical tag points at "${canonicalPath}" instead) -- redirect into the canonical URL directly, not a non-canonical alias`)
+      continue
+    }
+
+    infoLines.push(`PASS [4:pretty-path-redirects] "${oldPath}" -> ${res.status} -> "${targetPath}" (200, self-canonical, fid ${successorFid})`)
+  }
+
+  return { failures, infoLines }
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -661,11 +746,14 @@ async function main() {
   console.log(`${LOG} running check 2/3: sitemap prefix census (vs prod) ...`)
   const c2 = await checkSitemapPrefixCensus(localChildren)
 
-  console.log(`${LOG} running check 3/3: alias probe ...`)
+  console.log(`${LOG} running check 3/4: alias probe ...`)
   const c3 = await checkAliasProbe(BASE)
 
-  const allInfo = [...c1.infoLines, ...c2.infoLines, ...c3.infoLines]
-  const allFailures = [...c1.failures, ...c2.failures, ...c3.failures]
+  console.log(`${LOG} running check 4/4: pretty-path historical redirect ledger ...`)
+  const c4 = await checkPrettyPathRedirects(BASE)
+
+  const allInfo = [...c1.infoLines, ...c2.infoLines, ...c3.infoLines, ...c4.infoLines]
+  const allFailures = [...c1.failures, ...c2.failures, ...c3.failures, ...c4.failures]
 
   console.log('\n' + LINE)
   console.log(`${LOG} DETAIL`)
@@ -683,7 +771,8 @@ async function main() {
   }
 
   console.log(`${LOG} RESULT: PASS -- ${c1.infoLines.filter(l => l.startsWith('PASS')).length} sampled figure(s), ` +
-    `${localIds.length} local sitemap children, ${c3.infoLines.filter(l => l.startsWith('PASS')).length}/${Object.keys(SLUG_TO_FANDOM).length} alias pairs checked, 0 STOPs.`)
+    `${localIds.length} local sitemap children, ${c3.infoLines.filter(l => l.startsWith('PASS')).length}/${Object.keys(SLUG_TO_FANDOM).length} alias pairs checked, ` +
+    `${c4.infoLines.filter(l => l.startsWith('PASS')).length}/${Object.keys(PRETTY_PATH_REDIRECTS).length} pretty-path redirects checked, 0 STOPs.`)
   console.log(LINE)
 }
 
