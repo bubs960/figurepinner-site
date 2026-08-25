@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
 import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
-import { isAtOrAboveIndexBar, censusLastCompDate, characterHubMeetsIndexBar } from '@/data/indexValueCensus'
+import { isAtOrAboveIndexBar, censusLastCompDate, characterHubMeetsIndexBar, lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 
 // Fandom slug (KB value) → genre slug (URL path segment used by the router).
 // The character hub page at /[genre]/character/[slug] resolves genre → fandom
@@ -217,12 +217,19 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   }
 
   // ── Line hub pages (/[genre]/[line]) ────────────────────────────────────
-  const linePages: MetadataRoute.Sitemap = [...lineFids].map(([line, fids]) => ({
-    url: `${BASE}/${genre}/${line}`,
-    lastModified: maxCensusDate(fids) ?? now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // Track A gate (2026-08-25, webaudit round-2 §2): excludes only singleton
+  // lines (one member) — NOT a price-coverage gate, see lineHubMeetsIndexBar's
+  // own doc for why that would wrongly deindex large zero-above-bar checklists.
+  // Excluded pages stay live/linked; robots meta goes noindex,follow in
+  // lockstep ([genre]/[line]/page.tsx generateMetadata calls the SAME helper).
+  const linePages: MetadataRoute.Sitemap = [...lineFids]
+    .filter(([, fids]) => lineHubMeetsIndexBar(fids))
+    .map(([line, fids]) => ({
+      url: `${BASE}/${genre}/${line}`,
+      lastModified: maxCensusDate(fids) ?? now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
 
   // ── Character hub pages (/[genre]/character/[character_slug]) ───────────
   // One page per unique character_canonical within the fandom — but ONLY when

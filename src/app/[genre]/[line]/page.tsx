@@ -13,6 +13,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl, type KBFigure } from '@/data/kb'
+import { lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
@@ -247,16 +248,32 @@ export async function generateMetadata(
   const lineName  = buildLineDisplayName(line, figures)
   const genreName = prettifySlug(genre)
 
+  // Track A index gate (2026-08-25, webaudit round-2 §2) — LOCKSTEP with
+  // sitemap.ts's linePages filter, both call lineHubMeetsIndexBar. Singleton
+  // lines only; see that function's own doc for why this is member-count-only,
+  // not price-coverage like the character-hub gate.
+  const indexWorthy = lineHubMeetsIndexBar(
+    figures.filter(f => !f.is_canary).map(f => f.figure_id)
+  )
+
   return {
-    title: `${lineName} Price Guide — ${genreName}`,
-    description: `${lineName} action figure prices. Track values for ${figures.length}+ ${genreName} figures with real eBay sold data on FigurePinner.`,
+    // Phase 4 line-hub extension (2026-08-25, WEBAUDIT-EXTERNAL-AUDIT-PLAN-
+    // REVISION-ROUND2 §3 pre-check): confirmed this page carries the identical
+    // price-copy overclaim character hubs had — title/meta/JSON-LD/H1/paragraph
+    // all claimed "real eBay sold prices"/"Price Guide" while the page fetches
+    // and renders zero price data (no QuickLookAnchor or equivalent anywhere in
+    // this file). Same fix as the character-hub pass: drop the claim, point to
+    // each figure's own page instead.
+    title: `${lineName} Figure Guide — ${genreName}`,
+    description: `Every ${lineName} figure — ${figures.length}+ releases in ${genreName}. See current eBay sold prices on each figure's page.`,
     openGraph: {
-      title: `${lineName} Price Guide | FigurePinner`,
-      description: `Real sold prices for ${figures.length}+ ${lineName} figures. Updated daily from eBay.`,
+      title: `${lineName} Figure Guide | FigurePinner`,
+      description: `Every ${lineName} figure — ${figures.length}+ releases. Real eBay sold prices on each figure's page.`,
     },
     alternates: {
       canonical: `https://figurepinner.com/${genre}/${line}`,
     },
+    ...(indexWorthy ? {} : { robots: { index: false, follow: true } }),
   }
 }
 
@@ -315,8 +332,8 @@ export default async function LineHubPage(
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${lineName} Price Guide`,
-    description: `Price guide for ${totalCount} ${lineName} action figures`,
+    name: `${lineName} Figure Guide`,
+    description: `All ${totalCount} ${lineName} figures — real eBay sold prices on each figure's page`,
     url: `https://figurepinner.com/${genre}/${line}`,
     mainEntity: {
       '@type': 'ItemList',
@@ -418,12 +435,13 @@ export default async function LineHubPage(
             color: 'var(--text)',
             margin: '0 0 0.625rem',
           }}>
-            {lineName} Price Guide
+            {lineName} Figure Guide
           </h1>
 
           <p style={{ fontSize: '1rem', color: '#EEEEF5', margin: '0 0 1.5rem', maxWidth: 540 }}>
-            Real eBay sold prices for {totalCount.toLocaleString()} {lineName} figures across{' '}
-            {waves.length} series. {uniqueChars} unique characters.
+            Every {lineName} figure — {totalCount.toLocaleString()} releases across{' '}
+            {waves.length} series, {uniqueChars} unique characters. Real eBay sold prices on
+            each figure&rsquo;s page.
           </p>
 
           {/* Sample image strip */}
@@ -610,7 +628,7 @@ export default async function LineHubPage(
           marginTop: '2rem', textAlign: 'center',
           fontSize: '0.68rem', color: '#EEEEF5',
         }}>
-          FigurePinner may earn a commission from eBay purchases. Prices are based on recent sold listings.
+          FigurePinner may earn a commission from eBay purchases. Prices shown on each figure&rsquo;s page are based on recent sold listings.
         </p>
       </main>
 

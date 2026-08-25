@@ -17,101 +17,108 @@ import JsonLd from '@/app/_components/JsonLd'
 
 // ── Genre config (SEO copy only — visuals are the shared shelf design) ───────
 
+// Phase 4 genre-hub extension (2026-08-25, found while pre-checking line hubs
+// per WEBAUDIT-EXTERNAL-AUDIT-PLAN-REVISION-ROUND2 §3): the same overclaim as
+// character/line hubs, one level further up — every title/description here
+// claimed "Price Guide"/"real eBay sold prices" while this page fetches and
+// renders zero price data (grepped: no QuickLookAnchor, no derivePriceContract,
+// no sparkline anywhere in this file). Same fix: "Figure Guide" framing, price
+// claim scoped to "on each figure's page" instead of implied present here.
 const GENRE_META: Record<string, { label: string; title: string; description: string }> = {
   'wrestling': {
     label: 'Wrestling',
-    title: 'WWE & Wrestling Figure Price Guide — Mattel Elite, Hasbro & More',
-    description: 'WWE, AEW, and wrestling action figure price guide. Real eBay sold prices for Mattel Elite, Hasbro WWF, Jakks Ruthless Aggression, and 5,000+ figures. Updated daily.',
+    title: 'WWE & Wrestling Figure Guide — Mattel Elite, Hasbro & More',
+    description: 'WWE, AEW, and wrestling action figures — Mattel Elite, Hasbro WWF, Jakks Ruthless Aggression, and 5,000+ figures. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'marvel': {
     label: 'Marvel',
-    title: 'Marvel Legends Price Guide — Hasbro, ToyBiz & More',
-    description: 'Marvel Legends price guide with real eBay sold prices. Track Hasbro Marvel Legends, ToyBiz, and Marvel action figure values across your collection. Updated daily.',
+    title: 'Marvel Legends Figure Guide — Hasbro, ToyBiz & More',
+    description: 'Hasbro Marvel Legends, ToyBiz, and Marvel action figures. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'star-wars': {
     label: 'Star Wars',
-    title: 'Star Wars Action Figure Price Guide — Black Series, Vintage Collection & More',
-    description: 'Star Wars action figure price guide. Real eBay sold prices for Black Series, Vintage Collection, Power of the Force, and more. Updated daily.',
+    title: 'Star Wars Action Figure Guide — Black Series, Vintage Collection & More',
+    description: 'Star Wars action figures — Black Series, Vintage Collection, Power of the Force, and more. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'dc': {
     label: 'DC',
-    title: 'DC Action Figure Price Guide — McFarlane, DC Direct & More',
-    description: 'DC action figure price guide. Real eBay sold prices for McFarlane DC Multiverse, DC Direct, and DC Universe Classics figures. Updated daily.',
+    title: 'DC Action Figure Guide — McFarlane, DC Direct & More',
+    description: 'DC action figures — McFarlane DC Multiverse, DC Direct, and DC Universe Classics. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'transformers': {
     label: 'Transformers',
-    title: 'Transformers Figure Price Guide — Masterpiece, Studio Series & More',
-    description: 'Transformers action figure price guide. Real eBay sold prices for Masterpiece, Studio Series, and Generations figures. Updated daily.',
+    title: 'Transformers Figure Guide — Masterpiece, Studio Series & More',
+    description: 'Transformers action figures — Masterpiece, Studio Series, and Generations. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'gijoe': {
     label: 'G.I. Joe',
-    title: 'G.I. Joe Figure Price Guide — Classified Series & Vintage',
-    description: 'G.I. Joe action figure price guide. Real eBay sold prices for Classified Series and vintage A Real American Hero figures. Updated daily.',
+    title: 'G.I. Joe Figure Guide — Classified Series & Vintage',
+    description: 'G.I. Joe action figures — Classified Series and vintage A Real American Hero. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'masters-of-the-universe': {
     label: 'Masters of the Universe',
-    title: 'Masters of the Universe Price Guide — MOTU Origins, Masterverse & Vintage',
-    description: 'Masters of the Universe (MOTU) price guide. Real eBay sold prices for Origins, Masterverse, and vintage 1982 Mattel figures. Updated daily.',
+    title: 'Masters of the Universe Figure Guide — MOTU Origins, Masterverse & Vintage',
+    description: 'Masters of the Universe (MOTU) action figures — Origins, Masterverse, and vintage 1982 Mattel. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'teenage-mutant-ninja-turtles': {
     label: 'TMNT',
-    title: 'TMNT Figure Price Guide — NECA, Playmates & Super7',
-    description: 'Teenage Mutant Ninja Turtles action figure price guide. Real eBay sold prices for NECA, Playmates vintage, and Super7 TMNT figures. Updated daily.',
+    title: 'TMNT Figure Guide — NECA, Playmates & Super7',
+    description: 'Teenage Mutant Ninja Turtles action figures — NECA, Playmates vintage, and Super7. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'power-rangers': {
     label: 'Power Rangers',
-    title: 'Power Rangers Figure Price Guide — Lightning Collection & Vintage',
-    description: 'Power Rangers action figure price guide. Real eBay sold prices for Lightning Collection and vintage Power Rangers figures. Updated daily.',
+    title: 'Power Rangers Figure Guide — Lightning Collection & Vintage',
+    description: 'Power Rangers action figures — Lightning Collection and vintage. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'indiana-jones': {
     label: 'Indiana Jones',
-    title: 'Indiana Jones Figure Price Guide — Adventure Series & Vintage Kenner',
-    description: 'Indiana Jones action figure price guide. Real eBay sold prices for Adventure Series and vintage Kenner figures. Updated daily.',
+    title: 'Indiana Jones Figure Guide — Adventure Series & Vintage Kenner',
+    description: 'Indiana Jones action figures — Adventure Series and vintage Kenner. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'ghostbusters': {
     label: 'Ghostbusters',
-    title: 'Ghostbusters Figure Price Guide — Plasma Series & Vintage Kenner',
-    description: 'Ghostbusters action figure price guide. Real eBay sold prices for Plasma Series and vintage Kenner Real Ghostbusters figures. Updated daily.',
+    title: 'Ghostbusters Figure Guide — Plasma Series & Vintage Kenner',
+    description: 'Ghostbusters action figures — Plasma Series and vintage Kenner Real Ghostbusters. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'mythic-legions': {
     label: 'Mythic Legions',
-    title: 'Mythic Legions Price Guide — Four Horsemen Figures',
-    description: 'Mythic Legions price guide. Real eBay sold prices for Four Horsemen figures from all waves. Updated daily.',
+    title: 'Mythic Legions Figure Guide — Four Horsemen Figures',
+    description: 'Mythic Legions figures from all waves — Four Horsemen. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'thundercats': {
     label: 'Thundercats',
-    title: 'Thundercats Figure Price Guide — Super7 & LJN Vintage',
-    description: 'Thundercats action figure price guide. Real eBay sold prices for Super7 Ultimates and vintage LJN Thundercats figures. Updated daily.',
+    title: 'Thundercats Figure Guide — Super7 & LJN Vintage',
+    description: 'Thundercats action figures — Super7 Ultimates and vintage LJN. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'action-force': {
     label: 'Action Force',
-    title: 'Action Force Figure Price Guide',
-    description: 'Action Force action figure price guide. Real eBay sold prices updated daily.',
+    title: 'Action Force Figure Guide',
+    description: 'Action Force action figures. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'dungeons-dragons': {
     label: 'Dungeons & Dragons',
-    title: 'Fantasy Action Figure Price Guide — D&D, LJN, Hasbro & Super7',
-    description: 'Fantasy action figure price guide with real eBay sold prices — D&D-adjacent LJN Advanced Dungeons & Dragons figures plus Hasbro and Super7 fantasy lines. Updated daily.',
+    title: 'Fantasy Action Figure Guide — D&D, LJN, Hasbro & Super7',
+    description: 'Fantasy action figures — D&D-adjacent LJN Advanced Dungeons & Dragons plus Hasbro and Super7 fantasy lines. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'neca': {
     label: 'Horror & Film',
-    title: 'NECA Horror & Film Figure Price Guide — Ultimate Series & More',
-    description: 'NECA Horror & Film action figure price guide. Real eBay sold prices for Ultimate figures, slashers, and movie characters. Updated daily.',
+    title: 'NECA Horror & Film Figure Guide — Ultimate Series & More',
+    description: 'NECA Horror & Film action figures — Ultimate figures, slashers, and movie characters. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'spawn': {
     label: 'Spawn',
-    title: 'Spawn Figure Price Guide — McFarlane Toys Series 1–40',
-    description: 'Spawn action figure price guide. Real eBay sold prices for McFarlane Toys Spawn series from Series 1 through modern releases. Updated daily.',
+    title: 'Spawn Figure Guide — McFarlane Toys Series 1–40',
+    description: 'McFarlane Toys Spawn figures, Series 1 through modern releases. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'gargoyles': {
     label: 'Gargoyles',
-    title: 'Gargoyles Figure Price Guide — NECA & More',
-    description: 'Gargoyles action figure price guide. Real eBay sold prices for NECA Gargoyles figures. Updated daily.',
+    title: 'Gargoyles Figure Guide — NECA & More',
+    description: 'Gargoyles action figures — NECA. Real eBay sold prices on each figure’s page, updated daily.',
   },
   'ufc': {
     label: 'UFC',
-    title: 'UFC Action Figure Price Guide — Jakks Pacific & Jazwares',
-    description: 'UFC action figure price guide. Real eBay sold prices for Jakks Pacific and Jazwares UFC figures. Updated daily.',
+    title: 'UFC Action Figure Guide — Jakks Pacific & Jazwares',
+    description: 'UFC action figures — Jakks Pacific and Jazwares. Real eBay sold prices on each figure’s page, updated daily.',
   },
 }
 
@@ -354,12 +361,12 @@ export default async function GenrePage(
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${meta.label} Action Figure Price Guide`,
+    name: `${meta.label} Action Figure Guide`,
     description: meta.description,
     url: `https://figurepinner.com/${genre}`,
     mainEntity: {
       '@type': 'ItemList',
-      name: `${meta.label} Action Figure Prices`,
+      name: `${meta.label} Action Figures`,
       numberOfItems: totalFigures,
       itemListElement: groups.slice(0, 5).flatMap(([, group]) =>
         group.slice(0, 10).map((f, i) => ({

@@ -58,6 +58,25 @@ export function characterHubMeetsIndexBar(memberFids: string[]): boolean {
   return memberFids.length >= 2 && memberFids.some(isAtOrAboveIndexBar)
 }
 
+/**
+ * Line-hub index gate, Track A only (webaudit round-2 revision,
+ * WEBAUDIT-EXTERNAL-AUDIT-PLAN-REVISION-ROUND2-2026-08-24 §2, Steve-authorized
+ * via the same narrow §7.4 override as the character-hub fix).
+ *
+ * Deliberately NOT a port of characterHubMeetsIndexBar's price-coverage logic
+ * (members>=2 AND >=1 above-bar) — round-2 verification found that would
+ * deindex ~61 genuinely large, useful collector checklists (up to 153
+ * releases) purely for weak sold-comp coverage, which is not a content-
+ * quality signal for a checklist page. This gate excludes ONLY the singleton
+ * lines (a one-figure line hub duplicates the figure page it wraps, same
+ * justification already accepted for one-figure character hubs) — Track B
+ * (a total-member-count floor for the 61 multi-member/zero-above-bar lines)
+ * needs a Steve/matcher-confirmed threshold and is NOT implemented here.
+ */
+export function lineHubMeetsIndexBar(memberFids: string[]): boolean {
+  return memberFids.length >= 2
+}
+
 /** Real last-comp-change date for an at-bar fid, or null (below-bar / no census entry / exempted with no known date). */
 export function censusLastCompDate(figureId: string): Date | null {
   const raw = CENSUS[figureId]
