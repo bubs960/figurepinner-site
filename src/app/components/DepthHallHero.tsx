@@ -117,6 +117,20 @@ export default function DepthHallHero({
   // 2026-08-13 startTransition mitigation couldn't reach (that only
   // reprioritizes React's own scheduling, not browser paint work).
   const [searchActive, setSearchActive] = useState(false)
+  // Phase 9 lazy-load (2026-08-24, WEBAUDIT-TO-WEB-CURRENT-STATE-AND-NEXT-STEPS):
+  // every card previously forced `loading="eager"` unconditionally, so all 12
+  // fired their image fetch on the very first paint even though only a couple
+  // are near the camera at any moment in the loop. Native `loading="lazy"`
+  // can't fix this (still the 2026-07-24 finding below — 3D transform breaks
+  // the browser's own viewport check), so this reuses the scene-level
+  // IntersectionObserver's signal instead: cards past the first couple per
+  // side stay `src`-less (no fetch) until the hero itself is confirmed
+  // on-screen, then all load together. Trade-off stated per R16: a no-JS
+  // visitor never gets these deferred images (only the first-couple-per-side
+  // eager set) — acceptable because every card is already aria-hidden/
+  // tabIndex=-1 decoration, and every figure stays reachable via search and
+  // the shelf section below regardless.
+  const [heroInView, setHeroInView] = useState(false)
   const reducedRef = useRef(false)
   const tickingRef = useRef(false)
   const mouseRef = useRef({ mx: 0, my: 0 })
@@ -148,7 +162,12 @@ export default function DepthHallHero({
   // (2026-08-13, HeroSearch.tsx) only reprioritizes React's scheduling; it
   // can't touch this, which is why CF RUM showed no improvement.
   useEffect(() => {
-    if (reduced) return // reduced-motion already renders everything static
+    if (reduced) {
+      // Reduced-motion renders everything static (no loop to defer against),
+      // so every card image should just load like a normal page.
+      setHeroInView(true)
+      return
+    }
     const scene = sceneRef.current
     if (!scene) return
     const svgs = scene.querySelectorAll('svg')
@@ -167,7 +186,11 @@ export default function DepthHallHero({
       idleTimer = setTimeout(() => { scrolling = false; apply() }, 150)
     }
     const io = new IntersectionObserver(
-      entries => { offscreen = !entries[0].isIntersecting; apply() },
+      entries => {
+        offscreen = !entries[0].isIntersecting
+        apply()
+        if (entries[0].isIntersecting) setHeroInView(true)
+      },
       { threshold: 0 },
     )
     io.observe(scene)
@@ -357,7 +380,12 @@ export default function DepthHallHero({
                 trap, and each spends 25% of its loop focusable-but-
                 invisible. Every figure stays reachable via search and the
                 shelf below. */}
-            {visibleCards.map(c => (
+            {visibleCards.map((c, i) => {
+              // First card per side (delay 0, closest to the front of the
+              // loop on mount) stays eager; the rest wait on heroInView.
+              const eager = i < 2
+              const showImg = eager || heroInView
+              return (
               <button
                 type="button"
                 className={`${styles.card} ${c.side === 'L' ? styles.cardL : styles.cardR}`}
@@ -377,12 +405,19 @@ export default function DepthHallHero({
                 <span className={styles.cardBody}>
                   <span className={styles.cardGlow} aria-hidden />
                   <span className={styles.cardImgBox}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    {/* Eager, not lazy: these ride 3D-transformed cards that
-                        start at translateZ(-4400px)/opacity 0 — Chrome's
-                        lazy-load viewport check never fires there, so lazy
-                        images simply never loaded (live incident,
-                        2026-07-24). They're the hero visual anyway. */}
+                    {/* Not `loading="lazy"`: these ride 3D-transformed cards
+                        that start at translateZ(-4400px)/opacity 0 — Chrome's
+                        native lazy-load viewport check never fires there, so
+                        a lazy image simply never loads (live incident,
+                        2026-07-24). Deferred instead via `showImg` (Phase 9,
+                        2026-08-24): only the first card per side renders
+                        `src` immediately; the rest wait for the scene-level
+                        IntersectionObserver above to confirm the hero is
+                        actually on-screen before starting their fetch, so a
+                        dozen images don't all compete for bandwidth on the
+                        very first paint. */}
+                    {showImg && (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       className={styles.cardImg}
                       src={c.img}
@@ -392,6 +427,7 @@ export default function DepthHallHero({
                       decoding="async"
                       onError={() => setBroken(b => ({ ...b, [c.fid]: true }))}
                     />
+                    )}
                   </span>
                   <span className={styles.cardPlacard}>
                     <span className={styles.cardName}>{c.name}</span>
@@ -399,7 +435,8 @@ export default function DepthHallHero({
                   </span>
                 </span>
               </button>
-            ))}
+              )
+            })}
           </div>
         </div>
 

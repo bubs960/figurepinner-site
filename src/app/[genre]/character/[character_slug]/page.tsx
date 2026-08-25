@@ -171,8 +171,14 @@ export async function generateMetadata({
     figures.filter(f => !f.is_canary).map(f => f.figure_id)
   )
 
-  const title = `${charName} Action Figure Price Guide — All ${lineCount} Lines`
-  const description = `${charName} action figure prices across ${figures.length} releases in ${lineCount} line${lineCount !== 1 ? 's' : ''}. Real eBay sold prices for ${genreName} figures. Updated daily — ${year}.`
+  // Phase 4 price-copy fix (2026-08-24, WEBAUDIT-TO-WEB-CURRENT-STATE-AND-NEXT-STEPS):
+  // this hub fetches no price data server-side — pricing only ever renders via
+  // QuickLookAnchor's desktop-only pointer-hover card, invisible to crawlers and
+  // touch devices alike. Title/meta previously claimed "real eBay sold prices"
+  // on a surface that renders none; this hub is a browsable catalog that LINKS
+  // to price data on each figure's own page, not a price surface itself.
+  const title = `${charName} Action Figure Guide — All ${lineCount} Lines`
+  const description = `Every ${charName} action figure across ${figures.length} releases in ${lineCount} line${lineCount !== 1 ? 's' : ''}. See current eBay sold prices on each figure's page — updated daily, ${year}.`
 
   return {
     title,
@@ -180,7 +186,7 @@ export async function generateMetadata({
     ...(indexWorthy ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: `${title} | FigurePinner`,
-      description: `Every ${charName} ${genreName} figure — ${figures.length} releases, ${lineCount} lines. Real eBay sold prices.`,
+      description: `Every ${charName} ${genreName} figure — ${figures.length} releases, ${lineCount} lines. Real eBay sold prices on each figure's page.`,
       images: figures.find(f => f.canonical_image_url)?.canonical_image_url
         ? [{ url: figures.find(f => f.canonical_image_url)!.canonical_image_url! }]
         : [],
@@ -237,8 +243,8 @@ export default async function CharacterHubPage({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${charName} Action Figure Price Guide`,
-    description: `All ${charName} ${genreName} figures with real eBay sold prices`,
+    name: `${charName} Action Figure Guide`,
+    description: `All ${charName} ${genreName} figures — real eBay sold prices on each figure's page`,
     url: `https://figurepinner.com/${genre}/character/${character_slug}`,
     ...(heroImage ? { image: heroImage } : {}),
     mainEntity: {
@@ -354,7 +360,7 @@ export default async function CharacterHubPage({
 
             <p style={{ fontSize: '1rem', color: 'var(--fp-muted)', margin: '0 0 1.5rem', maxWidth: 540 }}>
               Every {charName} {genreName} figure — {totalCount.toLocaleString()} release{totalCount !== 1 ? 's' : ''} across{' '}
-              {lineCount} line{lineCount !== 1 ? 's' : ''}. Real eBay sold prices.
+              {lineCount} line{lineCount !== 1 ? 's' : ''}. Real eBay sold prices on each figure&rsquo;s page.
             </p>
 
             {/* Image strip */}
@@ -548,7 +554,7 @@ export default async function CharacterHubPage({
             fontSize: '0.68rem', color: 'var(--fp-muted)',
           }}
         >
-          FigurePinner may earn a commission from eBay purchases. Prices are based on recent sold listings.
+          FigurePinner may earn a commission from eBay purchases. Prices shown on each figure&rsquo;s page are based on recent sold listings.
         </p>
       </main>
     </div>

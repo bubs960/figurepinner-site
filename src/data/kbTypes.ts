@@ -186,6 +186,21 @@ export function deriveName(f: KBFigure): string {
   return `${char}${variant} (${line}${wave})`
 }
 
+// Phase 2 title/meta fix (2026-08-24, WEBAUDIT-TO-WEB-CURRENT-STATE-AND-NEXT-STEPS):
+// deriveName() already embeds the product line into 96.3% of display names
+// (the "Name (Line)" / "Name (Line · Series)" shape above), but both figure
+// page templates independently re-appended "— {line} Price & Value" on top of
+// it, producing titles like "Cody Rhodes (Elite Series) — Elite Series Price &
+// Value". 22,496/23,239 titles exceeded 60 chars (median 91) partly because of
+// this. One shared helper so both templates can't drift back out of sync.
+/** SERP title for a figure page: appends the line only when deriveName()
+ *  hasn't already embedded it (case-insensitive substring check, since the
+ *  embedded form can carry a trailing " · Series N" the bare line doesn't). */
+export function figurePageTitle(displayName: string, line: string): string {
+  const alreadyHasLine = displayName.toLowerCase().includes(line.toLowerCase())
+  return alreadyHasLine ? `${displayName} Price & Value` : `${displayName} — ${line} Price & Value`
+}
+
 /** Stable internal URL for a figure. */
 export function figureUrl(f: Pick<KBFigure, 'figure_id'>): string {
   return `/figure/${f.figure_id}`

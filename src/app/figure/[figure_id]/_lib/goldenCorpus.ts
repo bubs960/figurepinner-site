@@ -6,12 +6,12 @@
 // carry its verbatim quote + source URL; fields the pipeline could not support
 // stay unresolved and the page renders that honestly.
 
-// Candidate #2 (Hela, ML Thor Ragnarok) — the first to pass web's full
-// acceptance gate (MATCHER-TO-WEB-GOLDEN-CORPUS-HELA-NOMINATION-2026-08-13:
-// 11/11 fields, claim-by-claim receipt verification, clean wave). The rejected
-// ME149 doc is deliberately NOT loaded — Steve's 8/13 bar: golden corpus =
-// complete best-possible example only.
-import claimsDocRaw from '../_data/golden-corpus-hela-2026-08-13.json'
+// Track 1 scale-up (2026-08-24, WEBAUDIT-TO-WEB-GOLDEN-CORPUS-TRACK1-ACTIONABLE):
+// was a single hardcoded Hela import (the 8/13 pilot doc); now loads lazily from
+// any of the 320 per-wave sidecars in src/data/figures-provenance/, the same
+// dynamic-import pattern ScalePassport.tsx already uses for its receipts lookup
+// (fig.passport.sidecar names the file). Hela's doc lives in one of those wave
+// files too (marvel-comics--marvel-legends--thor-ragnarok.json) — no data lost.
 
 export type EvidenceClass = 'primary_exact' | 'single_secondary' | string
 
@@ -64,12 +64,24 @@ export interface FigureClaimsDoc {
   claims: Claim[]
 }
 
-const docs = claimsDocRaw as unknown as FigureClaimsDoc[]
-
 /** Returns the claims doc for a figure, or null when this figure isn't in the
- *  golden corpus. The doc itself is the render gate — no separate allowlist. */
-export function getGoldenCorpusClaims(figureId: string): FigureClaimsDoc | null {
-  return docs.find(d => d.figure_id === figureId && d.schema_version === 'figure-claims-2') ?? null
+ *  golden corpus (no sidecar, sidecar not synced, or fid absent from it). The
+ *  doc itself is the render gate — no separate allowlist. Render-safe: any
+ *  failure degrades to null rather than throwing (same contract as
+ *  ScalePassport's loadSidecarDoc, which this mirrors). */
+export async function getGoldenCorpusClaims(
+  figureId: string,
+  sidecar: string | undefined
+): Promise<FigureClaimsDoc | null> {
+  if (!sidecar || !/^[a-z0-9-]+(--[a-z0-9-]+){2}$/.test(sidecar)) return null
+  try {
+    const mod = await import(`@/data/figures-provenance/${sidecar}.json`)
+    const docs = (mod.default ?? mod) as Record<string, FigureClaimsDoc>
+    const doc = docs[figureId]
+    return doc && doc.schema_version === 'figure-claims-2' ? doc : null
+  } catch {
+    return null
+  }
 }
 
 /** Resolve a claim's quote ids to the actual verbatim quotes + their sources. */

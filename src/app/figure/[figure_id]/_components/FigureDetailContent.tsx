@@ -886,8 +886,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // Only real, per-figure or confirmed-source data. UNRESOLVED fields are never
   // rendered (same "don't publish what you can't source" rule as everywhere
   // else on this page) rather than shown as a fabricated/empty row.
-  // Golden-corpus claims doc lookup (null for every fid outside the doc).
-  const goldenCorpusDoc = getGoldenCorpusClaims(figureId)
+  // Golden-corpus claims doc lookup (null for every fid outside the corpus).
+  const goldenCorpusDoc = await getGoldenCorpusClaims(figureId, local.passport?.sidecar)
 
   const dpIdentity: IdentityRow[] = [
     { label: 'Name', value: displayName, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },
