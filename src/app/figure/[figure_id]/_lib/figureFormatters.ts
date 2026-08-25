@@ -95,6 +95,15 @@ const DISPLAY_NAME_OVERRIDES: Record<string, string> = {
 const ACRONYM_TOKENS = new Set([
   'wwe', 'wwf', 'wcw', 'aew', 'tna', 'njpw', 'roh', 'dc', 'gi', 'ljn',
   'neca', 'mafex', 'mwfp', 'r3', 'dnd', 'nxt', 'jbl',
+  // Figures Toy Company -- found rendering as "Ftc" (2026-08-25, webaudit
+  // sweep of the small-line-hub content fix; the manufacturer slug is real
+  // KB data, this override gap predates and is independent of that fix).
+  'ftc',
+  // Convention/venue names surfaced by the same fix's new exclusive_to
+  // clause (San Diego Comic-Con 38 occurrences, New York Comic Con 7,
+  // Major League Baseball crossover figures 4) -- same acronym-casing gap
+  // class as ftc above, not previously exercised anywhere on the site.
+  'sdcc', 'nycc', 'mlb',
 ])
 
 /**

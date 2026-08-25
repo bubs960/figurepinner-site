@@ -12,7 +12,7 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl, type KBFigure } from '@/data/kb'
+import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl, titleCaseValue, type KBFigure } from '@/data/kb'
 import { lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -145,29 +145,75 @@ function buildLineDisplayName(lineSlug: string, figures: KBFigure[]): string {
 // content fix. This targets exactly that population.
 const SMALL_LINE_THRESHOLD = 5
 
-/** Short, entirely KB-derived context sentence for small lines lacking a
- *  curated intro. Every clause is included ONLY when the underlying field is
- *  actually present on at least one figure in the line -- never fabricated,
- *  same house rule the passport/golden-corpus render paths already follow.
- *  manufacturer is a required KBFigure field (always present); year is
- *  optional (~53% coverage site-wide) and is common but not universal for a
- *  small line, so it's the one clause that can legitimately be absent. */
-function autoLineContext(figures: KBFigure[], genreName: string, waveCount: number): string {
-  const totalCount = figures.length
-  const manufacturers = [...new Set(figures.map(f => f.manufacturer).filter(Boolean))]
-  const mfrClause =
-    manufacturers.length === 1 ? ` from ${prettifySlug(manufacturers[0])}`
-    : manufacturers.length === 2 ? ` from ${prettifySlug(manufacturers[0])} and ${prettifySlug(manufacturers[1])}`
-    : '' // 3+ manufacturers on a 5-or-fewer-figure line is unusual; naming them all reads worse than omitting
+// v1 rejected by webaudit's panel review (2026-08-25,
+// WEBAUDIT-TO-WEB-SMALL-LINE-CONTENT-VERDICT): it restated manufacturer/
+// release-count/wave-count, all of which buildLineDisplayName() already
+// bakes into the H1 and the hero subtitle already states in prose a few
+// lines above this box -- a real second copy of the same three facts, not
+// new information. The fixed "A [X] figure line from [Y] with [N]..."
+// skeleton was also flagged as reading as generated-to-have-something-here
+// rather than generated-because-it's-useful, even though every clause was
+// honestly KB-gated.
+//
+// v2 (this version) only uses fields NOT shown anywhere else on the page:
+// scale (83/85 coverage, near-universal), exclusive_to (29/85, genuinely
+// novel -- retailer exclusivity isn't shown elsewhere on a line hub), and
+// year (53/85). No fixed opening skeleton -- each present fact is its own
+// short sentence, so the SET of sentences varies per line instead of one
+// template recognizable across dozens of pages. Returns null (box
+// suppressed entirely) when none of the three apply, rather than always
+// rendering something -- webaudit measured only 2/85 lines hit that case.
+// Real KB data quality gap, found live-testing this fix: `exclusive_to`
+// sometimes holds a generic placeholder ("Exclusive", "unspecified",
+// "UNRESOLVED", "Limited Edition", "Chase" -- not a retailer/venue name) or
+// a value that already contains the word "Exclusive" ("Ring Giants
+// Exclusive", "New York Toy Fair Exclusive") -- naively wrapping either in
+// "Includes a {X} exclusive release" produced nonsense ("a Exclusive
+// exclusive release") or a duplicated word. Returns null (clause omitted)
+// for the placeholder case; strips a redundant trailing "Exclusive" for the
+// duplication case.
+const GENERIC_EXCLUSIVE_VALUES = new Set(['exclusive', 'unspecified', 'unresolved', 'limited edition', 'chase'])
+function cleanExclusiveToValue(raw: string): string | null {
+  if (GENERIC_EXCLUSIVE_VALUES.has(raw.trim().toLowerCase())) return null
+  const stripped = raw.trim().replace(/\s+exclusive$/i, '').trim()
+  if (!stripped || GENERIC_EXCLUSIVE_VALUES.has(stripped.toLowerCase())) return null
+  return stripped
+}
+
+function autoLineContext(figures: KBFigure[]): string | null {
+  const sentences: string[] = []
+
+  const scales = [...new Set(figures.map(f => f.scale).filter((s): s is string => !!s && s !== 'None'))]
+  if (scales.length === 1) {
+    // Raw KB values look like "6in"/"3.75in" -- light regex prose fix, same
+    // spirit as titleCaseValue's raw-slug cleanup elsewhere in this file.
+    // Non-numeric values ("keychain", "Mini") pass through titleCaseValue.
+    const raw = scales[0]
+    const pretty = /^\d/.test(raw) ? raw.replace(/^(\d+(?:\.\d+)?)in\b/i, '$1-inch') : titleCaseValue(raw)
+    sentences.push(`${pretty} scale figures.`)
+  }
+
+  const exclusives = [...new Set(
+    figures.map(f => f.exclusive_to)
+      .filter((e): e is string => !!e && e !== 'None')
+      .map(cleanExclusiveToValue)
+      .filter((e): e is string => e !== null)
+  )]
+  if (exclusives.length === 1) {
+    const pretty = titleCaseValue(exclusives[0])
+    const article = /^[aeiou]/i.test(pretty) ? 'an' : 'a'
+    sentences.push(`Includes ${article} ${pretty} exclusive release.`)
+  } else if (exclusives.length > 1) {
+    sentences.push('Includes retailer-exclusive releases.')
+  }
 
   const years = figures.map(f => f.year).filter((y): y is number => typeof y === 'number')
-  const yearClause = years.length === 0 ? ''
-    : Math.min(...years) === Math.max(...years) ? ` First released in ${Math.min(...years)}.`
-    : ` Released ${Math.min(...years)}–${Math.max(...years)}.`
+  if (years.length) {
+    const minY = Math.min(...years), maxY = Math.max(...years)
+    sentences.push(minY === maxY ? `Released in ${minY}.` : `Released ${minY}–${maxY}.`)
+  }
 
-  const waveClause = waveCount > 1 ? ` across ${waveCount} series` : ''
-
-  return `A ${genreName} figure line${mfrClause} with ${totalCount} release${totalCount !== 1 ? 's' : ''}${waveClause}.${yearClause}`
+  return sentences.length ? sentences.join(' ') : null
 }
 
 /** Group figures by release_wave. Returns sorted array of [wave, figures[]] */
@@ -355,7 +401,7 @@ export default async function LineHubPage(
     ? (LINE_INTROS[figures[0].fandom + '/' + figures[0].product_line] ?? null)
     : null
   const lineIntro = curatedIntro
-    ?? (totalCount <= SMALL_LINE_THRESHOLD ? autoLineContext(figures, genreName, waves.length) : null)
+    ?? (totalCount <= SMALL_LINE_THRESHOLD ? autoLineContext(figures) : null)
 
   const featured = selectFeatured(figures)
 
