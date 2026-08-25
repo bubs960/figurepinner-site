@@ -24,6 +24,12 @@ const ALLOWED_EVENTS = new Set<string>(FUNNEL_EVENTS)
 //      event describes a *user* journey.
 //   3. Soft per-IP cap via the shared limiter — generous, this is meant to
 //      stop scripted spam, not throttle a real user clicking around.
+//
+// Dataset scope (updated 2026-08-25, Steve-ruled): this dataset is SESSION-
+// JOINABLE, not anonymous-aggregate — sessionId (blob13 below) ties events
+// back to the same visitor so a real journey (landing -> impression ->
+// viewable -> click -> signup) can be reconstructed. Treat it accordingly —
+// do not assume rows are anonymous just because no other PII is collected.
 const ALLOWED_HOSTS = new Set(['figurepinner.com', 'www.figurepinner.com'])
 const SOFT_LIMIT_PER_MINUTE = 60
 
@@ -149,6 +155,13 @@ export async function POST(request: NextRequest) {
           search,          // blob10
           figureName,      // blob11
           method,          // blob12
+          sessionId,       // blob13 -- APPROVED 2026-08-25 (Steve, via standalone) to make
+                            // funnel events session-joinable: seeing a real visitor's path
+                            // (landing -> impression -> viewable -> click -> signup) needs
+                            // ties back to the same visitor, which an anonymous-aggregate
+                            // dataset can't support. Dataset is session-joinable as of this
+                            // field, not anonymous -- see STANDALONE-TO-WEBAUDIT-FUNNEL-
+                            // SESSION-RULING-2026-08-25.md.
         ],
         doubles: [1, pointCount, compCount, figures, coverage],
         indexes: [event],
@@ -159,10 +172,6 @@ export async function POST(request: NextRequest) {
     // vanish silently either (same silent-swallow class as the GraphQL lesson).
     console.warn('[funnel] writeDataPoint failed', event, err instanceof Error ? err.message : String(err))
   }
-
-  // sessionId is accepted to keep client sessions stable for future sampling,
-  // but not written to Analytics Engine so the dataset stays anonymous.
-  void sessionId
 
   return new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } })
 }
