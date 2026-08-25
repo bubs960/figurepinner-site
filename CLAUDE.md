@@ -87,6 +87,15 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
    everywhere else — that's what actually found this one, after several
    hours of reading code that all looked correct in isolation. Full
    incident: `project_web_status_log.md`, 2026-08-05/06 entries.
+9. **`export const dynamicParams = false` (and likely other route-segment-
+   config exports) has NO effect in `next dev` — it only takes effect in a
+   real production build.** Confirmed 2026-08-24: added `dynamicParams =
+   false` to `sitemap.ts` so an unknown `/sitemap/<id>.xml` 404s instead of
+   200ing with an empty `<urlset>`; testing against a running `next dev`
+   server still showed 200, which looked like the fix didn't work. It did —
+   `next build && next start` on the same code showed the correct 404. If a
+   route-segment-config change doesn't seem to be taking effect, verify
+   against a real build before concluding the code is wrong.
 
 ## Repo facts
 
