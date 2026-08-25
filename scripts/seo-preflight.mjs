@@ -583,7 +583,17 @@ async function checkSitemapPrefixCensus(localChildren) {
     //   getFiguresByFandom('crouching-tiger-hidden-dragon').length === 4
     //   (li-mu-bai, yu-shu-lien, jen-yu, lo-dark-cloud), matching the
     //   commit's fid count exactly. No overlap with any other fandom.
-    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth', 'soulcalibur', 'onimusha', 'crouching-tiger-hidden-dragon'])
+    // 'skeleton-warriors' = new fandom (2026-08-25, matcher's KB sync commit
+    //   `5b2c63b`-prefixed pour, sourcing-pilot round 12): Playmates 1994
+    //   Basic Series, all 8 original numbered-card figures. Verified before
+    //   adding this entry: getFiguresByFandom('skeleton-warriors').length
+    //   === 8 (prince-lightstar, ursak-the-guardian, grimskull, baron-dark,
+    //   shriek, dagger, aracula, dr-cyborn), matching the mint's fid count
+    //   exactly. 2/8 character_canonical values (shriek, dagger) share a
+    //   NAME with unrelated existing Marvel/DC fids under a different
+    //   manufacturer/product_line -- confirmed no figure_id or semantic-key
+    //   collision before minting. No fandom overlap.
+    const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth', 'soulcalibur', 'onimusha', 'crouching-tiger-hidden-dragon', 'skeleton-warriors'])
 
     const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
     if (newPrefixes.length) {
