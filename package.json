@@ -21,6 +21,7 @@
     "deploy:seed": "npx @opennextjs/cloudflare populateCache remote || echo SEED FAILED non-fatal: prerendered pages will ISR-fill on first request instead"
   },
   "dependencies": {
+    "@cf-wasm/photon": "0.4.0",
     "@clerk/nextjs": "^6.39.5",
     "next": "^15.5.20",
     "react": "^19.0.0",

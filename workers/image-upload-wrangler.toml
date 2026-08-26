@@ -1,0 +1,18 @@
+name = "figurepinner-images"
+main = "image-upload.ts"
+compatibility_date = "2025-09-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Bindings CONFIRMED live 2026-08-26 via `npx wrangler versions view <latest> --name
+# figurepinner-images` (not guessed — the file's prior header warned the original
+# config was lost 8/16 and a guess could detach the R2 binding in prod).
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "figurepinner-assets"
+
+[vars]
+PUBLIC_URL = "https://figurepinner-images.bubs960.workers.dev"
+
+# UPLOAD_SECRET is a secret, not a var — already set live, do NOT put a value here.
+# If this config is ever used to deploy a fresh worker, set it separately:
+#   npx wrangler secret put UPLOAD_SECRET --name figurepinner-images
