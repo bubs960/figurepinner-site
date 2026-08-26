@@ -185,19 +185,30 @@ async function fetchSnapshot(fid: string): Promise<Snapshot> {
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`,
     { next: { revalidate: 3600 } }
   ).catch(() => null)
-  if (!res?.ok) return { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled', trend30d: null }
-  const snap = await res.json() as {
-    median_sold: number | null; avg_sold: number | null; sold_count: number
-    sealed?: CondBucket | null; loose?: CondBucket | null; condition_segmentation?: string
-    recent?: { price: number; sold_date: string | null }[]
-  }
-  return {
-    median: snap.median_sold ?? snap.avg_sold ?? null,
-    comps: snap.sold_count ?? 0,
-    sealed: snap.sealed ?? null,
-    loose: snap.loose ?? null,
-    segmentation: snap.condition_segmentation ?? 'pooled',
-    trend30d: computeTrend30d(snap.recent ?? []),
+  const EMPTY: Snapshot = { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled', trend30d: null }
+  if (!res?.ok) return EMPTY
+  // D1-audit follow-up (2026-08-25, WEBAUDIT-POSTDEPLOY-AUDIT-50D8DD0 finding
+  // #3): the fetch() above already has .catch()+res.ok guarding it, but the
+  // JSON parse itself didn't -- a 200 with a malformed body would throw
+  // uncaught into the SAME Promise.all the D1 fix (52a2f16) just hardened.
+  // Low probability (r2proxy returns a valid `{}` for a missing object) but
+  // the same "never an error" rule this function's fetch already follows.
+  try {
+    const snap = await res.json() as {
+      median_sold: number | null; avg_sold: number | null; sold_count: number
+      sealed?: CondBucket | null; loose?: CondBucket | null; condition_segmentation?: string
+      recent?: { price: number; sold_date: string | null }[]
+    }
+    return {
+      median: snap.median_sold ?? snap.avg_sold ?? null,
+      comps: snap.sold_count ?? 0,
+      sealed: snap.sealed ?? null,
+      loose: snap.loose ?? null,
+      segmentation: snap.condition_segmentation ?? 'pooled',
+      trend30d: computeTrend30d(snap.recent ?? []),
+    }
+  } catch {
+    return EMPTY
   }
 }
 
