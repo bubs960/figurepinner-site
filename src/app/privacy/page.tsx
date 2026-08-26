@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export const revalidate = 86400 // static page — emit s-maxage for the colo edge cache
 
 export default function PrivacyPage() {
-  const updated = 'June 2026'
+  const updated = 'August 2026'
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}>
@@ -45,6 +45,7 @@ export default function PrivacyPage() {
             <li>Browser type, operating system, and general geographic region</li>
             <li>Pages visited and features used within the app</li>
           </ul>
+          <p>To understand how visitors move through FigurePinner (for example, from a search to a signup), some usage events are linked together by a temporary session identifier — a randomly generated code stored in your browser for your current visit. This identifier is <strong>not</strong> linked to your account, email address, or any other personal identifier, and it is retained for approximately 90 days.</p>
 
           <h3>Chrome Extension</h3>
           <p>The FigurePinner Chrome Extension scans product pages on supported retail and resale sites (eBay, Amazon, Target, Walmart, and others) to match listings against our figure database. The extension:</p>
@@ -89,7 +90,7 @@ export default function PrivacyPage() {
 
         <ProseSection title="Data Retention">
           <p>We retain your account and usage data for as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where we are legally required to retain it.</p>
-          <p>Aggregated, anonymized analytics data (e.g., total searches per figure) may be retained indefinitely as it cannot be traced back to individual users.</p>
+          <p>Aggregated, fully anonymized analytics data (e.g., total searches per figure) may be retained indefinitely. Session-level usage analytics — the visit-journey data described under &ldquo;Usage Data&rdquo; above, linked by a temporary session identifier rather than your identity — are retained for approximately 90 days.</p>
         </ProseSection>
 
         <ProseSection title="Your Rights">
