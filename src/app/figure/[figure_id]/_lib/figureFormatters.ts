@@ -104,6 +104,11 @@ const ACRONYM_TOKENS = new Set([
   // Major League Baseball crossover figures 4) -- same acronym-casing gap
   // class as ftc above, not previously exercised anywhere on the site.
   'sdcc', 'nycc', 'mlb',
+  // KB Toys (the retailer) -- found by webaudit's independent re-verification
+  // of 47bd6dd: "KB Toys" is already correctly cased upstream, but
+  // titleCaseValue lowercases every token before re-casing, and 'kb' wasn't
+  // here, so it rendered as "Kb Toys." Same gap class as ftc/sdcc/nycc/mlb.
+  'kb',
 ])
 
 /**
