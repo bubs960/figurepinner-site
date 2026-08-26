@@ -234,7 +234,7 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   // ── Character hub pages (/[genre]/character/[character_slug]) ───────────
   // One page per unique character_canonical within the fandom — but ONLY when
   // the hub clears `characterHubMeetsIndexBar` (≥2 members, ≥1 above-bar).
-  // Ungated, this class was 9,611 URLs of which ~70% were one-figure wrappers
+  // Ungated, this class was 9,841 URLs of which ~70% were one-figure wrappers
   // and ~17.5% wrapped only below-bar figures; Google demoted the whole URL
   // pattern to never-crawled (webaudit root cause, 2026-08-20). Excluded pages
   // stay live and internally linked; their own robots meta goes

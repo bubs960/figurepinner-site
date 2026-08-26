@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             <li>Browser type, operating system, and general geographic region</li>
             <li>Pages visited and features used within the app</li>
           </ul>
-          <p>To understand how visitors move through FigurePinner (for example, from a search to a signup), some usage events are linked together by a temporary session identifier — a randomly generated code stored in your browser for your current visit. This identifier is <strong>not</strong> linked to your account, email address, or any other personal identifier, and it is retained for approximately 90 days.</p>
+          <p>To understand how visitors move through FigurePinner (for example, from a search to a signup), some usage events are linked together by a temporary session identifier — a randomly generated code stored in your browser for your current visit. This identifier is <strong>not</strong> linked to your account, email address, or any other personal identifier, and the analytics records it links together are retained for approximately 90 days.</p>
 
           <h3>Chrome Extension</h3>
           <p>The FigurePinner Chrome Extension scans product pages on supported retail and resale sites (eBay, Amazon, Target, Walmart, and others) to match listings against our figure database. The extension:</p>

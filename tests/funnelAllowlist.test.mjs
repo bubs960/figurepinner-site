@@ -42,6 +42,15 @@ const KNOWN_PAYLOAD_FIELDS = [
 // deploy changed -- 135/135 passing gave false comfort on that gap.
 const INTENTIONALLY_NOT_PERSISTED = new Set()
 
+describe('sessionId regression guard (read-then-dropped once before, eb15b32)', () => {
+  test('sessionId is wired into the blobs array, not just read from body', () => {
+    assert.ok(
+      /sessionId,\s*\/\/ blob13/.test(routeSource) || /blobs:[\s\S]*sessionId/.test(routeSource),
+      'sessionId must remain in the blobs array -- it was read-then-dropped once before (eb15b32)',
+    )
+  })
+})
+
 describe('funnel event allowlist (client union === server ALLOWED_EVENTS)', () => {
   test('funnelClient.ts and api/funnel/route.ts read the SAME FUNNEL_EVENTS source', () => {
     // Both sides import FUNNEL_EVENTS directly (unified source, not two

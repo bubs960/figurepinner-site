@@ -96,6 +96,20 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
    `next build && next start` on the same code showed the correct 404. If a
    route-segment-config change doesn't seem to be taking effect, verify
    against a real build before concluding the code is wrong.
+10. **`node scripts/run-seo-preflight.mjs` (or a plain `next build`) hanging
+    with ZERO output for minutes, twice in a row, is almost always another
+    session's concurrent build fighting over the shared `.next` directory**
+    — this repo routinely has multiple Claude Code sessions/lanes working
+    in it at once. Confirmed 2026-08-25: two straight hangs, no error, no
+    partial log lines; killing the task and rebuilding with
+    `FP_DIST_DIR=<unique-name> npx next build` (the isolation env var
+    `next.config.ts` already supports, originally added for the 8/14
+    liquid-bg canary) succeeded immediately. `next start` needs the same
+    `FP_DIST_DIR` value to serve that build. **Side effect to catch before
+    committing:** building with a custom `FP_DIST_DIR` makes Next.js
+    auto-rewrite `tsconfig.json`'s `include` array to add that dir's
+    `types/**/*.ts` path — `git checkout -- tsconfig.json` after cleaning
+    up the isolated `.next-*` folder, don't ship that edit.
 
 ## Repo facts
 

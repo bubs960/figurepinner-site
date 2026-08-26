@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+
 // Last-resort error boundary (2026-08-25, WEBAUDIT-POSTDEPLOY-AUDIT-50D8DD0
 // finding #4) — catches an error thrown by the ROOT LAYOUT itself, which
 // error.tsx cannot (Next.js requirement: global-error.tsx replaces the
@@ -9,11 +11,16 @@
 // tokens — this is the fallback for when something upstream of those tokens
 // already failed.
 export default function GlobalError({
+  error,
   reset,
 }: {
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  useEffect(() => {
+    console.error(error)
+  }, [error])
+
   return (
     <html lang="en">
       <body style={{ margin: 0, fontFamily: 'system-ui, sans-serif', background: '#09090F', color: '#EEEEF5' }}>

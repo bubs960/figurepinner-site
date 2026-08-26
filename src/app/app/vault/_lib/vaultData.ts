@@ -9,9 +9,16 @@
  *    name/line at add time and go stale; the KB is re-synced on every deploy).
  *    Converted from the bundled @/data/kb 2026-08-16: this page is fully
  *    dynamic (per-user, uncacheable) so it's the one live consumer that
- *    forced the whole 20MB slim KB array into the runtime Worker bundle —
- *    every other @/data/kb consumer is a static/prerendered page that gets
- *    tree-shaken out. That single reachability pushed the Worker past
+ *    forced the whole 20MB slim KB array into the runtime Worker bundle.
+ *    CORRECTION 2026-08-25 (webaudit postdeploy audit of 50d8dd0): the old
+ *    claim that other @/data/kb consumers "get tree-shaken out" is wrong —
+ *    the deployed handler is 40MB with the whole KB array inlined verbatim
+ *    (canonical_image_url appears 22,417 times in the built bundle against
+ *    22,357 figures that have one). Next.js/OpenNext does not tree-shake a
+ *    module-level array export reachable from any route in the same Worker.
+ *    Phase 7 (migrating all @/data/kb consumers onto kbDb) is what actually
+ *    removes the bundled array — this comment is not a reason to leave it
+ *    at 2 call sites. That single reachability pushed the Worker past
  *    Cloudflare's 62 MiB deploy traversal limit (code 10027) once matcher's
  *    passport pours grew the KB past the margin. See
  *    Bridge/MATCHER-TO-WEB-OPTION-E-SPEC-2026-06-14.md for the kbDb design.
