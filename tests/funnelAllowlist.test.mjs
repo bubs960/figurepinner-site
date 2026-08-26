@@ -36,7 +36,11 @@ const KNOWN_PAYLOAD_FIELDS = [
 
 // Fields deliberately accepted but never written to Analytics Engine, with
 // the reason documented in route.ts's own comment -- not a drift, a choice.
-const INTENTIONALLY_NOT_PERSISTED = new Set(['sessionId'])
+// sessionId REMOVED 2026-08-25 (webaudit postdeploy audit of 50d8dd0,
+// finding #2): eb15b32 made it blob13, so it IS persisted now. Leaving it
+// here made this test silently skip its check on exactly the field that
+// deploy changed -- 135/135 passing gave false comfort on that gap.
+const INTENTIONALLY_NOT_PERSISTED = new Set()
 
 describe('funnel event allowlist (client union === server ALLOWED_EVENTS)', () => {
   test('funnelClient.ts and api/funnel/route.ts read the SAME FUNNEL_EVENTS source', () => {
