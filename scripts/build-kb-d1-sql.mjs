@@ -52,6 +52,8 @@ function parseArgs(argv) {
     check: argv.includes('--check'),
     out: null,
     chunkSize: DEFAULT_CHUNK_SIZE,
+    table: 'kb_figures',
+    limit: null,
   }
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -62,6 +64,21 @@ function parseArgs(argv) {
     } else if (arg === '--chunk-size') {
       const next = Number(argv[i + 1])
       if (Number.isFinite(next) && next > 0) opts.chunkSize = Math.floor(next)
+      i += 1
+    } else if (arg === '--table') {
+      // Atomic-swap staging support (2026-08-26): emit schema + inserts against
+      // a staging table (e.g. kb_figures_new) so the live table is never dropped
+      // by a load. The DDL's index names are rewritten with the table name too —
+      // SQLite index names are database-global, so staging indexes must not
+      // collide with the live table's.
+      const next = argv[i + 1]
+      if (!next || !/^[a-z_][a-z0-9_]*$/i.test(next)) fail('--table needs a valid SQL identifier')
+      opts.table = next
+      i += 1
+    } else if (arg === '--limit') {
+      // Rehearsal aid: build only the first N rows (local dry-runs).
+      const next = Number(argv[i + 1])
+      if (Number.isFinite(next) && next > 0) opts.limit = Math.floor(next)
       i += 1
     }
   }
@@ -164,10 +181,24 @@ function validateRows(rows) {
   }
 }
 
-function insertSql(rows) {
+function insertSql(rows, table) {
   return rows
-    .map((row) => `INSERT INTO kb_figures (${COLUMNS.join(', ')}) VALUES (${COLUMNS.map((col) => sqlValue(row[col])).join(', ')});`)
+    .map((row) => `INSERT INTO ${table} (${COLUMNS.join(', ')}) VALUES (${COLUMNS.map((col) => sqlValue(row[col])).join(', ')});`)
     .join('\n') + '\n'
+}
+
+/**
+ * Rewrite the canonical DDL for a staging table: every `kb_figures` occurrence
+ * (table name AND index names — `idx_kb_figures_fandom` → `idx_<staging>_fandom`)
+ * becomes the staging name, so nothing collides with the live table. SQLite
+ * index names are database-global, which is why the index renames matter.
+ * Plain substring replace is correct here: the canonical DDL contains no other
+ * token embedding `kb_figures` (and `_` is a word char, so \b would skip the
+ * index names).
+ */
+function stagingDdl(ddl, table) {
+  if (table === 'kb_figures') return ddl
+  return ddl.replaceAll('kb_figures', table)
 }
 
 function rel(path) {
@@ -184,10 +215,13 @@ if (!existsSync(ddlPath)) fail(`Missing DDL source: ${rel(ddlPath)}`)
 const { FIGURES_V2 } = require(kbPath)
 if (!Array.isArray(FIGURES_V2)) fail(`${rel(kbPath)} did not export FIGURES_V2[]`)
 
-const rows = FIGURES_V2.map(rowFromFigure)
+const sourceFigures = opts.limit ? FIGURES_V2.slice(0, opts.limit) : FIGURES_V2
+const rows = sourceFigures.map(rowFromFigure)
 const report = validateRows(rows)
 
 console.log(`[kb:d1] source: ${rel(kbPath)}`)
+console.log(`[kb:d1] target table: ${opts.table}`)
+if (opts.limit) console.log(`[kb:d1] REHEARSAL LIMIT: first ${opts.limit} rows only`)
 console.log(`[kb:d1] rows: ${report.rowCount}`)
 console.log(`[kb:d1] image rows: ${report.imageCount} (${report.localImageCount} local FigurePinner images)`)
 console.log(`[kb:d1] enriched rows: ${report.enrichedCount}`)
@@ -209,27 +243,34 @@ rmSync(opts.out, { recursive: true, force: true })
 mkdirSync(opts.out, { recursive: true })
 
 const schemaOut = join(opts.out, '000_schema.sql')
-writeFileSync(schemaOut, readFileSync(ddlPath, 'utf8'))
+writeFileSync(schemaOut, stagingDdl(readFileSync(ddlPath, 'utf8'), opts.table))
 
 const chunkFiles = []
 for (let start = 0, index = 1; start < rows.length; start += opts.chunkSize, index += 1) {
   const chunk = rows.slice(start, start + opts.chunkSize)
   const name = `001_load_${String(index).padStart(4, '0')}.sql`
   const path = join(opts.out, name)
-  writeFileSync(path, insertSql(chunk))
+  writeFileSync(path, insertSql(chunk, opts.table))
   chunkFiles.push(path)
 }
 
 const manifestLines = [
-  '# Apply these after creating the remote D1 database and filling KB_DB in wrangler.toml.',
-  '# Keep production routes on src/data/kb until remote row-count and sample parity pass.',
+  opts.table === 'kb_figures'
+    ? '# LEGACY DIRECT-APPLY MANIFEST — schema begins with DROP TABLE IF EXISTS kb_figures.'
+    : `# STAGING MANIFEST (table: ${opts.table}) — the live kb_figures is never touched by these.`,
+  opts.table === 'kb_figures'
+    ? '# DO NOT run this against remote while kb_figures serves production (2026-08-25 standalone ruling):'
+    : '# Apply via scripts/kb-d1-swap.mjs, which sequences load -> verify -> atomic rename -> finalize.',
+  opts.table === 'kb_figures'
+    ? '# use `node scripts/build-kb-d1-sql.mjs --out ... --table kb_figures_new` + scripts/kb-d1-swap.mjs instead.'
+    : '# Remote execution requires the CLAUDE.md rule 5 authorization gate (standalone-authorized).',
   '',
   `npx wrangler d1 execute figurepinner-kb --remote --file ${rel(schemaOut)}`,
   ...chunkFiles.map((file) => `npx wrangler d1 execute figurepinner-kb --remote --file ${rel(file)}`),
   '',
 ]
 writeFileSync(join(opts.out, 'apply-remote-commands.txt'), manifestLines.join('\n'))
-writeFileSync(join(opts.out, 'stats.json'), `${JSON.stringify(report, null, 2)}\n`)
+writeFileSync(join(opts.out, 'stats.json'), `${JSON.stringify({ table: opts.table, ...report }, null, 2)}\n`)
 
 console.log(`[kb:d1] wrote schema + ${chunkFiles.length} load chunks to ${rel(opts.out)}`)
 console.log(`[kb:d1] next: review ${rel(join(opts.out, 'apply-remote-commands.txt'))}`)

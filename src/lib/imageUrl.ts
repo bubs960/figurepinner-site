@@ -11,9 +11,15 @@
  *    so we rewrite to the smallest bucket >= the requested width. Grid pages
  *    were pulling s-l1600 originals (~200-500KB) into 40px boxes.
  *
- * Other hosts (actionfigure411 thumbs, R2 worker, wixstatic) pass through
- * unchanged — AF411 URLs already point at /images/thumbs/, and the R2 images
- * worker has no resize support yet (rehost campaign in progress).
+ *  - figurepinner-images (R2 worker, 75%+ of the KB after the rehost
+ *    campaign): pre-generated thumbnail buckets 200/450/800 via `?width=`
+ *    (lister's 2026-08-26 build, Steve's option #3). Smallest bucket >= the
+ *    requested width, same shape as the eBay rewrite. Photos uploaded before
+ *    the worker deploy have no thumbs yet — the worker falls through to the
+ *    full-res original on those (no error), so this is safe for every object.
+ *
+ * Other hosts (actionfigure411 thumbs, wixstatic) pass through unchanged —
+ * AF411 URLs already point at /images/thumbs/.
  */
 export function thumb(url: string | null | undefined, width = 160): string | null {
   if (!url) return null
@@ -22,6 +28,15 @@ export function thumb(url: string | null | undefined, width = 160): string | nul
     if (/[?&]width=/.test(url)) return url // already sized
     const sep = url.includes('?') ? '&' : '?'
     return `${url}${sep}width=${width}`
+  }
+
+  if (url.includes('figurepinner-images')) {
+    if (/[?&]width=/.test(url)) return url // already sized
+    // Buckets are fixed worker-side; >800 has no thumb, serve the original.
+    const bucket = width <= 200 ? 200 : width <= 450 ? 450 : width <= 800 ? 800 : null
+    if (bucket == null) return url
+    const sep = url.includes('?') ? '&' : '?'
+    return `${url}${sep}width=${bucket}`
   }
 
   if (url.includes('i.ebayimg.com')) {
