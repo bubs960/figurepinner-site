@@ -3,6 +3,7 @@ import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
 import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
 import { isAtOrAboveIndexBar, censusLastCompDate, characterHubMeetsIndexBar, lineHubMeetsIndexBar } from '@/data/indexValueCensus'
+import { enrichmentPourDate } from '@/data/enrichmentDates'
 
 // Fandom slug (KB value) → genre slug (URL path segment used by the router).
 // The character hub page at /[genre]/character/[slug] resolves genre → fandom
@@ -73,10 +74,27 @@ export const dynamicParams = false
 function maxCensusDate(figureIds: Iterable<string>): Date | null {
   let newest: Date | null = null
   for (const id of figureIds) {
-    const d = censusLastCompDate(id)
+    const d = lastContentDate(id)
     if (d && (!newest || d > newest)) newest = d
   }
   return newest
+}
+
+/**
+ * Newest real content-change date for one figure: comp change OR enrichment
+ * pour, whichever is later (2026-08-27, WEBAUDIT-TO-WEB-SITEMAP-LASTMOD-
+ * ENRICHMENT-GAP-2026-08-26). Before this, lastmod saw comps only — a rolling
+ * per-fandom enrichment deploy changed the pages and moved ZERO lastmods,
+ * telling Google nothing changed. Both inputs are real per-URL dates (census
+ * comp dates; matcher's poured_at from the provenance sidecars) — the same
+ * never-fabricate-`now` rule as everything else here. Enrichment dates feed
+ * ONLY freshness, never the index bar (policy question routed separately).
+ */
+function lastContentDate(figureId: string): Date | null {
+  const comp = censusLastCompDate(figureId)
+  const pour = enrichmentPourDate(figureId)
+  if (comp && pour) return pour > comp ? pour : comp
+  return comp ?? pour
 }
 
 export async function generateSitemaps(): Promise<{ id: string }[]> {
@@ -271,15 +289,16 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
     const url = `${BASE}${prettyFigureUrl(f)}`
     if (!seenUrls.has(url)) {
       seenUrls.add(url)
-      // Honest lastmod: the real last-comp-change date when the census has
-      // one, never a fabricated `now` (D3/R8 — a flat build-timestamp on
-      // every URL teaches Google to distrust and lazily recrawl our lastmod).
+      // Honest lastmod: the real last content change (comp change OR
+      // enrichment pour, whichever is later — see lastContentDate above),
+      // never a fabricated `now` (D3/R8 — a flat build-timestamp on every
+      // URL teaches Google to distrust and lazily recrawl our lastmod).
       // The lone Bing-protected exempt fid has no census entry (0 comps) so
       // falls back to `now` here same as before this change — one page, not
       // worth a fabricated placeholder date either.
       figurePages.push({
         url,
-        lastModified: censusLastCompDate(f.figure_id) ?? now,
+        lastModified: lastContentDate(f.figure_id) ?? now,
         changeFrequency: 'weekly' as const,
         priority: 0.7,
       })

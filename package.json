@@ -15,6 +15,7 @@
     "kb:d1:build": "node scripts/build-kb-d1-sql.mjs --out .tmp/kb-d1",
     "kb:d1:remote-check": "node scripts/check-kb-d1-remote.mjs",
     "kb:d1:build-staging": "node scripts/build-kb-d1-sql.mjs --out .tmp/kb-d1-swap --table kb_figures_new",
+    "kb:enrichment-dates": "node scripts/generate-enrichment-dates.mjs",
     "kb:d1:swap": "node scripts/kb-d1-swap.mjs",
     "kb:d1:swap-rehearse": "node scripts/kb-d1-swap.mjs rehearse",
     "kb:d1:canary-audit": "node scripts/audit-kb-d1-canary.mjs",

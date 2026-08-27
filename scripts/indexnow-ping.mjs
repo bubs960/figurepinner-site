@@ -18,21 +18,55 @@
  *
  * Protocol: https://www.indexnow.org/documentation
  * Usage:
- *   node scripts/indexnow-ping.mjs           # routine deploy: priority URLs
- *   node scripts/indexnow-ping.mjs --full    # rare full sitemap resubmission
- *   node scripts/indexnow-ping.mjs <url...>  # submit explicit changed URLs
+ *   node scripts/indexnow-ping.mjs                    # routine deploy: priority URLs
+ *   node scripts/indexnow-ping.mjs --full             # rare full sitemap resubmission
+ *   node scripts/indexnow-ping.mjs <url...>           # submit explicit changed URLs
+ *   node scripts/indexnow-ping.mjs --fandom <name>    # rolling-fandom deploy: submit that
+ *                                                     #   fandom's live child sitemap URLs
+ *   node scripts/indexnow-ping.mjs --urls-file <path> # submit URLs from a file (one per line)
+ *
+ * --fandom / --urls-file (2026-08-27, per the rolling per-fandom enrichment
+ * program — WEBAUDIT-TO-WEB-SITEMAP-LASTMOD-ENRICHMENT-GAP addendum §2):
+ * explicit CLI URLs cap out around ~300 on Windows and a fandom is thousands.
+ * --fandom reads the LIVE child sitemap (/sitemap/<name>.xml) so it submits
+ * ONLY sitemap-emitted (above-bar) URLs — never the raw figure list; below-bar
+ * pages are noindexed and submitting them is a mixed signal. Fetched via
+ * curl.exe with a Chrome UA (the Bot-Fight-immune probe recipe the deploy
+ * chain already uses; Node fetch's TLS fingerprint is 403'd regardless of UA).
+ * Run it AFTER the fandom's deploy + cache purge so the sitemap read is fresh
+ * — as a third command block, not inside the deploy chain (whose auto-run
+ * stays priority-mode).
  */
 
 import { readFileSync, existsSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
 
 const KEY = 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'
 const HOST = 'figurepinner.com'
 const SITEMAP = 'https://' + HOST + '/sitemap.xml'
 const ENDPOINT = 'https://api.indexnow.org/IndexNow'
 const BATCH_SIZE = 10000
+const CHROME_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 const args = process.argv.slice(2)
 const FULL_SUBMIT = args.includes('--full') || process.env.INDEXNOW_FULL === '1'
-const EXPLICIT_URLS = args.filter((arg) => arg !== '--full' && /^https:\/\/figurepinner\.com\//.test(arg))
+
+function argValue(flag) {
+  const i = args.indexOf(flag)
+  return i !== -1 ? args[i + 1] : null
+}
+
+const DRY_RUN = args.includes('--dry-run') // source + count URLs, submit nothing
+const FANDOM = argValue('--fandom')
+const URLS_FILE = argValue('--urls-file')
+if (FANDOM && !/^[a-z0-9-]+$/.test(FANDOM)) {
+  console.error('[IndexNow] --fandom must be a bare fandom slug (e.g. star-wars), got: ' + FANDOM)
+  process.exit(1)
+}
+
+const FLAG_VALUES = new Set([FANDOM, URLS_FILE].filter(Boolean))
+const EXPLICIT_URLS = args.filter(
+  (arg) => arg !== '--full' && !FLAG_VALUES.has(arg) && /^https:\/\/figurepinner\.com\//.test(arg),
+)
 
 const LOCAL_SITEMAP_PATHS = [
   '.next/server/app/sitemap.xml.body',
@@ -60,6 +94,54 @@ function withPriority(urls) {
   const set = new Set(urls)
   for (const u of PRIORITY_URLS) set.add(u)
   return [...set]
+}
+
+/**
+ * Fetch one fandom's live child sitemap and return its <loc> URLs. curl.exe +
+ * Chrome UA is the only shell path Bot Fight Mode admits (Node fetch 403s on
+ * TLS fingerprint) — see CLAUDE.md deploy truth #3. Returns null on any
+ * failure so the caller can refuse loudly rather than submit nothing silently.
+ */
+function getFandomSitemapUrls(fandom) {
+  const url = 'https://' + HOST + '/sitemap/' + fandom + '.xml'
+  let xml
+  try {
+    xml = execFileSync('curl.exe', ['-s', '--fail', '-A', CHROME_UA, url], {
+      encoding: 'utf8',
+      maxBuffer: 1024 * 1024 * 64,
+      windowsHide: true,
+    })
+  } catch (err) {
+    console.error('[IndexNow] curl fetch of ' + url + ' failed: ' + (err.message || err))
+    return null
+  }
+  const urls = extractLocs(xml)
+  if (urls.length === 0) {
+    console.error('[IndexNow] ' + url + ' fetched but contained zero <loc> entries — wrong fandom slug, or the sitemap route 404-bodied')
+    return null
+  }
+  console.log('[IndexNow] source: live child sitemap ' + url + ' (' + urls.length + ' URLs)')
+  return urls
+}
+
+function getUrlsFromFile(path) {
+  let text
+  try {
+    text = readFileSync(path, 'utf8')
+  } catch (err) {
+    console.error('[IndexNow] --urls-file read failed (' + path + '): ' + err.message)
+    return null
+  }
+  const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
+  const urls = lines.filter((l) => /^https:\/\/figurepinner\.com\//.test(l))
+  const rejected = lines.length - urls.length
+  if (rejected > 0) console.warn('[IndexNow] --urls-file: ' + rejected + ' non-figurepinner line(s) ignored')
+  if (urls.length === 0) {
+    console.error('[IndexNow] --urls-file contained zero valid figurepinner.com URLs')
+    return null
+  }
+  console.log('[IndexNow] source: urls-file ' + path + ' (' + urls.length + ' URLs)')
+  return urls
 }
 
 async function getSitemapUrls() {
@@ -154,15 +236,38 @@ async function submitBatch(urlList, idx, total) {
 }
 
 async function ping() {
-  const urls = EXPLICIT_URLS.length > 0
-    ? withPriority(EXPLICIT_URLS)
-    : FULL_SUBMIT
-      ? await getSitemapUrls()
-      : [...PRIORITY_URLS]
+  // Fandom / urls-file modes submit ONLY their own URL set — no priority
+  // padding (the addendum's rule: sitemap-emitted URLs, nothing mixed in).
+  // A null from either sourcing function is a hard exit: a fandom submit that
+  // silently sent 0 URLs would read as "done" while sending no signal at all.
+  let urls
+  let mode
+  if (FANDOM) {
+    urls = getFandomSitemapUrls(FANDOM)
+    mode = 'fandom:' + FANDOM
+    if (!urls) process.exit(1)
+  } else if (URLS_FILE) {
+    urls = getUrlsFromFile(URLS_FILE)
+    mode = 'urls-file'
+    if (!urls) process.exit(1)
+  } else if (EXPLICIT_URLS.length > 0) {
+    urls = withPriority(EXPLICIT_URLS)
+    mode = 'explicit+priority'
+  } else if (FULL_SUBMIT) {
+    urls = await getSitemapUrls()
+    mode = 'full sitemap'
+  } else {
+    urls = [...PRIORITY_URLS]
+    mode = 'priority'
+  }
 
   const batches = Math.ceil(urls.length / BATCH_SIZE)
-  const mode = EXPLICIT_URLS.length > 0 ? 'explicit+priority' : FULL_SUBMIT ? 'full sitemap' : 'priority'
-  console.log('[IndexNow] mode: ' + mode)
+  console.log('[IndexNow] mode: ' + mode + (DRY_RUN ? ' (DRY RUN)' : ''))
+  if (DRY_RUN) {
+    console.log('[IndexNow] dry run: would submit ' + urls.length + ' URLs in ' + batches + ' batch(es); first 3: ' + urls.slice(0, 3).join(' , '))
+    console.log('[IndexNow] Done.')
+    return
+  }
   console.log('[IndexNow] Submitting ' + urls.length + ' URLs in ' + batches + ' batch(es) of up to ' + BATCH_SIZE + '...')
 
   for (let i = 0; i < urls.length; i += BATCH_SIZE) {
