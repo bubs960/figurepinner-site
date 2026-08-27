@@ -19,6 +19,10 @@
 /.vercel/
 /.wrangler/
 /.open-next/
+# wrangler local state for the workers/ sub-projects too (e.g. lister's
+# figurepinner-images deploys from workers/ — local miniflare state, never
+# ship it, never commit it; root-anchored /.wrangler/ above doesn't cover it)
+workers/.wrangler/
 
 # production
 /build
