@@ -74,7 +74,9 @@ export const ARTICLES: Article[] = [
       'The DC figures that actually command money, from a $786 vintage Kenner Super Powers Cyborg to McFarlane Gold Label sets — real eBay sold data, sealed and loose.',
     dek: 'Forty years of DC toys, and the top of the market is still 1986.',
     readingMinutes: 6,
-    updated: '2026-08-13',
+    updated: '2026-08-28',
+    shortVersion:
+      'Vintage Kenner Super Powers Series 3 is where the DC money lives — a loose 1986 Cyborg medians $786.50, and carded Series 3 multiplies from there. Modern McFarlane tops out around $200 on Gold Label sets. Check what yours actually sells for:',
     body: [
       { type: 'p', text: 'DC figure collecting spans Kenner’s 1984–86 Super Powers Collection, the DC Universe Classics run, and McFarlane’s current Multiverse machine. Put every era on one sold-price table and the answer is lopsided: vintage Kenner is where the serious money lives, and it is not particularly close.' },
       { type: 'h2', text: 'Super Powers: the third series is the vault' },
@@ -102,7 +104,9 @@ export const ARTICLES: Article[] = [
       'What vintage Masters of the Universe actually sells for: Turbodactyl at a $250 median, Spydor, Fright Zone, and why 1987 beasts outsell every He-Man variant.',
     dek: 'He-Man is everywhere. The 1987 creatures his line died with are not.',
     readingMinutes: 5,
-    updated: '2026-08-13',
+    updated: '2026-08-28',
+    shortVersion:
+      'Skip the tenth He-Man variant: vintage MOTU money is in the 1987 beasts and late playsets, and completeness decides everything — Turbodactyl medians $250 unbroken, and a Fright Zone is a $55 item incomplete or a $1,500 one with the puppet. Check yours:',
     body: [
       { type: 'p', text: 'The vintage Masters of the Universe line ran 1982 to 1988, sold in staggering quantities at its peak, and collapsed hard at the end — and that collapse is exactly where the value lives now. The figures every kid owned are affordable forever. The beasts and playsets from the death years are what cost real money, because they shipped into a market that had already moved on.' },
       { type: 'h2', text: 'What the sold data shows' },
@@ -180,7 +184,9 @@ export const ARTICLES: Article[] = [
       'Origins’ retro 5.5-inch revival against Masterverse’s 7-inch modern line, with real sold data: SDCC exclusives, Turtles of Grayskull, and where each line’s money is.',
     dek: 'One line resurrects 1982. The other modernizes it. The aftermarket treats them very differently.',
     readingMinutes: 6,
-    updated: '2026-08-13',
+    updated: '2026-08-28',
+    shortVersion:
+      'Collect Origins if you want the aftermarket on your side — its SDCC launch two-pack medians $275 and its dead sub-lines appreciate. Buy Masterverse at clearance if you want the better figure in hand while the line sits paused. See what yours sell for:',
     body: [
       { type: 'p', text: 'Mattel currently runs two parallel MOTU lines and they are not competing products so much as two different hobbies. Origins is the 5.5-inch retro revival: vintage proportions, swappable parts, mini-comics, built to stand next to your childhood figures. Masterverse is the 7-inch modern collector line: real articulation, Revelation and Revolution show designs, built to stand next to your Marvel Legends. Which one to collect depends on what you want your shelf to say — but the sold data has opinions worth hearing first.' },
       { type: 'h2', text: 'Where the Origins money is' },
@@ -283,7 +289,9 @@ export const ARTICLES: Article[] = [
       'DCUC’s scarce waves and Collect-and-Connect economics, documented — Wave 11, Giganta, the SDCC exclusives — and why our sold medians for this line are on hold.',
     dek: 'The Four Horsemen built the definitive DC shelf. Pricing it honestly turns out to be the hard part.',
     readingMinutes: 5,
-    updated: '2026-08-13',
+    updated: '2026-08-28',
+    shortVersion:
+      'DCUC pricing is really parts pricing: the money sits in the Walmart-exclusive waves, complete Collect-and-Connect builds, and SDCC pieces, while common waves trade cheap. We hold DCUC medians until our comps cleanly split it from McFarlane\'s "DC Classics" — check any other DC figure now:',
     body: [
       { type: 'p', text: 'DC Universe Classics ran 2008 to 2012, sculpted by the Four Horsemen in a unified style across twenty waves, and it remains the definitive comic-DC six-inch shelf for a generation of collectors. It has real scarcity structure and real grails. What it does not have, today, is trustworthy sold medians on this site — and here is the honest reason: while building our DC value guide we found our DCUC comp buckets contaminated with McFarlane “DC Classics” listings. Same character names, a similar-sounding line name from fifteen years later, and our query matching conflated them. We publish numbers we can defend or none at all, so DCUC gets the qualitative guide now and the medians after the fix.' },
       { type: 'h2', text: 'Where the scarcity actually lives' },
@@ -1651,7 +1659,9 @@ export const ARTICLES: Article[] = [
         'Three ways into Masters of the Universe collecting: vintage 1982 figures, retro-style Origins, and collector-grade Masterverse. What each line is, who it is for, and what holds value.',
       dek: 'He-Man has three doors back into your collection. They lead to very different rooms.',
       readingMinutes: 8,
-      updated: '2026-06-10',
+      updated: '2026-08-28',
+      shortVersion:
+        'Three doors back into MOTU: vintage is a condition-and-completeness market, Origins is the retro line whose exclusives appreciate, and Masterverse is the better figure in hand that trades under retail. Price the one on your shelf:',
       body: [
         { type: 'p', text: 'You held the Power Sword once. Maybe it was 1984 and the figure was He-Man himself, or Skeletor, or a Beast Man your cousin left behind — but if you are reading a Masters of the Universe collecting guide, some part of you remembers the heft of those chunky 5.5-inch figures and the spring-loaded waist that made them punch. Mattel knows you remember. That is why there are now three distinct MOTU lines competing for your money, and why picking the right one matters more than collectors expect.' },
   
@@ -1841,7 +1851,9 @@ export const ARTICLES: Article[] = [
     metaDescription: 'McFarlane\'s DC Multiverse delivers superhero figures at mass-market prices. Here\'s what holds resale value, what pegwarms, and how the Gold Label tier changes the math.',
     dek: 'Seven inches, 22 points of articulation, and a price point that made superhero collecting accessible. The catch is knowing which ones actually matter.',
     readingMinutes: 6,
-    updated: '2026-06-16',
+    updated: '2026-08-28',
+    shortVersion:
+      'A standard DC Multiverse figure floors at or below its $19.99–$24.99 retail for years — the resale money lives in Gold Label, Platinum, and desirable BAF waves. Check what yours actually sells for:',
     body: [
       { type: 'p', text: 'In January 2020, McFarlane Toys took over the DC Multiverse license and did something the superhero action figure market hadn\'t seen in years: they made it cheap. The line launched at $19.99 to $24.99, with 22 points of articulation and character variety that put Mattel\'s previous DC offerings to shame. For collectors who\'d been watching Marvel Legends dominate the 6-inch premium space, DC Multiverse felt like a real answer — volume, variety, and an accessible entry point.' },
       { type: 'p', text: 'Five-plus years and hundreds of releases later, the reality of the line is more complicated. Some figures hold value. A lot don\'t. The Gold Label tier changed the math on exclusives. And the QC inconsistency that critics noted at launch hasn\'t fully disappeared. Here\'s how to think about the line before you spend.' },
@@ -2391,7 +2403,9 @@ export const ARTICLES: Article[] = [
     metaDescription: 'McFarlane Sports Picks ran from 2001 to 2012 across NFL, MLB, NBA, NHL, and NASCAR. The line\'s entire secondary market runs on variants — here\'s how to read them.',
     dek: 'The base figure is the floor. The white jersey, the gold uniform, the chase variant you didn\'t know existed — that\'s where the real money is.',
     readingMinutes: 8,
-    updated: '2026-06-20',
+    updated: '2026-08-28',
+    shortVersion:
+      'The base Sports Picks figure is the floor. Jersey and equipment variants carry the premiums, and the gold/sepia chases — inserted at ratios as low as 1-in-6 — carry the real money. Check your player:',
     body: [
       { type: 'p', text: 'McFarlane Toys launched Sports Picks in 2001 with an NFL Series 1 that looked like nothing else in the sports collectible aisle. Six-inch figures with 12-plus points of articulation, game-accurate uniforms, sculpted face likenesses, and a retail price around $12.99. Not action figures in the child-toy sense — display pieces in the McFarlane tradition, just wearing jerseys instead of capes. They sold.' },
       { type: 'p', text: 'The line expanded quickly: MLB followed in 2002, NBA and NHL in 2003, NASCAR in 2004. At peak production McFarlane was running parallel series in five sports simultaneously, dropping multiple waves per year. The entire run ended around 2012 when the company shifted focus to DC Multiverse and other licenses. Eleven years of production across five sports left an enormous catalog — and buried inside that catalog is a variant structure that functions like a second, hidden product line that most casual buyers never found.' },
@@ -3146,7 +3160,9 @@ export const ARTICLES: Article[] = [
       'Three manufacturers have made Batman: The Animated Series figures across three decades. Which Kenner figures carry premiums, why DC Collectibles is the shelf line, and what McFarlane\'s reissues actually are.',
     dek: 'Three manufacturers, thirty years, one art style nobody has matched since.',
     readingMinutes: 7,
-    updated: '2026-08-20',
+    updated: '2026-08-28',
+    shortVersion:
+      'Figure out which era you are holding first: Kenner villains (Mr. Freeze, Ra\'s al Ghul, Talia) trade $35–80 loose while the eleven Batman variants are bin material, DC Collectibles is the display line, and McFarlane\'s are in-production reissues. Check yours:',
     body: [
       { type: 'p', text: 'Batman: The Animated Series premiered in September 1992 and its figures have never really gone away: three separate manufacturer eras, three separate markets, and they barely price on the same logic. We track all three: 87 Kenner entries, 69 DC Collectibles entries, and 53 from the current McFarlane-era revival. Sorting out which era you are actually buying is most of the work, because a listing titled "Batman Animated Series figure" could be a 1993 kids\' toy, a 2015 adult collectible, or a 2024 reissue, and they are worth very different money.' },
 
