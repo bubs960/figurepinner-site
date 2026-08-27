@@ -13,6 +13,7 @@
  * policy question routed to standalone/Steve (webaudit 8/27 addendum §4).
  */
 import ENRICHMENT_DATES from './enrichment-dates.generated.json'
+import { censusLastCompDate } from './indexValueCensus'
 
 const DATES = ENRICHMENT_DATES as Record<string, string>
 
@@ -22,4 +23,20 @@ export function enrichmentPourDate(figureId: string): Date | null {
   if (!raw) return null
   const d = new Date(raw)
   return Number.isNaN(d.getTime()) ? null : d
+}
+
+/**
+ * Newest real content-change date for one figure: comp change OR enrichment
+ * pour, whichever is later. THE shared freshness predicate — figure lastmods,
+ * hub lastmod aggregates (sitemap.ts), and the root sitemapindex child
+ * lastmods (sitemapIndex.ts via sitemap-index.xml/route.ts) must all derive
+ * from this one function so the discovery chain can't disagree with itself
+ * about what changed (same one-predicate-many-callers rule as
+ * prettyUrlRouterCountKeys).
+ */
+export function lastContentDate(figureId: string): Date | null {
+  const comp = censusLastCompDate(figureId)
+  const pour = enrichmentPourDate(figureId)
+  if (comp && pour) return pour > comp ? pour : comp
+  return comp ?? pour
 }

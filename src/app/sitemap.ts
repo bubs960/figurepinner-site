@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
 import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
-import { isAtOrAboveIndexBar, censusLastCompDate, characterHubMeetsIndexBar, lineHubMeetsIndexBar } from '@/data/indexValueCensus'
-import { enrichmentPourDate } from '@/data/enrichmentDates'
+import { isAtOrAboveIndexBar, characterHubMeetsIndexBar, lineHubMeetsIndexBar } from '@/data/indexValueCensus'
+import { lastContentDate } from '@/data/enrichmentDates'
 
 // Fandom slug (KB value) → genre slug (URL path segment used by the router).
 // The character hub page at /[genre]/character/[slug] resolves genre → fandom
@@ -80,22 +80,11 @@ function maxCensusDate(figureIds: Iterable<string>): Date | null {
   return newest
 }
 
-/**
- * Newest real content-change date for one figure: comp change OR enrichment
- * pour, whichever is later (2026-08-27, WEBAUDIT-TO-WEB-SITEMAP-LASTMOD-
- * ENRICHMENT-GAP-2026-08-26). Before this, lastmod saw comps only — a rolling
- * per-fandom enrichment deploy changed the pages and moved ZERO lastmods,
- * telling Google nothing changed. Both inputs are real per-URL dates (census
- * comp dates; matcher's poured_at from the provenance sidecars) — the same
- * never-fabricate-`now` rule as everything else here. Enrichment dates feed
- * ONLY freshness, never the index bar (policy question routed separately).
- */
-function lastContentDate(figureId: string): Date | null {
-  const comp = censusLastCompDate(figureId)
-  const pour = enrichmentPourDate(figureId)
-  if (comp && pour) return pour > comp ? pour : comp
-  return comp ?? pour
-}
+// lastContentDate (max of comp-change and enrichment-pour dates) moved to
+// @/data/enrichmentDates 2026-08-27 so the root sitemapindex's child lastmods
+// derive from the SAME predicate as the figure/hub lastmods here — one
+// freshness answer across the whole discovery chain (webaudit build-verdict
+// item A). History + rationale live on the function itself.
 
 export async function generateSitemaps(): Promise<{ id: string }[]> {
   return [{ id: STATIC_ID }, ...getAllFandoms().map(fandom => ({ id: fandom }))]

@@ -38,7 +38,7 @@
  * stays priority-mode).
  */
 
-import { readFileSync, existsSync } from 'node:fs'
+import { readFileSync, existsSync, appendFileSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 
 const KEY = 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'
@@ -96,6 +96,67 @@ function withPriority(urls) {
   return [...set]
 }
 
+// ── Failed-batch log (build-verdict item C, 2026-08-27) ──────────────────────
+// Console warnings die with the terminal window; a failed chunk in the
+// post-deploy fandom submit would be unrecoverable once scrollback closes.
+// Every finally-failed batch (and sitemap ping) appends one JSON line to
+// .indexnow-failures.jsonl (repo root, gitignored, machine-local — same class
+// as .kv-purge-state.json) so it can be re-submitted later via --urls-file.
+// The log write itself is try/catch'd: it must never break the deploy chain.
+const FAILURE_LOG = '.indexnow-failures.jsonl'
+let RUN_MODE = 'unknown'
+
+function logFailure(record) {
+  try {
+    appendFileSync(FAILURE_LOG, JSON.stringify({ ts: new Date().toISOString(), mode: RUN_MODE, ...record }) + '\n')
+    console.warn('[IndexNow] failure recorded in ' + FAILURE_LOG + ' (re-submit later via --urls-file)')
+  } catch (err) {
+    console.warn('[IndexNow] could not write failure log (non-fatal): ' + err.message)
+  }
+}
+
+function curlText(url) {
+  return execFileSync('curl.exe', ['-s', '--fail', '-A', CHROME_UA, url], {
+    encoding: 'utf8',
+    maxBuffer: 1024 * 1024 * 64,
+    windowsHide: true,
+  })
+}
+
+/**
+ * Serving gate (build-verdict item B, 2026-08-27): before a fandom submit,
+ * prove the edge is serving THIS deploy — /api/healthz's build sha must match
+ * the fp-build meta on a real served page from the fetched URL set. If they
+ * disagree, the edge/ISR is still serving pre-deploy content and submitting
+ * would notify engines about the OLD corpus, burning the freshness signal.
+ * Enforced in-script rather than left as a runbook comment — procedural gates
+ * get skipped. Returns true only on a verified match.
+ */
+function servingGatePasses(sampleUrl) {
+  let healthzSha
+  try {
+    healthzSha = JSON.parse(curlText('https://' + HOST + '/api/healthz')).build
+  } catch (err) {
+    console.error('[IndexNow] serving gate: healthz fetch failed (' + (err.message || err) + ') — refusing to submit')
+    return false
+  }
+  let pageSha = null
+  try {
+    const html = curlText(sampleUrl)
+    pageSha = /name="fp-build"[^>]*content="([^"]+)"/.exec(html)?.[1] ?? null
+  } catch (err) {
+    console.error('[IndexNow] serving gate: sample page fetch failed (' + sampleUrl + ': ' + (err.message || err) + ') — refusing to submit')
+    return false
+  }
+  if (!healthzSha || !pageSha || healthzSha !== pageSha) {
+    console.error('[IndexNow] serving gate FAILED: healthz build=' + healthzSha + ' vs sample fp-build=' + pageSha + ' (' + sampleUrl + ')')
+    console.error('[IndexNow] the edge is not serving this deploy yet — run the deploy chain purges first, then retry')
+    return false
+  }
+  console.log('[IndexNow] serving gate OK: healthz build == sample fp-build == ' + healthzSha)
+  return true
+}
+
 /**
  * Fetch one fandom's live child sitemap and return its <loc> URLs. curl.exe +
  * Chrome UA is the only shell path Bot Fight Mode admits (Node fetch 403s on
@@ -106,11 +167,7 @@ function getFandomSitemapUrls(fandom) {
   const url = 'https://' + HOST + '/sitemap/' + fandom + '.xml'
   let xml
   try {
-    xml = execFileSync('curl.exe', ['-s', '--fail', '-A', CHROME_UA, url], {
-      encoding: 'utf8',
-      maxBuffer: 1024 * 1024 * 64,
-      windowsHide: true,
-    })
+    xml = curlText(url)
   } catch (err) {
     console.error('[IndexNow] curl fetch of ' + url + ' failed: ' + (err.message || err))
     return null
@@ -213,6 +270,7 @@ async function submitBatch(urlList, idx, total) {
       })
     } catch (err) {
       console.warn('[IndexNow] batch ' + idx + '/' + total + ' network error (non-fatal): ' + err.message)
+      logFailure({ batch: idx, of: total, urlCount: urlList.length, status: 'network-error', note: err.message })
       return
     }
 
@@ -231,6 +289,7 @@ async function submitBatch(urlList, idx, total) {
 
     const text = await res.text()
     console.warn('[IndexNow] batch ' + idx + '/' + total + ' response ' + res.status + ' (non-fatal, giving up after ' + (attempt + 1) + ' attempt(s)): ' + text.slice(0, 200))
+    logFailure({ batch: idx, of: total, urlCount: urlList.length, status: res.status, note: text.slice(0, 120) })
     return
   }
 }
@@ -246,6 +305,14 @@ async function ping() {
     urls = getFandomSitemapUrls(FANDOM)
     mode = 'fandom:' + FANDOM
     if (!urls) process.exit(1)
+    // Serving gate (item B): sample a figure page from the set we're about to
+    // submit (falls back to the first URL — every page carries fp-build).
+    // Dry runs still RUN the gate (so it's testable) but only report — a
+    // pre-deploy dry-run legitimately sees the previous build.
+    const sample = urls.find((u) => u.includes('/figure/')) ?? urls[0]
+    const gateOk = servingGatePasses(sample)
+    if (!gateOk && !DRY_RUN) process.exit(1)
+    if (!gateOk && DRY_RUN) console.warn('[IndexNow] (dry run: gate result reported, not enforced)')
   } else if (URLS_FILE) {
     urls = getUrlsFromFile(URLS_FILE)
     mode = 'urls-file'
@@ -261,6 +328,7 @@ async function ping() {
     mode = 'priority'
   }
 
+  RUN_MODE = mode
   const batches = Math.ceil(urls.length / BATCH_SIZE)
   console.log('[IndexNow] mode: ' + mode + (DRY_RUN ? ' (DRY RUN)' : ''))
   if (DRY_RUN) {
@@ -297,6 +365,7 @@ async function ping() {
       continue
     }
     console.warn('[IndexNow] sitemap ping FAIL (' + r.status + ', non-fatal, giving up after ' + (attempt + 1) + ' attempt(s))')
+    logFailure({ batch: 'sitemap-ping', urlCount: 1, status: r.status, note: SITEMAP })
     break
   }
 

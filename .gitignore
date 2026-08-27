@@ -70,6 +70,9 @@ npm-debug.log*
 # race doesn't surface as a false "uncommitted change" warning.
 /.kv-purge-state.json
 /.kv-purge-state.json.tmp-*
+# IndexNow failed-batch log (machine-local; failed submits recorded for later
+# re-submission via --urls-file — see scripts/indexnow-ping.mjs item C note)
+/.indexnow-failures.jsonl
 
 # hub-isr-check.mjs output — machine-local scratch, mode-specific by design
 # (2026-07-27: a shared filename between baseline/verify runs once silently
