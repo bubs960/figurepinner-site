@@ -25,7 +25,7 @@ import LiquidBackground from './LiquidBackground'
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
-import { enrichedDescription, gatedLoreText } from '../_lib/enrichedCopy'
+import { enrichedDescription, gatedLoreText, gatedKeyFeatures } from '../_lib/enrichedCopy'
 import { getLineAttributes } from '../_lib/line-attributes-data'
 import { getCharacterNotes } from '../_lib/character-notes-data'
 import { getSellerListings } from '@/data/bubs-inventory'
@@ -1087,7 +1087,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           {/* match_represented renders in the hero lore slot now — features only here */}
           <FigureEnrichment
             matchRepresented={null}
-            keyFeatures={local.key_features}
+            keyFeatures={gatedKeyFeatures(local)}
           />
         </div>
 

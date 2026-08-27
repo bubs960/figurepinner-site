@@ -29,7 +29,10 @@ const HEDGE_RE =
 
 // Placeholder/artifact sweep — zero hits in the current KB, kept as a
 // permanent gate because future enrichment batches are unaudited by default.
-const ARTIFACT_RE = /\bN\/A\b|\bundefined\b|\bnull\b|\bNaN\b|\bTBD\b|\bFIXME\b|lorem ipsum/i
+// "null ray(s)" / "null-ray" is a real Transformers weapon (G1 Starscream,
+// Legacy Dirge) — the lookahead keeps those rows live (webaudit claims-3
+// verification, 2026-08-27: 2 of 5 raw \bnull\b hits were this weapon).
+const ARTIFACT_RE = /\bN\/A\b|\bundefined\b|\bnull\b(?![ -]rays?\b)|\bNaN\b|\bTBD\b|\bFIXME\b|lorem ipsum/i
 
 const MIN_LEN = 30
 const META_BUDGET = 200 // hard ceiling after sentence-boundary truncation
@@ -88,5 +91,22 @@ export function gatedLoreText(f: KBFigure): string | null {
   if (HEDGE_RE.test(raw)) return null
   if (ARTIFACT_RE.test(raw)) return null
   if (DUPLICATE_TEXTS.has(raw)) return null
+  return raw
+}
+
+/**
+ * key_features if it passes the QA-language gates, else null (the Key
+ * Features section simply doesn't render). Added 2026-08-28 per webaudit's
+ * claims-3 verification: only 3 of 21,934 rows currently trip the gates
+ * (matcher owns fixing those KB rows), but future enrichment batches are
+ * unaudited by default — same rationale as ARTIFACT_RE existing at zero hits.
+ * No length/duplicate gates: key_features is a comma list, not prose — short
+ * rows and shared phrasing ("articulated joints") are legitimate there.
+ */
+export function gatedKeyFeatures(f: KBFigure): string | null {
+  const raw = f.key_features?.trim()
+  if (!raw) return null
+  if (HEDGE_RE.test(raw)) return null
+  if (ARTIFACT_RE.test(raw)) return null
   return raw
 }

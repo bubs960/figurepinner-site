@@ -270,7 +270,7 @@ async function submitBatch(urlList, idx, total) {
       })
     } catch (err) {
       console.warn('[IndexNow] batch ' + idx + '/' + total + ' network error (non-fatal): ' + err.message)
-      logFailure({ batch: idx, of: total, urlCount: urlList.length, status: 'network-error', note: err.message })
+      logFailure({ batch: idx, of: total, urlCount: urlList.length, status: 'network-error', note: err.message, urls: urlList })
       return
     }
 
@@ -289,7 +289,7 @@ async function submitBatch(urlList, idx, total) {
 
     const text = await res.text()
     console.warn('[IndexNow] batch ' + idx + '/' + total + ' response ' + res.status + ' (non-fatal, giving up after ' + (attempt + 1) + ' attempt(s)): ' + text.slice(0, 200))
-    logFailure({ batch: idx, of: total, urlCount: urlList.length, status: res.status, note: text.slice(0, 120) })
+    logFailure({ batch: idx, of: total, urlCount: urlList.length, status: res.status, note: text.slice(0, 120), urls: urlList })
     return
   }
 }
