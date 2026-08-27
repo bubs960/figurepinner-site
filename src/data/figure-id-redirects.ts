@@ -36,4 +36,15 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_wrestling_mattel_elite_111_cody-rhodes_133ae0',
   'fp_wrestling_mattel_wrestlemania_31_stardust_3cf429':
     'fp_wrestling_mattel_elite_36_stardust_b73853',
+
+  // 8/27 Rey Mysterio S&S conflation split (FIGURE-ISSUE-QUEUE Batch 20) — the
+  // old fid merged two real products and was rekeyed to the 2006 boxed LE it
+  // actually depicted; the 2005 carded ToyFare S&S Rey got its own NEW fid
+  // (918bab), which needs no redirect. No pretty-path entry either: 3 boxed-LE
+  // rey-mysterio records existed at the pre-removal snapshot, so the old
+  // canonical was always /figure/:id (same reasoning as the cody-rhodes/
+  // stardust exclusions in pretty-path-redirects.ts) —
+  // MATCHER-TO-WEB-REY-SAS-REKEY-REDIRECT-PAIR-2026-08-27.md
+  'fp_wrestling_jakks-pacific_boxed-limited-edition_stars-and-stripes-internet-exclusive_rey-mysterio_0ecb88':
+    'fp_wrestling_jakks-pacific_boxed-limited-edition_none_rey-mysterio_b69595',
 }
