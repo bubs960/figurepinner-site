@@ -25,10 +25,14 @@
  * there's nothing to rewrite to.
  *
  * Regenerate whenever the KB syncs (same cadence as other KB-derived
- * artifacts like index-value-census.json) -- a stale map just means some
- * figures miss the KV-consolidation optimization until regenerated, not a
- * correctness bug (middleware falls through to normal figure-page rendering
- * for any figure_id not in the map).
+ * artifacts like index-value-census.json). ⚠️ A stale map IS a correctness
+ * bug, not just a missed optimization (proven live 2026-08-28): an entry for
+ * a fid the KB has since removed rewrites /figure/<old-fid> to a now-404
+ * pretty path BEFORE the figure route's FIGURE_ID_REDIRECTS lookup can run,
+ * silently shadowing the redirect. tests/figureIdPrettyMap.test.mjs now
+ * drift-gates this (fails the deploy chain if the map disagrees with the KB).
+ * Missing entries are still benign — middleware falls through to normal
+ * figure-page rendering for any figure_id not in the map.
  *
  * Usage: node --import ./scripts/register-ts-loader.mjs scripts/gen-figure-id-pretty-map.mjs <out-file>
  */
