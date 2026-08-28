@@ -48,43 +48,40 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
   'fp_wrestling_jakks-pacific_boxed-limited-edition_stars-and-stripes-internet-exclusive_rey-mysterio_0ecb88':
     'fp_wrestling_jakks-pacific_boxed-limited-edition_none_rey-mysterio_b69595',
 
-  // ⚠️ PARKED 8/28 (commented pairs below): matcher's phantom-drop for these
-  // sources has NOT reached the site KB sync yet — all 21 commented sources
-  // are still live records here, and the structural guard test correctly
-  // refuses a redirect whose source a live record shadows. UNCOMMENT each
-  // batch when the sync that drops them lands (next KB drift commit should
-  // carry it; re-run npm test to confirm). The 2 active pairs below are the
-  // Batch 22/24/25 surgeries whose old fids are already gone.
+  // 8/28 UNPARKED: matcher's phantom-drop sync landed (emit-site-slim-kb.py
+  // fix, slim re-emitted at 23,241 fids) — all 21 previously-parked sources
+  // are gone from the site KB; guard test confirms mechanically.
+  // MATCHER-TO-WEB-PHANTOM-DROP-FIXED-SLIM-RESYNCED-2026-08-28.md
   // 8/27 re-key/dedup pour, FIGURE-ISSUE-QUEUE Batches 22/24/25 (15 pairs) —
   // MATCHER-TO-WEB-REKEY-REDIRECT-PAIRS-B22-24-25-2026-08-27.md. The 6
   // never-released/prototype phantoms from the same relay have no survivor
   // and correctly 404 (standing policy above).
-  // 'fp_wrestling_mattel_elite_1_fatu_d29d90':
-  // 'fp_wrestling_mattel_elite-legends_18_fatu_c93a8a',
-  // 'fp_wrestling_mattel_elite_2_1-2-3-kid_ba76ec':
-  // 'fp_wrestling_mattel_elite_41_1-2-3-kid_4cbbb5',
-  // 'fp_wrestling_mattel_elite_3_colonel-mustafa_5d29d6':
-  // 'fp_wrestling_mattel_elite_86_colonel-mustafa_21826b46bbc7',
-  // 'fp_wrestling_mattel_elite_1_hbk_519319':
-  // 'fp_wrestling_mattel_elite_3_shawn-michaels_306022',
-  // 'fp_wrestling_mattel_elite_3_queen-sherri_6ce4ea':
-  // 'fp_wrestling_mattel_elite_65_sensational-sherri_19068864364b',
-  // 'fp_wrestling_mattel_elite_2_avalanche_d3261d':
-  // 'fp_wrestling_mattel_elite_35_earthquake_3cf156',
-  // 'fp_wrestling_mattel_elite_2_adam-copeland_3836ea':
-  // 'fp_wrestling_jazwares_aew-unmatched_10_adam-copeland_64e689',
-  // 'fp_other_neca_neca-movies_movies_goliath_9642c1':
-  // 'fp_tv_neca_ultimate_2021_goliath_44939d',
-  // 'fp_other_neca_neca-movies_movies_demona_545a9b':
-  // 'fp_tv_neca_ultimate_2022_demona_208178',
-  // 'fp_other_neca_neca-movies_movies_brooklyn_44ddd6':
-  // 'fp_tv_neca_ultimate_2023_brooklyn_dade2d',
-  // 'fp_other_neca_neca-movies_movies_lexington_985685':
-  // 'fp_tv_neca_ultimate_2023_lexington_f59269',
-  // 'fp_other_neca_neca-movies_movies_broadway_95b87e':
-  // 'fp_tv_neca_ultimate_2022_broadway_b209fb',
-  // 'fp_other_neca_neca-movies_movies_bronx_78c611':
-  // 'fp_tv_neca_ultimate_2022_bronx_e94443',
+  'fp_wrestling_mattel_elite_1_fatu_d29d90':
+    'fp_wrestling_mattel_elite-legends_18_fatu_c93a8a',
+  'fp_wrestling_mattel_elite_2_1-2-3-kid_ba76ec':
+    'fp_wrestling_mattel_elite_41_1-2-3-kid_4cbbb5',
+  'fp_wrestling_mattel_elite_3_colonel-mustafa_5d29d6':
+    'fp_wrestling_mattel_elite_86_colonel-mustafa_21826b46bbc7',
+  'fp_wrestling_mattel_elite_1_hbk_519319':
+    'fp_wrestling_mattel_elite_3_shawn-michaels_306022',
+  'fp_wrestling_mattel_elite_3_queen-sherri_6ce4ea':
+    'fp_wrestling_mattel_elite_65_sensational-sherri_19068864364b',
+  'fp_wrestling_mattel_elite_2_avalanche_d3261d':
+    'fp_wrestling_mattel_elite_35_earthquake_3cf156',
+  'fp_wrestling_mattel_elite_2_adam-copeland_3836ea':
+    'fp_wrestling_jazwares_aew-unmatched_10_adam-copeland_64e689',
+  'fp_other_neca_neca-movies_movies_goliath_9642c1':
+    'fp_tv_neca_ultimate_2021_goliath_44939d',
+  'fp_other_neca_neca-movies_movies_demona_545a9b':
+    'fp_tv_neca_ultimate_2022_demona_208178',
+  'fp_other_neca_neca-movies_movies_brooklyn_44ddd6':
+    'fp_tv_neca_ultimate_2023_brooklyn_dade2d',
+  'fp_other_neca_neca-movies_movies_lexington_985685':
+    'fp_tv_neca_ultimate_2023_lexington_f59269',
+  'fp_other_neca_neca-movies_movies_broadway_95b87e':
+    'fp_tv_neca_ultimate_2022_broadway_b209fb',
+  'fp_other_neca_neca-movies_movies_bronx_78c611':
+    'fp_tv_neca_ultimate_2022_bronx_e94443',
   'fp_wrestling_mattel_elite_1_manik_173ec9':
     'fp_wrestling_mattel_elite-network-spotlight_1_tj-perkins_358ff9',
   'fp_wrestling_toy-biz_wcw-toy-biz_bgt_sting-vs-sid-vic_d39ecc':
@@ -92,23 +89,23 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
 
   // 8/27 star-wars credit-collection pilot pour (2 dup phantom-flags) —
   // MATCHER-TO-WEB-CREDIT-COLLECTION-SW-PILOT-POURED-2026-08-27.md
-  // 'fp_star-wars_hasbro_credit-collection_credit-collection_the-mandalorian_5366a6':
-  // 'fp_star-wars_hasbro_credit-collection_credit-collection_mandalorian_7c7538',
-  // 'fp_star-wars_hasbro_credit-collection_credit-collection_the-armorer_c1b8b0':
-  // 'fp_star-wars_hasbro_credit-collection_credit-collection_armorer_f8a146',
+  'fp_star-wars_hasbro_credit-collection_credit-collection_the-mandalorian_5366a6':
+    'fp_star-wars_hasbro_credit-collection_credit-collection_mandalorian_7c7538',
+  'fp_star-wars_hasbro_credit-collection_credit-collection_the-armorer_c1b8b0':
+    'fp_star-wars_hasbro_credit-collection_credit-collection_armorer_f8a146',
 
   // 8/27 Codex queue E pour (6 dup phantom-flags with duplicate_of) —
   // MATCHER-TO-WEB-CODEX-E-REDIRECT-PAIRS-2026-08-27.md
-  // 'fp_wrestling_mattel_wwe-superstars_3_million-dollar-m_fed384':
-  // 'fp_wrestling_jakks-pacific_classic-superstars_3_ted-dibiase_fc14d8',
-  // 'fp_wrestling_mattel_wwe-superstars_3_undertaker_596e6c':
-  // 'fp_wrestling_jakks-pacific_classic-superstars_3_undertaker_617a7b',
-  // 'fp_wrestling_mattel_wwe-superstars_8_hulk-hogan_3c3066':
-  // 'fp_wrestling_jakks-pacific_classic-superstars_8_hollywood-hulk-hogan_ee511d',
-  // 'fp_wrestling_jakks-pacific_deluxe-aggression_17_david-hart-smith_11f655':
-  // 'fp_wrestling_jakks-pacific_deluxe-aggression_17_dh-smith_cb7235',
-  // 'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_a-wing_8dfdc3':
-  // 'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_a-wing_bbc0de',
-  // 'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_ezra-bridgers-a-wing_13e1b6':
-  // 'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_ezra-bridger-s-a-wing_04ed82',
+  'fp_wrestling_mattel_wwe-superstars_3_million-dollar-m_fed384':
+    'fp_wrestling_jakks-pacific_classic-superstars_3_ted-dibiase_fc14d8',
+  'fp_wrestling_mattel_wwe-superstars_3_undertaker_596e6c':
+    'fp_wrestling_jakks-pacific_classic-superstars_3_undertaker_617a7b',
+  'fp_wrestling_mattel_wwe-superstars_8_hulk-hogan_3c3066':
+    'fp_wrestling_jakks-pacific_classic-superstars_8_hollywood-hulk-hogan_ee511d',
+  'fp_wrestling_jakks-pacific_deluxe-aggression_17_david-hart-smith_11f655':
+    'fp_wrestling_jakks-pacific_deluxe-aggression_17_dh-smith_cb7235',
+  'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_a-wing_8dfdc3':
+    'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_a-wing_bbc0de',
+  'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_ezra-bridgers-a-wing_13e1b6':
+    'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_ezra-bridger-s-a-wing_04ed82',
 }
