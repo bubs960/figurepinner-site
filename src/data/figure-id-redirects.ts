@@ -108,4 +108,53 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_a-wing_bbc0de',
   'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_ezra-bridgers-a-wing_13e1b6':
     'fp_star-wars_hasbro_micro-galaxy-squadron_light-armor-class_ezra-bridger-s-a-wing_04ed82',
+
+  // 8/28 held-surgeries pour (3 re-keys; deluxe-aggression_25_mark-henry is a
+  // phantom with no survivor and correctly 404s) —
+  // MATCHER-TO-WEB-HELD-SURGERIES-POURED-3-REDIRECT-PAIRS-2026-08-28.md
+  'fp_wrestling_mattel_summerslam_86_triple-h_87503f':
+    'fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_hhh_040bb5',
+  'fp_wrestling_mattel_summerslam_ss_goldberg_ded67a':
+    'fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a',
+  'fp_wrestling_mattel_wwe-superstars_10_big-boss-man_1e84c8':
+    'fp_wrestling_grand-toys_wrestling-superstars_6_big-boss-man_12f029',
+
+  // 8/28 Codex queue F re-keys (2 pairs; elite_3_2026-new-york-toy-fair stays
+  // held/UNKNOWN, no redirect) —
+  // MATCHER-TO-WEB-QUEUE-F-REKEYS-2-REDIRECT-PAIRS-2026-08-28.md
+  'fp_wrestling_mattel_elite_1_2026-wwe-world_726dcb':
+    'fp_wrestling_mattel_elite-walmart-exclusive_none_the-rock_33bc7d',
+  'fp_wrestling_mattel_elite_2_2026-wwe-world_1a1456':
+    'fp_wrestling_mattel_elite-hall-of-fame_none_shawn-michaels_8a82e3',
+
+  // 8/28 Galaxy's Edge Black Series dedup (Codex queue G): the misspelled
+  // `galaxy-s-edge` bucket phantomed with duplicate_of; survivors keep the
+  // canonical `galaxys-edge` wave key —
+  // MATCHER-TO-WEB-GALAXYS-EDGE-DEDUP-POURED-2026-08-28.md
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_galaxy-edge-first-order_c316ef':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-first-order_b19888',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_galaxy-edge-first-order_7abb49':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-first-order_eee1f0',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_galaxy-edge-droid-depot_c38615':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_galaxy-edge-droid-depot_d79a2a':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_af049f',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_galaxy-edge-smugglers-run_0ca570':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-smugglers-run_ed984c',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_galaxy-edge-galactic-creatures_3efc7a':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-galactic-creatures_208d9e',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_captain-cardinal_1334a7':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_captain-cardinal_a5a328',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_commander-pyre_f22aba':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_commander-pyre_5a4f19',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_dj-r-3x_25279c':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_dj-r-3x_e26a34',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_hondo-ohnaka_206560':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_hondo-ohnaka_bef7f6',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_mountain-trooper_cbc198':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_mountain-trooper_3fbc7f',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_r5-p8_352f74':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_r5-p8_af744b',
+  'fp_star-wars_hasbro_black-series_galaxy-s-edge_dok-ondar_e102b2':
+    'fp_star-wars_hasbro_black-series_galaxys-edge_dok-ondar_3f130b',
 }
