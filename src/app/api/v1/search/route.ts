@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { deriveName } from '@/data/kb'
+import { deriveName } from '@/data/kbHelpers'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb, aggregateGenreFacets, MAX_RESULTS } from '../_lib/kbSearch'
 import { searchGenreForFandom } from '@/lib/genreFigures'

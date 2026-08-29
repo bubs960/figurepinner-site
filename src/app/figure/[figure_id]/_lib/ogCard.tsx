@@ -10,8 +10,8 @@
  * headline. ShelfCard below applies the SAME rule to the share card: the
  * headline stat is the grail COUNT, never a dollar total.
  */
-import type { KBFigure } from '@/data/kb'
-import { deriveName } from '@/data/kb'
+import type { KBFigure } from '@/data/kbHelpers'
+import { deriveName } from '@/data/kbHelpers'
 import { prettifySlug } from './figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 

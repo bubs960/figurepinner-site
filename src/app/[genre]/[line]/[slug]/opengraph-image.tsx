@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { deriveName } from '@/data/kb'
+import { deriveName } from '@/data/kbHelpers'
 import { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'

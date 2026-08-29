@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { deriveName } from '@/data/kb'
+import { deriveName } from '@/data/kbHelpers'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb } from '../_lib/kbSearch'
 import { checkRateLimit } from '@/lib/rateLimit'
