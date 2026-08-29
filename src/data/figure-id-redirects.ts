@@ -172,4 +172,49 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_star-wars_hasbro_black-series_exclusives_the-mandalorian_ce6441',
   'fp_star-wars_hasbro_black-series_exclusives_ronin-r5-d56_6ed9c2':
     'fp_star-wars_hasbro_black-series_exclusives_the-ronin-r5-d56_cb2b77',
+
+  // 8/29 galaxy-bucket slug-vs-prose dedup (13 pairs): bare-slug twin phantomed,
+  // `the-` prose row survives —
+  // MATCHER-TO-WEB-GALAXY-THE-DEDUP-POURED-13-REDIRECT-PAIRS-2026-08-29.md
+  'fp_star-wars_hasbro_black-series_galaxy_armorer_b51b96':
+    'fp_star-wars_hasbro_black-series_galaxy_the-armorer_eaa259',
+  'fp_star-wars_hasbro_black-series_galaxy_armorer_5acd3a':
+    'fp_star-wars_hasbro_black-series_galaxy_the-armorer_38ea13',
+  'fp_star-wars_hasbro_black-series_galaxy_client_d1fdb8':
+    'fp_star-wars_hasbro_black-series_galaxy_the-client_ec2821',
+  'fp_star-wars_hasbro_black-series_galaxy_figrin-dan_aacf37':
+    'fp_star-wars_hasbro_black-series_galaxy_figrin-d-an_40a5ff',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian-and-grogu_d09f78':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian-and-grogu_0109c5',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian_b0d576':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian_a8a4c4',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian-grogu_8aa4f3':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian-grogu_353286',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian-grogu_857ca0':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian-grogu_acd701',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian-grogu_28614a':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian-grogu_a97600',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian_2a85b7':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian_a6e2ba',
+  'fp_star-wars_hasbro_black-series_galaxy_mandalorian_68f425':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian_2b4364',
+  'fp_star-wars_hasbro_black-series_galaxy_ronin_ac0bac':
+    'fp_star-wars_hasbro_black-series_galaxy_the-ronin_2434ee',
+  'fp_star-wars_hasbro_black-series_galaxy_stranger_03abb0':
+    'fp_star-wars_hasbro_black-series_galaxy_the-stranger_15bdd0',
+
+  // 8/29 galaxy K-r1 metadata pour (6 dedup phantoms) —
+  // MATCHER-TO-WEB-GALAXY-K-R1-POURED-6-REDIRECT-PAIRS-2026-08-29.md
+  'fp_star-wars_hasbro_black-series_galaxy_captain-cassian-andor_d1692a':
+    'fp_star-wars_hasbro_black-series_galaxy_cassian-andor_2820d7',
+  'fp_star-wars_hasbro_black-series_galaxy_chopper-c1-10p-repack_a6bab1':
+    'fp_star-wars_hasbro_black-series_galaxy_chopper-repack_4fea6b',
+  'fp_star-wars_hasbro_black-series_galaxy_clone-commando-urban-fighter-b1-battle-droid_278c53':
+    'fp_star-wars_hasbro_black-series_galaxy_clone-commando-b1-battle-droid_8d0668',
+  'fp_star-wars_hasbro_black-series_galaxy_darth-vader_0c053b':
+    'fp_star-wars_hasbro_black-series_galaxy_darth-vader_3f6b74',
+  'fp_star-wars_hasbro_black-series_galaxy_garazeb-zeb-orrelios_9e1588':
+    'fp_star-wars_hasbro_black-series_galaxy_garazeb-orrelios_5cd4a4',
+  'fp_star-wars_hasbro_black-series_galaxy_hk-87-assassin-droid_69c2df':
+    'fp_star-wars_hasbro_black-series_galaxy_hk-87_f54ee7',
 }
