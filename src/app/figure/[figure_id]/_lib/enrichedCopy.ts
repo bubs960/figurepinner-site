@@ -51,14 +51,24 @@ const DUPLICATE_TEXTS: Set<string> = (() => {
   return new Set([...counts.entries()].filter(([, n]) => n > 1).map(([t]) => t))
 })()
 
-/** Truncate at the last sentence boundary within `budget` chars; null if no
- *  complete sentence fits (better to keep the template than ship a fragment). */
+/** Truncate at the last sentence boundary within `budget` chars; if no
+ *  complete sentence fits, fall back to a last-space cut + "…" — approved
+ *  webaudit policy (WEBAUDIT-TO-WEB-KEYFEATURES-PASS-TRUNCATION-APPROVED-
+ *  AMENDED-2026-08-29): recovers the ~1.5K long-prose rows that previously
+ *  fell back to templated copy, with trailing punctuation stripped before
+ *  the ellipsis (the amendment — kills the ",…" fragment class). */
 function truncateAtSentence(text: string, budget: number): string | null {
   if (text.length <= budget) return text
   const head = text.slice(0, budget + 1)
   const cut = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '))
-  if (cut < MIN_LEN) return null
-  return head.slice(0, cut + 1)
+  if (cut >= MIN_LEN) return head.slice(0, cut + 1)
+  // No sentence boundary fits: cut at the last space so "…" lands ≤ budget,
+  // then strip trailing punctuation so the result never ends ",…" etc.
+  const space = text.slice(0, budget).lastIndexOf(' ')
+  if (space < MIN_LEN) return null
+  const trimmed = text.slice(0, space).replace(/[,;:&"'()\-–—]+$/, '')
+  if (trimmed.length < MIN_LEN) return null
+  return trimmed + '…'
 }
 
 /**

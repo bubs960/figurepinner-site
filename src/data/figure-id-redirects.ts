@@ -217,4 +217,27 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_star-wars_hasbro_black-series_galaxy_garazeb-orrelios_5cd4a4',
   'fp_star-wars_hasbro_black-series_galaxy_hk-87-assassin-droid_69c2df':
     'fp_star-wars_hasbro_black-series_galaxy_hk-87_f54ee7',
+
+  // 8/29 surgery batches 28/29/30 (10 pairs: elite dedups/re-key + BS force-awakens->galaxy re-keys) —
+  // MATCHER-TO-WEB-SURGERY-B28-29-30-POURED-10-REDIRECT-PAIRS-2026-08-29.md
+  'fp_wrestling_mattel_elite_3_miz_5d087e':
+    'fp_wrestling_mattel_elite_3_the-miz_7770c5',
+  'fp_wrestling_mattel_elite_5_triple-h_9cc72b':
+    'fp_wrestling_mattel_elite_best-of-2010_triple-h_f91211',
+  'fp_star-wars_hasbro_black-series_force-awakens-20_the-mandalorian_45536e':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian_8d6a1f',
+  'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_mandalorian_9709bd':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian_8d6a1f',
+  'fp_star-wars_hasbro_black-series_force-awakens-20_the-mandalorian_f24716':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian-first-edition_543ecf',
+  'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_mandalorian_ba0d46':
+    'fp_star-wars_hasbro_black-series_galaxy_the-mandalorian-first-edition_543ecf',
+  'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_cal-kestis_1e8397':
+    'fp_star-wars_hasbro_black-series_galaxy_cal-kestis_3285bf',
+  'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_cal-kestis_b89329':
+    'fp_star-wars_hasbro_black-series_galaxy_cal-kestis-first-edition_509a59',
+  'fp_star-wars_hasbro_black-series_force-awakens-2015-2018_cara-dune_dfc14a':
+    'fp_star-wars_hasbro_black-series_galaxy_cara-dune_526368',
+  'fp_star-wars_hasbro_black-series_exclusives_x-34-landspeeder-and-luke-skywal_820f2f':
+    'fp_star-wars_hasbro_black-series_exclusives_x-34-landspeeder-and-luke-skywalker_3fd5f0',
 }

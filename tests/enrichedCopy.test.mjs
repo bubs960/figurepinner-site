@@ -59,7 +59,29 @@ describe('enrichedDescription', () => {
     assert.equal(enrichedDescription(fig(longText)), 'A'.repeat(50) + '.')
   })
 
-  test('null when over budget with no sentence boundary to truncate at', () => {
+  // Word-boundary fallback — webaudit-approved truncation policy + amendment
+  // (WEBAUDIT-TO-WEB-KEYFEATURES-PASS-TRUNCATION-APPROVED-AMENDED-2026-08-29)
+  test('falls back to last-space cut + ellipsis when no sentence boundary fits', () => {
+    const words = ('word '.repeat(60)).trim() // 299 chars, no sentence boundary
+    const out = enrichedDescription(fig(words))
+    assert.ok(out !== null, 'long boundary-less prose must recover, not null')
+    assert.ok(out.endsWith('…'), `must end with ellipsis: ${out.slice(-10)}`)
+    assert.ok(out.length <= 200, `must fit meta budget: ${out.length}`)
+    assert.ok(!/[ ,;:&"'()\-]…$/.test(out), 'no space/punct before the ellipsis')
+  })
+
+  test('amendment: trailing punctuation stripped before the ellipsis', () => {
+    const text = 'He won the title at KeyArena in Seattle, ' + 'w'.repeat(180) + ' end'
+    // Force the cut to land right after "Seattle," — build a string where the
+    // last space under budget follows a comma.
+    const comma = 'x'.repeat(190) + ' comma, ' + 'y'.repeat(100)
+    const out = enrichedDescription(fig(comma))
+    assert.ok(out !== null && out.endsWith('…'))
+    assert.ok(!out.includes(',…'), `comma must be stripped before ellipsis: ${out.slice(-12)}`)
+    void text
+  })
+
+  test('null when over budget with no space to cut at (single unbroken token)', () => {
     assert.equal(enrichedDescription(fig('A'.repeat(300))), null)
   })
 })
