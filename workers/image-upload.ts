@@ -27,6 +27,9 @@
  *                       in the background (does not delay the response)
  *   POST /upload-batch  authed multi-file upload → `listing-photos/<prefix>/<i>.jpg`,
  *                       same background thumb generation per file
+ *   POST /backfill-thumbs  authed, ONE PAGE per call (cursor-driven) --
+ *                       regenerates thumbs for existing pre-deploy photos.
+ *                       See BACKFILL below.
  *   GET  /<key>?width=N R2 passthrough; with a `width` param on a
  *                       `listing-photos/` key, serves the smallest
  *                       pre-generated bucket >= N if one exists, else falls
@@ -42,6 +45,38 @@
  * workers.dev address — `cf.image` fetch options don't apply there); the
  * Cloudflare Images binding (works fine on workers.dev, but bills per
  * transformation, real ongoing cost for a resize this size/frequency).
+ *
+ * BACKFILL (added 2026-08-26, web's flag: 17,532 pre-deploy photos have no
+ * thumbs and won't get any until re-uploaded). `POST /backfill-thumbs`
+ * processes ONE PAGE of `env.ASSETS.list({prefix: "listing-photos/"})` per
+ * call (default 20 objects, see the limit comment at the route for the
+ * timeout incident that set it), skips keys that are themselves thumb
+ * variants, skips originals that already have a `w200` marker (cheap
+ * head-only check, makes a full re-run from `cursor=null` safe after an
+ * interruption), and returns `{scanned, alreadyThumbed, written, deletedStale,
+ * failed, cursor, done}` for the caller to drive in a loop.
+ *
+ * `GET /debug-list` (authed, list-only, no decode/resize) supports the
+ * webaudit-recommended close-out method: don't trust the running counters as
+ * proof of coverage (a killed invocation can't report what it didn't finish)
+ * -- list `w200/` keys vs originals directly and gap-count for real. Also
+ * useful for narrowing a stuck cursor without risking another resource-limit
+ * hit, which is what it was built for (2026-08-26 incident, see
+ * MAX_RESIZE_PIXELS below).
+ *
+ * AUDITED 2026-08-29 by webaudit (`WEBAUDIT-TO-LISTER-IMAGE-WORKER-AUDIT-
+ * 2026-08-29.md`) after the backfill silently stalled ~40% through for 3 days
+ * -- fixed same session: stale-thumb-on-reupload (HIGH: a corrective
+ * re-upload smaller than a bucket used to leave the OLD photo's thumb serving
+ * forever at that URL, `immutable, 1yr` cached -- see the delete-on-skip in
+ * generateThumbs), `bucketFor(>800)` silently served the 800 bucket instead
+ * of falling through to the original as documented, reserved-namespace guard
+ * on `path`/`prefix` (a collision with `w200|450|800/` was silently
+ * clobberable), `X-FP-Thumb` response header for real coverage observability,
+ * and honest per-bucket backfill counts instead of a boolean "processed."
+ * Noted, not yet built: a separate `BACKFILL_SECRET` (the shared upload
+ * secret's blast radius is ~200x larger through this endpoint with no rate
+ * limit) -- needs Steve to provision a new secret, flagged as a follow-up.
  *
  * TODO, NOT yet implemented:
  *   1. HEAD support (currently falls through to 404) — enables cheap
@@ -65,12 +100,39 @@ const THUMB_QUALITY = 82;
 // photon's own caveat: Workers have a ~128MB memory cap. Stay well under it
 // for the resize path; the original upload itself has no such limit.
 const MAX_RESIZE_INPUT_BYTES = 20 * 1024 * 1024;
+// Found 2026-08-26 during the backfill sweep: a 4.1MB/24.5MP (4284x5712) test
+// photo hit Cloudflare's CPU/memory limit (error 1102) on Lanczos3 resize
+// despite being well under MAX_RESIZE_INPUT_BYTES -- decoded pixel count, not
+// file size, is what's actually expensive. Real listing photos observed
+// elsewhere run ~1.4-1.5MB at far lower resolution; 12MP is generous headroom
+// above that while excluding this class of outlier.
+// KNOWN GAP: this check runs AFTER PhotonImage.new_from_byteslice() decodes
+// the full image (dimensions aren't knowable any cheaper without hand-parsing
+// the JPEG header), so it protects the resize step but not decode itself --
+// if decode alone is what trips 1102 on some future object, this won't catch
+// it before the crash. Root cause for THIS incident was a stray test upload
+// (deleted, not a real listing photo); a pre-decode header-only dimension
+// parser would close the gap fully but wasn't built -- disproportionate for a
+// one-off outlier given real uploads run far smaller. Revisit if this
+// recurs on a genuine listing photo, not test debris.
+const MAX_RESIZE_PIXELS = 12_000_000;
 
-function bucketFor(width: number): number {
+// Reserved so an uploaded `path`/`prefix` can never collide with the thumb
+// namespace (webaudit 2026-08-29 medium finding): a colliding upload would be
+// silently clobbered by unrelated thumb writes and permanently invisible to
+// the backfill skip-marker check.
+const RESERVED_THUMB_SEGMENT = /^w(200|450|800)$/;
+
+// null = wider than the largest bucket -- per the documented contract, GET
+// falls through to the full-res original rather than serving an
+// undersized-relative-to-request 800 bucket (webaudit 2026-08-29: the
+// original version silently served w800 here, contradicting its own doc
+// comment; dormant today since the site never requests >800, but wrong).
+function bucketFor(width: number): number | null {
   for (const b of THUMB_BUCKETS) {
     if (width <= b) return b;
   }
-  return THUMB_BUCKETS[THUMB_BUCKETS.length - 1];
+  return null;
 }
 
 function thumbKeyFor(basePath: string, bucket: number): string {
@@ -80,35 +142,73 @@ function thumbKeyFor(basePath: string, bucket: number): string {
 /**
  * Best-effort. Never throws — a resize failure must not affect the upload
  * response, which has already been sent by the time this runs (ctx.waitUntil).
- * GET falls back to the full-res original for any bucket that isn't written.
+ * GET falls back to the full-res original for any bucket key that doesn't
+ * exist. Returns honest per-bucket counts (webaudit 2026-08-29: the caller
+ * used to just increment "processed" whenever the original's bytes were
+ * readable, which can't tell a real success from a silently-skipped bucket).
  */
-async function generateThumbs(env: Env, basePath: string, buf: ArrayBuffer): Promise<void> {
-  if (buf.byteLength === 0 || buf.byteLength > MAX_RESIZE_INPUT_BYTES) return;
+async function generateThumbs(
+  env: Env,
+  basePath: string,
+  buf: ArrayBuffer,
+): Promise<{ written: number; deletedStale: number; skipped: number; failed: number }> {
+  const result = { written: 0, deletedStale: 0, skipped: 0, failed: 0 };
+  if (buf.byteLength === 0 || buf.byteLength > MAX_RESIZE_INPUT_BYTES) {
+    result.failed = THUMB_BUCKETS.length;
+    return result;
+  }
   let input: PhotonImage | undefined;
   try {
     input = PhotonImage.new_from_byteslice(new Uint8Array(buf));
     const srcWidth = input.get_width();
     const srcHeight = input.get_height();
-    if (!srcWidth || !srcHeight) return;
+    if (!srcWidth || !srcHeight || srcWidth * srcHeight > MAX_RESIZE_PIXELS) {
+      result.failed = THUMB_BUCKETS.length;
+      return result;
+    }
     for (const bucket of THUMB_BUCKETS) {
-      if (srcWidth <= bucket) continue; // already small enough; GET serves the original for this bucket
+      const thumbKey = thumbKeyFor(basePath, bucket);
+      if (srcWidth <= bucket) {
+        // Source is already smaller than this bucket -- no thumb needed.
+        // HIGH-severity fix (webaudit 2026-08-29): a PREVIOUS, larger version
+        // of this same path may have left a real thumb at this exact key. A
+        // corrective re-upload with a smaller image used to leave that stale
+        // thumb serving forever (wrong image, Cache-Control: immutable,
+        // 1yr) -- delete is idempotent on a missing key, so this is safe to
+        // run unconditionally on every skip, not just on a real re-upload.
+        try {
+          await env.ASSETS.delete(thumbKey);
+          result.deletedStale++;
+        } catch {
+          // best-effort; a delete failure here just means a stale thumb
+          // persists one more cycle, not a new correctness regression.
+        }
+        result.skipped++;
+        continue;
+      }
       const targetHeight = Math.round(srcHeight * (bucket / srcWidth));
       let output: PhotonImage | undefined;
       try {
         output = photonResize(input, bucket, targetHeight, SamplingFilter.Lanczos3);
         const jpegBytes = output.get_bytes_jpeg(THUMB_QUALITY);
-        await env.ASSETS.put(thumbKeyFor(basePath, bucket), jpegBytes, {
+        await env.ASSETS.put(thumbKey, jpegBytes, {
           httpMetadata: { contentType: "image/jpeg" },
         });
+        result.written++;
+      } catch (err) {
+        result.failed++;
+        console.error("thumb write failed", basePath, bucket, String(err));
       } finally {
         output?.free();
       }
     }
   } catch (err) {
     console.error("thumb generation failed", basePath, String(err));
+    result.failed = THUMB_BUCKETS.length;
   } finally {
     input?.free();
   }
+  return result;
 }
 
 export default {
@@ -140,6 +240,12 @@ export default {
           );
         }
         const basePath = String(path);
+        if (RESERVED_THUMB_SEGMENT.test(basePath.split("/")[0])) {
+          return Response.json(
+            { error: "path collides with the reserved thumb namespace (w200/w450/w800)" },
+            { status: 400, headers: corsHeaders },
+          );
+        }
         const key = `listing-photos/${basePath}`;
         const buf = await file.arrayBuffer();
         await env.ASSETS.put(key, buf, {
@@ -164,6 +270,12 @@ export default {
       }
       const formData = await request.formData();
       const prefix = formData.get("prefix") || "unknown";
+      if (RESERVED_THUMB_SEGMENT.test(String(prefix).split("/")[0])) {
+        return Response.json(
+          { error: "prefix collides with the reserved thumb namespace (w200/w450/w800)" },
+          { status: 400, headers: corsHeaders },
+        );
+      }
       const urls: string[] = [];
       for (const [name, value] of formData.entries()) {
         if (name.startsWith("file") && value instanceof File) {
@@ -180,20 +292,128 @@ export default {
       }
       return Response.json({ urls, count: urls.length }, { headers: corsHeaders });
     }
+    if (request.method === "GET" && url.pathname === "/debug-list") {
+      // List-only, no decode/resize -- can't itself hit a resource limit.
+      // Built 2026-08-26 to isolate a stuck backfill cursor; kept as a
+      // supported reconciliation tool per webaudit's 2026-08-29 review (list
+      // w200/ keys vs originals for a real gap-count, not the running
+      // counters, to close out a sweep -- see the doc block above).
+      const fpKey = request.headers.get("X-FP-Key") || "";
+      const auth = request.headers.get("Authorization") || "";
+      const validKey = fpKey === env.UPLOAD_SECRET || auth === `Bearer ${env.UPLOAD_SECRET}`;
+      if (!validKey) {
+        return Response.json({ error: "unauthorized" }, { status: 401, headers: corsHeaders });
+      }
+      const cursor = url.searchParams.get("cursor") || undefined;
+      const limitParam = Number(url.searchParams.get("limit"));
+      const limit = Number.isFinite(limitParam) && limitParam > 0 ? Math.min(limitParam, 1000) : 20;
+      const listing = await env.ASSETS.list({ prefix: LISTING_PREFIX, cursor, limit });
+      const objects = await Promise.all(
+        listing.objects.map(async (o) => ({ key: o.key, size: o.size, uploaded: o.uploaded })),
+      );
+      return Response.json(
+        { objects, cursor: listing.truncated ? listing.cursor : null, done: !listing.truncated },
+        { headers: corsHeaders },
+      );
+    }
+    if (request.method === "POST" && url.pathname === "/backfill-thumbs") {
+      const fpKey = request.headers.get("X-FP-Key") || "";
+      const auth = request.headers.get("Authorization") || "";
+      const validKey = fpKey === env.UPLOAD_SECRET || auth === `Bearer ${env.UPLOAD_SECRET}`;
+      if (!validKey) {
+        return Response.json({ error: "unauthorized" }, { status: 401, headers: corsHeaders });
+      }
+      const cursor = url.searchParams.get("cursor") || undefined;
+      const limitParam = Number(url.searchParams.get("limit"));
+      // Default lowered 50 -> 20 (2026-08-26, mid-sweep): a batch containing
+      // several large originals pushed cumulative resize time past Cloudflare's
+      // edge gateway timeout (524, non-JSON response, broke 2 consecutive
+      // calls at ~15,800/17,532 processed). Smaller batches bound worst-case
+      // per-call time; the skip-if-already-thumbed check below (same fix)
+      // makes it cheap to just restart the whole sweep from cursor=null
+      // instead of needing to locate/resume the exact stuck cursor.
+      const limit = Number.isFinite(limitParam) && limitParam > 0 ? Math.min(limitParam, 200) : 20;
+
+      const listing = await env.ASSETS.list({ prefix: LISTING_PREFIX, cursor, limit });
+      const originals = listing.objects
+        .map((o) => o.key)
+        .filter((key) => {
+          const rest = key.slice(LISTING_PREFIX.length);
+          return !THUMB_BUCKETS.some((b) => rest.startsWith(`w${b}/`));
+        });
+
+      // Honest per-object counts (webaudit 2026-08-29 finding: the old
+      // `processed++` fired whenever the original's bytes were readable --
+      // decode failures, per-bucket put failures, and a missing object were
+      // all invisible to it, so "0 failed" only ever meant "0 unreadable
+      // originals," nothing about whether thumbs actually landed).
+      let alreadyThumbed = 0;
+      let written = 0;
+      let deletedStale = 0;
+      const failed: string[] = [];
+      for (const key of originals) {
+        const basePath = key.slice(LISTING_PREFIX.length);
+        try {
+          // Cheap head-only marker check: the smallest bucket exists for any
+          // original wider than 200px (the overwhelming majority of real
+          // photos), so its presence means this object was already
+          // backfilled -- skip without a decode/resize/encode. Makes the
+          // whole sweep safely re-runnable from scratch after an interruption
+          // instead of needing an exact resume cursor.
+          const marker = await env.ASSETS.head(thumbKeyFor(basePath, THUMB_BUCKETS[0]));
+          if (marker) {
+            alreadyThumbed++;
+            continue;
+          }
+          const object = await env.ASSETS.get(key);
+          if (!object) {
+            failed.push(basePath); // listed but unreadable -- a real gap, not a silent no-op
+            continue;
+          }
+          const buf = await object.arrayBuffer();
+          const r = await generateThumbs(env, basePath, buf);
+          written += r.written;
+          deletedStale += r.deletedStale;
+          if (r.failed > 0) failed.push(basePath);
+        } catch (err) {
+          failed.push(basePath);
+          console.error("backfill failed", basePath, String(err));
+        }
+      }
+
+      return Response.json(
+        {
+          scanned: listing.objects.length,
+          alreadyThumbed,
+          written,
+          deletedStale,
+          failed,
+          cursor: listing.truncated ? listing.cursor : null,
+          done: !listing.truncated,
+        },
+        { headers: corsHeaders },
+      );
+    }
     if (request.method === "GET" && url.pathname.length > 1) {
       const key = url.pathname.slice(1);
       const widthParam = url.searchParams.get("width");
       if (widthParam && key.startsWith(LISTING_PREFIX)) {
         const width = Number(widthParam);
-        if (Number.isFinite(width) && width > 0) {
+        const bucket = Number.isFinite(width) && width > 0 ? bucketFor(width) : null;
+        if (bucket !== null) {
           const basePath = key.slice(LISTING_PREFIX.length);
-          const thumbObject = await env.ASSETS.get(thumbKeyFor(basePath, bucketFor(width)));
+          const thumbObject = await env.ASSETS.get(thumbKeyFor(basePath, bucket));
           if (thumbObject) {
             return new Response(thumbObject.body, {
               headers: {
                 ...corsHeaders,
                 "Content-Type": thumbObject.httpMetadata?.contentType || "image/jpeg",
                 "Cache-Control": "public, max-age=31536000, immutable",
+                // Coverage observability (webaudit 2026-08-29): a bare passthrough
+                // gave no way to tell "thumb served" from "fell through to
+                // full-res" without a separate probe -- this is what let the
+                // backfill's 3-day stall go unnoticed.
+                "X-FP-Thumb": `w${bucket}`,
               },
             });
           }
@@ -210,6 +430,7 @@ export default {
           ...corsHeaders,
           "Content-Type": object.httpMetadata?.contentType || "image/jpeg",
           "Cache-Control": "public, max-age=31536000, immutable",
+          "X-FP-Thumb": "original",
         },
       });
     }
