@@ -157,4 +157,19 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_star-wars_hasbro_black-series_galaxys-edge_r5-p8_af744b',
   'fp_star-wars_hasbro_black-series_galaxy-s-edge_dok-ondar_e102b2':
     'fp_star-wars_hasbro_black-series_galaxys-edge_dok-ondar_3f130b',
+
+  // 8/29 BS-exclusives dedup (Codex verification pour): 5 duplicate-of pairs.
+  // rancor_8fc794 + both Reva FX rows are no-product phantoms (HasLab Rancor
+  // never funded; Reva FX is a replica, not a figure) — correct 404s, no pair —
+  // MATCHER-TO-WEB-BS-EXCLUSIVES-MAPPING-TABLE-ANSWER-2026-08-29.md
+  'fp_star-wars_hasbro_black-series_exclusives_luke-skywalker-jedi-master-on-ahch-to-island_106bcc':
+    'fp_star-wars_hasbro_black-series_exclusives_luke-skywalker-on-ahch-to-island_54dbaf',
+  'fp_star-wars_hasbro_black-series_exclusives_arc-trooper-infiltrator-commando-droid_5b97f6':
+    'fp_star-wars_hasbro_black-series_exclusives_arc-trooper-commando-droid_7bbbb9',
+  'fp_star-wars_hasbro_black-series_exclusives_darth-vader-emperors-wrath_687273':
+    'fp_star-wars_hasbro_black-series_exclusives_darth-vader-emperor-s-wrath_47002c',
+  'fp_star-wars_hasbro_black-series_exclusives_mandalorian_7c8ae2':
+    'fp_star-wars_hasbro_black-series_exclusives_the-mandalorian_ce6441',
+  'fp_star-wars_hasbro_black-series_exclusives_ronin-r5-d56_6ed9c2':
+    'fp_star-wars_hasbro_black-series_exclusives_the-ronin-r5-d56_cb2b77',
 }
