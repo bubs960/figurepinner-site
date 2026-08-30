@@ -151,13 +151,18 @@ function thumbKeyFor(basePath: string, bucket: number): string {
  * exist. Returns honest per-bucket counts (webaudit 2026-08-29: the caller
  * used to just increment "processed" whenever the original's bytes were
  * readable, which can't tell a real success from a silently-skipped bucket).
+ * `skipped` covers every bucket the source was already small enough to not
+ * need, INCLUDING the stale-thumb delete attempt below -- R2's delete()
+ * doesn't report whether a key actually existed, so a separate "deleted N
+ * real stale thumbs" count isn't obtainable without an extra head() per
+ * bucket, and wasn't worth adding for a number nothing downstream consumes.
  */
 async function generateThumbs(
   env: Env,
   basePath: string,
   buf: ArrayBuffer,
-): Promise<{ written: number; deletedStale: number; skipped: number; failed: number }> {
-  const result = { written: 0, deletedStale: 0, skipped: 0, failed: 0 };
+): Promise<{ written: number; skipped: number; failed: number }> {
+  const result = { written: 0, skipped: 0, failed: 0 };
   if (buf.byteLength === 0 || buf.byteLength > MAX_RESIZE_INPUT_BYTES) {
     result.failed = THUMB_BUCKETS.length;
     return result;
@@ -183,7 +188,6 @@ async function generateThumbs(
         // run unconditionally on every skip, not just on a real re-upload.
         try {
           await env.ASSETS.delete(thumbKey);
-          result.deletedStale++;
         } catch {
           // best-effort; a delete failure here just means a stale thumb
           // persists one more cycle, not a new correctness regression.
@@ -381,7 +385,6 @@ export default {
       // originals," nothing about whether thumbs actually landed).
       let alreadyThumbed = 0;
       let written = 0;
-      let deletedStale = 0;
       const failed: string[] = [];
       for (const key of originals) {
         const basePath = key.slice(LISTING_PREFIX.length);
@@ -405,7 +408,6 @@ export default {
           const buf = await object.arrayBuffer();
           const r = await generateThumbs(env, basePath, buf);
           written += r.written;
-          deletedStale += r.deletedStale;
           if (r.failed > 0) failed.push(basePath);
         } catch (err) {
           failed.push(basePath);
@@ -418,7 +420,6 @@ export default {
           scanned: listing.objects.length,
           alreadyThumbed,
           written,
-          deletedStale,
           failed,
           cursor: listing.truncated ? listing.cursor : null,
           done: !listing.truncated,
