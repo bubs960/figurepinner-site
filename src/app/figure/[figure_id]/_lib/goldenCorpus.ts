@@ -2,9 +2,14 @@
 // (figure-claims-2 schema, v4.2 typed-claims pipeline). Pilot per
 // MATCHER-TO-WEB-GOLDEN-CORPUS-CANDIDATE-CODY-2026-08-12.md: the page reads the
 // claims doc DIRECTLY — this is deliberately NOT a KB pour; pour-schema design
-// (PB12, new KB fields) is matcher's punch-list item. Every rendered value must
-// carry its verbatim quote + source URL; fields the pipeline could not support
-// stay unresolved and the page renders that honestly.
+// (PB12, new KB fields) is matcher's punch-list item. Fields the pipeline could
+// not support stay unresolved and the page renders that honestly.
+//
+// Render policy (WEBAUDIT-TO-WEB-SOURCE-DISPLAY-REVIEW-SPEC-2026-08-30, Steve
+// 8/30): the doc's verbatim quotes + source URLs (evidence.quotes/sources) are
+// never rendered publicly — only the resolved claim.value. The quotes stay in
+// the data for matcher's internal quality gates; this file's exported types
+// still describe them so that data continues to type-check.
 
 // Track 1 scale-up (2026-08-24, WEBAUDIT-TO-WEB-GOLDEN-CORPUS-TRACK1-ACTIONABLE):
 // was a single hardcoded Hela import (the 8/13 pilot doc); now loads lazily from
@@ -67,8 +72,7 @@ export interface FigureClaimsDoc {
 /** Returns the claims doc for a figure, or null when this figure isn't in the
  *  golden corpus (no sidecar, sidecar not synced, or fid absent from it). The
  *  doc itself is the render gate — no separate allowlist. Render-safe: any
- *  failure degrades to null rather than throwing (same contract as
- *  ScalePassport's loadSidecarDoc, which this mirrors). */
+ *  failure degrades to null rather than throwing. */
 export async function getGoldenCorpusClaims(
   figureId: string,
   sidecar: string | undefined
@@ -82,19 +86,4 @@ export async function getGoldenCorpusClaims(
   } catch {
     return null
   }
-}
-
-/** Resolve a claim's quote ids to the actual verbatim quotes + their sources. */
-export function resolveEvidence(
-  doc: FigureClaimsDoc,
-  quoteIds: string[] | undefined
-): Array<{ quote: ClaimsQuote; source: ClaimsSource | null }> {
-  if (!quoteIds?.length) return []
-  return quoteIds
-    .map(id => doc.evidence.quotes.find(q => q.quote_id === id))
-    .filter((q): q is ClaimsQuote => q != null)
-    .map(quote => ({
-      quote,
-      source: doc.evidence.sources.find(s => s.source_id === quote.source_id) ?? null,
-    }))
 }

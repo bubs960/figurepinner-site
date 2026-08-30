@@ -2,7 +2,7 @@
 // column (Steve, 2026-08-13: the space under the vitrine sat empty while the
 // right column ran long). Renders ONLY when a golden-corpus claims doc exists
 // for the figure — same gate as the passport section; every value here is one
-// of its receipt-backed claims, restated at a glance. Server component.
+// of its resolved claims, restated at a glance. Server component.
 
 import { type FigureClaimsDoc } from '../_lib/goldenCorpus'
 
@@ -50,14 +50,14 @@ export default function GoldenCorpusAtAGlance({ doc }: { doc: FigureClaimsDoc })
         }}>
           At a Glance
         </span>
-        {/* Real anchor to the receipts section, not a static chip (v4 pass). */}
+        {/* Real anchor to the passport section, not a static chip (v4 pass). */}
         <a href="#receipts" style={{
           fontSize: '0.56rem', fontWeight: 700, letterSpacing: '0.06em',
           color: 'var(--shelf-gold-hi, #f5c462)', textDecoration: 'none',
           border: '1px solid rgba(224,168,62,0.4)', borderRadius: '100px',
           padding: '2px 8px', whiteSpace: 'nowrap',
         }}>
-          SOURCED ↓
+          DETAILS ↓
         </a>
       </div>
       {rows.map(r => (
@@ -71,7 +71,7 @@ export default function GoldenCorpusAtAGlance({ doc }: { doc: FigureClaimsDoc })
         </div>
       ))}
       <div style={{ marginTop: '8px', fontSize: '0.62rem', color: 'rgba(242,232,213,0.45)', lineHeight: 1.5 }}>
-        Every fact sourced — receipts in the passport section below.
+        Full details in the passport section below.
       </div>
     </div>
   )

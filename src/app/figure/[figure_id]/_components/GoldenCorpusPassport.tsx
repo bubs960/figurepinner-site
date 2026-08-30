@@ -1,17 +1,19 @@
-// GoldenCorpusPassport.tsx — evidence-locked passport section (golden-corpus pilot,
+// GoldenCorpusPassport.tsx — passport section (golden-corpus pilot,
 // MATCHER-TO-WEB-GOLDEN-CORPUS-CANDIDATE-CODY-2026-08-12.md). Renders matcher's
-// figure-claims-2 doc with per-fact "show source" provenance: every value carries
-// its verbatim quote + source URL. Honesty rules, per the relay's design note:
+// figure-claims-2 doc as plain stated facts — no verbatim source quotes or
+// source links (WEBAUDIT-TO-WEB-SOURCE-DISPLAY-REVIEW-SPEC-2026-08-30, Steve
+// 8/30: never republish third-party expressive text on any public surface).
+// Sidecars/evidence quotes stay internal — matcher's quality gates still read
+// them, this component just doesn't render them. Honesty rules, per the
+// original relay's design note, still apply:
 //   - unresolved fields render "Not yet documented" — never papered over
 //   - not_applicable renders as such (e.g. BAF on WWE basic figures)
-//   - conflict renders BOTH values with both sources — we don't pick a winner
-// Server component, no 'use client' — <details>/<summary> gives the disclosure
-// interaction natively; no date/Intl formatting anywhere (CLAUDE.md truth #8).
+//   - conflict renders BOTH values plainly — we don't pick a winner
+// Server component, no 'use client'; no date/Intl formatting (CLAUDE.md #8).
 
 import {
   type FigureClaimsDoc,
   type Claim,
-  resolveEvidence,
 } from '../_lib/goldenCorpus'
 
 // field_path → human label. Indexed paths (visual_identifiers[0]…) collapse to
@@ -44,110 +46,18 @@ function labelFor(fieldPath: string): string {
   return FIELD_LABELS.find(f => f.match.test(fieldPath))?.label ?? fieldPath
 }
 
-// Exported for ScalePassport (2026-08-15): the scale render shares this badge
-// vocabulary — matcher owns the ec strings, one mapping keeps the two in step.
-export function evidenceBadge(cls: string | undefined): { label: string; color: string; inferred?: boolean } {
-  if (cls === 'primary_exact') return { label: 'PRIMARY SOURCE', color: 'var(--dp-green)' }
-  if (cls === 'single_secondary') return { label: 'SINGLE SOURCE', color: 'var(--dp-gold)' }
-  // Per the Hela nomination's own caveat: corroborated_exact can be two pages
-  // of the same publisher, so the label deliberately says "corroborated", not
-  // "two independent sources".
-  if (cls === 'corroborated_exact') return { label: 'CORROBORATED', color: 'var(--dp-green)' }
-  // Steve-approved class (8/13): the value is an inference from a dated source
-  // (e.g. street date bounded by a review's dateline). MUST NOT read as a
-  // stated fact — distinct badge + italic value carry that. Amber, not pink,
-  // per the v4 design pass: pink now means ONLY "SOURCES DISAGREE", so
-  // red = conflict stays unambiguous.
-  if (cls === 'inferred_from_dated_source') return { label: 'INFERRED FROM DATED SOURCE', color: '#e0a83e', inferred: true }
-  return { label: 'SOURCED', color: 'var(--dp-cyan)' }
-}
-
-function hostname(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '')
-  } catch {
-    return url
-  }
-}
-
-function ShowSource({ doc, quoteIds, defaultOpen }: { doc: FigureClaimsDoc; quoteIds: string[] | undefined; defaultOpen?: boolean }) {
-  const evidence = resolveEvidence(doc, quoteIds)
-  if (evidence.length === 0) return null
-  return (
-    <details open={defaultOpen} style={{ marginTop: '4px' }}>
-      <summary style={{
-        cursor: 'pointer', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '.06em',
-        color: 'var(--dp-cyan)', listStyle: 'none',
-      }}>
-        SHOW SOURCE{evidence.length > 1 ? `S (${evidence.length})` : ''}
-      </summary>
-      <div style={{ marginTop: '6px', display: 'grid', gap: '6px' }}>
-        {evidence.map(({ quote, source }) => (
-          <div key={quote.quote_id} style={{
-            padding: '8px 10px', borderRadius: '8px',
-            background: 'rgba(78,205,230,.05)', border: '1px solid rgba(78,205,230,.2)',
-            fontSize: '0.72rem', lineHeight: 1.5,
-          }}>
-            <div style={{ color: 'var(--dp-text)', fontStyle: 'italic' }}>&ldquo;{quote.text}&rdquo;</div>
-            {source && (
-              <div style={{ marginTop: '4px', color: 'var(--dp-muted)' }}>
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  style={{ color: 'var(--dp-cyan)', textDecoration: 'underline' }}
-                >
-                  {hostname(source.url)}
-                </a>
-                {source.retrieved_at ? ` · retrieved ${source.retrieved_at}` : null}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </details>
-  )
-}
-
-function ClaimRow({ doc, claim, firstEvidence }: { doc: FigureClaimsDoc; claim: Claim; firstEvidence?: boolean }) {
+function ClaimRow({ claim }: { claim: Claim }) {
   const label = labelFor(claim.field_path)
 
   let body: React.ReactNode
   if (claim.status === 'resolved') {
-    const badge = evidenceBadge(claim.evidence_class)
-    body = (
-      <div>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
-          <span style={{ color: 'var(--dp-text)', fontWeight: 600, fontStyle: badge.inferred ? 'italic' : undefined }}>{claim.value}</span>
-          <span style={{
-            fontSize: '0.58rem', fontWeight: 700, letterSpacing: '.05em',
-            color: badge.color, border: `1px solid ${badge.color}`,
-            borderRadius: '100px', padding: '1px 7px', whiteSpace: 'nowrap',
-          }}>
-            {badge.label}
-          </span>
-        </div>
-        <ShowSource doc={doc} quoteIds={claim.evidence_quote_ids} defaultOpen={firstEvidence} />
-      </div>
-    )
+    body = <span style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{claim.value}</span>
   } else if (claim.status === 'conflict') {
     body = (
-      <div>
-        <span style={{
-          fontSize: '0.58rem', fontWeight: 700, letterSpacing: '.05em',
-          color: 'var(--dp-pink)', border: '1px solid var(--dp-pink)',
-          borderRadius: '100px', padding: '1px 7px', whiteSpace: 'nowrap',
-        }}>
-          SOURCES DISAGREE
-        </span>
-        <div style={{ display: 'grid', gap: '4px', marginTop: '6px' }}>
-          {(claim.conflicting_values ?? []).map(cv => (
-            <div key={cv.value}>
-              <span style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{cv.value}</span>
-              <ShowSource doc={doc} quoteIds={cv.evidence_quote_ids} />
-            </div>
-          ))}
-        </div>
+      <div style={{ display: 'grid', gap: '4px' }}>
+        {(claim.conflicting_values ?? []).map(cv => (
+          <span key={cv.value} style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{cv.value}</span>
+        ))}
       </div>
     )
   } else if (claim.status === 'not_applicable') {
@@ -176,11 +86,6 @@ const DROP_ENTIRELY = /^fingerprint\.packaging_style$/
 const STRETCH_OMIT_WHEN_UNRESOLVED = /^(fingerprint\.known_variants|identity_bonus\.(manufacturer_sku|street_date))/
 
 export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) {
-  // First claim (in render order) that carries receipts opens expanded —
-  // teaches the show-source interaction without a click (v4 design pass).
-  const firstEvidenceField = GROUPS
-    .flatMap(g => doc.claims.filter(c => g.prefixes.some(p => c.field_path.startsWith(p))))
-    .find(c => c.status === 'resolved' && c.evidence_quote_ids?.length)?.field_path
   return (
     <div id="receipts" style={{ marginTop: '1.75rem' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '0.6rem' }}>
@@ -188,19 +93,11 @@ export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) 
           fontFamily: 'var(--font-display)', fontWeight: 400, letterSpacing: '.02em',
           fontSize: '1.375rem', margin: 0, color: 'var(--dp-text)',
         }}>
-          Documented Facts, With Receipts
+          Documented Facts
         </h2>
-        <span style={{
-          display: 'inline-block', padding: '3px 10px', borderRadius: '100px',
-          fontSize: '0.6rem', fontWeight: 700, letterSpacing: '.08em',
-          background: 'rgba(78,201,140,.1)', border: '1px solid var(--dp-green)', color: 'var(--dp-green)',
-        }}>
-          EVIDENCE-LOCKED
-        </span>
       </div>
       <div style={{ fontSize: '0.72rem', color: 'var(--dp-muted)', lineHeight: 1.6, marginBottom: '0.75rem' }}>
-        Every fact below is backed by a verbatim quote from a named source — expand any row to see
-        exactly where it came from. Fields we couldn&apos;t verify say so.
+        Fields we couldn&apos;t verify say so.
       </div>
       {GROUPS.map(group => {
         const claims = doc.claims
@@ -217,7 +114,7 @@ export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) 
               {group.title.toUpperCase()}
             </div>
             <div style={{ borderRadius: '12px', border: '1px solid rgba(255,255,255,.1)', overflow: 'hidden' }}>
-              {claims.map(c => <ClaimRow key={c.field_path} doc={doc} claim={c} firstEvidence={c.field_path === firstEvidenceField} />)}
+              {claims.map(c => <ClaimRow key={c.field_path} claim={c} />)}
             </div>
           </div>
         )
