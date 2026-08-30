@@ -240,4 +240,61 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_star-wars_hasbro_black-series_galaxy_cara-dune_526368',
   'fp_star-wars_hasbro_black-series_exclusives_x-34-landspeeder-and-luke-skywal_820f2f':
     'fp_star-wars_hasbro_black-series_exclusives_x-34-landspeeder-and-luke-skywalker_3fd5f0',
+
+  // 8/29 elite wave-vs-subline miskey sweep (5 dedup + 22 mint) —
+  // MATCHER-TO-WEB-ELITE-MISKEY-SWEEP-POURED-27-REDIRECT-PAIRS-2026-08-29.md
+  'fp_wrestling_mattel_elite_29_rob-van-dam_a977d9':
+    'fp_wrestling_mattel_elite-legends_29_rob-van-dam_a0c810',
+  'fp_wrestling_mattel_elite_2_alundra-blayze_2f11cd':
+    'fp_wrestling_mattel_elite-flashback_2_alundra-blayze_ba7158',
+  'fp_wrestling_mattel_elite_3_miss-elizabeth_cce195':
+    'fp_wrestling_mattel_elite-then-now-forever_3_miss-elizabeth_bdd066',
+  'fp_wrestling_mattel_elite_1_eddie-guerrero_24a5ea':
+    'fp_wrestling_mattel_elite-hall-of-champions_1_eddie-guerrero_57c566',
+  'fp_wrestling_mattel_elite_2_ric-flair_2891bd':
+    'fp_wrestling_mattel_elite-retrofest_2_ric-flair_87730e',
+  'fp_wrestling_mattel_elite_1_bam-bam-bigelow_a69257':
+    'fp_wrestling_mattel_elite-then-now-forever_1_bam-bam-bigelow_e4251a',
+  'fp_wrestling_mattel_elite_1_tyler-breeze_0a0ee3':
+    'fp_wrestling_mattel_elite-then-now-forever_1_tyler-breeze_f3f180',
+  'fp_wrestling_mattel_elite_1_yokozuna_076cb5':
+    'fp_wrestling_mattel_elite-flashback_1_yokozuna_afefb8',
+  'fp_wrestling_mattel_elite_2_doink-the-clown_0a1fba':
+    'fp_wrestling_mattel_elite-flashback_2_doink-the-clown_0d187c',
+  'fp_wrestling_mattel_elite_1_batista_ae47ca':
+    'fp_wrestling_mattel_elite-hall-of-champions_1_batista_6d18c3',
+  'fp_wrestling_mattel_elite_3_billy-gunn_c30694':
+    'fp_wrestling_mattel_elite-hall-of-champions_3_billy-gunn_feac39',
+  'fp_wrestling_mattel_elite_3_paul-bearer_773485':
+    'fp_wrestling_mattel_elite-hall-of-champions_3_paul-bearer_1650c6',
+  'fp_wrestling_mattel_elite_3_road-dogg_df29b4':
+    'fp_wrestling_mattel_elite-hall-of-champions_3_road-dogg_c882cf',
+  'fp_wrestling_mattel_elite_2_asuka_808922':
+    'fp_wrestling_mattel_elite-network-spotlight_2_asuka_60773e',
+  'fp_wrestling_mattel_elite_2_jinder-mahal_012edc':
+    'fp_wrestling_mattel_elite-network-spotlight_2_jinder-mahal_6196ce',
+  'fp_wrestling_mattel_elite_2_hacksaw-jim-duggan_3f83e0':
+    'fp_wrestling_mattel_elite-retrofest_2_hacksaw-jim-duggan_717c38',
+  'fp_wrestling_mattel_elite_2_honky-tonk-man_c96245':
+    'fp_wrestling_mattel_elite-retrofest_2_honky-tonk-man_1283d6',
+  'fp_wrestling_mattel_elite_1_mark-henry_988527':
+    'fp_wrestling_mattel_elite-decade-of-domination_1_mark-henry_bb574e',
+  'fp_wrestling_mattel_elite_2_beth-phoenix_bcd498':
+    'fp_wrestling_mattel_elite-decade-of-domination_2_beth-phoenix_94e51a',
+  'fp_wrestling_mattel_elite_3_wendi-richter_e2f7d2':
+    'fp_wrestling_mattel_elite-network-spotlight_3_wendi-richter_9f1d21',
+  'fp_wrestling_mattel_elite_1_shayna-baszler_4467d5':
+    'fp_wrestling_mattel_elite-fan-takeover_1_shayna-baszler_0d1d52',
+  'fp_wrestling_mattel_elite_2_johnny-gargano_ae964d':
+    'fp_wrestling_mattel_elite-fan-takeover_2_johnny-gargano_93f9c7',
+  'fp_wrestling_mattel_elite_1_gene-okerlund_a89338':
+    'fp_wrestling_mattel_elite-flashback_1_gene-okerlund_b85202',
+  'fp_wrestling_mattel_elite_3_harley-race_e2ad2d':
+    'fp_wrestling_mattel_elite-flashback_3_harley-race_31570c',
+  'fp_wrestling_mattel_elite_3_jake-roberts_955bc3':
+    'fp_wrestling_mattel_elite-flashback_3_jake-roberts_266efd',
+  'fp_wrestling_mattel_elite_2_bianca-belair_39d39c':
+    'fp_wrestling_mattel_elite-street-fighter_2_bianca-belair_0762e3',
+  'fp_wrestling_mattel_elite_2_faarooq_fbd93e':
+    'fp_wrestling_mattel_elite-nation-of-domination_2pack_faarooq_3f0759',
 }
