@@ -103,19 +103,24 @@ const MAX_RESIZE_INPUT_BYTES = 20 * 1024 * 1024;
 // Found 2026-08-26 during the backfill sweep: a 4.1MB/24.5MP (4284x5712) test
 // photo hit Cloudflare's CPU/memory limit (error 1102) on Lanczos3 resize
 // despite being well under MAX_RESIZE_INPUT_BYTES -- decoded pixel count, not
-// file size, is what's actually expensive. Real listing photos observed
-// elsewhere run ~1.4-1.5MB at far lower resolution; 12MP is generous headroom
-// above that while excluding this class of outlier.
-// KNOWN GAP: this check runs AFTER PhotonImage.new_from_byteslice() decodes
-// the full image (dimensions aren't knowable any cheaper without hand-parsing
-// the JPEG header), so it protects the resize step but not decode itself --
-// if decode alone is what trips 1102 on some future object, this won't catch
-// it before the crash. Root cause for THIS incident was a stray test upload
-// (deleted, not a real listing photo); a pre-decode header-only dimension
-// parser would close the gap fully but wasn't built -- disproportionate for a
-// one-off outlier given real uploads run far smaller. Revisit if this
-// recurs on a genuine listing photo, not test debris.
-const MAX_RESIZE_PIXELS = 12_000_000;
+// file size, is what's actually expensive.
+// CORRECTED 2026-08-29: the original 12MP cutoff was wrong, not just
+// conservative -- it sits BELOW the single most common real capture
+// resolution. The backfill's first real completion left 356 failures, every
+// one a `frame_N.jpg` raw upload capture at the standard iPhone 3024x4032 =
+// 12,192,768px, ~1.4-1.9MB. That's normal, current, real listing-photo
+// content (some ARE the canonical_image_url for their figure -- confirmed via
+// the KB, not assumed), not an outlier -- the guard was silently regressing
+// exactly the photos this whole project exists to fix. Raised to 20MP: real
+// margin above every standard phone resolution (12MP included), still well
+// under the 24.5MP file that actually crashed the worker. Live-tested against
+// a real 12MP frame_1.jpg before trusting this broadly (see the fix relay).
+// KNOWN GAP unchanged: this check runs AFTER PhotonImage.new_from_byteslice()
+// decodes the full image, so it protects the resize step but not decode
+// itself. Still judged disproportionate to build a pre-decode JPEG-header
+// parser for one confirmed outlier file (now deleted) -- revisit if a genuine
+// listing photo trips 1102 again, this time above the 20MP line.
+const MAX_RESIZE_PIXELS = 20_000_000;
 
 // Reserved so an uploaded `path`/`prefix` can never collide with the thumb
 // namespace (webaudit 2026-08-29 medium finding): a colliding upload would be
@@ -313,6 +318,33 @@ export default {
       );
       return Response.json(
         { objects, cursor: listing.truncated ? listing.cursor : null, done: !listing.truncated },
+        { headers: corsHeaders },
+      );
+    }
+    if (request.method === "POST" && url.pathname === "/debug-delete") {
+      // Delete through env.ASSETS -- the EXACT binding this worker reads from
+      // -- because `wrangler r2 object delete` reported success twice on
+      // fp_test/frame_1.jpg and frame_2.jpg (2026-08-29) while this worker's
+      // own env.ASSETS.list()/get() kept showing them present. Root cause
+      // unconfirmed (account/context mismatch between the CLI's auth and this
+      // deployment's binding is the leading theory), but this endpoint
+      // sidesteps it entirely by using the same binding as everything else
+      // here. Single key only, no bulk delete surface.
+      const fpKey = request.headers.get("X-FP-Key") || "";
+      const auth = request.headers.get("Authorization") || "";
+      const validKey = fpKey === env.UPLOAD_SECRET || auth === `Bearer ${env.UPLOAD_SECRET}`;
+      if (!validKey) {
+        return Response.json({ error: "unauthorized" }, { status: 401, headers: corsHeaders });
+      }
+      const key = url.searchParams.get("key");
+      if (!key) {
+        return Response.json({ error: "missing key" }, { status: 400, headers: corsHeaders });
+      }
+      const before = await env.ASSETS.head(key);
+      await env.ASSETS.delete(key);
+      const after = await env.ASSETS.head(key);
+      return Response.json(
+        { key, existedBefore: !!before, existsAfter: !!after },
         { headers: corsHeaders },
       );
     }
