@@ -124,6 +124,13 @@ export default function RootLayout({
             across deploys, so this can lag the deployed sha; that lag is the
             signal). Compare against /api/version. See next.config.ts. */}
         <meta name="fp-build" content={process.env.FP_BUILD_SHA ?? 'unknown'} />
+        {/* Critical inline CSS: kill the UA-default 8px body margin BEFORE the
+            external stylesheets apply. CF RUM caught a real-user CLS=1 on
+            /guides/transformers-hub (2026-08-30, body top 8→0 signature): on a
+            slow connection the first paint used the unstyled default margin,
+            then snapped when the CSS chunks landed. Inlining the reset makes
+            that shift class structurally impossible. */}
+        <style>{'body{margin:0}'}</style>
       </head>
       <body>
         {/* Plain ClerkProvider, NO `dynamic` prop (S70 fix, 2026-07-07, per
