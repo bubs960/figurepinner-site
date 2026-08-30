@@ -158,6 +158,8 @@ export const ARTICLES: Article[] = [
     dek: 'The premium is real, it is wildly uneven, and it follows rules. Here they are with numbers.',
     readingMinutes: 6,
     updated: '2026-08-13',
+    shortVersion:
+      'Sealed only earns its premium when the production run is closed: under five years closed expect 1.2–1.5x over loose, decades closed with few survivors is where 3x and up gets defensible (Hasbro WWF Series 8 Undertaker runs $665 sealed against a $199 loose median). Still shipping to Target? The premium is mostly a story the listing is telling you. Price the two markets as different products:',
     body: [
       { type: 'p', text: 'Every pricing question on this site eventually collapses into one split: sealed or loose? We track both buckets separately across the whole database, so instead of the usual forum dogma — one side calling sealed collectors cardboard hostages, the other calling openers vandals — here is what the sold data actually does. We take no side on how you collect. We take a hard side on what the numbers say.' },
       { type: 'h2', text: 'The split at its most extreme' },
@@ -456,6 +458,8 @@ export const ARTICLES: Article[] = [
     dek: 'Bootlegs do not fool a trained eye. They fool a rushed one.',
     readingMinutes: 5,
     updated: '2026-08-07',
+    shortVersion:
+      'Almost every bootleg fails the same slow checks: mushy paint edges and soft sculpt detail, packaging misprints, a price that undercuts every real comp, and a seller account that showed up last week. None of it needs special equipment, just reading the listing before you hit buy. Compare against real sold prices first:',
     body: [
       { type: 'p', text: 'Counterfeit figures have gotten better, but they have not gotten as good as the sellers pushing them want you to believe. Almost every bootleg fails on the same handful of checks, and none of them require special equipment \u2014 just slowing down before you hit buy.' },
       { type: 'h2', text: 'Weight is the fastest tell' },
@@ -692,6 +696,8 @@ export const ARTICLES: Article[] = [
     dek: 'Same brand, two very different figures, two very different prices. Here is how to choose.',
     readingMinutes: 7,
     updated: '2026-06-06',
+    shortVersion:
+      'Elite is breadth — if a specific midcard wrestler from a specific era got a figure, Elite almost certainly made him, and most active WWE figure trading happens there. Ultimate Edition is the premium display piece for your top guys. It is a fit question, not a quality ranking — see what each line trades at:',
     body: [
       { type: 'p', text: 'Mattel makes both. They both say WWE on the box. And new collectors constantly assume they are basically the same figure at two price points. They are not. Elite and Ultimate Edition are built for different collectors, and buying the wrong one for how you actually collect is how shelves fill up with figures that do not get touched.' },
       { type: 'p', text: 'Here is the honest comparison — what each line is, who it is for, and what the resale market says about both.' },
@@ -903,6 +909,8 @@ export const ARTICLES: Article[] = [
     dek: 'Every figure on your shelf is a tiny decision you keep re-making. Here is how to actually make it.',
     readingMinutes: 8,
     updated: '2026-06-06',
+    shortVersion:
+      'Keep it only if you would buy it again today at market price; habit is not a reason to tie up money and shelf space. Under about $12 the listing effort outweighs the sale, at $150 it is a real decision, and trajectory matters more than the snapshot. Get the number first:',
     body: [
       { type: 'p', text: 'You pick it up, turn it over, think about listing it, and put it back down. You have done this with the same figure four times. That is not collecting — that is a decision you keep refusing to make. The good news is it is a solvable problem, because "keep or sell" is really three smaller questions wearing a trenchcoat, and once you separate them the answer usually walks right up to you.' },
       { type: 'p', text: 'The three questions are: how much does this mean to me, what is it actually worth right now, and where is its price heading. Sentiment, comps, trajectory. Most people only ask the first one and then feel guilty, or only ask the second one and then feel like a sellout. Run all three and the figure tells you what to do.' },
@@ -947,6 +955,8 @@ export const ARTICLES: Article[] = [
     dek: 'Anyone can see what a figure sold for. Knowing which sales to believe is the actual skill.',
     readingMinutes: 7,
     updated: '2026-06-06',
+    shortVersion:
+      'Straight off the screen, eBay sold comps are dirty: lot sales pollute medians (that $240 “sold” was four figures), Best Offer hides the real number behind the headline, and one wrong-figure comp can drag a median off by 50%. Confirm line, wave, and variant on every listing before it enters your set — or skip the cleanup:',
     body: [
       { type: 'p', text: 'A new collector finds the Sold Items filter, sees a figure went for $240, and thinks they just struck gold. A seasoned one sees the same $240 and immediately asks: was that a bundle, a shill, a different variant, or one excited buyer at 11pm? The raw sold number is the easy part. Reading it correctly is the part that separates people who price well from people who get worked.' },
       { type: 'p', text: 'The Sold Items toggle on eBay is the most honest data the hobby has — completed transactions, real money, no wishful thinking. But a comp set straight off the screen is dirty. Here is how to clean it.' },
@@ -1091,6 +1101,8 @@ export const ARTICLES: Article[] = [
     dek: 'Everything is "rare" in a listing title. Almost nothing is. Here is how to tell the difference.',
     readingMinutes: 7,
     updated: '2026-06-06',
+    shortVersion:
+      '“Rare” means one of exactly four things — short print, chase, exclusive, or condition scarcity — and only some of them move price. Real scarcity is specific and measurable; everything else is a listing adjective. Check what a figure actually sells for before paying extra for the word:',
     body: [
       { type: 'p', text: 'Open any marketplace and search a figure you know. Count how many listings say "RARE" in the title. Now count how many of those figures you have personally seen sitting on a peg or in a comp set within the last month. The gap between those two numbers is the entire problem with the word. "Rare" is the most abused term in collecting because it costs the seller nothing to type and it works on buyers who have not learned to ask the only question that matters: rare compared to what?' },
       { type: 'p', text: 'Real scarcity is specific and measurable. There are really only four things people mean when they say a figure is rare, and only some of them move price. Learn to tell them apart and you stop overpaying.' },
@@ -1229,6 +1241,8 @@ export const ARTICLES: Article[] = [
       dek: 'The rare one in the case. Real scarcity, real premiums — and a real target for fakes. Here is how to know what you are holding.',
       readingMinutes: 8,
       updated: '2026-06-07',
+      shortVersion:
+        'A chase is scarcity by design: a deliberate hidden variant packed at a fixed ratio, and the ratio IS the scarcity. A factory error is an accident, a running deco change is production drift, and neither holds a premium the way designed scarcity does. Verify the ratio before you pay the chase tax:',
       body: [
         { type: 'p', text: 'You open the case and most of them are the figure you expected. One of them is not. Different paint, a glow finish, a metallic deco, a swapped head — and the price on that one is double, sometimes more. That is a chase, and it is one of the few times the word “rare” in this hobby is actually backed by a number.' },
         { type: 'p', text: 'But the premium is exactly why chases get faked, mislabeled, and oversold. Knowing what a chase really is — and how to verify one — is the difference between paying for scarcity and paying for a story.' },
@@ -1468,6 +1482,8 @@ export const ARTICLES: Article[] = [
       dek: 'A 9.0 is a baseball card standard. Figures have their own condition language — and it maps directly to money.',
       readingMinutes: 7,
       updated: '2026-06-09',
+      shortVersion:
+        'The tier ladder, loose-incomplete up through sealed, is the language everyday figure trading actually runs on; AFA numeric grading only earns its fee on high-stakes sealed vintage. A wide comp spread ($30 to $90 on the same figure) is condition distribution, so place your figure on that spectrum before you price it. See the spread yourself:',
       body: [
         { type: 'p', text: 'Mention "grading" to a sports card collector and they reach for a numeric scale. Mention it to a figure collector and you will get a blank stare — or a laugh. Figures do not work like cards. The condition system that actually governs figure pricing is a ladder of tiers: loose, loose-complete, mint-on-card, mint-in-box, sealed. Each step means something specific, and each step moves the price.' },
         { type: 'p', text: 'Understanding this ladder is not a formality. It is how you price what you own, evaluate what you are buying, and avoid the most common mistake in figure collecting — comparing your figure to a comp that is not actually in the same condition.' },
