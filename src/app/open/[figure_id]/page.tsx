@@ -16,7 +16,8 @@
 
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import { getFigureById, deriveName } from '@/data/kb'
+import { getFigureById } from '@/data/kbDb'
+import { deriveName } from '@/data/kbHelpers'
 
 export default async function OpenDeepLink({
   params,
@@ -26,7 +27,9 @@ export default async function OpenDeepLink({
   const { figure_id } = await params
 
   // Validate the figure exists before redirecting
-  const figure = getFigureById(figure_id)
+  // Tier B: D1 read. On a D1 blip, treat like an unknown fid — this route is
+  // a noindex deep-link shim; redirecting to /search is the safe degrade.
+  const figure = await getFigureById(figure_id).catch(() => null)
 
   if (!figure) {
     // Unknown figure_id — redirect to search rather than 404. (Was '/app',
@@ -45,7 +48,7 @@ export async function generateMetadata({
   params: Promise<{ figure_id: string }>
 }): Promise<Metadata> {
   const { figure_id } = await params
-  const figure = getFigureById(figure_id)
+  const figure = await getFigureById(figure_id).catch(() => null)
   if (!figure) return { robots: { index: false } }
 
   return {

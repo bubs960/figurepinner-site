@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og'
-import { getFigureById, getFigureByStableSuffix, deriveName } from '@/data/kb'
+import { getFigureById, getFigureByStableSuffix } from '@/data/kbDb'
+import { deriveName } from '@/data/kbHelpers'
 import { fetchFigurePageData } from './_components/FigureDetailContent'
 import { derivePriceContract } from './_lib/priceContract'
 import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from './_lib/ogCard'
@@ -15,7 +16,7 @@ type Props = { params: Promise<{ figure_id: string }> }
 // restore per-figure alt text alongside a default export image function).
 export async function generateImageMetadata({ params }: Props) {
   const { figure_id } = await params
-  const figure = getFigureById(figure_id) ?? getFigureByStableSuffix(figure_id)
+  const figure = (await getFigureById(figure_id)) ?? (await getFigureByStableSuffix(figure_id))
   return [
     {
       id: 'default',
@@ -28,7 +29,7 @@ export async function generateImageMetadata({ params }: Props) {
 
 export default async function Image({ params }: Props) {
   const { figure_id } = await params
-  const figure = getFigureById(figure_id) ?? getFigureByStableSuffix(figure_id)
+  const figure = (await getFigureById(figure_id)) ?? (await getFigureByStableSuffix(figure_id))
 
   if (!figure) {
     return new ImageResponse(<FallbackOGCard />, OG_SIZE)

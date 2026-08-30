@@ -3,12 +3,13 @@
 // canonicalizes to the figure page). Same gold/ink museum aesthetic as the
 // /shelf share page, deliberately reused rather than a third visual system.
 
-import { getFigureById, deriveName, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kbDb'
+import { deriveName } from '@/data/kbHelpers'
 import { thumb } from '@/lib/imageUrl'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import type { SpotlightRow } from '../_lib/dailySpotlight'
 
-export function SpotlightView({
+export async function SpotlightView({
   row,
   isToday,
 }: {
@@ -17,7 +18,8 @@ export function SpotlightView({
    *  false on /today/[date] (adds a link back to the live /today instead). */
   isToday: boolean
 }) {
-  const figure = getFigureById(row.figureId)
+  // Tier B: D1 read; a miss OR a D1 blip both land on the existing EmptyState.
+  const figure = await getFigureById(row.figureId).catch(() => null)
   // Defensive only — the pool is hardcoded/verified and D1 rows only ever
   // come from that same pool, so this should never actually fire.
   if (!figure) return <EmptyState />
@@ -55,7 +57,7 @@ export function SpotlightView({
         </div>
         <div className="tds-comps">{row.compCount} real sold comps behind this read</div>
 
-        <a className="tds-cta" href={prettyFigureUrl(figure)}>See full price history &rarr;</a>
+        <a className="tds-cta" href={await prettyFigureUrl(figure)}>See full price history &rarr;</a>
 
         {isToday ? (
           <a className="tds-sub" href={`/today/${row.date}`}>Permalink for today &rarr;</a>

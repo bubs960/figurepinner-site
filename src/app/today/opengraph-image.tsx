@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { getFigureById } from '@/data/kb'
+import { getFigureById } from '@/data/kbDb'
 import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
 import { getOrCreateTodaysSpotlight } from './_lib/dailySpotlight'
 
@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 
 export async function generateImageMetadata() {
   const row = await getOrCreateTodaysSpotlight()
-  const figure = row ? getFigureById(row.figureId) : null
+  const figure = row ? await getFigureById(row.figureId).catch(() => null) : null
   return [
     {
       id: 'default',
@@ -23,7 +23,7 @@ export async function generateImageMetadata() {
 
 export default async function Image() {
   const row = await getOrCreateTodaysSpotlight()
-  const figure = row ? getFigureById(row.figureId) : null
+  const figure = row ? await getFigureById(row.figureId).catch(() => null) : null
 
   if (!row || !figure) {
     return new ImageResponse(<FallbackOGCard />, OG_SIZE)

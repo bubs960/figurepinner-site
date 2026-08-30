@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { getFigureById, deriveName } from '@/data/kb'
+import { getFigureById } from '@/data/kbDb'
+import { deriveName } from '@/data/kbHelpers'
 import { getOrCreateTodaysSpotlight } from './_lib/dailySpotlight'
 import { SpotlightView, EmptyState } from './_components/SpotlightView'
 
@@ -22,7 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
       alternates: { canonical: `${BASE}/today` },
     }
   }
-  const figure = getFigureById(row.figureId)
+  // Tier B: D1 read; dynamic route, null fallback below already handles a miss
+  const figure = await getFigureById(row.figureId).catch(() => null)
   const name = figure ? deriveName(figure) : 'a real figure'
   const direction = row.trendPct >= 0 ? 'up' : 'down'
   return {

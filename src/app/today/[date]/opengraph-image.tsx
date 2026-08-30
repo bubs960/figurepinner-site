@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { getFigureById } from '@/data/kb'
+import { getFigureById } from '@/data/kbDb'
 import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
 import { getSpotlightByDate } from '../_lib/dailySpotlight'
 
@@ -13,7 +13,7 @@ type Props = { params: Promise<{ date: string }> }
 export async function generateImageMetadata({ params }: Props) {
   const { date } = await params
   const row = await getSpotlightByDate(date)
-  const figure = row ? getFigureById(row.figureId) : null
+  const figure = row ? await getFigureById(row.figureId).catch(() => null) : null
   return [
     {
       id: 'default',
@@ -27,7 +27,7 @@ export async function generateImageMetadata({ params }: Props) {
 export default async function Image({ params }: Props) {
   const { date } = await params
   const row = await getSpotlightByDate(date)
-  const figure = row ? getFigureById(row.figureId) : null
+  const figure = row ? await getFigureById(row.figureId).catch(() => null) : null
 
   if (!row || !figure) {
     return new ImageResponse(<FallbackOGCard />, OG_SIZE)

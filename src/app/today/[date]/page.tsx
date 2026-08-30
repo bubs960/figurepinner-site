@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getFigureById, deriveName, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kbDb'
+import { deriveName } from '@/data/kbHelpers'
 import { getSpotlightByDate } from '../_lib/dailySpotlight'
 import { SpotlightView } from '../_components/SpotlightView'
 
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const row = await getSpotlightByDate(date)
   if (!row) return { title: 'Spotlight not found', robots: { index: false, follow: false } }
 
-  const figure = getFigureById(row.figureId)
+  const figure = await getFigureById(row.figureId).catch(() => null)
   const name = figure ? deriveName(figure) : 'a real figure'
   const direction = row.trendPct >= 0 ? 'up' : 'down'
 
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // the figure page stays the single authoritative source for that
     // figure's data — never a swarm of near-duplicate "spotlight" pages
     // competing with it for rank.
-    alternates: { canonical: figure ? `${BASE}${prettyFigureUrl(figure)}` : `${BASE}/today` },
+    alternates: { canonical: figure ? `${BASE}${await prettyFigureUrl(figure)}` : `${BASE}/today` },
   }
 }
 

@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // redirects to its successor's current canonical; anything else falls
     // through to a real 404 (thrown by the page body, not here — metadata
     // alone can't emit notFound()). See resolveLegacyPrettyPath's doc.
-    const legacyTarget = resolveLegacyPrettyPath(genre, line, slug)
+    const legacyTarget = await resolveLegacyPrettyPath(genre, line, slug)
     if (legacyTarget) permanentRedirect(legacyTarget)
     return { title: 'Figure Not Found' }
   }
@@ -180,7 +180,7 @@ export default async function PrettyFigurePage({ params }: PageProps) {
   // VERIFIED former URL for a figure that genuinely moved gets a redirect
   // now; everything else is a real 404. See resolveLegacyPrettyPath and
   // the ledger it reads for the full rationale + external-audit decision.
-  const legacyTarget = resolveLegacyPrettyPath(genre, line, slug)
+  const legacyTarget = await resolveLegacyPrettyPath(genre, line, slug)
   if (legacyTarget) permanentRedirect(legacyTarget)
 
   notFound()
