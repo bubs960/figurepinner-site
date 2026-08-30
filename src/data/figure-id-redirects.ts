@@ -297,4 +297,11 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
     'fp_wrestling_mattel_elite-street-fighter_2_bianca-belair_0762e3',
   'fp_wrestling_mattel_elite_2_faarooq_fbd93e':
     'fp_wrestling_mattel_elite-nation-of-domination_2pack_faarooq_3f0759',
+
+  // 8/30 elite S101-129 sweep (1 typo re-key + 1 placeholder dedup) —
+  // MATCHER-TO-WEB-ELITE-S101-129-FIXES-2026-08-30.md
+  'fp_wrestling_mattel_elite_101_the-americanightmare-cody-rhodes_690f8adc11fe':
+    'fp_wrestling_mattel_elite_101_the-american-nightmare-cody-rhodes_d50585',
+  'fp_wrestling_mattel_elite_126_2026-new-york-toy-fair_27b3c2':
+    'fp_wrestling_mattel_elite_3_2026-new-york-toy-fair_09a43a',
 }
