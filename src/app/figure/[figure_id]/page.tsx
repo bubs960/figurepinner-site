@@ -142,7 +142,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function FigureDetailPage({ params }: PageProps) {
   const { figure_id } = await params
-  if (!getFigureById(figure_id)) {
+  if (!(await getFigureById(figure_id))) {
     const canonical = (await getFigureById(FIGURE_ID_REDIRECTS[figure_id] ?? '')) ?? (await getFigureByStableSuffix(figure_id))
     if (canonical) permanentRedirect(await prettyFigureUrl(canonical))
   }
