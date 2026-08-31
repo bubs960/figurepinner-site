@@ -123,6 +123,15 @@
  * just excluded from sitemap priority, so a below-bar figure with NO
  * internal link is still a genuine problem worth stopping on.
  *
+ * ── TIER B D1 LOCAL-DEGRADATION EXEMPTION (added 2026-08-30) ────────────
+ * Checks 1, 3, and 4 fetch individual figure/pretty-path pages, which have
+ * been D1-backed (kbDb, no local binding under plain `next start`) since
+ * Phase 7 Tier B landed the same day. A 500 (or timeout) on exactly these
+ * fetches is expected local behavior, not a regression -- see
+ * isD1LocalDegradation()'s comment for the full rationale and the
+ * loud SKIP logging this produces. Sitemap/robots/hub-page checks are
+ * unaffected (kb.ts, no D1).
+ *
  * This script imports the REAL, LIVE modules (src/data/kbTypes.ts,
  * src/data/kb.ts) via the repo's existing test-time TS loader
  * (scripts/ts-loader.mjs). It self-registers that loader at the top of this
@@ -249,6 +258,38 @@ async function safeRequestText(url) {
   }
 }
 
+// ── Tier B D1 local-degradation exemption (added 2026-08-30) ───────────────
+// Phase 7 Tier B (commit 578d7fa, same day) moved figure-page point lookups
+// and the [genre]/[line]/[slug] legacy resolver to kbDb (D1) at request time.
+// kbDb's getKbDb() -> getCloudflareContext() throws under plain `next start`
+// (no local D1 binding without extra `initOpenNextCloudflareForDev()` setup)
+// -- and page.tsx's own comment says that's DELIBERATE: "A D1 exception
+// deliberately propagates as an UNCACHED 500 here... catching to null would
+// let a transient D1 blip cache a wrong 404/redirect for a live figure for
+// 24h." So an individual figure/pretty-path fetch 500ing locally is expected
+// Tier B behavior, not a regression -- this is the first time this gate has
+// run since Tier B landed (Tier B sat committed-not-deployed all evening),
+// which is why this exemption didn't exist until now.
+//
+// The honest limitation: the HTTP response body is a bare generic 500 either
+// way (the real error only appears in server-side logs, never in what curl
+// sees), so this script CANNOT tell "expected D1 degradation" apart from "a
+// real regression that also happens to 500" from the response alone. Steve's
+// call (2026-08-30, this exact incident): skip status-assertions on these
+// specific fetches with a loud, permanent SKIP log line (never silently
+// swallowed into a PASS) rather than block every future deploy forever.
+// Verification for these routes shifts to the post-deploy R10 checks, which
+// run against real prod D1 (see WEB-R10-CHECKS-TIERB-DEPLOY-2026-08-30.md).
+// Sitemap/robots/hub-page checks are UNCHANGED -- those go through kb.ts
+// (no D1), confirmed still accurate per this file's own header comment.
+//
+// Revisit if/when this gate gets real local D1 (wrangler dev --remote or a
+// seeded local D1) -- at that point this exemption should be narrowed or
+// removed, not left as permanent cover for a real bug.
+function isD1LocalDegradation(res) {
+  return res.status === 500 || (res.status === 0 && !!res.error)
+}
+
 async function assertBaseReachable(base) {
   console.log(`${LOG} checking --base is reachable: ${base}`)
   try {
@@ -337,6 +378,10 @@ async function checkSampleUrlMatrix(base, localChildren) {
       const servedPath = prettyFigureUrl(f)
       const served = await safeRequestText(`${base}${servedPath}`)
 
+      if (isD1LocalDegradation(served)) {
+        infoLines.push(`SKIP [1:sample-matrix] ${f.figure_id}: served URL ${servedPath} returned ${served.status} -- Tier B D1 local-degradation exemption (see isD1LocalDegradation), cannot verify locally, relying on post-deploy R10`)
+        continue
+      }
       if (served.status !== 200) {
         failures.push(`STOP [1:sample-matrix] ${f.figure_id}: served URL ${servedPath} returned ${served.status} (expected 200)${served.error ? ' -- ' + served.error : ''}`)
         continue
@@ -358,6 +403,10 @@ async function checkSampleUrlMatrix(base, localChildren) {
       // URL (the common case for a unique figure, which self-canonicalizes)
       // reuse the response already in hand instead of fetching it twice.
       const target = canonicalPath === servedPath ? served : await safeRequestText(`${base}${canonicalPath}`)
+      if (isD1LocalDegradation(target)) {
+        infoLines.push(`SKIP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} returned ${target.status} -- Tier B D1 local-degradation exemption, cannot verify locally, relying on post-deploy R10`)
+        continue
+      }
       if (target.status !== 200) {
         failures.push(`STOP [1:sample-matrix] ${f.figure_id}: canonical target ${canonicalPath} returned ${target.status} (expected 200) -- 404ing canonical target is the exact 2026-07-12 bug shape${target.error ? ' -- ' + target.error : ''}`)
         continue
@@ -639,6 +688,11 @@ async function checkAliasProbe(base) {
     const canonicalRes = await safeRequestText(`${base}${canonicalPath}`)
     const rawRes = await safeRequestText(`${base}${rawPath}`)
 
+    if (isD1LocalDegradation(canonicalRes) || isD1LocalDegradation(rawRes)) {
+      infoLines.push(`SKIP [3:alias-probe] "${urlSlug}"<->"${kbFandom}": canonical ${canonicalPath}=${canonicalRes.status}, raw ${rawPath}=${rawRes.status} -- Tier B D1 local-degradation exemption (the [genre]/[line]/[slug] resolver is D1-backed since Tier B), cannot verify locally, relying on post-deploy R10`)
+      continue
+    }
+
     const canonicalIs200 = canonicalRes.status === 200
     const rawIsRedirect = rawRes.status >= 300 && rawRes.status < 400
     const rawIs200 = rawRes.status === 200
@@ -696,6 +750,10 @@ async function checkPrettyPathRedirects(base) {
     }
 
     const res = await safeRequestText(`${base}${oldPath}`)
+    if (isD1LocalDegradation(res)) {
+      infoLines.push(`SKIP [4:pretty-path-redirects] "${oldPath}" returned ${res.status} -- Tier B D1 local-degradation exemption (the [genre]/[line]/[slug] resolver is D1-backed since Tier B), cannot verify locally, relying on post-deploy R10`)
+      continue
+    }
     if (res.status < 300 || res.status >= 400) {
       failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" did not return a 30x redirect (got ${res.status})${res.error ? ' -- ' + res.error : ''} -- either the fallback logic regressed or this entry no longer matches the route's lookup key`)
       continue
@@ -714,6 +772,10 @@ async function checkPrettyPathRedirects(base) {
     }
 
     const target = await safeRequestText(`${base}${targetPath}`)
+    if (isD1LocalDegradation(target)) {
+      infoLines.push(`SKIP [4:pretty-path-redirects] "${oldPath}" -> "${targetPath}": target returned ${target.status} -- Tier B D1 local-degradation exemption, cannot verify locally, relying on post-deploy R10`)
+      continue
+    }
     if (target.status !== 200) {
       failures.push(`STOP [4:pretty-path-redirects] "${oldPath}" -> "${targetPath}": target did not return 200 (got ${target.status}) -- not a single clean hop`)
       continue
