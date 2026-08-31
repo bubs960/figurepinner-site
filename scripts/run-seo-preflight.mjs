@@ -136,6 +136,8 @@
 
 import { spawn, spawnSync, execFileSync } from 'node:child_process'
 import { createConnection } from 'node:net'
+import { openSync, closeSync, readFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
@@ -169,26 +171,30 @@ function log(msg) { console.log(`${LOG} ${msg}`) }
 // ── Server child process state (module-level so cleanup can reach it from
 // the finally block AND from signal handlers) ──────────────────────────────
 let serverProc = null
-let serverOutput = [] // ring buffer of recent stdout/stderr for failure debugging
-const SERVER_OUTPUT_CAP = 400 // lines
-
-function captureServerOutput(chunk) {
-  const text = chunk.toString('utf8')
-  for (const line of text.split(/\r?\n/)) {
-    if (!line) continue
-    serverOutput.push(line)
-    if (serverOutput.length > SERVER_OUTPUT_CAP) serverOutput.shift()
-  }
-}
+// Server stdout/stderr go to a FILE, never to pipes: step 5 runs the
+// preflight via spawnSync, which freezes this process's event loop for the
+// entire run -- piped stdio would stop being drained, and once the server
+// has written ~64KB (easily reached: under Tier B every local figure-page
+// request 500s with a full D1 stack trace) the pipe fills and `next start`
+// BLOCKS on its own console write, freezing every route. The preflight then
+// sits at curl's max-time per request and looks hung forever (observed live
+// 2026-08-31, "stuck at check 1/3"). File writes never block on a reader.
+const SERVER_LOG = join(tmpdir(), `seo-preflight-server-${process.pid}.log`)
+let serverLogFd = null
+const SERVER_OUTPUT_CAP = 400 // lines printed back on failure
 
 function printCapturedServerOutput() {
-  if (!serverOutput.length) {
+  let lines = []
+  try {
+    lines = readFileSync(SERVER_LOG, 'utf8').split(/\r?\n/).filter(Boolean).slice(-SERVER_OUTPUT_CAP)
+  } catch { /* log file may not exist if the spawn itself failed */ }
+  if (!lines.length) {
     log('(no server output was captured)')
     return
   }
   console.log(LINE)
-  log(`captured next start output (last ${serverOutput.length} line(s)):`)
-  for (const l of serverOutput) console.log('  ' + l)
+  log(`captured next start output (last ${lines.length} line(s), full log: ${SERVER_LOG}):`)
+  for (const l of lines) console.log('  ' + l)
   console.log(LINE)
 }
 
@@ -201,6 +207,10 @@ let cleanedUp = false
 function killServer() {
   if (cleanedUp) return
   cleanedUp = true
+  if (serverLogFd !== null) {
+    try { closeSync(serverLogFd) } catch { /* best-effort */ }
+    serverLogFd = null
+  }
   if (!serverProc || serverProc.exitCode !== null || serverProc.killed) {
     if (serverProc) log('server process already exited, nothing to clean up.')
     return
@@ -364,21 +374,21 @@ async function main() {
   }
   log(`ISR declaration audit passed in ${timings['isr-declaration-audit']}ms.`)
 
-  // 3) Spawn `next start -p PORT` as a background child. Captured (not
-  //    inherited) stdio so a failed readiness wait can print recent output
-  //    for debugging without letting the server's ongoing request logs spam
-  //    the console for the rest of the run.
-  log(`starting next start -p ${PORT} -H ${HOST} ...`)
+  // 3) Spawn `next start -p PORT` as a background child. Output goes to a
+  //    log file (NOT pipes -- see the SERVER_LOG comment above for the
+  //    spawnSync deadlock this avoids) so a failed readiness wait can print
+  //    recent output for debugging without the server's request logs
+  //    spamming the console.
+  log(`starting next start -p ${PORT} -H ${HOST} (server log: ${SERVER_LOG}) ...`)
+  serverLogFd = openSync(SERVER_LOG, 'w')
   const spawnOpts = {
     cwd: REPO_ROOT,
-    stdio: ['ignore', 'pipe', 'pipe'],
+    stdio: ['ignore', serverLogFd, serverLogFd],
     env: process.env,
   }
   if (process.platform !== 'win32') spawnOpts.detached = true // POSIX: own process group, see killServer()
   serverProc = spawn(process.execPath, [NEXT_BIN, 'start', '-p', String(PORT), '-H', HOST], spawnOpts)
-  serverProc.stdout.on('data', captureServerOutput)
-  serverProc.stderr.on('data', captureServerOutput)
-  serverProc.on('error', (e) => captureServerOutput(Buffer.from(`[spawn error] ${e.message}\n`)))
+  serverProc.on('error', (e) => log(`[spawn error] ${e.message}`))
 
   let preflightExitCode = null
 
