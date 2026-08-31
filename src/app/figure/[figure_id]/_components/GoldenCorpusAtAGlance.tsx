@@ -4,16 +4,21 @@
 // for the figure — same gate as the passport section; every value here is one
 // of its resolved claims, restated at a glance. Server component.
 
-import { type FigureClaimsDoc } from '../_lib/goldenCorpus'
+import { type FigureClaimsDoc, isVerbatimOverlap } from '../_lib/goldenCorpus'
 
+// Stopgap (2026-08-30 claim-value audit, see goldenCorpus.ts): a value that's
+// substantially its own source quote is withheld here too, same bar as the
+// passport section — this card renders claims directly, not derived facts.
 function claimValue(doc: FigureClaimsDoc, fieldPath: string): string | null {
   const c = doc.claims.find(c => c.field_path === fieldPath)
-  return c?.status === 'resolved' && c.value ? c.value : null
+  if (c?.status !== 'resolved' || !c.value) return null
+  return isVerbatimOverlap(doc, c.evidence_quote_ids, c.value) ? null : c.value
 }
 
 function claimValues(doc: FigureClaimsDoc, prefix: string): string[] {
   return doc.claims
     .filter(c => c.field_path.startsWith(prefix) && c.status === 'resolved' && c.value)
+    .filter(c => !isVerbatimOverlap(doc, c.evidence_quote_ids, c.value))
     .map(c => c.value as string)
 }
 

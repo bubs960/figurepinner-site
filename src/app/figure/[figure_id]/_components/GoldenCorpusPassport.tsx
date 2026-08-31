@@ -4,16 +4,21 @@
 // source links (WEBAUDIT-TO-WEB-SOURCE-DISPLAY-REVIEW-SPEC-2026-08-30, Steve
 // 8/30: never republish third-party expressive text on any public surface).
 // Sidecars/evidence quotes stay internal — matcher's quality gates still read
-// them, this component just doesn't render them. Honesty rules, per the
+// them, this component just doesn't render them (they're still used here,
+// read-only, for the verbatim-overlap gate below). Honesty rules, per the
 // original relay's design note, still apply:
 //   - unresolved fields render "Not yet documented" — never papered over
 //   - not_applicable renders as such (e.g. BAF on WWE basic figures)
 //   - conflict renders BOTH values plainly — we don't pick a winner
+//   - a value that's substantially its own source quote (isVerbatimOverlap,
+//     goldenCorpus.ts) renders as "Not yet documented" too — stopgap for the
+//     2026-08-30 claim-value audit, see goldenCorpus.ts's module comment
 // Server component, no 'use client'; no date/Intl formatting (CLAUDE.md #8).
 
 import {
   type FigureClaimsDoc,
   type Claim,
+  isVerbatimOverlap,
 } from '../_lib/goldenCorpus'
 
 // field_path → human label. Indexed paths (visual_identifiers[0]…) collapse to
@@ -46,18 +51,25 @@ function labelFor(fieldPath: string): string {
   return FIELD_LABELS.find(f => f.match.test(fieldPath))?.label ?? fieldPath
 }
 
-function ClaimRow({ claim }: { claim: Claim }) {
+function ClaimRow({ doc, claim }: { doc: FigureClaimsDoc; claim: Claim }) {
   const label = labelFor(claim.field_path)
 
   let body: React.ReactNode
   if (claim.status === 'resolved') {
-    body = <span style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{claim.value}</span>
+    body = isVerbatimOverlap(doc, claim.evidence_quote_ids, claim.value)
+      ? <span style={{ color: 'var(--dp-muted)' }}>Not yet documented</span>
+      : <span style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{claim.value}</span>
   } else if (claim.status === 'conflict') {
     body = (
-      <div style={{ display: 'grid', gap: '4px' }}>
-        {(claim.conflicting_values ?? []).map(cv => (
-          <span key={cv.value} style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{cv.value}</span>
-        ))}
+      <div>
+        <div style={{ fontSize: '0.68rem', color: 'var(--dp-muted)', marginBottom: '4px' }}>Sources disagree:</div>
+        <div style={{ display: 'grid', gap: '4px' }}>
+          {(claim.conflicting_values ?? []).map(cv => (
+            <span key={cv.value} style={{ color: 'var(--dp-text)', fontWeight: 600 }}>
+              {isVerbatimOverlap(doc, cv.evidence_quote_ids, cv.value) ? 'Not yet documented' : cv.value}
+            </span>
+          ))}
+        </div>
       </div>
     )
   } else if (claim.status === 'not_applicable') {
@@ -114,7 +126,7 @@ export default function GoldenCorpusPassport({ doc }: { doc: FigureClaimsDoc }) 
               {group.title.toUpperCase()}
             </div>
             <div style={{ borderRadius: '12px', border: '1px solid rgba(255,255,255,.1)', overflow: 'hidden' }}>
-              {claims.map(c => <ClaimRow key={c.field_path} claim={c} />)}
+              {claims.map(c => <ClaimRow key={c.field_path} doc={doc} claim={c} />)}
             </div>
           </div>
         )

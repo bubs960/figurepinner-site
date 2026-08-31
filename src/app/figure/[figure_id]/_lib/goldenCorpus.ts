@@ -10,6 +10,22 @@
 // never rendered publicly — only the resolved claim.value. The quotes stay in
 // the data for matcher's internal quality gates; this file's exported types
 // still describe them so that data continues to type-check.
+//
+// STOPGAP GATE (2026-08-30, same day, second finding): removing the quote
+// PANEL didn't guarantee the claim VALUE itself is clean — an independent
+// audit found 1,520 resolved/conflict values across 620 of 1,020 figures
+// (61%) contain a 40+ character run copied verbatim from their own linked
+// source quote (e.g. a "visual identifier" value that's actually a reviewer's
+// verbatim descriptive sentence, not an extracted fact). That's a
+// harvest/extraction-pipeline defect (matcher's side, not web's rendering) —
+// the real fix is regenerating those values from validated facts. Until then,
+// `isVerbatimOverlap` below is the render-time stopgap: any value that still
+// carries a long run shared with its own quote is withheld the same way an
+// unresolved field is ("Not yet documented"), everywhere a claim value
+// reaches the page (GoldenCorpusPassport, GoldenCorpusAtAGlance, and
+// ScalePassport via its sidecar quote lookup). Threshold matches the audit
+// exactly so the gate closes precisely what was measured — not a proxy for
+// it. See WEB-TO-MATCHER-CLAIM-VALUE-VERBATIM-AUDIT-2026-08-30.md.
 
 // Track 1 scale-up (2026-08-24, WEBAUDIT-TO-WEB-GOLDEN-CORPUS-TRACK1-ACTIONABLE):
 // was a single hardcoded Hela import (the 8/13 pilot doc); now loads lazily from
@@ -86,4 +102,45 @@ export async function getGoldenCorpusClaims(
   } catch {
     return null
   }
+}
+
+// Same threshold used to measure the problem (see the module comment above) —
+// keep these in lockstep if either changes.
+const VERBATIM_OVERLAP_THRESHOLD = 40
+
+/** Longest run of characters `a` and `b` share in common, case-insensitive.
+ *  Classic O(len(a)*len(b)) DP; these strings are short (single field values
+ *  and single quotes), so this is cheap per call. */
+function longestCommonRun(a: string, b: string): number {
+  const s = a.toLowerCase()
+  const t = b.toLowerCase()
+  let prev = new Array(t.length + 1).fill(0)
+  let best = 0
+  for (let i = 1; i <= s.length; i++) {
+    const cur = new Array(t.length + 1).fill(0)
+    for (let j = 1; j <= t.length; j++) {
+      if (s[i - 1] === t[j - 1]) {
+        cur[j] = prev[j - 1] + 1
+        if (cur[j] > best) best = cur[j]
+      }
+    }
+    prev = cur
+  }
+  return best
+}
+
+/** True if `value` shares a 40+ character verbatim run with any quote it
+ *  cites as its own evidence — i.e. the "fact" is substantially the source's
+ *  own sentence, not an extracted fact. Render callers withhold the value
+ *  (treat it like an unresolved field) when this is true. */
+export function isVerbatimOverlap(
+  doc: FigureClaimsDoc,
+  quoteIds: string[] | undefined,
+  value: string | undefined
+): boolean {
+  if (!value || value.length < VERBATIM_OVERLAP_THRESHOLD || !quoteIds?.length) return false
+  return quoteIds.some(id => {
+    const quote = doc.evidence.quotes.find(q => q.quote_id === id)
+    return quote ? longestCommonRun(value, quote.text) >= VERBATIM_OVERLAP_THRESHOLD : false
+  })
 }
