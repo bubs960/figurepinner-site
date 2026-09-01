@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kb'
+import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kbDb'
 import { figuresForGenre, groupAndSortLines, cardName, genreSlugForFandom, getFandom } from '@/lib/genreFigures'
 import { GENRE_TAXONOMY, type LineTile } from '@/data/genre-lines'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -250,7 +250,7 @@ function buildCharacterHighlights(figures: KBFigure[]): CharacterHighlight[] {
     })
 }
 
-function buildHub(genre: string, figures: KBFigure[]) {
+async function buildHub(genre: string, figures: KBFigure[]) {
   const groups = groupAndSortLines(figures)
 
   // Editorial overlay (names that deserve better casing + era labels) — same
@@ -302,7 +302,7 @@ function buildHub(genre: string, figures: KBFigure[]) {
     if (!f) continue
     shelf.push({
       fid: f.figure_id,
-      href: prettyFigureUrl(f),
+      href: await prettyFigureUrl(f),
       name: cardName(f),
       tag: lineName,
       img: thumb(f.canonical_image_url!, 225) ?? f.canonical_image_url!,
@@ -320,7 +320,7 @@ function buildHub(genre: string, figures: KBFigure[]) {
         have.add(f.figure_id)
         shelf.push({
           fid: f.figure_id,
-          href: prettyFigureUrl(f),
+          href: await prettyFigureUrl(f),
           name: cardName(f),
           tag: lineName,
           img: thumb(f.canonical_image_url, 225) ?? f.canonical_image_url,
@@ -346,10 +346,10 @@ export default async function GenrePage(
   const meta = GENRE_META[genre]
   if (!meta) notFound()
 
-  const figures = figuresForGenre(genre)
+  const figures = await figuresForGenre(genre)
   if (!figures.length) notFound()
 
-  const { groups, registry, more, shelf, totalLines } = buildHub(genre, figures)
+  const { groups, registry, more, shelf, totalLines } = await buildHub(genre, figures)
   const characters = buildCharacterHighlights(figures)
   const totalFigures = figures.length
   const hunting = shelf.slice(0, 3)
@@ -368,14 +368,14 @@ export default async function GenrePage(
       '@type': 'ItemList',
       name: `${meta.label} Action Figures`,
       numberOfItems: totalFigures,
-      itemListElement: groups.slice(0, 5).flatMap(([, group]) =>
-        group.slice(0, 10).map((f, i) => ({
+      itemListElement: await Promise.all(groups.slice(0, 5).flatMap(([, group]) =>
+        group.slice(0, 10).map(async (f, i) => ({
           '@type': 'ListItem',
           position: i + 1,
-          url: `https://figurepinner.com${prettyFigureUrl(f)}`,
+          url: `https://figurepinner.com${await prettyFigureUrl(f)}`,
           name: cardName(f),
         }))
-      ),
+      )),
     },
   }
 

@@ -17,13 +17,16 @@
  * at build: an entry whose line no longer exists in the KB is dropped with a
  * build-log warning instead of shipping a dead tile.
  *
- * Build-time only — imports kb.ts; never ships to the client bundle. The
- * homepage passes the computed array to GenreTaxonomy as serialized props.
+ * Counts and resolvable slugs are precomputed from the KB before Next builds.
+ * This module retains the editorial overlay and its validation, then passes
+ * the computed array to GenreTaxonomy as serialized props.
  */
 
-import { getFiguresByFandom, type KBFigure } from './kb'
-import { UI_SLUG_TO_FANDOM, NECA_FANDOMS, plusLabel } from './kb-stats'
+import generated from './kb-stats.generated.json'
+import { UI_SLUG_TO_FANDOM, NECA_FANDOMS, plusLabel, type KbStatsGenerated } from './kb-stats'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+
+const KB_STATS: KbStatsGenerated = generated
 
 // ─── Public types (serializable — cross the client boundary as props) ────────
 
@@ -175,8 +178,11 @@ function fandomsForGenre(genre: string): string[] {
 }
 
 function buildGenre(ui: { slug: string; name: string; accent: string }): GenreTab | null {
-  const figures: KBFigure[] = fandomsForGenre(ui.slug).flatMap(f => getFiguresByFandom(f))
-  if (!figures.length) {
+  const summaries = fandomsForGenre(ui.slug)
+    .map(fandom => KB_STATS.fandoms[fandom])
+    .filter((summary): summary is NonNullable<typeof summary> => summary !== undefined)
+  const figureCount = summaries.reduce((sum, summary) => sum + summary.count, 0)
+  if (!figureCount) {
     console.warn(`[genre-lines] genre "${ui.slug}" has no KB figures — tab dropped`)
     return null
   }
@@ -186,12 +192,16 @@ function buildGenre(ui: { slug: string; name: string; accent: string }): GenreTa
   // "mcfarlane-spawn") — the line page accepts both shapes; editorial entries
   // may use the prefixed form to split one product_line by manufacturer.
   const byMfrLine = new Map<string, { count: number; productLine: string }>()
-  for (const f of figures) {
-    byLine.set(f.product_line, (byLine.get(f.product_line) ?? 0) + 1)
-    const mfrKey = `${f.manufacturer}-${f.product_line}`
-    if (mfrKey !== f.product_line) {
-      const cur = byMfrLine.get(mfrKey)
-      byMfrLine.set(mfrKey, { count: (cur?.count ?? 0) + 1, productLine: f.product_line })
+  for (const summary of summaries) {
+    for (const [slug, count] of Object.entries(summary.lines)) {
+      byLine.set(slug, (byLine.get(slug) ?? 0) + count)
+    }
+    for (const [slug, entry] of Object.entries(summary.manufacturerLines)) {
+      const cur = byMfrLine.get(slug)
+      byMfrLine.set(slug, {
+        count: (cur?.count ?? 0) + entry.count,
+        productLine: entry.productLine,
+      })
     }
   }
 
@@ -249,8 +259,8 @@ function buildGenre(ui: { slug: string; name: string; accent: string }): GenreTa
     slug: ui.slug,
     name: ui.name,
     accent: ui.accent,
-    totalCount: plusLabel(figures.length),
-    figureCount: figures.length,
+    totalCount: plusLabel(figureCount),
+    figureCount,
     lines: tiles.map(({ order: _o, n: _n, ...tile }) => tile),
   }
 }

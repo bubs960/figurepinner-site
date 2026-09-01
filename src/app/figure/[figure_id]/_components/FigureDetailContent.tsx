@@ -6,8 +6,8 @@
  */
 
 import { notFound } from 'next/navigation'
-import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl, isNumericWave } from '@/data/kb'
-import { passportValue, type KBFigure } from '@/data/kbTypes'
+import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl } from '@/data/kbDb'
+import { isNumericWave, passportValue, type KBFigure } from '@/data/kbTypes'
 import { genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
 import HeroBand from './HeroBand'
@@ -259,7 +259,7 @@ function conditionDepthLabel(count: number): string {
 // ── Main component ─────────────────────────────────────────────────────────────
 
 export default async function FigureDetailContent({ figureId }: { figureId: string }) {
-  const local = getFigureById(figureId)
+  const local = await getFigureById(figureId)
   // A missing figure must be a true HTTP 404, not a 200 page that merely looks
   // like a 404. The old `<NotFoundState />` returned 200 — a soft-404 that wasted
   // crawl budget and let Google index junk /figure/<bad-id> URLs. notFound()
@@ -619,11 +619,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   // ── Seller listings ─────────────────────────────────────────────────────────
 
-  const sellerListings = getSellerListings(figureId)
+  const sellerListings = await getSellerListings(figureId)
 
   // ── Related figures ─────────────────────────────────────────────────────────
 
-  const allInGenre = getFiguresByFandom(genre)
+  const allInGenre = await getFiguresByFandom(genre)
 
   // Full wave (uncapped, includes the current figure) — drives an honest
   // "you own N of M" denominator. The visible row is still capped at 12.
@@ -645,16 +645,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     return cleaned ? `BAF · ${cleaned}` : `BAF · ${piece}`
   }
 
-  const seriesCompanions = fullWave
+  const seriesCompanions = await Promise.all(fullWave
     .filter(f => f.figure_id !== figureId)
     .slice(0, 12)
-    .map(f => ({
+    .map(async f => ({
       figure_id: f.figure_id,
-      href: prettyFigureUrl(f),
+      href: await prettyFigureUrl(f),
       name: f.character_canonical.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
       imageUrl: thumb(f.canonical_image_url, 180),
       subLabel: bafSubLabel(f),
-    }))
+    })))
 
   const characterVariantsAll = allInGenre.filter(f =>
     f.figure_id !== figureId &&
@@ -664,22 +664,23 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // ("you are here") — matches the design's every-version rail. Only when
   // other versions exist: a one-card rail of just this page is noise (and
   // RelatedRow's empty-guard previously hid it entirely).
+  const localPrettyUrl = await prettyFigureUrl(local)
   const characterVariants = characterVariantsAll.length === 0 ? [] : [
     {
       figure_id: figureId,
-      href: prettyFigureUrl(local),
+      href: localPrettyUrl,
       name: deriveName(local),
       imageUrl: thumb(imageUrlFinal, 180),
       isCurrent: true,
     },
-    ...characterVariantsAll
+    ...(await Promise.all(characterVariantsAll
       .slice(0, 12)
-      .map(f => ({
+      .map(async f => ({
         figure_id: f.figure_id,
-        href: prettyFigureUrl(f),
+        href: await prettyFigureUrl(f),
         name: deriveName(f),
         imageUrl: thumb(f.canonical_image_url, 180),
-      })),
+      })))),
   ]
   const characterHubHref = `/${genreSlug}/character/${local.character_canonical}`
 
@@ -948,7 +949,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           : []),
         { name: line, url: `https://figurepinner.com/${genreSlug}/${local.product_line}` },
         { name: characterH1, url: `https://figurepinner.com${characterHubHref}` },
-        { name: displayName, url: `https://figurepinner.com${prettyFigureUrl(local)}` },
+        { name: displayName, url: `https://figurepinner.com${localPrettyUrl}` },
       ]} />
 
       {/* Shelf design tokens (scoped) + responsive overrides */}

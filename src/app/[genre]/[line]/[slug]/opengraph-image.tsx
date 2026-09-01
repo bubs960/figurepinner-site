@@ -13,7 +13,7 @@ type Props = { params: Promise<{ genre: string; line: string; slug: string }> }
 
 export async function generateImageMetadata({ params }: Props) {
   const { genre, line, slug } = await params
-  const figure = findFigureMatches(genre, line, slug)[0]
+  const figure = (await findFigureMatches(genre, line, slug))[0]
   return [
     {
       id: 'default',
@@ -26,7 +26,7 @@ export async function generateImageMetadata({ params }: Props) {
 
 export default async function Image({ params }: Props) {
   const { genre, line, slug } = await params
-  const figure = findFigureMatches(genre, line, slug)[0]
+  const figure = (await findFigureMatches(genre, line, slug))[0]
 
   if (!figure) {
     return new ImageResponse(<FallbackOGCard />, OG_SIZE)

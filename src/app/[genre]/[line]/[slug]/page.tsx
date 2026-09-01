@@ -15,7 +15,8 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { deriveName, deriveEmbeddedLine, figurePageTitle, figureUrl, prettyFigureUrl } from '@/data/kb'
+import { figureUrl, prettyFigureUrl } from '@/data/kbDb'
+import { deriveName, deriveEmbeddedLine, figurePageTitle } from '@/data/kbHelpers'
 import { getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalGenre = genreSlugForFandom(getFandom(genre))
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}/${slug}`)
 
-  const matches = findFigureMatches(genre, line, slug)
+  const matches = await findFigureMatches(genre, line, slug)
   const figure = matches[0]
   if (!figure) {
     // 2026-08-24 soft-404 fix: a verified former URL for this exact path
@@ -108,7 +109,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // the character-hub lockstep).
   const belowIndexBar = !isAtOrAboveIndexBar(figure.figure_id)
 
-  const canonical = `${BASE}${prettyFigureUrl(figure)}`
+  const canonical = `${BASE}${await prettyFigureUrl(figure)}`
 
   // Enriched prose leads when it passes the quality gates (S52 meta wiring) —
   // this is the INDEXED canonical route, so it matters most here.
@@ -158,7 +159,7 @@ export default async function PrettyFigurePage({ params }: PageProps) {
   const canonicalGenre = genreSlugForFandom(getFandom(genre))
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}/${slug}`)
 
-  const matches = findFigureMatches(genre, line, slug)
+  const matches = await findFigureMatches(genre, line, slug)
   const figure = matches[0]
 
   if (figure) {

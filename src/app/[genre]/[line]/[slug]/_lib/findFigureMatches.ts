@@ -1,4 +1,4 @@
-import { getFiguresByFandom, type KBFigure } from '@/data/kb'
+import { getFiguresByFandom, type KBFigure } from '@/data/kbDb'
 import { getFandom } from '@/lib/genreFigures'
 
 function normalizeSlug(s: string) {
@@ -11,8 +11,8 @@ function normalizeSlug(s: string) {
  * which diverges from the KB fandom for remapped fandoms (gijoe→gi-joe,
  * marvel→marvel-comics, teenage-mutant-ninja-turtles→tmnt) — remap via getFandom.
  */
-export function findFigureMatches(fandom: string, line: string, slug: string): KBFigure[] {
-  const candidates = getFiguresByFandom(getFandom(fandom))
+export async function findFigureMatches(fandom: string, line: string, slug: string): Promise<KBFigure[]> {
+  const candidates = await getFiguresByFandom(getFandom(fandom))
   if (!candidates.length) return []
 
   const lineNorm = normalizeSlug(line)

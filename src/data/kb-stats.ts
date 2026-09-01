@@ -8,30 +8,45 @@
  * inflated 2–6x (Power Rangers tile claimed 1,200+; KB has 200). This destroys
  * collector trust, which the site lives or dies on.
  *
- * Counts here are COMPUTED from the KB at build time, so they self-correct on
- * every KB sync and can never drift again. Build-time only — never ships to the
- * client bundle (same constraint as kb.ts).
+ * Counts here are generated from the KB before Next builds, so they
+ * self-correct on every KB sync without placing the full catalog in the
+ * Worker dependency graph.
  */
 
-import { getAllFigures, getFiguresByFandom } from './kb'
-import { SLUG_TO_FANDOM as UI_SLUG_TO_FANDOM, NECA_FANDOMS } from '@/lib/genreFigures'
+import generated from './kb-stats.generated.json'
+import { SLUG_TO_FANDOM } from './kbTypes'
+
+export type FandomSummary = {
+  count: number
+  lines: Record<string, number>
+  manufacturerLines: Record<string, { count: number; productLine: string }>
+}
+
+export type KbStatsGenerated = {
+  totalFigures: number
+  totalFiguresLabel: string
+  totalFandoms: number
+  fandoms: Record<string, FandomSummary>
+}
+
+/** Compact, build-generated aggregates; never contains figure records. */
+const KB_STATS: KbStatsGenerated = generated
 
 /**
- * UI genre slug → KB fandom slug, and the NECA-rollup fandom list.
- * Single source of truth is src/lib/genreFigures.ts — re-exported here under
- * the historical names so existing consumers (e.g. genre-lines.ts) are
- * unaffected. Do not redefine these locally elsewhere; import from
- * lib/genreFigures (or this re-export) instead.
+ * UI genre slug → KB fandom slug, and the NECA-rollup fandom list. Keep these
+ * historical exports so existing consumers remain unchanged. genreFigures.ts
+ * cannot be the source here because it imports kb.ts for other helpers.
  */
-export { UI_SLUG_TO_FANDOM, NECA_FANDOMS }
+export { SLUG_TO_FANDOM as UI_SLUG_TO_FANDOM } from './kbTypes'
+export const NECA_FANDOMS = [
+  'horror', 'aliens-predator', 'terminator', 'robocop', 'scifi', 'pop-culture',
+]
 
 /** Total distinct figures in the KB. Computed once at build. */
-export const TOTAL_FIGURES: number = getAllFigures().length
+export const TOTAL_FIGURES: number = KB_STATS.totalFigures
 
 /** Number of distinct fandoms present in the KB. */
-const TOTAL_FANDOMS: number = new Set(
-  getAllFigures().map(f => f.fandom)
-).size
+const TOTAL_FANDOMS: number = KB_STATS.totalFandoms
 
 /**
  * Real figure count for a homepage UI genre slug.
@@ -39,10 +54,10 @@ const TOTAL_FANDOMS: number = new Set(
  */
 function fandomCountForUISlug(uiSlug: string): number {
   if (uiSlug === 'neca') {
-    return NECA_FANDOMS.reduce((sum, f) => sum + getFiguresByFandom(f).length, 0)
+    return NECA_FANDOMS.reduce((sum, fandom) => sum + (KB_STATS.fandoms[fandom]?.count ?? 0), 0)
   }
-  const fandom = UI_SLUG_TO_FANDOM[uiSlug] ?? uiSlug
-  return getFiguresByFandom(fandom).length
+  const fandom = SLUG_TO_FANDOM[uiSlug] ?? uiSlug
+  return KB_STATS.fandoms[fandom]?.count ?? 0
 }
 
 /**

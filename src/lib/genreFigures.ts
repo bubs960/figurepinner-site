@@ -7,7 +7,7 @@
  * The line `slug` in groupAndSortLines is always the raw KB product_line
  * value, NOT the pretty URL slug forms the line-hub route also accepts.
  */
-import { getFiguresByFandom, type KBFigure } from '@/data/kb'
+import { getFiguresByFandom, type KBFigure } from '@/data/kbDb'
 
 // URL slug ↔ KB fandom mapping now lives in @/data/kbTypes (leaf module) so
 // kb.ts's prettyFigureUrl can use it without a circular import (2026-07-12
@@ -211,8 +211,11 @@ export function fandomsForGenre(genre: string): string[] {
   return [getFandom(genre)]
 }
 
-export function figuresForGenre(genre: string): KBFigure[] {
-  return fandomsForGenre(genre).flatMap(f => getFiguresByFandom(f))
+export async function figuresForGenre(genre: string): Promise<KBFigure[]> {
+  const figureGroups = await Promise.all(
+    fandomsForGenre(genre).map(getFiguresByFandom)
+  )
+  return figureGroups.flat()
 }
 
 export function cardName(f: KBFigure): string {

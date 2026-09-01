@@ -12,7 +12,8 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getFiguresByLine, getFiguresByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, hasUniquePrettyFigureUrl, titleCaseValue, type KBFigure } from '@/data/kb'
+import { getFiguresByLine, getLinesByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, isPrettyUrlUnique, type KBFigure } from '@/data/kbDb'
+import { titleCaseValue } from '@/data/kbHelpers'
 import { lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -74,8 +75,11 @@ const LINE_INTROS: Record<string, string> = {
 // used to carry its own copy, which is how every line link from /marvel,
 // /gijoe, and /teenage-mutant-ninja-turtles genre pages 404'd before S20).
 
-function figuresForLine(genre: string, line: string): KBFigure[] {
-  return fandomsForGenre(genre).flatMap(f => getFiguresByLine(f, line))
+async function figuresForLine(genre: string, line: string): Promise<KBFigure[]> {
+  const figureGroups = await Promise.all(
+    fandomsForGenre(genre).map(fandom => getFiguresByLine(fandom, line))
+  )
+  return figureGroups.flat()
 }
 
 /**
@@ -90,11 +94,14 @@ function figuresForLine(genre: string, line: string): KBFigure[] {
  *     super7-thundercats → super7)
  * Anything still ambiguous or unmatched stays a 404 — no guessing.
  */
-function resolveLineAlias(genre: string, line: string): string | null {
+async function resolveLineAlias(genre: string, line: string): Promise<string | null> {
   const norm = line.toLowerCase().trim()
   const lines = new Set<string>()
-  for (const fandom of fandomsForGenre(genre)) {
-    for (const f of getFiguresByFandom(fandom)) lines.add(f.product_line)
+  const lineGroups = await Promise.all(
+    fandomsForGenre(genre).map(getLinesByFandom)
+  )
+  for (const lineGroup of lineGroups) {
+    for (const candidate of lineGroup) lines.add(candidate)
   }
 
   // 1. token permutation
@@ -268,11 +275,13 @@ const FEATURED_MIN_ELIGIBLE = 4
 /** Returns null when the module should not render (line too small, or too
  *  few eligible candidates) -- distinct from an empty array so the caller
  *  can skip the section outright rather than rendering an empty shell. */
-function selectFeatured(figures: KBFigure[]): KBFigure[] | null {
+async function selectFeatured(figures: KBFigure[]): Promise<KBFigure[] | null> {
   if (figures.length < FEATURED_MIN_LINE_SIZE) return null
 
-  const ranked = figures
-    .filter(f => isAtOrAboveIndexBar(f.figure_id) && hasUniquePrettyFigureUrl(f))
+  const ranked = (await Promise.all(figures
+    .filter(f => isAtOrAboveIndexBar(f.figure_id))
+    .map(async f => ((await isPrettyUrlUnique(f)) ? f : null))))
+    .filter((f): f is KBFigure => f !== null)
     .map(f => {
       const enriched = enrichedDescription(f)
       return {
@@ -313,13 +322,13 @@ export async function generateMetadata(
   const canonicalGenre = genreSlugForFandom(getFandom(genre))
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}`)
 
-  const figures = figuresForLine(genre, line)
+  const figures = await figuresForLine(genre, line)
   if (!figures.length) {
     // Redirect HERE, not in the page body: generateMetadata runs before the
     // response starts streaming, so this emits a real 308. A redirect thrown
     // after streaming begins degrades to a 200 + <meta http-equiv=refresh>,
     // which Google treats as soft, not permanent.
-    const alias = resolveLineAlias(genre, line)
+    const alias = await resolveLineAlias(genre, line)
     if (alias) permanentRedirect('/' + genre + '/' + alias)
     return { title: 'Not Found' }
   }
@@ -368,13 +377,13 @@ export default async function LineHubPage(
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}`)
 
   // Guard: genre must map to at least one valid fandom (after remap/rollup)
-  const validFandoms = getAllFandoms()
+  const validFandoms = await getAllFandoms()
   if (!fandomsForGenre(genre).some(f => validFandoms.includes(f))) notFound()
 
-  const figures = figuresForLine(genre, line)
+  const figures = await figuresForLine(genre, line)
   if (!figures.length) {
     // Legacy/typo slug? 301 to the canonical line URL instead of dead-ending.
-    const alias = resolveLineAlias(genre, line)
+    const alias = await resolveLineAlias(genre, line)
     if (alias) permanentRedirect(`/${genre}/${alias}`)
     notFound()
   }
@@ -403,7 +412,7 @@ export default async function LineHubPage(
   const lineIntro = curatedIntro
     ?? (totalCount <= SMALL_LINE_THRESHOLD ? autoLineContext(figures) : null)
 
-  const featured = selectFeatured(figures)
+  const featured = await selectFeatured(figures)
 
   // Sample images for the hero (first 4 figures with images)
   const sampleImages = figures
@@ -422,12 +431,12 @@ export default async function LineHubPage(
       '@type': 'ItemList',
       name: `${lineName} Figures`,
       numberOfItems: totalCount,
-      itemListElement: figures.slice(0, 50).map((f, i) => ({
+      itemListElement: await Promise.all(figures.slice(0, 50).map(async (f, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://figurepinner.com${prettyFigureUrl(f)}`,
+        url: `https://figurepinner.com${await prettyFigureUrl(f)}`,
         name: deriveName(f),
-      })),
+      }))),
     },
   }
 
@@ -723,7 +732,7 @@ export default async function LineHubPage(
 
 // ─── Figure Card ──────────────────────────────────────────────────────────────
 
-function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string }) {
+async function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string }) {
   const charName = f.character_canonical
     .split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
   const variant = (f.character_variant && f.character_variant !== 'None')
@@ -734,7 +743,7 @@ function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string })
   return (
     <div className="line-card-wrap">
       <a
-        href={prettyFigureUrl(f)}
+        href={await prettyFigureUrl(f)}
         className="line-card"
         style={{
           display: 'flex',

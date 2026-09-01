@@ -325,7 +325,27 @@ async function main() {
   }
   log(`port ${PORT} is free.`)
 
-  // 2) Plain `next build` -- see header comment for why not the CF build.
+  // 2) Regenerate the compact layout-safe aggregates before this direct
+  // `next build` invocation. Unlike `npm run build`, this wrapper calls the
+  // Next binary itself, so npm's prebuild lifecycle hook does not run here.
+  log('generating compact KB stats ...')
+  const kbStatsStart = Date.now()
+  const kbStats = spawnSync(process.execPath, ['scripts/build-kb-stats.mjs'], {
+    cwd: REPO_ROOT,
+    stdio: 'inherit',
+    env: process.env,
+  })
+  mark('kb-stats', kbStatsStart)
+  if (kbStats.status !== 0) {
+    banner(
+      'ORCHESTRATION FAILURE (not a guardrail finding)',
+      `KB stats generation failed (exit code ${kbStats.status ?? kbStats.signal}).`,
+      'The G1 guardrail never ran -- fix generation, then rerun.',
+    )
+    process.exit(ORCH_FAIL_EXIT)
+  }
+
+  // 3) Plain `next build` -- see header comment for why not the CF build.
   log('running next build (plain, not @opennextjs/cloudflare build) ...')
   const buildStart = Date.now()
   const build = spawnSync(process.execPath, [NEXT_BIN, 'build'], {

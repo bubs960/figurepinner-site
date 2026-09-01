@@ -86,7 +86,7 @@ export const SELLER_INVENTORY: Record<string, SellerListing[]> = {
 // (schema drift, not expected today), SellerCard treats that as "don't
 // render the chip," not "assume Used" — never guess.
 import shopExport from './shop-listings.json'
-import { getFigureById } from './kb'
+import { getFigureById } from './kbDb'
 import { deriveName } from './kbTypes'
 
 // Steve's real eBay storefront (confirmed 2026-07-11) — powers the "Browse
@@ -110,10 +110,10 @@ for (const item of (shopExport as { items: ShopExportItem[] }).items) {
   else EBAY_LISTINGS_BY_FID.set(item.figure_id, [item])
 }
 
-function ebayListingsFor(figureId: string): SellerListing[] {
+async function ebayListingsFor(figureId: string): Promise<SellerListing[]> {
   const items = EBAY_LISTINGS_BY_FID.get(figureId)
   if (!items) return []
-  const figure = getFigureById(figureId)
+  const figure = await getFigureById(figureId)
   const title = figure ? deriveName(figure) : figureId
   return items.map(item => ({
     seller_name: 'Bubs960 Collectibles',
@@ -131,7 +131,7 @@ function ebayListingsFor(figureId: string): SellerListing[] {
 
 /** Returns in-stock listings for a given figure_id, empty array if none.
  *  Merges the hand-maintained Shopify seed with the auto eBay export. */
-export function getSellerListings(figureId: string): SellerListing[] {
+export async function getSellerListings(figureId: string): Promise<SellerListing[]> {
   const manual = (SELLER_INVENTORY[figureId] ?? []).filter(l => l.in_stock)
-  return [...manual, ...ebayListingsFor(figureId)]
+  return [...manual, ...(await ebayListingsFor(figureId))]
 }

@@ -16,10 +16,11 @@
  *     those as meta would recreate the duplicate problem this fixes.
  * Gated-out figures keep the existing template; nothing gets worse.
  *
- * Server/build-time only (reads the KB module).
+ * Server/build-time only (reads a compact generated duplicate-text sidecar).
  */
 
-import { getAllFigures, type KBFigure } from '@/data/kb'
+import generated from '@/data/enriched-copy.generated.json' with { type: 'json' }
+import type { KBFigure } from '@/data/kbTypes'
 
 // Internal-QA / hedge language that must never reach a customer-facing
 // surface. Pattern families from the S52 audit — keep additive; a false
@@ -40,16 +41,9 @@ const META_BUDGET = 200 // hard ceiling after sentence-boundary truncation
 // Exact-duplicate set: any match_represented text shared by >1 figure is
 // skipped entirely (fall back to template) rather than heuristically allowed
 // for multipacks — duplicate meta text is exactly what this wiring exists to
-// eliminate. One O(n) pass at module init, build/ISR time only.
-const DUPLICATE_TEXTS: Set<string> = (() => {
-  const counts = new Map<string, number>()
-  for (const f of getAllFigures()) {
-    const t = f.match_represented?.trim()
-    if (!t) continue
-    counts.set(t, (counts.get(t) ?? 0) + 1)
-  }
-  return new Set([...counts.entries()].filter(([, n]) => n > 1).map(([t]) => t))
-})()
+// eliminate. Generated from the full catalog during build, never scanned in a
+// Worker module at runtime.
+const DUPLICATE_TEXTS: ReadonlySet<string> = new Set(generated.duplicateTexts)
 
 /** Truncate at the last sentence boundary within `budget` chars; if no
  *  complete sentence fits, fall back to a last-space cut + "…" — approved

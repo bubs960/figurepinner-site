@@ -18,10 +18,9 @@ import {
   getFiguresByFandom,
   getAllFandoms,
   deriveName,
-  figureUrl,
   prettyFigureUrl,
   type KBFigure,
-} from '@/data/kb'
+} from '@/data/kbDb'
 import { fandomsForGenre, getFandom, genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import { characterHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -72,12 +71,11 @@ const GENRE_ACCENT: Record<string, string> = {
 // ─── Data helpers ─────────────────────────────────────────────────────────────
 
 /** All figures for a genre + character slug combination. */
-function figuresForCharacter(genre: string, characterSlug: string): KBFigure[] {
-  return fandomsForGenre(genre).flatMap(fandom =>
-    getFiguresByFandom(fandom).filter(
-      f => f.character_canonical === characterSlug
-    )
+async function figuresForCharacter(genre: string, characterSlug: string): Promise<KBFigure[]> {
+  const figureGroups = await Promise.all(
+    fandomsForGenre(genre).map(getFiguresByFandom)
   )
+  return figureGroups.flat().filter(f => f.character_canonical === characterSlug)
 }
 
 /** Group figures by product_line, then by release_wave within each line. */
@@ -152,7 +150,7 @@ export async function generateMetadata({
   const canonicalGenre = genreSlugForFandom(getFandom(genre))
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/character/${character_slug}`)
 
-  const figures = figuresForCharacter(genre, character_slug)
+  const figures = await figuresForCharacter(genre, character_slug)
   if (!figures.length) {
     return { title: 'Not Found', robots: { index: false, follow: false } }
   }
@@ -211,10 +209,10 @@ export default async function CharacterHubPage({
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/character/${character_slug}`)
 
   // Guard: genre must be valid
-  const validFandoms = getAllFandoms()
+  const validFandoms = await getAllFandoms()
   if (!fandomsForGenre(genre).some(f => validFandoms.includes(f))) notFound()
 
-  const figures = figuresForCharacter(genre, character_slug)
+  const figures = await figuresForCharacter(genre, character_slug)
   if (!figures.length) notFound()
 
   const charName = prettifySlug(character_slug)
@@ -251,12 +249,12 @@ export default async function CharacterHubPage({
       '@type': 'ItemList',
       name: `${charName} Figures`,
       numberOfItems: totalCount,
-      itemListElement: figures.slice(0, 50).map((f, i) => ({
+      itemListElement: await Promise.all(figures.slice(0, 50).map(async (f, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://figurepinner.com${prettyFigureUrl(f)}`,
+        url: `https://figurepinner.com${await prettyFigureUrl(f)}`,
         name: deriveName(f),
-      })),
+      }))),
     },
   }
 
@@ -563,14 +561,14 @@ export default async function CharacterHubPage({
 
 // ─── Figure card ──────────────────────────────────────────────────────────────
 
-function CharFigureCard({ figure: f, accent }: { figure: KBFigure; accent: string }) {
+async function CharFigureCard({ figure: f, accent }: { figure: KBFigure; accent: string }) {
   const name = deriveName(f)
   const exclusive =
     f.exclusive_to && f.exclusive_to !== 'None' ? f.exclusive_to : null
 
   return (
     <QuickLookAnchor
-      href={prettyFigureUrl(f)}
+      href={await prettyFigureUrl(f)}
       className="char-card"
       image={thumb(f.canonical_image_url, 640)}
       name={name}
