@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllFandoms } from '@/data/kb'
+import { getAllFandoms } from '@/data/kbLite'
 
 const BASE = 'https://figurepinner.com'
 

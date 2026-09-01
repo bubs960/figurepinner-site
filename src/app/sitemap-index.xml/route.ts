@@ -1,4 +1,4 @@
-import { getAllFandoms, getFiguresByFandom } from '@/data/kb'
+import { getAllFandoms, getFiguresByFandom } from '@/data/kbLite'
 import { lastContentDate } from '@/data/enrichmentDates'
 import { sitemapIndexXml, type SitemapIndexEntry } from '@/lib/sitemapIndex'
 

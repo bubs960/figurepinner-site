@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getFiguresByFandom, getLinesByFandom } from '@/data/kb'
+import kbStats from '@/data/kb-stats.generated.json'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { getFandom } from '@/lib/genreFigures'
 import { ARTICLES } from './_data/articles'
@@ -46,15 +46,15 @@ const GENRES: GenreDef[] = [
 
 export const revalidate = 3600
 
+// Counts come from the build-generated kb-stats aggregate (scripts/build-kb-stats.mjs),
+// not the catalog: this page is in the shared Worker bundle and a kb.ts import
+// here inlined the full 22MB catalog into every cold isolate (OOM gate, 2026-09-01).
+type FandomStats = { count: number; lines: Record<string, number> }
 function genreStats(slug: string): { figures: number; guides: number } {
   const fandom = getFandom(slug)
-  try {
-    const figures = getFiguresByFandom(fandom).length
-    const guides = getLinesByFandom(fandom).length
-    return { figures, guides }
-  } catch {
-    return { figures: 0, guides: 0 }
-  }
+  const stats = (kbStats as { fandoms: Record<string, FandomStats> }).fandoms[fandom]
+  if (!stats) return { figures: 0, guides: 0 }
+  return { figures: stats.count, guides: Object.keys(stats.lines).length }
 }
 
 const STATS = GENRES.map(g => ({ ...g, ...genreStats(g.slug) }))

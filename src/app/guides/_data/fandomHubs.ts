@@ -17,7 +17,7 @@
  * block + register its nightly data — no component edits.
  */
 
-import { getFigureById, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 
 // Precomputed top-comps JSON (nightly build-fandom-top-comps.mjs). STATIC imports —
 // register each fandom's file here once its data exists. See loadTopComps() below.

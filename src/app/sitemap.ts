@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kb'
+import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kbLite'
 import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
 import { isAtOrAboveIndexBar, characterHubMeetsIndexBar, lineHubMeetsIndexBar } from '@/data/indexValueCensus'

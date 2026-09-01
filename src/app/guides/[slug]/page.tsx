@@ -20,7 +20,7 @@ import ConversionBreak from '../_components/ConversionBreak'
 import { renderInlineLinks as renderText } from '../_lib/renderInlineLinks'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
-import { getFigureById, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 
 // §0 canonical-link fix (2026-07-24): the `href` baked into every comp block in
 // bidcheck-articles.ts is the non-canonical /figure/<fid> form. Resolve it from

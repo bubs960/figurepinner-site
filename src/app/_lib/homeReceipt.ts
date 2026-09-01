@@ -14,7 +14,7 @@
  *  - Tape prices are individual real sold comps from the same snapshots.
  */
 
-import { getFigureById, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 import { thumb } from '@/lib/imageUrl'
 import { compCountToConfidence, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 

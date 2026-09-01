@@ -13,7 +13,7 @@
  * change together — that is the point.
  */
 
-import { getAllFigures, deriveName, type KBFigure } from '@/data/kb'
+import { getAllFigures, deriveName, type KBFigure } from '@/data/kbLite'
 import { searchGenreForFandom } from '@/lib/genreFigures'
 
 export const MAX_RESULTS = 300

@@ -10,7 +10,7 @@
  * KB_DB) instead of the bundled array. Pure helpers live in kbTypes.ts so this
  * module does not pull the slim JS catalog into the build graph.
  *
- * Surfaces convert by swapping `from '@/data/kb'` → `from '@/data/kbDb'` and
+ * Surfaces convert by swapping the `@/data/kb` import for `@/data/kbDb` and
  * adding `await`. Build-time-only readers (homepage shelf, sitemap) do NOT use
  * this module the same way — see homepage fixture + async sitemap.
  *

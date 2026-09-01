@@ -14,7 +14,7 @@ import { fetchHomeMarket, type TapeItem, type ReceiptFigure } from './_lib/homeR
 import ProvenanceTypeScrollDriver from './components/ProvenanceTypeScrollDriver'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
-import { getFigureById, getFiguresByLine, prettyFigureUrl } from '@/data/kb'
+import { getFigureById, getFiguresByLine, prettyFigureUrl } from '@/data/kbLite'
 import { getFandom } from '@/lib/genreFigures'
 import { thumb } from '@/lib/imageUrl'
 

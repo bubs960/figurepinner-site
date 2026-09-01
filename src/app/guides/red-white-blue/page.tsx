@@ -18,7 +18,7 @@ import {
   getFigureById,
   prettyFigureUrl,
   type KBFigure,
-} from '@/data/kb'
+} from '@/data/kbLite'
 import { genreSlugForFandom } from '@/lib/genreFigures'
 import { fetchPriceSnaps } from '../_lib/priceSnaps'
 import { RWB_ROSTER, RWB_PRICE_SAMPLE_CAP, type RwbRosterEntry } from './rwbRoster'
