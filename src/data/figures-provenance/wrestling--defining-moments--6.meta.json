@@ -1,5 +1,5 @@
 {
- "md5": "29648927439578CEF234037D6F5EEE8D",
+ "md5": "6943A756594BBEA411E9EFFCBA264D29",
  "doc_count": 13,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -18,5 +18,20 @@
   "fp_wrestling_mattel_defining-moments_6_undertaker_51c9b1": "2c9f55f59e40f641",
   "fp_wrestling_mattel_defining-moments_6_ric-flair_e71ea9": "66b5a8a2e035dd26",
   "fp_wrestling_mattel_defining-moments_6_ultimate-warrior_b0cbe3": "4c896f128b5a33e5"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_defining-moments_6_hulk-hogan_8f9875",
+    "fp_wrestling_mattel_defining-moments_6_ric-flair_9e505d",
+    "fp_wrestling_mattel_defining-moments_6_ric-flair_e71ea9",
+    "fp_wrestling_mattel_defining-moments_6_shinsuke-nakamur_2f4a13",
+    "fp_wrestling_mattel_defining-moments_6_sting_a96b83",
+    "fp_wrestling_mattel_defining-moments_6_stone-cold-steve-a_3a88fa",
+    "fp_wrestling_mattel_defining-moments_6_ultimate-warrior_b0cbe3"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "496940D25B7F1F7E625C3004B18C6BFF",
+ "md5": "2FB45EDF5C7DE0150A4CCE5A0FC91A29",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite17-REPAIRED-2026-08-16.json",
@@ -15,5 +15,15 @@
   "fp_wrestling_mattel_elite_44_macho-man-randy-savage_73f12e4cb85b": "26b433c98087cd5c",
   "fp_wrestling_mattel_elite_44_braun-strowman_be163c": "b4e7af490386d9c0",
   "fp_wrestling_mattel_elite_44_tugboat_996ce7": "31a4e93af5e909f6"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_44_big-e_df45204079ab",
+    "fp_wrestling_mattel_elite_44_braun-strowman_be163c"
+   ]
+  }
+ ]
 }

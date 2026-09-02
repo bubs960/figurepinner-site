@@ -1,5 +1,5 @@
 {
- "md5": "9507234167FA5FB34A75DA3BB59479C3",
+ "md5": "CC5C99170720FBA60B58900F9012E3BC",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json",
@@ -15,5 +15,20 @@
   "fp_wrestling_mattel_elite_110_kit-wilson_273ab5": "b7f5413bec98a43b",
   "fp_wrestling_mattel_elite_110_bruno-sammartino_a99680": "d855754cb1a91bd7",
   "fp_wrestling_mattel_elite_110_butch_fcce9407717b": "7ab3b74508fe2f75"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_110_austin-theory_6e099f",
+    "fp_wrestling_mattel_elite_110_bruno-sammartino_a99680",
+    "fp_wrestling_mattel_elite_110_butch_fcce9407717b",
+    "fp_wrestling_mattel_elite_110_elton-prince_6980b5",
+    "fp_wrestling_mattel_elite_110_kit-wilson_273ab5",
+    "fp_wrestling_mattel_elite_110_rhea-ripley_da80db",
+    "fp_wrestling_mattel_elite_110_roman-reigns_f1f557"
+   ]
+  }
+ ]
 }

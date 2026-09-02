@@ -1,5 +1,5 @@
 {
- "md5": "B569CAC401B28AD1B708AC5ABDD02B51",
+ "md5": "D8623EE1777A14B5F49C3726D5873813",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite22-REPAIRED-2026-08-16.json"
@@ -13,5 +13,14 @@
   "fp_wrestling_mattel_elite_8_william-regal_eac740": "34d93253cde3c353",
   "fp_wrestling_mattel_elite_8_edge_df6e5f": "6bf2fa671b60f89e",
   "fp_wrestling_mattel_elite_8_drew-mcintyre_8cd266": "c815674ab1b39892"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_8_drew-mcintyre_8cd266"
+   ]
+  }
+ ]
 }

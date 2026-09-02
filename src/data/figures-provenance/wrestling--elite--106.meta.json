@@ -1,5 +1,5 @@
 {
- "md5": "7BA7DE914BE812871BBDB1368D5B1162",
+ "md5": "DD7D3CB0ECD39F25F2114DDDCA433751",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
@@ -13,5 +13,19 @@
   "fp_wrestling_mattel_elite_106_sami-zayn_7bf3b0": "886c6308dab3d391",
   "fp_wrestling_mattel_elite_106_jey-uso_42d3ad": "848b8a5ab73123ee",
   "fp_wrestling_mattel_elite_106_roxanne-perez_8349c5": "baade88147e159ac"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_106_chad-gable_2db510",
+    "fp_wrestling_mattel_elite_106_jey-uso_42d3ad",
+    "fp_wrestling_mattel_elite_106_jimmy-uso_e0e872",
+    "fp_wrestling_mattel_elite_106_paul-bearer_2f8fb2",
+    "fp_wrestling_mattel_elite_106_roxanne-perez_8349c5",
+    "fp_wrestling_mattel_elite_106_sami-zayn_7bf3b0"
+   ]
+  }
+ ]
 }

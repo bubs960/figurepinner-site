@@ -1,5 +1,5 @@
 {
- "md5": "310BBC24E763D5A8E8DEE18F9943E31C",
+ "md5": "277FE5BCB48ADDDF8CD00BEAEC0C55C9",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite21-REPAIRED-2026-08-16.json"
@@ -14,5 +14,14 @@
   "fp_wrestling_mattel_elite_16_the-rock_a4cf02": "a7b3ac1e883889b9",
   "fp_wrestling_mattel_elite_16_randy-orton_5be708": "13847efea83c25ab",
   "fp_wrestling_mattel_elite_16_diesel_30e3c8": "2e6285d6f3e20071"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_16_kevin-nash_7edeab"
+   ]
+  }
+ ]
 }

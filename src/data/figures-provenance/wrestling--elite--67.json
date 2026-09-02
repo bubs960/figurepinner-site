@@ -1319,7 +1319,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "White hand wrap and purple and black wristband; black, silver and purple trunks, black and purple knee pads, black boots",
+    "value": "Purple-and-black wristband over white hand wrap; black/silver/purple trunks, black-purple knee pads, black boots",
     "evidence_quote_ids": [
      "f_q11",
      "f_q12"
@@ -1363,7 +1363,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "White hand wrap and purple and black wristband",
+    "value": "Hand wrap white, wristband purple/black",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -1372,7 +1372,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[3]",
     "status": "resolved",
-    "value": "Black, silver and purple trunks, black and purple knee pads, black boots",
+    "value": "Trunks black/silver/purple; knee pads black/purple; boots black",
     "evidence_quote_ids": [
      "f_q12"
     ],
@@ -1394,7 +1394,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "WWE Cruiserweight Championship accessory",
+    "value": "Accessory: WWE Cruiserweight Championship",
     "evidence_quote_ids": [
      "f_q13"
     ],
@@ -1773,7 +1773,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "black spandex zip-up shirt with black, white and blue sleeves; black pants with a white belt",
+    "value": "Zip-up spandex shirt in black with blue/white sleeve accents",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8"
@@ -1794,7 +1794,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "long black hair that are resting on his shoulders, open mouth where you see his tongue and teeth",
+    "value": "Hair long and black, shoulder-length; mouth open showing tongue and teeth",
     "evidence_quote_ids": [
      "f_q10",
      "f_q13"
@@ -1804,7 +1804,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "creature of the night face paint, which is light and dark blue, white and orange",
+    "value": "Face paint named 'Creature of the Night': light/dark blue, white, orange",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -1813,7 +1813,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel-hinged wrists, ab crunch, swivel waist, ball jointed hips, swivel thighs, double-hinged knees, swivel calves, and ball jointed ankles",
+    "value": "Ball joint neck/hips/ankles; hinge shoulders; sw biceps/thighs/calves; hinge elbows; sw-hinge wrists; ab-crunch/sw waist; dbl-hinge knees",
     "evidence_quote_ids": [
      "f_q14"
     ],
@@ -1826,7 +1826,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "boots are mostly black with some white deco on the front",
+    "value": "Boots mostly black, white deco on front",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1835,7 +1835,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "long black hair that are resting on his shoulders",
+    "value": "Hair black, long, resting on shoulders",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -1844,7 +1844,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "creature of the night face paint, which is light and dark blue, white and orange",
+    "value": "Face paint named 'Creature of the Night': light/dark blue, white, orange",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -1857,7 +1857,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "two sets of interchangeable hand sculpts, closed fisted and his entrance hands",
+    "value": "Two hand sets: closed fist, entrance pose",
     "evidence_quote_ids": [
      "f_q15"
     ],
@@ -1866,7 +1866,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "WWE Championship belt that he won in his match with Jinder Mahal",
+    "value": "WWE Championship belt won vs. Jinder Mahal",
     "evidence_quote_ids": [
      "f_q16"
     ],
@@ -2164,26 +2164,22 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Bold and colorful figure comes ready to wreak havoc right out of the box",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Authentic ring attire and iconic accessories",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
     "field_path": "fingerprint.known_variants[0]",
     "status": "resolved",
-    "value": "WCW 'Halloween Havoc' purple and black ring suit and tights, with interchangeable hands and a WCW Cruiserweight Championship accessory",
+    "value": "Ring suit and tights in WCW 'Halloween Havoc' purple/black",
     "evidence_quote_ids": [
      "f_q4",
      "f_q5"

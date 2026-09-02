@@ -1,5 +1,5 @@
 {
- "md5": "1843474A394C722EC6ABEE5A7159FFBA",
+ "md5": "7D0273B1C2F8300EEC96C5E3D7777F8C",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite19-REPAIRED-2026-08-16.json",
@@ -15,5 +15,14 @@
   "fp_wrestling_mattel_elite_29_damien-sandow_868d94": "16cd772cca586b9f",
   "fp_wrestling_mattel_elite_29_rob-van-dam_a977d9": "a5c9c6933924242b",
   "fp_wrestling_mattel_elite_29_luke-harper_f8a217": "9ca2fa19a184c305"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_29_rob-van-dam_a977d9"
+   ]
+  }
+ ]
 }

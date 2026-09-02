@@ -1,5 +1,5 @@
 {
- "md5": "CDAAC9FB07933B323536DED6CACE7B45",
+ "md5": "48FC6AF5C96BCA400B568292E6DA71B3",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json"
@@ -13,5 +13,18 @@
   "fp_wrestling_mattel_elite_60_elias_f8a297": "3746b3328bfa06fa",
   "fp_wrestling_mattel_elite_60_kofi-kingston_4f403c": "7718835da23ca49f",
   "fp_wrestling_mattel_elite_60_xavier-woods_98cbf1": "644d3b9967b9f26f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_60_giant-machine_c89e4c87779f",
+    "fp_wrestling_mattel_elite_60_john-cena_ca9ca1",
+    "fp_wrestling_mattel_elite_60_kofi-kingston_4f403c",
+    "fp_wrestling_mattel_elite_60_triple-h_dff837",
+    "fp_wrestling_mattel_elite_60_xavier-woods_98cbf1"
+   ]
+  }
+ ]
 }

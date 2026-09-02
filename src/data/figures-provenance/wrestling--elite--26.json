@@ -307,7 +307,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Apr. 7, 2013 @ WWE WrestleMania 29",
+    "value": "WrestleMania 29, Apr. 7, 2013",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -346,7 +346,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "removable grey shirt that says Bent on Destruction",
+    "value": "Grey removable shirt reading 'Bent on Destruction'",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1806,11 +1806,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Bright red singlet with lion design in the front",
-    "evidence_quote_ids": [
-     "f_q1"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {

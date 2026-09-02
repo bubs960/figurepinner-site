@@ -1,5 +1,5 @@
 {
- "md5": "63DD1684422B0AB8F5A9C28D4F0B03AA",
+ "md5": "C364CA1BF997A08E3C52BFDD18127050",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite10-REPAIRED-2026-08-16.json",
@@ -15,5 +15,20 @@
   "fp_wrestling_mattel_elite_88_roman-reigns_86dd75": "0578124ae0d33d04",
   "fp_wrestling_mattel_elite_88_rey-mysterio_ddb901": "0f42c6094effcea9",
   "fp_wrestling_mattel_elite_88_trish-stratus_970517": "1251f5d178acdadc"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_88_kushida_9b3a0f7204e6",
+    "fp_wrestling_mattel_elite_88_mvp_a491fc",
+    "fp_wrestling_mattel_elite_88_rey-mysterio_ddb901",
+    "fp_wrestling_mattel_elite_88_riddle_280f5313e076",
+    "fp_wrestling_mattel_elite_88_roman-reigns_86dd75",
+    "fp_wrestling_mattel_elite_88_trish-stratus_970517",
+    "fp_wrestling_mattel_elite_88_zodiac_a3dd18684a24"
+   ]
+  }
+ ]
 }

@@ -344,7 +344,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Sept. 18, 2011 @ WWE Night of Champions",
+    "value": "Night of Champions, Sept. 18, 2011",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -373,7 +373,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Includes World Heavyweight Championship Belt",
+    "value": "World Heavyweight Championship belt included",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1688,7 +1688,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Includes Wristbands, Necklace & Lil Jimmy Proof Vest",
+    "value": "Wristbands, necklace, Lil Jimmy Proof Vest included",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2024,11 +2024,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "An outfit to reflect his earlier WWF run",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {

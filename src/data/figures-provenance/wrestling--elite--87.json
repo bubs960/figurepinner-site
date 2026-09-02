@@ -288,7 +288,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -296,11 +296,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -621,11 +619,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -634,11 +630,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -937,7 +931,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Aug. 23, 2020 @ WWE SummerSlam",
+    "value": "SummerSlam, Aug. 23, 2020",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1298,7 +1292,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "custom made camo-style ring pants, light brown ring boots and includes a removable camo vest and interchangeable hands",
+    "value": "Camo-style ring pants, light brown boots, removable camo vest, interchangeable hands",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1316,7 +1310,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Strowman has an angry headsculpt and is sporting accurate tattoos",
+    "value": "Angry headsculpt with accurate tattoos",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1325,7 +1319,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1702,7 +1696,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1710,11 +1704,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1723,11 +1715,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q1"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2040,7 +2030,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Purple, pink, black and grey studded stretch-design ring top and trunks with purple knee pads, black and white laced ring shoes, and a removable entrance jacket",
+    "value": "Studded stretch-design ring top in purple, pink, black and grey",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6",
@@ -2091,7 +2081,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Purple, pink, black and grey studded stretch-design ring top",
+    "value": "Ring top styled in purple, pink, black and grey studs",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -2100,7 +2090,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Removable entrance jacket with blue and purple winged designs on the back",
+    "value": "Entrance jacket: blue/purple winged design on back, purple/green sleeveless studs on front",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2113,7 +2103,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Interchangeable hands with painted nails",
+    "value": "Hands (interchangeable) with painted nails",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2122,7 +2112,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Removable entrance jacket with blue and purple winged designs",
+    "value": "Entrance jacket, blue/purple winged design, removable",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2573,7 +2563,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Neck is a little odd, head keeps popping down without staying locked in place",
+    "value": "Head keeps popping down, doesn't stay locked in place",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2582,7 +2572,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Chains on one side and intricate straps on the other",
+    "value": "Straps on one side, chains on the other side",
     "evidence_quote_ids": [
      "f_q5"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "D29B1D4BD8687DD84330EEAD95AC40A5",
+ "md5": "AEAF269C857E645800F9D8BCF3D4F0BC",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,17 @@
   "fp_wrestling_mattel_elite_38_faarooq_ec1d59c9c143": "8b201d8709df2682",
   "fp_wrestling_mattel_elite_38_roman-reigns_96699b": "24ccfe691165b796",
   "fp_wrestling_mattel_elite_38_adam-rose_220147": "dd6a917125ddd0af"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_38_adam-rose_220147",
+    "fp_wrestling_mattel_elite_38_bradshaw_ff7a8a",
+    "fp_wrestling_mattel_elite_38_daniel-bryan_d27c52",
+    "fp_wrestling_mattel_elite_38_macho-man-randy-savage_9a99c96d9ccd"
+   ]
+  }
+ ]
 }

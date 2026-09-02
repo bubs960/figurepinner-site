@@ -874,7 +874,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Undershirt accessory does not come off of figure",
+    "value": "Undershirt accessory is fixed, not removable",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1247,7 +1247,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: May 9, 2014 @ WWE SmackDown",
+    "value": "SmackDown, May 9, 2014",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1665,7 +1665,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Distinctive look particularly with short haircut and beard; definitely looks like him, particularly the nose",
+    "value": "Likeness noted especially in the nose sculpt",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -1679,7 +1679,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Hinged ankles w/ lateral rocker hinges, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, hinged abdomen, swivel/hinged shoulders, swivel biceps, hinged elbows, swivel/hinged wrists, and a ball jointed head",
+    "value": "Joints: ankles w/ lateral hinges, rocker, boot swivels, knees, thighs, hips, waist, abdomen, shoulders, biceps, elbows, wrists, head",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1701,7 +1701,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Leg sleeve-style knee pads make some poses more difficult than you'd like",
+    "value": "Leg sleeve-style knee pads limit some poses",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2526,7 +2526,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "his gear from Extreme Rules 2014 when Evolution fought the Shield",
+    "value": "Gear from Evolution vs. The Shield, Extreme Rules 2014",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2538,11 +2538,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "it looks less like Randy Orton is grinning and more like he's eaten a box of powdered donuts",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2552,7 +2550,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Hinged ankles with lateral rockers, boot swivels, double hinged knees, swivel thighs, T-bar hips, swivel waist, hinged abdomen, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head.",
+    "value": "Joints: ankles w/ lateral rockers, boot swivels, knees, thighs, T-bar hips, waist, abdomen, shoulders, biceps, elbows, wrists, head",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2565,7 +2563,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "depicts three skeletons, representing Batista, Triple H, and Orton himself",
+    "value": "Graphic shows three skeletons - Batista, Triple H, and Orton",
     "evidence_quote_ids": [
      "f_q5"
     ],

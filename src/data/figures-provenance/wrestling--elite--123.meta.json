@@ -1,5 +1,5 @@
 {
- "md5": "07675CA94031A5FACBA5CB8AACF10A9F",
+ "md5": "6620E0AFCBEB3B9D83D7DFA134DC84D1",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite5-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,19 @@
   "fp_wrestling_mattel_elite_123_demolition-smash_4cc4487b6800": "daad23b31d402fae",
   "fp_wrestling_mattel_elite_123_nikki-bella_4b59db80273c": "681b597921ccfe27",
   "fp_wrestling_mattel_elite_123_the-great-khali_7da1a7ece5ce": "ad98a1fa36f142a1"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_123_demolition-ax_e7a2e72f2ef1",
+    "fp_wrestling_mattel_elite_123_demolition-smash_4cc4487b6800",
+    "fp_wrestling_mattel_elite_123_drew-mcintyre_b9e508e0b30c",
+    "fp_wrestling_mattel_elite_123_nikki-bella_4b59db80273c",
+    "fp_wrestling_mattel_elite_123_roman-reigns_1c67e1a0d96a",
+    "fp_wrestling_mattel_elite_123_the-great-khali_7da1a7ece5ce"
+   ]
+  }
+ ]
 }

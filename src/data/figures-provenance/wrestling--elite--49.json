@@ -525,7 +525,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Jan. 24, 2016 @ WWE Royal Rumble",
+    "value": "Royal Rumble, Jan. 24, 2016",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -789,7 +789,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Yellow and black animal print with white zebra print ring tights, tall laced white boots",
+    "value": "Ring tights: yellow/black animal print, white zebra print sides; tall white laced boots",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1466,7 +1466,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Mar. 12, 2016 @ WWE Roadblock",
+    "value": "Roadblock, Mar. 12, 2016",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1475,7 +1475,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black vest with leopard print, gold chains, white and black socks with blue and black ring shoes",
+    "value": "Socks in white/black; ring shoes in blue/black",
     "evidence_quote_ids": [
      "f_q6",
      "f_q7",
@@ -1534,7 +1534,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[3]",
     "status": "resolved",
-    "value": "White and black socks with blue and black ring shoes",
+    "value": "Socks (white/black) with ring shoes in blue and black",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1906,7 +1906,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Two t-shirt accessories, one that says 'SAWFT'",
+    "value": "One of two shirts reads 'SAWFT'",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1922,7 +1922,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[3]",
     "status": "resolved",
-    "value": "Red and black ring trunks with 'Big Cass' in the front and red and brown city designs on the back",
+    "value": "Ring trunks (red/black): 'Big Cass' text on front, red/brown city design on back",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1944,7 +1944,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Two t-shirt accessories, one that says 'SAWFT'",
+    "value": "Two shirts; one reads 'SAWFT'",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2250,7 +2250,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black with a slight accent; since he's been The Viper, Orton has largely traded away any useful variations to his attire",
+    "value": "Attire is black with a slight accent color",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2269,7 +2269,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Neutral and somewhat calculating; odd to have an Orton figure with more than a buzz cut",
+    "value": "Neutral, calculating expression; more hair than the usual buzz cut",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -2290,7 +2290,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "As an earlier Orton, this figure only has a few tattoos on the arms instead of the full sleeve",
+    "value": "Early-era Orton: partial arm tattoos, not the full sleeve",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2298,12 +2298,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Black with a slight accent; an orange, lavender or blue would have been great to further distinguish this figure from all the others",
-    "evidence_quote_ids": [
-     "f_q3",
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {

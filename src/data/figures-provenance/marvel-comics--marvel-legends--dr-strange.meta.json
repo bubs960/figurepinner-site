@@ -1,5 +1,5 @@
 {
- "md5": "43DAD888A1DD41981F7D9475000E6F9C",
+ "md5": "628F91F71853F114F9ACDB0C650A0DC4",
  "doc_count": 8,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -13,5 +13,21 @@
   "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-nico-minoru_930df5": "3b59a76bc8e9d3e7",
   "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501": "0b401e1a4e60b0a7",
   "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-brother-voodoo_41e56b": "088c4098e7c1ee61"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_astral-dr-strange_c5380d",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_dormammu_beb3d3",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_iron-fist_6014da",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_karl-mordo_8f846c",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-brother-voodoo_41e56b",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-enchantress_e3ba25",
+    "fp_marvel-comics_hasbro_marvel-legends_dr-strange_mystic-rivals-nico-minoru_930df5"
+   ]
+  }
+ ]
 }

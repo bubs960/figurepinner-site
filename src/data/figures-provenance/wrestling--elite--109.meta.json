@@ -1,5 +1,5 @@
 {
- "md5": "1DF9E52BD111E270EBD581A538E2FE3B",
+ "md5": "19BCA217334428386E3413758A40DF7B",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json",
@@ -14,5 +14,18 @@
   "fp_wrestling_mattel_elite_109_dominik-mysterio_32e219": "e2c9fa48f925418a",
   "fp_wrestling_mattel_elite_109_seth-rollins_0b9d23": "079703ca7026673b",
   "fp_wrestling_mattel_elite_109_damian-priest_2ac72b": "03c33b3e7565a2f3"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_109_bayley_b0f2dc",
+    "fp_wrestling_mattel_elite_109_damian-priest_2ac72b",
+    "fp_wrestling_mattel_elite_109_dominik-mysterio_32e219",
+    "fp_wrestling_mattel_elite_109_seth-rollins_0b9d23",
+    "fp_wrestling_mattel_elite_109_shinsuke-nakamur_465f57"
+   ]
+  }
+ ]
 }

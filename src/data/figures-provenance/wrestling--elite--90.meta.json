@@ -1,5 +1,5 @@
 {
- "md5": "A01044FB07A6FD3DDE39F96F39A69E81",
+ "md5": "39A237BF304EC1EDA1DA36C8511BF63D",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite10-REPAIRED-2026-08-16.json",
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_90_big-boss-man_41db8c": "50215ff2edba70a5",
   "fp_wrestling_mattel_elite_90_jey-uso_f47d39": "b3dfc939a23768c3",
   "fp_wrestling_mattel_elite_90_mustafa-ali_4cabef": "8203ecdc304850d9"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_90_big-boss-man_41db8c",
+    "fp_wrestling_mattel_elite_90_bronson-reed_1c458e435c6f",
+    "fp_wrestling_mattel_elite_90_jey-uso_f47d39",
+    "fp_wrestling_mattel_elite_90_mustafa-ali_4cabef",
+    "fp_wrestling_mattel_elite_90_randy-orton_8ad6ed",
+    "fp_wrestling_mattel_elite_90_reckoning_b58f20fb2cc6"
+   ]
+  }
+ ]
 }

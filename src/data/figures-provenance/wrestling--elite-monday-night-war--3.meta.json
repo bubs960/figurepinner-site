@@ -1,5 +1,5 @@
 {
- "md5": "8C078249E542C1DCCFFD5B9B31D74DB1",
+ "md5": "48C42B8D37B55081710F30A37025FAD1",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,15 @@
   "fp_wrestling_mattel_elite-monday-night-war_3_booker-t_d1646d": "efdc029394c49046",
   "fp_wrestling_mattel_elite-monday-night-war_3_stevie-ray_9803e9": "ef4def20c267e4ab",
   "fp_wrestling_mattel_elite-monday-night-war_3_disciple_eae085": "37386d19dd1a70cb"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite-monday-night-war_3_booker-t_d1646d",
+    "fp_wrestling_mattel_elite-monday-night-war_3_rob-van-dam_0a515f"
+   ]
+  }
+ ]
 }

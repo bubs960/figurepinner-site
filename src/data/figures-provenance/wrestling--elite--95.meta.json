@@ -1,5 +1,5 @@
 {
- "md5": "ADCA6260966596E8A40368348FDC74DF",
+ "md5": "F1DCE4D46DB4EE086FE4142BA87A41D5",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json",
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_95_bobby-lashley_fc16e3": "415d753ae7ed9049",
   "fp_wrestling_mattel_elite_95_john-cena_5ea468": "321825f9d5aee92e",
   "fp_wrestling_mattel_elite_95_shotzi_2d73a6": "3678e1c1f14b0556"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_95_big-e_223c46",
+    "fp_wrestling_mattel_elite_95_bobby-lashley_fc16e3",
+    "fp_wrestling_mattel_elite_95_eddie-guerrero_edc954",
+    "fp_wrestling_mattel_elite_95_jimmy-uso_7e0630",
+    "fp_wrestling_mattel_elite_95_john-cena_5ea468",
+    "fp_wrestling_mattel_elite_95_shotzi_2d73a6"
+   ]
+  }
+ ]
 }

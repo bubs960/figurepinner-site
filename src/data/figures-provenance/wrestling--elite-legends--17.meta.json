@@ -1,5 +1,5 @@
 {
- "md5": "AE1A2E712B2F276810AC4F9D48C6783C",
+ "md5": "9704800F9FACC74A51AA3F93677F0D40",
  "doc_count": 4,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -9,5 +9,15 @@
   "fp_wrestling_mattel_elite-legends_17_shawn-michaels_fbcfc5": "08ee5a6971dab2c2",
   "fp_wrestling_mattel_elite-legends_17_ultimate-warrior_05fcb7": "0067ee7e7ec2deeb",
   "fp_wrestling_mattel_elite-legends_17_ken-shamrock_4fb8ef": "8ab94b66e227fb4d"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite-legends_17_aj-styles_d4149a",
+    "fp_wrestling_mattel_elite-legends_17_shawn-michaels_fbcfc5"
+   ]
+  }
+ ]
 }

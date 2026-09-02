@@ -1,5 +1,5 @@
 {
- "md5": "1589FACA642C83C50EB74402613582C3",
+ "md5": "464A0C99A432D47A66F9DC7D33FB2829",
  "doc_count": 8,
  "source_batches": [
   "enrich-v42-batch-elite13-REPAIRED-2026-08-16.json"
@@ -15,5 +15,18 @@
   "fp_wrestling_mattel_elite_71_nikki-bella_ba1c5b": "fc6da127c2809f90",
   "fp_wrestling_mattel_elite_71_adam-cole_2911b8": "3b110c61e33cfc3e",
   "fp_wrestling_mattel_elite_71_paige_172214901c0e": "035767e7a17ab98e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_71_adam-cole_2911b8",
+    "fp_wrestling_mattel_elite_71_big-show_30b3a9",
+    "fp_wrestling_mattel_elite_71_jeff-hardy_bdd88a",
+    "fp_wrestling_mattel_elite_71_john-cena_a381f8",
+    "fp_wrestling_mattel_elite_71_kassius-ohno_04a61eb1ee6f"
+   ]
+  }
+ ]
 }

@@ -409,11 +409,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Features character-authentic details and AEW wrestling gear",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -790,7 +788,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Incredibly detailed black and yellow lucha mask with accurate tattoos including a dreamcatcher",
+    "value": "Black and yellow lucha mask; tattoos include a dreamcatcher",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -799,7 +797,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "White wrist tape, hand wrap, and cheetah pattern black and yellow 'phoenix' design tights",
+    "value": "Cheetah-pattern black and yellow 'phoenix' tights, white wrist tape, hand wrap",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1190,7 +1188,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "July 13, 2019 @ AEW Fight for the Fallen",
+    "value": "AEW Fight for the Fallen, July 13, 2019",
     "evidence_quote_ids": [
      "w_q5"
     ],
@@ -1224,7 +1222,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Authentically styled from AEW Dynamite, Rampage, and Pay-Per-View events",
+    "value": "Styled after specific AEW Dynamite, Rampage, and PPV events",
     "evidence_quote_ids": [
      "f_q8",
      "f_q10"
@@ -1233,17 +1231,15 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Features character-authentic details and AEW wrestling gear",
-    "evidence_quote_ids": [
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
     "field_path": "fingerprint.known_variants[0]",
     "status": "resolved",
-    "value": "a running change version exists to add outlining to his mask",
+    "value": "Running-change variant adds outlining to the mask",
     "evidence_quote_ids": [
      "w_q6"
     ],
@@ -1941,7 +1937,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black suspender and skirt combination, black arm bands, red fingerless gloves, red trunks, red knee pads, red and white boots with yellow design",
+    "value": "Red trunks and fingerless gloves, black arm bands, red knee pads, red-white-yellow boot design",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2",
@@ -1952,7 +1948,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Regal head sculpt with black and pink hair",
+    "value": "Black and pink hair, regal head sculpt",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2353,7 +2349,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "black short tights with yellow trim and green and black ring shoes",
+    "value": "Short black tights, yellow trim, green and black ring shoes",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2397,7 +2393,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "removable, cloth black jacket with gold trim",
+    "value": "Black cloth jacket with gold trim, removable",
     "evidence_quote_ids": [
      "f_q8"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "947F0298AC1915A53E72B846035BE673",
+ "md5": "671F6B2E65B586FAC563EECAC1E5F086",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite5-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,18 @@
   "fp_wrestling_mattel_elite_126_penta_963fb5fb9a84": "9a599a83dd6f267e",
   "fp_wrestling_mattel_elite_126_jimmy-uso_44ce3b518045": "cd058e005a05e76b",
   "fp_wrestling_mattel_elite_126_el-grande-americano_4afeb0733a0e": "81b7eee17b04f97e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_126_el-grande-americano_4afeb0733a0e",
+    "fp_wrestling_mattel_elite_126_jevon-evans_ee814c2605c8",
+    "fp_wrestling_mattel_elite_126_jimmy-uso_44ce3b518045",
+    "fp_wrestling_mattel_elite_126_penta_963fb5fb9a84",
+    "fp_wrestling_mattel_elite_126_roxanne-perez_1bf88f065fcf"
+   ]
+  }
+ ]
 }

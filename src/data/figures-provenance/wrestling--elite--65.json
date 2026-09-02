@@ -275,7 +275,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable scarf and black jacket with black ring pants and tall, laced boots",
+    "value": "Tall laced boots, black ring pants, removable scarf and jacket",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -649,11 +649,9 @@
    },
    {
     "field_path": "included_items[0]",
-    "status": "resolved",
-    "value": "The first ever WWE Elite figure for Ronda Rousey",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1043,7 +1041,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Green trunks with pointing arrow designs; green and blue knee pads with 'Sanity' designs; black boots with yellow laces",
+    "value": "Black boots, yellow laces; green trunks, arrow print; green-blue knee pads with 'Sanity' design",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6"
@@ -1088,7 +1086,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Removable face scarf, hood, and black 'Sanity' vest with arrows on the back and patches on the front",
+    "value": "Patches on front, arrows on back of black 'Sanity' vest; removable hood and face scarf",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1110,7 +1108,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Black 'Sanity' vest with arrows on the back and patches on the front",
+    "value": "Black 'Sanity' vest, arrow/patch design",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1416,7 +1414,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black trunks with a purple, white and green color scheme; black and white boots",
+    "value": "Trunks in black with purple, white, green color scheme",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4"
@@ -2583,7 +2581,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Intercontinental Championship accessory and interchangeable hands",
+    "value": "IC Championship accessory, interchangeable hands",
     "evidence_quote_ids": [
      "f_q11"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "B7586A4BB9CBD6C48FFA285A5986EE01",
+ "md5": "287F6F15B1DB87FC14B146ADBC5F2026",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
@@ -13,5 +13,19 @@
   "fp_wrestling_mattel_elite_112_xavier-woods_41fbe0": "69ba9bacf23f6646",
   "fp_wrestling_mattel_elite_112_jd-mcdonagh_ddc961": "f7e25e4ed0b4412a",
   "fp_wrestling_mattel_elite_112_channing-stacks-_459267": "fff08dab77293f45"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_112_becky-lynch_3d7e12",
+    "fp_wrestling_mattel_elite_112_bray-wyatt_ad1399",
+    "fp_wrestling_mattel_elite_112_channing-stacks-_459267",
+    "fp_wrestling_mattel_elite_112_jd-mcdonagh_ddc961",
+    "fp_wrestling_mattel_elite_112_seth-rollins_f09c72",
+    "fp_wrestling_mattel_elite_112_xavier-woods_41fbe0"
+   ]
+  }
+ ]
 }

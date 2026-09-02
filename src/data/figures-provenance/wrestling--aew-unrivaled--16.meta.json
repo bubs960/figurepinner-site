@@ -1,5 +1,5 @@
 {
- "md5": "8F55C7746D23C37784BCC9511EBB8FEE",
+ "md5": "A31EA48BDC2B2816B136BA0CA88EFCE0",
  "doc_count": 7,
  "source_batch": "enrich-v42-batch-aew43-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -12,5 +12,19 @@
   "fp_wrestling_jazwares_aew-unrivaled_16_konosuke-takeshi_48032f": "2eb0a79e11769784",
   "fp_wrestling_jazwares_aew-unrivaled_16_julia-hart_4257d4": "6ff9dcb7cd64ff4e",
   "fp_wrestling_jazwares_aew-unrivaled_16_austin-gunn_ca1d99": "26e18773006008e3"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_jazwares_aew-unrivaled_16_austin-gunn_ca1d99",
+    "fp_wrestling_jazwares_aew-unrivaled_16_colten-gunn_d4a99f",
+    "fp_wrestling_jazwares_aew-unrivaled_16_jeff-hardy_55b0f1",
+    "fp_wrestling_jazwares_aew-unrivaled_16_julia-hart_4257d4",
+    "fp_wrestling_jazwares_aew-unrivaled_16_matt-hardy_022c3a",
+    "fp_wrestling_jazwares_aew-unrivaled_16_orange-cassidy_81bae4"
+   ]
+  }
+ ]
 }

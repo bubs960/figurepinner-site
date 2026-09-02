@@ -616,7 +616,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black, blue and white chest protetor with his symbol; black ring pants and black boots",
+    "value": "Chest protector black/blue/white with front symbol",
     "evidence_quote_ids": [
      "f_q4",
      "f_q6"
@@ -647,7 +647,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Black, blue and white chest protetor with his symbol in the front",
+    "value": "Chest protector: black, blue, white with symbol up front",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -656,7 +656,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Accurate tattoos, a black glove and black wrist tape",
+    "value": "Tattoos, black glove, black wrist tape",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1912,12 +1912,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "A tremendous likeness, the complete opposite of the Shawn Michaels' dodgy head sculpt",
-    "evidence_quote_ids": [
-     "f_q7",
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1961,12 +1958,9 @@
    },
    {
     "field_path": "fingerprint.known_variants[0]",
-    "status": "resolved",
-    "value": "Attire Date: Aug. 27, 1995 @ WWF SummerSlam, Series: 68",
-    "evidence_quote_ids": [
-     "f_q3",
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2721,11 +2715,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {

@@ -1,5 +1,5 @@
 {
- "md5": "58209EAB88A594613D1070F3FF90EC65",
+ "md5": "6474069CA823670F0110897651D5677C",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite18-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_39_british-bulldog_aeba19": "1f4f38bc97937d8f",
   "fp_wrestling_mattel_elite_39_sting_327afb": "60b14693be19b4c4",
   "fp_wrestling_mattel_elite_39_dolph-ziggler_a7584eb80eeb": "4519ef6f1c9d03be"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_39_british-bulldog_aeba19",
+    "fp_wrestling_mattel_elite_39_damien-mizdow_9851b6da5f6b",
+    "fp_wrestling_mattel_elite_39_dolph-ziggler_a7584eb80eeb",
+    "fp_wrestling_mattel_elite_39_sting_327afb"
+   ]
+  }
+ ]
 }

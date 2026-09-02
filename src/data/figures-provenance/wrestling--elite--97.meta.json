@@ -1,5 +1,5 @@
 {
- "md5": "A6EB6C9BF75CC1D42B67152619AA1F7C",
+ "md5": "EF5575B0AFF5124642D15EE1B43141D3",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json"
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_97_xavier-woods_aeffae": "42535ad2fa7839c1",
   "fp_wrestling_mattel_elite_97_omos_90ba36": "c3bcd0fd62137af7",
   "fp_wrestling_mattel_elite_97_chainsaw-charlie_af662eabf2a6": "d091cc48414e662f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_97_alexa-bliss_70762e",
+    "fp_wrestling_mattel_elite_97_chainsaw-charlie_af662eabf2a6",
+    "fp_wrestling_mattel_elite_97_omos_90ba36",
+    "fp_wrestling_mattel_elite_97_ronda-rousey_a6a947"
+   ]
+  }
+ ]
 }

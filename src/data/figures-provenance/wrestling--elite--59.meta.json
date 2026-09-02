@@ -1,5 +1,5 @@
 {
- "md5": "D9C3D9A05F5424B304492BF47EDAB562",
+ "md5": "BB45BF73935F250D4572C0EFA26C6654",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json",
@@ -15,5 +15,18 @@
   "fp_wrestling_mattel_elite_59_zack-ryder_025055": "267b5c042ece0503",
   "fp_wrestling_mattel_elite_59_the-miz_dded58": "8653116e67ac4f38",
   "fp_wrestling_mattel_elite_59_finn-balor_1a3955522157": "cc5a5c7f24f88c54"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_59_chad-gable_d0a6db",
+    "fp_wrestling_mattel_elite_59_jason-jordan_c1ded8",
+    "fp_wrestling_mattel_elite_59_kurt-angle_e648eb",
+    "fp_wrestling_mattel_elite_59_miz_2c9c2b",
+    "fp_wrestling_mattel_elite_59_zack-ryder_025055"
+   ]
+  }
+ ]
 }

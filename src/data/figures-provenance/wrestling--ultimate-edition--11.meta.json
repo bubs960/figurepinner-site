@@ -1,10 +1,19 @@
 {
- "md5": "71F04EB4B955ED8C77B87746DE75AA0B",
+ "md5": "1575F1B4C71E0B42E67C317953A2F2BC",
  "doc_count": 1,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
  "warn_count_at_pour": 8,
  "identity_hashes": {
   "fp_wrestling_mattel_ultimate-edition_11_undertaker_74b4dd": "41bfa2c08222c305"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_ultimate-edition_11_undertaker_74b4dd"
+   ]
+  }
+ ]
 }

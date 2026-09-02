@@ -1,5 +1,5 @@
 {
- "md5": "6033684300F709C42A9D4EC59E63381F",
+ "md5": "4F3B9D1F1E510390CDA67E9E41471040",
  "doc_count": 4,
  "source_batch": "enrich-v42-batch-aew43-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -9,5 +9,14 @@
   "fp_wrestling_mattel_wwe-superstars_15_ultimate-warrior_81ef61": "f9743e4cfae2ba5d",
   "fp_wrestling_mattel_wwe-superstars_15_nikolai-volkoff_5f6ae8": "56109a3b5430ceb7",
   "fp_wrestling_mattel_wwe-superstars_15_george-steele_fecd96": "1009b1f318f8efd7"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_wwe-superstars_15_george-steele_fecd96"
+   ]
+  }
+ ]
 }

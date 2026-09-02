@@ -542,7 +542,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Wearing a removable jacket and has ring attire directly mirroring that of his boss, The Miz",
+    "value": "Ring attire mirrors The Miz's, plus a removable jacket",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -571,7 +571,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "A removable jacket and ring attire directly mirroring that of his boss, The Miz",
+    "value": "Removable jacket; gear matches his boss The Miz's attire",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1315,7 +1315,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Entrance cape accessory featuring the Union Jack",
+    "value": "Entrance cape printed with the Union Jack",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1701,20 +1701,16 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Realistic accessories complete his ring outfit",
-    "evidence_quote_ids": [
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2050,7 +2046,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Front has the green 'DZ' logo; back has an image of a woman bending over; something is missing on Dolph's shirt - the 'I' in 'I'm Too Good'",
+    "value": "Front has green 'DZ' logo; back shows woman bending over",
     "evidence_quote_ids": [
      "f_q3",
      "f_q9"
@@ -2077,7 +2073,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Hinged ankles w/ lateral rockers, boot swivels, double-hinged knees, swivel thighs, ball-jointed hips, swivel waist",
+    "value": "Swivel waist, ball-jointed hips, swivel thighs, double-hinged knees, boot swivels, hinged ankles w/ lateral rockers",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2090,7 +2086,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "T-shirt with green 'DZ' logo; back has an image of a woman bending over; missing the 'I' in 'I'm Too Good'",
+    "value": "T-shirt: green 'DZ' logo on front, woman bending over on back",
     "evidence_quote_ids": [
      "f_q3",
      "f_q9"

@@ -1,5 +1,5 @@
 {
- "md5": "87AB1FBFC0AB3AFA9BCC0284F80CF9E2",
+ "md5": "55FF7FBD94286D3CD37285A4660AEC20",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,17 @@
   "fp_wrestling_mattel_elite_111_trish-stratus_b3e2fe": "9ad5980b55e1da06",
   "fp_wrestling_mattel_elite_111_tony-dangelo_7eb26e": "8f29c448f5eef732",
   "fp_wrestling_mattel_elite_111_ricochet_4d61db": "9dd120b3c378432e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_111_cody-rhodes_133ae0",
+    "fp_wrestling_mattel_elite_111_ricochet_4d61db",
+    "fp_wrestling_mattel_elite_111_tony-dangelo_7eb26e",
+    "fp_wrestling_mattel_elite_111_trish-stratus_b3e2fe"
+   ]
+  }
+ ]
 }

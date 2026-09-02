@@ -1,5 +1,5 @@
 {
- "md5": "679077578D8075FE574BE734D83D4AFA",
+ "md5": "82070FFF5922C84781575ACB2DD7D6CC",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite22-REPAIRED-2026-08-16.json",
@@ -14,5 +14,14 @@
   "fp_wrestling_mattel_elite_11_miz_53501a": "1f14ae7985702c09",
   "fp_wrestling_mattel_elite_11_wade-barrett_99e6dc": "0e1661c33c40acf7",
   "fp_wrestling_mattel_elite_11_christian_ea4139": "c9d74f1fd6341655"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_11_rey-mysterio_1fc214"
+   ]
+  }
+ ]
 }

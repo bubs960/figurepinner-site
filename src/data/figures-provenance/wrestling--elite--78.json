@@ -428,7 +428,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -436,11 +436,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1044,7 +1042,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1642,7 +1640,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Oct. 4, 2019 @ WWE SmackDown",
+    "value": "WWE SmackDown, Oct. 4, 2019",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1679,11 +1677,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Amazing detail capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2220,7 +2216,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2228,11 +2224,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -3304,11 +3298,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -3631,7 +3623,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "his earlier 1970s run when he was the WWWF champion",
+    "value": "1970s era as WWWF Champion",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -3658,7 +3650,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, waist, hips, thighs, knees (double-jointed), ankles",
+    "value": "Ball-jointed shoulders, neck, bicep, elbows, wrists (w/ hinge), waist, hips, thighs, double-jointed knees, ankles",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -3680,7 +3672,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "a cloth tie-dye t-shirt, which works for either era as well",
+    "value": "Tie-dye cloth t-shirt fits both attire eras",
     "evidence_quote_ids": [
      "f_q4"
     ],

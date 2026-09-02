@@ -1,5 +1,5 @@
 {
- "md5": "3A4BE50337B64150F0B9EF43B1960EA2",
+ "md5": "F4E31F21EE19E37C758206065531806A",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite15-REPAIRED-2026-08-16.json"
@@ -13,5 +13,18 @@
   "fp_wrestling_mattel_elite_57_tye-dillinger_051f12": "d12c24157bc963ba",
   "fp_wrestling_mattel_elite_57_baron-corbin_93c052": "a7fd9e16087e11f4",
   "fp_wrestling_mattel_elite_57_jeff-hardy_ba3a59": "8394fd5d9abbcd67"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_57_baron-corbin_93c052",
+    "fp_wrestling_mattel_elite_57_jeff-hardy_ba3a59",
+    "fp_wrestling_mattel_elite_57_scotty-2-hotty_3a45fb",
+    "fp_wrestling_mattel_elite_57_seth-rollins_bd3742",
+    "fp_wrestling_mattel_elite_57_shinsuke-nakamur_d66eff"
+   ]
+  }
+ ]
 }

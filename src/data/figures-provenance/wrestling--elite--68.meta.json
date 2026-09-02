@@ -1,5 +1,5 @@
 {
- "md5": "2A0C90289156CCA2A2411A7F2E4A6329",
+ "md5": "7F6132133C492037F9AF8847E9478B4C",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite13-REPAIRED-2026-08-16.json"
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_68_king-mabel_f4e3b2": "b5acb61e57337677",
   "fp_wrestling_mattel_elite_68_pat-patterson_bc4634b0d3a3": "06e12f3d43f7f44a",
   "fp_wrestling_mattel_elite_68_braun-strowman_5c90f1": "4e3310ad54fafff9"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_68_braun-strowman_5c90f1",
+    "fp_wrestling_mattel_elite_68_king-mabel_f4e3b2",
+    "fp_wrestling_mattel_elite_68_roman-reigns_8641cf"
+   ]
+  }
+ ]
 }

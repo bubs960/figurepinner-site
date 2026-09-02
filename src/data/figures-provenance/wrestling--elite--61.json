@@ -245,7 +245,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "blue 'Fashion Police' tights and white boots",
+    "value": "White boots and blue 'Fashion Police' tights",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -289,7 +289,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "blue 'Fashion Police' tights and white boots",
+    "value": "Blue 'Fashion Police' tights, white boots",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -302,7 +302,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "blue 'Fashion Police' tights and white boots, lengthy hair and black wrist tape",
+    "value": "White boots, blue 'Fashion Police' tights",
     "evidence_quote_ids": [
      "f_q2",
      "f_q3"
@@ -658,7 +658,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Americanized ring gear including a removable American flag duster and American flag singlet with New Day designs in the front",
+    "value": "Removable American-flag duster over flag-print New Day singlet",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -667,7 +667,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "American flag duster and American flag singlet with New Day designs in the front, yellow boots that feature more New Day characters",
+    "value": "Yellow boots featuring New Day characters, plus flag-print duster and singlet",
     "evidence_quote_ids": [
      "f_q8",
      "f_q9"
@@ -707,7 +707,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Yellow boots that feature more New Day characters",
+    "value": "Boots in yellow with extra New Day character art",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -716,7 +716,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Removable American flag duster and American flag singlet with New Day designs in the front",
+    "value": "Flag-pattern duster (removable), flag-pattern singlet, New Day front graphic",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1113,7 +1113,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black ring pants and white sneaks with red trim",
+    "value": "White sneaks with red trim, black ring pants",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1147,26 +1147,22 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q9"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Realistic accessories complete his ring outfit",
-    "evidence_quote_ids": [
-     "f_q10"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Breakaway announce table for high-risk maneuvers",
+    "value": "Breakaway announce table",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1531,7 +1527,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "long blonde hair, a beard and a mustache",
+    "value": "Beard, mustache, and long blonde hair",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1552,7 +1548,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "removable hoodie that is interchangeable with the extra one that is included",
+    "value": "Soft plastic vest with a swappable hoodie; spare hoodie included",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1560,11 +1556,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "deluxe articulation, a detailed character expression, authentic ring attire and iconic accessories",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1950,7 +1944,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable shirt featuring a yellow badge, white and black hat, yellow and orange sunglasses, and a fluffy baton",
+    "value": "Fluffy baton, yellow/orange sunglasses, white-and-black hat, removable shirt with yellow badge",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1959,7 +1953,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "The self-declared fashion police who dishes out punishment inside the ring and citations for fashion violations outside the ring",
+    "value": "Character gimmick: in-ring punishment, outside-ring fashion citations",
     "evidence_quote_ids": [
      "f_q9",
      "f_q10"
@@ -1973,7 +1967,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Removable shirt featuring a yellow badge",
+    "value": "Removable shirt with yellow badge",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2344,7 +2338,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black and red 'KO' shirt, black, white and red fight shorts with 'KO' on the side, black boots and black knee pads",
+    "value": "Fight shorts (black, white, red) with 'KO' on side; black boots and knee pads",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8"
@@ -2363,7 +2357,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Brand new, spot on headscan with tattoos on his shoulder and left forearm",
+    "value": "Tattoos on shoulder and left forearm",
     "evidence_quote_ids": [
      "f_q7",
      "f_q2"
@@ -2385,7 +2379,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Tattoos on his shoulder and left forearm",
+    "value": "Shoulder and left-forearm tattoos",
     "evidence_quote_ids": [
      "f_q2"
     ],

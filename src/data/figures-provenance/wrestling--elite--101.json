@@ -286,11 +286,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "authentic ring gear with iconic accessories",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -909,7 +907,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Blue tights with intricate bronze detailing on the legs and knees, white laced boots with the American Nightmare logo",
+    "value": "Tights: blue, bronze detailing at legs/knees. Boots: white, laced, American Nightmare logo",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -939,7 +937,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable 'Nightmare' weight belt displaying the American Nightmare emblem",
+    "value": "'Nightmare' weight belt (removable), American Nightmare emblem",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1272,7 +1270,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "New headscan with a sneering expression, dark lipstick, and long hair",
+    "value": "Headscan (new): sneering expression, dark lipstick, long hair",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1311,7 +1309,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Black sleeveless catsuit that features a choker, belt, and buckled straps, as well as black laced boots",
+    "value": "Catsuit: black, sleeveless, choker/belt/buckled straps. Boots: black, laced",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1604,7 +1602,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black tights emblazoned with a red-and-yellow flame motif and a 'Ricochet' logo on the left",
+    "value": "Tights: black, red-yellow flame motif, 'Ricochet' logo (left)",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1613,7 +1611,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black-and-yellow martial arts belt, contrasting yellow and black boots, and contrasting black and yellow knee pads, with black tights emblazoned with a red-and-yellow flame motif",
+    "value": "Belt: black-yellow, martial arts. Boots: yellow/black contrast. Knee pads: black/yellow contrast. Tights: black, red-yellow flame motif",
     "evidence_quote_ids": [
      "f_q6",
      "f_q5"

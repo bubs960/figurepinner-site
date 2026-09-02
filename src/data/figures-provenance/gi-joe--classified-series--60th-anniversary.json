@@ -406,7 +406,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Green and black camouflage uniform with a lighter green on the chest and back of her shirt; shirt is simply cloth with no gauntlets or body armor; a harness with some pockets; black hair held back by a green bandana; camo paint on her face",
+    "value": "Green/black camo uniform, lighter green chest and back; black hair in green bandana; camo face paint",
     "evidence_quote_ids": [
      "f_q1",
      "f_q6",
@@ -439,7 +439,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Head is on a ball joint, butterfly joints at the shoulders, ball joints with bicep swivel, double elbows, double knees, rotation at the boots and hinged ankles",
+    "value": "Ball-jointed head, butterfly shoulder joints, bicep-swivel ball joints, double elbows and knees, boot rotation, ankle hinges",
     "evidence_quote_ids": [
      "f_q3",
      "f_q15"
@@ -453,7 +453,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Dark skin, straight black hair held back by a green bandana, with camo face paint",
+    "value": "Dark skin, black hair in green bandana; camo face paint",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -981,7 +981,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Butterfly joints at the shoulders, arms on ball joints with an upper arm cut, double elbows, rotation at the wrists, and a hinge at the wrists",
+    "value": "Butterfly shoulders; ball-jointed arms with upper-arm cut; double elbows; wrist rotation and hinge",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1035,7 +1035,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Alternate helmet with night vision goggles",
+    "value": "Alternate night-vision helmet",
     "evidence_quote_ids": [
      "f_q2",
      "f_q12"
@@ -1451,7 +1451,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Two heads (white and black) with a matching set of trigger hands for both",
+    "value": "Two heads, one white one black, each with matching trigger hands",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1464,7 +1464,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Head on dumbbell joint with unhindered movement up, down, and all around; butterfly joints at shoulders; arms on ball joints",
+    "value": "Dumbbell-jointed head moves freely up, down, and around; butterfly shoulder joints; ball-jointed arms",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1495,7 +1495,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Double-barrel assault rifle, light machine gun (looks like the M249), and heavy machine gun with a tripod",
+    "value": "Double-barrel rifle, M249-style light machine gun, tripod-mounted heavy machine gun",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1526,7 +1526,7 @@
    {
     "field_path": "included_items[3]",
     "status": "resolved",
-    "value": "Double-barrel assault rifle, light machine gun (looks like the M249), and heavy machine gun with a tripod",
+    "value": "Assault rifle, M249-style LMG, tripod heavy machine gun",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1928,7 +1928,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "African American head with the wet suit hood up, and a spare Caucasian head",
+    "value": "Wetsuit hood covers head, revealing African American face",
     "evidence_quote_ids": [
      "f_q8",
      "f_q9"
@@ -1956,7 +1956,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Mostly black swimsuit with OD green gear",
+    "value": "Black swimsuit accented with OD green gear",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1965,7 +1965,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Hood of the wetsuit with just his face poking out",
+    "value": "Wetsuit hood covers head, only face exposed",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1973,11 +1973,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[2]",
-    "status": "resolved",
-    "value": "A lot of character in the portrait; he looks like a really tough and determined guy",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2556,7 +2554,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Blue police uniform under a black tactical vest, with blue pants and black boots",
+    "value": "Blue police uniform under black tactical vest",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -2570,7 +2568,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "African American male with short, black hair, a mustache, and a goatee",
+    "value": "Short black hair, mustache and goatee; African American male",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2583,7 +2581,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Head is on a dumbbell joint, with unhindered movement up, down, and all around",
+    "value": "Dumbbell-jointed head with unrestricted movement up, down, and around",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2596,7 +2594,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Blue police uniform under a black tactical vest with blue pants and black boots",
+    "value": "Black tactical vest over a blue police uniform",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -2606,7 +2604,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "African American male with short, black hair, a mustache, and a goatee",
+    "value": "Short black hair, mustache and goatee; African American male",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -3107,7 +3105,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Swappable portraits wearing hoods to protect their heads and hair with only the face visible",
+    "value": "Two interchangeable portraits, hooded to shield head and hair, only face exposed",
     "evidence_quote_ids": [
      "f_q3",
      "f_q5"
@@ -3121,7 +3119,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Swivel/hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips, ball jointed waist, ball jointed mid-torso, butterfly pecs, swivel/hinge shoulders, bicep swivels, double hinged elbows, swivel/hinge wrists, ball jointed neck base, and a barbell jointed head",
+    "value": "Ball-jointed head/neck, waist, mid-torso, hips; butterfly pecs; hinge shoulders/elbows/wrists/knees/ankles; swivel thighs/boots",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -3143,7 +3141,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Portraits wearing hoods to protect their heads and hair with only the face visible",
+    "value": "Hooded portraits shield head and hair, leaving only the face showing",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -3652,7 +3650,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "wearing camo pants and a tactical sweater",
+    "value": "Camo pants paired with tactical sweater",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -3683,7 +3681,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Swivel/hinge ankles, boot swivels, double hinged knees, swivel thighs, ball jointed drop down hips, ball jointed waist, mid-torso hinge, butterfly pecs, swivel/hinge shoulders, bicep swivels, double hinged elbows, swivel/hinge wrists, ball jointed neck base, and a ball jointed head",
+    "value": "Ball-jointed head, neck, waist, hips; mid-torso hinge; butterfly pecs; hinge shoulders/elbows/wrists/knees/ankles; swivel thighs/boots",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -4243,7 +4241,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Butterfly joints at the shoulders, arms on ball joints with an upper-arm cut, double elbows, and rotation at the wrists",
+    "value": "Butterfly shoulder joints; ball-jointed arms w/ upper-arm cut; double elbows; wrist rotation",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -4274,7 +4272,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "A straight repaint of the Classified Series Airborne figure",
+    "value": "Repaint of Classified Series Airborne figure",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -4297,7 +4295,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Alternate helmet with night vision goggles",
+    "value": "Alternate night-vision helmet",
     "evidence_quote_ids": [
      "f_q2",
      "f_q5"
@@ -4357,7 +4355,7 @@
    {
     "field_path": "included_items[8]",
     "status": "resolved",
-    "value": "Foldable soft goods display parachute that can stow in the backpack",
+    "value": "Backpack-stowable soft-goods display parachute",
     "evidence_quote_ids": [
      "f_q5"
     ],

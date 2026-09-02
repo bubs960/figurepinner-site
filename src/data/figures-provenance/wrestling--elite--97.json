@@ -362,7 +362,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Blonde, ponytailed hair with pink highlights and a wild eyed headsculpt",
+    "value": "Wild-eyed headsculpt; blonde ponytail with pink highlights",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -383,7 +383,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Interchangeable hands and a 'Lilly' accessory",
+    "value": "Swappable hands plus 'Lilly' accessory",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1375,7 +1375,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "black and white 'Baddest' long sleeve ring shirt and long black ring tights, black jacket",
+    "value": "Ring gear: long black tights, sleeved 'Baddest' shirt in black and white",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -1415,7 +1415,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "black and white 'Baddest' long sleeve ring shirt and long black ring tights",
+    "value": "Long black ring tights; 'Baddest' shirt in black and white",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1437,7 +1437,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "two pairs of interchangeable hand accessories",
+    "value": "Two interchangeable hand-accessory pairs",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2696,7 +2696,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "WWE Raw Tag Team Championship accessories",
+    "value": "WWE Raw Tag Team Championship accessory",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -3106,7 +3106,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Long sleeve red shirt with black overalls and white painted stains, blue jeans, black boots with red laces",
+    "value": "Long sleeve red shirt, black overalls with white paint stains; masked headsculpt",
     "evidence_quote_ids": [
      "f_q4",
      "f_q5"
@@ -3145,11 +3145,9 @@
    },
    {
     "field_path": "fingerprint.known_variants[0]",
-    "status": "resolved",
-    "value": "Includes an additional 'Terry Funk' style headsculpt",
-    "evidence_quote_ids": [
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -3164,7 +3162,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Additional 'Terry Funk' style headsculpt",
+    "value": "'Terry Funk' style headsculpt, additional",
     "evidence_quote_ids": [
      "f_q7"
     ],

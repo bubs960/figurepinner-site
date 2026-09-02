@@ -1,5 +1,5 @@
 {
- "md5": "4F86C28A67A1042107BFC687E5CA0B63",
+ "md5": "740EB7C5D80D3C72DB1F265C80E07623",
  "doc_count": 8,
  "source_batches": [
   "enrich-v42-batch-elite12-REPAIRED-2026-08-16.json"
@@ -15,5 +15,16 @@
   "fp_wrestling_mattel_elite_77_aj-styles_51e5ef": "945898ab923387d2",
   "fp_wrestling_mattel_elite_77_miss-elizabeth_ec34f3cfa417": "abf96d95f882365f",
   "fp_wrestling_mattel_elite_77_ravishing-rick-rude_7c5f4620253f": "cca1fa6c92ec9ad2"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_77_aj-styles_51e5ef",
+    "fp_wrestling_mattel_elite_77_ravishing-rick-rude_7c5f4620253f",
+    "fp_wrestling_mattel_elite_77_the-fiend-bray-wyatt_2958b73bb2c5"
+   ]
+  }
+ ]
 }

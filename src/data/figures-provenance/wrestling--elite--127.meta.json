@@ -1,5 +1,5 @@
 {
- "md5": "B5C3B718FAC9276D208D7C76655C3463",
+ "md5": "6A994B2DBB1427BD6F33BFFA67D81E19",
  "doc_count": 7,
  "source_batch": "enrich-v42-batch-elite5-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -12,5 +12,18 @@
   "fp_wrestling_mattel_elite_127_jeff-cobb_524e00": "6439b244f32925b2",
   "fp_wrestling_mattel_elite_127_nathan-frazer_9c52838d06fc": "99439c6c74bfea62",
   "fp_wrestling_mattel_elite_127_sami-zayn_80bd6596908d": "0a67aee55ca0b96f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_127_alexa-bliss_186e4d99138a",
+    "fp_wrestling_mattel_elite_127_bronson-reed_6cfe86732060",
+    "fp_wrestling_mattel_elite_127_john-cena_59cce092f9f9",
+    "fp_wrestling_mattel_elite_127_nathan-frazer_9c52838d06fc",
+    "fp_wrestling_mattel_elite_127_sami-zayn_80bd6596908d"
+   ]
+  }
+ ]
 }

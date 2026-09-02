@@ -1,5 +1,5 @@
 {
- "md5": "E55B2551CA9530C3DBF24072A7FC6B74",
+ "md5": "B3BB2506A2BD691E643B334185BAA3BF",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite12-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_76_john-cena_2ba9dc": "a747bd5c30a2d615",
   "fp_wrestling_mattel_elite_76_otis_abb787": "a9123ab3e46a9c52",
   "fp_wrestling_mattel_elite_76_tucker_69640e": "da0804a75db835ac"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_76_christian_7a5d42",
+    "fp_wrestling_mattel_elite_76_john-cena_2ba9dc",
+    "fp_wrestling_mattel_elite_76_otis_abb787",
+    "fp_wrestling_mattel_elite_76_tucker_69640e"
+   ]
+  }
+ ]
 }

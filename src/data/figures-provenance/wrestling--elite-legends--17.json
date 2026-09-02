@@ -359,11 +359,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "authentic ring gear with iconic accessories",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -758,17 +756,15 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "authentic ring gear with iconic accessories",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Elite Collection - WWE Legends - True FX life-like details - Series 17 - Ages 8+",
+    "value": "WWE Legends Elite line, Series 17, True FX details, Ages 8+",
     "evidence_quote_ids": [
      "f_q6"
     ],

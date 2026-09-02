@@ -641,7 +641,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Matching blue ring gear featuring red lips designs and 'slay' designs, with tall red boots",
+    "value": "Blue ring gear with red lips and 'slay' motifs",
     "evidence_quote_ids": [
      "f_q4",
      "f_q5"
@@ -665,7 +665,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -673,11 +673,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -705,7 +703,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Interchangeable hand and sunglasses accessories",
+    "value": "Hand and sunglasses accessories, interchangeable",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -718,7 +716,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Interchangeable hand and sunglasses accessories",
+    "value": "Hand and sunglasses accessories, interchangeable",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1036,7 +1034,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1447,7 +1445,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Dec. 25, 2020 @ WWE SmackDown",
+    "value": "SmackDown, Dec. 25, 2020",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1464,7 +1462,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1480,11 +1478,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories with amazing detail capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q10"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1805,7 +1801,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "TrueFX technology to perfectly capture KO's expression",
+    "value": "TrueFX technology captures KO's facial expression",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1827,7 +1823,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Includes an adjustable ladder, handcuff and interchangeable hand accessories",
+    "value": "Hand accessories (interchangeable), plus adjustable ladder and handcuff",
     "evidence_quote_ids": [
      "f_q4"
     ],

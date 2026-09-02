@@ -1,5 +1,5 @@
 {
- "md5": "B859EE5969B0A8414F707C038DA88476",
+ "md5": "1334674B37783E6A9703FA64A71F284B",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,19 @@
   "fp_wrestling_mattel_elite_114_jimmy-uso_5b30c8": "68fc5719037d317c",
   "fp_wrestling_mattel_elite_114_bron-breakker_4c2238": "e0880d547324b93d",
   "fp_wrestling_mattel_elite_114_zoey-stark_33302c": "7f3ed74b871991fc"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_114_bron-breakker_4c2238",
+    "fp_wrestling_mattel_elite_114_ilja-dragunov_3815ff",
+    "fp_wrestling_mattel_elite_114_jey-uso_81aa07",
+    "fp_wrestling_mattel_elite_114_jimmy-uso_5b30c8",
+    "fp_wrestling_mattel_elite_114_tommaso-ciampa_e7e377",
+    "fp_wrestling_mattel_elite_114_zoey-stark_33302c"
+   ]
+  }
+ ]
 }

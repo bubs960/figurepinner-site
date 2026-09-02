@@ -1,5 +1,5 @@
 {
- "md5": "D1123FABA878FE9A1103BFC3E1BFF980",
+ "md5": "B16FD460AE9299776ABFD0ECE72F17E0",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_23_macho-man-randy-savage_127720a0cb31": "ae6827424be841a5",
   "fp_wrestling_mattel_elite_23_antonio-cesaro_436665": "4e7a8f0ff8ad020f",
   "fp_wrestling_mattel_elite_23_triple-h_3dd9c497809b": "18cec2b3ffa7f561"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_23_antonio-cesaro_436665",
+    "fp_wrestling_mattel_elite_23_macho-man-randy-savage_127720a0cb31",
+    "fp_wrestling_mattel_elite_23_undertaker_4027da"
+   ]
+  }
+ ]
 }

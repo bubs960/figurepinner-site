@@ -541,7 +541,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "RAW 1993 ring attire; recorded upset victory over Razor Ramon on Monday Night Raw",
+    "value": "Upset over Razor Ramon on Monday Night Raw, 1993",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4"
@@ -551,7 +551,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Blue ring tights with 1-2-3 Kid designs on the front and back",
+    "value": "Blue tights, front and back printed with the 1-2-3 Kid graphic",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -573,7 +573,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Neck, shoulders, bicep, elbow, wrist, wrist hinge, waist, hip, thigh, knee, and ankle",
+    "value": "Ankle, knee, thigh, hip, waist, wrist hinge, wrist, elbow, bicep, shoulders, neck - points of articulation",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -586,7 +586,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Blue tights with 1-2-3 Kid designs on the back and the front",
+    "value": "1-2-3 Kid graphics on blue tights, both sides",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -595,7 +595,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Intricate wraparound tights design faithfully captured, just like a supersized version of the Hasbro figure",
+    "value": "Tights design mirrors the classic Hasbro figure, just larger",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -615,7 +615,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Classic WWE Tag Team Championship accessory",
+    "value": "WWE Tag Team Championship belt accessory",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -866,7 +866,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Body paint, headdress and removable entrance gauntlets; ring attire reflects his demonic presence",
+    "value": "Body paint, headdress, removable entrance gauntlets",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -918,11 +918,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[2]",
-    "status": "resolved",
-    "value": "Ring attire reflects his demonic presence",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1155,7 +1153,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Apr. 13, 1997 @ ECW Barely Legal",
+    "value": "ECW Barely Legal, Apr. 13, 1997",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1482,7 +1480,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Ambrose shirt, ring jeans and a studded belt, RAW, MAY 25, 2015",
+    "value": "Ambrose shirt, ring jeans, studded belt",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6"
@@ -1512,7 +1510,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "a look of someone who has completely lost it",
+    "value": "Wild, manic expression",
     "evidence_quote_ids": [
      "f_q7"
     ],

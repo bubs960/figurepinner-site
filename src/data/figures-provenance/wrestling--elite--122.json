@@ -347,7 +347,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "red, white, and blue American Made logo singlet with American stars-and-stripes design; matching blue stars-and-stripes knee pads, black boots",
+    "value": "Red-white-blue singlet, American Made logo, stars-and-stripes design; stars-and-stripes knee pads (blue), black boots",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6"
@@ -366,7 +366,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "TrueFX detailing for life-like facial features",
+    "value": "TrueFX detailing giving life-like facial detail",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -388,7 +388,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "red, white, and blue American Made logo singlet with American stars-and-stripes design",
+    "value": "American Made logo singlet, red-white-blue with stars-and-stripes",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -397,7 +397,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "matching blue stars-and-stripes knee pads, black boots",
+    "value": "Stars-and-stripes knee pads (blue), black boots",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -419,7 +419,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Blue fabric sleeveless American Made logo tee",
+    "value": "American Made logo tee, blue sleeveless fabric",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -784,7 +784,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Nov. 30, 2024 @ WWE Survivor Series: WarGames",
+    "value": "WWE Survivor Series: WarGames, Nov. 30, 2024",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -801,7 +801,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "highly detailed TrueFX technology for life-like facial features",
+    "value": "Highly detailed TrueFX tech giving life-like facial detail",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -823,7 +823,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Interchangeable hands and iconic accessories",
+    "value": "Interchangeable hands and included accessories",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1237,7 +1237,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "TrueFX technology for life-like facial features",
+    "value": "TrueFX technology giving life-like facial detail",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1705,7 +1705,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black sleeveless bodysuit with studded detailing and illustrated panels",
+    "value": "Sleeveless black bodysuit, studded details, illustrated panels",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1732,7 +1732,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "Advanced TrueFX technology for lifelike facial details and expressions",
+    "value": "Advanced TrueFX tech for lifelike facial detail and expression",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1740,11 +1740,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Fully articulated with multiple points of articulation for dynamic poses and playability",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1763,7 +1761,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Black sleeveless bodysuit with studded detailing and illustrated panels",
+    "value": "Illustrated panels and studded details on black sleeveless bodysuit",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2186,7 +2184,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Red, white, and blue American Made logo singlet with American stars-and-stripes design; matching blue stars-and-stripes knee pads, black boots",
+    "value": "Red-white-blue singlet, American Made logo, stars-and-stripes design; stars-and-stripes knee pads (blue), black boots",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8"
@@ -2239,7 +2237,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Blue fabric sleeveless American Made logo tee",
+    "value": "American Made logo tee, blue sleeveless fabric",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2672,7 +2670,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "highly detailed TrueFX technology for life-like facial features",
+    "value": "Highly detailed TrueFX tech giving life-like facial detail",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2694,7 +2692,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "interchangeable hands and iconic accessories",
+    "value": "Interchangeable hands and included accessories",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -2703,7 +2701,7 @@
    {
     "field_path": "fingerprint.known_variants[0]",
     "status": "resolved",
-    "value": "an additional pair of hands, a black entrance mask, and the fan-demanded debut of the WWE Speed Championship title belt",
+    "value": "Extra hand pair, black entrance mask, debut WWE Speed Championship belt",
     "evidence_quote_ids": [
      "f_q3"
     ],

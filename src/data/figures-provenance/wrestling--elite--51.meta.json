@@ -1,5 +1,5 @@
 {
- "md5": "5AE18E85EAB5284600DD971F8691695D",
+ "md5": "435F299FA6C0C6834DCCDC5726FAE030",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite16-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_51_mankind_5d7e47": "c230b5899ae2a552",
   "fp_wrestling_mattel_elite_51_berzerker_30f93f": "6626d7e0a56ec85e",
   "fp_wrestling_mattel_elite_51_scott-hall_e2ddb8": "f0a5ace8f06f4377"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_51_aj-styles_c51dd2",
+    "fp_wrestling_mattel_elite_51_berzerker_30f93f",
+    "fp_wrestling_mattel_elite_51_mankind_5d7e47",
+    "fp_wrestling_mattel_elite_51_scott-hall_e2ddb8"
+   ]
+  }
+ ]
 }

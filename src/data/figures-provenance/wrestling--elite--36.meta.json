@@ -1,5 +1,5 @@
 {
- "md5": "440D73E7B369C15653EDAD3E9B4AB464",
+ "md5": "8C23236D4B5B2B62E9CAA36F3E3BB5C7",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite18-REPAIRED-2026-08-16.json"
@@ -13,5 +13,16 @@
   "fp_wrestling_mattel_elite_36_bo-dallas_dc7d7c": "18c8aabcfa0d7d8f",
   "fp_wrestling_mattel_elite_36_goldust_db546f": "06bdcc38a110f2db",
   "fp_wrestling_mattel_elite_36_bray-wyatt_15354a": "c9c0d92ce0eba9d2"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_36_bo-dallas_dc7d7c",
+    "fp_wrestling_mattel_elite_36_dean-ambrose_325404",
+    "fp_wrestling_mattel_elite_36_stardust_b73853"
+   ]
+  }
+ ]
 }

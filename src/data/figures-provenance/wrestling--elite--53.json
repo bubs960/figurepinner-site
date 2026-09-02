@@ -378,7 +378,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "grey 'Jericho' trunks that match the grey 'Jericho' boot designs",
+    "value": "Grey 'Jericho' boot designs matching grey 'Jericho' trunks",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -849,7 +849,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Oct. 9, 2016 @ WWE No Mercy",
+    "value": "No Mercy, Oct. 9, 2016",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -883,11 +883,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1793,7 +1791,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black, red and white 'KO' fight shorts and a shirt that says 'The Kevin Owens Show' styled like the Raw Is War logo",
+    "value": "'KO' fight shorts in black, red and white; shirt: 'The Kevin Owens Show', styled after the Raw Is War logo",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2768,7 +2766,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Studded silver, blue and pink belt accessory",
+    "value": "Belt accessory: silver, blue and pink, studded",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2781,7 +2779,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Studded silver, blue and pink belt accessory",
+    "value": "Belt accessory: silver, blue and pink, studded",
     "evidence_quote_ids": [
      "f_q2"
     ],

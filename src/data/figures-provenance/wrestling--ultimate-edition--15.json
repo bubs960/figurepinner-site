@@ -383,7 +383,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Three interchangeable bearded head scans with accurate tattoos",
+    "value": "Three bearded, interchangeable head scans",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4"
@@ -397,7 +397,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "value": "30+ articulation points, including ab-crunch torso and double-jointed knees/elbows",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -419,7 +419,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Three interchangeable bearded head scans",
+    "value": "Three bearded interchangeable head scans",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -441,7 +441,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Three interchangeable bearded head scans",
+    "value": "Three bearded interchangeable head scans",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -865,7 +865,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Removable blue and yellow tasseled jacket; pink, yellow and black ring gear featuring the visages of Warrior and 'Macho Man' Randy Savage",
+    "value": "Pink/yellow/black ring gear and a removable blue-yellow tasseled jacket, both showing Warrior and 'Macho Man' Randy Savage",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -874,7 +874,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Two interchangeable headsculpts - one with a painted face and the other 'Dingo' style",
+    "value": "One painted-face headsculpt and one 'Dingo'-style headsculpt (two total)",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -883,7 +883,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "TrueFX enhanced facial detailing for life-like authenticity",
+    "value": "TrueFX facial detailing technology",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -892,7 +892,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Over 30 points of articulation plus ab-crunch torso, double-jointed knees, and double-jointed elbows",
+    "value": "30+ articulation points, including ab-crunch torso and double-jointed knees/elbows",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -904,17 +904,15 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Knee pads are pieces of artwork in their own right",
-    "evidence_quote_ids": [
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Removable jacket and ring gear featuring the visages of Warrior himself and 'Macho Man' Randy Savage",
+    "value": "Removable jacket and ring gear depicting Warrior and 'Macho Man' Randy Savage",
     "evidence_quote_ids": [
      "f_q1"
     ],

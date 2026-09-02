@@ -1,5 +1,5 @@
 {
- "md5": "AF078846788A993B0AA0C2C50F01F82C",
+ "md5": "3F72D80BE0CC062EAC2E2230140070D4",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite21-REPAIRED-2026-08-16.json"
@@ -13,5 +13,18 @@
   "fp_wrestling_mattel_elite_17_sheamus_84a763": "e646d929cfa7c539",
   "fp_wrestling_mattel_elite_17_zack-ryder_217407": "b5b982903edb0b92",
   "fp_wrestling_mattel_elite_17_mankind_f72a42": "91cc2c5c79884012"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_17_john-cena_92e4ad",
+    "fp_wrestling_mattel_elite_17_kelly-kelly_fd7b23",
+    "fp_wrestling_mattel_elite_17_kofi-kingston_714f2e",
+    "fp_wrestling_mattel_elite_17_mankind_f72a42",
+    "fp_wrestling_mattel_elite_17_sheamus_84a763"
+   ]
+  }
+ ]
 }

@@ -456,13 +456,9 @@
    },
    {
     "field_path": "fingerprint.known_variants[0]",
-    "status": "resolved",
-    "value": "White singlet with bold geometric designs in red, blue, and black, white boots, and an updated wide-smiling headsculpt (Mattel WWE Elite Series 98)",
-    "evidence_quote_ids": [
-     "f_q8",
-     "f_q9",
-     "f_q11"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -868,11 +864,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Red bustier-style top with black laces at the sides, black shorts with a grommet belt, and black laced boots with fishnet stockings",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -887,7 +881,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Updated headsculpt with a disdainful stare and darker hair color",
+    "value": "Updated headsculpt: disdainful stare, darker hair",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -908,7 +902,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Pair of devilish wings from her NXT Women's Championship win at Halloween Havoc",
+    "value": "Wings (devilish) tied to Halloween Havoc NXT Women's Championship win",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -917,7 +911,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Alternate hands to strike the perfect pose",
+    "value": "Alternate hands for posing",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -930,7 +924,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Pair of devilish wings from her NXT Women's Championship win at Halloween Havoc",
+    "value": "Devilish wings (Halloween Havoc NXT title win)",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1445,7 +1439,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Sept. 26, 2021 @ WWE Extreme Rules",
+    "value": "WWE Extreme Rules, Sept. 26, 2021",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1454,7 +1448,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "black 'Summon the Demon' trunks with kneepads to match; black kickpad-style boots, white finger tape, red forearm tape, and black-and-red tassels",
+    "value": "Black 'Summon the Demon' trunks and matching kneepads; black kickpad boots; white finger tape; red forearm tape; black-red tassels",
     "evidence_quote_ids": [
      "f_q8",
      "f_q9"
@@ -1494,7 +1488,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Torso design that features sharp, bared teeth and a long, pointed tongue",
+    "value": "Torso design with sharp bared teeth and long pointed tongue",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -1525,7 +1519,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Alternate set of hands in a harrowing claw gesture",
+    "value": "Alternate claw-gesture hand set",
     "evidence_quote_ids": [
      "f_q13"
     ],
@@ -1930,7 +1924,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black and red outfit with white logos; black trunks with red-and-white tattoo detailing and 'RKO' logo on the rear, matching 'RKO' kneepads, black wrist and hand tape, black laced boots",
+    "value": "Black trunks, red-white tattoo print, 'RKO' logo rear; matching 'RKO' kneepads; black wrist/hand tape; black laced boots",
     "evidence_quote_ids": [
      "f_q1",
      "f_q6"
@@ -1940,7 +1934,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "New head sculpt; triumphant headscan with updated facial hair and accurate tattoos",
+    "value": "Headsculpt features accurate tattoos and updated facial hair",
     "evidence_quote_ids": [
      "f_q2",
      "f_q7"
@@ -1962,7 +1956,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Alternate hands for spot-on entrance posing",
+    "value": "Alternate entrance-posing hands",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1975,7 +1969,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "WWE RAW Tag Team Championship Title accessory",
+    "value": "Accessory: WWE RAW Tag Team Championship Title",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2865,11 +2859,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Gray 'Let's Ride' singlet with denim overall-style details above a black-and-red striped top, with the Boogs Cruise emblem on the back",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2932,7 +2924,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Two sets of alternate hands, including a horns-up pair",
+    "value": "Two alternate hand sets, one horns-up pose",
     "evidence_quote_ids": [
      "f_q8"
     ],

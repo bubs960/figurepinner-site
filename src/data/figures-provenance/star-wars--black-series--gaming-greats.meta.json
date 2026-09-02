@@ -1,5 +1,5 @@
 {
- "md5": "8D836F318967252906C35E0E2B3DF94F",
+ "md5": "68B3FA7B885F7ED977A4033F448895D3",
  "doc_count": 7,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -12,5 +12,20 @@
   "fp_star-wars_hasbro_black-series_gaming-greats_scout-trooper_fbe997": "bde8265bee5f884e",
   "fp_star-wars_hasbro_black-series_gaming-greats_shadow-stormtrooper_1ff0fc": "fb21b89d7267405d",
   "fp_star-wars_hasbro_black-series_gaming-greats_stormtrooper-commander_69f444": "a00deaf80db0cfd4"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_star-wars_hasbro_black-series_gaming-greats_darth-nihilus_884f50",
+    "fp_star-wars_hasbro_black-series_gaming-greats_electrostaff-purge-trooper_5d61ba",
+    "fp_star-wars_hasbro_black-series_gaming-greats_heavy-battle-droid_c59428",
+    "fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1",
+    "fp_star-wars_hasbro_black-series_gaming-greats_scout-trooper_fbe997",
+    "fp_star-wars_hasbro_black-series_gaming-greats_shadow-stormtrooper_1ff0fc",
+    "fp_star-wars_hasbro_black-series_gaming-greats_stormtrooper-commander_69f444"
+   ]
+  }
+ ]
 }

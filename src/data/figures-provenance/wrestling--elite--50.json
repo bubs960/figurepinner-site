@@ -723,7 +723,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Red, white and blue stylings just like his 'PBR' style ring gear",
+    "value": "Ring gear styled after 'PBR' look: red, white, blue",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1160,7 +1160,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable entrance gear including a mask, chest protector and belt",
+    "value": "Entrance gear (removable): mask, chest protector, belt",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1959,7 +1959,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "White, molded 'Shane 'O' Mac' jersey and black sports pants",
+    "value": "Molded jersey (white) reading 'Shane 'O' Mac'; black sports pants",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1977,7 +1977,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "White hair and a confident smirk on his new head sculpt",
+    "value": "New head sculpt: white hair, smirking expression",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2348,7 +2348,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Removable black and silver studded entrance jacket",
+    "value": "Entrance jacket (removable, black/silver studded)",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2392,17 +2392,15 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Black and silver studded ring pants and tall black boots",
+    "value": "Ring pants (black/silver studded); tall black boots",
     "evidence_quote_ids": [
      "f_q2"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "E2A58CBFDEC852F7315625133849B38B",
+ "md5": "27E9E44E6845DC047C733CD4CE0CBDDD",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,14 @@
   "fp_wrestling_mattel_elite_33_roman-reigns_983041": "1af307935639e5ec",
   "fp_wrestling_mattel_elite_33_junkyard-dog_3b6db7": "28a70736696b95ba",
   "fp_wrestling_mattel_elite_33_x-pac_1c4337": "e3af50b2f4ec4ce1"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_33_batista_ba0e91"
+   ]
+  }
+ ]
 }

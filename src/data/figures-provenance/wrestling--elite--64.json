@@ -737,7 +737,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Blue and orange color scheme with his symbol in front and 'Face the Facts' symbols on the side",
+    "value": "'Face the Facts' side symbols; blue-orange gear with front symbol",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -767,7 +767,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Tall, blue boots with orange kick pads that have white trim",
+    "value": "White-trimmed orange kick pads on tall blue boots",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -776,7 +776,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Blue and orange ring gear with his symbol on the front and 'Face the Facts' symbols on the side",
+    "value": "Front symbol on blue-orange gear; 'Face the Facts' text at the side",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1164,7 +1164,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Dark blue ring jorts and blue and black ring shoes",
+    "value": "Blue-and-black ring shoes with dark blue ring jorts",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1194,7 +1194,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Interchangeable 'You Can't See Me' hands, a green 'Respect' shirt, removable 'Never Give Up' hat and dog tags",
+    "value": "Dog tags; removable 'Never Give Up' hat; green 'Respect' shirt; 'You Can't See Me' hands (interchangeable)",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1203,7 +1203,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "A removable, green 'Never Give Up' armband",
+    "value": "Green 'Never Give Up' armband (removable)",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1234,7 +1234,7 @@
    {
     "field_path": "included_items[3]",
     "status": "resolved",
-    "value": "Interchangeable 'You Can't See Me' hands",
+    "value": "'You Can't See Me' hands (interchangeable)",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1756,7 +1756,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable black shirt that says 'Joe' multiple times in the front",
+    "value": "Black shirt (removable) printed with 'Joe' multiple times up front",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -2157,7 +2157,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "a brand new headsculpt and accurate tattoos on his chest and arms",
+    "value": "Tattoos on chest and arms; new head sculpt",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2178,7 +2178,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "black and red hooded sweatshirt that says 'Down Since Day One Ish' on the back",
+    "value": "'Down Since Day One Ish' printed on the back of a black-and-red hoodie",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -3034,7 +3034,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Jacket/vest is purple with a grey textured edging; black shirt and shorts with the Bruiser Weight logo on the left in purple and white; boots are painted in purple, with a bright red on the front, and the bottom are black",
+    "value": "Purple boots w/ red front, black soles; black shirt/shorts w/ purple-white Bruiser Weight logo (left); purple/grey vest",
     "evidence_quote_ids": [
      "f_q2",
      "f_q4",
@@ -3044,12 +3044,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "The head sculpt is nicely done and features a great likeness, with a great facial expression with the raised lip",
-    "evidence_quote_ids": [
-     "f_q6",
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -3059,7 +3056,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel-hinged wrists, ab crunch, swivel waist, ball jointed hips, double-hinged knees, swivel calves, hinged and rocker ankles",
+    "value": "Articulation: neck, shoulders, biceps, elbows, wrists, ab crunch, waist, hips, knees, calves, ankles",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -3072,7 +3069,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "The right side of his head is longer than the left side, which is shaved",
+    "value": "Left side of head shaved; right side left longer",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -3081,7 +3078,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "The Bruiser Weight logo, which is white and black",
+    "value": "White-and-black Bruiser Weight logo",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -3099,7 +3096,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Extra set of open hands that can grab onto the ropes or a Championship belt",
+    "value": "Extra open hands (rope/belt grip)",
     "evidence_quote_ids": [
      "f_q10"
     ],

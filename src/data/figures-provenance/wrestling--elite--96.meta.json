@@ -1,5 +1,5 @@
 {
- "md5": "47AD99D83FEB9EC2B21DE98A5E6EF774",
+ "md5": "DEFEE8AA194B4B18B825E4E5BFBD6993",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json",
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_96_kofi-kingston_5228a52f0438": "b3c268925d506292",
   "fp_wrestling_mattel_elite_96_hulk-hogan_b132b9": "dcfea5b044735ce6",
   "fp_wrestling_mattel_elite_96_ilja-dragunov_00e264": "92334160db8cc351"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_96_brock-lesnar_718f69",
+    "fp_wrestling_mattel_elite_96_hulk-hogan_b132b9",
+    "fp_wrestling_mattel_elite_96_kofi-kingston_5228a52f0438",
+    "fp_wrestling_mattel_elite_96_shinsuke-nakamur_bdf6fd"
+   ]
+  }
+ ]
 }

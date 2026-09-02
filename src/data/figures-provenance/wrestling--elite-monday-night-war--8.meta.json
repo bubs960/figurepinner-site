@@ -1,5 +1,5 @@
 {
- "md5": "0049E2D756BFE821A23100C82D0F33BF",
+ "md5": "BCA0526FABEAB298783D310BD9E0D4EB",
  "doc_count": 4,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -9,5 +9,15 @@
   "fp_wrestling_mattel_elite-monday-night-war_8_michael-cole_afa154": "f7b4f9034014e70e",
   "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366": "dd2cc01867778ff8",
   "fp_wrestling_mattel_elite-monday-night-war_8_undertaker_187d5c": "4473d87a6ba4ba12"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite-monday-night-war_8_shark_71b366",
+    "fp_wrestling_mattel_elite-monday-night-war_8_undertaker_187d5c"
+   ]
+  }
+ ]
 }

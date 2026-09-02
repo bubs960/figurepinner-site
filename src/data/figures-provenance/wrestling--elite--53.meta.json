@@ -1,5 +1,5 @@
 {
- "md5": "95853AC204413B5692D7A8F9022FDA7C",
+ "md5": "537A7FEA2C746EA8A0FA9E824246CF71",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite15-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_53_kevin-owens_a748ae": "aa65ad4068db2c07",
   "fp_wrestling_mattel_elite_53_big-e_67351b": "aaf81d6790773f35",
   "fp_wrestling_mattel_elite_53_alexa-bliss_058f09": "efdb830e5fe18437"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_53_alexa-bliss_058f09",
+    "fp_wrestling_mattel_elite_53_chris-jericho_235990",
+    "fp_wrestling_mattel_elite_53_heath-slater_8beb19",
+    "fp_wrestling_mattel_elite_53_kevin-owens_a748ae"
+   ]
+  }
+ ]
 }

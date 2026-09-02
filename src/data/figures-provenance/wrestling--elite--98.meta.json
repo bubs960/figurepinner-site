@@ -1,5 +1,5 @@
 {
- "md5": "426C461B7FDF0DA7AD03DC5CFADBAA05",
+ "md5": "AA97AA949D1E30B94B623BF3A408837A",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json"
@@ -13,5 +13,18 @@
   "fp_wrestling_mattel_elite_98_randy-orton_90c470": "1ea17f7e296be41e",
   "fp_wrestling_mattel_elite_98_faarooq-asad_6d444d71f47f": "a6bc015ea7c728cd",
   "fp_wrestling_mattel_elite_98_rick-boogs_89328a": "cb8ff20865688b7d"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_98_big-e_007ba6",
+    "fp_wrestling_mattel_elite_98_finn-balor_3c31f4",
+    "fp_wrestling_mattel_elite_98_mandy-rose_aeb59a",
+    "fp_wrestling_mattel_elite_98_randy-orton_90c470",
+    "fp_wrestling_mattel_elite_98_rick-boogs_89328a"
+   ]
+  }
+ ]
 }

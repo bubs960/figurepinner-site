@@ -282,7 +282,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Helmet gives an Optimus Prime vibe with the covered mouthplate and angled nose; face fully covered by the helmet",
+    "value": "Helmet resembles Optimus Prime: covered mouthplate, angled nose",
     "evidence_quote_ids": [
      "f_q2",
      "f_q8"
@@ -309,7 +309,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Captain America shield with a sculpted arc reactor component at the center instead of a star, with scuffed up red and silver paint",
+    "value": "Captain America-style shield with arc-reactor sculpt at center instead of a star",
     "evidence_quote_ids": [
      "f_q4",
      "f_q9"
@@ -678,7 +678,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Ninja style attire with the partially revealed kabuki mask and topknot combination",
+    "value": "Ninja-style outfit; kabuki mask partially shown, paired with topknot",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -687,7 +687,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Red folds at the end to cushion the silver plated wrist guards",
+    "value": "Silver-plated wrist guards cushioned by red folds at the ends",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -696,7 +696,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Flawless head sculpt with bright white contrasting with the blacks and reds",
+    "value": "Bright white contrasts with black and red on the head sculpt",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -709,7 +709,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "The overlay does drastically limit the torso movement, but the leg movement is surprisingly not restricted much",
+    "value": "Overlay limits torso movement; leg movement is only slightly restricted",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -722,7 +722,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "The clothing pattern is very intricate, and the sculpting pulls it off well; so many rectangles",
+    "value": "Clothing pattern made up of many rectangles",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -730,11 +730,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "The paint on his face is cleanly executed, and his eyes are hypnotic and haunting",
-    "evidence_quote_ids": [
-     "f_q9"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -754,7 +752,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "The left arm of the Build-A-Figure Mr. Hyde figure",
+    "value": "Mr. Hyde BAF left arm",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1258,7 +1256,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "MCU costume keeps the general colors from comic Shang-Chi with reds and black",
+    "value": "MCU outfit uses reds and black, echoing the comic Shang-Chi color scheme",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1270,11 +1268,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "Likeness to actor is very good, not perfect, but definitely see the actor there",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1678,7 +1674,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "New head sculpt; the figure comes with a clear blue Tony Stark head on the body with the helmeted head alongside",
+    "value": "New sculpt: clear blue Tony Stark head on body, plus separate helmeted head",
     "evidence_quote_ids": [
      "f_q2",
      "f_q11"
@@ -1688,7 +1684,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "On his helmet you can see a bit of blue paint in the eye and mouth slits to replicate the Tony hologram piloting the suit; the figure comes with a clear blue Tony Stark head alongside the helmeted head",
+    "value": "Helmet has blue paint in eye and mouth slits replicating the Tony hologram; extra clear-blue head included",
     "evidence_quote_ids": [
      "f_q9",
      "f_q11"
@@ -1706,7 +1702,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Repulsor hands which swap easily with the fists, and the longer repulsor blasts cast in translucent blue",
+    "value": "Repulsor hands swap with fists; extended repulsor blasts in translucent blue",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1725,7 +1721,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Helmet with a bit of blue paint in the eye and mouth slits",
+    "value": "Helmet's eye and mouth slits carry blue paint accents",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1758,7 +1754,7 @@
    {
     "field_path": "included_items[3]",
     "status": "resolved",
-    "value": "Longer repulsor blasts cast in translucent blue",
+    "value": "Extended repulsor blasts in translucent blue",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1767,7 +1763,7 @@
    {
     "field_path": "included_items[4]",
     "status": "resolved",
-    "value": "BAF piece with the right leg of the Mr. Hyde figure",
+    "value": "Mr. Hyde BAF right leg",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2091,7 +2087,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "black textured suit overlaid with a blue shoulder sash and pauldron and a skirt section with a blue geometric printed pattern",
+    "value": "Black textured suit topped with blue shoulder sash/pauldron and a blue geometric-print skirt section",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2145,7 +2141,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "the figure goes for his blue/black cleaned up appearance",
+    "value": "Figure depicts Wenwu's cleaned-up blue/black look",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2154,7 +2150,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "a skirt section with a blue geometric printed pattern",
+    "value": "Skirt section featuring a blue geometric print pattern",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2177,7 +2173,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Three sets of hands (gripping, open gesture, and fists)",
+    "value": "Hand set: gripping, open gesture, fists (3 pairs)",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -2186,7 +2182,7 @@
    {
     "field_path": "included_items[3]",
     "status": "resolved",
-    "value": "Right arm and cane for the Mr. Hyde Build-A-Figure",
+    "value": "Mr. Hyde BAF right arm and cane",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -2574,7 +2570,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Face scan captures the likeness of actress Meng'er Zhang",
+    "value": "Face scan reflects actress Meng'er Zhang's likeness",
     "evidence_quote_ids": [
      "f_q2",
      "f_q7"
@@ -2583,11 +2579,9 @@
    },
    {
     "field_path": "fingerprint.face_technology",
-    "status": "resolved",
-    "value": "Face scan captures the likeness of actress Meng'er Zhang",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -3065,7 +3059,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "One arrow and a set of arrows bunched together to fit in the quiver",
+    "value": "Bow arrow plus bundled quiver arrows",
     "evidence_quote_ids": [
      "f_q5"
     ],

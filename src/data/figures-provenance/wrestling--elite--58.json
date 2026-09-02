@@ -271,7 +271,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "A blue and pink designed top; blue, white and pink ring pants which bear a yellow and pink symbol on each side and have wide, bell bottoms",
+    "value": "Wide bell-bottom ring pants: blue, white, pink, with yellow-and-pink side symbols",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -672,7 +672,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "roaring headscan and tattoos on his huge arms",
+    "value": "Tattoos on his huge arms, roaring headscan",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -693,7 +693,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "ambulance door accessory that he definitely ripped right off of the actual vehicle",
+    "value": "Ambulance door accessory",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -966,7 +966,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Green and gold ring pants and black boots",
+    "value": "Black boots, green-and-gold ring pants",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1298,7 +1298,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: June 4, 2017 @ WWE Extreme Rules",
+    "value": "Extreme Rules, June 4, 2017",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1675,7 +1675,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "removable tuxedo and 'skirt' accessory that look just like Sheamus' entrance gear with Cesaro",
+    "value": "Entrance gear matching Cesaro's; removable tuxedo and 'skirt' accessory",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1684,7 +1684,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "black, red and white ring trunks that bear his logo",
+    "value": "Ring trunks bearing his logo, black, red and white",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1724,7 +1724,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "tall, black and white laced boots with a celtic cross on the backs",
+    "value": "Tall black-and-white laced boots with celtic cross on the back",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1732,11 +1732,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "all swagger and muscle, sculled in serious detail",
-    "evidence_quote_ids": [
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2159,7 +2157,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Removable black and gold tuxedo and 'skirt' entrance accessories",
+    "value": "Entrance accessories with Sheamus: removable black-and-gold tuxedo and 'skirt'",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2181,7 +2179,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Removable black and gold tuxedo and 'skirt' entrance accessories",
+    "value": "'Skirt' and black-gold tuxedo accessories, removable",
     "evidence_quote_ids": [
      "f_q7"
     ],

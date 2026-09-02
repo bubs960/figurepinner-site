@@ -1,5 +1,5 @@
 {
- "md5": "BA4806DB3ABB175DBDE5329BEB648900",
+ "md5": "E6CDA4E2C5799592D8407649C14B4797",
  "doc_count": 8,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -13,5 +13,19 @@
   "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_odinson_8afdf7": "4331271d3f4b26d5",
   "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_cb32c9": "c5def748b8700c65",
   "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_thor_eedb60": "a2eb052c757a2584"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_ares_566d38",
+    "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895",
+    "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_cb32c9",
+    "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hulk_68fb09",
+    "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_jane-foster_2698b5",
+    "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_odinson_8afdf7"
+   ]
+  }
+ ]
 }

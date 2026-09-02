@@ -1,5 +1,5 @@
 {
- "md5": "445A924E50071AA4806497EEA8D52253",
+ "md5": "A477D060CD985DEDFB801A93E9A58C10",
  "doc_count": 12,
  "source_batches": [
   "enrich-v42-batch-elite16-REPAIRED-2026-08-16.json",
@@ -20,5 +20,22 @@
   "fp_wrestling_mattel_elite_47_goldust_673981472942": "658070a88dd61638",
   "fp_wrestling_mattel_elite_47_the-rock_54b1f08b760b": "9f0431d0ab75e4d6",
   "fp_wrestling_mattel_elite_47_viktor_287a25c75d48": "095900a7a6ffe6aa"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_47_aj-styles_9fab0b",
+    "fp_wrestling_mattel_elite_47_big-boss-man_8b79ae476bbc",
+    "fp_wrestling_mattel_elite_47_brian-pillman_07c55179c56c",
+    "fp_wrestling_mattel_elite_47_cesaro_c1420753ec83",
+    "fp_wrestling_mattel_elite_47_goldust_673981472942",
+    "fp_wrestling_mattel_elite_47_kane_9400fc7ce763",
+    "fp_wrestling_mattel_elite_47_kevin-owens_c83cc6",
+    "fp_wrestling_mattel_elite_47_konnor_44f8cc418e61",
+    "fp_wrestling_mattel_elite_47_viktor_287a25c75d48"
+   ]
+  }
+ ]
 }

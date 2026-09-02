@@ -1,5 +1,5 @@
 {
- "md5": "7BC494510071DB364D0DA1B1B112C0A1",
+ "md5": "F4887433EC9956F356747A70C8177A28",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite11-REPAIRED-2026-08-16.json"
@@ -13,5 +13,16 @@
   "fp_wrestling_mattel_elite_83_drew-mcintyre_e5893a": "4164511b39d45b4e",
   "fp_wrestling_mattel_elite_83_dusty-rhodes_e18929": "855d2b4ead72f38c",
   "fp_wrestling_mattel_elite_83_michael-ps-hayes_25c6ebcb4c04": "e3444afd59ebd6d2"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_83_edge_9c4008",
+    "fp_wrestling_mattel_elite_83_king-corbin_35b3c7",
+    "fp_wrestling_mattel_elite_83_sasha-banks_efd4d2"
+   ]
+  }
+ ]
 }

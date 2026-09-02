@@ -1,5 +1,5 @@
 {
- "md5": "49583927CC53320F04FB4D486A9A7AD3",
+ "md5": "A1AA8B874208375CC6CF21C652585C4F",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite17-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_41_terry-funk_11f04a": "c2c7238b57d6ad56",
   "fp_wrestling_mattel_elite_41_dean-ambrose_a02b12": "a64faf68689b5450",
   "fp_wrestling_mattel_elite_41_lita_00382898b941": "f6eb0b2aa34f438d"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_41_1-2-3-kid_4cbbb5",
+    "fp_wrestling_mattel_elite_41_dean-ambrose_a02b12",
+    "fp_wrestling_mattel_elite_41_finn-balor_82c29b",
+    "fp_wrestling_mattel_elite_41_terry-funk_11f04a"
+   ]
+  }
+ ]
 }

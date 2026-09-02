@@ -1,5 +1,5 @@
 {
- "md5": "625BCC2D013B6864346936F4C1BC7361",
+ "md5": "77548858FD6CBB3251BBA1E8824856CF",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite20-REPAIRED-2026-08-16.json",
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_24_rey-mysterio_421ddf161026": "5974e935853ad37d",
   "fp_wrestling_mattel_elite_24_trish-stratus_5f8d55": "bad8ac7fa91439fd",
   "fp_wrestling_mattel_elite_24_dolph-ziggler_b6230d": "18235a12e48bfd2b"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_24_rey-mysterio_421ddf161026",
+    "fp_wrestling_mattel_elite_24_ryback_b4db77",
+    "fp_wrestling_mattel_elite_24_trish-stratus_5f8d55"
+   ]
+  }
+ ]
 }

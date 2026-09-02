@@ -1,5 +1,5 @@
 {
- "md5": "67B03744DBACBC133D183CB869033B06",
+ "md5": "4238DD51E6805289EC0E24B23EDBF782",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite13-REPAIRED-2026-08-16.json"
@@ -14,5 +14,18 @@
   "fp_wrestling_mattel_elite_66_kevin-owens_cbb8b065525b": "a08bca83cee25a35",
   "fp_wrestling_mattel_elite_66_alexander-wolfe_7140ed": "56e98a28b65b8908",
   "fp_wrestling_mattel_elite_66_kurt-angle_e636cf": "0d23f2ad2da59f0f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_66_aj-styles_2e54afc7bb1c",
+    "fp_wrestling_mattel_elite_66_alexander-wolfe_7140ed",
+    "fp_wrestling_mattel_elite_66_harper_a8826b",
+    "fp_wrestling_mattel_elite_66_kurt-angle_e636cf",
+    "fp_wrestling_mattel_elite_66_nikki-cross_88b3a7"
+   ]
+  }
+ ]
 }

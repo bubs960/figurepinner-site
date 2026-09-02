@@ -1,5 +1,5 @@
 {
- "md5": "FC4DEAE63C2D0E0ECC815FF65F9B6A66",
+ "md5": "7441B428985CA415487A979AE219EF2D",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite17-REPAIRED-2026-08-16.json"
@@ -13,5 +13,18 @@
   "fp_wrestling_mattel_elite_46_finn-balor_31a8b9": "215ae44fcf1f8e0b",
   "fp_wrestling_mattel_elite_46_rusev_519acc": "31ac1a2f7aa2608d",
   "fp_wrestling_mattel_elite_46_stevie-ray_d41ed7": "3bced0cacd66186f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_46_booker-t_4145f6",
+    "fp_wrestling_mattel_elite_46_john-cena_43efb2",
+    "fp_wrestling_mattel_elite_46_rusev_519acc",
+    "fp_wrestling_mattel_elite_46_sheamus_508c8c",
+    "fp_wrestling_mattel_elite_46_stevie-ray_d41ed7"
+   ]
+  }
+ ]
 }

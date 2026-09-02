@@ -1,5 +1,5 @@
 {
- "md5": "D7815200079F0C513AFDF3DF66D1C589",
+ "md5": "CF9A07C417AD6E015958A68EDB29BE6D",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite22-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_14_alberto-del-rio_39e94e": "4838790498c9a81e",
   "fp_wrestling_mattel_elite_14_john-cena_dcab91": "9079809f9e56b918",
   "fp_wrestling_mattel_elite_14_booker-t_6db36c": "af2fbae91c64aa9c"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_14_alberto-del-rio_39e94e",
+    "fp_wrestling_mattel_elite_14_big-boss-man_39b560",
+    "fp_wrestling_mattel_elite_14_booker-t_6db36c",
+    "fp_wrestling_mattel_elite_14_john-cena_dcab91"
+   ]
+  }
+ ]
 }

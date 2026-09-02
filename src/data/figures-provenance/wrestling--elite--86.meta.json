@@ -1,5 +1,5 @@
 {
- "md5": "CDDF745AD3FBAFA7CBF0F36867F22237",
+ "md5": "F21691E7299EB152AA3CB217081D9AA2",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite10-REPAIRED-2026-08-16.json"
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_86_triple-h_027d8e": "6c381615cffffb2d",
   "fp_wrestling_mattel_elite_86_carmella_925f16": "93dae39521fee0dd",
   "fp_wrestling_mattel_elite_86_miz_35f3d4": "44aacbec1d9dc6c6"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_86_carmella_925f16",
+    "fp_wrestling_mattel_elite_86_miz_35f3d4",
+    "fp_wrestling_mattel_elite_86_seth-rollins_4bd381",
+    "fp_wrestling_mattel_elite_86_sid-justice_262535",
+    "fp_wrestling_mattel_elite_86_the-fiend-bray-wyatt_08181c219203",
+    "fp_wrestling_mattel_elite_86_triple-h_027d8e"
+   ]
+  }
+ ]
 }

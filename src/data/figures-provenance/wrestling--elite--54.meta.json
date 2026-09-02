@@ -1,5 +1,5 @@
 {
- "md5": "FD51DA382B8DD835B3BF4F0D10DEE372",
+ "md5": "AEC11B8B7E6363E336229E653FA7479B",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite15-REPAIRED-2026-08-16.json"
@@ -13,5 +13,19 @@
   "fp_wrestling_mattel_elite_54_john-cena_3203f4": "8d993490e35addcb",
   "fp_wrestling_mattel_elite_54_rich-swann_35157d": "eb69cc3f78474b15",
   "fp_wrestling_mattel_elite_54_jey-uso_6f4980": "eb8fa9aac6a6b35e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_54_bray-wyatt_9da9fb",
+    "fp_wrestling_mattel_elite_54_charlotte-flair_bb6673",
+    "fp_wrestling_mattel_elite_54_jey-uso_6f4980",
+    "fp_wrestling_mattel_elite_54_jimmy-uso_515729",
+    "fp_wrestling_mattel_elite_54_john-cena_3203f4",
+    "fp_wrestling_mattel_elite_54_rich-swann_35157d"
+   ]
+  }
+ ]
 }

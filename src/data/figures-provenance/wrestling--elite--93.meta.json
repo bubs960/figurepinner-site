@@ -1,5 +1,5 @@
 {
- "md5": "5A9A2EA731BFDA976DDAD1A78BA6BB2C",
+ "md5": "F5AB62D8E6E02A7FDB104AC514D60189",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_93_cesaro_58b57d": "f2188ed4be919736",
   "fp_wrestling_mattel_elite_93_raquel-gonzalez_f99c60": "ee2ef958f8cfd85d",
   "fp_wrestling_mattel_elite_93_t-bar_549bc7a17af1": "c77f6885bd5e1c2a"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_93_cesaro_58b57d",
+    "fp_wrestling_mattel_elite_93_karrion-kross_626ea3282f93",
+    "fp_wrestling_mattel_elite_93_raquel-gonzalez_f99c60",
+    "fp_wrestling_mattel_elite_93_t-bar_549bc7a17af1"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "68AF0659E36AAF04C59000FF7290546A",
+ "md5": "9B6E28847C423908B2FA8207ED4A35CA",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite23-REPAIRED-2026-08-16.json",
@@ -14,5 +14,15 @@
   "fp_wrestling_mattel_elite_4_kofi-kingston_5491da": "64167a0930201729",
   "fp_wrestling_mattel_elite_4_kane_c20936": "6f83b2129c3fd5a4",
   "fp_wrestling_mattel_elite_4_john-morrison_893747": "fbaf67ad04ca75a7"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_4_big-show_7c2e92",
+    "fp_wrestling_mattel_elite_4_chris-jericho_1c736a"
+   ]
+  }
+ ]
 }

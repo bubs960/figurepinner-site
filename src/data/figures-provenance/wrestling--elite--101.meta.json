@@ -1,5 +1,5 @@
 {
- "md5": "C08C9DC07C7920642B6405E0C79DAD56",
+ "md5": "B2EDEB34BEBC0E111433A593FEDF7D68",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite8-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_101_sonya-deville_960452": "c6aca286b9bf5920",
   "fp_wrestling_mattel_elite_101_ricochet_a55076": "c58e96f943e7ab23",
   "fp_wrestling_mattel_elite_101_mr-america_1eb9fadba86e": "9f440f3903d1cdc7"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_101_johnny-knoxville_ed25ae",
+    "fp_wrestling_mattel_elite_101_ricochet_a55076",
+    "fp_wrestling_mattel_elite_101_sonya-deville_960452",
+    "fp_wrestling_mattel_elite_101_the-americanightmare-cody-rhodes_690f8adc11fe"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "8B05088D3BD224EA39DE3265D6A516DC",
+ "md5": "866C9CA6D635262007553C45E408D23D",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-aew43-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,18 @@
   "fp_wrestling_jazwares_aew-unrivaled_6_chris-jericho_c3dc06": "4a3ec94f7eeaae29",
   "fp_wrestling_jazwares_aew-unrivaled_6_hikaru-shida_c37cb6": "6d657d8ca6cd1858",
   "fp_wrestling_jazwares_aew-unrivaled_6_jake-hager_e46b7c": "29a851d6771313f4"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_jazwares_aew-unrivaled_6_hikaru-shida_c37cb6",
+    "fp_wrestling_jazwares_aew-unrivaled_6_jake-hager_e46b7c",
+    "fp_wrestling_jazwares_aew-unrivaled_6_mjf_612271",
+    "fp_wrestling_jazwares_aew-unrivaled_6_penta-el-zero-m_79e5fc",
+    "fp_wrestling_jazwares_aew-unrivaled_6_rey-fenix_854763"
+   ]
+  }
+ ]
 }

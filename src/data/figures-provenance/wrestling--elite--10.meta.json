@@ -1,5 +1,5 @@
 {
- "md5": "88036C004320049E82951BDD44BE7516",
+ "md5": "3D8CE312787F5DD1428F658BE5DB5BC0",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite22-REPAIRED-2026-08-16.json"
@@ -13,5 +13,16 @@
   "fp_wrestling_mattel_elite_10_john-morrison_ffcd9f": "6c58298e1ea339db",
   "fp_wrestling_mattel_elite_10_ted-dibiase_3c3ff4": "b2c76c71c083cac0",
   "fp_wrestling_mattel_elite_10_yoshi-tatsu_956924": "25efe0a18dd242bc"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_10_kane_7622da",
+    "fp_wrestling_mattel_elite_10_r-truth_4d5816",
+    "fp_wrestling_mattel_elite_10_yoshi-tatsu_956924"
+   ]
+  }
+ ]
 }

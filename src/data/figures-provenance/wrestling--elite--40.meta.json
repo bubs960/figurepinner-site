@@ -1,5 +1,5 @@
 {
- "md5": "D77605E19DF8EC4EF2AEF09756809F1A",
+ "md5": "4CF1E13AC7D1C11111643D6146D71B03",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite18-REPAIRED-2026-08-16.json"
@@ -13,5 +13,16 @@
   "fp_wrestling_mattel_elite_40_umaga_37ae8c66e6eb": "6a569ebb4e0c90bb",
   "fp_wrestling_mattel_elite_40_john-cena_d5e5d6": "c382a14a8a456dcc",
   "fp_wrestling_mattel_elite_40_ravishing-rick-rude_513fa516fe7e": "834fdf499d8acd1a"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_40_irwin-r-schyster_dd9918c7535e",
+    "fp_wrestling_mattel_elite_40_ravishing-rick-rude_513fa516fe7e",
+    "fp_wrestling_mattel_elite_40_umaga_37ae8c66e6eb"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "63624D4BEE25CDE0A7EAEFFE206FC151",
+ "md5": "632BB009B2271C49FE0FA56F1707E712",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite11-REPAIRED-2026-08-16.json",
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_78_drake-maverick_9a6059": "3f2777121fa1ad9e",
   "fp_wrestling_mattel_elite_78_matt-riddle_a03682": "5a8175f52c774dd3",
   "fp_wrestling_mattel_elite_78_superstar-billy-graham_57c2afdca3e7": "5af103a6bad28372"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_78_kofi-kingston_162501",
+    "fp_wrestling_mattel_elite_78_matt-riddle_a03682",
+    "fp_wrestling_mattel_elite_78_naomi_71eccd",
+    "fp_wrestling_mattel_elite_78_r-truth_2faa23",
+    "fp_wrestling_mattel_elite_78_randy-orton_ebf517",
+    "fp_wrestling_mattel_elite_78_superstar-billy-graham_57c2afdca3e7"
+   ]
+  }
+ ]
 }

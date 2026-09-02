@@ -1,5 +1,5 @@
 {
- "md5": "4998BFC777522823700EE58B93C136C7",
+ "md5": "CAA54445A98A2CEC35672AE89332C48A",
  "doc_count": 5,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -10,5 +10,18 @@
   "fp_wrestling_mattel_basic_150_rey-mysterio_704c5a": "85a98c8c8c70983d",
   "fp_wrestling_mattel_basic_150_stone-cold-steve_9498ea": "a686bce2e68d3fca",
   "fp_wrestling_mattel_basic_150_the-rock_7e732c": "d8b36cd59c57a924"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_basic_150_cm-punk_358563",
+    "fp_wrestling_mattel_basic_150_lita_bcd94d",
+    "fp_wrestling_mattel_basic_150_rey-mysterio_704c5a",
+    "fp_wrestling_mattel_basic_150_stone-cold-steve_9498ea",
+    "fp_wrestling_mattel_basic_150_the-rock_7e732c"
+   ]
+  }
+ ]
 }

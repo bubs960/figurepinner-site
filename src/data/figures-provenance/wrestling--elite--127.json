@@ -276,7 +276,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "black-and-pink top with strap details, matching black-and-pink shorts, and black boots with fishnet stockings",
+    "value": "Black-and-pink strapped top and matching shorts; black boots with fishnet stockings",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -315,7 +315,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Black-and-pink top with strap details, matching shorts, and black boots with fishnet stockings",
+    "value": "Top in black-and-pink with strap details, matching shorts; black boots with fishnet stockings",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1042,7 +1042,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "Facial detailing enhanced by True FX for life-like authenticity",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1456,7 +1456,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "black singlet with gray tribal design work, black boots, knee pads, and elbow pads",
+    "value": "Gray tribal-design black singlet; knee pads, elbow pads, and black boots",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1465,7 +1465,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "fearsome headscan and accurate tribal tattoos",
+    "value": "Headscan with tribal tattoos",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -2258,7 +2258,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "Advanced TrueFX facial printing for lifelike expression",
+    "value": "TrueFX facial printing delivering a lifelike expression",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2266,11 +2266,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Extensive articulation for dynamic posing",
-    "evidence_quote_ids": [
-     "f_q9"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2279,11 +2277,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Authentic ring gear sculpted with precision detail",
-    "evidence_quote_ids": [
-     "f_q11"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2302,7 +2298,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Interchangeable hands for varied action poses",
+    "value": "Hands, interchangeable, for varied poses",
     "evidence_quote_ids": [
      "f_q12"
     ],
@@ -2629,19 +2625,15 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Black fabric hoodie, black-and-white laced boots and black tights with white trim and red and green color panels, first-ever United States Championship with a determined headscan",
-    "evidence_quote_ids": [
-     "f_q1",
-     "f_q2",
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black tights with white trim and red and green color panels",
+    "value": "Black tights with white trim, red-and-green panels; black-and-white laced boots",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2680,7 +2672,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "First-ever United States Championship with a determined headscan",
+    "value": "Determined headscan; first-ever United States Championship",
     "evidence_quote_ids": [
      "f_q3"
     ],

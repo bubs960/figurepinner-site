@@ -1,5 +1,5 @@
 {
- "md5": "D47997EB4EF13D68CBB4E6AC1561E8B6",
+ "md5": "16521F1C68FFA637E669A376670B8EE8",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json"
@@ -14,5 +14,18 @@
   "fp_wrestling_mattel_elite_65_nia-jax_0b70f0": "6dfc153376d11bef",
   "fp_wrestling_mattel_elite_65_sensational-sherri_19068864364b": "2db365ea2568b899",
   "fp_wrestling_mattel_elite_65_roman-reigns_c63dd6": "2f737ce8a3fc45ca"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_65_aiden-english_b703f3",
+    "fp_wrestling_mattel_elite_65_eric-young_1a6165",
+    "fp_wrestling_mattel_elite_65_roman-reigns_c63dd6",
+    "fp_wrestling_mattel_elite_65_ronda-rousey_69ed91b98be3",
+    "fp_wrestling_mattel_elite_65_rusev_99ed80"
+   ]
+  }
+ ]
 }

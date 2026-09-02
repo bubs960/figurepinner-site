@@ -764,11 +764,9 @@
    },
    {
     "field_path": "included_items[1]",
-    "status": "resolved",
-    "value": "Iconic accessories to recreate signature moves and in-ring action",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1214,7 +1212,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Red tights similar to his regular wrestling gear, a cloth shirt featuring the Brisco Bros. Body Shop, and black sweatpants",
+    "value": "Red wrestling-style tights; cloth shirt with Brisco Bros. Body Shop logo",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4",
@@ -1257,7 +1255,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Cloth shirt featuring the Brisco Bros. Body Shop",
+    "value": "Cloth shirt with Brisco Bros. Body Shop branding",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1275,7 +1273,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Red tights similar to his regular wrestling gear",
+    "value": "Tights red, styled like his regular wrestling gear",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1288,7 +1286,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Gerald Brisco, the Walmart exclusive chase figure for Elite 70, Series 70",
+    "value": "Walmart-exclusive chase figure, Elite 70",
     "evidence_quote_ids": [
      "f_q10",
      "w_q11_brisco_series",
@@ -1751,7 +1749,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Aug. 19, 2018 @ WWE SummerSlam",
+    "value": "WWE SummerSlam, Aug. 19, 2018",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2176,7 +2174,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Good likeness to his younger days, with brown hair and nicely done facial details, including a cleft chin",
+    "value": "Younger-era likeness with brown hair and a cleft chin",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -2189,7 +2187,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel-hinged wrists, swivel waist, ball jointed hips, swivel thighs, double hinged knees, hinged and rocker ankles",
+    "value": "Ball joint neck/hips; hinge shoulders; sw biceps/thighs; hinge elbows; sw-hinge wrists; sw waist; dbl-hinge knees; hinge-rocker ankles",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2211,7 +2209,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Classic WWF microphone with the old logo in yellow",
+    "value": "Yellow old-logo WWF microphone prop",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2242,7 +2240,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Two sets of interchangeable hands (open and open grabbing)",
+    "value": "Two hand sets: open, open-grabbing",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2646,7 +2644,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Yellow, white and black ring gear with trunks, wrist tape and knee pads",
+    "value": "Ring gear yellow/white/black: trunks, wrist tape, knee pads",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -3042,7 +3040,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, waist, hips, thighs, knees (double-jointed), ankles",
+    "value": "Points: neck, bicep, elbows, wrists, waist, hips, thighs, ankles; ball-jointed shoulders; double-jointed knees",
     "evidence_quote_ids": [
      "f_q8"
     ],

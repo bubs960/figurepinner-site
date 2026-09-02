@@ -1,5 +1,5 @@
 {
- "md5": "CBF6815446EF12FF4BF46EDC4EE054C3",
+ "md5": "A0B59483D97AA5BBB71E139C22825565",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite23-REPAIRED-2026-08-16.json"
@@ -14,5 +14,15 @@
   "fp_wrestling_mattel_elite_5_mark-henry_c2c6fe": "68a9251cde3f61a1",
   "fp_wrestling_mattel_elite_5_rey-mysterio_795d43": "74f410b2d3dbc6bc",
   "fp_wrestling_mattel_elite_5_vladimir-kozlov_cf28dc": "8bb41ec27bf787f9"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_5_jack-swagger_f51a56",
+    "fp_wrestling_mattel_elite_5_rey-mysterio_795d43"
+   ]
+  }
+ ]
 }

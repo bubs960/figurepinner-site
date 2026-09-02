@@ -252,7 +252,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Pink singlet with all-over number print; black laced boots, pink knee pads, and black hand and wrist tape",
+    "value": "Boots: black, laced. Knee pads: pink. Hand/wrist tape: black",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4"
@@ -631,7 +631,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Red tights with black-and-white P1 logos and detailing, black knee pads, black-and-red kickpad boots with red Phenomenal/1 logos",
+    "value": "Tights: red, black-white P1 logos/detailing. Knee pads: black. Boots: black-red kickpad, red Phenomenal/1 logos",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -640,7 +640,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Determined head scan and accurate tattoos",
+    "value": "Headscan: determined expression, tattoos",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1058,7 +1058,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black-and-pink top with ripped details and studded choker; black-and-pink trunks with studded belt, chains, and ripped detailing; black boots with jagged pink stripe design.",
+    "value": "Black-pink top: ripped details, studded choker. Black-pink trunks: studded belt, chains, ripped detail. Black boots: jagged pink stripe",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1088,7 +1088,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Multicolored hairstyle featuring two-tone pink and blonde highlights",
+    "value": "Hair: multicolored, pink/blonde two-tone highlights",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1097,7 +1097,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "WWE-branded microphone and two sets of hands for accurate entrance poses",
+    "value": "WWE-branded microphone; two sets of hands for entrance poses",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -1538,7 +1538,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black MMA-style shorts with an asymmetric red tribal print",
+    "value": "Shorts: black, MMA-style, asymmetric red tribal print",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1578,7 +1578,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Three sets of hands for accurate Bloodline poses as well as a black sleeveless We the Ones shirt",
+    "value": "Three sets of hands (Bloodline poses); black sleeveless 'We the Ones' shirt",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1587,7 +1587,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Black foot wraps, black and red knee pads with a red tribal design, and a taped hand and forearm",
+    "value": "Foot wraps: black. Knee pads: black-red, red tribal design. Hand/forearm: taped",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1600,7 +1600,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Three sets of hands for accurate Bloodline poses",
+    "value": "Three hand sets (Bloodline poses)",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2048,11 +2048,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "authentic ring gear with iconic accessories",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2490,7 +2488,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Sept. 3, 2022 @ WWE Clash at the Castle",
+    "value": "WWE Clash at the Castle, Sept. 3, 2022",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2499,7 +2497,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black trunks with red crossed-swords emblem front and rear; black laced boots, black wrist tape, and black knee pads with red crossed-swords emblem; removable molded black kilt with tartan detailing",
+    "value": "Boots: black, laced. Wrist tape: black. Knee pads: black, red crossed-swords emblem. Kilt: black, molded, removable, tartan detailing",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4",
@@ -2531,7 +2529,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable molded black kilt with tartan detailing",
+    "value": "Kilt: black, molded, removable, tartan detailing",
     "evidence_quote_ids": [
      "f_q4"
     ],

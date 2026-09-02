@@ -1,5 +1,5 @@
 {
- "md5": "36C47893139A6FA979617F1494064038",
+ "md5": "DF52A6538AFDA8BF42731476699867F0",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_119_john-cena_bcb770809ebb": "27054375657e4af6",
   "fp_wrestling_mattel_elite_119_liv-morgan_6f1207": "99fa8feefb9aa3e2",
   "fp_wrestling_mattel_elite_119_dexter-lumis_308581": "c5a548f110e32f36"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_119_bron-breakker_11bf8c",
+    "fp_wrestling_mattel_elite_119_dexter-lumis_308581",
+    "fp_wrestling_mattel_elite_119_dominik-mysterio_7a5c69",
+    "fp_wrestling_mattel_elite_119_liv-morgan_6f1207"
+   ]
+  }
+ ]
 }

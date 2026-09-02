@@ -1,5 +1,5 @@
 {
- "md5": "40BA5DB0C9DC118A614915E6E8B9D120",
+ "md5": "E20518536409A798E2BAE334050B02F4",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite19-REPAIRED-2026-08-16.json"
@@ -13,5 +13,14 @@
   "fp_wrestling_mattel_elite_32_daniel-bryan_0de7c8": "5f51b1cf37a67886",
   "fp_wrestling_mattel_elite_32_sin-cara_a66851aaaa91": "74eb67df4aeaa062",
   "fp_wrestling_mattel_elite_32_mark-henry_4b3577": "025d77faad8f8d0d"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_32_cody-rhodes_f0e7df"
+   ]
+  }
+ ]
 }

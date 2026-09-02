@@ -1,5 +1,5 @@
 {
- "md5": "A2808FA2E0C15013ED7C5CD5A5C5916C",
+ "md5": "1B2A5B37A3384933EF931E8E8CF7FD68",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite20-REPAIRED-2026-08-16.json"
@@ -13,5 +13,15 @@
   "fp_wrestling_mattel_elite_27_rob-van-dam_017dcf2cb991": "98e8671e3ad64ad7",
   "fp_wrestling_mattel_elite_27_billy-gunn_97d7d1": "58c15ceb6daf9ae8",
   "fp_wrestling_mattel_elite_27_rikishi_e1760b": "fd268eeb4a6ddcb6"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_27_billy-gunn_97d7d1",
+    "fp_wrestling_mattel_elite_27_fandango_a7ecf7"
+   ]
+  }
+ ]
 }

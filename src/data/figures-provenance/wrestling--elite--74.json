@@ -619,7 +619,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -627,11 +627,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -999,7 +997,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q3",
      "f_q5"
@@ -1008,12 +1006,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q4",
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "corroborated_exact"
    },
    {
@@ -1023,7 +1018,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Interchangable hands let you pose this WWE Elite figure in-ring or coming down the aisle",
+    "value": "Interchangeable hands for in-ring or entrance poses",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1032,7 +1027,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
+    "value": "WWE ring gear and accessories",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1733,7 +1728,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q2",
      "f_q8"
@@ -1751,7 +1746,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Interchangable hands let you pose this WWE Elite figure in-ring or coming down the aisle with added authenticity.",
+    "value": "Interchangeable hands for in-ring or entrance poses",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -2136,7 +2131,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2144,11 +2139,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2158,7 +2151,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
+    "value": "WWE ring gear and accessories",
     "evidence_quote_ids": [
      "f_q7"
     ],

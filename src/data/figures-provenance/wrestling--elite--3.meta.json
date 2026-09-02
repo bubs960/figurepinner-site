@@ -1,5 +1,5 @@
 {
- "md5": "FED18C95E08A159CA51EC1344EC65D65",
+ "md5": "2C1A0D28520700F4ADC5A2467E01BFB1",
  "doc_count": 17,
  "source_batches": [
   "enrich-v42-batch-elite23-REPAIRED-2026-08-16.json",
@@ -25,5 +25,16 @@
   "fp_wrestling_mattel_elite_3_the-miz_7770c5": "9a293f488ae486a7",
   "fp_wrestling_mattel_elite_3_colonel-mustafa_5d29d6": "fea146ce1d1d2794",
   "fp_wrestling_mattel_elite_3_miz_5d087e": "aaae9038d03fb879"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_3_christian_c0e6ac",
+    "fp_wrestling_mattel_elite_3_jake-roberts_955bc3",
+    "fp_wrestling_mattel_elite_3_miz_5d087e"
+   ]
+  }
+ ]
 }

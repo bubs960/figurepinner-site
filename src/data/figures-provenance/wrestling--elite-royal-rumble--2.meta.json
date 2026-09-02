@@ -1,5 +1,5 @@
 {
- "md5": "883758E7AED69641EF75BB824071D810",
+ "md5": "EEC2D17F0CA365AD3528057BA43FF404",
  "doc_count": 2,
  "source_batch": "enrich-v42-batch-aew43-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -7,5 +7,15 @@
  "identity_hashes": {
   "fp_wrestling_mattel_elite-royal-rumble_2_stone-cold-steve-a_fd168a": "ef20a8166cbdc3ff",
   "fp_wrestling_mattel_elite-royal-rumble_2_titus-oneil_df1d05": "95836b47562b2dd2"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite-royal-rumble_2_stone-cold-steve-a_fd168a",
+    "fp_wrestling_mattel_elite-royal-rumble_2_titus-oneil_df1d05"
+   ]
+  }
+ ]
 }

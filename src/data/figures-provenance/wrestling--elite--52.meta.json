@@ -1,5 +1,5 @@
 {
- "md5": "E9F75935F35B13BBC9D3D4EDF6AF5893",
+ "md5": "7B7A7FFF352BD3F4471E4707E2E102A5",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite16-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_52_ken-shamrock_b54b5a": "4201719ca0f7d7b7",
   "fp_wrestling_mattel_elite_52_braun-strowman_809ad8": "ec32eb54dd87a0ea",
   "fp_wrestling_mattel_elite_52_kofi-kingston_0c5a30": "67a422d18740017a"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_52_braun-strowman_809ad8",
+    "fp_wrestling_mattel_elite_52_ken-shamrock_b54b5a",
+    "fp_wrestling_mattel_elite_52_kofi-kingston_0c5a30",
+    "fp_wrestling_mattel_elite_52_xavier-woods_4a413e"
+   ]
+  }
+ ]
 }

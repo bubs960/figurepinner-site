@@ -1,5 +1,5 @@
 {
- "md5": "E302BA469863013E17180FE458C6823B",
+ "md5": "AE376CEADBCA6E9C9FCFE3C6BDDEA481",
  "doc_count": 4,
  "source_batches": [
   "enrich-v42-batch-elite23-REPAIRED-2026-08-16.json"
@@ -11,5 +11,14 @@
   "fp_wrestling_mattel_elite_7_david-hart-smith_dd2590": "1a24b5d302c7d18c",
   "fp_wrestling_mattel_elite_7_hornswoggle_b4e49f": "bb08c3b365d68736",
   "fp_wrestling_mattel_elite_7_john-cena_bb7a3f": "c25a2ebd7a97aed8"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_7_david-hart-smith_dd2590"
+   ]
+  }
+ ]
 }

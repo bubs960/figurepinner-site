@@ -1,5 +1,5 @@
 {
- "md5": "D23BD7DD677E62CDC58FD4473FDD07BA",
+ "md5": "CCE516E9E270DDD49A1BCB42FECD65B9",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite12-REPAIRED-2026-08-16.json",
@@ -15,5 +15,18 @@
   "fp_wrestling_mattel_elite_72_roderick-strong_7283ad": "c0e1b15d247403e1",
   "fp_wrestling_mattel_elite_72_rey-mysterio_9cc393": "2b2091156dd32968",
   "fp_wrestling_mattel_elite_72_becky-lynch_f755ac": "9944a5e075fc4b8c"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_72_batista_e7e7ad",
+    "fp_wrestling_mattel_elite_72_becky-lynch_f755ac",
+    "fp_wrestling_mattel_elite_72_buddy-murphy_314135",
+    "fp_wrestling_mattel_elite_72_gorilla-monsoon_f169066e1e40",
+    "fp_wrestling_mattel_elite_72_rey-mysterio_9cc393"
+   ]
+  }
+ ]
 }

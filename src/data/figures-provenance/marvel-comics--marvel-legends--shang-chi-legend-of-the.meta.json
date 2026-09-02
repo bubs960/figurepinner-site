@@ -1,5 +1,5 @@
 {
- "md5": "938C4CAAAF9C47DBBC2D0C2EEAC3FFE0",
+ "md5": "3BEF9AC7580C1BE791D040AF4A3321FD",
  "doc_count": 8,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -13,5 +13,20 @@
   "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_wenwu_4d2fd6": "07b4761ea78af308",
   "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_xialing_796c2e": "3e92277575463fd7",
   "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_katy_0245a2": "25ae9765e77ec986"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_civil-warrior_c601b6",
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_death-dealer_c5887e",
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_katy_0245a2",
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_shang-chi_e9b90b",
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_tony-stark_0efa73",
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_wenwu_4d2fd6",
+    "fp_marvel-comics_hasbro_marvel-legends_shang-chi-legend-of-the_xialing_796c2e"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "47C353F89DBCA95C50F1546AE0A31182",
+ "md5": "3DE24ED0F56200F7D675213FA7DB02ED",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite12-REPAIRED-2026-08-16.json",
@@ -15,5 +15,17 @@
   "fp_wrestling_mattel_elite_74_aj-styles_853757": "f7318a5e55cdd032",
   "fp_wrestling_mattel_elite_74_andrade_e1422c": "a22697e1e24bc69e",
   "fp_wrestling_mattel_elite_74_natalya_86725e": "0bd7999e07b08363"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_74_aj-styles_853757",
+    "fp_wrestling_mattel_elite_74_andrade_e1422c",
+    "fp_wrestling_mattel_elite_74_finn-balor_c13ffa",
+    "fp_wrestling_mattel_elite_74_lince-dorado_bca3c3"
+   ]
+  }
+ ]
 }

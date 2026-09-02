@@ -1,5 +1,5 @@
 {
- "md5": "2046602E9043E2CD9533705794CA3033",
+ "md5": "309148E3EC02D050292E7695421A6BB2",
  "doc_count": 7,
  "source_batch": "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -12,5 +12,17 @@
   "fp_wrestling_mattel_elite_80_erik_8912ba": "9491acc0568e632e",
   "fp_wrestling_mattel_elite_80_bayley_aeecde": "f163c8a181a51e61",
   "fp_wrestling_mattel_elite_80_ricochet_346dcf": "cc576bd3004fe58e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_80_bayley_aeecde",
+    "fp_wrestling_mattel_elite_80_erik_8912ba",
+    "fp_wrestling_mattel_elite_80_kevin-owens_a11a5f8d975c",
+    "fp_wrestling_mattel_elite_80_kyle-oreilly_8acbd0"
+   ]
+  }
+ ]
 }

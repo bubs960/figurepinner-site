@@ -1,5 +1,5 @@
 {
- "md5": "9173D15B291CD1B5FD8830500579EA1A",
+ "md5": "CD9C5258CD775A1007C08E375E5AB464",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite10-REPAIRED-2026-08-16.json",
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_89_the-goon_8a031b14e13d": "8fdef1bff1f2aabf",
   "fp_wrestling_mattel_elite_89_damian-priest_c1a78e": "38b53b4f1cac8c47",
   "fp_wrestling_mattel_elite_89_sgt-slaughter_071e384bee5d": "113972f8ca1b2719"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_89_bobby-lashley_5b27ad",
+    "fp_wrestling_mattel_elite_89_damian-priest_c1a78e",
+    "fp_wrestling_mattel_elite_89_dominik-mysterio_7be0a988cc6a",
+    "fp_wrestling_mattel_elite_89_nia-jax_5fb41e",
+    "fp_wrestling_mattel_elite_89_sgt-slaughter_071e384bee5d",
+    "fp_wrestling_mattel_elite_89_the-goon_8a031b14e13d"
+   ]
+  }
+ ]
 }

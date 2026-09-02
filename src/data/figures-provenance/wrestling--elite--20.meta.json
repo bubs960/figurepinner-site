@@ -1,5 +1,5 @@
 {
- "md5": "DCB60DC9E7F0F0029978DD481B1D13CE",
+ "md5": "DC72BE6761BFA9991E3B286E23FF1E32",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite21-REPAIRED-2026-08-16.json"
@@ -13,5 +13,14 @@
   "fp_wrestling_mattel_elite_20_cm-punk_598664": "cf1bd3f73fbb06d4",
   "fp_wrestling_mattel_elite_20_cody-rhodes_f385a4": "4610d7196b9af311",
   "fp_wrestling_mattel_elite_20_john-cena_232b36": "aca497e12179c05e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_20_santino-marella_3cc615"
+   ]
+  }
+ ]
 }

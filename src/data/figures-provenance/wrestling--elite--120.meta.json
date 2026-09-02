@@ -1,5 +1,5 @@
 {
- "md5": "A5A4587F55D633300044564781C59D6A",
+ "md5": "F9685230735A28AA394EB6A9B17CDD6D",
  "doc_count": 5,
  "source_batches": [
   "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_120_la-knight_0b1bf5": "1c15692c666023dd",
   "fp_wrestling_mattel_elite_120_joe-gacy_7ce4db": "e960cdc2f75ba85c",
   "fp_wrestling_mattel_elite_120_cody-rhodes_0e4c65b35006": "06385bcab25e74aa"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_120_joe-gacy_7ce4db",
+    "fp_wrestling_mattel_elite_120_la-knight_0b1bf5",
+    "fp_wrestling_mattel_elite_120_lola-vice_b4fe19",
+    "fp_wrestling_mattel_elite_120_roman-reigns_c00ccb"
+   ]
+  }
+ ]
 }

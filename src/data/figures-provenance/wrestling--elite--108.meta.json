@@ -1,5 +1,5 @@
 {
- "md5": "414EE00E93D0C0940050D71E5C5F3DDC",
+ "md5": "E25A3966B20AD19C88AC1F9F84A43E96",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_108_bronson-reed_c3105d": "2b317fa8572b7e5e",
   "fp_wrestling_mattel_elite_108_la-knight_924a1a": "5ea19ecf5567f6b3",
   "fp_wrestling_mattel_elite_108_chelsea-green_e6af57": "88fbf88b4e0f332f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_108_brock-lesnar_dc6139",
+    "fp_wrestling_mattel_elite_108_bronson-reed_c3105d",
+    "fp_wrestling_mattel_elite_108_la-knight_924a1a",
+    "fp_wrestling_mattel_elite_108_omos_4881fc"
+   ]
+  }
+ ]
 }

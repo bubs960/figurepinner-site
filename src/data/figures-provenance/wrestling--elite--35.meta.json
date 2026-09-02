@@ -1,5 +1,5 @@
 {
- "md5": "6D0C6C3308B53659E2C00373834B26D6",
+ "md5": "85A0898444CB519D938E1E4A2A77675B",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_35_triple-h_0adc1a": "f7a011ba963eef59",
   "fp_wrestling_mattel_elite_35_earthquake_3cf156": "22ac23aec917ae97",
   "fp_wrestling_mattel_elite_35_randy-orton_da181e": "639f6ead9e33c02e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_35_fernando_1ed8d2",
+    "fp_wrestling_mattel_elite_35_luke-harper_531471",
+    "fp_wrestling_mattel_elite_35_randy-orton_da181e",
+    "fp_wrestling_mattel_elite_35_triple-h_0adc1a"
+   ]
+  }
+ ]
 }

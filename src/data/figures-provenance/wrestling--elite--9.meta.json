@@ -1,5 +1,5 @@
 {
- "md5": "8C61910302BBE4C62DE12512762C586B",
+ "md5": "D5BDA30760FA63B0B958EE6540435396",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite22-REPAIRED-2026-08-16.json"
@@ -13,5 +13,14 @@
   "fp_wrestling_mattel_elite_9_randy-orton_eff796": "650a79322ec10520",
   "fp_wrestling_mattel_elite_9_zack-ryder_d9b46e": "bc9a4bc7c130d216",
   "fp_wrestling_mattel_elite_9_the-miz_b3e353": "c0db5ba908881356"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_9_randy-orton_eff796"
+   ]
+  }
+ ]
 }

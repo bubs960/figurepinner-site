@@ -1,5 +1,5 @@
 {
- "md5": "A20518188FB642BCB919E9FAA56B2BFE",
+ "md5": "26FE04AE99E082D9ADF41DF75946C565",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite19-REPAIRED-2026-08-16.json"
@@ -13,5 +13,14 @@
   "fp_wrestling_mattel_elite_31_vader_a0a4fa": "9dfa0cf555280b0b",
   "fp_wrestling_mattel_elite_31_kane_a299bf": "576ef09035504a49",
   "fp_wrestling_mattel_elite_31_dean-ambrose_0cde44": "cd68e4e59d176c27"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_31_kane_a299bf"
+   ]
+  }
+ ]
 }

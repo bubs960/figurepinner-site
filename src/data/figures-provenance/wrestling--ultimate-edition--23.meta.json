@@ -1,5 +1,5 @@
 {
- "md5": "8EAB424691D955F4AFA9E2DFC45EDE88",
+ "md5": "829BFC8009D424BF7860BFF927A08D02",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,15 @@
   "fp_wrestling_mattel_ultimate-edition_23_la-knight_9fec3f": "91806d7a867c743d",
   "fp_wrestling_mattel_ultimate-edition_23_rey-mysterio_11af52": "96d0449ae795bd6e",
   "fp_wrestling_mattel_ultimate-edition_23_scott-hall_084fcb": "c3237c660126caf2"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_ultimate-edition_23_kevin-nash_bf321e",
+    "fp_wrestling_mattel_ultimate-edition_23_rey-mysterio_11af52"
+   ]
+  }
+ ]
 }

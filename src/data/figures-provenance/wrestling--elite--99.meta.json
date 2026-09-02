@@ -1,5 +1,5 @@
 {
- "md5": "437074CD5C57C9463B538ECC03753AD7",
+ "md5": "0F2B7A550D078BE757C91F0C6A12B7C5",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite8-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_99_brock-lesnar_6cc074": "bb04a0fe821d4335",
   "fp_wrestling_mattel_elite_99_queen-zelina_29385d": "1cf039b86f6c43cb",
   "fp_wrestling_mattel_elite_99_riddle_024456": "b085cc0169c462f1"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_99_boogeyman_34cb6b",
+    "fp_wrestling_mattel_elite_99_happy-corbin_f27d62",
+    "fp_wrestling_mattel_elite_99_queen-zelina_29385d",
+    "fp_wrestling_mattel_elite_99_riddle_024456"
+   ]
+  }
+ ]
 }

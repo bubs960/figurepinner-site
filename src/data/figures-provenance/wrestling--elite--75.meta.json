@@ -1,5 +1,5 @@
 {
- "md5": "EE0CCC2A5281CCD3348CA842177CC9B8",
+ "md5": "915C1B53D4CF20CEDBBF43C14AD804AE",
  "doc_count": 8,
  "source_batches": [
   "enrich-v42-batch-elite12-REPAIRED-2026-08-16.json"
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_75_hurricane_f89452": "d7c8ca9e304ae61d",
   "fp_wrestling_mattel_elite_75_the-hurricane_5e5161": "28c9dae31dd549c2",
   "fp_wrestling_mattel_elite_75_seth-rollins_00d90c": "b2805765dfd74c19"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_75_billie-kay_b2c126c03a07",
+    "fp_wrestling_mattel_elite_75_jeff-hardy_2340a6",
+    "fp_wrestling_mattel_elite_75_kalisto_7d31e2",
+    "fp_wrestling_mattel_elite_75_mandy-rose_df0cc2",
+    "fp_wrestling_mattel_elite_75_pete-dunne_a435dd",
+    "fp_wrestling_mattel_elite_75_the-hurricane_5e5161"
+   ]
+  }
+ ]
 }

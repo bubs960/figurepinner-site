@@ -1,5 +1,5 @@
 {
- "md5": "080A666968CA40B765BD34A5AAC4A565",
+ "md5": "85C7EF195F747FF9D6E3C73E2E4E0FE0",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite19-REPAIRED-2026-08-16.json"
@@ -13,5 +13,15 @@
   "fp_wrestling_mattel_elite_30_hawk_c7e1a2": "1cb0e32151df48b6",
   "fp_wrestling_mattel_elite_30_animal_0cd19d": "88ba21c0b6bec67d",
   "fp_wrestling_mattel_elite_30_lex-luger_004d73": "ee419213299793b3"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_30_animal_0cd19d",
+    "fp_wrestling_mattel_elite_30_lex-luger_004d73"
+   ]
+  }
+ ]
 }

@@ -1690,7 +1690,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Oct. 3, 1991 @ WWF Battle Royal at the Albert Hall",
+    "value": "Battle Royal at the Albert Hall, Oct. 3, 1991",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2111,11 +2111,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Stars and stripes on the tights, wrist tape and the kneepads",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2130,7 +2128,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "One of Mattel's better headsculpts that perfectly captures Luger in his smiling USA patriot days",
+    "value": "Headsculpt shows Luger smiling in his USA patriot-era look",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2156,7 +2154,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Stars and stripes on the tights, wrist tape and the kneepads",
+    "value": "Tights, wrist tape and kneepads show stars-and-stripes design",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -2165,7 +2163,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Smiling headsculpt that captures Luger in his smiling USA patriot days",
+    "value": "USA patriot-era smiling headsculpt of Luger",
     "evidence_quote_ids": [
      "f_q6"
     ],

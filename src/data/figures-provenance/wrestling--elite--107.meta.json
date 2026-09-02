@@ -1,5 +1,5 @@
 {
- "md5": "0D552ADADA45D3F11D63523E16B3576E",
+ "md5": "19D3067366CD466F73B8B717E9CD63A8",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_107_solo-sikoa_dd4424": "a637f30c71e28f69",
   "fp_wrestling_mattel_elite_107_undertaker_bbd857996203": "fd3e16f5df2bb6d1",
   "fp_wrestling_mattel_elite_107_otis_d11a78": "ef3640d55c3d70be"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_107_cora-jade_0db08a",
+    "fp_wrestling_mattel_elite_107_finn-balor_af4f4a",
+    "fp_wrestling_mattel_elite_107_otis_d11a78",
+    "fp_wrestling_mattel_elite_107_solo-sikoa_dd4424"
+   ]
+  }
+ ]
 }

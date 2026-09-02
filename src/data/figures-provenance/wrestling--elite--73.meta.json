@@ -1,5 +1,5 @@
 {
- "md5": "D3A59B3E3834BFEC723E0B2B616B6717",
+ "md5": "510EFD10EC4790BD85A30DDFC3689059",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite12-REPAIRED-2026-08-16.json",
@@ -15,5 +15,15 @@
   "fp_wrestling_mattel_elite_73_daniel-bryan_1fe62d": "eef9b2551b315599",
   "fp_wrestling_mattel_elite_73_aleister-black_f448d6": "6b83809fedac7ae8",
   "fp_wrestling_mattel_elite_73_peyton-royce_cd6916260003": "b832c42c0f664384"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_73_aleister-black_f448d6",
+    "fp_wrestling_mattel_elite_73_triple-h_830eb7"
+   ]
+  }
+ ]
 }

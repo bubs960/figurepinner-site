@@ -356,7 +356,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Purple, red and yellow singlet with skull and cross bones design; black knee pads and short black boots",
+    "value": "Singlet: purple/red/yellow with skull-and-crossbones design; black knee pads; short black boots",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -757,7 +757,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Grey, white and black ring top with black and grey ring pants with white trim",
+    "value": "Ring top in grey, white and black; ring pants in black and grey with white trim",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1245,7 +1245,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "White trunks with red Orton symbols on the sides and 'Orton' on the back",
+    "value": "White trunks bearing red Orton symbols at the sides and 'Orton' lettering on back; black wrist tape and hand wraps",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1297,7 +1297,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Additional 'Viper pose' hand accessories, a steel chair, and glasses accessories included",
+    "value": "Steel chair and glasses accessories plus 'Viper pose' hands",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -1310,7 +1310,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Additional 'Viper pose' hand accessories",
+    "value": "'Viper pose' hand accessories, additional",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -1982,7 +1982,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Bold and colorful figure, approximately 6-inches, ready to wreak havoc right out of the box",
+    "value": "Approximately 6 inches tall",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2377,7 +2377,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Interchangeable hand and neck ruff accessories",
+    "value": "Hand and neck ruff accessories, interchangeable",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -2390,7 +2390,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Interchangeable hand and neck ruff accessories",
+    "value": "Hand and neck ruff accessories, interchangeable",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -2785,7 +2785,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing, lifelike authenticity",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2793,12 +2793,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q3",
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "corroborated_exact"
    },
    {

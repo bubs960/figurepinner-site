@@ -1001,11 +1001,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories—all with amazing detail capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1019,7 +1017,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1028,7 +1026,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "25 points of deluxe articulation for multiple ways to pose and play",
+    "value": "25 points of deluxe articulation",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1041,7 +1039,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Featuring extreme articulation, unmatched attention to detail with entrance accessories.",
+    "value": "Entrance accessories included",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1423,7 +1421,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "signature face tattoos in the current 6-inch Elite scale",
+    "value": "Sculpted face tattoos; 6-inch Elite figure scale",
     "evidence_quote_ids": [
      "w_q2"
     ],

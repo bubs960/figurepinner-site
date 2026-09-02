@@ -319,12 +319,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Black-and-red pants with sculpted scales, black boots, and black armbands with brown sculpted, furry, tattered armbands",
-    "evidence_quote_ids": [
-     "f_q1",
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -341,7 +338,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Fearsome headscan with red, yellow, and black face paint",
+    "value": "Headsculpt with red, yellow and black face paint",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -362,7 +359,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Iconic worms, which can be attached to his mouth",
+    "value": "Worms accessory attaches to his mouth",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -371,7 +368,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "His famous broken clock, wooden staff, pink human heart necklace",
+    "value": "Broken clock, wooden staff, pink heart necklace accessories",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -416,7 +413,7 @@
    {
     "field_path": "included_items[3]",
     "status": "resolved",
-    "value": "Iconic worms, which can be attached to his mouth",
+    "value": "Worms accessory attaches to his mouth",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -898,7 +895,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Partially-open shirt with black-and-orange design, black slacks, and black shoes",
+    "value": "Black slacks, black shoes, and a partially-open black-and-orange patterned shirt",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2277,7 +2274,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "white top with intricate red detailing, matching tights, boots, and wrist tape",
+    "value": "Red-detailed white top, wrist tape, boots and matching tights",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -2295,7 +2292,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "brand new smiling headscan with flowing black-and-red hair and accurate tattoos",
+    "value": "Accurate tattoos; flowing black-red hair; smiling, newly sculpted headscan",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2777,7 +2774,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Red trunks with a yellow 'BRO' logo and a purple fabric 'HEY RAAANDY' shirt in honor of his RK-Bro tag team partner, Randy Orton",
+    "value": "Purple 'HEY RAAANDY' fabric shirt honoring RK-Bro partner Randy Orton",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -2818,7 +2815,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Includes his long-awaited and highly-requested scooter",
+    "value": "Scooter accessory",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2827,7 +2824,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Two sets of alternate gesture hands for expressive posing",
+    "value": "Two alternate gesture hand pairs",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2836,7 +2833,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Purple fabric 'HEY RAAANDY' shirt in honor of his RK-Bro tag team partner, Randy Orton",
+    "value": "Purple 'HEY RAAANDY' fabric shirt honoring RK-Bro partner Randy Orton",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2849,7 +2846,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "His long-awaited and highly-requested scooter",
+    "value": "Scooter",
     "evidence_quote_ids": [
      "f_q4"
     ],

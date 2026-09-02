@@ -1,5 +1,5 @@
 {
- "md5": "F3EF491377990D27F2B535FD3EB601C0",
+ "md5": "63F2D8E99A925306EDC2689F068FD68B",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite16-REPAIRED-2026-08-16.json",
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_48_erick-rowan_aedd420965ec": "6d8d989e5e8985a5",
   "fp_wrestling_mattel_elite_48_dean-ambrose_fccec5": "2d2d77f34e119456",
   "fp_wrestling_mattel_elite_48_boogeyman_bd33a5fe94d1": "413b04139bc54a18"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_48_boogeyman_bd33a5fe94d1",
+    "fp_wrestling_mattel_elite_48_cactus-jack_fe492d",
+    "fp_wrestling_mattel_elite_48_erick-rowan_aedd420965ec"
+   ]
+  }
+ ]
 }

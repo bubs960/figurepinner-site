@@ -1,5 +1,5 @@
 {
- "md5": "BCD21C78AFE13F5C22212BDFEAD4CE75",
+ "md5": "B560D9B11F5408D8909B8FCD8F001D8A",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite13-REPAIRED-2026-08-16.json",
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_70_mr-mcmahon_979aff27285b": "b8bfb58b608601ab",
   "fp_wrestling_mattel_elite_70_ec3_308262": "37fc3e271bb3406f",
   "fp_wrestling_mattel_elite_70_johnny-gargano_1c426a": "57b8a1991bf1d0d4"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_70_dolph-ziggler_52ec882cc5fd",
+    "fp_wrestling_mattel_elite_70_ec3_308262",
+    "fp_wrestling_mattel_elite_70_gerald-brisco_23db22f32375",
+    "fp_wrestling_mattel_elite_70_johnny-gargano_1c426a",
+    "fp_wrestling_mattel_elite_70_mr-mcmahon_979aff27285b",
+    "fp_wrestling_mattel_elite_70_seth-rollins_ab22e89eeb90"
+   ]
+  }
+ ]
 }

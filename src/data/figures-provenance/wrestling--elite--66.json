@@ -252,7 +252,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Red and black entrance jacket; red and black ring top, black and red ring pants, black boots",
+    "value": "Black boots; red-and-black ring pants, black-and-red ring top",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6"
@@ -662,11 +662,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "authentic ring attire and iconic accessories",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -977,7 +975,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Jan. 28, 2018 @ WWE Royal Rumble",
+    "value": "WWE Royal Rumble, Jan. 28, 2018",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1016,7 +1014,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "removable 'The House that AJ Built' shirt",
+    "value": "Shirt reading 'The House that AJ Built' (removable)",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1034,7 +1032,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "interchangeable hands with designs on his gloves",
+    "value": "Glove designs on interchangeable hands",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1047,7 +1045,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Removable 'The House that AJ Built' shirt",
+    "value": "'The House that AJ Built' shirt (removable)",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2192,11 +2190,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories-all with amazing detail capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2220,7 +2216,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing for lifelike authenticity",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2229,7 +2225,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel wrists, swivel waist, ab crunch, ball jointed hips, swivel thighs, double-hinged knees, swivel calves, hinged and rocker ankles",
+    "value": "Ball joint neck/hips; hinge shoulders; sw biceps/thighs/calves; hinge elbows; sw-hinge wrists; ab-crunch/sw waist; dbl-hinge knees",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2238,7 +2234,7 @@
    {
     "field_path": "fingerprint.packaging_style",
     "status": "resolved",
-    "value": "Standard window box as seen with other modern WWE Elite figures",
+    "value": "Standard WWE Elite window box, matching other current releases",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -2552,7 +2548,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Red, white and blue designed, molded zipper singlet with stars on the bottom and blue and white star kneepads",
+    "value": "Molded zipper singlet, red/white/blue with bottom stars; blue-and-white star kneepads",
     "evidence_quote_ids": [
      "f_q3"
     ],

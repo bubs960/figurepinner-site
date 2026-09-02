@@ -1860,7 +1860,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire pays homage to what 'The Fiend' wore at SummerSlam 2019",
+    "value": "Based on 'The Fiend' SummerSlam 2019 attire",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1873,7 +1873,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "The detail on the face is sensational and the tattoos are accurate",
+    "value": "Includes facial tattoo detailing",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1904,7 +1904,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Hair color may vary between yellow and brown",
+    "value": "Hair color varies between yellow and brown",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1912,11 +1912,9 @@
    },
    {
     "field_path": "fingerprint.known_variants[0]",
-    "status": "resolved",
-    "value": "Hair color may vary between yellow and brown",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2212,7 +2210,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Removable entrance vest, t-shirt, interchangeable gloved hands, black tights, kickpads, and adjustable knee pads.",
+    "value": "Entrance vest and t-shirt (removable), gloved hands, black tights, kickpads, knee pads",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2225,7 +2223,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Spot-on headscan complete with shoulder-length hair and a full beard.",
+    "value": "Headscan with shoulder-length hair and full beard",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -3047,7 +3045,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -3055,11 +3053,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -3078,7 +3074,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Iconic accessories with amazing detail capturing the Superstar's unique personality",
+    "value": "Includes character accessories",
     "evidence_quote_ids": [
      "f_q9"
     ],

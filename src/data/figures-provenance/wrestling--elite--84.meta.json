@@ -1,5 +1,5 @@
 {
- "md5": "9C736B91A6246AE53652DB549DB44C13",
+ "md5": "FB2572DFE05DB59CDEA037587EEA8F16",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite11-REPAIRED-2026-08-16.json",
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_84_jeff-hardy_e77002": "0f691e1d81a12808",
   "fp_wrestling_mattel_elite_84_murphy_f28dbdb09c41": "51e6cee8736d13ac",
   "fp_wrestling_mattel_elite_84_roman-reigns_541c20": "40d3e22558557694"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_84_jeff-hardy_e77002",
+    "fp_wrestling_mattel_elite_84_murphy_f28dbdb09c41",
+    "fp_wrestling_mattel_elite_84_rhea-ripley_10845a",
+    "fp_wrestling_mattel_elite_84_roman-reigns_541c20",
+    "fp_wrestling_mattel_elite_84_sheamus_deb3d3",
+    "fp_wrestling_mattel_elite_84_zelina-vega_83fbed46ea7e"
+   ]
+  }
+ ]
 }

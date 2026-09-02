@@ -1,5 +1,5 @@
 {
- "md5": "AB94E9D8FAFB2AA8D3A2117E25EE65A0",
+ "md5": "86FD7760120B8CE040EDD273B90AF130",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite8-REPAIRED-2026-08-16.json",
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_104_solo-sikoa_8b1f75": "a7a70bd04ddb21bc",
   "fp_wrestling_mattel_elite_104_rick-steiner_8b9053": "bc4fc071aa3f212a",
   "fp_wrestling_mattel_elite_104_drew-mcintyre_d09505": "5f55710fefd8726e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_104_aj-styles_0e2508",
+    "fp_wrestling_mattel_elite_104_bron-breakker_f5c0a8",
+    "fp_wrestling_mattel_elite_104_dakota-kai_ad3c18",
+    "fp_wrestling_mattel_elite_104_drew-mcintyre_d09505",
+    "fp_wrestling_mattel_elite_104_rick-steiner_8b9053",
+    "fp_wrestling_mattel_elite_104_solo-sikoa_8b1f75"
+   ]
+  }
+ ]
 }

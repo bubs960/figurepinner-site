@@ -271,7 +271,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Feb. 7, 1986 @ JCP Superstars on the Superstation",
+    "value": "Superstars on the Superstation, Feb. 7, 1986",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -288,7 +288,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "true FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing for lifelike authenticity",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -296,11 +296,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -309,11 +307,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories with amazing Detail capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q9"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -649,7 +645,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black, white and gold trim trunks, as well as long knee pads with the same color scheme and tall boots",
+    "value": "Tall boots; long knee pads matching trunks' black, white, gold-trim scheme",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -666,7 +662,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball jointed neck, ball hinged shoulders, swivel biceps, hinged elbows, swivel-hinged wrists, ab crunch, swivel waist, ball jointed hips, double-hinged knees, swivel calves, hinged and rocker ankles",
+    "value": "Articulation: neck, shoulders, biceps, elbows, wrists, ab crunch, waist, hips, knees, calves, ankles",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1027,7 +1023,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "black sleeveless shirt, black pants and laced black boots",
+    "value": "Laced black boots, black pants, black sleeveless shirt",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1055,7 +1051,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "true FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing for lifelike authenticity",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1081,7 +1077,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "black sleeveless shirt, black pants and laced black boots with black gloves",
+    "value": "Black pants, laced black boots, black sleeveless shirt",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8"
@@ -1437,11 +1433,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories with amazing Detail capturing the Superstar's unique personality.",
-    "evidence_quote_ids": [
-     "f_q7"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1811,7 +1805,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Detailed and given short brown hair, and nicely done facial details",
+    "value": "Short brown hair",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -1824,7 +1818,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball jointed head, ball hinged shoulders, swivel biceps, hinged elbows, ball jointed wrists, ab crunch, swivel waist, ball jointed hips, swivel thighs, double-hinged knees, swivel boots, hinged and rocker ankles",
+    "value": "Articulation: head, shoulders, biceps, elbows, wrists, ab crunch, waist, hips, thighs, knees, boots, ankles",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -1844,7 +1838,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Separate white scarf that is removable from around his neck, also made of fabric",
+    "value": "Fabric scarf (white, separate) that removes from the neck",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -2256,7 +2250,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Nov. 14, 2017 @ WWE SmackDown",
+    "value": "WWE SmackDown, Nov. 14, 2017",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2284,7 +2278,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing for lifelike authenticity",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2301,7 +2295,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable 'Yep! Yep! Yep!' shirt lampooning Daniel Bryan",
+    "value": "Shirt (removable, 'Yep! Yep! Yep!') spoofing Daniel Bryan",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2643,7 +2637,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "One half of his head is shaved, with his cocky scowl that he is known for",
+    "value": "Half-shaved head; known cocky scowl",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2656,7 +2650,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Head, shoulders, arms, wrists, torso, knee, ankle, thighs",
+    "value": "Articulation added at ankle, thighs, torso, wrists, arms, shoulders, knee, head",
     "evidence_quote_ids": [
      "f_q2"
     ],

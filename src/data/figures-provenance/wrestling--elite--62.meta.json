@@ -1,5 +1,5 @@
 {
- "md5": "5B84720F7EBE30114DABA9441D7A9544",
+ "md5": "A60BF7D6A93B34C4AF0280AE60D8FC6F",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json"
@@ -13,5 +13,19 @@
   "fp_wrestling_mattel_elite_62_dude-love_94df22": "2397d4b09b679d73",
   "fp_wrestling_mattel_elite_62_roman-reigns_836ce2": "075d1c5023bcc9ea",
   "fp_wrestling_mattel_elite_62_braun-strowman_c18c68": "025cf6e67715b882"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_62_akam_f3ad5b",
+    "fp_wrestling_mattel_elite_62_braun-strowman_c18c68",
+    "fp_wrestling_mattel_elite_62_dude-love_94df22",
+    "fp_wrestling_mattel_elite_62_rezar_498f93",
+    "fp_wrestling_mattel_elite_62_roman-reigns_836ce2",
+    "fp_wrestling_mattel_elite_62_sting_ba0ad4"
+   ]
+  }
+ ]
 }

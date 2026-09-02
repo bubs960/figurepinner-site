@@ -1,5 +1,5 @@
 {
- "md5": "AB799C0B50A847284D77DCF891470BB6",
+ "md5": "61A95C3608210D5FE441C30EE4434D70",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_92_ric-flair_5a4dfbef79a6": "fafa135d55e0f4a1",
   "fp_wrestling_mattel_elite_92_rey-mysterio_5bb726": "f54ff7bca9663eb2",
   "fp_wrestling_mattel_elite_92_scarlett_998335": "fc90911cd57ba31e"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_92_charlotte-flair_4b87bc",
+    "fp_wrestling_mattel_elite_92_ric-flair_5a4dfbef79a6",
+    "fp_wrestling_mattel_elite_92_scarlett_998335",
+    "fp_wrestling_mattel_elite_92_the-fiend-bray-wyatt_79fc1921b04d"
+   ]
+  }
+ ]
 }

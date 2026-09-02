@@ -1,5 +1,5 @@
 {
- "md5": "E1E3B81761790D538E87FF444BFCFBC3",
+ "md5": "DF0D1DAD62137EF93C7C553D80BB4CD8",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite17-REPAIRED-2026-08-16.json",
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_43_bret-hit-man-hart_4d641ea3897c": "2f7420c0456472da",
   "fp_wrestling_mattel_elite_43_samoa-joe_c2ff0d": "a44ac13651582850",
   "fp_wrestling_mattel_elite_43_jim-the-anvil-neidhart_6a3b7d543a79": "3a9f7fd087e77670"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_43_kevin-owens_28ea00",
+    "fp_wrestling_mattel_elite_43_kofi-kingston_27cd0f",
+    "fp_wrestling_mattel_elite_43_samoa-joe_c2ff0d"
+   ]
+  }
+ ]
 }

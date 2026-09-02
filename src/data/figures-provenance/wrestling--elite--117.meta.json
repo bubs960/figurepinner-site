@@ -1,5 +1,5 @@
 {
- "md5": "928DB55C4407533FE691C62BFF45ABCF",
+ "md5": "2FD47949AAB6E7C7D495FA77CB2277A8",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_117_grayson-waller_a0c582": "20e498594f9692a2",
   "fp_wrestling_mattel_elite_117_rhea-ripley_cd53b0": "ed44f5f464c12acf",
   "fp_wrestling_mattel_elite_117_axiom_76cb51": "66a2195de00d6641"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_117_axiom_76cb51",
+    "fp_wrestling_mattel_elite_117_grayson-waller_a0c582",
+    "fp_wrestling_mattel_elite_117_naomi_2f946b",
+    "fp_wrestling_mattel_elite_117_rhea-ripley_cd53b0",
+    "fp_wrestling_mattel_elite_117_roman-reigns_9baba3",
+    "fp_wrestling_mattel_elite_117_seth-rollins_6c6db9"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "E510AC2C8FB01322A97B527643D502B0",
+ "md5": "67C450711EE097EDEC337C74B2449F09",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite17-REPAIRED-2026-08-16.json",
@@ -14,5 +14,18 @@
   "fp_wrestling_mattel_elite_45_bubba-ray-dudley_f87fd9": "9575ac6b09740b49",
   "fp_wrestling_mattel_elite_45_seth-rollins_9d255b": "34acbd077201df48",
   "fp_wrestling_mattel_elite_45_roman-reigns_33181d": "b23375da26bda0f8"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_45_bubba-ray-dudley_f87fd9",
+    "fp_wrestling_mattel_elite_45_d-von-dudley_01855b",
+    "fp_wrestling_mattel_elite_45_narcissist-lex-luger_f40ca9eaa57a",
+    "fp_wrestling_mattel_elite_45_roman-reigns_33181d",
+    "fp_wrestling_mattel_elite_45_seth-rollins_9d255b"
+   ]
+  }
+ ]
 }

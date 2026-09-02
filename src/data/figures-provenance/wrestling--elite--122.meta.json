@@ -1,5 +1,5 @@
 {
- "md5": "9A406DED352EABFEC583905281708AE7",
+ "md5": "03ED11C1145C244C485C35600E961269",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite5-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,19 @@
   "fp_wrestling_mattel_elite_122_damian-priest_a07180854fad": "9957b8352bde5b36",
   "fp_wrestling_mattel_elite_122_brutus-creed_b4cadf524fea": "042bdcb8862c04e3",
   "fp_wrestling_mattel_elite_122_andrade_125d74": "b35f4abcab438976"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_122_andrade_125d74",
+    "fp_wrestling_mattel_elite_122_brutus-creed_b4cadf524fea",
+    "fp_wrestling_mattel_elite_122_damian-priest_a07180854fad",
+    "fp_wrestling_mattel_elite_122_iyo-sky_1905b08eba0c",
+    "fp_wrestling_mattel_elite_122_julius-creed_1fe7de2962d0",
+    "fp_wrestling_mattel_elite_122_stone-cold-steve-austin_a8fd30aa3a7e"
+   ]
+  }
+ ]
 }

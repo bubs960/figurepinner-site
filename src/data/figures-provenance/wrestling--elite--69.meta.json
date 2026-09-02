@@ -1,5 +1,5 @@
 {
- "md5": "6D161E3F4B5E9D817B8A64374608FB08",
+ "md5": "E2C49CEAEDAB2869D195C63B25696CBD",
  "doc_count": 9,
  "source_batches": [
   "enrich-v42-batch-elite13-REPAIRED-2026-08-16.json"
@@ -16,5 +16,17 @@
   "fp_wrestling_mattel_elite_69_the-miz_0019a2c20ae5": "372251c16a122252",
   "fp_wrestling_mattel_elite_69_the-rock_9c301a2d77ac": "db014638249e1d81",
   "fp_wrestling_mattel_elite_69_tommaso-ciampa_f9481e": "e2688cf23b7cad5f"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_69_ricochet_f09cd1",
+    "fp_wrestling_mattel_elite_69_sonya-deville_759228f50c2c",
+    "fp_wrestling_mattel_elite_69_the-miz_0019a2c20ae5",
+    "fp_wrestling_mattel_elite_69_tommaso-ciampa_f9481e"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "7F47428A320C442B3289D94EC96A7AB7",
+ "md5": "7C8FCA459F75FA7AC26E80259563D584",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite8-REPAIRED-2026-08-16.json",
@@ -14,5 +14,18 @@
   "fp_wrestling_mattel_elite_105_dominik-mysterio_b947d4": "93eea1ae41b33252",
   "fp_wrestling_mattel_elite_105_scott-steiner_5a7eba": "040a975e96a61e13",
   "fp_wrestling_mattel_elite_105_braun-strowman_60aa58": "e40597d12ef8b12a"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_105_braun-strowman_60aa58",
+    "fp_wrestling_mattel_elite_105_carmelo-hayes_4a0246",
+    "fp_wrestling_mattel_elite_105_dominik-mysterio_b947d4",
+    "fp_wrestling_mattel_elite_105_iyo-sky_faa185",
+    "fp_wrestling_mattel_elite_105_johnny-gargano_325279"
+   ]
+  }
+ ]
 }

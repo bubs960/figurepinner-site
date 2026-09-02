@@ -1,5 +1,5 @@
 {
- "md5": "81B902263B68F9D593D62095F4C1C0B9",
+ "md5": "06F4730FFB33E4C4CF248662A7F5D1C1",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-aew43-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,17 @@
   "fp_wrestling_jazwares_aew-unrivaled_4_matt-hardy_dca0a3": "ba13027c9ae40352",
   "fp_wrestling_jazwares_aew-unrivaled_4_kenny-omega_74d4a1": "c9ecaf293689ab5f",
   "fp_wrestling_jazwares_aew-unrivaled_4_santana_178e6c": "f67519378ba3900b"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_jazwares_aew-unrivaled_4_cody-rhodes_4231c8",
+    "fp_wrestling_jazwares_aew-unrivaled_4_kenny-omega_74d4a1",
+    "fp_wrestling_jazwares_aew-unrivaled_4_sammy-guevara_399767",
+    "fp_wrestling_jazwares_aew-unrivaled_4_santana_178e6c"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "165124BBD60A86F6E78D06FBEBA2C3B6",
+ "md5": "BED414DAEF7139DEA877B3182F4C5BF2",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite20-REPAIRED-2026-08-16.json"
@@ -13,5 +13,15 @@
   "fp_wrestling_mattel_elite_26_road-dogg_121258": "750e42bc9a392ba1",
   "fp_wrestling_mattel_elite_26_big-e-langston_bb440bdf9c33": "7983ace72f997839",
   "fp_wrestling_mattel_elite_26_roman-reigns_ed6a97": "da82f9e3a19155e4"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_26_big-e-langston_bb440bdf9c33",
+    "fp_wrestling_mattel_elite_26_mark-henry_1c0679"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "473C867BA4556ECB28C52E6250A4C9FE",
+ "md5": "212040C81EB1842D7BB681834CB9E77A",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite5-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,19 @@
   "fp_wrestling_mattel_elite_125_giulia_489630d0767e": "fe42d24948aa5b78",
   "fp_wrestling_mattel_elite_125_jacob-fatu_99d41ccec600": "0f4daf5c57ecb91b",
   "fp_wrestling_mattel_elite_125_demolition-crush_29c3a37a9e08": "70bfe5e16444b574"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_125_cody-rhodes_4b780b95829e",
+    "fp_wrestling_mattel_elite_125_demolition-crush_29c3a37a9e08",
+    "fp_wrestling_mattel_elite_125_giulia_489630d0767e",
+    "fp_wrestling_mattel_elite_125_jacob-fatu_99d41ccec600",
+    "fp_wrestling_mattel_elite_125_koko-b-ware_dc2323cdc805",
+    "fp_wrestling_mattel_elite_125_stephanie-vaquer_bb23b3ad2e0d"
+   ]
+  }
+ ]
 }

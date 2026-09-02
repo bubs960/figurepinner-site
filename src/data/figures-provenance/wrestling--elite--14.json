@@ -377,11 +377,9 @@
    },
    {
     "field_path": "included_items[0]",
-    "status": "resolved",
-    "value": "Big Boss Man - WWE Elite 14 WWE Toy Wrestling Action Figure by Mattel!",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1618,11 +1616,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "The headscan of this fig is grotesque and doesn't look like Del Rio",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1980,11 +1976,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "Highly detailed sculpting capturing Cena's signature look and features",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2343,7 +2337,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: June 30, 2006 @ WWE SmackDown",
+    "value": "SmackDown, June 30, 2006",
     "evidence_quote_ids": [
      "f_q3"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "39FD8CE73CFDCF0D9C88E1B163A54471",
+ "md5": "904BA91BFB018BD26F76FF5647305495",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite5-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,19 @@
   "fp_wrestling_mattel_elite_124_cm-punk_c31fc2c73828": "8af96946bdaee05f",
   "fp_wrestling_mattel_elite_124_lyra-valkyria_6dc356f55ebd": "d880f36ca9b92d38",
   "fp_wrestling_mattel_elite_124_rey-mysterio_2b040991acaa": "ad02d76a48ce96ec"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_124_alex-shelley_1725abbb5b12",
+    "fp_wrestling_mattel_elite_124_chris-sabin_05e8624a3264",
+    "fp_wrestling_mattel_elite_124_cm-punk_c31fc2c73828",
+    "fp_wrestling_mattel_elite_124_jey-uso_4e012c",
+    "fp_wrestling_mattel_elite_124_lyra-valkyria_6dc356f55ebd",
+    "fp_wrestling_mattel_elite_124_rey-mysterio_2b040991acaa"
+   ]
+  }
+ ]
 }

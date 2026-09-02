@@ -1,5 +1,5 @@
 {
- "md5": "6AA38615840242CBCA9210600F676118",
+ "md5": "A6B45A0032BD57512D2534AD8748D89D",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite11-REPAIRED-2026-08-16.json"
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_81_bianca-belair_786a59": "01bf5509d0f88b7b",
   "fp_wrestling_mattel_elite_81_stunning-steve-austin_e228f054b70d": "b6e7ae4925e7ced5",
   "fp_wrestling_mattel_elite_81_shinsuke-nakamur_8bbbe0": "cd37b8aeb4bf5647"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_81_angelo-dawkins_e96aaf",
+    "fp_wrestling_mattel_elite_81_mae-young_0cd3b6445725",
+    "fp_wrestling_mattel_elite_81_montez-ford_a743d5",
+    "fp_wrestling_mattel_elite_81_stunning-steve-austin_e228f054b70d"
+   ]
+  }
+ ]
 }

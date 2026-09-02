@@ -1,5 +1,5 @@
 {
- "md5": "14B5B762CAD4F51E7C994C2C22809AB2",
+ "md5": "3BEBF0249659B0CFAB7684DCD31E8C46",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite10-REPAIRED-2026-08-16.json",
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_91_sami-zayn_130a88": "ae247e54c881f9d2",
   "fp_wrestling_mattel_elite_91_kevin-owens_59fe56": "4bb298950b1971fc",
   "fp_wrestling_mattel_elite_91_austin-theory_587d36e40543": "574bf523ae0d4d46"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_91_bianca-belair_58a215",
+    "fp_wrestling_mattel_elite_91_hulk-hogan_273318",
+    "fp_wrestling_mattel_elite_91_kevin-owens_59fe56",
+    "fp_wrestling_mattel_elite_91_sami-zayn_130a88"
+   ]
+  }
+ ]
 }

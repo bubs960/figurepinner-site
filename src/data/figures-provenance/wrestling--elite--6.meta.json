@@ -1,5 +1,5 @@
 {
- "md5": "0D8B22D85BAF15213A6BB2A5B06B1B2C",
+ "md5": "3DD37C89D627CAB2F3E70571949BD867",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite23-REPAIRED-2026-08-16.json",
@@ -14,5 +14,14 @@
   "fp_wrestling_mattel_elite_6_goldust_65269c": "6d4ec2bf92ceb2f8",
   "fp_wrestling_mattel_elite_6_cm-punk_d39907": "c6ead921ab7ff087",
   "fp_wrestling_mattel_elite_6_batista_156f3c": "c9b65633afaf0bc1"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_6_jtg_1896b6"
+   ]
+  }
+ ]
 }

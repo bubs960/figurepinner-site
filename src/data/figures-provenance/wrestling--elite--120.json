@@ -238,7 +238,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: July 7, 2024 @ NXT Heatwave",
+    "value": "NXT Heatwave, July 7, 2024",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -255,7 +255,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "TrueFX technology for exceptional facial and body realism",
+    "value": "TrueFX technology delivering facial and body realism",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -271,11 +271,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Authentic ring gear with true-to-life accessories, capturing iconic WWE moments.",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -583,7 +581,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Oct. 5, 2024 @ WWE Bad Blood",
+    "value": "WWE Bad Blood, Oct. 5, 2024",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -868,7 +866,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "New figure featuring a determined headsculpt",
+    "value": "Determined-expression headsculpt, new figure",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -907,7 +905,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Red Knight rear print and front helmet logo on trunks",
+    "value": "Trunks with red Knight print on rear, helmet logo on front",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -938,7 +936,7 @@
    {
     "field_path": "included_items[2]",
     "status": "resolved",
-    "value": "Additional pair of hands for screen-accurate poses",
+    "value": "Extra pair of hands, screen-accurate poses",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1277,7 +1275,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black-and-white striped pants, black boots, sleeveless maroon fabric shirt, and sleeveless blue plaid shirt",
+    "value": "Black-white striped pants, black boots; maroon sleeveless shirt, blue plaid sleeveless shirt",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1286,7 +1284,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Maniacal grinning headscan featuring long hair and a shaggy beard",
+    "value": "Grinning maniacal headscan: long hair, shaggy beard",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1307,7 +1305,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Additional pair of hands and Huskus the Pig mask",
+    "value": "Huskus the Pig mask, plus extra hand pair",
     "evidence_quote_ids": [
      "f_q10"
     ],

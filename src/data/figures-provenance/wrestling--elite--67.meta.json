@@ -1,5 +1,5 @@
 {
- "md5": "2027B63394FD75860BEE48B2F019137D",
+ "md5": "AB273A1E0759D73E502F77A1C0AD5007",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite13-REPAIRED-2026-08-16.json",
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_67_cedric-alexander_fe0f5a": "59d62ea24d40ba35",
   "fp_wrestling_mattel_elite_67_jeff-hardy_b8989d": "0bd3cc41dda5f0c8",
   "fp_wrestling_mattel_elite_67_rey-mysterio_777606": "34a539b80709dd87"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_67_cedric-alexander_fe0f5a",
+    "fp_wrestling_mattel_elite_67_jeff-hardy_b8989d",
+    "fp_wrestling_mattel_elite_67_rey-mysterio_777606"
+   ]
+  }
+ ]
 }

@@ -338,7 +338,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Includes interchangeable hands and accessories",
+    "value": "Interchangeable hands and accessories included",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -670,7 +670,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Nov. 13, 1997 @ WWF Shotgun Saturday Night",
+    "value": "WWF Shotgun Saturday Night, Nov. 13, 1997",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1060,11 +1060,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "The gloves are still inaccurate, but in a different way",
-    "evidence_quote_ids": [
-     "f_q9"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {

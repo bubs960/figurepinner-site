@@ -1,5 +1,5 @@
 {
- "md5": "740A4217F9D5467CABB5A3B78DF23D64",
+ "md5": "4D541C158D2017B25A6EE27B402DC15B",
  "doc_count": 5,
  "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -10,5 +10,17 @@
   "fp_wrestling_mattel_elite_118_nia-jax_f5cd50": "f49f465a75d7751a",
   "fp_wrestling_mattel_elite_118_tama-tonga_ad26f1": "dcf9f9c1fa490f6c",
   "fp_wrestling_mattel_elite_118_jacob-fatu_3c7a4f": "8ab9e947314b3819"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_118_jacob-fatu_3c7a4f",
+    "fp_wrestling_mattel_elite_118_nia-jax_f5cd50",
+    "fp_wrestling_mattel_elite_118_solo-sikoa_a7c10a",
+    "fp_wrestling_mattel_elite_118_tama-tonga_ad26f1"
+   ]
+  }
+ ]
 }

@@ -338,7 +338,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black jacket and a white and black 'Wyatt Family' shirt, black ring pants cover his brown boots",
+    "value": "'Wyatt Family' shirt, white and black, with black jacket",
     "evidence_quote_ids": [
      "f_q6",
      "f_q7"
@@ -375,7 +375,7 @@
    {
     "field_path": "fingerprint.packaging_style",
     "status": "resolved",
-    "value": "A talent-specific backdrop in the package featuring highly detailed creative artwork by Rob Schamberger",
+    "value": "Package backdrop, talent-specific, featuring detailed artwork by Rob Schamberger",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -384,7 +384,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "A lantern to light his way through the spooky darkness",
+    "value": "Lantern accessory",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -675,7 +675,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Sept. 13, 2016 @ WWE SmackDown",
+    "value": "SmackDown, Sept. 13, 2016",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -708,11 +708,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Authentic ring attire and iconic accessories",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1100,7 +1098,7 @@
    {
     "field_path": "fingerprint.packaging_style",
     "status": "resolved",
-    "value": "comes with a talent-specific backdrop in the package featuring highly detailed creative artwork by WWE fan favorite artist, Rob Schamberger, and collectors can piece together each backdrop to create an entire diorama",
+    "value": "Backdrops piece together into a diorama; talent-specific package art by Rob Schamberger",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1471,11 +1469,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Capture the blowout action of WWE Superstars with this Elite Collection figure! Featuring one of the WWE's biggest personalities and champions, this bold and colorful figure comes ready to wreak havoc right out of the box!",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1876,7 +1872,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black and green 'wing tipped' trunks with 'J III' and 'Rich Swann' on them, black and green boots",
+    "value": "Boots in black and green; trunks (black, green, 'wing tipped') printed 'J III' and 'Rich Swann'",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1906,7 +1902,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "White and silver entrance jacket accessory",
+    "value": "Entrance jacket accessory in white and silver",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -1928,7 +1924,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "White and silver entrance jacket accessory",
+    "value": "Entrance jacket accessory in white and silver",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2316,7 +2312,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Sept. 13, 2016 @ WWE SmackDown",
+    "value": "SmackDown, Sept. 13, 2016",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2364,7 +2360,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "accurate tattoos beneath his removable white vest",
+    "value": "Removable white vest hides tattoos underneath",
     "evidence_quote_ids": [
      "f_q7"
     ],

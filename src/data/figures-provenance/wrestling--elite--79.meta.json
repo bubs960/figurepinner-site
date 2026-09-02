@@ -1,5 +1,5 @@
 {
- "md5": "9EFF757A33D1B74B1FED02694402D980",
+ "md5": "67F8EAAA13C305A969BDA56904541534",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite11-REPAIRED-2026-08-16.json",
@@ -15,5 +15,17 @@
   "fp_wrestling_mattel_elite_79_io-shirai_c9a153d46af7": "35c3a8d106a487e4",
   "fp_wrestling_mattel_elite_79_roman-reigns_7dc894": "96a8bb65bb052f06",
   "fp_wrestling_mattel_elite_79_undertaker_fb80c7a21835": "9e8f85ca25ccbf8b"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_79_bobby-fish_aa31c0",
+    "fp_wrestling_mattel_elite_79_daniel-bryan_9160e00685f9",
+    "fp_wrestling_mattel_elite_79_roman-reigns_7dc894",
+    "fp_wrestling_mattel_elite_79_undertaker_fb80c7a21835"
+   ]
+  }
+ ]
 }

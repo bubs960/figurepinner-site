@@ -209,11 +209,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "scruffy beard, 'R' arm bands, and an incredibly detailed red singlet with an R in the front and white and black designs. He is also wearing black knee pads, gloves, and boots",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1151,7 +1149,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Skeletal mask and ring design with black and white Mexican-style \"bones,\" with a smattering of orange",
+    "value": "Skeletal-bones mask design, black and white, with orange accents",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1181,7 +1179,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Skeletal mask and ring design with black and white Mexican-style \"bones\" and a smattering of orange",
+    "value": "Black-and-white skeletal 'bones' mask with orange accents",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1515,11 +1513,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "Black elbow pads and a pink, white and black ring top with painted-stitching ring pants",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1550,7 +1546,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Black elbow pads with a pink, white and black ring top; ring pants have painted stitching on the sides",
+    "value": "Pink, white and black ring top; black elbow pads; painted-stitch ring pants",
     "evidence_quote_ids": [
      "f_q6"
     ],

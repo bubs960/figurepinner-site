@@ -343,7 +343,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Molded blonde hair and removable sunglasses, removable 'Nasty Boys' entrance coat",
+    "value": "Blonde molded hair, removable sunglasses; 'Nasty Boys' coat included, removable",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -352,7 +352,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Red, white and yellow 'Nasty Boys' entrance gear",
+    "value": "'Nasty Boys' gear in red, white, and yellow",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -863,7 +863,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "comes with a mask, molded ring gear and accurate tattoos",
+    "value": "Molded ring gear, mask, and accurate tattoos included",
     "evidence_quote_ids": [
      "w_q9"
     ],
@@ -889,7 +889,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Lateral ankle rockers, hinged ankles, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, mid-torso hinge, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head.",
+    "value": "Joints: hinged ankles w/ lateral rockers, boot swivels, knees, thighs, hips, waist, mid-torso hinge, shoulders, biceps, elbows, wrists, head",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -902,7 +902,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Face mask which mostly goes over his mouth",
+    "value": "Face mask covers mostly the mouth area",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1763,7 +1763,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Blue and white flame designs throughout his gear",
+    "value": "Blue and white flame pattern throughout his gear",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1775,17 +1775,15 @@
    },
    {
     "field_path": "fingerprint.face_technology",
-    "status": "resolved",
-    "value": "The right eye doesn't seem to be painted correctly and looks a little bit wonky",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Lateral ankle rockers, hinged ankles, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, mid-torso hinge, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head",
+    "value": "Joints: hinged ankles w/ lateral rockers, boot swivels, knees, thighs, hips, waist, mid-torso hinge, shoulders, biceps, elbows, wrists, head",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1806,11 +1804,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Far more intricate than we're accustomed to seeing on a mass market figure",
-    "evidence_quote_ids": [
-     "f_q9"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2263,7 +2259,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Bright purple trunks; purple and white stripes on his boots; purple color this is molded in and the black and white logo",
+    "value": "Molded purple color; black-and-white logo",
     "evidence_quote_ids": [
      "f_q7",
      "f_q6",
@@ -2287,7 +2283,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Lateral ankle rockers, hinged ankles, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, mid-torso hinge, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head",
+    "value": "Joints: hinged ankles w/ lateral rockers, boot swivels, knees, thighs, hips, waist, mid-torso hinge, shoulders, biceps, elbows, wrists, head",
     "evidence_quote_ids": [
      "f_q10"
     ],

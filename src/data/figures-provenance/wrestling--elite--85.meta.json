@@ -1,5 +1,5 @@
 {
- "md5": "322083FC349FEE78C810AAC99A809D58",
+ "md5": "89975D570E423A9671AF49A2B40F695D",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite10-REPAIRED-2026-08-16.json"
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_85_kama-mustafa_aee2d4150199": "380f5d534a09dc40",
   "fp_wrestling_mattel_elite_85_undertaker_b6538d": "2b788e9ff58fd275",
   "fp_wrestling_mattel_elite_85_liv-morgan_a01a6b": "7d8d47cd50e0d778"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_85_aleister-black_78030f",
+    "fp_wrestling_mattel_elite_85_becky-lynch_08cde5",
+    "fp_wrestling_mattel_elite_85_bray-wyatt_c60620",
+    "fp_wrestling_mattel_elite_85_kama-mustafa_aee2d4150199",
+    "fp_wrestling_mattel_elite_85_karrion-kross_eff4c8",
+    "fp_wrestling_mattel_elite_85_liv-morgan_a01a6b"
+   ]
+  }
+ ]
 }

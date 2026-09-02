@@ -1,5 +1,5 @@
 {
- "md5": "92649A0B54856FC67B173A37DD05CC4D",
+ "md5": "422DF5D8D2BF4A09FC0BDB456FAB414D",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite7-REPAIRED-2026-08-15.json",
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_113_trick-williams_c085ff": "0ba25cf081c82f62",
   "fp_wrestling_mattel_elite_113_kofi-kingston_7c6d90": "69e3c8b411878e63",
   "fp_wrestling_mattel_elite_113_carlito_d4b891": "2785b72b85136a40"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_113_carlito_d4b891",
+    "fp_wrestling_mattel_elite_113_cm-punk_56aaad",
+    "fp_wrestling_mattel_elite_113_dragon-lee_acd30b",
+    "fp_wrestling_mattel_elite_113_kofi-kingston_7c6d90",
+    "fp_wrestling_mattel_elite_113_tiffany-stratton_b8e8cc",
+    "fp_wrestling_mattel_elite_113_trick-williams_c085ff"
+   ]
+  }
+ ]
 }

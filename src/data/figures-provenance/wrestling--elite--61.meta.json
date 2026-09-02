@@ -1,5 +1,5 @@
 {
- "md5": "75837406EBE709DCEDCE9B147D2EF3DB",
+ "md5": "7E69911F2C12AAA989E849AFEF9E6070",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json",
@@ -16,5 +16,19 @@
   "fp_wrestling_mattel_elite_61_aj-styles_38b45f": "c24e3eb0ce8b0cf4",
   "fp_wrestling_mattel_elite_61_tyler-breeze_99b59a": "acac3f44dc32e681",
   "fp_wrestling_mattel_elite_61_kevin-owens_270018": "a866a112a087b6fb"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_61_aj-styles_38b45f",
+    "fp_wrestling_mattel_elite_61_big-e_cc510026d852",
+    "fp_wrestling_mattel_elite_61_fandango_e9c5ca",
+    "fp_wrestling_mattel_elite_61_kevin-owens_270018",
+    "fp_wrestling_mattel_elite_61_shane-mcmahon_be53ba2d1349",
+    "fp_wrestling_mattel_elite_61_tyler-breeze_99b59a"
+   ]
+  }
+ ]
 }

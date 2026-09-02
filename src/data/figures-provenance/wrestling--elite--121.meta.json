@@ -1,5 +1,5 @@
 {
- "md5": "C2D683D6633D080D00E87CBEC8EE6741",
+ "md5": "182B160494C0EE14841A74A7B436629E",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,19 @@
   "fp_wrestling_mattel_elite_121_alba-fyre_cf5177f6d2e5": "011edc9cbe93523f",
   "fp_wrestling_mattel_elite_121_oba-femi_497e9371b768": "43a700bbaaefd01b",
   "fp_wrestling_mattel_elite_121_carmelo-hayes_0497bd73e7c7": "d70675f9671954b3"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_121_alba-fyre_cf5177f6d2e5",
+    "fp_wrestling_mattel_elite_121_austin-theory_eda04ce9edfb",
+    "fp_wrestling_mattel_elite_121_carmelo-hayes_0497bd73e7c7",
+    "fp_wrestling_mattel_elite_121_cm-punk_b7b245",
+    "fp_wrestling_mattel_elite_121_gunther_484a2b0f51c4",
+    "fp_wrestling_mattel_elite_121_oba-femi_497e9371b768"
+   ]
+  }
+ ]
 }

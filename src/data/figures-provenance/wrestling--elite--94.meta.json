@@ -1,5 +1,5 @@
 {
- "md5": "EEEA93EB1546ADA3D3BCFDA48681F431",
+ "md5": "855AD6D50EC6807DF3DB56BD0F90CF56",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite9-REPAIRED-2026-08-16.json",
@@ -15,5 +15,19 @@
   "fp_wrestling_mattel_elite_94_edge_d5ad31": "f689b143dc43d695",
   "fp_wrestling_mattel_elite_94_mace_8b30b35b06b6": "d212eae02f1f7ea9",
   "fp_wrestling_mattel_elite_94_stephanie-mcmaho_570466": "ad86339093f919a1"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_94_british-bulldog_f3743a",
+    "fp_wrestling_mattel_elite_94_edge_d5ad31",
+    "fp_wrestling_mattel_elite_94_mace_8b30b35b06b6",
+    "fp_wrestling_mattel_elite_94_nash-carter_091aba",
+    "fp_wrestling_mattel_elite_94_stephanie-mcmaho_570466",
+    "fp_wrestling_mattel_elite_94_wes-lee_0d428f300b4d"
+   ]
+  }
+ ]
 }

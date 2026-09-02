@@ -1,5 +1,5 @@
 {
- "md5": "667E039123FB8A5E0DE79DCEC51D2B56",
+ "md5": "B697219E9C02AD8F154ABCE81C065713",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite22-REPAIRED-2026-08-16.json",
@@ -14,5 +14,16 @@
   "fp_wrestling_mattel_elite_15_rey-mysterio_170dc0": "59f4b6c465eedf2e",
   "fp_wrestling_mattel_elite_15_r-truth_193520": "4f8ef6202aa327b4",
   "fp_wrestling_mattel_elite_15_yokozuna_237d26": "559c19d716c63534"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_15_mark-henry_f69695",
+    "fp_wrestling_mattel_elite_15_r-truth_193520",
+    "fp_wrestling_mattel_elite_15_yokozuna_237d26"
+   ]
+  }
+ ]
 }

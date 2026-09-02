@@ -1,5 +1,5 @@
 {
- "md5": "E2DFD283276A42727431AB848AA557C0",
+ "md5": "B8BE71154FA43AAED87FB8E27296437D",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite15-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_56_gentleman-jack-gallagher_a4b492346402": "fe3370d8a639744f",
   "fp_wrestling_mattel_elite_56_roman-reigns_bb6158": "5b1b78f91d952136",
   "fp_wrestling_mattel_elite_56_luke-gallows_f2051d": "f6ac93775581c529"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_56_aj-styles_dba9e1",
+    "fp_wrestling_mattel_elite_56_karl-anderson_5380a8",
+    "fp_wrestling_mattel_elite_56_luke-gallows_f2051d",
+    "fp_wrestling_mattel_elite_56_samoa-joe_ed644f"
+   ]
+  }
+ ]
 }

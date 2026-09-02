@@ -1,5 +1,5 @@
 {
- "md5": "AD70FA88038EF08466B778EF312F0643",
+ "md5": "5D41BEB0C7DAC115C41505C84F49EB98",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite11-REPAIRED-2026-08-16.json"
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_82_rob-gronkowski_1555ab31dbb7": "c256c292b2ce32ed",
   "fp_wrestling_mattel_elite_82_jerry-the-king-lawler_851b429149f0": "66a5a1aa41c16150",
   "fp_wrestling_mattel_elite_82_keith-lee_ffc581": "b9ad123002efb94a"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_82_alexa-bliss_e212e9",
+    "fp_wrestling_mattel_elite_82_davey-boy-smith_4116ea19f6cb",
+    "fp_wrestling_mattel_elite_82_john-morrison_ac13f7",
+    "fp_wrestling_mattel_elite_82_keith-lee_ffc581"
+   ]
+  }
+ ]
 }

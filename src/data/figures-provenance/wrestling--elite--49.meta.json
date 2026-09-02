@@ -1,5 +1,5 @@
 {
- "md5": "E2E9E2670E979C468F5E44108CC71832",
+ "md5": "D935A713BEF46DDA97ACEB548761CD55",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite16-REPAIRED-2026-08-16.json",
@@ -15,5 +15,18 @@
   "fp_wrestling_mattel_elite_49_enzo-amore_7c918b": "69f1fadea8172e28",
   "fp_wrestling_mattel_elite_49_big-cass_c48e36": "1d370c0ff7b76ff4",
   "fp_wrestling_mattel_elite_49_randy-orton_ffdd99784236": "d71ed5e693c3d470"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_49_becky-lynch_11b8db",
+    "fp_wrestling_mattel_elite_49_big-cass_c48e36",
+    "fp_wrestling_mattel_elite_49_brutus-the-barbe_db3e37",
+    "fp_wrestling_mattel_elite_49_enzo-amore_7c918b",
+    "fp_wrestling_mattel_elite_49_randy-orton_ffdd99784236"
+   ]
+  }
+ ]
 }

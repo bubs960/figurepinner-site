@@ -1,5 +1,5 @@
 {
- "md5": "D44DC6C051877133C13CF5EE20E2F2F6",
+ "md5": "19B6BB536FEAAE7F1154ACDA71122721",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite21-REPAIRED-2026-08-16.json"
@@ -13,5 +13,17 @@
   "fp_wrestling_mattel_elite_19_kane_cdc70c": "5463974c5be8b8b6",
   "fp_wrestling_mattel_elite_19_daniel-bryan_927fbb": "5e06d3dee1f072f7",
   "fp_wrestling_mattel_elite_19_brock-lesnar_8c28bccb89b7": "c45f9f218a949b88"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_19_brock-lesnar_8c28bccb89b7",
+    "fp_wrestling_mattel_elite_19_dolph-ziggler_d3ec79",
+    "fp_wrestling_mattel_elite_19_miss-elizabeth_5ef400",
+    "fp_wrestling_mattel_elite_19_shawn-michaels_60ceac"
+   ]
+  }
+ ]
 }

@@ -616,7 +616,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Aug. 10, 1996 @ WCW Hog Wild",
+    "value": "WCW Hog Wild, Aug. 10, 1996",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1851,11 +1851,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "features authentic ring gear and accessories",
-    "evidence_quote_ids": [
-     "f_q10"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {

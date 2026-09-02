@@ -1,5 +1,5 @@
 {
- "md5": "AEBC646118F9C0466D58DEB395B42C1B",
+ "md5": "8BBED751896B603C81096C4C6693B684",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json",
@@ -15,5 +15,20 @@
   "fp_wrestling_mattel_elite_63_bob-backlund_bec51e01a881": "320fddc32472f1cd",
   "fp_wrestling_mattel_elite_63_sami-zayn_7524fbdcdc71": "dfe972e3a692c5ea",
   "fp_wrestling_mattel_elite_63_shinsuke-nakamur_2e2d25": "23698d9ae410d113"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_63_bob-backlund_bec51e01a881",
+    "fp_wrestling_mattel_elite_63_dean-ambrose_790b89",
+    "fp_wrestling_mattel_elite_63_dusty-rhodes_726cf8",
+    "fp_wrestling_mattel_elite_63_kane_79bbe12b01c0",
+    "fp_wrestling_mattel_elite_63_sami-zayn_7524fbdcdc71",
+    "fp_wrestling_mattel_elite_63_shelton-benjamin_f8213d",
+    "fp_wrestling_mattel_elite_63_shinsuke-nakamur_2e2d25"
+   ]
+  }
+ ]
 }

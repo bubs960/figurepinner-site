@@ -220,11 +220,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "Most accurate headscan ever with perfect hairstyle",
-    "evidence_quote_ids": [
-     "f_q1"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -242,7 +240,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Includes a \"Real Mega Dad of the Year\" sign from the New Day's epic feud with the Prime Time Players",
+    "value": "New Day vs. Prime Time Players feud sign reading 'Real Mega Dad of the Year'",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -571,7 +569,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black, grey and white ring shorts that say 'fight' on the bottom, and a 'KO' shirt with 'Fight Owens Fight' on the back",
+    "value": "Shirt reads 'KO' and 'Fight Owens Fight' on back; ring shorts black, grey, white with 'fight' text at bottom",
     "evidence_quote_ids": [
      "f_q6",
      "f_q7"
@@ -611,7 +609,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "'KO' shirt with 'Fight Owens Fight' on the back",
+    "value": "Shirt reads 'KO' and 'Fight Owens Fight' on back",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -620,7 +618,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Black, grey and white ring shorts that say 'fight' on the bottom",
+    "value": "Ring shorts in black, grey, white with 'fight' text at bottom",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1836,7 +1834,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "neck, ball-jointed shoulders, bicep, elbow, wrist, wrist hinge, torso, waist, hip, thigh, knee (double-jointed), shin, ankle",
+    "value": "Ankle, shin, double-jointed knee, thigh, hip, waist, torso, wrist hinge, wrist, elbow, bicep, ball-jointed shoulders, neck",
     "evidence_quote_ids": [
      "f_q7"
     ],

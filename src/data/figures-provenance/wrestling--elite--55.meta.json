@@ -1,5 +1,5 @@
 {
- "md5": "9574A34E92787CB15E2C0C75DFCB9B57",
+ "md5": "82F2F8794009E6D56E734DC6A577588E",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite15-REPAIRED-2026-08-16.json"
@@ -13,5 +13,16 @@
   "fp_wrestling_mattel_elite_55_james-ellsworth_66cf80": "3b458cb125bf1e7e",
   "fp_wrestling_mattel_elite_55_neville_a87475": "7067b23970ca0149",
   "fp_wrestling_mattel_elite_55_undertaker_25ad38": "7ee56ee4a0fbb265"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_55_enzo-amore_fc885e",
+    "fp_wrestling_mattel_elite_55_james-ellsworth_66cf80",
+    "fp_wrestling_mattel_elite_55_neville_a87475"
+   ]
+  }
+ ]
 }

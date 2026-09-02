@@ -1,5 +1,5 @@
 {
- "md5": "5549E6B00BDD9A6674B03B2DD26258C2",
+ "md5": "20314400849916CB28AF9801D2A85525",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite14-REPAIRED-2026-08-16.json",
@@ -15,5 +15,18 @@
   "fp_wrestling_mattel_elite_64_jimmy-uso_11fcc3": "38112f781204659a",
   "fp_wrestling_mattel_elite_64_seth-rollins_c155b0": "36b216df8e2fc849",
   "fp_wrestling_mattel_elite_64_pete-dunne_5b5c54": "0e984c8d2d51aff7"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_64_curt-hawkins_863d64",
+    "fp_wrestling_mattel_elite_64_jimmy-uso_11fcc3",
+    "fp_wrestling_mattel_elite_64_john-cena_d3d92d0f1960",
+    "fp_wrestling_mattel_elite_64_pete-dunne_5b5c54",
+    "fp_wrestling_mattel_elite_64_samoa-joe_a7665198d372"
+   ]
+  }
+ ]
 }

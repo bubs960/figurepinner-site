@@ -1,5 +1,5 @@
 {
- "md5": "BADF316FD82B9A222AD69C31D8C99E84",
+ "md5": "D07AB180CD72F2A9396001F763443162",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
  "poured_at": "2026-08-15",
@@ -11,5 +11,18 @@
   "fp_wrestling_mattel_elite_116_lexis-king_8c81d0": "abf65d33be573cab",
   "fp_wrestling_mattel_elite_116_jade-cargill_dd785b": "6f608d66c3e44cfa",
   "fp_wrestling_mattel_elite_116_randy-orton_ff5622": "17b39a7720bfbcba"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_116_aj-styles_f185bf",
+    "fp_wrestling_mattel_elite_116_brian-pillman_3d8315",
+    "fp_wrestling_mattel_elite_116_jade-cargill_dd785b",
+    "fp_wrestling_mattel_elite_116_kevin-owens_83fab3",
+    "fp_wrestling_mattel_elite_116_lexis-king_8c81d0"
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "md5": "34DEB648D9E7BC082AD91D5E96987AF9",
+ "md5": "D1DA3E8B7CCDA2685D0DC55EAFB496B6",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite21-REPAIRED-2026-08-16.json",
@@ -14,5 +14,14 @@
   "fp_wrestling_mattel_elite_18_undertaker_f5267d": "a2ae0f34d593313a",
   "fp_wrestling_mattel_elite_18_rey-mysterio_4e1645": "8922bb88f04a4f46",
   "fp_wrestling_mattel_elite_18_sin-cara_f6b078": "afb44bf2075e01ad"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_18_rey-mysterio_4e1645"
+   ]
+  }
+ ]
 }

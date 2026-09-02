@@ -1,5 +1,5 @@
 {
- "md5": "406BA90FC4E8338CD3D386C468F3F73F",
+ "md5": "36158F69264123B6EE071A915B0F5EBE",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite19-REPAIRED-2026-08-16.json"
@@ -13,5 +13,15 @@
   "fp_wrestling_mattel_elite_28_big-show_572560": "3fafa4f3ea459fa2",
   "fp_wrestling_mattel_elite_28_john-cena_9edde3": "bfd6906bb9b727de",
   "fp_wrestling_mattel_elite_28_triple-h_3032e9": "78379cb5855e63cd"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_28_bray-wyatt_e98369",
+    "fp_wrestling_mattel_elite_28_demolition-crush_7547df72d75f"
+   ]
+  }
+ ]
 }

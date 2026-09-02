@@ -479,11 +479,9 @@
   "claims": [
    {
     "field_path": "fingerprint.attire_reference",
-    "status": "resolved",
-    "value": "authentic ring attire and iconic accessories",
-    "evidence_quote_ids": [
-     "f_q1"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2164,7 +2162,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Apr. 5, 2009 @ WWE WrestleMania 25; June 7, 2009 @ Extreme Rules",
+    "value": "WrestleMania 25, Apr. 5, 2009; Extreme Rules, June 7, 2009",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -4667,7 +4665,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Face is dead on accurate; faux hawk with three lines shaved into the side of the head",
+    "value": "Three shaved lines forming a faux hawk on the side of the head",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -4706,7 +4704,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Faux hawk with three lines shaved into the side of the head",
+    "value": "Side of the head has a faux hawk with three shaved lines",
     "evidence_quote_ids": [
      "f_q8"
     ],

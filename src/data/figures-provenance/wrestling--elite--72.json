@@ -315,7 +315,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Red, black and white 'Batista' ring trunks, black knee pads, red boots, black elbow pads, accurate tattoos",
+    "value": "Trunks red/black/white 'Batista'; black knee pads; red boots; black elbow pads; tattoos",
     "evidence_quote_ids": [
      "f_q1",
      "f_q4"
@@ -759,7 +759,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "The smiling headsculpt is perfect and just feels authentic, a really, really great likeness",
+    "value": "Smiling expression",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6"
@@ -1189,7 +1189,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "White wrist tape with red, white and black designed ring tights; white and red knee pads; white boots with kick pads",
+    "value": "Wrist tape white; ring tights red/white/black pattern",
     "evidence_quote_ids": [
      "f_q3",
      "f_q4"
@@ -2437,7 +2437,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "New, open hands molded to look like his unique gloves",
+    "value": "Open hands newly molded, shaped like his signature gloves",
     "evidence_quote_ids": [
      "w_q10"
     ],
@@ -2445,11 +2445,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2888,7 +2886,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "First WWE Elite female figure with swappable hands and double-jointed knees",
+    "value": "First female WWE Elite figure featuring swappable hands, double-jointed knees",
     "evidence_quote_ids": [
      "w_q9"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "CD6FC812EE622D03AE3FCCE529E7FD1D",
+ "md5": "477BF58351BD2310F9C17B019D31CB50",
  "doc_count": 8,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -13,5 +13,21 @@
   "fp_gi-joe_hasbro_classified-series_60th-anniversary_search-rescue-firefighter_0188b8": "1d67637dbbbb402c",
   "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-special-forces_07c66b": "ea7462cd90d5b1dd",
   "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-jumper_cdc0fb": "c9e8456ae3764338"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-marine-sniper_233267",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-high-altitude-low-opening-jumper_3c2542",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-pilot-halo-jumper_cdc0fb",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-sailor-recon-diver_f75400",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-infantry_7c7ca9",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_action-soldier-special-forces_07c66b",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_police-emergency-service-unit_8e0b2a",
+    "fp_gi-joe_hasbro_classified-series_60th-anniversary_search-rescue-firefighter_0188b8"
+   ]
+  }
+ ]
 }

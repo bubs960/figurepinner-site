@@ -134,7 +134,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Trademark suspenders, tie, and suitcase accessory",
+    "value": "Suspenders, tie, and suitcase accessory, all included",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -803,7 +803,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Even with the wider body mold, Umaga has the same articulation we've come to expect with the Elite line",
+    "value": "Wider body mold than standard Elite figures",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -824,11 +824,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "It wraps around him well and fastens reasonably snug around his waist",
-    "evidence_quote_ids": [
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1303,7 +1301,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "A more toned down hairstyle similar to how Rude had it during the original Survivor Series, without his signature kissy face expression",
+    "value": "Hairstyle modeled on his original Survivor Series look; no signature kissy-face expression",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8"

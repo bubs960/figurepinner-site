@@ -644,7 +644,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Nov. 18, 2012 @ WWE Survivor Series",
+    "value": "Survivor Series, Nov. 18, 2012",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -683,7 +683,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "a removable Celtic cross and gold Celtic cross t-shirt",
+    "value": "Removable Celtic cross pendant; gold Celtic-cross t-shirt",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -696,7 +696,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Removable Celtic cross and gold Celtic cross t-shirt",
+    "value": "Celtic cross pendant, gold Celtic-cross t-shirt",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2164,7 +2164,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "perfect headscan representing his career pique, painted chest and arm hair",
+    "value": "Headscan captures his career pique; chest and arm hair painted",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2199,11 +2199,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {

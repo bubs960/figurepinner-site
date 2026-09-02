@@ -267,7 +267,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "purple, white and silver drape and ring gear with removable purple and silver ring entrance cape",
+    "value": "Ring gear and drape in purple, white, silver; removable purple/silver entrance cape",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2"
@@ -286,12 +286,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "New headscan; this head sculpt perfectly captures that overconfident demeanor",
-    "evidence_quote_ids": [
-     "f_q3",
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "corroborated_exact"
    },
    {
@@ -331,7 +328,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Removable purple and silver ring entrance cape",
+    "value": "Purple/silver entrance cape (removable)",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -986,7 +983,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Molded 'Dudley - 3D - Get The Tables' shirt",
+    "value": "Shirt text molded: 'Dudley - 3D - Get The Tables'",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1038,7 +1035,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Molded 'Dudley - 3D - Get The Tables' shirt",
+    "value": "Molded chest text: 'Dudley - 3D - Get The Tables'",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1399,11 +1396,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[2]",
-    "status": "resolved",
-    "value": "butt kickin' boots for the debut Elite Bubba Ray figure",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1814,7 +1809,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Lateral ankle rockers, hinged ankles, boot swivels, double hinged knees, swivel thighs, ball jointed hips, swivel waist, mid-torso hinge, swivel/hinge shoulders, swivel biceps, hinged elbows, swivel/hinge wrists, and a ball jointed head",
+    "value": "Ankle rockers, ankles, boot swivels, double knees, thighs, ball hips, waist, torso hinge, shoulders, biceps, elbows, wrists, ball head",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -1840,7 +1835,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "WWE World Heavyweight Championship title",
+    "value": "Title: WWE World Heavyweight Championship",
     "evidence_quote_ids": [
      "f_q10",
      "f_q1"
@@ -2237,7 +2232,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "His symbol on the front of his ring gear",
+    "value": "Symbol printed on front of ring gear",
     "evidence_quote_ids": [
      "f_q2"
     ],

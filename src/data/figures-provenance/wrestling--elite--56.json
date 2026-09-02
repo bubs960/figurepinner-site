@@ -285,11 +285,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "Deluxe articulation, incredible detail, authentic ring attire and accessories.",
-    "evidence_quote_ids": [
-     "f_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -574,7 +572,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "green and black fight shorts and black knee pads complete with black boots",
+    "value": "Black boots and knee pads with green-and-black fight shorts",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -968,7 +966,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Removable 'Phenomenal One' hooded jacket accessory",
+    "value": "Removable jacket accessory called 'Phenomenal One' (hooded)",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -990,7 +988,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Removable 'Phenomenal One' hooded jacket accessory",
+    "value": "'Phenomenal One' jacket, removable, hooded",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -1932,7 +1930,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black and white singlet with 'The Club' symbol, black and blue ring pants, black and white ring boots",
+    "value": "'The Club' symbol on a black-and-white singlet",
     "evidence_quote_ids": [
      "f_q9",
      "f_q10",
@@ -1964,7 +1962,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Massive, detailed blue and black 'Gallows' duster/trench coat",
+    "value": "Blue and black 'Gallows' duster, massive and detailed",
     "evidence_quote_ids": [
      "f_q5",
      "f_q8"

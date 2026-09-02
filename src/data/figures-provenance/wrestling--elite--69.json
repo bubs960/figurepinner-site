@@ -742,7 +742,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "removable entrance cape-vest hybrid. He's also sporting long tights and has tall, laced boots",
+    "value": "Removable cape-vest hybrid entrance piece; long tights; tall laced boots",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -768,7 +768,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Prep a finishing move pose with 24+ points of articulation",
+    "value": "24+ points of articulation",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -780,20 +780,16 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "All swagger and muscle, sculpted in serious detail",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Realistic accessories complete his ring outfit",
-    "evidence_quote_ids": [
-     "f_q5"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1520,7 +1516,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1528,11 +1524,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -1541,11 +1535,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "WWE ring gear and iconic accessories capturing the Superstar's unique personality",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2762,7 +2754,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Apr. 8, 2018 @ WWE WrestleMania 34",
+    "value": "WrestleMania 34, Apr. 8, 2018",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -3630,7 +3622,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Apr. 7, 2018 @ NXT TakeOver: New Orleans",
+    "value": "NXT TakeOver: New Orleans, Apr. 7, 2018",
     "evidence_quote_ids": [
      "f_q1"
     ],

@@ -243,7 +243,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Oct. 23, 2011 @ WWE Vengeance",
+    "value": "Vengeance, Oct. 23, 2011",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -521,7 +521,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: September 18, 2011 (WWE Night of Champions)",
+    "value": "Night of Champions, September 18, 2011",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -891,7 +891,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Sept. 18, 2011 @ WWE Night of Champions",
+    "value": "Night of Champions, Sept. 18, 2011",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1269,7 +1269,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Attire Date: Apr. 1, 2012 @ WWE WrestleMania XXVIII",
+    "value": "WrestleMania XXVIII, Apr. 1, 2012",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1304,7 +1304,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Necklace & World Heavyweight Championship Belt",
+    "value": "World Heavyweight Championship belt and necklace",
     "evidence_quote_ids": [
      "f_q3",
      "f_q9"
@@ -2014,11 +2014,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "Realistic accessories complete his ring outfit",
-    "evidence_quote_ids": [
-     "f_q4"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {

@@ -321,7 +321,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Gone is the off grey chest armor and brown pants, sleeker, cooler looking black for both parts of the costume",
+    "value": "Both costume pieces switched from grey chest armor, brown pants to black",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -334,7 +334,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Spartan flair helmet with big top feather; darker paint around the eyes with an almost possessed glare in the eyes; powered-up 'God' eyes",
+    "value": "Dark eye paint creates an almost possessed glare under the helmeted portrait",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8",
@@ -344,17 +344,15 @@
    },
    {
     "field_path": "fingerprint.face_technology",
-    "status": "resolved",
-    "value": "Instead of sporting mere mortal eyes with pupils, the new version is sporting powered-up 'God' eyes that look downright malevolent",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Missing standard points of modern articulation: double-jointed elbows and swivel calves/boots; torso joint is somewhat limited, coupled with a restricting neck joint, doesn't allow for the most dynamic poses",
+    "value": "No double-jointed elbows or swivel calves/boots; torso and neck joints restrict dynamic posing",
     "evidence_quote_ids": [
      "f_q3",
      "f_q9"
@@ -368,7 +366,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Gone is the off grey chest armor and brown pants, replaced with black for both parts of the costume",
+    "value": "Chest armor and pants changed from off-grey/brown to black",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -377,7 +375,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Powered-up 'God' eyes that look downright malevolent, instead of mere mortal eyes with pupils",
+    "value": "Powered-up 'God' eyes instead of mortal eyes with pupils",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1305,7 +1303,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Cate Blanchett head is masterfully done and truly beautiful; hair is sculpted with sharp edges and uses a hard plastic",
+    "value": "Cate Blanchett head sculpt; hair has sharp sculpted edges in hard plastic",
     "evidence_quote_ids": [
      "k_c_q7"
     ],
@@ -1313,18 +1311,15 @@
    },
    {
     "field_path": "fingerprint.face_technology",
-    "status": "resolved",
-    "value": "The eyes use the halftone printing and it looks good, as do the lips; face paint is flawless and even has faint viens just above her eyes",
-    "evidence_quote_ids": [
-     "k_c_q3",
-     "k_c_q8"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball-jointed neck, shoulders, chest, and hips with swivel-hinged elbows and wrists, swivel thighs, double-hinged knees, and swivel-hinged/lateral-rocker ankles",
+    "value": "Ball joints: neck, shoulders, chest, hips; swivel-hinge elbows/wrists/ankles; swivel thighs; double-hinged knees",
     "evidence_quote_ids": [
      "k_c_q1",
      "k_c_q6"
@@ -1334,7 +1329,7 @@
    {
     "field_path": "fingerprint.packaging_style",
     "status": "resolved",
-    "value": "Series packaging in light blues, with extra clear packaging packed with the figure to hold extra accessories",
+    "value": "Extra clear packaging included to hold additional accessories",
     "evidence_quote_ids": [
      "k_d_q4-packaging-blues",
      "k_d_q5-packaging-clear-insert"
@@ -1382,7 +1377,7 @@
    {
     "field_path": "fingerprint.known_variants[1]",
     "status": "resolved",
-    "value": "Comic Hela from the Doctor Strange box set",
+    "value": "Doctor Strange box-set comic Hela variant",
     "evidence_quote_ids": [
      "k_g_q7"
     ],
@@ -1919,7 +1914,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Helmet looks oversized but is removable to reveal a fully sculpted Hulk head underneath",
+    "value": "Oversized removable helmet hides a fully-sculpted Hulk head beneath",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1945,7 +1940,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Helmet looks oversized but is removable to reveal a fully sculpted Hulk head underneath",
+    "value": "Removable oversized helmet reveals a fully-sculpted head beneath",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1954,7 +1949,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "White war paint on Hulk's chest and face contrasts beautifully",
+    "value": "Hulk's chest and face carry white war paint",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2376,7 +2371,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Well rounded articulation; the shoulder length hair somewhat limits upper head movement just a little",
+    "value": "Shoulder-length hair limits head movement slightly; otherwise well-rounded articulation",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2385,7 +2380,7 @@
    {
     "field_path": "fingerprint.packaging_style",
     "status": "resolved",
-    "value": "Light blue vivid colors on this series packaging",
+    "value": "Series packaging in vivid light blue colors",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2407,7 +2402,7 @@
    {
     "field_path": "fingerprint.known_variants[0]",
     "status": "resolved",
-    "value": "Marvel Legends Thor Love and Thunder Mighty Thor Jane Foster Figure (Korg Series)",
+    "value": "Korg Series Jane Foster figure as Mighty Thor from Love and Thunder",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -3342,7 +3337,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Black sleeveless shirt painted onto his chest with a little cutout up top; the tops of the trousers are sculpted and tied off with a piece of rope; the boots feature sculpted flares at the knees, and sculpted brown straps tying them in place",
+    "value": "Black sleeveless shirt painted on chest with cutout; trouser tops tied with rope; boots have knee flares and brown straps",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2",
@@ -3363,7 +3358,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Stern-faced, bearded head sculpt; the face is very chiseled and angular with some beautiful definition in the sculpt; the hair is sculpted so that it's blowing off to the side; wild hair and scraggly beard both look fantastic",
+    "value": "Angular chiseled face with fine sculpt detail; side-blown hair; scraggly beard, wild hairstyle",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8",
@@ -3379,7 +3374,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Rotating hinges in shoulders and wrists, double hinges in elbows and knees, swivels in biceps and thighs, ball-jointed head/shoulders/wrists/hips, ab crunch and swivel waist, ankle hinges with lateral rockers",
+    "value": "Shoulder and wrist hinges rotate; elbows have double hinges; biceps swivel",
     "evidence_quote_ids": [
      "f_q9",
      "f_q10",
@@ -3395,7 +3390,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Enchanted axe accessory, Jarnbjorn, with sculpted wood and wrapping on the handle",
+    "value": "Handle features sculpted wood grain and wrapping",
     "evidence_quote_ids": [
      "f_q11",
      "f_q20",
@@ -3818,7 +3813,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Green metallic colouring brightened, cloak coloured in a brighter tone, and an orange translucent magic effects piece",
+    "value": "Orange translucent magic effects accessory",
     "evidence_quote_ids": [
      "f_q1",
      "f_q2",
@@ -3829,7 +3824,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "A straight haired Hela with a more neutral expression, and a bedraggled haired Hela as she appears on the clifftop after Odin's death; a Cate Blanchett face",
+    "value": "Two heads: straight-haired Hela with neutral expression; bedraggled-haired Hela from the clifftop after Odin's death",
     "evidence_quote_ids": [
      "f_q3",
      "f_q11"
@@ -3924,7 +3919,7 @@
    {
     "field_path": "included_items[5]",
     "status": "resolved",
-    "value": "An alternative right hand, but sculpted to be holding Mjolnir as it flies towards her",
+    "value": "Alt right hand holding flying Mjolnir",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -3956,7 +3951,7 @@
    {
     "field_path": "wave_context.baf_piece",
     "status": "resolved",
-    "value": "Hulk Build-a-Figure Right Arm and Battle Axe",
+    "value": "Battle Axe and Right Arm — Hulk Build-a-Figure piece",
     "evidence_quote_ids": [
      "f_q9"
     ],

@@ -1,5 +1,5 @@
 {
- "md5": "84EAEA87ED9D9A6F9960912018ECF533",
+ "md5": "17361F839C4B13BE79F338A9898A020B",
  "doc_count": 3,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -8,5 +8,16 @@
   "fp_wrestling_mattel_ultimate-edition_7_fiend-bray-wyatt_53a30d": "f761bb625c7ca48b",
   "fp_wrestling_mattel_ultimate-edition_7_hollywood-hulk-hogan_2d0540": "dbe1a69a318c6244",
   "fp_wrestling_mattel_ultimate-edition_7_hulk-hogan_cdeae8": "2d0fe7f41a033b67"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_ultimate-edition_7_fiend-bray-wyatt_53a30d",
+    "fp_wrestling_mattel_ultimate-edition_7_hollywood-hulk-hogan_2d0540",
+    "fp_wrestling_mattel_ultimate-edition_7_hulk-hogan_cdeae8"
+   ]
+  }
+ ]
 }

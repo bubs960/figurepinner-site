@@ -1,5 +1,5 @@
 {
- "md5": "78C419537507F0774B2F301B3078E496",
+ "md5": "B46E2FAE8609DDFFB6BF4FD53F930DA1",
  "doc_count": 6,
  "source_batch": "enrich-v42-batch-aew43-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -11,5 +11,18 @@
   "fp_wrestling_jazwares_aew-unrivaled_7_dax-harwood_897fc4": "4fbb15f39f9afae4",
   "fp_wrestling_jazwares_aew-unrivaled_7_nick-jackson_4fe135": "978f60af1bc51780",
   "fp_wrestling_jazwares_aew-unrivaled_7_lance-archer_acbb84": "664f5e8f61b80319"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_jazwares_aew-unrivaled_7_cash-wheeler_6c9ef1",
+    "fp_wrestling_jazwares_aew-unrivaled_7_dax-harwood_897fc4",
+    "fp_wrestling_jazwares_aew-unrivaled_7_lance-archer_acbb84",
+    "fp_wrestling_jazwares_aew-unrivaled_7_matt-jackson_d2b201",
+    "fp_wrestling_jazwares_aew-unrivaled_7_nyla-rose_9844eb"
+   ]
+  }
+ ]
 }

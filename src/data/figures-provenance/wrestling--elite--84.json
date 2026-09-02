@@ -323,7 +323,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Silver and black designed 'Ripley' ring top and molded ring tights with plenty of straps, fishnet and molded chains.",
+    "value": "Silver-and-black 'Ripley' ring top, molded ring tights with straps, fishnet, molded chains",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -332,7 +332,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "A confident headsculpt with accurate piercings",
+    "value": "Headsculpt with accurate piercings",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -341,7 +341,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -358,7 +358,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Silver and black 'Ripley' ring top and molded ring tights with straps, fishnet, and molded chains",
+    "value": "Silver/black 'Ripley' ring top with molded ring tights, straps, fishnet, molded chains",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -367,7 +367,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Confident headsculpt with accurate piercings",
+    "value": "Headsculpt with accurate piercings",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1366,7 +1366,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, double-jointed knees, ankles",
+    "value": "Double-jointed knees, thighs, hips, waist, torso, wrist hinge, wrists, elbows, ball-jointed shoulders, bicep, neck, ankles",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -1406,7 +1406,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[3]",
     "status": "resolved",
-    "value": "Wristband, tight and kneepad details came out nice and clean",
+    "value": "Wristband, tights, and kneepad detailing",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1943,7 +1943,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1960,7 +1960,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Off-white entrance jacket with stylized black designs",
+    "value": "Off-white entrance jacket, stylized black design accents",
     "evidence_quote_ids": [
      "f_q15"
     ],
@@ -1989,7 +1989,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Off-white entrance jacket with stylized black designs",
+    "value": "Off-white jacket, stylized black designs",
     "evidence_quote_ids": [
      "f_q15"
     ],
@@ -2432,7 +2432,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Character attire date: Mar. 5, 2019 @ WWE SmackDown",
+    "value": "WWE SmackDown, Mar. 5, 2019",
     "evidence_quote_ids": [
      "w_q2"
     ],
@@ -2441,7 +2441,7 @@
    {
     "field_path": "fingerprint.gear_colors",
     "status": "resolved",
-    "value": "Black cargo ring pants with a white belt and black and white ring shoes; blue and black arm bands; blue and white face paint",
+    "value": "Black cargo ring pants, white belt, black-and-white ring shoes",
     "evidence_quote_ids": [
      "f_q7",
      "f_q8",
@@ -2456,7 +2456,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -2464,11 +2464,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q1"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2478,7 +2476,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Incredibly detailed blue and white face paint",
+    "value": "Blue and white face paint",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -2487,7 +2485,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Blue and black arm bands with accurate tattoos",
+    "value": "Blue and black arm bands with tattoos",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -2496,7 +2494,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Black cargo ring pants with a white belt and black and white ring shoes",
+    "value": "Black cargo ring pants, white belt, black-and-white ring shoes",
     "evidence_quote_ids": [
      "f_q7"
     ],
@@ -2509,7 +2507,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Additional pair of interchangeable hands",
+    "value": "Interchangeable hands, additional pair",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2518,7 +2516,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "Black, green and purple 'Escape Normal' shirt",
+    "value": "'Escape Normal' shirt (black, green, purple)",
     "evidence_quote_ids": [
      "f_q10"
     ],
@@ -2916,7 +2914,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Included as accessories Murphy's Messiah black sleeveless t-shirt and different interchangeable hands",
+    "value": "Includes Messiah black sleeveless t-shirt, swappable hands",
     "evidence_quote_ids": [
      "f_q9"
     ],
@@ -3255,7 +3253,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Two spot on headscans, one with a man-bun and the other with hair down",
+    "value": "Two headsculpts: one with man-bun, one with hair down",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -3298,7 +3296,7 @@
    {
     "field_path": "included_items[0]",
     "status": "resolved",
-    "value": "Two sets of interchangeable hand accessories",
+    "value": "Two interchangeable hand-accessory sets",
     "evidence_quote_ids": [
      "f_q4"
     ],

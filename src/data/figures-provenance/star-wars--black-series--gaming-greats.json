@@ -448,7 +448,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[2]",
     "status": "resolved",
-    "value": "Swivel/hinge ankles, boot swivels, hinged knees, balljointed hips, balljointed mid-torso, swivel/hinge shoulders, bicep swivels, hinged elbows, swivel/hinge wrists, swivel/hinge neck, balljointed head, and hinged movement processors",
+    "value": "Balljointed head/torso/hips; swivel-hinge shoulders/wrists/ankles/neck; swivel biceps/boots; hinged elbows/knees/processors",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -889,18 +889,15 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[0]",
-    "status": "resolved",
-    "value": "premium detail and multiple points of articulation",
-    "evidence_quote_ids": [
-     "f_q4",
-     "f_q6"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "corroborated_exact"
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "purple-bladed lightsaber while cloaked in white Jedi robes",
+    "value": "Purple lightsaber blade; white Jedi robes",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -1214,11 +1211,9 @@
    },
    {
     "field_path": "fingerprint.head_sculpt",
-    "status": "resolved",
-    "value": "I keep seeing a silly clown or kitty-cat in that face, so I'm not feeling the cool factor",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -1228,7 +1223,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Swivel/hinge shoulders, elbows, wrists, hips, and ankles",
+    "value": "Shoulders, elbows, wrists, hips and ankles use swivel/hinge joints",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1241,7 +1236,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "The body re-uses a lot of Darth Maul parts from wave one with new arms, head, and skirt piece",
+    "value": "Body reuses Darth Maul's wave one parts, but has a new head, arms, and skirt piece",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -1250,7 +1245,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Nihilus comes with a saber with removeable blade",
+    "value": "Removable-blade saber included",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -1595,7 +1590,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Re-use of the original Purge Trooper figure head",
+    "value": "Reuses the original Purge Trooper's figure head",
     "evidence_quote_ids": [
      "f_q2"
     ],
@@ -1608,7 +1603,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Swivel/hinge shoulders, wrists, hips, and ankles; double hinged knees; thigh and bicep swivel; ball and socket mid-torso and head; hinged neck",
+    "value": "Hinged neck; ball-and-socket head and mid-torso; bicep and thigh swivels; double-hinged knees; swivel-hinge ankles/hips/wrists/shoulders",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1630,7 +1625,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Comes with a long staff and two translucent energy effects",
+    "value": "Long staff with gun-metal finish; two translucent energy effects",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1996,7 +1991,7 @@
    {
     "field_path": "fingerprint.attire_reference",
     "status": "resolved",
-    "value": "Gets rid of all the weathering from the previous version(s), retaining the armour's bright white finish",
+    "value": "Weathering removed from prior version; armor now bright white",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -2009,7 +2004,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "The helmet sculpt is unchanged, but the paint apps are a little bit sharper and the gloss that's been added to the visor makes a world of difference",
+    "value": "Helmet sculpt unchanged; sharper paint apps; gloss added to visor",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2022,7 +2017,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "Ball jointed head and torso; swivel hinge shoulders, wrists, hips and ankles; double hinge elbows and knees",
+    "value": "Ankles, hips, wrists, and shoulders use swivel-hinge joints",
     "evidence_quote_ids": [
      "f_q5",
      "f_q6",
@@ -2037,7 +2032,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Extendable electro-baton and EC-17 blaster stored in a holster on the right leg",
+    "value": "EC-17 blaster and extendable electro-baton, holstered on the right leg",
     "evidence_quote_ids": [
      "f_q8"
     ],
@@ -2046,7 +2041,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "Gloss that's been added to the visor makes a world of difference",
+    "value": "Gloss added to the visor",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -2378,7 +2373,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Shadow Stormtroopers utilize cloaking devices to ambush their enemies in the Star Wars: The Force Unleashed video game.",
+    "value": "Uses cloaking devices to ambush enemies in the Force Unleashed game",
     "evidence_quote_ids": [
      "f_q1"
     ],
@@ -2386,11 +2381,9 @@
    },
    {
     "field_path": "fingerprint.visual_identifiers[1]",
-    "status": "resolved",
-    "value": "premium detail and multiple points of articulation",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "single_secondary"
    },
    {
@@ -2704,7 +2697,7 @@
    {
     "field_path": "fingerprint.head_sculpt",
     "status": "resolved",
-    "value": "Special paint scheme that features a blue streak over the right eye on the helmet",
+    "value": "Helmet paint has a blue streak above the right eye",
     "evidence_quote_ids": [
      "f_q6"
     ],
@@ -2725,7 +2718,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "Blue streak over the right eye on the helmet",
+    "value": "Blue streak painted above the right eye of the helmet",
     "evidence_quote_ids": [
      "f_q6"
     ],

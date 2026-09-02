@@ -1,5 +1,5 @@
 {
- "md5": "FE7710A167788515242A6CFE197B7683",
+ "md5": "4F0162C36628AE269410B13C09CD5BE1",
  "doc_count": 2,
  "source_batch": "enrich-v42-batch-mattel47-REPAIRED-2026-08-14.json",
  "poured_at": "2026-08-14",
@@ -7,5 +7,15 @@
  "identity_hashes": {
   "fp_wrestling_mattel_ultimate-edition_3_finn-balor_a7ea9c": "613fdbb80b4402c8",
   "fp_wrestling_mattel_ultimate-edition_3_triple-h_9364e6": "0899643892a486c9"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_ultimate-edition_3_finn-balor_a7ea9c",
+    "fp_wrestling_mattel_ultimate-edition_3_triple-h_9364e6"
+   ]
+  }
+ ]
 }

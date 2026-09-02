@@ -1,5 +1,5 @@
 {
- "md5": "D664BBD36E37AF3B9443C3971BD003F9",
+ "md5": "E6552527EF5545ADFC984C54ED133AB9",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite8-REPAIRED-2026-08-16.json"
@@ -13,5 +13,16 @@
   "fp_wrestling_mattel_elite_100_stunning-steve-a_e9a710": "10267a02a5f2852e",
   "fp_wrestling_mattel_elite_100_the-rock_3c447b": "a85cc6cfe102c6ba",
   "fp_wrestling_mattel_elite_100_john-cena_c7882a": "1a178755897a0bcf"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_100_rey-mysterio_7fd343",
+    "fp_wrestling_mattel_elite_100_stunning-steve-a_e9a710",
+    "fp_wrestling_mattel_elite_100_the-rock_3c447b"
+   ]
+  }
+ ]
 }

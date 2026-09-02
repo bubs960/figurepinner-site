@@ -1,5 +1,5 @@
 {
- "md5": "AA6BD94D38E2DABBCD67DAC0BE5301A8",
+ "md5": "9490578CA1CFBBCD2E1B7A4421684F9D",
  "doc_count": 17,
  "source_batches": [
   "enrich-v42-batch-elite23-REPAIRED-2026-08-16.json",
@@ -25,5 +25,15 @@
   "fp_wrestling_mattel_elite_1_gene-okerlund_a89338": "52595f2d35c10feb",
   "fp_wrestling_mattel_elite_1_hbk_519319": "b858515a9eea3fa2",
   "fp_wrestling_mattel_elite_1_undertaker_6eadf3": "c67034b5b03b06eb"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_1_edge_f3ac96",
+    "fp_wrestling_mattel_elite_1_rey-mysterio_6df631"
+   ]
+  }
+ ]
 }

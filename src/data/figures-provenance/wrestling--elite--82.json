@@ -950,7 +950,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -958,11 +958,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q1"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -972,7 +970,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[0]",
     "status": "resolved",
-    "value": "bold and colorful figure is approximately 6-inches",
+    "value": "Approximately 6 inches tall",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -1474,7 +1472,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q3"
     ],
@@ -1482,11 +1480,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q2"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -2047,7 +2043,7 @@
    {
     "field_path": "fingerprint.articulation_points",
     "status": "resolved",
-    "value": "neck, bicep, ball-jointed shoulders, elbows, wrists, wrist hinge, torso, waist, hips, thighs, double-jointed knees, ankles",
+    "value": "Double-jointed knees, thighs, hips, waist, torso, wrist hinge, wrists, elbows, ball-jointed shoulders, bicep, neck, ankles",
     "evidence_quote_ids": [
      "f_q5"
     ],
@@ -3607,7 +3603,7 @@
    {
     "field_path": "fingerprint.face_technology",
     "status": "resolved",
-    "value": "True FX enhanced facial detailing for life-like authenticity",
+    "value": "True FX facial detailing",
     "evidence_quote_ids": [
      "f_q4"
     ],
@@ -3615,11 +3611,9 @@
    },
    {
     "field_path": "fingerprint.articulation_points",
-    "status": "resolved",
-    "value": "Deluxe articulation for multiple ways to pose and play",
-    "evidence_quote_ids": [
-     "f_q3"
-    ],
+    "status": "unresolved",
+    "value": null,
+    "evidence_quote_ids": [],
     "evidence_class": "primary_exact"
    },
    {
@@ -3638,7 +3632,7 @@
    {
     "field_path": "fingerprint.visual_identifiers[1]",
     "status": "resolved",
-    "value": "A set of slightly enclosed grasping hands",
+    "value": "Grasping hands, slightly enclosed",
     "evidence_quote_ids": [
      "f_q11"
     ],
@@ -3660,7 +3654,7 @@
    {
     "field_path": "included_items[1]",
     "status": "resolved",
-    "value": "A set of slightly enclosed grasping hands",
+    "value": "Slightly enclosed grasping hands",
     "evidence_quote_ids": [
      "f_q11"
     ],

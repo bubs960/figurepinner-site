@@ -1,5 +1,5 @@
 {
- "md5": "1C6E98A70CB56A914EE1FDF4215A9359",
+ "md5": "5CAE0EB6400E15716A22641863916E9B",
  "doc_count": 7,
  "source_batches": [
   "enrich-v42-batch-elite8-REPAIRED-2026-08-16.json"
@@ -14,5 +14,19 @@
   "fp_wrestling_mattel_elite_102_gunther_ec08a8": "80174b1cf9f7fe9c",
   "fp_wrestling_mattel_elite_102_mick-foley_71000e": "c23e2cdc4d0bd4fb",
   "fp_wrestling_mattel_elite_102_mick-foley_9c010a": "1b9c311f71781ad5"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_102_austin-theory_299c91",
+    "fp_wrestling_mattel_elite_102_edge_12ade7",
+    "fp_wrestling_mattel_elite_102_mick-foley_71000e",
+    "fp_wrestling_mattel_elite_102_mick-foley_9c010a",
+    "fp_wrestling_mattel_elite_102_rhea-ripley_272f80",
+    "fp_wrestling_mattel_elite_102_sami-zayn_f368ab"
+   ]
+  }
+ ]
 }

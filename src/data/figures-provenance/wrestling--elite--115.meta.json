@@ -1,5 +1,5 @@
 {
- "md5": "DA051E12FC80562E3F79DF45745A4F26",
+ "md5": "F02F429EC1AC47A3F7AEE6EA7D7746CB",
  "doc_count": 6,
  "source_batches": [
   "enrich-v42-batch-elite6-REPAIRED-2026-08-15.json",
@@ -14,5 +14,17 @@
   "fp_wrestling_mattel_elite_115_drew-mcintyre_ea9ce3": "5d513d5b54b8414f",
   "fp_wrestling_mattel_elite_115_the-rock_67e46d": "2c7d8c80c94f2496",
   "fp_wrestling_mattel_elite_115_cm-punk_9d6391": "16d830dfc246675a"
- }
+ },
+ "remediations": [
+  {
+   "kind": "verbatim-claim-values",
+   "date": "2026-09-02",
+   "fids": [
+    "fp_wrestling_mattel_elite_115_cm-punk_9d6391",
+    "fp_wrestling_mattel_elite_115_kairi-sane_3519cf",
+    "fp_wrestling_mattel_elite_115_the-rock_67e46d",
+    "fp_wrestling_mattel_elite_115_tyler-bate_5d2776"
+   ]
+  }
+ ]
 }
