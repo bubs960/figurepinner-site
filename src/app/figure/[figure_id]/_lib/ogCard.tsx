@@ -183,6 +183,25 @@ export function withCardFonts(size: typeof OG_SIZE, fonts: CardFont[]) {
   return fonts.length ? { ...size, fonts } : size
 }
 
+/**
+ * Shared-cache TTL for figure OG cards (2026-09-02, webaudit scale-risk item 7):
+ * every share and every crawler OG fetch was a full 1.8–3.0 s Satori render because
+ * the response carried no shared-cache TTL (`s-maxage=0` observed), so nothing ever
+ * stored it. Figure data and the price snapshot change at most daily (the route's own
+ * revalidate=86400 reasoning) and the deploy chain purges the edge, so a day is safe.
+ * Deliberately NOT applied to the /today cards, which turn over at the UTC day
+ * boundary. A "figure not found" card may become findable at the next pour, so the
+ * fallback stays short.
+ */
+export const OG_CACHE_HEADERS = { 'cache-control': 'public, s-maxage=86400, stale-while-revalidate=604800' }
+export const OG_FALLBACK_CACHE_HEADERS = { 'cache-control': 'public, s-maxage=3600' }
+export function figureOgOptions(fonts: CardFont[]) {
+  return { ...withCardFonts(OG_SIZE, fonts), headers: OG_CACHE_HEADERS }
+}
+export function figureOgFallbackOptions() {
+  return { ...OG_SIZE, headers: OG_FALLBACK_CACHE_HEADERS }
+}
+
 const FONT_STACK = 'Inter, sans-serif'
 
 export function GrailCard({

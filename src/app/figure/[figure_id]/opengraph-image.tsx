@@ -3,7 +3,7 @@ import { getFigureById, getFigureByStableSuffix } from '@/data/kbDb'
 import { deriveName } from '@/data/kbHelpers'
 import { fetchFigurePageData } from './_components/FigureDetailContent'
 import { derivePriceContract } from './_lib/priceContract'
-import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from './_lib/ogCard'
+import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, figureOgOptions, figureOgFallbackOptions } from './_lib/ogCard'
 
 export const contentType = 'image/png'
 export const dynamic = 'force-static' // matches the page's explicit config — don't rely on inference
@@ -32,7 +32,7 @@ export default async function Image({ params }: Props) {
   const figure = (await getFigureById(figure_id)) ?? (await getFigureByStableSuffix(figure_id))
 
   if (!figure) {
-    return new ImageResponse(<FallbackOGCard />, OG_SIZE)
+    return new ImageResponse(<FallbackOGCard />, figureOgFallbackOptions())
   }
 
   const [{ price }, photoSrc, fonts] = await Promise.all([
@@ -72,6 +72,6 @@ export default async function Image({ params }: Props) {
         }}
       />
     ),
-    withCardFonts(OG_SIZE, fonts)
+    figureOgOptions(fonts)
   )
 }

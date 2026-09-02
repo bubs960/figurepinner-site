@@ -111,6 +111,16 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
     `types/**/*.ts` path — `git checkout -- tsconfig.json` after cleaning
     up the isolated `.next-*` folder, don't ship that edit.
 
+11. **Request-time code may not load, iterate, or index the full catalog.**
+    Per-request work is bounded by the page, not by KB row count. "Build-time
+    only" in a comment is not a constraint — the deploy gate is:
+    `scripts/assert-no-runtime-kb-in-handler.mjs` (compiled-artifact sentinels +
+    size ceilings) and `tests/kbRuntimeImports.test.mjs` (no `src/` import of
+    `kb.ts`). Runtime reads go through `kbDb.ts` (indexed, bounded contracts —
+    `kbDbQueries.ts` is the SQL) or `kbLite.ts` (prose-free artifact). Origin:
+    the 2026-08-31 Worker OOM + the 2026-09-02 D1-overload day (standalone scale
+    program, `Bridge/SCALE-BUDGET.md`).
+
 ## Repo facts
 
 - Deploys as a CF Worker via OpenNext (`npm run deploy`); `git push` alone

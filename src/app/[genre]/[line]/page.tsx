@@ -33,7 +33,10 @@ import JsonLd from '@/app/_components/JsonLd'
 // OpenNext served every line hub as uncached SSR (`no-store`) since 6/14.
 // See [genre]/page.tsx for the full mechanism note; same fix, same pair.
 export const dynamic = 'force-static'
-export const revalidate = 3600
+// 24h, not 1h (2026-09-02, webaudit hub deep-dive breakthrough 2): hub content only
+// changes at KB pours, and the deploy chain already purges both cache layers
+// (kv-purge-stale-isr.mjs + purge-cache.mjs). Matches the figure + character routes.
+export const revalidate = 86400
 
 // ─── Genre config (accent colors) ─────────────────────────────────────────────
 

@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { deriveName } from '@/data/kbHelpers'
 import { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
-import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
+import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, figureOgOptions, figureOgFallbackOptions } from '@/app/figure/[figure_id]/_lib/ogCard'
 import { findFigureMatches } from './_lib/findFigureMatches'
 
 export const contentType = 'image/png'
@@ -29,7 +29,7 @@ export default async function Image({ params }: Props) {
   const figure = (await findFigureMatches(genre, line, slug))[0]
 
   if (!figure) {
-    return new ImageResponse(<FallbackOGCard />, OG_SIZE)
+    return new ImageResponse(<FallbackOGCard />, figureOgFallbackOptions())
   }
 
   const [{ price }, photoSrc, fonts] = await Promise.all([
@@ -63,6 +63,6 @@ export default async function Image({ params }: Props) {
         }}
       />
     ),
-    withCardFonts(OG_SIZE, fonts)
+    figureOgOptions(fonts)
   )
 }

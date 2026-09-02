@@ -135,7 +135,9 @@ const GENRE_META: Record<string, { label: string; title: string; description: st
 // 2026-07-27: 139/139 pages, default heap, no OOM — force-static does not
 // enumerate genres at build time, so the OOM multiplier never returns.
 export const dynamic = 'force-static'
-export const revalidate = 3600
+// 24h, not 1h (2026-09-02, webaudit hub deep-dive breakthrough 2): genre content only
+// changes at KB pours, and the deploy chain already purges both cache layers.
+export const revalidate = 86400
 
 // On-demand ISR (no generateStaticParams) — Option E (2026-06-14). Prerendering
 // all 17 genres at build instantiated the full ~22k-figure KB array once PER

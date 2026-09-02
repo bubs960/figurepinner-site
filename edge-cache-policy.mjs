@@ -86,7 +86,15 @@ export function synthesizeCacheControl(response, request) {
   if (response.status === 404) {
     out.headers.set('cache-control', `public, s-maxage=${NOT_FOUND_TTL}, stale-while-revalidate=3600`)
   } else {
-    out.headers.set('cache-control', 'public, s-maxage=3600, stale-while-revalidate=86400')
+    // 2026-09-02 (webaudit hub deep-dive, breakthrough 1): the raw-fid /figure/:id
+    // shape is served through the KV-consolidation rewrite (middleware.ts), whose
+    // render comes back `private` with no s-maxage, so it landed here and got the
+    // generic hour even though figure/[figure_id]/page.tsx asks for revalidate=86400
+    // -- the 9,973 sitemap-submitted /figure/fp_* URLs cached 1/24th as long as
+    // intended. Same allowance predicate as the store decision, so the scope is
+    // exactly that shape; every other public HTML page keeps the generic hour.
+    const ttl = isKnownSafeDespitePrivate(request) ? HTML_TTL_CAP : 3600
+    out.headers.set('cache-control', `public, s-maxage=${ttl}, stale-while-revalidate=86400`)
   }
   return out
 }

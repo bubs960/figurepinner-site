@@ -85,8 +85,22 @@ describe('edge cache ordering fix — skip-check runs against the ORIGINAL respo
     const original = htmlResponse(200, {}) // no cache-control at all -- the normal ISR/ OpenNext case
     const { skip, res2 } = simulateHandlerOrdering(original, req('/figure/fp_wrestling_example_123abc'))
     assert.equal(skip, null, 'a genuinely public response with no cache-control must NOT be skipped')
-    assert.equal(res2.headers.get('cache-control'), 'public, s-maxage=3600, stale-while-revalidate=86400',
-      'synthesis must still run for real public responses -- this is the case synthesizeCacheControl exists for')
+    // 2026-09-02: the raw /figure/:id shape synthesizes the figure route's own 24h
+    // (revalidate=86400), not the generic hour -- the 9,973 sitemap-submitted
+    // /figure/fp_* URLs were caching 1/24th as long as intended (webaudit hub
+    // deep-dive, breakthrough 1).
+    assert.equal(res2.headers.get('cache-control'), 'public, s-maxage=86400, stale-while-revalidate=86400',
+      'synthesis must still run for real public responses -- and at the raw figure shape it must be the 24h figure TTL')
+  })
+
+  test('2026-09-02: only the raw /figure/:id shape gets the 24h TTL; generic public HTML without s-maxage (hubs, pretty paths) keeps the hour', () => {
+    const hub = simulateHandlerOrdering(htmlResponse(200, {}), req('/wrestling/elite'))
+    assert.equal(hub.skip, null)
+    assert.equal(hub.res2.headers.get('cache-control'), 'public, s-maxage=3600, stale-while-revalidate=86400',
+      'a hub without s-maxage stays on the generic hour (its own revalidate reaches the edge as s-maxage in production)')
+    const pretty = simulateHandlerOrdering(htmlResponse(200, {}), req('/wrestling/elite/cody-rhodes'))
+    assert.equal(pretty.res2.headers.get('cache-control'), 'public, s-maxage=3600, stale-while-revalidate=86400',
+      'the 3-segment pretty figure path is not the raw shape and must not inherit the 24h synthesis')
   })
 
   test('already-public HTML with an explicit positive s-maxage: passes through unchanged either way', () => {
@@ -113,7 +127,8 @@ describe('edge cache ordering fix — skip-check runs against the ORIGINAL respo
     const original = htmlResponse(200, { 'cache-control': 'private, no-cache, no-store, max-age=0, must-revalidate' })
     const { skip, res2 } = simulateHandlerOrdering(original, req('/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22'))
     assert.equal(skip, null, 'the raw /figure/:id shape must be allowed through despite a private header (known OpenNext rewrite-vs-ISR bug, not a real privacy signal)')
-    assert.equal(res2.headers.get('cache-control'), 'public, s-maxage=3600, stale-while-revalidate=86400')
+    assert.equal(res2.headers.get('cache-control'), 'public, s-maxage=86400, stale-while-revalidate=86400',
+      '2026-09-02: the allowed-through raw figure shape gets the 24h figure TTL, not the generic hour')
   })
 
   test('KV-consolidation allowance stays scoped: the 3-segment pretty-path figure route is UNAFFECTED (private there still skips, as it should)', () => {

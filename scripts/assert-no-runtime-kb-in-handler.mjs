@@ -72,8 +72,24 @@ for (const [p, size] of files) {
   }
 }
 
+// Size ceilings (2026-09-02, standalone scale-program ask 2): the catalog is out of
+// the handler, so the growth risk moved to the whole bundle and to the kb-lite
+// artifact (loaded whole at first use, O(fids)). Fail early at build time, and
+// print the numbers every R10 file should carry so the trend stays visible.
+const HANDLER_WARN_MB = 45   // the OOM handler was 41.6 MB
+const HANDLER_FAIL_MB = 60
+const KB_LITE_FAIL_MB = 20   // 7.95 MB at 24.4K figures; ~77K figures would hit KV's 25 MB value cap
+const handler = files.find(([p]) => p.endsWith('handler.mjs'))
+const handlerMb = handler ? handler[1] / 1e6 : 0
+const kbLitePath = join(ROOT, 'src', 'data', 'kb-lite.generated.json')
+const kbLiteMb = existsSync(kbLitePath) ? statSync(kbLitePath).size / 1e6 : 0
+console.log(`[kb-gate] sizes: handler ${handlerMb.toFixed(2)} MB (warn ${HANDLER_WARN_MB}, fail ${HANDLER_FAIL_MB}) · kb-lite artifact ${kbLiteMb.toFixed(2)} MB (fail ${KB_LITE_FAIL_MB})`)
+if (handlerMb > HANDLER_FAIL_MB) { failed = true; console.error(`[kb-gate] FAIL handler ${handlerMb.toFixed(2)} MB exceeds ${HANDLER_FAIL_MB} MB`) }
+else if (handlerMb > HANDLER_WARN_MB) console.warn(`[kb-gate] WARN handler ${handlerMb.toFixed(2)} MB is past the ${HANDLER_WARN_MB} MB warning line`)
+if (kbLiteMb > KB_LITE_FAIL_MB) { failed = true; console.error(`[kb-gate] FAIL kb-lite artifact ${kbLiteMb.toFixed(2)} MB exceeds ${KB_LITE_FAIL_MB} MB`) }
+
 if (failed) {
-  console.error('[kb-gate] handler still carries the full KB catalog — refusing to treat this build as deployable')
+  console.error('[kb-gate] handler still carries the full KB catalog (or a size ceiling tripped) — refusing to treat this build as deployable')
   process.exit(1)
 }
-console.log('[kb-gate] PASS — no catalog sentinel in the compiled handler')
+console.log('[kb-gate] PASS — no catalog sentinel in the compiled handler, size ceilings clear')

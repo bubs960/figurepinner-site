@@ -72,6 +72,13 @@ const opts = {
   expectRows: argValue('--expect-rows') ? Number(argValue('--expect-rows')) : null,
   dryRun: argv.includes('--dry-run'),
   resume: argv.includes('--resume'),
+  // --pace <ms>: sleep between chunk files. A remote `d1 execute --file` puts D1
+  // into import mode, which REJECTS concurrent site queries for the length of
+  // each file (`D1_ERROR: Currently processing a long-running import`, observed
+  // 2026-09-02 12:45 UTC: 5x 500 on production during a daytime load). Pacing
+  // spreads those windows so the site recovers between them; loads still belong
+  // in the traffic trough. 0 = today's behaviour.
+  pace: argValue('--pace') ? Number(argValue('--pace')) : 0,
 }
 
 function die(message) {
@@ -86,6 +93,8 @@ Phases (run in order): status | load | verify-staging | swap | verify-live | fin
   load --resume        continue a load that died mid-way (network blip): skips the schema and
                        every chunk whose rows are already in kb_figures_new, ONLY if the
                        existing row count sits exactly on a file boundary; otherwise refuses.
+  load --pace <ms>     sleep <ms> between chunk files (recommended 1500 for any daytime
+                       remote load: each file import blocks production reads while it runs).
 Recovery:              rollback   (before finalize only)
 Rehearsal:             rehearse   (fully local, disposable, exercises everything incl. forced failures)
 
@@ -155,6 +164,11 @@ function runSql(command, { allowFail = false } = {}) {
 // Fix: never trust the exit code alone in either direction. Accept that
 // exact signature ONLY, then prove the rows landed with a COUNT(*) against
 // the expected running total; anything else is still fatal.
+// Synchronous sleep for the pacing option (the script is execSync-driven end to end).
+function sleepMs(ms) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms)
+}
+
 const WRANGLER_POLL_BUG = /Not currently importing anything/i
 const WRANGLER_IMPORT_DONE = /Processed \d+ quer/i
 
@@ -292,6 +306,7 @@ function phaseLoad() {
     expected += n
     console.log(`[kb:d1:swap]   ${file} (+${n} -> ${expected})`)
     runSqlFile(path, { table: STAGING, expectRowsAfter: expected })
+    if (opts.pace > 0 && !opts.dryRun) sleepMs(opts.pace)
   }
   if (expected !== stats.rowCount) {
     die(`emitted files sum to ${expected} INSERTs but stats.json says ${stats.rowCount} -- build dir inconsistent, rebuild it`)
