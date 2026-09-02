@@ -7,7 +7,7 @@
  * The line `slug` in groupAndSortLines is always the raw KB product_line
  * value, NOT the pretty URL slug forms the line-hub route also accepts.
  */
-import { getFiguresByFandom, type KBFigure } from '@/data/kbDb'
+import { getCardsByFandom, type KBFigure } from '@/data/kbDb'
 
 // URL slug ↔ KB fandom mapping now lives in @/data/kbTypes (leaf module) so
 // kb.ts's prettyFigureUrl can use it without a circular import (2026-07-12
@@ -211,9 +211,16 @@ export function fandomsForGenre(genre: string): string[] {
   return [getFandom(genre)]
 }
 
+/**
+ * The genre hub's figures: every row of every fandom in the genre, as compact
+ * cards (no prose columns — stage 2, 2026-09-02). The hub renders the whole
+ * fandom (line groups, counts, shelf), so this stays a whole-fandom read; the
+ * projection is what got bounded. Grouped-count + top-N-per-line is the
+ * follow-up that would shrink it further.
+ */
 export async function figuresForGenre(genre: string): Promise<KBFigure[]> {
   const figureGroups = await Promise.all(
-    fandomsForGenre(genre).map(getFiguresByFandom)
+    fandomsForGenre(genre).map(getCardsByFandom)
   )
   return figureGroups.flat()
 }

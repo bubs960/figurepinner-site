@@ -15,10 +15,11 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import {
-  getFiguresByFandom,
+  getCardsByCharacter,
   getAllFandoms,
   deriveName,
-  prettyFigureUrl,
+  buildPrettyUrlMap,
+  prettyFigureUrlFromMap,
   type KBFigure,
 } from '@/data/kbDb'
 import { fandomsForGenre, getFandom, genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
@@ -72,10 +73,13 @@ const GENRE_ACCENT: Record<string, string> = {
 
 /** All figures for a genre + character slug combination. */
 async function figuresForCharacter(genre: string, characterSlug: string): Promise<KBFigure[]> {
+  // OOM stage 2 (2026-09-02): a (character_canonical) index seek per fandom,
+  // compact cards — instead of every figure in the fandom filtered in JS. The
+  // slug is bound exactly as given, matching the old exact-equality filter.
   const figureGroups = await Promise.all(
-    fandomsForGenre(genre).map(getFiguresByFandom)
+    fandomsForGenre(genre).map(fandom => getCardsByCharacter(fandom, characterSlug))
   )
-  return figureGroups.flat().filter(f => f.character_canonical === characterSlug)
+  return figureGroups.flat()
 }
 
 /** Group figures by product_line, then by release_wave within each line. */
@@ -215,6 +219,11 @@ export default async function CharacterHubPage({
   const figures = await figuresForCharacter(genre, character_slug)
   if (!figures.length) notFound()
 
+  // Every row of this character in each fandom is in `figures`, so the
+  // router-key count map is exact from own rows — no per-card COUNT queries
+  // (stage 2, 2026-09-02).
+  const counts = buildPrettyUrlMap(figures)
+
   const charName = prettifySlug(character_slug)
   const genreName = prettifySlug(genre)
   // Same split as the line hub: /horror/character/freddy-krueger serves 200
@@ -252,7 +261,7 @@ export default async function CharacterHubPage({
       itemListElement: await Promise.all(figures.slice(0, 50).map(async (f, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://figurepinner.com${await prettyFigureUrl(f)}`,
+        url: `https://figurepinner.com${prettyFigureUrlFromMap(f, counts)}`,
         name: deriveName(f),
       }))),
     },
@@ -497,7 +506,7 @@ export default async function CharacterHubPage({
                     }}
                   >
                     {waveFigs.map(f => (
-                      <CharFigureCard key={f.figure_id} figure={f} accent={accent} />
+                      <CharFigureCard key={f.figure_id} figure={f} accent={accent} href={prettyFigureUrlFromMap(f, counts)} />
                     ))}
                   </div>
                 </div>
@@ -561,14 +570,14 @@ export default async function CharacterHubPage({
 
 // ─── Figure card ──────────────────────────────────────────────────────────────
 
-async function CharFigureCard({ figure: f, accent }: { figure: KBFigure; accent: string }) {
+async function CharFigureCard({ figure: f, accent, href }: { figure: KBFigure; accent: string; href: string }) {
   const name = deriveName(f)
   const exclusive =
     f.exclusive_to && f.exclusive_to !== 'None' ? f.exclusive_to : null
 
   return (
     <QuickLookAnchor
-      href={await prettyFigureUrl(f)}
+      href={href}
       className="char-card"
       image={thumb(f.canonical_image_url, 640)}
       name={name}

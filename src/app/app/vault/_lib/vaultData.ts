@@ -28,7 +28,7 @@
  *    never an error.
  */
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { getFigureById, getFiguresByFandom, figureUrl, type KBFigure } from '@/data/kbDb'
+import { getFigureById, getLineWaveCounts, figureUrl, type KBFigure } from '@/data/kbDb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 
@@ -280,15 +280,22 @@ async function computeLineCompletion(vaultRows: VaultRow[], kbByFid: Map<string,
   // just don't get a line-completion badge this load) rather than rejecting
   // the whole Promise.all and losing line-completion for every owned item
   // across every fandom over one transient error.
-  const fandomFigureSets = await Promise.all(
-    [...fandoms].map(f => getFiguresByFandom(f).catch(() => [] as KBFigure[]))
+  // Stage 2 (2026-09-02): the denominators come back GROUPED from D1
+  // (product_line, release_wave, count — wave-less rows excluded, exactly the
+  // rows the old JS loop skipped) instead of every row of the fandom.
+  type WaveCounts = Awaited<ReturnType<typeof getLineWaveCounts>>
+  const fandomCounts = await Promise.all(
+    [...fandoms].map(fandom =>
+      getLineWaveCounts(fandom)
+        .then(rows => ({ fandom, rows }))
+        .catch(() => ({ fandom, rows: [] as WaveCounts })),
+    ),
   )
-  for (const figures of fandomFigureSets) {
-    for (const f of figures) {
-      if (!f.release_wave) continue
-      const key = lineGroupKey(f.fandom, f.product_line, f.release_wave)
+  for (const { fandom, rows } of fandomCounts) {
+    for (const r of rows) {
+      const key = lineGroupKey(fandom, r.product_line, r.release_wave)
       if (!ownedByKey.has(key)) continue
-      totals.set(key, (totals.get(key) ?? 0) + 1)
+      totals.set(key, (totals.get(key) ?? 0) + r.count)
     }
   }
 

@@ -52,6 +52,17 @@
         "$env:FP_DIST_DIR='.next-verify'; npx next dev -p 3009"
       ],
       "port": 3009
+    },
+    {
+      "name": "figurepinner-wrangler-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--port",
+        "8788"
+      ],
+      "port": 8788
     }
   ]
 }

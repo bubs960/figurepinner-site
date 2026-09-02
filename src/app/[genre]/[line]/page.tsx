@@ -12,7 +12,7 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getFiguresByLine, getLinesByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrl, isPrettyUrlUnique, type KBFigure } from '@/data/kbDb'
+import { getFiguresByLine, getLinesByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrlFromMap, prettyUrlCountsForLineHub, prettyUrlIsUnique, type KBFigure } from '@/data/kbDb'
 import { titleCaseValue } from '@/data/kbHelpers'
 import { lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
@@ -275,13 +275,14 @@ const FEATURED_MIN_ELIGIBLE = 4
 /** Returns null when the module should not render (line too small, or too
  *  few eligible candidates) -- distinct from an empty array so the caller
  *  can skip the section outright rather than rendering an empty shell. */
-async function selectFeatured(figures: KBFigure[]): Promise<KBFigure[] | null> {
+async function selectFeatured(figures: KBFigure[], counts: Map<string, number>): Promise<KBFigure[] | null> {
   if (figures.length < FEATURED_MIN_LINE_SIZE) return null
 
-  const ranked = (await Promise.all(figures
+  // Stage 2 (2026-09-02): uniqueness from the hub's own router-key count map —
+  // was one COUNT query per above-bar figure.
+  const ranked = figures
     .filter(f => isAtOrAboveIndexBar(f.figure_id))
-    .map(async f => ((await isPrettyUrlUnique(f)) ? f : null))))
-    .filter((f): f is KBFigure => f !== null)
+    .filter(f => prettyUrlIsUnique(f, counts))
     .map(f => {
       const enriched = enrichedDescription(f)
       return {
@@ -388,6 +389,14 @@ export default async function LineHubPage(
     notFound()
   }
 
+  // Stage 2 (2026-09-02): ONE router-key count map for the whole hub — built
+  // from the line's own rows (plus a narrow read only for compound-alias
+  // members whose product_line differs from the URL token) — resolves every
+  // card link, the JSON-LD list and the featured-module gate. Was one COUNT
+  // query per card + per featured candidate.
+  const counts = await prettyUrlCountsForLineHub(figures, line)
+  const hrefOf = (f: KBFigure) => prettyFigureUrlFromMap(f, counts)
+
   const lineName    = buildLineDisplayName(line, figures)
   const genreName   = prettifySlug(genre)
   // Crumb target, distinct from genreName (a display string for meta/eBay copy):
@@ -412,7 +421,7 @@ export default async function LineHubPage(
   const lineIntro = curatedIntro
     ?? (totalCount <= SMALL_LINE_THRESHOLD ? autoLineContext(figures) : null)
 
-  const featured = await selectFeatured(figures)
+  const featured = await selectFeatured(figures, counts)
 
   // Sample images for the hero (first 4 figures with images)
   const sampleImages = figures
@@ -434,7 +443,7 @@ export default async function LineHubPage(
       itemListElement: await Promise.all(figures.slice(0, 50).map(async (f, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: `https://figurepinner.com${await prettyFigureUrl(f)}`,
+        url: `https://figurepinner.com${hrefOf(f)}`,
         name: deriveName(f),
       }))),
     },
@@ -625,7 +634,7 @@ export default async function LineHubPage(
               gap: '0.5rem',
             }}>
               {featured.map(f => (
-                <FigureCard key={f.figure_id} figure={f} accent={accent} />
+                <FigureCard key={f.figure_id} figure={f} accent={accent} href={hrefOf(f)} />
               ))}
             </div>
           </section>
@@ -665,7 +674,7 @@ export default async function LineHubPage(
                 gap: '0.5rem',
               }}>
                 {waveFigs.map(f => (
-                  <FigureCard key={f.figure_id} figure={f} accent={accent} />
+                  <FigureCard key={f.figure_id} figure={f} accent={accent} href={hrefOf(f)} />
                 ))}
               </div>
             </section>
@@ -732,7 +741,7 @@ export default async function LineHubPage(
 
 // ─── Figure Card ──────────────────────────────────────────────────────────────
 
-async function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: string }) {
+async function FigureCard({ figure: f, accent, href }: { figure: KBFigure; accent: string; href: string }) {
   const charName = f.character_canonical
     .split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
   const variant = (f.character_variant && f.character_variant !== 'None')
@@ -743,7 +752,7 @@ async function FigureCard({ figure: f, accent }: { figure: KBFigure; accent: str
   return (
     <div className="line-card-wrap">
       <a
-        href={await prettyFigureUrl(f)}
+        href={href}
         className="line-card"
         style={{
           display: 'flex',

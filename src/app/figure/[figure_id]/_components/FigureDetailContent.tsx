@@ -6,7 +6,7 @@
  */
 
 import { notFound } from 'next/navigation'
-import { getFigureById, getFiguresByFandom, deriveName, figureUrl, prettyFigureUrl } from '@/data/kbDb'
+import { getFigureById, getWaveCompanions, getCardsByCharacter, prettyFigureUrls, deriveName, figureUrl } from '@/data/kbDb'
 import { isNumericWave, passportValue, type KBFigure } from '@/data/kbTypes'
 import { genreSlugForFandom, genreCrumbForFandom } from '@/lib/genreFigures'
 import AdSlot from '@/app/components/AdSlot'
@@ -623,14 +623,16 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
 
   // ── Related figures ─────────────────────────────────────────────────────────
 
-  const allInGenre = await getFiguresByFandom(genre)
-
-  // Full wave (uncapped, includes the current figure) — drives an honest
-  // "you own N of M" denominator. The visible row is still capped at 12.
-  const fullWave = allInGenre.filter(f =>
-    f.product_line === local.product_line &&
-    f.release_wave === local.release_wave
-  )
+  // OOM stage 2 (2026-09-02, plan §6): two bounded compact reads replace the
+  // whole-fandom FULL_COLS scan — a (fandom, product_line) seek for the wave
+  // and a (character_canonical) seek for the versions — and ONE narrow read
+  // resolves every related link (prettyFigureUrls) instead of a COUNT query
+  // per card. Full wave is uncapped and includes the current figure — drives
+  // an honest "you own N of M" denominator. The visible row is still capped at 12.
+  const [fullWave, characterCards] = await Promise.all([
+    getWaveCompanions(genre, local.product_line, local.release_wave),
+    getCardsByCharacter(genre, local.character_canonical),
+  ])
   const waveFids = fullWave.map(f => f.figure_id)
 
   // v4 Phase 4: BAF-piece sublabel from the poured passport block — matcher's
@@ -645,26 +647,24 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     return cleaned ? `BAF · ${cleaned}` : `BAF · ${piece}`
   }
 
-  const seriesCompanions = await Promise.all(fullWave
-    .filter(f => f.figure_id !== figureId)
-    .slice(0, 12)
-    .map(async f => ({
-      figure_id: f.figure_id,
-      href: await prettyFigureUrl(f),
-      name: f.character_canonical.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-      imageUrl: thumb(f.canonical_image_url, 180),
-      subLabel: bafSubLabel(f),
-    })))
+  const companionFigs = fullWave.filter(f => f.figure_id !== figureId).slice(0, 12)
+  const characterVariantsAll = characterCards.filter(f => f.figure_id !== figureId)
+  const variantFigs = characterVariantsAll.slice(0, 12)
+  const relatedHrefs = await prettyFigureUrls([local, ...companionFigs, ...variantFigs])
+  const hrefOf = (f: KBFigure) => relatedHrefs.get(f.figure_id) ?? figureUrl(f)
 
-  const characterVariantsAll = allInGenre.filter(f =>
-    f.figure_id !== figureId &&
-    f.character_canonical === local.character_canonical
-  )
+  const seriesCompanions = companionFigs.map(f => ({
+    figure_id: f.figure_id,
+    href: hrefOf(f),
+    name: f.character_canonical.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    imageUrl: thumb(f.canonical_image_url, 180),
+    subLabel: bafSubLabel(f),
+  }))
   // v4 Phase 4: the version rail leads with the current figure, gold-ringed
   // ("you are here") — matches the design's every-version rail. Only when
   // other versions exist: a one-card rail of just this page is noise (and
   // RelatedRow's empty-guard previously hid it entirely).
-  const localPrettyUrl = await prettyFigureUrl(local)
+  const localPrettyUrl = hrefOf(local)
   const characterVariants = characterVariantsAll.length === 0 ? [] : [
     {
       figure_id: figureId,
@@ -673,14 +673,12 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       imageUrl: thumb(imageUrlFinal, 180),
       isCurrent: true,
     },
-    ...(await Promise.all(characterVariantsAll
-      .slice(0, 12)
-      .map(async f => ({
-        figure_id: f.figure_id,
-        href: await prettyFigureUrl(f),
-        name: deriveName(f),
-        imageUrl: thumb(f.canonical_image_url, 180),
-      })))),
+    ...variantFigs.map(f => ({
+      figure_id: f.figure_id,
+      href: hrefOf(f),
+      name: deriveName(f),
+      imageUrl: thumb(f.canonical_image_url, 180),
+    })),
   ]
   const characterHubHref = `/${genreSlug}/character/${local.character_canonical}`
 

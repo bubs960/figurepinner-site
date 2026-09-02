@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { prettyFigureUrl, figureUrl, type KBFigure } from '@/data/kbDb'
+import { buildPrettyUrlMap, prettyFigureUrlFromMap, type KBFigure } from '@/data/kbDb'
 import { figuresForGenre, groupAndSortLines, cardName, genreSlugForFandom, getFandom } from '@/lib/genreFigures'
 import { GENRE_TAXONOMY, type LineTile } from '@/data/genre-lines'
 import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -250,7 +250,7 @@ function buildCharacterHighlights(figures: KBFigure[]): CharacterHighlight[] {
     })
 }
 
-async function buildHub(genre: string, figures: KBFigure[]) {
+async function buildHub(genre: string, figures: KBFigure[], counts: Map<string, number>) {
   const groups = groupAndSortLines(figures)
 
   // Editorial overlay (names that deserve better casing + era labels) — same
@@ -302,7 +302,7 @@ async function buildHub(genre: string, figures: KBFigure[]) {
     if (!f) continue
     shelf.push({
       fid: f.figure_id,
-      href: await prettyFigureUrl(f),
+      href: prettyFigureUrlFromMap(f, counts),
       name: cardName(f),
       tag: lineName,
       img: thumb(f.canonical_image_url!, 225) ?? f.canonical_image_url!,
@@ -320,7 +320,7 @@ async function buildHub(genre: string, figures: KBFigure[]) {
         have.add(f.figure_id)
         shelf.push({
           fid: f.figure_id,
-          href: await prettyFigureUrl(f),
+          href: prettyFigureUrlFromMap(f, counts),
           name: cardName(f),
           tag: lineName,
           img: thumb(f.canonical_image_url, 225) ?? f.canonical_image_url,
@@ -349,7 +349,11 @@ export default async function GenrePage(
   const figures = await figuresForGenre(genre)
   if (!figures.length) notFound()
 
-  const { groups, registry, more, shelf, totalLines } = await buildHub(genre, figures)
+  // Every row of every fandom in this genre is in `figures` (compact cards), so
+  // the router-key count map is exact from own rows — no per-card COUNT queries
+  // (stage 2, 2026-09-02).
+  const counts = buildPrettyUrlMap(figures)
+  const { groups, registry, more, shelf, totalLines } = await buildHub(genre, figures, counts)
   const characters = buildCharacterHighlights(figures)
   const totalFigures = figures.length
   const hunting = shelf.slice(0, 3)
@@ -372,7 +376,7 @@ export default async function GenrePage(
         group.slice(0, 10).map(async (f, i) => ({
           '@type': 'ListItem',
           position: i + 1,
-          url: `https://figurepinner.com${await prettyFigureUrl(f)}`,
+          url: `https://figurepinner.com${prettyFigureUrlFromMap(f, counts)}`,
           name: cardName(f),
         }))
       )),
