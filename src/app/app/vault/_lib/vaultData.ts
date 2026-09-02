@@ -28,7 +28,7 @@
  *    never an error.
  */
 import { getCloudflareContext } from '@opennextjs/cloudflare'
-import { getFigureById, getLineWaveCounts, figureUrl, type KBFigure } from '@/data/kbDb'
+import { getFiguresByIds, getLineWaveCounts, figureUrl, type KBFigure } from '@/data/kbDb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
 
@@ -275,7 +275,7 @@ async function computeLineCompletion(vaultRows: VaultRow[], kbByFid: Map<string,
   if (ownedByKey.size === 0) return result
 
   const totals = new Map<string, number>()
-  // Same D1-error-handling fix as the getFigureById calls above: a fandom
+  // Same D1-error-handling fix as the batched KB read above: a fandom
   // whose D1 read fails degrades to an empty set (that fandom's owned items
   // just don't get a line-completion badge this load) rather than rejecting
   // the whole Promise.all and losing line-completion for every owned item
@@ -348,14 +348,22 @@ export async function getVaultShelfData(userId: string): Promise<VaultShelfData>
   // KBFigure | null and resolveDisplaySync() already has a real fallback
   // path for a missing KB entry (the stored row's own name/line) -- same
   // "never an error" resilience this file's R2 snapshot fetches already
-  // follow (see file header). A per-fid catch reuses that existing fallback
+  // follow (see file header). The catch reuses that existing fallback
   // instead of adding a new one.
-  const [snapEntries, kbEntries] = await Promise.all([
+  //
+  // One batched PK read, not N (2026-09-02, gap sweep finding 2): this was one
+  // getFigureById statement per owned/wanted figure on every uncached Vault
+  // view (100 items = 100 D1 statements). getFiguresByIds is the IN-chunked
+  // batch helper built for exactly this (one db.batch round trip). The same
+  // "never fail the page" contract holds: a failed batch degrades every row
+  // to resolveDisplaySync's stored-name fallback, exactly as a missing entry
+  // did before.
+  const [snapEntries, kbLoaded] = await Promise.all([
     Promise.all(toFetch.map(async fid => [fid, await fetchSnapshot(fid)] as const)),
-    Promise.all(fidOrder.map(async fid => [fid, await getFigureById(fid).catch(() => null)] as const)),
+    getFiguresByIds(fidOrder).catch(() => new Map<string, KBFigure>()),
   ])
   const snaps = new Map<string, Snapshot>(snapEntries)
-  const kbByFid = new Map<string, KBFigure | null>(kbEntries)
+  const kbByFid = new Map<string, KBFigure | null>(fidOrder.map(fid => [fid, kbLoaded.get(fid) ?? null] as const))
 
   const lineCompletion = await computeLineCompletion(vaultRows, kbByFid)
 

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { getFigureById } from '@/data/kbDb'
-import { GrailCard, FallbackOGCard, OG_SIZE, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
+import { GrailCard, FallbackOGCard, OG_SIZE, OG_CACHE_HEADERS, OG_FALLBACK_CACHE_HEADERS, resolveCardPhoto, loadCardFonts, withCardFonts } from '@/app/figure/[figure_id]/_lib/ogCard'
 import { getSpotlightByDate } from '../_lib/dailySpotlight'
 
 export const contentType = 'image/png'
@@ -30,7 +30,7 @@ export default async function Image({ params }: Props) {
   const figure = row ? await getFigureById(row.figureId).catch(() => null) : null
 
   if (!row || !figure) {
-    return new ImageResponse(<FallbackOGCard />, OG_SIZE)
+    return new ImageResponse(<FallbackOGCard />, { ...OG_SIZE, headers: OG_FALLBACK_CACHE_HEADERS })
   }
 
   const [photoSrc, fonts] = await Promise.all([
@@ -51,6 +51,8 @@ export default async function Image({ params }: Props) {
         }}
       />
     ),
-    withCardFonts(OG_SIZE, fonts)
+    // Dated spotlight rows are write-once (see dailySpotlight), so the figure
+    // card's 24 h shared TTL is safe here (2026-09-02, gap sweep finding 8).
+    { ...withCardFonts(OG_SIZE, fonts), headers: OG_CACHE_HEADERS }
   )
 }

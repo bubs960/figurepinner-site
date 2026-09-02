@@ -30,6 +30,7 @@
  * Plan + column map: Bridge/MATCHER-TO-WEB-OPTION-E-SPEC-2026-06-14.md.
  */
 
+import { cache } from 'react'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import {
   deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey, stableIdSuffix,
@@ -132,14 +133,22 @@ function mapRow(r: KBCardRow): KBFigure {
   }
 }
 
+// Request-level memo (2026-09-02, gap sweep finding 5): generateMetadata, the
+// page body and FigureDetailContent each called getFigureById for the SAME id
+// in one render (3 PK reads per figure regen; the hub's metadata + body each
+// ran the line plan, 2× per hub render). React's cache() dedupes identical-
+// argument calls within one server render and is a passthrough everywhere else
+// (scripts via ts-loader, route handlers), so no caller changed. Only pure
+// reads keyed by their string args are wrapped; getFiguresByIds takes an array
+// (identity-keyed, would never hit) and stays as is.
 // ── Point lookups ─────────────────────────────────────────────────────────────
 
 /** Look up a single figure by figure_id (PK). Mirrors kb.getFigureById. */
-export async function getFigureById(figure_id: string): Promise<KBFigure | null> {
+export const getFigureById = cache(async function getFigureById(figure_id: string): Promise<KBFigure | null> {
   const db = await getKbDb()
   const row = await db.prepare(SQL.figureById).bind(figure_id).first<KBRow>()
   return row ? mapRow(row) : null
-}
+})
 
 /** Batch PK lookup (vault, guides). Chunked under D1's bound-parameter limit, one batch round trip. */
 export async function getFiguresByIds(ids: string[]): Promise<Map<string, KBFigure>> {
@@ -178,18 +187,18 @@ export async function getFigureByStableSuffix(figure_id: string): Promise<KBFigu
  * `character` is bound exactly as given (the router normalizes its own slug;
  * the character hub passes the raw URL segment, matching its old exact filter).
  */
-export async function getFiguresByCharacter(fandom: string, character: string): Promise<KBFigure[]> {
+export const getFiguresByCharacter = cache(async function getFiguresByCharacter(fandom: string, character: string): Promise<KBFigure[]> {
   const db = await getKbDb()
   const { results } = await db.prepare(SQL.figuresByCharacter(FULL_COLS)).bind(fandom, character).all<KBRow & WithRid>()
   return sortLikeFandomScan(results ?? []).map(mapRow)
-}
+})
 
 /** Same set as getFiguresByCharacter, compact cards (character hub, figure-page variants). */
-export async function getCardsByCharacter(fandom: string, character: string): Promise<KBFigure[]> {
+export const getCardsByCharacter = cache(async function getCardsByCharacter(fandom: string, character: string): Promise<KBFigure[]> {
   const db = await getKbDb()
   const { results } = await db.prepare(SQL.figuresByCharacter(CARD_COLS)).bind(fandom, character).all<KBCardRow & WithRid>()
   return sortLikeFandomScan(results ?? []).map(mapRow)
-}
+})
 
 /**
  * Compact cards for a whole fandom — the genre hub (ISR) renders the fandom's
@@ -210,7 +219,7 @@ export async function getCardsByFandom(fandom: string): Promise<KBFigure[]> {
  * Results are merged back into table order (rowid), so callers that take the
  * first N (JSON-LD ItemList) see the same rows the old single scan returned.
  */
-export async function getFiguresByLine(fandom: string, lineSlug: string): Promise<KBFigure[]> {
+export const getFiguresByLine = cache(async function getFiguresByLine(fandom: string, lineSlug: string): Promise<KBFigure[]> {
   const db = await getKbDb()
   const plan = lineQueryPlan(FULL_COLS, fandom, lineSlug)
   const results = await db.batch<BatchRows<KBRow & WithRid>>(plan.map(q => db.prepare(q.sql).bind(...q.params)))
@@ -224,7 +233,7 @@ export async function getFiguresByLine(fandom: string, lineSlug: string): Promis
     }
   }
   return sortLikeFandomScan(rows).map(mapRow)
-}
+})
 
 /**
  * Figures sharing the current figure's (fandom, product_line, release_wave) —
@@ -258,18 +267,18 @@ export async function getLineWaveCounts(
 }
 
 /** All unique fandom slugs. Mirrors kb.getAllFandoms. */
-export async function getAllFandoms(): Promise<string[]> {
+export const getAllFandoms = cache(async function getAllFandoms(): Promise<string[]> {
   const db = await getKbDb()
   const { results } = await db.prepare(SQL.allFandoms).all<{ fandom: string }>()
   return (results ?? []).map(r => r.fandom)
-}
+})
 
 /** All unique product_line values for a fandom. Mirrors kb.getLinesByFandom. */
-export async function getLinesByFandom(fandom: string): Promise<string[]> {
+export const getLinesByFandom = cache(async function getLinesByFandom(fandom: string): Promise<string[]> {
   const db = await getKbDb()
   const { results } = await db.prepare(SQL.linesByFandom).bind(fandom).all<{ product_line: string }>()
   return (results ?? []).map(r => r.product_line)
-}
+})
 
 // ── Pretty-URL uniqueness (canonical + list links) ───────────────────────────
 // kb.ts builds a module-level count map over the whole array. At request time:
