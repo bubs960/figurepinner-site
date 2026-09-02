@@ -43,7 +43,7 @@ function withFakeKv(kvOverrides, fn) {
 describe('kv-incremental-cache-ttl', () => {
   test('TTL constants exceed their own cache type\'s revalidate window (so an entry never expires before Next would have refreshed it anyway)', () => {
     const PAGE_REVALIDATE_SECONDS = 86400 // figure/[figure_id] and [genre]/[line]/[slug] page.tsx
-    const FETCH_REVALIDATE_SECONDS = 3600 // R2 price-summary fetch, FigureDetailContent.tsx
+    const FETCH_REVALIDATE_SECONDS = 86400 // R2 price fetches, FigureDetailContent.tsx PRICE_FETCH_REVALIDATE_SECONDS (3600 -> 86400, D2 2026-09-02)
     assert.ok(PAGE_CACHE_TTL_SECONDS > PAGE_REVALIDATE_SECONDS)
     assert.ok(FETCH_CACHE_TTL_SECONDS > FETCH_REVALIDATE_SECONDS)
   })

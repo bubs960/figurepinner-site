@@ -110,11 +110,24 @@ export type PriceHistory = {
   window_truncated: boolean
 }
 
+// D2 (2026-09-02, webaudit release-A correction + omnibus item 1; Steve's call,
+// defaulted per the 9/2 "jump right in" ruling): the two R2 price fetches below
+// used `revalidate: 3600`, and a route's effective revalidate is the MINIMUM of
+// its own export and every cached fetch inside it — so /figure/[figure_id] and
+// /[genre]/[line]/[slug] declared 86400 but were really 1-hour pages, and the
+// 9,973 sitemap-submitted /figure/fp_* URLs recooled hourly (23K cold renders a
+// day for Google alone). Prices refresh on a DAILY aggregation cadence upstream
+// (figure/[figure_id]/page.tsx:22), so a 24h data cache loses nothing; the
+// "Latest sold comp: <date>" label is the honesty surface. KV fetch-cache TTL
+// scales with this in src/lib/kv-incremental-cache-ttl.ts (must stay > this).
+export const PRICE_FETCH_REVALIDATE_SECONDS = 86400
+
 export async function fetchPriceHistory(figure_id: string): Promise<PriceHistory | null> {
   try {
     const res = await fetch(
       `${R2_PROXY_BASE}/price-history/${encodeURIComponent(figure_id)}.json`,
-      { next: { revalidate: 3600 } }
+      // 24h (D2, 2026-09-02): see fetchFigurePageData below — same lever, same reason.
+      { next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS } }
     )
     if (!res.ok) return null
     const data = (await res.json()) as PriceHistory
@@ -215,7 +228,7 @@ export async function fetchFigurePageData(figure_id: string): Promise<{ price: P
   // limit is the backstop. (Fix: S32, 2026-06-18 — WEB-HEALTH-ALERT-2026-06-16)
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
-    { next: { revalidate: 3600 } }
+    { next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS } }
   ).catch(() => null)
   if (!res?.ok) return { price: null, imageUrl: null }
   const snap = await res.json().catch(() => null) as R2Snapshot | null

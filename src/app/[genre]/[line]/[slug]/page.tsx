@@ -25,6 +25,7 @@ import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract
 import { findFigureMatches } from './_lib/findFigureMatches'
 import { resolveLegacyPrettyPath } from './_lib/resolveLegacyPrettyPath'
 import { isAtOrAboveIndexBar } from '@/data/indexValueCensus'
+import { isReservedPageSegment } from '../_lib/lineHubPaging'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
 // client-side in FigureDetailContent so caching is safe. Was force-dynamic;
@@ -42,6 +43,13 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { genre, line, slug } = await params
+
+  // Reserved segment (hub pagination, 2026-09-02): /[genre]/[line]/page/N is
+  // the paged hub, so the bare /[genre]/[line]/page can never be a figure —
+  // it is page 1, i.e. the hub itself. No KB character slug is literally
+  // "page" (tests/lineHubPagination.test.mjs asserts it on every run), so this
+  // never shadows a real figure. Thrown here, pre-streaming, for a real 308.
+  if (isReservedPageSegment(slug)) permanentRedirect(`/${genre}/${line}`)
 
   // Genre-alias 308 lives HERE as well as in the page body: generateMetadata
   // runs before the response streams, so this emits a real 308 (the page-body
@@ -151,6 +159,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function PrettyFigurePage({ params }: PageProps) {
   const { genre, line, slug } = await params
+
+  // Reserved "page" segment — see generateMetadata; fallback copy.
+  if (isReservedPageSegment(slug)) permanentRedirect(`/${genre}/${line}`)
 
   // Exactly ONE slug namespace serves 200 per fandom; every alias 308s to it
   // (2026-07-12 root-cause FIX-2). Before this, /marvel-comics/... and

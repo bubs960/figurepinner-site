@@ -42,13 +42,17 @@ import {
 //   - page/route cache ("cache" -- `revalidate = 86400` = 24h in
 //     src/app/figure/[figure_id]/page.tsx and [genre]/[line]/[slug]/page.tsx):
 //     5 days.
-//   - fetch/data cache ("fetch" -- `next: { revalidate: 3600 }` = 1h on the
-//     R2 price-summary fetch, FigureDetailContent.tsx:175-177): 8 hours.
+//   - fetch/data cache ("fetch" -- `next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS }`
+//     on the two R2 price fetches in FigureDetailContent.tsx): was 8 hours
+//     against a 1h revalidate; raised to 3 days on 2026-09-02 (D2) when that
+//     revalidate went 3600 -> 86400, keeping the "TTL > revalidate" invariant
+//     at the low end of the 3-7x band. Storage delta is bounded: one small
+//     JSON entry per figure that gets traffic, already the case at 8h.
 // Cloudflare KV's `expirationTtl` minimum is 60 seconds; both values are far
 // above it. See tests/kvIncrementalCacheTtl.test.mjs for the regression
 // guard that fails loudly if a future edit ever drops the TTL again.
 export const PAGE_CACHE_TTL_SECONDS = 5 * 24 * 60 * 60; // 5 days
-export const FETCH_CACHE_TTL_SECONDS = 8 * 60 * 60; // 8 hours
+export const FETCH_CACHE_TTL_SECONDS = 3 * 24 * 60 * 60; // 3 days
 
 export function ttlSecondsForCacheType(cacheType: CacheEntryType | undefined): number {
   return cacheType === "fetch" ? FETCH_CACHE_TTL_SECONDS : PAGE_CACHE_TTL_SECONDS;
