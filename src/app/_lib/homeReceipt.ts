@@ -14,6 +14,7 @@
  *  - Tape prices are individual real sold comps from the same snapshots.
  */
 
+import { PRICE_FETCH_REVALIDATE_SECONDS } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 import { thumb } from '@/lib/imageUrl'
 import { compCountToConfidence, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -128,9 +129,14 @@ async function fetchOne(entry: { fid: string; chipLabel: string; fieldNote?: str
   // AbortSignal.timeout() omitted — same reason as FigureDetailContent:
   // dynamic signal busts Next 15 fetch cache → revalidate=0 → page no-store.
   // (Fix: S32, 2026-06-18)
+  // 24 h, not 1 h (2026-09-02 speed sweep, finding 2): a route's effective
+  // revalidate is the MINIMUM of its own export and every cached fetch inside
+  // it, so this 3600 made the homepage — the busiest page — recool hourly
+  // (1,850 ms cold TTFB measured) while every hub is a 24 h page. Prices refresh
+  // daily upstream; same constant the figure page uses (D2).
   const res = await fetch(
     `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(entry.fid)}.json`,
-    { next: { revalidate: 3600 } }
+    { next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS } }
   ).catch(() => null)
   if (!res?.ok) return null
 

@@ -30,7 +30,12 @@ describe('kbLite mirrors kb.ts for the fields runtime readers use', () => {
       const l = lite.getFigureById(f.figure_id)
       assert.ok(l, `missing ${f.figure_id}`)
       for (const k of ['fandom', 'manufacturer', 'product_line', 'character_canonical', 'character_variant', 'release_wave', 'canonical_image_url', 'name', 'v1_name', 'v1_line', 'v1_series']) {
-        assert.equal(l[k] ?? null, f[k] ?? null, `${f.figure_id}.${k}`)
+        // '' and null are the same "no value" for these nullable strings: every
+        // runtime reader (kbDb.ts mapRow, kbLite.ts rowToFigure) folds null to ''.
+        // Matcher's 2026-09-02 evening sync (74a7413) wrote release_wave "" into
+        // the full file for 2 fids while the slim file omits the key — a real
+        // sync inconsistency reported to matcher, but not a reader-parity defect.
+        assert.equal(l[k] || null, f[k] || null, `${f.figure_id}.${k}`)
       }
       assert.equal(deriveName(l), deriveName(f), `${f.figure_id} deriveName`)
       assert.equal(lite.prettyFigureUrl(l), kb.prettyFigureUrl(f), `${f.figure_id} prettyFigureUrl`)

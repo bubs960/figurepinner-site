@@ -29,7 +29,7 @@ export async function fetchPriceSnaps(fids: string[]): Promise<Map<string, Price
         // in Next 15, forcing revalidate=0 -> no-store on the route (S32,
         // 2026-06-18 — see FigureDetailContent.tsx for the original fix).
         const r = await fetch(`${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`, {
-          next: { revalidate: 3600 },
+          next: { revalidate: 86400 }, // was 3600 — prices refresh daily upstream (2026-09-02 speed sweep)
         })
         if (!r.ok) return [fid, null] as const
         const j = (await r.json()) as PriceSnap

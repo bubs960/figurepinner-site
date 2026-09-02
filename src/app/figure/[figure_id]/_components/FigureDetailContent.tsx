@@ -280,9 +280,18 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // Google without an explicit X-Robots-Tag header. (SEO verify 2026-06-25, R5.)
   if (!local) notFound()
 
-  const [{ price, imageUrl }, priceHistory] = await Promise.all([
+  // One await for every read that needs only `local` (2026-09-02 speed sweep,
+  // finding 3): these used to run in three serialized stages — price fetches,
+  // then seller listings, then wave/character cards, then the golden-corpus
+  // doc — 60–160 ms of avoidable latency on every cold figure render. Only
+  // prettyFigureUrls (below) genuinely depends on a result here.
+  const [{ price, imageUrl }, priceHistory, sellerListings, fullWave, characterCards, goldenCorpusDoc] = await Promise.all([
     fetchFigurePageData(figureId),
     fetchPriceHistory(figureId),
+    getSellerListings(figureId),
+    getWaveCompanions(local.fandom, local.product_line, local.release_wave),
+    getCardsByCharacter(local.fandom, local.character_canonical),
+    getGoldenCorpusClaims(figureId, local.passport?.sidecar),
   ])
   const latestCompDate = price ? latestSoldDate(price.soldHistory) : null
 
@@ -638,8 +647,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   }
 
   // ── Seller listings ─────────────────────────────────────────────────────────
-
-  const sellerListings = await getSellerListings(figureId)
+  // (sellerListings resolved in the Promise.all above.)
 
   // ── Related figures ─────────────────────────────────────────────────────────
 
@@ -649,10 +657,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // resolves every related link (prettyFigureUrls) instead of a COUNT query
   // per card. Full wave is uncapped and includes the current figure — drives
   // an honest "you own N of M" denominator. The visible row is still capped at 12.
-  const [fullWave, characterCards] = await Promise.all([
-    getWaveCompanions(genre, local.product_line, local.release_wave),
-    getCardsByCharacter(genre, local.character_canonical),
-  ])
+  // (fullWave / characterCards resolved in the Promise.all above; `genre` ===
+  // local.fandom, which is what that call passes.)
   const waveFids = fullWave.map(f => f.figure_id)
 
   // v4 Phase 4: BAF-piece sublabel from the poured passport block — matcher's
@@ -905,8 +911,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // Only real, per-figure or confirmed-source data. UNRESOLVED fields are never
   // rendered (same "don't publish what you can't source" rule as everywhere
   // else on this page) rather than shown as a fabricated/empty row.
-  // Golden-corpus claims doc lookup (null for every fid outside the corpus).
-  const goldenCorpusDoc = await getGoldenCorpusClaims(figureId, local.passport?.sidecar)
+  // Golden-corpus claims doc (null for every fid outside the corpus) — resolved
+  // in the Promise.all at the top of the component.
 
   const dpIdentity: IdentityRow[] = [
     { label: 'Name', value: displayName, badge: 'KB RECORD', badgeColor: 'var(--dp-cyan)' },

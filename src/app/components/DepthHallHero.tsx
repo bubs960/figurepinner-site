@@ -20,7 +20,7 @@
  * stays reachable through search and the shelf section below the hero).
  */
 
-import { createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './DepthHallHero.module.css'
 
 // Lets a nested HeroSearch report its takeover-open state up to the liquid
@@ -28,7 +28,10 @@ import styles from './DepthHallHero.module.css'
 // gate below). No-op default: HeroSearch also renders standalone on
 // SiteHeader and [genre] pages, outside any DepthHallHero provider, and
 // must work unchanged there.
-export const DepthHallSearchActiveContext = createContext<(active: boolean) => void>(() => {})
+// Context moved to ./DepthHallSearchContext (2026-09-02) — re-exported for
+// callers that still import it from here; HeroSearch imports the small file.
+import { DepthHallSearchActiveContext } from './DepthHallSearchContext'
+export { DepthHallSearchActiveContext }
 
 export type HallCard = {
   fid: string

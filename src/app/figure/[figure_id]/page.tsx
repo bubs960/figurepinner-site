@@ -50,7 +50,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const line = prettifySlug(local.product_line)
   const fandom = prettifySlug(local.fandom)
 
-  const { price } = await fetchFigurePageData(figure_id)
+  // Price fetch (R2) and the canonical lookup (D1) don't depend on each other —
+  // one await, not two (2026-09-02 speed sweep, finding 7).
+  const [{ price }, canonicalPath] = await Promise.all([fetchFigurePageData(figure_id), prettyFigureUrl(local)])
 
   // FPPS-01 (2026-07-15, Steve's binding decisions): meta tags must never
   // assert a single pooled price when condition-split data exists. Compact,
@@ -94,7 +96,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const belowIndexBar = !isAtOrAboveIndexBar(figure_id)
 
   // Canonical points to the keyword-rich pretty URL
-  const canonical = `${BASE}${await prettyFigureUrl(local)}`
+  const canonical = `${BASE}${canonicalPath}`
 
   // Enriched prose leads when it passes the quality gates (S52 meta wiring —
   // differentiates ~18K near-identical descriptions); templated fallback else.

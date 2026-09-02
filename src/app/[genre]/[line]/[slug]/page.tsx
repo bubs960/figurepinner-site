@@ -73,7 +73,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const lineName = prettifySlug(figure.product_line)
   const fandomName = prettifySlug(genre)
 
-  const { price } = await fetchFigurePageData(figure.figure_id)
+  // Price fetch (R2) and the canonical lookup (D1) in one await (2026-09-02 speed sweep).
+  const [{ price }, canonicalPath] = await Promise.all([fetchFigurePageData(figure.figure_id), prettyFigureUrl(figure)])
 
   // FIX-1 (webaudit transparent-split gate, 2026-07-17 s4, "sibling-surface
   // trap sighting #6"): this route's own generateMetadata used to read raw
@@ -117,7 +118,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // the character-hub lockstep).
   const belowIndexBar = !isAtOrAboveIndexBar(figure.figure_id)
 
-  const canonical = `${BASE}${await prettyFigureUrl(figure)}`
+  const canonical = `${BASE}${canonicalPath}`
 
   // Enriched prose leads when it passes the quality gates (S52 meta wiring) —
   // this is the INDEXED canonical route, so it matters most here.

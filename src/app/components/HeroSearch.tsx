@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useContext, startTransition } from 'react'
 import { createPortal } from 'react-dom'
-import { DepthHallSearchActiveContext } from '@/app/components/DepthHallHero'
+import { DepthHallSearchActiveContext } from '@/app/components/DepthHallSearchContext'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import { thumb } from '@/lib/imageUrl'
 import { useQuickLook } from '@/app/components/QuickLookAnchor'

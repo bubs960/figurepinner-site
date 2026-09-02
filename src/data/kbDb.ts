@@ -204,11 +204,11 @@ export const getCardsByCharacter = cache(async function getCardsByCharacter(fand
  * Compact cards for a whole fandom — the genre hub (ISR) renders the fandom's
  * line groups and counts. The one remaining whole-fandom read; no prose.
  */
-export async function getCardsByFandom(fandom: string): Promise<KBFigure[]> {
+export const getCardsByFandom = cache(async function getCardsByFandom(fandom: string): Promise<KBFigure[]> {
   const db = await getKbDb()
   const { results } = await db.prepare(SQL.cardsByFandom).bind(fandom).all<KBCardRow & WithRid>()
   return sortLikeFandomScan(results ?? []).map(mapRow)
-}
+})
 
 /**
  * All figures for a fandom + product_line combination. lineSlug can be either

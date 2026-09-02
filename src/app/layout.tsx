@@ -131,6 +131,12 @@ export default function RootLayout({
             then snapped when the CSS chunks landed. Inlining the reset makes
             that shift class structurally impossible. */}
         <style>{'body{margin:0}'}</style>
+        {/* Preconnect to the two third-party origins every anonymous page reaches
+            (CF Web Analytics beacon, Adsterra invoke.js) so their TLS handshakes
+            overlap the HTML parse instead of starting after it (2026-09-02 speed
+            sweep). Zero bytes in the bundle. */}
+        <link rel="preconnect" href="https://static.cloudflareinsights.com" />
+        <link rel="preconnect" href="https://www.highperformanceformat.com" crossOrigin="anonymous" />
       </head>
       <body>
         {/* Plain ClerkProvider, NO `dynamic` prop (S70 fix, 2026-07-07, per

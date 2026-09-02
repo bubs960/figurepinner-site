@@ -44,7 +44,7 @@ const GENRES: GenreDef[] = [
   { slug: 'action-force', label: 'Action Force', accent: '#455a64', blurb: 'British Action Force figures and vehicles.', highlights: ['Action Force'] },
 ]
 
-export const revalidate = 3600
+export const revalidate = 86400 // was 3600 — guide prose changes on deploy, prices daily (2026-09-02 speed sweep)
 
 // Counts come from the build-generated kb-stats aggregate (scripts/build-kb-stats.mjs),
 // not the catalog: this page is in the shared Worker bundle and a kb.ts import

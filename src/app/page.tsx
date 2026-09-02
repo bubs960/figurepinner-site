@@ -18,6 +18,12 @@ import { getFigureById, getFiguresByLine, prettyFigureUrl } from '@/data/kbLite'
 import { getFandom } from '@/lib/genreFigures'
 import { thumb } from '@/lib/imageUrl'
 
+// Explicit ISR cadence (2026-09-02 speed sweep): before this the homepage had no
+// route config and inherited whatever the R2 fetches in homeReceipt.ts declared —
+// 1 h, i.e. a full cold render every hour on the site's busiest URL. 24 h matches
+// every hub route; the deploy chain purges on every release anyway.
+export const revalidate = 86400
+
 export const metadata: Metadata = {
   title: { absolute: 'Action Figure Price Guide — Real Sold Prices | FigurePinner' },
   description: `Search real eBay sold prices for ${TOTAL_FIGURES_LABEL} action figures across WWE, Star Wars, Marvel, DC and more. Know what yours is worth before you buy or sell.`,

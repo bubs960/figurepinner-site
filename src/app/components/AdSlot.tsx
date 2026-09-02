@@ -200,6 +200,13 @@ export default function AdSlot({ slot, className }: Props) {
   // (the iframe itself failing outright) -- not "the ad network chose not to
   // serve a creative this impression," which real ad networks do sometimes
   // and which this can no longer distinguish from a normal fill.
+  // 2026-09-02 (speed sweep, finding 5): the iframe below is now `loading="lazy"`,
+  // so a below-fold unit (figure pages carry two) no longer opens a third-party
+  // connection during hydration. That also means the fill-timeout clock must
+  // not start at mount — a lazy iframe that hasn't been scrolled to would read
+  // as "unfilled" and collapse. The clock starts when the unit comes within a
+  // viewport of the fold (same IntersectionObserver pattern as ad_viewable
+  // above); browsers without IO start it immediately, as before.
   useEffect(() => {
     if (proState !== 'free') return
     const iframeEl = iframeRef.current
@@ -208,13 +215,28 @@ export default function AdSlot({ slot, className }: Props) {
     const onLoad = () => setAdState('filled')
     iframeEl.addEventListener('load', onLoad)
 
-    const timeout = setTimeout(() => {
-      setAdState(current => (current === 'pending' ? 'unfilled' : current))
-    }, FILL_TIMEOUT_MS)
+    let timeout: ReturnType<typeof setTimeout> | null = null
+    const startClock = () => {
+      if (timeout != null) return
+      timeout = setTimeout(() => {
+        setAdState(current => (current === 'pending' ? 'unfilled' : current))
+      }, FILL_TIMEOUT_MS)
+    }
+
+    let obs: IntersectionObserver | null = null
+    if (typeof IntersectionObserver === 'undefined') {
+      startClock()
+    } else {
+      obs = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) { startClock(); obs?.disconnect() }
+      }, { rootMargin: '100% 0px' })
+      obs.observe(iframeEl)
+    }
 
     return () => {
       iframeEl.removeEventListener('load', onLoad)
-      clearTimeout(timeout)
+      if (timeout != null) clearTimeout(timeout)
+      obs?.disconnect()
     }
   }, [proState])
 
@@ -258,6 +280,7 @@ export default function AdSlot({ slot, className }: Props) {
           ref={iframeRef}
           srcDoc={adHtml}
           title="Advertisement"
+          loading="lazy"
           sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
           style={{ width: config.width, height: config.height, border: 'none', maxWidth: '100%' }}
         />
