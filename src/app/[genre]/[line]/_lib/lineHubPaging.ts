@@ -133,6 +133,36 @@ export function planPage<T extends Pageable>(all: T[], page: number): PagePlan<T
   return { sections, start, end: Math.max(start, end), total, totalPages, waveCount: groups.length }
 }
 
+
+// ─── Generic window (any ordered card list) ───────────────────────────────────
+// The character hub (/[genre]/character/[slug]/page/N, Release F 2026-09-02)
+// orders cards line → wave → name, not wave → name, so it flattens its own
+// order and takes a plain window; the section regrouping happens at the
+// call site. Same page size, same 1-based page semantics as planPage().
+
+export type PageWindow<T> = {
+  items: T[]
+  /** 0-based index of the first card on this page. */
+  start: number
+  /** 0-based exclusive end. */
+  end: number
+  total: number
+  totalPages: number
+}
+
+export function pageWindow<T>(ordered: T[], page: number): PageWindow<T> {
+  const total = ordered.length
+  const totalPages = totalPagesFor(total)
+  const start = Math.min((page - 1) * LINE_HUB_PAGE_SIZE, total)
+  const end = Math.min(start + LINE_HUB_PAGE_SIZE, total)
+  return { items: ordered.slice(start, end), start, end, total, totalPages }
+}
+
+/** Page URL for a character hub: page 1 is the bare hub, pages 2+ get /page/N. */
+export function characterHubPath(genre: string, characterSlug: string, page: number): string {
+  return page <= 1 ? `/${genre}/character/${characterSlug}` : `/${genre}/character/${characterSlug}/page/${page}`
+}
+
 /**
  * Page numbers to show in the nav: first, last, and a window around the
  * current page, with `null` marking an ellipsis. Bounded (<= 9 entries) so a

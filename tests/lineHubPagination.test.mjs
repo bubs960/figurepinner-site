@@ -128,3 +128,36 @@ describe('line hub pagination', () => {
     }
   })
 })
+
+describe('character hub pagination (Release F) — pageWindow + characterHubPath', async () => {
+  const { pageWindow, characterHubPath } = await import('../src/app/[genre]/[line]/_lib/lineHubPaging.ts')
+
+  test('pageWindow slices the display order without gaps or overlap', () => {
+    const ordered = Array.from({ length: 250 }, (_, i) => i)
+    const pages = Math.ceil(250 / 96)
+    const seen = []
+    for (let p = 1; p <= pages; p++) {
+      const w = pageWindow(ordered, p)
+      assert.equal(w.total, 250); assert.equal(w.totalPages, 3)
+      assert.equal(w.items.length, w.end - w.start)
+      assert.ok(w.items.length <= 96)
+      seen.push(...w.items)
+    }
+    assert.deepEqual(seen, ordered)
+    assert.deepEqual(pageWindow(ordered, 3).items.length, 58)
+    assert.deepEqual(pageWindow(ordered, 4).items, [])
+  })
+
+  test('characterHubPath: page 1 is the bare hub, pages 2+ get /page/N', () => {
+    assert.equal(characterHubPath('dc', 'batman', 1), '/dc/character/batman')
+    assert.equal(characterHubPath('dc', 'batman', 3), '/dc/character/batman/page/3')
+  })
+
+  test('the character hub routes both register ISR (revalidate + generateStaticParams) — source guard', () => {
+    for (const rel of ['../src/app/[genre]/character/[character_slug]/page.tsx', '../src/app/[genre]/character/[character_slug]/page/[n]/page.tsx']) {
+      const src = readFileSync(new URL(rel, import.meta.url), 'utf8')
+      assert.match(src, /export const revalidate = 86400/)
+      assert.match(src, /export function generateStaticParams\(\)/)
+    }
+  })
+})
