@@ -349,9 +349,22 @@ export function dataQualityState(soldCount: number): DataQualityState {
  */
 export type PriceCompTier = 'trustworthy' | 'thin' | 'suppress'
 
+/**
+ * THE comp-count floor for quoting a median anywhere on the site (FPPS-01 rule
+ * 2: "<3 -> suppress"). Every surface that decides whether a price number
+ * renders reads this constant -- priceCompTier, BidCheck's column gate, the
+ * hero price block / placard rows (via priceContract.quotableBuckets) and the
+ * Decision-Passport bucket cards. 2026-09-02 (webaudit pass-1 defect 1): the
+ * hero and the passport block had their own `count >= 1` gates and quoted
+ * "$25 median · LOW · 2 comps" on a bucket that Bid Check and Recent Sales, on
+ * the same page, correctly refused to quote -- one page, three verdicts.
+ */
+export const MIN_COMPS_TO_QUOTE = 3
+export const TRUSTWORTHY_COMPS = 10
+
 export function priceCompTier(compCount: number): PriceCompTier {
-  if (compCount >= 10) return 'trustworthy'
-  if (compCount >= 3)  return 'thin'
+  if (compCount >= TRUSTWORTHY_COMPS) return 'trustworthy'
+  if (compCount >= MIN_COMPS_TO_QUOTE) return 'thin'
   return 'suppress'
 }
 

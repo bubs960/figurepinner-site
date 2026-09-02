@@ -13,6 +13,7 @@
 
 import type { CondBucket } from './FigureDetailContent'
 import { confidenceForCount } from '../_lib/confidence'
+import { priceCompTier, MIN_COMPS_TO_QUOTE } from '../_lib/figureFormatters'
 
 export type IdentityRow = { label: string; value: string; badge: string; badgeColor: string }
 
@@ -36,7 +37,11 @@ function confidenceLabel(count: number): { label: string; color: string } {
 
 function BucketCard({ label, bucket }: { label: string; bucket: CondBucket | null }) {
   const count = bucket?.count ?? 0
-  const hasNumber = bucket?.median != null && count >= 1
+  // Same floor as every other price surface (FPPS-01 rule 2, MIN_COMPS_TO_QUOTE):
+  // a 1-2 comp bucket shows its count, never a dollar figure (2026-09-02,
+  // webaudit pass-1 defect 1 -- this card said "$25 · 2 comps" while Bid Check
+  // on the same page said "not enough loose sales").
+  const hasNumber = bucket?.median != null && priceCompTier(count) !== 'suppress'
   const conf = confidenceLabel(count)
   return (
     <div style={{
@@ -52,9 +57,11 @@ function BucketCard({ label, bucket }: { label: string; bucket: CondBucket | nul
         {hasNumber ? `$${bucket!.median!.toFixed(0)}` : '—'}
       </div>
       <div style={{ fontSize: '0.7rem', lineHeight: 1.5, color: 'var(--dp-muted)' }}>
-        {count > 0
+        {count > 0 && hasNumber
           ? `${count} comp${count === 1 ? '' : 's'}${bucket?.min != null && bucket?.max != null ? ` · range $${bucket.min.toFixed(0)}–$${bucket.max.toFixed(0)}` : ''}`
-          : 'No recent sold comps in this condition yet'}
+          : count > 0
+            ? `${count} sale${count === 1 ? '' : 's'} on record — not enough to quote a median (needs ${MIN_COMPS_TO_QUOTE})`
+            : 'No recent sold comps in this condition yet'}
       </div>
       {count > 0 && (
         <div style={{ marginTop: '0.5rem' }}>

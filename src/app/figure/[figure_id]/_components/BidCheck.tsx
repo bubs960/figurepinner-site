@@ -30,7 +30,7 @@
 // only; logic, thresholds, wording, and verdict colors are unchanged.
 
 import { useState } from 'react'
-import { formatCurrency } from '../_lib/figureFormatters'
+import { formatCurrency, MIN_COMPS_TO_QUOTE } from '../_lib/figureFormatters'
 import SectionH2 from './SectionH2'
 
 interface Comp {
@@ -53,7 +53,10 @@ interface BidCheckProps {
   looseCount?: number
 }
 
-const MIN_SPLIT_COMPS = 3
+// One floor site-wide (FPPS-01 rule 2, figureFormatters.MIN_COMPS_TO_QUOTE) --
+// this used to be a local `3` that happened to agree with the contract while
+// the hero and passport surfaces used `>= 1` (2026-09-02).
+const MIN_SPLIT_COMPS = MIN_COMPS_TO_QUOTE
 const FIRM_COMPS = 10
 
 // ── Parity helpers (mirror MarketPanel) ──────────────────────────────────────

@@ -1,7 +1,7 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
-import { derivePriceContract, INSUFFICIENT_COMPS_LABEL } from '../src/app/figure/[figure_id]/_lib/priceContract.ts'
-import { priceCompTier } from '../src/app/figure/[figure_id]/_lib/figureFormatters.ts'
+import { derivePriceContract, INSUFFICIENT_COMPS_LABEL, quotableBuckets } from '../src/app/figure/[figure_id]/_lib/priceContract.ts'
+import { priceCompTier, MIN_COMPS_TO_QUOTE, TRUSTWORTHY_COMPS } from '../src/app/figure/[figure_id]/_lib/figureFormatters.ts'
 
 // FPPS-01 (2026-07-15) -- Steve's binding product decisions:
 //   1. No single headline price, ever, when both conditions have data.
@@ -27,6 +27,38 @@ describe('priceCompTier (Steve\'s exact 3-tier boundaries)', () => {
     assert.equal(priceCompTier(0), 'suppress')
     assert.equal(priceCompTier(1), 'suppress')
     assert.equal(priceCompTier(2), 'suppress')
+  })
+})
+
+describe('one floor, one verdict (2026-09-02, webaudit pass-1 defect 1)', () => {
+  test('the exported floor IS the tier boundary the contract uses', () => {
+    assert.equal(MIN_COMPS_TO_QUOTE, 3)
+    assert.equal(TRUSTWORTHY_COMPS, 10)
+    assert.equal(priceCompTier(MIN_COMPS_TO_QUOTE - 1), 'suppress')
+    assert.equal(priceCompTier(MIN_COMPS_TO_QUOTE), 'thin')
+    assert.equal(priceCompTier(TRUSTWORTHY_COMPS), 'trustworthy')
+  })
+
+  test('quotableBuckets: the JD McDonagh case -- a 2-comp loose bucket is NOT quotable, so the hero shows no number for it', () => {
+    const loose = { median: 25, count: 2, avg: 25, min: 20, max: 30, p10: null, p90: null }
+    const { sealed, loose: q } = quotableBuckets(null, loose)
+    assert.equal(sealed, null)
+    assert.equal(q, null, 'a bucket under the floor must come back null -- the hero renders no dollar figure for it')
+    // and the same input through derivePriceContract agrees: median suppressed, count kept
+    const c = derivePriceContract({ soldCount: 2, medianSold: 25, loose })
+    assert.equal(c.loose?.median, null)
+    assert.equal(c.loose?.count, 2)
+    assert.equal(c.loose?.tier, 'suppress')
+  })
+
+  test('quotableBuckets: 3 comps is quotable (thin), 10+ is quotable (trustworthy); a bucket without a median is never quotable', () => {
+    const thin = { median: 40, count: 3 }
+    const deep = { median: 180, count: 12 }
+    const noMedian = { median: null, count: 50 }
+    const r = quotableBuckets(deep, thin)
+    assert.equal(r.sealed, deep)
+    assert.equal(r.loose, thin)
+    assert.equal(quotableBuckets(noMedian, null).sealed, null)
   })
 })
 

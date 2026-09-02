@@ -150,3 +150,25 @@ export function derivePriceContract(price: PriceContractInput | null | undefined
 /** "insufficient recent comps" (or equivalent) copy for a suppressed tier --
  *  single source so wording can't drift between surfaces. */
 export const INSUFFICIENT_COMPS_LABEL = 'Insufficient recent comps'
+
+/**
+ * The two condition buckets as the hero price block / placard may QUOTE them:
+ * a bucket comes back only when it has a median and clears the FPPS-01 floor
+ * (priceCompTier !== 'suppress'); otherwise null, so the caller renders no
+ * number for that condition. Same rule derivePriceContract applies to
+ * `.median`, exposed on the raw bucket shape the hero components consume.
+ *
+ * 2026-09-02 (webaudit pass-1 defect 1): HeroBand/PriceBlock and the
+ * Decision-Passport bucket cards were reading raw buckets behind a `count >= 1`
+ * gate, so a 2-comp loose bucket rendered "$25 · LOW" in the hero while Bid
+ * Check and Recent Sales on the same page said "not enough sales". One floor,
+ * one verdict, every surface.
+ */
+export function quotableBuckets<T extends { median: number | null; count: number }>(
+  sealed: T | null | undefined,
+  loose: T | null | undefined,
+): { sealed: T | null; loose: T | null } {
+  const quotable = (b: T | null | undefined): T | null =>
+    b != null && b.median != null && priceCompTier(b.count) !== 'suppress' ? b : null
+  return { sealed: quotable(sealed), loose: quotable(loose) }
+}

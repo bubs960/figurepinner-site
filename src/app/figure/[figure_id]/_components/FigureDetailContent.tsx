@@ -22,7 +22,7 @@ import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
 import MobileActionBar from './MobileActionBar'
 import LiquidBackground from './LiquidBackground'
-import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier } from '../_lib/figureFormatters'
+import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier, MIN_COMPS_TO_QUOTE } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { enrichedDescription, gatedLoreText, gatedKeyFeatures } from '../_lib/enrichedCopy'
@@ -35,7 +35,7 @@ import GoldenCorpusPassport from './GoldenCorpusPassport'
 import ScalePassport from './ScalePassport'
 import GoldenCorpusAtAGlance from './GoldenCorpusAtAGlance'
 import { getGoldenCorpusClaims } from '../_lib/goldenCorpus'
-import { derivePriceContract } from '../_lib/priceContract'
+import { derivePriceContract, quotableBuckets } from '../_lib/priceContract'
 import { thumb } from '@/lib/imageUrl'
 import { formatShortDateWithYear } from '@/lib/safeDate'
 import SiteHeader from '@/app/components/SiteHeader'
@@ -373,6 +373,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const loosePresent = jsonLdPriceContract.loose != null
   const sealedUsable = jsonLdPriceContract.sealed?.median != null
   const looseUsable = jsonLdPriceContract.loose?.median != null
+  // Hero price block buckets, gated by the SAME floor as everything else
+  // (FPPS-01 rule 2 via quotableBuckets) -- never the raw buckets. 2026-09-02,
+  // webaudit pass-1 defect 1: the raw pass-through let a 2-comp loose bucket
+  // render "$25 · LOW" here while Bid Check and Recent Sales refused it.
+  const quotable = quotableBuckets(price?.sealed, price?.loose)
   const headlineBucket =
     sealedUsable ? (price?.sealed ?? null)
     : looseUsable ? (price?.loose ?? null)
@@ -384,7 +389,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     : headlineCondition === 'loose' ? 'loose'
     : null
   const placardSecondary =
-    segmentation === 'split' && price?.loose && price.loose.median != null
+    segmentation === 'split' && looseUsable && price?.loose && price.loose.median != null
       ? { label: 'Loose', median: price.loose.median, count: price.loose.count }
       : null
   const placardConditionRows = (() => {
@@ -393,7 +398,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       { key: 'sealed' as const, label: 'Sealed / carded', bucket: price.sealed ?? null },
       { key: 'loose' as const, label: 'Loose / opened', bucket: price.loose ?? null },
     ].flatMap(({ key, label, bucket }) => {
-      if (!bucket || bucket.median == null || bucket.count < 1) return []
+      // Same floor as every other price surface (FPPS-01 rule 2) -- a 1-2 comp
+      // bucket gets no dollar row here either (2026-09-02).
+      if (!bucket || bucket.median == null || bucket.count < MIN_COMPS_TO_QUOTE) return []
       const rangeLabel = bucket.min != null && bucket.max != null && bucket.max > bucket.min
         ? `${formatCurrency(bucket.min)}-${formatCurrency(bucket.max)}`
         : null
@@ -1031,7 +1038,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             conditionRows={placardConditionRows}
             secondary={placardSecondary}
             inferenceNote={inferenceNote}
-            buckets={{ sealed: price?.sealed ?? null, loose: price?.loose ?? null }}
+            buckets={quotable}
             history={priceHistory}
             hasReceipts={!!goldenCorpusDoc || !!local.passport}
             ebaySearchUrl={ebayUrl}
