@@ -10,9 +10,11 @@
 // Anonymous visitors: NO fetch fires at all (webaudit FIX-1, 2026-07-12
 // verdict) — figure pages are ~99% anonymous/bot traffic, and a guaranteed
 // -401 request per consumer per view is dead weight on the exact surface
-// already being shaved for cost/perf. Gated on Clerk's `isSignedIn`; while
-// Clerk is still loading (`isSignedIn === undefined`) that's treated the
-// same as signed-out rather than firing early.
+// already being shaved for cost/perf. Gated on the Clerk session-hint
+// cookie (useSessionHint, 2026-09-03) — NOT on Clerk's useUser(): public
+// pages no longer mount ClerkProvider at all (webaudit Clerk-off finding),
+// and the hint is false until the post-hydration effect, so nothing fires
+// early. A stale hint costs one 401, which resolves to owned=false.
 //
 // Two consumers on one figure page (ClaimPin + FigureActions) previously
 // meant two independent fetches per view (webaudit FIX-2). A module-level
@@ -23,7 +25,7 @@
 // "false".
 
 import { useEffect, useState } from 'react'
-import { useUser } from '@clerk/nextjs'
+import { useSessionHint } from './sessionHint'
 
 const statusCache = new Map<string, Promise<boolean>>()
 
@@ -39,7 +41,7 @@ function fetchOwnership(figureId: string): Promise<boolean> {
 }
 
 export function useOwnershipStatus(figureId: string): { owned: boolean; loading: boolean } {
-  const { isSignedIn } = useUser()
+  const isSignedIn = useSessionHint()
   const [owned, setOwned] = useState(false)
   const [loading, setLoading] = useState(true)
 

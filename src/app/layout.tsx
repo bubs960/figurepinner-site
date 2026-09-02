@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import { Bebas_Neue, Inter, Cinzel } from 'next/font/google'
-import { ClerkProvider } from '@clerk/nextjs'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
 import Footer from './components/Footer'
@@ -139,24 +138,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.highperformanceformat.com" crossOrigin="anonymous" />
       </head>
       <body>
-        {/* Plain ClerkProvider, NO `dynamic` prop (S70 fix, 2026-07-07, per
-            standalone's spec: STANDALONE-TO-WEB-CLERK-HEADER-FIX-SPEC).
-            `dynamic` opts a subtree into per-request rendering, which needs
-            clerkMiddleware() to have processed the request — that's what
-            broke the first attempt, since middleware.ts's matcher
-            deliberately excludes public routes (S19, bot-traffic cost).
-            Plain ClerkProvider on v6 does NOT force dynamic rendering, so
-            public pages stay static/ISR'd exactly as before; SiteHeader's
-            <SignedIn>/<SignedOut> read Clerk's CLIENT-side session state
-            after hydration instead, no middleware coverage required.
-            app/app/layout.tsx keeps its own <ClerkProvider dynamic> for real
-            per-request auth() calls in /app — unchanged, untouched. */}
-        <ClerkProvider>
-          <FunnelTracker />
-          <ClaimRitual />
-          {children}
-          <Footer />
-        </ClerkProvider>
+        {/* NO ClerkProvider here (2026-09-03, Clerk off public pages — webaudit
+            speed finding: the S70 root-level provider hot-loaded ~705 KB of
+            clerk-js plus two clerk.figurepinner.com API round-trips on every
+            anonymous page view). Public pages read a cookie session HINT
+            (src/app/_lib/sessionHint.ts) and mount Clerk only as a lazy
+            island for hinted visitors (SiteHeader → ClerkAccountIsland).
+            Providers now live where auth actually happens: app/app/layout.tsx
+            (dynamic), sign-in and sign-up layouts. API routes are unaffected
+            (server-side auth() via clerkMiddleware, as before). */}
+        <FunnelTracker />
+        <ClaimRitual />
+        {children}
+        <Footer />
         {/* AD STANDARD v2 (2026-07-19): AdSense auto-ads script removed —
             unconditional sitewide loader wrapping every route incl. signed-in
             surfaces, Google-chosen placements, no unit ever rendered (the

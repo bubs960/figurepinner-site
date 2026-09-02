@@ -2,8 +2,9 @@
 
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import HeroSearch from './HeroSearch'
+import ClerkAccountIsland from './ClerkAccountIsland'
+import { useSessionHint } from '../_lib/sessionHint'
 
 // Hydration guard for the Clerk auth block below (2026-08-05 root-cause fix,
 // see project_web_status_log.md). Public pages have no ClerkProvider auth
@@ -252,6 +253,7 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
   const hasCrumbs = Boolean(crumbs && crumbs.length > 0)
   const [searchOpen, setSearchOpen] = useState(false)
   const mounted = useMounted()
+  const hinted = useSessionHint()
 
   // The overlay declares aria-modal="true", so it has to actually behave
   // modally: Tab cycles within the dialog instead of escaping into the
@@ -360,16 +362,23 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
             `mounted` guard added 2026-08-05 (root-cause fix for the site-wide
             React #418 hydration error this block was causing — see
             useMounted() doc above and project_web_status_log.md). */}
-        {mounted && (
+        {/* 2026-09-03 (Clerk off public pages, webaudit speed finding):
+            <SignedIn>/<SignedOut> replaced by the session-hint cookie —
+            public pages no longer mount ClerkProvider, so anonymous visitors
+            never fetch clerk.browser.js. A hinted (signed-in) visitor gets
+            the real UserButton via ClerkAccountIsland, a lazy island with its
+            own provider. `mounted` guard retained (React #418, see above);
+            useSessionHint is itself post-hydration-only. */}
+        {mounted && !hinted && (
           <>
-            <SignedOut>
-              <a href="/sign-in">Log in</a>
-              <a className="fp-sitenav-join" href="/sign-up">Sign up free</a>
-            </SignedOut>
-            <SignedIn>
-              <a href="/app">My Collection</a>
-              <UserButton afterSignOutUrl="/" />
-            </SignedIn>
+            <a href="/sign-in">Log in</a>
+            <a className="fp-sitenav-join" href="/sign-up">Sign up free</a>
+          </>
+        )}
+        {mounted && hinted && (
+          <>
+            <a href="/app">My Collection</a>
+            <ClerkAccountIsland />
           </>
         )}
       </div>
