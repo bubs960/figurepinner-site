@@ -28,6 +28,8 @@ import { prettifySlug, buildEbaySearchUrl, EBAY_CAMPAIGN_ID } from '@/app/figure
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
 import FigureThumb from '@/app/components/FigureThumb'
+import FigureThumbStatic from '@/app/components/FigureThumbStatic'
+import ThumbLoadDelegate from '@/app/components/ThumbLoadDelegate'
 import QuickLookAnchor from '@/app/components/QuickLookAnchor'
 import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
@@ -296,10 +298,33 @@ export default async function CharacterHubPage({
         @media (prefers-reduced-motion: reduce) {
           .char-card:hover .char-card-mount { transform: none; }
         }
+        /* Card chrome as classes, not inline style objects (same diet as the
+           line hub's .line-card — every inline style on a 300-card hub is
+           duplicated into the RSC flight; 2026-09-02). */
+        .char-card {
+          display: block; text-decoration: none; color: var(--text);
+          font-size: 0.8125rem; min-width: 0;
+        }
+        .char-card-mount {
+          display: flex; align-items: center; gap: 0.625rem;
+          padding: 0.625rem 0.75rem;
+          background: var(--s1); border: 1px solid var(--border); border-radius: 8px;
+          min-width: 0;
+          transition: border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s;
+        }
+        .char-card__info { flex: 1; min-width: 0; }
+        .char-card__name {
+          font-weight: 600; line-height: 1.3;
+          overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        }
+        .char-card__exclusive { font-size: 0.65rem; color: ${accent}; margin-top: 1px; opacity: 0.85; }
+        .char-card__arrow { flex-shrink: 0; opacity: 0.6; stroke: ${accent}; }
+        .fp-thumb__fallback { background: ${accent}22; color: ${accent}; }
         .line-section + .line-section {
           margin-top: 2.5rem;
         }
       `}</style>
+      <ThumbLoadDelegate />
 
       <SiteHeader
         crumbs={[
@@ -506,7 +531,7 @@ export default async function CharacterHubPage({
                     }}
                   >
                     {waveFigs.map(f => (
-                      <CharFigureCard key={f.figure_id} figure={f} accent={accent} href={prettyFigureUrlFromMap(f, counts)} />
+                      <CharFigureCard key={f.figure_id} figure={f} href={prettyFigureUrlFromMap(f, counts)} />
                     ))}
                   </div>
                 </div>
@@ -570,7 +595,10 @@ export default async function CharacterHubPage({
 
 // ─── Figure card ──────────────────────────────────────────────────────────────
 
-async function CharFigureCard({ figure: f, accent, href }: { figure: KBFigure; accent: string; href: string }) {
+// Classes instead of inline styles + FigureThumbStatic instead of the per-card
+// client FigureThumb (see the <style> block; 2026-09-02 hub markup diet).
+// Accent colours come from the page's <style> block, so no accent prop.
+async function CharFigureCard({ figure: f, href }: { figure: KBFigure; href: string }) {
   const name = deriveName(f)
   const exclusive =
     f.exclusive_to && f.exclusive_to !== 'None' ? f.exclusive_to : null
@@ -583,58 +611,16 @@ async function CharFigureCard({ figure: f, accent, href }: { figure: KBFigure; a
       name={name}
       sub={exclusive}
       figureId={f.figure_id}
-      style={{
-        display: 'block',
-        textDecoration: 'none',
-        color: 'var(--text)',
-        fontSize: '0.8125rem',
-        minWidth: 0,
-      }}
     >
       {/* Visual chrome + hover lift/tilt/glow live here, not on the anchor
           above — see the .char-card-mount comment in the <style> block. */}
-      <div
-        className="char-card-mount"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.625rem',
-          padding: '0.625rem 0.75rem',
-          background: 'var(--s1)',
-          border: '1px solid var(--border)',
-          borderRadius: 8,
-          minWidth: 0,
-          transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
-        }}
-      >
-        <FigureThumb
-          image={f.canonical_image_url}
-          size={40}
-          radius={4}
-          cdnWidth={96}
-          fallback={{ kind: 'icon', accent }}
-        />
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div
-            style={{
-              fontWeight: 600,
-              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-              lineHeight: 1.3,
-            }}
-          >
-            {name}
-          </div>
-          {exclusive && (
-            <div style={{ fontSize: '0.65rem', color: accent, marginTop: 1, opacity: 0.85 }}>
-              {exclusive}
-            </div>
-          )}
+      <div className="char-card-mount">
+        <FigureThumbStatic image={f.canonical_image_url} cdnWidth={96} />
+        <div className="char-card__info">
+          <div className="char-card__name">{name}</div>
+          {exclusive && <div className="char-card__exclusive">{exclusive}</div>}
         </div>
-        <svg
-          width="10" height="10" viewBox="0 0 12 12" fill="none"
-          stroke={accent} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-          style={{ flexShrink: 0, opacity: 0.6 }}
-        >
+        <svg className="char-card__arrow" width="10" height="10" viewBox="0 0 12 12" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M2 6h8M6 2l4 4-4 4" />
         </svg>
       </div>

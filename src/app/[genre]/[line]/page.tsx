@@ -12,7 +12,7 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getFiguresByLine, getLinesByFandom, getAllFandoms, deriveName, figureUrl, prettyFigureUrlFromMap, prettyUrlCountsForLineHub, prettyUrlIsUnique, type KBFigure } from '@/data/kbDb'
+import { getFiguresByLine, getLinesByFandom, getAllFandoms, deriveName, prettyFigureUrlFromMap, prettyUrlCountsForLineHub, prettyUrlIsUnique, type KBFigure } from '@/data/kbDb'
 import { titleCaseValue } from '@/data/kbHelpers'
 import { lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
@@ -22,6 +22,8 @@ import INDEX_VALUE_CENSUS from '@/data/index-value-census.json'
 import AdSlot from '@/app/components/AdSlot'
 import TrackedLink from '@/app/components/TrackedLink'
 import FigureThumb from '@/app/components/FigureThumb'
+import FigureThumbStatic from '@/app/components/FigureThumbStatic'
+import ThumbLoadDelegate from '@/app/components/ThumbLoadDelegate'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
 import JsonLd from '@/app/_components/JsonLd'
@@ -469,6 +471,26 @@ export default async function LineHubPage(
           on this card, so the transform can live directly on the anchor
           with no popover-positioning risk. */}
       <style>{`
+        /* Card chrome lives here as classes, not inline style objects: on a
+           1,500-card hub every inline style is duplicated into the RSC flight
+           and the render outgrew the Worker (Error 1102, 2026-09-02). Six
+           style attrs per card became six class names. */
+        .line-card {
+          display: flex; align-items: center; gap: 0.625rem;
+          padding: 0.625rem 0.75rem;
+          background: var(--s1); border: 1px solid var(--border); border-radius: 8px;
+          text-decoration: none; color: var(--text); font-size: 0.8125rem; min-width: 0;
+          transition: border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s;
+        }
+        .line-card__info { flex: 1; min-width: 0; }
+        .line-card__name {
+          font-weight: 600; line-height: 1.3;
+          overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        }
+        .line-card__variant { font-size: 0.68rem; color: #EEEEF5; margin-top: 1px; }
+        .line-card__exclusive { font-size: 0.65rem; color: ${accent}; margin-top: 1px; opacity: 0.85; }
+        .line-card__arrow { flex-shrink: 0; opacity: 0.6; stroke: ${accent}; }
+        .fp-thumb__fallback { background: ${accent}22; color: ${accent}; }
         .line-card:hover {
           border-color: ${accent}55 !important;
           background: ${accent}0A !important;
@@ -500,6 +522,7 @@ export default async function LineHubPage(
           .line-card-char-link { transition: none; }
         }
       `}</style>
+      <ThumbLoadDelegate />
 
       <SiteHeader crumbs={[
         ...(genreCrumb ? [{ label: genreCrumb.label, href: `/${genreCrumb.slug}` }] : []),
@@ -637,7 +660,7 @@ export default async function LineHubPage(
               gap: '0.5rem',
             }}>
               {featured.map(f => (
-                <FigureCard key={f.figure_id} figure={f} accent={accent} href={hrefOf(f)} />
+                <FigureCard key={f.figure_id} figure={f} href={hrefOf(f)} />
               ))}
             </div>
           </section>
@@ -677,7 +700,7 @@ export default async function LineHubPage(
                 gap: '0.5rem',
               }}>
                 {waveFigs.map(f => (
-                  <FigureCard key={f.figure_id} figure={f} accent={accent} href={hrefOf(f)} />
+                  <FigureCard key={f.figure_id} figure={f} href={hrefOf(f)} />
                 ))}
               </div>
             </section>
@@ -744,7 +767,12 @@ export default async function LineHubPage(
 
 // ─── Figure Card ──────────────────────────────────────────────────────────────
 
-async function FigureCard({ figure: f, accent, href }: { figure: KBFigure; accent: string; href: string }) {
+// Server-only card: classes instead of inline styles, FigureThumbStatic instead
+// of the per-card client FigureThumb (see the <style> block and
+// components/FigureThumbStatic.tsx — the /marvel/marvel-legends Error 1102 fix,
+// 2026-09-02). Accent colours come from the page's <style> block, so the card
+// takes no accent prop.
+async function FigureCard({ figure: f, href }: { figure: KBFigure; href: string }) {
   const charName = f.character_canonical
     .split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
   const variant = (f.character_variant && f.character_variant !== 'None')
@@ -754,50 +782,14 @@ async function FigureCard({ figure: f, accent, href }: { figure: KBFigure; accen
 
   return (
     <div className="line-card-wrap">
-      <a
-        href={href}
-        className="line-card"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.625rem',
-          padding: '0.625rem 0.75rem',
-          background: 'var(--s1)',
-          border: '1px solid var(--border)',
-          borderRadius: 8,
-          textDecoration: 'none',
-          color: 'var(--text)',
-          fontSize: '0.8125rem',
-          transition: 'border-color 0.12s, background 0.12s, transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s',
-          minWidth: 0,
-        }}
-      >
-        {/* Thumbnail */}
-        <FigureThumb image={f.canonical_image_url} size={40} radius={4} cdnWidth={96} fallback={{ kind: 'icon', accent }} />
-
-        {/* Info */}
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{
-            fontWeight: 600,
-            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-            lineHeight: 1.3,
-          }}>
-            {charName}
-          </div>
-          {variant && (
-            <div style={{ fontSize: '0.68rem', color: '#EEEEF5', marginTop: 1 }}>
-              {variant}
-            </div>
-          )}
-          {exclusive && (
-            <div style={{ fontSize: '0.65rem', color: accent, marginTop: 1, opacity: 0.85 }}>
-              {exclusive}
-            </div>
-          )}
+      <a href={href} className="line-card">
+        <FigureThumbStatic image={f.canonical_image_url} cdnWidth={96} />
+        <div className="line-card__info">
+          <div className="line-card__name">{charName}</div>
+          {variant && <div className="line-card__variant">{variant}</div>}
+          {exclusive && <div className="line-card__exclusive">{exclusive}</div>}
         </div>
-
-        {/* Arrow */}
-        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke={accent} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, opacity: 0.6 }}>
+        <svg className="line-card__arrow" width="10" height="10" viewBox="0 0 12 12" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M2 6h8M6 2l4 4-4 4" />
         </svg>
       </a>
