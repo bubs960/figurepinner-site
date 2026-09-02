@@ -41,7 +41,7 @@
 
 import { execSync } from 'node:child_process'
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
-import { join, resolve } from 'node:path'
+import { basename, join, resolve } from 'node:path'
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -71,6 +71,7 @@ const opts = {
   dir: argValue('--dir') ? resolve(ROOT, argValue('--dir')) : join(ROOT, '.tmp', 'kb-d1-swap'),
   expectRows: argValue('--expect-rows') ? Number(argValue('--expect-rows')) : null,
   dryRun: argv.includes('--dry-run'),
+  resume: argv.includes('--resume'),
 }
 
 function die(message) {
@@ -79,9 +80,12 @@ function die(message) {
 }
 
 if (!phase || !PHASES.includes(phase)) {
-  console.log(`Usage: node scripts/kb-d1-swap.mjs <phase> [--db name] [--local] [--dir path] [--expect-rows n] [--dry-run] [--authorized]
+  console.log(`Usage: node scripts/kb-d1-swap.mjs <phase> [--db name] [--local] [--dir path] [--expect-rows n] [--dry-run] [--authorized] [--resume]
 
 Phases (run in order): status | load | verify-staging | swap | verify-live | finalize
+  load --resume        continue a load that died mid-way (network blip): skips the schema and
+                       every chunk whose rows are already in kb_figures_new, ONLY if the
+                       existing row count sits exactly on a file boundary; otherwise refuses.
 Recovery:              rollback   (before finalize only)
 Rehearsal:             rehearse   (fully local, disposable, exercises everything incl. forced failures)
 
@@ -141,12 +145,47 @@ function runSql(command, { allowFail = false } = {}) {
   return { ok: true, results: first?.results ?? first?.result?.[0]?.results ?? [], raw: res.output }
 }
 
-function runSqlFile(path) {
+// Known wrangler 4.x quirk (observed live 2026-09-01, wrangler 4.107.0, first
+// swap attempt at head E85134B3): `d1 execute --remote --file` prints
+// "Processed N queries." (the import COMPLETED) and then exits non-zero with
+// "Not currently importing anything." from its post-import status poll. The
+// original code trusted the exit code, died on file 1 of 99, and left an
+// empty kb_figures_new. Same class as the bin-ingest "wrangler can exit
+// nonzero after a successful import" note in task-health-check.ps1.
+// Fix: never trust the exit code alone in either direction. Accept that
+// exact signature ONLY, then prove the rows landed with a COUNT(*) against
+// the expected running total; anything else is still fatal.
+const WRANGLER_POLL_BUG = /Not currently importing anything/i
+const WRANGLER_IMPORT_DONE = /Processed \d+ quer/i
+
+function runSqlFile(path, { table = null, expectRowsAfter = null } = {}) {
   if (opts.dryRun) {
     console.log(`[kb:d1:swap] (dry-run) would execute file: ${path}`)
     return
   }
-  runWrangler(['d1', 'execute', opts.db, locFlag(), '--file', path])
+  const res = runWrangler(['d1', 'execute', opts.db, locFlag(), '--file', path], { allowFail: true })
+  if (!res.ok) {
+    const pollBug = WRANGLER_IMPORT_DONE.test(res.output) && WRANGLER_POLL_BUG.test(res.output)
+    if (!pollBug) {
+      console.error(`[kb:d1:swap] wrangler failed on ${basename(path)}:\n${res.output}`)
+      process.exit(1)
+    }
+    console.log(`[kb:d1:swap]     wrangler post-import poll failed AFTER "Processed N queries" (known 4.x quirk) -- verifying rows landed instead of trusting the exit code`)
+  }
+  if (table && expectRowsAfter !== null) {
+    const have = rowCount(table)
+    if (have !== expectRowsAfter) {
+      die(`row count after ${basename(path)}: expected ${expectRowsAfter}, got ${have} -- that file did NOT land. Re-run load from the top (000_schema.sql is DROP TABLE IF EXISTS, a restart is safe).`)
+    }
+    console.log(`[kb:d1:swap]     ${table} = ${have} rows (expected ${expectRowsAfter}) OK`)
+  }
+}
+
+// Rows a load chunk will insert = its single-row INSERT statements (the
+// emitter writes one INSERT per figure). Schema files contribute 0.
+function rowsInSqlFile(path) {
+  const sql = readFileSync(path, 'utf8')
+  return (sql.match(/^INSERT INTO /gm) ?? []).length
 }
 
 // ── table inspection ─────────────────────────────────────────────────────────
@@ -222,10 +261,40 @@ function phaseLoad() {
   }
   const files = readdirSync(opts.dir).filter(f => f.endsWith('.sql')).sort()
   if (!files.includes('000_schema.sql')) die('000_schema.sql missing from build dir')
-  console.log(`[kb:d1:swap] loading ${files.length} files (${stats.rowCount} rows) into ${STAGING}`)
+  console.log(`[kb:d1:swap] loading ${files.length} files (${stats.rowCount} rows) into ${STAGING} -- row count verified after EVERY file`)
+  // --resume (2026-09-01): a remote load is ~99 uploads; a transient network
+  // failure mid-way (seen live: "fetch failed" on the 2nd attempt) must not
+  // cost a full restart. Resume is only legal when the rows already in staging
+  // sit EXACTLY on a file boundary of this build dir -- then the schema file
+  // (which would DROP the table) and every fully-landed chunk are skipped and
+  // the per-file count checks continue from there. Anything else refuses and
+  // says restart. Without --resume the schema's DROP TABLE IF EXISTS wins.
+  const existing = (!opts.dryRun && opts.resume && tableExists(STAGING)) ? rowCount(STAGING) : 0
+  let skipping = opts.resume && existing > 0
+  if (opts.resume && !skipping) console.log(`[kb:d1:swap] --resume requested but ${STAGING} is absent/empty -- doing a normal full load`)
+  if (skipping) console.log(`[kb:d1:swap] --resume: ${STAGING} already has ${existing} rows -- skipping files whose rows are present (boundary-checked)`)
+  let expected = 0
   for (const file of files) {
-    console.log(`[kb:d1:swap]   ${file}`)
-    runSqlFile(join(opts.dir, file))
+    const path = join(opts.dir, file)
+    const n = rowsInSqlFile(path)
+    if (skipping) {
+      if (expected + n <= existing) {
+        expected += n
+        console.log(`[kb:d1:swap]   ${file} (+${n} -> ${expected}) SKIPPED, already loaded`)
+        continue
+      }
+      if (expected !== existing) {
+        die(`--resume: ${STAGING} has ${existing} rows, which is not on a file boundary (previous boundary ${expected}, next ${expected + n}) -- a chunk half-landed. Restart WITHOUT --resume.`)
+      }
+      skipping = false
+      console.log(`[kb:d1:swap] --resume: boundary ${expected} confirmed, continuing with ${file}`)
+    }
+    expected += n
+    console.log(`[kb:d1:swap]   ${file} (+${n} -> ${expected})`)
+    runSqlFile(path, { table: STAGING, expectRowsAfter: expected })
+  }
+  if (expected !== stats.rowCount) {
+    die(`emitted files sum to ${expected} INSERTs but stats.json says ${stats.rowCount} -- build dir inconsistent, rebuild it`)
   }
   if (!opts.dryRun) {
     const loaded = rowCount(STAGING)
