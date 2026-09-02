@@ -1,5 +1,5 @@
 {
- "md5": "E6CDA4E2C5799592D8407649C14B4797",
+ "md5": "06782748CD5D67DB33136289D585C367",
  "doc_count": 8,
  "source_batch": "enrich-v42-prod44-REPAIRED-2026-08-13.json",
  "poured_at": "2026-08-13",
@@ -26,6 +26,10 @@
     "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_jane-foster_2698b5",
     "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_odinson_8afdf7"
    ]
+  },
+  {
+   "kind": "verbatim-residuals",
+   "date": "2026-09-02"
   }
  ]
 }
