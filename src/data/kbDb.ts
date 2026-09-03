@@ -37,7 +37,7 @@ import {
   genreSlugForFandom, type KBFigure,
 } from './kbTypes'
 import { SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
-import { getFigureByStableSuffix as liteFigureByStableSuffix } from './kbLite'
+import { getFigureByStableSuffix as liteFigureByStableSuffix, getAllFandoms as liteAllFandoms } from './kbLite'
 
 // Re-export the pure parts so a converted surface can import everything from
 // one place (`import { getFigureById, deriveName } from '@/data/kbDb'`).
@@ -299,6 +299,21 @@ export const getAllFandoms = cache(async function getAllFandoms(): Promise<strin
   // A failed read must not poison the memo for an hour.
   value.catch(() => { if (fandomsMemo?.value === value) fandomsMemo = null })
   return value
+})
+
+/**
+ * Route-validity gate for hubs (2026-09-03, SCALE-ALERT 9/3 follow-up): is
+ * `fandom` a real KB fandom? The build-time list (kb-stats, via kbLite) answers
+ * for free; only a fandom NOT in that list -- i.e. one added by a D1 swap since
+ * the last deploy -- falls through to a 1-row indexed existence probe. The
+ * previous gate ran `SELECT DISTINCT fandom` (a 23.5k-row scan) per hub render,
+ * ~7.7k times/day; the 1 h memo cut that to ~116/h because isolates churn.
+ */
+export const isKnownFandom = cache(async function isKnownFandom(fandom: string): Promise<boolean> {
+  if (liteAllFandoms().includes(fandom)) return true
+  const db = await getKbDb()
+  const row = await db.prepare(SQL.fandomExists).bind(fandom).first<{ one: number }>()
+  return Boolean(row)
 })
 
 /** All unique product_line values for a fandom. Mirrors kb.getLinesByFandom. */

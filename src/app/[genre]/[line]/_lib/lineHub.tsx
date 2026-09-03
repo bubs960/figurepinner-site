@@ -21,7 +21,7 @@
 
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getFiguresByLine, getLinesByFandom, getAllFandoms, deriveName, prettyFigureUrlFromMap, prettyUrlCountsForLineHub, prettyUrlIsUnique, type KBFigure } from '@/data/kbDb'
+import { getFiguresByLine, getLinesByFandom, isKnownFandom, deriveName, prettyFigureUrlFromMap, prettyUrlCountsForLineHub, prettyUrlIsUnique, type KBFigure } from '@/data/kbDb'
 import { titleCaseValue } from '@/data/kbHelpers'
 import { lineHubMeetsIndexBar } from '@/data/indexValueCensus'
 import { fandomsForGenre, genreSlugForFandom, getFandom, genreCrumbForFandom } from '@/lib/genreFigures'
@@ -159,8 +159,8 @@ export async function loadLineHubFigures(
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/${line}${suffix}`)
 
   if (opts.guardGenre) {
-    const validFandoms = await getAllFandoms()
-    if (!fandomsForGenre(genre).some(f => validFandoms.includes(f))) notFound()
+    const known = await Promise.all(fandomsForGenre(genre).map(isKnownFandom))
+    if (!known.some(Boolean)) notFound()
   }
 
   const figures = await figuresForLine(genre, line)

@@ -23,6 +23,7 @@
  * script). Prints a clear warning + the manual fallback instead.
  */
 
+import { recordStep } from './deploy-status.mjs'
 import { readFileSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
@@ -69,6 +70,7 @@ async function main() {
       body: JSON.stringify({ purge_everything: true }),
     })
   } catch (error) {
+    recordStep('zone-purge', 'FAILED', `request failed to send: ${error?.message || String(error)}`)
     console.warn(`\n[purge-cache] Purge request failed to send: ${error?.message || String(error)}`)
     console.warn('              Non-fatal -- deploy already succeeded. New build reaches every colo within 24h regardless.')
     console.warn('              Manual fallback: Cloudflare dash -> figurepinner.com -> Caching -> Configuration -> Purge Everything.\n')
@@ -80,6 +82,7 @@ async function main() {
   try { json = JSON.parse(text) } catch { /* leave null */ }
 
   if (!response.ok || !json?.success) {
+    recordStep('zone-purge', 'FAILED', `HTTP ${response.status}, success=${json?.success}`)
     console.warn(`\n[purge-cache] Purge request returned HTTP ${response.status}, success=${json?.success}.`)
     console.warn(`              Body: ${text.slice(0, 400)}`)
     console.warn('              Non-fatal -- deploy already succeeded. New build reaches every colo within 24h regardless.')
@@ -87,6 +90,7 @@ async function main() {
     return
   }
 
+  recordStep('zone-purge', 'OK', 'purge_everything')
   console.log(`[purge-cache] Zone ${zoneId} purged (purge_everything). Deploy propagation is now instant, not 24h-bounded.`)
 }
 

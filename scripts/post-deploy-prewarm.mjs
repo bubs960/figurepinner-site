@@ -41,6 +41,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { spawnSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { recordStep } from './deploy-status.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const BASE = process.env.FP_PREWARM_BASE ?? 'https://figurepinner.com'
@@ -163,6 +164,7 @@ async function main() {
     groups = buildPaths()
   } catch (err) {
     console.log(`[prewarm] could not build the path list (${err?.message ?? err}) -- skipped, deploy continues`)
+    recordStep('prewarm', 'FAILED', `path list: ${err?.message ?? err}`)
     return
   }
   const total = groups.reduce((n, g) => n + g.paths.length, 0)
@@ -197,8 +199,10 @@ async function main() {
   const p95 = ttfbs[Math.floor(ttfbs.length * 0.95)] ?? 0
   const secs = Math.round((Date.now() - started) / 1000)
   console.log(`[prewarm] done: ${n} requests in ${secs}s, ok=${tally.ok} err=${tally.err}, edge HIT=${tally.hit} MISS/EXPIRED=${tally.miss} (first-touch MISSes are the point), origin TTFB p50=${p50}ms p95=${p95}ms`)
+  recordStep('prewarm', tally.err > n / 4 ? 'FAILED' : 'OK', `${n} req, ok=${tally.ok} err=${tally.err}, p50=${p50}ms`)
 }
 
 main().catch(err => {
   console.log(`[prewarm] unexpected error (${err?.message ?? err}) -- deploy continues`)
+  recordStep('prewarm', 'FAILED', `unexpected: ${err?.message ?? err}`)
 }).finally(() => process.exit(0))

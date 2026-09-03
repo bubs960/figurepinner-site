@@ -40,6 +40,26 @@
  */
 
 import { execSync } from 'node:child_process'
+import { readSteps } from './deploy-status.mjs'
+
+// ---- 0. post-deploy side-effect status (2026-09-03) ----
+// kv-purge / zone-purge / prewarm are non-fatal by design; this is the one
+// loud place their outcome is echoed so a "green" deploy with a stale cache
+// cannot pass unnoticed.
+{
+  const steps = readSteps()
+  const want = ['kv-purge', 'zone-purge', 'prewarm']
+  const bad = want.filter(k => !steps[k] || steps[k].status !== 'OK')
+  const rule = '='.repeat(66)
+  console.log('\n' + rule)
+  console.log(bad.length ? '[deploy-status] POST-DEPLOY STEPS NEED ATTENTION' : '[deploy-status] post-deploy steps all OK')
+  for (const k of want) {
+    const st = steps[k]
+    console.log(`  ${k.padEnd(11)} ${st ? st.status.padEnd(8) : 'MISSING '} ${st?.detail ?? '(no record -- step did not run or crashed before recording)'}`)
+  }
+  if (bad.length) console.log('  -> a stale ISR/zone cache may be live; re-run the failed step by hand (see its script header) before trusting live reads.')
+  console.log(rule + '\n')
+}
 
 function git(args) {
   try {

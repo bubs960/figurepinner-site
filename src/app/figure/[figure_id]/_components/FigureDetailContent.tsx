@@ -285,14 +285,27 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // then seller listings, then wave/character cards, then the golden-corpus
   // doc — 60–160 ms of avoidable latency on every cold figure render. Only
   // prettyFigureUrls (below) genuinely depends on a result here.
+  // Phase timing (2026-09-03, webaudit ask 2 "instrument the figure render"):
+  // the release-h tail put cold figure renders at wall p50 1.2 s / CPU p95
+  // 1.4 s with no breakdown. Each read below is timed and ONE line is logged
+  // per render -- `[figure-timing] {...}` -- which wrangler tail /
+  // FP-WorkerTailCapture pick up. Zero cost (console.log only). Remove or
+  // gate once the breakdown has answered where the second goes.
+  const t0 = Date.now()
+  const timings: Record<string, number> = {}
+  const timed = async <T,>(name: string, p: Promise<T>): Promise<T> => {
+    const s = Date.now()
+    try { return await p } finally { timings[name] = Date.now() - s }
+  }
   const [{ price, imageUrl }, priceHistory, sellerListings, fullWave, characterCards, goldenCorpusDoc] = await Promise.all([
-    fetchFigurePageData(figureId),
-    fetchPriceHistory(figureId),
-    getSellerListings(figureId),
-    getWaveCompanions(local.fandom, local.product_line, local.release_wave),
-    getCardsByCharacter(local.fandom, local.character_canonical),
-    getGoldenCorpusClaims(figureId, local.passport?.sidecar),
+    timed('price', fetchFigurePageData(figureId)),
+    timed('history', fetchPriceHistory(figureId)),
+    timed('sellers', getSellerListings(figureId)),
+    timed('wave', getWaveCompanions(local.fandom, local.product_line, local.release_wave)),
+    timed('character', getCardsByCharacter(local.fandom, local.character_canonical)),
+    timed('golden', getGoldenCorpusClaims(figureId, local.passport?.sidecar)),
   ])
+  timings.reads = Date.now() - t0
   const latestCompDate = price ? latestSoldDate(price.soldHistory) : null
 
   // ── Derived display values ──────────────────────────────────────────────────
@@ -676,7 +689,11 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const companionFigs = fullWave.filter(f => f.figure_id !== figureId).slice(0, 12)
   const characterVariantsAll = characterCards.filter(f => f.figure_id !== figureId)
   const variantFigs = characterVariantsAll.slice(0, 12)
+  const tUrls = Date.now()
   const relatedHrefs = await prettyFigureUrls([local, ...companionFigs, ...variantFigs])
+  timings.urls = Date.now() - tUrls
+  timings.total = Date.now() - t0
+  console.log('[figure-timing]', JSON.stringify({ fid: figureId, ...timings }))
   const hrefOf = (f: KBFigure) => relatedHrefs.get(f.figure_id) ?? figureUrl(f)
 
   const seriesCompanions = companionFigs.map(f => ({

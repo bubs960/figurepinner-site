@@ -134,6 +134,7 @@
  * immediate-throw path and that's expected, not a regression.
  */
 
+import { recordStep } from './deploy-status.mjs'
 import { readFileSync, existsSync, writeFileSync, unlinkSync, renameSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { join } from 'node:path'
@@ -766,6 +767,7 @@ async function main() {
     lastKeptBuildId: keepBuildId,
     lastRun: { at: new Date().toISOString(), status: 'ok', deleted: deletedThisRun, calls: callsThisRun, queueDepth: nextQueue.length, ...runDiag },
   })
+  if (process.argv.includes('--execute')) recordStep('kv-purge', 'OK', `deleted ${deletedThisRun} keys, queue ${nextQueue.length}`)
 }
 
 await main().catch(async (err) => {
@@ -792,6 +794,7 @@ await main().catch(async (err) => {
       },
     }).catch(() => {})
   }
+  if (process.argv.includes('--execute')) recordStep('kv-purge', err?.anomaly ? 'ANOMALY' : 'FAILED', err?.message || String(err))
   if (err?.anomaly) {
     console.warn('\n\u{1F6A8}\u{1F6A8}\u{1F6A8} [kv-purge-stale-isr] ANOMALY -- cleanup SKIPPED/PAUSED, this is not routine \u{1F6A8}\u{1F6A8}\u{1F6A8}')
     console.warn(`              ${err.message}`)

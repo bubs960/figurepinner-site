@@ -192,6 +192,8 @@ export const SQL = {
     `GROUP BY product_line, release_wave`,
 
   allFandoms: `SELECT DISTINCT fandom FROM ${KB_TABLE}`,
+  /** Indexed existence probe (idx_kb_figures_fandom): 1 row, replaces the DISTINCT scan as the route-validity gate. */
+  fandomExists: `SELECT 1 AS one FROM ${KB_TABLE} WHERE fandom = ? LIMIT 1`,
   linesByFandom: `SELECT DISTINCT product_line FROM ${KB_TABLE} WHERE fandom = ?`,
 
   /**

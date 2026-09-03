@@ -24,7 +24,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import {
   getCardsByCharacter,
-  getAllFandoms,
+  isKnownFandom,
   deriveName,
   buildPrettyUrlMap,
   prettyFigureUrlFromMap,
@@ -101,9 +101,9 @@ export async function loadCharacterHubFigures(
   if (canonicalGenre !== genre) permanentRedirect(`/${canonicalGenre}/character/${characterSlug}${suffix}`)
 
   if (opts.guardGenre) {
-    // Guard: genre must be valid
-    const validFandoms = await getAllFandoms()
-    if (!fandomsForGenre(genre).some(f => validFandoms.includes(f))) notFound()
+    // Guard: genre must be valid (build-time list first, 1-row D1 probe only for unknowns)
+    const known = await Promise.all(fandomsForGenre(genre).map(isKnownFandom))
+    if (!known.some(Boolean)) notFound()
   }
 
   return figuresForCharacter(genre, characterSlug)
