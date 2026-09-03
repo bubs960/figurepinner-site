@@ -31,8 +31,8 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { getFiguresByIds, getLineWaveCounts, figureUrl, type KBFigure } from '@/data/kbDb'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { thumb } from '@/lib/imageUrl'
+import { readPriceObject } from '@/lib/priceStore'
 
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 /** Median fetches per page load are capped (newest items first). Items past
  *  the cap still render — just without a median line. */
 const MEDIAN_FETCH_CAP = 60
@@ -185,27 +185,23 @@ function computeTrend30d(recent: { price: number; sold_date: string | null }[]):
   return { delta, pct: mPrior > 0 ? (delta / mPrior) * 100 : null }
 }
 
+type RawSnapshot = {
+  median_sold: number | null; avg_sold: number | null; sold_count: number
+  sealed?: CondBucket | null; loose?: CondBucket | null; condition_segmentation?: string
+  recent?: { price: number; sold_date: string | null }[]
+}
+
 async function fetchSnapshot(fid: string): Promise<Snapshot> {
-  // AbortSignal.timeout() intentionally omitted — combining it with
-  // next:{revalidate} forces the fetch out of ISR cache (S32, 2026-06-18).
-  const res = await fetch(
-    `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`,
-    { next: { revalidate: 3600 } }
-  ).catch(() => null)
+  // Release L (2026-09-03): R2 binding read (never throws, null on a
+  // missing/malformed object) instead of the r2proxy hop — up to 60 of
+  // these ran in parallel per uncached Vault view, each a full Worker→Worker
+  // round trip. Same "never an error" contract as before: the D1-audit
+  // follow-up (2026-08-25, finding #3) guarded the JSON parse; readPriceObject
+  // carries that guard now, and the shape check below is belt-and-braces.
   const EMPTY: Snapshot = { median: null, comps: 0, sealed: null, loose: null, segmentation: 'pooled', trend30d: null }
-  if (!res?.ok) return EMPTY
-  // D1-audit follow-up (2026-08-25, WEBAUDIT-POSTDEPLOY-AUDIT-50D8DD0 finding
-  // #3): the fetch() above already has .catch()+res.ok guarding it, but the
-  // JSON parse itself didn't -- a 200 with a malformed body would throw
-  // uncaught into the SAME Promise.all the D1 fix (52a2f16) just hardened.
-  // Low probability (r2proxy returns a valid `{}` for a missing object) but
-  // the same "never an error" rule this function's fetch already follows.
+  const snap = await readPriceObject<RawSnapshot>('price-summaries', fid, 3600)
+  if (!snap || typeof snap !== 'object') return EMPTY
   try {
-    const snap = await res.json() as {
-      median_sold: number | null; avg_sold: number | null; sold_count: number
-      sealed?: CondBucket | null; loose?: CondBucket | null; condition_segmentation?: string
-      recent?: { price: number; sold_date: string | null }[]
-    }
     return {
       median: snap.median_sold ?? snap.avg_sold ?? null,
       comps: snap.sold_count ?? 0,

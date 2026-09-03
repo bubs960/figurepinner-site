@@ -7,7 +7,7 @@
 // fetchPriceSnaps is on the client`). This file has no browser APIs and no
 // React, so it stays a plain server module.
 
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
+import { readPriceObject } from '@/lib/priceStore'
 
 export type PriceSnap = {
   median_sold: number | null
@@ -17,27 +17,17 @@ export type PriceSnap = {
   sold_count: number
 }
 
-/** Batched, ISR-cached (1h) fetch of price snapshots for a set of fids.
+/** Batched fetch of price snapshots for a set of fids — one R2 binding read
+ *  each (Release L, 2026-09-03; proxy fallback only when the binding is
+ *  absent). The guide page's own 24 h ISR is what caches the result now.
  *  Returns only fids that have a usable snapshot. */
 export async function fetchPriceSnaps(fids: string[]): Promise<Map<string, PriceSnap>> {
   const unique = [...new Set(fids)]
   const entries = await Promise.all(
     unique.map(async (fid) => {
-      try {
-        // AbortSignal.timeout() intentionally omitted: combining a dynamic
-        // signal with next:{revalidate} opts the fetch out of Next's cache
-        // in Next 15, forcing revalidate=0 -> no-store on the route (S32,
-        // 2026-06-18 — see FigureDetailContent.tsx for the original fix).
-        const r = await fetch(`${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(fid)}.json`, {
-          next: { revalidate: 86400 }, // was 3600 — prices refresh daily upstream (2026-09-02 speed sweep)
-        })
-        if (!r.ok) return [fid, null] as const
-        const j = (await r.json()) as PriceSnap
-        if (!j || Object.keys(j).length === 0) return [fid, null] as const
-        return [fid, j] as const
-      } catch {
-        return [fid, null] as const
-      }
+      const j = await readPriceObject<PriceSnap>('price-summaries', fid, 86400)
+      if (!j || Object.keys(j).length === 0) return [fid, null] as const
+      return [fid, j] as const
     }),
   )
   return new Map(entries.filter((e): e is readonly [string, PriceSnap] => e[1] !== null))

@@ -110,6 +110,12 @@ split); give him two separate blocks: `cd` first, then `npm run deploy`.
     auto-rewrite `tsconfig.json`'s `include` array to add that dir's
     `types/**/*.ts` path — `git checkout -- tsconfig.json` after cleaning
     up the isolated `.next-*` folder, don't ship that edit.
+    **`FP_DIST_DIR` is for `next build`/`next dev` ONLY — never prefix
+    `npm run build:cf` (or `npm run deploy`) with it.** Confirmed 2026-09-03:
+    `FP_DIST_DIR=.next-relL npm run build:cf` printed a green kb-gate PASS,
+    but OpenNext bundled the OLD `.next` (the previous release's build), so
+    `.open-next/` and the wrangler-dev check were silently testing the prior
+    release's code. A build:cf/deploy must run against the default `.next`.
 
 11. **Request-time code may not load, iterate, or index the full catalog.**
     Per-request work is bounded by the page, not by KB row count. "Build-time

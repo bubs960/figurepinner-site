@@ -12,6 +12,7 @@
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { cache } from 'react'
 import { computeTrend } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { readPriceObject } from '@/lib/priceStore'
 
 async function getDB(): Promise<D1Database> {
   const { env } = await getCloudflareContext()
@@ -61,21 +62,13 @@ const SPOTLIGHT_POOL: string[] = [
 // figure until the data itself shifts.
 const TOP_N = 8
 
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
-
 type Candidate = { figureId: string; trendPct: number; compCount: number }
 
 async function fetchCandidate(figureId: string): Promise<Candidate | null> {
-  // Same no-AbortSignal-timeout pattern as every other R2 price fetch in
-  // this repo (S32) -- combining a dynamic signal with next:{revalidate}
-  // forces the fetch out of ISR cache.
-  const res = await fetch(
-    `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figureId)}.json`,
-    { next: { revalidate: 3600 } },
-  ).catch(() => null)
-  if (!res?.ok) return null
-
-  const snap = await res.json() as { sold_count: number; recent?: Array<{ price: number; sold_date: string | null }> }
+  // Release L (2026-09-03): R2 binding read instead of the r2proxy hop —
+  // this runs 29-wide once per UTC day (first visitor), then persists.
+  const snap = await readPriceObject<{ sold_count: number; recent?: Array<{ price: number; sold_date: string | null }> }>('price-summaries', figureId, 3600)
+  if (!snap) return null
   const history = (snap.recent ?? []).map(r => ({ price: r.price, sold_date: r.sold_date ?? '' }))
   // computeTrend() IS the comp-count floor: it returns null under 6 total
   // comps by construction (needs >=3 in both the last-30d and prior-30-90d

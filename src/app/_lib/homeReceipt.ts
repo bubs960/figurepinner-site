@@ -18,8 +18,7 @@ import { PRICE_FETCH_REVALIDATE_SECONDS } from '@/app/figure/[figure_id]/_compon
 import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 import { thumb } from '@/lib/imageUrl'
 import { compCountToConfidence, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
-
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
+import { readPriceObject } from '@/lib/priceStore'
 
 export type ReceiptFigure = {
   fid: string
@@ -126,21 +125,15 @@ async function fetchOne(entry: { fid: string; chipLabel: string; fieldNote?: str
   const kb = getFigureById(entry.fid)
   if (!kb || !kb.canonical_image_url) return null
 
-  // AbortSignal.timeout() omitted — same reason as FigureDetailContent:
-  // dynamic signal busts Next 15 fetch cache → revalidate=0 → page no-store.
-  // (Fix: S32, 2026-06-18)
-  // 24 h, not 1 h (2026-09-02 speed sweep, finding 2): a route's effective
-  // revalidate is the MINIMUM of its own export and every cached fetch inside
-  // it, so this 3600 made the homepage — the busiest page — recool hourly
-  // (1,850 ms cold TTFB measured) while every hub is a 24 h page. Prices refresh
-  // daily upstream; same constant the figure page uses (D2).
-  const res = await fetch(
-    `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(entry.fid)}.json`,
-    { next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS } }
-  ).catch(() => null)
-  if (!res?.ok) return null
-
-  const snap = await res.json() as R2Snapshot
+  // Release L (2026-09-03): one R2 binding read instead of the r2proxy
+  // Worker hop (proxy fallback only when the binding is absent). The
+  // homepage's own 24 h ISR is what caches this now; the revalidate constant
+  // only governs the fallback fetch. (History: 24 h not 1 h since the
+  // 2026-09-02 speed sweep — a route's effective revalidate is the MINIMUM
+  // of its export and every cached fetch inside it, so 3600 here made the
+  // busiest page recool hourly.)
+  const snap = await readPriceObject<R2Snapshot>('price-summaries', entry.fid, PRICE_FETCH_REVALIDATE_SECONDS)
+  if (!snap) return null
   // True median only — substituting the avg under a "MEDIAN SOLD" label is
   // the one kind of lie this page exists to fight.
   const median = snap.median_sold

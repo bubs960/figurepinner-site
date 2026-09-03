@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
-
-const R2_PROXY = 'https://figurepinner-r2proxy.bubs960.workers.dev'
+import { readPriceObject } from '@/lib/priceStore'
 
 export const revalidate = 300
 
@@ -45,16 +44,17 @@ export async function GET(req: NextRequest) {
   await Promise.allSettled(
     ids.map(async (id) => {
       try {
-        const res = await fetch(`${R2_PROXY}/price-summaries/${encodeURIComponent(id)}.json`, {
-          signal: AbortSignal.timeout(3000),
-        })
-        if (!res.ok) return
-        const snap = await res.json() as {
+        // Release L (2026-09-03): R2 binding read (up to 40 per call) instead
+        // of 40 r2proxy Worker hops. The 3 s AbortSignal the proxy fetch
+        // carried is unnecessary on a binding read; the route's own 5-min
+        // edge cache is unchanged.
+        const snap = await readPriceObject<{
           recent?: Array<{ price: number }>
           median_sold?: number | null
           avg_sold?: number | null
           sold_count?: number
-        }
+        }>('price-summaries', id, 300)
+        if (!snap) return
         const prices = (snap.recent ?? []).map((r) => r.price).filter((p) => p > 0)
         const median = snap.median_sold ?? snap.avg_sold ?? null
         const stat: 'median' | 'avg' = snap.median_sold != null ? 'median' : 'avg'

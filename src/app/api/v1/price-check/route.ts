@@ -3,6 +3,7 @@ import { deriveName } from '@/data/kbHelpers'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb } from '../_lib/kbSearch'
 import { checkRateLimit } from '@/lib/rateLimit'
+import { readPriceObject } from '@/lib/priceStore'
 
 /**
  * GET /api/v1/price-check?q=<free text>
@@ -26,8 +27,6 @@ import { checkRateLimit } from '@/lib/rateLimit'
  * - No auth: returns the same public comp data the site already shows.
  *   Abuse posture = edge cache below + Bot Fight Mode (NO custom WAF rules).
  */
-
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 
 // 10 min shared cache per distinct q, 1h SWR — voice queries repeat heavily
 // during a show ("hulk hogan" asked 5x = 1 origin hit).
@@ -93,14 +92,8 @@ export async function GET(req: NextRequest) {
     const line = prettifySlug(f.product_line)
     const match = { fid: f.figure_id, name, brand, line }
 
-    // AbortSignal.timeout() intentionally omitted — combining it with
-    // next:{revalidate} forces the fetch out of ISR cache (S32, 2026-06-18).
-    const res = await fetch(
-      `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(f.figure_id)}.json`,
-      { next: { revalidate: 3600 } },
-    ).catch(() => null)
-
-    const snap = res?.ok ? ((await res.json()) as R2Snapshot) : null
+    // Release L (2026-09-03): R2 binding read instead of the r2proxy hop.
+    const snap = await readPriceObject<R2Snapshot>('price-summaries', f.figure_id, 3600)
     const median = snap ? (snap.median_sold ?? snap.avg_sold) : null
     const soldCount = snap?.sold_count ?? 0
 
