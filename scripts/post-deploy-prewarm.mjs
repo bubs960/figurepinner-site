@@ -1,19 +1,30 @@
 #!/usr/bin/env node
 /**
- * post-deploy-prewarm.mjs — warm the edge + ISR cache for the ~150 paths that
- * carry most human traffic, right after the deploy chain's purge_everything
- * and BEFORE the IndexNow ping (webaudit "deploy freeze + prewarm" ask,
- * 2026-09-02; NEXT-STEPS item 4). Zero cost beyond ~150 paced requests.
+ * post-deploy-prewarm.mjs — warm the edge + ISR cache for the ~650 paths that
+ * carry the site's hub surface plus a figure sample, right after the deploy
+ * chain's purge_everything and BEFORE the IndexNow ping (webaudit "deploy
+ * freeze + prewarm" ask, 2026-09-02; NEXT-STEPS item 4). Zero cost beyond the
+ * paced requests.
+ *
+ * Release M (2026-09-04, speed program S2, Steve-approved 9/3): widened from
+ * 50 line hubs / 20 character hubs to EVERY genre + line hub (+ /page/2 for
+ * every line over PAGE_SIZE) and the 150 largest character hubs by figure
+ * count (Steve's ruling: traffic is 20–50 visits/day, no signal to rank by;
+ * NOT all ~10.6k character hubs — the average one holds two figures).
+ * TOTAL_BUDGET_MS raised in the same change: sleep time alone for the hub
+ * groups is ~5.5 min, so the old 6-min budget would have cut the run short.
  *
  * WHY: `purge-cache.mjs` purges the whole zone, so for the next ~30 min every
  * visitor (and Googlebot) pays a cold origin render — measured 2026-09-02:
  * warm edge-hit rate fell from 9/10 to 7/10 for over half an hour after
  * Release G, and Steve reported "still slow" on a day with five deploys.
  *
- * ORDER (sequential, paced — never a burst): healthz → genre hubs → the 50
- * largest line hubs (+ /page/2 where the hub paginates) → 50 figure pages →
- * 20 largest character hubs. Hubs are not rate-limited; figure pages are
- * (100 req/min/IP, middleware.ts) so they get a wider gap.
+ * ORDER (sequential, paced — never a burst): healthz → genre hubs → every
+ * line hub, largest first (+ /page/2 where the hub paginates) → 50 figure
+ * pages → the 150 largest character hubs. Hubs are not rate-limited; figure
+ * pages are (100 req/min/IP, middleware.ts) so they get a wider gap. If the
+ * time budget trips, the LAST groups are what gets cut — hence largest-first
+ * ordering inside each group.
  *
  * SOURCES (all build-time, on disk, no D1): `kb-stats.generated.json` (fandom
  * → line counts), `kb-lite.generated.json` (tuples: figure_id, fandom, …,
@@ -49,11 +60,14 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const CURL = process.platform === 'win32' ? 'curl.exe' : 'curl'
 const HUB_GAP_MS = 250
 const FIGURE_GAP_MS = 700 // < 100 req/min on the rate-limited figure route
-const LINE_HUBS = 50
+const LINE_HUBS = Infinity // Release M: every line hub (was 50)
 const FIGURES = 50
-const CHARACTER_HUBS = 20
+const CHARACTER_HUBS = 150 // Release M: was 20; Steve 9/3: by size, not traffic
 const PAGE_SIZE = 96 // must match lineHubPaging.LINE_HUB_PAGE_SIZE
-const TOTAL_BUDGET_MS = 6 * 60 * 1000
+// Release M: ~412 hub paths × 250 ms + 50 figures × 700 ms + 150 char hubs × 250 ms
+// ≈ 5.5 min of sleep before any network time; 15 min leaves headroom without
+// letting a stalled origin hold the deploy chain hostage.
+const TOTAL_BUDGET_MS = 15 * 60 * 1000
 
 const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
@@ -95,7 +109,7 @@ function buildPaths() {
     for (const [line, count] of Object.entries(info.lines ?? {})) lines.push({ fandom, line, count })
   }
   lines.sort((a, b) => b.count - a.count)
-  const topLines = lines.slice(0, LINE_HUBS)
+  const topLines = Number.isFinite(LINE_HUBS) ? lines.slice(0, LINE_HUBS) : lines
 
   const lineHubPaths = []
   for (const l of topLines) {

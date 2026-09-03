@@ -48,9 +48,25 @@ import {
   storeSkipReason,
   synthesizeCacheControl,
   storeTtl,
+  shieldOrigin500,
 } from './edge-cache-policy.mjs'
 import { checkRateLimit } from './src/lib/rateLimit.ts'
 import { isFigurePageRoute } from './src/lib/routeClassification.ts'
+import { genreSlugForFandom } from './src/data/kbTypes.ts'
+import kbStats from './src/data/kb-stats.generated.json'
+
+// Release M: the genre-slug allowlist for the origin-500 shield. Build-time
+// artifact (kb-stats, fandom -> line counts), mapped through the same
+// fandom -> URL-segment function every canonical link uses, plus the two
+// hub slugs that are routes but not KB fandoms (the NECA rollup, and the
+// dungeons-dragons hub slot Steve added 2026-07-30). No D1, no catalog rows.
+// tests/edgeOriginShield.test.mjs asserts this set covers GENRE_HUB_LABELS
+// and mirrors HUB_ONLY_SLUGS -- keep both lists identical.
+export const HUB_ONLY_SLUGS = ['neca', 'dungeons-dragons']
+const KB_GENRE_SLUGS = new Set([
+  ...Object.keys(kbStats.fandoms ?? {}).map(genreSlugForFandom),
+  ...HUB_ONLY_SLUGS,
+])
 
 // Data Defense Layer 2 gap fix (2026-08-24): src/middleware.ts enforces this
 // same limit, but middleware never runs on a cache HIT (this Worker returns
@@ -220,7 +236,10 @@ export default {
       return withEdgeHeader(hit, 'HIT')
     }
 
-    const res = await handler.fetch(request, env, ctx)
+    // Release M origin-500 shield: a cold KB page that 500s during a D1 blip
+    // becomes an uncacheable 503 + Retry-After (see edge-cache-policy.mjs).
+    // Everything else passes through untouched, including every non-500.
+    const res = shieldOrigin500(await handler.fetch(request, env, ctx), request, KB_GENRE_SLUGS)
 
     // 2026-07-15 fix (webaudit/Codex-sourced): skip-check MUST run against the
     // ORIGINAL response, before synthesizeCacheControl rewrites cache-control.

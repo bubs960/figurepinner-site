@@ -13,8 +13,84 @@
  * the OpenNext worker at all.
  */
 
+import { needsClerkPipeline } from './src/lib/routeClassification.ts'
+
 const HTML_TTL_CAP = 86400
 export const NOT_FOUND_TTL = 900
+
+/**
+ * Release M (2026-09-04, speed program S2, item 2): origin-500 shield for the
+ * KB-reading PAGE routes.
+ *
+ * WHY: a D1 blip ("D1 DB is overloaded", "storage operation exceeded timeout
+ * which caused object to be reset" -- four windows on 9/2, one at 13:51Z 9/3)
+ * surfaces from kbDb.ts as an uncaught exception BY DESIGN (a caught error
+ * would render a false 404 and cache it for 24 h -- figure/[figure_id]/page.tsx
+ * header). Warm pages are already safe: OpenNext serves the stale KV entry and
+ * revalidates in the background. A COLD page during the blip is the gap: the
+ * visitor gets Next's opaque 500, which nothing retries. This turns that exact
+ * case into a 503 + Retry-After + no-store, so a browser/crawler retries in
+ * half a minute and no cache layer can hold an error page.
+ *
+ * SCOPE (allowlist, not a segment count -- /guides/[slug], /about, /deals and
+ * friends sit at the same URL depths as hubs and must never match):
+ *   /figure/[id]                          /figure/[id]/opengraph-image
+ *   /[genre]                              /[genre]/[line]  (+ /page/N)
+ *   /[genre]/character/[slug] (+ /page/N) /[genre]/[line]/[slug]
+ *   /[genre]/[line]/[slug]/opengraph-image
+ * where [genre] MUST be in the caller-supplied genre-slug set (built at entry
+ * load from kb-stats.generated.json, a build-time artifact -- no D1). Reserved
+ * prefixes (/app, /admin, /api, ...) are refused first via needsClerkPipeline.
+ * kbDb.ts, the rate limiter, the store/skip decisions above and the admin
+ * fail-closed paths are untouched (R16).
+ */
+export const ORIGIN_SHIELD_RETRY_AFTER = 30
+
+function isPageNumber(seg) {
+  return /^[1-9]\d*$/.test(seg ?? '')
+}
+
+export function isKbPageRoute(pathname, genreSlugs) {
+  if (needsClerkPipeline(pathname)) return false
+  const s = pathname.split('/').filter(Boolean)
+  if (s.length === 0) return false
+  if (s[0] === 'figure') {
+    return s.length === 2 || (s.length === 3 && s[2] === 'opengraph-image')
+  }
+  if (!genreSlugs.has(s[0])) return false
+  if (s.length === 1) return true
+  if (s[1] === 'character') {
+    return s.length === 3 || (s.length === 5 && s[3] === 'page' && isPageNumber(s[4]))
+  }
+  if (s.length === 2) return true
+  if (s.length === 3) return true
+  if (s.length === 4) return (s[2] === 'page' && isPageNumber(s[3])) || s[3] === 'opengraph-image'
+  return false
+}
+
+/**
+ * Given the origin response for a non-bypass GET, return the response to
+ * serve: the original in every case except a 500 on a KB page route, which
+ * becomes an uncacheable 503. Never throws; never touches non-500s.
+ */
+export function shieldOrigin500(response, request, genreSlugs) {
+  if (response.status !== 500) return response
+  const { pathname } = new URL(request.url)
+  if (!isKbPageRoute(pathname, genreSlugs)) return response
+  return new Response(
+    '<!doctype html><meta charset="utf-8"><title>Temporarily unavailable</title>' +
+    '<p>This page is briefly unavailable while our price database catches up. It retries automatically in about half a minute.</p>',
+    {
+      status: 503,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+        'cache-control': 'no-store',
+        'retry-after': String(ORIGIN_SHIELD_RETRY_AFTER),
+        'x-fp-shield': 'origin-500',
+      },
+    },
+  )
+}
 
 /** Positive s-maxage from a Cache-Control header, else 0. */
 export function sharedTtl(cc) {
