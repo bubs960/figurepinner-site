@@ -33,10 +33,11 @@
 import { cache } from 'react'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import {
-  deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey, stableIdSuffix,
+  deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey,
   genreSlugForFandom, type KBFigure,
 } from './kbTypes'
 import { SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
+import { getFigureByStableSuffix as liteFigureByStableSuffix } from './kbLite'
 
 // Re-export the pure parts so a converted surface can import everything from
 // one place (`import { getFigureById, deriveName } from '@/data/kbDb'`).
@@ -165,18 +166,24 @@ export async function getFiguresByIds(ids: string[]): Promise<Map<string, KBFigu
 
 /**
  * Resolve stale/truncated generated IDs when their final stable hash is unique.
- * 404-path only. Deliberately still a PK-index scan — see SQL.stableSuffix.
+ * 404-path only.
+ *
+ * 2026-09-03 (SCALE-ALERT 9/3, D1 rows/query 4,294): the D1 form
+ * (SQL.stableSuffix, a SUBSTR() predicate the planner cannot index) was the
+ * single largest KB read on the account — 560 M rows / 24 h, ~23.5k
+ * executions at ~23.8k rows each, i.e. bots re-hitting stale /figure/<id>
+ * URLs paying a full PK-index scan per 404. The suffix → figure map already
+ * exists in memory (kbLite.bySuffix, built lazily from the prose-free
+ * catalog projection, same unique-or-null semantics as `LIMIT 2` /
+ * `length !== 1`), so resolve there and spend ONE indexed PK seek on D1 for
+ * the full record. Skipped: an expression index on the suffix — a schema
+ * change routed through the emitter + swap (plan §6 rule 5); add it if the
+ * lite map's lazy parse ever shows up in isolate memory on the 404 path.
  */
 export async function getFigureByStableSuffix(figure_id: string): Promise<KBFigure | null> {
-  const suffix = stableIdSuffix(figure_id)
-  if (!suffix) return null
-
-  const db = await getKbDb()
-  const { results } = await db.prepare(SQL.stableSuffix).bind(suffix).all<{ figure_id: string }>()
-
-  const matches = results ?? []
-  if (matches.length !== 1) return null
-  return getFigureById(matches[0].figure_id)
+  const lite = liteFigureByStableSuffix(figure_id)
+  if (!lite) return null
+  return getFigureById(lite.figure_id)
 }
 
 // ── Bounded set reads ─────────────────────────────────────────────────────────
@@ -266,11 +273,32 @@ export async function getLineWaveCounts(
   return (results ?? []).map(r => ({ product_line: r.product_line, release_wave: r.release_wave, count: Number(r.c) }))
 }
 
-/** All unique fandom slugs. Mirrors kb.getAllFandoms. */
+/**
+ * All unique fandom slugs. Mirrors kb.getAllFandoms.
+ *
+ * 2026-09-03 (SCALE-ALERT 9/3): `SELECT DISTINCT fandom` is a whole-table
+ * scan (23.9k rows) and ran ~7.7k×/day (185 M rows / 24 h) — every line-hub
+ * and character-hub render calls it as a route-validity gate. The set changes
+ * only on a KB swap, so memoise per isolate for FANDOMS_TTL_MS on top of the
+ * per-request React cache(). D1 stays the source of truth (a swap that adds
+ * a fandom is visible within the TTL, no deploy needed); reads drop from
+ * per-render to per-isolate-per-hour.
+ */
+const FANDOMS_TTL_MS = 60 * 60 * 1000
+let fandomsMemo: { at: number; value: Promise<string[]> } | null = null
+
 export const getAllFandoms = cache(async function getAllFandoms(): Promise<string[]> {
-  const db = await getKbDb()
-  const { results } = await db.prepare(SQL.allFandoms).all<{ fandom: string }>()
-  return (results ?? []).map(r => r.fandom)
+  const now = Date.now()
+  if (fandomsMemo && now - fandomsMemo.at < FANDOMS_TTL_MS) return fandomsMemo.value
+  const value = (async () => {
+    const db = await getKbDb()
+    const { results } = await db.prepare(SQL.allFandoms).all<{ fandom: string }>()
+    return (results ?? []).map(r => r.fandom)
+  })()
+  fandomsMemo = { at: now, value }
+  // A failed read must not poison the memo for an hour.
+  value.catch(() => { if (fandomsMemo?.value === value) fandomsMemo = null })
+  return value
 })
 
 /** All unique product_line values for a fandom. Mirrors kb.getLinesByFandom. */
