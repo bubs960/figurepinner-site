@@ -88,7 +88,7 @@ type PriceData = {
 
 // ── Data fetching ──────────────────────────────────────────────────────────────
 
-const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
+import { readPriceObject } from '@/lib/priceStore'
 
 /** Weekly-median history (matcher's price-history emitter, live 2026-08-14 —
  *  MATCHER-TO-WEB-PRICE-HISTORY-EMITTER-LIVE-2026-08-14.md). Contract: exactly
@@ -124,14 +124,10 @@ export const PRICE_FETCH_REVALIDATE_SECONDS = 86400
 
 export async function fetchPriceHistory(figure_id: string): Promise<PriceHistory | null> {
   try {
-    const res = await fetch(
-      `${R2_PROXY_BASE}/price-history/${encodeURIComponent(figure_id)}.json`,
-      // 24h (D2, 2026-09-02): see fetchFigurePageData below — same lever, same reason.
-      { next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS } }
-    )
-    if (!res.ok) return null
-    const data = (await res.json()) as PriceHistory
-    if (!Array.isArray(data.weeks) || data.weeks.length === 0) return null
+    // Direct R2 read (Release K, 2026-09-03) — see src/lib/priceStore.ts; the
+    // 24h revalidate only applies on the proxy fallback.
+    const data = await readPriceObject<PriceHistory>('price-history', figure_id, PRICE_FETCH_REVALIDATE_SECONDS)
+    if (!data || !Array.isArray(data.weeks) || data.weeks.length === 0) return null
     return data
   } catch {
     return null
@@ -226,12 +222,9 @@ export async function fetchFigurePageData(figure_id: string): Promise<{ price: P
   // forcing revalidate=0 → private/no-store on the entire route (BYPASS).
   // The r2proxy worker has its own upstream timeout; Cloudflare's 30s wall-clock
   // limit is the backstop. (Fix: S32, 2026-06-18 — WEB-HEALTH-ALERT-2026-06-16)
-  const res = await fetch(
-    `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
-    { next: { revalidate: PRICE_FETCH_REVALIDATE_SECONDS } }
-  ).catch(() => null)
-  if (!res?.ok) return { price: null, imageUrl: null }
-  const snap = await res.json().catch(() => null) as R2Snapshot | null
+  // Direct R2 read (Release K, 2026-09-03): was a fetch to the r2proxy Worker —
+  // p50 623 ms of the cold render. See src/lib/priceStore.ts.
+  const snap = await readPriceObject<R2Snapshot>('price-summaries', figure_id, PRICE_FETCH_REVALIDATE_SECONDS)
   if (!snap) return { price: null, imageUrl: null }
   const iqr = _iqr((snap.recent ?? []).map((s: { price: number }) => s.price))
   return {

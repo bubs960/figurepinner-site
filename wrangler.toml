@@ -50,6 +50,15 @@ binding = "KB_DB"
 database_name = "figurepinner-kb"
 database_id = "ec1b97f5-9b65-48ca-aa15-5e612d37ebfe"
 
+# Price snapshots read DIRECTLY from R2 (2026-09-03, Release K): the figure
+# page used to fetch price-summaries/ + price-history/ through the
+# figurepinner-r2proxy Worker (646 ms of a 769 ms cold render, measured over
+# 209 prod renders). Same bucket the proxy serves; READ-ONLY use in the site
+# (src/lib/priceStore.ts). Nothing writes here from this Worker.
+[[r2_buckets]]
+binding = "PRICE_ASSETS"
+bucket_name = "figurepinner-assets"
+
 [[kv_namespaces]]
 binding = "PRO_KV"
 id = "e1858bb16a4f41f5b81afe8cf53519f5"  # FP_KV — shared, prefixed with "pro:"
