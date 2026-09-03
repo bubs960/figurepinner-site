@@ -10,6 +10,7 @@
  * "nothing to spotlight" state, never a fabricated pick.
  */
 import { getCloudflareContext } from '@opennextjs/cloudflare'
+import { cache } from 'react'
 import { computeTrend } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 async function getDB(): Promise<D1Database> {
@@ -121,14 +122,15 @@ function mapRow(r: SpotlightDbRow): SpotlightRow {
 
 /** Read-only -- never writes, never computes. Archive pages call this so a
  *  past date always shows exactly what was actually spotlighted that day. */
-export async function getSpotlightByDate(date: string): Promise<SpotlightRow | null> {
+// cache(): generateMetadata + the page body both read this per render (2026-09-03 cost audit #2).
+export const getSpotlightByDate = cache(async function getSpotlightByDate(date: string): Promise<SpotlightRow | null> {
   const db = await getDB()
   const row = await db
     .prepare('SELECT date, figure_id, trend_pct, comp_count FROM daily_spotlight WHERE date = ?')
     .bind(date)
     .first<SpotlightDbRow>()
   return row ? mapRow(row) : null
-}
+})
 
 /** /today's own data source: read today's row if it already exists, else
  *  compute + persist it (first visitor of the day pays the pool-fetch cost,
@@ -136,7 +138,7 @@ export async function getSpotlightByDate(date: string): Promise<SpotlightRow | n
  *  mint route is: a UNIQUE/PK insert collision re-reads instead of erroring.
  *  Returns null only when NOTHING in the pool cleared the trend floor today
  *  -- the caller renders an honest empty state, never a fake pick. */
-export async function getOrCreateTodaysSpotlight(): Promise<SpotlightRow | null> {
+export const getOrCreateTodaysSpotlight = cache(async function getOrCreateTodaysSpotlight(): Promise<SpotlightRow | null> {
   const today = utcDateString(new Date())
   const existing = await getSpotlightByDate(today)
   if (existing) return existing
@@ -155,4 +157,4 @@ export async function getOrCreateTodaysSpotlight(): Promise<SpotlightRow | null>
     return row // null only if the race-loser's own re-read somehow still finds nothing (shouldn't happen; not fatal either way)
   }
   return { date: today, figureId: pick.figureId, trendPct: pick.trendPct, compCount: pick.compCount }
-}
+})

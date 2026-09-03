@@ -1,5 +1,6 @@
 import { SignUp } from '@clerk/nextjs'
 import type { Metadata } from 'next'
+import FunnelEvent from '@/app/_components/FunnelEvent'
 
 export const metadata: Metadata = {
   title: 'Create Account',
@@ -18,6 +19,7 @@ export default function SignUpPage() {
       justifyContent: 'center',
       padding: '2rem 1rem',
     }}>
+      <FunnelEvent event="signup_start" />
       {/* Wordmark */}
       <a href="/" style={{
         fontFamily: 'var(--font-display)',

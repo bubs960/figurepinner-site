@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import { useOwnershipStatus } from '@/app/_lib/useOwnershipStatus'
 import { addFigureToVault } from '@/app/_lib/vaultAdd'
+import { useSessionHint } from '@/app/_lib/sessionHint'
+import { goToSignInWithReturn, takePendingIntent } from '@/app/_lib/signInReturn'
 
 type Props = {
   figure_id: string
@@ -51,6 +53,26 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
   useEffect(() => {
     if (owned) setVaultStatus('done')
   }, [owned])
+
+  // Return-path replay (2026-09-03, engagement audit #1): the visitor clicked
+  // a CTA while anonymous, signed in, and Clerk sent them back here via
+  // redirect_url. Finish what they started: vault adds fire automatically
+  // (the figure is what they asked to save); want/alert intents reopen the
+  // form they were in, since both need a price the visitor hasn't typed yet.
+  const hinted = useSessionHint()
+  useEffect(() => {
+    if (!hinted) return
+    const intent = takePendingIntent(figure_id)
+    if (!intent) return
+    if (intent === 'vault') {
+      if (vaultStatus === 'idle') void addToVault()
+    } else if (intent === 'want') {
+      setShowWantForm(true)
+    } else {
+      setShowAlertForm(true)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once when the hint flips; addToVault/setters are stable per render
+  }, [hinted, figure_id])
   const [wantStatus, setWantStatus] = useState<Status>('idle')
   const [alertStatus, setAlertStatus] = useState<Status>('idle')
   const [paidInput, setPaidInput] = useState('')
@@ -82,7 +104,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
     })
 
     if (result.status === 'unauthenticated') {
-      window.location.href = '/sign-in'
+      goToSignInWithReturn(figure_id, 'vault')
       return
     }
     if (result.status === 'gated') {
@@ -118,7 +140,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
         }),
       })
       if (res.status === 401) {
-        window.location.href = '/sign-in'
+        goToSignInWithReturn(figure_id, 'alert')
         return
       }
       if (res.status === 402) {
@@ -154,7 +176,7 @@ export default function FigureActions({ figure_id, name, brand, line, genre, img
         setWantStatus('done')
         setShowWantForm(false)
       } else if (res.status === 401) {
-        window.location.href = '/sign-in'
+        goToSignInWithReturn(figure_id, 'want')
       } else if (res.status === 409) {
         setWantStatus('done')
         setShowWantForm(false)

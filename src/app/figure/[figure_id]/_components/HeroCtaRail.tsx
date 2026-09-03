@@ -46,6 +46,7 @@
 import { useEffect, useState } from 'react'
 import TrackedLink from '@/app/components/TrackedLink'
 import { hasClientClerkSession } from '@/app/_lib/clientAuth'
+import { goToSignInWithReturn } from '@/app/_lib/signInReturn'
 import { useOwnershipStatus } from '@/app/_lib/useOwnershipStatus'
 import { addFigureToVault } from '@/app/_lib/vaultAdd'
 
@@ -81,7 +82,9 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
     setAddState('loading')
     const result = await addFigureToVault({ figure_id: figureId, name: figureName, brand: brand!, line: line!, genre: genre! })
     if (result.status === 'unauthenticated') {
-      window.location.href = '/sign-in'
+      // Return-path (2026-09-03): stash the intent, come back to this page
+      // after sign-in; FigureActions replays the add. See signInReturn.ts.
+      goToSignInWithReturn(figureId, 'vault')
       return
     }
     if (result.status === 'ok' || result.status === 'duplicate') {

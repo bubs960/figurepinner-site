@@ -353,7 +353,7 @@ export default async function HomePage() {
         .fph-hero-grid > * { min-width: 0; }
 
         /* ── Museum Night S2 — GalleryTypeLayer: giant decorative "GRAILS"
-           background type, parallaxed via HeroTypeScrollDriver writing
+           background type, parallaxed via ProvenanceTypeScrollDriver writing
            --parallax-y (0-1). Purely decorative: aria-hidden, no pointer
            events, out of flow, transform-only motion (no reflow), never
            the LCP element (H1/shelf image own that). ── */

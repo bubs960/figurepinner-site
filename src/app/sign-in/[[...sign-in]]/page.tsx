@@ -1,5 +1,6 @@
 import { SignIn } from '@clerk/nextjs'
 import type { Metadata } from 'next'
+import FunnelEvent from '@/app/_components/FunnelEvent'
 
 export const metadata: Metadata = {
   title: 'Sign In',
@@ -18,6 +19,7 @@ export default function SignInPage() {
       justifyContent: 'center',
       padding: '2rem 1rem',
     }}>
+      <FunnelEvent event="signin_start" />
       {/* Wordmark */}
       <a href="/" style={{
         fontFamily: 'var(--font-display)',

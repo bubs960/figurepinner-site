@@ -21,6 +21,10 @@ export const FUNNEL_EVENTS = [
   'homepage_vault_signup_click',
   'return_visit_after_save',
   'personalized_shelf_shown',
+  // 2026-09-03: distinguish "CTA click -> never reached sign-in" from
+  // "reached sign-in -> abandoned" (engagement audit #9).
+  'signin_start',
+  'signup_start',
 ] as const
 
 export type FunnelEvent = typeof FUNNEL_EVENTS[number]

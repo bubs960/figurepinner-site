@@ -136,10 +136,13 @@ NEXT_INC_CACHE_KV_PREFIX = "isr-cache"
 # application domain. Dashboard component paths are being deprecated by Clerk
 # — code-side config is the forward-compat path. All four are public; safe to
 # commit.
+# FALLBACK (not FORCE) since 2026-09-03: a CTA-initiated sign-in carries
+# `redirect_url=<figure page>` and must land back there (signInReturn.ts);
+# "force" would override it and strand the visitor on /app.
 NEXT_PUBLIC_CLERK_SIGN_IN_URL = "/sign-in"
 NEXT_PUBLIC_CLERK_SIGN_UP_URL = "/sign-up"
-NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL = "/app"
-NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL = "/app"
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL = "/app"
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL = "/app"
 
 # ── Cron binding — REMOVED 2026-05-11 PM, EXPLICIT-EMPTY FORCE 2026-05-13 PM ─
 # Was: */5 * * * * triggering /api/cron/process-jobs for IMPORT_AF411,
