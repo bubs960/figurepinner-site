@@ -1,5 +1,5 @@
 import type { NextConfig } from 'next'
-import { execSync } from 'node:child_process'
+import { execSync, execFileSync } from 'node:child_process'
 
 // Build-identity stamp (S52, 2026-07-03): baked into every rendered page as
 // <meta name="fp-build"> and served at /api/version. Purpose: ISR cache
@@ -8,7 +8,14 @@ import { execSync } from 'node:child_process'
 // /api/version (always-fresh) makes staleness checkable instead of guessable.
 function gitSha(): string {
   try {
-    const dirty = execSync('git status --porcelain', { encoding: 'utf8' }).trim() ? '-dirty' : ''
+    // Generated data files are excluded from the dirty check (2026-09-04):
+    // the deploy chain's own `build-kb-stats` step regenerates
+    // src/data/*.generated.json AFTER predeploy-clean-check has passed and
+    // BEFORE this runs, so a clean tree still stamped `-dirty` on train #1
+    // (healthz `8d9273c-dirty`). The sha must answer "which committed code is
+    // live", and regenerated data derived from that code is not a source edit.
+    // execFileSync (no shell): the exclude pathspec must not pass through cmd.exe quoting.
+    const dirty = execFileSync('git', ['status', '--porcelain', '--', '.', ':!src/data/*.generated.json'], { encoding: 'utf8' }).trim() ? '-dirty' : ''
     return execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim() + dirty
   } catch {
     return 'unknown'
