@@ -38,7 +38,7 @@ import TrackedLink from '@/app/components/TrackedLink'
 import FigureThumb from '@/app/components/FigureThumb'
 import FigureThumbStatic from '@/app/components/FigureThumbStatic'
 import ThumbLoadDelegate from '@/app/components/ThumbLoadDelegate'
-import QuickLookAnchor from '@/app/components/QuickLookAnchor'
+import QuickLookDelegate from '@/app/components/QuickLookDelegate'
 import { thumb } from '@/lib/imageUrl'
 import SiteHeader from '@/app/components/SiteHeader'
 import BreadcrumbJsonLd from '@/app/_components/BreadcrumbJsonLd'
@@ -420,6 +420,9 @@ export async function CharacterHubView(
         .line-pagenav--top { margin: 0 0 1.5rem; justify-content: flex-start; }
       `}</style>
       <ThumbLoadDelegate />
+      {/* Release N: one quick-look listener for every card below (was a client
+          QuickLookAnchor per card — each card shipped twice, HTML + RSC props). */}
+      <QuickLookDelegate />
 
       <SiteHeader
         crumbs={[
@@ -738,19 +741,24 @@ function PageNav({ genre, characterSlug, page, totalPages, top = false }: {
 // Classes instead of inline styles + FigureThumbStatic instead of the per-card
 // client FigureThumb (see the <style> block; 2026-09-02 hub markup diet).
 // Accent colours come from the page's <style> block, so no accent prop.
+// Release N (2026-09-04): a plain server <a> carrying `data-ql-*` attributes;
+// the page-level QuickLookDelegate supplies the hover card. No client
+// component per card any more.
 async function CharFigureCard({ figure: f, href }: { figure: KBFigure; href: string }) {
   const name = deriveName(f)
   const exclusive =
     f.exclusive_to && f.exclusive_to !== 'None' ? f.exclusive_to : null
+  const image = thumb(f.canonical_image_url, 640)
 
   return (
-    <QuickLookAnchor
+    <a
       href={href}
       className="char-card"
-      image={thumb(f.canonical_image_url, 640)}
-      name={name}
-      sub={exclusive}
-      figureId={f.figure_id}
+      data-ql=""
+      data-ql-image={image ?? undefined}
+      data-ql-name={name}
+      data-ql-sub={exclusive ?? undefined}
+      data-ql-fid={f.figure_id}
     >
       {/* Visual chrome + hover lift/tilt/glow live here, not on the anchor
           above — see the .char-card-mount comment in the <style> block. */}
@@ -764,6 +772,6 @@ async function CharFigureCard({ figure: f, href }: { figure: KBFigure; href: str
           <path d="M2 6h8M6 2l4 4-4 4" />
         </svg>
       </div>
-    </QuickLookAnchor>
+    </a>
   )
 }

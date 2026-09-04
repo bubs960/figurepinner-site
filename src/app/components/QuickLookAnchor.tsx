@@ -29,19 +29,18 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { SOLD_COUNT_CONFIDENCE_FLOOR } from '@/lib/searchDisplay'
+// Release N (2026-09-04): position/gate/price-cache rules live in
+// quickLookCore.ts, shared with QuickLookDelegate (the character hub's
+// one-per-page consumer). This hook's behaviour is unchanged.
+import {
+  computeCardPosition, desktopPointer, fetchQuickLookPrice, peekQuickLookPrice,
+  HOVER_INTENT_MS, type QuickLookPrice,
+} from './quickLookCore'
 
 // `stat` = which aggregate `median` holds ('avg' when the snapshot had no
 // median_sold and the sparklines route fell back) — labels must not call an
 // average a median (S55 FTC audit).
-export type QuickLookPrice = { median: number | null; soldCount: number; stat?: 'median' | 'avg' }
-
-// Module-wide so hovering the same figure twice (or in two rails) never
-// refetches. `null` doubles as the in-flight marker.
-const priceCache = new Map<string, QuickLookPrice | null>()
-
-const CARD_W = 340
-const CARD_EST_H = 470 // pic 340 + clamped caption + padding — viewport clamp basis
-const EDGE = 12        // minimum gap to every viewport edge
+export type { QuickLookPrice }
 
 export interface QuickLookOptions {
   /** Best-available image URL for the card (pass a large rendition). null → no card. */
@@ -70,46 +69,16 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
   function show() {
     const el = hoverEl.current
     if (!el) return
-    const r = el.getBoundingClientRect()
-    // Horizontal: BESIDE the anchor, never on top of it (S56 — overlaying the
-    // row's left edge hid the rest of the list while scanning). Prefer the
-    // right side; flip to the left side when there's no room; clamp last.
-    const GAP = 14
-    const fitsRight = r.right + GAP + CARD_W + EDGE <= window.innerWidth
-    const left = Math.min(
-      Math.max(EDGE, fitsRight ? r.right + GAP : r.left - GAP - CARD_W),
-      window.innerWidth - CARD_W - EDGE,
-    )
-    // Vertical: center on the anchor, clamped so the card never leaves the
-    // viewport (the "image cut off at the top" fix — clamp, don't center).
-    // Outer floor: on short viewports (innerHeight < CARD_EST_H + 2*EDGE) the
-    // two inner clamp bounds invert and the naive result goes negative —
-    // rendering the card above the viewport, overlapping whatever sits at
-    // y=0 (search bar, nav). Never let it go above EDGE, even then.
-    const centerY = r.top + r.height / 2
-    const half = CARD_EST_H / 2
-    const top = Math.round(
-      Math.max(
-        EDGE,
-        Math.min(Math.max(centerY, half + EDGE), window.innerHeight - half - EDGE) - half,
-      ),
-    )
-    setPos({ top, left: Math.round(left) })
+    // Beside-not-over placement + viewport clamp (S54/S56) — see quickLookCore.
+    setPos(computeCardPosition(el.getBoundingClientRect(), window.innerWidth, window.innerHeight))
 
     if (price !== undefined || !figureId) return
-    if (priceCache.has(figureId)) {
-      setFetched(priceCache.get(figureId) ?? null)
-      return
+    const known = peekQuickLookPrice(figureId)
+    if (known !== undefined) {
+      setFetched(known ?? null)
+      if (known !== null) return
     }
-    priceCache.set(figureId, null) // in-flight marker
-    fetch(`/api/sparklines?ids=${encodeURIComponent(figureId)}`)
-      .then(res => (res.ok ? res.json() : {}))
-      .then((data: Record<string, QuickLookPrice>) => {
-        const p = data[figureId] ?? null
-        priceCache.set(figureId, p)
-        setFetched(p)
-      })
-      .catch(() => { priceCache.delete(figureId) })
+    fetchQuickLookPrice(figureId).then(p => setFetched(p))
   }
 
   function hide() {
@@ -128,22 +97,14 @@ export function useQuickLook({ image, name, sub, figureId, price }: QuickLookOpt
 
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current) }, [])
 
-  // Same gate as HeroSearch's isDesktopPointer(): fine pointer AND no touch
-  // capability at all. matchMedia alone passes hybrid (touch-screen laptop)
-  // devices, where a hover card can ambush a touch interaction — the exact
-  // gate shape the 7/25 search-takeover bug came from (7/26 overlay audit).
-  function desktopPointer(): boolean {
-    const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches
-    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
-    return hasFinePointer && !hasTouch
-  }
-
+  // desktopPointer() (7/25 search-takeover / 7/26 overlay-audit gate) is
+  // quickLookCore's — the same function the delegate uses.
   const anchorHandlers = {
     onPointerEnter(e: React.PointerEvent<HTMLElement>) {
       if (!image || !desktopPointer()) return
       hoverEl.current = e.currentTarget
       if (timer.current) clearTimeout(timer.current)
-      timer.current = setTimeout(show, 450)
+      timer.current = setTimeout(show, HOVER_INTENT_MS)
     },
     onPointerLeave() { hide() },
     onFocus(e: React.FocusEvent<HTMLElement>) {
