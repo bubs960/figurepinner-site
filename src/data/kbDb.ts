@@ -262,44 +262,39 @@ export async function getWaveCompanions(fandom: string, productLine: string, rel
  * (null/'' waves excluded — a wave-less bucket is not a completable line).
  * Vault line-completion denominators; replaces a whole-fandom row read.
  */
-export async function getLineWaveCounts(
-  fandom: string,
-): Promise<Array<{ product_line: string; release_wave: string; count: number }>> {
-  const db = await getKbDb()
-  const { results } = await db
-    .prepare(SQL.lineWaveCounts)
-    .bind(fandom)
-    .all<{ product_line: string; release_wave: string; c: number }>()
-  return (results ?? []).map(r => ({ product_line: r.product_line, release_wave: r.release_wave, count: Number(r.c) }))
-}
+type LineWaveCount = { product_line: string; release_wave: string; count: number }
+// Release M (2026-09-04, speed program S2): per-isolate memo, keyed by fandom.
+// The only caller is /app/vault (force-dynamic, no ISR), so every Vault view
+// re-ran one GROUP BY per fandom in the shelf. Denominators change only on a
+// KB pour, so a 1 h TTL — the same TTL the retired getAllFandoms memo used, deliberately
+// NOT the hubs' 24 h — bounds staleness to the same window the fandom list
+// already accepts. Same de-poison rule: a failed read clears its own entry.
+const LINE_WAVE_TTL_MS = 60 * 60 * 1000
+const lineWaveMemo = new Map<string, { at: number; value: Promise<LineWaveCount[]> }>()
 
-/**
- * All unique fandom slugs. Mirrors kb.getAllFandoms.
- *
- * 2026-09-03 (SCALE-ALERT 9/3): `SELECT DISTINCT fandom` is a whole-table
- * scan (23.9k rows) and ran ~7.7k×/day (185 M rows / 24 h) — every line-hub
- * and character-hub render calls it as a route-validity gate. The set changes
- * only on a KB swap, so memoise per isolate for FANDOMS_TTL_MS on top of the
- * per-request React cache(). D1 stays the source of truth (a swap that adds
- * a fandom is visible within the TTL, no deploy needed); reads drop from
- * per-render to per-isolate-per-hour.
- */
-const FANDOMS_TTL_MS = 60 * 60 * 1000
-let fandomsMemo: { at: number; value: Promise<string[]> } | null = null
-
-export const getAllFandoms = cache(async function getAllFandoms(): Promise<string[]> {
+export async function getLineWaveCounts(fandom: string): Promise<LineWaveCount[]> {
   const now = Date.now()
-  if (fandomsMemo && now - fandomsMemo.at < FANDOMS_TTL_MS) return fandomsMemo.value
+  const hit = lineWaveMemo.get(fandom)
+  if (hit && now - hit.at < LINE_WAVE_TTL_MS) return hit.value
   const value = (async () => {
     const db = await getKbDb()
-    const { results } = await db.prepare(SQL.allFandoms).all<{ fandom: string }>()
-    return (results ?? []).map(r => r.fandom)
+    const { results } = await db
+      .prepare(SQL.lineWaveCounts)
+      .bind(fandom)
+      .all<{ product_line: string; release_wave: string; c: number }>()
+    return (results ?? []).map(r => ({ product_line: r.product_line, release_wave: r.release_wave, count: Number(r.c) }))
   })()
-  fandomsMemo = { at: now, value }
-  // A failed read must not poison the memo for an hour.
-  value.catch(() => { if (fandomsMemo?.value === value) fandomsMemo = null })
+  lineWaveMemo.set(fandom, { at: now, value })
+  value.catch(() => { if (lineWaveMemo.get(fandom)?.value === value) lineWaveMemo.delete(fandom) })
   return value
-})
+}
+
+// Release M (2026-09-04): kbDb's own `getAllFandoms` (the memoised
+// `SELECT DISTINCT fandom` scan, Release H) was removed here — Release J's
+// `isKnownFandom` below replaced its only render-path use, and a repo-wide
+// check (src/, scripts/, tests/) found zero importers of the kbDb export; every
+// `getAllFandoms` caller imports the build-time list from kb.ts / kbLite.ts.
+// Its 1 h TTL pattern lives on in getLineWaveCounts above.
 
 /**
  * Route-validity gate for hubs (2026-09-03, SCALE-ALERT 9/3 follow-up): is
