@@ -21,34 +21,40 @@
 // Callers keep their own shape checks; this only fetches + parses JSON.
 
 import { getCloudflareContext } from '@opennextjs/cloudflare'
+import { readThroughPrice, type KvLike } from './priceReadThrough'
 
 export const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
 export type PriceKind = 'price-summaries' | 'price-history'
 
 type R2Like = { get(key: string): Promise<{ json<T>(): Promise<T> } | null> }
+type Bindings = { r2: R2Like | null; kv: KvLike | null; waitUntil?: (p: Promise<unknown>) => void }
 
-async function bucket(): Promise<R2Like | null> {
+// Release O (2026-09-04): the KV mirror (PRICE_KV, its own namespace so
+// kv-purge-stale-isr can never sweep it) sits in front of the R2 binding —
+// see priceReadThrough.ts for the why and the freshness contract. All three
+// bindings are optional: no KV → K/L behaviour; no R2 → proxy fallback.
+async function bindings(): Promise<Bindings> {
   try {
-    const { env } = await getCloudflareContext()
+    const { env, ctx } = await getCloudflareContext()
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const b = (env as any)?.PRICE_ASSETS as R2Like | undefined
-    return b && typeof b.get === 'function' ? b : null
+    const e = env as any
+    const r2 = e?.PRICE_ASSETS as R2Like | undefined
+    const kv = e?.PRICE_KV as KvLike | undefined
+    const waitUntil = ctx && typeof ctx.waitUntil === 'function' ? (p: Promise<unknown>) => ctx.waitUntil(p) : undefined
+    return {
+      r2: r2 && typeof r2.get === 'function' ? r2 : null,
+      kv: kv && typeof kv.get === 'function' && typeof kv.put === 'function' ? kv : null,
+      waitUntil,
+    }
   } catch {
-    return null
+    return { r2: null, kv: null }
   }
 }
 
-/**
- * Read `<kind>/<figure_id>.json`. Returns the parsed object, or null when the
- * object does not exist / is not valid JSON. Never throws.
- * `revalidate` only matters on the proxy fallback (Next fetch cache).
- */
-export async function readPriceObject<T>(kind: PriceKind, figure_id: string, revalidate = 86400): Promise<T | null> {
-  const key = `${kind}/${figure_id}.json`
-  const b = await bucket()
-  if (b) {
+async function readOrigin<T>(r2: R2Like | null, kind: string, figure_id: string, revalidate: number): Promise<T | null> {
+  if (r2) {
     try {
-      const obj = await b.get(key)
+      const obj = await r2.get(`${kind}/${figure_id}.json`)
       if (!obj) return null
       return await obj.json<T>()
     } catch {
@@ -62,4 +68,19 @@ export async function readPriceObject<T>(kind: PriceKind, figure_id: string, rev
   } catch {
     return null
   }
+}
+
+/**
+ * Read `<kind>/<figure_id>.json`: KV mirror first, then the R2 binding (or the
+ * proxy when the binding is absent), mirroring the result. Returns the parsed
+ * object, or null when the object does not exist / is not valid JSON. Never
+ * throws. `revalidate` only matters on the proxy fallback (Next fetch cache).
+ */
+export async function readPriceObject<T>(kind: PriceKind, figure_id: string, revalidate = 86400): Promise<T | null> {
+  const { r2, kv, waitUntil } = await bindings()
+  return readThroughPrice<T>(
+    { kv, waitUntil, origin: (k, fid) => readOrigin<T>(r2, k, fid, revalidate) },
+    kind,
+    figure_id,
+  )
 }
