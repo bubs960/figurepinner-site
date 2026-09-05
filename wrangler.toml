@@ -76,6 +76,15 @@ id = "e1858bb16a4f41f5b81afe8cf53519f5"  # FP_KV — shared, prefixed with "pro:
 binding = "NEXT_INC_CACHE_KV"
 id = "e1858bb16a4f41f5b81afe8cf53519f5"  # same namespace as PRO_KV, prefixed with "isr-cache:"
 
+# Release O (2026-09-04, Steve-approved): read-through KV mirror of the R2
+# price snapshots (src/lib/priceReadThrough.ts). Its OWN namespace on purpose —
+# scripts/kv-purge-stale-isr.mjs sweeps FP_KV by build id and must never see
+# these keys. Keys: `<gen>/<kind>/<figure_id>`, 24 h TTL; `price-gen` = manual
+# flush switch (`wrangler kv key put --namespace-id fb4c… price-gen g1`).
+[[kv_namespaces]]
+binding = "PRICE_KV"
+id = "fb4c1bd0cee4467380818383357094e9"
+
 # OpenNext ISR revalidation (reworked 2026-06-11):
 # The old Cloudflare-Queues producer/consumer blocks were DEAD CONFIG —
 # @opennextjs/cloudflare 1.19.x removed the queue-based path entirely, and the
