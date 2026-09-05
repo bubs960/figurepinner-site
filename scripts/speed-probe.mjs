@@ -83,12 +83,22 @@ const pct = (arr, p) => { const s = [...arr].filter(x => x != null).sort((a, b) 
 const ts = new Date().toISOString()
 const bust = Date.now()
 const rows = []
+// Edge-level 403 (no x-fp-edge header = the Worker never ran) on a cache-busted
+// probe is a Bot-Fight artifact of THIS instrument, seen on 2/10 rows right
+// after each of the 9/4 and 9/5 train deploys and 200 on immediate retry.
+// R17 #4: a flaky instrument gets ONE retry, then it is fixed -- this is the
+// fix. A 403 that survives the retry is still reported as-is.
+async function curlRetry403(url) {
+  const r = curl(url)
+  if (r.status === 403 && !r.edge) { await sleep(1500); return curl(url) }
+  return r
+}
 for (const { cls, u } of URLS) {
-  const cold = curl(`${SITE}${u}${u.includes('?') ? '&' : '?'}sp=${bust}`)
+  const cold = await curlRetry403(`${SITE}${u}${u.includes('?') ? '&' : '?'}sp=${bust}`)
   await sleep(1000)
   curl(`${SITE}${u}`)                       // prime
   await sleep(1000)
-  const warm = curl(`${SITE}${u}`)           // measure
+  const warm = await curlRetry403(`${SITE}${u}`) // measure
   await sleep(1000)
   rows.push({ cls, url: u, cold, warm })
 }
