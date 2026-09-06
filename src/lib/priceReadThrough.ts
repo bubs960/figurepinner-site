@@ -100,10 +100,17 @@ export async function readThroughPrice<T>(deps: ReadThroughDeps, kind: string, f
   if (kv && key) {
     const value = obj === null ? NEG_SENTINEL : JSON.stringify(obj)
     const ttl = obj === null ? PRICE_KV_NEG_TTL_S : PRICE_KV_TTL_S
-    const put = kv.put(key, value, { expirationTtl: ttl }).catch((err: unknown) => {
-      // a failed mirror write never affects the response — but it must be visible in the tail
-      console.warn('[price-kv] put failed:', key, err instanceof Error ? err.message : String(err))
-    })
+    // Train #4 diagnostic (2026-09-06): start + ok lines bracket the write so the tail
+    // can tell "rejected" (failed line) from "cancelled before completion" (start with
+    // no ok/failed) from "never reached" (no lines at all). Remove once the mirror is proven.
+    const mode = deps.waitUntil ? 'bg' : 'inline'
+    console.log('[price-kv] put start', key, mode)
+    const put = kv.put(key, value, { expirationTtl: ttl })
+      .then(() => { console.log('[price-kv] put ok', key, mode) })
+      .catch((err: unknown) => {
+        // a failed mirror write never affects the response — but it must be visible in the tail
+        console.warn('[price-kv] put failed:', key, err instanceof Error ? err.message : String(err))
+      })
     if (deps.waitUntil) deps.waitUntil(put)
     else await put
   }
