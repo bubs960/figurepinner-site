@@ -41,7 +41,7 @@
 import { readFileSync, existsSync, appendFileSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 
-const KEY = 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4'
+const KEY = '6d21e3af4a7a44f9a1a0c0fba6518a49'
 const HOST = 'figurepinner.com'
 const SITEMAP = 'https://' + HOST + '/sitemap.xml'
 const ENDPOINT = 'https://api.indexnow.org/IndexNow'
