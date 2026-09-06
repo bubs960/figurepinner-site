@@ -11,7 +11,7 @@
  */
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { cache } from 'react'
-import { computeTrend } from '@/app/figure/[figure_id]/_lib/figureFormatters'
+import { computeTrendWindowed } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { readPriceObject } from '@/lib/priceStore'
 
 async function getDB(): Promise<D1Database> {
@@ -70,11 +70,14 @@ async function fetchCandidate(figureId: string): Promise<Candidate | null> {
   const snap = await readPriceObject<{ sold_count: number; recent?: Array<{ price: number; sold_date: string | null }> }>('price-summaries', figureId, 3600)
   if (!snap) return null
   const history = (snap.recent ?? []).map(r => ({ price: r.price, sold_date: r.sold_date ?? '' }))
-  // computeTrend() IS the comp-count floor: it returns null under 6 total
-  // comps by construction (needs >=3 in both the last-30d and prior-30-90d
-  // windows) -- the exact "thin data never embarrasses a real figure" guard
-  // the spec asks for, reused rather than re-invented with a second number.
-  const trendPct = computeTrend(history)
+  // computeTrendWindowed() IS the comp-count floor: it returns null under 6
+  // comps inside the last 90 days (>=3 in each half of the window) -- the
+  // "thin data never embarrasses a real figure" guard. Steve ruling 2026-09-06
+  // (Option a): the previous 30d/30-90d split needed comps in the last 30 days,
+  // which the CAPTCHA-walled sold-comps pipeline has not produced since ~7/22,
+  // so every pool candidate returned null and /today sat on its empty state.
+  // Widened, not lowered: still 6 real comps minimum, labelled "over 90 days".
+  const trendPct = computeTrendWindowed(history, { windowDays: 90, minPerHalf: 3 })
   if (trendPct == null) return null
 
   return { figureId, trendPct, compCount: snap.sold_count }

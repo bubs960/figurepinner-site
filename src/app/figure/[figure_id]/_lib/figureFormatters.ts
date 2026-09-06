@@ -212,6 +212,40 @@ export function computeTrend(
   return ((avgRecent - avgOlder) / avgOlder) * 100
 }
 
+/**
+ * Windowed trend for the /today spotlight (Steve ruling 2026-09-06, standalone
+ * relay STANDALONE-TO-WEB-TODAY-SPOTLIGHT-RULING-2026-09-06: relax the recency
+ * floor, do not noindex, label honestly). Unlike computeTrend() it does NOT
+ * require comps in the last 30 days: it takes every comp inside the last
+ * `windowDays`, sorts by sold_date, and compares the newer half against the
+ * older half. Needs >= minPerHalf comps in each half or returns null, so thin
+ * data still never embarrasses a real figure. Stopgap tied to the sold-comps
+ * pipeline being CAPTCHA-walled since ~2026-07-22; tighten back to
+ * computeTrend() once 30-day data is reliable again.
+ */
+export function computeTrendWindowed(
+  history: Array<{ price: number; sold_date: string }>,
+  opts: { windowDays?: number; minPerHalf?: number; now?: number } = {}
+): number | null {
+  const windowDays = opts.windowDays ?? 90
+  const minPerHalf = opts.minPerHalf ?? 3
+  const now = opts.now ?? Date.now()
+  const day = 86400000
+  const inWindow = history
+    .map(h => ({ price: h.price, t: new Date(h.sold_date).getTime() }))
+    .filter(h => Number.isFinite(h.t) && h.t <= now && now - h.t <= windowDays * day)
+    .sort((a, b) => a.t - b.t)
+  if (inWindow.length < minPerHalf * 2) return null
+  const mid = Math.floor(inWindow.length / 2)
+  const older = inWindow.slice(0, mid)
+  const recent = inWindow.slice(mid)
+  if (older.length < minPerHalf || recent.length < minPerHalf) return null
+  const avgOlder = older.reduce((s, h) => s + h.price, 0) / older.length
+  const avgRecent = recent.reduce((s, h) => s + h.price, 0) / recent.length
+  if (avgOlder <= 0) return null
+  return ((avgRecent - avgOlder) / avgOlder) * 100
+}
+
 function cleanEbaySearchPart(value: string): string {
   return value
     .replace(/[()]/g, ' ')
