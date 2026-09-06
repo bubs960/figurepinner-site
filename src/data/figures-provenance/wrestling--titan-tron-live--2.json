@@ -1,0 +1,1101 @@
+{
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_edge_e9632b": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_edge_e9632b",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_edge_e9632b",
+   "character_canonical": "edge",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 1999,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Edge"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live?page=2",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl2-bigshowwhite",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://www.figurerealm.com/actionfigure?ns=280&action=seriesitemlist&id=6258&ssid=-1&series=wwftitantronlive",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s4",
+     "url": "https://www.ebay.com/itm/197202657154",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s5",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl-boxset20",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s1",
+     "text": "Regular price $0.00 / Sale price $0.00",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s4",
+     "text": "2000 WWF WWE Jakks Pacific Titantron Live Series 6 Edge Figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": "edge",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "04223970693ab6a7"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_triple-h_90cb94": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_triple-h_90cb94",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_triple-h_90cb94",
+   "character_canonical": "triple-h",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Triple H"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://www.figurerealm.com/actionfigure?action=actionfigure&id=62715&figure=tripleh",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://www.ebay.com/itm/296706905134",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://www.ebay.com/itm/402767504751",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "s4",
+     "url": "https://thetoycollectorsguide.com/wrestling-wwf-jakks-pacific-1999/",
+     "source_type": "toy_news",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "s5",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl-uncoveredbox",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "s6",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    }
+   ],
+   "quotes": []
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "86d4a216d83788d7"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_undertaker_bf3a02": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_undertaker_bf3a02",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_undertaker_bf3a02",
+   "character_canonical": "undertaker",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Undertaker"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl1-undertaker",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 Big Show",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 Kane",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "kane",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q3",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 Ken Shamrock",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q4",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 Stone Cold",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q5",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 The Rock",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "the-rock",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q6",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 X-Pac",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "x-pac",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q7",
+     "source_id": "s2",
+     "text": "Release Date: 1999",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q8",
+     "source_id": "s2",
+     "text": "Series: 1",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "undertaker",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "db423fd854f1eb03"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_big-show_72bc57": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_big-show_72bc57",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_big-show_72bc57",
+   "character_canonical": "big-show",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 1999,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Big Show"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl2-bigshowwhite",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://www.ebay.com/itm/265080225838",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s1",
+     "text": "Release Date: 1999",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s1",
+     "text": "Manufacturer: Jakks Pacific",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q3",
+     "source_id": "s1",
+     "text": "Series: 2",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "big-show",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q4",
+     "source_id": "s1",
+     "text": "Release date may vary from copyright date on packaging as some retailers receive product earlier than mass retail.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "f625d93b4dfd6845"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_x-pac_2d69c7": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_x-pac_2d69c7",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_x-pac_2d69c7",
+   "character_canonical": "x-pac",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 1999,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "X-Pac"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live?page=2",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl-boxset26",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://wrestlingfiguredatabase.com/products/basf-xpac",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s4",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": []
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "1612ae2969a2cd14"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_stone-cold-steve_943044": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_stone-cold-steve_943044",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_stone-cold-steve_943044",
+   "character_canonical": "stone-cold-steve-austin",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 2002,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stone Cold Steve Austin"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl2-scsawhite",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://ebay.com/p/Jakks-Pacific-WWF-Wrestlemania-2000-TITAN-Tron-Live-Series-2-Steve-Austin/1900069078",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://dhcollectibles.com/products/1999-wwe-titantron-world-wrestling-federation-2000-live-smack-down-series-2-stone-cold-steve-austin-action-figure",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s1",
+     "text": "1999 WWF Jakks Pacific Titantron Live Series 2 Stone Cold Steve Austin",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s1",
+     "text": "Release Date: 1999",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q3",
+     "source_id": "s1",
+     "text": "Manufacturer: Jakks Pacific",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q4",
+     "source_id": "s1",
+     "text": "Series: 2",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q5",
+     "source_id": "s1",
+     "text": "White Insert",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": "white-insert-card",
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "q6",
+     "source_id": "s1",
+     "text": "Red Insert",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": "red-insert-card",
+      "condition": "carded"
+     }
+    },
+    {
+     "quote_id": "q7",
+     "source_id": "s3",
+     "text": "Stone Cold Steve Austin is fully poseable and comes with Slammin Sewer Lid",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": 2002,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q8",
+     "source_id": "s3",
+     "text": "$20.00 CAD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "q9",
+     "source_id": "s3",
+     "text": "This item is brand new and in excellent condition. Packaging has some shelving wear and tear. Suitable to display in package or to open",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titantron-live",
+      "year": null,
+      "character_canonical": "stone-cold-steve-austin",
+      "character_variant": null,
+      "condition": "sealed"
+     }
+    },
+    {
+     "quote_id": "q10",
+     "source_id": "s2",
+     "text": "HHH Triple H",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "wrestlemania-2000-titantron-live",
+      "year": 1999,
+      "character_canonical": "triple-h",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Fully poseable",
+    "evidence_quote_ids": [
+     "q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "conflict",
+    "conflicting_values": [
+     {
+      "value": "White Insert",
+      "evidence_quote_ids": [
+       "q5"
+      ]
+     },
+     {
+      "value": "Red Insert",
+      "evidence_quote_ids": [
+       "q6"
+      ]
+     }
+    ]
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "resolved",
+    "value": "White Insert",
+    "evidence_quote_ids": [
+     "q5"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "fingerprint.known_variants[1]",
+    "status": "resolved",
+    "value": "Red Insert",
+    "evidence_quote_ids": [
+     "q6"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "included_items[1]",
+    "status": "resolved",
+    "value": "Slammin Sewer Lid",
+    "evidence_quote_ids": [
+     "q7"
+    ],
+    "evidence_class": "primary_exact"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "4743a4e2d7db8b81"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_2_ken-shamrock_495b81": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_ken-shamrock_495b81",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_2_ken-shamrock_495b81",
+   "character_canonical": "ken-shamrock",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "2",
+   "fandom": "wrestling",
+   "year": 1999,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Ken Shamrock"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://www.ebay.com/itm/157828423878",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://www.actionfiguresandcomics.com/products/wrestling-wwe-action-figures-ken-shamrock-titan-tron-live-ttl-jakks-pacific-toys-wwf-wcw",
+     "source_type": "secondary_market",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://wrestlingfiguredatabase.com/collections/all-ken-shamrock-wrestling-action-figures",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s2",
+     "text": "$6.95 USD",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s2",
+     "text": "overall excellent - nice paint, nice joints, nothing broken or damaged.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    },
+    {
+     "quote_id": "q3",
+     "source_id": "s2",
+     "text": "approx. 7 inch",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 1999,
+      "character_canonical": "ken-shamrock",
+      "character_variant": null,
+      "condition": "loose"
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "resolved",
+    "value": "$6.95 USD",
+    "evidence_quote_ids": [
+     "q1"
+    ],
+    "evidence_class": "single_secondary",
+    "price_detail": {
+     "amount": 6.95,
+     "currency": "USD",
+     "price_kind": "resale_current",
+     "region": null,
+     "as_of": null,
+     "source_id": "s2"
+    }
+   }
+  ],
+  "identity_hash": "314c46fbdd07e657"
+ }
+}

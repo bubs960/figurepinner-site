@@ -1,0 +1,870 @@
+{
+ "fp_wrestling_jakks-pacific_titan-tron-live_5_chris-jericho_40bd07": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_chris-jericho_40bd07",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_chris-jericho_40bd07",
+   "character_canonical": "chris-jericho",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": 2000,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Chris Jericho"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://www.ebay.com/itm/277607071142",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://forum.wrestlingfigs.com/thread/367601/titan-tron-live-series-05",
+     "source_type": "forum",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live?page=5",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s2",
+     "text": "I feel Jakks used that Jericho scan with way cooler attires.",
+     "scope": {
+      "kind": "line",
+      "manufacturer": "jakks-pacific",
+      "product_line": null,
+      "year": null,
+      "character_canonical": "chris-jericho",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s2",
+     "text": "The second Real Scan wave",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "mattel",
+      "product_line": "wwe-real-scan",
+      "year": 2021,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "c1d4a207dd1339a4"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_5_test_2cfcad": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_test_2cfcad",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_test_2cfcad",
+   "character_canonical": "test",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Test"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl-summerslam-test",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://www.ebay.com/itm/156519444558",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": []
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "845da257ab17a82e"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_5_triple-h_ba894c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_triple-h_ba894c",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_triple-h_ba894c",
+   "character_canonical": "triple-h",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Triple H"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://www.google.com/search?q=JAKKS+Pacific+WWF+WWE+Titantron+Live+Series+5+Triple+H+action+figure",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://www.google.com/search?q=%22Titantron+Live%22+%22Series+5%22+Triple+H+wrestlingfiguredatabase",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://www.google.com/search?q=Jakks+%22Titan+Tron+Live%22+%22Series+5%22+Triple+H+2000",
+     "source_type": null,
+     "fetch_status": "snippet_only",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s4",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s5",
+     "url": "https://www.ebay.com/itm/296706905134",
+     "source_type": "secondary_market",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s6",
+     "url": "https://www.figurerealm.com/actionfigure?action=actionfigure&id=62715&figure=tripleh",
+     "source_type": "collector_database",
+     "fetch_status": "unreachable",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": []
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "0b3b3f1b26022a6f"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_5_stone-cold-steve-austin_f89c79": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_stone-cold-steve-austin_f89c79",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_stone-cold-steve-austin_f89c79",
+   "character_canonical": "stone-cold-steve-austin",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": 2000,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Stone Cold Steve Austin"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://www.ebay.com/itm/185243262346",
+     "source_type": "secondary_market",
+     "fetch_status": "snippet_only"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live?page=5",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://wrestlingfiguredatabase.com/collections/all-stone-cold-steve-austin-action-figures",
+     "source_type": "collector_database",
+     "fetch_status": "fetched"
+    },
+    {
+     "source_id": "s4",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl3-scsa",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only"
+    },
+    {
+     "source_id": "s5",
+     "url": "https://www.figurerealm.com/actionfigure?ns=280&action=seriesitemlist&id=6258&ssid=-1&series=wwftitantronlive",
+     "source_type": "collector_database",
+     "fetch_status": "snippet_only"
+    }
+   ],
+   "quotes": []
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "57b0c84ce3b3edb0"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_5_mankind_37858c": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_mankind_37858c",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_mankind_37858c",
+   "character_canonical": "mankind",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": null,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Mankind"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "http://newplanetcybertron.blogspot.com/2013/03/misc-review-mankind-jakks-pacific-titan.html",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://wrestlingfiguredatabase.com/collections/jakks-pacific-wwf-wwe-titantron-live?page=5",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s1",
+     "text": "The outfit that he wears, as a nod to his hardcore tradition, is custom faded with that classic torn and worn out look.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s1",
+     "text": "He even has a necktie!",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q3",
+     "source_id": "s1",
+     "text": "The head sculpt is pretty darn good, and they got the hair and mask perfectly right.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q4",
+     "source_id": "s1",
+     "text": "the head turns left and right limitedly – the shirt collar is clearly blocking Mankind's chin",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q5",
+     "source_id": "s1",
+     "text": "the shoulders are on some sort of a universal joints that allows all range of motions",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q6",
+     "source_id": "s1",
+     "text": "there are no elbows articulation, unfortunately, but he does come with rotating wrists.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q7",
+     "source_id": "s1",
+     "text": "The legs move front and back at the hips; the knees bend into 90°",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q8",
+     "source_id": "s1",
+     "text": "This set only comes with one accessory, which is a worn out and bended pipe, made from bendable rubbery plastic.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q9",
+     "source_id": "s1",
+     "text": "The pipe is as detailed as Mankind himself, custom-rusted with what appeared to be the galvanized coating peelings.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": null,
+      "character_canonical": "mankind",
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Custom faded, torn and worn-out hardcore-style outfit with a necktie",
+    "evidence_quote_ids": [
+     "q1",
+     "q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "resolved",
+    "value": "Good likeness sculpt with accurately rendered hair and mask",
+    "evidence_quote_ids": [
+     "q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "resolved",
+    "value": "Universal-joint shoulders (full range of motion), rotating wrists, no elbow articulation, hips move front/back, knees bend to 90 degrees; head turns left/right but limited by shirt collar",
+    "evidence_quote_ids": [
+     "q4",
+     "q5",
+     "q6",
+     "q7"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Wears a necktie as part of his outfit",
+    "evidence_quote_ids": [
+     "q2"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[1]",
+    "status": "resolved",
+    "value": "Custom faded, torn and worn-out attire evoking his hardcore wrestling tradition",
+    "evidence_quote_ids": [
+     "q1"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "included_items[0]",
+    "status": "resolved",
+    "value": "Bendable rubbery-plastic pipe accessory, custom-rusted with a galvanized-coating-peel paint effect",
+    "evidence_quote_ids": [
+     "q8",
+     "q9"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "c1b24221d68f37a7"
+ },
+ "fp_wrestling_jakks-pacific_titan-tron-live_5_kurt-angle_ea682f": {
+  "schema_version": "figure-claims-2",
+  "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_kurt-angle_ea682f",
+  "target": {
+   "figure_id": "fp_wrestling_jakks-pacific_titan-tron-live_5_kurt-angle_ea682f",
+   "character_canonical": "kurt-angle",
+   "character_variant": null,
+   "manufacturer": "jakks-pacific",
+   "product_line": "titan-tron-live",
+   "release_wave": "5",
+   "fandom": "wrestling",
+   "year": 2000,
+   "scale": "6in",
+   "pack_size": "1",
+   "v1_name": "Kurt Angle"
+  },
+  "evidence": {
+   "sources": [
+    {
+     "source_id": "s1",
+     "url": "https://wrestlingfiguredatabase.com/products/ttl5-kurtangle",
+     "source_type": "collector_database",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s2",
+     "url": "https://www.ringsidecollectibles.com/JakksFigures/TTL5KurtAngle.html",
+     "source_type": "official_retailer",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    },
+    {
+     "source_id": "s3",
+     "url": "https://forum.wrestlingfigs.com/thread/367601/titan-tron-live-series-05",
+     "source_type": "forum",
+     "fetch_status": "fetched",
+     "retrieved_at": "2026-09-06"
+    }
+   ],
+   "quotes": [
+    {
+     "quote_id": "q1",
+     "source_id": "s2",
+     "text": "SOLD OUT",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q2",
+     "source_id": "s3",
+     "text": "Kurt with the removable singlet was a good idea on paper but Jakks never got it right",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q3",
+     "source_id": "s3",
+     "text": "I loved that Angle figure as a kid. The removable singlet was a great addition to the figure",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q4",
+     "source_id": "s3",
+     "text": "That Angle is one of my favorite TTLs.",
+     "scope": {
+      "kind": "figure",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": "kurt-angle",
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q5",
+     "source_id": "s3",
+     "text": "I voted for the Angle and Test",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    },
+    {
+     "quote_id": "q6",
+     "source_id": "s3",
+     "text": "This is a pretty damn good set, I also love the package too.",
+     "scope": {
+      "kind": "wave",
+      "manufacturer": "jakks-pacific",
+      "product_line": "titan-tron-live",
+      "year": 2000,
+      "character_canonical": null,
+      "character_variant": null,
+      "condition": null
+     }
+    }
+   ]
+  },
+  "claims": [
+   {
+    "field_path": "fingerprint.attire_reference",
+    "status": "resolved",
+    "value": "Removable singlet",
+    "evidence_quote_ids": [
+     "q2",
+     "q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.gear_colors",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.head_sculpt",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.face_technology",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.articulation_points",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.packaging_style",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "fingerprint.visual_identifiers[0]",
+    "status": "resolved",
+    "value": "Removable singlet gimmick",
+    "evidence_quote_ids": [
+     "q3"
+    ],
+    "evidence_class": "single_secondary"
+   },
+   {
+    "field_path": "fingerprint.known_variants[0]",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "wave_context.baf_target",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "wave_context.baf_piece",
+    "status": "not_applicable"
+   },
+   {
+    "field_path": "identity_bonus.manufacturer_sku",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.street_date",
+    "status": "unresolved"
+   },
+   {
+    "field_path": "identity_bonus.original_retail_price",
+    "status": "unresolved"
+   }
+  ],
+  "identity_hash": "60c5cd0a19117ade"
+ }
+}
