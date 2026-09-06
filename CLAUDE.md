@@ -5,8 +5,18 @@ fires" hole. Keep this SHORT — pointers, not prose. The canonical deploy doc i
 
 **`C:\Users\bubs9\FigurePinner-Ecosystem\Fig Pinner Dev - Claude\runbooks\deploy-guardrails.md`** —
 READ IT before proposing any deploy. Caps: figurepinner-site 2/day soft,
-3/day HARD, 30-min cool-down. Steve executes ALL deploys (author/execute
-split); give him two separate blocks: `cd` first, then `npm run deploy`.
+3/day HARD, 30-min cool-down. Execution, AMENDED 2026-09-06 (Steve's ruling):
+the daily train self-executes from the web chat inside the 05:00-07:00Z window
+via one path-bound permission rule,
+`Bash(npm --prefix C:/Users/bubs9/FigurePinner-Ecosystem/figurepinner-site run deploy)`,
+in the ecosystem project settings (mirrored in this repo's `.claude/settings.json`).
+The author/execute split still holds for everything else: ad-hoc runs, and EVERY
+`FP_ALLOW_DIRTY` override, stay a human decision (the override is deliberately
+not covered by the rule); for those, give Steve two separate blocks: `cd` first,
+then `npm run deploy`. Stopgap until FP-DeployTrain is a registered task (R13).
+Why: trains #1-2 ran from the chat under the 9/3 approval; train #3 (9/6) was
+denied by the auto-mode classifier and slipped 7 h into US morning traffic
+behind a full cache purge.
 
 ## Deploy truths (each of these has already burned a session)
 
