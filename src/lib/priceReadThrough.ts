@@ -88,7 +88,8 @@ export async function readThroughPrice<T>(deps: ReadThroughDeps, kind: string, f
         if (hit === NEG_SENTINEL) return null
         try { return JSON.parse(hit) as T } catch { /* corrupt entry → fall through to origin */ }
       }
-    } catch {
+    } catch (err) {
+      console.warn('[price-kv] get failed, skipping mirror for this read:', err instanceof Error ? err.message : String(err))
       key = null // KV unavailable: skip caching this read
     }
   }
@@ -99,7 +100,10 @@ export async function readThroughPrice<T>(deps: ReadThroughDeps, kind: string, f
   if (kv && key) {
     const value = obj === null ? NEG_SENTINEL : JSON.stringify(obj)
     const ttl = obj === null ? PRICE_KV_NEG_TTL_S : PRICE_KV_TTL_S
-    const put = kv.put(key, value, { expirationTtl: ttl }).catch(() => { /* a failed mirror write never affects the response */ })
+    const put = kv.put(key, value, { expirationTtl: ttl }).catch((err: unknown) => {
+      // a failed mirror write never affects the response — but it must be visible in the tail
+      console.warn('[price-kv] put failed:', key, err instanceof Error ? err.message : String(err))
+    })
     if (deps.waitUntil) deps.waitUntil(put)
     else await put
   }

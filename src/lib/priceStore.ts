@@ -35,7 +35,11 @@ type Bindings = { r2: R2Like | null; kv: KvLike | null; waitUntil?: (p: Promise<
 // bindings are optional: no KV → K/L behaviour; no R2 → proxy fallback.
 async function bindings(): Promise<Bindings> {
   try {
-    const { env, ctx } = await getCloudflareContext()
+    // O-fix (2026-09-06): async form — the sync form throws when OpenNext judges the
+    // context SSG/ISR-flavoured (see @opennextjs/cloudflare cloudflare-context.js);
+    // vaultData.ts already uses async. Train #3 showed 0 mirror writes with every
+    // failure path silent, so each swallowed branch now names itself in the tail.
+    const { env, ctx } = await getCloudflareContext({ async: true })
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const e = env as any
     const r2 = e?.PRICE_ASSETS as R2Like | undefined
@@ -43,10 +47,11 @@ async function bindings(): Promise<Bindings> {
     const waitUntil = ctx && typeof ctx.waitUntil === 'function' ? (p: Promise<unknown>) => ctx.waitUntil(p) : undefined
     return {
       r2: r2 && typeof r2.get === 'function' ? r2 : null,
-      kv: kv && typeof kv.get === 'function' && typeof kv.put === 'function' ? kv : null,
+      kv: kv && typeof kv.get === 'function' && typeof kv.put === 'function' ? kv : (console.warn('[price-kv] PRICE_KV binding missing on env'), null),
       waitUntil,
     }
-  } catch {
+  } catch (err) {
+    console.warn('[price-kv] bindings unavailable:', err instanceof Error ? err.message : String(err))
     return { r2: null, kv: null }
   }
 }
