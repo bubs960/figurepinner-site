@@ -18,6 +18,7 @@
  */
 
 import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
+import { hygieneVaultTop } from '../_lib/vaultHygiene'
 
 // Precomputed top-comps JSON (nightly build-fandom-top-comps.mjs). STATIC imports —
 // register each fandom's file here once its data exists. See loadTopComps() below.
@@ -505,6 +506,8 @@ const TOP_COMPS: Record<string, TopCompPayload> = {
 
 export type VaultFigure = { figure_id: string; name: string; price: number; sold_count: number; flag: string; image?: string | null; url: string }
 export type Vault = { line: string; line_slug: string; count: number; priced_count: number; top: VaultFigure[] }
+
+
 export type VaultPayload = { fandom: string; generated_at: string; source: string; vaults: Vault[] }
 
 const VAULTS: Record<string, VaultPayload> = {
@@ -535,7 +538,10 @@ export async function loadVaults(dataKey: string): Promise<VaultPayload | null> 
     ...payload,
     vaults: payload.vaults.map((v) => ({
       ...v,
-      top: v.top.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+      // Release T (2026-09-07, external audit F5): a Force FX lightsaber sat in the
+      // 6" Black Series vault (KB product_line misclassification, relayed to matcher).
+      // Roleplay never renders inside a figure vault; dedupe by figure_id while here.
+      top: hygieneVaultTop(v.line_slug, v.top).map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
     })),
   }
 }

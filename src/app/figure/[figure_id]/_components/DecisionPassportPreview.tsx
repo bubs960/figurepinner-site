@@ -133,22 +133,26 @@ export default function DecisionPassportPreview({ identity, sealed, loose, child
 
         {/* Identity */}
         <SectionHeading>How to Identify This Exact Release</SectionHeading>
-        <div style={{ borderRadius: '12px', border: '1px solid rgba(255,255,255,.1)', overflow: 'hidden' }}>
+        {/* Release T (Steve, 2026-09-07): the per-row "KB RECORD" pills were noise
+            and cost a third of the width. Spec-panel layout instead, like the
+            back of a package: two columns of label-over-value cells, half the
+            height. Only a value that is NOT from this figure's own record keeps
+            a quiet note (the line-level retail reference), so the honesty
+            distinction survives without a badge column. */}
+        <div style={{
+          display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1px',
+          borderRadius: '12px', border: '1px solid rgba(255,255,255,.1)', overflow: 'hidden',
+          background: 'rgba(255,255,255,.06)',
+        }}>
           {identity.map(row => (
-            <div key={row.label} style={{
-              display: 'grid', gridTemplateColumns: 'minmax(100px,150px) 1fr auto', gap: '10px',
-              padding: '9px 14px', borderTop: '1px solid rgba(255,255,255,.06)',
-              fontSize: '0.8rem', alignItems: 'center',
-            }}>
-              <span style={{ color: 'var(--dp-muted)' }}>{row.label}</span>
-              <span style={{ color: 'var(--dp-text)', fontWeight: 600 }}>{row.value}</span>
-              <span style={{
-                fontSize: '0.6rem', fontWeight: 700, letterSpacing: '.05em',
-                color: row.badgeColor, border: `1px solid ${row.badgeColor}`,
-                borderRadius: '100px', padding: '2px 8px', whiteSpace: 'nowrap',
-              }}>
-                {row.badge}
-              </span>
+            <div key={row.label} style={{ padding: '8px 12px', background: 'var(--dp-bg, rgba(0,0,0,.35))', fontSize: '0.78rem', lineHeight: 1.35 }}>
+              <div style={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--dp-muted)' }}>{row.label}</div>
+              <div style={{ color: 'var(--dp-text)', fontWeight: 600, overflowWrap: 'anywhere' }}>
+                {row.value}
+                {row.badge !== 'KB RECORD' && (
+                  <span style={{ marginLeft: 6, fontSize: '0.6rem', fontWeight: 500, color: 'var(--dp-muted)' }}>({row.badge.toLowerCase()})</span>
+                )}
+              </div>
             </div>
           ))}
         </div>

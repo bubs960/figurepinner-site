@@ -4,6 +4,7 @@
  * This is the original written-content surface for SEO + AdSense value.
  */
 
+import { guideFandom } from '../_lib/guideFandom'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ARTICLES, type Article, type ArticleBlock } from '../_data/articles'
@@ -228,10 +229,14 @@ export default async function GuideArticlePage({ params }: PageProps) {
 // Cross-links to keep readers in the guides funnel instead of dead-ending.
 // Sort by most-recently updated so cross-links rotate as new articles ship.
 function MoreGuides({ current }: { current: string }) {
-  const others = ARTICLES
-    .filter(a => a.slug !== current)
-    .sort((a, b) => (b.updated ?? '').localeCompare(a.updated ?? ''))
-    .slice(0, 3)
+  // Release T (2026-09-07, external audit F8): same-fandom guides first, then
+  // the most recently updated -- the Marvel guide no longer offers DC + MOTU.
+  const fandom = guideFandom(current)
+  const byDate = (a: Article, b: Article) => (b.updated ?? '').localeCompare(a.updated ?? '')
+  const pool = ARTICLES.filter(a => a.slug !== current)
+  const same = fandom === 'general' ? [] : pool.filter(a => guideFandom(a.slug) === fandom).sort(byDate)
+  const rest = pool.filter(a => !same.includes(a)).sort(byDate)
+  const others = [...same, ...rest].slice(0, 3)
   if (!others.length) return null
   return (
     <div style={{ marginTop: '2.5rem' }}>
