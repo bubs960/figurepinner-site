@@ -44,7 +44,7 @@ const COPY: Record<DataQualityState, {
   },
   sparse: {
     label: 'Sparse Data',
-    caveat: 'Only 1–3 comps. Directional only — verify before bidding.',
+    caveat: 'Only 1–2 comps. Directional only — verify before bidding.',
     dot: '#FF5F00',
   },
   none: {

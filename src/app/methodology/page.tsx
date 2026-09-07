@@ -43,15 +43,16 @@ export default function MethodologyPage() {
           <p>A median from 40 comps means something. A median from 2 is an anecdote. So every figure carries a visible <strong>data-quality label</strong> based on how many recent comps we have:</p>
           <ul style={{ margin: '0.5rem 0 0', paddingLeft: '1.25rem', lineHeight: 1.7 }}>
             <li><strong>Reliable Pricing</strong> — 10+ comps. The median is meaningful; bid with confidence.</li>
-            <li><strong>Limited Data</strong> — 4–9 comps. Enough to direction-check, not enough to bid hard against. Treat the median as an estimate.</li>
-            <li><strong>Sparse Data</strong> — 1–3 comps. An anchor point only. Directional — verify before you bid.</li>
+            <li><strong>Limited Data</strong> — 3–9 comps. Enough to direction-check, not enough to bid hard against. Treat the median as an estimate.</li>
+            <li><strong>Sparse Data</strong> — 1–2 comps. An anchor point only; we don&apos;t quote a median under 3. Directional — verify before you bid.</li>
             <li><strong>No Sold Data Yet</strong> — 0 comps. We won&apos;t invent a number. We point you to search eBay sold comps directly instead.</li>
           </ul>
           <p style={{ marginTop: '0.75rem' }}>We would rather tell you &ldquo;we don&apos;t have enough data&rdquo; than show a confident-looking price we can&apos;t stand behind.</p>
         </ProseSection>
 
         <ProseSection title="Trend: is it heating up or cooling down?">
-          <p>When a figure has enough comp history, we compare its <strong>average sale price over the last 30 days</strong> against the <strong>30-to-90-day window</strong> before that. That percentage swing is the trend signal — it tells you whether a figure is heating up, flat, or cooling off. We only show a trend when there are enough comps in both windows to make the comparison honest (at least three in each); otherwise we show nothing rather than a noisy arrow.</p>
+          <p>When a figure has enough comp history, we compare its <strong>average sale price over the last 30 days</strong> against the <strong>30-to-90-day window</strong> before that. That percentage swing is the trend signal — it tells you whether a figure is heating up, flat, or cooling off. We only show a trend when there are enough comps in both windows to make the comparison honest (at least three in each); otherwise we show nothing rather than a noisy arrow. The daily <a href="/today">Grail Spotlight</a> uses a wider read — the newer half of the last 90 days of sales against the older half, six sales minimum — and says so on the card.</p>
+          <p>Two windows, two labels: a <strong>&ldquo;last 90 days&rdquo;</strong> median is computed only from sales inside that window. The <strong>sales on record</strong> list under it can reach further back — it shows the evidence, with each sale dated, not the calculation window.</p>
         </ProseSection>
 
         <ProseSection title="What this is — and isn't">

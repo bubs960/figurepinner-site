@@ -78,6 +78,16 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
     .sort((a, b) => (b.sold_date || '').localeCompare(a.sold_date || ''))
     .slice(0, 15)
 
+  // Release S (2026-09-07, external audit F3): the placard's "last 90 days"
+  // median and this evidence list are different windows -- label the list as
+  // sales on record with its own dated span so nobody reads a March sale as
+  // part of a 90-day median.
+  const dated = compRows.map(c => c.sold_date).filter(Boolean).sort()
+  const spanFmt = (d: string) => new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  const compSpan = dated.length
+    ? (spanFmt(dated[0]) === spanFmt(dated[dated.length - 1]) ? spanFmt(dated[0]) : `${spanFmt(dated[0])} – ${spanFmt(dated[dated.length - 1])}`)
+    : ''
+
   function toggleComps() {
     const next = !showComps
     setShowComps(next)
@@ -171,7 +181,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
           color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
           fontVariantNumeric: 'tabular-nums',
         }}>
-          {pricing.comp_count} sold
+          {pricing.comp_count} sales on record{compSpan ? ` · ${compSpan}` : ''}
         </div>
       </div>
 
