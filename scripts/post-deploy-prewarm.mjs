@@ -41,6 +41,13 @@
  * TRANSPORT: curl.exe with a desktop-Chrome UA — Node fetch/undici is 403'd
  * by Bot Fight on this zone regardless of UA (CLAUDE.md truth #3).
  *
+ * 403 = Bot Fight challenge, not a page failure (2026-09-07 replay: 41/615
+ * 403s scattered across every group, no cf-cache/cf-mitigated header, 37/41
+ * served 200 on immediate re-hit; trains #1/#2 err=11 and #4 err=33 were all
+ * this class). A 403 gets ONE retry after RETRY_GAP_MS; a second 403 counts
+ * as `challenged`, reported separately from `err` so err only carries real
+ * failures (0/5xx/429/other 4xx).
+ *
  * NEVER fails the deploy chain: exits 0 whatever happens, prints one summary
  * line (counts + HIT/MISS + p50) so the deploy log carries an observed value.
  *
@@ -60,6 +67,7 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const CURL = process.platform === 'win32' ? 'curl.exe' : 'curl'
 const HUB_GAP_MS = 250
 const FIGURE_GAP_MS = 700 // < 100 req/min on the rate-limited figure route
+const RETRY_GAP_MS = 1500 // one retry on a 403 (Bot Fight challenge), see header
 const LINE_HUBS = Infinity // Release M: every line hub (was 50)
 const FIGURES = 50
 const CHARACTER_HUBS = 150 // Release M: was 20; Steve 9/3: by size, not traffic
@@ -190,7 +198,7 @@ async function main() {
 
   const started = Date.now()
   const ttfbs = []
-  const tally = { ok: 0, err: 0, hit: 0, miss: 0 }
+  const tally = { ok: 0, err: 0, challenged: 0, retried: 0, hit: 0, miss: 0 }
   let n = 0
   outer: for (const g of groups) {
     for (const p of g.paths) {
@@ -200,8 +208,15 @@ async function main() {
         break outer
       }
       n++
-      const r = warm(`${BASE}${p}`)
-      if (r.status >= 200 && r.status < 400) tally.ok++; else tally.err++
+      let r = warm(`${BASE}${p}`)
+      if (r.status === 403) {
+        tally.retried++
+        await sleep(RETRY_GAP_MS)
+        r = warm(`${BASE}${p}`)
+      }
+      if (r.status >= 200 && r.status < 400) tally.ok++
+      else if (r.status === 403) tally.challenged++
+      else tally.err++
       if (r.cache === 'HIT') tally.hit++; else if (r.cache === 'MISS' || r.cache === 'EXPIRED') tally.miss++
       ttfbs.push(r.ttfb)
       if (r.status === 0 || r.status >= 500 || r.status === 429) console.log(`[prewarm]   ${r.status} ${p} (${r.ttfb} ms, ${r.cache})`)
@@ -212,8 +227,8 @@ async function main() {
   const p50 = ttfbs[Math.floor(ttfbs.length / 2)] ?? 0
   const p95 = ttfbs[Math.floor(ttfbs.length * 0.95)] ?? 0
   const secs = Math.round((Date.now() - started) / 1000)
-  console.log(`[prewarm] done: ${n} requests in ${secs}s, ok=${tally.ok} err=${tally.err}, edge HIT=${tally.hit} MISS/EXPIRED=${tally.miss} (first-touch MISSes are the point), origin TTFB p50=${p50}ms p95=${p95}ms`)
-  recordStep('prewarm', tally.err > n / 4 ? 'FAILED' : 'OK', `${n} req, ok=${tally.ok} err=${tally.err}, p50=${p50}ms`)
+  console.log(`[prewarm] done: ${n} requests in ${secs}s, ok=${tally.ok} err=${tally.err} challenged=${tally.challenged} (403 twice; retried=${tally.retried}), edge HIT=${tally.hit} MISS/EXPIRED=${tally.miss} (first-touch MISSes are the point), origin TTFB p50=${p50}ms p95=${p95}ms`)
+  recordStep('prewarm', tally.err > n / 4 ? 'FAILED' : 'OK', `${n} req, ok=${tally.ok} err=${tally.err} challenged=${tally.challenged}, p50=${p50}ms`)
 }
 
 main().catch(err => {
