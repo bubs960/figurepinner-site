@@ -350,15 +350,20 @@ function buildChartPath(
  * Thresholds chosen empirically:
  *   reliable: enough comps that the median is statistically meaningful
  *   limited:  enough to direction-check but not to bid against
- *   sparse:   1-3 comps — anchor-point only, treat as anecdote
+ *   sparse:   1-2 comps — anchor-point only, treat as anecdote (Release S: was 1-3)
  *   none:     0 comps — no data at all, surface affiliate search instead
  */
 export type DataQualityState = 'reliable' | 'limited' | 'sparse' | 'none'
 
 export function dataQualityState(soldCount: number): DataQualityState {
-  if (soldCount >= 10) return 'reliable'
-  if (soldCount >= 4)  return 'limited'
-  if (soldCount >= 1)  return 'sparse'
+  // Release S (2026-09-07, external audit F9 / webaudit omnibus item 3): the
+  // badge's 'limited' band used to start at 4 while priceCompTier's 'thin'
+  // starts at MIN_COMPS_TO_QUOTE (3) -- a 3-comp figure was "sparse, anchor
+  // point only" on the badge and a quoted thin median in the ledger. One
+  // policy now: 10+ reliable/trustworthy, 3-9 limited/thin, 1-2 sparse/suppress.
+  if (soldCount >= TRUSTWORTHY_COMPS) return 'reliable'
+  if (soldCount >= MIN_COMPS_TO_QUOTE) return 'limited'
+  if (soldCount >= 1) return 'sparse'
   return 'none'
 }
 

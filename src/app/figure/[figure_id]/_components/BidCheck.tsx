@@ -31,6 +31,7 @@
 
 import { useState } from 'react'
 import { formatCurrency, MIN_COMPS_TO_QUOTE } from '../_lib/figureFormatters'
+import { resolveBidColumns, columnQuotable } from '../_lib/bidCheckResolve'
 import SectionH2 from './SectionH2'
 
 interface Comp {
@@ -68,13 +69,6 @@ function normalizeCondition(raw: string | null | undefined): 'new' | 'used' {
     c.includes('sealed') || c === 'mint' || c === 'new' || c.includes('brand new')
   ) return 'new'
   return 'used'
-}
-
-function median(arr: number[]): number {
-  if (!arr.length) return 0
-  const s = [...arr].sort((a, b) => a - b)
-  const mid = Math.floor(s.length / 2)
-  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2
 }
 
 // ── Verdict ──────────────────────────────────────────────────────────────────
@@ -117,22 +111,18 @@ export default function BidCheck({
   const newPrices  = comps.filter(c => normalizeCondition(c.condition) === 'new').map(c => c.price)
   const usedPrices = comps.filter(c => normalizeCondition(c.condition) === 'used').map(c => c.price)
 
-  // Single source of truth: the authoritative full-corpus snapshot bucket wins
-  // whenever it has enough comps (≥ MIN_SPLIT_COMPS) — INCLUDING pooled figures.
-  // The recent ~30-comp sample only fills in when the snapshot has no usable
-  // bucket. This stops the figure page from showing a locally-recomputed
-  // condition median (e.g. $28.45) that diverges from the snapshot the placard
-  // and vault both read. New→sealed, Used→loose.
-  const resolveCol = (localPrices: number[], snapMedian: number | null, snapCount: number): { med: number; n: number } =>
-    snapMedian != null && snapCount >= MIN_SPLIT_COMPS
-      ? { med: snapMedian, n: snapCount }
-      : { med: median(localPrices), n: localPrices.length }
-
+  // Release S (2026-09-07): the snapshot's title-classified buckets are the
+  // ONLY source whenever the snapshot has a split -- a thin bucket is an honest
+  // blank with its count, never a number from the item-condition sample (that
+  // fallback produced "Used $28 · 30 sales" beside "Loose: 1 sale" on Vader).
+  // Pooled figures with no bucket data keep the sample split, labelled as such.
+  const [newCol, usedCol] = resolveBidColumns({
+    segmentation, sealedMedian, sealedCount, looseMedian, looseCount, newPrices, usedPrices,
+  })
+  const sampleNote = newCol.source === 'sample' ? ' · recent sample, eBay item condition' : ''
   const columns = [
-    { key: 'new',  title: 'New',  sub: 'sealed / MOC',   blank: 'Not enough sealed sales to call it',
-      ...resolveCol(newPrices, sealedMedian, sealedCount) },
-    { key: 'used', title: 'Used', sub: 'loose / opened', blank: 'Not enough loose sales to call it',
-      ...resolveCol(usedPrices, looseMedian, looseCount) },
+    { ...newCol,  title: 'New',  sub: 'sealed / MOC' + sampleNote,   blank: 'Not enough sealed sales to call it' },
+    { ...usedCol, title: 'Used', sub: 'loose / opened' + sampleNote, blank: 'Not enough loose sales to call it' },
   ]
 
   return (
@@ -226,7 +216,7 @@ export default function BidCheck({
         {columns.map((col, i) => {
           const n = col.n
           const med = col.med
-          const enough = n >= MIN_SPLIT_COMPS
+          const enough = columnQuotable(col)
           const v = enough && hasBid ? verdictFor(bid, med) : null
           return (
             <div key={col.key} className="fp-bidcheck-card" style={{
@@ -243,7 +233,7 @@ export default function BidCheck({
               {!enough ? (
                 <div style={{ fontSize: '0.8125rem', fontWeight: 300, lineHeight: 1.6,
                               color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', marginTop: '0.5rem' }}>
-                  {col.blank}{n > 0 ? ` (${n} sale${n > 1 ? 's' : ''} on record)` : ''}
+                  {col.blank}{n > 0 ? ` — ${n} sale${n > 1 ? 's' : ''} on record, needs ${MIN_SPLIT_COMPS}` : ''}
                 </div>
               ) : (
                 <>
