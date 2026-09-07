@@ -34,6 +34,10 @@ export type DecisionBucket = {
     | 'condition_split_required'
     | 'thin_evidence'
   evidence_type: 'sold_observed' | 'asking_observed'
+  /** The Phase 1b 90-day (fresh-window) count/statistic — NOT what the tier
+   *  evaluator renders for recent/historical (matcher confirm, 2026-09-07:
+   *  these keep their 90-day meaning even on a recent/historical bucket;
+   *  use tier_count/tier_statistic instead). */
   count: number
   statistic: number | null
   valid_until: string | null
@@ -45,6 +49,10 @@ export type DecisionBucket = {
   last_sold_date?: string | null
   last_sold_price?: number | null
   tier_valid_until?: string | null
+  /** The tier's OWN count/statistic (recency-weighted for recent/historical,
+   *  equal to statistic/count on fresh) — this is what renders. */
+  tier_count?: number | null
+  tier_statistic?: number | null
 } | null | undefined
 
 /** Render-ready output — the ONLY shape any consumer (hero, Decision Passport,
@@ -89,13 +97,13 @@ function isFuture(iso: string | null | undefined, now: number): boolean {
   return Number.isFinite(t) && t > now
 }
 
-function earlier(a: string | null | undefined, b: string | null | undefined): string | null {
-  const ta = a ? Date.parse(a) : NaN
-  const tb = b ? Date.parse(b) : NaN
-  if (!Number.isFinite(ta) && !Number.isFinite(tb)) return null
-  if (!Number.isFinite(ta)) return b ?? null
-  if (!Number.isFinite(tb)) return a ?? null
-  return ta <= tb ? (a as string) : (b as string)
+/** Cache lifetime precedence per matcher's confirm (2026-09-07): take
+ *  tier_valid_until when present, else fall back to valid_until (the
+ *  Phase 1b fresh-window field, which equals tier_valid_until on fresh
+ *  and recent/historical anyway, and is null on thin/none where
+ *  tier_valid_until carries the real value instead). */
+function cacheLifetime(bucket: NonNullable<DecisionBucket>): string | null {
+  return bucket.tier_valid_until ?? bucket.valid_until ?? null
 }
 
 /**
@@ -113,10 +121,7 @@ export function evaluateSoldBucket(bucket: DecisionBucket, now: number = Date.no
   const tier = bucket.tier
   if (!tier || tier === 'none') return { state: 'unavailable', reason: 'none' }
 
-  // Cache lifetime is the earlier of the two validity fields the contract
-  // defines (section 2b: "tier_valid_until is what the site uses for cache
-  // lifetime once tiers ship (the earlier of the two)").
-  const cacheUntil = earlier(bucket.tier_valid_until, bucket.valid_until)
+  const cacheUntil = cacheLifetime(bucket)
 
   if (tier === 'thin') {
     if (!cacheUntil || !isFuture(cacheUntil, now)) return { state: 'unavailable', reason: 'expired' }
@@ -134,8 +139,17 @@ export function evaluateSoldBucket(bucket: DecisionBucket, now: number = Date.no
     }
   }
 
-  // fresh / recent / historical
-  if (!bucket.publishable || bucket.statistic == null) {
+  // fresh / recent / historical. Render tier_statistic/tier_count, NOT the
+  // bare statistic/count — those keep their 90-day (fresh-window) meaning
+  // even on a recent/historical bucket (matcher confirm, 2026-09-07: a
+  // recent bucket can carry count:0/statistic:<value> because count/
+  // statistic describe the FRESH window, which found nothing; tier_count/
+  // tier_statistic are the tier's own and are what the ruling's label
+  // describes). tier_statistic falls back to statistic for a fresh bucket
+  // predating the tier fields (equal in that case, harmless fallback).
+  const renderStatistic = bucket.tier_statistic ?? bucket.statistic
+  const renderCount = bucket.tier_count ?? bucket.count
+  if (!bucket.publishable || renderStatistic == null) {
     // A tier of fresh/recent/historical with publishable:false or no
     // statistic is a contract violation from the API's side — the ruling
     // says publishable is true for these three tiers unconditionally.
@@ -147,8 +161,8 @@ export function evaluateSoldBucket(bucket: DecisionBucket, now: number = Date.no
   return {
     state: 'quote',
     tier,
-    statistic: bucket.statistic,
-    count: bucket.count,
+    statistic: renderStatistic,
+    count: renderCount,
     label: bucket.label ?? null,
     lastSoldDate: bucket.last_sold_date ?? null,
     lastSoldPrice: bucket.last_sold_price ?? null,

@@ -1,0 +1,60 @@
+{
+ "method_version": "phase1b-2026-09-07",
+ "generated_at": "2026-09-07T12:00:00.000Z",
+ "min_comps": 3,
+ "policy": "validated_identity_only; condition split required when any row is bucketable; expiry = earliest contributing observation leaving its window, capped by snapshot age; sold tiers fresh 90 / recent 180 / historical 270 / thin / none, window widens only with its label",
+ "sold_sealed": {
+  "publishable": true,
+  "reason": "ok",
+  "evidence_type": "sold_observed",
+  "count": 4,
+  "statistic": 42.5,
+  "valid_until": "2026-09-14T12:00:00.000Z",
+  "method_version": "phase1b-2026-09-07"
+ },
+ "sold_loose": {
+  "publishable": false,
+  "reason": "insufficient_recent_sold_evidence",
+  "evidence_type": "sold_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-2026-09-07"
+ },
+ "sold_pooled": {
+  "publishable": false,
+  "reason": "condition_split_required",
+  "evidence_type": "sold_observed",
+  "count": 4,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-2026-09-07"
+ },
+ "asking_sealed": {
+  "publishable": false,
+  "reason": "no_validated_evidence",
+  "evidence_type": "asking_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-2026-09-07"
+ },
+ "asking_loose": {
+  "publishable": false,
+  "reason": "no_validated_evidence",
+  "evidence_type": "asking_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-2026-09-07"
+ },
+ "asking_pooled": {
+  "publishable": false,
+  "reason": "no_validated_evidence",
+  "evidence_type": "asking_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-2026-09-07"
+ }
+}

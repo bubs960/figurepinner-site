@@ -1,0 +1,103 @@
+{
+ "method_version": "phase1b-tiers-2026-09-07",
+ "generated_at": "2026-08-28T12:00:00.000Z",
+ "min_comps": 3,
+ "policy": "validated_identity_only; condition split required when any row is bucketable; expiry = earliest contributing observation leaving its window, capped by snapshot age; sold tiers fresh 90 / recent 180 / historical 270 / thin / none, window widens only with its label",
+ "sold_tier": "recent",
+ "sold_sealed": {
+  "publishable": true,
+  "reason": "ok",
+  "evidence_type": "sold_observed",
+  "count": 0,
+  "statistic": 30,
+  "valid_until": "2026-09-04T12:00:00.000Z",
+  "method_version": "phase1b-tiers-2026-09-07",
+  "tier": "recent",
+  "window_days": 180,
+  "label": "based on sales over the last 6 months",
+  "tier_count": 3,
+  "tier_statistic": 30,
+  "tier_valid_until": "2026-09-04T12:00:00.000Z",
+  "last_sold_date": "2026-05-30",
+  "last_sold_price": 30
+ },
+ "sold_loose": {
+  "publishable": false,
+  "reason": "insufficient_recent_sold_evidence",
+  "evidence_type": "sold_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-tiers-2026-09-07",
+  "tier": "none",
+  "window_days": null,
+  "label": null,
+  "tier_count": 0,
+  "tier_statistic": null,
+  "tier_valid_until": null,
+  "last_sold_date": null,
+  "last_sold_price": null
+ },
+ "sold_pooled": {
+  "publishable": false,
+  "reason": "condition_split_required",
+  "evidence_type": "sold_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-tiers-2026-09-07",
+  "tier": "none",
+  "window_days": null,
+  "label": null,
+  "tier_count": 3,
+  "tier_statistic": null,
+  "tier_valid_until": null,
+  "last_sold_date": "2026-05-30",
+  "last_sold_price": 30
+ },
+ "tiers": {
+  "windows": [
+   {
+    "tier": "fresh",
+    "days": 90
+   },
+   {
+    "tier": "recent",
+    "days": 180
+   },
+   {
+    "tier": "historical",
+    "days": 270
+   }
+  ],
+  "reach_window_days": 270,
+  "ruling": "STEVE-RULING-QUOTE-TIERS-90-180-270-2026-09-07"
+ },
+ "asking_sealed": {
+  "publishable": false,
+  "reason": "no_validated_evidence",
+  "evidence_type": "asking_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-tiers-2026-09-07"
+ },
+ "asking_loose": {
+  "publishable": false,
+  "reason": "no_validated_evidence",
+  "evidence_type": "asking_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-tiers-2026-09-07"
+ },
+ "asking_pooled": {
+  "publishable": false,
+  "reason": "no_validated_evidence",
+  "evidence_type": "asking_observed",
+  "count": 0,
+  "statistic": null,
+  "valid_until": null,
+  "method_version": "phase1b-tiers-2026-09-07"
+ }
+}
