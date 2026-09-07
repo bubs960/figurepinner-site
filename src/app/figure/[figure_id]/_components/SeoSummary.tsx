@@ -8,6 +8,7 @@
  * Server component — zero JS shipped.
  */
 
+import { relatedGuidesForFandom } from '@/app/guides/_lib/guideFandom'
 import { formatCurrency } from '../_lib/figureFormatters'
 import { derivePriceContract, type PriceContractInput } from '../_lib/priceContract'
 
@@ -118,9 +119,12 @@ interface SeoSummaryProps {
   medianIsAvg?: boolean
   trendPct:     number | null
   soldHistory:  Array<{ sold_date: string }>
+  /** KB fandom of the figure (Release T, 2026-09-07): drives the related-guides strip. */
+  fandom?:      string | null
 }
 
 export default function SeoSummary({
+  fandom = null,
   displayName,
   brand,
   line,
@@ -199,11 +203,11 @@ export default function SeoSummary({
   // bid" / "most valuable" queries. Flooding crawl equity at these from every
   // figure page is the documented move to convert Bing wins -> Google. Slugs are
   // verified real in src/app/guides/_data/articles.ts. Contextual + useful.
-  const relatedGuides: Array<{ href: string; anchor: string }> = [
-    { href: '/guides/read-ebay-sold-listings', anchor: 'how to read eBay sold listings' },
-    { href: '/guides/how-to-price-wrestling-figures', anchor: 'how to price a figure before you buy' },
-    { href: '/guides/most-valuable-vintage-wrestling-figures', anchor: 'the most valuable vintage wrestling figures' },
-  ]
+  // Release T (2026-09-07, external audit F8): this used to be a hardcoded
+  // wrestling trio on every figure page (Vader -> "most valuable vintage
+  // wrestling figures"). Now the fandom's hub guide + two evergreen method
+  // guides; wrestling keeps the original trio.
+  const relatedGuides = relatedGuidesForFandom(fandom)
 
   // Retail comparison (only when we have a retail price AND median)
   const retailMarkup = (() => {

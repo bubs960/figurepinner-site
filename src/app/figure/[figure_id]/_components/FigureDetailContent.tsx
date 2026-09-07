@@ -1211,6 +1211,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         {/* SEO Summary — natural language paragraph + retail vs market + velocity */}
         <div className="fp-z-seo">
         <SeoSummary
+          fandom={local.fandom}
           displayName={displayName}
           brand={brand}
           line={line}

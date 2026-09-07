@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
+import { GENRE_TAXONOMY } from '@/data/genre-lines'
 import SiteHeader from '@/app/components/SiteHeader'
 
 export const metadata: Metadata = {
@@ -70,7 +71,7 @@ export default function AboutPage() {
               click Buy It Now.
             </p>
             <p>
-              It's grown into a full price-intelligence platform: {TOTAL_FIGURES_LABEL} figures across 16 genres,
+              It's grown into a full price-intelligence platform: {TOTAL_FIGURES_LABEL} figures across {GENRE_TAXONOMY.length} fandoms,
               a wantlist with deal alerts, a vault to track your collection value, and SEO price guides
               so collectors everywhere can get a quick read on any figure.
             </p>
