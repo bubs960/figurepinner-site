@@ -501,9 +501,30 @@ async function checkSitemapPrefixCensus(localChildren) {
   } else {
     const prodChildren = await fetchAllSitemapChildren(PROD_BASE, prodIds)
     const prodPrefixes = new Set()
-    for (const [, child] of prodChildren) {
-      if (!child.ok) continue
+    // Release U (2026-09-07, train #4 false STOP): a prod child whose fetch did
+    // NOT return 200 used to be skipped silently, so every prefix it carries
+    // read as "missing from prod" and the gate STOPped on a namespace that was
+    // live the whole time (scifi, then 9 more once Bot Fight rate-limited the
+    // second run). A failed fetch is now a loud WARN with its status, and the
+    // prefixes of the LOCAL child with the same id are excluded from the diff
+    // -- unverifiable is not the same as new. Successfully fetched children
+    // are diffed exactly as before, so a genuinely new namespace still STOPs.
+    const prodUnfetched = []
+    for (const [id, child] of prodChildren) {
+      if (!child.ok) { prodUnfetched.push(`${id} (${child.status}${child.error ? ': ' + child.error.slice(0, 80) : ''})`); continue }
       for (const loc of child.locs) prodPrefixes.add(prefixOf(loc))
+    }
+    const unverifiablePrefixes = new Set()
+    for (const u of prodUnfetched) {
+      const id = u.split(' ')[0]
+      const counts = localPrefixByChild.get(id)
+      if (counts) for (const pfx of counts.keys()) unverifiablePrefixes.add(pfx)
+    }
+    if (prodUnfetched.length) {
+      infoLines.push(`WARN [2:prefix-census] ${prodUnfetched.length}/${prodIds.length} prod sitemap child fetch(es) did not return 200 -- their prefixes are UNVERIFIABLE this run and excluded from the new-prefix diff (post-deploy R10 covers them): ${prodUnfetched.join('; ')}`)
+    }
+    if (prodUnfetched.length === prodIds.length && prodIds.length > 0) {
+      infoLines.push('WARN [2:prefix-census] EVERY prod child fetch failed -- the instrument is down (Bot Fight / rate limit?), prefix diff skipped this run')
     }
     const localPrefixes = new Set()
     for (const [, counts] of localPrefixByChild) for (const p of counts.keys()) localPrefixes.add(p)
@@ -644,11 +665,11 @@ async function checkSitemapPrefixCensus(localChildren) {
     //   collision before minting. No fandom overlap.
     const KNOWN_NEW_FEATURE_PREFIXES = new Set(['today', 'neca', 'dungeons-dragons', 'gargoyles', 'whatnot', 'ufc', 'metal-gear-solid', 'defenders-of-the-earth', 'soulcalibur', 'onimusha', 'crouching-tiger-hidden-dragon', 'skeleton-warriors'])
 
-    const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p))
+    const newPrefixes = [...localPrefixes].filter(p => !prodPrefixes.has(p) && !KNOWN_NEW_FEATURE_PREFIXES.has(p) && !unverifiablePrefixes.has(p))
     if (newPrefixes.length) {
       failures.push(`STOP [2:prefix-census] NEW top-level sitemap prefix(es) present locally but not in PROD: ${newPrefixes.join(', ')} -- if this is a deliberate new fandom/section, confirm by eye before shipping; if not, it is the exact 2026-07-12 bug shape (a new accidental namespace)`)
     }
-    infoLines.push(`prod sitemap children: ${prodIds.length}, prod distinct top-level prefixes: ${prodPrefixes.size}; local sitemap children: ${localPrefixByChild.size}, local distinct top-level prefixes: ${localPrefixes.size}`)
+    infoLines.push(`prod sitemap children: ${prodIds.length} (${prodIds.length - prodUnfetched.length} fetched), prod distinct top-level prefixes: ${prodPrefixes.size}; local sitemap children: ${localPrefixByChild.size}, local distinct top-level prefixes: ${localPrefixes.size}`)
   }
 
   return { failures, infoLines }
