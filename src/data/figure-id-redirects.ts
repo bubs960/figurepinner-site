@@ -12,7 +12,16 @@
  * Deliberately NOT here: fids removed with no survivor (phantom records) —
  * those 404 correctly.
  */
-export const FIGURE_ID_REDIRECTS: Record<string, string> = {
+import generated from './figure-id-redirects.generated.json'
+
+/**
+ * Release P (2026-09-06): the KB's own `duplicate_of` field is now the PRIMARY source --
+ * scripts/build-figure-redirects.mjs derives figure-id-redirects.generated.json from it at
+ * build time, so every matcher dedup redirects without a relayed mapping table (the 9/2
+ * Ruling A batch never got one: 904 formerly indexed /figure/<fid> URLs 404'd for four days).
+ * This hand map stays for rekeys/merges the field does not express, and WINS on overlap.
+ */
+const HAND_FIGURE_ID_REDIRECTS: Record<string, string> = {
   // 7/22 WWE true-duplicate sweep, deployed in 470b230 (7/23 nightly) —
   // MATCHER-TO-WEB-470b230-3-FIGURES-ANSWERED-REDIRECT-MAP-2026-07-31.md
   'fp_wrestling_jakks-pacific_jakk-d-up_none_sable_b0b53f':
@@ -305,3 +314,10 @@ export const FIGURE_ID_REDIRECTS: Record<string, string> = {
   'fp_wrestling_mattel_elite_126_2026-new-york-toy-fair_27b3c2':
     'fp_wrestling_mattel_elite_3_2026-new-york-toy-fair_09a43a',
 }
+
+/** Merged map the figure route consults: generated pairs first, hand entries override. */
+export const FIGURE_ID_REDIRECTS: Record<string, string> = {
+  ...(generated as Record<string, string>),
+  ...HAND_FIGURE_ID_REDIRECTS,
+}
+export { HAND_FIGURE_ID_REDIRECTS }
