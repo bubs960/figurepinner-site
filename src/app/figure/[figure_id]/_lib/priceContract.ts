@@ -29,6 +29,7 @@
  */
 
 import { priceCompTier, type PriceCompTier } from './figureFormatters'
+import { evaluateSoldBucket, type DecisionBucket, type QuoteTier } from '@/lib/priceDecision'
 
 export type CondBucketLike = {
   median: number | null
@@ -56,6 +57,23 @@ export type ConditionPrice = {
   /** True when tier === 'thin' -- convenience flag so callers don't have to
    *  re-check `tier === 'thin'` at every render site. */
   needsThinDataLabel: boolean
+  /** Phase 1b section 2b evidence-age tier -- set ONLY by
+   *  deriveTieredPriceContract; undefined on the legacy (comp-count-only)
+   *  path so old callers see no shape change. Orthogonal to `tier` above:
+   *  `tier` is the FPPS-01 comp-count band (trustworthy/thin/suppress) used
+   *  for the existing badges; `evidenceTier` is the evidence-age band
+   *  (fresh/recent/historical/thin/none) that drives the ruling's label. */
+  evidenceTier?: QuoteTier
+  /** Verbatim from the API (STEVE-RULING-QUOTE-TIERS-90-180-270-2026-09-07.md)
+   *  -- render as-is, never reformat. null on fresh/legacy. */
+  evidenceLabel?: string | null
+  /** JSON-LD offers eligible only for fresh + recent (section 2b). Always
+   *  false on the legacy path (that decision belongs to the tiered path). */
+  jsonLdEligible?: boolean
+  /** Newest validated dated sale in 270 d, regardless of tier -- populated
+   *  on the tiered path for quote AND thin states. */
+  lastSoldDate?: string | null
+  lastSoldPrice?: number | null
 }
 
 export type PriceContract = {
@@ -85,7 +103,17 @@ export type PriceContract = {
    *  sitting right there unused (webaudit gate, 2026-07-30 -- offers-
    *  suppression fix, FPPS-01 follow-up).
    */
-  pooled: { median: number | null; tier: PriceCompTier; needsThinDataLabel: boolean; isAvg: boolean } | null
+  pooled: {
+    median: number | null
+    tier: PriceCompTier
+    needsThinDataLabel: boolean
+    isAvg: boolean
+    evidenceTier?: QuoteTier
+    evidenceLabel?: string | null
+    jsonLdEligible?: boolean
+    lastSoldDate?: string | null
+    lastSoldPrice?: number | null
+  } | null
 }
 
 function bucketToConditionPrice(
@@ -150,6 +178,117 @@ export function derivePriceContract(price: PriceContractInput | null | undefined
 /** "insufficient recent comps" (or equivalent) copy for a suppressed tier --
  *  single source so wording can't drift between surfaces. */
 export const INSUFFICIENT_COMPS_LABEL = 'Insufficient recent comps'
+
+/**
+ * Phase 1b section 2b: the tiered-evidence sibling of `derivePriceContract`.
+ *
+ * NOT wired to any consumer as of 2026-09-07 -- built ahead of the API's
+ * coordinated deploy (matcher: `MATCHER-TO-WEB-QUOTE-TIER-SEQUENCING-ANSWER-
+ * 2026-09-07.md`, "build now, in parallel... hold the merge"). Every LIVE
+ * snapshot today is pre-1b (no `decision` block), and this function correctly
+ * renders that as `hasNoData: true` -- switching a consumer over before the
+ * API deploys would blank every price on the site. Do not wire this into
+ * `page.tsx`/`FigureDetailContent` etc. until the coordinated site window.
+ *
+ * Unlike `derivePriceContract`, this has NO legacy raw-number fallback: per
+ * contract section 3.4, "snapshots without decision are unsupported ->
+ * unavailable". A condition whose decision bucket evaluates to `unavailable`
+ * renders NOTHING for that condition -- it does not fall back to a pooled or
+ * raw number, even if one exists on the snapshot's legacy fields.
+ */
+export function deriveTieredPriceContract(
+  input: { sold_sealed?: DecisionBucket; sold_loose?: DecisionBucket; sold_pooled?: DecisionBucket } | null | undefined,
+  now: number = Date.now(),
+): PriceContract {
+  if (!input) return { hasNoData: true, hasBothConditions: false, sealed: null, loose: null, pooled: null }
+
+  const sealed = tieredConditionPrice('sealed', 'Sealed / carded', input.sold_sealed, now)
+  const loose = tieredConditionPrice('loose', 'Loose / opened', input.sold_loose, now)
+
+  // "Both conditions present" here means both decision buckets exist and are
+  // not simply missing -- mirrors derivePriceContract's bucket-presence check
+  // (a thin bucket still "has" that condition; only a fully absent/missing
+  // bucket does not).
+  const hasBothConditions = input.sold_sealed != null && input.sold_loose != null
+
+  const sealedUsable = sealed != null && sealed.median != null
+  const looseUsable = loose != null && loose.median != null
+  const pooled = (!sealedUsable && !looseUsable) ? tieredPooled(input.sold_pooled, now) : null
+
+  const hasNoData = sealed == null && loose == null && pooled == null
+  return { hasNoData, hasBothConditions, sealed, loose, pooled }
+}
+
+function tieredConditionPrice(
+  condition: 'sealed' | 'loose',
+  label: string,
+  bucket: DecisionBucket,
+  now: number,
+): ConditionPrice | null {
+  const d = evaluateSoldBucket(bucket, now)
+  if (d.state === 'quote') {
+    return {
+      condition,
+      label,
+      median: d.statistic,
+      count: d.count,
+      tier: priceCompTier(d.count),
+      needsThinDataLabel: priceCompTier(d.count) === 'thin',
+      evidenceTier: d.tier,
+      evidenceLabel: d.label,
+      jsonLdEligible: d.jsonLdEligible,
+      lastSoldDate: d.lastSoldDate,
+      lastSoldPrice: d.lastSoldPrice,
+    }
+  }
+  if (d.state === 'thin') {
+    return {
+      condition,
+      label,
+      median: null,
+      count: 0,
+      tier: 'suppress',
+      needsThinDataLabel: false,
+      evidenceTier: 'thin',
+      evidenceLabel: null,
+      jsonLdEligible: false,
+      lastSoldDate: d.lastSoldDate,
+      lastSoldPrice: d.lastSoldPrice,
+    }
+  }
+  return null
+}
+
+function tieredPooled(bucket: DecisionBucket, now: number): PriceContract['pooled'] {
+  const d = evaluateSoldBucket(bucket, now)
+  if (d.state === 'quote') {
+    return {
+      median: d.statistic,
+      tier: priceCompTier(d.count),
+      needsThinDataLabel: priceCompTier(d.count) === 'thin',
+      isAvg: false,
+      evidenceTier: d.tier,
+      evidenceLabel: d.label,
+      jsonLdEligible: d.jsonLdEligible,
+      lastSoldDate: d.lastSoldDate,
+      lastSoldPrice: d.lastSoldPrice,
+    }
+  }
+  if (d.state === 'thin') {
+    return {
+      median: null,
+      tier: 'suppress',
+      needsThinDataLabel: false,
+      isAvg: false,
+      evidenceTier: 'thin',
+      evidenceLabel: null,
+      jsonLdEligible: false,
+      lastSoldDate: d.lastSoldDate,
+      lastSoldPrice: d.lastSoldPrice,
+    }
+  }
+  return null
+}
 
 /**
  * The two condition buckets as the hero price block / placard may QUOTE them:
