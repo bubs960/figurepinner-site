@@ -1,0 +1,77 @@
+{
+  "asof": "2026-09-08",
+  "window": {
+    "geq": "2026-08-09",
+    "leq": "2026-09-08",
+    "days": 30
+  },
+  "source": "cf-rum rumPageloadEventsAdaptiveGroups (account-wide, refererHost x requestPath)",
+  "referer_families": {
+    "bing-family": 200,
+    "ai": 10
+  },
+  "fids": [
+    "fp_marvel-comics_mafex_mafex_mafex-action-figures_spider-man_5c6de1",
+    "fp_wrestling_mattel_basic_138_edge_c29351"
+  ],
+  "paths_total": 1984,
+  "paths_search_referred": 19,
+  "paths_unmapped": [
+    {
+      "path": "/guides/wrestling-hub",
+      "visits": 20
+    },
+    {
+      "path": "/guides/gi-joe-hub",
+      "visits": 20
+    },
+    {
+      "path": "/guides/marvel-legends-hub",
+      "visits": 20
+    },
+    {
+      "path": "/spawn",
+      "visits": 20
+    },
+    {
+      "path": "/guides/star-wars-black-series-hub",
+      "visits": 20
+    },
+    {
+      "path": "/guides/transformers-hub",
+      "visits": 10
+    },
+    {
+      "path": "/neca",
+      "visits": 10
+    },
+    {
+      "path": "/gijoe",
+      "visits": 10
+    },
+    {
+      "path": "/guides/marvel-legends-price-guide-2026",
+      "visits": 10
+    },
+    {
+      "path": "/wrestling",
+      "visits": 10
+    },
+    {
+      "path": "/",
+      "visits": 10
+    },
+    {
+      "path": "/guides/hulk-hogan-figure-value",
+      "visits": 10
+    },
+    {
+      "path": "/guides/mcfarlane-sports-picks-guide",
+      "visits": 10
+    },
+    {
+      "path": "/guides/neca-hub",
+      "visits": 10
+    }
+  ]
+}
