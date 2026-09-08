@@ -11,7 +11,7 @@ import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDe
 import { prettifySlug } from './_lib/figureFormatters'
 import { enrichedDescription } from './_lib/enrichedCopy'
 import { derivePriceContract } from './_lib/priceContract'
-import { isAtOrAboveIndexBar } from '@/data/indexValueCensus'
+import { isAtOrAboveIndexBar, googleIndexRobots } from '@/data/indexValueCensus'
 
 // ISR — figure detail re-rendered at most once per hour per figure_id.
 // Public, immutable-per-figure data; user-specific bits (vault status etc.)
@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // own confidence/quarantine/Bing-protection gates) -- two different tests
   // for the "same" thing. Same fix shape as the character-hub lockstep
   // (indexValueCensus.ts) -- one shared predicate, both surfaces call it.
-  const belowIndexBar = !isAtOrAboveIndexBar(figure_id)
+  const robotsMeta = googleIndexRobots(figure_id, Boolean(local.is_canary))
 
   // Canonical points to the keyword-rich pretty URL
   const canonical = `${BASE}${canonicalPath}`
@@ -126,9 +126,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // is_canary belt+suspenders noindex (Data Defense Layer 3, 2026-08-07) —
     // redundant with the sitemap exclusion, kept in case a canary URL is ever
     // reached directly.
-    ...(belowIndexBar || local.is_canary
-      ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
-      : {}),
+    // Corpus-focus tier (2026-09-08): T0 -> all noindex (as before), T1 ->
+    // generic index + googlebot noindex, T2 -> no robots meta. Same helper
+    // the sitemap uses (lockstep, tests/sitemapTierLockstep.test.mjs).
+    ...(robotsMeta ? { robots: robotsMeta } : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same
     // route segment supplies the real Grail Card, superseding the bare product
     // photo this used to point at.

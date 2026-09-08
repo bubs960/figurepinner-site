@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/build-kb-stats.mjs && node scripts/build-figure-redirects.mjs",
+    "prebuild": "node scripts/build-kb-stats.mjs && node scripts/build-figure-redirects.mjs && node scripts/build-google-index-bar.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

@@ -1,0 +1,13 @@
+{
+  "rule": "canary-only-2026-09-08",
+  "inputs": {
+    "kb_md5": "741FD36D5FF3719C2FF7692A85075DB5",
+    "census_file": "index-value-census.json",
+    "grandfather_asof": null,
+    "exemptions_asof": null,
+    "canary_asof": "2026-09-08"
+  },
+  "tiers": {
+    "fp_star-wars_hasbro_black-series_force-awakens-2015-2018_constable-zuvio_efc902": 1
+  }
+}

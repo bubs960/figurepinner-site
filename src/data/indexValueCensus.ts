@@ -20,6 +20,7 @@
 // dropped below the bar stays in one cycle longer) — there is no correctness requirement to
 // regenerate on every deploy, only periodically.
 import censusJson from './index-value-census.json'
+import indexBarJson from './google-index-bar.generated.json'
 
 const CENSUS: Record<string, string> = censusJson as Record<string, string>
 
@@ -83,4 +84,50 @@ export function censusLastCompDate(figureId: string): Date | null {
   if (!raw) return null
   const d = new Date(raw)
   return Number.isNaN(d.getTime()) ? null : d
+}
+
+// ── Corpus focus: Google-scoped index tier (spec v3 §4.1/4.5, 2026-09-08) ──
+// Resolved per-fid tiers come from the committed artifact written by
+// scripts/build-google-index-bar.mjs. Absent fid = unchanged behaviour.
+//   T0: below the bar above (noindex all engines, out of every sitemap).
+//   T1: generic index,follow + googlebot noindex,follow; OUT of the main
+//       sitemap; IN /sitemap/bing-tail.xml (Bing-only, never in robots.txt).
+//   T2: index,follow; in the main sitemap.
+// LOCKSTEP RULE (same contract as isAtOrAboveIndexBar): sitemap.ts's figure
+// filter, the bing-tail emitter and both figure routes' robots meta MUST all
+// call THESE helpers — tests/sitemapTierLockstep.test.mjs asserts it.
+export type GoogleIndexTier = 0 | 1 | 2
+
+const INDEX_BAR = indexBarJson as { rule: string; inputs: Record<string, string | null>; tiers: Record<string, number> }
+
+/** Rule id of the committed tier artifact ('canary-only-…' until wave 1 ships). */
+export const GOOGLE_INDEX_BAR_RULE: string = INDEX_BAR.rule
+
+export function googleIndexTier(figureId: string): GoogleIndexTier {
+  if (!isAtOrAboveIndexBar(figureId)) return 0
+  const t = INDEX_BAR.tiers[figureId]
+  return t === 1 ? 1 : 2
+}
+
+/** All fids the artifact places at tier 1 (bing-tail sitemap source). */
+export function tierOneFids(): string[] {
+  return Object.keys(INDEX_BAR.tiers).filter((fid) => googleIndexTier(fid) === 1)
+}
+
+/**
+ * Robots metadata for a figure route, by tier. `forceNoindex` is the
+ * is_canary (Data Defense Layer 3) belt-and-suspenders override — an
+ * unrelated "canary" from the corpus-focus one; it always wins.
+ * Returns undefined for tier 2 so the route emits no robots meta at all
+ * (unchanged output for every T2 page).
+ */
+export function googleIndexRobots(
+  figureId: string,
+  forceNoindex = false,
+): { index: boolean; follow: boolean; googleBot: { index: boolean; follow: boolean } } | undefined {
+  if (forceNoindex) return { index: false, follow: true, googleBot: { index: false, follow: true } }
+  const tier = googleIndexTier(figureId)
+  if (tier === 0) return { index: false, follow: true, googleBot: { index: false, follow: true } }
+  if (tier === 1) return { index: true, follow: true, googleBot: { index: false, follow: true } }
+  return undefined
 }
