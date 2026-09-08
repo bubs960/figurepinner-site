@@ -11,12 +11,25 @@
 // delta_90d (deliberately null when window_truncated — never recomputed from
 // the weeks array); absent history = no strip, no placeholder.
 
-import type { CondBucket, PriceHistory } from './FigureDetailContent'
+import type { PriceHistory } from './FigureDetailContent'
+import type { ConditionPrice } from '../_lib/priceContract'
 import { confidenceForCount, type ConfidenceTier } from '../_lib/confidence'
+import { formatShortDate } from '@/lib/safeDate'
+import { usable, thinEvidence, tierCaption } from '../_lib/priceBlockView'
 
 interface PriceBlockProps {
-  sealed: CondBucket | null
-  loose: CondBucket | null
+  // Phase 1b section 2b: these are now the TIERED per-condition price
+  // (jsonLdPriceContract.sealed/.loose from FigureDetailContent — the same
+  // contract JSON-LD/MobileActionBar/CollectionPanel already read), not the
+  // raw CondBucket. This was the site's actual primary price display for any
+  // figure with real condition-split data (HeroBand falls back to the pooled
+  // placard only when neither bucket is usable) -- wiring THIS is what makes
+  // the tiered decision the real headline number instead of only the
+  // fallback path's number. Steve's "option 1" scope: the median/count/tier
+  // label move here; range/sparkline (SparklineStrip, driven by `history`,
+  // a separate weekly-median emitter) are untouched.
+  sealed: ConditionPrice | null
+  loose: ConditionPrice | null
   /** Weekly-median history — null until the backfill cycle reaches this fid. */
   history?: PriceHistory | null
   /** Golden-corpus annotation for the sealed bucket ("sealed carries the BAF
@@ -36,9 +49,9 @@ const CHIP_COLOR: Record<ConfidenceTier, string> = {
   low: 'rgba(242,232,213,.55)',
 }
 
-function usable(b: CondBucket | null): b is CondBucket {
-  return b != null && b.median != null && b.count >= 1
-}
+// usable/thinEvidence/tierCaption now live in ../_lib/priceBlockView.ts (the
+// test loader can't import a .tsx file directly, same reason LiveMedian's
+// render-state logic was split out).
 
 // ── Sparkline helpers (no Intl anywhere — repo rule #8, even server-side) ────
 
@@ -120,7 +133,7 @@ function SparklineStrip({ history }: { history: PriceHistory }) {
 
 function Bucket({ label, bucket, priceColor, caption }: {
   label: string
-  bucket: CondBucket
+  bucket: ConditionPrice
   priceColor: string
   caption: React.ReactNode
 }) {
@@ -157,6 +170,33 @@ function Bucket({ label, bucket, priceColor, caption }: {
   )
 }
 
+/** Thin-evidence row (STEVE-RULING-QUOTE-TIERS-90-180-270-2026-09-07.md):
+ *  1-2 validated dated sales in 270 d shows the last-sold PRICE, muted and
+ *  never framed as a median, with no confidence chip (a chip implies enough
+ *  comps to have a confidence tier at all). */
+function ThinBucket({ label, lastSoldDate, lastSoldPrice }: { label: string; lastSoldDate: string; lastSoldPrice: number }) {
+  return (
+    <div style={{ padding: '22px 26px' }}>
+      <div style={{
+        fontSize: '10.5px', fontWeight: 700, letterSpacing: '.14em',
+        textTransform: 'uppercase', color: 'rgba(242,232,213,.55)', marginBottom: '4px',
+      }}>
+        {label}
+      </div>
+      <div style={{
+        fontFamily: 'var(--fp-font-display)', fontWeight: 400,
+        fontSize: 'clamp(3rem, 5vw, 4rem)', lineHeight: 1,
+        color: 'rgba(242,232,213,.55)', fontVariantNumeric: 'tabular-nums',
+      }}>
+        ${Math.round(lastSoldPrice)}
+      </div>
+      <div style={{ fontSize: '11.5px', color: 'rgba(242,232,213,.55)', marginTop: '6px' }}>
+        last sold {formatShortDate(new Date(lastSoldDate))}, not enough recent sales for a median
+      </div>
+    </div>
+  )
+}
+
 export default function PriceBlock({ sealed, loose, history, sealedNote, hasReceipts }: PriceBlockProps) {
   const buckets: React.ReactNode[] = []
 
@@ -169,13 +209,16 @@ export default function PriceBlock({ sealed, loose, history, sealedNote, hasRece
         priceColor="#f5c462"
         caption={
           <>
-            median, last 90 days
+            {tierCaption(loose)}
             {deltaFragment(history?.delta_90d?.loose)}
             {hasReceipts && <> · <a href="#receipts" style={{ color: 'inherit', textDecoration: 'underline' }}>how we price ↓</a></>}
           </>
         }
       />
     )
+  } else {
+    const thin = thinEvidence(loose)
+    if (thin) buckets.push(<ThinBucket key="loose" label="Loose / complete" lastSoldDate={thin.date} lastSoldPrice={thin.price} />)
   }
   if (usable(sealed)) {
     buckets.push(
@@ -186,12 +229,15 @@ export default function PriceBlock({ sealed, loose, history, sealedNote, hasRece
         priceColor="#f2e8d5"
         caption={
           <>
-            {sealedNote ?? 'median, last 90 days · sealed sales only'}
+            {sealedNote ?? `${tierCaption(sealed)} · sealed sales only`}
             {deltaFragment(history?.delta_90d?.sealed)}
           </>
         }
       />
     )
+  } else {
+    const thin = thinEvidence(sealed)
+    if (thin) buckets.push(<ThinBucket key="sealed" label="Sealed / carded" lastSoldDate={thin.date} lastSoldPrice={thin.price} />)
   }
   if (buckets.length === 0) return null
 
