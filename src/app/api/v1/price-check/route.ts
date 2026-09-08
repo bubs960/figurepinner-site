@@ -6,7 +6,7 @@ import { checkRateLimit } from '@/lib/rateLimit'
 import { readPriceObject } from '@/lib/priceStore'
 import { deriveTieredPriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import type { DecisionBucket } from '@/lib/priceDecision'
-import { primaryQuote, spokenLine } from './_lib/priceCheckSpoken'
+import { primaryQuote, spokenLine, cacheControlFor } from './_lib/priceCheckSpoken'
 
 /**
  * GET /api/v1/price-check?q=<free text>
@@ -115,7 +115,10 @@ export async function GET(req: NextRequest) {
         last_sold_price: quote?.lastSoldPrice ?? null,
         spoken: spokenLine(name, brand, line, quote),
       },
-      { headers: CACHE_HEADERS },
+      // Phase 1b section 3.4: a response carrying a tiered quote must not be
+      // cached publicly past its cacheUntil, even though the route's own
+      // baseline (voice queries repeat heavily during a show) is longer.
+      { headers: { ...CACHE_HEADERS, 'Cache-Control': cacheControlFor(quote, CACHE_HEADERS['Cache-Control']) } },
     )
   } catch {
     return NextResponse.json({ error: 'no match' }, { status: 404, headers: CACHE_HEADERS })

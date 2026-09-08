@@ -56,6 +56,7 @@ export async function GET(req: NextRequest) {
     lastSoldDate: string | null
     lastSoldPrice: number | null
   }> = {}
+  const cacheUntils: string[] = []
 
   await Promise.allSettled(
     ids.map(async (id) => {
@@ -74,7 +75,8 @@ export async function GET(req: NextRequest) {
         }>('price-summaries', id, 300)
         if (!snap) return
         const prices = (snap.recent ?? []).map((r) => r.price).filter((p) => p > 0)
-        const quote = deriveSparklineQuote(snap.decision)
+        const { cacheUntil, ...quote } = deriveSparklineQuote(snap.decision)
+        if (cacheUntil) cacheUntils.push(cacheUntil)
         // trend needs at least 2 points; median can stand alone
         if (prices.length < 2 && quote.median == null) return
         const first = prices.slice(0, Math.ceil(prices.length / 2))
@@ -92,7 +94,15 @@ export async function GET(req: NextRequest) {
     })
   )
 
+  // Phase 1b section 3.4: the batch's shared Cache-Control can't outlive the
+  // TIGHTEST cacheUntil among its fids -- one stale quote in a 40-id batch
+  // would otherwise ride the whole response's cache lifetime.
+  const now = Date.now()
+  const tightestS = cacheUntils.length
+    ? Math.max(0, Math.floor((Math.min(...cacheUntils.map(d => Date.parse(d))) - now) / 1000))
+    : 300
+  const maxAge = Math.min(300, tightestS)
   return NextResponse.json(results, {
-    headers: { 'Cache-Control': 'public, max-age=300, s-maxage=300' },
+    headers: { 'Cache-Control': `public, max-age=${maxAge}, s-maxage=${maxAge}` },
   })
 }

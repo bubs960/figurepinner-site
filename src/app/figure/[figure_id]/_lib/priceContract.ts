@@ -74,6 +74,10 @@ export type ConditionPrice = {
    *  on the tiered path for quote AND thin states. */
   lastSoldDate?: string | null
   lastSoldPrice?: number | null
+  /** Cache lifetime ceiling from the evaluator (section 3.4) -- consumers
+   *  that cache a rendered response (KV mirror TTL, negative sentinel,
+   *  ISR/edge lifetime) must not outlive this. Undefined on the legacy path. */
+  cacheUntil?: string
 }
 
 export type PriceContract = {
@@ -115,6 +119,7 @@ export type PriceContract = {
     lastSoldPrice?: number | null
     /** Set on the tiered path's quote state only (mirrors ConditionPrice.count). */
     count?: number
+    cacheUntil?: string
   } | null
 }
 
@@ -253,6 +258,7 @@ function tieredConditionPrice(
       jsonLdEligible: d.jsonLdEligible,
       lastSoldDate: d.lastSoldDate,
       lastSoldPrice: d.lastSoldPrice,
+      cacheUntil: d.cacheUntil,
     }
   }
   if (d.state === 'thin') {
@@ -268,6 +274,7 @@ function tieredConditionPrice(
       jsonLdEligible: false,
       lastSoldDate: d.lastSoldDate,
       lastSoldPrice: d.lastSoldPrice,
+      cacheUntil: d.cacheUntil,
     }
   }
   return null
@@ -287,6 +294,7 @@ function tieredPooled(bucket: DecisionBucket, now: number): PriceContract['poole
       jsonLdEligible: d.jsonLdEligible,
       lastSoldDate: d.lastSoldDate,
       lastSoldPrice: d.lastSoldPrice,
+      cacheUntil: d.cacheUntil,
     }
   }
   if (d.state === 'thin') {
@@ -300,6 +308,7 @@ function tieredPooled(bucket: DecisionBucket, now: number): PriceContract['poole
       jsonLdEligible: false,
       lastSoldDate: d.lastSoldDate,
       lastSoldPrice: d.lastSoldPrice,
+      cacheUntil: d.cacheUntil,
     }
   }
   return null

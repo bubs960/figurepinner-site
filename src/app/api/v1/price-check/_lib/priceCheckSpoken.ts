@@ -20,6 +20,18 @@ export function spokenCurrency(n: number): string {
   })}`
 }
 
+/** Cache lifetime ceiling (Phase 1b section 3.4): a response carrying a
+ *  tiered quote must not be cached publicly past its cacheUntil, even
+ *  though the route's own baseline is longer (voice queries repeat heavily
+ *  during a show). No quote / no cacheUntil -- keep the baseline; a shorter
+ *  cacheUntil in the past clamps to 0 (no-store-equivalent max-age). */
+export function cacheControlFor(q: ReturnType<typeof primaryQuote>, baseline: string, now: number = Date.now()): string {
+  const until = q?.cacheUntil ? Date.parse(q.cacheUntil) : NaN
+  if (!Number.isFinite(until)) return baseline
+  const remainingS = Math.max(0, Math.floor((until - now) / 1000))
+  return `public, max-age=${Math.min(300, remainingS)}, s-maxage=${Math.min(600, remainingS)}`
+}
+
 export function spokenLine(name: string, brand: string, line: string, q: ReturnType<typeof primaryQuote>): string {
   const who = `${name}, ${brand}`
   if (!q) return `${who}: no sold sales on record yet.`

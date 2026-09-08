@@ -10,6 +10,9 @@ export type SparklineQuote = {
   tier: 'fresh' | 'recent' | 'historical' | 'thin' | 'none'
   lastSoldDate: string | null
   lastSoldPrice: number | null
+  /** Cache lifetime ceiling (section 3.4) -- not returned to the client;
+   *  the route uses it to bound the batch's shared Cache-Control header. */
+  cacheUntil: string | null
 }
 
 export function deriveSparklineQuote(decision: {
@@ -24,5 +27,6 @@ export function deriveSparklineQuote(decision: {
     tier: quote?.evidenceTier ?? 'none',
     lastSoldDate: quote?.lastSoldDate ?? null,
     lastSoldPrice: quote?.lastSoldPrice ?? null,
+    cacheUntil: quote?.cacheUntil ?? null,
   }
 }
