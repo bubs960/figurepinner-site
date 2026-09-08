@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
 import { readPriceObject } from '@/lib/priceStore'
+import type { DecisionBucket } from '@/lib/priceDecision'
+import { deriveSparklineQuote } from './_lib/sparklineQuote'
 
 export const revalidate = 300
 
@@ -35,11 +37,25 @@ export async function GET(req: NextRequest) {
   const ids = req.nextUrl.searchParams.get('ids')?.split(',').filter(Boolean).slice(0, 40) ?? []
   if (!ids.length) return NextResponse.json({})
 
-  // `stat` says which aggregate `median` actually holds: snapshots missing
-  // median_sold fall back to avg_sold, and labeling an average "median" is
-  // the FTC label-truthfulness drift the 5/22 estimated-price spec exists to
-  // prevent (S55 audit). Clients render the label from this field.
-  const results: Record<string, { points: number[]; trend: 'up' | 'down' | 'flat'; median: number | null; soldCount: number; stat: 'median' | 'avg' }> = {}
+  // `stat` says which aggregate `median` actually holds. Phase 1b section 2b
+  // (PHASE1B-PUBLICATION-DECISION-CONTRACT-2026-09-07.md): the "latest comp"
+  // median now comes from the tiered decision, same as price-check/
+  // LiveMedian -- `tier` tells the client which evidence window backed it,
+  // and `median` is null (never a re-derived legacy number) on thin/none.
+  // NOT WIRED to a live decision block as of 2026-09-07 (matcher's API is
+  // staged, not deployed) -- every live snapshot lacks `decision`, so this
+  // renders tier:'none'/median:null for everything until the coordinated
+  // release. Held on branch release-v-quote-tier-wiring, not merged.
+  const results: Record<string, {
+    points: number[]
+    trend: 'up' | 'down' | 'flat'
+    median: number | null
+    soldCount: number
+    stat: 'median'
+    tier: 'fresh' | 'recent' | 'historical' | 'thin' | 'none'
+    lastSoldDate: string | null
+    lastSoldPrice: number | null
+  }> = {}
 
   await Promise.allSettled(
     ids.map(async (id) => {
@@ -50,16 +66,17 @@ export async function GET(req: NextRequest) {
         // edge cache is unchanged.
         const snap = await readPriceObject<{
           recent?: Array<{ price: number }>
-          median_sold?: number | null
-          avg_sold?: number | null
-          sold_count?: number
+          decision?: {
+            sold_sealed?: DecisionBucket
+            sold_loose?: DecisionBucket
+            sold_pooled?: DecisionBucket
+          }
         }>('price-summaries', id, 300)
         if (!snap) return
         const prices = (snap.recent ?? []).map((r) => r.price).filter((p) => p > 0)
-        const median = snap.median_sold ?? snap.avg_sold ?? null
-        const stat: 'median' | 'avg' = snap.median_sold != null ? 'median' : 'avg'
+        const quote = deriveSparklineQuote(snap.decision)
         // trend needs at least 2 points; median can stand alone
-        if (prices.length < 2 && median == null) return
+        if (prices.length < 2 && quote.median == null) return
         const first = prices.slice(0, Math.ceil(prices.length / 2))
         const last  = prices.slice(-Math.ceil(prices.length / 2))
         const avgFirst = first.length ? first.reduce((a, b) => a + b, 0) / first.length : 0
@@ -68,7 +85,7 @@ export async function GET(req: NextRequest) {
           prices.length < 2  ? 'flat' :
           avgLast > avgFirst * 1.05 ? 'up' :
           avgLast < avgFirst * 0.95 ? 'down' : 'flat'
-        results[id] = { points: prices, trend, median, soldCount: snap.sold_count ?? 0, stat }
+        results[id] = { points: prices, trend, stat: 'median', ...quote }
       } catch {
         // skip missing snapshots
       }
