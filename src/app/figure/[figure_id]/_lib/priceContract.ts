@@ -113,6 +113,8 @@ export type PriceContract = {
     jsonLdEligible?: boolean
     lastSoldDate?: string | null
     lastSoldPrice?: number | null
+    /** Set on the tiered path's quote state only (mirrors ConditionPrice.count). */
+    count?: number
   } | null
 }
 
@@ -264,6 +266,7 @@ function tieredPooled(bucket: DecisionBucket, now: number): PriceContract['poole
   if (d.state === 'quote') {
     return {
       median: d.statistic,
+      count: d.count,
       tier: priceCompTier(d.count),
       needsThinDataLabel: priceCompTier(d.count) === 'thin',
       isAvg: false,
