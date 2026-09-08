@@ -8,6 +8,7 @@
 // React, so it stays a plain server module.
 
 import { readPriceObject } from '@/lib/priceStore'
+import type { DecisionBucket } from '@/lib/priceDecision'
 
 export type PriceSnap = {
   median_sold: number | null
@@ -15,6 +16,13 @@ export type PriceSnap = {
   min_sold: number | null
   max_sold: number | null
   sold_count: number
+  /** Phase 1b section 2b -- absent on every live snapshot until matcher's
+   *  coordinated API deploy. See LiveMedian.tsx for the read side. */
+  decision?: {
+    sold_sealed?: DecisionBucket
+    sold_loose?: DecisionBucket
+    sold_pooled?: DecisionBucket
+  }
 }
 
 /** Batched fetch of price snapshots for a set of fids — one R2 binding read

@@ -198,6 +198,18 @@ export const INSUFFICIENT_COMPS_LABEL = 'Insufficient recent comps'
  * renders NOTHING for that condition -- it does not fall back to a pooled or
  * raw number, even if one exists on the snapshot's legacy fields.
  */
+/** One quotable price when a surface can only show one number (price-check's
+ *  spoken line, a guide comp card): sealed preferred over loose over pooled,
+ *  the same primary-condition precedence the hero/passport uses. `null` when
+ *  nothing in the contract is quotable or thin (i.e. hasNoData or every
+ *  bucket evaluated unavailable). */
+export function pickPrimaryQuote(contract: PriceContract) {
+  if (contract.sealed) return { conditionLabel: contract.sealed.label, ...contract.sealed }
+  if (contract.loose) return { conditionLabel: contract.loose.label, ...contract.loose }
+  if (contract.pooled) return { conditionLabel: null as string | null, ...contract.pooled }
+  return null
+}
+
 export function deriveTieredPriceContract(
   input: { sold_sealed?: DecisionBucket; sold_loose?: DecisionBucket; sold_pooled?: DecisionBucket } | null | undefined,
   now: number = Date.now(),

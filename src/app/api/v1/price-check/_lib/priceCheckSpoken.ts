@@ -4,16 +4,12 @@
  * short config allowlist -- everything else fails the route module's type
  * contract. See ../route.ts for the endpoint itself.
  */
-import type { PriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
+import { pickPrimaryQuote } from '@/app/figure/[figure_id]/_lib/priceContract'
 
-/** Sealed preferred over loose over pooled — same primary-condition
- *  precedence the hero/passport uses when only one number can be spoken. */
-export function primaryQuote(contract: PriceContract) {
-  if (contract.sealed) return { conditionLabel: contract.sealed.label, ...contract.sealed }
-  if (contract.loose) return { conditionLabel: contract.loose.label, ...contract.loose }
-  if (contract.pooled) return { conditionLabel: null, ...contract.pooled }
-  return null
-}
+/** Re-exported so existing imports of `primaryQuote` from this module keep
+ *  working; the actual logic now lives in priceContract.ts (shared with
+ *  LiveMedian) so the two surfaces can't drift on primary-condition order. */
+export const primaryQuote = pickPrimaryQuote
 
 /** Full-precision spoken currency — no "k" abbreviation, Siri reads "$1,250" fine. */
 export function spokenCurrency(n: number): string {
