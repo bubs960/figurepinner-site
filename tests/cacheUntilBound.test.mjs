@@ -46,12 +46,15 @@ describe('cacheControlFor (price-check)', () => {
 })
 
 describe('deriveSparklineQuote carries cacheUntil for the batch bound', () => {
+  // Signature changed 2026-09-09 (pre-mortem item 1): deriveSparklineQuote
+  // now takes the whole price snapshot ({ decision, ...legacy fields }), not
+  // just the decision block -- see tests/sparklineQuote.test.mjs's own header.
   test('fresh: cacheUntil populated', () => {
-    const q = deriveSparklineQuote(decisionFor('fresh'))
+    const q = deriveSparklineQuote({ decision: decisionFor('fresh') })
     assert.ok(q.cacheUntil)
   })
   test('none: cacheUntil null', () => {
-    const q = deriveSparklineQuote(decisionFor('none'))
+    const q = deriveSparklineQuote({ decision: decisionFor('none') })
     assert.equal(q.cacheUntil, null)
   })
 })

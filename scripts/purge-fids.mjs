@@ -14,7 +14,7 @@
  * build, and purge-cache.mjs only does zone-wide purge_everything — neither
  * takes a fid list.
  *
- * Two purges per fid:
+ * Three purges per run:
  *   1. PRICE_KV mirror entries (`<gen>/price-summaries/<fid>` and
  *      `<gen>/price-history/<fid>`, priceReadThrough.ts's own key format) —
  *      `wrangler kv key delete`, reusing wrangler's authenticated session
@@ -27,6 +27,36 @@
  *      handful of fids. URL comes from figureIdToPrettyPath.generated.json
  *      (the cutoff regen's own map) when a fid has a pretty path, else the
  *      canonical `/figure/<fid>` fallback route.
+ *   3. The CURRENT build's whole `isr-cache/<buildId>/` prefix in the shared
+ *      FP_KV namespace (Next's incremental cache -- open-next.config.ts /
+ *      src/lib/kv-incremental-cache-ttl.ts, binding NEXT_INC_CACHE_KV).
+ *      ADDED 2026-09-09 (pre-mortem item 2, CODEX-PREMORTEM-QUOTE-TIER-
+ *      RELEASE-2026-09-09.md): steps 1+2 above never touched this cache, so
+ *      a purged figure's page (and the R2 price fetch's own "fetch" cache
+ *      entry) could keep refilling stale from the incremental cache even
+ *      after a fresh regenerate — a page could show the OLD price on both
+ *      the "cold" (edge-purged) and "warm" read, exactly the gap the item's
+ *      own test asks for ("inspect both cold and warm page output ... after
+ *      regeneration/purge"). This purges the WHOLE current build's ISR
+ *      cache (page cache AND fetch/data cache both live under this one
+ *      prefix, see computeCacheKey's `.cache`/`.fetch` suffix) rather than
+ *      computing a per-URL hash key: OpenNext's exact cache-key string
+ *      (pathname? locale? build id composition?) is an internal
+ *      implementation detail not worth reverse-engineering under a release
+ *      deadline when a full-build sweep is unambiguously correct and reuses
+ *      kv-purge-stale-isr.mjs's own already-hardened list/delete idiom
+ *      (assertAllPrefixed defense-in-depth, chunked bulk delete) — see that
+ *      file's header for the fuller incident history behind those guards.
+ *      Deliberately NOT importing that script (it has an unconditional
+ *      top-level `main()` that would fire the stale-build sweep as a side
+ *      effect); the small subset needed is reimplemented here, scoped to
+ *      the CURRENT build instead of prior ones. Cost is bounded: this only
+ *      runs once per coordinated release window, not per request or per
+ *      deploy, and the accepted risk is identical to what every deploy
+ *      already accepts ("worst case is one cold revalidation per page").
+ *      Non-fatal on failure (network/`.next/BUILD_ID` missing) -- the rest
+ *      of the purge already completed; a failure here is surfaced loudly in
+ *      the run's own output so the operator re-checks cold+warm by hand.
  *
  * Default mode is DRY RUN, same convention as kv-purge-stale-isr.mjs: prints
  * what would be purged, touches nothing. Pass --execute to actually purge.
@@ -40,14 +70,16 @@
  */
 
 import { spawnSync } from 'node:child_process'
-import { readFileSync } from 'node:fs'
-import { homedir } from 'node:os'
+import { readFileSync, writeFileSync, unlinkSync } from 'node:fs'
+import { homedir, tmpdir } from 'node:os'
 import { join } from 'node:path'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { isrPrefixForBuild, assertAllPrefixed, parseKvKeyNames } from './lib/purge-fids-core.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const PRICE_KV_NAMESPACE_ID = 'fb4c1bd0cee4467380818383357094e9' // wrangler.toml PRICE_KV
+const ISR_KV_NAMESPACE_ID = 'e1858bb16a4f41f5b81afe8cf53519f5' // FP_KV, shared PRO_KV/NEXT_INC_CACHE_KV (same id kv-purge-stale-isr.mjs uses)
 const ZONE_ID_FALLBACK = '66a98bfaa6a2992c9ed3c32f9f3c1702' // same fallback purge-cache.mjs uses
 const GEN_KEY = 'price-gen'
 const GEN_DEFAULT = 'g0' // must match src/lib/priceReadThrough.ts
@@ -86,12 +118,55 @@ function loadEnvFile() {
   return out
 }
 
-function wrangler(args) {
-  const res = spawnSync('npx.cmd', ['wrangler', ...args], { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024, cwd: ROOT })
+function wrangler(args, opts = {}) {
+  const res = spawnSync('npx.cmd', ['wrangler', ...args], { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024, cwd: ROOT, timeout: opts.timeoutMs })
   if (res.status !== 0) {
     throw new Error(`wrangler ${args.join(' ')} exited ${res.status}: ${(res.stderr || res.stdout || '').slice(0, 500)}`)
   }
   return res.stdout
+}
+
+/** `.next/BUILD_ID` -- only trustworthy right after a build/deploy, same
+ *  caveat kv-purge-stale-isr.mjs documents for its own read of this file. */
+function currentBuildId() {
+  const p = path.join(ROOT, '.next', 'BUILD_ID')
+  let id
+  try {
+    id = readFileSync(p, 'utf8').trim()
+  } catch (err) {
+    throw new Error(`could not read ${p} (${err.message}) -- run this after the build/deploy step, not standalone against a stale local build.`)
+  }
+  if (!id) throw new Error(`${p} is empty -- refusing to sweep an empty build-id prefix.`)
+  return id
+}
+
+/**
+ * Sweep the CURRENT build's whole isr-cache/<buildId>/ prefix out of the
+ * shared FP_KV namespace (pre-mortem item 2 -- see the file header for why
+ * this is a full-build sweep rather than a per-URL targeted delete, and why
+ * this reimplements kv-purge-stale-isr.mjs's list/delete idiom rather than
+ * importing it). Non-fatal to the caller -- throws, caller decides.
+ */
+function purgeIsrForCurrentBuild() {
+  const buildId = currentBuildId()
+  const prefix = isrPrefixForBuild(buildId)
+  console.log(`[purge-fids] listing ISR cache keys under ${prefix} ...`)
+  const out = wrangler(['kv', 'key', 'list', '--namespace-id', ISR_KV_NAMESPACE_ID, '--remote', '--prefix', prefix], { timeoutMs: 5 * 60 * 1000 })
+  const names = parseKvKeyNames(out, 'purgeIsrForCurrentBuild()')
+  assertAllPrefixed(names, prefix, 'purgeIsrForCurrentBuild()')
+  console.log(`[purge-fids] ${names.length} ISR cache key(s) found for build ${buildId}`)
+  for (let i = 0; i < names.length; i += 1000) {
+    const batch = names.slice(i, i + 1000)
+    const tmpPath = join(tmpdir(), `purge-fids-isr-${Date.now()}-${Math.random().toString(36).slice(2)}.json`)
+    writeFileSync(tmpPath, JSON.stringify(batch))
+    try {
+      wrangler(['kv', 'bulk', 'delete', tmpPath, '--namespace-id', ISR_KV_NAMESPACE_ID, '--remote', '-f'], { timeoutMs: 90 * 1000 })
+      console.log(`[purge-fids] deleted ISR chunk ${Math.floor(i / 1000) + 1}: ${batch.length} key(s)`)
+    } finally {
+      unlinkSync(tmpPath)
+    }
+  }
+  return { buildId, deleted: names.length }
 }
 
 function currentGen() {
@@ -156,6 +231,7 @@ async function main() {
   for (const k of kvKeys) console.log(`  ${k}`)
   console.log(`[purge-fids] would purge ${urls.length} URL(s):`)
   for (const u of urls) console.log(`  ${u}`)
+  console.log('[purge-fids] would also sweep the current build\'s whole isr-cache/<buildId>/ prefix (item 2 fix -- full-build sweep, see file header).')
 
   if (!execute) {
     console.log('[purge-fids] dry run only -- pass --execute to actually purge.')
@@ -175,6 +251,15 @@ async function main() {
   }
 
   await purgeUrls(urls, loadEnvFile())
+
+  try {
+    const { buildId, deleted } = purgeIsrForCurrentBuild()
+    console.log(`[purge-fids] ISR/incremental cache: deleted ${deleted} key(s) for build ${buildId}.`)
+  } catch (err) {
+    console.warn(`[purge-fids] ISR purge FAILED (non-fatal -- the PRICE_KV + edge purges above already completed): ${err.message.slice(0, 300)}`)
+    console.warn('             A stale ISR entry can still serve the target fid(s) until it naturally expires. Verify with a cold+warm read; re-run this script if the ISR sweep is the only thing that failed.')
+  }
+
   console.log('[purge-fids] done.')
 }
 

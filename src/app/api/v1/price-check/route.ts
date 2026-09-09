@@ -4,7 +4,7 @@ import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import { searchKb } from '../_lib/kbSearch'
 import { checkRateLimit } from '@/lib/rateLimit'
 import { readPriceObject } from '@/lib/priceStore'
-import { deriveTieredPriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
+import { resolvePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import type { DecisionBucket } from '@/lib/priceDecision'
 import { primaryQuote, spokenLine, cacheControlFor } from './_lib/priceCheckSpoken'
 
@@ -22,18 +22,16 @@ import { primaryQuote, spokenLine, cacheControlFor } from './_lib/priceCheckSpok
  *
  * - Match = top-1 from the same forgiveness ladder as site search
  *   (../_lib/kbSearch.ts — shared on purpose, do not fork the scoring).
- * - Price = Phase 1b tiered decision (PHASE1B-PUBLICATION-DECISION-CONTRACT-
- *   2026-09-07.md section 2b) via deriveTieredPriceContract, sealed preferred
- *   over loose over pooled (same primary-condition precedence the hero uses).
- *   `tier` is 'fresh'|'recent'|'historical'|'thin'|'none'|null (null = no
- *   snapshot at all). `median_price` is populated for fresh/recent/historical
- *   only; `thin` returns null median with last_sold_date/last_sold_price
- *   instead, per the ruling (never a median from 1-2 sales).
- * - NOT WIRED to a live decision block as of 2026-09-07 (matcher's API side
- *   is staged, not deployed) — every live snapshot today is pre-1b, so this
- *   renders tier:'none' for everything until the coordinated release. Held
- *   on branch `release-v-quote-tier-wiring`, not merged (see
- *   MATCHER-TO-WEB-QUOTE-TIER-SEQUENCING-ANSWER-2026-09-07.md).
+ * - Price = resolvePriceContract (PHASE1B-PUBLICATION-DECISION-CONTRACT-
+ *   2026-09-07.md section 2b + pre-mortem item 1, 2026-09-08), sealed
+ *   preferred over loose over pooled (same primary-condition precedence the
+ *   hero uses). `tier` is 'fresh'|'recent'|'historical'|'thin'|'none' --
+ *   'none' covers both "no data at all" and "not yet regenerated under
+ *   Phase 1b" (both cases still return real median_price/sample_size from
+ *   the legacy snapshot fields when they exist). `median_price` is
+ *   populated for fresh/recent/historical/legacy; `thin` returns null
+ *   median with last_sold_date/last_sold_price instead, per the ruling
+ *   (never a median from 1-2 sales).
  * - `spoken` is plain text for Siri TTS. "$24.50" is read natively as
  *   "twenty-four dollars and fifty cents" — do not spell out numbers.
  * - Matched figure with no publishable evidence returns 200 with
@@ -59,6 +57,16 @@ type R2Snapshot = {
     sold_loose?: DecisionBucket
     sold_pooled?: DecisionBucket
   }
+  // Legacy (pre-1b) snapshot fields -- read only when `decision` is absent
+  // or every bucket predates the tier build (pre-mortem item 1, 2026-09-08).
+  // Matches main's response exactly (median_sold ?? avg_sold, sold_count) so
+  // this endpoint does not go silent for the ~9k figures still awaiting
+  // regeneration -- an external consumer (the Siri Shortcut / iOS app) would
+  // otherwise see median_price flip from populated to null for a real,
+  // already-priced figure purely because matcher hasn't reached it yet.
+  median_sold?: number | null
+  avg_sold?: number | null
+  sold_count?: number
 }
 
 // S1 (hygiene plan, 2026-07-02): one of two open data faucets (the other is
@@ -102,14 +110,24 @@ export async function GET(req: NextRequest) {
 
     // Release L (2026-09-03): R2 binding read instead of the r2proxy hop.
     const snap = await readPriceObject<R2Snapshot>('price-summaries', f.figure_id, 3600)
-    const contract = deriveTieredPriceContract(snap?.decision)
+    const contract = resolvePriceContract({
+      soldCount: snap?.sold_count ?? 0,
+      medianSold: snap?.median_sold,
+      avgSold: snap?.avg_sold,
+      decision: snap?.decision,
+    })
     const quote = primaryQuote(contract)
 
     return NextResponse.json(
       {
         match,
         median_price: quote?.median != null ? Math.round(quote.median * 100) / 100 : null,
-        sample_size: quote?.count ?? 0,
+        // `.count` is unset on the legacy pooled fallback's precursor shape
+        // in older callers -- resolvePriceContract's legacy path now mirrors
+        // tieredPooled and sets it directly, but keep the snapshot fallback
+        // too so a sealed/loose-only legacy bucket (which never carried a
+        // pooled count at all) still reports a real sample size.
+        sample_size: quote?.count ?? snap?.sold_count ?? 0,
         tier: quote?.evidenceTier ?? 'none',
         last_sold_date: quote?.lastSoldDate ?? null,
         last_sold_price: quote?.lastSoldPrice ?? null,

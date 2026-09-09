@@ -27,6 +27,14 @@ interface CollectionPanelProps {
   /** FPPS-01 decision 2: a 3-9 comp bucket must carry a "thin data" caveat
    *  wherever its number renders. */
   needsThinDataLabel?: boolean
+  /** Phase 1b section 2b age-evidence caveat (pre-mortem item 4/10,
+   *  2026-09-08: "the window widens only with its label" -- this surface
+   *  had none). null/undefined for fresh and for the legacy-fallback case
+   *  (no caveat needed); a short fragment ("based on sales over the last
+   *  6 months" / "{date}, older evidence") for recent/historical, from
+   *  priceContract.ts's `evidenceCaveat` -- single source so this can't
+   *  drift from PriceBlock's own age labeling. */
+  evidenceCaveat?: string | null
   scale: string | null
   series: number | null
   packSize: number
@@ -48,7 +56,7 @@ interface CollectionPanelProps {
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, scale, series, packSize, exclusiveTo, imgSrc, whisper, upc,
+  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, evidenceCaveat, scale, series, packSize, exclusiveTo, imgSrc, whisper, upc,
 }: CollectionPanelProps) {
   return (
     <div id="figure-actions" className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column', scrollMarginTop: '72px' }}>
@@ -110,6 +118,7 @@ export default function CollectionPanel({
                   ? `${conditionLabel} ${medianIsAvg ? 'avg' : 'median'}`
                   : `${medianIsAvg ? 'avg' : 'median'} sold`} · {compCount} comp{compCount === 1 ? '' : 's'}
                 {needsThinDataLabel ? ' · thin data' : ''}
+                {evidenceCaveat ? ` · ${evidenceCaveat}` : ''}
               </div>
             </>
           ) : (

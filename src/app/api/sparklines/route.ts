@@ -67,6 +67,9 @@ export async function GET(req: NextRequest) {
         // edge cache is unchanged.
         const snap = await readPriceObject<{
           recent?: Array<{ price: number }>
+          median_sold?: number | null
+          avg_sold?: number | null
+          sold_count?: number
           decision?: {
             sold_sealed?: DecisionBucket
             sold_loose?: DecisionBucket
@@ -75,7 +78,10 @@ export async function GET(req: NextRequest) {
         }>('price-summaries', id, 300)
         if (!snap) return
         const prices = (snap.recent ?? []).map((r) => r.price).filter((p) => p > 0)
-        const { cacheUntil, ...quote } = deriveSparklineQuote(snap.decision)
+        // pre-mortem item 1 (2026-09-08): pass the legacy fields too, so an
+        // unmigrated snapshot's median falls back instead of going null for
+        // the whole catalog until matcher's regeneration reaches it.
+        const { cacheUntil, ...quote } = deriveSparklineQuote(snap)
         if (cacheUntil) cacheUntils.push(cacheUntil)
         // trend needs at least 2 points; median can stand alone
         if (prices.length < 2 && quote.median == null) return

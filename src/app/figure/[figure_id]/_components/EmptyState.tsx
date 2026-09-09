@@ -1,14 +1,26 @@
 // EmptyState.tsx — shown when pricing is null or comp_count < 1
 // Server component
 import TrackedLink from '@/app/components/TrackedLink'
+import { INSUFFICIENT_SOLD_EVIDENCE_LABEL } from '@/lib/priceDecision'
 
 interface EmptyStateProps {
   figureId: string
   figureName: string
   ebaySearchUrl: string
+  /** Pre-mortem item 3/9 (2026-09-08, CODEX-PREMORTEM-QUOTE-TIER-RELEASE-
+   *  2026-09-09.md; MATCHER-TO-WEB-STANDALONE-PREMORTEM-VERDICT-DECOUPLE-9-9-
+   *  2026-09-08.md): true only when this snapshot has actually been
+   *  regenerated under Phase 1b tiers AND still has no publishable sold
+   *  evidence (e.g. every sale quarantined) -- distinct from a figure that
+   *  simply hasn't been captured yet (the default copy below, unchanged,
+   *  correct for the ~9k figures still awaiting regeneration). Contract 3.2
+   *  requires the exact "Insufficient recent sold evidence" wording for
+   *  that case, not "haven't captured... yet" -- the latter wrongly implies
+   *  no attempt was ever made when real evidence existed and was excluded. */
+  insufficientEvidence?: boolean
 }
 
-export default function EmptyState({ figureId, figureName, ebaySearchUrl }: EmptyStateProps) {
+export default function EmptyState({ figureId, figureName, ebaySearchUrl, insufficientEvidence = false }: EmptyStateProps) {
   const soldListingsUrl = `${ebaySearchUrl}&LH_Sold=1&LH_Complete=1`
 
   return (
@@ -49,7 +61,7 @@ export default function EmptyState({ figureId, figureName, ebaySearchUrl }: Empt
           color: 'var(--shelf-cream, #f2e8d5)',
           marginBottom: '0.6rem',
         }}>
-          No pricing data yet
+          {insufficientEvidence ? INSUFFICIENT_SOLD_EVIDENCE_LABEL : 'No pricing data yet'}
         </div>
         <div style={{
           fontSize: '17px',
@@ -59,7 +71,9 @@ export default function EmptyState({ figureId, figureName, ebaySearchUrl }: Empt
           margin: '0 auto',
           lineHeight: 1.7,
         }}>
-          We haven&apos;t captured recent sold comps for {figureName} yet, so we won&apos;t invent a price. Check completed eBay sales directly before you bid or list.
+          {insufficientEvidence
+            ? <>Recent sold listings for {figureName} didn&apos;t clear our verification checks, so we won&apos;t show a price built on them. Check completed eBay sales directly before you bid or list.</>
+            : <>We haven&apos;t captured recent sold comps for {figureName} yet, so we won&apos;t invent a price. Check completed eBay sales directly before you bid or list.</>}
         </div>
       </div>
 

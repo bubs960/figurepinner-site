@@ -17,8 +17,11 @@ export function thinEvidence(b: ConditionPrice | null): { date: string; price: n
 }
 
 /** Caption text for the tier backing this bucket's number -- verbatim label
- *  from the API where one exists (fresh carries none). Plain string (not
- *  JSX) so it's usable from both PriceBlock.tsx and plain tests. */
+ *  from the API where one exists (fresh AND the legacy-fallback case share
+ *  the plain "median, last 90 days" line -- unchanged by the pre-mortem
+ *  item 1 fallback, since a legacy ConditionPrice's evidenceTier is
+ *  undefined here too). Plain string (not JSX) so it's usable from both
+ *  PriceBlock.tsx and plain tests. */
 export function tierCaption(b: ConditionPrice): string {
   if (b.evidenceTier === 'recent') return 'median, based on sales over the last 6 months'
   if (b.evidenceTier === 'historical' && b.evidenceLabel) return `median · ${b.evidenceLabel}, older evidence`
