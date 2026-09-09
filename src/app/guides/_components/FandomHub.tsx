@@ -324,6 +324,11 @@ export default function FandomHub({
   moreGuides: { slug: string; title: string; readingMinutes: number }[]
 }) {
   const v = theme.voice
+  // Release T follow-up (9/8): vault hubs render only body[0..1] inside the
+  // collapsed story, so a leading callout (the F5 scope note) never showed.
+  // Surface the first pre-h2 callout right below the pricing intel instead.
+  const firstH2 = article.body.findIndex((b) => b.type === 'h2')
+  const scopeNote = article.body.slice(0, firstH2 < 0 ? article.body.length : firstH2).find((b) => b.type === 'callout')
   // Seam hero is the atmospheric centerpiece pattern MOTU proved (Gate 1) and
   // GI Joe templatized (S40). theme.seam opts a fandom in; theme.centerpiece
   // picks which inline-SVG hero it renders.
@@ -485,6 +490,7 @@ export default function FandomHub({
         ) : (
           <IntelTable data={topComps} theme={theme} />
         )}
+        {scopeNote && <Block block={scopeNote} />}
         <EscapeHatch totalFigs={totalFigs} />
 
         {vaults && vaults.vaults.length > 0 ? (

@@ -90,7 +90,7 @@ export default function AboutPage() {
           }}>
             {[
               { value: TOTAL_FIGURES_LABEL, label: 'Figures tracked' },
-              { value: '16', label: 'Genres covered' },
+              { value: String(GENRE_TAXONOMY.length), label: 'Genres covered' },
               { value: 'Real-time', label: 'eBay sold prices' },
               { value: 'Free', label: 'Core features' },
             ].map(({ value, label }) => (
@@ -168,7 +168,7 @@ export default function AboutPage() {
               {
                 step: '02',
                 title: 'Search Any Figure',
-                body: `Type any figure name into the search bar and instantly pull up market data: average sold price, median, high/low, and a list of recent eBay sales. ${TOTAL_FIGURES_LABEL} figures across 16 genres.`,
+                body: `Type any figure name into the search bar and instantly pull up market data: average sold price, median, high/low, and a list of recent eBay sales. ${TOTAL_FIGURES_LABEL} figures across ${GENRE_TAXONOMY.length} genres.`,
               },
               {
                 step: '03',

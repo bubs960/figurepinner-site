@@ -219,7 +219,10 @@ async function main() {
       else tally.err++
       if (r.cache === 'HIT') tally.hit++; else if (r.cache === 'MISS' || r.cache === 'EXPIRED') tally.miss++
       ttfbs.push(r.ttfb)
-      if (r.status === 0 || r.status >= 500 || r.status === 429) console.log(`[prewarm]   ${r.status} ${p} (${r.ttfb} ms, ${r.cache})`)
+      // Log EVERY non-2xx/3xx path (9/8: train #4's err=33 had no per-path
+      // record because only 0/5xx/429 were printed, so webaudit's "are any of
+      // them sitemap members that 404?" could not be answered from the log).
+      if (!(r.status >= 200 && r.status < 400)) console.log(`[prewarm]   ${r.status} ${p} (${r.ttfb} ms, ${r.cache})${r.status === 403 ? ' challenged' : ''}`)
       await sleep(g.gap)
     }
   }
