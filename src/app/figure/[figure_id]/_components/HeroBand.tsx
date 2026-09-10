@@ -9,7 +9,8 @@ import ConditionShineBox from './ConditionShineBox'
 import NoUpscalePhoto from './NoUpscalePhoto'
 import PriceBlock from './PriceBlock'
 import HeroCtaRail from './HeroCtaRail'
-import type { CondBucket, PriceHistory } from './FigureDetailContent'
+import type { PriceHistory } from './FigureDetailContent'
+import type { ConditionPrice } from '../_lib/priceContract'
 
 type RarityTier = 'common' | 'uncommon' | 'rare' | 'grail' | null
 
@@ -78,10 +79,13 @@ interface HeroBandProps {
   secondary?: { label: string; median: number; count: number } | null
   /** Honesty footnote, e.g. "Includes N comps classified from the listing title." */
   inferenceNote?: string | null
-  /** v4 price block (build plan §1): when either condition bucket has a
-   *  usable median, the two-bucket PriceBlock replaces the legacy placard.
-   *  Pooled-only figures (neither bucket) keep the placard unchanged. */
-  buckets?: { sealed: CondBucket | null; loose: CondBucket | null } | null
+  /** v4 price block (build plan §1): when either condition has a usable
+   *  median OR thin evidence (a last-sold-only row), the two-bucket
+   *  PriceBlock replaces the legacy placard. Pooled-only figures (neither
+   *  condition, i.e. jsonLdPriceContract's pooled path) keep the placard
+   *  unchanged. Phase 1b section 2b: these are the TIERED per-condition
+   *  price (jsonLdPriceContract.sealed/.loose), not the raw CondBucket. */
+  buckets?: { sealed: ConditionPrice | null; loose: ConditionPrice | null } | null
   /** v4 weekly-median history (matcher's price-history emitter, 2026-08-14).
    *  Null while the backfill cycle hasn't reached this fid — strip stays off. */
   history?: PriceHistory | null
@@ -117,7 +121,10 @@ export default function HeroBand({
 }: HeroBandProps) {
   const showPriceBlock = buckets != null &&
     ((buckets.sealed?.median != null && buckets.sealed.count >= 1) ||
-     (buckets.loose?.median != null && buckets.loose.count >= 1))
+     (buckets.loose?.median != null && buckets.loose.count >= 1) ||
+     // Thin evidence (1-2 validated dated sales in 270 d) also renders in
+     // PriceBlock, as a last-sold-only row -- not the legacy placard.
+     buckets.sealed?.evidenceTier === 'thin' || buckets.loose?.evidenceTier === 'thin')
   const rarity = rarityTier && rarityTier !== 'common' ? RARITY_CONFIG[rarityTier] : null
   const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 

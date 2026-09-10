@@ -32,6 +32,8 @@
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import type { PriceSnap } from '../_lib/priceSnaps'
 import { formatGroupedNumber } from '@/lib/safeNumber'
+import { formatShortDate } from '@/lib/safeDate'
+import { deriveLiveMedianView } from '../_lib/liveMedianView'
 
 // 2026-08-06: was `n.toLocaleString('en-US', {...})` -- flagged by
 // scripts/predeploy-clean-check.mjs's ICU-risk scan (see src/lib/safeNumber.ts).
@@ -55,12 +57,19 @@ export default function LiveMedian({
   ebayUrl?: string
   figureId?: string
 }) {
-  const median = snap ? (snap.median_sold ?? snap.avg_sold) : null
-  // Label truthfulness (S55 FTC audit): when a snapshot has no median_sold the
-  // number shown is the average — say so instead of calling it a median.
-  const stat = snap?.median_sold != null ? 'median' : 'avg'
-  const n = snap?.sold_count ?? 0
-  const hasData = median !== null && n > 0
+  // Phase 1b section 2b: NOT wired to a live decision block as of 2026-09-07
+  // (matcher's API is staged, not deployed) -- snap.decision is undefined on
+  // every live snapshot today, so this renders the "No sold comps yet" state
+  // for everything until the coordinated release. Held on branch
+  // release-v-quote-tier-wiring, not merged. See ../_lib/liveMedianView.ts
+  // for the tested render-state logic.
+  const view = deriveLiveMedianView(snap)
+  const hasData = view.hasData
+  const median = hasData ? view.median : null
+  const n = hasData ? view.count : 0
+  const stat = 'median'
+  const isThin = !hasData && view.isThin
+  const evidenceCaveat = hasData ? view.evidenceCaveat : null
 
   function onEbayClick() {
     trackFunnel('ebay_exit', { figureId: figureId ?? '', target: 'guide_bidcheck' })
@@ -97,7 +106,18 @@ export default function LiveMedian({
               {fmtMoney(median as number)}
             </div>
             <div style={{ fontSize: '0.66rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--fp-muted)', marginTop: '0.3rem' }}>
-              {n} sold &middot; {stat} &middot; live
+              {evidenceCaveat ? evidenceCaveat : `${n} sold · ${stat} · live`}
+            </div>
+          </>
+        ) : isThin ? (
+          <>
+            {/* Ruling STEVE-RULING-QUOTE-TIERS-90-180-270-2026-09-07.md: 1-2
+                sales in 270 d shows the last-sold price, never a median. */}
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.9rem', lineHeight: 1, color: 'var(--fp-muted)' }}>
+              {fmtMoney(view.isThin ? view.lastSoldPrice : 0)}
+            </div>
+            <div style={{ fontSize: '0.66rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--fp-muted)', marginTop: '0.3rem' }}>
+              last sold {view.isThin ? formatShortDate(new Date(view.lastSoldDate)) : ''}
             </div>
           </>
         ) : (

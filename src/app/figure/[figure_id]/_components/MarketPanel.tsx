@@ -17,9 +17,10 @@
 
 import { useState } from 'react'
 import { formatCurrency, formatDate } from '../_lib/figureFormatters'
+import { formatShortDate } from '@/lib/safeDate'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import LiquidSparkline from './LiquidSparkline'
-import { derivePriceContract, INSUFFICIENT_COMPS_LABEL } from '../_lib/priceContract'
+import { INSUFFICIENT_COMPS_LABEL, type PriceContract } from '../_lib/priceContract'
 import SectionH2 from './SectionH2'
 
 interface Comp {
@@ -40,23 +41,18 @@ interface Pricing {
   recent_comps: Comp[]
 }
 
-/** Full-corpus condition buckets from the price snapshot. These are the
- *  authoritative numbers (same source the placard + vault read); a bucket with
- *  enough comps replaces the local 30-comp approximation so this panel never
- *  shows a condition median the rest of the app contradicts. Passed for ALL
- *  segmentations incl. pooled — a thin bucket (< MIN_SPLIT_COMPS) is ignored
- *  per-bucket below, falling back to the blended view. */
-interface SnapshotBuckets {
-  segmentation: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
-  sealed: { median: number | null; count: number } | null
-  loose: { median: number | null; count: number } | null
-}
-
 interface MarketPanelProps {
   pricing: Pricing | null
   ebaySearchUrl: string
   figureName: string
-  buckets?: SnapshotBuckets | null
+  /** Phase 1b section 2b: the SAME tiered contract FigureDetailContent
+   *  computes once for JSON-LD/HeroBand/MobileActionBar/CollectionPanel --
+   *  passed down rather than recomputed here (this panel used to call its
+   *  own derivePriceContract from a separate SnapshotBuckets prop, a second
+   *  contract-derivation site that could drift from the headline's; passing
+   *  the already-computed one removes that class of bug at the source
+   *  instead of keeping two computations in sync by discipline). */
+  priceContract?: PriceContract | null
   /** Same number the page's own JSON-LD already claims (valuePricing.trend_90d_pct,
    *  passed to SeoSummary too) — the sparkline's momentum droplet reuses it rather
    *  than computing a second, differently-windowed "trend" that could disagree. */
@@ -64,7 +60,7 @@ interface MarketPanelProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- ebaySearchUrl kept in the prop contract, unused here
-export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, buckets: snapshotBuckets, trendPct = null }: MarketPanelProps) {
+export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, priceContract, trendPct = null }: MarketPanelProps) {
   const [showComps, setShowComps] = useState(false)
 
   if (!pricing || pricing.comp_count < 1) return null
@@ -96,34 +92,13 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
 
   // FPPS-01 (2026-07-15, Steve's binding decisions): this panel is THE
   // surface webaudit flagged for the pooled "$180 · MEDIAN SOLD · 50 COMPS"
-  // pattern. Each row's NUMBER runs through the same 10+/3-9/<3 comp-count
-  // tier as every other price surface, via derivePriceContract -- a thin
-  // bucket (3-9 comps) gets a "Thin data" chip instead of a plain "sold"
-  // chip, and a suppressed bucket (<3 comps) renders NO number, just the
-  // insufficient-comps state, rather than falling through to the pooled blend.
-  //
-  // Census-addendum transparent-split fix (2026-07-17): sealed/loose used to
-  // be gated on `segmentation === 'split'` (etc.) before being passed in --
-  // for the 3,839-fid affected population (segmentation 'pooled' but real
-  // sealed+loose buckets both exist underneath), that nulled BOTH buckets out
-  // and fell straight through to the blended "All" row, directly contradicting
-  // HeroBand's headline immediately above it on the same page (the exact bug
-  // 13b0cf6 already fixed for the headline -- this panel was the one surface
-  // still gating on the raw segmentation label instead of real bucket
-  // presence, same class as the fixed HeroBand ticket-let). derivePriceContract
-  // itself already gates per-bucket on presence (median != null && count >= 1,
-  // see priceContract.ts) -- passing the raw buckets unconditionally, same as
-  // HeroBand/CollectionPanel/SeoSummary/meta description all already do via
-  // jsonLdPriceContract, is the fix; no second gate needed here.
-  const seg = snapshotBuckets?.segmentation ?? 'pooled'
-  const contract = derivePriceContract({
-    soldCount: pricing.comp_count,
-    medianSold: pricing.median,
-    avgSold: null,
-    segmentation: seg,
-    sealed: snapshotBuckets?.sealed ?? null,
-    loose: snapshotBuckets?.loose ?? null,
-  })
+  // pattern. Each row's NUMBER runs through the tiered decision now (Phase
+  // 1b section 2b) -- a thin evidenceTier (1-2 validated dated sales in
+  // 270 d) gets a last-sold-only row (see ThinLedgerRow below), never a
+  // median; an unpublishable/unavailable bucket renders NO number, just the
+  // insufficient-evidence state, rather than falling through to the pooled
+  // blend.
+  const contract = priceContract ?? { hasNoData: true, hasBothConditions: false, sealed: null, loose: null, pooled: null }
   const sealedRow = contract.sealed
   const looseRow = contract.loose
   const useSnapshot = Boolean(sealedRow || looseRow)
@@ -200,11 +175,15 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
         {sealedRow && (
           sealedRow.median != null
             ? <LedgerRow label="Sealed / Carded" median={sealedRow.median} count={sealedRow.count} thin={sealedRow.needsThinDataLabel} tone="gold" />
+            : sealedRow.evidenceTier === 'thin' && sealedRow.lastSoldDate != null && sealedRow.lastSoldPrice != null
+            ? <ThinLedgerRow label="Sealed / Carded" lastSoldDate={sealedRow.lastSoldDate} lastSoldPrice={sealedRow.lastSoldPrice} />
             : <SuppressedRow label="Sealed / Carded" count={sealedRow.count} />
         )}
         {looseRow && (
           looseRow.median != null
             ? <LedgerRow label="Loose" median={looseRow.median} count={looseRow.count} thin={looseRow.needsThinDataLabel} tone="red" />
+            : looseRow.evidenceTier === 'thin' && looseRow.lastSoldDate != null && looseRow.lastSoldPrice != null
+            ? <ThinLedgerRow label="Loose" lastSoldDate={looseRow.lastSoldDate} lastSoldPrice={looseRow.lastSoldPrice} />
             : <SuppressedRow label="Loose" count={looseRow.count} />
         )}
         {!useSnapshot && contract.pooled && (
@@ -215,10 +194,12 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
             ? <LedgerRow
                 label="All"
                 median={contract.pooled.median}
-                count={pricing.comp_count}
+                count={contract.pooled.count ?? pricing.comp_count}
                 stat={contract.pooled.isAvg ? 'avg' : 'median'}
                 thin={contract.pooled.needsThinDataLabel}
               />
+            : contract.pooled.evidenceTier === 'thin' && contract.pooled.lastSoldDate != null && contract.pooled.lastSoldPrice != null
+            ? <ThinLedgerRow label="All" lastSoldDate={contract.pooled.lastSoldDate} lastSoldPrice={contract.pooled.lastSoldPrice} />
             : <SuppressedRow label="All" count={pricing.comp_count} />
         )}
       </div>
@@ -340,6 +321,56 @@ function LedgerRow({ label, median: med, count, stat = 'median', thin = false, t
           Thin data
         </span>
       )}
+    </div>
+  )
+}
+
+/** Thin-evidence state (STEVE-RULING-QUOTE-TIERS-90-180-270-2026-09-07.md):
+ *  1-2 validated dated sales in 270 d shows the last-sold price, never a
+ *  median -- same treatment as PriceBlock's ThinBucket, this panel's own row
+ *  shape. */
+function ThinLedgerRow({ label, lastSoldDate, lastSoldPrice }: { label: string; lastSoldDate: string; lastSoldPrice: number }) {
+  return (
+    <div
+      className="fp-marketledger-row"
+      style={{
+        display: 'flex', alignItems: 'center', gap: '0.75rem',
+        padding: '0.7rem 0 0.65rem',
+        borderBottom: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
+      }}
+    >
+      <span style={{
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
+        whiteSpace: 'nowrap',
+      }}>
+        {label}
+      </span>
+      <span aria-hidden="true" style={{
+        flex: '1 1 auto', minWidth: '16px',
+        borderBottom: '1px dotted rgba(242,232,213,.18)',
+        transform: 'translateY(-3px)',
+      }} />
+      <span style={{
+        fontFamily: 'var(--fp-font-display)',
+        fontSize: '19px', lineHeight: 1, letterSpacing: '0.03em',
+        color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+        fontVariantNumeric: 'tabular-nums',
+        whiteSpace: 'nowrap',
+      }}>
+        {formatCurrency(lastSoldPrice)}
+      </span>
+      <span style={{
+        fontFamily: 'var(--fp-font-body)',
+        fontSize: '9px', fontWeight: 500, letterSpacing: '0.1em',
+        textTransform: 'uppercase',
+        color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))',
+        whiteSpace: 'nowrap',
+      }}>
+        last sold {formatShortDate(new Date(lastSoldDate))}
+      </span>
     </div>
   )
 }

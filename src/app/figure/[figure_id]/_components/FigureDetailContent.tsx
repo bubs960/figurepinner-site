@@ -35,7 +35,9 @@ import GoldenCorpusPassport from './GoldenCorpusPassport'
 import ScalePassport from './ScalePassport'
 import GoldenCorpusAtAGlance from './GoldenCorpusAtAGlance'
 import { getGoldenCorpusClaims } from '../_lib/goldenCorpus'
-import { derivePriceContract, quotableBuckets } from '../_lib/priceContract'
+import { resolvePriceContract, isMigratedSnapshot, evidenceCaveat } from '../_lib/priceContract'
+import { jsonLdPriceProperties } from '../_lib/jsonLdPriceProperties'
+import type { DecisionBucket } from '@/lib/priceDecision'
 import { thumb } from '@/lib/imageUrl'
 import { formatShortDateWithYear } from '@/lib/safeDate'
 import SiteHeader from '@/app/components/SiteHeader'
@@ -84,6 +86,13 @@ type PriceData = {
   loose?: CondBucket | null
   segmentation?: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
   conditionInference?: { sealed_from_title: number; loose_from_title: number; overrides: number } | null
+  /** Phase 1b section 2b -- absent on every live snapshot until matcher's
+   *  coordinated API deploy. See jsonLdPriceContract below for the read side. */
+  decision?: {
+    sold_sealed?: DecisionBucket
+    sold_loose?: DecisionBucket
+    sold_pooled?: DecisionBucket
+  }
 }
 
 // ── Data fetching ──────────────────────────────────────────────────────────────
@@ -143,6 +152,11 @@ type R2Snapshot = {
   loose?: CondBucket | null
   condition_segmentation?: 'split' | 'sealed-only' | 'loose-only' | 'pooled'
   condition_inference?: { sealed_from_title: number; loose_from_title: number; overrides: number } | null
+  decision?: {
+    sold_sealed?: DecisionBucket
+    sold_loose?: DecisionBucket
+    sold_pooled?: DecisionBucket
+  }
 }
 
 function _pctile(sorted: number[], p: number): number {
@@ -238,6 +252,7 @@ export async function fetchFigurePageData(figure_id: string): Promise<{ price: P
       loose: snap.loose ?? null,
       segmentation: snap.condition_segmentation ?? 'pooled',
       conditionInference: snap.condition_inference ?? null,
+      decision: snap.decision,
     },
     imageUrl: null,
   }
@@ -382,30 +397,41 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   // label for their own separate logic. Only headlineBucket/headlineCondition
   // below switch from the raw label to bucket-presence-based selection.
   const segmentation = price?.segmentation ?? 'pooled'
-  const jsonLdPriceContract = derivePriceContract(price ? {
-    soldCount: price.soldCount,
-    medianSold: price.medianSold,
-    avgSold: price.avgSold,
-    sealed: price.sealed,
-    loose: price.loose,
-    segmentation: price.segmentation,
-  } : null)
-  // PRESENT (bucket object exists, count>=1) vs USABLE (also tier-cleared --
-  // .median survives the <3-comp suppress rule) are different questions. A
-  // present-but-suppressed bucket can't lead as a headline number, but its
-  // mere presence still must block the legacy blended fallback below -- a
-  // present-but-thin bucket is more honest than a blended figure even when
-  // it's too thin to show a number of its own (same rule CollectionPanel/
-  // MobileActionBar already apply via jsonLdPriceContract.pooled's own gate).
+  // Phase 1b section 2b (PHASE1B-PUBLICATION-DECISION-CONTRACT-2026-09-07.md):
+  // jsonLdPriceContract now comes from the tiered decision once a snapshot is
+  // actually migrated, not raw comp-count buckets -- this is the swap
+  // matcher's coordinated release depends on. It still drives JSON-LD/
+  // MobileActionBar/CollectionPanel exactly as before (they already read
+  // ONLY jsonLdPriceContract fields, so they need no separate edit). Steve's
+  // ruling on scope (2026-09-07, "option 1"): the headline NUMBER + evidence
+  // label + JSON-LD eligibility move to the tiered decision; the RANGE
+  // display (IQR/Tukey fence/dispersion warning below) stays sourced from
+  // the raw CondBucket's own p10/p90/min/max, which the decision object does
+  // not carry.
+  //
+  // resolvePriceContract (pre-mortem item 1, 2026-09-08, superseding the
+  // "NOT WIRED" note this comment used to carry): falls back to today's
+  // legacy derivePriceContract for any snapshot matcher's rolling
+  // regeneration hasn't reached yet, instead of rendering the honest-no-data
+  // state for the whole catalog until migration completes.
+  const isMigrated = isMigratedSnapshot(price?.decision)
+  const jsonLdPriceContract = resolvePriceContract(price)
+  // PRESENT (bucket object exists, not simply missing) vs USABLE (also
+  // tier-cleared -- .median survives the evidence-age floor) are different
+  // questions. A present-but-suppressed bucket can't lead as a headline
+  // number, but its mere presence still must block the legacy blended
+  // fallback below -- a present-but-thin bucket is more honest than a
+  // blended figure even when it's too thin to show a number of its own (same
+  // rule CollectionPanel/MobileActionBar already apply via
+  // jsonLdPriceContract.pooled's own gate).
   const sealedPresent = jsonLdPriceContract.sealed != null
   const loosePresent = jsonLdPriceContract.loose != null
   const sealedUsable = jsonLdPriceContract.sealed?.median != null
   const looseUsable = jsonLdPriceContract.loose?.median != null
-  // Hero price block buckets, gated by the SAME floor as everything else
-  // (FPPS-01 rule 2 via quotableBuckets) -- never the raw buckets. 2026-09-02,
-  // webaudit pass-1 defect 1: the raw pass-through let a 2-comp loose bucket
-  // render "$25 · LOW" here while Bid Check and Recent Sales refused it.
-  const quotable = quotableBuckets(price?.sealed, price?.loose)
+  // headlineTieredQuote carries the DISPLAYED number/count/label (tiered);
+  // headlineBucket stays the RAW CondBucket, used ONLY below for the range
+  // bar's p10/p90/min/max (option 1 -- range display is untouched).
+  const headlineTieredQuote = sealedUsable ? jsonLdPriceContract.sealed : looseUsable ? jsonLdPriceContract.loose : null
   const headlineBucket =
     sealedUsable ? (price?.sealed ?? null)
     : looseUsable ? (price?.loose ?? null)
@@ -417,27 +443,27 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     : headlineCondition === 'loose' ? 'loose'
     : null
   const placardSecondary =
-    segmentation === 'split' && looseUsable && price?.loose && price.loose.median != null
-      ? { label: 'Loose', median: price.loose.median, count: price.loose.count }
+    segmentation === 'split' && looseUsable && jsonLdPriceContract.loose?.median != null
+      ? { label: 'Loose', median: jsonLdPriceContract.loose.median, count: jsonLdPriceContract.loose.count }
       : null
   const placardConditionRows = (() => {
     if (!price) return []
     const rows = [
-      { key: 'sealed' as const, label: 'Sealed / carded', bucket: price.sealed ?? null },
-      { key: 'loose' as const, label: 'Loose / opened', bucket: price.loose ?? null },
-    ].flatMap(({ key, label, bucket }) => {
-      // Same floor as every other price surface (FPPS-01 rule 2) -- a 1-2 comp
-      // bucket gets no dollar row here either (2026-09-02).
-      if (!bucket || bucket.median == null || bucket.count < MIN_COMPS_TO_QUOTE) return []
-      const rangeLabel = bucket.min != null && bucket.max != null && bucket.max > bucket.min
+      { key: 'sealed' as const, label: 'Sealed / carded', tiered: jsonLdPriceContract.sealed, bucket: price.sealed ?? null },
+      { key: 'loose' as const, label: 'Loose / opened', tiered: jsonLdPriceContract.loose, bucket: price.loose ?? null },
+    ].flatMap(({ key, label, tiered, bucket }) => {
+      // Tiered quote gates whether a dollar row shows at all (option 1: the
+      // decision governs the number; the raw bucket only supplies its range).
+      if (!tiered || tiered.median == null) return []
+      const rangeLabel = bucket && bucket.min != null && bucket.max != null && bucket.max > bucket.min
         ? `${formatCurrency(bucket.min)}-${formatCurrency(bucket.max)}`
         : null
       return [{
         key,
         label,
-        median: bucket.median,
-        count: bucket.count,
-        depthLabel: conditionDepthLabel(bucket.count),
+        median: tiered.median,
+        count: tiered.count,
+        depthLabel: conditionDepthLabel(tiered.count),
         rangeLabel,
       }]
     })
@@ -751,43 +777,15 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     return pm >= 1 ? `~${pm} per month` : null
   })()
 
-  // FPPS-01 (2026-07-15, Steve's binding decision 1 + 5): JSON-LD must never
-  // emit a single pooled "Median sold price" when sealed and loose both have
-  // real data -- that's exactly the pooled-vs-visible-page mismatch webaudit
-  // flagged (this figure's page shows $180/$20 split; the OLD JSON-LD here
-  // agreed by coincidence because it read the same headlineBucket valuePricing
-  // already used, but the field was still misleadingly named as if it were
-  // the only price). Both conditions present -> two labeled PropertyValues,
-  // no single "Median sold price". One condition (or pooled) -> keep the
-  // single labeled property, still tier-gated (suppressed <3-comp buckets
-  // emit no price property at all for that condition).
-  // (jsonLdPriceContract itself is now computed once, up near headlineBucket --
-  // 2026-07-17 condition-blend fix hoisted it so the headline could reuse it too.)
-  const jsonLdPriceProperties = (() => {
-    if (jsonLdPriceContract.hasBothConditions) {
-      return [
-        jsonLdPriceContract.sealed?.median != null
-          ? { '@type': 'PropertyValue', name: 'Sealed / carded median sold price', value: formatCurrency(jsonLdPriceContract.sealed.median) }
-          : null,
-        jsonLdPriceContract.loose?.median != null
-          ? { '@type': 'PropertyValue', name: 'Loose median sold price', value: formatCurrency(jsonLdPriceContract.loose.median) }
-          : null,
-      ]
-    }
-    const only = jsonLdPriceContract.sealed?.median != null ? jsonLdPriceContract.sealed
-      : jsonLdPriceContract.loose?.median != null ? jsonLdPriceContract.loose
-      : null
-    if (only) {
-      return [{ '@type': 'PropertyValue', name: `${only.label} median sold price`, value: formatCurrency(only.median!) }]
-    }
-    if (jsonLdPriceContract.pooled?.median != null) {
-      return [{ '@type': 'PropertyValue', name: jsonLdPriceContract.pooled.isAvg ? 'Average sold price' : 'Median sold price', value: formatCurrency(jsonLdPriceContract.pooled.median) }]
-    }
-    return []
-  })()
+  // FPPS-01 (2026-07-15, Steve's binding decision 1 + 5) + pre-mortem item
+  // 4/10 (2026-09-08): logic lives in jsonLdPriceProperties.ts (see that
+  // file's doc comment) so it's unit-testable without JSX. jsonLdPriceContract
+  // itself is computed once, up near headlineBucket -- 2026-07-17
+  // condition-blend fix hoisted it so the headline could reuse it too.
+  const jsonLdPriceProps = jsonLdPriceProperties(jsonLdPriceContract)
 
   const valueProperties = [
-    ...jsonLdPriceProperties,
+    ...jsonLdPriceProps,
     price?.soldCount != null
       ? { '@type': 'PropertyValue', name: 'Sold comp count', value: String(price.soldCount) }
       : null,
@@ -902,19 +900,21 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const collectionPanelPrice: {
     median: number | null; medianIsAvg: boolean; compCount: number
     conditionLabel: 'sealed' | 'loose' | null; needsThinDataLabel: boolean
+    evidenceCaveat: string | null
   } = (() => {
     const c = jsonLdPriceContract
-    if (c.hasNoData) return { median: null, medianIsAvg: false, compCount: 0, conditionLabel: null, needsThinDataLabel: false }
+    const empty = { median: null, medianIsAvg: false, compCount: 0, conditionLabel: null, needsThinDataLabel: false, evidenceCaveat: null }
+    if (c.hasNoData) return empty
     if (c.sealed?.median != null) {
-      return { median: c.sealed.median, medianIsAvg: false, compCount: c.sealed.count, conditionLabel: 'sealed' as const, needsThinDataLabel: c.sealed.needsThinDataLabel }
+      return { median: c.sealed.median, medianIsAvg: false, compCount: c.sealed.count, conditionLabel: 'sealed' as const, needsThinDataLabel: c.sealed.needsThinDataLabel, evidenceCaveat: evidenceCaveat(c.sealed.evidenceTier, c.sealed.evidenceLabel) }
     }
     if (c.loose?.median != null) {
-      return { median: c.loose.median, medianIsAvg: false, compCount: c.loose.count, conditionLabel: 'loose' as const, needsThinDataLabel: c.loose.needsThinDataLabel }
+      return { median: c.loose.median, medianIsAvg: false, compCount: c.loose.count, conditionLabel: 'loose' as const, needsThinDataLabel: c.loose.needsThinDataLabel, evidenceCaveat: evidenceCaveat(c.loose.evidenceTier, c.loose.evidenceLabel) }
     }
     if (c.pooled?.median != null) {
-      return { median: c.pooled.median, medianIsAvg: c.pooled.isAvg, compCount: price?.soldCount ?? 0, conditionLabel: null, needsThinDataLabel: c.pooled.needsThinDataLabel }
+      return { median: c.pooled.median, medianIsAvg: c.pooled.isAvg, compCount: c.pooled.count ?? price?.soldCount ?? 0, conditionLabel: null, needsThinDataLabel: c.pooled.needsThinDataLabel, evidenceCaveat: evidenceCaveat(c.pooled.evidenceTier, c.pooled.evidenceLabel) }
     }
-    return { median: null, medianIsAvg: false, compCount: 0, conditionLabel: null, needsThinDataLabel: false }
+    return empty
   })()
 
   // ── Decision Passport preview (figure-page-v3, 2026-08-08) — identity rows ──
@@ -1067,7 +1067,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
             conditionRows={placardConditionRows}
             secondary={placardSecondary}
             inferenceNote={inferenceNote}
-            buckets={quotable}
+            buckets={{ sealed: jsonLdPriceContract.sealed, loose: jsonLdPriceContract.loose }}
             history={priceHistory}
             hasReceipts={!!goldenCorpusDoc || !!local.passport}
             ebaySearchUrl={ebayUrl}
@@ -1166,20 +1166,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 pricing={marketPricing}
                 ebaySearchUrl={ebayUrl}
                 figureName={displayName}
-                buckets={{
-                  segmentation,
-                  sealed: price?.sealed ?? null,
-                  loose: price?.loose ?? null,
-                }}
+                priceContract={jsonLdPriceContract}
                 trendPct={valuePricing?.trend_90d_pct ?? null}
               />
             ) : (
-              <EmptyState figureId={figureId} figureName={displayName} ebaySearchUrl={ebayUrl} />
+              <EmptyState figureId={figureId} figureName={displayName} ebaySearchUrl={ebayUrl} insufficientEvidence={isMigrated} />
             )}
           </div>
 
           <div className="fp-right-col" style={{ position: 'sticky', top: '72px' }}>
             <CollectionPanel
+              evidenceCaveat={collectionPanelPrice.evidenceCaveat}
               figureId={figureId}
               figureName={displayName}
               brand={brand}
