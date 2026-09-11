@@ -337,6 +337,64 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11: first of the guide-gap builds (webaudit Bing read #2 →
+    // WEB-TO-WEBAUDIT-STANDALONE-BING-READ-2-ASKS-ANSWERED-GUIDE-GAPS-2026-09-11.md,
+    // Steve: "go on the guide-gap list, start with WWE Basic"). Every number
+    // below is from the r2proxy price-summaries pull of all 991 Basic fids on
+    // 2026-09-11 (872 had comps) or the KB itself. No owner first-person datum
+    // was available at write time, so the article claims data, not experience.
+    slug: 'wwe-basic-price-guide',
+    title: 'WWE Basic Price Guide: The $15 Line Where the Women Cost $50',
+    metaTitle: 'WWE Basic Figures Price Guide — Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Mattel WWE Basic values from 872 figures with real eBay sold data: a $15 line median, AJ Lee at $58, Oba Femi at $90, every Brock Lesnar over $40, and why Series 1 is not worth what you think.',
+    dek: 'Sixteen years, 167 series, 991 figures. Most of them are worth fifteen bucks. The exceptions follow one rule.',
+    readingMinutes: 6,
+    updated: '2026-09-11',
+    shortVersion:
+      'A loose or carded WWE Basic is a $15 figure unless it is a woman, a Brock, or a non-wrestler Mattel made once and never again. Check the specific release before paying more:',
+    body: [
+      { type: 'p', text: 'Mattel took the WWE license from Jakks in 2010 and has shipped a Basic figure of somebody roughly every three days since. FigurePinner tracks 991 of them across 167 numbered series plus the retailer exclusives, and 872 have real eBay sold comps behind them. The line median is $15. Eighty-three percent of Basics with five or more sales clear at $20 or under, which is another way of saying the peg price is the aftermarket price for most of this line, and a shelf of them is not an investment, it is a fed.' },
+      { type: 'p', text: 'That is the boring truth. The interesting truth is the other 17 percent, because it is not random. Twenty-five Basics hold a $40-plus median, and they sort into exactly three buckets.' },
+      { type: 'h2', text: 'Bucket one: the women' },
+      { type: 'p', text: 'Fourteen of the top thirty Basics by median are women’s division figures, in a line where women are 61 of the 859 figures with a real sample. That is a 7 percent share of the checklist producing 47 percent of the money. Mattel ships one woman per case if that, the figure sells through on the truck, and then it does not get reissued because the next series has a different woman in it. Supply math, not fandom.' },
+      { type: 'ul', items: [
+        'AJ Lee, Series 30 (her first Basic): $57.99 median across 50 sold, top sale $149.99. Her Series 53 runs $55 across 37. She retired in 2015 and Mattel has not made a new one, so both are the supply forever.',
+        'Tiffany Stratton, Series 159: $77.99 median across 20 sold, top sale $199.99. Her Series 145 sits at $49.99. Current champion, first figures, and the Elite has not caught up.',
+        'Sol Ruca, Series 165: $54.99 across a full 50-sale sample, with a $201.99 top. An NXT figure outselling every men’s main-roster Basic in the line.',
+        'Liv Morgan: Series 152 at $50 across 50 sold, Series 110 at $49.99 across 50. Two different years, same number, which is what a stable floor looks like.',
+        'Melina, Series 5 (2010): $80 median across 11 sold. The oldest figure on this list and the one with the thinnest sample, so read it as a range marker.',
+      ]},
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_30_42-aj-lee_04986a', label: 'AJ Lee, Basic Series 30', sublabel: 'The women’s-division floor: 50 sold, no reissue coming' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_165_sol-ruca_2b2c6b', label: 'Sol Ruca, Basic Series 165', sublabel: 'NXT figure, main-roster money' },
+      { type: 'p', text: 'Rhea Ripley is the one that breaks the pattern in an instructive way: $40 across 50 sold on both her Series 114 and Series 153 Basics, not $55. She is the most-pushed woman on the roster and Mattel makes her constantly, so the Elite absorbs the demand. The Basic premium goes to women who got one or two figures, not to the biggest star.' },
+      { type: 'h2', text: 'Bucket two: Brock Lesnar, all of him' },
+      { type: 'p', text: 'Brock has 12 Basic figures in the database with comps and 7 Elites. Every Basic of his from Series 47 onward holds between $39.99 and $50 at a full 50-sale sample, with the Series 47 at $50 and a $185.99 top sale. No other male wrestler comes close. John Cena has 43 Basics, the most of anyone; his median is $15 and his best single release tops out at $34.95. Roman Reigns, 21 comps, $15 and under. The Rock, 14 comps, $14.99 and under.' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_47_15-brock-lesnar_3ec7cd', label: 'Brock Lesnar, Basic Series 47', sublabel: 'The only men’s figure that prices like a woman’s' },
+      { type: 'p', text: 'Why Brock and nobody else is a fair question, and I do not have a clean answer from the data. The plausible read is that Brock is a part-timer whose figures ship in one series and vanish, while Cena and Roman are on every truck for a decade. That is a supply story again, and it is consistent with the women. What it is not is a popularity story: Cena outsells Brock at retail every year and Brock outprices Cena on the sold screen every year.' },
+      { type: 'h2', text: 'Bucket three: the people who are not wrestlers' },
+      { type: 'p', text: 'Paul Heyman, Series 63, $40 across 29 sold with a $165 top. Ricardo Rodriguez, Series 34, $48 across 16. Hornswoggle, Series 19, $40 across 23. Mattel makes a manager or a ring announcer once, as a case filler nobody expects to sell, and then the fed-builders who need a Heyman for their Brock shelf discover there is exactly one. Eddie Guerrero belongs here for a different reason: $39.99 on both his Series 16 (2012) and Series 149 (2024) Basics across 50 sold each, the same number twelve years apart, because a figure of someone who is not coming back does not go on clearance.' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_63_paul-heyman_762d3d', label: 'Paul Heyman, Basic Series 63', sublabel: 'One manager, one series, one price' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_16_21-eddie-guerrer_5bb004', label: 'Eddie Guerrero, Basic Series 16', sublabel: 'Same $39.99 as the 2024 reissue' },
+      { type: 'callout', text: 'Oba Femi, Series 158, is the single highest median in the line right now: $90 across 14 sold, top $199.99. A 2025 NXT champion’s first figure, case-packed at one, and the sample is small enough that I would call it $70 to $100 rather than $90. Watch it: if his Elite lands in the next year, that number halves. If it does not, it is the Sol Ruca chart with a bigger ceiling.' },
+      { type: 'h2', text: 'Series 1 is not a grail. Stop paying like it is.' },
+      { type: 'p', text: 'The 2010 launch wave was Batista, Big Show, Evan Bourne, John Cena, Kofi Kingston, and Triple H. Every one of them has a 44-to-50 sale sample, and the medians run $11.99 (Triple H) to $24.41 (Big Show). Cena Series 1, the first Mattel Cena ever made: $15.99. Big Show carries a $482.98 top sale that is a lot or a mislabeled Elite, not a market. Series 2 and 3 tell the same story: Great Khali Series 3 is the “expensive” early figure at $29.99, and a 2010 CM Punk Basic is $18 across 49 sold.' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_1_big-show_5c56d7', label: 'Big Show, Basic Series 1 (2010)', sublabel: 'The launch wave, priced honestly' },
+      { type: 'p', text: 'Mattel shipped the launch series deep, the figures got played with, and there are thousands loose. “First Mattel” on a listing title is worth nothing on the sold screen. If you want a 2010 shelf, buy it loose for lunch money and put the savings toward a Melina.' },
+      { type: 'h2', text: 'What we cannot price yet' },
+      { type: 'p', text: 'The 37 retailer exclusives in the database, the Walmart and Target and Toys R Us Basics with the extra accessory or the alternate attire, have almost no clean comps. Sellers title them by the retailer, buyers search by the wrestler, and our matching does not yet split a Walmart-exclusive Cena from the forty other Cenas reliably enough to print a number. The one exclusive Brock with a sample shows $20.11 across two sales, which is not a data point, it is two receipts. When that matching ships, this page gets an exclusives section with real medians. Until then, treat any exclusive Basic quote as unverified, including ours. Same caveat on release years: 363 of the 991 records have no year attached yet, so the series number is the reliable handle, not the date.' },
+      { type: 'h2', text: 'How to buy this line without getting worked' },
+      { type: 'p', text: 'Buy men’s main-roster Basics loose, in lots, and never above $15 unless the sold history for that exact series says otherwise. Buy women’s figures and one-off managers on sight at retail, because the aftermarket on those is the only place in this line where the peg price is the floor rather than the ceiling. Ignore Series 1. And check the specific release, not the name: there are 43 Cenas and one of them is $34.95, there are two AJ Lees and both are north of $55, and the difference between a $15 Basic and a $50 Basic is never the wrestler’s push, it is how many times Mattel made them.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[WWE Elite collector guide|/guides/wwe-elite-hub]] — the articulated tier, where the same names price on different rules',
+        '[[WWE Elite vs Ultimate Edition|/guides/wwe-elite-vs-ultimate-edition]] — which tier to buy for what',
+        '[[Most valuable WWE Elite figures|/guides/most-valuable-wwe-elite-figures]] — the Elite money list',
+        '[[How to price wrestling figures|/guides/how-to-price-wrestling-figures]] — the method behind every number on this page',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2572,6 +2630,7 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Further reading' },
       { type: 'ul', items: [
         '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
+        '[[WWE Basic price guide|/guides/wwe-basic-price-guide]] -- the $15 line, and the 25 figures that are not',
         '[[Jakks Pacific collector guide|/guides/jakks-hub]] -- Classic Superstars & Ruthless Aggression',
       ]},
     ],
