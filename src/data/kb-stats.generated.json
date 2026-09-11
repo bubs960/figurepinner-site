@@ -1,10 +1,10 @@
 {
-  "totalFigures": 23477,
+  "totalFigures": 23468,
   "totalFiguresLabel": "23,000+",
   "totalFandoms": 30,
   "fandoms": {
     "wrestling": {
-      "count": 6508,
+      "count": 6522,
       "lines": {
         "deluxe-aggression": 145,
         "elite": 820,
@@ -24,8 +24,8 @@
         "remco-all-star": 9,
         "saurozoic-warriors": 2,
         "summerslam": 24,
-        "survivor-series": 22,
-        "titan-tron-live": 145,
+        "survivor-series": 34,
+        "titan-tron-live": 126,
         "ultimate-edition": 134,
         "ultimate-edition-coliseum": 16,
         "wrestlemania": 41,
@@ -37,7 +37,7 @@
         "deluxe-classic": 48,
         "classic-superstars": 398,
         "wwf-hasbro": 122,
-        "r3-tech": 75,
+        "r3-tech": 76,
         "wwe-retro": 86,
         "aew-unrivaled": 238,
         "aew-unmatched": 128,
@@ -73,7 +73,7 @@
         "ecw": 43,
         "wcw-osftm": 153,
         "back-alley-street-fight": 6,
-        "backlash": 30,
+        "backlash": 37,
         "gamestop-exclusive": 1,
         "havoc-unleashed": 6,
         "house-of-pain": 6,
@@ -107,7 +107,6 @@
         "basic-wrestlemania": 4,
         "elite-ringside-exclusive": 9,
         "elite-fan-central": 5,
-        "elite-survivor-series": 3,
         "elite-best-of-ra": 4,
         "basic-royal-rumble-heritage": 2,
         "basic-survivor-series-heritage": 2,
@@ -174,7 +173,9 @@
         "elite-walmart-exclusive": 1,
         "elite-decade-of-domination": 2,
         "elite-fan-takeover": 2,
-        "elite-nation-of-domination": 1
+        "elite-nation-of-domination": 1,
+        "ultimate-edition-monday-night-war": 15,
+        "double-slam": 1
       },
       "manufacturerLines": {
         "jakks-pacific-deluxe-aggression": {
@@ -250,11 +251,11 @@
           "productLine": "summerslam"
         },
         "mattel-survivor-series": {
-          "count": 22,
+          "count": 34,
           "productLine": "survivor-series"
         },
         "jakks-pacific-titan-tron-live": {
-          "count": 145,
+          "count": 126,
           "productLine": "titan-tron-live"
         },
         "mattel-ultimate-edition": {
@@ -302,7 +303,7 @@
           "productLine": "wwf-hasbro"
         },
         "jakks-pacific-r3-tech": {
-          "count": 75,
+          "count": 76,
           "productLine": "r3-tech"
         },
         "mattel-wwe-retro": {
@@ -446,7 +447,7 @@
           "productLine": "back-alley-street-fight"
         },
         "jakks-pacific-backlash": {
-          "count": 30,
+          "count": 37,
           "productLine": "backlash"
         },
         "jakks-pacific-gamestop-exclusive": {
@@ -584,10 +585,6 @@
         "mattel-elite-fan-central": {
           "count": 5,
           "productLine": "elite-fan-central"
-        },
-        "mattel-elite-survivor-series": {
-          "count": 3,
-          "productLine": "elite-survivor-series"
         },
         "mattel-elite-best-of-ra": {
           "count": 4,
@@ -864,6 +861,14 @@
         "mattel-elite-nation-of-domination": {
           "count": 1,
           "productLine": "elite-nation-of-domination"
+        },
+        "mattel-ultimate-edition-monday-night-war": {
+          "count": 15,
+          "productLine": "ultimate-edition-monday-night-war"
+        },
+        "jakks-pacific-double-slam": {
+          "count": 1,
+          "productLine": "double-slam"
         }
       }
     },
@@ -1244,9 +1249,9 @@
       }
     },
     "masters-of-the-universe": {
-      "count": 1317,
+      "count": 1294,
       "lines": {
-        "origins": 371,
+        "origins": 348,
         "original": 191,
         "eternia-minis": 84,
         "masterverse": 162,
@@ -1259,7 +1264,7 @@
       },
       "manufacturerLines": {
         "mattel-origins": {
-          "count": 371,
+          "count": 348,
           "productLine": "origins"
         },
         "mattel-original": {
