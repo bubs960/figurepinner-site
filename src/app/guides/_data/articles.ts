@@ -397,7 +397,8 @@ export const ARTICLES: Article[] = [
   {
     // 2026-09-11: guide-gap #2 (Steve: "go on Vintage Collection next"). Hasbro's
     // The Vintage Collection ONLY (KB product_line the-vintage-collection, 812
-    // fids) — the Kenner 1977–85 line sits under `vintage-collection` and is
+    // fids at write time; 678 after matcher's FIQ 85 sub-line dedupe the same
+    // evening — Bastila's comp fid swapped to the surviving twin _a7d8cd) — the Kenner 1977–85 line sits under `vintage-collection` and is
     // covered by the two vintage-kenner guides, whose comp-defect disclosure
     // still stands. Numbers from the 9/11 r2proxy price-summaries pull (404 of
     // 812 had comps) or the KB. No owner first-person datum at write time.
@@ -412,7 +413,7 @@ export const ARTICLES: Article[] = [
     shortVersion:
       'A carded TVC single is a $20 figure if it shipped after 2018 and a $33 figure if it shipped 2010–12; the real money is HasLab and deluxe vehicles, foil cards, and Expanded Universe deep cuts Hasbro made once. Check the exact VC release:',
     body: [
-      { type: 'p', text: 'The Vintage Collection has two lives. Hasbro launched it in April 2010 on the Kenner-homage cardback, killed it in 2012, and brought it back in spring 2018 with the same card and a photoreal face pipeline. FigurePinner tracks 812 TVC releases, 404 of them with real eBay sold comps, and those two lives price differently: carded singles from 2010–12 hold a $32.99 median with 29 percent of them at $40 or more, while singles from 2018 onward sit at $19.99 with 9 percent at $40 or more. Same scale, same card art, same collector base. The 1.0 run was shorter, shipped thinner, and ended before most of today’s buyers noticed it existed.' },
+      { type: 'p', text: 'The Vintage Collection has two lives. Hasbro launched it in April 2010 on the Kenner-homage cardback, killed it in 2012, and brought it back in spring 2018 with the same card and a photoreal face pipeline. FigurePinner tracks 678 TVC releases after a September 2026 catalog dedupe folded 134 duplicate entries into their twins, 404 of them with real eBay sold comps, and those two lives price differently: carded singles from 2010–12 hold a $32.99 median with 29 percent of them at $40 or more, while singles from 2018 onward sit at $19.99 with 9 percent at $40 or more. Same scale, same card art, same collector base. The 1.0 run was shorter, shipped thinner, and ended before most of today’s buyers noticed it existed.' },
       { type: 'p', text: 'Retail on a carded single is about $18 today, so the 2.0 median is the peg price with the shrink wrap off. That is the baseline. Everything below is the part of the line that does not behave like that.' },
       { type: 'h2', text: 'The boxes: HasLab and deluxe are a different market' },
       { type: 'ul', items: [
@@ -436,7 +437,7 @@ export const ARTICLES: Article[] = [
         'Brea Tonnika and Senni Tonnika (2025, the cantina sisters): $149.99 each, across 16 and 7 sold. Newest figures on this page, thinnest samples, and already the highest single-carded medians in the line. Read them as $120 to $150 until the samples fill in.',
         'Grand Moff Tarkin (2012): $100 across 17. Odd Ball (2012, the clone pilot): $97.57 across 34. Nom Anor (2012, New Jedi Order): $55 across 11.',
       ]},
-      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection_bastila-shan_b06bf2', label: 'Bastila Shan (2011)', sublabel: 'KOTOR, one figure, 50 sold' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_bastila-shan_a7d8cd', label: 'Bastila Shan (2011)', sublabel: 'KOTOR, one figure, 50 sold' },
       { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_antoc-merrick_1b8dd5', label: 'Antoc Merrick (2021)', sublabel: 'The 2.0 figure that prices like 1.0' },
       { type: 'callout', text: 'Jar Jar Binks (2012): $69.88 median across 46 sold, top $760. The most-mocked character in the franchise is a $70 figure because he shipped at the very end of 1.0, in the wave that barely reached shelves before Hasbro pulled the line. Case ratio beats character every time in this hobby, and Jar Jar is the proof nobody wants to cite.' },
       { type: 'h2', text: 'The pegwarmers: streaming-era characters' },
@@ -447,7 +448,7 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Reissues, and the one that beats its original' },
       { type: 'p', text: 'Hasbro reissues 1.0 figures on 2.0 cards, and usually the original wins: Boba Fett VC-09 (2011) is $29.88 across 50 while the 2019 Boba Fett reissue is $49.99 across 50. Read that again. The reissue is outpricing the original by $20, on identical sample sizes, and the honest explanation is that the 2019 card is the one current buyers recognize and the 2011 card had a longer shelf life. Luke Skywalker (Crait, 2019) at $46 is the top Luke in the line; the 2011 Death Star Escape Luke is $39.99, and the 2010 Jedi Knight Luke is $31. Do not assume older is worth more in TVC. Check the specific release.' },
       { type: 'h2', text: 'What we do not have' },
-      { type: 'p', text: 'Half the line. 404 of 812 TVC records carry a usable comp today, and the missing half skews toward 2.0 reissues and 2024–26 releases that have not built a sold history yet. Twenty records have no release year at all, the Tauntaun among them ($59.99 across 50, so the market knows what it is even if our catalog is missing the date). VC numbers are not in our catalog either; hardcores cite them from memory and we would rather add them right than add them fast. And the Kenner-era line that shares this name is a separate guide with a separate, disclosed comp problem; nothing on this page is about 1977.' },
+      { type: 'p', text: 'Two-fifths of the line. 404 of 678 TVC records carry a usable comp today, and the missing half skews toward 2.0 reissues and 2024–26 releases that have not built a sold history yet. Twenty records have no release year at all, the Tauntaun among them ($59.99 across 50, so the market knows what it is even if our catalog is missing the date). VC numbers are not in our catalog either; hardcores cite them from memory and we would rather add them right than add them fast. And the Kenner-era line that shares this name is a separate guide with a separate, disclosed comp problem; nothing on this page is about 1977.' },
       { type: 'h2', text: 'How to buy it' },
       { type: 'p', text: 'Buy 2.0 singles at retail and never above it unless the figure is an EU or Rogue One deep cut with a documented thin case. Buy 1.0 carded on the sold history for that VC release, not on the card style, because half of 1.0 is $33 and the other half is $110. Buy boxes at preorder. And buy streaming-era pegwarmers from clearance, in bulk, if you like the characters, because nobody else is going to pay you for them.' },
       { type: 'h2', text: 'Further reading' },
