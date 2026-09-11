@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllFandoms, getFiguresByFandom, prettyFigureUrl } from '@/data/kbLite'
 import { genreSlugForFandom as fandomToGenre, hubGenreForFandom } from '@/lib/genreFigures'
 import { ARTICLES } from '@/app/guides/_data/articles'
-import { isAtOrAboveIndexBar, characterHubMeetsIndexBar, lineHubMeetsIndexBar } from '@/data/indexValueCensus'
+import { isAtOrAboveIndexBar, characterHubMeetsIndexBar, lineHubMeetsIndexBar, googleIndexTier } from '@/data/indexValueCensus'
 import { lastContentDate } from '@/data/enrichmentDates'
 
 // Fandom slug (KB value) → genre slug (URL path segment used by the router).
@@ -274,7 +274,10 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
   const seenUrls = new Set<string>()
   const figurePages: MetadataRoute.Sitemap = []
   for (const f of figs) {
-    if (!isAtOrAboveIndexBar(f.figure_id)) continue
+    // Corpus-focus tier (2026-09-08): only T2 is submitted here. T1 pages
+    // (googlebot noindex) go to bingTailSitemap() below instead; T0 stays
+    // out everywhere. googleIndexTier() already folds in isAtOrAboveIndexBar.
+    if (googleIndexTier(f.figure_id) !== 2) continue
     const url = `${BASE}${prettyFigureUrl(f)}`
     if (!seenUrls.has(url)) {
       seenUrls.add(url)

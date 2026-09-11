@@ -24,7 +24,7 @@ import { enrichedDescription } from '@/app/figure/[figure_id]/_lib/enrichedCopy'
 import { derivePriceContract } from '@/app/figure/[figure_id]/_lib/priceContract'
 import { findFigureMatches } from './_lib/findFigureMatches'
 import { resolveLegacyPrettyPath } from './_lib/resolveLegacyPrettyPath'
-import { isAtOrAboveIndexBar } from '@/data/indexValueCensus'
+import { googleIndexRobots } from '@/data/indexValueCensus'
 import { isReservedPageSegment } from '../_lib/lineHubPaging'
 
 // ISR — this is the SEO-canonical indexed figure URL; user-specific bits load
@@ -116,7 +116,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Sitemap/robots lockstep fix (2026-08-23) — see figure/[figure_id]/page.tsx's
   // twin comment for the full rationale (fp-crawl finding, same fix shape as
   // the character-hub lockstep).
-  const belowIndexBar = !isAtOrAboveIndexBar(figure.figure_id)
+  const robotsMeta = googleIndexRobots(figure.figure_id, Boolean(figure.is_canary))
 
   const canonical = `${BASE}${canonicalPath}`
 
@@ -141,9 +141,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // is_canary belt+suspenders noindex (Data Defense Layer 3, 2026-08-07) —
     // redundant with the sitemap exclusion + findFigureMatches never resolving
     // a pretty URL for one, kept in case a canary is ever reached directly.
-    ...(belowIndexBar || figure.is_canary
-      ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
-      : {}),
+    // Corpus-focus tier (2026-09-08) — see figure/[figure_id]/page.tsx.
+    ...(robotsMeta ? { robots: robotsMeta } : {}),
     // No `images` here — the file-convention opengraph-image.tsx in this same
     // route segment supplies the real Grail Card, superseding the bare product
     // photo this used to point at.
