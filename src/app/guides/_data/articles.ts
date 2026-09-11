@@ -581,6 +581,62 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11: guide-gap #5 (Steve: "go on Clone Wars next"). KB product_line
+    // the-clone-wars (Hasbro 3.75", 2008-13), 270 fids, 242 with comps, 206 n>=5
+    // (9/11 r2proxy pull). Variant pooling present (6 Captain Rex records share one
+    // snapshot; 3 Obi-Wans; etc.) — only unique-record numbers are quoted. The KB
+    // key_features claim "blue/white = highly sought early release" is NOT borne
+    // out by comps (blue/white figure median $20, same as every era) and the
+    // article says so. No owner datum.
+    slug: 'star-wars-clone-wars-figures-price-guide',
+    title: 'Star Wars Clone Wars Figures Price Guide: The Cardback Myth and the Gunship Money',
+    metaTitle: 'Star Wars The Clone Wars (Hasbro 2008–13) Price Guide — Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Hasbro Clone Wars values from 242 figures and vehicles with real eBay sold data: Republic Gunship at $233, Separatist Droid Gunship at $450, named clones at $40–65, and why the 2008 blue-and-white card is worth nothing extra.',
+    dek: 'Five packaging eras, one figure price. The money in this line was never on the card. It was in the box the card came next to.',
+    readingMinutes: 6,
+    updated: '2026-09-11',
+    shortVersion:
+      'A carded Hasbro Clone Wars figure is a $20–27 figure in every packaging era; the premiums are named clones ($40–65) and vehicles ($60–450), with the retailer-exclusive gunships and ARC-170s at the top. Check the exact release:',
+    body: [
+      { type: 'p', text: 'Hasbro ran The Clone Wars as its own 3.75-inch line from the 2008 movie through 2013, on five packaging designs collectors use as era markers: blue-and-white (2008), red-and-white (2009–10), blue-and-black (2010–12), the Darth Maul card (2012), and the Yoda card (2013). FigurePinner tracks 270 releases, 242 of them with real eBay sold comps and 206 with five or more sales. That is the deepest comp coverage of any Star Wars line we publish, which is why this page can say something the packaging folklore does not want to hear.' },
+      { type: 'h2', text: 'The cardback myth' },
+      { type: 'p', text: 'Carded figures on the 2008 blue-and-white card hold a $20 median across 23 sampled releases. Red-and-white: $22 across 37. Blue-and-black: $21.99 across 48. Darth Maul card: $19.99 across 15. Yoda card: $22.99 across 8. That is one price, five cards. The first-wave premium that every listing title asserts does not exist on the sold screen: General Grievous, the top 2008 figure, is $29.99 across 50 sold, and 2008 Anakin Skywalker is $15 across 49. Our own catalog notes still describe the blue-and-white card as “highly sought,” and we are correcting that on the strength of this data, not defending it.' },
+      { type: 'p', text: 'The bottom of the figure market is the same in every era too. Yoda on the 2008 card: $10 across 49. R2-D2 on the red card: $10.99 across 45. Count Dooku: $14.99 across 48. Chewbacca on two different cards: $15 each. Hasbro shipped the main cast in every wave for five years, and the market prices them like it.' },
+      { type: 'h2', text: 'Named clones are the only figures that appreciate' },
+      { type: 'ul', items: [
+        'Seripas (blue-and-black): $64.99 median across 31 sold. The bounty hunter in the mech suit, one figure, one wave, and the top single-carded price in the line.',
+        'Clone Trooper Draa (blue-and-black): $54.99 across 37. Firefighter Droid (2009): $51.61 across 9.',
+        'Clone Trooper Jek (2009): $44.99 across 15. Stealth Ops Clone Trooper: $42.49 across 33, top $125. Clone Trooper Echo (2009): $40 across 50, top $149.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_seripas_0dbde7', label: 'Seripas (blue-and-black card)', sublabel: 'The top carded figure in the line, 31 sold' },
+      { type: 'p', text: 'Six carded figures clear $40 and five of them are clones with names. A named clone is an army-builder and a character at once: the collector building a 501st shelf needs one, the collector who watched the show needs Echo specifically, and Hasbro made each of them exactly once while it made Captain Rex six times. Rex, for the record, holds $27.49 across 50 sold on every card he appeared on, which is a decent figure price and the proof that reissue kills appreciation even for the most popular clone in the show.' },
+      { type: 'h2', text: 'The vehicles are the line' },
+      { type: 'ul', items: [
+        'Separatist Droid Gunship (blue-and-black): $449.99 median across 7 sold. Thin sample, no argument about the direction; nothing else in the line is within $200 of it.',
+        'Republic Gunship, Walmart exclusive (blue-and-white): $233.10 across 48 sold, top $944.99. The non-exclusive red-card Republic Gunship: $75 across 50. Same mold, three times the price, because the Walmart deco shipped once.',
+        'ARC-170 Fighter, Target exclusive: $189.95 across 24 on the blue-and-white card, $140 across 50 on the red. Naboo Starfighter (Darth Maul packaging): $249.99 across 10.',
+        'AT-TE: $100.99 across 50 for the Costco version, $99 across 50 for the standard. Jedi Turbo Speeder: $149.99 across 12. Ahsoka Tano’s Jedi Starfighter (2009): $99.99 across 36. V-Wing with pilot: $100 across 30.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_vehicles-blue-white-pack_republic-gunship_932b99', label: 'Republic Gunship, Walmart exclusive (2008 card)', sublabel: '48 sold, three times the red-card version' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_vehicles-blue-black-pack_separatist-droid-gunship_3f10f9', label: 'Separatist Droid Gunship', sublabel: 'The ceiling of the line, 7 sold' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_vehicles-blue-white-pack_at-te_23e63c', label: 'AT-TE (2008 card)', sublabel: 'The big box everyone kept, 50 sold' },
+      { type: 'p', text: 'Vehicles hold a $52 to $85 median by era against $20 to $23 for figures, and the era does matter here, in the direction the folklore predicts: blue-and-white vehicles run $85 median across 15 sampled, red-and-white $52.50 across 22, blue-and-black $63.35 across 15. Boxes got thrown away and cards did not, so the early boxes are scarce and the early cards are not. The mid-tier is deep and honest: Vulture Droid $65 to $70 on two cards, Republic Fighter Tank $65 to $78 on three, MagnaGuard Fighter $75 to $86, AAT $69.99 across 50, V-19 Torrent $63.35 across 50.' },
+      { type: 'callout', text: 'The exclusive rule holds at every size in this line. Walmart’s Republic Gunship at $233 versus the open-retail one at $75. Target’s ARC-170 at $190 and $140 on two cards. Walmart’s AT-RT with ARF Trooper at $59.95 across 30, when a plain ARF Trooper is $22. But the Walmart-exclusive 501st Clone Trooper single figure is $20 across 50, the same as every other clone, because Hasbro shipped it deep. Exclusive means nothing by itself; exclusive-and-shallow is the whole game.' },
+      { type: 'h2', text: 'What we hold back' },
+      { type: 'p', text: 'Our comp matching pools some same-character variants into one bucket on this line: six Captain Rex records (standard, Cold Assault, Cold Weather, Jet Pack, across three cards) return an identical $27.49 across 50, three Obi-Wan variants return an identical $18.97, and the 41st Elite Corps and Space Gear Clone Troopers share one number. The pooled figures are real market signals for the character; they are not per-variant prices, and we have not quoted them as such. Twenty-eight of 270 records have no comp yet, and 205 have no release year attached, which is why this page leans on the packaging era instead of the calendar. Both are queued with our pipeline owner.' },
+      { type: 'h2', text: 'How to buy Clone Wars figures in 2026' },
+      { type: 'p', text: 'Ignore the card colour when you are buying figures and pay attention to it when you are buying vehicles. Pay $20 to $27 for any main-cast figure on any card, and walk away from a “rare 2008 first wave” listing priced like a grail, because the market has had seventeen years to agree with that title and has not. Pay for named clones, once each. And if you see a boxed Walmart Republic Gunship or a Target ARC-170 at a garage sale, do not haggle.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — the 3.75-inch line that absorbed the Clone Wars characters after 2013',
+        '[[Micro Galaxy Squadron price guide|/guides/micro-galaxy-squadron-price-guide]] — where the clone vehicles live now',
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the six-inch line',
+        '[[Most valuable Star Wars action figures|/guides/most-valuable-star-wars-action-figures]] — across every line',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2768,6 +2824,7 @@ export const ARTICLES: Article[] = [
         '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — TVC 1.0 vs 2.0 cards, HasLab boxes, and the pegwarmers, from real sold data',
         '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the sixth-scale tier: Tarkin at $795, troopers and sets, heroes at retail',
         '[[Micro Galaxy Squadron price guide|/guides/micro-galaxy-squadron-price-guide]] — Jazwares’ class ladder, chases, and the comps we can defend so far',
+        '[[Star Wars Clone Wars figures price guide|/guides/star-wars-clone-wars-figures-price-guide]] — Hasbro 2008–13: the cardback myth, named clones, and the gunship money',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
