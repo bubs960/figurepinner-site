@@ -460,6 +460,68 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11: guide-gap #3 (Steve: "go on Hot Toys Star Wars next"). KB
+    // product_line hot-toys, 358 fids; 305 with comps from the 9/11 r2proxy
+    // pull. Two data defects disclosed in the article and relayed to matcher:
+    // (1) variant pooling — same-character variants share one comp bucket
+    // (all three Jyn Ersos = $586.99/45); (2) Hasbro leakage — a few buckets
+    // return sub-$100 medians that cannot be Hot Toys. Only unique-record
+    // numbers are quoted. No owner first-person datum at write time.
+    slug: 'hot-toys-star-wars-price-guide',
+    title: 'Hot Toys Star Wars Price Guide: Where the $300 Figures Become $800',
+    metaTitle: 'Hot Toys Star Wars Price Guide — Real Sold Prices (1/6 Scale) | FigurePinner',
+    metaDescription:
+      'Hot Toys Star Wars values from 305 sixth-scale figures with real eBay sold data: Tarkin at $795, Crosshair at $750, the BARC Speeder sets near $700, Vader and Luke holding retail, and which buckets we refuse to quote.',
+    dek: 'Most Hot Toys Star Wars figures sell for what they cost. The ones that do not are troopers, sets, and the one villain nobody expected.',
+    readingMinutes: 7,
+    updated: '2026-09-11',
+    shortVersion:
+      'A standard Hot Toys Star Wars figure resells at roughly retail, $300 give or take; the appreciation is in one-run troopers, figure-plus-vehicle sets, and Tarkin. Check the exact MMS release before paying a premium:',
+    body: [
+      { type: 'p', text: 'Hot Toys is the sixth-scale luxury tier: Hong Kong-made, MMS-numbered, sold on payment plans, delivered two years after the preorder. FigurePinner tracks 358 Hot Toys Star Wars releases and 305 of them carry real eBay sold comps. The line median is $298.99, and 152 of the 275 figures with a real sample sit between $250 and $400, which is the retail band. Read that as the headline: a Hot Toys figure is not an appreciating asset by default. It is a $300 object that resells for $300, minus shipping and the eBay cut, plus whatever the proto-versus-production gap did to the head sculpt.' },
+      { type: 'p', text: 'Thirty-two figures clear $400 and eleven clear $600. That is the part worth reading about, and it is almost entirely troopers, sets, and one Grand Moff.' },
+      { type: 'h2', text: 'Tarkin is the grail, and it is not close' },
+      { type: 'p', text: 'Grand Moff Tarkin (2017): $795 median across 41 sold, top sale $1,382. The Tarkin and Darth Vader two-pack from the same year: $850 across 31. Nothing else single-carded in the line is within $200 of him. Peter Cushing’s likeness is the one Hot Toys nailed on the first try, the figure was a one-run release that did not get a special edition, and the buyer pool is the Rogue One and A New Hope crowd who will pay for the one Imperial officer that matters. No reissue, no Deluxe, no Artisan Edition. Just the run.' },
+      { type: 'comp', fid: 'fp_star-wars_hot-toys_hot-toys_action-figures_grand-moff-tarkin_ce42bf', label: 'Grand Moff Tarkin (2017)', sublabel: 'The single-figure ceiling of the line, 41 sold' },
+      { type: 'h2', text: 'Troopers and clones: the army-builder tax at sixth scale' },
+      { type: 'ul', items: [
+        'Crosshair (2022, The Bad Batch): $749.99 median across 32 sold, top $1,750. The rarest Bad Batch member at retail and the one the animation fans wanted most.',
+        'Death Star Gunner (2017): $699.99 across 19. A helmet, a chest box, and no face to get wrong; the figure everyone skipped at preorder and now cannot find.',
+        'Jedha Patrol Stormtrooper TK-14057 (2016): $577.86 across 28, top $1,508.99.',
+        'Umbra Operative ARC Trooper (2024): $540.99 across 39. 501st Legion Clone Trooper (2022): $495 across 32.',
+        'General Grievous Special Edition (2025): $563.89 across 47, top $1,599.90. Four arms, four sabers, and a current-release figure already trading at nearly double.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hot-toys_hot-toys_action-figures_crosshair_e6422a', label: 'Crosshair (2022)', sublabel: 'Bad Batch, one run, 32 sold' },
+      { type: 'p', text: 'The pattern is the same one that runs every army-builder line from Classified to Black Series, scaled up by a factor of thirty: troopers ship at the same edition size as the heroes, the army-builders buy three, and the second wave of buyers finds nothing. At $300 retail there is no “buy five and open them” collector to absorb supply, so a sold-out trooper does not come back down. Named heroes get reissued; a Jedha Patrol Stormtrooper does not.' },
+      { type: 'h2', text: 'Sets and vehicles: the number is the box' },
+      { type: 'ul', items: [
+        'Heavy Weapons Clone Trooper and BARC Speeder with Sidecar (2022): $727.99 across 15. Commander Appo with BARC Speeder (2022): $699.99 across 36. ARF Trooper and 501st AT-RT (2022): $699.95 across 19. The 501st AT-RT on its own: $601.05 across 29.',
+        'Dewback (2023): $649.99 across 28, top $1,699. The biggest box Hot Toys has shipped in this line, and it prices like it.',
+        'Chewbacca with Disassembled C-3PO (2025): $615 across 36. Han Solo and Chewbacca set (2016): $525.99 across 47, with a $4,100 top sale that is a lot, not a comp.',
+        'Princess Leia (Endor) and Wicket set (2019): $467.99 across 50. Kuiil and Blurrg (2021): $449.99 across 35. Scout Trooper and Speeder Bike ROTJ (2021): $422.39 across 50.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hot-toys_hot-toys_action-figures_commander-appo-with-barc-speeder_f45ead', label: 'Commander Appo with BARC Speeder (2022)', sublabel: 'Vehicle sets hold the retail premium and add to it' },
+      { type: 'comp', fid: 'fp_star-wars_hot-toys_hot-toys_action-figures_dewback_2566d8', label: 'Dewback (2023)', sublabel: 'The biggest box in the line, 28 sold' },
+      { type: 'p', text: 'Every one of these shipped at a higher retail than a standard figure, and every one holds or beats it. The vehicle is a second edition-size constraint on top of the figure’s: Hot Toys builds a BARC Speeder run once, and the clone riding it is never sold alone.' },
+      { type: 'h2', text: 'The heroes hold retail. All of them.' },
+      { type: 'p', text: 'Darth Vader has 16 Hot Toys releases in our database with comps and the best of them, the 2025 Battle Damaged, is $350 across 47 sold. Luke Skywalker, 15 releases, tops out at $309.60. Obi-Wan Mythos (2017): $310 across 50. Boba Fett ESB (2018): $299.99 across 50. The Mandalorian and Blurrg (2021) is the top Mando at $379.95 across 50, and that is the Blurrg talking. Ahsoka, all three versions, $225. Darth Maul Solo and Concept Art: $298.99 across 46 each.' },
+      { type: 'p', text: 'Hot Toys reissues its heroes constantly: Special Edition, Deluxe, Artisan Edition, a new film appearance every eighteen months. A Vader collector always has a Vader available at retail, so the aftermarket on any single Vader never leaves the retail band. Buy the hero you want at the best preorder price you can find and stop thinking about resale. The resale is retail, at best, three years later, if the rubber on the suit held up.' },
+      { type: 'comp', fid: 'fp_star-wars_hot-toys_hot-toys_action-figures_padme-amidala_29cf52', label: 'Padmé Amidala AOTC (2023)', sublabel: 'The hero exception: $520 across 45' },
+      { type: 'callout', text: 'Padmé Amidala AOTC (2023) is the hero that broke the rule: $520 median across 45 sold. Two reasons that both hold up: she got one figure in the line’s modern era against sixteen Vaders, and the Natalie Portman likeness landed, which in this hobby is the whole product. Shin Hati from Ahsoka (2024) at $396.99 across 50 is the same story on a smaller scale. A female character Hot Toys makes once, with a good sculpt, prices like a trooper.' },
+      { type: 'h2', text: 'What we will not quote, and why' },
+      { type: 'p', text: 'Two defects in our own data, disclosed before someone finds them. First, our comp matching currently pools variants of the same character into one bucket for several Hot Toys entries: all three Jyn Erso releases (standard, Deluxe, Imperial Disguise) return an identical $586.99 across 45 sold, five different deluxe Vaders return an identical $335.80, and the Dewback and Dewback Deluxe read the same. Those figures are real and the pooled number is a real market signal for the character, but it is not a per-release price, so this page does not quote the Jyns or the deluxe Vaders as if it were. Second, a handful of buckets return medians that cannot be a Hot Toys figure: a $24.50 Stormtrooper Set, a $26.99 Boushh Leia, a $50 Wicket. Those are Hasbro listings leaking into a sixth-scale query, and we treat anything under $100 in this line as contamination, not a bargain. Both fixes are queued with our pipeline owner. Until they land, the rule is: trust a number on this page only where the release is unique in the line, which is every figure named above.' },
+      { type: 'h2', text: 'Buying Hot Toys Star Wars without regret' },
+      { type: 'p', text: 'Preorder troopers and sets if you want them at all, because they are the only category that goes up and the only category that does not come back. Buy heroes at retail from whoever is discounting, never at a premium, because a new edition is always coming. Treat any listing under $150 as a Hasbro figure with the wrong title until proven otherwise. And when someone tells you their Vader is an investment, ask which of the sixteen.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the six-inch line, same characters, one-tenth the price',
+        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — the 3.75-inch cardback line',
+        '[[Vintage Collection vs Black Series|/guides/swvc-vs-black-series]] — which Hasbro scale is yours',
+        '[[Sealed vs loose action figures|/guides/sealed-vs-loose-action-figures]] — the condition ladder, which at $300 a figure is the whole conversation',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2645,6 +2707,7 @@ export const ARTICLES: Article[] = [
         '[[Marvel Legends: Where to Begin|/guides/marvel-legends-where-to-begin]] — entry point for new collectors choosing a first wave',
         '[[Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For|/guides/hope-summers-marvel-legends-figure-guide]] — Terrax wave deep-dive',
         '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — TVC 1.0 vs 2.0 cards, HasLab boxes, and the pegwarmers, from real sold data',
+        '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the sixth-scale tier: Tarkin at $795, troopers and sets, heroes at retail',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
