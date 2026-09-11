@@ -395,6 +395,71 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11: guide-gap #2 (Steve: "go on Vintage Collection next"). Hasbro's
+    // The Vintage Collection ONLY (KB product_line the-vintage-collection, 812
+    // fids) — the Kenner 1977–85 line sits under `vintage-collection` and is
+    // covered by the two vintage-kenner guides, whose comp-defect disclosure
+    // still stands. Numbers from the 9/11 r2proxy price-summaries pull (404 of
+    // 812 had comps) or the KB. No owner first-person datum at write time.
+    slug: 'star-wars-vintage-collection-price-guide',
+    title: 'Star Wars Vintage Collection Price Guide: 1.0 Cards, HasLab Boxes, and the $10 Ahsokas',
+    metaTitle: 'Star Wars Vintage Collection (TVC) Price Guide — Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Hasbro TVC values from 404 figures with real eBay sold data: the Sail Barge at $2,150, Bastila Shan at $125, Cody Foil at $110, why 2010–12 cards trade at $33 and 2018-on at $20, and which figures peg-warm.',
+    dek: 'Two runs, one cardback. The 2010 cards are worth a third more than the 2018 ones, and the reason is not the figures.',
+    readingMinutes: 7,
+    updated: '2026-09-11',
+    shortVersion:
+      'A carded TVC single is a $20 figure if it shipped after 2018 and a $33 figure if it shipped 2010–12; the real money is HasLab and deluxe vehicles, foil cards, and Expanded Universe deep cuts Hasbro made once. Check the exact VC release:',
+    body: [
+      { type: 'p', text: 'The Vintage Collection has two lives. Hasbro launched it in April 2010 on the Kenner-homage cardback, killed it in 2012, and brought it back in spring 2018 with the same card and a photoreal face pipeline. FigurePinner tracks 812 TVC releases, 404 of them with real eBay sold comps, and those two lives price differently: carded singles from 2010–12 hold a $32.99 median with 29 percent of them at $40 or more, while singles from 2018 onward sit at $19.99 with 9 percent at $40 or more. Same scale, same card art, same collector base. The 1.0 run was shorter, shipped thinner, and ended before most of today’s buyers noticed it existed.' },
+      { type: 'p', text: 'Retail on a carded single is about $18 today, so the 2.0 median is the peg price with the shrink wrap off. That is the baseline. Everything below is the part of the line that does not behave like that.' },
+      { type: 'h2', text: 'The boxes: HasLab and deluxe are a different market' },
+      { type: 'ul', items: [
+        'Jabba’s Sail Barge (The Khetanna), the 2019 HasLab: $2,150 median across 39 sold. Built to backer count and never rerun; the $10,000 top sale in our data is a lot or a typo, not a comp.',
+        'Mos Eisley Cantina Deluxe (2025): $600 across a full 50-sale sample, top $1,189.99. A current release already trading at multiples, because the run sold through before the second wave of buyers arrived.',
+        'The Ghost (2024): $499.99 across 50 sold. Our database currently carries it twice under two ids with identical numbers, which is a duplicate we have flagged, not two products.',
+        'Republic Gunship (2013): $465 across 12, the last big box of the 1.0 era and one of the thinnest samples on this page.',
+        'Boba Fett’s Throne Room (2023): $269.99 across 41. B-wing (2011): $157.50 across 22.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-vehicles-and-creatures_jabba-sail-barge_38bd9a', label: 'Jabba’s Sail Barge (HasLab, 2019)', sublabel: 'Closed supply, forever' },
+      { type: 'p', text: 'Vehicles and creatures as a category carry a $55.50 median across 28 sampled releases, against $22 for carded singles. Hasbro prices the boxes high, ships them shallow, and does not reissue them, and post-tariff the new ones (N-1 Starfighter at $95 across 50, the 2026 Imperial Remnant AT-RT at $64.84) are starting above where the old ones settled. If you want a TVC vehicle, the sold screen says buy it at preorder or pay the box tax later.' },
+      { type: 'h2', text: 'Foil cards and the 2010 launch' },
+      { type: 'p', text: 'The 2010 launch wave shipped a foil-card variant of several figures, and the foil is the whole price. Clone Commander Cody Foil: $110 across 50 sold, top $550. The same Cody on the standard card: $50 across 15. Boba Fett (ESB) Foil: $65.99 across 50, top $399.99. Darth Vader (Anakin Skywalker) Foil and the standard Vader both sit at $50 across 50, so the foil premium is not universal; it tracks the character’s army-builder and prequel-fan demand more than the card itself. General Grievous (2010): $109.99 across 50, top $850, no foil needed.' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_clone-commander-cody_60ceab', label: 'Clone Commander Cody (Foil, 2010)', sublabel: 'Foil card: $110. Standard card: $50.' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c', label: 'Boba Fett (ESB) Foil, 2010', sublabel: 'The launch-wave Fett, 50 sold' },
+      { type: 'h2', text: 'The Expanded Universe rule: made once, never again' },
+      { type: 'p', text: 'The single most expensive carded figures in the line are not Luke or Vader. They are characters Hasbro made one time for a niche and then abandoned when the niche got de-canonized or the run ended.' },
+      { type: 'ul', items: [
+        'Bastila Shan (2011, Knights of the Old Republic): $124.95 median across 50 sold, top $475. The only Bastila in 3.75 inches, from a game whose fans have been waiting on a remake since 2021.',
+        'Antoc Merrick (2021, Rogue One’s Blue Leader): $129.99 across 35 sold. A 2.0-era figure that prices like 1.0, because he shipped one per case in a wave nobody stocked deep.',
+        'Brea Tonnika and Senni Tonnika (2025, the cantina sisters): $149.99 each, across 16 and 7 sold. Newest figures on this page, thinnest samples, and already the highest single-carded medians in the line. Read them as $120 to $150 until the samples fill in.',
+        'Grand Moff Tarkin (2012): $100 across 17. Odd Ball (2012, the clone pilot): $97.57 across 34. Nom Anor (2012, New Jedi Order): $55 across 11.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection_bastila-shan_b06bf2', label: 'Bastila Shan (2011)', sublabel: 'KOTOR, one figure, 50 sold' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_antoc-merrick_1b8dd5', label: 'Antoc Merrick (2021)', sublabel: 'The 2.0 figure that prices like 1.0' },
+      { type: 'callout', text: 'Jar Jar Binks (2012): $69.88 median across 46 sold, top $760. The most-mocked character in the franchise is a $70 figure because he shipped at the very end of 1.0, in the wave that barely reached shelves before Hasbro pulled the line. Case ratio beats character every time in this hobby, and Jar Jar is the proof nobody wants to cite.' },
+      { type: 'h2', text: 'The pegwarmers: streaming-era characters' },
+      { type: 'p', text: 'The bottom of the sold screen is as consistent as the top. Greef Karga (2021): $8.35 across 22. Ree-Yees reissue (2023): $8.54 across 43. Reva (2022): $9.95. Ahsoka Tano in her Corvus, Mandalore, and Peridea outfits: $9.99, $10.23, and $12, each across 37 to 50 sold. Jyn Erso (2018): $11.40 across 50. Bo-Katan (Plazir-15): $11.98 across 50. Every one of these is a Disney-era streaming character Hasbro shipped deep into a wave, and every one trades under half of retail loose or carded. The line’s buyers are original-trilogy and prequel people; the case assortments are not built for them, and the clearance aisle is where that argument gets settled.' },
+      { type: 'p', text: 'The flip side is that the Ahsoka collector has never had it better. Three carded TVC Ahsokas for $32 combined is a real shelf. Buy them from the people who are selling them at a loss.' },
+      { type: 'h2', text: 'Exclusives and multipacks, priced honestly' },
+      { type: 'p', text: 'TVC exclusives mostly trade near their (higher) retail. Pulse’s Heir to the Empire 3-pack (2025) is the exception at $89.99 across 21; the fan-channel Skiff Guards 3-pack (2019) holds $59.99 across 50; the Stormtroopers of the Empire 3-pack sits at $63.50 across 43. The trooper 4-packs (X-Wing Pilots $36, Shoretroopers $35, Phase II Clones $38, each across 13 to 50 sold) trade at or under what Pulse charged. Army builders buy them to open, and an opened 4-pack is four $9 troopers. The exclusive tag in this line means “sold through,” not “appreciated.”' },
+      { type: 'h2', text: 'Reissues, and the one that beats its original' },
+      { type: 'p', text: 'Hasbro reissues 1.0 figures on 2.0 cards, and usually the original wins: Boba Fett VC-09 (2011) is $29.88 across 50 while the 2019 Boba Fett reissue is $49.99 across 50. Read that again. The reissue is outpricing the original by $20, on identical sample sizes, and the honest explanation is that the 2019 card is the one current buyers recognize and the 2011 card had a longer shelf life. Luke Skywalker (Crait, 2019) at $46 is the top Luke in the line; the 2011 Death Star Escape Luke is $39.99, and the 2010 Jedi Knight Luke is $31. Do not assume older is worth more in TVC. Check the specific release.' },
+      { type: 'h2', text: 'What we do not have' },
+      { type: 'p', text: 'Half the line. 404 of 812 TVC records carry a usable comp today, and the missing half skews toward 2.0 reissues and 2024–26 releases that have not built a sold history yet. Twenty records have no release year at all, the Tauntaun among them ($59.99 across 50, so the market knows what it is even if our catalog is missing the date). VC numbers are not in our catalog either; hardcores cite them from memory and we would rather add them right than add them fast. And the Kenner-era line that shares this name is a separate guide with a separate, disclosed comp problem; nothing on this page is about 1977.' },
+      { type: 'h2', text: 'How to buy it' },
+      { type: 'p', text: 'Buy 2.0 singles at retail and never above it unless the figure is an EU or Rogue One deep cut with a documented thin case. Buy 1.0 carded on the sold history for that VC release, not on the card style, because half of 1.0 is $33 and the other half is $110. Buy boxes at preorder. And buy streaming-era pegwarmers from clearance, in bulk, if you like the characters, because nobody else is going to pay you for them.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Vintage Collection vs Black Series|/guides/swvc-vs-black-series]] — which scale is yours',
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the 6-inch line on the same rules',
+        '[[Most valuable vintage Kenner Star Wars figures|/guides/most-valuable-vintage-star-wars-kenner]] — the 1977–85 line this one is named after',
+        '[[Most valuable Star Wars action figures|/guides/most-valuable-star-wars-action-figures]] — across every line',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2579,6 +2644,7 @@ export const ARTICLES: Article[] = [
         '[[Marvel Legends Price Guide 2026: What Every Wave Is Actually Worth|/guides/marvel-legends-price-guide-2026]] — wave-by-wave breakdown with specific comp data',
         '[[Marvel Legends: Where to Begin|/guides/marvel-legends-where-to-begin]] — entry point for new collectors choosing a first wave',
         '[[Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For|/guides/hope-summers-marvel-legends-figure-guide]] — Terrax wave deep-dive',
+        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — TVC 1.0 vs 2.0 cards, HasLab boxes, and the pegwarmers, from real sold data',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
