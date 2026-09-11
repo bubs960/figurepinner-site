@@ -38,7 +38,7 @@
  * stays priority-mode).
  */
 
-import { readFileSync, existsSync, appendFileSync } from 'node:fs'
+import { readFileSync, existsSync, appendFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 
 const KEY = '6d21e3af4a7a44f9a1a0c0fba6518a49'
@@ -58,6 +58,29 @@ function argValue(flag) {
 const DRY_RUN = args.includes('--dry-run') // source + count URLs, submit nothing
 const FANDOM = argValue('--fandom')
 const URLS_FILE = argValue('--urls-file')
+
+// ── --delta mode (2026-09-11, Steve ruling via standalone: IndexNow REINSTATED
+// at reduced volume — INDEXING-CANONICAL.md AMENDMENT 2026-09-11) ────────────
+// The deploy-chain step. Terms, verbatim from the ruling, all enforced here:
+//   * cap <= DELTA_DAILY_CAP URLs per UTC day, hard-coded, counted in a ledger
+//     line per run (R13: assert what was SENT, not that the step ran);
+//   * changed/new URLs only — fids whose enrichment date is newer than the
+//     last ledger cursor (first run: the last 24h), mapped to pretty paths and
+//     intersected with the LOCAL child sitemaps so only above-bar, sitemap-
+//     emitted URLs go out; never a sitemap re-submit, never the priority pad;
+//   * overflow beyond the cap is carried to the next night in a carry file and
+//     the carried count is logged;
+//   * serving gate before submit (healthz sha == fp-build meta on a sample);
+//   * one retry on a non-2xx, then log and continue — never aborts the deploy.
+// "100 most-linked" in the ruling is approximated as newest-enrichment-first
+// (web may tighten, not loosen — this sends fewer, not more).
+const DELTA = args.includes('--delta')
+const DELTA_DAILY_CAP = 100
+const DELTA_LEDGER = '.indexnow-ledger.jsonl' // repo root, gitignored, machine-local
+const DELTA_CARRY = '.indexnow-carry.txt' // overflow URLs, one per line, consumed next run
+const SLIM_KB = 'src/data/figures-reference-v2.slim.js'
+const PRETTY_MAP = 'src/data/figureIdToPrettyPath.generated.json'
+const LOCAL_CHILD_SITEMAP_DIR = '.next/server/app/sitemap'
 if (FANDOM && !/^[a-z0-9-]+$/.test(FANDOM)) {
   console.error('[IndexNow] --fandom must be a bare fandom slug (e.g. star-wars), got: ' + FANDOM)
   process.exit(1)
@@ -243,7 +266,9 @@ async function getSitemapUrls() {
 // one; falls back to a short fixed backoff otherwise. Still fully non-fatal —
 // callers already treat every outcome as a warning, never a thrown error, so
 // this can't break the deploy chain regardless of how IndexNow responds.
-const RETRY_DELAYS_MS = [3000, 8000] // 2 retries after the first attempt = 3 tries total
+// 2026-09-11 reinstatement terms: ONE retry after the first attempt, on any
+// non-2xx (was 2 retries, 429-only). Tightened, not loosened.
+const RETRY_DELAYS_MS = [5000] // 1 retry after the first attempt = 2 tries total
 
 function retryDelayMs(res, attempt) {
   const header = res?.headers?.get?.('retry-after')
@@ -271,18 +296,18 @@ async function submitBatch(urlList, idx, total) {
     } catch (err) {
       console.warn('[IndexNow] batch ' + idx + '/' + total + ' network error (non-fatal): ' + err.message)
       logFailure({ batch: idx, of: total, urlCount: urlList.length, status: 'network-error', note: err.message, urls: urlList })
-      return
+      return 'network-error'
     }
 
     if (res.ok || res.status === 202) {
       const retriedNote = attempt > 0 ? ' (after ' + attempt + ' retry/retries)' : ''
       console.log('[IndexNow] batch ' + idx + '/' + total + ' accepted (' + res.status + ')' + retriedNote + ' - ' + urlList.length + ' URLs')
-      return
+      return String(res.status)
     }
 
-    if (res.status === 429 && attempt < maxAttempts - 1) {
+    if (attempt < maxAttempts - 1) {
       const delay = retryDelayMs(res, attempt)
-      console.warn('[IndexNow] batch ' + idx + '/' + total + ' got 429, retrying in ' + Math.round(delay / 1000) + 's (attempt ' + (attempt + 2) + '/' + maxAttempts + ')')
+      console.warn('[IndexNow] batch ' + idx + '/' + total + ' got ' + res.status + ', retrying in ' + Math.round(delay / 1000) + 's (attempt ' + (attempt + 2) + '/' + maxAttempts + ')')
       await sleep(delay)
       continue
     }
@@ -290,11 +315,244 @@ async function submitBatch(urlList, idx, total) {
     const text = await res.text()
     console.warn('[IndexNow] batch ' + idx + '/' + total + ' response ' + res.status + ' (non-fatal, giving up after ' + (attempt + 1) + ' attempt(s)): ' + text.slice(0, 200))
     logFailure({ batch: idx, of: total, urlCount: urlList.length, status: res.status, note: text.slice(0, 120), urls: urlList })
-    return
+    return String(res.status)
+  }
+  return 'exhausted'
+}
+
+// ── --delta mode helpers (2026-09-11 reinstatement) ──────────────────────────
+function readJsonOrNull(path) {
+  try {
+    return JSON.parse(readFileSync(path, 'utf8'))
+  } catch (err) {
+    console.error('[IndexNow] delta: could not read ' + path + ': ' + err.message)
+    return null
   }
 }
 
+function utcDay(ts) {
+  return (ts ? new Date(ts) : new Date()).toISOString().slice(0, 10)
+}
+
+/** Ledger lines for this UTC day + the newest cursor (last enrichment date submitted). */
+function readLedger() {
+  const today = utcDay()
+  let sentToday = 0
+  let cursor = null
+  if (existsSync(DELTA_LEDGER)) {
+    for (const line of readFileSync(DELTA_LEDGER, 'utf8').split(/\r?\n/)) {
+      if (!line.trim()) continue
+      let rec
+      try {
+        rec = JSON.parse(line)
+      } catch {
+        continue
+      }
+      if (rec.day === today) sentToday += Number(rec.sent) || 0
+      if (rec.cursor) cursor = rec.cursor // lines are chronological; last accepted run wins
+    }
+  }
+  return { today, sentToday, cursor }
+}
+
+function writeLedger(record) {
+  try {
+    appendFileSync(DELTA_LEDGER, JSON.stringify({ ts: new Date().toISOString(), ...record }) + '\n')
+  } catch (err) {
+    console.warn('[IndexNow] could not write ledger (non-fatal): ' + err.message)
+  }
+}
+
+/** Every <loc> across the LOCAL child sitemaps of this build = the above-bar URL set. */
+function localSitemapUrlSet() {
+  const set = new Set()
+  let files = []
+  try {
+    files = readdirSync(LOCAL_CHILD_SITEMAP_DIR).filter((f) => f.endsWith('.xml.body'))
+  } catch (err) {
+    console.error('[IndexNow] delta: no local child sitemaps at ' + LOCAL_CHILD_SITEMAP_DIR + ' (' + err.message + ') — run after a build')
+    return null
+  }
+  for (const f of files) {
+    try {
+      for (const u of extractLocs(readFileSync(LOCAL_CHILD_SITEMAP_DIR + '/' + f, 'utf8'))) set.add(u)
+    } catch (err) {
+      console.warn('[IndexNow] delta: could not read ' + f + ': ' + err.message)
+    }
+  }
+  if (set.size === 0) {
+    console.error('[IndexNow] delta: local child sitemaps contained zero <loc> entries')
+    return null
+  }
+  return set
+}
+
+function gitText(args, maxBuffer = 1 << 28) {
+  return execFileSync('git', args, { encoding: 'utf8', maxBuffer, windowsHide: true })
+}
+
+/** Parse the `const FIGURES_V2 = [...]` array out of a KB JS module body. */
+function parseKbArray(txt) {
+  const i = txt.indexOf('[')
+  const j = txt.lastIndexOf(']')
+  return JSON.parse(txt.slice(i, j + 1))
+}
+
+/**
+ * Changed/new fids for tonight = every non-phantom record in the slim KB whose
+ * JSON differs between the cursor commit (last accepted run's HEAD; first run:
+ * the newest commit older than 24h) and the working copy. This is the actual
+ * "pages touched by this deploy or KB pour" set the ruling asks for — the
+ * enrichment-dates and enriched-copy artifacts are NOT per-fid change records
+ * (checked 2026-09-11: 0 hits on a day with 1,193 changed fids). Added fids
+ * first, then changed, each mapped to its pretty path and kept only if the
+ * LOCAL sitemap emits it. Returns null on any sourcing failure.
+ */
+function getDeltaUrls(cursorSha) {
+  const pretty = readJsonOrNull(PRETTY_MAP)
+  const aboveBar = localSitemapUrlSet()
+  if (!pretty || !aboveBar) return null
+
+  let since = cursorSha
+  let headSha
+  try {
+    headSha = gitText(['rev-parse', 'HEAD']).trim()
+    if (!since) since = gitText(['rev-list', '-1', '--before=24 hours ago', 'HEAD']).trim()
+    if (!since) since = gitText(['rev-parse', 'HEAD~1']).trim()
+  } catch (err) {
+    console.error('[IndexNow] delta: git cursor resolution failed: ' + err.message)
+    return null
+  }
+  let oldRows
+  let newRows
+  try {
+    oldRows = parseKbArray(gitText(['show', since + ':' + SLIM_KB]))
+    newRows = parseKbArray(readFileSync(SLIM_KB, 'utf8'))
+  } catch (err) {
+    console.error('[IndexNow] delta: KB diff failed (' + since.slice(0, 7) + ' vs working copy): ' + err.message)
+    return null
+  }
+  const oldById = new Map(oldRows.map((r) => [r.figure_id, JSON.stringify(r)]))
+  const addedFids = []
+  const changedFids = []
+  for (const r of newRows) {
+    if (r.phantom) continue
+    const prev = oldById.get(r.figure_id)
+    if (prev === undefined) addedFids.push(r.figure_id)
+    else if (prev !== JSON.stringify(r)) changedFids.push(r.figure_id)
+  }
+  const fresh = [...addedFids, ...changedFids]
+  const candidates = []
+  let unmapped = 0
+  let belowBar = 0
+  for (const fid of fresh) {
+    const path = pretty[fid]
+    if (!path) {
+      unmapped++
+      continue
+    }
+    const url = 'https://' + HOST + path
+    if (!aboveBar.has(url)) {
+      belowBar++
+      continue
+    }
+    candidates.push(url)
+  }
+
+  let carriedIn = []
+  if (existsSync(DELTA_CARRY)) {
+    try {
+      carriedIn = readFileSync(DELTA_CARRY, 'utf8')
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter((l) => /^https:\/\/figurepinner\.com\//.test(l) && aboveBar.has(l))
+    } catch (err) {
+      console.warn('[IndexNow] delta: carry file unreadable (' + err.message + ') — ignoring')
+    }
+  }
+
+  const urls = [...new Set([...carriedIn, ...candidates])]
+  console.log(
+    '[IndexNow] delta: cursor ' + since.slice(0, 7) + ' -> HEAD ' + headSha.slice(0, 7) + ': ' + addedFids.length + ' added + ' +
+      changedFids.length + ' changed fid(s); ' + candidates.length + ' above-bar URL(s), ' + belowBar +
+      ' below-bar skipped, ' + unmapped + ' unmapped; ' + carriedIn.length + ' carried in from ' + DELTA_CARRY,
+  )
+  return { urls, headSha, carriedIn: carriedIn.length, freshFids: fresh.length }
+}
+
+async function pingDelta() {
+  RUN_MODE = 'delta'
+  const { today, sentToday, cursor } = readLedger()
+  const delta = getDeltaUrls(cursor)
+  if (!delta) {
+    writeLedger({ day: today, mode: 'delta', sent: 0, status: 'source-failed', note: 'no submit' })
+    console.warn('[IndexNow] delta: sourcing failed — nothing submitted (non-fatal)')
+    return
+  }
+  const room = Math.max(0, DELTA_DAILY_CAP - sentToday)
+  const toSend = delta.urls.slice(0, room)
+  const carryOut = delta.urls.slice(room)
+  console.log(
+    '[IndexNow] delta: cap ' + DELTA_DAILY_CAP + '/UTC-day, already sent today ' + sentToday + ', room ' + room +
+      ' -> sending ' + toSend.length + ', carrying ' + carryOut.length,
+  )
+
+  if (DRY_RUN) {
+    console.log('[IndexNow] dry run: would submit ' + toSend.length + ' URL(s); first 3: ' + toSend.slice(0, 3).join(' , '))
+    console.log('[IndexNow] Done.')
+    return
+  }
+
+  // Carry file is rewritten every real run (consumed + refilled), never appended.
+  try {
+    writeFileSync(DELTA_CARRY, carryOut.join('\n') + (carryOut.length ? '\n' : ''))
+  } catch (err) {
+    console.warn('[IndexNow] could not write carry file (non-fatal): ' + err.message)
+  }
+
+  if (toSend.length === 0) {
+    writeLedger({ day: today, mode: 'delta', sent: 0, status: 'nothing-to-send', carried: carryOut.length, cursor: delta.headSha })
+    console.log('[IndexNow] delta: nothing to send tonight. Done.')
+    return
+  }
+
+  const sample = toSend.find((u) => u.includes('/figure/')) ?? toSend[0]
+  if (!servingGatePasses(sample)) {
+    // Not our deploy at the edge yet: do not burn the freshness signal. Keep
+    // the URLs for tomorrow (prepend to carry) and log it. Never aborts.
+    try {
+      writeFileSync(DELTA_CARRY, [...toSend, ...carryOut].join('\n') + '\n')
+    } catch {}
+    writeLedger({ day: today, mode: 'delta', sent: 0, status: 'serving-gate-failed', carried: toSend.length + carryOut.length })
+    return
+  }
+
+  const status = await submitBatch(toSend, 1, 1)
+  const accepted = status === '200' || status === '202'
+  writeLedger({
+    day: today,
+    mode: 'delta',
+    sent: accepted ? toSend.length : 0,
+    attempted: toSend.length,
+    status,
+    carried: carryOut.length,
+    carriedIn: delta.carriedIn,
+    freshFids: delta.freshFids,
+    // Advance the cursor only on acceptance so a 403 night re-sources the same delta.
+    ...(accepted ? { cursor: delta.headSha } : {}),
+  })
+  if (!accepted) {
+    // Rejected: put tonight's set back on the carry so tomorrow retries it (still capped).
+    try {
+      writeFileSync(DELTA_CARRY, [...toSend, ...carryOut].join('\n') + '\n')
+    } catch {}
+  }
+  console.log('[IndexNow] delta: ledger line written (' + DELTA_LEDGER + ') — sent=' + (accepted ? toSend.length : 0) + ' status=' + status)
+  console.log('[IndexNow] Done.')
+}
+
 async function ping() {
+  if (DELTA) return pingDelta()
   // Fandom / urls-file modes submit ONLY their own URL set — no priority
   // padding (the addendum's rule: sitemap-emitted URLs, nothing mixed in).
   // A null from either sourcing function is a hard exit: a fandom submit that

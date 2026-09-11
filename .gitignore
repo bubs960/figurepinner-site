@@ -96,3 +96,6 @@ src/data/figures-reference-v2.js.backup-pre-sync
 
 # speed-probe (2026-09-02): per-run JSONL log, live task state — never commit (R18: outputs/ is operational)
 /outputs/
+# IndexNow --delta ledger + carry (2026-09-11 reinstatement; machine-local, R18 operational)
+/.indexnow-ledger.jsonl
+/.indexnow-carry.txt
