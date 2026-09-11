@@ -522,6 +522,64 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11: guide-gap #4 (Steve: "go on Micro Galaxy Squadron next"). KB
+    // product_line micro-galaxy-squadron, 318 fids; only 54 have comps and 19
+    // have n>=5 (9/11 r2proxy pull), with the same variant-pooling defect as
+    // Hot Toys (3 X-Wings identical $100, 5 TIE Fighters identical $19.99).
+    // Written in the honest "structure now, medians later" shape (DCUC/vintage
+    // Kenner precedent). Class retail tiers come from the KB retail_price field;
+    // chase/rare mechanics from KB key_features only. No owner datum.
+    slug: 'micro-galaxy-squadron-price-guide',
+    title: 'Micro Galaxy Squadron Price Guide: Class Tiers, Chases, and What We Can Price So Far',
+    metaTitle: 'Star Wars Micro Galaxy Squadron Price Guide — Classes, Chases & Sold Data | FigurePinner',
+    metaDescription:
+      'Jazwares Micro Galaxy Squadron explained by class and retail tier, the chase and Armada Edition variants, the AT-AT and Black Squadron sold comps we can defend, and why most of this line has no median yet.',
+    dek: 'A $6-to-$60 vehicle line with a chase system, three years old, and a sold-comp record we are still building. Here is what holds up.',
+    readingMinutes: 5,
+    updated: '2026-09-11',
+    shortVersion:
+      'Micro Galaxy Squadron prices by class and rarity, not by ship: Scout $5.99, Light Armor $12.99, Starfighter $15–17, Starship $30–35, Assault and exclusives $60–100 at retail, and chases trade above their class. We can defend medians on a handful of releases today; check yours:',
+    body: [
+      { type: 'p', text: 'Jazwares launched Micro Galaxy Squadron in 2022 as a small-scale Star Wars vehicle line built around the figure, not the ship: articulated micro figures riding speeders, starfighters with removable pilots, walkers, and capital ships, sold in a class ladder that goes from a $5.99 Scout Class speeder bike to a $59.99 Assault Class AT-AT. FigurePinner tracks 318 releases across nine classes and four years. What it does not have, for most of them, is a defensible sold median, and this page says so up front rather than printing numbers it cannot stand behind.' },
+      { type: 'h2', text: 'The class ladder is the price list' },
+      { type: 'ul', items: [
+        'Scout Class, 90 releases, $5.99 retail: speeder bikes, STAPs, AT-RTs, escape pods, each with a removable figure. The army-builder floor of the line.',
+        'Light Armor Class, 64 releases, $12.99: TIE Fighters, A-Wings, Jedi Starfighters, the AT-ST. Where most of the chase variants live.',
+        'Starfighter Class, 73 releases, $14.99 to $16.99: X-Wings, TIE Advanced, Slave I, the Razor Crest, snowspeeders. The core of most collections.',
+        'Starship Class, 21 releases, $29.99 to $34.99: shuttles, the Tydirium, U-Wing, larger transports.',
+        'Assault Class (6), Dreadnaught Class (4), Transport Class (2): the AT-AT, the Millennium Falcon, the TIE Reaper, the LAAT. $39.99 to $59.99.',
+        'Exclusives, 41 releases: Target, Amazon, Walmart, SDCC and Disney pieces, plus the Vault and Armada Edition repaints, listed at $60 to $100 for the big ones.',
+      ]},
+      { type: 'p', text: 'That ladder is the first thing to check on any listing. A Light Armor TIE Fighter at $30 is a chase or a mislabel; a Starship Class shuttle at $30 is retail. Most of the confusion on the sold screen is sellers pricing by ship name when the line prices by class and rarity.' },
+      { type: 'h2', text: 'Chases, Rares, and Armada Editions' },
+      { type: 'p', text: 'The line has a rarity system baked into the case packs. Our catalog carries it as Jazwares labels it: the Hera Syndulla A-Wing is the Series 2 Rare variant of the standard A-Wing; Luke’s Landspeeder is a Series 4 Chase; the X-Wing Hologram is a translucent chase; the Saesee Tiin Jedi Starfighter is the scarcer version of the retail Jedi Starfighter. Armada Edition is a grey-deco repaint program (TIE Fighter, TIE Interceptor) sold as exclusives. Translucent-blue and Vault-branded pieces sit alongside them. These are the releases that move above their class price, and they are also the ones where our sold sample is thinnest, because a chase that ships one per case does not produce fifty eBay sales in a year.' },
+      { type: 'h2', text: 'What we can price today' },
+      { type: 'ul', items: [
+        'AT-AT Walker, Assault Class, Target (2023): $45 median across 11 sold, top $62. The most-sampled big piece in the line, trading below its $59.99 tag loose and at it complete.',
+        'Black Squadron exclusive set (2024): $77.99 across 7 sold, against a $70 list price. Thin sample, positive signal.',
+        'Tydirium Shuttle, Starship Class (2025): $26.95 across 13, under its $34.99 retail.',
+        'TIE Reaper, Dreadnaught Class (2025): $19 across 28 sold, the deepest sample on the page and a clear pegwarmer against a $39.83 tag.',
+        'Royal Guard TIE Interceptor, Light Armor (2023): $24.95 across 9, roughly double its $12.99 class price, which is what a sought-after deco does.',
+        'Soontir Fel’s TIE Interceptor (181st Wing): $71.78 across 5. Five sales is a range marker, not a quote; read it as $60 to $85.',
+        'Saesee Tiin’s Jedi Starfighter: $19.99 across 14, the scarce-variant premium over a $12.99 class in one number.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_micro-galaxy-squadron_assault-class_at-at-walker_f53c14', label: 'AT-AT Walker, Assault Class (Target, 2023)', sublabel: 'The deepest big-piece sample in the line' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_micro-galaxy-squadron_dreadnaught-class_tie-reaper_f412d4', label: 'TIE Reaper, Dreadnaught Class (2025)', sublabel: '28 sold, half of retail: the pegwarmer' },
+      { type: 'callout', text: 'The X-Wing problem, disclosed: our data shows the Antoc Merrick X-Wing, the Kenner-deco Luke X-Wing, and the Hera Syndulla X-Wing at an identical $100 median with an identical $117.57 top sale. That is one comp bucket being served for three releases, not three figures that happen to agree. The same thing is true of five TIE Fighter variants at $19.99. Until our matching splits them, this page does not quote any X-Wing or TIE Fighter as a per-release price. The pooled number is still information: somebody is paying around $100 for a Micro Galaxy X-Wing exclusive, and it is probably the Merrick.' },
+      { type: 'h2', text: 'Why most of the line has no median yet' },
+      { type: 'p', text: 'Fifty-four of 318 releases have a sold comp at all, and 19 have five or more sales. Three reasons, all structural. The line is young: 124 of our records have no year attached and the earliest is 2022, so there is not a decade of resale behind it. The units are cheap: a $5.99 Scout Class speeder rarely gets listed on its own, it gets lotted, and a lot of twelve Scouts is not a comp for any one of them. And our catalog’s retail field is itself unreliable on a few big pieces, listing an AT-AT at $2.68 and a Dreadnaught at $1.51, which are obviously not retail prices and are queued for a fix. We would rather show you the ladder and seven honest numbers than a table of medians built on two sales each.' },
+      { type: 'h2', text: 'How to buy it while the data catches up' },
+      { type: 'p', text: 'Buy by class at retail and let the chases find you in the case, because paying a premium for a chase before the resale market exists is guessing with someone else’s confidence. Buy the Assault and Starship pieces on clearance, where the TIE Reaper already lives. Lot up your Scout Class extras; that is how the line trades. And treat any single-ship price above its class tier as a claim to be checked against the exact variant, because in Micro Galaxy the variant is the product and the ship is the packaging.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — the 3.75-inch line these micro figures scale against',
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the six-inch line',
+        '[[Chase variants explained|/guides/chase-variants-explained]] — how case-pack rarity works across lines',
+        '[[Pricing thin-comp figures|/guides/pricing-thin-comp-figures]] — what to do when a figure has two sales, which is most of this line',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2708,6 +2766,7 @@ export const ARTICLES: Article[] = [
         '[[Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For|/guides/hope-summers-marvel-legends-figure-guide]] — Terrax wave deep-dive',
         '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — TVC 1.0 vs 2.0 cards, HasLab boxes, and the pegwarmers, from real sold data',
         '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the sixth-scale tier: Tarkin at $795, troopers and sets, heroes at retail',
+        '[[Micro Galaxy Squadron price guide|/guides/micro-galaxy-squadron-price-guide]] — Jazwares’ class ladder, chases, and the comps we can defend so far',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
