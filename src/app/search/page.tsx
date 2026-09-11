@@ -19,7 +19,11 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     return {
       title: `"${q}" — Search`,
       description: `Search results for ${q}. Find action figure prices, values, and collector info on FigurePinner.`,
-      // Don't canonicalize query-specific pages — they're ephemeral
+      // Don't canonicalize query-specific pages — they're ephemeral.
+      // noindex,follow: BWT pull #2 (2026-09-11) showed Bing crawling and
+      // indexing /search?q=... URLs — crawl waste + thin-content exposure.
+      // Bare /search (below) stays indexable with its canonical.
+      robots: { index: false, follow: true },
     }
   }
   return {
