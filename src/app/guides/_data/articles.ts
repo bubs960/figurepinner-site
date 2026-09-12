@@ -799,6 +799,64 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-12: guide-gap #9 (Steve: "go on WCW Toy Biz next"). KB product_line
+    // wcw-toy-biz (1998-2001), 209 fids, 149 with comps, 135 n>=5. This line is
+    // the variant-pooling defect at full scale: 26 Sting and 26 Goldberg records
+    // each return ONE snapshot, and the ~50 sub-series codes (BRU, PS, SS, KEY…)
+    // have no names in the KB beyond what key_features prose mentions (Bashin'
+    // Brawlers, Body Bashers). So this is written as a character-level guide
+    // and says so. Only the handful of unique records are quoted per release.
+    slug: 'wcw-toy-biz-price-guide',
+    title: 'WCW Toy Biz Price Guide: The Monday Night War Line, Priced by Wrestler',
+    metaTitle: 'WCW Toy Biz Figures (1998–2001) Price Guide — Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Toy Biz WCW figure values from 149 records with real eBay sold data: Vampiro at $43, Hollywood Hogan at $28, Nash at $25, Sting at $25, Goldberg at $14 across 26 releases, and the nWo 3-pack at $110. Priced by wrestler, because that is how it trades.',
+    dek: 'Toy Biz made Sting twenty-eight times in three years. The sold screen prices him once. Here is what that means for the whole line.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A Toy Biz WCW figure is a $14–28 figure and the wrestler sets the price, not the gimmick series: Vampiro $43, Hogan $28, Nash $25, Sting $25, Goldberg $14. Pay more only for the nWo 3-pack and the rivalry two-packs:',
+    body: [
+      { type: 'p', text: 'Toy Biz held the WCW license from 1998 to 2001, the Monday Night War years, and used it the way Toy Biz used every license: the same twelve wrestlers, re-released across dozens of gimmick sub-lines. Bashin’ Brawlers with spring-loaded torsos, Body Bashers plush buddies, motorcycle sets, talking figures, 12-inch collector editions, grip-and-flip, ring sets. FigurePinner tracks 209 releases across roughly fifty sub-series, 149 of them with real eBay sold comps and 135 with five or more sales. The median is $22.99. Eighty-two of 135 sit between $20 and $30. One clears $50, and it is a three-pack.' },
+      { type: 'h2', text: 'Why this page prices wrestlers, not figures' },
+      { type: 'p', text: 'Sting has 28 Toy Biz WCW releases in our database. Goldberg has 27. Kevin Nash 15, DDP 12, Hogan 17 across his Hollywood and red-and-yellow looks. When we pulled the comps for this guide, every one of those Stings returned the same number, $24.97 across 20 sold, and every Goldberg returned $13.95 across 18. That is one comp bucket per wrestler being served for every sub-series he appeared in, which is a matching defect we have queued with our pipeline owner. It is also, for this specific line, close to how the market behaves: buyers search “Toy Biz Sting,” not “Toy Biz Sting Grip ’n Flip Series 2,” and the listings are titled the same way. The gimmick series barely moves the price. So this page gives you the honest unit, the wrestler, and tells you which few releases stand apart from their wrestler’s bucket.' },
+      { type: 'h2', text: 'The wrestler table' },
+      { type: 'ul', items: [
+        'Vampiro: $43.42 across 16 sold on two releases, $34.39 across 31 on a third. The top single-figure name in the line, and the one nobody expected: a late-roster cult figure Toy Biz made three times and nobody else has made since.',
+        'Kidman: $30 across 15 and $30 across 8. Same logic, smaller sample.',
+        'Hollywood Hogan (nWo black-and-white): $27.99 across 20. Hulk Hogan (red and yellow): $21.38 across 20. The nWo version is worth six dollars more, on every release.',
+        'Kevin Nash: $25 across 20 to 26. Sting: $24.97 across 20. Konnan: $25.50 across 35, the deepest sample in the top tier. Scott Steiner: $24.95 across 20. Randy Savage: $22.99 across 20 to 22. Sid Vicious: $22.99 across 20.',
+        'Buff Bagwell: $19.20 across 20. Giant: $19.99 across 50. Diamond Dallas Page: $13.99 across 20 on most releases, $18.99 across 50 on his Series 1 brawler. Bret Hart: $15.95 across 20, $17.20 across 50 for one release. Goldberg: $13.95 across 18, $15 across 50 on the Series 2 brawler.',
+      ]},
+      { type: 'comp', fid: 'fp_wrestling_toy-biz_wcw-toy-biz_tnt_vampiro_043cb4', label: 'Vampiro (Toy Biz, 2000)', sublabel: 'The top name in the line, 31 sold' },
+      { type: 'comp', fid: 'fp_wrestling_toy-biz_wcw-toy-biz_tt_konnan_4cd125', label: 'Konnan (Toy Biz, 1999)', sublabel: 'The deepest top-tier sample: 35 sold' },
+      { type: 'p', text: 'Read the shape of that table. The two most famous men in the company, Goldberg and Hogan, are at $14 and $21 to $28. The wrestlers over $30 are the ones Toy Biz made once or twice at the end of the license, when it was making fewer of everything. Goldberg at $13.95 is the price of 27 releases of the same man in three years; every Walmart in 1999 had a wall of him, and the wall is still out there in tubs.' },
+      { type: 'h2', text: 'The releases that stand apart' },
+      { type: 'ul', items: [
+        'Hollywood Hogan, Goldberg and Sting 3-pack (1999): $109.99 median across 7 sold, top $199.95. The only release in the line over $50, and the three biggest names in one box that shipped once.',
+        'Sting vs. Hollywood Hogan two-pack (1999): $40 across 7. Giant vs. Kevin Nash two-pack (1999): $32.99 across 10. Rivalry sets, again the mechanism: two figures, one box, one run.',
+        'Macho Man Randy Savage, Series 1 (1998): $30 across 50 sold, top $500. The one single-figure Savage release with its own number, and the deepest sample on this page. The $500 top is a signed or graded piece, not the market.',
+        'Kidman (1999 Bruiser release): $30 across 15, top $249.99.',
+      ]},
+      { type: 'comp', fid: 'fp_wrestling_toy-biz_wcw-toy-biz_nc_hogan-goldberg-s_775b2b', label: 'Hollywood Hogan, Goldberg & Sting 3-pack (1999)', sublabel: 'The only release over $50' },
+      { type: 'comp', fid: 'fp_wrestling_toy-biz_wcw-toy-biz_key_macho-man-randy-_520470', label: 'Macho Man Randy Savage, Series 1 (1998)', sublabel: '50 sold at $30' },
+      { type: 'callout', text: 'The floor of the line is Wrath at $5.29 across 15 sold. A mid-card monster with one release, the exact shape that makes a $165 figure in Classic Superstars, and here he is five dollars, because Toy Biz shipped even its one-offs deep and because nobody is booking a Wrath shelf. Scarcity needs demand to act on. In the Jakks legends line it had it. In Toy Biz WCW it mostly does not, and Vampiro is the exception that proves how narrow the demand is.' },
+      { type: 'h2', text: 'The year and the gimmick, for the record' },
+      { type: 'p', text: '1998 releases hold a $22.99 median across 27 sampled, 1999 $24.97 across 48, 2000 $19.60 across 46. Three years, one price, with the last year cheapest because the license was winding down into clearance. By gimmick sub-series, the medians run from $13.95 to $25 with no pattern we can defend given the pooling: the sub-series tags in our catalog are fifty two-to-four-letter codes inherited from a checklist, most without a full name attached, and until they are named and the comps are split, a per-series price on this line would be us pretending to a precision the data does not have.' },
+      { type: 'h2', text: 'What we hold back' },
+      { type: 'p', text: 'Sixty of 209 records have no comp, and the 149 that do collapse to about 20 distinct numbers because of the pooling above. The sub-series codes are unnamed. The 12-inch collector editions, the plush Body Bashers, and the motorcycle sets are all in the catalog but share their wrestler’s bucket, so we cannot tell you whether a 12-inch Sting outprices a 6-inch one. When our matching splits by sub-series, this page gets a real table. Until then, the wrestler is the price.' },
+      { type: 'h2', text: 'How to buy the Monday Night War' },
+      { type: 'p', text: 'Buy by name at the numbers above, loose, in lots, and never above $30 for a single figure unless it is Vampiro or the Series 1 Savage. Pay for the 3-pack and the rivalry two-packs if you want boxed pieces from the era, because those are the only things Toy Biz made once. Do not pay a gimmick premium; the market does not. And if you want a Goldberg, you want a Goldberg for $14, and you can have twenty-seven kinds.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Wrestling figures collector guide|/guides/wrestling-hub]] — the era arc from LJN to Mattel',
+        '[[Classic Superstars price guide|/guides/jakks-classic-superstars-price-guide]] — where the same scarcity mechanism has demand behind it',
+        '[[Ruthless Aggression price guide|/guides/jakks-ruthless-aggression-price-guide]] — the WWE line from the same years, same reissue rule',
+        '[[Most valuable vintage wrestling figures|/guides/most-valuable-vintage-wrestling-figures]] — LJN, Hasbro, and Galoob WCW, the lines before this one',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -3043,6 +3101,7 @@ export const ARTICLES: Article[] = [
       { type: 'ul', items: [
         '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
         '[[WWE Basic price guide|/guides/wwe-basic-price-guide]] -- the $15 line, and the 25 figures that are not',
+        '[[WCW Toy Biz price guide|/guides/wcw-toy-biz-price-guide]] -- the Monday Night War line, priced by wrestler because that is how it trades',
         '[[Jakks Pacific collector guide|/guides/jakks-hub]] -- Classic Superstars & Ruthless Aggression',
       ]},
     ],
