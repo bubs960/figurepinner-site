@@ -24,6 +24,10 @@ interface DecisionPassportProps {
   /** Evidence-locked golden-corpus section (Hela pilot, 2026-08-13) — rendered
    *  inside the passport card, between market evidence and coming-soon. */
   children?: React.ReactNode
+  /** Option C (2026-09-12, README "Cuts"): no NEW banner, no roadmap prose,
+   *  no Coming-soon placeholders; identity + market evidence + children only,
+   *  unframed (it sits inside the About "Passport" tab). */
+  compact?: boolean
 }
 
 // Thresholds live in _lib/confidence.ts (shared with the v4 PriceBlock —
@@ -104,21 +108,21 @@ function ComingSoon({ title, note }: { title: string; note: string }) {
   )
 }
 
-export default function DecisionPassportPreview({ identity, sealed, loose, children }: DecisionPassportProps) {
+export default function DecisionPassportPreview({ identity, sealed, loose, children, compact = false }: DecisionPassportProps) {
   return (
-    <section style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+    <section style={{ marginTop: compact ? 0 : '1.5rem', marginBottom: compact ? 0 : '1.5rem' }}>
       <style>{`
         .fp-dp {
           --dp-bg: #09090F; --dp-text: #EEEEF5; --dp-muted: rgba(238,238,245,.55);
           --dp-gold: #f5c462; --dp-cyan: #4ecde6; --dp-green: #4ec98c; --dp-pink: #e05a7a;
         }
       `}</style>
-      <div className="fp-dp" style={{
+      <div className="fp-dp" style={compact ? {} : {
         background: 'linear-gradient(160deg, #16131f 0%, #0b0a12 65%)',
         border: '1px solid rgba(224,168,62,.3)', borderRadius: '16px',
         padding: '1.5rem 1.5rem 1.75rem',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
+        {!compact && <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
           <span style={{
             display: 'inline-block', padding: '3px 10px', borderRadius: '100px',
             fontSize: '0.65rem', fontWeight: 700, letterSpacing: '.08em',
@@ -129,7 +133,7 @@ export default function DecisionPassportPreview({ identity, sealed, loose, child
           <div style={{ fontSize: '0.72rem', color: 'var(--dp-muted)', lineHeight: 1.5 }}>
             We&apos;re building a deeper, source-backed page for this figure. Some sections below are still filling in.
           </div>
-        </div>
+        </div>}
 
         {/* Identity */}
         <SectionHeading>How to Identify This Exact Release</SectionHeading>
@@ -172,7 +176,7 @@ export default function DecisionPassportPreview({ identity, sealed, loose, child
 
         {children}
 
-        <ComingSoon
+        {!compact && <><ComingSoon
           title="Complete Check"
           note="Coming soon: check what's in the box against everything that originally shipped with this figure, and see how much a missing piece changes its value."
         />
@@ -183,7 +187,7 @@ export default function DecisionPassportPreview({ identity, sealed, loose, child
         <ComingSoon
           title="Compared With Its Closest Prior Release"
           note="Coming soon: a side-by-side against the previous version of this character."
-        />
+        /></>}
       </div>
     </section>
   )

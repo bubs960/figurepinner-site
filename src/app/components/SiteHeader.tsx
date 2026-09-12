@@ -317,7 +317,8 @@ export default function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
         </a>
         <a className="fp-sitenav-home" href="/" aria-label="FigurePinner home">
           <span className="fp-sitenav-mark">FP</span>
-          {!hasCrumbs && <span className="fp-sitenav-word">FigurePinner</span>}
+          {/* Steve 2026-09-12: the wordmark was hidden whenever crumbs rendered -- the brand name never appeared on figure pages. Always render; the narrow-screen rule below still hides it on phones. */}
+          <span className="fp-sitenav-word">FigurePinner</span>
         </a>
       </div>
 

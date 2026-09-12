@@ -64,6 +64,13 @@ interface Props {
 
 type AddState = 'idle' | 'loading' | 'done' | 'error'
 
+// Option C (2026-09-12): #figure-actions lives inside the About "Passport"
+// tab panel (AboutTabs.tsx), which is `hidden` until opened -- ask it to open
+// first, then scroll. No-op when no tabs are on the page (guide/hub call sites).
+function openPassportTab() {
+  document.dispatchEvent(new CustomEvent('fp:open-tab', { detail: 'passport' }))
+}
+
 export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand, line, genre }: Props) {
   const canDirectAdd = brand != null && line != null && genre != null
 
@@ -95,7 +102,7 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
       // Vault full -- send them to the real panel, which renders the actual
       // gate message (limit/upgrade_url); duplicating that copy here would
       // just be a second place for it to go stale.
-      document.getElementById('figure-actions')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      openPassportTab(); document.getElementById('figure-actions')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       return
     }
     setAddState('error')
@@ -115,7 +122,7 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
               handleDirectAdd()
               return
             }
-            document.getElementById('figure-actions')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            openPassportTab(); document.getElementById('figure-actions')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }}
           aria-label={signedIn ? `Add ${figureName} to your collection` : `Track ${figureName} in your free collection`}
           aria-disabled={signedIn && canDirectAdd && (addState === 'loading' || addState === 'done')}

@@ -52,12 +52,18 @@ interface CollectionPanelProps {
    *  at claim time; null means Tier-2 (no real fact) and the ritual just
    *  silently skips the whisper, exactly as spec'd. */
   whisper?: string | null
+  /** Option C (2026-09-12): 'tab' renders inside the About "Passport" tab --
+   *  no price summary, no eBay CTA (both live in the hero price card; one-field
+   *  rule), just the own/want form + the details rows the spec line doesn't
+   *  already carry (pack, exclusive, UPC). */
+  variant?: 'tab'
 }
 
 export default function CollectionPanel({
   figureId, figureName, brand, line, genre, ebaySearchUrl,
-  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, evidenceCaveat, scale, series, packSize, exclusiveTo, imgSrc, whisper, upc,
+  median, medianIsAvg, compCount, conditionLabel, needsThinDataLabel, evidenceCaveat, scale, series, packSize, exclusiveTo, imgSrc, whisper, upc, variant,
 }: CollectionPanelProps) {
+  const tab = variant === 'tab'
   return (
     <div id="figure-actions" className="fp-cpanel" style={{ display: 'flex', flexDirection: 'column', scrollMarginTop: '72px' }}>
       <style>{`
@@ -97,7 +103,7 @@ export default function CollectionPanel({
         }} />
 
         {/* Price summary — modest, numbers support */}
-        <div style={{ marginBottom: '1.125rem' }}>
+        {!tab && <div style={{ marginBottom: '1.125rem' }}>
           {median != null ? (
             <>
               <div style={{
@@ -130,10 +136,10 @@ export default function CollectionPanel({
               No price data yet
             </div>
           )}
-        </div>
+        </div>}
 
         {/* eBay CTA — gold filled, dark text, the one loud thing */}
-        <TrackedLink
+        {!tab && <><TrackedLink
           data-ebay-inline-cta
           href={ebaySearchUrl}
           target="_blank"
@@ -166,7 +172,7 @@ export default function CollectionPanel({
         }}>
           <strong style={{ color: 'var(--shelf-cream, #f2e8d5)', fontWeight: 500 }}>Free for you</strong>
           {' · '}We earn a small commission from eBay
-        </div>
+        </div></>}
 
         {/* Own / Want buttons */}
         <FigureActions
@@ -186,10 +192,10 @@ export default function CollectionPanel({
         }}>
           <SectionH2 lead="Details" style={{ margin: '0 0 0.875rem' }} />
           <div className="fp-cpanel-spec" style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-            <Row label="Brand" value={brand} />
-            <Row label="Line" value={line} />
-            {series != null && <Row label="Series" value={String(series)} />}
-            {scale && <Row label="Scale" value={scale} />}
+            {!tab && <Row label="Brand" value={brand} />}
+            {!tab && <Row label="Line" value={line} />}
+            {!tab && series != null && <Row label="Series" value={String(series)} />}
+            {!tab && scale && <Row label="Scale" value={scale} />}
             {packSize > 1 && <Row label="Pack" value={`${packSize}-pack`} />}
             {exclusiveTo && exclusiveTo !== 'None' && <Row label="Exclusive" value={exclusiveTo} />}
             {upc && <Row label="UPC" value={upc} />}

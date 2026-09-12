@@ -61,6 +61,10 @@ interface MarketPanelProps {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- ebaySearchUrl kept in the prop contract, unused here
 export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, figureName, priceContract, trendPct = null }: MarketPanelProps) {
+  // Option C (2026-09-12, README comps band): the first VISIBLE_ROWS comps
+  // are open by default; the toggle reveals the rest. Titles stay out of the
+  // rows on purpose (2026-05-29 changelog) -- nothing to ellipsize.
+  const VISIBLE_ROWS = 8
   const [showComps, setShowComps] = useState(false)
 
   if (!pricing || pricing.comp_count < 1) return null
@@ -206,16 +210,8 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
 
       {/* Expandable comp list — price/condition/date only, deliberately no
           listing title (see 2026-05-29 changelog entry above). */}
-      <button
-        type="button"
-        className="fp-comps-toggle"
-        onClick={toggleComps}
-        aria-expanded={showComps}
-      >
-        {showComps ? 'Hide the comps ▴' : 'See the comps ▾'}
-      </button>
-      <div className={`fp-comps-list${showComps ? ' open' : ''}`}>
-        {compRows.map((c, i) => (
+      <div className="fp-comps-list open">
+        {compRows.slice(0, VISIBLE_ROWS).map((c, i) => (
           <div className="fp-comp-row" key={`${c.sold_date}-${i}`}>
             <span className="fp-comp-date">{formatDate(c.sold_date)}</span>
             <span className="fp-comp-condition">{c.condition}</span>
@@ -223,6 +219,27 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
           </div>
         ))}
       </div>
+      {compRows.length > VISIBLE_ROWS && (
+        <>
+          <button
+            type="button"
+            className="fp-comps-toggle"
+            onClick={toggleComps}
+            aria-expanded={showComps}
+          >
+            {showComps ? 'Fewer comps ▴' : `All ${compRows.length} comps ▾`}
+          </button>
+          <div className={`fp-comps-list${showComps ? ' open' : ''}`}>
+            {compRows.slice(VISIBLE_ROWS).map((c, i) => (
+              <div className="fp-comp-row" key={`${c.sold_date}-${VISIBLE_ROWS + i}`}>
+                <span className="fp-comp-date">{formatDate(c.sold_date)}</span>
+                <span className="fp-comp-condition">{c.condition}</span>
+                <span className="fp-comp-price">{formatCurrency(c.price)}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   )
 }
