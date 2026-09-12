@@ -1085,7 +1085,17 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
            "full story" tab); denser type inside the tab panels so the open
            panel stays near the README's 240 px budget. */
         .fp-z-about .fp-lede { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
-        .fp-tab-panel .fp-loreband p { font-size: 15px !important; line-height: 1.55 !important; }
+        /* Title block centered in its grid area (Steve 2026-09-12) */
+        .fp-z-title { text-align: center; }
+        .fp-z-title .fp-hero-id-col { align-items: center; }
+        .fp-z-title .fp-hero-specs { justify-content: center; }
+        /* "The full story" panel: prose left, details right, so the panel
+           fills its width instead of a 70ch column beside empty space */
+        .fp-tab-panel .fp-story { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px 40px; align-items: start; }
+        .fp-tab-panel .fp-story-side { display: flex; flex-direction: column; gap: 1.25rem; }
+        @media (max-width: 767px) { .fp-tab-panel .fp-story { grid-template-columns: 1fr; } }
+        .fp-tab-panel .fp-loreband { max-width: none !important; }
+        .fp-tab-panel .fp-loreband p { font-size: 17px !important; line-height: 1.65 !important; }
         .fp-tab-panel .fp-loreband { padding-left: 1rem !important; }
         .fp-tab-panel .fp-enrich p { font-size: 15px !important; line-height: 1.55 !important; }
         .fp-tab-panel .fp-enrich li { padding: 6px 0 !important; }
@@ -1248,8 +1258,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                 id: 'story',
                 label: 'The full story',
                 content: (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                  <div className="fp-story">
                     <LoreBand loreInput={loreInput} />
+                    <div className="fp-story-side">
                     {/* one-field rule: the lede is in the hero (6-line clamp); the tab carries only the features the hero could not fit */}
                     <FigureEnrichment matchRepresented={null} keyFeatures={heroFeaturesAll.length > heroFeatures.length ? heroFeaturesAll.slice(6).join(', ') : null} />
                     <SeoSummary
@@ -1276,6 +1287,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
                       trendPct={valuePricing?.trend_90d_pct ?? null}
                       soldHistory={price?.soldHistory ?? []}
                     />
+                    </div>
                   </div>
                 ),
               },

@@ -356,7 +356,7 @@ export default function HeroBand({
         </h1>
 
         {/* Spec row */}
-        <div style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', rowGap: '8px' }}>
+        <div className="fp-hero-specs" style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', rowGap: '8px' }}>
           {specs.map((s, i) => (
             <div key={s.k} style={{
               padding: i === 0 ? '0 22px 0 0' : '0 22px',
@@ -382,6 +382,15 @@ export default function HeroBand({
           row, CTA pair + disclosure. Right column on desktop, second in DOM. */}
       {part === 'price' && (
       <div className={`fp-hero-price-col ${className ?? ''}`} style={{ display: 'flex', flexDirection: 'column' }}>
+        {/* Brand line (Steve 2026-09-12: "we need to scream our brand more") */}
+        <div className="fp-price-brand" style={{
+          display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px',
+          fontSize: '10px', fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase',
+          color: 'var(--shelf-gold, #e0a83e)',
+        }}>
+          <span aria-hidden style={{ width: '18px', height: '1px', background: 'var(--shelf-gold, #e0a83e)', opacity: 0.65 }} />
+          FigurePinner price · real eBay solds
+        </div>
         {/* v4 PRICE BLOCK — two condition buckets, Bebas faces, confidence
             chips (build plan §1). Fires whenever a real sealed/loose bucket
             exists; the legacy placard below stays the pooled-only fallback so
