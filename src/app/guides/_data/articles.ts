@@ -637,6 +637,60 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11: guide-gap #6 (Steve: "go on Classic Superstars next"). KB
+    // product_line classic-superstars, 398 fids, 307 with comps, 222 n>=5 (9/11
+    // r2proxy pull). The ToyFare ~100-unit chases the ledger documents have NO
+    // comps here (they trade through auction/forums, not in our 90-day window)
+    // so they are described, not priced. 241 records lack a year; series
+    // number is the handle. No owner datum.
+    slug: 'jakks-classic-superstars-price-guide',
+    title: 'Classic Superstars Price Guide: The Sacred Jakks Line, Priced by Who Sold Least',
+    metaTitle: 'Jakks Classic Superstars Price Guide — Real Sold Prices (2004–2009) | FigurePinner',
+    metaDescription:
+      'Jakks Classic Superstars values from 307 figures with real eBay sold data: Barbarian and Ken Patera at $165, Giant Gonzalez at $100, Strike Force 3-pack at $115, Hogan and Warrior under $40, and why the late series beat the early ones.',
+    dek: 'Twenty-eight series, 2004 to 2009, the line every modern legends figure gets measured against. The sold screen ranks it upside down from the roster.',
+    readingMinutes: 7,
+    updated: '2026-09-11',
+    shortVersion:
+      'A Classic Superstars single is a $30 figure; the headliners Jakks reissued sit at $20–40, the one-time jobbers and tag 3-packs from Series 15 on sit at $60–165. Check the series number, not the name:',
+    body: [
+      { type: 'p', text: 'Jakks Pacific ran Classic Superstars from 2004 to 2009, 28 numbered series plus the tag-team 3-packs and 84 retailer, convention, and ToyFare exclusives, and it is still the line the whole legends category is graded against; Mattel’s Elite Legends exist because this line proved the market. FigurePinner tracks 398 releases, 307 with real eBay sold comps and 222 with five or more sales. The median is $30. The thing the median hides is that Classic Superstars prices in the exact opposite order from the WrestleMania card: the main-eventers are the cheap figures and the jobbers are the money.' },
+      { type: 'h2', text: 'The headliners are $20 to $40, because Jakks made them again' },
+      { type: 'p', text: 'Ultimate Warrior has 13 Classic Superstars releases in our database. Series 1: $18 across 26 sold. Series 7: $18.07 across 15. The retail exclusive: $26 across 50. Hulk Hogan, 8 releases: the best is Hollywood Hogan from Series 8 at $34.99 across 46, and the exclusive at $39.98. Andre the Giant, 6 releases, $20 to $30 everywhere. Shawn Michaels, Series 1 and 2, $27.99. Steve Austin Series 18: $19 across 16. Mr. Perfect Series 10: $19.99 across 32. Randy Orton, the exclusive: $14.39 across 50, the cheapest figure with a real sample in the line.' },
+      { type: 'p', text: 'This is the reissue rule doing exactly what it does in every line, and it is worth stating plainly because Classic Superstars has a mythology that says otherwise: the sculpts are excellent, the line is revered, and none of that puts a floor under a figure Jakks made thirteen times. Buy your Warrior loose for lunch money. He is not scarce.' },
+      { type: 'h2', text: 'The jobbers are the grails' },
+      { type: 'ul', items: [
+        'The Barbarian, Series 16: $165 median across 8 sold, top $299.99. Ken Patera, Series 17: $165 across 8. Meng, Series 26: $149.99 across 6. Three figures nobody main-evented anything, each made once, late in the run, when Jakks was shipping cases thin.',
+        'Spike Dudley, Series 23: $100 across 17, top $200. Giant Gonzalez, Series 16: $99.50 across 40 sold, the deepest sample in the top ten and therefore the most trustworthy number on this page.',
+        'Adam Bomb, Series 19: $84.99 across 7. The Barbarian again, Series 27: $90 across 18. Steve Williams, Series 26: $79.72 across 6. Nikita Koloff, Series 19: $67.49 across 11. Buff Bagwell, Series 21 (2008): $66.40 across 15. Luna Vachon, Series 13: $69.99 across 9. Repo Man, Series 17: $59.99 across 10.',
+      ]},
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_16_giant-gonzalez_ee4afd', label: 'Giant Gonzalez, Series 16', sublabel: 'The most-sampled grail in the line, 40 sold' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_16_barbarian_0958bf', label: 'The Barbarian, Series 16', sublabel: 'The top single, on an 8-sale sample' },
+      { type: 'p', text: 'The series-number pattern is the whole story. Singles from Series 1 to 7 hold a $26.20 median across 44 sampled releases and not one of them clears $75. Series 8 to 14: $25.50 across 58, none over $75. Series 15 to 21: $34.12 across 46, four over $75. Series 22 to 28: $34.99 across 28, four over $75. Early series shipped deep to every Walmart in America and the figures are everywhere. By Series 16 the line was a collector product in collector quantities, and the mid-card names in those waves, the ones Jakks would never revisit, are the figures a legends fed cannot be booked without.' },
+      { type: 'h2', text: 'The 3-packs beat the singles' },
+      { type: 'p', text: 'Tag-team and rivalry 3-packs hold a $47.73 median across 22 sampled sets against $29.23 for singles. Strike Force, Tito Santana and Rick Martel: $115 across 16 sold. The Midnight Express, Bobby Eaton and Stan Lane: $100 across 20. The Killer Bees: $91.45 across 20, top $295. Tony Atlas and Rocky Johnson: $91.98 across 5. Hogan versus Warrior: $80 across 12. Jerry Lawler versus Andy Kaufman: $62.50 across 6. A tag team is two one-time figures in one box; the Midnight Express number is the Barbarian number with the sample size to back it.' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_6p_strike-force-tit_a16640', label: 'Strike Force 3-pack (Series 6)', sublabel: 'Two one-time figures, one box, 16 sold' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_23_spike-dudley_5af6b5', label: 'Spike Dudley, Series 23', sublabel: 'Late-series, one release, 17 sold' },
+      { type: 'h2', text: 'Exclusives, and the ones we cannot price' },
+      { type: 'p', text: 'The exclusives bucket is 84 records and it holds a $30 median across the 24 with a real sample, which means most retailer exclusives trade like singles. The ones that do not are the two-figure sets: Kane and Vader $129.99 across 6, Hogan versus Andre $105 across 7, the Razor versus Shawn Ladder Match set $84.99 across 22, Shattered Dreams Goldust $72.53 across 8 with a $500 top. Sunny, the exclusive, holds $55 across 17, and Jimmy Hart $45 across 40 with a $1,999.99 top sale that we read as a signed lot, not a comp.' },
+      { type: 'callout', text: 'The ToyFare chases, the roughly-100-unit runs like the glow-in-the-dark Undertaker and the Bloody Funk U Terry Funk that the hobby cites as the line’s grails, do not appear on this page with a number. They do not sell fifty times in ninety days; they sell a handful of times a year, through forums and auction houses, and a two-sale sample is not a median. Our catalog has the Jeff Hardy and Bret Hart exclusive at $250 on one sale and the DX set at $140 on one sale. Read those as “someone paid it once.” When a chase changes hands, the price is the negotiation, not our table.' },
+      { type: 'h2', text: 'The deceased-legend premium is real but smaller than the folklore' },
+      { type: 'p', text: 'Eddie Guerrero, Series 17: $59.99 across 4 sold. Series 22: $32.99 across 10. The exclusive: $20 across 50. Undertaker Series 2 (2008 reissue): $62.50 across 10 against $26 for his Series 13 and exclusive figures. Rowdy Roddy Piper Series 1: $69.95 across 5, and $19 to $25 for his three later releases. Terry Funk, the figure the deceased-legend argument is usually made with: $19.99 across 50 for the exclusive, $16.25 for Series 5. The premium attaches to a specific release with a small run, not to the wrestler. Being gone does not make the Series 5 Funk scarce; Jakks shipping it deep made it common, and that does not change.' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_25_jeff-hardy_8e107f', label: 'Jeff Hardy, Series 25 (2009)', sublabel: 'The last-year release: $59.99 across 50' },
+      { type: 'h2', text: 'What we hold back' },
+      { type: 'p', text: 'Ninety-one of 398 records have no comp, and 241 have no release year attached, which is why every figure above is cited by series number rather than date. The ToyFare chases are documented in our fact ledger from the public record and priced by nobody, including us. And the top three singles on this page carry six-to-eight-sale samples; Giant Gonzalez at 40 sales is the one you can quote at a show without a caveat.' },
+      { type: 'h2', text: 'How to buy the sacred line' },
+      { type: 'p', text: 'Buy headliners loose, in lots, and never above $40 unless it is a Series 2 Undertaker or a Series 1 Piper with a documented sample. Buy anything from Series 15 onward on sight if the name is a mid-carder, because those figures were made once and the people who need them are patient and paying. Buy tag 3-packs sealed if you can, since the box is half the price. And when a listing says “rare Classic Superstars Hogan,” remember there are eight of him and the market has not found any of them rare in twenty years.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Jakks Pacific collector guide|/guides/jakks-hub]] — the era: Classic Superstars vs Ruthless Aggression',
+        '[[Jakks Ruthless Aggression value guide|/guides/jakks-aggression-value-guide]] — the action mainline the sacred line sat beside',
+        '[[WWE Basic price guide|/guides/wwe-basic-price-guide]] — the Mattel line on the same reissue rule',
+        '[[Most valuable vintage wrestling figures|/guides/most-valuable-vintage-wrestling-figures]] — LJN and Hasbro, the lines before Jakks',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2848,6 +2902,7 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: "Whether Jakks or Mattel made the better WWE figures is the hobby's live debate. Jakks gets credit for the Classic Superstars sculpts and the Attitude-era nostalgia; Mattel for the Elite line's articulation and the modern adult-collector standard. There is no settled answer -- which is why each era gets its own shelf." },
       { type: 'h2', text: 'Further reading' },
       { type: 'ul', items: [
+        '[[Classic Superstars price guide|/guides/jakks-classic-superstars-price-guide]] -- the sacred line by the numbers: jobbers over headliners, late series over early, 3-packs over singles',
         '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
       ]},
     ],
