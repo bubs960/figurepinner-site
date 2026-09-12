@@ -691,6 +691,59 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-11/12: guide-gap #7 (Steve: "go on Ruthless Aggression next"). KB
+    // product_line ruthless-aggression, 342 fids, 255 with comps but only 124
+    // n>=5 (9/12 r2proxy pull). This is the price-guide upgrade to the June
+    // jakks-aggression-value-guide, and the comps contradict that guide's
+    // "market noticed" thesis: median $17.99, two figures >= $50, late series
+    // CHEAPER than early. Pooling: Triple H x3 share one snapshot. No owner datum.
+    slug: 'jakks-ruthless-aggression-price-guide',
+    title: 'Ruthless Aggression Price Guide: The Nostalgia Wave That Has Not Arrived',
+    metaTitle: 'Jakks Ruthless Aggression Price Guide — Real Sold Prices (2002–2009) | FigurePinner',
+    metaDescription:
+      'Jakks Ruthless Aggression values from 255 figures with real eBay sold data: an $18 median, two figures over $50, Chris Benoit at $35, Brock Series 1 at $40, and why the late series are cheaper than the early ones.',
+    dek: 'Forty-four series, the whole 2000s roster, and a sold screen that says the collectors who bought these as kids have not come back for them. Yet.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A Ruthless Aggression figure is an $18 figure on any card in any series; two releases clear $50 and none clear $100. Buy the roster loose for lunch money and pay a premium only for a documented specific release:',
+    body: [
+      { type: 'p', text: 'Ruthless Aggression was Jakks Pacific’s WWE mainline from 2002 to 2009, 44 numbered series plus the Micro Aggression bundles, the pay-per-view sub-series, and a dozen retailer exclusives, and it put a figure of every wrestler on the roster in every Walmart in America for seven years. In June we published a value guide for this era that said the market was starting to notice it. This page is the check on that claim, from 255 figures with real eBay sold comps and 124 with five or more sales, and the honest answer is: not yet. The median is $17.99. Fifty-four of the 124 sit at $15 or under. Two clear $50. None clear $100.' },
+      { type: 'h2', text: 'The series number does not help you, in either direction' },
+      { type: 'p', text: 'Series 1 to 11 hold a $19.95 median across 29 sampled figures. Series 12 to 22: $17.99 across 28. Series 23 to 33: $18.78 across 32. Series 34 to 44: $14.99 across 32. The late-series scarcity that the June guide predicted, and that is real in Classic Superstars, does not show up here; the last eleven series are the cheapest band in the line. Jakks did not ship Ruthless Aggression thin at the end. It shipped it deep until the license moved, and the 2009 figures are $15 because there are a lot of them.' },
+      { type: 'p', text: 'The year tells the same story. 2004 figures: $12.99 median across 11. 2006: $24.99 across 14, the best year in the line. 2009: $14.99 across 15. The bottom of the sold screen is the top of the roster: Edge Series 44 at $9.99 across 38 sold, Edge Series 29 at $10 across 24, CM Punk Series 42 at $10.50 across 24, Triple H Series 16 at $13.99 across 49, Batista Series 31 at $14.99 across 37, Chris Jericho on two cards at $13. These are main-eventers with fifty-sale samples, and the market has settled them at ten to fifteen dollars.' },
+      { type: 'h2', text: 'The two figures over $50, and the eleven over $30' },
+      { type: 'ul', items: [
+        'Triple H, Series 33: $87 median across 6 sold, top $250. The top single in the line on a six-sale sample; treat it as $60 to $100. Our data also pools three other Triple H records into one $19.99 bucket, so the Series 33 number is the only Triple H price on this page we can defend.',
+        'MVP, Series 44: $49.99 across 33 sold. The deepest sample in the top ten and the one you can quote without a caveat. A last-series figure of a mid-carder Mattel has barely touched.',
+        'Super Crazy, Series 28: $49.98 across 5. The Great Khali, Series 24: $44.99 across 6. Lilian Garcia, Series 34: $40 across 10, the only non-wrestler and the only woman over $30.',
+        'Brock Lesnar, Series 1 (2002): $39.99 across 12, top $99.99. The launch-wave Brock is the one first-figure release in the line that the sold data actually supports.',
+        'Chris Benoit, Series 26: $35 across 25 sold. Rey Mysterio, Series 23: $32.99 across 11. Randy Orton, Series 33 and 19: $31.49 and $30.29. John Cena, Series 18: $30 across 31. Kane, Series 24: $30.',
+      ]},
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_44_mvp_bbead9', label: 'MVP, Series 44 (2009)', sublabel: 'The quotable top: 33 sold' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_1_brock-lesnar_36398b', label: 'Brock Lesnar, Series 1 (2002)', sublabel: 'The launch-wave figure that holds' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_26_chris-benoit_1cf4b7', label: 'Chris Benoit, Series 26', sublabel: 'No Mattel refresh, ever: $35 across 25' },
+      { type: 'p', text: 'Benoit is the case the June guide got right, for the reason it gave: Mattel will never make him, so every Benoit shelf is built from Jakks, and his Series 26 holds $35 while his Series 7 and 10 sit at $20 to $25. It is the only deceased-or-gone premium in the line with a real sample behind it. Eddie Guerrero, the figure that argument is usually made with, is $22.99 across 14 for his Series 18 here, because Mattel has made Eddie a dozen times since and the demand went there.' },
+      { type: 'h2', text: 'First-figure releases: mostly a myth in this line' },
+      { type: 'p', text: 'The rookie-card logic says the first Jakks figure of a future headliner should climb. Brock Series 1 does. John Cena’s first Ruthless Aggression figures do not appear on this page because they have two sales each in our window, which is itself the finding: nobody is trading them. Cena has 22 releases in this line and the one with a real sample, Series 18, is $30 across 31. Rey Mysterio has 24 releases and tops out at $32.99. Batista’s best is the Micro Aggression Series 1 bundle at $54.87 across 7, a set with a second figure in it. Randy Orton Series 1 shows $39.99 on four sales. The market for this era has not decided the first figure matters, and until it does, paying a rookie premium is paying for a story.' },
+      { type: 'h2', text: 'Women and exclusives' },
+      { type: 'p', text: 'The women of the era are a small, steady tier: Torrie Wilson Series 22 at $29.99 across 10, Victoria Series 28 at $27.99 across 11, Melina Series 29 at $24.99 across 49 sold with a $210 top, Trish Stratus Series 14 at $19.99 across 13. Nothing like the WWE Basic women’s premium, and the reason is the same one that runs this whole page: Jakks made the women in the same quantities as the men. The exclusives bucket holds 12 records and almost no sample; the Limited Edition Rey at $39 across 5 is the only one with a number, and the Limited Edition Cena at $179.99 on two sales is a claim, not a comp.' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_29_melina_fd4f46', label: 'Melina, Series 29', sublabel: '49 sold: the most-traded woman in the line' },
+      { type: 'callout', text: 'What the June guide called the nostalgia window is a real mechanism; it lifted Hasbro WWF figures a decade ago and it is lifting Mattel Basic women right now. It has not lifted Ruthless Aggression, and the sold data says why: the mechanism needs scarcity to act on, and this line was manufactured without any. The 2006 median of $25 is the high-water mark so far. If the wave comes, it comes for MVP Series 44, Benoit, and the Micro Aggression sets first, because those are the only figures with a supply constraint.' },
+      { type: 'h2', text: 'What we hold back' },
+      { type: 'p', text: 'Only 124 of 342 records have five or more sales, which for a line this size means most individual figures trade too rarely to price, and 119 records have no release year attached. Three Triple H records share one comp bucket. The Micro Aggression Series 1 bundles (Batista $54.87 across 7, Triple H $44.99 across 8, Rey $39.95 across 6) are two-figure sets whose price is partly the micro figure, so they are not comparable to the singles.' },
+      { type: 'h2', text: 'How to buy the era' },
+      { type: 'p', text: 'Buy the roster loose, in tubs, at the $10 to $15 the market has set, and enjoy the best-articulated Jakks figures ever made for less than a Mattel Basic. Pay $30 to $50 for exactly the releases named above and nothing else. Do not pay a first-figure premium on Cena or Rey, and do not pay a late-series premium at all. The June guide told you to sort the tub before you lot it; that still holds, because the MVP and the Benoit are in there. The rest of the tub is the tub.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Ruthless Aggression vs Deluxe Aggression value guide|/guides/jakks-aggression-value-guide]] — the era overview this page checks against the sold data',
+        '[[Classic Superstars price guide|/guides/jakks-classic-superstars-price-guide]] — the Jakks line where late-series scarcity is real',
+        '[[WWE Basic price guide|/guides/wwe-basic-price-guide]] — the Mattel line that replaced this one at the peg',
+        '[[Jakks Pacific collector guide|/guides/jakks-hub]] — the era: nostalgia line vs action line',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2101,6 +2154,7 @@ export const ARTICLES: Article[] = [
         { type: 'p', text: 'Buying: target the names, not the lines. A complete loose figure of a top-tier name from a scarce wave beats a carded common every time. Check accessories — Jakks figures shipped with belts, shirts, and gear that the loose market routinely lost, and completeness moves the price the same way it does in every vintage market.' },
         { type: 'p', text: 'Selling: if you have a childhood tub of these, do not bulk-lot it blind. The tub is mostly commons — but one first-release name or late-series figure can be worth more than the rest combined, and bulk lots hand that figure to a reseller for free. Sort, look up, then lot the leftovers.' },
         { type: 'p', text: 'FigurePinner has the sold comps across the Jakks era — Ruthless Aggression, Deluxe Aggression, and the sublines — so you can separate the climbing figures from the abundant ones in seconds. Look up the name before you buy, and before you let a single figure leave the tub.' },
+        { type: 'callout', text: 'Update, September 2026: we checked this guide against the sold data for all 342 Ruthless Aggression records. The median is $17.99, two figures clear $50, and the late series are cheaper than the early ones. The full numbers, and where the mechanism above does and does not hold, are in the [[Ruthless Aggression price guide|/guides/jakks-ruthless-aggression-price-guide]].' },
       ],
     },
 
@@ -2903,6 +2957,7 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Further reading' },
       { type: 'ul', items: [
         '[[Classic Superstars price guide|/guides/jakks-classic-superstars-price-guide]] -- the sacred line by the numbers: jobbers over headliners, late series over early, 3-packs over singles',
+        '[[Ruthless Aggression price guide|/guides/jakks-ruthless-aggression-price-guide]] -- the mainline by the numbers: an $18 line, two figures over $50, and the nostalgia wave that has not arrived',
         '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
       ]},
     ],
