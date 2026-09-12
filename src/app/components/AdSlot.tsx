@@ -67,6 +67,38 @@ import { trackFunnel } from '@/app/_lib/funnelClient'
  * iframe, until the sandboxing above — see that note for why and what changed.)
  */
 
+// 2026-09-12 — `allow-same-origin` RESTORED (partial reversal of 64ce8a9 / the
+// 2026-07-29 Steve ruling, on R8 grounds: Steve reported "where's Adsterra,
+// costing me money" and a live side-by-side on prod proved the cause).
+//
+// Evidence (prod homepage, 2026-09-12 ~02:20Z, two injected srcDoc frames with
+// byte-identical ad markup): the frame sandboxed exactly as 64ce8a9 shipped it
+// (`allow-scripts allow-popups allow-popups-to-escape-sandbox`) stayed EMPTY;
+// the same frame with `allow-same-origin` added rendered a real creative within
+// ten seconds. Inside the opaque-origin frame invoke.js sees `origin: null`,
+// `document.domain: ""` and an empty referrer, and Adsterra serves nothing for a
+// placement it cannot attribute to figurepinner.com. So the 7/26 root-cause
+// doc's "costs zero revenue" premise (§7 option 1) — which the 7/29 ruling
+// rested on — was wrong: the sandbox suppressed every ad impression sitewide
+// from the 7/28 deploy until today. The optimistic `load`-event fill signal
+// below is why nothing collapsed and nobody saw it: the srcDoc document loads
+// fine, only the creative never arrives.
+//
+// What stays closed: the ACTUAL 7/26 redirect vector, `window.top.location =`.
+// A sandboxed frame without `allow-top-navigation` cannot navigate its
+// ancestors regardless of origin — that flag is still deliberately absent.
+// What reopens: with `allow-scripts` + `allow-same-origin` together the ad
+// script is same-origin again and can read this page's DOM and non-HttpOnly
+// cookies (Clerk's `__session` is HttpOnly; Clerk itself is off every public
+// page since 2026-09-03, and AdSlot mounts only on public pages), and a hostile
+// script could remove the sandbox attribute on its own frame — the spec's
+// documented caveat. Accepted as the lesser cost against six weeks of zero
+// revenue. The clean fix is a genuinely cross-origin frame host (a second
+// origin serving the atOptions+invoke.js document, framed with this same
+// sandbox list) — not shippable tonight because no second origin exists
+// (workers.dev 404s) and the site sends `X-Frame-Options: DENY` /
+// `frame-ancestors 'none'` sitewide. Tracked in
+// WEB-TO-STANDALONE-WEBAUDIT-ADSTERRA-ZERO-FILL-SINCE-0728-ROOTCAUSE-FIX-2026-09-12.md.
 const FILL_TIMEOUT_MS = 4000
 
 type SlotConfig = {
@@ -281,7 +313,7 @@ export default function AdSlot({ slot, className }: Props) {
           srcDoc={adHtml}
           title="Advertisement"
           loading="lazy"
-          sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
           style={{ width: config.width, height: config.height, border: 'none', maxWidth: '100%' }}
         />
       </div>

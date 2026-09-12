@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/nextjs'
 import { genreMark } from '@/app/_lib/genreMarks'
+import AdSlot from '@/app/components/AdSlot'
 
 type WantItem = {
   id: string
@@ -126,6 +127,8 @@ export default function WantlistPage() {
         Search for a figure and click &ldquo;Add to Want List&rdquo; from its detail page.
         Click a target price to edit it inline.
       </p>
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content; AdSlot hides itself for Pro */}
+      <AdSlot slot="adsterra-banner" />
     </div>
   )
 }

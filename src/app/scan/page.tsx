@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
-import Link from 'next/link'
+import Link from 'next/link'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 
 // BarcodeDetector is a browser API not yet in TypeScript's lib. Declare minimally.
 declare class BarcodeDetector {
@@ -394,6 +395,8 @@ export default function ScanPage() {
           </form>
         )}
 
+        {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content */}
+        <AdSlot slot="adsterra-banner" />
       </div>
     </div>
   )

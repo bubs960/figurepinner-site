@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 import { WHATNOT_SELLERS, WHATNOT_INVITE } from './_data/sellers'
 
 export const metadata: Metadata = {
@@ -129,6 +130,8 @@ export default function WhatnotSellersPage() {
           </div>
         </section>
 
+        {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content */}
+        <AdSlot slot="adsterra-banner" />
       </main>
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getShelfShareStats } from '../_lib/shelfShareData'
+import AdSlot from '@/app/components/AdSlot'
 
 export const dynamic = 'force-dynamic'
 
@@ -54,6 +55,8 @@ export default async function ShelfSharePage({ params }: Props) {
         )}
         <a className="shs-cta" href="/sign-up">Start your own shelf &rarr;</a>
       </div>
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content */}
+      <AdSlot slot="adsterra-banner" />
       <a className="shs-home" href="/">FigurePinner &mdash; the collector&apos;s price guide</a>
     </div>
   )

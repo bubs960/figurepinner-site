@@ -73,7 +73,7 @@ export default function PrivacyPage() {
         <ProseSection title="Affiliate Links & Third-Party Services">
           <p>FigurePinner displays links to eBay listings. Some of these links are affiliate links through the eBay Partner Network. When you click an affiliate link and make a purchase, we may earn a commission at no extra cost to you. These commissions help support the development of FigurePinner.</p>
           <p>Clicking an eBay affiliate link sends you to eBay, which has its own privacy policy and data practices. FigurePinner does not receive any personal information from eBay as a result of these clicks.</p>
-          <p>FigurePinner displays third-party display ads (Adsterra) on select public content pages. These ads render inside a cross-origin iframe that FigurePinner does not control; the ad network may use cookies or similar identifiers within that iframe to serve ads and measure performance.</p>
+          <p>FigurePinner displays third-party display ads (Adsterra) on select public content pages. These ads render inside a sandboxed iframe that FigurePinner embeds; the ad content and the scripts inside it are supplied by the ad network, not by FigurePinner, and the ad network may use cookies or similar identifiers within that iframe to serve ads and measure performance.</p>
           <p>We also use the following third-party services:</p>
           <ul>
             <li><strong>Clerk</strong> — authentication and user management</li>
@@ -110,7 +110,7 @@ export default function PrivacyPage() {
         </ProseSection>
 
         <ProseSection title="Cookies">
-          <p>FigurePinner uses essential cookies to maintain your login session (managed by Clerk). Select public pages may also include a third-party ad unit (Adsterra), which loads inside a cross-origin iframe and may set its own cookies to serve ads; FigurePinner does not control or read those cookies.</p>
+          <p>FigurePinner uses essential cookies to maintain your login session (managed by Clerk). Pages may also include a third-party ad unit (Adsterra), which loads inside a sandboxed iframe and may set its own cookies to serve ads; FigurePinner does not read those cookies.</p>
           <p>You can control cookies through your browser settings, though disabling essential cookies may break authentication.</p>
         </ProseSection>
 

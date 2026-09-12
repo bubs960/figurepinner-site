@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import { GENRE_TAXONOMY } from '@/data/genre-lines'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 
 export const metadata: Metadata = {
   title: 'About — Real Prices for Action Figure Collectors',
@@ -233,6 +234,8 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content */}
+        <AdSlot slot="adsterra-banner" />
       </main>
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}

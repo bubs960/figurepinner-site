@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { genreMark, labelMark } from '@/app/_lib/genreMarks'
+import AdSlot from '@/app/components/AdSlot'
 
 // Client component — runtime is inherited from the edge layout
 
@@ -305,6 +306,8 @@ function AppHomeContent() {
           ))}
         </div>
       </section>
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content; AdSlot hides itself for Pro */}
+      <AdSlot slot="adsterra-banner" />
     </div>
   )
 }

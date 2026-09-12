@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import SearchInterface from './_components/SearchInterface'
 import { TOTAL_FIGURES_LABEL } from '@/data/kb-stats'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 
 interface SearchPageProps {
   searchParams: Promise<{ q?: string; genre?: string }>
@@ -45,6 +46,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       <SiteHeader />
 
       <SearchInterface initialQuery={initialQuery} initialGenre={initialGenre} totalLabel={TOTAL_FIGURES_LABEL} />
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content */}
+      <AdSlot slot="adsterra-banner" />
     </main>
   )
 }

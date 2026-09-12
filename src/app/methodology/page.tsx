@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import SiteHeader from '@/app/components/SiteHeader'
+import AdSlot from '@/app/components/AdSlot'
 
 export const metadata: Metadata = {
   title: 'How We Calculate Prices — Methodology',
@@ -76,6 +77,8 @@ export default function MethodologyPage() {
           </a>
         </div>
 
+        {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content */}
+        <AdSlot slot="adsterra-banner" />
       </main>
 
       {/* Footer is rendered globally by the root layout (src/app/layout.tsx). */}

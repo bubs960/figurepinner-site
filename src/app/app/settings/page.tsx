@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { UserProfile, useUser } from '@clerk/nextjs'
+import AdSlot from '@/app/components/AdSlot'
 
 type NotifPrefs = {
   dealAlerts: boolean
@@ -210,6 +211,8 @@ export default function SettingsPage() {
           )}
         </div>
       </Section>
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content; AdSlot hides itself for Pro */}
+      <AdSlot slot="adsterra-banner" />
     </div>
   )
 }

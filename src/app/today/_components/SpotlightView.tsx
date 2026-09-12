@@ -8,6 +8,7 @@ import { deriveName } from '@/data/kbHelpers'
 import { thumb } from '@/lib/imageUrl'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 import type { SpotlightRow } from '../_lib/dailySpotlight'
+import AdSlot from '@/app/components/AdSlot'
 
 export async function SpotlightView({
   row,
@@ -65,6 +66,8 @@ export async function SpotlightView({
           <a className="tds-sub" href="/today">See today's spotlight &rarr;</a>
         )}
       </div>
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit; covers /today and /today/[date] */}
+      <AdSlot slot="adsterra-banner" />
       <a className="tds-home" href="/">FigurePinner &mdash; the collector&apos;s price guide</a>
     </div>
   )

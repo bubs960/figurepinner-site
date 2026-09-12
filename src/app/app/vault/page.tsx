@@ -7,6 +7,7 @@ import { thumb } from '@/lib/imageUrl'
 import ScrollReveal from '@/app/components/ScrollReveal'
 import VaultNav from './_components/VaultNav'
 import VaultClient from './_components/VaultClient'
+import AdSlot from '@/app/components/AdSlot'
 
 export const dynamic = 'force-dynamic'
 
@@ -89,6 +90,9 @@ export default async function VaultShelfPage() {
           <a href="/methodology">How pricing works &rarr;</a>
         </div>
       </section>
+
+      {/* Ads on all pages (Steve, 2026-09-12) — one 300×250 unit, end of content; AdSlot hides itself for Pro */}
+      <AdSlot slot="adsterra-banner" />
 
       {/* Footer is rendered globally by the root layout. */}
     </div>
