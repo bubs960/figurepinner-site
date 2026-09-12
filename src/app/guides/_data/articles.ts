@@ -744,6 +744,61 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-12: guide-gap #8 (Steve: "go on Power of the Force next"). KB
+    // product_line power-of-the-force = the 1995-2000 Hasbro/Kenner revival
+    // (POTF2), 222 fids, 215 with comps, 214 n>=5 — the best-traded line on
+    // the site. Not the 1985 Kenner POTF (that lives under vintage-collection).
+    // Variant/cardback sub-versions (.00/.01, long-saber etc.) are NOT in the KB
+    // and are not claimed. Pooling: a few Luke/Han pairs share snapshots. No owner datum.
+    slug: 'star-wars-power-of-the-force-price-guide',
+    title: 'Power of the Force Price Guide (1995–2000): The Buff-Luke Era Is a $12 Line',
+    metaTitle: 'Star Wars Power of the Force (1995–2000) Price Guide — Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Hasbro Power of the Force values from 215 figures with real eBay sold data: red cards at $15, green cards at $12, CommTech at $11, the AT-AT at $95, the freeze-frame AT-AT Driver at $75, and why the 1995 Boba Fett is not a grail.',
+    dek: 'The line that brought Star Wars back to the pegs in 1995 sold in the tens of millions. Thirty years later the sold screen still knows it.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A 1995–2000 Power of the Force carded figure is a $10–15 figure on any card; the money is vehicles ($30–100), the freeze-frame AT-AT Driver, and the Walmart Max Rebo pairs. Check the exact release before paying a “vintage” premium:',
+    body: [
+      { type: 'p', text: 'When Kenner relaunched Star Wars figures in 1995 after a decade off the shelves, it did it on a red card with figures built like bodybuilders, and the hobby has been making the buff-Luke joke ever since. The line ran through 2000 on red cards, then green, then the Freeze Frame, Flashback, and CommTech chip cards, with Shadows of the Empire and Expanded Universe sub-lines and a full vehicle range beside them. FigurePinner tracks 222 releases, and 215 of them have real eBay sold comps with 214 at five or more sales, which makes this the most thoroughly traded line we publish. The median is $15.50. Sixty of 214 clear $20. Six clear $50. One clears $100, and it is a spaceship.' },
+      { type: 'h2', text: 'The card colours, priced' },
+      { type: 'p', text: 'Red card (1995–96): $14.95 median across 27 sampled figures. Green card (1997–98): $12 across 45. Freeze Frame green: $16.15 across 18. CommTech and Flashback (the starburst cards, 1998–2000): $11 across 20. Expanded Universe: $16 across 9. Shadows of the Empire: $14.68 across 5. The oldest card is worth three dollars more than the newest, and that is the whole cardback premium. These figures shipped in quantities that made a 1978 Kenner run look artisanal, and a carded example of most of them is a ten-dollar object in 2026 with thirty years of dust on it.' },
+      { type: 'p', text: 'The floor is the main cast on green: Ben Kenobi at $8.99 across 37 and $9.95 across 50 on two green releases, Princess Leia at $9.95 across 42, Hammerhead at $9.79 across 47, Lando in Skiff Guard disguise at $8.68 across 34, the Electronic Power F/X Emperor at $7.99 across 44 sold. Luke Skywalker has 14 releases in this line and the best of them, the 1995 red-card original, is $20.27 across 27 sold. The buff Luke everyone jokes about is a twenty-dollar figure. The Flashback Luke is $9.74.' },
+      { type: 'h2', text: 'The 1995 Boba Fett is not a grail' },
+      { type: 'p', text: 'The red-card Boba Fett is the figure most often listed with the word “rare” in this line, and it holds a $15 median across 50 sold. It carries a $999 top sale in our data, which is either a graded variant or a mistake, and either way it is not the market; the market is fifty people paying fifteen dollars. The red-card figure that actually holds is R2-D2 at $40.50 across 20 sold, top $750, and we can tell you it holds without being able to tell you why from our catalog, because the cardback sub-variants collectors chase in this line (the printing revisions, the accessory changes) are not fields we track yet. When they are, this figure gets a footnote. Until then, $40 is the number and the reason is yours to research.' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_power-of-the-force_red-card-action-figures_boba-fett_cee8da', label: 'Boba Fett, red card (1995)', sublabel: 'Listed as rare, sells at $15, 50 times' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_power-of-the-force_red-card-action-figures_r2-d2_1d3b53', label: 'R2-D2, red card (1995)', sublabel: 'The red-card figure that holds: $40.50 across 20' },
+      { type: 'p', text: 'The rest of the red card in one breath: Greedo $23 across 20, Tusken Raider $22 across 28, Yoda $18, Vader $17.15, Han $17.10, Chewbacca $17, Stormtrooper $16, Lando $14.99 across 26, R5-D4 $14.95 across 50, C-3PO $14.39 across 50. Twenty-seven figures, one of them over $25.' },
+      { type: 'h2', text: 'The one carded figure over $50' },
+      { type: 'p', text: 'AT-AT Driver on the Freeze Frame card (1998): $75 median across 20 sold, top $245. It is the only carded single in the line above $50, and it is the shape you would predict: a late-wave trooper on the collector card, shipped in a case assortment that shorted him. The next carded figures down are Dengar at $26.60 across 20 and the Max Rebo Band pairs, which are Walmart exclusives in two-packs: Max Rebo and Doda Bodonawieedo at $49.99 across 24, Joh Yowza and Sy Snootles at $30 across 13, Droopy McCool and Barquin D’an at $24.97 across 22.' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_power-of-the-force_green-card-freeze-frame-action-figures_at-at-driver_744dbc', label: 'AT-AT Driver, Freeze Frame (1998)', sublabel: 'The only carded single over $50' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_power-of-the-force_deluxe-packs-and-exclusives_max-rebo-doda-bodonawieedo_8847f0', label: 'Max Rebo & Doda Bodonawieedo (Walmart, 1998)', sublabel: 'Exclusive two-pack, 24 sold' },
+      { type: 'h2', text: 'The vehicles are where the money is, again' },
+      { type: 'ul', items: [
+        'Dash Rendar’s Outrider (1997 vehicle release): $100 across 6 sold. Thin sample; the 1996 Shadows of the Empire boxing of the same ship is $25.65 across 22, so read the $100 with care.',
+        'Imperial AT-AT Walker (1997): $95 across 28, top $224.99. The big box everyone kept and the deepest sample at the top.',
+        'Y-Wing Fighter (1999): $79.99 across 50. X-Wing Fighter (1995): $65.55 across 50. Two fifty-sale samples at the top of the line, both spaceships.',
+        'Rancor with Luke (1998): $69.35 across 21. Millennium Falcon CD-ROM playset (1999): $48.88 across 50. AT-ST Scout Walker (1995): $46.44 across 50, top $874.99. Slave I, Shadows boxing (1996): $45.99 across 28. Bantha with Tusken Raider (1998): $45 across 20.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_power-of-the-force_vehicles-creatures-and-playsets_imperial-at-at-walker_16baf1', label: 'Imperial AT-AT Walker (1997)', sublabel: 'The top of the line with a real sample' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_power-of-the-force_vehicles-creatures-and-playsets_y-wing-fighter_8bcbef', label: 'Y-Wing Fighter (1999)', sublabel: '50 sold at $79.99' },
+      { type: 'p', text: 'Vehicles, creatures, and playsets hold a $27 median across 37 sampled releases against $12 to $15 for carded figures, and 15 of the 37 clear $30. Same mechanism as every 3.75-inch line before and since: the box got thrown out, the card did not, and a complete boxed vehicle from 1997 is scarce in a way no carded figure from 1997 will ever be. The Gunner Station sets (Falcon with Han $39.99 across 50, TIE with Vader $37.50 across 50) and the creature two-packs (Wampa with Luke $35.99 across 35, Tauntaun with Han $30 across 50) are the mid-tier, and the 1995 Snowspeeder at $34 across 50 is the cheapest way to own a box from the relaunch year.' },
+      { type: 'callout', text: 'The year tells you almost nothing here except at the very end: 1995 releases hold a $17.15 median, 1996 $19, 1997 $15.50, 1998 $20, and 1999 $31.87 across 6. The last year is the priciest because it is mostly vehicles (Y-Wing, Skiff, Falcon playset) and because the line was winding down into Episode I product. If you want one rule: in Power of the Force, buy the year 1999 and the word “vehicle,” and treat everything else as a ten-dollar figure until the sold history for that exact release says otherwise.' },
+      { type: 'h2', text: 'What we hold back' },
+      { type: 'p', text: 'The cardback sub-variants this line is famous for among its own collectors, the printing revisions and running changes on the red and green cards, are not in our catalog, so a “variant” premium you see quoted elsewhere is neither confirmed nor denied here; our numbers are per release, not per revision. Our comp matching pools a few same-character pairs (two Lukes at $11.24, two Hans at $10, Mara Jade with Ree-Yees), disclosed rather than quoted. And 116 of 222 records lack a year, which is why the card colour, not the calendar, is the handle above.' },
+      { type: 'h2', text: 'How to buy the relaunch era' },
+      { type: 'p', text: 'Buy carded figures at $10 to $15 by the lot, because that is what they are and because thirty-year-old blister cards are a cheap, honest shelf. Do not pay a red-card premium for anyone but R2-D2. Buy boxed vehicles complete, on the sold history for that box, and buy the AT-AT and the Y-Wing before anyone else notices they are the only two things in the line with fifty-sale samples above $60. And when a listing calls the 1995 Boba Fett a grail, remember that fifty people this quarter disagreed at fifteen dollars each.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Most valuable vintage Kenner Star Wars figures|/guides/most-valuable-vintage-star-wars-kenner]] — the 1977–85 line this one revived, where the grails actually live',
+        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — the 2010-on line that replaced this shape',
+        '[[Vintage Kenner Star Wars vehicles guide|/guides/vintage-star-wars-kenner-vehicles-guide]] — the boxes-are-the-money rule, in its original era',
+        '[[What rare actually means|/guides/what-rare-actually-means]] — for the next listing that calls a $15 figure a grail',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2933,6 +2988,7 @@ export const ARTICLES: Article[] = [
         '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the sixth-scale tier: Tarkin at $795, troopers and sets, heroes at retail',
         '[[Micro Galaxy Squadron price guide|/guides/micro-galaxy-squadron-price-guide]] — Jazwares’ class ladder, chases, and the comps we can defend so far',
         '[[Star Wars Clone Wars figures price guide|/guides/star-wars-clone-wars-figures-price-guide]] — Hasbro 2008–13: the cardback myth, named clones, and the gunship money',
+        '[[Power of the Force (1995–2000) price guide|/guides/star-wars-power-of-the-force-price-guide]] — the buff-Luke era: a $12 line where the vehicles are the only money',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
