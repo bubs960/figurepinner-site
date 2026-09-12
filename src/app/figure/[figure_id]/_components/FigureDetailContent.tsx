@@ -1067,7 +1067,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           grid-template-columns: 300px minmax(0, 1fr) 340px;
           column-gap: 28px; row-gap: 20px; align-items: start;
           grid-template-areas:
-            "title title title"
+            "title title price"
             "photo about price"
             "comps comps ad1"
             "seller seller seller"
@@ -1098,7 +1098,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           .fp-page-main {
             grid-template-columns: minmax(0, 1fr) 340px;
             grid-template-areas:
-              "title title"
+              "title price"
               "photo price"
               "photo about"
               "comps comps"
