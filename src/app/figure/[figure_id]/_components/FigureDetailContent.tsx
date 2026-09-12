@@ -1028,8 +1028,9 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           /* Hero-internal reorder: identity column (chips/H1/price/CTAs)
              above the photo vitrine + At a Glance. */
           .fp-hero-grid { display: flex !important; flex-direction: column; }
-          .fp-hero-photo-col { order: 2; }
           .fp-hero-id-col    { order: 1; }
+          .fp-hero-price-col { order: 2; }
+          .fp-hero-photo-col { order: 3; }
         }
       `}</style>
 

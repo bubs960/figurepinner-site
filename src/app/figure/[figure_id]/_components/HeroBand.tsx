@@ -162,7 +162,13 @@ export default function HeroBand({
       style={{
         display: 'grid',
         gridTemplateColumns: 'minmax(260px, 380px) 1fr',
-        gap: '3rem',
+        // Steve 2026-09-12: the photo column sat empty below the vitrine while
+        // the identity column stacked lore + price + CTAs into a long scroll.
+        // Two rows: identity spans both on the right; price + CTAs take row 2
+        // under the photo. Mobile order is set in FigureDetailContent's
+        // .fp-hero-* rules (identity, price, photo).
+        gridTemplateRows: 'auto auto',
+        gap: '1.5rem 3rem',
         alignItems: 'start',
       }}
     >
@@ -214,7 +220,7 @@ export default function HeroBand({
       `}</style>
 
       {/* Vitrine — outer wrapper reserves space before image loads, preventing CLS */}
-      <div className="fp-hero-photo-col" style={{ position: 'relative', minHeight: '325px' }}>
+      <div className="fp-hero-photo-col" style={{ position: 'relative', minHeight: '325px', gridColumn: 1, gridRow: 1 }}>
         <div
           className="fp-vit-sweep"
           style={{
@@ -319,7 +325,7 @@ export default function HeroBand({
       </div>
 
       {/* Identity + placard */}
-      <div className="fp-hero-id-col" style={{ paddingTop: '0.25rem', display: 'flex', flexDirection: 'column' }}>
+      <div className="fp-hero-id-col" style={{ paddingTop: '0.25rem', display: 'flex', flexDirection: 'column', gridColumn: 2, gridRow: '1 / span 2' }}>
         {/* Eyebrow — genre + maker + line, gold ruled */}
         <div style={{
           fontSize: '0.84rem', fontWeight: 500, letterSpacing: '0.22em',
@@ -373,7 +379,12 @@ export default function HeroBand({
             {loreText}
           </p>
         )}
+      </div>
 
+      {/* Price + CTAs — third grid child, under the photo on desktop (row 2,
+          column 1); FigureDetailContent's mobile rules order it right after
+          the identity column so phones still read title -> price -> photo. */}
+      <div className="fp-hero-price-col" style={{ gridColumn: 1, gridRow: 2, display: 'flex', flexDirection: 'column' }}>
         {/* v4 PRICE BLOCK — two condition buckets, Bebas faces, confidence
             chips (build plan §1). Fires whenever a real sealed/loose bucket
             exists; the legacy placard below stays the pooled-only fallback so
