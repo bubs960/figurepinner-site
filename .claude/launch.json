@@ -63,6 +63,18 @@
         "8788"
       ],
       "port": 8788
+    },
+    {
+      "name": "figurepinner-wrangler-remote",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--remote",
+        "--port",
+        "8789"
+      ],
+      "port": 8789
     }
   ]
 }
