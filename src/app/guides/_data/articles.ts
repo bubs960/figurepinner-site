@@ -857,6 +857,57 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-12: guide-gap #10 (Steve: "go on Marvel Hot Toys next"). KB fandom
+    // marvel-comics / product_line hot-toys, 262 fids, 222 with comps, 188 n>=5
+    // (9/12 r2proxy pull). Same two defects as the SW Hot Toys guide: variant
+    // pooling (18 Spider-Man records = one $325 snapshot; 5 Iron Man Mark IIIs
+    // = one $400) and Hasbro leakage (10 records under $100). Only unique-record
+    // numbers quoted. No owner datum.
+    slug: 'hot-toys-marvel-price-guide',
+    title: 'Hot Toys Marvel Price Guide: Big Bodies Hold, MCU Heroes Sell Under Retail',
+    metaTitle: 'Hot Toys Marvel Price Guide — Real Sold Prices (1/6 Scale MCU & Comics) | FigurePinner',
+    metaDescription:
+      'Hot Toys Marvel values from 222 sixth-scale figures with real eBay sold data: The Thing at $553, Red Hulk at $538, Hydra Stomper at $550, Kang at $482, Loki and Captain America under $225, and which buckets we refuse to quote.',
+    dek: 'The Star Wars line pays for troopers. The Marvel line pays for mass. Hulks, Things, Dooms, and the 2026 Fantastic Four are the money; Loki is not.',
+    readingMinutes: 7,
+    updated: '2026-09-12',
+    shortVersion:
+      'A standard Hot Toys Marvel figure resells at roughly $300; oversized villains and the current Fantastic Four wave clear $450–550, and MCU headliners like Loki, Captain America, and Black Widow trade under their own retail. Check the exact MMS release:',
+    body: [
+      { type: 'p', text: 'FigurePinner tracks 262 Hot Toys Marvel releases, 222 with real eBay sold comps and 188 with five or more sales, spanning the MCU from Iron Man’s Mark III to the 2026 Fantastic Four wave plus the comic-inspired and Gamerverse lines. The median is $315.99, a touch above the Star Wars line’s $299, and 131 of 188 sampled figures sit between $250 and $400. Thirty-five clear $400. None clear $600. That last number is the difference between the two licenses: Star Wars has an $850 Tarkin; Marvel has no single figure over $555, because Hot Toys reissues Marvel harder than it reissues anything.' },
+      { type: 'h2', text: 'The rule here is mass, not scarcity' },
+      { type: 'ul', items: [
+        'The Thing (2026 Fantastic Four): $553.52 across 24 sold on the standard release, with a $1,499.95 top; the Special Edition and a second listing pool at $515.14 across 43. Either way, the biggest body in the wave is the priciest figure in the line.',
+        'Steve Rogers and the Hydra Stomper (2021, What If…?): $550 across 40 sold. The Hydra Stomper alone: $424.99 across 48.',
+        'Red Hulk (2025): $538 across 42, top $882. Hulk, Avengers: Endgame (2019): $469.99 across 50, top $950. Every Hulk-class body Hot Toys has shipped holds $450-plus.',
+        'Classic Iron Man (2023, comic deco): $519 across 40. Doctor Doom Special Edition (2025): $499.99 across 46; the Collector Edition, $455 across 32. Kang (2023): $481.95 across 37. Infinity Ultron (2021): $425 across 46. Carnage Deluxe (2021): $440 across 46.',
+        'Mister Fantastic (2026): $455.99 across 36; with H.E.R.B.I.E., $498 across 17. Human Torch (2026): $400 across 35. Mr. Knight (2026): $488 across 8.',
+      ]},
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_red-hulk_f83618', label: 'Red Hulk (2025)', sublabel: 'A Hulk-class body, 42 sold' },
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_steve-rodgers-and-the-hydra-stomper_771eea', label: 'Steve Rogers and the Hydra Stomper (2021)', sublabel: 'The top set: $550 across 40' },
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_kang_ba2465', label: 'Kang (2023)', sublabel: 'A villain made once' },
+      { type: 'p', text: 'Read the top of the table and the pattern is physical. Hulks, Red Hulks, the Thing, Ultron, Doom, the Hydra Stomper armour, Carnage: oversized or heavily-armoured bodies that shipped at a higher retail than a standard figure and cannot be cheaply re-cut as another variant. A Spider-Man can be reissued as a new suit on the same body every nine months. A Red Hulk is a Red Hulk. The Star Wars line prices its one-run troopers this way; the Marvel line prices its one-run tonnage this way.' },
+      { type: 'h2', text: 'The 2026 Fantastic Four wave is already trading above retail' },
+      { type: 'p', text: 'Releases dated 2026 in our database hold a $390.77 median across 22 sampled figures, against $299.99 for 2024 and $317.97 for 2025. That is the Fantastic Four wave: Thing, Mister Fantastic, Human Torch, Doom, Mr. Knight, all current or just-delivered, all trading at 1.3 to 1.8 times a standard figure while the preorder backlog clears. Invisible Woman is the caution: $50.70 across 24 sold in our data, which is not a Hot Toys price and is almost certainly Hasbro Marvel Legends listings leaking into the bucket. We do not quote her, and the reason is in the section below.' },
+      { type: 'h2', text: 'MCU heroes sell under their own retail' },
+      { type: 'p', text: 'Loki (2021 series and Endgame, pooled): $200 across 50 sold. Captain America (Endgame and Falcon and the Winter Soldier, pooled): $222 across 49. Black Widow (Special and Artisan Editions, pooled): $209 across 48. Doctor Strange (No Way Home and Multiverse, pooled): $225 across 49. Star-Lord: $210 across 49. Captain Marvel: $180 across 46. Thor, Endgame and Deluxe: $175 on thin samples. Stan Lee, Thor: Ragnarok: $156.40 across 44. Mantis: $155.75 across 38. Armorized Deadpool (2021): $119.99 across 49, the cheapest legitimate Hot Toys figure in the line and a warning about what a rushed movie tie-in does at resale.' },
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_hulk_36bb04', label: 'Hulk, Avengers: Endgame (2019)', sublabel: 'The 2019 figure that held: $470 across 50' },
+      { type: 'p', text: 'Every one of those is a standard-body MCU character with multiple Hot Toys releases and, in most cases, a likeness debate attached. They resell for a hundred dollars under what the current version costs at Sideshow. If you own a Loki as an asset, you own a $200 asset that cost $260. The Marvel line’s hero rule is stricter than Star Wars’: there, Vader holds retail; here, Loki does not.' },
+      { type: 'callout', text: 'Wolverine is the hero exception, and it is a body-and-costume exception, not a likeness one. The 1973 Version Deluxe (2022): $349.99 across 46. The TVA Jacket Version (2025): $349.95 across 48. Both above the line median, both distinctive costumes rather than another take on the same suit. Venom Special Edition (2020): $379.99 across 49, for the same reason with a bigger body. Spider-Man, meanwhile, has 22 releases in our database and 18 of them pool into one $325 snapshot, which is useless per release and roughly right as a category: a Spider-Man is a $325 figure, whichever suit, and there is always another suit coming.' },
+      { type: 'h2', text: 'What we will not quote' },
+      { type: 'p', text: 'Same two defects as our Hot Toys Star Wars guide, disclosed the same way. Variant pooling: eighteen Spider-Man records, five Iron Man Mark III colour versions ($400 across 49, identical), three Peter Parker suits ($395.08), three Friendly Neighborhood Spider-Man editions ($510 across 46), and a dozen more pairs return one snapshot each; the pooled number is a real category signal and not a per-release price, so those are named here only as categories. Hasbro leakage: ten records under $100, led by a $15.19 Winter Soldier, a $19.99 Scarlet Witch Collector Edition, a $30 Green Goblin, and a $34.99 Blade. None of those is a sixth-scale price. Treat anything under $100 on this line as a six-inch figure with the wrong title until our pipeline owner ships the fix.' },
+      { type: 'h2', text: 'How to buy Hot Toys Marvel' },
+      { type: 'p', text: 'Buy the oversized bodies at preorder if you want them, because that is the only category in this line that goes up and the only one that does not get a cheaper reissue. Buy the MCU heroes second-hand, at the $150 to $225 the market has settled on, never at retail, and never as an investment. Buy the Fantastic Four now or wait a year; the 2026 premium is a backlog premium and backlogs clear. And when a listing under $100 says Hot Toys, it is a Marvel Legends figure until the photos prove otherwise.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the other license, where troopers are the money',
+        '[[Marvel Legends collector guide|/guides/marvel-legends-hub]] — the six-inch line these Hasbro leaks come from',
+        '[[Marvel Legends price guide 2026|/guides/marvel-legends-price-guide-2026]] — wave by wave, at one-tenth the price',
+        '[[Sealed vs loose action figures|/guides/sealed-vs-loose-action-figures]] — the condition ladder, which at $300 a figure is the whole conversation',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -2551,6 +2602,15 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'The scale divide is real and it matters' },
       { type: 'p', text: 'These two lines are not interchangeable. They don\'t display together well. Their vehicles and accessories don\'t cross over. Their collector communities overlap but don\'t fully coincide. Buying one because you like the other is the clearest path to a shelf that satisfies neither.' },
       { type: 'p', text: 'The collectors who are happiest in the Star Wars market tend to be ones who picked a lane. TVC because they want the full roster, the dioramas, the vehicles, and the carded display. Black Series because they want premium display pieces on a desk or shelf. Both because they\'re separate with a budget that accounts for both. What doesn\'t work is treating them as interchangeable options for the same shelf.' },
+      { type: 'h2', text: 'Further reading: the Star Wars price guides' },
+      { type: 'ul', items: [
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the six-inch line, priced',
+        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — TVC 1.0 vs 2.0 cards, HasLab boxes, and the pegwarmers, from real sold data',
+        '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the sixth-scale tier: Tarkin at $795, troopers and sets, heroes at retail',
+        '[[Micro Galaxy Squadron price guide|/guides/micro-galaxy-squadron-price-guide]] — Jazwares’ class ladder, chases, and the comps we can defend so far',
+        '[[Star Wars Clone Wars figures price guide|/guides/star-wars-clone-wars-figures-price-guide]] — Hasbro 2008–13: the cardback myth, named clones, and the gunship money',
+        '[[Power of the Force (1995–2000) price guide|/guides/star-wars-power-of-the-force-price-guide]] — the buff-Luke era: a $12 line where the vehicles are the only money',
+      ]},
       { type: 'p', text: 'Before you spend anything above retail on the secondary market, pull comps on FigurePinner for the specific figure and version you\'re looking at. The sold data tells you what that exact release — not the character in general — has actually traded for. Both lines have a wide spread between figures that hold and figures that don\'t, and the difference is almost never obvious from the listing title alone.' },
     ],
   },
@@ -3042,11 +3102,7 @@ export const ARTICLES: Article[] = [
         '[[Marvel Legends Price Guide 2026: What Every Wave Is Actually Worth|/guides/marvel-legends-price-guide-2026]] — wave-by-wave breakdown with specific comp data',
         '[[Marvel Legends: Where to Begin|/guides/marvel-legends-where-to-begin]] — entry point for new collectors choosing a first wave',
         '[[Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For|/guides/hope-summers-marvel-legends-figure-guide]] — Terrax wave deep-dive',
-        '[[Star Wars Vintage Collection price guide|/guides/star-wars-vintage-collection-price-guide]] — TVC 1.0 vs 2.0 cards, HasLab boxes, and the pegwarmers, from real sold data',
-        '[[Hot Toys Star Wars price guide|/guides/hot-toys-star-wars-price-guide]] — the sixth-scale tier: Tarkin at $795, troopers and sets, heroes at retail',
-        '[[Micro Galaxy Squadron price guide|/guides/micro-galaxy-squadron-price-guide]] — Jazwares’ class ladder, chases, and the comps we can defend so far',
-        '[[Star Wars Clone Wars figures price guide|/guides/star-wars-clone-wars-figures-price-guide]] — Hasbro 2008–13: the cardback myth, named clones, and the gunship money',
-        '[[Power of the Force (1995–2000) price guide|/guides/star-wars-power-of-the-force-price-guide]] — the buff-Luke era: a $12 line where the vehicles are the only money',
+        '[[Hot Toys Marvel price guide|/guides/hot-toys-marvel-price-guide]] — the sixth-scale tier: big-body villains and the Fantastic Four at $500, MCU heroes under retail',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
