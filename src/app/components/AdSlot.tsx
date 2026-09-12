@@ -110,6 +110,11 @@ type SlotConfig = {
 
 const SLOT_CONFIG: Record<string, SlotConfig> = {
   'adsterra-banner': { width: 300, height: 250, label: 'Adsterra Banner (300×250)', key: '5758f0cf21092928ed5d04198e165847' },
+  // Option C (2026-09-12): figure-page Ad 2 is a 728×90 leaderboard box. The
+  // zone key is Steve's to create in the Adsterra dashboard (STEVE-QUEUE 9/12);
+  // until it exists the slot renders the 300×250 banner inside the same box so
+  // the layout is final now and only the creative size changes later.
+  'adsterra-leaderboard': { width: 728, height: 90, label: 'Adsterra Leaderboard (728×90)', key: process.env.NEXT_PUBLIC_ADSTERRA_728_KEY ?? '' },
 }
 
 type Props = {
@@ -117,7 +122,10 @@ type Props = {
   className?: string
 }
 
-export default function AdSlot({ slot, className }: Props) {
+export default function AdSlot({ slot: requestedSlot, className }: Props) {
+  // Leaderboard without a key -> fall back to the banner unit (see SLOT_CONFIG).
+  const slot: keyof typeof SLOT_CONFIG =
+    requestedSlot === 'adsterra-leaderboard' && !SLOT_CONFIG['adsterra-leaderboard'].key ? 'adsterra-banner' : requestedSlot
   const [proState, setProState] = useState<'loading' | 'pro' | 'free'>('loading')
   const [adState, setAdState] = useState<'pending' | 'filled' | 'unfilled'>('pending')
   const iframeRef = useRef<HTMLIFrameElement>(null)

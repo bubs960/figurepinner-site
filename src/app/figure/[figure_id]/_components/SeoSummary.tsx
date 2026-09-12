@@ -121,6 +121,11 @@ interface SeoSummaryProps {
   soldHistory:  Array<{ sold_date: string }>
   /** KB fandom of the figure (Release T, 2026-09-07): drives the related-guides strip. */
   fandom?:      string | null
+  /** Option C (2026-09-12): 'sentence' = the summary paragraph only, muted,
+   *  for the hero About column; 'details' = retail/velocity row + guide links
+   *  only (the sentence lives in the hero -- one-field rule). Default renders
+   *  the pre-Option-C full band. */
+  variant?:     'sentence' | 'details'
 }
 
 export default function SeoSummary({
@@ -138,6 +143,7 @@ export default function SeoSummary({
   medianIsAvg,
   trendPct,
   soldHistory,
+  variant,
 }: SeoSummaryProps) {
   const retailPrice = LINE_RETAIL_PRICE[productLine] ?? null
   const velocity    = salesVelocity(soldHistory)
@@ -220,17 +226,25 @@ export default function SeoSummary({
     return { retailPrice, median, direction, absPct, label }
   })()
 
+  if (variant === 'sentence') {
+    return (
+      <p className="fp-seo-sentence" style={{ fontSize: '0.85rem', lineHeight: 1.6, color: 'rgba(242,232,213,.65)', margin: '12px 0 0' }}>
+        {summaryText}
+      </p>
+    )
+  }
+
   return (
     <div
       style={{
-        padding: '1rem 0',
-        borderTop: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
-        borderBottom: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
-        marginBottom: '1.5rem',
+        padding: variant === 'details' ? '0' : '1rem 0',
+        borderTop: variant === 'details' ? 'none' : '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
+        borderBottom: variant === 'details' ? 'none' : '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
+        marginBottom: variant === 'details' ? '0' : '1.5rem',
       }}
     >
       {/* Natural language paragraph — primary featured snippet target */}
-      <p
+      {variant !== 'details' && <p
         style={{
           fontSize: '0.9rem',
           lineHeight: 1.65,
@@ -240,7 +254,7 @@ export default function SeoSummary({
         }}
       >
         {summaryText}
-      </p>
+      </p>}
 
       {/* Retail vs market + velocity row */}
       {(retailMarkup || velocity) && (

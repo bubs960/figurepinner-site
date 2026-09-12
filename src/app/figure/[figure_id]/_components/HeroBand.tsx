@@ -45,6 +45,15 @@ interface ConditionRow {
 }
 
 interface HeroBandProps {
+  /** Option C (2026-09-12, Design handoff): the hero is three page-grid
+   *  children, not one component tree -- FigureDetailContent renders this
+   *  component three times with a different `part`, and the page grid places
+   *  them (title full-width, photo left, price right; phone DOM order title ->
+   *  price -> photo). All props are passed to every call; the derived values
+   *  are cheap and identical, so the three parts can never disagree. */
+  part: 'title' | 'photo' | 'price'
+  /** Compact Bid Check row, rendered as the bottom row of the price card. */
+  bidCheck?: React.ReactNode
   /** Powers the ambient brass corner pin (Claiming Ritual Phase A graft). */
   figureId: string
   imageUrl: string | null
@@ -113,9 +122,10 @@ function fmt(n: number): string {
 }
 
 export default function HeroBand({
+  part, bidCheck,
   figureId, imageUrl, characterName, brand, lineName, series, scale,
   eraLabel, releaseYear, rarityTier, genre, className,
-  valuePricing, loreText, underPhoto, ticks, lastSale,
+  valuePricing, underPhoto, ticks, lastSale,
   conditionLabel, conditionRows, secondary, inferenceNote,
   buckets, history, hasReceipts, ebaySearchUrl,
 }: HeroBandProps) {
@@ -157,16 +167,8 @@ export default function HeroBand({
   const trend = p?.trend_90d_pct ?? null
 
   return (
-    <div
-      className={className}
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(260px, 380px) 1fr',
-        gap: '3rem',
-        alignItems: 'start',
-      }}
-    >
-      <style>{`
+    <>
+      {part !== 'title' && <style>{`
         .fp-vit-sweep::after {
           content: '';
           position: absolute; top: -25%; bottom: -25%; left: 0; width: 34%;
@@ -211,17 +213,18 @@ export default function HeroBand({
           .fp-plc-med { animation: none; transform: translate(-50%,-50%) scaleY(1); }
           .fp-sold-stamp { animation: none; opacity: 1; }
         }
-      `}</style>
+      `}</style>}
 
       {/* Vitrine — outer wrapper reserves space before image loads, preventing CLS */}
-      <div className="fp-hero-photo-col" style={{ position: 'relative', minHeight: '325px' }}>
+      {part === 'photo' && (
+      <div className={`fp-hero-photo-col ${className ?? ''}`} style={{ position: 'relative', minHeight: '300px' }}>
         <div
           className="fp-vit-sweep"
           style={{
             position: 'relative',
             border: '1px solid var(--shelf-line, rgba(242,232,213,0.08))',
             borderRadius: '16px',
-            padding: '26px 22px 20px',
+            padding: '18px 16px 14px',
             background: 'linear-gradient(180deg, rgba(242,232,213,0.03), rgba(242,232,213,0.008) 60%, transparent)',
             boxShadow: '0 24px 60px rgba(0,0,0,0.45), inset 0 0 60px rgba(224,168,62,0.035)',
             overflow: 'hidden',
@@ -315,13 +318,20 @@ export default function HeroBand({
 
         <ClaimPin figureId={figureId} />
 
-        {underPhoto}
+        {/* Option C: fixed 120 px slot under the vitrine -- content swaps
+            (At a Glance / trend / data-quality), height never does, so
+            screens 1-2 are identical across page classes. */}
+        <div className="fp-hero-slot" style={{ height: '104px', marginTop: '10px', overflow: 'hidden' }}>
+          {underPhoto}
+        </div>
       </div>
+      )}
 
-      {/* Identity + placard */}
-      <div className="fp-hero-id-col" style={{ paddingTop: '0.25rem', display: 'flex', flexDirection: 'column' }}>
+      {/* Identity: eyebrow + H1 + spec row (full-width top row of the page grid) */}
+      {part === 'title' && (
+      <div className={`fp-hero-id-col ${className ?? ''}`} style={{ display: 'flex', flexDirection: 'column' }}>
         {/* Eyebrow — genre + maker + line, gold ruled */}
-        <div style={{
+        <div className="fp-hero-eyebrow" style={{
           fontSize: '0.84rem', fontWeight: 500, letterSpacing: '0.22em',
           textTransform: 'uppercase', color: 'var(--shelf-gold, #e0a83e)',
           display: 'inline-flex', alignItems: 'center', gap: '11px',
@@ -334,17 +344,19 @@ export default function HeroBand({
         <h1 style={{
           fontFamily: 'var(--fp-font-display)',
           fontWeight: 400,
-          fontSize: 'clamp(3.25rem, 5.6vw, 4.875rem)',
+          // Option C (2026-09-12): one size step down so the title row fits
+          // the README's hero budget (was clamp(3.25rem, 5.6vw, 4.875rem)).
+          fontSize: 'clamp(2.5rem, 4.2vw, 3.6rem)',
           letterSpacing: '0.012em',
           lineHeight: '0.94',
           color: 'var(--shelf-cream, #f2e8d5)',
-          margin: '12px 0 0',
+          margin: '8px 0 0',
         }}>
           {characterName.toUpperCase()}
         </h1>
 
         {/* Spec row */}
-        <div style={{ marginTop: '18px', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', rowGap: '10px' }}>
+        <div style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', rowGap: '8px' }}>
           {specs.map((s, i) => (
             <div key={s.k} style={{
               padding: i === 0 ? '0 22px 0 0' : '0 22px',
@@ -363,17 +375,13 @@ export default function HeroBand({
           ))}
         </div>
 
-        {/* Lore — the character paragraph (KB enrichment; the growth surface) */}
-        {loreText && (
-          <p style={{
-            margin: '16px 0 0', maxWidth: '54ch',
-            fontSize: '1.125rem', fontWeight: 400, lineHeight: 1.7,
-            color: 'var(--shelf-cream-dim, rgba(242,232,213,0.6))',
-          }}>
-            {loreText}
-          </p>
-        )}
+      </div>
+      )}
 
+      {/* Price card: PriceBlock (or the legacy placard), compact Bid Check
+          row, CTA pair + disclosure. Right column on desktop, second in DOM. */}
+      {part === 'price' && (
+      <div className={`fp-hero-price-col ${className ?? ''}`} style={{ display: 'flex', flexDirection: 'column' }}>
         {/* v4 PRICE BLOCK — two condition buckets, Bebas faces, confidence
             chips (build plan §1). Fires whenever a real sealed/loose bucket
             exists; the legacy placard below stays the pooled-only fallback so
@@ -725,6 +733,9 @@ export default function HeroBand({
           </div>
         )}
 
+        {/* Option C: Bid Check as the price card's bottom row (README "Cuts") */}
+        {bidCheck}
+
         {/* v4 Phase 2 — hero CTA pair (2:1) + affiliate disclosure, under
             whichever price surface rendered above. */}
         {ebaySearchUrl && (
@@ -738,6 +749,7 @@ export default function HeroBand({
           />
         )}
       </div>
-    </div>
+      )}
+    </>
   )
 }

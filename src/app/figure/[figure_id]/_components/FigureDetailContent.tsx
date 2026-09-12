@@ -34,6 +34,8 @@ import DecisionPassportPreview, { type IdentityRow } from './DecisionPassportPre
 import GoldenCorpusPassport from './GoldenCorpusPassport'
 import ScalePassport from './ScalePassport'
 import GoldenCorpusAtAGlance from './GoldenCorpusAtAGlance'
+import AboutTabs from './AboutTabs'
+import SectionH2 from './SectionH2'
 import { getGoldenCorpusClaims } from '../_lib/goldenCorpus'
 import { resolvePriceContract, isMigratedSnapshot, evidenceCaveat } from '../_lib/priceContract'
 import { jsonLdPriceProperties } from '../_lib/jsonLdPriceProperties'
@@ -945,6 +947,64 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
     ] : []),
   ]
 
+  // ── Option C (2026-09-12): shared hero props (HeroBand renders 3 parts) ──
+  const heroProps = {
+    figureId,
+    imageUrl: thumb(imageUrlFinal, 760),
+    characterName: characterH1,
+    brand,
+    lineName: lineAttrs?.display_name ?? line,
+    series: seriesNum,
+    scale: scaleClean,
+    eraLabel: lineAttrs?.era_label ?? null,
+    releaseYear,
+    rarityTier: null,
+    genre,
+    valuePricing,
+    ticks: placardTicks,
+    lastSale,
+    conditionLabel: placardConditionLabel,
+    conditionRows: placardConditionRows,
+    secondary: placardSecondary,
+    inferenceNote,
+    buckets: { sealed: jsonLdPriceContract.sealed, loose: jsonLdPriceContract.loose },
+    history: priceHistory,
+    hasReceipts: !!goldenCorpusDoc || !!local.passport,
+    ebaySearchUrl: ebayUrl,
+  }
+  // 120 px slot under the vitrine: At a Glance (golden corpus) -> data
+  // quality + latest comp + 90 d trend (always available). Fixed height in
+  // HeroBand so screens 1-2 are identical across page classes.
+  const trendPctForSlot = valuePricing?.trend_90d_pct ?? null
+  const heroSlot = goldenCorpusDoc
+    ? <GoldenCorpusAtAGlance doc={goldenCorpusDoc} />
+    : (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+        <DataQualityBadge
+          state={dataQualityState(price?.soldCount ?? 0)}
+          compCount={price?.soldCount ?? 0}
+          compact
+          mixedConditions={sealedPresent && loosePresent}
+        />
+        {latestCompDate && (
+          <div style={{ fontSize: '12px', color: 'rgba(242,232,213,.65)' }}>
+            Latest sold comp: <time dateTime={latestCompDate.iso}>{latestCompDate.label}</time>
+          </div>
+        )}
+        {trendPctForSlot != null && Math.abs(trendPctForSlot) >= 1 && (
+          <div style={{ fontSize: '12px', color: 'rgba(242,232,213,.65)' }}>
+            90-day trend: <span style={{ color: trendPctForSlot > 0 ? 'var(--fp-success, #00C870)' : 'var(--shelf-cream, #f2e8d5)', fontWeight: 500 }}>
+              {trendPctForSlot > 0 ? '▲' : '▼'} {Math.abs(Math.round(trendPctForSlot))}%
+            </span>
+          </div>
+        )}
+      </div>
+    )
+  const heroLede = gatedLoreText(local)
+  const heroFeaturesAll = (gatedKeyFeatures(local) ?? '').split(',').map(f => f.trim()).filter(Boolean)
+  const heroFeatures = heroFeaturesAll.slice(0, 6)
+  const ad2Height = process.env.NEXT_PUBLIC_ADSTERRA_728_KEY ? 90 : 250
+
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
       {/* v4 Phase 6 — liquid bg (flag-gated, renders null unless
@@ -998,38 +1058,63 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           --shelf-line-gold: rgba(224,168,62,0.20);
           --shelf-mount:     linear-gradient(180deg,#fbf7ee 0%,#efe5d0 100%);
         }
-        @media (max-width: 768px) {
-          .fp-hero-grid  { grid-template-columns: 1fr !important; }
-          .fp-main-grid  { grid-template-columns: 1fr !important; }
+        /* ── Option C page grid (2026-09-12, Claude Design handoff README) ──
+           DOM is the phone order; desktop and tablet place the same nodes with
+           grid-template-areas. Zone classes (.fp-z-*) are kept for measurement
+           (getBoundingClientRect per zone is the acceptance instrument). */
+        .fp-page-main {
+          display: grid;
+          grid-template-columns: 300px minmax(0, 1fr) 340px;
+          column-gap: 28px; row-gap: 20px; align-items: start;
+          grid-template-areas:
+            "title title title"
+            "photo about price"
+            "comps comps ad1"
+            "seller seller seller"
+            "tabs tabs tabs"
+            "receipts receipts receipts"
+            "strip strip strip"
+            "ad2 ad2 ad2";
+        }
+        /* Between 1024 and 1199 the README's 300/340 side tracks leave the
+           About column ~240 px; narrow both so About keeps >= 360 px. */
+        @media (max-width: 1199px) {
+          .fp-page-main { grid-template-columns: 260px minmax(0, 1fr) 300px; column-gap: 22px; }
+        }
+        /* Hero About column: 6-line clamp on the lede (full text in the
+           "full story" tab); denser type inside the tab panels so the open
+           panel stays near the README's 240 px budget. */
+        .fp-z-about .fp-lede { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+        .fp-tab-panel .fp-loreband p { font-size: 15px !important; line-height: 1.55 !important; }
+        .fp-tab-panel .fp-loreband { padding-left: 1rem !important; }
+        .fp-tab-panel .fp-enrich p { font-size: 15px !important; line-height: 1.55 !important; }
+        .fp-tab-panel .fp-enrich li { padding: 6px 0 !important; }
+        .fp-tab-panel .fp-enrich li span:last-child { font-size: 13.5px !important; line-height: 1.5 !important; }
+        .fp-tab-panel .fp-enrich ul { columns: 2; column-gap: 24px; }
+        /* Explore strip: two rails stacked should read as one band */
+        .fp-z-strip .fp-relrow { margin-bottom: 0.75rem !important; }
+        .fp-z-strip .fp-relrow > div:first-of-type { margin-bottom: 0.5rem !important; }
+        @media (max-width: 1023px) {
+          .fp-page-main {
+            grid-template-columns: minmax(0, 1fr) 340px;
+            grid-template-areas:
+              "title title"
+              "photo price"
+              "photo about"
+              "comps comps"
+              "ad1 ad1"
+              "seller seller"
+              "tabs tabs"
+              "receipts receipts"
+              "strip strip"
+              "ad2 ad2";
+          }
+        }
+        @media (max-width: 767px) {
+          .fp-page-main { display: flex; flex-direction: column; gap: 18px; }
+          .fp-hero-eyebrow { font-size: 0.7rem !important; letter-spacing: 0.16em !important; }
+          .fp-z-title h1 { font-size: 2.4rem !important; }
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
-          .fp-right-col  { position: static !important; }
-          /* v4 Phase 3 — deliberate mobile section order (build plan §3,
-             design README "Mobile deltas"): price-first hero, comps before
-             prose, receipts after prose. Single flow + CSS order, never
-             duplicated markup (duplicate sections = duplicate funnel events).
-             Desktop keeps source order — these rules bind only here.
-             Deviation from the mockup, on purpose: ad unit 1 stays after the
-             comps panel instead of joining unit 2 at page bottom — adjacent
-             ad units is exactly what the AD STANDARD thin-page rule forbids. */
-          .fp-page-main { display: flex; flex-direction: column; }
-          .fp-z-hero      { order: 1; }
-          .fp-z-bidcheck  { order: 2; }
-          .fp-z-comps     { order: 3; }
-          .fp-z-seller    { order: 4; }
-          .fp-z-ad1       { order: 5; }
-          .fp-z-lore      { order: 6; }
-          .fp-z-enrich    { order: 7; }
-          .fp-z-passport  { order: 8; }
-          .fp-z-seo       { order: 9; }
-          .fp-z-versions  { order: 10; }
-          .fp-z-wave      { order: 11; }
-          .fp-z-hubs      { order: 12; }
-          .fp-z-ad2       { order: 13; }
-          /* Hero-internal reorder: identity column (chips/H1/price/CTAs)
-             above the photo vitrine + At a Glance. */
-          .fp-hero-grid { display: flex !important; flex-direction: column; }
-          .fp-hero-photo-col { order: 2; }
-          .fp-hero-id-col    { order: 1; }
         }
       `}</style>
 
@@ -1041,232 +1126,248 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
       ]} />
 
       {/* ── Main content ─────────────────────────────────────────────────────── */}
-      <main className="fp-page-main" style={{ maxWidth: '1040px', margin: '0 auto', padding: '2.5rem 1.5rem 5rem' }}>
+      <main className="fp-page-main" style={{ maxWidth: '1280px', margin: '0 auto', padding: '1.5rem 40px 4rem' }}>
 
-        {/* Zone 1 — Hero: image + identity + price strip (inline at wide viewports) */}
-        <div className="fp-z-hero" style={{ marginBottom: '1.75rem' }}>
+        {/* ── Option C page (2026-09-12, Claude Design handoff) ──
+            DOM order = README phone order: title -> price card -> photo ->
+            comps + Ad 1 -> About -> seller -> tabs -> receipts -> strip -> Ad 2.
+            Desktop placement is the grid-template-areas in the style block. */}
+
+        {/* Row 0 — eyebrow + H1 + spec line, full width */}
+        <div className="fp-z-title" style={{ gridArea: 'title' }}>
+          <HeroBand part="title" {...heroProps} />
+        </div>
+
+        {/* Price card (PriceBlock / placard) + compact Bid Check + CTAs */}
+        <div className="fp-z-price" style={{ gridArea: 'price' }}>
           <HeroBand
-            className="fp-hero-grid"
-            figureId={figureId}
-            imageUrl={thumb(imageUrlFinal, 760)}
-            characterName={characterH1}
-            brand={brand}
-            lineName={lineAttrs?.display_name ?? line}
-            series={seriesNum}
-            scale={scaleClean}
-            eraLabel={lineAttrs?.era_label ?? null}
-            releaseYear={releaseYear}
-            rarityTier={null}
-            genre={genre}
-            valuePricing={valuePricing}
-            loreText={gatedLoreText(local)}
-            underPhoto={goldenCorpusDoc ? <GoldenCorpusAtAGlance doc={goldenCorpusDoc} /> : null}
-            ticks={placardTicks}
-            lastSale={lastSale}
-            conditionLabel={placardConditionLabel}
-            conditionRows={placardConditionRows}
-            secondary={placardSecondary}
-            inferenceNote={inferenceNote}
-            buckets={{ sealed: jsonLdPriceContract.sealed, loose: jsonLdPriceContract.loose }}
-            history={priceHistory}
-            hasReceipts={!!goldenCorpusDoc || !!local.passport}
-            ebaySearchUrl={ebayUrl}
+            part="price"
+            {...heroProps}
+            bidCheck={marketPricing && marketPricing.recent_comps.length > 0 ? (
+              <BidCheck
+                compact
+                comps={marketPricing.recent_comps.map(c => ({ price: c.price, condition: c.condition }))}
+                segmentation={segmentation}
+                sealedMedian={price?.sealed?.median ?? null}
+                sealedCount={price?.sealed?.count ?? 0}
+                looseMedian={price?.loose?.median ?? null}
+                looseCount={price?.loose?.count ?? 0}
+              />
+            ) : null}
           />
         </div>
 
-        {/* Zone 2b — Bid Check verdict widget (S16, north star). Renders only
-            when sold comps exist; zero-comp figures keep the EmptyState flow. */}
-        {marketPricing && marketPricing.recent_comps.length > 0 && (
-          <div className="fp-z-bidcheck" style={{ marginBottom: '1.5rem' }}>
-            <BidCheck
-              comps={marketPricing.recent_comps.map(c => ({ price: c.price, condition: c.condition }))}
-              segmentation={segmentation}
-              sealedMedian={price?.sealed?.median ?? null}
-              sealedCount={price?.sealed?.count ?? 0}
-              looseMedian={price?.loose?.median ?? null}
-              looseCount={price?.loose?.count ?? 0}
+        {/* Photo vitrine + fixed 120 px slot */}
+        <div className="fp-z-photo" style={{ gridArea: 'photo' }}>
+          <HeroBand part="photo" {...heroProps} underPhoto={heroSlot} />
+        </div>
+
+        {/* Comps band (README §2): ledger rows + first 8 comps open */}
+        <div className="fp-z-comps" style={{ gridArea: 'comps', minWidth: 0 }}>
+          {hasPricing ? (
+            <MarketPanel
+              pricing={marketPricing}
+              ebaySearchUrl={ebayUrl}
+              figureName={displayName}
+              priceContract={jsonLdPriceContract}
+              trendPct={valuePricing?.trend_90d_pct ?? null}
             />
+          ) : (
+            <EmptyState figureId={figureId} figureName={displayName} ebaySearchUrl={ebayUrl} insufficientEvidence={isMigrated} />
+          )}
+        </div>
+
+        {/* Ad 1 — fixed 300×250 box in the comps band's right track (top
+            aligned with the first comp row); after price + comps in DOM. */}
+        <div className="fp-z-ad1" style={{ gridArea: 'ad1', display: 'flex', justifyContent: 'center' }}>
+          <div data-ad-box style={{ width: 300, height: 250, flex: 'none' }}>
+            <AdSlot slot="adsterra-banner" />
           </div>
-        )}
-
-        {/* Zone 2c — Decision Passport preview (figure-page-v3, 2026-08-08).
-            Visual redesign shell: real identity + market-evidence data now,
-            honest "coming soon" states for Complete Check / wave-BAF map /
-            comparison until matcher's per-figure data exists. Steve's call
-            2026-08-08: ship the shape now, populate with matcher iteratively. */}
-        <div className="fp-z-passport">
-        <DecisionPassportPreview
-          identity={dpIdentity}
-          sealed={price?.sealed ?? null}
-          loose={price?.loose ?? null}
-        >
-          {/* Golden-corpus evidence-locked passport (Hela, 2026-08-13 — first
-              candidate to pass web's full acceptance gate). Doc presence is
-              the render gate; reads matcher's claims doc directly, NOT a KB
-              pour. Scale figures (poured passport block, 8/13 tiering ruling)
-              fall through to ScalePassport — CORE rows + honest gaps. */}
-          {goldenCorpusDoc
-            ? <GoldenCorpusPassport doc={goldenCorpusDoc} />
-            : local.passport && <ScalePassport fig={local} fullWave={fullWave} />}
-        </DecisionPassportPreview>
         </div>
 
-        {/* Zone 3 — Lore band */}
-        <div className="fp-z-lore" style={{ marginBottom: '1.5rem' }}>
-          <LoreBand loreInput={loreInput} />
-        </div>
-
-        {/* Zone 3b — Per-figure enrichment (match represented + key features).
-            Render-safe: shows only for fids matcher has enriched. */}
-        <div className="fp-z-enrich" style={{ marginBottom: '1.5rem' }}>
-          {/* match_represented renders in the hero lore slot now — features only here */}
-          <FigureEnrichment
-            matchRepresented={null}
-            keyFeatures={gatedKeyFeatures(local)}
+        {/* About column — hero middle on desktop; after Ad 1 on phones.
+            Lede (KB enrichment), 6 key features in two columns, one muted
+            SEO sentence. The full text lives in the tabs below. */}
+        <div className="fp-z-about" style={{ gridArea: 'about', minWidth: 0 }}>
+          {heroLede && (
+            <p className="fp-lede" style={{ margin: 0, fontSize: '0.95rem', lineHeight: 1.6, color: 'rgba(242,232,213,.65)' }}>
+              {heroLede}
+            </p>
+          )}
+          {heroFeatures.length > 0 && (
+            <ul style={{
+              listStyle: 'none', margin: '14px 0 0', padding: 0,
+              display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '6px 18px',
+            }}>
+              {heroFeatures.map((f, i) => (
+                <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '13px', lineHeight: 1.5, color: 'rgba(242,232,213,.65)' }}>
+                  <span aria-hidden style={{ flex: 'none', width: '10px', height: '1px', background: 'var(--shelf-gold, #e0a83e)', opacity: 0.7, marginTop: '0.7em' }} />
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <SeoSummary
+            variant="sentence"
+            fandom={local.fandom}
+            displayName={displayName}
+            brand={brand}
+            line={line}
+            productLine={local.product_line}
+            seriesNum={seriesNum}
+            scale={scaleClean}
+            exclusiveTo={exclusiveToClean}
+            soldCount={price?.soldCount ?? 0}
+            priceInput={price ? {
+              soldCount: price.soldCount,
+              medianSold: price.medianSold,
+              avgSold: price.avgSold,
+              sealed: price.sealed,
+              loose: price.loose,
+              segmentation: price.segmentation,
+            } : null}
+            median={valuePricing?.median ?? null}
+            medianIsAvg={valuePricing?.medianIsAvg ?? false}
+            trendPct={valuePricing?.trend_90d_pct ?? null}
+            soldHistory={price?.soldHistory ?? []}
           />
         </div>
 
-
-        {/* Seller listing */}
+        {/* Seller listing (Steve's own inventory) — only when present */}
         {sellerListings.length > 0 && (
-          <div className="fp-z-seller">
+          <div className="fp-z-seller" style={{ gridArea: 'seller' }}>
             <SellerCard listings={sellerListings} />
           </div>
         )}
 
-        {/* Zones 4 + 5 — Market panel + collection panel */}
-        <div
-          className="fp-main-grid fp-z-comps"
-          style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: '1.5rem', alignItems: 'start', marginBottom: '2rem' }}
-        >
-          <div>
-            {/* Per-figure data quality badge — sets honest expectations
-                BEFORE the user sees the price. Powers our move from opaque
-                coverage gating toward per-figure transparency. */}
-            <div style={{ marginBottom: '1rem' }}>
-              <DataQualityBadge
-                state={dataQualityState(price?.soldCount ?? 0)}
-                compCount={price?.soldCount ?? 0}
-                compact={hasPricing}
-                mixedConditions={sealedPresent && loosePresent}
-              />
-              {latestCompDate && (
-                <div style={{
-                  marginTop: '0.5rem',
-                  fontSize: '0.75rem',
-                  color: 'var(--fp-muted)',
-                }}>
-                  Latest sold comp: <time dateTime={latestCompDate.iso}>{latestCompDate.label}</time>
-                </div>
-              )}
+        {/* About tabs (README §3): every panel in DOM, `hidden` toggled */}
+        <div className="fp-z-tabs" style={{ gridArea: 'tabs', minWidth: 0 }}>
+          <AboutTabs
+            tabs={[
+              {
+                id: 'story',
+                label: 'The full story',
+                content: (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                    <LoreBand loreInput={loreInput} />
+                    {/* one-field rule: the lede is in the hero (6-line clamp); the tab carries only the features the hero could not fit */}
+                    <FigureEnrichment matchRepresented={null} keyFeatures={heroFeaturesAll.length > heroFeatures.length ? heroFeaturesAll.slice(6).join(', ') : null} />
+                    <SeoSummary
+                      variant="details"
+                      fandom={local.fandom}
+                      displayName={displayName}
+                      brand={brand}
+                      line={line}
+                      productLine={local.product_line}
+                      seriesNum={seriesNum}
+                      scale={scaleClean}
+                      exclusiveTo={exclusiveToClean}
+                      soldCount={price?.soldCount ?? 0}
+                      priceInput={price ? {
+                        soldCount: price.soldCount,
+                        medianSold: price.medianSold,
+                        avgSold: price.avgSold,
+                        sealed: price.sealed,
+                        loose: price.loose,
+                        segmentation: price.segmentation,
+                      } : null}
+                      median={valuePricing?.median ?? null}
+                      medianIsAvg={valuePricing?.medianIsAvg ?? false}
+                      trendPct={valuePricing?.trend_90d_pct ?? null}
+                      soldHistory={price?.soldHistory ?? []}
+                    />
+                  </div>
+                ),
+              },
+              {
+                id: 'passport',
+                label: 'Passport',
+                meta: goldenCorpusDoc ? 'source-backed' : null,
+                content: (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                    <DecisionPassportPreview
+                      compact
+                      identity={dpIdentity}
+                      sealed={price?.sealed ?? null}
+                      loose={price?.loose ?? null}
+                    />
+                    <CollectionPanel
+                      variant="tab"
+                      evidenceCaveat={collectionPanelPrice.evidenceCaveat}
+                      figureId={figureId}
+                      figureName={displayName}
+                      brand={brand}
+                      line={line}
+                      genre={genre}
+                      ebaySearchUrl={ebayUrl}
+                      median={collectionPanelPrice.median}
+                      medianIsAvg={collectionPanelPrice.medianIsAvg}
+                      compCount={collectionPanelPrice.compCount}
+                      conditionLabel={collectionPanelPrice.conditionLabel}
+                      needsThinDataLabel={collectionPanelPrice.needsThinDataLabel}
+                      scale={scaleClean}
+                      series={seriesNum}
+                      packSize={Number(local.pack_size) || 1}
+                      exclusiveTo={exclusiveToClean}
+                      imgSrc={thumb(imageUrlFinal, 760)}
+                      whisper={jsonLdEnriched}
+                      upc={local.upc}
+                    />
+                  </div>
+                ),
+              },
+            ]}
+          />
+        </div>
+
+        {/* Rich pages only: evidence-locked passport + receipts as a section
+            (README rich-page row 4). Thin pages have no such content. */}
+        {(goldenCorpusDoc || local.passport) && (
+          <div className="fp-z-receipts" style={{ gridArea: 'receipts', minWidth: 0 }}>
+            <div style={{
+              border: '1px solid rgba(224,168,62,.3)', borderRadius: '16px',
+              background: 'linear-gradient(160deg, #16131f 0%, #0b0a12 65%)',
+              padding: '1.5rem 1.5rem 1.75rem',
+            }}>
+              <div className="fp-dp">
+                {goldenCorpusDoc
+                  ? <GoldenCorpusPassport doc={goldenCorpusDoc} />
+                  : local.passport && <ScalePassport fig={local} fullWave={fullWave} />}
+              </div>
             </div>
-
-            {hasPricing ? (
-              <MarketPanel
-                pricing={marketPricing}
-                ebaySearchUrl={ebayUrl}
-                figureName={displayName}
-                priceContract={jsonLdPriceContract}
-                trendPct={valuePricing?.trend_90d_pct ?? null}
-              />
-            ) : (
-              <EmptyState figureId={figureId} figureName={displayName} ebaySearchUrl={ebayUrl} insufficientEvidence={isMigrated} />
-            )}
           </div>
+        )}
 
-          <div className="fp-right-col" style={{ position: 'sticky', top: '72px' }}>
-            <CollectionPanel
-              evidenceCaveat={collectionPanelPrice.evidenceCaveat}
-              figureId={figureId}
-              figureName={displayName}
-              brand={brand}
-              line={line}
-              genre={genre}
-              ebaySearchUrl={ebayUrl}
-              median={collectionPanelPrice.median}
-              medianIsAvg={collectionPanelPrice.medianIsAvg}
-              compCount={collectionPanelPrice.compCount}
-              conditionLabel={collectionPanelPrice.conditionLabel}
-              needsThinDataLabel={collectionPanelPrice.needsThinDataLabel}
-              scale={scaleClean}
-              series={seriesNum}
-              packSize={Number(local.pack_size) || 1}
-              exclusiveTo={exclusiveToClean}
-              imgSrc={thumb(imageUrlFinal, 760)}
-              whisper={jsonLdEnriched}
-              upc={local.upc}
-            />
+        {/* Explore strip (README §4): wave rail + version rail + hub end-links */}
+        <div className="fp-z-strip" style={{ gridArea: 'strip', minWidth: 0 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px 16px', marginBottom: '0.75rem' }}>
+            <SectionH2 lead="Explore" accent={line} />
+            <CtaRail variant="inline" genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
           </div>
+          <RelatedRow
+            label={`Complete the Wave — ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
+            figures={seriesCompanions}
+            ownershipFids={waveFids}
+          />
+          <RelatedRow
+            label={`Every Version of ${characterH1}`}
+            figures={characterVariants}
+            accentColor="var(--fp-accent-warm)"
+            headerLink={{
+              href: characterHubHref,
+              label: `See all ${characterVariantsAll.length + 1} ${characterH1} figures →`,
+            }}
+          />
         </div>
 
-        {/* Ad — Adsterra Banner (468×60), below the price/comps panel
-            (ad-revenue plan S4: unit 1 of 2 on figure pages) */}
-        <div className="fp-z-ad1" style={{ display: 'flex', justifyContent: 'center', padding: '0.5rem 0' }}>
-          <AdSlot slot="adsterra-banner" />
-        </div>
-
-        {/* SEO Summary — natural language paragraph + retail vs market + velocity */}
-        <div className="fp-z-seo">
-        <SeoSummary
-          fandom={local.fandom}
-          displayName={displayName}
-          brand={brand}
-          line={line}
-          productLine={local.product_line}
-          seriesNum={seriesNum}
-          scale={scaleClean}
-          exclusiveTo={exclusiveToClean}
-          soldCount={price?.soldCount ?? 0}
-          priceInput={price ? {
-            soldCount: price.soldCount,
-            medianSold: price.medianSold,
-            avgSold: price.avgSold,
-            sealed: price.sealed,
-            loose: price.loose,
-            segmentation: price.segmentation,
-          } : null}
-          median={valuePricing?.median ?? null}
-          medianIsAvg={valuePricing?.medianIsAvg ?? false}
-          trendPct={valuePricing?.trend_90d_pct ?? null}
-          soldHistory={price?.soldHistory ?? []}
-        />
-        </div>
-
-        {/* Zone 6 — Series companions */}
-        <div className="fp-z-wave">
-        <RelatedRow
-          label={`Complete the Wave — ${line}${seriesNum ? ` Series ${seriesNum}` : ''}`}
-          figures={seriesCompanions}
-          ownershipFids={waveFids}
-        />
-        </div>
-
-        {/* Zone 7 — Character thread */}
-        <div className="fp-z-versions">
-        <RelatedRow
-          label={`Every Version of ${characterH1}`}
-          figures={characterVariants}
-          accentColor="var(--fp-accent-warm)"
-          headerLink={{
-            href: characterHubHref,
-            label: `See all ${characterVariantsAll.length + 1} ${characterH1} figures →`,
-          }}
-        />
-        </div>
-
-        {/* Zone 8 — CTA rail */}
-        <div className="fp-z-hubs">
-          <CtaRail genre={genre} brand={brand} line={line} lineSlug={local.product_line} />
-        </div>
-
-        {/* Ad — Adsterra Banner (468×60), page bottom after related figures
-            (ad-revenue plan S4: unit 2 of 2 — native slot converts to banner,
-            format swap not removal; no native widgets sitewide per plan S3.2).
-            AD STANDARD v2 thin-page rule: skipped on thin no-comp pages where
-            it would land within ~1 viewport of unit 1 — see showUnitTwo above. */}
+        {/* Ad 2 — fixed box above the footer (728×90 once the leaderboard
+            zone key exists; 300×250 banner in the meantime). AD STANDARD v2
+            thin-page rule (showUnitTwo) still binds. */}
         {showUnitTwo && (
-          <div className="fp-z-ad2" style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0 0.5rem' }}>
-            <AdSlot slot="adsterra-banner" />
+          <div className="fp-z-ad2" style={{ gridArea: 'ad2', display: 'flex', justifyContent: 'center', paddingTop: '0.5rem' }}>
+            <div data-ad-box style={{ height: ad2Height, display: 'flex', justifyContent: 'center', flex: 'none' }}>
+              <AdSlot slot="adsterra-leaderboard" />
+            </div>
           </div>
         )}
       </main>

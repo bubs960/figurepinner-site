@@ -52,6 +52,10 @@ interface BidCheckProps {
   sealedCount?: number
   looseMedian?: number | null
   looseCount?: number
+  /** Option C (2026-09-12): render as the price card's bottom row -- no
+   *  section frame, no header; one input line + one verdict line per
+   *  condition. Logic, thresholds and wording are the standalone band's. */
+  compact?: boolean
 }
 
 // One floor site-wide (FPPS-01 rule 2, figureFormatters.MIN_COMPS_TO_QUOTE) --
@@ -103,6 +107,7 @@ export default function BidCheck({
   sealedCount = 0,
   looseMedian = null,
   looseCount = 0,
+  compact = false,
 }: BidCheckProps) {
   const [raw, setRaw] = useState('')
   const bid = parseFloat(raw)
@@ -124,6 +129,55 @@ export default function BidCheck({
     { ...newCol,  title: 'New',  sub: 'sealed / MOC' + sampleNote,   blank: 'Not enough sealed sales to call it' },
     { ...usedCol, title: 'Used', sub: 'loose / opened' + sampleNote, blank: 'Not enough loose sales to call it' },
   ]
+
+  if (compact) {
+    return (
+      <div className="fp-bidcheck fp-bidcheck-compact" aria-label="Bid Check" style={{
+        marginTop: '14px', paddingTop: '12px',
+        borderTop: '1px solid var(--shelf-line, rgba(242,232,213,.08))',
+        fontFamily: 'var(--fp-font-body)',
+      }}>
+        <style>{`
+          .fp-bidcheck-compact .fp-bidcheck-input {
+            width: 6rem; font-family: var(--fp-font-body); font-size: 1rem; font-weight: 500;
+            font-variant-numeric: tabular-nums; padding: 0.35rem 0.6rem;
+            background: rgba(242,232,213,.02); border: 1px solid rgba(242,232,213,.18);
+            border-radius: 8px; color: var(--shelf-cream, #f2e8d5); outline: none;
+          }
+          .fp-bidcheck-compact .fp-bidcheck-input:focus { border-color: var(--shelf-gold, #e0a83e); box-shadow: 0 0 0 3px rgba(224,168,62,.16); }
+        `}</style>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))' }}>
+            Bid check
+          </span>
+          <span style={{ fontSize: '0.9rem', color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))' }}>$</span>
+          <input
+            type="text" inputMode="decimal" autoComplete="off" value={raw}
+            onChange={e => setRaw(e.target.value.replace(/[^0-9.]/g, ''))}
+            placeholder="current bid" aria-label="Current bid in dollars" className="fp-bidcheck-input"
+          />
+          <span style={{ fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))' }}>before shipping</span>
+        </div>
+        <div style={{ marginTop: '8px', display: 'grid', gap: '4px' }}>
+          {columns.map(col => {
+            const enough = columnQuotable(col)
+            const v = enough && hasBid ? verdictFor(bid, col.med) : null
+            return (
+              <div key={col.key} style={{ fontSize: '12px', lineHeight: 1.5, color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))', display: 'flex', gap: '8px', alignItems: 'baseline', flexWrap: 'wrap' }}>
+                <span style={{ fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', fontSize: '10px', minWidth: '3rem' }}>{col.title}</span>
+                {!enough
+                  ? <span style={{ color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))' }}>{col.blank}</span>
+                  : <>
+                      <span style={{ fontVariantNumeric: 'tabular-nums' }}>median {formatCurrency(col.med)} · {col.n} sale{col.n !== 1 ? 's' : ''}</span>
+                      {v && <span style={{ color: v.color, fontWeight: 500 }}>{v.label} · {pctPhrase(v.pct)}</span>}
+                    </>}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section

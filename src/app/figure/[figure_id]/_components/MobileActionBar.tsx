@@ -60,13 +60,19 @@ export default function MobileActionBar({ figureId, ebaySearchUrl, figureName }:
 
   useEffect(() => {
     if (!enabled) return
-    const inlineCta = document.querySelector('[data-ebay-inline-cta]')
-    if (!inlineCta) return
+    // Option C (2026-09-12, README): the bar also hides while either ad box
+    // is on screen, so it never covers a creative. Same observer, more targets.
+    const targets = Array.from(document.querySelectorAll('[data-ebay-inline-cta], [data-ad-box]'))
+    if (targets.length === 0) return
+    const visible = new Set<Element>()
     const obs = new IntersectionObserver(
-      ([entry]) => setHideForInlineCta(entry.isIntersecting),
+      entries => {
+        for (const e of entries) { if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target) }
+        setHideForInlineCta(visible.size > 0)
+      },
       { threshold: 0.1 }
     )
-    obs.observe(inlineCta)
+    targets.forEach(t => obs.observe(t))
     return () => obs.disconnect()
   }, [enabled])
 

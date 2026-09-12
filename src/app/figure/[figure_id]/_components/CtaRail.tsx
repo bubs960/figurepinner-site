@@ -13,6 +13,9 @@ interface CtaRailProps {
   line: string
   /** Raw product_line slug — builds the /[genre]/[line] hub URL. */
   lineSlug?: string
+  /** Option C (2026-09-12): 'inline' renders the three hub links as end-tiles
+   *  of the wave strip instead of three cards (README "Cuts"). */
+  variant?: 'inline'
 }
 
 interface CtaCard {
@@ -24,7 +27,7 @@ interface CtaCard {
   accentVar: string
 }
 
-export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) {
+export default function CtaRail({ genre, brand, line, lineSlug, variant }: CtaRailProps) {
   const genreSlug = (genre ?? '').toLowerCase().replace(/\s+/g, '-')
   const genreLabel = genre.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 
@@ -65,6 +68,18 @@ export default function CtaRail({ genre, brand, line, lineSlug }: CtaRailProps) 
       accentVar: 'var(--shelf-gold-hi, #f5c462)',
     },
   ]
+
+  if (variant === 'inline') {
+    return (
+      <div className="fp-cta-inline" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 18px', alignItems: 'baseline' }}>
+        {cards.map(c => (
+          <Link key={c.label} href={c.href} style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.04em', color: c.accentVar, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            {c.cta}
+          </Link>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className="fp-cta-rail" style={{
