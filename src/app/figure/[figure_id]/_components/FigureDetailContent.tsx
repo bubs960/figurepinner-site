@@ -1123,7 +1123,14 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         @media (max-width: 767px) {
           .fp-page-main { display: flex; flex-direction: column; gap: 18px; }
           .fp-hero-eyebrow { font-size: 0.7rem !important; letter-spacing: 0.16em !important; }
-          .fp-z-title h1 { font-size: 2.4rem !important; }
+          .fp-z-title h1 { font-size: 2.4rem !important; margin-top: 4px !important; }
+          /* Phone density pass (2026-09-13, WEB-EOC-2026-09-13.md): the spec
+             row's desktop padding (22px/side) wraps 6 items to 2-3 rows on a
+             ~350px content width. Tighter padding + row-gap fits more per row
+             without dropping any spec. */
+          .fp-hero-specs { margin-top: 8px !important; row-gap: 4px !important; }
+          .fp-hero-specs > div { padding-left: 14px !important; padding-right: 14px !important; }
+          .fp-hero-specs > div:first-child { padding-left: 0 !important; }
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
         }
       `}</style>
