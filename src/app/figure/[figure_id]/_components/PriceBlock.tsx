@@ -99,7 +99,7 @@ function SparklineStrip({ history }: { history: PriceHistory }) {
   const first = isoWeekLabel(history.weeks[0].week)
   const last = isoWeekLabel(history.weeks[history.weeks.length - 1].week, true)
   return (
-    <div style={{
+    <div className="fp-priceblock-spark" style={{
       borderTop: '1px solid rgba(242,232,213,.08)',
       padding: '14px 26px',
       background: 'rgba(224,168,62,.03)',
@@ -140,7 +140,7 @@ function Bucket({ label, bucket, priceColor, caption }: {
   const conf = confidenceForCount(bucket.count)
   const chipColor = CHIP_COLOR[conf.tier]
   return (
-    <div style={{ padding: '22px 26px' }}>
+    <div className="fp-priceblock-bucket" style={{ padding: '22px 26px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px', flexWrap: 'wrap' }}>
         <span style={{
           fontSize: '10.5px', fontWeight: 700, letterSpacing: '.14em',
@@ -176,7 +176,7 @@ function Bucket({ label, bucket, priceColor, caption }: {
  *  comps to have a confidence tier at all). */
 function ThinBucket({ label, lastSoldDate, lastSoldPrice }: { label: string; lastSoldDate: string; lastSoldPrice: number }) {
   return (
-    <div style={{ padding: '22px 26px' }}>
+    <div className="fp-priceblock-bucket" style={{ padding: '22px 26px' }}>
       <div style={{
         fontSize: '10.5px', fontWeight: 700, letterSpacing: '.14em',
         textTransform: 'uppercase', color: 'rgba(242,232,213,.55)', marginBottom: '4px',
@@ -242,7 +242,7 @@ export default function PriceBlock({ sealed, loose, history, sealedNote, hasRece
   if (buckets.length === 0) return null
 
   return (
-    <div style={{
+    <div className="fp-priceblock" style={{
       marginTop: '24px',
       border: '1px solid rgba(224,168,62,.35)',
       borderRadius: '16px',
