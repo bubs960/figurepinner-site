@@ -1146,6 +1146,20 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           .fp-priceblock-spark { padding: 10px 18px !important; }
           .fp-priceblock-spark > div:first-child { height: 36px !important; }
           .fp-priceblock-spark > div:last-child { margin-top: 4px !important; }
+          /* Phone density pass part 3 (2026-09-13): HeroCtaRail's two buttons
+             (minWidth 200/180 + 12px gap = 392px) never fit the ~310px phone
+             content column, so they silently wrap to 2 stacked rows every
+             time -- an un-audited ~60px of pure wrap tax. Dropping the
+             minWidth floor lets the existing flex:2/flex:1.4 ratio size them
+             to fit one row instead; font-size/padding trimmed to match so
+             the longer "TRACK THIS FIGURE — FREE" label still reads clean at
+             the narrower width. Verify visually -- this is the
+             revenue-critical CTA pair, not a spacing-only surface. */
+          .fp-hero-cta-row { margin-top: 10px !important; gap: 8px !important; }
+          .fp-hero-cta-primary, .fp-hero-cta-secondary { min-width: 0 !important; padding: 12px 10px !important; }
+          .fp-hero-cta-primary { font-size: 12px !important; }
+          .fp-hero-cta-secondary { font-size: 11.5px !important; }
+          .fp-hero-cta-note { margin-top: 5px !important; }
         }
       `}</style>
 
