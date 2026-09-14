@@ -158,7 +158,7 @@ export default function BidCheck({
           />
           <span style={{ fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))' }}>before shipping</span>
         </div>
-        <div style={{ marginTop: '8px', display: 'grid', gap: '4px' }}>
+        <div style={{ marginTop: '8px', display: 'flex', flexWrap: 'wrap', columnGap: '16px', rowGap: '4px' }}>
           {columns.map(col => {
             const enough = columnQuotable(col)
             const v = enough && hasBid ? verdictFor(bid, col.med) : null
@@ -168,7 +168,7 @@ export default function BidCheck({
                 {!enough
                   ? <span style={{ color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))' }}>{col.blank}</span>
                   : <>
-                      <span style={{ fontVariantNumeric: 'tabular-nums' }}>median {formatCurrency(col.med)} · {col.n} sale{col.n !== 1 ? 's' : ''}</span>
+                      <span style={{ fontVariantNumeric: 'tabular-nums' }}>{formatCurrency(col.med)} · {col.n} sale{col.n !== 1 ? 's' : ''}</span>
                       {v && <span style={{ color: v.color, fontWeight: 500 }}>{v.label} · {pctPhrase(v.pct)}</span>}
                     </>}
               </div>
