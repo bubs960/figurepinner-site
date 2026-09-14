@@ -18,8 +18,22 @@
 //    data-grounded estimate (per-line sealed premium) is a v2 matcher ask.
 //  - Sparse columns (3-9 sales) carry a thin-data caveat with the count.
 //  - Zero comps overall → parent doesn't render this component at all.
-//  - "before shipping" microcopy: Whatnot bids exclude shipping; comps don't
-//    always. Honest about the gap.
+//  - "before shipping" microcopy: Whatnot/eBay bids are always entered
+//    before shipping, so the input label stays accurate regardless of the
+//    comp side. The comp side used to be true too, but isn't uniformly
+//    anymore (Steve ruling, 2026-09-13, MATCHER-TO-WEB-WEBAUDIT-STANDALONE-
+//    STEVE-RULING-AUCTION-DELIVERED-PRICE-2026-09-13.md, `2dae683`): auction-
+//    format sold rows captured from the 9/13 23:15 ingest onward record the
+//    DELIVERED price (hammer + shipping); Buy-It-Now rows and every comp
+//    captured before that ingest are still item-only. Filed before the
+//    mixed population actually shows up (matcher's ruling relay: "web owes
+//    a copy audit before the mixed population shows on pages") rather than
+//    waiting for a user to notice a weird number — right now every comp in
+//    the system still predates the change, so this is a static, always-on
+//    caveat, not something gated on live data mix. Full (non-compact) only:
+//    compact mode stays as-is, no room for another line without undoing the
+//    2026-09-13 phone-density work, and the input label itself (still
+//    accurate) was never the part that changed.
 //
 // Condition split mirrors MarketPanel.normalizeCondition exactly (Steve's
 // 6/06 call: eBay's own language, untagged = Used). Keep the two in sync.
