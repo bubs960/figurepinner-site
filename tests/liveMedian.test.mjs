@@ -6,6 +6,14 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { deriveLiveMedianView } from '../src/app/guides/_lib/liveMedianView.ts'
 
+// Fixed reference instant, not Date.now(): the fixtures encode tier windows
+// (fresh/recent/historical valid_until) relative to their generated_at, so
+// evaluating them against the real wall clock makes this suite flip to
+// failing the moment real time crosses those baked-in dates (hit live
+// 2026-09-14, see cacheUntilBound.test.mjs's NOW for the established
+// pattern this mirrors).
+const NOW = Date.parse('2026-09-07T13:00:00Z')
+
 function snapFor(name) {
   const dec = JSON.parse(readFileSync(new URL(`./fixtures/quote-tiers-2026-09-07/${name}.decision.json`, import.meta.url), 'utf8'))
   return { median_sold: null, avg_sold: null, min_sold: null, max_sold: null, sold_count: 0, decision: dec }
@@ -13,7 +21,7 @@ function snapFor(name) {
 
 describe('deriveLiveMedianView against matcher\'s real fixtures', () => {
   test('fresh: quote, no caveat', () => {
-    const v = deriveLiveMedianView(snapFor('fresh'))
+    const v = deriveLiveMedianView(snapFor('fresh'), NOW)
     assert.equal(v.hasData, true)
     if (v.hasData) {
       assert.equal(v.median, 42.5)
@@ -23,7 +31,7 @@ describe('deriveLiveMedianView against matcher\'s real fixtures', () => {
   })
 
   test('recent: quote with the 6-month caveat', () => {
-    const v = deriveLiveMedianView(snapFor('recent'))
+    const v = deriveLiveMedianView(snapFor('recent'), NOW)
     assert.equal(v.hasData, true)
     if (v.hasData) {
       assert.equal(v.median, 30)
@@ -32,7 +40,7 @@ describe('deriveLiveMedianView against matcher\'s real fixtures', () => {
   })
 
   test('historical: quote with a formatted last-sold-date caveat', () => {
-    const v = deriveLiveMedianView(snapFor('historical'))
+    const v = deriveLiveMedianView(snapFor('historical'), NOW)
     assert.equal(v.hasData, true)
     if (v.hasData) {
       assert.equal(v.median, 22)
@@ -41,7 +49,7 @@ describe('deriveLiveMedianView against matcher\'s real fixtures', () => {
   })
 
   test('thin: NOT hasData, isThin with the raw last-sold price/date', () => {
-    const v = deriveLiveMedianView(snapFor('thin'))
+    const v = deriveLiveMedianView(snapFor('thin'), NOW)
     assert.equal(v.hasData, false)
     assert.equal(v.isThin, true)
     if (v.isThin) {
@@ -52,7 +60,7 @@ describe('deriveLiveMedianView against matcher\'s real fixtures', () => {
 
   test('none/pre-tier/expired: neither hasData nor isThin (honest blank)', () => {
     for (const name of ['none', 'pre-tier', 'expired']) {
-      const v = deriveLiveMedianView(snapFor(name))
+      const v = deriveLiveMedianView(snapFor(name), NOW)
       assert.equal(v.hasData, false, name)
       assert.equal(v.isThin, false, name)
     }

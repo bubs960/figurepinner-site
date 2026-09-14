@@ -31,13 +31,13 @@ export function deriveSparklineQuote(price: {
     sold_loose?: DecisionBucket
     sold_pooled?: DecisionBucket
   }
-} | undefined): SparklineQuote {
+} | undefined, now: number = Date.now()): SparklineQuote {
   const contract = resolvePriceContract({
     soldCount: price?.sold_count ?? 0,
     medianSold: price?.median_sold,
     avgSold: price?.avg_sold,
     decision: price?.decision,
-  })
+  }, now)
   const quote = pickPrimaryQuote(contract)
   return {
     median: quote?.evidenceTier === 'thin' ? null : (quote?.median ?? null),

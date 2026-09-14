@@ -50,11 +50,11 @@ describe('deriveSparklineQuote carries cacheUntil for the batch bound', () => {
   // now takes the whole price snapshot ({ decision, ...legacy fields }), not
   // just the decision block -- see tests/sparklineQuote.test.mjs's own header.
   test('fresh: cacheUntil populated', () => {
-    const q = deriveSparklineQuote({ decision: decisionFor('fresh') })
+    const q = deriveSparklineQuote({ decision: decisionFor('fresh') }, NOW)
     assert.ok(q.cacheUntil)
   })
   test('none: cacheUntil null', () => {
-    const q = deriveSparklineQuote({ decision: decisionFor('none') })
+    const q = deriveSparklineQuote({ decision: decisionFor('none') }, NOW)
     assert.equal(q.cacheUntil, null)
   })
 })
