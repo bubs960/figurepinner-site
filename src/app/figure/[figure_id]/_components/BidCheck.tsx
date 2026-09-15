@@ -342,6 +342,14 @@ export default function BidCheck({
           )
         })}
       </div>
+
+      {/* Full-variant only (see header comment) — always on, not gated on live
+          data mix: right now every comp still predates the 9/13 ingest change,
+          so this is a standing disclosure, not a conditional flag. */}
+      <div style={{ fontSize: '0.6875rem', fontWeight: 300, lineHeight: 1.5,
+                    color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))', marginTop: '0.75rem' }}>
+        Auction sold prices captured since Sept. 13 include shipping; earlier auction comps and Buy-It-Now sales are item price only.
+      </div>
     </section>
   )
 }
