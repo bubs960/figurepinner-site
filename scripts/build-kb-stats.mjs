@@ -16,7 +16,13 @@ import { fileURLToPath } from 'node:url'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'src', 'data', 'kb-stats.generated.json')
 const ENRICHED_COPY_OUT = join(ROOT, 'src', 'data', 'enriched-copy.generated.json')
-const KB_LITE_OUT = join(ROOT, 'src', 'data', 'kb-lite.generated.json')
+// public/ (not src/data/) since 2026-09-15 (SCALE-ALERT out-of-bundle fix):
+// files here ship as a static asset (.open-next/assets, served via the
+// ASSETS binding) instead of getting bundled into the Worker handler as an
+// inlined JS string — see src/data/kbLite.ts's module header for the full
+// mechanism and why this was the deploy-gate's "longest line" + a cold-render
+// cost lever.
+const KB_LITE_OUT = join(ROOT, 'public', 'kb-lite.generated.json')
 const require = createRequire(import.meta.url)
 
 // This is the exact build-time source used by src/data/kb.ts. Do not import
@@ -146,4 +152,4 @@ writeFileSync(ENRICHED_COPY_OUT, `${JSON.stringify({ duplicateTexts }, null, 2)}
 console.log(`[kb-stats] ${stats.totalFigures.toLocaleString()} figures across ${stats.totalFandoms} fandoms`)
 console.log('[kb-stats] wrote src/data/kb-stats.generated.json')
 console.log(`[kb-stats] wrote ${duplicateTexts.length} duplicate enrichment texts`)
-console.log(`[kb-stats] wrote src/data/kb-lite.generated.json (${lite.count.toLocaleString()} rows, ${(lite.rows.length / 1e6).toFixed(2)} MB tuple string)`)
+console.log(`[kb-stats] wrote public/kb-lite.generated.json (${lite.count.toLocaleString()} rows, ${(lite.rows.length / 1e6).toFixed(2)} MB tuple string)`)

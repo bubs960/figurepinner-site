@@ -77,13 +77,13 @@ type Tile = {
 }
 
 /** Resolve a roster entry into a renderable tile, or null if image-gated out. */
-function resolveTile(entry: RwbRosterEntry): Tile | null {
-  const figures = getFiguresByFandom(entry.fandom).filter(
+async function resolveTile(entry: RwbRosterEntry): Promise<Tile | null> {
+  const figures = (await getFiguresByFandom(entry.fandom)).filter(
     (f) => f.character_canonical === entry.character,
   )
   if (!figures.length) return null
 
-  const seed = entry.seedFid ? getFigureById(entry.seedFid) : null
+  const seed = entry.seedFid ? await getFigureById(entry.seedFid) : null
   const withImage = figures.filter((f) => f.canonical_image_url)
   if (!withImage.length) return null
 
@@ -92,7 +92,7 @@ function resolveTile(entry: RwbRosterEntry): Tile | null {
   // Single-release characters land on the figure page itself — a one-figure
   // character hub is a dead end; the figure page has the full price panel.
   const href = figures.length === 1
-    ? prettyFigureUrl(figures[0])
+    ? await prettyFigureUrl(figures[0])
     : `/${genreSlugForFandom(entry.fandom)}/character/${entry.character}`
 
   // Bounded price-snapshot sample: seed figure always included. Evenly spaced
@@ -116,7 +116,7 @@ function money(n: number): string {
 }
 
 export default async function RedWhiteBluePage() {
-  const tiles = RWB_ROSTER.map(resolveTile).filter((t): t is Tile => t !== null)
+  const tiles = (await Promise.all(RWB_ROSTER.map(resolveTile))).filter((t): t is Tile => t !== null)
 
   const snaps = await fetchPriceSnaps(tiles.flatMap((t) => t.priceFids))
 

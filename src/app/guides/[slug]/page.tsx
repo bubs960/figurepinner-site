@@ -23,15 +23,6 @@ import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
 import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 
-// §0 canonical-link fix (2026-07-24): the `href` baked into every comp block in
-// bidcheck-articles.ts is the non-canonical /figure/<fid> form. Resolve it from
-// the fid at render time rather than regenerating the data — a generated URL
-// artifact is exactly what went stale in figureIdToPrettyPath.generated.json.
-// Falls back to the authored href if the fid no longer resolves in the KB.
-function compHref(fid: string, authored: string | undefined): string | undefined {
-  const kb = getFigureById(fid)
-  return kb ? prettyFigureUrl(kb) : authored
-}
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
 
 const BASE = 'https://figurepinner.com'
@@ -70,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 // Inline link syntax: [[label|/path]] — used in article body text and ul items.
 // renderInlineLinks() parses this into styled <a> tags at render time.
 
-function Block({ block, comps, ebayUrls }: { block: ArticleBlock; comps: Map<string, PriceSnap>; ebayUrls: Map<string, string> }) {
+function Block({ block, comps, ebayUrls, compHrefs }: { block: ArticleBlock; comps: Map<string, PriceSnap>; ebayUrls: Map<string, string>; compHrefs: Map<string, string | undefined> }) {
   switch (block.type) {
     case 'comp':
       return (
@@ -78,7 +69,7 @@ function Block({ block, comps, ebayUrls }: { block: ArticleBlock; comps: Map<str
           snap={comps.get(block.fid)}
           label={block.label}
           sublabel={block.sublabel}
-          href={compHref(block.fid, block.href)}
+          href={compHrefs.get(block.fid) ?? block.href}
           ebayUrl={ebayUrls.get(block.fid)}
           figureId={block.fid}
         />
@@ -153,9 +144,16 @@ export default async function GuideArticlePage({ params }: PageProps) {
   // eBay affiliate search URL per comp block — these guide pages had no direct
   // affiliate link before 2026-07-02 (ad units only); this is what a real
   // affiliate-vs-ad comparison needs to start collecting data against.
+  // §0 canonical-link fix (2026-07-24): the `href` baked into every comp block in
+  // bidcheck-articles.ts is the non-canonical /figure/<fid> form. Resolve it from
+  // the fid at render time rather than regenerating the data — a generated URL
+  // artifact is exactly what went stale in figureIdToPrettyPath.generated.json.
+  // A fid absent from compHrefs (no KB match) falls back to the authored href
+  // in Block() below.
   const ebayUrls = new Map<string, string>()
+  const compHrefs = new Map<string, string | undefined>()
   for (const fid of compFids) {
-    const kb = getFigureById(fid)
+    const kb = await getFigureById(fid)
     if (!kb) continue
     ebayUrls.set(fid, buildEbaySearchUrl(
       prettifySlug(kb.character_canonical),
@@ -165,6 +163,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
       kb.release_wave,
       EBAY_CAMPAIGN_ID,
     ))
+    compHrefs.set(fid, await prettyFigureUrl(kb))
   }
 
   const jsonLd = {
@@ -207,7 +206,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
             return (
               <div key={i}>
                 {isBreakPoint && <ConversionBreak headline="Have the figure in front of you? Pull its real comps now." />}
-                <Block block={block} comps={comps} ebayUrls={ebayUrls} />
+                <Block block={block} comps={comps} ebayUrls={ebayUrls} compHrefs={compHrefs} />
               </div>
             )
           })

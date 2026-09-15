@@ -81,12 +81,30 @@ const HANDLER_FAIL_MB = 60
 const KB_LITE_FAIL_MB = 20   // 7.95 MB at 24.4K figures; ~77K figures would hit KV's 25 MB value cap
 const handler = files.find(([p]) => p.endsWith('handler.mjs'))
 const handlerMb = handler ? handler[1] / 1e6 : 0
-const kbLitePath = join(ROOT, 'src', 'data', 'kb-lite.generated.json')
+// public/ (not src/data/) since 2026-09-15: kb-lite now ships as a static
+// asset, not a bundled module — see kbLite.ts's module header. Still worth
+// its own size ceiling (the file itself, not a bundle line) since it's
+// loaded whole into isolate memory on first use.
+const kbLitePath = join(ROOT, 'public', 'kb-lite.generated.json')
 const kbLiteMb = existsSync(kbLitePath) ? statSync(kbLitePath).size / 1e6 : 0
 console.log(`[kb-gate] sizes: handler ${handlerMb.toFixed(2)} MB (warn ${HANDLER_WARN_MB}, fail ${HANDLER_FAIL_MB}) · kb-lite artifact ${kbLiteMb.toFixed(2)} MB (fail ${KB_LITE_FAIL_MB})`)
 if (handlerMb > HANDLER_FAIL_MB) { failed = true; console.error(`[kb-gate] FAIL handler ${handlerMb.toFixed(2)} MB exceeds ${HANDLER_FAIL_MB} MB`) }
 else if (handlerMb > HANDLER_WARN_MB) console.warn(`[kb-gate] WARN handler ${handlerMb.toFixed(2)} MB is past the ${HANDLER_WARN_MB} MB warning line`)
 if (kbLiteMb > KB_LITE_FAIL_MB) { failed = true; console.error(`[kb-gate] FAIL kb-lite artifact ${kbLiteMb.toFixed(2)} MB exceeds ${KB_LITE_FAIL_MB} MB`) }
+
+// Out-of-bundle proof (2026-09-15): confirm the artifact actually shipped as
+// a static asset OpenNext will serve via the ASSETS binding, not just that it
+// exists on disk pre-build — a missing copy into .open-next/assets would
+// silently fall through to kbLite.ts's disk-read fallback in production,
+// which doesn't exist there (no real filesystem in a Worker), so every
+// runtime read would 500 instead of tripping this build-time gate.
+const shippedAssetPath = join(ROOT, '.open-next', 'assets', 'kb-lite.generated.json')
+if (!existsSync(shippedAssetPath)) {
+  failed = true
+  console.error(`[kb-gate] FAIL ${shippedAssetPath} missing — kb-lite did not ship as a static asset (public/ copy present: ${kbLiteMb > 0})`)
+} else {
+  console.log(`[kb-gate] out-of-bundle check PASS — kb-lite present in .open-next/assets (${(statSync(shippedAssetPath).size / 1e6).toFixed(2)} MB)`)
+}
 
 if (failed) {
   console.error('[kb-gate] handler still carries the full KB catalog (or a size ceiling tripped) — refusing to treat this build as deployable')

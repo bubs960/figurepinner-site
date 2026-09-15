@@ -526,9 +526,9 @@ const VAULTS: Record<string, VaultPayload> = {
 // truth rather than adding a second generated-URL artifact that can drift the
 // way figureIdToPrettyPath.generated.json already has. Falls back to the
 // baked url if the fid no longer resolves in the KB (dropped/renamed figure).
-function resolvedUrl(figureId: string, bakedUrl: string): string {
-  const kb = getFigureById(figureId)
-  return kb ? prettyFigureUrl(kb) : bakedUrl
+async function resolvedUrl(figureId: string, bakedUrl: string): Promise<string> {
+  const kb = await getFigureById(figureId)
+  return kb ? await prettyFigureUrl(kb) : bakedUrl
 }
 
 export async function loadVaults(dataKey: string): Promise<VaultPayload | null> {
@@ -536,13 +536,13 @@ export async function loadVaults(dataKey: string): Promise<VaultPayload | null> 
   if (!payload) return null
   return {
     ...payload,
-    vaults: payload.vaults.map((v) => ({
+    vaults: await Promise.all(payload.vaults.map(async (v) => ({
       ...v,
       // Release T (2026-09-07, external audit F5): a Force FX lightsaber sat in the
       // 6" Black Series vault (KB product_line misclassification, relayed to matcher).
       // Roleplay never renders inside a figure vault; dedupe by figure_id while here.
-      top: hygieneVaultTop(v.line_slug, v.top).map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
-    })),
+      top: await Promise.all(hygieneVaultTop(v.line_slug, v.top).map(async (f) => ({ ...f, url: await resolvedUrl(f.figure_id, f.url) }))),
+    }))),
   }
 }
 
@@ -564,8 +564,8 @@ export async function loadHeroesVillains(dataKey: string): Promise<HeroesVillain
   if (!payload) return null
   return {
     ...payload,
-    heroes: payload.heroes.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
-    villains: payload.villains.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+    heroes: await Promise.all(payload.heroes.map(async (f) => ({ ...f, url: await resolvedUrl(f.figure_id, f.url) }))),
+    villains: await Promise.all(payload.villains.map(async (f) => ({ ...f, url: await resolvedUrl(f.figure_id, f.url) }))),
   }
 }
 
@@ -595,7 +595,7 @@ export async function loadMostChecked(dataKey: string): Promise<MostCheckedPaylo
   if (!payload) return null
   return {
     ...payload,
-    figures: payload.figures.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+    figures: await Promise.all(payload.figures.map(async (f) => ({ ...f, url: await resolvedUrl(f.figure_id, f.url) }))),
   }
 }
 
@@ -604,6 +604,6 @@ export async function loadTopComps(dataKey: string): Promise<TopCompPayload | nu
   if (!payload) return null
   return {
     ...payload,
-    figures: payload.figures.map((f) => ({ ...f, url: resolvedUrl(f.figure_id, f.url) })),
+    figures: await Promise.all(payload.figures.map(async (f) => ({ ...f, url: await resolvedUrl(f.figure_id, f.url) }))),
   }
 }

@@ -20,9 +20,9 @@ export const dynamic = 'force-static'
  * else here. The static child has no per-entity dates and omits lastmod
  * (never fabricate `now` — see sitemapIndex.ts).
  */
-function fandomLastmod(fandom: string): Date | null {
+async function fandomLastmod(fandom: string): Promise<Date | null> {
   let newest: Date | null = null
-  for (const f of getFiguresByFandom(fandom)) {
+  for (const f of await getFiguresByFandom(fandom)) {
     const d = lastContentDate(f.figure_id)
     if (d && (!newest || d > newest)) newest = d
   }
@@ -32,7 +32,7 @@ function fandomLastmod(fandom: string): Date | null {
 export async function GET(): Promise<Response> {
   const entries: SitemapIndexEntry[] = [
     { id: 'static' },
-    ...getAllFandoms().map(fandom => ({ id: fandom, lastmod: fandomLastmod(fandom) })),
+    ...await Promise.all(getAllFandoms().map(async fandom => ({ id: fandom, lastmod: await fandomLastmod(fandom) }))),
   ]
   return new Response(sitemapIndexXml(entries), {
     headers: { 'Content-Type': 'application/xml' },

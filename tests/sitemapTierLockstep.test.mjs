@@ -16,9 +16,9 @@ import { getAllFigures, prettyFigureUrl } from '../src/data/kbLite.ts'
 
 const BASE = 'https://figurepinner.com'
 const urlToFids = new Map()
-for (const f of getAllFigures()) {
+for (const f of await getAllFigures()) {
   if (f.is_canary) continue
-  const u = `${BASE}${prettyFigureUrl(f)}`
+  const u = `${BASE}${await prettyFigureUrl(f)}`
   if (!urlToFids.has(u)) urlToFids.set(u, [])
   urlToFids.get(u).push(f.figure_id)
 }
@@ -29,7 +29,7 @@ describe('sitemap tier lockstep', () => {
     const ids = (await generateSitemaps()).map((s) => s.id).filter((id) => id !== 'static')
     let figureUrls = 0
     for (const id of ids) {
-      for (const e of sitemap({ id })) {
+      for (const e of await sitemap({ id })) {
         if (!isFigureUrl(e.url)) continue
         figureUrls++
         const fids = urlToFids.get(e.url)
@@ -42,7 +42,7 @@ describe('sitemap tier lockstep', () => {
   })
 
   test('bing-tail lists exactly the tier-1 URLs, each with googlebot-noindex robots, none in the main sitemap', async () => {
-    const tail = bingTailSitemap()
+    const tail = await bingTailSitemap()
     assert.ok(tail.length >= 1, 'canary must be present')
     const tailUrls = new Set(tail.map((e) => e.url))
     for (const u of tailUrls) {
@@ -52,7 +52,7 @@ describe('sitemap tier lockstep', () => {
       for (const fid of fids) if (googleIndexTier(fid) === 1) assert.deepEqual(googleIndexRobots(fid).googleBot, { index: false, follow: true })
     }
     const ids = (await generateSitemaps()).map((s) => s.id)
-    for (const id of ids) for (const e of sitemap({ id })) assert.ok(!tailUrls.has(e.url), `${e.url} is in both sitemaps`)
+    for (const id of ids) for (const e of await sitemap({ id })) assert.ok(!tailUrls.has(e.url), `${e.url} is in both sitemaps`)
     // Route renders them
     const res = await bingTailGET()
     const xml = await res.text()
@@ -68,14 +68,14 @@ describe('sitemap tier lockstep', () => {
     const idx = await (await sitemapIndexGET()).text()
     assert.ok(!idx.includes('bing-tail'))
     // and not from the static child either
-    assert.ok(!sitemap({ id: 'static' }).some((e) => e.url.includes('bing-tail')))
+    assert.ok(!(await sitemap({ id: 'static' })).some((e) => e.url.includes('bing-tail')))
   })
 
   test('tier-0 figures are in neither sitemap', async () => {
-    const tailUrls = new Set(bingTailSitemap().map((e) => e.url))
+    const tailUrls = new Set((await bingTailSitemap()).map((e) => e.url))
     const ids = (await generateSitemaps()).map((s) => s.id)
     const mainUrls = new Set()
-    for (const id of ids) for (const e of sitemap({ id })) mainUrls.add(e.url)
+    for (const id of ids) for (const e of await sitemap({ id })) mainUrls.add(e.url)
     let checked = 0
     for (const [u, fids] of urlToFids) {
       if (fids.every((fid) => googleIndexTier(fid) === 0)) {

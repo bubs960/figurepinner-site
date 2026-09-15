@@ -32,13 +32,13 @@ describe('character hub lockstep', () => {
       if (!ids.includes(fandom)) continue
       const genre = genreSlugForFandom(fandom)
       const members = new Map()
-      for (const f of getFiguresByFandom(fandom)) {
+      for (const f of await getFiguresByFandom(fandom)) {
         if (f.is_canary) continue
         if (!members.has(f.character_canonical)) members.set(f.character_canonical, [])
         members.get(f.character_canonical).push(f.figure_id)
       }
       const expected = new Set([...members].filter(([, fids]) => characterHubMeetsIndexBar(fids)).map(([c]) => `${BASE}/${genre}/character/${c}`))
-      const listed = new Set(sitemap({ id: fandom }).map((e) => e.url).filter((u) => u.includes(`/${genre}/character/`)))
+      const listed = new Set((await sitemap({ id: fandom })).map((e) => e.url).filter((u) => u.includes(`/${genre}/character/`)))
       assert.deepEqual(listed, expected, `character hubs for ${fandom} disagree between sitemap and predicate`)
       hubsChecked += listed.size
     }
@@ -51,12 +51,12 @@ describe('character hub lockstep', () => {
       if (!ids.includes(fandom)) continue
       const genre = genreSlugForFandom(fandom)
       const members = new Map()
-      for (const f of getFiguresByFandom(fandom)) {
+      for (const f of await getFiguresByFandom(fandom)) {
         if (f.is_canary) continue
         if (!members.has(f.character_canonical)) members.set(f.character_canonical, [])
         members.get(f.character_canonical).push(f.figure_id)
       }
-      for (const e of sitemap({ id: fandom })) {
+      for (const e of await sitemap({ id: fandom })) {
         const m = e.url.match(new RegExp(`/${genre}/character/([^/]+)$`))
         if (!m) continue
         const fids = members.get(m[1]) ?? []

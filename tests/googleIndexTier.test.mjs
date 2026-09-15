@@ -34,20 +34,20 @@ describe('googleIndexTier — canary artifact', () => {
     assert.equal(artifact.inputs.canary_asof, canary.asof)
   })
 
-  test('every canary fid is tier 1, in the KB, above the T0 bar, not a Data-Defense canary', () => {
+  test('every canary fid is tier 1, in the KB, above the T0 bar, not a Data-Defense canary', async () => {
     assert.ok(canary.fids.length >= 1)
     for (const fid of canary.fids) {
       assert.equal(googleIndexTier(fid), 1, fid)
       assert.ok(isAtOrAboveIndexBar(fid), `${fid} must be above the T0 bar`)
-      const f = getFigureById(fid)
+      const f = await getFigureById(fid)
       assert.ok(f, `${fid} not in KB`)
       assert.ok(!f.is_canary, `${fid} is a Data-Defense canary record`)
     }
     assert.deepEqual(new Set(tierOneFids()), new Set(canary.fids))
   })
 
-  test('tier 0 = below the bar (unchanged policy); tier 2 = everything else above the bar', () => {
-    const figs = getAllFigures().filter((f) => !f.is_canary)
+  test('tier 0 = below the bar (unchanged policy); tier 2 = everything else above the bar', async () => {
+    const figs = (await getAllFigures()).filter((f) => !f.is_canary)
     const below = figs.find((f) => !isAtOrAboveIndexBar(f.figure_id))
     const above = figs.find((f) => isAtOrAboveIndexBar(f.figure_id) && !canary.fids.includes(f.figure_id))
     assert.ok(below && above)
@@ -56,14 +56,14 @@ describe('googleIndexTier — canary artifact', () => {
     assert.equal(googleIndexTier('fp_not_a_real_fid_000000'), 0)
   })
 
-  test('robots split by tier (spec 4.1): T1 = generic index + googlebot noindex', () => {
+  test('robots split by tier (spec 4.1): T1 = generic index + googlebot noindex', async () => {
     const fid = canary.fids[0]
     assert.deepEqual(googleIndexRobots(fid), {
       index: true,
       follow: true,
       googleBot: { index: false, follow: true },
     })
-    const figs = getAllFigures().filter((f) => !f.is_canary)
+    const figs = (await getAllFigures()).filter((f) => !f.is_canary)
     const below = figs.find((f) => !isAtOrAboveIndexBar(f.figure_id))
     const above = figs.find((f) => isAtOrAboveIndexBar(f.figure_id) && !canary.fids.includes(f.figure_id))
     assert.deepEqual(googleIndexRobots(below.figure_id), {

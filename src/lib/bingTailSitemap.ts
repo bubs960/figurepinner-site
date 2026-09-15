@@ -15,13 +15,13 @@ const BASE = 'https://figurepinner.com'
  * Lives here rather than in app/sitemap.ts because a sibling app/sitemap/
  * directory makes an extensionless '@/app/sitemap' import ambiguous.
  */
-export function bingTailSitemap(now: Date = new Date()): MetadataRoute.Sitemap {
+export async function bingTailSitemap(now: Date = new Date()): Promise<MetadataRoute.Sitemap> {
   const out: MetadataRoute.Sitemap = []
   const seen = new Set<string>()
   for (const fid of tierOneFids()) {
-    const f = getFigureById(fid)
+    const f = await getFigureById(fid)
     if (!f || f.is_canary) continue
-    const url = `${BASE}${prettyFigureUrl(f)}`
+    const url = `${BASE}${await prettyFigureUrl(f)}`
     if (seen.has(url)) continue
     seen.add(url)
     out.push({ url, lastModified: lastContentDate(fid) ?? now, changeFrequency: 'weekly' as const, priority: 0.7 })

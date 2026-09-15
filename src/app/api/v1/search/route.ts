@@ -74,7 +74,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const { scored, note } = searchKb(q)
+    const { scored, note } = await searchKb(q)
     const total = scored.length
 
     const results = scored

@@ -162,15 +162,15 @@ function isTinyThumbSafe(url: string | null): boolean {
  *  Returns null (no line mapping, or no thumb-safe photo exists) so the
  *  caller falls back to the CSS-only gold plate instead of ever shipping an
  *  unresized image into a 56px badge. */
-function guidePlateImg(fandom: string | null, line: string | null): string | null {
+async function guidePlateImg(fandom: string | null, line: string | null): Promise<string | null> {
   if (!fandom || !line) return null
-  const fig = getFiguresByLine(getFandom(fandom), line).find(f => isTinyThumbSafe(f.canonical_image_url ?? null))
+  const fig = (await getFiguresByLine(getFandom(fandom), line)).find(f => isTinyThumbSafe(f.canonical_image_url ?? null))
   return fig ? thumb(fig.canonical_image_url!, 112) ?? null : null
 }
 
 /** Resolve curated shelf entries against the KB; real sold prices (from the
  *  tape) replace the line tag where we have one. */
-function buildShelf(tape: TapeItem[]): ShelfFigure[] {
+async function buildShelf(tape: TapeItem[]): Promise<ShelfFigure[]> {
   const soldByFid = new Map<string, number>()
   for (const t of tape) {
     const m = /^\/figure\/(.+)$/.exec(t.href)
@@ -184,13 +184,13 @@ function buildShelf(tape: TapeItem[]): ShelfFigure[] {
   // picks could silently collapse the shelf below its >=6 render gate.
   for (const entry of pickShelfFids(SHELF_POOL, SHELF_POOL.length)) {
     if (resolved.length >= SHELF_COUNT) break
-    const kb = getFigureById(entry.fid)
+    const kb = await getFigureById(entry.fid)
     if (!kb || !kb.canonical_image_url) continue
     const sold = soldByFid.get(entry.fid)
     resolved.push({
       fig: {
         fid: entry.fid,
-        href: prettyFigureUrl(kb),
+        href: await prettyFigureUrl(kb),
         name: titleCase(kb.character_canonical),
         tag: sold != null ? 'Just sold' : entry.tag,
         sold: sold != null,
@@ -263,10 +263,10 @@ function VitrineCard({ f, large }: { f: ReceiptFigure; large?: boolean }) {
  *  shelf, re-imaged at hall size (the shelf's 180px thumbs would blur on
  *  the hero's 252px-wide cards). Failures drop silently; the client
  *  component's onError guard catches anything that still 404s live. */
-function buildHallCards(shelf: ShelfFigure[]): HallCard[] {
+async function buildHallCards(shelf: ShelfFigure[]): Promise<HallCard[]> {
   const out: HallCard[] = []
   for (const f of shelf) {
-    const kb = getFigureById(f.fid)
+    const kb = await getFigureById(f.fid)
     if (!kb?.canonical_image_url) continue
     out.push({
       fid: f.fid,
@@ -282,8 +282,8 @@ function buildHallCards(shelf: ShelfFigure[]): HallCard[] {
 export default async function HomePage() {
   // Live market data — real solds or the modules hide themselves.
   const { figures: receiptFigures, tape } = await fetchHomeMarket()
-  const shelf = buildShelf(tape)
-  const hallCards = buildHallCards(shelf)
+  const shelf = await buildShelf(tape)
+  const hallCards = await buildHallCards(shelf)
   const hallTicker: HallTickerItem[] = tape.slice(0, 12)
   const laneCount = GENRE_TAXONOMY.length
   // Room I (Museum Night S3): top lanes by live figure count become large
@@ -297,7 +297,7 @@ export default async function HomePage() {
   // build (server-rendered), cycles if there are ever more than 6 guides.
   const SPINE_LEAN_DEG = [-3, 2.4, -1.6, 3, -2.2, 1.4]
   // Bookplate photo per guide — null falls back to the CSS-only gold plate.
-  const guidePlates = PRIORITY_GUIDES.map(g => guidePlateImg(g.fandom, g.line))
+  const guidePlates = await Promise.all(PRIORITY_GUIDES.map(g => guidePlateImg(g.fandom, g.line)))
   // Room III (Museum Night S4): curated 6-8 wall, Steve's explicit density
   // call (2026-07-10) over an exhaustive 15-entry feed. receiptFigures is
   // already curated (CURATED array, homeReceipt.ts) so no further picking
