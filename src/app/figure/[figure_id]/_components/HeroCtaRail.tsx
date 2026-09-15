@@ -112,8 +112,9 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
 
   return (
     <div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '16px' }}>
+      <div className="fp-hero-cta-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '16px' }}>
         <TrackedLink
+          className="fp-hero-cta-primary"
           href={!signedIn ? '/sign-up' : '#figure-actions'}
           onClick={e => {
             if (!signedIn) return
@@ -141,6 +142,7 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
           {signedIn ? (canDirectAdd ? directAddLabel : 'ADD TO COLLECTION') : 'TRACK THIS FIGURE — FREE'}
         </TrackedLink>
         <TrackedLink
+          className="fp-hero-cta-secondary"
           href={ebaySearchUrl}
           target="_blank"
           rel="sponsored nofollow noopener noreferrer"
@@ -158,7 +160,7 @@ export default function HeroCtaRail({ figureId, ebaySearchUrl, figureName, brand
           FIND IT ON EBAY ↗
         </TrackedLink>
       </div>
-      <div style={{
+      <div className="fp-hero-cta-note" style={{
         fontSize: '10px', color: 'rgba(242,232,213,.35)', marginTop: '8px',
         letterSpacing: '.02em',
       }}>

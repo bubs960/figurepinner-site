@@ -10,7 +10,7 @@ export type LiveMedianView =
   | { hasData: false; isThin: true; lastSoldDate: string; lastSoldPrice: number }
   | { hasData: false; isThin: false }
 
-export function deriveLiveMedianView(snap: PriceSnap | null | undefined): LiveMedianView {
+export function deriveLiveMedianView(snap: PriceSnap | null | undefined, now: number = Date.now()): LiveMedianView {
   // pre-mortem item 1 (2026-09-08): resolvePriceContract falls back to the
   // legacy median_sold/avg_sold/sold_count for a snapshot matcher hasn't
   // regenerated yet, instead of this guide comp card going blank for the
@@ -20,7 +20,7 @@ export function deriveLiveMedianView(snap: PriceSnap | null | undefined): LiveMe
     medianSold: snap?.median_sold,
     avgSold: snap?.avg_sold,
     decision: snap?.decision,
-  })
+  }, now)
   const quote = pickPrimaryQuote(contract)
 
   if (quote?.evidenceTier === 'thin' && quote.lastSoldPrice != null && quote.lastSoldDate != null) {

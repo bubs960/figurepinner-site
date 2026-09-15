@@ -1123,8 +1123,43 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
         @media (max-width: 767px) {
           .fp-page-main { display: flex; flex-direction: column; gap: 18px; }
           .fp-hero-eyebrow { font-size: 0.7rem !important; letter-spacing: 0.16em !important; }
-          .fp-z-title h1 { font-size: 2.4rem !important; }
+          .fp-z-title h1 { font-size: 2.4rem !important; margin-top: 4px !important; }
+          /* Phone density pass (2026-09-13, WEB-EOC-2026-09-13.md): the spec
+             row's desktop padding (22px/side) wraps 6 items to 2-3 rows on a
+             ~350px content width. Tighter padding + row-gap fits more per row
+             without dropping any spec. */
+          .fp-hero-specs { margin-top: 8px !important; row-gap: 4px !important; }
+          .fp-hero-specs > div { padding-left: 14px !important; padding-right: 14px !important; }
+          .fp-hero-specs > div:first-child { padding-left: 0 !important; }
           .fp-cta-rail   { grid-template-columns: 1fr !important; }
+          /* Phone density pass part 2 (2026-09-13): PriceBlock is the biggest
+             single contributor to the phone price card (~370-400px, README
+             budgeted the legacy single-bucket placard at 230px) -- it stacks
+             two full buckets + a sparkline on a narrow column where desktop
+             puts them side by side. Padding/type-scale trim only; still shows
+             every bucket, chip, delta and sparkline bar the desktop gets. */
+          .fp-priceblock { margin-top: 16px !important; }
+          .fp-priceblock-bucket { padding: 14px 18px !important; }
+          .fp-priceblock-bucket > div:first-child { margin-bottom: 2px !important; }
+          .fp-priceblock-bucket > div:nth-child(2) { font-size: 2.5rem !important; }
+          .fp-priceblock-bucket > div:last-child { margin-top: 4px !important; }
+          .fp-priceblock-spark { padding: 10px 18px !important; }
+          .fp-priceblock-spark > div:first-child { height: 36px !important; }
+          .fp-priceblock-spark > div:last-child { margin-top: 4px !important; }
+          /* Phone density pass part 3 (2026-09-13): HeroCtaRail's two buttons
+             (minWidth 200/180 + 12px gap = 392px) never fit the ~310px phone
+             content column, so they silently wrap to 2 stacked rows every
+             time -- an un-audited ~60px of pure wrap tax. Dropping the
+             minWidth floor lets the existing flex:2/flex:1.4 ratio size them
+             to fit one row instead; font-size/padding trimmed to match so
+             the longer "TRACK THIS FIGURE — FREE" label still reads clean at
+             the narrower width. Verify visually -- this is the
+             revenue-critical CTA pair, not a spacing-only surface. */
+          .fp-hero-cta-row { margin-top: 10px !important; gap: 8px !important; }
+          .fp-hero-cta-primary, .fp-hero-cta-secondary { min-width: 0 !important; padding: 12px 10px !important; }
+          .fp-hero-cta-primary { font-size: 12px !important; }
+          .fp-hero-cta-secondary { font-size: 11.5px !important; }
+          .fp-hero-cta-note { margin-top: 5px !important; }
         }
       `}</style>
 

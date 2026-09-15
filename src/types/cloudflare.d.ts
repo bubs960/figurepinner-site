@@ -12,6 +12,16 @@ interface D1Database {
   prepare(query: string): D1PreparedStatement
   batch<T = unknown>(statements: D1PreparedStatement[]): Promise<T[]>
   exec(query: string): Promise<void>
+  // Sessions API (read replication): 'first-unconstrained' routes to any
+  // instance (primary or replica), 'first-primary' to the primary, or a
+  // bookmark string from a previous session's getBookmark().
+  withSession(constraint?: 'first-unconstrained' | 'first-primary' | string): D1DatabaseSession
+}
+
+interface D1DatabaseSession {
+  prepare(query: string): D1PreparedStatement
+  batch<T = unknown>(statements: D1PreparedStatement[]): Promise<T[]>
+  getBookmark(): string | null
 }
 
 interface AnalyticsEngineDataset {

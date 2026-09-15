@@ -91,10 +91,87 @@ interface KBRouteRow {
  */
 type BatchRows<T> = { results?: T[] }
 
-async function getKbDb(): Promise<D1Database> {
+// D1 blip guard (2026-09-13). Two ~3 s D1-side transients today -- 18:38Z
+// "D1_ERROR: internal error; reference = ...", 20:43Z "D1 DB is overloaded.
+// Requests queued for too long" -- each failed the 2-3 cold renders in
+// flight (Workers Logs CSV). D1 analytics for figurepinner-kb: zero writes
+// all day, ~30 reads/min steady, and reads DROPPED in the blip minutes, so
+// this was the ENAM primary hiccuping, not our load. The Release M shield
+// already turns those into an uncacheable 503 + Retry-After 30; this layer
+// stops most of them from failing at all:
+//  1. every read runs in a `first-unconstrained` session. With read
+//     replication enabled on the database (Settings -> Enable Read
+//     Replication; REST: read_replication.mode=auto) the query is served by
+//     the nearest replica instead of the single primary -- and per the D1
+//     docs, WITHOUT the Sessions API every query keeps going to the primary
+//     even after replication is on, so this half is load-bearing. Sequential
+//     consistency within a session is all a read-only catalog needs; the only
+//     writer is the atomic table swap (kb-d1-swap.mjs), and a replica lagging
+//     that by seconds is invisible to a 24 h ISR page.
+//  2. ONE retry, D1_RETRY_DELAY_MS later, in a NEW session (may land on a
+//     different instance), only when the error message matches the transient
+//     shapes seen live. Not a loop; a real outage still surfaces as the same
+//     uncaught error figure/[figure_id]/page.tsx deliberately lets propagate.
+// Every call site keeps `db.prepare(sql).bind(...).first()/.all()` and
+// `db.batch([...])` exactly as before -- the retry lives in this wrapper so
+// no reader had to change.
+const D1_TRANSIENT = /overloaded|queued for too long|internal error|storage operation exceeded|reset|timed? ?out|network connection lost/i
+const D1_RETRY_DELAY_MS = 250
+
+interface KbPrepared {
+  bind(...values: unknown[]): KbPrepared
+  first<T = Record<string, unknown>>(): Promise<T | null>
+  all<T = Record<string, unknown>>(): Promise<{ results: T[] }>
+  run(): Promise<{ meta: { changes: number; last_row_id: number } }>
+}
+interface KbDb {
+  prepare(sql: string): KbPrepared
+  batch<T = unknown>(statements: KbPrepared[]): Promise<T[]>
+}
+
+async function kbSession(): Promise<D1DatabaseSession> {
   const { env } = await getCloudflareContext()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (env as any).KB_DB as D1Database
+  return ((env as any).KB_DB as D1Database).withSession('first-unconstrained')
+}
+
+async function runWithRetry<T>(exec: (s: D1DatabaseSession) => Promise<T>): Promise<T> {
+  try {
+    return await exec(await kbSession())
+  } catch (err) {
+    if (!(err instanceof Error) || !D1_TRANSIENT.test(err.message)) throw err
+    console.warn('[kb-d1] transient D1 error, retrying once:', err.message.slice(0, 160))
+    await new Promise(resolve => setTimeout(resolve, D1_RETRY_DELAY_MS))
+    return await exec(await kbSession())
+  }
+}
+
+// Plain fields, not constructor parameter properties: `npm test` loads this
+// file through scripts/register-ts-loader.mjs, a type-STRIPPING loader, and
+// parameter properties are the one class syntax stripping cannot erase (nine
+// test files that import kbDb died at load until this was rewritten).
+class RetryingStatement implements KbPrepared {
+  private readonly sql: string
+  private readonly values: unknown[]
+  constructor(sql: string, values: unknown[] = []) {
+    this.sql = sql
+    this.values = values
+  }
+  bind(...values: unknown[]): KbPrepared { return new RetryingStatement(this.sql, values) }
+  real(s: D1DatabaseSession): D1PreparedStatement { return s.prepare(this.sql).bind(...this.values) }
+  first<T = Record<string, unknown>>(): Promise<T | null> { return runWithRetry(s => this.real(s).first<T>()) }
+  all<T = Record<string, unknown>>(): Promise<{ results: T[] }> { return runWithRetry(s => this.real(s).all<T>()) }
+  run(): Promise<{ meta: { changes: number; last_row_id: number } }> { return runWithRetry(s => this.real(s).run()) }
+}
+
+const KB_DB: KbDb = {
+  prepare: (sql: string) => new RetryingStatement(sql),
+  batch: <T = unknown>(statements: KbPrepared[]) =>
+    runWithRetry(s => s.batch<T>(statements.map(st => (st as RetryingStatement).real(s)))),
+}
+
+async function getKbDb(): Promise<KbDb> {
+  return KB_DB
 }
 
 /**

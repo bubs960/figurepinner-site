@@ -16,34 +16,42 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { deriveSparklineQuote } from '../src/app/api/sparklines/_lib/sparklineQuote.ts'
 
+// Fixed reference instant, not Date.now(): the fixtures encode tier windows
+// (fresh/recent/historical valid_until) relative to their generated_at, so
+// evaluating them against the real wall clock makes this suite flip to
+// failing the moment real time crosses those baked-in dates (hit live
+// 2026-09-14, see cacheUntilBound.test.mjs's NOW for the established
+// pattern this mirrors).
+const NOW = Date.parse('2026-09-07T13:00:00Z')
+
 function decisionFor(name) {
   return JSON.parse(readFileSync(new URL(`./fixtures/quote-tiers-2026-09-07/${name}.decision.json`, import.meta.url), 'utf8'))
 }
 
 describe('deriveSparklineQuote against matcher\'s real fixtures', () => {
   test('fresh: median populated, tier fresh', () => {
-    const q = deriveSparklineQuote({ decision: decisionFor('fresh') })
+    const q = deriveSparklineQuote({ decision: decisionFor('fresh') }, NOW)
     assert.equal(q.median, 42.5)
     assert.equal(q.soldCount, 4)
     assert.equal(q.tier, 'fresh')
   })
 
   test('recent: tier_statistic renders, not the fresh-window statistic', () => {
-    const q = deriveSparklineQuote({ decision: decisionFor('recent') })
+    const q = deriveSparklineQuote({ decision: decisionFor('recent') }, NOW)
     assert.equal(q.median, 30)
     assert.equal(q.soldCount, 3)
     assert.equal(q.tier, 'recent')
   })
 
   test('historical: median populated with last-sold fields', () => {
-    const q = deriveSparklineQuote({ decision: decisionFor('historical') })
+    const q = deriveSparklineQuote({ decision: decisionFor('historical') }, NOW)
     assert.equal(q.median, 22)
     assert.equal(q.tier, 'historical')
     assert.equal(q.lastSoldDate, '2026-02-19')
   })
 
   test('thin: median null, last-sold populated, soldCount 0 (never a comp count for a suppressed number)', () => {
-    const q = deriveSparklineQuote({ decision: decisionFor('thin') })
+    const q = deriveSparklineQuote({ decision: decisionFor('thin') }, NOW)
     assert.equal(q.median, null)
     assert.equal(q.tier, 'thin')
     assert.equal(q.lastSoldPrice, 40)
@@ -52,7 +60,7 @@ describe('deriveSparklineQuote against matcher\'s real fixtures', () => {
 
   test('none/pre-tier/expired, no legacy fields supplied: median null, tier none, no last-sold', () => {
     for (const name of ['none', 'pre-tier', 'expired']) {
-      const q = deriveSparklineQuote({ decision: decisionFor(name) })
+      const q = deriveSparklineQuote({ decision: decisionFor(name) }, NOW)
       assert.equal(q.median, null, name)
       assert.equal(q.tier, 'none', name)
       assert.equal(q.lastSoldDate, null, name)
@@ -60,7 +68,7 @@ describe('deriveSparklineQuote against matcher\'s real fixtures', () => {
   })
 
   test('undefined price object: median null, tier none', () => {
-    const q = deriveSparklineQuote(undefined)
+    const q = deriveSparklineQuote(undefined, NOW)
     assert.equal(q.median, null)
     assert.equal(q.tier, 'none')
   })
