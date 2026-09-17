@@ -4,7 +4,7 @@
  *
  * Every entry here is a seller Steve has chosen to feature. Do NOT add a
  * handle on your own — the record of who's featured is
- * Bridge/WEB-WHATNOT-SELLERS-APPROVED-LOG.md, not this file. This file is
+ * Bridge/data/logs/WEB-WHATNOT-SELLERS-APPROVED-LOG.md, not this file. This file is
  * display data only.
  *
  * photoUrl is captured from each profile's og:image at the time this list

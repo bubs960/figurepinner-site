@@ -260,7 +260,7 @@ async function getSitemapUrls() {
 // 429 retry-with-backoff (2026-07-29): IndexNow 429'd on 2 consecutive deploys
 // (b304ac3, cb1ee06) even at 8-URL priority-mode batches, well under
 // BATCH_SIZE — not a batch-size problem, a rate-limit-on-the-endpoint problem.
-// Bing is the working traffic channel (webaudit, WEBAUDIT-BING-CHANNEL-LOG.md),
+// Bing is the working traffic channel (webaudit, Bridge/data/logs/WEBAUDIT-BING-CHANNEL-LOG.md),
 // so a submitter that silently 429s every deploy is quietly throttling the
 // channel that pays. Retries respect `Retry-After` when the endpoint sends
 // one; falls back to a short fixed backoff otherwise. Still fully non-fatal —
