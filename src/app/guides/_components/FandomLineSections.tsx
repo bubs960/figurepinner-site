@@ -90,7 +90,7 @@ export default function FandomLineSections({
                         {v.top.slice(0, 3).map(f => (
                           <a key={f.figure_id} href={f.url} className="fh-line-fig">
                             <span className={`fh-line-fig-thumb${f.image ? '' : ' is-empty'}`}>
-                              {f.image && <img src={f.image} alt="" width={48} height={48} loading="lazy" decoding="async" />}
+                              {f.image && <img src={f.image} alt={`${f.name} action figure`} width={48} height={48} loading="lazy" decoding="async" />}
                             </span>
                             <span className="fh-line-fig-text">
                               <span className="fh-line-fig-name">{f.name}</span>

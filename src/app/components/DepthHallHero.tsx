@@ -448,7 +448,7 @@ export default function DepthHallHero({
                     <img
                       className={styles.cardImg}
                       src={c.img}
-                      alt=""
+                      alt={`${c.name} action figure`}
                       loading="eager"
                       fetchPriority="low"
                       decoding="async"

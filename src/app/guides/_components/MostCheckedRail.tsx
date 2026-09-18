@@ -26,7 +26,7 @@ function McCard({ f, fw, rank }: { f: MostCheckedFigure; fw: HubFlagWording; ran
     <a href={f.url} className="fh-hv-card fh-mc-card">
       <span className="fh-intel-rank" aria-hidden="true">{rank}</span>
       <span className={`fh-hv-thumb${f.image ? '' : ' is-empty'}`}>
-        {f.image && <img src={f.image} alt="" width={44} height={44} loading="lazy" decoding="async" />}
+        {f.image && <img src={f.image} alt={`${f.name} action figure`} width={44} height={44} loading="lazy" decoding="async" />}
       </span>
       <span className="fh-hv-text">
         <span className="fh-hv-name">{f.name}</span>

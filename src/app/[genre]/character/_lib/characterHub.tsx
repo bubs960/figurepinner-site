@@ -449,6 +449,7 @@ export async function CharacterHubView(
                 radius={12}
                 cdnWidth={240}
                 fallback={{ kind: 'icon', accent }}
+                alt={`${charName} action figure`}
                 eager
               />
             </div>
@@ -755,7 +756,7 @@ async function CharFigureCard({ figure: f, href }: { figure: KBFigure; href: str
       {/* Visual chrome + hover lift/tilt/glow live here, not on the anchor
           above — see the .char-card-mount comment in the <style> block. */}
       <div className="char-card-mount">
-        <FigureThumbStatic image={f.canonical_image_url} cdnWidth={96} />
+        <FigureThumbStatic image={f.canonical_image_url} cdnWidth={96} alt={`${name} action figure`} />
         <div className="char-card__info">
           <div className="char-card__name">{name}</div>
           {exclusive && <div className="char-card__exclusive">{exclusive}</div>}

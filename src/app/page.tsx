@@ -237,7 +237,7 @@ function VitrineCard({ f, large }: { f: ReceiptFigure; large?: boolean }) {
     <a className={`fph-vc${large ? ' large' : ''}`} href={f.href}>
       {f.image && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img className="fph-vc-img" src={f.image} alt="" loading="lazy" decoding="async" />
+        <img className="fph-vc-img" src={f.image} alt={`${f.name} action figure`} loading="lazy" decoding="async" />
       )}
       <div className="fph-vc-body">
         <div className="fph-vc-name">{f.name}</div>
@@ -1202,7 +1202,7 @@ export default async function HomePage() {
                 {guidePlates[i] ? (
                   <span className="fph-spine-plate">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={guidePlates[i]!} alt="" width={56} height={56} loading="lazy" decoding="async" />
+                    <img src={guidePlates[i]!} alt={`${guide.label} guide cover figure`} width={56} height={56} loading="lazy" decoding="async" />
                   </span>
                 ) : (
                   <span className="fph-spine-plate fph-spine-plate--fallback" aria-hidden>

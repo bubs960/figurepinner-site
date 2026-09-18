@@ -274,10 +274,12 @@ export default function SpotlightVitrine({ f }: { f: ReceiptFigure }) {
         <span className="fph-sv-mote" aria-hidden />
         <div className="fph-sv-imgwrap">
           {f.image && (
-            // alt="" — decorative-in-context: the placard right below names
-            // the same figure, so alt={name} made the link stutter it twice
+            // Named alt (2026-09-18): was alt="" so the link didn't read the
+            // name twice, but Bing flags empty alt on figure photos and image
+            // search can't use them. "<name> action figure" differs from the
+            // placard text, so it describes the photo rather than echoing it.
             // eslint-disable-next-line @next/next/no-img-element
-            <img className="fph-sv-img" src={f.image} alt="" loading="lazy" decoding="async" />
+            <img className="fph-sv-img" src={f.image} alt={`${f.name} action figure`} loading="lazy" decoding="async" />
           )}
         </div>
         <div className="fph-sv-placard">

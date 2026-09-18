@@ -897,6 +897,7 @@ export default async function GenrePage(
                     radius={8}
                     cdnWidth={96}
                     fallback={{ kind: 'icon', accent: '#e0a83e' }}
+                    alt={`${c.name} action figures`}
                   />
                   <span className="fpg-char-text">
                     <span className="fpg-char-name">{c.name}</span>

@@ -867,7 +867,7 @@ async function FigureCard({ figure: f, href }: { figure: KBFigure; href: string 
   return (
     <div className="line-card-wrap">
       <a href={href} className="line-card">
-        <FigureThumbStatic image={f.canonical_image_url} cdnWidth={96} />
+        <FigureThumbStatic image={f.canonical_image_url} cdnWidth={96} alt={`${charName}${variant ? ` ${variant}` : ''} action figure`} />
         <div className="line-card__info">
           <div className="line-card__name">{charName}</div>
           {variant && <div className="line-card__variant">{variant}</div>}
