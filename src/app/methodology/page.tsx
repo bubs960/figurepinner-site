@@ -35,6 +35,11 @@ export default function MethodologyPage() {
           <p>Comp summaries refresh roughly hourly, so the median you see reflects recent market activity rather than a stale snapshot.</p>
         </ProseSection>
 
+        <ProseSection title="Auction sales: delivered price, not just the hammer">
+          <p>eBay auctions close with a hammer price, then shipping is billed separately when the auction ends — so &ldquo;sold for $45&rdquo; can hide a real $12 shipping charge on top. Starting September 13, 2026, we add that shipping back into every auction comp we capture, so the number you see is what the buyer actually paid, delivered. Buy-It-Now sales already worked this way (the seller sets one all-in price), so those comps are unchanged.</p>
+          <p>Auction comps captured before September 13 are still hammer-price only and haven&apos;t been restated — there&apos;s no shipping figure on record for them to add. If you&apos;re comparing an old sale to a new one on the same figure, keep that in mind; it&apos;s a small, one-time definition change, not a data error.</p>
+        </ProseSection>
+
         <ProseSection title="Median, not average">
           <p>The headline number is the <strong>median</strong> — the middle sale price — not the average. One sealed grail or one beat-up loose figure can drag an average far from reality; the median ignores those extremes and lands on the typical sale. When there aren&apos;t enough comps to compute a stable median, we fall back to the average and label the data accordingly.</p>
           <p>We also show the <strong>range</strong> (lowest and highest recent comps) and, when there are enough of them, the middle 50% band (25th–75th percentile) so you can see how tightly a figure actually trades. A loose figure and a MOC copy of the same character won&apos;t sell for the same money — the spread tells you that at a glance.</p>
