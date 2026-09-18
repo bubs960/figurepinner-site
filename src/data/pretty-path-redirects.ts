@@ -75,3 +75,24 @@ export const PRETTY_PATH_REDIRECTS: Record<string, string> = {
   '/wrestling/wrestlemania/becky-lynch':
     'fp_wrestling_mattel_elite_112_becky-lynch_3d7e12',
 }
+
+/**
+ * HARVESTED entries (2026-09-18) — a second, machine-derived map; the hand ledger above is
+ * unchanged and still wins on a key collision.
+ *
+ * Same standard of proof, produced a different way: scripts/harvest-dead-pretty-paths.mjs takes
+ * pretty URLs crawlers are hitting as 404s and records one only when it is PROVEN — a slim-KB
+ * version in git history where a live record had exactly that fandom/line/character_canonical,
+ * or a live fid whose embedded line+slug equal the path (the fid is minted from the original
+ * slug). Those facts live in pretty-path-harvest.json; scripts/build-figure-redirects.mjs
+ * re-derives this map from them against the current KB on every build (a successor that was
+ * deduped again follows the duplicate_of chain, one that left the KB drops out, a path that is
+ * served again is never emitted).
+ *
+ * Deliberately NOT iterated by seo-preflight check 4: that check STOPs a deploy when a hand
+ * entry's target leaves the KB, which is right for five curated rows and wrong for a harvested
+ * list — tests/derivePrettyPathRedirects.test.mjs gates this map against the live KB instead,
+ * and resolveLegacyPrettyPath still fails safe to 404 on a dead target at request time.
+ */
+import harvested from './pretty-path-redirects.generated.json'
+export const HARVESTED_PRETTY_PATH_REDIRECTS: Record<string, string> = harvested as Record<string, string>
