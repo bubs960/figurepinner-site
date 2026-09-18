@@ -17,6 +17,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { figureUrl, prettyFigureUrl } from '@/data/kbDb'
 import { deriveName, deriveEmbeddedLine, figurePageTitle } from '@/data/kbHelpers'
+import { fitFigureTitle } from '@/lib/fitTitle'
 import { getFandom, genreSlugForFandom } from '@/lib/genreFigures'
 import FigureDetailContent, { fetchFigurePageData } from '@/app/figure/[figure_id]/_components/FigureDetailContent'
 import { prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -131,7 +132,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // No '| FigurePinner' here — the root layout title template appends it;
     // hard-coding it too rendered 'Price & Value | FigurePinner | FigurePinner'
     // on every figure SERP title (S52 fix).
-    title: figurePageTitle(displayName, lineName, deriveEmbeddedLine(figure)),
+    title: fitFigureTitle(figurePageTitle(displayName, lineName, deriveEmbeddedLine(figure))),
     description: enriched
       ? `${enriched} ${priceTail}`
       : priceFragment
