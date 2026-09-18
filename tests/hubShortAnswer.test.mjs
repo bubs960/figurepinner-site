@@ -51,8 +51,10 @@ test('refresh plan: scoped hubs keep their scope, vaults are pinned to the lines
   assert.equal(step.env.OUT, 'wwe-elite')
   assert.ok(/^\^\(.*\belite\b.*\)\$$/.test(step.env.LINE_MATCH))
   const jakks = planStep(HUBS.find((h) => h.key === 'wrestling-jakks'), 'top-comps')
-  assert.equal(jakks.env.LINE_EXCLUDE, '^tna')
+  assert.equal(jakks.env.LINE_EXCLUDE, '^(tna|other)')
   assert.equal(jakks.env.LINE_MATCH, undefined) // top comps stay maker-wide for Jakks
+  // wwe-elite top comps use the elite-family regex (every elite-* line), not the 10-line vault pin
+  assert.equal(planStep(elite, 'top-comps').env.LINE_MATCH, '^(elite|ultimate-edition|defining-moments)')
   const parent = HUBS.find((h) => h.key === 'wrestling')
   assert.deepEqual(parent.families, ['top-comps'])
   assert.equal(planStep(parent, 'top-comps').env.OUT, undefined)

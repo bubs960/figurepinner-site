@@ -20,7 +20,11 @@
  *  - list sizes (TOP_N / PER_LINE / PER_SIDE) are read back from the committed payloads.
  *
  * Usage:
- *   node scripts/refresh-fandom-hub-data.mjs                 # everything (~16k paced read-only GETs, ~10 min)
+ *   node scripts/refresh-fandom-hub-data.mjs                 # everything: ~15,700 unique fids
+ *       TIME: the r2proxy Worker allows 120 cache-MISS requests / 60 s per IP (workers/r2proxy/
+ *       wrangler.toml, RATE_LIMITER, since 2026-07-04) and answers 429 + Retry-After: 60 beyond that.
+ *       Cold edge cache (the weekly case) = ~2.5-3 h. Warm cache (s-maxage 3600) = ~35 min, which is
+ *       what the 2026-09-18 run measured. Never run two consumers from one IP at once.
  *   node scripts/refresh-fandom-hub-data.mjs gi-joe          # one hub
  *   node scripts/refresh-fandom-hub-data.mjs --skip-most-checked
  *   node scripts/refresh-fandom-hub-data.mjs --plan          # print the commands, run nothing
@@ -48,8 +52,14 @@ export const HUBS = [
   { key: 'gi-joe', fandom: 'gi-joe', families: ['top-comps', 'vaults', 'heroes-villains'] },
   { key: 'star-wars', fandom: 'star-wars', families: ['top-comps', 'vaults', 'heroes-villains'] },
   { key: 'transformers', fandom: 'transformers', families: ['top-comps', 'vaults', 'heroes-villains'] },
-  { key: 'wwe-elite', fandom: 'wrestling', scope: { MFR: 'mattel' }, pinAllToVaultLines: true, families: ['top-comps', 'vaults', 'heroes-villains'] },
-  { key: 'wrestling-jakks', fandom: 'wrestling', scope: { MFR: 'jakks-pacific', LINE_EXCLUDE: '^tna' }, families: ['top-comps', 'vaults', 'heroes-villains'] },
+  // Scopes of the two wrestling sub-hubs were reconstructed against the June slim KB (git show
+  // a644e9b:src/data/figures-reference-v2.slim.js) by the parallel 2026-09-18 session: every June vault
+  // line list reproduces with  wwe-elite = LINE_MATCH ^(elite|ultimate-edition|defining-moments)  and
+  // wrestling-jakks = MFR jakks-pacific + LINE_EXCLUDE ^(tna|other)  (`other` held 42 Jakks figures in
+  // June and is not on the page). MFR=mattel on wwe-elite follows build-fandom-most-checked.mjs; it
+  // differs from the June run by one jakks-made elite-royal-rumble figure.
+  { key: 'wwe-elite', fandom: 'wrestling', scope: { MFR: 'mattel', LINE_MATCH: '^(elite|ultimate-edition|defining-moments)' }, families: ['top-comps', 'vaults', 'heroes-villains'] },
+  { key: 'wrestling-jakks', fandom: 'wrestling', scope: { MFR: 'jakks-pacific', LINE_EXCLUDE: '^(tna|other)' }, families: ['top-comps', 'vaults', 'heroes-villains'] },
 ]
 
 const readPayload = (family, key) => {
@@ -110,6 +120,20 @@ if (isMain) {
     if (code !== 0) failures.push('most-checked (exit ' + code + ')')
   }
   if (cacheDir) { try { rmSync(cacheDir, { recursive: true, force: true }) } catch {} }
+  // Floor gate in plain JS (the weekly wrapper runs this in a bare worktree with no node_modules,
+  // so it cannot lean on the TS test runner): no payload row may rest on fewer than 3 sold comps.
+  if (!PLAN) {
+    const under = []
+    for (const family of ['top-comps', 'vaults', 'heroes-villains']) {
+      for (const hub of HUBS) {
+        const d = readPayload(family, hub.key)
+        if (!d) continue
+        const rows = [...(d.figures ?? []), ...(d.heroes ?? []), ...(d.villains ?? []), ...(d.vaults ?? []).flatMap((v) => v.top ?? [])]
+        for (const r of rows) if (!(r.sold_count >= 3)) under.push(family + '/' + hub.key + ': ' + r.name + ' (' + r.sold_count + ' sold)')
+      }
+    }
+    if (under.length) { failures.push('floor gate: ' + under.length + ' row(s) under 3 sold, e.g. ' + under[0]) }
+  }
   console.log('\n[hub-refresh] ' + (PLAN ? 'plan only' : 'done in ' + Math.round((Date.now() - started) / 1000) + ' s') + (failures.length ? ' -- FAILED: ' + failures.join(', ') : ' -- all steps ok'))
   process.exit(failures.length ? 1 : 0)
 }

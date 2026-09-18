@@ -6,8 +6,11 @@
  * MEASURED 2026-09-18: one pass over the 6,507 wrestling fids at concurrency 16 got
  * **3,680 HTTP 429s (57%)** -- and every one was silently treated as "this figure has no comps".
  * The "top comps" lists were therefore the top of whatever random subset got through (the WWF
- * Hasbro Undertaker, $210.50 across 48 sold, was missing from the wrestling list). A price list
- * built from partial data is worse than a stale one, so:
+ * Hasbro Undertaker, $210.50 across 48 sold, was missing from the wrestling list). The limiter is the
+ * proxy Worker's own: workers/r2proxy/wrangler.toml RATE_LIMITER, 120 cache-MISS requests / 60 s per
+ * IP since 2026-07-04, answering 429 + Retry-After: 60 (edge HITs are not counted). The June payloads
+ * predate it, which is why a plain concurrent sweep "used to work". scripts/gen-drip-priority-list.mjs
+ * documents the same trap (7/25). A price list built from partial data is worse than a stale one, so:
  *   - requests are paced (SNAPSHOT_RPS, default 30/s) and a 429/5xx pauses EVERY worker, honours
  *     Retry-After, and backs off exponentially;
  *   - a fid that still fails after all attempts THROWS -- the generator exits non-zero before it
