@@ -138,12 +138,37 @@ function logFailure(record) {
   }
 }
 
+// Write-out marker instead of bare `--fail`, and `-S` alongside `-s`
+// (2026-09-15 root-cause fix): the serving gate's own error log had said
+// nothing but "Command failed: curl.exe ..." on at least 2 recent deploys,
+// logged both times as "non-fatal, not re-diagnosed" -- because `-s` without
+// `-S` silences curl's OWN diagnostic text on a `--fail`-triggered exit, so
+// there was never anything for the catch block to surface. Live-verified
+// (2026-09-15): the same bare `-s --fail` invocation against a deliberately
+// broken URL throws with an empty-ish message; this form throws "HTTP 404
+// from <url>" for an HTTP failure and the real curl error text ("Could not
+// resolve host: ...") for a connection-level one. `%{http_code}` is appended
+// after a marker so the caller can always tell a real status from "curl
+// itself never got a response" -- the two failure classes needed different
+// answers and used to collapse into the same unreadable message.
+const CURL_CODE_MARKER = '\n__CURL_HTTP_CODE__'
+
 function curlText(url) {
-  return execFileSync('curl.exe', ['-s', '--fail', '-A', CHROME_UA, url], {
-    encoding: 'utf8',
-    maxBuffer: 1024 * 1024 * 64,
-    windowsHide: true,
-  })
+  const args = ['-s', '-S', '-A', CHROME_UA, '-w', CURL_CODE_MARKER + '%{http_code}', '--max-time', '20', url]
+  let raw
+  try {
+    raw = execFileSync('curl.exe', args, { encoding: 'utf8', maxBuffer: 1024 * 1024 * 64, windowsHide: true })
+  } catch (err) {
+    const detail = (err.stderr && String(err.stderr).trim()) || err.message
+    throw new Error('curl exit ' + (err.status ?? '?') + ': ' + detail)
+  }
+  const marker = raw.lastIndexOf(CURL_CODE_MARKER)
+  const body = marker >= 0 ? raw.slice(0, marker) : raw
+  const code = marker >= 0 ? raw.slice(marker + CURL_CODE_MARKER.length).trim() : 'unknown'
+  if (Number(code) >= 400 || code === 'unknown' || code === '000') {
+    throw new Error('HTTP ' + code + ' from ' + url)
+  }
+  return body
 }
 
 /**
