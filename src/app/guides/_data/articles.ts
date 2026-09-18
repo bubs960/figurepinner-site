@@ -337,6 +337,362 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    // 2026-09-12: rewrite after a two-audit rejection of the 2026-09-11 draft
+    // and a second verifier rejection of the first rewrite attempt. Every
+    // number below is recomputed directly from wwe-basic-price-guide.csv
+    // (991 rows, 872 with comps, 859 at sold_count>=5) by a Python script run
+    // for this pass; nothing is carried over from either prior draft. No
+    // owner first-person datum was available at write time, so the article
+    // claims data, not experience.
+    // 2026-09-12 (surgical pass): re-verified every number over the same CSV.
+    // Fixed a major (paragraph 1 repeated the banned "N tracked / N with
+    // comps / N with n>=5" coverage-numbers opening; split so paragraph 1
+    // carries only the line's cadence/series/EX story and paragraph 2 carries
+    // the comp-coverage numbers, phrased distinctly). Tightened the
+    // women's-wrestler share of the 859-release sample from "~120/14%" to a
+    // reproducible "~114/13%" under a stated wrestler-only definition, noted
+    // that definition isn't a CSV field, and fixed the Rhea Ripley line to
+    // note Kelly Kelly ties her at the $40 floor rather than sitting below
+    // it. Added a one-clause note that Series 1 holds eleven rows total, six
+    // of them the 2010 launch wave this piece profiles and five more (2017,
+    // no comp data) outside it.
+    // 2026-09-12 (round 5, FINDINGS-FOR-R5): fixed two blockers. metaDescription's
+    // women's-range ceiling was $78, but Melina's Series 5 ($80.00/11 sold,
+    // already in the body) is the true top of the fifteen-release women's
+    // tier; changed to $80. The closer called Tiffany Stratton's $77.99 that
+    // tier's "ceiling," which the same body text contradicts; changed to
+    // Melina's $80.00. Also dropped "split almost evenly" from the 15/10
+    // women/men split (a 60/40 split isn't "almost even"); the ~114/13%
+    // wrestler-only share was independently re-checked and left as-is (the
+    // verifier's own reclassification landed in the same 110-115 range).
+    slug: 'wwe-basic-price-guide',
+    title: 'WWE Basic Price Guide: A $15 Line, With Real Exceptions',
+    metaTitle: 'WWE Basic Figures Price Guide — Real Sold Prices | FigurePinner',
+    metaDescription:
+      '991 Mattel WWE Basic figures priced from real eBay sold data: a $15 median, women’s releases at $40 to $80, and eight Brock Lesnar releases in his $40 band.',
+    dek: '991 releases, 167 series, a $15.00 median — and a $40-plus tier that belongs to fifteen women, five one-off men, and Brock Lesnar, no one else.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A loose or carded WWE Basic is worth $15 to $20 unless it is one of the line’s fifteen women’s releases at $40 or more, one of Brock Lesnar’s eight releases in his $39.99-to-$50 band, or one of five one-off men who clear $40 the hard way. Check the specific series before paying more:',
+    body: [
+      { type: 'p', text: 'Mattel has made a WWE Basic every six days or so since 2010: 991 of them across 167 numbered series, plus 37 retailer exclusives filed under an "EX" series code outside that count. That cadence is the line’s real story: a toy-aisle staple for sixteen straight years.' },
+      { type: 'p', text: 'Sold-comp coverage doesn’t reach every release: 872 of those 991 carry a real eBay comp, and 859 clear the five-sale floor this piece uses everywhere else. The median across that 859 is $15.00, the median of release medians, not a median of every single sale. Eighty-three percent of them, 715 of 859, sell at $20 or under. That is the whole line in one sentence: buy loose, buy cheap.' },
+      { type: 'p', text: 'The other 17 percent is where the real story sits. Twenty-five releases in this catalog hold a five-sale median of $40 or more: fifteen are women’s-division wrestlers, ten are men. Zoom out to the full 859-release sample and the ratio flips hard: women’s-division wrestlers, counting only wrestlers and leaving out valets, managers, and on-air authority figures, account for roughly 114 of those releases, about 13 percent of a count that isn’t a CSV field. Three in five of the line’s real money releases are women. Mattel made three AJ Lee Basics in sixteen years and forty-three John Cena Basics in the same span; that ratio is the imbalance in miniature.' },
+      { type: 'h2', text: 'Women get paid, and it doesn’t last' },
+      { type: 'ul', items: [
+        'AJ Lee’s Series 30 runs $57.99 median across a full 50 sold, the retrieval ceiling on our comp puller, not a hard count of every sale; top sale $149.99. Her Series 53 sits at $55.00 across 37 sold, at that number, not north of it.',
+        'Tiffany Stratton’s Series 159 runs $77.99 across 20 sold, top sale $199.99. Her earlier Series 145 sits at $49.99 across 25.',
+        'Sol Ruca’s Series 165 holds $54.99 across a full 50-sale sample, top sale $201.99, the second-highest full-sample median of any woman on this list, behind only AJ Lee’s Series 30.',
+        'Liv Morgan runs $50.00 on Series 152 and $49.99 on Series 110, both full 50-sale samples: the same number twice, on two different series.',
+        'Melina’s Series 5 sits at $80.00 across 11 sold, top sale $129.99. It carries the lowest series number of any woman named here, which is the only basis for calling it the oldest; the row itself has no year attached.',
+        'A third AJ entry, catalogued separately as "aj" rather than "aj-lee": Series 24 runs $50.66 across just 6 sold. The catalog’s own key_features calls it her "early NXT-era sculpt," though none of the three AJ rows carries a year to confirm which shipped first.',
+      ]},
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_30_42-aj-lee_04986a', label: 'AJ Lee, Basic Series 30', sublabel: '$57.99 across 50 sold, the clearest women’s premium in the line' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_165_sol-ruca_2b2c6b', label: 'Sol Ruca, Basic Series 165', sublabel: 'An NXT-era release outpricing most of the men’s roster' },
+      { type: 'p', text: 'Rhea Ripley’s two Basics undercut the pattern rather than fit it: Series 114 and Series 153 both land at exactly $40.00 across 50 sold each, tied with Kelly Kelly’s Series 18 (also $40.00, on a thinner 10-sold sample) at the floor of the fifteen women’s releases that clear $40. Our sold-comp data doesn’t say why one woman here prices like the men next to her. It just shows that she does.' },
+      { type: 'h2', text: 'Brock Lesnar is the exception among the men' },
+      { type: 'p', text: 'Brock Lesnar has 12 Basics in this catalog with comps, 11 with a real sample. Eight sit in a tight band from $39.99 to $50.00: Series 47 on top ($50.00 across 50 sold, $185.99 max), then 53, 64, 75, 80, 103, 135, and 141, all $39.99 to $44.99 on 49-or-50-sale samples. The other three don’t reach that band: Series 25 and 147 both $30.00, Series 60 at $23.99, plus one retailer-exclusive Brock at $20.11 across 2 sold, two receipts, not a comp. No other man with a multi-release track record comes close. John Cena has 43 Basics, the most of anyone, and a $15.00 median of medians; his best single release is $34.95. Roman Reigns, 21 comp’d releases, $13.49 median, tops out at $15.00. The Rock, 14 comp’d releases, $13.00 median, tops at $14.99.' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_47_15-brock-lesnar_3ec7cd', label: 'Brock Lesnar, Basic Series 47', sublabel: 'The top of his eight-release $39.99-to-$50 band' },
+      { type: 'p', text: 'Why Brock and not Cena or Reigns is a fair question, and the sold-comp data doesn’t answer it directly. The pattern is consistent with Brock being a part-time attraction whose figures ship for one series and largely disappear from later waves, while Cena and Reigns turn up in nearly every series for over a decade, but that’s a read on the numbers, not something the data shows outright.' },
+      { type: 'h2', text: 'Five more men clear $40, and none of them are stars' },
+      { type: 'p', text: 'Ricardo Rodriguez’s Series 34 runs $48.00 across 16 sold. Paul Heyman’s Series 63 sits at $40.00 across 29 sold, top sale $165.00. Hornswoggle has two releases here, not one: Series 19 at $40.00 across 23 sold, and Series 30 at $30.00 across 39 sold. Only the earlier clears this tier. Dragon Lee’s Series 162 is the thinnest sample in the whole $40-plus tier: $44.75 across exactly 5 sold, the floor this piece counts at all.' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_63_paul-heyman_762d3d', label: 'Paul Heyman, Basic Series 63', sublabel: 'One manager, one $40 median, 29 sold' },
+      { type: 'callout', text: 'Oba Femi’s Series 158 is the single highest median in the entire line: $90.00 across 14 sold, top sale $199.99. Fourteen sales is a small sample for a number that high, and it’s his only Basic in the catalog. Read it as a $70-to-$100 range, not a fixed $90 quote.' },
+      { type: 'p', text: 'Eddie Guerrero isn’t a manager, and he isn’t in the $40-plus tier either. His three Basics all sit just under it: $39.99 on Series 16 (2012, 50 sold), $39.95 on Series 29 (2013, 50 sold), and $39.99 again on Series 149 (2024, 50 sold). Same near-$40 price, three releases, twelve years apart. Whatever is driving that consistency, it isn’t recency.' },
+      { type: 'h2', text: 'Series 1 is just old, not rare' },
+      { type: 'p', text: 'The 2010 launch wave was six figures: Batista ($15.00 across 44 sold), Big Show ($24.41 across 50), Evan Bourne ($20.00 across 50), John Cena ($15.99 across 49), Kofi Kingston ($12.00 across 50), and Triple H ($11.99 across 50). Five of those six carry a 2010 year in the catalog; Triple H’s row has none, so placing him in 2010 here is an inference from sharing Series 1 with the rest, not a confirmed date. Series 1 itself runs eleven rows; the other five, dated 2017, carry no comp data and sit outside this launch-wave count. None of them is expensive. Big Show carries a $482.98 top sale, and ten of his twelve Basics across the whole line share that exact figure: a data quirk in how these snapshots were captured, not ten separate $482.98 sales. Treat it as one unreviewed high outlier duplicated across rows, not a pattern.' },
+      { type: 'comp', fid: 'fp_wrestling_mattel_basic_1_big-show_5c56d7', label: 'Big Show, Basic Series 1 (2010)', sublabel: 'The launch wave, priced at $24.41, not $482.98' },
+      { type: 'h2', text: 'The exclusives are undersampled, not settled' },
+      { type: 'p', text: 'Thirty-seven Basics here carry the "EX" series code that marks a retailer exclusive. Only 19 have any sold comp at all, and 14 clear the five-sale threshold this piece uses everywhere else. The catalog’s own key_features field describes these releases as carrying no accessories beyond the standard sculpt: the extra-accessory story doesn’t hold up against the data in front of us. The one exclusive Brock Lesnar release sits at $20.11 across 2 sold, which isn’t a comp, it’s two receipts. Until the matching on these improves, treat any exclusive-Basic price, including the ones above, as provisional.' },
+      { type: 'p', text: 'A men’s main-roster Basic outside Brock’s eight-release band is a $15-to-$20 figure, and no amount of series talk changes that math. A woman’s Basic is worth checking against its specific series before paying anything: the gap between $40 and Melina’s $80.00 ceiling is wider than the gap between the cheapest man here and the line’s overall median. Brock’s eight-release band, $39.99 to $50, is a buy with confidence on its own numbers. Oba Femi at $90 is one figure on fourteen sales, pay it if you want the number now, wait if you would rather watch it hold.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[WWE Elite collector guide|/guides/wwe-elite-hub]], the articulated tier, priced on different rules',
+        '[[WWE Elite vs Ultimate Edition|/guides/wwe-elite-vs-ultimate-edition]], which tier to buy for what',
+        '[[Most valuable WWE Elite figures|/guides/most-valuable-wwe-elite-figures]], the Elite money list',
+        '[[How to price wrestling figures|/guides/how-to-price-wrestling-figures]], the method behind every number here',
+      ]},
+    ],
+  },
+  {
+    // 2026-09-12: rewrite after two independent audits (codex + web) returned the
+    // 2026-09-11 draft as unpublishable, then a third-round R3 pass fixed findings
+    // against this same rewrite. All numbers recomputed directly from the post-dedupe
+    // CSV (270 fids, 242 with comps, 206 at n>=5) with release_wave aliases normalized
+    // (e.g. "vehicles-blue-white-pack" + "...-packaging" merged) before taking era
+    // medians. Captain Rex: of 8 reliable-sample releases, only 5 form two genuine
+    // full-signature pooled groups (a red-white pair, a blue-black trio) at $27.49/50;
+    // the Yoda-card row also reads $27.49/50 but fails the avg_sold match, so it's
+    // reported as a separate, uncorroborated release, not folded into either pool.
+    // Named-clone count: 3 true personal names out of 6 releases over $40 (one is a
+    // droid, one a bounty hunter, one a role-designation trooper). Ahsoka Tano's Jedi
+    // Starfighter dropped from quoting and excluded from the red-white vehicle era
+    // aggregate -- it exists as two catalog rows ($99.99/36 and $20/6) under two
+    // release_wave spellings for what looks like one physical release, and we can't
+    // tell which number is real. Trade Federation AAT merged from two unmerged
+    // character_canonical spellings: 4 releases, not 2. Separatist Droid Gunship's
+    // exclusive_to field is blank but its key_features text calls it an SDCC
+    // exclusive, same as Seripas -- both disclosed, neither asserted as fact beyond
+    // the catalog text. No owner data; no production/case-ratio claims.
+    // 2026-09-12 R4 (surgical): fixed two self-contradictions caught on re-read --
+    // the closing paragraph's "only four" figures-over-$40 claim omitted Firefighter
+    // Droid and Stealth Ops Clone Trooper, both single-release n>=5 releases already
+    // quoted at >$40 two sections earlier; and the Walmart-exclusive callout's "two
+    // exclusives" count ignored the AT-RT with ARF Trooper (a third Walmart-exclusive
+    // release, itself a vehicle, quoted one paragraph above it) -- callout rescoped to
+    // the two specific releases it's actually comparing rather than asserting a
+    // catalog-wide total. Also: metaDescription trimmed to 157 chars (was 162);
+    // AT-TE comp sublabel corrected from "a dollar" to the exact $1.99 gap; shortVersion
+    // and the closing paragraph's rounded "$20 to $23" aligned to the exact $19.99-$23.00
+    // era-median range stated in the eras section; "What the catalog can't tell you"
+    // heading reworded (paraphrase-adjacent to a banned heading) to "Where the matching
+    // can't be trusted," echoing the intro's own "flagged below rather than smoothed
+    // over" line. No other numbers or structure touched.
+    slug: 'star-wars-clone-wars-figures-price-guide',
+    title: 'Star Wars Clone Wars Figures Price Guide: The Card Never Set the Price',
+    metaTitle: 'Star Wars The Clone Wars Price Guide (Hasbro 2008-13) | FigurePinner',
+    metaDescription:
+      'Sold prices for 242 Hasbro Clone Wars figures and vehicles: $20-23 on every card, named clones at $40-55, and a $450 gunship with no clean price explanation.',
+    dek: 'Five packaging eras, six years, and the figures barely move between them. Exclusivity and which release it is set the price far more than the card color does.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A carded Hasbro Clone Wars figure holds $19.99 to $23 no matter which of the five cards it shipped on; three named clone troopers clear $40 to $55; vehicles run $52.50 to $65.32 by era with a handful of exclusives and one $449.99 gunship blowing past all of it. Check the exact release:',
+    body: [
+      { type: 'p', text: 'Hasbro ran The Clone Wars as its own 3.75-inch line from 2008 to 2013, across five packaging designs: blue-and-white (2008), red-and-white (2009), blue-and-black (2010-11), the Darth Maul card (2012), and the Yoda card (2013). FigurePinner has sold-comp data on 242 of 270 releases, 206 with five or more sales. Sort the figures by era and the medians barely move: $20.00, $22.00, $21.99, $19.99, $23.00. Sort the vehicles and they move more, though not in the order the packaging story predicts. A few spots in our own matching still can’t be trusted, and they’re flagged below rather than smoothed over.' },
+      { type: 'h2', text: 'The eras don’t split the figures' },
+      { type: 'p', text: 'Median of release medians, figures only, n≥5 sold: blue-and-white $20.00 across 23 releases, red-and-white $22.00 across 38, blue-and-black $21.99 across 48, Darth Maul card $19.99 across 15, Yoda card $23.00 across 8. A $3 spread across six years of production. Our own catalog copy calls the 2008 blue-and-white card a "highly sought early release." The comps do not back that up, and we are correcting the copy, not defending it. General Grievous tops that card at $29.99 across 50 sold; Commander Fox ties him on just 8 sales. 2008 Anakin Skywalker sits at $15 across 49. The floor is flat everywhere: Yoda on the 2008 card is $10 across 49, red-card R2-D2 is $10.99 across 45, Count Dooku is $14.99 across 48, Chewbacca is $15 on two separate cards. Condition mix could skew any one number; the pattern repeating across all five eras is what makes it real.' },
+      { type: 'h2', text: 'Six releases clear $40. Three are actually named clones.' },
+      { type: 'ul', items: [
+        'Seripas (blue-and-black): $64.99 median across 31 sold, top $99.99. Not a trooper: Hasbro’s own catalog text lists it as a San Diego Comic-Con exclusive. Top price in the line among releases with a reliable sample; two thinner ones (Clone Commander Jet, $96.75 on 4 sales; Riot Control Clone Trooper, $84.99 on 3) run higher but miss our five-sale bar.',
+        'Clone Trooper Draa (blue-and-black): $54.99 across 37 sold.',
+        'Firefighter Droid (red-and-white, 2009): $51.61 across 9 sold. A droid, not a clone.',
+        'Clone Trooper Jek (red-and-white, 2009): $44.99 across 15 sold.',
+        'Stealth Ops Clone Trooper (blue-and-black): $42.49 across 33 sold, top $125. A role designation, not a personal name.',
+        'Clone Trooper Echo (red-and-white, 2009): $40 across 50 sold, top $149.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_seripas_0dbde7', label: 'Seripas (blue-and-black card)', sublabel: 'Top price at a reliable sample, 31 sold' },
+      { type: 'p', text: 'Draa, Jek and Echo are the real named-clone-trooper premium: three individual soldiers with call signs, at or above $40, each with one release. Captain Rex tells the opposite story. He has nine distinct catalog releases, eight with a five-sale-or-better sample. Five of those eight form two matched pooled groups at $27.49 across 50 sold apiece: a red-and-white pair and a blue-and-black trio, each internally identical on every field. The Yoda-card release also prices at $27.49 across 50 sold but matches neither group on average sale, so it’s a separate, uncorroborated release. The other two are distinct: plain blue-and-white Rex at $27.95 and the blue-and-white Mailaway Rex at $25.34, both across 50 sold. Hasbro’s most reissued clone sits between $25.34 and $27.95 no matter which of nine cards he’s on; its one-off soldiers are the ones that moved.' },
+      { type: 'h2', text: 'The vehicles don’t care about the card either' },
+      { type: 'p', text: 'Median of release medians, vehicles only, n≥5 sold: blue-and-white $65.32 across 18 releases, blue-and-black $64.17 across 18, Darth Maul card $59.97 across 10, red-and-white $52.50 across 22 (two conflicting Ahsoka rows dropped; more below). (The Yoda card has only 4 vehicle releases at a reliable sample, too thin to rank.) Roughly a $13 gap between the cheapest and priciest era median: real, but nowhere near the "boxes got thrown away" story the packaging alone suggests. What separates a $50 vehicle from a $450 one here is which vehicle it is and whether a retailer locked it up, not the year on the card.' },
+      { type: 'ul', items: [
+        'Republic Fighter Tank has four cataloged releases: $77.95 across 30 sold (red-and-white), $65 across 42 (Darth Maul card), $60.95 across 50 (blue-and-black), $60 across 40 (Yoda card).',
+        'Vulture Droid has three: $69.69 across 25 (blue-and-white), $64.99 across 33 (blue-and-black), $59.99 across 50 (red-and-white).',
+        'MagnaGuard Fighter has two: $85.99 across 18 (blue-and-white), $74.95 across 24 (red-and-white).',
+        'The Trade Federation AAT has four across two unmerged catalog spellings: $60.95 across 50 (blue-and-white), $55 across 50 (red-and-white), $69.99 across 50 (blue-and-black), $50 across 50 (Darth Maul card).',
+        'AT-TE has two, nearly identical: the Costco release at $100.99 across 50, the standard release at $99 across 50.',
+      ]},
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_vehicles-blue-white-pack_at-te_23e63c', label: 'AT-TE (2008 card, standard release)', sublabel: '50 sold, $1.99 off its own Costco version' },
+      { type: 'p', text: 'The single most expensive vehicle in the catalog shares Seripas’s catalog quirk: no retailer-exclusive field is set, but its own catalog copy calls the Separatist Droid Gunship (blue-and-black) an SDCC exclusive too. It sits at $449.99 across 7 sold, top sale $469.99. The next-highest vehicle at a reliable sample, the Naboo Starfighter on the Darth Maul card ($249.99 across 10 sold), is exactly $200 behind it, and its catalog copy makes no exclusivity claim. We can’t explain that gap from this data: seven and ten sales are thin samples, and nothing in the catalog records print runs or case counts.' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_vehicles-blue-black-pack_separatist-droid-gunship_3f10f9', label: 'Separatist Droid Gunship', sublabel: 'Line ceiling, catalog-flagged SDCC exclusive, 7 sold' },
+      { type: 'p', text: 'Where a retailer tag does show up, it moves in both directions. The ARC-170 Fighter is a Target exclusive on both of its releases, and the price still splits by era: $189.95 across 24 (blue-and-white) against $140 across 50 (red-and-white). The AT-RT with ARF Trooper is a Walmart exclusive at $59.95 across 30, against a plain ARF Trooper around $21 to $22 on its own two cards, a real premium. That is consistent with Hasbro treating some retailer decos as short allocations rather than mainline stock, but that reading is inference from a price gap, not something the catalog records directly.' },
+      { type: 'comp', fid: 'fp_star-wars_hasbro_the-clone-wars_vehicles-blue-white-pack_republic-gunship_932b99', label: 'Republic Gunship, Walmart exclusive (2008 card)', sublabel: '48 sold, top sale $944.99' },
+      { type: 'callout', text: 'Exclusivity is not automatic money, though. The Walmart-exclusive Republic Gunship (blue-and-white) is $233.10 across 48 sold, top $944.99, more than three times the open-retail red-and-white Republic Gunship at $75 across 50. But the Walmart-exclusive 501st Legion Clone Trooper single figure sits at exactly $20 across 50 sold, in line with most other blue-and-white main-cast figures on that card, not the outlier its retailer tag might suggest. Of the vehicle and figure compared here, only the vehicle carries a premium. We have no explanation for why one retailer lock moved the price and the other did not.' },
+      { type: 'h2', text: 'Where the matching can’t be trusted' },
+      { type: 'p', text: 'Our matching pools some variants into one snapshot on this line; every case is flagged here, not quoted as separate prices. Beyond Captain Rex: three Obi-Wan Kenobi variants share $18.97 across 48; two Clone Trooper variants share $24.99 across 50; two Kit Fisto variants and two ARF Trooper variants each share a number too. Separately, Ahsoka Tano’s Jedi Starfighter appears twice under two spellings of one release_wave key: $99.99 across 36 sold on one row, $20 across 6 on the other. We cannot tell which is real, so neither is quoted, and both are dropped from the red-and-white era number above. Twenty-eight of 270 releases have no comp, and 205 have no year, which is why this page runs on packaging era instead of the calendar.' },
+      { type: 'p', text: 'A carded main-cast figure is a $19.99-to-$23 name no matter what a “rare 2008 first wave” listing claims about it. Draa, Jek, Echo, Seripas, Firefighter Droid and Stealth Ops Clone Trooper are the only single-carded figures that clear $40, each on one un-pooled, un-reissued release. Vehicles answer to the specific release, not the card: the Separatist Droid Gunship tops every other vehicle in the line by at least $200, a gap the sold data can’t explain, and a Walmart-badged Republic Gunship trades for multiples of a Walmart-badged 501st single figure despite sharing the same retailer’s name on the box. The exclusive sticker means nothing until you check what it’s stuck to.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the six-inch line',
+        '[[Most valuable Star Wars action figures|/guides/most-valuable-star-wars-action-figures]] — across every line',
+      ]},
+    ],
+  },
+  {
+    // 2026-09-12: surgical correction pass over the guide-gap-audit rewrite (jakks-classic-superstars
+    // section). Fixed: pack-numbering count (61 -> 59 records under the literal 1P-13P v1_series
+    // filter), pack-median count and value (22/$47.73 -> 20/$49.73, recomputed with half-up rounding
+    // on the two middle sorted medians 49.47/49.99), the Hart Foundation two-pack mislabeled as a
+    // "Walmart three-pack" (CSV has no retailer tag and key_features says "2-pack"), and the
+    // unsupported "proof the box is scarce" claim on the Hogan/Warrior pack (cut; contradicted the
+    // article's own scarcity disclaimer). Also: collapsed three unlabeled reissue-causes-cheap-resale
+    // assertions down to the one contract-permitted labelled inference paragraph; added the required
+    // one-time retrieval-ceiling note for "a full 50 sold"; stated the exclusives-bucket filter
+    // explicitly (EX-tagged plus named exclusive_to, 84 rows); restructured the opening to lead on
+    // the headliners-are-cheap inversion with coverage numbers moved to paragraph two; split the two
+    // rule-of-three lists in the exclusives/ToyFare section down to one; and corrected the Series-13
+    // Luna Vachon line, which isn't in the article's own "late-series" bands. All numbers reverified
+    // against the regenerated CSV (398 fids, 307 with comps, 222 at n>=5) by a Python pass over
+    // median_sold/sold_count with half-up rounding, plus a pooling check on (median_sold, sold_count,
+    // max_sold, min_sold, avg_sold) by character_canonical. No owner data.
+    slug: 'jakks-classic-superstars-price-guide',
+    title: 'Classic Superstars Price Guide: The Headliners Are the Cheap Seats',
+    metaTitle: 'Jakks Classic Superstars Price Guide: Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Real sold prices for 307 Classic Superstars figures: Barbarian at $165 (three rows, not two), Hillbilly Jim at $10.50, and why series number beats the roster.',
+    dek: 'Twenty-eight series, 2004 to 2009, and the sold screen ranks the roster upside down. The main-eventers are the cheap figures; the names nobody pushed carry the real money, and Barbarian turns up on both sides of that split.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A reissued headliner runs $18 to $40 with real exceptions under $20 (Warrior, Andre, Austin all have a sub-$20 release); a set of late-series mid-carders runs $60 to $165 instead; the multi-figure packs, numbered separately at 1P through 13P, add another $49.73 median on top, mostly for two-person boxes, not three. Check the name before you trust the series band:',
+    body: [
+      { type: 'p', text: 'The wrestlers who main-evented this line sit at the cheap end of the resale market; the ones who never got the push carry the real money — an inversion in the sold data, not a collector myth. Twenty-eight numbered series ran 2004 to 2009 under the Jakks Pacific license, alongside packs and exclusives, and card position says nothing about the sold screen.' },
+      { type: 'p', text: 'Our catalog holds 398 Classic Superstars releases across that run: 307 carry a real eBay sold comp, and 222 clear the five-sale floor this guide requires before trusting a median, $30, the number every price below measures against.' },
+      { type: 'h2', text: 'The headliners are the cheap seats' },
+      { type: 'p', text: 'Ultimate Warrior has 13 Classic Superstars releases on file, six with a sample deep enough to trust: $18 across 26 sold for Series 1, $18.07 across 15 for Series 7, $21 across 25 for Series 12, $17.99 across 5 for Series 16, $35.28 across 8 for Series 14, $26 across 50 for the exclusive. Hulk Hogan’s five qualifying releases run tighter and higher, $22.95 to $39.98; Hollywood Hogan’s Series 8 figure carries the deepest sample, $34.99 across 46 sold. Andre the Giant mostly holds $20 to $30 (Series 1 at $20 across 35, Series 7 at $29.99 across 24), except Series 6, at $18.67 across 7. Steve Austin’s Series 18 figure sits at $19 across 16, separate from Stone Cold Steve Austin’s three releases at $27.99 to $30. Jakks re-carded these names constantly across five years; Warrior’s 13 releases outnumber any other name here.' },
+      { type: 'p', text: 'The real floor here isn’t a headliner at all. It’s Series 4 Hillbilly Jim, a comedy-prelim figure, at $10.50 across a bare five sold, our minimum trustworthy sample. The cheapest number with real depth behind it belongs to Randy Orton’s exclusive, $14.39 across a full 50 sold (a retrieval ceiling, not a natural stopping point).' },
+      { type: 'h2', text: 'Series number is the real tell, not the card' },
+      { type: 'p', text: 'Singles from Series 1 to 7 hold a $26.20 median across 44 sampled releases, and Series 8 to 14 sit at $25.50 across 58; nothing clears $75 in either band. Series 15 to 21 jump to $34.12 across 46, with four releases over $75. Series 22 to 28 land at $35.00 across 28 ($34.995 rounded up), again four over $75. Those eight late-series standouts carry the catalog’s highest resale, on thin samples: Barbarian at $165 across 8 sold in Series 16 (top sale $299.99); Ken Patera, also $165 across 8, in Series 17; Meng at $149.99 across 6 in Series 26; Spike Dudley at $100 across 17 in Series 23; Giant Gonzalez at $99.50 across 40 in Series 16; Adam Bomb at $84.99 across 7 in Series 19; Steve Williams at $79.72 across 6 in Series 26; and Barbarian again, Series 27, at $90 across 18.' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_16_giant-gonzalez_ee4afd', label: 'Giant Gonzalez, Series 16', sublabel: 'The best-sampled number in the whole top tier, 40 sold' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_16_barbarian_0958bf', label: 'The Barbarian, Series 16', sublabel: 'Three catalog rows, two of them trustworthy' },
+      { type: 'p', text: 'That repeat is the whole lesson. Ken Patera, Meng, Spike Dudley, and Adam Bomb each have exactly one release in this line in our catalog. Barbarian has three catalog rows, not two: Series 16 at $165 across 8, Series 27 at $90 across 18, and a second Series 27 row at $40.55 across a thin 2, too small to trust but real. A reader assuming "late-series jobber equals one-timer" would be wrong here too. Check the name before paying a jobber premium; the series band won’t decide it.' },
+      { type: 'p', text: 'Below that top tier, the same single-release pattern holds at lower prices across Series 13 through 21: Luna Vachon (Series 13) at $69.99 across 9, Nikita Koloff (Series 19) at $67.49 across 11, Buff Bagwell (Series 21) at $66.40 across 15, Val Venis (Series 18) at $60 across 16, Repo Man (Series 17) at $59.99 across 10. Jeff Hardy’s two Classic Superstars releases land on the identical $59.99 median, Series 21 across a thin 11 sold and Series 25 across a full 50 sold, the same number twice on two different sample sizes.' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_23_spike-dudley_5af6b5', label: 'Spike Dudley, Series 23', sublabel: 'One release in our catalog, $100 across 17 sold' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_25_jeff-hardy_8e107f', label: 'Jeff Hardy, Series 25', sublabel: 'Same $59.99 median as his Series 21 figure, on 50 sold' },
+      { type: 'h2', text: 'The packs mostly aren’t 3-packs' },
+      { type: 'p', text: 'Fifty-nine records use Jakks’ 1P-through-13P pack numbering, and 41 name exactly two wrestlers, not three. Strike Force, Tito Santana and Rick Martel, is one of them: $115 median across 16 sold, top sale $179.99. Midnight Express, Bobby Eaton and Stan Lane, is the one pack where "one-time figure" holds for both names: $100 across 20, top $174. The Killer Bees, B. Brian Blair and Jim Brunzell, hold $91.45 across 20 with an unreviewed high outlier at $295. Tony Atlas and Rocky Johnson sit at $91.98 on a thin 5 sold. Hogan versus Warrior pairs two heavily reissued names and still clears $80 across 12. Lawler versus Kaufman: $62.50 across 6. The 20 packs with a trustworthy sample hold a $49.73 median, well above the $29.23 singles carry.' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_classic-superstars_6p_strike-force-tit_a16640', label: 'Strike Force (Series 6 pack)', sublabel: 'Two wrestlers, not three, on 16 sold' },
+      { type: 'h2', text: 'Exclusives split into two tiers, and three ToyFare pieces don’t price at all' },
+      { type: 'p', text: 'The exclusives bucket, records tagged EX plus any carrying a named retailer or venue exclusive, runs 84 deep, but only 24 clear five sold, matching the line’s $30 median. The real money sits in a few boxed two-figure exclusives: Kane and Vader top the group at $129.99 across 6, Hogan versus Andre the Giant close behind at $105 across 7. The Razor Ramon-Shawn Michaels Ladder Match set follows at $84.99 across 22. Three solo exclusives clear real numbers too: Shattered Dreams Goldust at $72.53 across 8 with an unreviewed high outlier at $500, Sunny at $55 across 17, and Jimmy Hart at $45 across 40, with a $1,999.99 sale we can’t explain and won’t pretend is the market.' },
+      { type: 'callout', text: 'Three named ToyFare exclusives in our catalog carry a stated print run and zero sold comps: Sgt. Slaughter’s "Rule Breaker" edition and Roddy Piper’s "Boxing" edition are both catalogued as limited to 100 pieces. Piper’s "Piper’s Pit" edition carries a stated run of 3,000. None of the three has traded inside our window: a stated print run is not a price. A handful of other exclusives sold once or twice and don’t qualify as a comp either: Jeff Hardy and Bret Hart sold once at $250, and D-Generation X once at $140. The Montreal Screwjob two-pack sold twice, at $110. Read those as isolated sales, not the market.' },
+      { type: 'h2', text: 'Two prices, and a gap the sample can’t close' },
+      { type: 'p', text: 'None of this makes the line scarce; scarcity is a per-figure question the data can’t check. Our own catalog proves it: a two-figure pack listed as "Hart Foundation: Jim Neidhart & Bret Hart," no retailer tag attached, and a separately catalogued exclusive under the same name return the identical $64.88-across-10 signature, right down to the $85 top sale and $44.88 low. Either our matching folded one release into two rows, or Jakks catalogued the same box twice. The same split shows up in Hollywood Hulk Hogan’s Series 8 record: a second row returns $24 across 37, not folded in above. Ninety-one of 398 records carry no comp at all, and 241 have no year attached, which is why every figure above is cited by series number rather than date.' },
+      { type: 'p', text: 'That gap between marquee and mid-card is the whole trade. Series-band medians run close together across the run: $26.20 for Series 1-7, $25.50 for 8-14, $34.12 for 15-21, $35.00 for 22-28. What breaks from that baseline is reissue count, not series number: a name reissued repeatedly runs $18 to $40 overall, with real sub-$20 exceptions, while a name that never got a second release can clear $75 and run past $165 on samples as thin as six sold. The pattern is consistent with reissue frequency capping resale value, but the data doesn’t explain why Jakks re-carded some names and not others. Barbarian sits on both sides of that split across his own three catalog rows: $165, $90, and an untrustworthy $40.55 row, proof a series number alone doesn’t tell you which of his prices you’re chasing.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Jakks Pacific collector guide|/guides/jakks-hub]] — the era: Classic Superstars vs Ruthless Aggression',
+        '[[Jakks Ruthless Aggression value guide|/guides/jakks-aggression-value-guide]] — the mainline that shipped alongside this one',
+        '[[WWE Basic price guide|/guides/wwe-basic-price-guide]] — the Mattel line running the same reissue-floor pattern',
+        '[[Most valuable vintage wrestling figures|/guides/most-valuable-vintage-wrestling-figures]] — LJN and Hasbro, the lines before Jakks',
+      ]},
+    ],
+  },
+  {
+    // 2026-09-12 rewrite (guide-gap audit): both single-pass audits found the
+    // prior draft unpublishable: a fabricated Cena "two sales each" claim
+    // contradicted by the CSV (real: $18/n=14), a false "only Series 33
+    // Triple H is defensible" line (Series 16, n=49, is also clean), a
+    // $50-header that opened on two sub-$50 figures, and a title asserting a
+    // time-series trend one snapshot can't show. Numbers recomputed from the
+    // CSV directly: 342 fids, 255 with comps, 124 at n>=5. Pooling: three
+    // Triple H records (S9/S42/S43) share one $19.99/n20/max250 signature
+    // and are excluded from per-release claims. No owner datum; one labeled
+    // inference paragraph, no other supply-mechanics claims.
+    // 2026-09-12 surgical pass: findings-list blockers/majors/minors for this
+    // slug (exclusives-with-comps undercount, Benoit "no other manufacturer"
+    // claim, unqualified 2006 high point, "eight straight years" span, $18
+    // vs $17.99 rounding, MVP/Mattel aside) were already resolved in this
+    // draft; recomputation over the CSV confirmed each stands (342/255/124,
+    // $17.99 median, six of 32 exclusives at n>=5, 2006 vs thinner 2002).
+    // Consistency re-read caught one live contradiction: the closer claimed
+    // every $30+ release was "Benoit, a woman's release, or half of a
+    // bundle," which the article's own bullets (Super Crazy, Khali, Lesnar,
+    // Rey Mysterio S23, both Ortons, Cena S18, Kane) contradict -- corrected
+    // to a claim the piece's own numbers actually support. Body 1206 words,
+    // 3 em-dashes, both within contract.
+    slug: 'jakks-ruthless-aggression-price-guide',
+    title: 'Ruthless Aggression Price Guide: The $17.99 Median and Its Exceptions',
+    metaTitle: 'Jakks Ruthless Aggression Price Guide — Real Sold Prices, 2002-2009',
+    metaDescription:
+      'Sold-comp prices for 124 Jakks Ruthless Aggression figures: a $17.99 median, MVP at $49.99 on 33 sold, Triple H Series 33 at $87, and where Benoit really lands.',
+    dek: 'Forty-four series and the entire 2000s WWE roster, priced from 255 figures with real eBay sold comps, and a market that has settled almost all of it at the same number.',
+    readingMinutes: 5,
+    updated: '2026-09-12',
+    shortVersion:
+      "A Ruthless Aggression figure is worth $15 to $20 on any card in any series unless it's specifically named below; two records clear $50 and none clear $100, and only one of those two is a single figure:",
+    body: [
+      { type: 'p', text: "Ruthless Aggression was Jakks Pacific's WWE mainline from 2002 to 2009: 44 numbered series, the Micro Aggression bundle waves, a WrestleMania sub-line, and a stack of retailer exclusives, built off the roster that filled Raw and SmackDown for most of the decade. FigurePinner's catalog holds 342 records for the line, 255 with a real eBay sold comp and 124 with five or more of those sales — the floor below which we won't call a number a price. Across that eligible group, the median of release medians is $17.99. Fifty-four of the 124 sit at $15 or under. One single figure clears $50 on a real sample, and none clear $100." },
+      { type: 'h2', text: 'The series number tells you nothing, either way' },
+      { type: 'p', text: "Series 1 through 11 hold a median of $18.98 across 26 sampled releases. Series 12 through 22: $17.99 across 28. Series 23 through 33: $18.78 across 32. Series 34 through 44: $15.00 across 32, the cheapest of the four bands and the last one made. If late-series scarcity were doing anything here, the tail of the line would cost more than the launch end. It costs less: the last band is the cheapest of the four, and nothing in this cohort points to Ruthless Aggression running thin near the end the way [[Classic Superstars|/guides/jakks-classic-superstars-price-guide]] does in its own late series." },
+      { type: 'p', text: "The year breakdown mostly agrees. 2004: $12.99 across 11 sampled releases, the low point. Among years with a double-digit sample, 2006 is the high point at $24.99 across 14; 2002 actually prices higher, at $29.00 across just 2 releases, too thin a sample to call it the real peak. 2009: $14.99 across 15. The cheapest releases carry the deepest samples: Edge's Series 44 figure is $9.99 across 38 sold, his Series 29 figure $10 across 24, CM Punk's Series 42 figure $10.50 across 24, Batista's Series 31 figure $14.99 across 37, Carlito's Series 32 figure $14.99 across 42. Chris Jericho spans both ends of his own catalog: $12.99 and $13.49 on two cards, but $29.95 across 12 on a third, his 2008 Series 34 release, so 'Jericho is a $13 figure' is only two-thirds true." },
+      { type: 'h2', text: 'One single figure clears $50, and a bundle also does' },
+      { type: 'ul', items: [
+        'Triple H, Series 33: $87 median across 6 sold, top sale $250. The only single-carded release in the line that clears $50 on a real sample; six sales is thin, so read it as a $60-to-$100 range, not a quote.',
+        'MVP, Series 44: $49.99 across 33 sold, the deepest sample of any release above $30 in this catalog.',
+        'Super Crazy, Series 28: $49.98 across 5. The Great Khali, Series 24: $44.99 across 6. Both thin samples.',
+        'Lilian Garcia, Series 34: $40 across 10, the only non-wrestler and the only woman to clear $30.',
+        'Brock Lesnar, Series 1 (2002): $39.99 across 12, top $99.99, the one launch-wave release the sold data actually supports.',
+        'Chris Benoit, Series 26: $35 across 25 sold. Rey Mysterio, Series 23: $32.99 across 11. Randy Orton, Series 33 and 19: $31.49 and $30.29. John Cena, Series 18: $30 across 31. Kane, Series 24: $30 across 9.',
+      ]},
+      { type: 'p', text: "A second record clears $50: the Micro Aggression Series 1 Batista, $54.87 across 7. It's a two-figure set, priced with a micro-scale companion attached, so it's off the list above; the same goes for the Micro Aggression Triple H ($44.99 across 8) and Rey ($39.95 across 6). Pricing a bundle like a single-carded figure overstates what one release is worth." },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_44_mvp_bbead9', label: 'MVP, Series 44 (2009)', sublabel: 'Deepest sample above $30: 33 sold' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_1_brock-lesnar_36398b', label: 'Brock Lesnar, Series 1 (2002)', sublabel: 'The one launch-wave figure that holds' },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_26_chris-benoit_1cf4b7', label: 'Chris Benoit, Series 26', sublabel: 'His high point in the line: $35 across 25, $10 clear of his next-best release' },
+      { type: 'p', text: "Benoit is the release where a name comparison actually holds up: his Series 26 release is $35 across 25 sold, well above his own Series 7 and Series 10 releases at $19.95 and $25. Eddie Guerrero, a name this line's premiums often get compared to, doesn't carry the same weight here: his Series 18 release is $22.99 across 14, cheaper than Benoit's best. Our data can't say why the gap exists, only that it does." },
+      { type: 'h2', text: 'Triple H is three different prices, not one' },
+      { type: 'p', text: "Three Triple H records, Series 9, Series 42, and Series 43, return the identical signature: $19.99 median, 20 sold, $250 top sale, on the nose across all three. That's our own matching pooling one snapshot across releases it hasn't told apart yet, not three separate markets, so none of the three is quotable alone. What is quotable: Series 33 at $87 across 6, thin but real, and Series 16 at $13.99 across 49 sold, one of the largest samples in the whole catalog and cheaper than the pooled bucket next to it." },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_16_triple-h_154747', label: 'Triple H, Series 16', sublabel: '49 sold, and the cheap one' },
+      { type: 'h2', text: "The rookie-card argument doesn't hold up here" },
+      { type: 'p', text: "The theory that a future headliner's first Jakks figure should carry a premium mostly fails here. Brock Lesnar's Series 1 is the exception this catalog can defend. John Cena's Series 1 carries 14 sold at a median of $18, well inside our five-sale floor, and it's cheaper than his Series 18 release ($30 across 31) — his rookie card is worth less than his mid-career figure, not more. Rey Mysterio has 24 releases and nine clear five sales; his best numbered-series release is Series 23 at $32.99 across 11, well past his debut." },
+      { type: 'h2', text: 'Women, exclusives, and the one inference this data supports' },
+      { type: 'p', text: "The women of the line read as a small, steady tier rather than a scarcity story: Lilian Garcia's Series 34 at $40 across 10, Torrie Wilson's Series 22 at $29.99 across 10, Victoria's Series 28 at $27.99 across 11, Melina's Series 29 at $24.99 across 49 sold with a $210 top sale, Trish Stratus's Series 14 at $19.99 across 13. None of it matches the premium [[WWE Basic|/guides/wwe-basic-price-guide]]'s Mattel-era women carry, and nothing in this catalog shows why." },
+      { type: 'comp', fid: 'fp_wrestling_jakks-pacific_ruthless-aggression_29_melina_fd4f46', label: 'Melina, Series 29', sublabel: '49 sold: the most-traded woman in the line' },
+      { type: 'p', text: "Thirty-two retailer-exclusive and limited-run records sit outside the numbered series, and six clear five sales: the three Micro Aggression bundles above, a fourth bundle in Shawn Michaels at $18.79 across 5, a Limited Edition Rey Mysterio at $39 across 5, and Mr. McMahon at $14 across 13, the best-sampled exclusive and also the cheapest. A Limited Edition Cena lists at $179.99 on 2 sold; that's a claim, not a comp." },
+      { type: 'callout', text: "One inference, not shown directly in this data: a line on shelves at consistent volume for eight straight years, recasting the same characters across a dozen-plus series each, never had to compete against its own scarcity for resale value. Nothing here proves why Jakks kept that pace through 2009, but the price pattern reads like a mainline toy sold at mainline volume, not a collector's line managed for later demand." },
+      { type: 'h2', text: "Where the last value guide on this era was right, and where it wasn't" },
+      { type: 'p', text: "[[The value guide FigurePinner ran on this era in June|/guides/jakks-aggression-value-guide]] argued the market was starting to notice Ruthless Aggression. The current comp set doesn't show that: a $17.99 median across 124 priced releases, one single figure over $50, none over $100. Where that guide holds up is Benoit: the price gap it predicted against Eddie Guerrero shows up here on a real five-sale sample. Where it overreached is the late-series-scarcity and rookie-card arguments; this line doesn't carry the data to back either one." },
+      { type: 'p', text: "Price a Ruthless Aggression figure the way the data says to: $15 to $20 for anything without a name attached to one of the releases above, no first-figure tax and no late-series tax — this catalog backs neither. Triple H's Series 33 and MVP's Series 44 are the two numbers worth chasing on their own merits. Everything else clearing $30 belongs to a name already covered above, or to half of a bundle, and that bundle's premium belongs to the second figure in the box as much as the one on the card." },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Ruthless Aggression vs Deluxe Aggression value guide|/guides/jakks-aggression-value-guide]]: the era overview this page checks against the sold data',
+        '[[Classic Superstars price guide|/guides/jakks-classic-superstars-price-guide]]: the Jakks line where late-series scarcity actually shows up',
+        '[[WWE Basic price guide|/guides/wwe-basic-price-guide]]: the Mattel line that replaced this one at the peg',
+        '[[Jakks Pacific collector guide|/guides/jakks-hub]]: the era, nostalgia line vs action line',
+      ]},
+    ],
+  },
+  {
+    // 2026-09-12 (fifth pass): guide-gap #10, surgical correction after a
+    // verifier flagged zero blockers, two majors (metaDescription rounding
+    // Kang's $481.95 median up to "$482", and a shortVersion oversized-body
+    // range, "$482 to $553", that matched neither The Thing's $553.52 nor
+    // Kang's $481.95), and four minors (a comp sublabel rounding the Endgame
+    // Hulk's $469.99 to "$470"; a Hydra Stomper "$65 under its $490" that is
+    // actually $65.01, fixed both places it appears; the Invisible Woman
+    // aside echoing the banned "what we will not quote" phrasing, reworded;
+    // and that same aside stating the Marvel Legends mislabeling as settled
+    // fact where the later Hasbro-leakage paragraph hedges it, now hedged to
+    // match). Every number re-verified directly against the 9/12 CSV before
+    // this pass touched anything; no other number in the article changed.
+    slug: 'hot-toys-marvel-price-guide',
+    title: 'Hot Toys Marvel Price Guide: Real Sold Prices',
+    // metaTitle says "Figures": Bing shows FP at pos 3.8 for "hot toys figures price
+    // guide" (95 impr, 2026-09-18 API read) with only a line hub to land on.
+    metaTitle: 'Hot Toys Marvel Figures Price Guide: Real Sold Prices | FigurePinner',
+    metaDescription:
+      'Hot Toys Marvel prices from 222 figures: The Thing at $553.52, Steve Rogers and the Hydra Stomper at $550, Red Hulk at $538, Kang at $481.95, Loki at $200.',
+    dek: 'Big, armored bodies mostly clear retail. Standard MCU heroes with repeat suits do not. The data says buy the Thing, not the Avenger.',
+    readingMinutes: 6,
+    updated: '2026-09-12',
+    shortVersion:
+      'A standard Hot Toys Marvel figure resells near $316; oversized bodies like The Thing and Kang clear $481.95 to $553.52, while MCU headliners such as Loki and Black Widow trade $41 to $176 under their own retail. Check the exact MMS release:',
+    body: [
+      { type: 'p', text: 'The Thing tops this catalog at $553.52 across 24 sold, and the runner-up sits closer than a headline number suggests: Steve Rogers and the Hydra Stomper, an unpooled, forty-sale 2021 release, undercuts it by just $3.52. Above both sit four thin-sample outliers that a real sample-size filter exists to exclude: a lone $780 Iron Man Mark VII sale, a four-sale $591.60 God Loki, a two-sale $590 She-Hulk, and two four-sale $559.99 Invisible Woman and H.E.R.B.I.E. sets. Real numbers, just not reliable ones.' },
+      { type: 'p', text: 'Two hundred sixty-two Hot Toys Marvel releases sit in this catalog; 222 carry real eBay sold comps, and 188 clear five or more sales, enough for a release-weighted median of $315.99, barely above the Hot Toys Star Wars line’s $298.99. A hundred and four of those 188 releases price between $250 and $400 inclusive; thirty-five clear $400 or more, though only twenty-seven clear it strictly.' },
+      { type: 'h2', text: 'Mass wins, and the data backs it' },
+      { type: 'ul', items: [
+        'The Thing (2026): $553.52 across 24 sold, top sale $1,499.95. The biggest body in the current wave is also the priciest figure in the line.',
+        'Steve Rogers and the Hydra Stomper (2021): $550 across 40, the line’s real second-place finisher. The Hydra Stomper alone: $424.99 across 48.',
+        'Red Hulk (2025): $538 across 42, top $882.14. Hulk, Avengers: Endgame (2019): $469.99 across 50, top $950.',
+        'Classic Iron Man (2023): $519 across 40. Doctor Doom Special Edition (2025): $499.99 across 46; the Collector Edition: $455 across 32. Kang (2023): $481.95 across 37.',
+        'Mister Fantastic (2026, pooling its Special Edition into the same number): $455.99 across 36; with H.E.R.B.I.E., also pooled: $498 across 17. Human Torch (2026): $400 across 35. Mr. Knight (2026): $488 across a thin 8, Moon Knight’s other identity, not a Fantastic Four figure.',
+      ]},
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_red-hulk_f83618', label: 'Red Hulk (2025)', sublabel: 'A Hulk-class body, 42 sold' },
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_steve-rodgers-and-the-hydra-stomper_771eea', label: 'Steve Rogers and the Hydra Stomper (2021)', sublabel: 'The real runner-up: $550 across 40' },
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_kang_ba2465', label: 'Kang (2023)', sublabel: 'A villain priced above every standard-scale MCU hero' },
+      { type: 'comp', fid: 'fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_hulk_36bb04', label: 'Hulk, Avengers: Endgame (2019)', sublabel: 'The 2019 figure that still holds: $469.99 across 50' },
+      { type: 'p', text: 'Retail price survives in our catalog for twelve of the releases named above. Ten resell above what Hot Toys and Sideshow charged for them at launch: Classic Iron Man ($400 retail, now $519), Red Hulk ($390 to $538), the Endgame Hulk ($380 to $469.99), both Doctor Dooms ($280 to $499.99 and $455), Kang ($290 to $481.95), Mister Fantastic ($290 to $455.99), Mister Fantastic and H.E.R.B.I.E. ($320 to $498), Human Torch ($305 to $400), and Mr. Knight ($255 to $488). The two exceptions are both Hydra Stomper listings: the set resells $80 under its $630 launch price, the standalone figure $65.01 under its $490. Nothing else on this list resold under its own launch price.' },
+      { type: 'p', text: 'Read down that list and a pattern turns physical rather than narrative: the money sits with oversized or heavily armored bodies, not standard-scale MCU heroes with repeat suits. That pattern is consistent with big, molded bodies being harder and costlier to recut into another colorway than a slim hero suit is, but that is inference, not something our sold-comp data proves; we have no tooling costs or reissue schedules to check it against.' },
+      { type: 'h2', text: '2026 is a loaded year, not a Fantastic Four wave' },
+      { type: 'p', text: 'Every 2026-dated release with a workable sample, twenty-two rows running from Cyclops to Daredevil to a Winter Soldier Artisan Edition, carries a $390.77 median, well clear of the line’s $315.99. Read that as a Fantastic Four premium and you would be wrong: eight of those twenty-two rows carry an FF name, five distinct characters between them. The real FF pieces price on their own merits. The Thing’s dated record sits at $515.14 across 43 (three rows in our catalog, the base and the Special Edition twice over, share that exact number); Mister Fantastic, $455.99 across 36; Mister Fantastic and H.E.R.B.I.E., $498 across 17; Human Torch, $400 across 35. Doctor Doom, despite reading like part of the same wave, is dated 2025 in our catalog: adjacent, not counted here. Mr. Knight carries the 2026 tag and an $488 median on a thin 8 sold, but he is Moon Knight’s other identity, no relation to the Fantastic Four. Invisible Woman is the one name in this cluster we won’t put a number on: the solo listing runs $50.70 across 24, the Special Edition $7.99 across 4. Neither price reads like a sixth-scale collectible; the same Marvel Legends mislabeling flagged below likely explains why, though the sold data alone doesn’t confirm it.' },
+      { type: 'h2', text: 'The MCU headliners are cheaper now than at launch' },
+      { type: 'p', text: 'Loki, Captain America, Black Widow, Doctor Strange, Star-Lord, and Captain Marvel are this line’s standard MCU headliners, and our matching pools two releases into one signal for every single one of them — not half, all six. Loki, the 2021 figure and the Endgame edition: $200 across 50. Captain America, Endgame and The Falcon: $222 across 49. Black Widow, Artisan and Special Editions: $209 across 48. Doctor Strange, No Way Home and Multiverse of Madness: $225 across 49. Star-Lord, Infinity War and the standalone release: $210 across 49. Captain Marvel, Deluxe and Endgame: $180 across 46. Retail survives for every pair, and every one resells under it, in a range that runs from $41 under (Star-Lord, $251 retail) to $176 under (Black Widow’s Artisan Edition, $385 retail).' },
+      { type: 'p', text: 'Below that tier the samples thin out but the trend holds. Stan Lee, Thor: Ragnarok (2020): $156.40 across 44. Mantis (2022): $155.75 across 38. Black Panther, Shuri suit (2022): $175 across a thin 10, $94 under its own $269 retail. Thor’s two releases both land at $175, on samples of 7 and 4. Armorized Deadpool (2021, pooling its Special Edition into the same number) is the floor: $119.99 across 49 on a $410 retail, the cheapest legitimate figure in this entire catalog.' },
+      { type: 'callout', text: 'Wolverine is the hero exception, and it is a costume-and-body exception, not a likeness one. The Deluxe 1973 Version (2022): $349.99 across 46. The TVA Jacket Version (2025): $349.95 across 48. Both clear the line median, and both are distinct enough builds that they do not compete with each other the way two Spider-Man suits do. Venom, Special Edition (2020): $379.99 across 49, for the same reason on a bigger body, though that one actually resold under its own $405 retail, proof size alone does not guarantee a premium.' },
+      { type: 'h2', text: 'The numbers that aren’t real releases' },
+      { type: 'p', text: 'Two defects run through our Hot Toys data. Variant pooling: eighteen of Spider-Man’s twenty-nine catalog releases (twenty-two of them comped) share one $325 signature across 20 sold; five Iron Man Mark III colorways share $400 across 49; three Peter Parker suits share $395.08 across 47; three Friendly Neighborhood Spider-Man editions share $510 across 46. Add the six MCU-hero pairs above and that covers most of this line’s headline names, each filed under one number for two or three SKUs apiece. Treat every one of those as a category signal, not a per-release price. Hasbro leakage: fifteen records price under $100 in our raw comp set, ten of them with a workable sample: Winter Soldier at $15.19, a Scarlet Witch Collector Edition at $19.99, Green Goblin at $30, Blade at $34.99. None of those is a sixth-scale price, and the data cannot tell us how many buyers were actually fooled by a Marvel Legends listing filed under Hot Toys — only that anything under $100 on this line should be assumed wrong until the photos say otherwise.' },
+      { type: 'h2', text: 'The Thing is the buy, the heroes are not' },
+      { type: 'p', text: 'The Thing’s $553.52 lead holds up under scrutiny: it beats a real, unpooled second-place figure by $3.52, and it clears every MCU headliner in this catalog by several hundred dollars, since those headliners resell $41 to $176 under their own retail. Only the Hydra Stomper listings break that pattern: the set resells $80 under its $630 launch price, the standalone figure $65.01 under its $490. A standard-scale hero at retail is a bet the resale market has already lost: Loki trades at $200 against a $265-to-$280 sticker, and nothing in this catalog says that changes.' },
+      { type: 'h2', text: 'Further reading' },
+      { type: 'ul', items: [
+        '[[Marvel Legends collector guide|/guides/marvel-legends-hub]] — the six-inch line the Hasbro leaks come from',
+        '[[Marvel Legends price guide 2026|/guides/marvel-legends-price-guide-2026]] — wave by wave, at one-tenth the price',
+        '[[Sealed vs loose action figures|/guides/sealed-vs-loose-action-figures]] — the condition ladder that decides whether a $553.52 median holds up',
+      ]},
+    ],
+  },
+  {
     slug: 'star-wars-black-series-price-guide',
     title: 'Star Wars Black Series Price Guide: What Actually Costs Money and Why',
     metaTitle: 'Star Wars Black Series Price Guide — Real Sold Prices | FigurePinner',
@@ -1747,6 +2103,7 @@ export const ARTICLES: Article[] = [
         { type: 'p', text: 'Buying: target the names, not the lines. A complete loose figure of a top-tier name from a scarce wave beats a carded common every time. Check accessories — Jakks figures shipped with belts, shirts, and gear that the loose market routinely lost, and completeness moves the price the same way it does in every vintage market.' },
         { type: 'p', text: 'Selling: if you have a childhood tub of these, do not bulk-lot it blind. The tub is mostly commons — but one first-release name or late-series figure can be worth more than the rest combined, and bulk lots hand that figure to a reseller for free. Sort, look up, then lot the leftovers.' },
         { type: 'p', text: 'FigurePinner has the sold comps across the Jakks era — Ruthless Aggression, Deluxe Aggression, and the sublines — so you can separate the climbing figures from the abundant ones in seconds. Look up the name before you buy, and before you let a single figure leave the tub.' },
+        { type: 'callout', text: 'Update, September 2026: we checked this guide against the sold data for all 342 Ruthless Aggression records. The median is $17.99, two figures clear $50, and the late series are cheaper than the early ones. The full numbers, and where the mechanism above does and does not hold, are in the [[Ruthless Aggression price guide|/guides/jakks-ruthless-aggression-price-guide]].' },
       ],
     },
 
@@ -2030,6 +2387,11 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'The scale divide is real and it matters' },
       { type: 'p', text: 'These two lines are not interchangeable. They don\'t display together well. Their vehicles and accessories don\'t cross over. Their collector communities overlap but don\'t fully coincide. Buying one because you like the other is the clearest path to a shelf that satisfies neither.' },
       { type: 'p', text: 'The collectors who are happiest in the Star Wars market tend to be ones who picked a lane. TVC because they want the full roster, the dioramas, the vehicles, and the carded display. Black Series because they want premium display pieces on a desk or shelf. Both because they\'re separate with a budget that accounts for both. What doesn\'t work is treating them as interchangeable options for the same shelf.' },
+      { type: 'h2', text: 'Further reading: the Star Wars price guides' },
+      { type: 'ul', items: [
+        '[[Star Wars Black Series price guide|/guides/star-wars-black-series-price-guide]] — the 6-inch line on the same rules',
+        '[[Star Wars Clone Wars figures price guide|/guides/star-wars-clone-wars-figures-price-guide]] — Hasbro 2008–13: the cardback myth, named clones, and the gunship money',
+      ]},
       { type: 'p', text: 'Before you spend anything above retail on the secondary market, pull comps on FigurePinner for the specific figure and version you\'re looking at. The sold data tells you what that exact release — not the character in general — has actually traded for. Both lines have a wide spread between figures that hold and figures that don\'t, and the difference is almost never obvious from the listing title alone.' },
     ],
   },
@@ -2521,6 +2883,7 @@ export const ARTICLES: Article[] = [
         '[[Marvel Legends Price Guide 2026: What Every Wave Is Actually Worth|/guides/marvel-legends-price-guide-2026]] — wave-by-wave breakdown with specific comp data',
         '[[Marvel Legends: Where to Begin|/guides/marvel-legends-where-to-begin]] — entry point for new collectors choosing a first wave',
         '[[Hope Summers Marvel Legends: The Mutant Messiah Figure You Probably Overpaid For|/guides/hope-summers-marvel-legends-figure-guide]] — Terrax wave deep-dive',
+        '[[Hot Toys Marvel price guide|/guides/hot-toys-marvel-price-guide]] — the sixth-scale tier: big-body villains and the Fantastic Four at $500, MCU heroes under retail',
         '[[Completing a Wave: The Completionist\'s Guide (and the BAF Trap)|/guides/completing-a-wave-completionist-guide]] — why the BAF math works against you',
       ]},
     ],
@@ -2544,6 +2907,8 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: "Whether Jakks or Mattel made the better WWE figures is the hobby's live debate. Jakks gets credit for the Classic Superstars sculpts and the Attitude-era nostalgia; Mattel for the Elite line's articulation and the modern adult-collector standard. There is no settled answer -- which is why each era gets its own shelf." },
       { type: 'h2', text: 'Further reading' },
       { type: 'ul', items: [
+        '[[Classic Superstars price guide|/guides/jakks-classic-superstars-price-guide]]: the Jakks line where late-series scarcity actually shows up',
+        '[[Ruthless Aggression price guide|/guides/jakks-ruthless-aggression-price-guide]] — Jakks\' WWE line, a different manufacturer, the same collecting era',
         '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
       ]},
     ],
@@ -2572,6 +2937,7 @@ export const ARTICLES: Article[] = [
       { type: 'h2', text: 'Further reading' },
       { type: 'ul', items: [
         '[[WWE Elite (Mattel) collector guide|/guides/wwe-elite-hub]] -- the modern Mattel era, face vs heel',
+        '[[WWE Basic price guide|/guides/wwe-basic-price-guide]] -- the $15 line, and the 25 figures that are not',
         '[[Jakks Pacific collector guide|/guides/jakks-hub]] -- Classic Superstars & Ruthless Aggression',
       ]},
     ],
