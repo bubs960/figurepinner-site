@@ -1003,7 +1003,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
   const heroLede = gatedLoreText(local)
   const heroFeaturesAll = (gatedKeyFeatures(local) ?? '').split(',').map(f => f.trim()).filter(Boolean)
   const heroFeatures = heroFeaturesAll.slice(0, 6)
-  const ad2Height = process.env.NEXT_PUBLIC_ADSTERRA_728_KEY ? 90 : 250
+  // 728×90 leaderboard zone live since 2026-09-17 (key in AdSlot SLOT_CONFIG).
+  const ad2Height = 90
 
   return (
     <div className="fp-shelf" style={{ background: 'var(--fp-bg)', minHeight: '100vh', color: 'var(--fp-text)', fontFamily: 'var(--fp-font-body)' }}>
@@ -1407,9 +1408,8 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           />
         </div>
 
-        {/* Ad 2 — fixed box above the footer (728×90 once the leaderboard
-            zone key exists; 300×250 banner in the meantime). AD STANDARD v2
-            thin-page rule (showUnitTwo) still binds. */}
+        {/* Ad 2 — fixed 728×90 leaderboard box above the footer (zone live
+            2026-09-17). AD STANDARD v2 thin-page rule (showUnitTwo) still binds. */}
         {showUnitTwo && (
           <div className="fp-z-ad2" style={{ gridArea: 'ad2', display: 'flex', justifyContent: 'center', paddingTop: '0.5rem' }}>
             <div data-ad-box style={{ height: ad2Height, display: 'flex', justifyContent: 'center', flex: 'none' }}>
