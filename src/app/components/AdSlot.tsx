@@ -110,11 +110,13 @@ type SlotConfig = {
 
 const SLOT_CONFIG: Record<string, SlotConfig> = {
   'adsterra-banner': { width: 300, height: 250, label: 'Adsterra Banner (300×250)', key: '5758f0cf21092928ed5d04198e165847' },
-  // Option C (2026-09-12): figure-page Ad 2 is a 728×90 leaderboard box. The
-  // zone key is Steve's to create in the Adsterra dashboard (STEVE-QUEUE 9/12);
-  // until it exists the slot renders the 300×250 banner inside the same box so
-  // the layout is final now and only the creative size changes later.
-  'adsterra-leaderboard': { width: 728, height: 90, label: 'Adsterra Leaderboard (728×90)', key: process.env.NEXT_PUBLIC_ADSTERRA_728_KEY ?? '' },
+  // Option C (2026-09-12): figure-page Ad 2 is a 728×90 leaderboard box.
+  // Zone created 2026-09-17 (Adsterra unit 31292491 "728x90_1" on
+  // figurepinner.com, STANDALONE-TO-WEB-ADSTERRA-728X90-ZONE-KEY-2026-09-17.md).
+  // Hardcoded like the banner key above — a zone key is public in the page
+  // HTML, and an env var would silently fall back to the banner on any build
+  // box without .env.local.
+  'adsterra-leaderboard': { width: 728, height: 90, label: 'Adsterra Leaderboard (728×90)', key: '0041b80b8affb54f7340dd415036e77e' },
 }
 
 type Props = {
@@ -123,9 +125,16 @@ type Props = {
 }
 
 export default function AdSlot({ slot: requestedSlot, className }: Props) {
-  // Leaderboard without a key -> fall back to the banner unit (see SLOT_CONFIG).
+  // A 728 leaderboard on a phone would be cropped to the middle ~390px by the
+  // overflow:hidden box below, so under 768px (the site's phone breakpoint)
+  // the leaderboard slot serves the 300×250 banner instead. Resolved in an
+  // effect, not at render, so server and first client render agree (null).
+  const [narrow, setNarrow] = useState<boolean | null>(null)
+  useEffect(() => {
+    setNarrow(window.matchMedia('(max-width: 767px)').matches)
+  }, [])
   const slot: keyof typeof SLOT_CONFIG =
-    requestedSlot === 'adsterra-leaderboard' && !SLOT_CONFIG['adsterra-leaderboard'].key ? 'adsterra-banner' : requestedSlot
+    requestedSlot === 'adsterra-leaderboard' && narrow ? 'adsterra-banner' : requestedSlot
   const [proState, setProState] = useState<'loading' | 'pro' | 'free'>('loading')
   const [adState, setAdState] = useState<'pending' | 'filled' | 'unfilled'>('pending')
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -278,9 +287,11 @@ export default function AdSlot({ slot: requestedSlot, className }: Props) {
       if (timeout != null) clearTimeout(timeout)
       obs?.disconnect()
     }
-  }, [proState])
+  }, [proState, slot])
 
   if (!config) return null
+  // Leaderboard viewport check not yet resolved (server / first client render).
+  if (requestedSlot === 'adsterra-leaderboard' && narrow === null) return null
 
   // Pro = ad-free. Hide for confirmed Pro users, AND while auth is still loading
   // (fail toward ad-free so a Pro user never sees a flash of an ad). Signed-out
