@@ -27,6 +27,18 @@ export default function robots(): MetadataRoute.Robots {
         // Block authenticated app routes from crawling
         disallow: ['/app/', '/sign-in/', '/sign-up/', '/api/'],
       },
+      // SEO-tool crawlers (2026-09-18, Steve's go): they feed third-party
+      // backlink/keyword databases, send no visitors, and every uncached page
+      // they fetch is a full Worker render (~440 ms CPU avg). Measured
+      // 2026-09-17: SemrushBot 2,836 + DotBot 863 + DataForSeoBot 361 renders
+      // in 24 h, ~27% of all renders, while Workers CPU ran ~10x the plan's
+      // included 30M cpu-ms/month. AhrefsBot and MJ12bot are the same class.
+      // All five honor robots.txt. Search engines (Google, Bing, Applebot,
+      // Baidu, PetalBot) and AI crawlers are deliberately NOT listed here.
+      {
+        userAgent: ['SemrushBot', 'DotBot', 'DataForSeoBot', 'AhrefsBot', 'MJ12bot'],
+        disallow: '/',
+      },
     ],
     sitemap: sitemaps,
     host: BASE,
