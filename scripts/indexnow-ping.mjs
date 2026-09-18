@@ -40,6 +40,7 @@
 
 import { readFileSync, existsSync, appendFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
+import { loadBwtConfig, submitViaBwt } from './lib/bwt-submit.mjs'
 
 const KEY = '6d21e3af4a7a44f9a1a0c0fba6518a49'
 const HOST = 'figurepinner.com'
@@ -552,27 +553,55 @@ async function pingDelta() {
     return
   }
 
-  const status = await submitBatch(toSend, 1, 1)
-  const accepted = status === '200' || status === '202'
+  const indexNowStatus = await submitBatch(toSend, 1, 1)
+  let status = indexNowStatus
+  let sentUrls = indexNowStatus === '200' || indexNowStatus === '202' ? toSend : []
+  let via = 'indexnow'
+  let bwtNote
+
+  // Fallback (2026-09-18): IndexNow rejected the batch — hand the same capped
+  // set to the BWT URL Submission API when a key is configured. See
+  // scripts/lib/bwt-submit.mjs for why (Bot Fight Mode vs key-file verification).
+  if (sentUrls.length === 0) {
+    const bwt = loadBwtConfig()
+    if (!bwt) {
+      console.log('[IndexNow] delta: no BWT_API_KEY configured — Bing fallback skipped')
+    } else {
+      const result = await submitViaBwt(toSend, bwt)
+      via = 'bwt'
+      status = result.status
+      sentUrls = result.submitted
+      bwtNote = result.note
+      console.log('[IndexNow] delta: BWT fallback ' + result.status + ' — submitted ' + result.submitted.length + '/' + toSend.length + (result.note ? ' (' + result.note + ')' : ''))
+    }
+  }
+
+  // Everything sent = accepted. A partial BWT night keeps the cursor where it
+  // was and carries the unsent remainder, so nothing is dropped or double-counted.
+  const accepted = sentUrls.length === toSend.length
+  const unsent = toSend.slice(sentUrls.length)
   writeLedger({
     day: today,
     mode: 'delta',
-    sent: accepted ? toSend.length : 0,
+    via,
+    sent: sentUrls.length,
     attempted: toSend.length,
     status,
-    carried: carryOut.length,
+    ...(via === 'bwt' ? { indexNowStatus, ...(bwtNote ? { note: bwtNote } : {}) } : {}),
+    carried: carryOut.length + unsent.length,
     carriedIn: delta.carriedIn,
     freshFids: delta.freshFids,
-    // Advance the cursor only on acceptance so a 403 night re-sources the same delta.
+    // Advance the cursor only when the whole set went out, so a rejected or
+    // partial night re-sources the same delta.
     ...(accepted ? { cursor: delta.headSha } : {}),
   })
   if (!accepted) {
-    // Rejected: put tonight's set back on the carry so tomorrow retries it (still capped).
+    // Put the unsent URLs back on the carry so tomorrow retries them (still capped).
     try {
-      writeFileSync(DELTA_CARRY, [...toSend, ...carryOut].join('\n') + '\n')
+      writeFileSync(DELTA_CARRY, [...unsent, ...carryOut].join('\n') + '\n')
     } catch {}
   }
-  console.log('[IndexNow] delta: ledger line written (' + DELTA_LEDGER + ') — sent=' + (accepted ? toSend.length : 0) + ' status=' + status)
+  console.log('[IndexNow] delta: ledger line written (' + DELTA_LEDGER + ') — via=' + via + ' sent=' + sentUrls.length + ' status=' + status)
   console.log('[IndexNow] Done.')
 }
 
