@@ -90,7 +90,7 @@ export async function generateSitemaps(): Promise<{ id: string }[]> {
   return [{ id: STATIC_ID }, ...getAllFandoms().map(fandom => ({ id: fandom }))]
 }
 
-export default function sitemap({ id }: { id: string }): MetadataRoute.Sitemap {
+export default async function sitemap({ id }: { id: string }): Promise<MetadataRoute.Sitemap> {
   const now = new Date()
 
   if (id === STATIC_ID) {
@@ -99,7 +99,7 @@ export default function sitemap({ id }: { id: string }): MetadataRoute.Sitemap {
   return fandomSitemap(id, now)
 }
 
-function staticSitemap(now: Date): MetadataRoute.Sitemap {
+async function staticSitemap(now: Date): Promise<MetadataRoute.Sitemap> {
   // To add a new static page: append an entry to this array.
   // changeFrequency: 'always'|'hourly'|'daily'|'weekly'|'monthly'|'yearly'|'never'
   // priority: 0.0 – 1.0 (1.0 = most important)
@@ -185,7 +185,7 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
     if (!genreNewest.has(slug)) genreNewest.set(slug, new Date(0))
     // is_canary fids excluded — Data Defense Layer 3, see kbTypes.ts.
     const d = maxCensusDate(
-      getFiguresByFandom(fandom).filter(f => !f.is_canary).map(f => f.figure_id),
+      (await getFiguresByFandom(fandom)).filter(f => !f.is_canary).map(f => f.figure_id),
     )
     if (d && d > genreNewest.get(slug)!) genreNewest.set(slug, d)
   }
@@ -200,11 +200,11 @@ function staticSitemap(now: Date): MetadataRoute.Sitemap {
   return [...staticPages, ...guidesIndex, ...guidePages, ...genrePages]
 }
 
-function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
+async function fandomSitemap(fandom: string, now: Date): Promise<MetadataRoute.Sitemap> {
   // is_canary fids excluded entirely — Data Defense Layer 3 (2026-08-07): they
   // must never appear in a line hub, character hub, or figure-page sitemap
   // entry. See kbTypes.ts.
-  const figs = getFiguresByFandom(fandom).filter(f => !f.is_canary)
+  const figs = (await getFiguresByFandom(fandom)).filter(f => !f.is_canary)
   const genre = fandomToGenre(fandom)
 
   // Group member figures once, then reuse for both hub types below. Keyed
@@ -278,7 +278,7 @@ function fandomSitemap(fandom: string, now: Date): MetadataRoute.Sitemap {
     // (googlebot noindex) go to bingTailSitemap() below instead; T0 stays
     // out everywhere. googleIndexTier() already folds in isAtOrAboveIndexBar.
     if (googleIndexTier(f.figure_id) !== 2) continue
-    const url = `${BASE}${prettyFigureUrl(f)}`
+    const url = `${BASE}${await prettyFigureUrl(f)}`
     if (!seenUrls.has(url)) {
       seenUrls.add(url)
       // Honest lastmod: the real last content change (comp change OR

@@ -122,7 +122,7 @@ function sampleEven(sorted: number[], n: number): number[] {
 }
 
 async function fetchOne(entry: { fid: string; chipLabel: string; fieldNote?: string }): Promise<{ figure: ReceiptFigure; prices: number[] } | null> {
-  const kb = getFigureById(entry.fid)
+  const kb = await getFigureById(entry.fid)
   if (!kb || !kb.canonical_image_url) return null
 
   // Release L (2026-09-03): one R2 binding read instead of the r2proxy
@@ -161,7 +161,7 @@ async function fetchOne(entry: { fid: string; chipLabel: string; fieldNote?: str
   return {
     figure: {
       fid: entry.fid,
-      href: prettyFigureUrl(kb),
+      href: await prettyFigureUrl(kb),
       chipLabel: entry.chipLabel,
       name: kb.v1_name ?? prettifySlug(kb.character_canonical),
       line: `${kb.v1_line ?? prettifySlug(kb.product_line)}${seriesNum ? ` ${seriesNum}` : ''}`,

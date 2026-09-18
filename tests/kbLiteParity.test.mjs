@@ -12,9 +12,10 @@ import { deriveName } from '../src/data/kbTypes.ts'
 
 describe('kbLite mirrors kb.ts for the fields runtime readers use', () => {
   const full = kb.getAllFigures().filter(f => !f.is_canary)
-  const liteAll = lite.getAllFigures()
+  const liteAllPromise = lite.getAllFigures()
 
-  test('same figure set, same order', () => {
+  test('same figure set, same order', async () => {
+    const liteAll = await liteAllPromise
     assert.equal(liteAll.length, full.length)
     for (let i = 0; i < full.length; i++) {
       assert.equal(liteAll[i].figure_id, full[i].figure_id, `row ${i}`)
@@ -25,9 +26,9 @@ describe('kbLite mirrors kb.ts for the fields runtime readers use', () => {
     assert.deepEqual(lite.getAllFandoms(), kb.getAllFandoms())
   })
 
-  test('every figure: identity, route, image and name fields match', () => {
+  test('every figure: identity, route, image and name fields match', async () => {
     for (const f of full) {
-      const l = lite.getFigureById(f.figure_id)
+      const l = await lite.getFigureById(f.figure_id)
       assert.ok(l, `missing ${f.figure_id}`)
       for (const k of ['fandom', 'manufacturer', 'product_line', 'character_canonical', 'character_variant', 'release_wave', 'canonical_image_url', 'name', 'v1_name', 'v1_line', 'v1_series']) {
         // '' and null are the same "no value" for these nullable strings: every
@@ -38,23 +39,23 @@ describe('kbLite mirrors kb.ts for the fields runtime readers use', () => {
         assert.equal(l[k] || null, f[k] || null, `${f.figure_id}.${k}`)
       }
       assert.equal(deriveName(l), deriveName(f), `${f.figure_id} deriveName`)
-      assert.equal(lite.prettyFigureUrl(l), kb.prettyFigureUrl(f), `${f.figure_id} prettyFigureUrl`)
-      assert.equal(lite.hasUniquePrettyFigureUrl(l), kb.hasUniquePrettyFigureUrl(f), `${f.figure_id} unique`)
+      assert.equal(await lite.prettyFigureUrl(l), kb.prettyFigureUrl(f), `${f.figure_id} prettyFigureUrl`)
+      assert.equal(await lite.hasUniquePrettyFigureUrl(l), kb.hasUniquePrettyFigureUrl(f), `${f.figure_id} unique`)
     }
   })
 
-  test('per-fandom and per-line reads agree', () => {
+  test('per-fandom and per-line reads agree', async () => {
     for (const fandom of kb.getAllFandoms()) {
       const a = kb.getFiguresByFandom(fandom).filter(f => !f.is_canary).map(f => f.figure_id)
-      const b = lite.getFiguresByFandom(fandom).map(f => f.figure_id)
+      const b = (await lite.getFiguresByFandom(fandom)).map(f => f.figure_id)
       assert.deepEqual(b, a, `fandom ${fandom}`)
-      assert.deepEqual(lite.getLinesByFandom(fandom), kb.getLinesByFandom(fandom), `lines ${fandom}`)
+      assert.deepEqual(await lite.getLinesByFandom(fandom), kb.getLinesByFandom(fandom), `lines ${fandom}`)
       for (const line of kb.getLinesByFandom(fandom).slice(0, 5)) {
         const sample = kb.getFiguresByFandom(fandom).find(f => f.product_line === line)
         const compound = `${sample.manufacturer}-${line}`
         for (const slug of [line, compound, line.toUpperCase()]) {
           assert.deepEqual(
-            lite.getFiguresByLine(fandom, slug).map(f => f.figure_id),
+            (await lite.getFiguresByLine(fandom, slug)).map(f => f.figure_id),
             kb.getFiguresByLine(fandom, slug).filter(f => !f.is_canary).map(f => f.figure_id),
             `line ${fandom}/${slug}`,
           )
@@ -63,10 +64,10 @@ describe('kbLite mirrors kb.ts for the fields runtime readers use', () => {
     }
   })
 
-  test('stable-suffix resolution agrees', () => {
+  test('stable-suffix resolution agrees', async () => {
     for (const f of full.slice(0, 2000)) {
       const a = kb.getFigureByStableSuffix(f.figure_id)?.figure_id ?? null
-      const b = lite.getFigureByStableSuffix(f.figure_id)?.figure_id ?? null
+      const b = (await lite.getFigureByStableSuffix(f.figure_id))?.figure_id ?? null
       assert.equal(b, a, `suffix ${f.figure_id}`)
     }
   })

@@ -77,11 +77,11 @@ function tokenScore(token: string, fl: FieldBag): number | null {
 type IndexEntry = { f: KBFigure; bag: FieldBag }
 let INDEX: IndexEntry[] | null = null
 
-function getIndex(): IndexEntry[] {
+async function getIndex(): Promise<IndexEntry[]> {
   if (!INDEX) {
     // is_canary figures never rank in search or price-check (both funnel
     // through this index) — Data Defense Layer 3, 2026-08-07. See kbTypes.ts.
-    INDEX = getAllFigures().filter(f => !f.is_canary).map(f => ({
+    INDEX = (await getAllFigures()).filter(f => !f.is_canary).map(f => ({
       f,
       bag: {
         char: f.character_canonical.toLowerCase(),
@@ -135,10 +135,10 @@ function scoreAll(
 // Vocabulary of character + line tokens, built once per isolate.
 let VOCAB: string[] | null = null
 
-function getVocab(): string[] {
+async function getVocab(): Promise<string[]> {
   if (!VOCAB) {
     const set = new Set<string>()
-    for (const { f } of getIndex()) {
+    for (const { f } of await getIndex()) {
       for (const t of f.character_canonical.toLowerCase().split(/[^a-z0-9]+/)) {
         if (t.length >= 3) set.add(t)
       }
@@ -234,12 +234,12 @@ const MAX_TOKENS = 12
  * Returns the complete ranked pool (uncapped) — callers slice to their limit.
  * Never throws on bad input; returns an empty pool for queries < 2 chars.
  */
-export function searchKb(q: string): KbSearchResult {
+export async function searchKb(q: string): Promise<KbSearchResult> {
   const query = q.trim().slice(0, MAX_QUERY_LEN)
   if (query.length < 2) return { scored: [], note: null }
 
   const tokens = query.toLowerCase().split(/\s+/).filter(Boolean).slice(0, MAX_TOKENS)
-  const entries = getIndex()
+  const entries = await getIndex()
 
   // Tier 1 — strict AND (alias-expanded)
   let scored = scoreAll(entries, tokens, 0)
@@ -247,7 +247,7 @@ export function searchKb(q: string): KbSearchResult {
 
   // Tier 2 — typo correction, preserves every token so it beats relaxing
   if (scored.length === 0) {
-    const vocab = getVocab()
+    const vocab = await getVocab()
     let changed = false
     const corrected = tokens.map(t => {
       const fix = correctToken(t, vocab)

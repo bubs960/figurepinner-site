@@ -258,7 +258,7 @@ export async function getFiguresByIds(ids: string[]): Promise<Map<string, KBFigu
  * lite map's lazy parse ever shows up in isolate memory on the 404 path.
  */
 export async function getFigureByStableSuffix(figure_id: string): Promise<KBFigure | null> {
-  const lite = liteFigureByStableSuffix(figure_id)
+  const lite = await liteFigureByStableSuffix(figure_id)
   if (!lite) return null
   return getFigureById(lite.figure_id)
 }

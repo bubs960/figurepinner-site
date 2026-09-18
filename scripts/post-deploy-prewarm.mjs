@@ -109,7 +109,7 @@ function buildPaths() {
   const fandomToSlug = readSlugToFandom()
   const slugFor = fandom => fandomToSlug[fandom] ?? fandom
   const stats = JSON.parse(readFileSync(path.join(ROOT, 'src/data/kb-stats.generated.json'), 'utf8'))
-  const lite = JSON.parse(readFileSync(path.join(ROOT, 'src/data/kb-lite.generated.json'), 'utf8'))
+  const lite = JSON.parse(readFileSync(path.join(ROOT, 'public/kb-lite.generated.json'), 'utf8'))
   const rows = JSON.parse(lite.rows)
 
   const lines = []

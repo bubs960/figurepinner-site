@@ -96,7 +96,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const { scored } = searchKb(q)
+    const { scored } = await searchKb(q)
     const top = scored[0]
     if (!top) {
       return NextResponse.json({ error: 'no match' }, { status: 404, headers: CACHE_HEADERS })
