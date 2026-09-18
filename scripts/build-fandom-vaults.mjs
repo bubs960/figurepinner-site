@@ -15,6 +15,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import vm from 'node:vm'
+import { fetchPriceSnapshot, snapshotStats } from './lib/price-snapshot-fetch.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -27,6 +28,10 @@ const OUT_OVERRIDE = process.env.OUT || null
 const MFR = process.env.MFR || null                                   // manufacturer scope (e.g. jakks-pacific, mattel)
 const LINE_EXCLUDE = process.env.LINE_EXCLUDE ? new RegExp(process.env.LINE_EXCLUDE) : null  // drop product_lines (e.g. ^tna)
 const MIN_LINE = Number(process.env.MIN_LINE || 1)
+// MIN_COMPS (2026-09-18): the site shows no price under 3 sold comps (MIN_COMPS_TO_QUOTE in
+// figureFormatters.ts). These payloads used to keep anything with sold_count > 0, so the hubs
+// listed 1-sale "medians" (Star Wars top row was $2,800 on one sale). Same floor here.
+const MIN_COMPS = Number(process.env.MIN_COMPS || 3)
 
 function loadFigures() {
   const raw = readFileSync(join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js'), 'utf8')
@@ -42,7 +47,8 @@ function rarityFlag(f){const l=(f.product_line||'').toLowerCase(),e=(f.exclusive
 // Normalize line label (collapse case-variant strays)
 const lineKey = f => { const l = (f.v1_line || prettify(f.product_line)).trim(); return l.charAt(0).toUpperCase()+l.slice(1) }
 
-async function snap(id){try{const r=await fetch(`${R2}/price-summaries/${encodeURIComponent(id)}.json`,{signal:AbortSignal.timeout(8000)});return r.ok?await r.json():null}catch{return null}}
+// Paced, retried, fail-closed (scripts/lib/price-snapshot-fetch.mjs): a 429 is never "no comps".
+const snap = (id) => fetchPriceSnapshot(id)
 async function mapLimit(items,limit,fn){const out=new Array(items.length);let i=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(i<items.length){const x=i++;out[x]=await fn(items[x])}}));return out}
 
 async function main(){
@@ -58,7 +64,7 @@ async function main(){
   const priced = await mapLimit(figs, CONCURRENCY, async f=>{
     const s=await snap(f.figure_id); if(!s)return null
     const p=(s.median_sold??s.avg_sold); const c=s.sold_count??0
-    if(p==null||c<=0)return null
+    if(p==null||c<MIN_COMPS)return null
     return { figure_id:f.figure_id, name:name(f), line:lineKey(f), price:Math.round(p), sold_count:c, flag:rarityFlag(f), image:f.canonical_image_url||null, url:`/figure/${f.figure_id}` }
   })
   const byId = new Map(priced.filter(Boolean).map(x=>[x.figure_id,x]))
@@ -75,8 +81,9 @@ async function main(){
     .filter(v => v.count >= MIN_LINE)
     .sort((a,b)=>b.count-a.count)
   if(!existsSync(OUT_DIR)) mkdirSync(OUT_DIR,{recursive:true})
-  const payload = { fandom: OUT_OVERRIDE || fandom, generated_at:new Date().toISOString(), source:'r2proxy price-summaries, sold_count>0', vaults }
+  const payload = { fandom: OUT_OVERRIDE || fandom, generated_at:new Date().toISOString(), source:`r2proxy price-summaries, sold_count>=${MIN_COMPS}`, vaults }
   writeFileSync(join(OUT_DIR,`${OUT_OVERRIDE || fandom}.json`), JSON.stringify(payload,null,2))
+  console.log('fetch', JSON.stringify(snapshotStats()))
   console.log(`wrote ${vaults.length} line-vaults:`, vaults.map(v=>`${v.line}(${v.count}/${v.top.length} priced)`).join(', '))
 }
 main().catch(e=>{console.error(e);process.exit(1)})

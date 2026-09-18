@@ -1,96 +1,96 @@
 {
   "fandom": "star-wars",
-  "generated_at": "2026-08-16T02:04:06.536Z",
+  "generated_at": "2026-09-18T22:33:29.697Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_star-wars_hasbro_black-series_deluxe-sets_jabba-the-hutt_49ad57",
-      "name": "Jabba The Hutt",
+      "figure_id": "fp_star-wars_hasbro_black-series_galaxy_anakin-skywalker_f9d68a",
+      "name": "Anakin Skywalker (Revenge of the Sith)",
       "line": "6\" Black Series",
       "price": 60,
-      "sold_count": 41,
-      "views": 3,
+      "sold_count": 10,
+      "views": 11,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_deluxe-sets_jabba-the-hutt_49ad57/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_black-series_deluxe-sets_jabba-the-hutt_49ad57"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_galaxy_anakin-skywalker_f9d68a/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_galaxy_anakin-skywalker_f9d68a"
     },
     {
-      "figure_id": "fp_star-wars_hasbro_black-series_3-75-playsets_at-st-walker-with-driver_db7858",
-      "name": "AT-ST Walker With Driver",
-      "line": "3.75 Black Series",
-      "price": 60,
-      "sold_count": 29,
-      "views": 3,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_3-75-playsets_at-st-walker-with-driver_db7858/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_black-series_3-75-playsets_at-st-walker-with-driver_db7858"
-    },
-    {
-      "figure_id": "fp_star-wars_kenner_vintage-collection_return-of-the-jedi-actio_b-wing-pilot_46e752",
-      "name": "B-Wing Pilot",
-      "line": "Kenner Vintage Collection",
-      "price": 60,
-      "sold_count": 48,
-      "views": 3,
-      "flag": "VINTAGE",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_kenner_vintage-collection_return-of-the-jedi-actio_b-wing-pilot_46e752/canonical.jpg",
-      "url": "/figure/fp_star-wars_kenner_vintage-collection_return-of-the-jedi-actio_b-wing-pilot_46e752"
-    },
-    {
-      "figure_id": "fp_star-wars_hasbro_archive-collection_archive-collection_ahsoka-tano_0bf52e",
-      "name": "Ahsoka Tano",
-      "line": "Archive Collection",
-      "price": 103,
-      "sold_count": 24,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_archive-collection_archive-collection_ahsoka-tano_0bf52e/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_archive-collection_archive-collection_ahsoka-tano_0bf52e"
-    },
-    {
-      "figure_id": "fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791",
-      "name": "Galaxy Edge - Droid Depot",
+      "figure_id": "fp_star-wars_hasbro_black-series_force-awakens-2015-2018_constable-zuvio_efc902",
+      "name": "Constable Zuvio",
       "line": "6\" Black Series",
-      "price": 60,
-      "sold_count": 9,
-      "views": 2,
+      "price": 9,
+      "sold_count": 5,
+      "views": 10,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_black-series_galaxys-edge_galaxy-edge-droid-depot_766791"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_force-awakens-2015-2018_constable-zuvio_efc902/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_force-awakens-2015-2018_constable-zuvio_efc902"
     },
     {
-      "figure_id": "fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_senni-tonnika_8da620",
-      "name": "Senni Tonnika",
-      "line": "The Vintage Collection",
-      "price": 150,
+      "figure_id": "fp_star-wars_hasbro_black-series_50th-anniversary_general-grievous_d1b8d3",
+      "name": "General Grievous (Clone Wars Tartakovsky)",
+      "line": "6\" Black Series",
+      "price": 44,
+      "sold_count": 50,
+      "views": 6,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_50th-anniversary_general-grievous_d1b8d3/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_50th-anniversary_general-grievous_d1b8d3"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1",
+      "name": "Jedi Knight Revan (Galaxy Heroes)",
+      "line": "6\" Black Series",
+      "price": 45,
+      "sold_count": 2,
+      "views": 4,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_gaming-greats_jedi-knight-revan_478be1"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_deluxe-sets_speeder-bike-and-biker-scout_0d92d2",
+      "name": "Speeder Bike and Biker Scout",
+      "line": "6\" Black Series",
+      "price": 24,
+      "sold_count": 1,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_deluxe-sets_speeder-bike-and-biker-scout_0d92d2/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_deluxe-sets_speeder-bike-and-biker-scout_0d92d2"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_galaxy_luke-skywalker_86e008",
+      "name": "Luke Skywalker (Imperial Light Cruiser)",
+      "line": "6\" Black Series",
+      "price": 37,
       "sold_count": 7,
-      "views": 2,
-      "flag": "VINTAGE",
-      "image": null,
-      "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-action-figures_senni-tonnika_8da620"
-    },
-    {
-      "figure_id": "fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_ahsoka_5d7c1d",
-      "name": "Ahsoka",
-      "line": "The Clone Wars",
-      "price": 20,
-      "sold_count": 50,
-      "views": 2,
+      "views": 4,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_ahsoka_5d7c1d/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_the-clone-wars_action-figures-blue-blac_ahsoka_5d7c1d"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_galaxy_luke-skywalker_86e008/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_galaxy_luke-skywalker_86e008"
     },
     {
-      "figure_id": "fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c",
-      "name": "Boba Fett (ESB) Foil",
-      "line": "The Vintage Collection",
-      "price": 66,
-      "sold_count": 50,
-      "views": 2,
-      "flag": "VINTAGE",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_boba-fett-esb-foil_89c64c"
+      "figure_id": "fp_star-wars_hasbro_30th-anniversary_action-figures_2-1b-surgical-droid_42c864",
+      "name": "2-1B Surgical Droid",
+      "line": "30th Anniversary",
+      "price": 18,
+      "sold_count": 44,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_30th-anniversary_action-figures_2-1b-surgical-droid_42c864/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_30th-anniversary_action-figures_2-1b-surgical-droid_42c864"
+    },
+    {
+      "figure_id": "fp_star-wars_hasbro_black-series_galaxy_aurra-sing_86daad",
+      "name": "Aurra Sing",
+      "line": "6\" Black Series",
+      "price": 14,
+      "sold_count": 13,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_black-series_galaxy_aurra-sing_86daad/canonical.jpg",
+      "url": "/figure/fp_star-wars_hasbro_black-series_galaxy_aurra-sing_86daad"
     }
   ]
 }

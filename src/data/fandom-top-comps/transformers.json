@@ -1,8 +1,19 @@
 {
   "fandom": "transformers",
-  "generated_at": "2026-06-22T00:12:08.914Z",
-  "source": "r2proxy price-summaries (median_sold ?? avg_sold), sold_count>0 only",
+  "generated_at": "2026-09-18T23:15:13.855Z",
+  "source": "r2proxy price-summaries (median_sold ?? avg_sold), sold_count>=3 only",
   "figures": [
+    {
+      "figure_id": "fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33",
+      "name": "Unicron",
+      "line": "War for Cybertron: Trilogy",
+      "price": 1825,
+      "sold_count": 10,
+      "last_sold": null,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33"
+    },
     {
       "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_predacus_afea42",
       "name": "Predacus",
@@ -15,28 +26,6 @@
       "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_predacus_afea42"
     },
     {
-      "figure_id": "fp_transformers_hasbro_classics_exclusives_games-of-deception-set_c5b05f",
-      "name": "Games of Deception Set (Bug Bite, Dirge, Dreadwind, Thrust, Thundercracker)",
-      "line": "Classics",
-      "price": 500,
-      "sold_count": 4,
-      "last_sold": null,
-      "flag": "MOTUC",
-      "image": null,
-      "url": "/figure/fp_transformers_hasbro_classics_exclusives_games-of-deception-set_c5b05f"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_generations-selects_deluxe-class_seacons-tentakil_cd3775",
-      "name": "Seacons Tentakil",
-      "line": "Generations Selects",
-      "price": 450,
-      "sold_count": 2,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://i.ebayimg.com/images/g/SIkAAeSwaO1qGwI-/s-l225.jpg",
-      "url": "/figure/fp_transformers_hasbro_generations-selects_deluxe-class_seacons-tentakil_cd3775"
-    },
-    {
       "figure_id": "fp_transformers_hasbro_generations-selects_deluxe-class_seacons-overbite_a0accd",
       "name": "Seacons Overbite",
       "line": "Generations Selects",
@@ -44,7 +33,7 @@
       "sold_count": 5,
       "last_sold": null,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/9NcAAeSwfdlo3sUl/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_deluxe-class_seacons-overbite_a0accd/canonical.jpg",
       "url": "/figure/fp_transformers_hasbro_generations-selects_deluxe-class_seacons-overbite_a0accd"
     },
     {
@@ -52,7 +41,7 @@
       "name": "Victory Saber",
       "line": "Legacy Series",
       "price": 420,
-      "sold_count": 27,
+      "sold_count": 14,
       "last_sold": null,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_victory-saber_dd6195/canonical.jpg",
@@ -63,33 +52,11 @@
       "name": "Omega Prime (Robots in Disguise 2001)",
       "line": "Legacy Series",
       "price": 400,
-      "sold_count": 50,
+      "sold_count": 22,
       "last_sold": null,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_omega-prime_4c173e/canonical.jpg",
       "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_omega-prime_4c173e"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_legacy-series_exclusives_deathsaurus_7c0ffe",
-      "name": "Deathsaurus",
-      "line": "Legacy Series",
-      "price": 300,
-      "sold_count": 8,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_deathsaurus_7c0ffe/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_deathsaurus_7c0ffe"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_generations-selects_sets_abominus_d310d4",
-      "name": "Abominus",
-      "line": "Generations Selects",
-      "price": 298,
-      "sold_count": 1,
-      "last_sold": null,
-      "flag": "",
-      "image": null,
-      "url": "/figure/fp_transformers_hasbro_generations-selects_sets_abominus_d310d4"
     },
     {
       "figure_id": "fp_transformers_hasbro_generations_titan-class_metroplex_85fcc3",
@@ -103,28 +70,6 @@
       "url": "/figure/fp_transformers_hasbro_generations_titan-class_metroplex_85fcc3"
     },
     {
-      "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_computron_0c40a9",
-      "name": "Computron",
-      "line": "Combiner Wars",
-      "price": 280,
-      "sold_count": 1,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_exclusives_computron_0c40a9/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_computron_0c40a9"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_legacy-series_commander-class_motormaster_679399",
-      "name": "Motormaster",
-      "line": "Legacy Series",
-      "price": 250,
-      "sold_count": 11,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_commander-class_motormaster_679399/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_legacy-series_commander-class_motormaster_679399"
-    },
-    {
       "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_titan-class_omega-supreme_2b0122",
       "name": "Omega Supreme",
       "line": "War for Cybertron Siege Series",
@@ -134,6 +79,61 @@
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_titan-class_omega-supreme_2b0122/canonical.jpg",
       "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_titan-class_omega-supreme_2b0122"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_generations-selects_titan-class_black-zarak_566515",
+      "name": "Black Zarak",
+      "line": "Generations Selects",
+      "price": 235,
+      "sold_count": 13,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_titan-class_black-zarak_566515/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_generations-selects_titan-class_black-zarak_566515"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_titan_autobot-ark_d5440b",
+      "name": "Autobot Ark",
+      "line": "War for Cybertron: Kingdom",
+      "price": 230,
+      "sold_count": 11,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_titan_autobot-ark_d5440b/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_titan_autobot-ark_d5440b"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_generations-selects_sets_king-poseidon_b2299a",
+      "name": "King Poseidon",
+      "line": "Generations Selects",
+      "price": 230,
+      "sold_count": 16,
+      "last_sold": null,
+      "flag": "",
+      "image": null,
+      "url": "/figure/fp_transformers_hasbro_generations-selects_sets_king-poseidon_b2299a"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_generations-selects_leader-class_star-convoy_f3d230",
+      "name": "Star Convoy",
+      "line": "Generations Selects",
+      "price": 230,
+      "sold_count": 5,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_leader-class_star-convoy_f3d230/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_generations-selects_leader-class_star-convoy_f3d230"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_generations-selects_titan-class_guardian-robot-lunar-tread_f9a51e",
+      "name": "Guardian Robot & Lunar-Tread",
+      "line": "Generations Selects",
+      "price": 205,
+      "sold_count": 13,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_titan-class_guardian-robot-lunar-tread_f9a51e/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_generations-selects_titan-class_guardian-robot-lunar-tread_f9a51e"
     }
   ]
 }

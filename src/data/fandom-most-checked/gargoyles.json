@@ -1,0 +1,19 @@
+{
+  "fandom": "gargoyles",
+  "generated_at": "2026-09-18T22:33:30.812Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_tv_neca_ultimate_2023_coldstone_3f9c61",
+      "name": "Coldstone",
+      "line": "Ultimate",
+      "price": null,
+      "sold_count": 0,
+      "views": 3,
+      "flag": "",
+      "image": null,
+      "url": "/figure/fp_tv_neca_ultimate_2023_coldstone_3f9c61"
+    }
+  ]
+}

@@ -1,63 +1,96 @@
 {
   "fandom": "action-force",
-  "generated_at": "2026-08-16T02:04:07.092Z",
+  "generated_at": "2026-09-18T22:33:31.014Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_action-force_valaverse_action-force_action-figures_riot-warfare-republic-guard_1ca79c",
-      "name": "Riot Warfare Republic Guard",
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_arctic-warfare-republic-guard_a4478c",
+      "name": "Arctic Warfare Republic Guard",
       "line": "Action Force",
-      "price": 55,
-      "sold_count": 50,
+      "price": null,
+      "sold_count": 0,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_riot-warfare-republic-guard_1ca79c/canonical.jpg",
-      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_riot-warfare-republic-guard_1ca79c"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_arctic-warfare-republic-guard_a4478c/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_arctic-warfare-republic-guard_a4478c"
     },
     {
-      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-bravo_d0f7b4",
-      "name": "Weapons Pack Bravo",
+      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_arctic-gear-pack_bb18b4",
+      "name": "Arctic Gear Pack",
       "line": "Action Force",
-      "price": 35,
-      "sold_count": 50,
+      "price": null,
+      "sold_count": 0,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-bravo_d0f7b4/canonical.jpg",
-      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-bravo_d0f7b4"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_arctic-gear-pack_bb18b4/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_arctic-gear-pack_bb18b4"
     },
     {
-      "figure_id": "fp_action-force_valaverse_action-force_action-figures_desert-rat_a48b4e",
-      "name": "Desert Rat",
+      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_pandora-upgrade-gear-set_70811b",
+      "name": "Pandora Upgrade Gear Set",
       "line": "Action Force",
-      "price": 135,
-      "sold_count": 1,
-      "views": 1,
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_desert-rat_a48b4e/canonical.jpg",
-      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_desert-rat_a48b4e"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_pandora-upgrade-gear-set_70811b/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_pandora-upgrade-gear-set_70811b"
     },
     {
-      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_swarm-gear-set_307c5f",
-      "name": "Swarm Gear Set",
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_bone-collector_685f52",
+      "name": "The Bone Collector",
       "line": "Action Force",
-      "price": 40,
-      "sold_count": 3,
-      "views": 1,
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_swarm-gear-set_307c5f/canonical.jpg",
-      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_swarm-gear-set_307c5f"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_bone-collector_685f52/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_bone-collector_685f52"
     },
     {
-      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-foxtrot_cbebe2",
-      "name": "Weapons Pack Foxtrot",
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_senshi_b94ee7",
+      "name": "Senshi",
       "line": "Action Force",
-      "price": 35,
-      "sold_count": 50,
-      "views": 1,
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-foxtrot_cbebe2/canonical.jpg",
-      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-foxtrot_cbebe2"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_senshi_b94ee7/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_senshi_b94ee7"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-charlie_7c717d",
+      "name": "Weapons Pack Charlie",
+      "line": "Action Force",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-charlie_7c717d/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_weapon-and-gear-packs_weapons-pack-charlie_7c717d"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_sidewinder_d53a6f",
+      "name": "Sidewinder (Dia De Los Muertos)",
+      "line": "Action Force",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_sidewinder_d53a6f/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_sidewinder_d53a6f"
+    },
+    {
+      "figure_id": "fp_action-force_valaverse_action-force_action-figures_blowback_9f0587",
+      "name": "Blowback",
+      "line": "Action Force",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_action-force_valaverse_action-force_action-figures_blowback_9f0587/canonical.jpg",
+      "url": "/figure/fp_action-force_valaverse_action-force_action-figures_blowback_9f0587"
     }
   ]
 }

@@ -1,0 +1,96 @@
+{
+  "fandom": "ufc",
+  "generated_at": "2026-09-18T22:33:30.971Z",
+  "window_days": 30,
+  "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
+  "figures": [
+    {
+      "figure_id": "fp_ufc_jakks-pacific_ufc-series_4_don-frye_2064a7",
+      "name": "Don Frye",
+      "line": "Ufc Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jakks-pacific_ufc-series_4_don-frye_2064a7/canonical.jpg",
+      "url": "/figure/fp_ufc_jakks-pacific_ufc-series_4_don-frye_2064a7"
+    },
+    {
+      "figure_id": "fp_ufc_jazwares_ultimate-collection_0_max-holloway_9aad6e",
+      "name": "Max Holloway",
+      "line": "Ultimate Collection",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jazwares_ultimate-collection_0_max-holloway_9aad6e/canonical.jpg",
+      "url": "/figure/fp_ufc_jazwares_ultimate-collection_0_max-holloway_9aad6e"
+    },
+    {
+      "figure_id": "fp_ufc_jakks-pacific_ufc-series_6_randy-couture_37cd79",
+      "name": "Randy Couture",
+      "line": "Ufc Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jakks-pacific_ufc-series_6_randy-couture_37cd79/canonical.jpg",
+      "url": "/figure/fp_ufc_jakks-pacific_ufc-series_6_randy-couture_37cd79"
+    },
+    {
+      "figure_id": "fp_ufc_jakks-pacific_ufc-series_5_dan-severn_946d48",
+      "name": "Dan Severn",
+      "line": "Ufc Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jakks-pacific_ufc-series_5_dan-severn_946d48/canonical.jpg",
+      "url": "/figure/fp_ufc_jakks-pacific_ufc-series_5_dan-severn_946d48"
+    },
+    {
+      "figure_id": "fp_ufc_jakks-pacific_ufc-series_9_vitor-belfort_26857c",
+      "name": "Vitor Belfort",
+      "line": "Ufc Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jakks-pacific_ufc-series_9_vitor-belfort_26857c/canonical.jpg",
+      "url": "/figure/fp_ufc_jakks-pacific_ufc-series_9_vitor-belfort_26857c"
+    },
+    {
+      "figure_id": "fp_ufc_jazwares_ultimate-collection_1_israel-adesanya_777128",
+      "name": "Israel Adesanya",
+      "line": "Ultimate Collection",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jazwares_ultimate-collection_1_israel-adesanya_777128/canonical.jpg",
+      "url": "/figure/fp_ufc_jazwares_ultimate-collection_1_israel-adesanya_777128"
+    },
+    {
+      "figure_id": "fp_ufc_jakks-pacific_ufc-series_6_thiago-alves_2354c7",
+      "name": "Thiago Alves",
+      "line": "Ufc Series",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jakks-pacific_ufc-series_6_thiago-alves_2354c7/canonical.jpg",
+      "url": "/figure/fp_ufc_jakks-pacific_ufc-series_6_thiago-alves_2354c7"
+    },
+    {
+      "figure_id": "fp_ufc_jazwares_ultimate-collection_0_daniel-cormier_6fd67d",
+      "name": "Daniel Cormier",
+      "line": "Ultimate Collection",
+      "price": null,
+      "sold_count": 0,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ufc_jazwares_ultimate-collection_0_daniel-cormier_6fd67d/canonical.jpg",
+      "url": "/figure/fp_ufc_jazwares_ultimate-collection_0_daniel-cormier_6fd67d"
+    }
+  ]
+}

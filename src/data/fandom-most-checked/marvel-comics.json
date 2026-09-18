@@ -1,96 +1,96 @@
 {
   "fandom": "marvel-comics",
-  "generated_at": "2026-08-16T02:04:05.902Z",
+  "generated_at": "2026-09-18T22:33:30.489Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_fantastic-four_mole-man_45f684",
-      "name": "Mole Man",
-      "line": "Marvel Legends",
-      "price": 50,
-      "sold_count": 5,
-      "views": 4,
-      "flag": "EXCLUSIVE",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_fantastic-four_mole-man_45f684/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_fantastic-four_mole-man_45f684"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895",
-      "name": "Hela",
-      "line": "Marvel Legends",
-      "price": 25,
-      "sold_count": 17,
+      "figure_id": "fp_marvel-comics_mezco_one-12-collective_main-line_doctor-doom_102b92",
+      "name": "Doctor Doom",
+      "line": "One 12 Collective",
+      "price": 360,
+      "sold_count": 42,
       "views": 4,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_thor-ragnarok_hela_2f5895"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_mezco_one-12-collective_main-line_doctor-doom_102b92/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_mezco_one-12-collective_main-line_doctor-doom_102b92"
     },
     {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_spider-man_jack-olantern_01bf79",
-      "name": "Jack O'Lantern",
+      "figure_id": "fp_marvel-comics_mezco_one-12-collective_main-line_gambit_3541b2",
+      "name": "Gambit",
+      "line": "One 12 Collective",
+      "price": 150,
+      "sold_count": 28,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_mezco_one-12-collective_main-line_gambit_3541b2/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_mezco_one-12-collective_main-line_gambit_3541b2"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_blob-baf_x-3-juggernaut_92faed",
+      "name": "X-3 Juggernaut",
       "line": "Marvel Legends",
-      "price": 19,
-      "sold_count": 1,
-      "views": 2,
+      "price": null,
+      "sold_count": 0,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_spider-man_jack-olantern_01bf79/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_spider-man_jack-olantern_01bf79"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_ultron-baf_x-3-juggernaut_92faed/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_blob-baf_x-3-juggernaut_92faed"
     },
     {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_x-men-x-force_boom-boom_5c8829",
-      "name": "Boom-Boom",
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b",
+      "name": "Iron Man MK85 & Thanos Final Battle (Avengers Endgame)",
+      "line": "Marvel Legends Sets",
+      "price": 35,
+      "sold_count": 30,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_spider-man_798cb3",
+      "name": "Spider-Man (Far From Home - Homemade Suit)",
+      "line": "Hot Toys",
+      "price": 325,
+      "sold_count": 46,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_spider-man_798cb3/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_spider-man_798cb3"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685",
+      "name": "Thor (UK)",
       "line": "Marvel Legends",
-      "price": 30,
-      "sold_count": 12,
-      "views": 2,
+      "price": null,
+      "sold_count": 0,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_x-men-x-force_boom-boom_5c8829/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_x-men-x-force_boom-boom_5c8829"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685"
     },
     {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange-multiverse-of_doctor-strange_92ab5b",
-      "name": "Doctor Strange (Astral Form)",
+      "figure_id": "fp_marvel-comics_mafex_mafex_mafex-action-figures_web-man_7afeee",
+      "name": "Web-Man",
+      "line": "Mafex Marvel",
+      "price": null,
+      "sold_count": 0,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_mafex_mafex_mafex-action-figures_web-man_7afeee/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_mafex_mafex_mafex-action-figures_web-man_7afeee"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9",
+      "name": "Mar-Vell",
       "line": "Marvel Legends",
-      "price": 30,
-      "sold_count": 50,
-      "views": 2,
+      "price": 20,
+      "sold_count": 43,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_dr-strange-multiverse-of_doctor-strange_92ab5b/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_dr-strange-multiverse-of_doctor-strange_92ab5b"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_ant-man_wasp_183736",
-      "name": "Wasp",
-      "line": "Marvel Legends",
-      "price": 25,
-      "sold_count": 38,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_ant-man_wasp_183736/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_ant-man_wasp_183736"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_exclusive-multi-packs_spider-man-and-his-amazing-friends-3-pack_a69b7d",
-      "name": "Spider-Man and His Amazing Friends 3 Pack",
-      "line": "Marvel Legends Exclusives",
-      "price": 140,
-      "sold_count": 6,
-      "views": 1,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_exclusive-multi-packs_spider-man-and-his-amazing-friends-3-pack_a69b7d/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_exclusive-multi-packs_spider-man-and-his-amazing-friends-3-pack_a69b7d"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_x-men_shatterstar_6e61df",
-      "name": "Shatterstar",
-      "line": "Marvel Legends",
-      "price": 31,
-      "sold_count": 50,
-      "views": 1,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_x-men_shatterstar_6e61df/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_x-men_shatterstar_6e61df"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9"
     }
   ]
 }

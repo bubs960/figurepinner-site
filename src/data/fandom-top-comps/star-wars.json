@@ -1,28 +1,17 @@
 {
   "fandom": "star-wars",
-  "generated_at": "2026-06-22T00:03:13.698Z",
-  "source": "r2proxy price-summaries (median_sold ?? avg_sold), sold_count>0 only",
+  "generated_at": "2026-09-18T23:05:46.651Z",
+  "source": "r2proxy price-summaries (median_sold ?? avg_sold), sold_count>=3 only",
   "figures": [
-    {
-      "figure_id": "fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_revenge-of-the-jedi-death-star-i_d0fe30",
-      "name": "Revenge of the Jedi (Death Star II) Set",
-      "line": "The Vintage Collection",
-      "price": 2800,
-      "sold_count": 1,
-      "last_sold": null,
-      "flag": "VINTAGE",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_revenge-of-the-jedi-death-star-i_d0fe30/canonical.jpg",
-      "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_revenge-of-the-jedi-death-star-i_d0fe30"
-    },
     {
       "figure_id": "fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-vehicles-and-creatures_jabba-sail-barge_38bd9a",
       "name": "Jabba Sail Barge (The Khetanna)",
       "line": "The Vintage Collection",
       "price": 2150,
-      "sold_count": 38,
+      "sold_count": 39,
       "last_sold": null,
       "flag": "VINTAGE",
-      "image": "https://i.ebayimg.com/images/g/XF8AAeSw7pFqC4bU/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-vehicles-and-creatures_jabba-sail-barge_38bd9a/canonical.jpg",
       "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-vehicles-and-creatures_jabba-sail-barge_38bd9a"
     },
     {
@@ -74,10 +63,10 @@
       "name": "Galaxy's Edge Millennium Falcon Smuggler's Run",
       "line": "The Vintage Collection",
       "price": 850,
-      "sold_count": 38,
+      "sold_count": 37,
       "last_sold": null,
       "flag": "VINTAGE",
-      "image": null,
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hasbro_the-vintage-collection_the-vintage-coll_galaxys-edge-millennium-falcon-s_882c45/canonical.jpg",
       "url": "/figure/fp_star-wars_hasbro_the-vintage-collection_the-vintage-collection-vehicles-and-creatures_galaxy-s-run_9fc480"
     },
     {
@@ -88,7 +77,7 @@
       "sold_count": 31,
       "last_sold": null,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/ZbsAAeSwa5xp-683/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_grand-moff-tarkin-and-darth-vade_5f77da/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_grand-moff-tarkin-and-darth-vade_5f77da"
     },
     {
@@ -96,22 +85,11 @@
       "name": "Grand Moff Tarkin",
       "line": "Hot Toys",
       "price": 795,
-      "sold_count": 41,
+      "sold_count": 43,
       "last_sold": null,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/C4YAAOSwi-hnL4p5/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_grand-moff-tarkin_ce42bf/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_grand-moff-tarkin_ce42bf"
-    },
-    {
-      "figure_id": "fp_star-wars_kenner_vintage-collection_star-wars-vehicles-and-p_tie-fighter_6a5744",
-      "name": "Tie Fighter",
-      "line": "Kenner Vintage Collection",
-      "price": 750,
-      "sold_count": 2,
-      "last_sold": null,
-      "flag": "VINTAGE",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_kenner_vintage-collection_star-wars-vehicles-and-p_tie-fighter_6a5744/canonical.jpg",
-      "url": "/figure/fp_star-wars_kenner_vintage-collection_star-wars-vehicles-and-p_tie-fighter_6a5744"
     },
     {
       "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_crosshair_e6422a",
@@ -121,7 +99,7 @@
       "sold_count": 32,
       "last_sold": null,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/v2gAAeSw2-NqGFf-/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_crosshair_e6422a/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_crosshair_e6422a"
     },
     {
@@ -132,8 +110,30 @@
       "sold_count": 15,
       "last_sold": null,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/-dYAAOSwZVVk8OLS/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_heavy-weapons-clone-trooper-barc_5ae0dd/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_heavy-weapons-clone-trooper-barc_5ae0dd"
+    },
+    {
+      "figure_id": "fp_star-wars_kenner_vintage-collection_power-of-the-force-actio_amanaman_716904",
+      "name": "Amanaman",
+      "line": "Kenner Vintage Collection",
+      "price": 712,
+      "sold_count": 4,
+      "last_sold": null,
+      "flag": "VINTAGE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_kenner_vintage-collection_power-of-the-force-actio_amanaman_716904/canonical.jpg",
+      "url": "/figure/fp_star-wars_kenner_vintage-collection_power-of-the-force-actio_amanaman_716904"
+    },
+    {
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_death-star-gunner_f58f52",
+      "name": "Death Star Gunner",
+      "line": "Hot Toys",
+      "price": 700,
+      "sold_count": 20,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_death-star-gunner_f58f52/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_death-star-gunner_f58f52"
     }
   ]
 }

@@ -1,30 +1,74 @@
 {
   "fandom": "wrestling-jakks",
-  "generated_at": "2026-08-16T02:04:04.467Z",
+  "generated_at": "2026-09-18T22:33:29.942Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_4_rob-conway_cab575",
-      "name": "Rob Conway",
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_1_randy-orton_5e273e",
+      "name": "Randy Orton",
       "line": "Deluxe Aggression",
-      "price": 9,
-      "sold_count": 17,
-      "views": 13,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s4-conway.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_4_rob-conway_cab575"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_17_repo-man_cee8b8",
-      "name": "Repo Man",
-      "line": "Classic Superstars",
-      "price": 60,
-      "sold_count": 7,
+      "price": 25,
+      "sold_count": 4,
       "views": 5,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/img-6293.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_17_repo-man_cee8b8"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s1-randy.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_1_randy-orton_5e273e"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_ex_ric-flair_c3fe2e",
+      "name": "Ric Flair",
+      "line": "Classic Superstars",
+      "price": 30,
+      "sold_count": 50,
+      "views": 5,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20250126_193915080.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_ex_ric-flair_c3fe2e"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_7_jeff-hardy_902aab",
+      "name": "Jeff Hardy",
+      "line": "Deluxe Aggression",
+      "price": 20,
+      "sold_count": 19,
+      "views": 5,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_2411f9c7-3395-43da-bf69-dd3030f8645d.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_7_jeff-hardy_902aab"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ringside-collection_1_vince-mcmahon_e5a03b",
+      "name": "Vince Mcmahon",
+      "line": "Ringside Collection",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ringside-collection_1_vince-mcmahon_e5a03b/canonical.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_ringside-collection_1_vince-mcmahon_e5a03b"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a",
+      "name": "Goldberg",
+      "line": "Ruthless Aggression PPV",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a/canonical.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_4_shelton-benjamin_4908e1",
+      "name": "Shelton Benjamin",
+      "line": "Deluxe Aggression",
+      "price": 16,
+      "sold_count": 7,
+      "views": 4,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s4-shelton-b.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_4_shelton-benjamin_4908e1"
     },
     {
       "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8",
@@ -38,59 +82,15 @@
       "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_7p_undertaker-kane-_7d5cc1",
-      "name": "Undertaker, Kane & Paul Bearer",
-      "line": "Classic Superstars",
-      "price": null,
-      "sold_count": 0,
-      "views": 3,
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_20_ric-flair_3f24ba",
+      "name": "Ric Flair",
+      "line": "Ruthless Aggression",
+      "price": 27,
+      "sold_count": 10,
+      "views": 4,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20230331_232838754_6f6b8c94-d290-4e43-a1df-2416ce9edf9d.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_7p_undertaker-kane-_7d5cc1"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_unmatched-fury_8_matt-hardy_c3f172",
-      "name": "Matt Hardy",
-      "line": "Unmatched Fury",
-      "price": null,
-      "sold_count": 0,
-      "views": 3,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/unmatchedfuryseries8matthardy.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_unmatched-fury_8_matt-hardy_c3f172"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_ecw-series_none_stevie-richards_97376c",
-      "name": "Stevie Richards",
-      "line": "ecw-series",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ecw-series_none_stevie-richards_97376c/canonical.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_ecw-series_none_stevie-richards_97376c"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_legends_1_jimmy-snuka_5985c0",
-      "name": "Jimmy Snuka",
-      "line": "Legends",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_legends_1_jimmy-snuka_5985c0/canonical.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_legends_1_jimmy-snuka_5985c0"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_other_2_rene-dupree_bbf1e1",
-      "name": "Rene Dupree",
-      "line": "other",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_other_2_rene-dupree_bbf1e1/canonical.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_other_2_rene-dupree_bbf1e1"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ruthless-aggression_20_ric-flair_3f24ba/canonical.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_ruthless-aggression_20_ric-flair_3f24ba"
     }
   ]
 }

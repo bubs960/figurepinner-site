@@ -39,6 +39,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { homedir } from 'node:os'
 import vm from 'node:vm'
+import { fetchPriceSnapshot } from './lib/price-snapshot-fetch.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -98,18 +99,10 @@ function rarityFlag(f) {
   return ''
 }
 
-async function fetchSnapshot(figure_id) {
-  try {
-    const res = await fetch(
-      `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
-      { signal: AbortSignal.timeout(8000) },
-    )
-    if (!res.ok) return null
-    return await res.json()
-  } catch {
-    return null
-  }
-}
+// Shared paced/retrying fetch (scripts/lib/price-snapshot-fetch.mjs). Price is OPTIONAL enrichment on
+// this rail (a demand tile is never dropped for lacking one), so an exhausted retry degrades to
+// "no price on the tile" here instead of failing the run -- unlike the three price-ranked builders.
+const fetchSnapshot = (figure_id) => fetchPriceSnapshot(figure_id).catch(() => null)
 
 async function mapLimit(items, limit, fn) {
   const out = new Array(items.length)

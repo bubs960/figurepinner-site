@@ -1,13 +1,13 @@
 {
   "fandom": "masters-of-the-universe",
-  "generated_at": "2026-06-21T03:04:14.409Z",
-  "source": "r2proxy price-summaries, sold_count>0",
+  "generated_at": "2026-09-18T22:55:41.295Z",
+  "source": "r2proxy price-summaries, sold_count>=3",
   "vaults": [
     {
       "line": "Origins",
       "line_slug": "origins",
-      "count": 474,
-      "priced_count": 415,
+      "count": 348,
+      "priced_count": 290,
       "top": [
         {
           "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles-and-playsets_snake-lair-playset_3be4d2",
@@ -16,18 +16,8 @@
           "price": 750,
           "sold_count": 6,
           "flag": "",
-          "image": null,
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles-and-playsets_snake-lair-playset_3be4d2/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles-and-playsets_snake-lair-playset_3be4d2"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_moat-monster_614aa9",
-          "name": "Moat Monster",
-          "line": "Origins",
-          "price": 700,
-          "sold_count": 19,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_moat-monster_614aa9/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles_moat-monster_614aa9"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles-and-playsets_moat-monster_e88ddc",
@@ -40,6 +30,16 @@
           "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-beasts-vehicles-and-playsets_moat-monster_e88ddc"
         },
         {
+          "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-exclusives_eternia-playset_e63fa8",
+          "name": "Eternia Playset",
+          "line": "Origins",
+          "price": 445,
+          "sold_count": 50,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-exclusives_eternia-playset_e63fa8/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-exclusives_eternia-playset_e63fa8"
+        },
+        {
           "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-exclusives_shogun-masters-skeletor_710e6b",
           "name": "Shogun Masters Skeletor",
           "line": "Origins",
@@ -50,16 +50,6 @@
           "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-exclusives_shogun-masters-skeletor_710e6b"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-deluxe_beast-man_038640",
-          "name": "Beast Man (Deluxe)",
-          "line": "Origins",
-          "price": 375,
-          "sold_count": 3,
-          "flag": "",
-          "image": "https://i.ebayimg.com/images/g/ARMAAOSwoRFnWJxJ/s-l225.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-deluxe_beast-man_038640"
-        },
-        {
           "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-exclusives_faker-and-dupli-cat_0b4849",
           "name": "Faker and Dupli-Cat",
           "line": "Origins",
@@ -68,6 +58,16 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-exclusives_faker-and-dupli-cat_0b4849/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-exclusives_faker-and-dupli-cat_0b4849"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_origins_origins-exclusives_shogun-masters-skeletor_553424",
+          "name": "Shogun Masters Skeletor (Dark Malice Edition)",
+          "line": "Origins",
+          "price": 310,
+          "sold_count": 41,
+          "flag": "EXCLUSIVE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_origins_origins-exclusives_shogun-masters-skeletor_553424/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_origins_origins-exclusives_shogun-masters-skeletor_553424"
         }
       ]
     },
@@ -75,75 +75,75 @@
       "line": "Mattel Classics",
       "line_slug": "classics",
       "count": 210,
-      "priced_count": 180,
+      "priced_count": 99,
       "top": [
         {
           "figure_id": "fp_masters-of-the-universe_mattel_classics_creatures_granamyr_f2d5ef",
           "name": "Granamyr",
           "line": "Mattel Classics",
           "price": 850,
-          "sold_count": 7,
+          "sold_count": 6,
           "flag": "MOTUC",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_creatures_granamyr_f2d5ef/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_classics_creatures_granamyr_f2d5ef"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_mattel_classics_vehicles-and-playsets_castle-grayskull_02f337",
-          "name": "Castle Grayskull",
-          "line": "Mattel Classics",
-          "price": 750,
-          "sold_count": 2,
-          "flag": "MOTUC",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_vehicles-and-playsets_castle-grayskull_02f337/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_classics_vehicles-and-playsets_castle-grayskull_02f337"
-        },
-        {
           "figure_id": "fp_masters-of-the-universe_mattel_classics_creatures_granamyr_9811c4",
           "name": "Granamyr (Green)",
           "line": "Mattel Classics",
-          "price": 436,
-          "sold_count": 31,
+          "price": 465,
+          "sold_count": 37,
           "flag": "MOTUC",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_creatures_granamyr_9811c4/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_classics_creatures_granamyr_9811c4"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_classics_packs_stonedar-and-rokkon_e853c2",
-          "name": "Stonedar and Rokkon",
-          "line": "Mattel Classics",
-          "price": 200,
-          "sold_count": 2,
-          "flag": "MOTUC",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_packs_stonedar-and-rokkon_e853c2/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_classics_packs_stonedar-and-rokkon_e853c2"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_classics_creatures_swiftwind_408b88",
           "name": "Swiftwind",
           "line": "Mattel Classics",
           "price": 197,
-          "sold_count": 23,
+          "sold_count": 22,
           "flag": "MOTUC",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_creatures_swiftwind_408b88/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_classics_creatures_swiftwind_408b88"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_mattel_classics_heroic-warriors_ram-man_b72dd1",
-          "name": "Ram Man",
+          "figure_id": "fp_masters-of-the-universe_mattel_classics_vehicles-and-playsets_roton_5e9696",
+          "name": "Roton",
           "line": "Mattel Classics",
-          "price": 189,
+          "price": 160,
+          "sold_count": 17,
+          "flag": "MOTUC",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_vehicles-and-playsets_roton_5e9696/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_classics_vehicles-and-playsets_roton_5e9696"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_classics_evil-warriors_scareglow_b619a8",
+          "name": "Scareglow",
+          "line": "Mattel Classics",
+          "price": 150,
+          "sold_count": 39,
+          "flag": "MOTUC",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_evil-warriors_scareglow_b619a8/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_classics_evil-warriors_scareglow_b619a8"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_classics_heroic-warriors_queen-marlena_39d44e",
+          "name": "Queen Marlena",
+          "line": "Mattel Classics",
+          "price": 150,
           "sold_count": 3,
           "flag": "MOTUC",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_heroic-warriors_ram-man_b72dd1/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_classics_heroic-warriors_ram-man_b72dd1"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_classics_heroic-warriors_queen-marlena_39d44e/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_classics_heroic-warriors_queen-marlena_39d44e"
         }
       ]
     },
     {
       "line": "Original",
       "line_slug": "original",
-      "count": 198,
-      "priced_count": 135,
+      "count": 191,
+      "priced_count": 126,
       "top": [
         {
           "figure_id": "fp_masters-of-the-universe_mattel_original_original-vehicles-and-playsets_royal-swift-wind_970a47",
@@ -154,16 +154,6 @@
           "flag": "VINTAGE",
           "image": null,
           "url": "/figure/fp_masters-of-the-universe_mattel_original_original-vehicles-and-playsets_royal-swift-wind_970a47"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_original_original-vehicles-and-playsets_thunder-punch-ammo_b5da47",
-          "name": "Thunder Punch Ammo",
-          "line": "Original",
-          "price": 345,
-          "sold_count": 2,
-          "flag": "VINTAGE",
-          "image": null,
-          "url": "/figure/fp_masters-of-the-universe_mattel_original_original-vehicles-and-playsets_thunder-punch-ammo_b5da47"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_original_original-vehicles-and-pl_turbodactyl_ff1a01",
@@ -204,25 +194,25 @@
           "flag": "VINTAGE",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_original_original-vehicles-and-pl_monstroid_076add/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_original_original-vehicles-and-pl_monstroid_076add"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_original_original-vehicles-and-playsets_sea-harp_b0bb00",
+          "name": "Sea Harp",
+          "line": "Original",
+          "price": 150,
+          "sold_count": 3,
+          "flag": "VINTAGE",
+          "image": null,
+          "url": "/figure/fp_masters-of-the-universe_mattel_original_original-vehicles-and-playsets_sea-harp_b0bb00"
         }
       ]
     },
     {
       "line": "Masterverse",
       "line_slug": "masterverse",
-      "count": 167,
-      "priced_count": 140,
+      "count": 162,
+      "priced_count": 100,
       "top": [
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_masterverse_new-eternia_mer-man_d00af1",
-          "name": "Mer-Man",
-          "line": "Masterverse",
-          "price": 150,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_new-eternia_mer-man_d00af1/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_new-eternia_mer-man_d00af1"
-        },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_masterverse_movie_beastman_ec1d9f",
           "name": "Beastman (1987 Movie)",
@@ -237,21 +227,11 @@
           "figure_id": "fp_masters-of-the-universe_mattel_masterverse_40th-anniversary_he-man-vs-skeletor_f46947",
           "name": "He-Man vs Skeletor",
           "line": "Masterverse",
-          "price": 120,
+          "price": 125,
           "sold_count": 50,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_40th-anniversary_he-man-vs-skeletor_f46947/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_40th-anniversary_he-man-vs-skeletor_f46947"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_masterverse_new-eternia_king-randor_240263",
-          "name": "King Randor",
-          "line": "Masterverse",
-          "price": 113,
-          "sold_count": 3,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_new-eternia_king-randor_240263/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_new-eternia_king-randor_240263"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_masterverse_revolution_sorceress-teela_09b910",
@@ -260,7 +240,7 @@
           "price": 110,
           "sold_count": 50,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/PDkAAeSwpZhqF8Th/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_revolution_sorceress-teela_09b910/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_revolution_sorceress-teela_09b910"
         },
         {
@@ -272,14 +252,34 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_revelation-deluxe_skeletor-and-havoc-throne_05af3a/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_revelation-deluxe_skeletor-and-havoc-throne_05af3a"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_masterverse_revolution_sorceress-teela_bfb2ff",
+          "name": "Sorceress Teela",
+          "line": "Masterverse",
+          "price": 98,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_revolution_sorceress-teela_bfb2ff/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_revolution_sorceress-teela_bfb2ff"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_masterverse_movie_blade_93ba8a",
+          "name": "Blade (1987)",
+          "line": "Masterverse",
+          "price": 90,
+          "sold_count": 7,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_masterverse_movie_blade_93ba8a/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_masterverse_movie_blade_93ba8a"
         }
       ]
     },
     {
       "line": "Mattel 200x",
       "line_slug": "mattel-200x",
-      "count": 126,
-      "priced_count": 100,
+      "count": 101,
+      "priced_count": 58,
       "top": [
         {
           "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_action-figures_he-man-vs-skeletor-gift-set_f681b4",
@@ -290,36 +290,6 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_he-man-vs-skeletor-gift-set_f681b4/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_he-man-vs-skeletor-gift-set_f681b4"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_creatures_battle-bones-transport_163847",
-          "name": "Battle Bones Transport",
-          "line": "Mattel 200x",
-          "price": 135,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-200x_creatures_battle-bones-transport_163847/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_creatures_battle-bones-transport_163847"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_action-figures_he-man_ede8eb",
-          "name": "He-Man",
-          "line": "Mattel 200x",
-          "price": 90,
-          "sold_count": 23,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_he-man_ede8eb/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_he-man_ede8eb"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_vehicles-playsets_he-man-battle-station_0b4ab9",
-          "name": "He-Man Battle Station",
-          "line": "Mattel 200x",
-          "price": 71,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-200x_vehicles-playsets_he-man-battle-station_0b4ab9/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_vehicles-playsets_he-man-battle-station_0b4ab9"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_action-figures_faker_ec633d",
@@ -340,55 +310,113 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_king-hssss_20e27f/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_king-hssss_20e27f"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_action-figures_king-hssss_0628e4",
+          "name": "King Hssss (Snakemen)",
+          "line": "Mattel 200x",
+          "price": 50,
+          "sold_count": 16,
+          "flag": "",
+          "image": null,
+          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_king-hssss_0628e4"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_action-figures_battle-fist_5bce90",
+          "name": "Battle Fist (Snakemen)",
+          "line": "Mattel 200x",
+          "price": 40,
+          "sold_count": 15,
+          "flag": "",
+          "image": null,
+          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_battle-fist_5bce90"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_mattel-200x_action-figures_evil-lyn_e31c2b",
+          "name": "Evil-Lyn",
+          "line": "Mattel 200x",
+          "price": 36,
+          "sold_count": 4,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_evil-lyn_e31c2b/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-200x_action-figures_evil-lyn_e31c2b"
+        }
+      ]
+    },
+    {
+      "line": "Super7",
+      "line_slug": "super7",
+      "count": 90,
+      "priced_count": 82,
+      "top": [
+        {
+          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_dylamug_a4b7a0",
+          "name": "Dylamug (Collector's Choice)",
+          "line": "Super7",
+          "price": 185,
+          "sold_count": 4,
+          "flag": "",
+          "image": null,
+          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_dylamug_a4b7a0"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_wrap-trap_c3688b",
+          "name": "Wrap Trap (Collector's Choice)",
+          "line": "Super7",
+          "price": 173,
+          "sold_count": 5,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_super7_super7_classics_wrap-trap_c3688b/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_wrap-trap_c3688b"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_snake-mountain_36a962",
+          "name": "Snake Mountain",
+          "line": "Super7",
+          "price": 120,
+          "sold_count": 25,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_super7_super7_classics_snake-mountain_36a962/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_snake-mountain_36a962"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_granita_9c3139",
+          "name": "Granita (Collector's Choice)",
+          "line": "Super7",
+          "price": 120,
+          "sold_count": 6,
+          "flag": "",
+          "image": null,
+          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_granita_9c3139"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_super7_super7_club-grayskull_chopper_00a0ef",
+          "name": "Chopper (Jitsu)",
+          "line": "Super7",
+          "price": 98,
+          "sold_count": 6,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_super7_super7_club-grayskull_chopper_00a0ef/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_super7_super7_club-grayskull_chopper_00a0ef"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_quakke_1fb688",
+          "name": "Quakke",
+          "line": "Super7",
+          "price": 93,
+          "sold_count": 30,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_super7_super7_classics_quakke_1fb688/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_quakke_1fb688"
         }
       ]
     },
     {
       "line": "Eternia Minis",
       "line_slug": "eternia-minis",
-      "count": 96,
-      "priced_count": 71,
+      "count": 84,
+      "priced_count": 52,
       "top": [
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_he-man-vs-skeletor_cada35",
-          "name": "He-Man vs Skeletor (SDCC)",
-          "line": "Eternia Minis",
-          "price": 29,
-          "sold_count": 20,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_he-man-vs-skeletor_cada35/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_he-man-vs-skeletor_cada35"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_trap-jaw_a59e72",
-          "name": "Trap Jaw",
-          "line": "Eternia Minis",
-          "price": 18,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_trap-jaw_a59e72/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_trap-jaw_a59e72"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-playsets_he-man-and-battle-cat_a32167",
-          "name": "He-Man and Battle Cat (Netflix)",
-          "line": "Eternia Minis",
-          "price": 17,
-          "sold_count": 4,
-          "flag": "",
-          "image": "https://i.ebayimg.com/images/g/LJQAAeSwlWhqI15y/s-l225.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-playsets_he-man-and-battle-cat_a32167"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_beast-man_954ab0",
-          "name": "Beast Man",
-          "line": "Eternia Minis",
-          "price": 15,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_beast-man_954ab0/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_beast-man_954ab0"
-        },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_ram-man_b118df",
           "name": "Ram Man (Anti-Eternia)",
@@ -408,82 +436,54 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_621d46/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_621d46"
-        }
-      ]
-    },
-    {
-      "line": "Super7",
-      "line_slug": "super7",
-      "count": 94,
-      "priced_count": 89,
-      "top": [
+        },
         {
-          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_dylamug_a4b7a0",
-          "name": "Dylamug (Collector's Choice)",
-          "line": "Super7",
-          "price": 185,
+          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_ram-man_45ec4e",
+          "name": "Ram Man (Anti-Eternia)",
+          "line": "Eternia Minis",
+          "price": 15,
           "sold_count": 4,
           "flag": "",
-          "image": null,
-          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_dylamug_a4b7a0"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_ram-man_45ec4e/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_ram-man_45ec4e"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_wrap-trap_c3688b",
-          "name": "Wrap Trap (Collector's Choice)",
-          "line": "Super7",
-          "price": 173,
+          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_94f24b",
+          "name": "Sorceress (Revelation)",
+          "line": "Eternia Minis",
+          "price": 15,
           "sold_count": 5,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/wSoAAeSw4WVoQZHj/s-l225.jpg",
-          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_wrap-trap_c3688b"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_94f24b/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-action-figures_sorceress_94f24b"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_super7_super7_club-grayskull_she-ra_d71c6a",
-          "name": "She-Ra",
-          "line": "Super7",
-          "price": 120,
+          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_eternia-minis-4-pack_36439d",
+          "name": "Eternia Minis 4 pack (Grayskull)",
+          "line": "Eternia Minis",
+          "price": 14,
+          "sold_count": 6,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_eternia-minis-4-pack_36439d/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_eternia-minis-4-pack_36439d"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_eternia-minis-4-pack_776cc4",
+          "name": "Eternia Minis 4 pack (Snake Mountain)",
+          "line": "Eternia Minis",
+          "price": 14,
           "sold_count": 3,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_super7_super7_club-grayskull_she-ra_d71c6a/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_super7_super7_club-grayskull_she-ra_d71c6a"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_super7_super7_classics_granita_9c3139",
-          "name": "Granita (Collector's Choice)",
-          "line": "Super7",
-          "price": 120,
-          "sold_count": 6,
-          "flag": "",
-          "image": null,
-          "url": "/figure/fp_masters-of-the-universe_super7_super7_classics_granita_9c3139"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_super7_super7_ultimate_skeletor_4b5a72",
-          "name": "Skeletor",
-          "line": "Super7",
-          "price": 100,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_super7_super7_ultimate_skeletor_4b5a72/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_super7_super7_ultimate_skeletor_4b5a72"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_super7_super7_club-grayskull_chopper_00a0ef",
-          "name": "Chopper (Jitsu)",
-          "line": "Super7",
-          "price": 98,
-          "sold_count": 6,
-          "flag": "",
-          "image": "https://i.ebayimg.com/images/g/YmwAAeSw78FpgUoL/s-l225.jpg",
-          "url": "/figure/fp_masters-of-the-universe_super7_super7_club-grayskull_chopper_00a0ef"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_eternia-minis-4-pack_776cc4/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_eternia-minis_eternia-vehicles-and-pla_eternia-minis-4-pack_776cc4"
         }
       ]
     },
     {
       "line": "Mondo",
       "line_slug": "mondo",
-      "count": 83,
-      "priced_count": 77,
+      "count": 60,
+      "priced_count": 55,
       "top": [
         {
           "figure_id": "fp_masters-of-the-universe_mondo_mondo_action-figures_swift-wind_c785de",
@@ -502,7 +502,7 @@
           "price": 1800,
           "sold_count": 5,
           "flag": "",
-          "image": null,
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mondo_mondo_action-figures_swift-wind-she-ra_768fa0/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_swift-wind-she-ra_768fa0"
         },
         {
@@ -510,20 +510,10 @@
           "name": "Anti-Eternia Battle Cat",
           "line": "Mondo",
           "price": 950,
-          "sold_count": 19,
+          "sold_count": 22,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mondo_mondo_action-figures_anti-eternia-battle-cat_edf14a/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_anti-eternia-battle-cat_edf14a"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mondo_mondo_action-figures_the-goddess_ddd166",
-          "name": "The Goddess (Timed Edition)",
-          "line": "Mondo",
-          "price": 667,
-          "sold_count": 1,
-          "flag": "",
-          "image": null,
-          "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_the-goddess_ddd166"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mondo_mondo_action-figures_goddess_4c4bc6",
@@ -536,14 +526,24 @@
           "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_goddess_4c4bc6"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_mondo_mondo_action-figures_panthor_ac5074",
+          "figure_id": "fp_masters-of-the-universe_mondo_mondo_action-figures_panthor_91b43c",
           "name": "Panthor (Timed Edition)",
           "line": "Mondo",
           "price": 625,
-          "sold_count": 34,
+          "sold_count": 17,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mondo_mondo_action-figures_panthor_ac5074/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_panthor_ac5074"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mondo_mondo_action-figures_panthor_91b43c/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_panthor_91b43c"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mondo_mondo_action-figures_scare-mare_6744d4",
+          "name": "Scare-Mare (Deluxe)",
+          "line": "Mondo",
+          "price": 600,
+          "sold_count": 12,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mondo_mondo_action-figures_scare-mare_6744d4/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mondo_mondo_action-figures_scare-mare_6744d4"
         }
       ]
     },
@@ -551,28 +551,8 @@
       "line": "New Adventures of He-Man",
       "line_slug": "new-adventures-of-he-man",
       "count": 38,
-      "priced_count": 12,
+      "priced_count": 6,
       "top": [
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_missile-armor-icarius_6f5170",
-          "name": "Missile Armor Icarius",
-          "line": "New Adventures of He-Man",
-          "price": 333,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://i.ebayimg.com/images/g/fpEAAOSw9YJk5Mtn/s-l225.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_missile-armor-icarius_6f5170"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_hook-em-brakk_d07a13",
-          "name": "Hook Em' Brakk",
-          "line": "New Adventures of He-Man",
-          "price": 292,
-          "sold_count": 2,
-          "flag": "",
-          "image": null,
-          "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_hook-em-brakk_d07a13"
-        },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_lizorr_1ef79f",
           "name": "Lizorr",
@@ -580,7 +560,7 @@
           "price": 278,
           "sold_count": 4,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/xXMAAeSw2OtpGQsm/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_lizorr_1ef79f/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_lizorr_1ef79f"
         },
         {
@@ -590,27 +570,47 @@
           "price": 75,
           "sold_count": 18,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/P10AAeSwAxtqFcQs/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_sagitar_cb1f9c/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_sagitar_cb1f9c"
         },
         {
-          "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_battle-punch-he-man_322105",
-          "name": "Battle Punch He-Man",
+          "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_he-man_26d1a4",
+          "name": "He-Man",
           "line": "New Adventures of He-Man",
-          "price": 44,
-          "sold_count": 2,
+          "price": 60,
+          "sold_count": 4,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/u1oAAeSwg6BqC1bh/s-l225.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_battle-punch-he-man_322105"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_he-man_26d1a4/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_he-man_26d1a4"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_thunder-punch-he-man_9cce42",
+          "name": "Thunder Punch He-Man",
+          "line": "New Adventures of He-Man",
+          "price": 25,
+          "sold_count": 11,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_thunder-punch-he-man_9cce42/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_thunder-punch-he-man_9cce42"
+        },
+        {
+          "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_nocturna_c90c2b",
+          "name": "Nocturna",
+          "line": "New Adventures of He-Man",
+          "price": 20,
+          "sold_count": 5,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_nocturna_c90c2b/canonical.jpg",
+          "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_nocturna_c90c2b"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_skeletor_caf83a",
           "name": "Skeletor",
           "line": "New Adventures of He-Man",
-          "price": 41,
-          "sold_count": 50,
+          "price": 10,
+          "sold_count": 3,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/7YQAAeSwANdqFcTb/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_skeletor_caf83a/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_new-adventures-of-he-man_action-figures_skeletor_caf83a"
         }
       ]
@@ -618,8 +618,8 @@
     {
       "line": "Mattel Chronicles",
       "line_slug": "mattel-chronicles",
-      "count": 11,
-      "priced_count": 4,
+      "count": 10,
+      "priced_count": 3,
       "top": [
         {
           "figure_id": "fp_masters-of-the-universe_mattel_mattel-chronicles_movie-action-figures_ram-man-fisto_10bd7b",
@@ -628,18 +628,8 @@
           "price": 68,
           "sold_count": 14,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/yP8AAeSw5bBqCfHE/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-chronicles_movie-action-figures_ram-man-fisto_10bd7b/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_mattel-chronicles_movie-action-figures_ram-man-fisto_10bd7b"
-        },
-        {
-          "figure_id": "fp_masters-of-the-universe_mattel_mattel-chronicles_movie-action-figures_he-man_0f5db1",
-          "name": "He-Man",
-          "line": "Mattel Chronicles",
-          "price": 49,
-          "sold_count": 8,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-chronicles_movie-action-figures_he-man_0f5db1/canonical.jpg",
-          "url": "/figure/fp_masters-of-the-universe_mattel_mattel-chronicles_movie-action-figures_he-man_0f5db1"
         },
         {
           "figure_id": "fp_masters-of-the-universe_mattel_mattel-chronicles_core-non-movie-action-figures_scare-glow_f41c78",
@@ -648,7 +638,7 @@
           "price": 48,
           "sold_count": 50,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/AbEAAeSw44JqE2cr/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-chronicles_core-non-movie-action-figures_scare-glow_f41c78/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_mattel-chronicles_core-non-movie-action-figures_scare-glow_f41c78"
         },
         {
@@ -658,7 +648,7 @@
           "price": 44,
           "sold_count": 34,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/QH4AAeSwQvFqIZkk/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_masters-of-the-universe_mattel_mattel-chronicles_core-non-movie-action-figures_skeletor_59e833/canonical.jpg",
           "url": "/figure/fp_masters-of-the-universe_mattel_mattel-chronicles_core-non-movie-action-figures_skeletor_59e833"
         }
       ]

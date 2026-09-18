@@ -1,30 +1,74 @@
 {
   "fandom": "ghostbusters",
-  "generated_at": "2026-08-16T02:04:06.928Z",
+  "generated_at": "2026-09-18T22:33:31.144Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-2_dbc7af",
-      "name": "ECTO-2",
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_ghosts-goblins_brain-blaster-ghost_553149",
+      "name": "Brain Blaster Ghost",
       "line": "Kenner Ghostbusters",
       "price": null,
       "sold_count": 0,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-2_dbc7af/canonical.jpg",
-      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-2_dbc7af"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_ghosts-goblins_brain-blaster-ghost_553149/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_ghosts-goblins_brain-blaster-ghost_553149"
     },
     {
-      "figure_id": "fp_ghostbusters_hasbro_hasbro-ghostbusters_roleplay_spengler-s-proton-pack_b0c177",
-      "name": "Spengler’s Proton Pack",
-      "line": "Hasbro Ghostbusters",
-      "price": 790,
-      "sold_count": 20,
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-1_77e1a0",
+      "name": "ECTO-1",
+      "line": "Kenner Ghostbusters",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-1_77e1a0/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-1_77e1a0"
+    },
+    {
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_air-sickness_acba3d",
+      "name": "Air Sickness (Haunted Vehicles)",
+      "line": "Kenner Ghostbusters",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_air-sickness_acba3d/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_air-sickness_acba3d"
+    },
+    {
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_playsets_banshee-bomber_6e5813",
+      "name": "Banshee Bomber (Gooper Ghost)",
+      "line": "Kenner Ghostbusters",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_playsets_banshee-bomber_6e5813/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_playsets_banshee-bomber_6e5813"
+    },
+    {
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-1a_ac7212",
+      "name": "ECTO-1A",
+      "line": "Kenner Ghostbusters",
+      "price": null,
+      "sold_count": 0,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-1a_ac7212/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_ecto-1a_ac7212"
+    },
+    {
+      "figure_id": "fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_highway-haunter_fce2a5",
+      "name": "Highway Haunter",
+      "line": "Kenner Ghostbusters",
+      "price": null,
+      "sold_count": 0,
       "views": 1,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_hasbro_hasbro-ghostbusters_roleplay_spengler-s-proton-pack_b0c177/canonical.jpg",
-      "url": "/figure/fp_ghostbusters_hasbro_hasbro-ghostbusters_roleplay_spengler-s-proton-pack_b0c177"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_highway-haunter_fce2a5/canonical.jpg",
+      "url": "/figure/fp_ghostbusters_kenner_kenner-ghostbusters_vehicles_highway-haunter_fce2a5"
     }
   ]
 }
