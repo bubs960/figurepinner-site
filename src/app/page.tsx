@@ -25,8 +25,13 @@ import { thumb } from '@/lib/imageUrl'
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-  title: { absolute: 'Action Figure Price Guide — Real Sold Prices | FigurePinner' },
-  description: `Search real eBay sold prices for ${TOTAL_FIGURES_LABEL} action figures across WWE, Star Wars, Marvel, DC and more. Know what yours is worth before you buy or sell.`,
+  // SERP copy tuned to the queries Bing actually shows the homepage for
+  // (GetPageQueryStats, 2026-09-18): 'action figure price guide' / 'value guide' /
+  // 'prices' / 'price list' / 'price checker' — all pos 4-8, ~0 clicks. 'Values'
+  // and 'Free' were the missing words. Keep <= 70 chars (tests/fitTitle gate is
+  // guides-only; this one is checked by hand: 68).
+  title: { absolute: 'Action Figure Price Guide & Values — Real Sold Prices | FigurePinner' },
+  description: `Free action figure price guide: real eBay sold prices and values for ${TOTAL_FIGURES_LABEL} figures — WWE, Star Wars, Marvel, DC, Transformers, G.I. Joe. See what yours is worth.`,
   alternates: { canonical: 'https://figurepinner.com' },
 }
 
