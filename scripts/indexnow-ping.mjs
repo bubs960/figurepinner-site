@@ -41,6 +41,7 @@
 import { readFileSync, existsSync, appendFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { loadBwtConfig, submitViaBwt } from './lib/bwt-submit.mjs'
+import { fetchBingPageStats, rankPriorityUrls, pickPriority, nextPriorityState, PRIORITY_SLOTS } from './lib/bwt-priority.mjs'
 
 const KEY = '6d21e3af4a7a44f9a1a0c0fba6518a49'
 const HOST = 'figurepinner.com'
@@ -79,6 +80,12 @@ const DELTA = args.includes('--delta')
 const DELTA_DAILY_CAP = 100
 const DELTA_LEDGER = '.indexnow-ledger.jsonl' // repo root, gitignored, machine-local
 const DELTA_CARRY = '.indexnow-carry.txt' // overflow URLs, one per line, consumed next run
+// AMENDED 2026-09-18 (Steve, web chat): up to PRIORITY_SLOTS of the daily cap go
+// to pages Bing already ranks at positions 4-15, ahead of the changed-fid delta
+// (14-day per-URL cooldown, sitemap-emitted canonical URLs only). This narrows
+// the "changed/new URLs only … never the priority pad" term above for those
+// rank-priority URLs alone; the static PRIORITY_URLS pad still never rides delta.
+const PRIORITY_STATE = '.bwt-priority-state.json' // repo root, gitignored, machine-local: { url: lastSubmittedDay }
 const SLIM_KB = 'src/data/figures-reference-v2.slim.js'
 const PRETTY_MAP = 'src/data/figureIdToPrettyPath.generated.json'
 const LOCAL_CHILD_SITEMAP_DIR = '.next/server/app/sitemap'
@@ -506,6 +513,47 @@ function getDeltaUrls(cursorSha) {
   return { urls, headSha, carriedIn: carriedIn.length, freshFids: fresh.length }
 }
 
+// ── rank-priority slots (2026-09-18) — see scripts/lib/bwt-priority.mjs ───────
+function readPriorityState() {
+  try {
+    return existsSync(PRIORITY_STATE) ? JSON.parse(readFileSync(PRIORITY_STATE, 'utf8')) : {}
+  } catch {
+    return {} // unreadable state = everything eligible; the daily cap still bounds it
+  }
+}
+
+function writePriorityState(state) {
+  try {
+    writeFileSync(PRIORITY_STATE, JSON.stringify(state, null, 0) + '\n')
+  } catch (err) {
+    console.warn('[IndexNow] could not write ' + PRIORITY_STATE + ' (non-fatal): ' + err.message)
+  }
+}
+
+/** URLs Bing ranks 4-15, cooled down, capped — or [] (no key, no room, API/source failure). Never throws. */
+async function sourceRankPriority(today, room) {
+  try {
+    if (room <= 0) return []
+    const bwt = loadBwtConfig()
+    if (!bwt) return []
+    const prettyByFid = readJsonOrNull(PRETTY_MAP)
+    const aboveBar = localSitemapUrlSet()
+    if (!prettyByFid || !aboveBar) return []
+    const stats = await fetchBingPageStats(bwt)
+    if (stats.error) {
+      console.warn('[IndexNow] rank-priority: ' + stats.error + ' — skipped tonight (non-fatal)')
+      return []
+    }
+    const ranked = rankPriorityUrls(stats.rows, { host: HOST, prettyByFid, aboveBar })
+    const picks = pickPriority(ranked, readPriorityState(), { today, slots: Math.min(PRIORITY_SLOTS, room) })
+    console.log('[IndexNow] rank-priority: Bing ranks ' + ranked.length + ' sitemap URL(s) at pos 4-15; ' + picks.length + ' eligible tonight (cooldown 14 d, max ' + PRIORITY_SLOTS + ')')
+    return picks
+  } catch (err) {
+    console.warn('[IndexNow] rank-priority failed (non-fatal): ' + err.message)
+    return []
+  }
+}
+
 async function pingDelta() {
   RUN_MODE = 'delta'
   const { today, sentToday, cursor } = readLedger()
@@ -516,15 +564,25 @@ async function pingDelta() {
     return
   }
   const room = Math.max(0, DELTA_DAILY_CAP - sentToday)
-  const toSend = delta.urls.slice(0, room)
-  const carryOut = delta.urls.slice(room)
+  // Rank-priority slots first (scripts/lib/bwt-priority.mjs — Steve 2026-09-18):
+  // pages Bing already ranks 4-15 go ahead of the changed-fid delta. They are
+  // re-derived from Bing's API every night and cooled down per URL, so they are
+  // never written to the carry file. No BWT key / API failure -> [] -> the
+  // night runs exactly as before.
+  const priority = await sourceRankPriority(today, room)
+  const prioritySet = new Set(priority)
+  const deltaOnly = delta.urls.filter((u) => !prioritySet.has(u))
+  const deltaRoom = Math.max(0, room - priority.length)
+  const deltaPart = deltaOnly.slice(0, deltaRoom)
+  const toSend = [...priority, ...deltaPart]
+  const carryOut = deltaOnly.slice(deltaRoom)
   console.log(
     '[IndexNow] delta: cap ' + DELTA_DAILY_CAP + '/UTC-day, already sent today ' + sentToday + ', room ' + room +
-      ' -> sending ' + toSend.length + ', carrying ' + carryOut.length,
+      ' -> sending ' + toSend.length + ' (' + priority.length + ' rank-priority + ' + deltaPart.length + ' delta), carrying ' + carryOut.length,
   )
 
   if (DRY_RUN) {
-    console.log('[IndexNow] dry run: would submit ' + toSend.length + ' URL(s); first 3: ' + toSend.slice(0, 3).join(' , '))
+    console.log('[IndexNow] dry run: would submit ' + toSend.length + ' URL(s); first 3 rank-priority: ' + (priority.slice(0, 3).join(' , ') || '(none)') + ' | first 3 delta: ' + deltaPart.slice(0, 3).join(' , '))
     console.log('[IndexNow] Done.')
     return
   }
@@ -542,12 +600,15 @@ async function pingDelta() {
     return
   }
 
-  const sample = toSend.find((u) => u.includes('/figure/')) ?? toSend[0]
+  // Sample from the delta part when there is one, so the gate probes the same
+  // kind of page it always has (rank-priority URLs are often guide hubs).
+  const sample = deltaPart.find((u) => u.includes('/figure/')) ?? deltaPart[0] ?? toSend[0]
   if (!servingGatePasses(sample)) {
     // Not our deploy at the edge yet: do not burn the freshness signal. Keep
-    // the URLs for tomorrow (prepend to carry) and log it. Never aborts.
+    // the delta URLs for tomorrow (prepend to carry) and log it. Never aborts.
+    // Rank-priority URLs are not carried — tomorrow's API read re-derives them.
     try {
-      writeFileSync(DELTA_CARRY, [...toSend, ...carryOut].join('\n') + '\n')
+      writeFileSync(DELTA_CARRY, [...deltaPart, ...carryOut].join('\n') + '\n')
     } catch {}
     writeLedger({ day: today, mode: 'delta', sent: 0, status: 'serving-gate-failed', carried: toSend.length + carryOut.length })
     return
@@ -579,13 +640,18 @@ async function pingDelta() {
   // Everything sent = accepted. A partial BWT night keeps the cursor where it
   // was and carries the unsent remainder, so nothing is dropped or double-counted.
   const accepted = sentUrls.length === toSend.length
-  const unsent = toSend.slice(sentUrls.length)
+  // Only delta URLs go back on the carry; an unsent rank-priority URL is simply
+  // eligible again tomorrow (its cooldown stamp is written only when sent).
+  const unsent = toSend.slice(sentUrls.length).filter((u) => !prioritySet.has(u))
+  const prioritySent = sentUrls.filter((u) => prioritySet.has(u))
+  if (prioritySent.length) writePriorityState(nextPriorityState(readPriorityState(), prioritySent, today))
   writeLedger({
     day: today,
     mode: 'delta',
     via,
     sent: sentUrls.length,
     attempted: toSend.length,
+    prioritySent: prioritySent.length,
     status,
     ...(via === 'bwt' ? { indexNowStatus, ...(bwtNote ? { note: bwtNote } : {}) } : {}),
     carried: carryOut.length + unsent.length,

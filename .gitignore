@@ -100,3 +100,6 @@ src/data/figures-reference-v2.js.backup-pre-sync
 # IndexNow --delta ledger + carry (2026-09-11 reinstatement; machine-local, R18 operational)
 /.indexnow-ledger.jsonl
 /.indexnow-carry.txt
+# rank-priority cooldown stamps for the nightly Bing URL submission (scripts/lib/bwt-priority.mjs);
+# machine-local like the ledger above. MUST stay ignored: an untracked copy fails the train's dirty-tree guard.
+/.bwt-priority-state.json
