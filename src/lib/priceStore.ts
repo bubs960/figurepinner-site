@@ -21,6 +21,7 @@
 // Callers keep their own shape checks; this only fetches + parses JSON.
 
 import { getCloudflareContext } from '@opennextjs/cloudflare'
+import { inNextBuild } from './inNextBuild'
 import { readThroughPrice, type KvLike } from './priceReadThrough'
 
 export const R2_PROXY_BASE = 'https://figurepinner-r2proxy.bubs960.workers.dev'
@@ -34,6 +35,11 @@ type Bindings = { r2: R2Like | null; kv: KvLike | null; waitUntil?: (p: Promise<
 // see priceReadThrough.ts for the why and the freshness contract. All three
 // bindings are optional: no KV → K/L behaviour; no R2 → proxy fallback.
 async function bindings(): Promise<Bindings> {
+  // `next build`: no bindings on purpose, so reads take the proxy FALLBACK above
+  // instead of spawning a local workerd whose simulated R2/KV are empty (see
+  // inNextBuild.ts). This is the path a build already took whenever that
+  // workerd failed to start ("[price-kv] bindings unavailable" in the logs).
+  if (inNextBuild()) return { r2: null, kv: null }
   try {
     // O-fix (2026-09-06): async form — the sync form throws when OpenNext judges the
     // context SSG/ISR-flavoured (see @opennextjs/cloudflare cloudflare-context.js);
