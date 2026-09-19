@@ -7,6 +7,7 @@
  * .tmp/kb-d1 (ignored by git).
  */
 
+import { createHash } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { dirname, join, relative, resolve } from 'node:path'
@@ -54,6 +55,7 @@ function parseArgs(argv) {
     chunkSize: DEFAULT_CHUNK_SIZE,
     table: 'kb_figures',
     limit: null,
+    slim: null,
   }
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -79,6 +81,13 @@ function parseArgs(argv) {
       // Rehearsal aid: build only the first N rows (local dry-runs).
       const next = Number(argv[i + 1])
       if (Number.isFinite(next) && next > 0) opts.limit = Math.floor(next)
+      i += 1
+    } else if (arg === '--slim') {
+      // Nightly loader (2026-09-19 ruling): emit from a SNAPSHOT of the slim, the
+      // same file check-kb-d1-remote.mjs --slim verifies against, so the emit and
+      // the verifier read the same bytes even if the live slim moves mid-load.
+      if (!argv[i + 1]) fail('--slim needs a path')
+      opts.slim = resolve(ROOT, argv[i + 1])
       i += 1
     }
   }
@@ -206,12 +215,16 @@ function rel(path) {
 }
 
 const opts = parseArgs(process.argv.slice(2))
-const kbPath = join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js')
+const kbPath = opts.slim ?? join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js')
 const ddlPath = join(ROOT, 'scripts', 'option-e-kb_figures.sql')
 
 if (!existsSync(kbPath)) fail(`Missing KB source: ${rel(kbPath)}`)
 if (!existsSync(ddlPath)) fail(`Missing DDL source: ${rel(ddlPath)}`)
 
+// head = MD5 of the exact slim bytes this emit was built from. It is the identity
+// the nightly loader writes to kb_meta in the swap batch and compares for its
+// no-op check; no human ever types it.
+const head = createHash('md5').update(readFileSync(kbPath)).digest('hex').toUpperCase()
 const { FIGURES_V2 } = require(kbPath)
 if (!Array.isArray(FIGURES_V2)) fail(`${rel(kbPath)} did not export FIGURES_V2[]`)
 
@@ -221,6 +234,7 @@ const report = validateRows(rows)
 
 console.log(`[kb:d1] source: ${rel(kbPath)}`)
 console.log(`[kb:d1] target table: ${opts.table}`)
+console.log(`[kb:d1] head (slim md5): ${head}`)
 if (opts.limit) console.log(`[kb:d1] REHEARSAL LIMIT: first ${opts.limit} rows only`)
 console.log(`[kb:d1] rows: ${report.rowCount}`)
 console.log(`[kb:d1] image rows: ${report.imageCount} (${report.localImageCount} local FigurePinner images)`)
@@ -270,7 +284,7 @@ const manifestLines = [
   '',
 ]
 writeFileSync(join(opts.out, 'apply-remote-commands.txt'), manifestLines.join('\n'))
-writeFileSync(join(opts.out, 'stats.json'), `${JSON.stringify({ table: opts.table, ...report }, null, 2)}\n`)
+writeFileSync(join(opts.out, 'stats.json'), `${JSON.stringify({ table: opts.table, head, ...report }, null, 2)}\n`)
 
 console.log(`[kb:d1] wrote schema + ${chunkFiles.length} load chunks to ${rel(opts.out)}`)
 console.log(`[kb:d1] next: review ${rel(join(opts.out, 'apply-remote-commands.txt'))}`)

@@ -40,7 +40,7 @@
  */
 
 import { execSync } from 'node:child_process'
-import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync } from 'node:fs'
 import { basename, join, resolve } from 'node:path'
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -50,13 +50,15 @@ const DEFAULT_DB = 'figurepinner-kb'
 const LIVE = 'kb_figures'
 const STAGING = 'kb_figures_new'
 const OLD = 'kb_figures_old'
+const META = 'kb_meta'
+const NOOP_EXIT = 10
 const WRANGLER_BIN = resolve(ROOT, 'node_modules', '.bin', process.platform === 'win32' ? 'wrangler.cmd' : 'wrangler')
 const DDL_PATH = join(ROOT, 'scripts', 'option-e-kb_figures.sql')
 
 // ── args ─────────────────────────────────────────────────────────────────────
 
 const argv = process.argv.slice(2)
-const PHASES = ['status', 'load', 'verify-staging', 'swap', 'verify-live', 'finalize', 'rollback', 'rehearse', 'probe-atomicity']
+const PHASES = ['status', 'noop-check', 'load', 'verify-staging', 'swap', 'verify-live', 'finalize', 'rollback', 'rehearse', 'probe-atomicity']
 const phase = argv[0]
 
 function argValue(flag) {
@@ -79,6 +81,12 @@ const opts = {
   // spreads those windows so the site recovers between them; loads still belong
   // in the traffic trough. 0 = today's behaviour.
   pace: argValue('--pace') ? Number(argValue('--pace')) : 0,
+  // Nightly loader (2026-09-19 ruling). --slim <path>: verify against a snapshot of
+  // the slim (the one the emit was built from), passed through to the verifier.
+  // --write-head: the swap batch also records stats.json `head` in kb_meta, so the
+  // table and its identity land in ONE transaction; noop-check compares it.
+  slim: argValue('--slim') ? resolve(ROOT, argValue('--slim')) : null,
+  writeHead: argv.includes('--write-head'),
 }
 
 function die(message) {
@@ -89,12 +97,16 @@ function die(message) {
 if (!phase || !PHASES.includes(phase)) {
   console.log(`Usage: node scripts/kb-d1-swap.mjs <phase> [--db name] [--local] [--dir path] [--expect-rows n] [--dry-run] [--authorized] [--resume]
 
-Phases (run in order): status | load | verify-staging | swap | verify-live | finalize
+Phases (run in order): status | noop-check | load | verify-staging | swap | verify-live | finalize
   load --resume        continue a load that died mid-way (network blip): skips the schema and
                        every chunk whose rows are already in kb_figures_new, ONLY if the
                        existing row count sits exactly on a file boundary; otherwise refuses.
   load --pace <ms>     sleep <ms> between chunk files (recommended 1500 for any daytime
                        remote load: each file import blocks production reads while it runs).
+  noop-check --dir <d> read-only: exit ${NOOP_EXIT} when kb_meta.head == the build dir's head AND
+                       kb_figures already has its row count (nothing to load); exit 0 = load needed.
+  swap --write-head    also writes the build dir's head into kb_meta, inside the swap batch.
+  --slim <path>        verify phases check against this slim snapshot, not the live file.
 Recovery:              rollback   (before finalize only)
 Rehearsal:             rehearse   (fully local, disposable, exercises everything incl. forced failures)
 
@@ -106,7 +118,7 @@ This flag attests the 2026-08-25 standalone conditional authorization applies
 
 // Rule 5 gate: remote execution of anything that writes must be explicitly
 // authorized. status is read-only and exempt; rehearse forces --local anyway.
-if (!opts.local && phase !== 'status' && phase !== 'rehearse' && !opts.authorized) {
+if (!opts.local && phase !== 'status' && phase !== 'noop-check' && phase !== 'rehearse' && !opts.authorized) {
   die(`phase "${phase}" against REMOTE requires --authorized (CLAUDE.md rule 5 / 2026-08-25 standalone ruling). Rehearse locally with: node scripts/kb-d1-swap.mjs rehearse`)
 }
 
@@ -116,8 +128,35 @@ function quoteWindowsArg(value) {
   return `"${String(value).replaceAll('"', '\\"')}"`
 }
 
-function runWrangler(args, { allowFail = false } = {}) {
+// Request-level retry (2026-09-19 ruling): the 9/19 load died on a transient
+// `Authentication error [code: 10000]` on request #1; "fetch failed" was seen 9/1.
+// Retrying the SAME wrangler call is the right granularity for those. It is OFF
+// (retry: false) for the swap/rollback rename batches, which are not idempotent:
+// if one landed and only the response was lost, a blind retry would fail on a
+// missing table and misreport a completed swap. A retried chunk file that did land
+// fails closed on the figure_id PRIMARY KEY, and the chain restarts the load.
+const TRANSIENT_WRANGLER = /Authentication error \[code: 10000\]|fetch failed/i
+const RETRY_MAX = 3
+const RETRY_SLEEP_MS = 5000
+
+function runWrangler(args, { allowFail = false, retry = true } = {}) {
   const command = [WRANGLER_BIN, ...args].map(quoteWindowsArg).join(' ')
+  for (let attempt = 0; ; attempt += 1) {
+    const res = runWranglerOnce(command)
+    if (res.ok) return res
+    if (retry && attempt < RETRY_MAX && TRANSIENT_WRANGLER.test(res.output)) {
+      console.log(`[kb:d1:swap]     transient wrangler failure (${res.output.match(TRANSIENT_WRANGLER)[0]}), retry ${attempt + 1}/${RETRY_MAX} in ${RETRY_SLEEP_MS / 1000}s`)
+      sleepMs(RETRY_SLEEP_MS)
+      continue
+    }
+    if (allowFail) return res
+    console.error(`[kb:d1:swap] wrangler failed:
+${res.output}`)
+    process.exit(1)
+  }
+}
+
+function runWranglerOnce(command) {
   try {
     return {
       ok: true,
@@ -131,11 +170,7 @@ function runWrangler(args, { allowFail = false } = {}) {
       }),
     }
   } catch (error) {
-    if (allowFail) {
-      return { ok: false, output: `${error.stdout ?? ''}${error.stderr ?? ''}` }
-    }
-    console.error(`[kb:d1:swap] wrangler failed:\n${error.stdout ?? ''}${error.stderr ?? ''}`)
-    process.exit(1)
+    return { ok: false, output: `${error.stdout ?? ''}${error.stderr ?? ''}` }
   }
 }
 
@@ -143,10 +178,10 @@ function locFlag() {
   return opts.local ? '--local' : '--remote'
 }
 
-function runSql(command, { allowFail = false } = {}) {
+function runSql(command, { allowFail = false, retry = true } = {}) {
   const res = runWrangler(
     ['d1', 'execute', opts.db, locFlag(), '--json', '--command', command.replace(/\s+/g, ' ').trim()],
-    { allowFail },
+    { allowFail, retry },
   )
   if (!res.ok) return { ok: false, results: [], raw: res.output }
   const parsed = JSON.parse(res.output)
@@ -253,6 +288,7 @@ function runVerify(table) {
   const args = ['node', 'scripts/check-kb-d1-remote.mjs', '--db', opts.db, '--table', table]
   if (opts.local) args.push('--local')
   if (opts.expectRows) args.push('--expect-rows', String(opts.expectRows))
+  if (opts.slim) args.push('--slim', opts.slim)
   console.log(`[kb:d1:swap] verify: ${args.join(' ')}`)
   if (opts.dryRun) return
   execSync(args.map(quoteWindowsArg).join(' '), {
@@ -261,6 +297,48 @@ function runVerify(table) {
     shell: process.platform === 'win32' ? 'cmd.exe' : '/bin/sh',
     windowsHide: true,
   })
+}
+
+// ── head identity (kb_meta) ─────────────────────────────────────────────────
+
+function buildStats() {
+  const path = join(opts.dir, 'stats.json')
+  if (!existsSync(path)) die(`stats.json missing from build dir: ${opts.dir}`)
+  return JSON.parse(readFileSync(path, 'utf8'))
+}
+
+function buildHead() {
+  const head = buildStats().head
+  if (!/^[0-9A-F]{32}$/.test(String(head))) {
+    die(`stats.json in ${opts.dir} carries no valid head (${head}) -- rebuild it with the current build-kb-d1-sql.mjs`)
+  }
+  return head
+}
+
+function metaSql(head) {
+  return `CREATE TABLE IF NOT EXISTS ${META} (key TEXT PRIMARY KEY, value TEXT); INSERT OR REPLACE INTO ${META} (key, value) VALUES ('head', '${head}');`
+}
+
+function liveHead() {
+  // kb_meta is absent until the first --write-head swap: that is "no head", not an error.
+  const res = runSql(`SELECT value FROM ${META} WHERE key='head'`, { allowFail: true })
+  return res.ok ? (res.results[0]?.value ?? null) : null
+}
+
+// Read-only. Exit NOOP_EXIT when D1 already serves exactly this build: same head in
+// kb_meta AND kb_figures at the build's row count AND no unfinalized swap lying
+// around. Anything else exits 0 = load needed.
+function phaseNoopCheck() {
+  const stats = buildStats()
+  const head = buildHead()
+  const have = liveHead()
+  console.log(`[kb:d1:swap] noop-check: build head ${head} (${stats.rowCount} rows), ${META}.head = ${have ?? 'absent'}`)
+  if (have !== head) { console.log('[kb:d1:swap] noop-check: head differs -- LOAD NEEDED'); return }
+  const rows = rowCount(LIVE)
+  if (rows !== stats.rowCount) { console.log(`[kb:d1:swap] noop-check: head matches but ${LIVE} has ${rows} rows -- LOAD NEEDED`); return }
+  if (tableExists(OLD)) { console.log(`[kb:d1:swap] noop-check: head matches but ${OLD} is still present (unfinalized swap) -- LOAD NEEDED`); return }
+  console.log('[kb:d1:swap] noop-check: D1 already serves this head -- NOOP')
+  process.exit(NOOP_EXIT)
 }
 
 // ── phases ───────────────────────────────────────────────────────────────────
@@ -328,10 +406,10 @@ function phaseSwap({ skipVerify = false } = {}) {
   if (stagingRows === 0) die(`${STAGING} is empty — refusing to swap`)
   if (!skipVerify) runVerify(STAGING)
 
-  const command = `ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE ${STAGING} RENAME TO ${LIVE};`
+  const command = `ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE ${STAGING} RENAME TO ${LIVE};${opts.writeHead ? ` ${metaSql(buildHead())}` : ''}`
   console.log(`[kb:d1:swap] executing batched swap: ${command}`)
   if (opts.dryRun) return
-  const res = runSql(command, { allowFail: true })
+  const res = runSql(command, { allowFail: true, retry: false })
   if (!res.ok) {
     console.error(`[kb:d1:swap] SWAP COMMAND FAILED. Observing actual state before anything else:`)
     printStatus()
@@ -368,12 +446,16 @@ function phaseRollback() {
   const command = liveExists
     ? `ALTER TABLE ${LIVE} RENAME TO kb_figures_rolledback; ALTER TABLE ${OLD} RENAME TO ${LIVE};`
     : `ALTER TABLE ${OLD} RENAME TO ${LIVE};`
+  // A --write-head swap recorded the NEW head; after a rollback the old table serves
+  // again, so that head is a lie and would turn tomorrow's noop-check into a skipped
+  // load. Clear it in the same batch (only when kb_meta exists: legacy swaps have none).
+  const clearHead = tableExists(META) ? ` DELETE FROM ${META} WHERE key='head';` : ''
   if (liveExists && tableExists('kb_figures_rolledback')) {
     die('kb_figures_rolledback already exists from an earlier rollback — drop or rename it first')
   }
-  console.log(`[kb:d1:swap] executing rollback: ${command}`)
+  console.log(`[kb:d1:swap] executing rollback: ${command}${clearHead}`)
   if (opts.dryRun) return
-  const res = runSql(command, { allowFail: true })
+  const res = runSql(`${command}${clearHead}`, { allowFail: true, retry: false })
   if (!res.ok) {
     console.error('[kb:d1:swap] ROLLBACK COMMAND FAILED. Actual state:')
     printStatus()
@@ -398,7 +480,7 @@ function phaseRehearse() {
   console.log('[rehearse] === kb_figures atomic-swap rehearsal (LOCAL, disposable) ===')
 
   // Clean slate.
-  for (const t of [LIVE, STAGING, OLD, 'kb_figures_rolledback']) {
+  for (const t of [LIVE, STAGING, OLD, 'kb_figures_rolledback', META]) {
     runSql(`DROP TABLE IF EXISTS ${t}`)
   }
 
@@ -406,8 +488,18 @@ function phaseRehearse() {
   const oldDir = join(ROOT, '.tmp', 'kb-d1-rehearse-old')
   const newDir = join(ROOT, '.tmp', 'kb-d1-rehearse-new')
   const sh = (cmd) => execSync(cmd, { cwd: ROOT, stdio: 'inherit', shell: process.platform === 'win32' ? 'cmd.exe' : '/bin/sh', windowsHide: true })
+  // Nightly-loader path: the new build is emitted from a SNAPSHOT of the slim and
+  // every verify below reads that same snapshot (--slim), never the live file.
+  const snapshot = join(ROOT, '.tmp', 'kb-d1-rehearse.slim.snapshot.js')
+  mkdirSync(join(ROOT, '.tmp'), { recursive: true })
+  copyFileSync(join(ROOT, 'src', 'data', 'figures-reference-v2.slim.js'), snapshot)
+  opts.slim = snapshot
   sh(`node scripts/build-kb-d1-sql.mjs --out ${oldDir} --limit 300`)
-  sh(`node scripts/build-kb-d1-sql.mjs --out ${newDir} --table ${STAGING} --limit 500`)
+  sh(`node scripts/build-kb-d1-sql.mjs --out ${newDir} --table ${STAGING} --limit 500 --slim ${snapshot}`)
+  opts.dir = newDir
+  const head = buildHead()
+  check('emit carries a head (slim-snapshot md5)', /^[0-9A-F]{32}$/.test(head), head)
+  check('noop: no kb_meta yet reads as "no head"', liveHead() === null)
 
   // Seed the fake live table (canonical name + canonical indexes, 300 rows).
   for (const file of readdirSync(oldDir).filter(f => f.endsWith('.sql')).sort()) {
@@ -453,9 +545,18 @@ function phaseRehearse() {
   check('forced-fail 2: no orphaned kb_figures_old', oldNotCreated)
   runSql(`ALTER TABLE kb_figures_hidden RENAME TO ${STAGING}`)
 
-  // ── The real swap ──────────────────────────────────────────────────────────
-  const sw = runSql(`ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE ${STAGING} RENAME TO ${LIVE};`, { allowFail: true })
+  // ── Forced failure 3: a head write must not survive a failed swap batch ────
+  runSql(`ALTER TABLE ${STAGING} RENAME TO kb_figures_hidden`)
+  const f3 = runSql(`${metaSql(head)} ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE ${STAGING} RENAME TO ${LIVE};`, { allowFail: true, retry: false })
+  check('forced-fail 3: batch with head write errors when staging missing', !f3.ok)
+  check('forced-fail 3: ATOMICITY — no head recorded by the failed batch', liveHead() === null, `${META}.head=${liveHead()}`)
+  check('forced-fail 3: live table untouched', tableExists(LIVE) && rowCount(LIVE) === 300)
+  runSql(`ALTER TABLE kb_figures_hidden RENAME TO ${STAGING}`)
+
+  // ── The real swap (renames + head in one batch, as the nightly chain runs it) ─
+  const sw = runSql(`ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE ${STAGING} RENAME TO ${LIVE}; ${metaSql(head)}`, { allowFail: true, retry: false })
   check('swap: batch succeeded', sw.ok)
+  check('swap: kb_meta.head == the build head', liveHead() === head, `${META}.head=${liveHead()}`)
   check('swap: kb_figures now has the NEW data', rowCount(LIVE) === 500, `${LIVE}=${rowCount(LIVE)}`)
   check('swap: old data preserved as kb_figures_old', tableExists(OLD) && rowCount(OLD) === 300, `${OLD}=${tableExists(OLD) ? rowCount(OLD) : 'MISSING'}`)
 
@@ -470,13 +571,14 @@ function phaseRehearse() {
   opts.expectRows = null
 
   // ── Rollback drill (undo the swap we just did) ─────────────────────────────
-  const rb = runSql(`ALTER TABLE ${LIVE} RENAME TO kb_figures_rolledback; ALTER TABLE ${OLD} RENAME TO ${LIVE};`, { allowFail: true })
+  const rb = runSql(`ALTER TABLE ${LIVE} RENAME TO kb_figures_rolledback; ALTER TABLE ${OLD} RENAME TO ${LIVE}; DELETE FROM ${META} WHERE key='head';`, { allowFail: true, retry: false })
   check('rollback: batch succeeded', rb.ok)
+  check('rollback: head cleared with the table (no stale identity)', liveHead() === null, `${META}.head=${liveHead()}`)
   check('rollback: kb_figures is the OLD data again', rowCount(LIVE) === 300, `${LIVE}=${rowCount(LIVE)}`)
   check('rollback: new data preserved as kb_figures_rolledback', tableExists('kb_figures_rolledback') && rowCount('kb_figures_rolledback') === 500)
 
   // ── Roll forward again and finalize (index normalization included) ─────────
-  runSql(`ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE kb_figures_rolledback RENAME TO ${LIVE};`)
+  runSql(`ALTER TABLE ${LIVE} RENAME TO ${OLD}; ALTER TABLE kb_figures_rolledback RENAME TO ${LIVE}; ${metaSql(head)}`)
   runSql(`DROP TABLE ${OLD}`)
   for (const idx of canonicalIndexes()) {
     const stagedName = idx.name.replace(LIVE, STAGING)
@@ -487,9 +589,13 @@ function phaseRehearse() {
   const wantIdx = canonicalIndexes().map(i => i.name).sort()
   check('finalize: canonical index names restored', JSON.stringify(finalIdx) === JSON.stringify(wantIdx), finalIdx.join(', '))
   check('finalize: live table intact after finalize', rowCount(LIVE) === 500, `${LIVE}=${rowCount(LIVE)}`)
+  check('noop: same head + row count + no kb_figures_old = nothing to load',
+    liveHead() === head && rowCount(LIVE) === buildStats().rowCount && !tableExists(OLD))
+  runSql(`INSERT OR REPLACE INTO ${META} (key, value) VALUES ('head', 'STALE')`)
+  check('noop: a different head reads as load needed', liveHead() !== head)
 
   // Cleanup local rehearsal tables.
-  for (const t of [LIVE, STAGING, OLD, 'kb_figures_rolledback']) {
+  for (const t of [LIVE, STAGING, OLD, 'kb_figures_rolledback', META]) {
     runSql(`DROP TABLE IF EXISTS ${t}`)
   }
 
@@ -545,6 +651,7 @@ function phaseProbeAtomicity() {
 
 switch (phase) {
   case 'status': printStatus(); break
+  case 'noop-check': phaseNoopCheck(); break
   case 'load': phaseLoad(); break
   case 'verify-staging': runVerify(STAGING); break
   case 'swap': phaseSwap(); break
