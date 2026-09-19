@@ -57,6 +57,7 @@
  */
 
 import { getCloudflareContext } from '@opennextjs/cloudflare'
+import { inNextBuild } from '../lib/inNextBuild'
 import kbStats from './kb-stats.generated.json'
 import {
   figureUrl,
@@ -104,17 +105,22 @@ function loadLite(): Promise<LiteGenerated> {
 }
 
 async function fetchLite(): Promise<LiteGenerated> {
-  try {
-    const { env } = await getCloudflareContext({ async: true })
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const assets = (env as any)?.ASSETS as { fetch(input: string): Promise<Response> } | undefined
-    if (assets && typeof assets.fetch === 'function') {
-      const res = await assets.fetch(`http://assets.local/${ASSET_NAME}`)
-      if (res.ok) return (await res.json()) as LiteGenerated
-      console.warn(`[kb-lite] ASSETS fetch for ${ASSET_NAME} returned ${res.status}, falling back to disk`)
+  // During `next build` the ASSETS attempt can only spawn a local workerd and
+  // then 404 (the simulated binding never has this file) -- go straight to the
+  // disk read. Why this matters: src/lib/inNextBuild.ts.
+  if (!inNextBuild()) {
+    try {
+      const { env } = await getCloudflareContext({ async: true })
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const assets = (env as any)?.ASSETS as { fetch(input: string): Promise<Response> } | undefined
+      if (assets && typeof assets.fetch === 'function') {
+        const res = await assets.fetch(`http://assets.local/${ASSET_NAME}`)
+        if (res.ok) return (await res.json()) as LiteGenerated
+        console.warn(`[kb-lite] ASSETS fetch for ${ASSET_NAME} returned ${res.status}, falling back to disk`)
+      }
+    } catch (err) {
+      console.warn('[kb-lite] ASSETS binding unavailable, falling back to disk:', err instanceof Error ? err.message : String(err))
     }
-  } catch (err) {
-    console.warn('[kb-lite] ASSETS binding unavailable, falling back to disk:', err instanceof Error ? err.message : String(err))
   }
   // `typeof window === 'undefined'` isn't just a Worker-vs-browser runtime
   // check here -- Next's CLIENT webpack build statically replaces it with
