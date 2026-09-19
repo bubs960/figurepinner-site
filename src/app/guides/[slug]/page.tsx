@@ -20,6 +20,7 @@ import ArticleEndCta from '../_components/ArticleEndCta'
 import ConversionBreak from '../_components/ConversionBreak'
 import { renderInlineLinks as renderText } from '../_lib/renderInlineLinks'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
+import { liveShortVersion } from '../_lib/liveShortVersion'
 import JsonLd from '@/app/_components/JsonLd'
 import { fitAbsoluteTitle } from '@/lib/fitTitle'
 import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
@@ -143,6 +144,12 @@ export default async function GuideArticlePage({ params }: PageProps) {
   // Live sold-median data for any `comp` blocks — one batched ISR-cached fetch.
   const compFids = article.body.flatMap((b) => (b.type === 'comp' ? [b.fid] : []))
   const comps = compFids.length ? await fetchPriceSnaps(compFids) : new Map<string, PriceSnap>()
+  // Answer box: the hand-written short version when the article has one, else one built from
+  // the live comp cards on this same render (liveShortVersion.ts) — never both, never stale.
+  const shortVersion = article.shortVersion ?? liveShortVersion(
+    article.body.flatMap((b) => (b.type === 'comp' ? [{ fid: b.fid, label: b.label }] : [])),
+    comps,
+  )
 
   // eBay affiliate search URL per comp block — these guide pages had no direct
   // affiliate link before 2026-07-02 (ad units only); this is what a real
@@ -197,7 +204,7 @@ export default async function GuideArticlePage({ params }: PageProps) {
           {article.dek}
         </p>
 
-        {article.shortVersion && <ArticleAnswerBox shortVersion={article.shortVersion} />}
+        {shortVersion && <ArticleAnswerBox shortVersion={shortVersion} />}
 
         {(() => {
           // Mid-page conversion break before every h2 after the first — the answer
