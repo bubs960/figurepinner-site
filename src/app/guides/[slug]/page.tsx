@@ -21,6 +21,7 @@ import ConversionBreak from '../_components/ConversionBreak'
 import { renderInlineLinks as renderText } from '../_lib/renderInlineLinks'
 import { fetchPriceSnaps, type PriceSnap } from '../_lib/priceSnaps'
 import JsonLd from '@/app/_components/JsonLd'
+import { fitAbsoluteTitle } from '@/lib/fitTitle'
 import { getFigureById, prettyFigureUrl } from '@/data/kbLite'
 
 import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, prettifySlug } from '@/app/figure/[figure_id]/_lib/figureFormatters'
@@ -45,7 +46,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) return { title: { absolute: 'Guide not found — FigurePinner' } }
   const canonical = `${BASE}/guides/${article.slug}`
   return {
-    title: { absolute: article.metaTitle },
+    // Over-70 metaTitles lose the ' | FigurePinner' suffix (src/lib/fitTitle.ts).
+    // OG/Twitter keep the full branded string — no length rule applies there.
+    title: { absolute: fitAbsoluteTitle(article.metaTitle) },
     description: article.metaDescription,
     alternates: { canonical },
     openGraph: {

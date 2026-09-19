@@ -1095,7 +1095,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'what-rare-actually-means',
     title: 'What "Rare" Actually Means in Action Figure Collecting',
-    metaTitle: 'What "Rare" Really Means for Action Figures (Chase, Short Print, Exclusive) | FigurePinner',
+    metaTitle: 'What "Rare" Means for Action Figures: Chase, Short Print, Exclusive | FigurePinner',
     metaDescription:
       'Short print vs chase vs exclusive vs reissue — the four things people mean when they say "rare," and which ones actually move price. Stop overpaying for the most abused word in the hobby.',
     dek: 'Everything is "rare" in a listing title. Almost nothing is. Here is how to tell the difference.',
@@ -1530,7 +1530,7 @@ export const ARTICLES: Article[] = [
     {
       slug: 'transformers-collecting-guide',
       title: 'Transformers Collecting: Masterpiece vs Studio Series vs Generations',
-      metaTitle: 'Transformers Collecting Guide: Masterpiece vs Studio Series vs Generations | FigurePinner',
+      metaTitle: 'Transformers Guide: Masterpiece vs Studio Series vs Generations | FigurePinner',
       metaDescription:
         'Three Transformers lines, three very different buyers, three price tiers. Where a new collector starts, what each line actually offers, and which holds value on the secondary market.',
       dek: 'One franchise, three completely different hobbies. Which line you collect is the first decision — and it drives everything else.',
@@ -1906,7 +1906,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'tmnt-collecting-guide',
     title: 'TMNT Figures: Playmates Vintage, NECA, and Super7 Explained',
-    metaTitle: 'TMNT Action Figures Price Guide — Playmates Vintage, NECA & Super7 Values | FigurePinner',
+    metaTitle: 'TMNT Figures Price Guide — Playmates Vintage, NECA & Super7 Values | FigurePinner',
     metaDescription: 'TMNT figure price guide: Playmates vintage 1988 first-wave values, NECA animated-series price floors, Super7 ReAction secondhand prices. Three markets, three different sets of comps.',
     dek: 'The Turtles have been in plastic since 1988. What that means for your collection depends entirely on which generation you\'re shopping.',
     readingMinutes: 7,
@@ -2237,7 +2237,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'how-to-find-action-figure-values',
     title: 'How to Find What Your Action Figures Are Worth',
-    metaTitle: 'Action Figure Sold Price Guide — How to Find What Yours Is Actually Worth | FigurePinner',
+    metaTitle: 'Action Figure Sold Price Guide — Find What Yours Is Actually Worth | FigurePinner',
     metaDescription: 'An action figure sold price guide: the correct way to find what figures are actually worth. Why listed prices lie, why sold comps are the only number that matters, and where to find them.',
     dek: 'Listed prices are fiction. Sold prices are facts. Here is how to find the facts.',
     readingMinutes: 7,
@@ -2415,7 +2415,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'mcfarlane-sports-picks-guide',
     title: 'McFarlane Sports Picks: The Variant Game Behind Every Figure',
-    metaTitle: 'McFarlane Sports Picks Value Guide — Variants, Chases & Secondary Market | FigurePinner',
+    metaTitle: 'McFarlane Sports Picks Value Guide — Variants, Chases & Resale | FigurePinner',
     metaDescription: 'McFarlane Sports Picks ran from 2001 to 2012 across NFL, MLB, NBA, NHL, and NASCAR. The line\'s entire secondary market runs on variants — here\'s how to read them.',
     dek: 'The base figure is the floor. The white jersey, the gold uniform, the chase variant you didn\'t know existed — that\'s where the real money is.',
     readingMinutes: 8,
@@ -2529,7 +2529,7 @@ export const ARTICLES: Article[] = [
   ,{
     slug: 'jakks-hub',
     title: 'Jakks Pacific WWE: A Collector\'s Guide to the Classic Superstars & Ruthless Aggression Years',
-    metaTitle: 'Jakks WWE Figures Price Guide 2026 — Classic Superstars & Ruthless Aggression | FigurePinner',
+    metaTitle: 'Jakks WWE Price Guide 2026 — Classic Superstars & Ruthless Aggression | FigurePinner',
     metaDescription: 'A collector\'s guide to Jakks Pacific WWE figures (1996-2009) — Classic Superstars legends, the Ruthless Aggression action era, the ToyFare grails, and real eBay sold comps.',
     dek: 'Jakks ran WWE figures from 1996 to 2009 — the Classic Superstars legends and the Ruthless Aggression action era. A collector\'s field guide to both.',
     readingMinutes: 9,
@@ -3178,7 +3178,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'batman-animated-series-figure-guide',
     title: 'Batman: The Animated Series Figures: Kenner vs. DC Collectibles vs. McFarlane',
-    metaTitle: 'Batman Animated Series Figure Guide — Kenner, DC Collectibles, McFarlane | FigurePinner',
+    metaTitle: 'Batman Animated Series Figures — Kenner, DC Collectibles, McFarlane | FigurePinner',
     metaDescription:
       'Three manufacturers have made Batman: The Animated Series figures across three decades. Which Kenner figures carry premiums, why DC Collectibles is the shelf line, and what McFarlane\'s reissues actually are.',
     dek: 'Three manufacturers, thirty years, one art style nobody has matched since.',
