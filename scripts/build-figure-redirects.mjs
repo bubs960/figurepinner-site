@@ -20,6 +20,7 @@ import { dirname, join, resolve } from 'node:path'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import { deriveFigureRedirects } from './lib/derive-figure-redirects.mjs'
+import { derivePrettyPathRedirects } from './lib/derive-pretty-path-redirects.mjs'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'src', 'data', 'figure-id-redirects.generated.json')
@@ -40,4 +41,25 @@ console.log(
   ` (skipped: ${stats.sourceStillServable} source still servable, ${stats.targetMissing} target missing,` +
   ` ${stats.selfOrCycle} self/cycle; ${stats.chainsResolved} chain(s) resolved)` +
   ` -> ${changed ? 'wrote' : 'unchanged'} src/data/figure-id-redirects.generated.json`,
+)
+
+// ── harvested pretty-path redirects (2026-09-18) ─────────────────────────────
+// src/data/pretty-path-harvest.json holds verified historical FACTS (old pretty path -> the
+// fid that served it, proven from git history by scripts/harvest-dead-pretty-paths.mjs). The
+// successor is re-derived here against tonight's KB so the map heals itself: a successor that
+// was deduped again follows the chain above, one that left the KB drops out, a path that is
+// served again is never emitted. Same commit-the-output contract as the fid map. A missing or
+// unreadable ledger emits an empty map -- this step must never fail a build.
+const PRETTY_OUT = join(ROOT, 'src', 'data', 'pretty-path-redirects.generated.json')
+let ledger = {}
+try { ledger = JSON.parse(readFileSync(join(ROOT, 'src', 'data', 'pretty-path-harvest.json'), 'utf8')) } catch { /* no ledger yet */ }
+const pretty = derivePrettyPathRedirects(ledger, slim, map)
+const prettyNext = `${JSON.stringify(pretty.map, null, 2)}\n`
+let prettyPrev = null
+try { prettyPrev = readFileSync(PRETTY_OUT, 'utf8') } catch { /* first run */ }
+if (prettyPrev !== prettyNext) writeFileSync(PRETTY_OUT, prettyNext)
+console.log(
+  `[figure-redirects] ${pretty.stats.emitted} harvested pretty-path redirect(s) from ${pretty.stats.candidates} ledger fact(s)` +
+  ` (skipped: ${pretty.stats.sourceLive} path served again, ${pretty.stats.noSurvivor} no live successor, ${pretty.stats.malformed} malformed;` +
+  ` ${pretty.stats.viaChain} via duplicate_of chain) -> ${prettyPrev !== prettyNext ? 'wrote' : 'unchanged'} src/data/pretty-path-redirects.generated.json`,
 )
