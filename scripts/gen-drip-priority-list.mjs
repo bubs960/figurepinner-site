@@ -163,7 +163,7 @@ let stillFailedCount = 0
 
 // Distinguishes "the fetch itself failed" (network error, timeout, non-2xx --
 // worth retrying, see the retry pass below) from "the fetch succeeded and
-// genuinely has no priced comp" (2xx with no median/avg or sold_count<=0 --
+// genuinely has no priced comp" (404, or 2xx with no median/avg or sold_count<=0 --
 // retrying that changes nothing, it's real data, not noise).
 const FETCH_FAILED = Symbol('fetch-failed')
 
@@ -174,6 +174,9 @@ async function fetchSnapshot(figure_id) {
       `${R2_PROXY_BASE}/price-summaries/${encodeURIComponent(figure_id)}.json`,
       { signal: AbortSignal.timeout(8000) },
     )
+    // 404 = the r2proxy has no summary for this fid (it answers MISS-404 since 85e956c):
+    // real data, same as a 2xx with no comps -- never a failure to retry or report.
+    if (res.status === 404) return {}
     if (!res.ok) return FETCH_FAILED
     return await res.json()
   } catch {
