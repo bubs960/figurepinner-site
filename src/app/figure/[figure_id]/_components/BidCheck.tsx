@@ -30,10 +30,14 @@
 //    a copy audit before the mixed population shows on pages") rather than
 //    waiting for a user to notice a weird number — right now every comp in
 //    the system still predates the change, so this is a static, always-on
-//    caveat, not something gated on live data mix. Full (non-compact) only:
-//    compact mode stays as-is, no room for another line without undoing the
-//    2026-09-13 phone-density work, and the input label itself (still
-//    accurate) was never the part that changed.
+//    caveat, not something gated on live data mix. The full variant carries
+//    it always-on. 2026-09-19: the full variant turned out to have NO call
+//    site (FigureDetailContent passes `compact`), so the caveat never
+//    rendered anywhere; Steve: "add a short caveat to compact". Compact shows
+//    a one-line version only after a bid is typed, so the untouched card
+//    keeps the 2026-09-13 phone-density height. Buy-It-Now / Best Offer comps
+//    are item price only (matcher read ext-sold-ingest.py, 9/19; ~2 in 3 BIN
+//    sales charge shipping on top) -- keep both caveats saying so.
 //
 // Condition split mirrors MarketPanel.normalizeCondition exactly (Steve's
 // 6/06 call: eBay's own language, untagged = Used). Keep the two in sync.
@@ -189,6 +193,16 @@ export default function BidCheck({
             )
           })}
         </div>
+        {/* Delivered-price caveat (Steve 2026-09-19: "add a short caveat to compact").
+            Shown only once a bid is typed: that is the moment a before-shipping bid
+            gets compared to comps that may include shipping, and it keeps the
+            untouched card at the 9/13 phone-density height. */}
+        {hasBid && (
+          <p className="fp-bidcheck-caveat" style={{ margin: '6px 0 0', fontSize: '11px', lineHeight: 1.45, color: 'var(--shelf-cream-mut, rgba(242,232,213,.38))' }}>
+            Auction comps since Sept. 13 include shipping. Buy-It-Now comps don&apos;t.{' '}
+            <a href="/methodology" style={{ color: 'inherit', textDecoration: 'underline' }}>How we price</a>
+          </p>
+        )}
       </div>
     )
   }
