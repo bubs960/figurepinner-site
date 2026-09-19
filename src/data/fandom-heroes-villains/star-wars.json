@@ -1,20 +1,8 @@
 {
   "fandom": "star-wars",
-  "generated_at": "2026-06-22T00:04:36.425Z",
-  "source": "curated allegiance + r2proxy price-summaries, sold_count>0, photo required",
+  "generated_at": "2026-09-18T23:05:47.692Z",
+  "source": "curated allegiance + r2proxy price-summaries, sold_count>=3, photo required",
   "heroes": [
-    {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_r2-d2_760952",
-      "name": "R2-D2 (Deluxe)",
-      "char": "r2-d2",
-      "pl": "hot-toys",
-      "line": "Hot Toys",
-      "price": 682,
-      "sold_count": 1,
-      "flag": "",
-      "image": "https://i.ebayimg.com/images/g/WtcAAeSwYOtp-p2R/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_r2-d2_760952"
-    },
     {
       "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_jyn-erso_f39f9f",
       "name": "Jyn Erso",
@@ -24,20 +12,8 @@
       "price": 587,
       "sold_count": 45,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/wUUAAeSwK4lp1s1X/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_jyn-erso_f39f9f/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_jyn-erso_f39f9f"
-    },
-    {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_padme-amidala_29cf52",
-      "name": "Padme Amidala (AOTC)",
-      "char": "padme-amidala",
-      "pl": "hot-toys",
-      "line": "Hot Toys",
-      "price": 520,
-      "sold_count": 45,
-      "flag": "",
-      "image": "https://i.ebayimg.com/images/g/OyEAAeSwYRNqCSxX/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_padme-amidala_29cf52"
     },
     {
       "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_chewbacca_235502",
@@ -48,58 +24,70 @@
       "price": 515,
       "sold_count": 20,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/s~4AAeSwBe1qDOde/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_chewbacca_235502/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_chewbacca_235502"
     },
     {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_luke-skywalker_1fdcff",
-      "name": "Luke Skywalker (Dark Empire)",
-      "char": "luke-skywalker",
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_padme-amidala_29cf52",
+      "name": "Padme Amidala (AOTC)",
+      "char": "padme-amidala",
       "pl": "hot-toys",
       "line": "Hot Toys",
-      "price": 400,
-      "sold_count": 1,
+      "price": 515,
+      "sold_count": 48,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/2O0AAeSwuXBqGbzZ/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_luke-skywalker_1fdcff"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_padme-amidala_29cf52/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_padme-amidala_29cf52"
     },
     {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_obi-wan-kenobi_77649c",
-      "name": "Obi-Wan Kenobi",
-      "char": "obi-wan-kenobi",
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_princess-leia_dc81aa",
+      "name": "Princess Leia (Bespin)",
+      "char": "princess-leia",
       "pl": "hot-toys",
       "line": "Hot Toys",
-      "price": 399,
-      "sold_count": 2,
+      "price": 363,
+      "sold_count": 20,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/E9YAAeSw5ApqHQFs/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_obi-wan-kenobi_77649c"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_princess-leia_dc81aa/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_princess-leia_dc81aa"
+    },
+    {
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_c-3po_4da11c",
+      "name": "C-3PO (ROTJ)",
+      "char": "c-3po",
+      "pl": "hot-toys",
+      "line": "Hot Toys",
+      "price": 356,
+      "sold_count": 48,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_c-3po_4da11c/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_c-3po_4da11c"
+    },
+    {
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_r2-d2_7e415b",
+      "name": "R2-D2 (AOTC)",
+      "char": "r2-d2",
+      "pl": "hot-toys",
+      "line": "Hot Toys",
+      "price": 332,
+      "sold_count": 22,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_r2-d2_7e415b/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_r2-d2_7e415b"
     }
   ],
   "villains": [
     {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_general-grievous_cb2a69",
-      "name": "General Grievous",
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_general-grievous_b2bfa7",
+      "name": "General Grievous (Special Edition)",
       "char": "general-grievous",
       "pl": "hot-toys",
       "line": "Hot Toys",
-      "price": 580,
-      "sold_count": 1,
+      "price": 564,
+      "sold_count": 47,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/piwAAeSwRHNqB-eD/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_general-grievous_cb2a69"
-    },
-    {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_darth-vader_3e774d",
-      "name": "Darth Vader (Deluxe)",
-      "char": "darth-vader",
-      "pl": "hot-toys",
-      "line": "Hot Toys",
-      "price": 450,
-      "sold_count": 11,
-      "flag": "",
-      "image": "https://i.ebayimg.com/images/g/3V0AAeSwizRqGjmC/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_darth-vader_3e774d"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_general-grievous_b2bfa7/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_general-grievous_b2bfa7"
     },
     {
       "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_darth-revan_4c1315",
@@ -110,20 +98,8 @@
       "price": 380,
       "sold_count": 42,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/oO4AAeSwgntqCBXS/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_darth-revan_4c1315/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_darth-revan_4c1315"
-    },
-    {
-      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_count-dooku_64c67f",
-      "name": "Count Dooku (Attack of the Clones)",
-      "char": "count-dooku",
-      "pl": "hot-toys",
-      "line": "Hot Toys",
-      "price": 370,
-      "sold_count": 2,
-      "flag": "",
-      "image": "https://i.ebayimg.com/images/g/kbUAAeSwVcxqGYpi/s-l225.jpg",
-      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_count-dooku_64c67f"
     },
     {
       "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_snowtrooper_30bb8f",
@@ -134,8 +110,20 @@
       "price": 361,
       "sold_count": 49,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/J6YAAeSwur5p97-D/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_snowtrooper_30bb8f/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_snowtrooper_30bb8f"
+    },
+    {
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_darth-vader_386371",
+      "name": "Darth Vader (Battle Damaged)",
+      "char": "darth-vader",
+      "pl": "hot-toys",
+      "line": "Hot Toys",
+      "price": 350,
+      "sold_count": 48,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_darth-vader_386371/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_darth-vader_386371"
     },
     {
       "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_cad-bane_49cd0a",
@@ -146,8 +134,20 @@
       "price": 330,
       "sold_count": 47,
       "flag": "",
-      "image": "https://i.ebayimg.com/images/g/bo0AAeSwQjlqHJ5i/s-l225.jpg",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_cad-bane_49cd0a/canonical.jpg",
       "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_cad-bane_49cd0a"
+    },
+    {
+      "figure_id": "fp_star-wars_hot-toys_hot-toys_action-figures_super-battle-droid_c43b7b",
+      "name": "Super Battle Droid",
+      "char": "super-battle-droid",
+      "pl": "hot-toys",
+      "line": "Hot Toys",
+      "price": 318,
+      "sold_count": 46,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_star-wars_hot-toys_hot-toys_action-figures_super-battle-droid_c43b7b/canonical.jpg",
+      "url": "/figure/fp_star-wars_hot-toys_hot-toys_action-figures_super-battle-droid_c43b7b"
     }
   ]
 }

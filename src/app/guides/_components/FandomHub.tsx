@@ -28,6 +28,7 @@ import GiJoeSeamAtmosphere from './GiJoeSeamAtmosphere'
 import WweRingAtmosphere from './WweRingAtmosphere'
 import SeamScrollDriver from './SeamScrollDriver'
 import FandomFacts from './FandomFacts'
+import { hubShortAnswer } from '../_lib/hubShortAnswer'
 import HeroesVillainsBand from './HeroesVillainsBand'
 import MostCheckedRail from './MostCheckedRail'
 import HubTrackStrip from './HubTrackStrip'
@@ -358,6 +359,9 @@ export default function FandomHub({
   const pricedFigs = vaults ? vaults.vaults.reduce((s, x) => s + x.priced_count, 0) : 0
   const lineCount = vaults ? vaults.vaults.length : 0
   const topGrail = topComps && topComps.figures.length ? Math.max(...topComps.figures.map(f => f.price)) : 0
+  // Answer-first sentence that opens the body (hubShortAnswer.ts): trustworthy comps only, from the
+  // same payload as the intel table below. null = nothing qualifies = render nothing.
+  const shortAnswer = hubShortAnswer(topComps, { totalFigs, pricedFigs })
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -408,6 +412,13 @@ export default function FandomHub({
       </section>
 
       <article className="fh-body">
+        {shortAnswer && (
+          <p className="fh-short-answer">
+            <strong>The short version:</strong> <a href={shortAnswer.url}>{shortAnswer.name}</a>
+            {shortAnswer.afterName}
+            {shortAnswer.coverage} <span className="fh-short-answer-asof">Sold data as of {shortAnswer.asOf}.</span>
+          </p>
+        )}
         {isSeam && totalFigs > 0 && (
           <div className="fh-stats" aria-label={v.statsAria}>
             <div className="fh-stat"><span className="fh-stat-num">{totalFigs.toLocaleString('en-US')}</span><span className="fh-stat-label">figures cataloged</span></div>

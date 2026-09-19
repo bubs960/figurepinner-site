@@ -1,30 +1,88 @@
 {
   "fandom": "transformers",
-  "generated_at": "2026-06-22T00:12:13.854Z",
-  "source": "r2proxy price-summaries, sold_count>0",
+  "generated_at": "2026-09-18T23:15:14.287Z",
+  "source": "r2proxy price-summaries, sold_count>=3",
   "vaults": [
+    {
+      "line": "g1",
+      "line_slug": "g1",
+      "count": 435,
+      "priced_count": 117,
+      "top": [
+        {
+          "figure_id": "fp_transformers_hasbro_g1_mini-vehicles_bumblejumper_64fb64",
+          "name": "Bumblejumper (Cliff Jumper)",
+          "line": "G1",
+          "price": 145,
+          "sold_count": 28,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_mini-vehicles_bumblejumper_64fb64/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_g1_mini-vehicles_bumblejumper_64fb64"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_g1_action-master-1990_devastator_db75b9",
+          "name": "Devastator",
+          "line": "G1",
+          "price": 100,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_action-master-1990_devastator_db75b9/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_g1_action-master-1990_devastator_db75b9"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_g1_aerialbots_superion_960827",
+          "name": "Superion",
+          "line": "G1",
+          "price": 95,
+          "sold_count": 24,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_aerialbots_superion_960827/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_g1_aerialbots_superion_960827"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_g1_stunticons_menasor_c8c36b",
+          "name": "Menasor",
+          "line": "G1",
+          "price": 95,
+          "sold_count": 21,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_stunticons_menasor_c8c36b/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_g1_stunticons_menasor_c8c36b"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_g1_aerialbots_skydive_b810b7",
+          "name": "Skydive",
+          "line": "G1",
+          "price": 90,
+          "sold_count": 20,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_aerialbots_skydive_b810b7/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_g1_aerialbots_skydive_b810b7"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_g1_constructicons_long-haul_b4fe23",
+          "name": "Long Haul",
+          "line": "G1",
+          "price": 85,
+          "sold_count": 19,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_constructicons_long-haul_b4fe23/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_g1_constructicons_long-haul_b4fe23"
+        }
+      ]
+    },
     {
       "line": "Studio Series",
       "line_slug": "studio-series",
       "count": 236,
-      "priced_count": 220,
+      "priced_count": 178,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_studio-series_multi-packs_devastator_4e2eca",
-          "name": "Devastator",
-          "line": "Studio Series",
-          "price": 170,
-          "sold_count": 27,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_studio-series_multi-packs_devastator_4e2eca/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_studio-series_multi-packs_devastator_4e2eca"
-        },
         {
           "figure_id": "fp_transformers_hasbro_studio-series_multi-packs_revenge-of-the-fallen-15th-anniversary-autobot-multipack_53ae4e",
           "name": "Revenge of the Fallen 15th Anniversary Autobot Multipack",
           "line": "Studio Series",
-          "price": 170,
-          "sold_count": 28,
+          "price": 175,
+          "sold_count": 19,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_studio-series_multi-packs_revenge-of-the-fallen-15th-anniversary-autobot-multipack_53ae4e/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_studio-series_multi-packs_revenge-of-the-fallen-15th-anniversary-autobot-multipack_53ae4e"
@@ -68,6 +126,16 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_studio-series_commander-class_constructicon-long-haul-constructicon-hook_af3e98/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_studio-series_commander-class_constructicon-long-haul-constructicon-hook_af3e98"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_studio-series_multi-packs_revenge-of-the-fallen-3-pack_3b1771",
+          "name": "Revenge of The Fallen 3 Pack",
+          "line": "Studio Series",
+          "price": 100,
+          "sold_count": 45,
+          "flag": "EXCLUSIVE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_studio-series_multi-packs_revenge-of-the-fallen-3-pack_3b1771/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_studio-series_multi-packs_revenge-of-the-fallen-3-pack_3b1771"
         }
       ]
     },
@@ -75,18 +143,8 @@
       "line": "Masterpiece",
       "line_slug": "masterpiece",
       "count": 171,
-      "priced_count": 165,
+      "priced_count": 161,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_masterpiece_takara_megatron-mp-43_67df0a",
-          "name": "Megatron (Beast Wars) MP-43",
-          "line": "Masterpiece",
-          "price": 224,
-          "sold_count": 13,
-          "flag": "",
-          "image": "https://i.ebayimg.com/images/g/Pm4AAeSwt85pB6BG/s-l225.jpg",
-          "url": "/figure/fp_transformers_hasbro_masterpiece_takara_megatron-mp-43_67df0a"
-        },
         {
           "figure_id": "fp_transformers_hasbro_masterpiece_takara_convoy-mp-10asl_0e9206",
           "name": "Convoy (Atmos Safari Lebron Ver) MP-10ASL",
@@ -94,38 +152,48 @@
           "price": 200,
           "sold_count": 20,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/1lkAAeSwZYRqG1jV/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_takara_convoy-mp-10asl_0e9206/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_masterpiece_takara_convoy-mp-10asl_0e9206"
         },
         {
-          "figure_id": "fp_transformers_hasbro_masterpiece_takara_godbomber_085b0f",
-          "name": "Godbomber (MPG-14S)",
+          "figure_id": "fp_transformers_hasbro_masterpiece_takara_megatron-mp-43_67df0a",
+          "name": "Megatron (Beast Wars) MP-43",
           "line": "Masterpiece",
-          "price": 199,
-          "sold_count": 2,
+          "price": 200,
+          "sold_count": 11,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_takara_godbomber_085b0f/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_masterpiece_takara_godbomber_085b0f"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_takara_megatron-mp-43_67df0a/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_masterpiece_takara_megatron-mp-43_67df0a"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_masterpiece_hasbro_optimus-prime_581301",
+          "name": "Optimus Prime",
+          "line": "Masterpiece",
+          "price": 195,
+          "sold_count": 50,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_hasbro_optimus-prime_581301/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_masterpiece_hasbro_optimus-prime_581301"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_masterpiece_takara_optimus-prime-style-generation_e5ce9b",
+          "name": "Optimus Prime Style Generation (MPG-17)",
+          "line": "Masterpiece",
+          "price": 190,
+          "sold_count": 24,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_takara_optimus-prime-style-generation_e5ce9b/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_masterpiece_takara_optimus-prime-style-generation_e5ce9b"
         },
         {
           "figure_id": "fp_transformers_hasbro_masterpiece_takara_optimus-prime-mp-44s_186a62",
           "name": "Optimus Prime MP-44S",
           "line": "Masterpiece",
           "price": 180,
-          "sold_count": 23,
+          "sold_count": 22,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_takara_optimus-prime-mp-44s_186a62/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_masterpiece_takara_optimus-prime-mp-44s_186a62"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_masterpiece_takara_optimus-prime-style-generation_e5ce9b",
-          "name": "Optimus Prime Style Generation (MPG-17)",
-          "line": "Masterpiece",
-          "price": 180,
-          "sold_count": 23,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_masterpiece_takara_optimus-prime-style-generation_e5ce9b/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_masterpiece_takara_optimus-prime-style-generation_e5ce9b"
         },
         {
           "figure_id": "fp_transformers_hasbro_masterpiece_special-edition_optimus-prime-convoy-sleep-mode-mp-4s_ec0a56",
@@ -143,38 +211,8 @@
       "line": "Universe",
       "line_slug": "universe",
       "count": 168,
-      "priced_count": 91,
+      "priced_count": 43,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_universe_exclusives_unicron-with-dead-end_192fcd",
-          "name": "Unicron with Dead End",
-          "line": "Universe",
-          "price": 185,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_exclusives_unicron-with-dead-end_192fcd/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_universe_exclusives_unicron-with-dead-end_192fcd"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_universe_micromasters_hightower_e576f4",
-          "name": "Hightower",
-          "line": "Universe",
-          "price": 160,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_micromasters_hightower_e576f4/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_universe_micromasters_hightower_e576f4"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_universe_micromasters_long-haul_acaf08",
-          "name": "Long Haul",
-          "line": "Universe",
-          "price": 160,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_micromasters_long-haul_acaf08/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_universe_micromasters_long-haul_acaf08"
-        },
         {
           "figure_id": "fp_transformers_hasbro_universe_multipacks_ultra-magnus-vs-treadshot_0c4ac8",
           "name": "Ultra Magnus vs. Treadshot",
@@ -204,74 +242,36 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_multipacks_smokescreen-vs-ransack_1c1a35/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_universe_multipacks_smokescreen-vs-ransack_1c1a35"
-        }
-      ]
-    },
-    {
-      "line": "G1",
-      "line_slug": "g1",
-      "count": 126,
-      "priced_count": 122,
-      "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_g1_autobots_rodimus-prime_a8bb1b",
-          "name": "Rodimus Prime",
-          "line": "G1",
-          "price": 150,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_autobots_rodimus-prime_a8bb1b/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_g1_autobots_rodimus-prime_a8bb1b"
         },
         {
-          "figure_id": "fp_transformers_hasbro_g1_mini-vehicles_bumblejumper_64fb64",
-          "name": "Bumblejumper (Cliff Jumper)",
-          "line": "G1",
-          "price": 145,
-          "sold_count": 28,
+          "figure_id": "fp_transformers_hasbro_universe_ultra_soundwave-space-case_e97701",
+          "name": "Soundwave & Space Case",
+          "line": "Universe",
+          "price": 100,
+          "sold_count": 3,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_mini-vehicles_bumblejumper_64fb64/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_g1_mini-vehicles_bumblejumper_64fb64"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_ultra_soundwave-space-case_e97701/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_universe_ultra_soundwave-space-case_e97701"
         },
         {
-          "figure_id": "fp_transformers_hasbro_g1_aerialbots_superion_960827",
-          "name": "Superion",
-          "line": "G1",
-          "price": 140,
-          "sold_count": 42,
+          "figure_id": "fp_transformers_hasbro_universe_deluxe_downshift-vs-cannonball_af5907",
+          "name": "Downshift vs. Cannonball",
+          "line": "Universe",
+          "price": 80,
+          "sold_count": 4,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_aerialbots_superion_960827/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_g1_aerialbots_superion_960827"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_deluxe_downshift-vs-cannonball_af5907/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_universe_deluxe_downshift-vs-cannonball_af5907"
         },
         {
-          "figure_id": "fp_transformers_hasbro_g1_autobots_blaster_5e5d66",
-          "name": "Blaster",
-          "line": "G1",
-          "price": 115,
-          "sold_count": 5,
+          "figure_id": "fp_transformers_hasbro_universe_deluxe_reptilion_b11322",
+          "name": "Reptilion",
+          "line": "Universe",
+          "price": 60,
+          "sold_count": 14,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_autobots_blaster_5e5d66/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_g1_autobots_blaster_5e5d66"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_g1_stunticons_menasor_c8c36b",
-          "name": "Menasor",
-          "line": "G1",
-          "price": 95,
-          "sold_count": 26,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_stunticons_menasor_c8c36b/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_g1_stunticons_menasor_c8c36b"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_g1_decepticons_reflector_b2511b",
-          "name": "Reflector",
-          "line": "G1",
-          "price": 93,
-          "sold_count": 20,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_decepticons_reflector_b2511b/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_g1_decepticons_reflector_b2511b"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_universe_deluxe_reptilion_b11322/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_universe_deluxe_reptilion_b11322"
         }
       ]
     },
@@ -279,7 +279,7 @@
       "line": "Generations Selects",
       "line_slug": "generations",
       "count": 81,
-      "priced_count": 38,
+      "priced_count": 24,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_generations_titan-class_metroplex_85fcc3",
@@ -290,6 +290,16 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations_titan-class_metroplex_85fcc3/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_generations_titan-class_metroplex_85fcc3"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_generations_voyager-class_armada-nemesis-prime-air-defense-mini-con-team_4ef6fa",
+          "name": "Armada Nemesis Prime & Air Defense Mini-Con Team",
+          "line": "Generations: Original",
+          "price": 200,
+          "sold_count": 4,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations_voyager-class_armada-nemesis-prime-air-defense-mini-con-team_4ef6fa/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_generations_voyager-class_armada-nemesis-prime-air-defense-mini-con-team_4ef6fa"
         },
         {
           "figure_id": "fp_transformers_hasbro_generations_sets_abominus_0fb7b2",
@@ -312,21 +322,11 @@
           "url": "/figure/fp_transformers_hasbro_generations_sets_cordon-autobot-spin-out_810a0c"
         },
         {
-          "figure_id": "fp_transformers_hasbro_generations_deluxe-class_drift_8a7261",
-          "name": "Drift",
-          "line": "Generations: Original",
-          "price": 90,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations_deluxe-class_drift_8a7261/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_generations_deluxe-class_drift_8a7261"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_generations_deluxe-class_sky-shadow_610e24",
           "name": "Sky Shadow",
           "line": "Generations: Original",
           "price": 90,
-          "sold_count": 16,
+          "sold_count": 9,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations_deluxe-class_sky-shadow_610e24/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_generations_deluxe-class_sky-shadow_610e24"
@@ -347,7 +347,7 @@
       "line": "Vintage G1 Reissue",
       "line_slug": "vintage-g1-reissue",
       "count": 76,
-      "priced_count": 36,
+      "priced_count": 29,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_powermaster-optimus-prime-with-apex-armor_79f9a6",
@@ -360,34 +360,14 @@
           "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_powermaster-optimus-prime-with-apex-armor_79f9a6"
         },
         {
-          "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_ultra-magnus_dbf326",
-          "name": "Ultra Magnus",
-          "line": "Vintage G1 Reissue",
-          "price": 100,
-          "sold_count": 4,
-          "flag": "VINTAGE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_ultra-magnus_dbf326/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_ultra-magnus_dbf326"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-optimus-prime-c-01_b82df4",
           "name": "Missing Link Optimus Prime (Convoy) C-01",
           "line": "Vintage G1 Reissue",
           "price": 85,
           "sold_count": 20,
           "flag": "VINTAGE",
-          "image": "https://i.ebayimg.com/images/g/gOgAAeSwfWJpKIyS/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-optimus-prime-c-01_b82df4/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-optimus-prime-c-01_b82df4"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_soundwave-and-buzzsaw_88284d",
-          "name": "Soundwave and Buzzsaw",
-          "line": "Vintage G1 Reissue",
-          "price": 80,
-          "sold_count": 7,
-          "flag": "VINTAGE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_soundwave-and-buzzsaw_88284d/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_soundwave-and-buzzsaw_88284d"
         },
         {
           "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-ultra-magnus-c-10_30541d",
@@ -408,6 +388,26 @@
           "flag": "VINTAGE",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_starscream_bf1853/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_starscream_bf1853"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_optimus-prime_f22f3d",
+          "name": "Optimus Prime (40th Anniversary)",
+          "line": "Vintage G1 Reissue",
+          "price": 75,
+          "sold_count": 32,
+          "flag": "VINTAGE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_optimus-prime_f22f3d/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_autobots-and-decepticons_optimus-prime_f22f3d"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-optimus-prime-convoy-c-01_0bf1e4",
+          "name": "Missing Link Optimus Prime (Convoy) C-01",
+          "line": "Vintage G1 Reissue",
+          "price": 75,
+          "sold_count": 21,
+          "flag": "VINTAGE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-optimus-prime-convoy-c-01_0bf1e4/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_vintage-g1-reissue_missing-link_missing-link-optimus-prime-convoy-c-01_0bf1e4"
         }
       ]
     },
@@ -415,27 +415,17 @@
       "line": "Titans Return",
       "line_slug": "titans-return",
       "count": 75,
-      "priced_count": 51,
+      "priced_count": 29,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_titans-return_titan-class_fortress-maximus_c8661d",
           "name": "Fortress Maximus",
           "line": "Titans Return",
           "price": 200,
-          "sold_count": 15,
+          "sold_count": 13,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_titan-class_fortress-maximus_c8661d/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_titans-return_titan-class_fortress-maximus_c8661d"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_titans-return_exclusives_titan-force_79c7ab",
-          "name": "Titan Force",
-          "line": "Titans Return",
-          "price": 175,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_exclusives_titan-force_79c7ab/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_titans-return_exclusives_titan-force_79c7ab"
         },
         {
           "figure_id": "fp_transformers_hasbro_titans-return_exclusives_primitive-skateboarding-optimus-prime_5ae8b7",
@@ -452,20 +442,10 @@
           "name": "Aimless & Misfire",
           "line": "Titans Return",
           "price": 143,
-          "sold_count": 13,
+          "sold_count": 22,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_deluxe-class_aimless-misfire_6ac055/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_titans-return_deluxe-class_aimless-misfire_6ac055"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_titans-return_deluxe-class_flameout-twin-twist_660db2",
-          "name": "Flameout & Twin Twist",
-          "line": "Titans Return",
-          "price": 126,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_deluxe-class_flameout-twin-twist_660db2/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_titans-return_deluxe-class_flameout-twin-twist_660db2"
         },
         {
           "figure_id": "fp_transformers_hasbro_titans-return_leader-class_ominus-sky-shadow_688672",
@@ -476,6 +456,26 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_leader-class_ominus-sky-shadow_688672/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_titans-return_leader-class_ominus-sky-shadow_688672"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_titans-return_leader-class_dreadnaut-decepticon-overlord_26dbb9",
+          "name": "Dreadnaut & Decepticon Overlord",
+          "line": "Titans Return",
+          "price": 105,
+          "sold_count": 30,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_leader-class_dreadnaut-decepticon-overlord_26dbb9/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_titans-return_leader-class_dreadnaut-decepticon-overlord_26dbb9"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_titans-return_leader-class_decepticon-revolver-six-shot_60764d",
+          "name": "Decepticon Revolver & Six Shot",
+          "line": "Titans Return",
+          "price": 79,
+          "sold_count": 8,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_titans-return_leader-class_decepticon-revolver-six-shot_60764d/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_titans-return_leader-class_decepticon-revolver-six-shot_60764d"
         }
       ]
     },
@@ -483,7 +483,7 @@
       "line": "Combiner Wars",
       "line_slug": "combiner-wars",
       "count": 69,
-      "priced_count": 63,
+      "priced_count": 26,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_predacus_afea42",
@@ -496,26 +496,6 @@
           "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_predacus_afea42"
         },
         {
-          "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_computron_0c40a9",
-          "name": "Computron",
-          "line": "Combiner Wars",
-          "price": 280,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_exclusives_computron_0c40a9/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_computron_0c40a9"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_victorion_7ad8e9",
-          "name": "Victorion",
-          "line": "Combiner Wars",
-          "price": 200,
-          "sold_count": 13,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_exclusives_victorion_7ad8e9/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_victorion_7ad8e9"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_devastator_b6db48",
           "name": "Devastator (SDCC)",
           "line": "Combiner Wars",
@@ -526,24 +506,44 @@
           "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_devastator_b6db48"
         },
         {
-          "figure_id": "fp_transformers_hasbro_combiner-wars_titan-class_devastator_d9e979",
-          "name": "Devastator",
+          "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_victorion_7ad8e9",
+          "name": "Victorion",
           "line": "Combiner Wars",
-          "price": 165,
-          "sold_count": 12,
+          "price": 178,
+          "sold_count": 9,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_titan-class_devastator_d9e979/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_combiner-wars_titan-class_devastator_d9e979"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_exclusives_victorion_7ad8e9/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_victorion_7ad8e9"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_g2-superion_b74fc4",
+          "name": "G2 Superion",
+          "line": "Combiner Wars",
+          "price": 155,
+          "sold_count": 6,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_exclusives_g2-superion_b74fc4/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_g2-superion_b74fc4"
         },
         {
           "figure_id": "fp_transformers_hasbro_combiner-wars_exclusives_g2-bruticus_50c9ad",
           "name": "G2 Bruticus",
           "line": "Combiner Wars",
           "price": 154,
-          "sold_count": 4,
+          "sold_count": 3,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_exclusives_g2-bruticus_50c9ad/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_combiner-wars_exclusives_g2-bruticus_50c9ad"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_combiner-wars_deluxe-class_blades_0b9a12",
+          "name": "Blades",
+          "line": "Combiner Wars",
+          "price": 60,
+          "sold_count": 4,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_combiner-wars_deluxe-class_blades_0b9a12/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_combiner-wars_deluxe-class_blades_0b9a12"
         }
       ]
     },
@@ -551,14 +551,14 @@
       "line": "Legacy Series",
       "line_slug": "legacy-series",
       "count": 64,
-      "priced_count": 26,
+      "priced_count": 11,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_legacy-series_exclusives_victory-saber_dd6195",
           "name": "Victory Saber",
           "line": "Legacy Series",
           "price": 420,
-          "sold_count": 27,
+          "sold_count": 14,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_victory-saber_dd6195/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_victory-saber_dd6195"
@@ -568,50 +568,50 @@
           "name": "Omega Prime (Robots in Disguise 2001)",
           "line": "Legacy Series",
           "price": 400,
-          "sold_count": 50,
+          "sold_count": 22,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_omega-prime_4c173e/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_omega-prime_4c173e"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-series_exclusives_deathsaurus_7c0ffe",
-          "name": "Deathsaurus",
+          "figure_id": "fp_transformers_hasbro_legacy-series_voyager-class_soundwave_2f8aa2",
+          "name": "Soundwave",
           "line": "Legacy Series",
-          "price": 300,
-          "sold_count": 8,
+          "price": 65,
+          "sold_count": 6,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_deathsaurus_7c0ffe/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_deathsaurus_7c0ffe"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_voyager-class_soundwave_2f8aa2/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-series_voyager-class_soundwave_2f8aa2"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-series_commander-class_motormaster_679399",
-          "name": "Motormaster",
+          "figure_id": "fp_transformers_hasbro_legacy-series_voyager-class_predacon-inferno_1bb595",
+          "name": "Predacon Inferno",
           "line": "Legacy Series",
-          "price": 250,
-          "sold_count": 11,
+          "price": 45,
+          "sold_count": 6,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_commander-class_motormaster_679399/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-series_commander-class_motormaster_679399"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_voyager-class_predacon-inferno_1bb595/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-series_voyager-class_predacon-inferno_1bb595"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-series_exclusives_shadowstrip_fc688d",
-          "name": "Shadowstrip (Deluxe Class - Velocitron Speedia 500 Collection)",
+          "figure_id": "fp_transformers_hasbro_legacy-series_voyager-class_starscream_7776b4",
+          "name": "Starscream (Armada Universe)",
           "line": "Legacy Series",
-          "price": 85,
-          "sold_count": 2,
+          "price": 30,
+          "sold_count": 3,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_shadowstrip_fc688d/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_shadowstrip_fc688d"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_voyager-class_starscream_7776b4/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-series_voyager-class_starscream_7776b4"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-series_exclusives_g2-universe-leadfoot-masterdominus_8c50ba",
-          "name": "G2 Universe Leadfoot & Masterdominus",
+          "figure_id": "fp_transformers_hasbro_legacy-series_deluxe-class_wild-rider_ed1dc2",
+          "name": "Wild Rider",
           "line": "Legacy Series",
-          "price": 76,
-          "sold_count": 1,
+          "price": 27,
+          "sold_count": 4,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_exclusives_g2-universe-leadfoot-masterdominus_8c50ba/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-series_exclusives_g2-universe-leadfoot-masterdominus_8c50ba"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_deluxe-class_wild-rider_ed1dc2/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-series_deluxe-class_wild-rider_ed1dc2"
         }
       ]
     },
@@ -619,7 +619,7 @@
       "line": "War for Cybertron Siege Series",
       "line_slug": "war-for-cybertron-siege",
       "count": 59,
-      "priced_count": 43,
+      "priced_count": 15,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_titan-class_omega-supreme_2b0122",
@@ -632,54 +632,54 @@
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_titan-class_omega-supreme_2b0122"
         },
         {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_micromasters_micromasters-10-pack_b026e2",
-          "name": "Micromasters 10 Pack",
-          "line": "War for Cybertron Siege Series",
-          "price": 150,
-          "sold_count": 19,
-          "flag": "EXCLUSIVE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_micromasters_micromasters-10-pack_b026e2/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_micromasters_micromasters-10-pack_b026e2"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_commander-class_jetfire_d5bf69",
-          "name": "Jetfire",
-          "line": "War for Cybertron Siege Series",
-          "price": 125,
-          "sold_count": 5,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_commander-class_jetfire_d5bf69/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_commander-class_jetfire_d5bf69"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_voyager-class_seekers-3-pack_23ce68",
           "name": "Seekers 3 Pack",
           "line": "War for Cybertron Siege Series",
-          "price": 105,
-          "sold_count": 18,
+          "price": 110,
+          "sold_count": 14,
           "flag": "EXCLUSIVE",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_voyager-class_seekers-3-pack_23ce68/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_voyager-class_seekers-3-pack_23ce68"
         },
         {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_commander-class_jetfire_d5bf69",
+          "name": "Jetfire",
+          "line": "War for Cybertron Siege Series",
+          "price": 107,
+          "sold_count": 37,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_commander-class_jetfire_d5bf69/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_commander-class_jetfire_d5bf69"
+        },
+        {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_leader-class_ultra-magnus_820e48",
           "name": "Ultra Magnus",
           "line": "War for Cybertron Siege Series",
-          "price": 100,
-          "sold_count": 7,
+          "price": 103,
+          "sold_count": 3,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_leader-class_ultra-magnus_820e48/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_leader-class_ultra-magnus_820e48"
         },
         {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_micromasters_laserbeak-ravage_394bf0",
-          "name": "Laserbeak & Ravage",
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_deluxe-class_refraktor-reconnaissance-team-3-pack_2749be",
+          "name": "Refraktor Reconnaissance Team 3 Pack",
           "line": "War for Cybertron Siege Series",
-          "price": 90,
-          "sold_count": 1,
+          "price": 70,
+          "sold_count": 5,
+          "flag": "EXCLUSIVE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_deluxe-class_refraktor-reconnaissance-team-3-pack_2749be/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_deluxe-class_refraktor-reconnaissance-team-3-pack_2749be"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-siege_deluxe-class_hound_104a8a",
+          "name": "Hound",
+          "line": "War for Cybertron Siege Series",
+          "price": 64,
+          "sold_count": 5,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_micromasters_laserbeak-ravage_394bf0/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_micromasters_laserbeak-ravage_394bf0"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-siege_deluxe-class_hound_104a8a/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-siege_deluxe-class_hound_104a8a"
         }
       ]
     },
@@ -687,75 +687,75 @@
       "line": "Legacy Evolution",
       "line_slug": "legacy-evolution",
       "count": 58,
-      "priced_count": 34,
+      "priced_count": 14,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_legacy-evolution_core-class_optimus-prime_378df5",
-          "name": "Optimus Prime (Legacy Evolution)",
-          "line": "Legacy Evolution",
-          "price": 170,
-          "sold_count": 32,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_core-class_optimus-prime_378df5/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-evolution_core-class_optimus-prime_378df5"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_legacy-evolution_titan-class_nemesis_74a57c",
-          "name": "Nemesis",
-          "line": "Legacy Evolution",
-          "price": 145,
-          "sold_count": 3,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_titan-class_nemesis_74a57c/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-evolution_titan-class_nemesis_74a57c"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_legacy-evolution_deluxe-class_needlenose_1de39f",
-          "name": "Needlenose",
-          "line": "Legacy Evolution",
-          "price": 64,
-          "sold_count": 6,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_deluxe-class_needlenose_1de39f/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-evolution_deluxe-class_needlenose_1de39f"
-        },
         {
           "figure_id": "fp_transformers_hasbro_legacy-evolution_leader-class_nova-prime_181b07",
           "name": "Nova Prime",
           "line": "Legacy Evolution",
-          "price": 60,
-          "sold_count": 14,
+          "price": 70,
+          "sold_count": 3,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_leader-class_nova-prime_181b07/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_legacy-evolution_leader-class_nova-prime_181b07"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-evolution_core-class_grimlock_e54cac",
-          "name": "Grimlock",
+          "figure_id": "fp_transformers_hasbro_legacy-evolution_deluxe-class_needlenose_1de39f",
+          "name": "Needlenose",
           "line": "Legacy Evolution",
-          "price": 55,
-          "sold_count": 1,
+          "price": 57,
+          "sold_count": 16,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_core-class_grimlock_e54cac/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-evolution_core-class_grimlock_e54cac"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_deluxe-class_needlenose_1de39f/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-evolution_deluxe-class_needlenose_1de39f"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-evolution_deluxe-class_scraphook_0d8125",
-          "name": "Scraphook",
+          "figure_id": "fp_transformers_hasbro_legacy-evolution_leader-class_dreadwing_9fc651",
+          "name": "Dreadwing",
           "line": "Legacy Evolution",
-          "price": 55,
+          "price": 50,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_leader-class_dreadwing_9fc651/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-evolution_leader-class_dreadwing_9fc651"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_legacy-evolution_voyager-class_dirge_13a7b0",
+          "name": "Dirge",
+          "line": "Legacy Evolution",
+          "price": 46,
           "sold_count": 4,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_deluxe-class_scraphook_0d8125/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-evolution_deluxe-class_scraphook_0d8125"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_voyager-class_dirge_13a7b0/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-evolution_voyager-class_dirge_13a7b0"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_legacy-evolution_deluxe-class_axlegrease_462b8c",
+          "name": "Axlegrease",
+          "line": "Legacy Evolution",
+          "price": 40,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_deluxe-class_axlegrease_462b8c/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-evolution_deluxe-class_axlegrease_462b8c"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_legacy-evolution_voyager-class_bludgeon_691b22",
+          "name": "Bludgeon",
+          "line": "Legacy Evolution",
+          "price": 25,
+          "sold_count": 5,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_voyager-class_bludgeon_691b22/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-evolution_voyager-class_bludgeon_691b22"
         }
       ]
     },
     {
       "line": "Legacy United",
       "line_slug": "legacy-united",
-      "count": 55,
-      "priced_count": 19,
+      "count": 57,
+      "priced_count": 9,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_legacy-united_titan-class_armada-universe-tidal-wave_fbeba8",
@@ -768,16 +768,6 @@
           "url": "/figure/fp_transformers_hasbro_legacy-united_titan-class_armada-universe-tidal-wave_fbeba8"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-united_exclusives_dinobot-dinoking-multipack_837bcf",
-          "name": "Dinobot Dinoking Multipack",
-          "line": "Legacy United",
-          "price": 120,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_exclusives_dinobot-dinoking-multipack_837bcf/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-united_exclusives_dinobot-dinoking-multipack_837bcf"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_legacy-united_leader-class_g1-universe-soundwave_8eeb61",
           "name": "G1 Universe Soundwave",
           "line": "Legacy United",
@@ -788,21 +778,11 @@
           "url": "/figure/fp_transformers_hasbro_legacy-united_leader-class_g1-universe-soundwave_8eeb61"
         },
         {
-          "figure_id": "fp_transformers_hasbro_legacy-united_voyager-class_comic-universe-tarn_3ea028",
-          "name": "Comic Universe Tarn",
-          "line": "Legacy United",
-          "price": 50,
-          "sold_count": 4,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_voyager-class_comic-universe-tarn_3ea028/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_legacy-united_voyager-class_comic-universe-tarn_3ea028"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_legacy-united_leader-class_galaxy-shuttle_7938bc",
           "name": "Galaxy Shuttle",
           "line": "Legacy United",
           "price": 50,
-          "sold_count": 15,
+          "sold_count": 11,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_leader-class_galaxy-shuttle_7938bc/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_legacy-united_leader-class_galaxy-shuttle_7938bc"
@@ -816,6 +796,26 @@
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_exclusives_versus-4-pack_9c694d/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_legacy-united_exclusives_versus-4-pack_9c694d"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_legacy-united_leader-class_overcharge_c64e3c",
+          "name": "Overcharge",
+          "line": "Legacy United",
+          "price": 44,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_leader-class_overcharge_c64e3c/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-united_leader-class_overcharge_c64e3c"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_legacy-united_voyager-class_vector-prime_9b09ee",
+          "name": "Vector Prime",
+          "line": "Legacy United",
+          "price": 38,
+          "sold_count": 19,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-united_voyager-class_vector-prime_9b09ee/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_legacy-united_voyager-class_vector-prime_9b09ee"
         }
       ]
     },
@@ -823,24 +823,14 @@
       "line": "Age of the Primes",
       "line_slug": "age-of-the-primes",
       "count": 52,
-      "priced_count": 29,
+      "priced_count": 14,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_age-of-the-primes_voyager-class_junkion-wreck-gar_49d484",
-          "name": "Junkion Wreck-Gar",
-          "line": "Age of the Primes",
-          "price": 195,
-          "sold_count": 1,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_voyager-class_junkion-wreck-gar_49d484/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_voyager-class_junkion-wreck-gar_49d484"
-        },
         {
           "figure_id": "fp_transformers_hasbro_age-of-the-primes_titan-class_thirteen-star-optimus-prime_b21818",
           "name": "The Thirteen Star Optimus Prime",
           "line": "Age of the Primes",
-          "price": 140,
-          "sold_count": 25,
+          "price": 138,
+          "sold_count": 3,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_titan-class_thirteen-star-optimus-prime_b21818/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_age-of-the-primes_titan-class_thirteen-star-optimus-prime_b21818"
@@ -856,34 +846,44 @@
           "url": "/figure/fp_transformers_hasbro_age-of-the-primes_exclusives_g2-dinobot-swoop-and-g2-dinobot-sludge_b70a1d"
         },
         {
-          "figure_id": "fp_transformers_hasbro_age-of-the-primes_leader-class_thirteen-megatronus-the-fallen_d6093e",
-          "name": "The Thirteen Megatronus the Fallen",
+          "figure_id": "fp_transformers_hasbro_age-of-the-primes_voyager-class_rescue-bot-heatwave_8457d7",
+          "name": "Rescue Bot Heatwave",
           "line": "Age of the Primes",
-          "price": 80,
-          "sold_count": 1,
+          "price": 45,
+          "sold_count": 8,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_leader-class_thirteen-megatronus-the-fallen_d6093e/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_leader-class_thirteen-megatronus-the-fallen_d6093e"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_voyager-class_rescue-bot-heatwave_8457d7/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_voyager-class_rescue-bot-heatwave_8457d7"
         },
         {
-          "figure_id": "fp_transformers_hasbro_age-of-the-primes_exclusives_wreck-n-doom-collection-topspin-vs-spinister_0bde16",
-          "name": "Wreck 'n Doom Collection Topspin vs Spinister",
+          "figure_id": "fp_transformers_hasbro_age-of-the-primes_voyager-class_combaticon-brawl_57962d",
+          "name": "Combaticon Brawl",
           "line": "Age of the Primes",
-          "price": 58,
-          "sold_count": 2,
-          "flag": "EXCLUSIVE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_exclusives_wreck-n-doom-collection-topspin-vs-spinister_0bde16/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_exclusives_wreck-n-doom-collection-topspin-vs-spinister_0bde16"
+          "price": 40,
+          "sold_count": 7,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_voyager-class_combaticon-brawl_57962d/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_voyager-class_combaticon-brawl_57962d"
         },
         {
-          "figure_id": "fp_transformers_hasbro_age-of-the-primes_deluxe-class_smokescreen_16d77a",
-          "name": "Smokescreen",
+          "figure_id": "fp_transformers_hasbro_age-of-the-primes_deluxe-class_sideways_b38dbb",
+          "name": "Sideways",
           "line": "Age of the Primes",
-          "price": 52,
-          "sold_count": 2,
+          "price": 39,
+          "sold_count": 50,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_deluxe-class_smokescreen_16d77a/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_deluxe-class_smokescreen_16d77a"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_deluxe-class_sideways_b38dbb/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_deluxe-class_sideways_b38dbb"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_age-of-the-primes_voyager-class_flatline_759504",
+          "name": "Flatline",
+          "line": "Age of the Primes",
+          "price": 28,
+          "sold_count": 5,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_age-of-the-primes_voyager-class_flatline_759504/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_age-of-the-primes_voyager-class_flatline_759504"
         }
       ]
     },
@@ -891,47 +891,17 @@
       "line": "War for Cybertron: Kingdom",
       "line_slug": "war-for-cybertron-kingdom",
       "count": 50,
-      "priced_count": 45,
+      "priced_count": 17,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_titan_autobot-ark_d5440b",
           "name": "Autobot Ark",
           "line": "War for Cybertron: Kingdom",
-          "price": 225,
-          "sold_count": 26,
+          "price": 230,
+          "sold_count": 11,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_titan_autobot-ark_d5440b/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_titan_autobot-ark_d5440b"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_commander_rodimus-prime_9324fd",
-          "name": "Rodimus Prime",
-          "line": "War for Cybertron: Kingdom",
-          "price": 130,
-          "sold_count": 8,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_commander_rodimus-prime_9324fd/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_commander_rodimus-prime_9324fd"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_mirage-maximal-grimlock_dd0ef0",
-          "name": "Mirage & Maximal Grimlock",
-          "line": "War for Cybertron: Kingdom",
-          "price": 75,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_mirage-maximal-grimlock_dd0ef0/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_mirage-maximal-grimlock_dd0ef0"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_voyager_inferno_88e213",
-          "name": "Inferno",
-          "line": "War for Cybertron: Kingdom",
-          "price": 65,
-          "sold_count": 6,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_voyager_inferno_88e213/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_voyager_inferno_88e213"
         },
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_terrorsaur_1d1c8d",
@@ -952,6 +922,36 @@
           "flag": "EXCLUSIVE",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_sideswipe-maximal-skywarp_02505a/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_sideswipe-maximal-skywarp_02505a"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_voyager_inferno_88e213",
+          "name": "Inferno",
+          "line": "War for Cybertron: Kingdom",
+          "price": 54,
+          "sold_count": 25,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_voyager_inferno_88e213/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_voyager_inferno_88e213"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_leader_megatron_9d6e04",
+          "name": "Megatron (Beast)",
+          "line": "War for Cybertron: Kingdom",
+          "price": 49,
+          "sold_count": 42,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_leader_megatron_9d6e04/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_leader_megatron_9d6e04"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_road-ranger-puffer_f0d8bc",
+          "name": "Road Ranger & Puffer",
+          "line": "War for Cybertron: Kingdom",
+          "price": 45,
+          "sold_count": 12,
+          "flag": "EXCLUSIVE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_road-ranger-puffer_f0d8bc/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-kingdom_exclusives_road-ranger-puffer_f0d8bc"
         }
       ]
     },
@@ -959,18 +959,8 @@
       "line": "Generations Selects",
       "line_slug": "generations-selects",
       "count": 48,
-      "priced_count": 46,
+      "priced_count": 40,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_generations-selects_deluxe-class_seacons-tentakil_cd3775",
-          "name": "Seacons Tentakil",
-          "line": "Generations Selects",
-          "price": 450,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://i.ebayimg.com/images/g/SIkAAeSwaO1qGwI-/s-l225.jpg",
-          "url": "/figure/fp_transformers_hasbro_generations-selects_deluxe-class_seacons-tentakil_cd3775"
-        },
         {
           "figure_id": "fp_transformers_hasbro_generations-selects_deluxe-class_seacons-overbite_a0accd",
           "name": "Seacons Overbite",
@@ -978,18 +968,8 @@
           "price": 450,
           "sold_count": 5,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/9NcAAeSwfdlo3sUl/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_deluxe-class_seacons-overbite_a0accd/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_generations-selects_deluxe-class_seacons-overbite_a0accd"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_generations-selects_sets_abominus_d310d4",
-          "name": "Abominus",
-          "line": "Generations Selects",
-          "price": 298,
-          "sold_count": 1,
-          "flag": "",
-          "image": null,
-          "url": "/figure/fp_transformers_hasbro_generations-selects_sets_abominus_d310d4"
         },
         {
           "figure_id": "fp_transformers_hasbro_generations-selects_titan-class_black-zarak_566515",
@@ -998,7 +978,7 @@
           "price": 235,
           "sold_count": 13,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/P44AAeSwQdhp~DPh/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_titan-class_black-zarak_566515/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_generations-selects_titan-class_black-zarak_566515"
         },
         {
@@ -1018,8 +998,28 @@
           "price": 230,
           "sold_count": 5,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/Yq4AAeSwbtBqIgUN/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_leader-class_star-convoy_f3d230/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_generations-selects_leader-class_star-convoy_f3d230"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_generations-selects_titan-class_guardian-robot-lunar-tread_f9a51e",
+          "name": "Guardian Robot & Lunar-Tread",
+          "line": "Generations Selects",
+          "price": 205,
+          "sold_count": 13,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_titan-class_guardian-robot-lunar-tread_f9a51e/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_generations-selects_titan-class_guardian-robot-lunar-tread_f9a51e"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_generations-selects_leader-class_golden-lagoon-soundwave_9346fc",
+          "name": "Golden Lagoon Soundwave",
+          "line": "Generations Selects",
+          "price": 140,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_generations-selects_leader-class_golden-lagoon-soundwave_9346fc/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_generations-selects_leader-class_golden-lagoon-soundwave_9346fc"
         }
       ]
     },
@@ -1027,67 +1027,67 @@
       "line": "War for Cybertron: Earthrise",
       "line_slug": "war-for-cybertron-earthrise",
       "count": 47,
-      "priced_count": 37,
+      "priced_count": 24,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_commander-class_sky-lynx_f3ae48",
-          "name": "Sky Lynx",
-          "line": "War for Cybertron: Earthrise",
-          "price": 180,
-          "sold_count": 14,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_commander-class_sky-lynx_f3ae48/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_commander-class_sky-lynx_f3ae48"
-        },
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_titan-class_scorponok_017109",
           "name": "Scorponok",
           "line": "War for Cybertron: Earthrise",
-          "price": 175,
-          "sold_count": 25,
+          "price": 190,
+          "sold_count": 13,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_titan-class_scorponok_017109/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_titan-class_scorponok_017109"
         },
         {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_runabout_5177c0",
-          "name": "Runabout",
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_quintesson-judge_7ba4b7",
+          "name": "Quintesson Judge",
           "line": "War for Cybertron: Earthrise",
-          "price": 130,
-          "sold_count": 8,
-          "flag": "EXCLUSIVE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_runabout_5177c0/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_runabout_5177c0"
+          "price": 76,
+          "sold_count": 9,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_quintesson-judge_7ba4b7/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_quintesson-judge_7ba4b7"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_leader-class_doubledealer_46124d",
+          "name": "Doubledealer",
+          "line": "War for Cybertron: Earthrise",
+          "price": 70,
+          "sold_count": 7,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_leader-class_doubledealer_46124d/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_leader-class_doubledealer_46124d"
         },
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_skywarp-thundercracker-2-pack_d909a8",
           "name": "Skywarp & Thundercracker 2 Pack",
           "line": "War for Cybertron: Earthrise",
-          "price": 90,
-          "sold_count": 11,
+          "price": 68,
+          "sold_count": 7,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_skywarp-thundercracker-2-pack_d909a8/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_skywarp-thundercracker-2-pack_d909a8"
         },
         {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_centurion-drone-weaponizer_65e4dd",
-          "name": "Centurion Drone Weaponizer",
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_alternate-universe-optimus-prime_e3ec56",
+          "name": "Alternate Universe Optimus Prime",
           "line": "War for Cybertron: Earthrise",
-          "price": 90,
-          "sold_count": 1,
-          "flag": "EXCLUSIVE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_centurion-drone-weaponizer_65e4dd/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_centurion-drone-weaponizer_65e4dd"
+          "price": 61,
+          "sold_count": 7,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_alternate-universe-optimus-prime_e3ec56/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_exclusives_alternate-universe-optimus-prime_e3ec56"
         },
         {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_quintesson-judge_7ba4b7",
-          "name": "Quintesson Judge",
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron-earthrise_deluxe-class_hoist_91b454",
+          "name": "Hoist",
           "line": "War for Cybertron: Earthrise",
-          "price": 80,
-          "sold_count": 14,
+          "price": 55,
+          "sold_count": 7,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_quintesson-judge_7ba4b7/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_voyager-class_quintesson-judge_7ba4b7"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron-earthrise_deluxe-class_hoist_91b454/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron-earthrise_deluxe-class_hoist_91b454"
         }
       ]
     },
@@ -1095,76 +1095,86 @@
       "line": "Power of the Primes",
       "line_slug": "power-of-the-primes",
       "count": 46,
-      "priced_count": 35,
+      "priced_count": 13,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_power-of-the-primes_titan-class_predaking_246df9",
-          "name": "Predaking",
-          "line": "Power of the Primes",
-          "price": 225,
-          "sold_count": 18,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_titan-class_predaking_246df9/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_titan-class_predaking_246df9"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_power-of-the-primes_exclusives_throne-of-the-primes_8b69ae",
-          "name": "Throne of the Primes",
-          "line": "Power of the Primes",
-          "price": 225,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_exclusives_throne-of-the-primes_8b69ae/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_exclusives_throne-of-the-primes_8b69ae"
-        },
         {
           "figure_id": "fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-optimal-optimus_b34f1a",
           "name": "Evolution Optimal Optimus",
           "line": "Power of the Primes",
           "price": 106,
-          "sold_count": 11,
+          "sold_count": 23,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-optimal-optimus_b34f1a/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-optimal-optimus_b34f1a"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-rodimus-prime_8efc70",
-          "name": "Evolution Rodimus Prime",
-          "line": "Power of the Primes",
-          "price": 75,
-          "sold_count": 7,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-rodimus-prime_8efc70/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-rodimus-prime_8efc70"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_power-of-the-primes_deluxe-class_autobot-jazz_3a62c4",
-          "name": "Autobot Jazz",
-          "line": "Power of the Primes",
-          "price": 70,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_deluxe-class_autobot-jazz_3a62c4/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_deluxe-class_autobot-jazz_3a62c4"
         },
         {
           "figure_id": "fp_transformers_hasbro_power-of-the-primes_voyager-class_elita-1_41855c",
           "name": "Elita-1",
           "line": "Power of the Primes",
           "price": 55,
-          "sold_count": 12,
+          "sold_count": 5,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_voyager-class_elita-1_41855c/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_power-of-the-primes_voyager-class_elita-1_41855c"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-rodimus-prime_8efc70",
+          "name": "Evolution Rodimus Prime",
+          "line": "Power of the Primes",
+          "price": 45,
+          "sold_count": 3,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-rodimus-prime_8efc70/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_leader-class_evolution-rodimus-prime_8efc70"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_power-of-the-primes_deluxe-class_blackwing_1c565e",
+          "name": "Blackwing",
+          "line": "Power of the Primes",
+          "price": 35,
+          "sold_count": 4,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_deluxe-class_blackwing_1c565e/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_deluxe-class_blackwing_1c565e"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_power-of-the-primes_deluxe-class_dreadwind_cbc273",
+          "name": "Dreadwind",
+          "line": "Power of the Primes",
+          "price": 30,
+          "sold_count": 6,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_deluxe-class_dreadwind_cbc273/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_deluxe-class_dreadwind_cbc273"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_power-of-the-primes_prime-masters_alpha-trion_54397c",
+          "name": "Alpha Trion (Landmine)",
+          "line": "Power of the Primes",
+          "price": 26,
+          "sold_count": 13,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_power-of-the-primes_prime-masters_alpha-trion_54397c/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_power-of-the-primes_prime-masters_alpha-trion_54397c"
         }
       ]
     },
     {
       "line": "War for Cybertron: Trilogy",
       "line_slug": "war-for-cybertron",
-      "count": 38,
-      "priced_count": 18,
+      "count": 37,
+      "priced_count": 11,
       "top": [
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33",
+          "name": "Unicron",
+          "line": "War for Cybertron: Trilogy",
+          "price": 1825,
+          "sold_count": 10,
+          "flag": "EXCLUSIVE",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33"
+        },
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron_leader-class-spo_nemesis-prime_65e052",
           "name": "Nemesis Prime",
@@ -1172,48 +1182,8 @@
           "price": 127,
           "sold_count": 50,
           "flag": "",
-          "image": "https://i.ebayimg.com/images/g/CzcAAeSwCbZqBfFc/s-l225.jpg",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_leader-class-spo_nemesis-prime_65e052/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron_leader-class-spo_nemesis-prime_65e052"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_hotlink_7e474b",
-          "name": "Hotlink",
-          "line": "War for Cybertron: Trilogy",
-          "price": 90,
-          "sold_count": 2,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_hotlink_7e474b/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_hotlink_7e474b"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_soundwave_cd00fc",
-          "name": "Soundwave",
-          "line": "War for Cybertron: Trilogy",
-          "price": 73,
-          "sold_count": 9,
-          "flag": "EXCLUSIVE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_soundwave_cd00fc/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_soundwave_cd00fc"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33",
-          "name": "Unicron",
-          "line": "War for Cybertron: Trilogy",
-          "price": 60,
-          "sold_count": 37,
-          "flag": "EXCLUSIVE",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_exclusives_unicron_906c33"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_megatron_85832a",
-          "name": "Megatron",
-          "line": "War for Cybertron: Trilogy",
-          "price": 55,
-          "sold_count": 3,
-          "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_megatron_85832a/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_megatron_85832a"
         },
         {
           "figure_id": "fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_optimus-prime_ea01ce",
@@ -1224,6 +1194,36 @@
           "flag": "EXCLUSIVE",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_optimus-prime_ea01ce/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_war-for-cybertron_voyager-class-battle-3-p_optimus-prime_ea01ce"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron_leader-class-spo_ultra-magnus_4ac45e",
+          "name": "Ultra Magnus",
+          "line": "War for Cybertron Trilogy",
+          "price": 40,
+          "sold_count": 20,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_leader-class-spo_ultra-magnus_4ac45e/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_leader-class-spo_ultra-magnus_4ac45e"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron_premium-finish_ultra-magnus_aa0c64",
+          "name": "Ultra Magnus (WFC-03 GE-03)",
+          "line": "War for Cybertron: Trilogy",
+          "price": 38,
+          "sold_count": 50,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_premium-finish_ultra-magnus_aa0c64/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_premium-finish_ultra-magnus_aa0c64"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_war-for-cybertron_premium-finish_megatron_440ce3",
+          "name": "Megatron (WFC-02 GE-02)",
+          "line": "War for Cybertron: Trilogy",
+          "price": 32,
+          "sold_count": 20,
+          "flag": "",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_war-for-cybertron_premium-finish_megatron_440ce3/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_war-for-cybertron_premium-finish_megatron_440ce3"
         }
       ]
     },
@@ -1231,38 +1231,8 @@
       "line": "Classics",
       "line_slug": "classics",
       "count": 37,
-      "priced_count": 24,
+      "priced_count": 9,
       "top": [
-        {
-          "figure_id": "fp_transformers_hasbro_classics_exclusives_games-of-deception-set_c5b05f",
-          "name": "Games of Deception Set (Bug Bite, Dirge, Dreadwind, Thrust, Thundercracker)",
-          "line": "Classics",
-          "price": 500,
-          "sold_count": 4,
-          "flag": "MOTUC",
-          "image": null,
-          "url": "/figure/fp_transformers_hasbro_classics_exclusives_games-of-deception-set_c5b05f"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_classics_exclusives_constructicon-devastator_c4d820",
-          "name": "Constructicon Devastator",
-          "line": "Classics",
-          "price": 219,
-          "sold_count": 2,
-          "flag": "MOTUC",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_exclusives_constructicon-devastator_c4d820/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_classics_exclusives_constructicon-devastator_c4d820"
-        },
-        {
-          "figure_id": "fp_transformers_hasbro_classics_legends-class_trypticon_623ab4",
-          "name": "Trypticon",
-          "line": "Classics",
-          "price": 110,
-          "sold_count": 3,
-          "flag": "MOTUC",
-          "image": null,
-          "url": "/figure/fp_transformers_hasbro_classics_legends-class_trypticon_623ab4"
-        },
         {
           "figure_id": "fp_transformers_hasbro_classics_exclusives_battle-for-autobot-city_80e812",
           "name": "Battle for Autobot City (Ultra Magnus vs Skywarp)",
@@ -1274,16 +1244,6 @@
           "url": "/figure/fp_transformers_hasbro_classics_exclusives_battle-for-autobot-city_80e812"
         },
         {
-          "figure_id": "fp_transformers_hasbro_classics_legends-class_jetfire_8f5edc",
-          "name": "Jetfire",
-          "line": "Classics",
-          "price": 60,
-          "sold_count": 1,
-          "flag": "MOTUC",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_legends-class_jetfire_8f5edc/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_classics_legends-class_jetfire_8f5edc"
-        },
-        {
           "figure_id": "fp_transformers_hasbro_classics_packs_optimus-prime_d53fd6",
           "name": "Optimus Prime (20th Anniversary DVD Edition)",
           "line": "Classics",
@@ -1292,6 +1252,46 @@
           "flag": "MOTUC",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_packs_optimus-prime_d53fd6/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_classics_packs_optimus-prime_d53fd6"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_classics_voyager-class_optimus-prime_9e84bd",
+          "name": "Optimus Prime",
+          "line": "Classics",
+          "price": 50,
+          "sold_count": 20,
+          "flag": "MOTUC",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_voyager-class_optimus-prime_9e84bd/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_classics_voyager-class_optimus-prime_9e84bd"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_classics_deluxe-class_bumblebee_50e807",
+          "name": "Bumblebee",
+          "line": "Classics",
+          "price": 25,
+          "sold_count": 50,
+          "flag": "MOTUC",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_deluxe-class_bumblebee_50e807/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_classics_deluxe-class_bumblebee_50e807"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_classics_legends-class_bumblebee_e07504",
+          "name": "Bumblebee",
+          "line": "Classics",
+          "price": 25,
+          "sold_count": 20,
+          "flag": "MOTUC",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_legends-class_bumblebee_e07504/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_classics_legends-class_bumblebee_e07504"
+        },
+        {
+          "figure_id": "fp_transformers_hasbro_classics_mini-cons_dinobots_64af46",
+          "name": "Dinobots (Knockdown, Swoop, Terrorsaur)",
+          "line": "Classics",
+          "price": 23,
+          "sold_count": 16,
+          "flag": "MOTUC",
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_classics_mini-cons_dinobots_64af46/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_classics_mini-cons_dinobots_64af46"
         }
       ]
     },
@@ -1299,27 +1299,27 @@
       "line": "Collaborative",
       "line_slug": "collaborative",
       "count": 24,
-      "priced_count": 17,
+      "priced_count": 15,
       "top": [
         {
           "figure_id": "fp_transformers_hasbro_collaborative_action-figures_soundwave-dreadnok-thunder-machine_94653b",
           "name": "Soundwave Dreadnok Thunder Machine",
           "line": "Collaborative",
           "price": 105,
-          "sold_count": 40,
+          "sold_count": 11,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_collaborative_action-figures_soundwave-dreadnok-thunder-machine_94653b/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_collaborative_action-figures_soundwave-dreadnok-thunder-machine_94653b"
         },
         {
-          "figure_id": "fp_transformers_hasbro_collaborative_action-figures_code-red_502718",
-          "name": "Code Red",
+          "figure_id": "fp_transformers_hasbro_collaborative_action-figures_autobot-kup-triple-t_10bc70",
+          "name": "Autobot Kup Triple T",
           "line": "Collaborative",
           "price": 65,
-          "sold_count": 8,
+          "sold_count": 4,
           "flag": "",
-          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_collaborative_action-figures_code-red_502718/canonical.jpg",
-          "url": "/figure/fp_transformers_hasbro_collaborative_action-figures_code-red_502718"
+          "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_collaborative_action-figures_autobot-kup-triple-t_10bc70/canonical.jpg",
+          "url": "/figure/fp_transformers_hasbro_collaborative_action-figures_autobot-kup-triple-t_10bc70"
         },
         {
           "figure_id": "fp_transformers_hasbro_collaborative_action-figures_balvintron_144b9d",
@@ -1336,7 +1336,7 @@
           "name": "Ectotron (ECTO-1)",
           "line": "Collaborative",
           "price": 60,
-          "sold_count": 29,
+          "sold_count": 12,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_collaborative_action-figures_ectotron_3840df/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_collaborative_action-figures_ectotron_3840df"
@@ -1356,7 +1356,7 @@
           "name": "Tyrannocon Rex & Autobot JP93",
           "line": "Collaborative",
           "price": 55,
-          "sold_count": 16,
+          "sold_count": 12,
           "flag": "",
           "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_collaborative_action-figures_tyrannocon-rex-autobot-jp93_08001b/canonical.jpg",
           "url": "/figure/fp_transformers_hasbro_collaborative_action-figures_tyrannocon-rex-autobot-jp93_08001b"

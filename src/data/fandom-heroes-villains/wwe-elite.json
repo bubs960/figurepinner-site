@@ -1,73 +1,79 @@
 {
   "fandom": "wwe-elite",
-  "generated_at": "2026-06-21T16:25:55.914Z",
-  "source": "curated allegiance + r2proxy price-summaries, sold_count>0, photo required",
+  "generated_at": "2026-09-18T23:24:42.852Z",
+  "source": "curated allegiance + r2proxy price-summaries, sold_count>=3, photo required",
   "heroes": [
     {
-      "figure_id": "fp_wrestling_mattel_elite_7_john-cena_bb7a3f",
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_sdcc_john-cena_7faa8c",
       "name": "John Cena",
       "char": "john-cena",
-      "line": "Elite",
-      "price": 200,
-      "sold_count": 4,
+      "pl": "ultimate-edition",
+      "line": "Ultimate Edition",
+      "price": 125,
+      "sold_count": 6,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/1b4f1d8b-2991-473c-9b67-7a1263972540_1.a02a5d1d177feb3cfa5aa150d9055368.jpg?v=1651246375",
-      "url": "/figure/fp_wrestling_mattel_elite_7_john-cena_bb7a3f"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_ultimate-edition_sdcc_john-cena_7faa8c/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_sdcc_john-cena_7faa8c"
     },
     {
       "figure_id": "fp_wrestling_mattel_elite_1_jeff-hardy_d9d8ef7855e0",
       "name": "Jeff Hardy",
       "char": "jeff-hardy",
+      "pl": "elite",
       "line": "Elite",
-      "price": 200,
-      "sold_count": 1,
+      "price": 120,
+      "sold_count": 16,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_elite_1_jeff-hardy_d9d8ef7855e0/canonical.jpg",
       "url": "/figure/fp_wrestling_mattel_elite_1_jeff-hardy_d9d8ef7855e0"
     },
     {
-      "figure_id": "fp_wrestling_mattel_elite-legends_1_ricky-steamboat_d371a3",
-      "name": "Ricky Steamboat",
-      "char": "ricky-steamboat",
-      "line": "Elite Legends",
-      "price": 130,
-      "sold_count": 2,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1434_i21_w800.jpg",
-      "url": "/figure/fp_wrestling_mattel_elite-legends_1_ricky-steamboat_d371a3"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_defining-moments_2_the-rock_292451",
-      "name": "The Rock",
-      "char": "the-rock",
+      "figure_id": "fp_wrestling_mattel_defining-moments_6_sting_a96b83",
+      "name": "Sting",
+      "char": "sting",
+      "pl": "defining-moments",
       "line": "Defining Moments",
-      "price": 90,
-      "sold_count": 2,
+      "price": 100,
+      "sold_count": 21,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1974_i1_w964.jpg",
-      "url": "/figure/fp_wrestling_mattel_defining-moments_2_the-rock_292451"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1991_i1_w1500.jpg",
+      "url": "/figure/fp_wrestling_mattel_defining-moments_6_sting_a96b83"
     },
     {
-      "figure_id": "fp_wrestling_mattel_elite_20_cody-rhodes_f385a4",
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_5_becky-lynch_c7e51c",
+      "name": "Becky Lynch",
+      "char": "becky-lynch",
+      "pl": "ultimate-edition",
+      "line": "Ultimate Edition",
+      "price": 88,
+      "sold_count": 10,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20231122_185001049.jpg",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_5_becky-lynch_c7e51c"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite_5_rey-mysterio_795d43",
+      "name": "Rey Mysterio",
+      "char": "rey-mysterio",
+      "pl": "elite",
+      "line": "Elite",
+      "price": 70,
+      "sold_count": 15,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/e5-rey.jpg",
+      "url": "/figure/fp_wrestling_mattel_elite_5_rey-mysterio_795d43"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_elite-from-the-vault_4_cody-rhodes_b58b8e",
       "name": "Cody Rhodes",
       "char": "cody-rhodes",
-      "line": "Elite",
-      "price": 79,
-      "sold_count": 12,
+      "pl": "elite-from-the-vault",
+      "line": "Elite From the Vault",
+      "price": 70,
+      "sold_count": 4,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/apizkd3lb-27252-1550283933.jpg",
-      "url": "/figure/fp_wrestling_mattel_elite_20_cody-rhodes_f385a4"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition_21_sami-zayn_eb4a34",
-      "name": "Sami Zayn",
-      "char": "sami-zayn",
-      "line": "Ultimate Edition",
-      "price": 75,
-      "sold_count": 17,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/GKP2jPUWQAEpOBb.jpg",
-      "url": "/figure/fp_wrestling_mattel_ultimate-edition_21_sami-zayn_eb4a34"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/1_41f7878e-29ce-49b1-b9b2-a3b0814c0775.png",
+      "url": "/figure/fp_wrestling_mattel_elite-from-the-vault_4_cody-rhodes_b58b8e"
     }
   ],
   "villains": [
@@ -75,39 +81,19 @@
       "figure_id": "fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00",
       "name": "Brock Lesnar",
       "char": "brock-lesnar",
+      "pl": "ultimate-edition",
       "line": "Ultimate Edition",
       "price": 125,
-      "sold_count": 17,
+      "sold_count": 50,
       "flag": "",
       "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20230720_165820095.jpg",
       "url": "/figure/fp_wrestling_mattel_ultimate-edition_15_brock-lesnar_aceb00"
     },
     {
-      "figure_id": "fp_wrestling_mattel_defining-moments_3_triple-h_fd366a",
-      "name": "Triple H",
-      "char": "triple-h",
-      "line": "Defining Moments",
-      "price": 110,
-      "sold_count": 4,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s112536817296687449_p1977_i1_w989.jpg",
-      "url": "/figure/fp_wrestling_mattel_defining-moments_3_triple-h_fd366a"
-    },
-    {
-      "figure_id": "fp_wrestling_mattel_elite_10_ted-dibiase_3c3ff4",
-      "name": "Ted DiBiase",
-      "char": "ted-dibiase",
-      "line": "Elite",
-      "price": 90,
-      "sold_count": 6,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/img-1132.jpg",
-      "url": "/figure/fp_wrestling_mattel_elite_10_ted-dibiase_3c3ff4"
-    },
-    {
       "figure_id": "fp_wrestling_mattel_ultimate-edition_17_andre-the-giant_5e5416",
       "name": "Andre the Giant",
       "char": "andre-the-giant",
+      "pl": "ultimate-edition",
       "line": "Ultimate Edition",
       "price": 90,
       "sold_count": 50,
@@ -116,26 +102,52 @@
       "url": "/figure/fp_wrestling_mattel_ultimate-edition_17_andre-the-giant_5e5416"
     },
     {
-      "figure_id": "fp_wrestling_mattel_ultimate-edition_23_gunther_95d298",
-      "name": "Gunther",
-      "char": "gunther",
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_32_jacob-fatu_ef20f8",
+      "name": "Jacob Fatu",
+      "char": "jacob-fatu",
+      "pl": "ultimate-edition",
       "line": "Ultimate Edition",
-      "price": 80,
-      "sold_count": 2,
+      "price": 67,
+      "sold_count": 36,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20241124_225940310.jpg",
-      "url": "/figure/fp_wrestling_mattel_ultimate-edition_23_gunther_95d298"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_ultimate-edition_32_jacob-fatu_ef20f8/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_32_jacob-fatu_ef20f8"
     },
     {
-      "figure_id": "fp_wrestling_mattel_elite_12_randy-orton_92d23e",
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_cc2_jake-roberts_7609c5",
+      "name": "Jake Roberts",
+      "char": "jake-roberts",
+      "pl": "ultimate-edition",
+      "line": "Ultimate Edition",
+      "price": 63,
+      "sold_count": 28,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_mattel_ultimate-edition_cc2_jake-roberts_7609c5/canonical.jpg",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_cc2_jake-roberts_7609c5"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_18_randy-orton_846dfa",
       "name": "Randy Orton",
       "char": "randy-orton",
-      "line": "Elite",
-      "price": 70,
-      "sold_count": 4,
+      "pl": "ultimate-edition",
+      "line": "Ultimate Edition",
+      "price": 60,
+      "sold_count": 16,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/291192_10150372337999260_1129648917_o.jpg",
-      "url": "/figure/fp_wrestling_mattel_elite_12_randy-orton_92d23e"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20241124_223945175.jpg",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_18_randy-orton_846dfa"
+    },
+    {
+      "figure_id": "fp_wrestling_mattel_ultimate-edition_21_kevin-owens_c1efd1",
+      "name": "Kevin Owens",
+      "char": "kevin-owens",
+      "pl": "ultimate-edition",
+      "line": "Ultimate Edition",
+      "price": 60,
+      "sold_count": 19,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_695268c6-aaf4-4e9b-bba7-23ff8124ae36.webp",
+      "url": "/figure/fp_wrestling_mattel_ultimate-edition_21_kevin-owens_c1efd1"
     }
   ]
 }

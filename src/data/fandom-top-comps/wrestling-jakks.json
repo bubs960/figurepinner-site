@@ -1,7 +1,7 @@
 {
   "fandom": "wrestling-jakks",
-  "generated_at": "2026-06-21T19:10:40.469Z",
-  "source": "r2proxy price-summaries (median_sold ?? avg_sold), sold_count>0 only",
+  "generated_at": "2026-09-18T23:27:18.924Z",
+  "source": "r2proxy price-summaries (median_sold ?? avg_sold), sold_count>=3 only",
   "figures": [
     {
       "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_9p_ricky-morton-rob_0c9804",
@@ -15,37 +15,15 @@
       "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_9p_ricky-morton-rob_0c9804"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_38_hornswoggle_5f3218",
-      "name": "Hornswoggle",
-      "line": "Ruthless Aggression",
-      "price": 273,
-      "sold_count": 1,
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_ex_halloween-havoc-_0745d1",
+      "name": "Halloween Havoc: Rey Mysterio vs. Eddie Guerrero",
+      "line": "Deluxe Classic",
+      "price": 290,
+      "sold_count": 4,
       "last_sold": null,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/img-9396.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_ruthless-aggression_38_hornswoggle_5f3218"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_7p_undertaker-kane-_7d5cc1",
-      "name": "Undertaker, Kane & Paul Bearer",
-      "line": "Classic Superstars",
-      "price": 250,
-      "sold_count": 2,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20230331_232838754_6f6b8c94-d290-4e43-a1df-2416ce9edf9d.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_7p_undertaker-kane-_7d5cc1"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_ex_jeff-hardy-bret-_3ef0dc",
-      "name": "Jeff Hardy & Bret Hart",
-      "line": "Classic Superstars",
-      "price": 250,
-      "sold_count": 1,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20231010_213631393.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_ex_jeff-hardy-bret-_3ef0dc"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/img-6867.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-classic_ex_halloween-havoc-_0745d1"
     },
     {
       "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_3_batista_b0c4e1",
@@ -59,37 +37,59 @@
       "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_3_batista_b0c4e1"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_unmatched-fury_8_matt-hardy_c3f172",
-      "name": "Matt Hardy",
-      "line": "Unmatched Fury",
-      "price": 200,
-      "sold_count": 1,
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_16_barbarian_0958bf",
+      "name": "Barbarian",
+      "line": "Classic Superstars",
+      "price": 165,
+      "sold_count": 8,
       "last_sold": null,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/unmatchedfuryseries8matthardy.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_unmatched-fury_8_matt-hardy_c3f172"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_8924e5e7-6fff-4139-8326-0d63fa44c1d7.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_16_barbarian_0958bf"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_r3-tech_ex_stage-of-rage_57752c",
-      "name": "Stage of Rage",
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_17_ken-patera_f92f38",
+      "name": "Ken Patera",
+      "line": "Classic Superstars",
+      "price": 165,
+      "sold_count": 8,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_e7cd24fc-db53-4647-9f5a-0fc6630bf4f5.png",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_17_ken-patera_f92f38"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-classic_ex_heaven-hell-shaw_9cca68",
+      "name": "Heaven & Hell: Shawn Michaels vs. Undertaker",
+      "line": "Deluxe Classic",
+      "price": 150,
+      "sold_count": 4,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/img-6866.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-classic_ex_heaven-hell-shaw_9cca68"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_26_meng_bdbe19",
+      "name": "Meng",
+      "line": "Classic Superstars",
+      "price": 150,
+      "sold_count": 6,
+      "last_sold": null,
+      "flag": "",
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20230520_163840086.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_26_meng_bdbe19"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_r3-tech_ex_triple-h_d06deb",
+      "name": "Triple H",
       "line": "R-3 Tech",
-      "price": 194,
-      "sold_count": 1,
+      "price": 145,
+      "sold_count": 4,
       "last_sold": null,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_4d36d97c-3994-4d62-badd-7e765c0c2b2c.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_r3-tech_ex_stage-of-rage_57752c"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_unmatched-fury_11_chris-jericho_7d3926",
-      "name": "Chris Jericho",
-      "line": "Unmatched Fury",
-      "price": 186,
-      "sold_count": 1,
-      "last_sold": null,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/wwe-unmatched-fury-jakks-chris-1-10791ae1d0f6ea59c8aafc65dedf1294.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_unmatched-fury_11_chris-jericho_7d3926"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/00463599.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_r3-tech_ex_triple-h_d06deb"
     }
   ]
 }

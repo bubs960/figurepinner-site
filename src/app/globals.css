@@ -512,6 +512,19 @@ a:hover {
 }
 
 .fh-body { max-width: 720px; margin: 0 auto; padding: 2.25rem 1.25rem 5rem; }
+/* Answer-first sentence that opens the hub body (2026-09-18, hubShortAnswer.ts). */
+.fh-short-answer {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--fh-text);
+  margin: 0 0 1.6rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--fh-accent, var(--blue));
+  background: color-mix(in srgb, var(--fh-text) 4%, transparent);
+  border-radius: 0 var(--fp-radius-sm) var(--fp-radius-sm) 0;
+}
+.fh-short-answer a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.fh-short-answer-asof { color: var(--fh-muted); font-size: 0.92em; white-space: nowrap; }
 
 /* Intel comp table — fandom-voiced, the funnel into figure pages */
 .fh-intel {

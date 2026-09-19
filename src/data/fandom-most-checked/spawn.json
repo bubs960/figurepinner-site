@@ -1,96 +1,96 @@
 {
   "fandom": "spawn",
-  "generated_at": "2026-08-16T02:04:06.083Z",
+  "generated_at": "2026-09-18T22:33:30.094Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_1_medieval-spawn_d30e7e",
-      "name": "Medieval Spawn",
+      "figure_id": "fp_spawn_mcfarlane_spawn_36_domina_a2c767",
+      "name": "Domina",
       "line": "Spawn",
-      "price": 10,
-      "sold_count": 1,
+      "price": null,
+      "sold_count": 0,
+      "views": 5,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_spawn_mcfarlane_spawn_36_domina_a2c767/canonical.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_36_domina_a2c767"
+    },
+    {
+      "figure_id": "fp_spawn_mcfarlane_spawn-modern_2_clown_4c80e4",
+      "name": "Clown",
+      "line": "Spawn Modern",
+      "price": null,
+      "sold_count": 0,
       "views": 4,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s01/thumb_medieval01.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_1_medieval-spawn_d30e7e"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_spawn_mcfarlane_spawn-modern_2_clown_4c80e4/canonical.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn-modern_2_clown_4c80e4"
     },
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_2_angela_5d5c47",
-      "name": "Angela",
+      "figure_id": "fp_spawn_mcfarlane_spawn_1_spawn_04dd98",
+      "name": "Spawn",
       "line": "Spawn",
-      "price": 10,
-      "sold_count": 1,
-      "views": 3,
+      "price": 60,
+      "sold_count": 20,
+      "views": 4,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s02/thumb_angela02.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_2_angela_5d5c47"
+      "image": "https://www.spawnworld.com/images/toys/s01/thumb_spawn01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_1_spawn_04dd98"
     },
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_8_curse-of-the-spawn_a5771f",
-      "name": "Curse of the Spawn",
-      "line": "Spawn",
-      "price": 25,
+      "figure_id": "fp_spawn_mcfarlane_spawn-modern_anniversary_spawn_b3f647",
+      "name": "Spawn (Image Comics 30th)",
+      "line": "Spawn Modern",
+      "price": 20,
       "sold_count": 20,
       "views": 3,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s08/thumb_curseofthespawn01.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_8_curse-of-the-spawn_a5771f"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_spawn_mcfarlane_spawn-modern_anniversary_spawn_b3f647/canonical.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn-modern_anniversary_spawn_b3f647"
     },
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_6_sansker_925275",
-      "name": "Sansker",
+      "figure_id": "fp_spawn_mcfarlane_spawn_26_spawn-issue-131-cover_e6199d",
+      "name": "Spawn Issue 131 Cover",
       "line": "Spawn",
-      "price": 37,
-      "sold_count": 20,
-      "views": 3,
-      "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s06/thumb_sansker01.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_6_sansker_925275"
-    },
-    {
-      "figure_id": "fp_spawn_mcfarlane_spawn_2_chapel_07d412",
-      "name": "Chapel",
-      "line": "Spawn",
-      "price": 10,
-      "sold_count": 26,
+      "price": 30,
+      "sold_count": 29,
       "views": 2,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s02/thumb_chapel02.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_2_chapel_07d412"
+      "image": "https://www.spawnworld.com/images/toys/s27/thumb_spawni13101.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_26_spawn-issue-131-cover_e6199d"
     },
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_17_malebolgia-ii_4b69f4",
-      "name": "Malebolgia II",
+      "figure_id": "fp_spawn_mcfarlane_spawn_16_nitro-rider_a6bc40",
+      "name": "Nitro Rider",
       "line": "Spawn",
       "price": null,
       "sold_count": 0,
       "views": 2,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s17/thumb_malebolgiaii02.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_17_malebolgia-ii_4b69f4"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_spawn_mcfarlane_spawn_16_nitro-rider_a6bc40/canonical.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_16_nitro-rider_a6bc40"
     },
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_3_vertebreaker_a0fb3f",
-      "name": "Vertebreaker",
+      "figure_id": "fp_spawn_mcfarlane_spawn_2_malebolgia_612989",
+      "name": "Malebolgia",
       "line": "Spawn",
-      "price": 29,
-      "sold_count": 18,
+      "price": null,
+      "sold_count": 0,
       "views": 2,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s03/thumb_vertebreaker01.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_3_vertebreaker_a0fb3f"
+      "image": "https://www.spawnworld.com/images/toys/s02/thumb_malebolgia02.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_2_malebolgia_612989"
     },
     {
-      "figure_id": "fp_spawn_mcfarlane_spawn_3_violator-ii_f5a2de",
-      "name": "Violator II",
+      "figure_id": "fp_spawn_mcfarlane_spawn_1_violator_951482",
+      "name": "Violator",
       "line": "Spawn",
-      "price": 29,
-      "sold_count": 23,
+      "price": 34,
+      "sold_count": 16,
       "views": 2,
       "flag": "",
-      "image": "https://www.spawnworld.com/images/toys/s03/thumb_violatorii01.jpg",
-      "url": "/figure/fp_spawn_mcfarlane_spawn_3_violator-ii_f5a2de"
+      "image": "https://www.spawnworld.com/images/toys/s01/thumb_violator01.jpg",
+      "url": "/figure/fp_spawn_mcfarlane_spawn_1_violator_951482"
     }
   ]
 }
