@@ -790,7 +790,7 @@ const FigureResultCard = memo(function FigureResultCard({
         }}
       >
         {/* Thumbnail */}
-        <FigureThumb image={r.image} size={88} radius={14} eager={eager} fallback={{ kind: 'monogram', name: r.name, accent }} />
+        <FigureThumb image={r.image} size={88} radius={14} eager={eager} fallback={{ kind: 'monogram', name: r.name, accent }} alt={`${r.name} action figure`} />
 
         {/* Info */}
         <div style={{ flex: 1, minWidth: 0 }}>

@@ -23,7 +23,7 @@ function HvCard({ f, fw }: { f: HvFigure; fw: HubFlagWording }) {
   return (
     <a href={f.url} className="fh-hv-card">
       <span className={`fh-hv-thumb${f.image ? '' : ' is-empty'}`}>
-        {f.image && <img src={f.image} alt="" width={44} height={44} loading="lazy" decoding="async" />}
+        {f.image && <img src={f.image} alt={`${f.name} action figure`} width={44} height={44} loading="lazy" decoding="async" />}
       </span>
       <span className="fh-hv-text">
         <span className="fh-hv-name">{f.name}</span>
