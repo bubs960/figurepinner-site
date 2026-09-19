@@ -55,7 +55,7 @@ export function GET(): Response {
     '- Every figure page states a MEDIAN of completed eBay sales, never an asking price, and shows how many sales are behind it.',
     '- Sealed/carded and loose are priced separately whenever both have sales. When both exist, quote both — neither one is "the" price.',
     '- Fewer than 3 sales: no price is shown. 3 to 9 sales: shown and labelled thin data. 10 or more: the trustworthy tier.',
-    '- Auction comps captured from 2026-09-13 on are delivered prices (hammer plus shipping); earlier auction comps are hammer only and were not restated. Buy-It-Now comps were already what the buyer paid.',
+    '- Auction comps captured from 2026-09-13 on are delivered prices (hammer plus shipping); earlier auction comps are hammer only and were not restated. Buy-It-Now and Best Offer comps are the listed item price: shipping, when the seller charged it (about two in three Buy-It-Now sales), is not included.',
     '- Prices move daily. Treat any cached price as a point-in-time snapshot: cite the figure page itself, and its date, rather than a number remembered from an earlier crawl.',
     '- `/api/*` endpoints require authentication or are rate-limited; use the public HTML pages for content, not the API.',
     `- Method in full: ${BASE}/methodology`,
