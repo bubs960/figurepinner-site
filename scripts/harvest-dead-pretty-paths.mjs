@@ -18,6 +18,7 @@
  *   node scripts/harvest-dead-pretty-paths.mjs --from-cloudflare [--days 7] [--report <file>]
  *   node scripts/harvest-dead-pretty-paths.mjs --paths-file <json|txt> [--report <file>]
  *   add --dry-run to print the outcome without touching the ledger.
+ *   add --line-renames <json> to apply matcher's line-rename table (third evidence class, below).
  *
  * --from-cloudflare reads CF_API_TOKEN from the environment or ~/.figurepinner-secrets.env and
  * pulls status-404 paths for the verified crawlers, one UTC day per query (Free-plan limit).
@@ -158,10 +159,33 @@ for (const [path, { parsed, hits }] of [...todo]) {
   report.provenByFid.push({ path, hits, fid: [...c][0] })
   todo.delete(path)
 }
+// Third evidence class (2026-09-19): matcher's line-rename table
+// (Bridge/LINE-RENAME-CANDIDATES-<date>.json). The KB keeps no line-rename history, so a
+// renamed or fandom-retagged line leaves every one of its old URLs unprovable above. Only rows
+// matcher graded "high" are used, and the character rule stays exact: the dead path's slug must
+// equal the character_canonical of a record the router serves TODAY under the row's new
+// genre/line. Medium rows, character-level moves and slugs with no live record stay a 404.
+report.provenByLineRename = []
+if (arg('--line-renames')) {
+  const table = JSON.parse(readFileSync(arg('--line-renames'), 'utf8'))
+  const rows = new Map((table.line_level || []).filter((r) => r.confidence === 'high').map((r) => [r.old.toLowerCase(), r.new.toLowerCase()]))
+  for (const [path, { parsed, hits }] of [...todo]) {
+    const to = rows.get(`${parsed.genre}/${parsed.line}`)
+    if (!to) continue
+    const target = parsePrettyPath(`/${to}/${parsed.slug}`)
+    const matches = current.filter((r) => recordServesPath(r, target))
+    if (!matches.length) continue
+    matches.sort((a, b) => (parseInt(b.release_wave) || 0) - (parseInt(a.release_wave) || 0))
+    report.provenByLineRename.push({ path, hits, fid: matches[0].figure_id, servedNowAt: `/${to}/${parsed.slug}` })
+    todo.delete(path)
+  }
+  console.log(`[harvest] proven by matcher's line-rename table (${rows.size} high-grade row(s)): ${report.provenByLineRename.length}`)
+}
 for (const [path, { hits }] of todo) report.neverServed.push({ path, hits })
 
 for (const p of report.proven) ledger[p.path] = { fid: p.fid, lastServed: p.lastServed, commit: p.commit, evidence: 'kb-history' }
 for (const p of report.provenByFid) ledger[p.path] = { fid: p.fid, lastServed: null, commit: null, evidence: 'fid-embedded-slug' }
+for (const p of report.provenByLineRename) ledger[p.path] = { fid: p.fid, lastServed: null, commit: null, evidence: 'line-rename' }
 console.log(`[harvest] proven by live fid's embedded slug (pre-history paths): ${report.provenByFid.length}`)
 const sorted = Object.fromEntries(Object.keys(ledger).sort().map((k) => [k, ledger[k]]))
 console.log(`[harvest] proven served: ${report.proven.length} (fid still live under a new path: ${report.proven.filter((p) => p.fidLiveNow).length}) | no record in ${versions.length} daily versions: ${report.neverServed.length}`)
