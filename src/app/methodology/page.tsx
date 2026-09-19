@@ -36,7 +36,8 @@ export default function MethodologyPage() {
         </ProseSection>
 
         <ProseSection title="Auction sales: delivered price, not just the hammer">
-          <p>eBay auctions close with a hammer price, then shipping is billed separately when the auction ends — so &ldquo;sold for $45&rdquo; can hide a real $12 shipping charge on top. Starting September 13, 2026, we add that shipping back into every auction comp we capture, so the number you see is what the buyer actually paid, delivered. Buy-It-Now sales already worked this way (the seller sets one all-in price), so those comps are unchanged.</p>
+          <p>eBay auctions close with a hammer price, then shipping is billed separately when the auction ends — so &ldquo;sold for $45&rdquo; can hide a real $12 shipping charge on top. Starting September 13, 2026, we add that shipping back into every auction comp we capture, so the number you see is what the buyer actually paid, delivered.</p>
+          <p>Buy-It-Now and Best Offer comps are different: they are recorded at the listed item price. When the seller charged shipping on top, that shipping is not in the number — and in our September 2026 captures about two in three Buy-It-Now sales did charge it. So on a figure that sells both ways, the auction comps run a little higher than the Buy-It-Now comps for the same figure, by roughly the cost of shipping.</p>
           <p>Auction comps captured before September 13 are still hammer-price only and haven&apos;t been restated — there&apos;s no shipping figure on record for them to add. If you&apos;re comparing an old sale to a new one on the same figure, keep that in mind; it&apos;s a small, one-time definition change, not a data error.</p>
         </ProseSection>
 
