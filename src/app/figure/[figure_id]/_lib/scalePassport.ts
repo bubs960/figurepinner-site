@@ -11,13 +11,14 @@
 //   - packaging_style dropped entirely (v4 product decision)
 // CORE lists below are a render-side copy of matcher's canonical config at
 // `Fig Pinner Dev - Claude/scripts/enrich-v42-passport-gate-fields.json`
-// (passport-gate-fields-1, ACKed 2026-08-13 incl. Delta 1 + the 8/13
-// core_by_product_line era profiles). If matcher revs that file, this copy
+// (passport-gate-fields-2: fields-1 ACKed 2026-08-13 incl. Delta 1 + the 8/13
+// core_by_product_line era profiles; fields-2 = 2026-09-19 wrestling retail
+// price demoted to stretch). If matcher revs that file, this copy
 // must follow — the gate config relay flow is the sync mechanism.
 
 import type { KBFigure } from '@/data/kbTypes'
 
-// ── Gate config (copy of passport-gate-fields-1; see header) ────────────────
+// ── Gate config (copy of passport-gate-fields-2; see header) ────────────────
 
 const CORE_DEFAULT = [
   'included_items',
@@ -34,8 +35,15 @@ const CORE_BY_FANDOM: Record<string, string[]> = {
   'marvel-comics': CORE_DEFAULT,
   'star-wars': CORE_DEFAULT,
   'gi-joe': CORE_DEFAULT,
-  // articulation_points not load-bearing for wrestling (0/5 prod-44 receipt)
-  wrestling: CORE_DEFAULT.filter(f => f !== 'fingerprint.articulation_points'),
+  // articulation_points not load-bearing for wrestling (0/5 prod-44 receipt).
+  // original_retail_price is STRETCH for wrestling (gate-fields-2, Steve
+  // 2026-09-19: 0/45 attested in mattel47; a bare store price fails the
+  // retail-price-unattested check, so it never fills). Resolved value still
+  // renders; an unresolved one is omitted, not shown as a gap. The
+  // jakks-pacific era profiles below stay CORE — the ruling did not name them.
+  wrestling: CORE_DEFAULT.filter(
+    f => f !== 'fingerprint.articulation_points' && f !== 'identity_bonus.original_retail_price'
+  ),
   // attire/head_sculpt/face_technology n/a by construction
   transformers: [
     'included_items',
