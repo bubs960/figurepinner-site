@@ -177,23 +177,31 @@ let BY_FANDOM: Map<string, KBFigure[]> | null = null
 let BY_SUFFIX: Map<string, KBFigure | null> | null = null
 let PRETTY_COUNTS: Map<string, number> | null = null
 let FANDOMS: string[] | null = null
+// In-flight promises: the builders below `await` before they assign, so N
+// concurrent first callers each used to pass the `!X` check and each build a
+// full copy (a hub's Promise.all of 15 url lookups = 15 catalog-sized builds).
+let ALL_P: Promise<KBFigure[]> | null = null
+let BY_ID_P: Promise<Map<string, KBFigure>> | null = null
+let PRETTY_COUNTS_P: Promise<Map<string, number>> | null = null
 
 async function all(): Promise<KBFigure[]> {
-  if (!ALL) {
+  if (ALL) return ALL
+  return (ALL_P ??= (async () => {
     const LITE = await loadLite()
     const rows = JSON.parse(LITE.rows) as LiteRow[]
     ALL = rows.map(r => rowToFigure(r, LITE))
-  }
-  return ALL
+    return ALL
+  })())
 }
 
 async function byId(): Promise<Map<string, KBFigure>> {
-  if (!BY_ID) {
+  if (BY_ID) return BY_ID
+  return (BY_ID_P ??= (async () => {
     const m = new Map<string, KBFigure>()
     for (const f of await all()) m.set(f.figure_id, f)
     BY_ID = m
-  }
-  return BY_ID
+    return m
+  })())
 }
 
 async function byFandom(): Promise<Map<string, KBFigure[]>> {
@@ -227,7 +235,8 @@ async function bySuffix(): Promise<Map<string, KBFigure | null>> {
 // predicate, now four implementations — tests/prettyFigureUrl.test.mjs guards
 // the drift.
 async function prettyCounts(): Promise<Map<string, number>> {
-  if (!PRETTY_COUNTS) {
+  if (PRETTY_COUNTS) return PRETTY_COUNTS
+  return (PRETTY_COUNTS_P ??= (async () => {
     const counts = new Map<string, number>()
     for (const f of await all()) {
       for (const key of prettyUrlRouterCountKeys(f)) {
@@ -235,8 +244,8 @@ async function prettyCounts(): Promise<Map<string, number>> {
       }
     }
     PRETTY_COUNTS = counts
-  }
-  return PRETTY_COUNTS
+    return counts
+  })())
 }
 
 // ── Public API (mirrors kb.ts; ASYNC since 2026-09-15 — see module header) ──
