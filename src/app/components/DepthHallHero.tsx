@@ -442,7 +442,11 @@ export default function DepthHallHero({
                         IntersectionObserver above to confirm the hero is
                         actually on-screen before starting their fetch, so a
                         dozen images don't all compete for bandwidth on the
-                        very first paint. */}
+                        very first paint. fetchPriority follows the same
+                        split (2026-09-20): the two eager cards are the
+                        homepage LCP candidates (CF RUM `/` LCP = a card img,
+                        2,512 ms, while they were `low`), so they load
+                        `high`; the deferred ones stay `low`. */}
                     {showImg && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -450,7 +454,7 @@ export default function DepthHallHero({
                       src={c.img}
                       alt={`${c.name} action figure`}
                       loading="eager"
-                      fetchPriority="low"
+                      fetchPriority={c.eager ? 'high' : 'low'}
                       decoding="async"
                       onError={() => setBroken(b => ({ ...b, [c.fid]: true }))}
                     />

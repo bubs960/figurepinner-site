@@ -136,6 +136,13 @@ export default function RootLayout({
             sweep). Zero bytes in the bundle. */}
         <link rel="preconnect" href="https://static.cloudflareinsights.com" />
         <link rel="preconnect" href="https://www.highperformanceformat.com" crossOrigin="anonymous" />
+        {/* Preconnect to the two figure-photo hosts (2026-09-20, CF RUM: the LCP
+            image host in 3 of 4 samples was figurepinner-images; the homepage's
+            two eager hero cards are one image-worker + one cdn.shopify.com
+            photo). Plain <img> loads are non-CORS, so no crossOrigin here — a
+            crossorigin preconnect would warm the wrong connection pool. */}
+        <link rel="preconnect" href="https://figurepinner-images.bubs960.workers.dev" />
+        <link rel="preconnect" href="https://cdn.shopify.com" />
       </head>
       <body>
         {/* NO ClerkProvider here (2026-09-03, Clerk off public pages — webaudit
