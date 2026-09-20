@@ -76,9 +76,13 @@ function tokenScore(token: string, fl: FieldBag): number | null {
 // limits (isolate already holds the KB itself).
 type IndexEntry = { f: KBFigure; bag: FieldBag }
 let INDEX: IndexEntry[] | null = null
+// In-flight build (2026-09-20): the check-then-await-then-assign shape let every concurrent
+// cold caller build its own 23k-entry index (same defect as kbLite's builders).
+let INDEX_P: Promise<IndexEntry[]> | null = null
 
 async function getIndex(): Promise<IndexEntry[]> {
-  if (!INDEX) {
+  if (INDEX) return INDEX
+  return (INDEX_P ??= (async () => {
     // is_canary figures never rank in search or price-check (both funnel
     // through this index) — Data Defense Layer 3, 2026-08-07. See kbTypes.ts.
     INDEX = (await getAllFigures()).filter(f => !f.is_canary).map(f => ({
@@ -93,8 +97,8 @@ async function getIndex(): Promise<IndexEntry[]> {
         wave: f.release_wave,
       },
     }))
-  }
-  return INDEX
+    return INDEX
+  })())
 }
 
 /**
@@ -134,9 +138,11 @@ function scoreAll(
 // ── Typo correction ─────────────────────────────────────────────────────────
 // Vocabulary of character + line tokens, built once per isolate.
 let VOCAB: string[] | null = null
+let VOCAB_P: Promise<string[]> | null = null
 
 async function getVocab(): Promise<string[]> {
-  if (!VOCAB) {
+  if (VOCAB) return VOCAB
+  return (VOCAB_P ??= (async () => {
     const set = new Set<string>()
     for (const { f } of await getIndex()) {
       for (const t of f.character_canonical.toLowerCase().split(/[^a-z0-9]+/)) {
@@ -147,8 +153,8 @@ async function getVocab(): Promise<string[]> {
       }
     }
     VOCAB = [...set]
-  }
-  return VOCAB
+    return VOCAB
+  })())
 }
 
 /** True if edit distance between a and b is <= 1. */

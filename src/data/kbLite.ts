@@ -182,6 +182,8 @@ let FANDOMS: string[] | null = null
 // full copy (a hub's Promise.all of 15 url lookups = 15 catalog-sized builds).
 let ALL_P: Promise<KBFigure[]> | null = null
 let BY_ID_P: Promise<Map<string, KBFigure>> | null = null
+let BY_FANDOM_P: Promise<Map<string, KBFigure[]>> | null = null
+let BY_SUFFIX_P: Promise<Map<string, KBFigure | null>> | null = null
 let PRETTY_COUNTS_P: Promise<Map<string, number>> | null = null
 
 async function all(): Promise<KBFigure[]> {
@@ -205,7 +207,8 @@ async function byId(): Promise<Map<string, KBFigure>> {
 }
 
 async function byFandom(): Promise<Map<string, KBFigure[]>> {
-  if (!BY_FANDOM) {
+  if (BY_FANDOM) return BY_FANDOM
+  return (BY_FANDOM_P ??= (async () => {
     const m = new Map<string, KBFigure[]>()
     for (const f of await all()) {
       const bucket = m.get(f.fandom)
@@ -213,12 +216,13 @@ async function byFandom(): Promise<Map<string, KBFigure[]>> {
       else m.set(f.fandom, [f])
     }
     BY_FANDOM = m
-  }
-  return BY_FANDOM
+    return m
+  })())
 }
 
 async function bySuffix(): Promise<Map<string, KBFigure | null>> {
-  if (!BY_SUFFIX) {
+  if (BY_SUFFIX) return BY_SUFFIX
+  return (BY_SUFFIX_P ??= (async () => {
     const m = new Map<string, KBFigure | null>()
     for (const f of await all()) {
       const suffix = stableIdSuffix(f.figure_id)
@@ -226,8 +230,8 @@ async function bySuffix(): Promise<Map<string, KBFigure | null>> {
       m.set(suffix, m.has(suffix) ? null : f)
     }
     BY_SUFFIX = m
-  }
-  return BY_SUFFIX
+    return m
+  })())
 }
 
 // Same predicate as kb.ts / kbDb.ts: counted under the ROUTER's match
