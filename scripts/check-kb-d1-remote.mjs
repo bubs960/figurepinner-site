@@ -38,7 +38,16 @@ const TABLE = tableArg
 // with build-kb-d1-sql.mjs --limit N).
 const expectRowsArg = args.includes('--expect-rows') ? Number(args[args.indexOf('--expect-rows') + 1]) : null
 
-const { FIGURES_V2 } = require(resolve(ROOT, 'src/data/figures-reference-v2.slim.js'))
+// --slim <path> (2026-09-19 nightly loader): verify against a SNAPSHOT of the slim
+// (the one the emit was built from) instead of the live file, which can move
+// during a load (the 9/17 C19D9170 abort: frozen emit vs live slim).
+const slimArg = args.includes('--slim') ? args[args.indexOf('--slim') + 1] : null
+if (args.includes('--slim') && !slimArg) {
+  console.error('[kb:d1:remote] --slim needs a path')
+  process.exit(1)
+}
+const SLIM_PATH = resolve(ROOT, slimArg ?? 'src/data/figures-reference-v2.slim.js')
+const { FIGURES_V2 } = require(SLIM_PATH)
 if (!Array.isArray(FIGURES_V2)) {
   console.error('[kb:d1:remote] FIGURES_V2[] export missing')
   process.exit(1)
@@ -164,6 +173,7 @@ const statsRows = runSql(`
 const actualStats = statsRows[0] ?? {}
 
 console.log(`[kb:d1:remote] db: ${dbName} (${local ? 'local' : 'remote'}), table: ${TABLE}`)
+if (slimArg) console.log(`[kb:d1:remote] slim source: ${SLIM_PATH}`)
 console.log(`[kb:d1:remote] rows: expected ${expectedStats.row_count}, actual ${actualStats.row_count}`)
 console.log(`[kb:d1:remote] image rows: expected ${expectedStats.image_count}, actual ${actualStats.image_count}`)
 console.log(`[kb:d1:remote] enriched rows: expected ${expectedStats.enriched_count}, actual ${actualStats.enriched_count}`)
