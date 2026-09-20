@@ -1,6 +1,6 @@
 {
   "fandom": "mythic-legions",
-  "generated_at": "2026-09-18T22:33:30.618Z",
+  "generated_at": "2026-09-20T12:53:39.362Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
@@ -8,89 +8,89 @@
       "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_horses-steeds-and-beasts_leodysseus_5d77e7",
       "name": "Leodysseus",
       "line": "Mythic Legions",
-      "price": null,
-      "sold_count": 0,
+      "price": 120,
+      "sold_count": 22,
       "views": 4,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_horses-steeds-and-beasts_leodysseus_5d77e7/canonical.jpg",
       "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_horses-steeds-and-beasts_leodysseus_5d77e7"
     },
     {
-      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_neve_37e3af",
-      "name": "Neve",
-      "line": "Mythic Legions",
-      "price": null,
-      "sold_count": 0,
-      "views": 3,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_neve_37e3af/canonical.jpg",
-      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_neve_37e3af"
-    },
-    {
       "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_broddr-of-bjorngar_8239b0",
       "name": "Broddr of Bjorngar",
       "line": "Mythic Legions",
-      "price": null,
-      "sold_count": 0,
+      "price": 85,
+      "sold_count": 42,
       "views": 3,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_broddr-of-bjorngar_8239b0/canonical.jpg",
       "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_broddr-of-bjorngar_8239b0"
     },
     {
-      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_weapon-and-accessory-pac_weapons-pack_bd0cc6",
-      "name": "Weapons Pack",
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_neve_37e3af",
+      "name": "Neve",
+      "line": "Mythic Legions",
+      "price": 90,
+      "sold_count": 50,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_neve_37e3af/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_neve_37e3af"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_urzokk-2_6e8277",
+      "name": "Urzokk 2",
+      "line": "Mythic Legions",
+      "price": 145,
+      "sold_count": 19,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_urzokk-2_6e8277/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_urzokk-2_6e8277"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_necronominus_ba44af",
+      "name": "Necronominus (Deluxe)",
+      "line": "Mythic Legions",
+      "price": 55,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_necronominus_ba44af/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_necronominus_ba44af"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_drayleeon_ed1a4b",
+      "name": "Drayleeon",
+      "line": "Mythic Legions",
+      "price": 300,
+      "sold_count": 12,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_drayleeon_ed1a4b/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_drayleeon_ed1a4b"
+    },
+    {
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_ogres-brutes-and-centaur_kalizirr_415115",
+      "name": "Kalizirr",
       "line": "Mythic Legions",
       "price": 50,
-      "sold_count": 31,
+      "sold_count": 46,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_weapon-and-accessory-pac_weapons-pack_bd0cc6/canonical.jpg",
-      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_weapon-and-accessory-pac_weapons-pack_bd0cc6"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_ogres-brutes-and-centaur_kalizirr_415115/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_ogres-brutes-and-centaur_kalizirr_415115"
     },
     {
-      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_special-releases_valiant-knight_a1a30d",
-      "name": "Valiant Knight",
+      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_knight-builder_151114",
+      "name": "Knight Builder (Deluxe)",
       "line": "Mythic Legions",
-      "price": 114,
-      "sold_count": 44,
+      "price": 90,
+      "sold_count": 46,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_special-releases_valiant-knight_a1a30d/canonical.jpg",
-      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_special-releases_valiant-knight_a1a30d"
-    },
-    {
-      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_special-releases_heroic-paladin-cleric_01b95c",
-      "name": "Heroic Paladin / Cleric",
-      "line": "Mythic Legions",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_special-releases_heroic-paladin-cleric_01b95c/canonical.jpg",
-      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_special-releases_heroic-paladin-cleric_01b95c"
-    },
-    {
-      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_malynna_dad95a",
-      "name": "Malynna",
-      "line": "Mythic Legions",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_malynna_dad95a/canonical.jpg",
-      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_malynna_dad95a"
-    },
-    {
-      "figure_id": "fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_thumpp_874861",
-      "name": "Thumpp",
-      "line": "Mythic Legions",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_thumpp_874861/canonical.jpg",
-      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_thumpp_874861"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_knight-builder_151114/canonical.jpg",
+      "url": "/figure/fp_mythic-legions_four-horsemen_mythic-legions_standard-deluxe-and-legi_knight-builder_151114"
     }
   ]
 }

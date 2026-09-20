@@ -1,6 +1,6 @@
 {
   "fandom": "marvel-comics",
-  "generated_at": "2026-09-18T22:33:30.489Z",
+  "generated_at": "2026-09-20T12:53:39.025Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
@@ -16,15 +16,37 @@
       "url": "/figure/fp_marvel-comics_mezco_one-12-collective_main-line_doctor-doom_102b92"
     },
     {
-      "figure_id": "fp_marvel-comics_mezco_one-12-collective_main-line_gambit_3541b2",
-      "name": "Gambit",
-      "line": "One 12 Collective",
-      "price": 150,
-      "sold_count": 28,
-      "views": 4,
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b",
+      "name": "Iron Man MK85 & Thanos Final Battle (Avengers Endgame)",
+      "line": "Marvel Legends Sets",
+      "price": 35,
+      "sold_count": 30,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_mezco_one-12-collective_main-line_gambit_3541b2/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_mezco_one-12-collective_main-line_gambit_3541b2"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685",
+      "name": "Thor (UK)",
+      "line": "Marvel Legends",
+      "price": 24,
+      "sold_count": 50,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9",
+      "name": "Mar-Vell",
+      "line": "Marvel Legends",
+      "price": 20,
+      "sold_count": 43,
+      "views": 3,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9"
     },
     {
       "figure_id": "fp_marvel-comics_hasbro_marvel-legends_blob-baf_x-3-juggernaut_92faed",
@@ -38,59 +60,37 @@
       "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_blob-baf_x-3-juggernaut_92faed"
     },
     {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b",
-      "name": "Iron Man MK85 & Thanos Final Battle (Avengers Endgame)",
-      "line": "Marvel Legends Sets",
-      "price": 35,
-      "sold_count": 30,
-      "views": 3,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_infinity-saga_iron-man-mk85-thanos-final-battle_7bcb3b"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_spider-man_798cb3",
-      "name": "Spider-Man (Far From Home - Homemade Suit)",
-      "line": "Hot Toys",
-      "price": 325,
-      "sold_count": 46,
-      "views": 3,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_spider-man_798cb3/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hot-toys_hot-toys_hot-toys-action-figures_spider-man_798cb3"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685",
-      "name": "Thor (UK)",
-      "line": "Marvel Legends",
-      "price": null,
-      "sold_count": 0,
-      "views": 3,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_thor_415685"
-    },
-    {
-      "figure_id": "fp_marvel-comics_mafex_mafex_mafex-action-figures_web-man_7afeee",
-      "name": "Web-Man",
-      "line": "Mafex Marvel",
-      "price": null,
-      "sold_count": 0,
-      "views": 3,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_mafex_mafex_mafex-action-figures_web-man_7afeee/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_mafex_mafex_mafex-action-figures_web-man_7afeee"
-    },
-    {
-      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9",
-      "name": "Mar-Vell",
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-endgame_loki_8b62db",
+      "name": "Loki (Endgame)",
       "line": "Marvel Legends",
       "price": 20,
-      "sold_count": 43,
-      "views": 3,
+      "sold_count": 27,
+      "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9/canonical.jpg",
-      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-gamerverse_mar-vell_d201f9"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-endgame_loki_8b62db/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-endgame_loki_8b62db"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501",
+      "name": "Masters of Magic - Dr. Strange",
+      "line": "Marvel Legends",
+      "price": 24,
+      "sold_count": 32,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_dr-strange_masters-of-magic-dr-strange_a00501"
+    },
+    {
+      "figure_id": "fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_captain-america_1eeef8",
+      "name": "Captain America (UK)",
+      "line": "Marvel Legends",
+      "price": 30,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_captain-america_1eeef8/canonical.jpg",
+      "url": "/figure/fp_marvel-comics_hasbro_marvel-legends_avengers-age-of-ultron_captain-america_1eeef8"
     }
   ]
 }

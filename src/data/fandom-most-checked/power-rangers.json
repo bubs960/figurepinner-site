@@ -1,41 +1,19 @@
 {
   "fandom": "power-rangers",
-  "generated_at": "2026-09-18T22:33:31.057Z",
+  "generated_at": "2026-09-20T12:53:42.715Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
     {
-      "figure_id": "fp_power-rangers_hasbro_lightning_exclusives_psycho-rangers-5-pack_641b1a",
-      "name": "Psycho Rangers 5 Pack",
+      "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_s-p-d-shadow-ranger_5f3d0b",
+      "name": "S.P.D. Shadow Ranger",
       "line": "Lightning",
-      "price": null,
-      "sold_count": 0,
+      "price": 64,
+      "sold_count": 20,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_exclusives_psycho-rangers-5-pack_641b1a/canonical.jpg",
-      "url": "/figure/fp_power-rangers_hasbro_lightning_exclusives_psycho-rangers-5-pack_641b1a"
-    },
-    {
-      "figure_id": "fp_power-rangers_super7_super7_super7-ultimates_bulk_755891",
-      "name": "Bulk",
-      "line": "Super7",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_super7_super7_super7-ultimates_bulk_755891/canonical.jpg",
-      "url": "/figure/fp_power-rangers_super7_super7_super7-ultimates_bulk_755891"
-    },
-    {
-      "figure_id": "fp_power-rangers_hasbro_lightning_exclusives_alien-rangers-of-aquitar-5-pack_325b36",
-      "name": "Alien Rangers of Aquitar 5 Pack",
-      "line": "Lightning",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_exclusives_alien-rangers-of-aquitar-5-pack_325b36/canonical.jpg",
-      "url": "/figure/fp_power-rangers_hasbro_lightning_exclusives_alien-rangers-of-aquitar-5-pack_325b36"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_lightning-action-figures_s-p-d-shadow-ranger_5f3d0b/canonical.jpg",
+      "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_s-p-d-shadow-ranger_5f3d0b"
     },
     {
       "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_lord-drakkon_175b91",
@@ -49,26 +27,37 @@
       "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_lord-drakkon_175b91"
     },
     {
-      "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_beast-morphers-blue-ranger_81a212",
-      "name": "Beast Morphers Blue Ranger",
+      "figure_id": "fp_power-rangers_hasbro_lightning_exclusives_psycho-rangers-5-pack_641b1a",
+      "name": "Psycho Rangers 5 Pack",
       "line": "Lightning",
-      "price": null,
-      "sold_count": 0,
+      "price": 90,
+      "sold_count": 47,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_lightning-action-figures_beast-morphers-blue-ranger_81a212/canonical.jpg",
-      "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_beast-morphers-blue-ranger_81a212"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_exclusives_psycho-rangers-5-pack_641b1a/canonical.jpg",
+      "url": "/figure/fp_power-rangers_hasbro_lightning_exclusives_psycho-rangers-5-pack_641b1a"
     },
     {
-      "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_s-p-d-shadow-ranger_5f3d0b",
-      "name": "S.P.D. Shadow Ranger",
-      "line": "Lightning",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
+      "figure_id": "fp_power-rangers_super7_super7_super7-ultimates_white-tigerzord_70e57d",
+      "name": "White Tigerzord (Warrior Mode)",
+      "line": "Super7",
+      "price": 50,
+      "sold_count": 12,
+      "views": 1,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_lightning-action-figures_s-p-d-shadow-ranger_5f3d0b/canonical.jpg",
-      "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_s-p-d-shadow-ranger_5f3d0b"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_super7_super7_super7-ultimates_white-tigerzord_70e57d/canonical.jpg",
+      "url": "/figure/fp_power-rangers_super7_super7_super7-ultimates_white-tigerzord_70e57d"
+    },
+    {
+      "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_mighty-morphin-red-ranger_4e4b59",
+      "name": "Mighty Morphin Red Ranger",
+      "line": "Lightning",
+      "price": 50,
+      "sold_count": 50,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_lightning-action-figures_mighty-morphin-red-ranger_4e4b59/canonical.jpg",
+      "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_mighty-morphin-red-ranger_4e4b59"
     },
     {
       "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_white-ranger_5d8559",
@@ -91,6 +80,17 @@
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_lightning-action-figures_mighty-morphin-pink-ranger_25f217/canonical.jpg",
       "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_mighty-morphin-pink-ranger_25f217"
+    },
+    {
+      "figure_id": "fp_power-rangers_hasbro_lightning_lightning-action-figures_lost-galaxy-magna-defender_ff8b94",
+      "name": "Lost Galaxy Magna Defender",
+      "line": "Lightning",
+      "price": 50,
+      "sold_count": 19,
+      "views": 1,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_power-rangers_hasbro_lightning_lightning-action-figures_lost-galaxy-magna-defender_ff8b94/canonical.jpg",
+      "url": "/figure/fp_power-rangers_hasbro_lightning_lightning-action-figures_lost-galaxy-magna-defender_ff8b94"
     }
   ]
 }

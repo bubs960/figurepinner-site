@@ -1,6 +1,6 @@
 {
   "fandom": "tmnt",
-  "generated_at": "2026-09-18T22:33:30.761Z",
+  "generated_at": "2026-09-20T12:53:41.211Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
@@ -8,89 +8,89 @@
       "figure_id": "fp_tmnt_playmates_playmates-mutant-mayhem_action-figures_splinter_047d52",
       "name": "Splinter",
       "line": "Playmates Mutant Mayhem",
-      "price": null,
-      "sold_count": 0,
+      "price": 14,
+      "sold_count": 6,
       "views": 3,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_playmates_playmates-mutant-mayhem_action-figures_splinter_047d52/canonical.jpg",
       "url": "/figure/fp_tmnt_playmates_playmates-mutant-mayhem_action-figures_splinter_047d52"
     },
     {
-      "figure_id": "fp_tmnt_neca_deluxe_2025_leatherhead_6f449c",
-      "name": "Leatherhead",
-      "line": "'First to Market' NECA Store",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_neca_deluxe_2025_leatherhead_6f449c/canonical.jpg",
-      "url": "/figure/fp_tmnt_neca_deluxe_2025_leatherhead_6f449c"
-    },
-    {
-      "figure_id": "fp_tmnt_super7_super7_super7-action-figures_raphael_0edf97",
-      "name": "Raphael (2003 Animated Series - Ultimates)",
-      "line": "Super7",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_super7_super7_super7-action-figures_raphael_0edf97/canonical.jpg",
-      "url": "/figure/fp_tmnt_super7_super7_super7-action-figures_raphael_0edf97"
-    },
-    {
-      "figure_id": "fp_tmnt_neca_general_2025_shredder-as-dracula_5d2db9",
-      "name": "Shredder as Dracula 'Crimson'",
-      "line": "Target (US)",
-      "price": null,
-      "sold_count": 0,
-      "views": 2,
-      "flag": "EXCLUSIVE",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_neca_general_2025_shredder-as-dracula_5d2db9/canonical.jpg",
-      "url": "/figure/fp_tmnt_neca_general_2025_shredder-as-dracula_5d2db9"
-    },
-    {
-      "figure_id": "fp_tmnt_neca_neca_neca-cartoon_napoleon-and-attila_4aeeaa",
-      "name": "Napoleon and Attila (Cartoon)",
+      "figure_id": "fp_tmnt_neca_neca_neca-comics_cyborg-donatello_104b1c",
+      "name": "Cyborg Donatello (Mirage Comics)",
       "line": "NECA",
-      "price": null,
-      "sold_count": 0,
+      "price": 25,
+      "sold_count": 19,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_neca_neca_neca-cartoon_napoleon-and-attila_4aeeaa/canonical.jpg",
-      "url": "/figure/fp_tmnt_neca_neca_neca-cartoon_napoleon-and-attila_4aeeaa"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_neca_neca_neca-comics_cyborg-donatello_104b1c/canonical.jpg",
+      "url": "/figure/fp_tmnt_neca_neca_neca-comics_cyborg-donatello_104b1c"
+    },
+    {
+      "figure_id": "fp_tmnt_super7_super7_super7-action-figures_donatello_cf2199",
+      "name": "Donatello (Glow in the Dark - Ultimates)",
+      "line": "Super7",
+      "price": 41,
+      "sold_count": 20,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_super7_super7_super7-action-figures_donatello_cf2199/canonical.jpg",
+      "url": "/figure/fp_tmnt_super7_super7_super7-action-figures_donatello_cf2199"
+    },
+    {
+      "figure_id": "fp_tmnt_super7_super7_super7-action-figures_donatello_a63ea0",
+      "name": "Donatello (Ultimates)",
+      "line": "Super7",
+      "price": 41,
+      "sold_count": 40,
+      "views": 2,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_super7_super7_super7-action-figures_donatello_a63ea0/canonical.jpg",
+      "url": "/figure/fp_tmnt_super7_super7_super7-action-figures_donatello_a63ea0"
     },
     {
       "figure_id": "fp_tmnt_playmates_playmates_playmates-action-figures_usagi-yojimbo_3e2668",
       "name": "Usagi Yojimbo",
       "line": "Playmates",
-      "price": null,
-      "sold_count": 0,
+      "price": 27,
+      "sold_count": 50,
       "views": 2,
       "flag": "",
       "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_playmates_playmates_playmates-action-figures_usagi-yojimbo_3e2668/canonical.jpg",
       "url": "/figure/fp_tmnt_playmates_playmates_playmates-action-figures_usagi-yojimbo_3e2668"
     },
     {
-      "figure_id": "fp_tmnt_super7_super7_super7-action-figures_leonardo_b7e210",
-      "name": "Leonardo (Glow in the Dark - Ultimates)",
-      "line": "Super7",
-      "price": null,
-      "sold_count": 0,
+      "figure_id": "fp_tmnt_neca_neca_neca-cartoon_napoleon-and-attila_4aeeaa",
+      "name": "Napoleon and Attila (Cartoon)",
+      "line": "NECA",
+      "price": 28,
+      "sold_count": 48,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_super7_super7_super7-action-figures_leonardo_b7e210/canonical.jpg",
-      "url": "/figure/fp_tmnt_super7_super7_super7-action-figures_leonardo_b7e210"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_neca_neca_neca-cartoon_napoleon-and-attila_4aeeaa/canonical.jpg",
+      "url": "/figure/fp_tmnt_neca_neca_neca-cartoon_napoleon-and-attila_4aeeaa"
     },
     {
-      "figure_id": "fp_tmnt_super7_super7_super7-action-figures_donatello_a63ea0",
-      "name": "Donatello (Ultimates)",
+      "figure_id": "fp_tmnt_neca_general_2025_shredder-as-dracula_5d2db9",
+      "name": "Shredder as Dracula 'Crimson'",
+      "line": "Target (US)",
+      "price": 25,
+      "sold_count": 50,
+      "views": 2,
+      "flag": "EXCLUSIVE",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_neca_general_2025_shredder-as-dracula_5d2db9/canonical.jpg",
+      "url": "/figure/fp_tmnt_neca_general_2025_shredder-as-dracula_5d2db9"
+    },
+    {
+      "figure_id": "fp_tmnt_super7_super7_super7-action-figures_raphael_0edf97",
+      "name": "Raphael (2003 Animated Series - Ultimates)",
       "line": "Super7",
-      "price": null,
-      "sold_count": 0,
+      "price": 25,
+      "sold_count": 20,
       "views": 2,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_super7_super7_super7-action-figures_donatello_a63ea0/canonical.jpg",
-      "url": "/figure/fp_tmnt_super7_super7_super7-action-figures_donatello_a63ea0"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_tmnt_super7_super7_super7-action-figures_raphael_0edf97/canonical.jpg",
+      "url": "/figure/fp_tmnt_super7_super7_super7-action-figures_raphael_0edf97"
     }
   ]
 }

@@ -1,41 +1,30 @@
 {
   "fandom": "wrestling-jakks",
-  "generated_at": "2026-09-18T22:33:29.942Z",
+  "generated_at": "2026-09-20T12:53:38.683Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a",
+      "name": "Goldberg",
+      "line": "Ruthless Aggression PPV",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a/canonical.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a"
+    },
     {
       "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_1_randy-orton_5e273e",
       "name": "Randy Orton",
       "line": "Deluxe Aggression",
       "price": 25,
       "sold_count": 4,
-      "views": 5,
+      "views": 4,
       "flag": "",
       "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s1-randy.jpg",
       "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_1_randy-orton_5e273e"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_ex_ric-flair_c3fe2e",
-      "name": "Ric Flair",
-      "line": "Classic Superstars",
-      "price": 30,
-      "sold_count": 50,
-      "views": 5,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/PXL_20250126_193915080.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_ex_ric-flair_c3fe2e"
-    },
-    {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_7_jeff-hardy_902aab",
-      "name": "Jeff Hardy",
-      "line": "Deluxe Aggression",
-      "price": 20,
-      "sold_count": 19,
-      "views": 5,
-      "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_2411f9c7-3395-43da-bf69-dd3030f8645d.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_7_jeff-hardy_902aab"
     },
     {
       "figure_id": "fp_wrestling_jakks-pacific_ringside-collection_1_vince-mcmahon_e5a03b",
@@ -49,48 +38,59 @@
       "url": "/figure/fp_wrestling_jakks-pacific_ringside-collection_1_vince-mcmahon_e5a03b"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a",
-      "name": "Goldberg",
-      "line": "Ruthless Aggression PPV",
-      "price": null,
-      "sold_count": 0,
-      "views": 4,
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_25_boss-man_8f77ee",
+      "name": "Boss Man",
+      "line": "Classic Superstars",
+      "price": 35,
+      "sold_count": 8,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a/canonical.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_ruthless-aggression-ppv_2_goldberg_1b8d0a"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/cs25-bbm-2.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_25_boss-man_8f77ee"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_4_shelton-benjamin_4908e1",
-      "name": "Shelton Benjamin",
+      "figure_id": "fp_wrestling_jakks-pacific_rulers-of-the-ring_3_perry-saturn_379cff",
+      "name": "Perry Saturn",
+      "line": "Rulers of the Ring",
+      "price": 20,
+      "sold_count": 33,
+      "views": 3,
+      "flag": "",
+      "image": "https://wrestlingfiguredatabase.com/cdn/shop/files/PXL_20240101_195950749_533x.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_rulers-of-the-ring_3_perry-saturn_379cff"
+    },
+    {
+      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_7_jeff-hardy_902aab",
+      "name": "Jeff Hardy",
       "line": "Deluxe Aggression",
-      "price": 16,
-      "sold_count": 7,
-      "views": 4,
+      "price": 25,
+      "sold_count": 28,
+      "views": 3,
       "flag": "",
-      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s4-shelton-b.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_4_shelton-benjamin_4908e1"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/files/s-l1600_2411f9c7-3395-43da-bf69-dd3030f8645d.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_7_jeff-hardy_902aab"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8",
-      "name": "John Cena",
-      "line": "Deluxe Aggression",
-      "price": 60,
-      "sold_count": 7,
-      "views": 4,
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_3_jimmy-snuka_f8728f",
+      "name": "Jimmy Snuka",
+      "line": "Classic Superstars",
+      "price": 20,
+      "sold_count": 4,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8/canonical.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_deluxe-aggression_1_john-cena_1ec6e8"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_classic-superstars_3_jimmy-snuka_f8728f/canonical-image_38c1358c.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_3_jimmy-snuka_f8728f"
     },
     {
-      "figure_id": "fp_wrestling_jakks-pacific_ruthless-aggression_20_ric-flair_3f24ba",
-      "name": "Ric Flair",
-      "line": "Ruthless Aggression",
-      "price": 27,
-      "sold_count": 10,
-      "views": 4,
+      "figure_id": "fp_wrestling_jakks-pacific_classic-superstars_8_hollywood-hulk-hogan_ee511d",
+      "name": "Hollywood Hulk Hogan",
+      "line": "Classic Superstars",
+      "price": 24,
+      "sold_count": 37,
+      "views": 3,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_wrestling_jakks-pacific_ruthless-aggression_20_ric-flair_3f24ba/canonical.jpg",
-      "url": "/figure/fp_wrestling_jakks-pacific_ruthless-aggression_20_ric-flair_3f24ba"
+      "image": "https://cdn.shopify.com/s/files/1/0619/5534/2589/products/s-l1600_29fcf176-105c-4c2a-a728-2343b2ad3d22.jpg",
+      "url": "/figure/fp_wrestling_jakks-pacific_classic-superstars_8_hollywood-hulk-hogan_ee511d"
     }
   ]
 }

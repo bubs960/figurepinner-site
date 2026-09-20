@@ -1,6 +1,6 @@
 {
   "fandom": "transformers",
-  "generated_at": "2026-09-18T22:33:30.256Z",
+  "generated_at": "2026-09-20T12:53:38.010Z",
   "window_days": 30,
   "source": "analytics_engine fp_funnel (figure_view events, all-time-in-window view count) + r2proxy price-summaries where available",
   "figures": [
@@ -16,48 +16,26 @@
       "url": "/figure/fp_transformers_hasbro_g1_action-master-1990_banzai-tron_dfeab4"
     },
     {
-      "figure_id": "fp_transformers_hasbro_legacy-evolution_leader-class_megatron_85b83a",
-      "name": "Megatron (Armada Universe)",
-      "line": "Legacy Evolution",
+      "figure_id": "fp_transformers_hasbro_g1_autobots_optimus-prime_144311",
+      "name": "Optimus Prime",
+      "line": "G1",
+      "price": 75,
+      "sold_count": 20,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_autobots_optimus-prime_144311/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_g1_autobots_optimus-prime_144311"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_rescue-bots_elite-rescue-elite-rescue-2015_heatwave-elite-rescue_59a1e6",
+      "name": "Heatwave (Elite Rescue)",
+      "line": "rescue-bots",
       "price": null,
       "sold_count": 0,
       "views": 4,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-evolution_leader-class_megatron_85b83a/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_legacy-evolution_leader-class_megatron_85b83a"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_g1_decepticons_skywarp_069355",
-      "name": "Skywarp",
-      "line": "G1",
-      "price": 30,
-      "sold_count": 50,
-      "views": 4,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_decepticons_skywarp_069355/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_g1_decepticons_skywarp_069355"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_legacy-series_core-class_g2-universe-megatron_c31e87",
-      "name": "G2 Universe Megatron",
-      "line": "Legacy Series",
-      "price": null,
-      "sold_count": 0,
-      "views": 4,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_legacy-series_core-class_g2-universe-megatron_c31e87/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_legacy-series_core-class_g2-universe-megatron_c31e87"
-    },
-    {
-      "figure_id": "fp_transformers_hasbro_g1_combaticons_brawl_bd2c8c",
-      "name": "Brawl",
-      "line": "G1",
-      "price": 48,
-      "sold_count": 16,
-      "views": 4,
-      "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_combaticons_brawl_bd2c8c/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_g1_combaticons_brawl_bd2c8c"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_rescue-bots_elite-rescue-elite-rescue-2015_heatwave-elite-rescue_59a1e6/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_rescue-bots_elite-rescue-elite-rescue-2015_heatwave-elite-rescue_59a1e6"
     },
     {
       "figure_id": "fp_transformers_hasbro_rescue-bots_figure-pack-2013_blades-and-dr-morocco_589eb2",
@@ -71,6 +49,28 @@
       "url": "/figure/fp_transformers_hasbro_rescue-bots_figure-pack-2013_blades-and-dr-morocco_589eb2"
     },
     {
+      "figure_id": "fp_transformers_hasbro_prime_weaponizer-2012_bumblebee-weaponizer_d7e653",
+      "name": "Bumblebee (Weaponizer)",
+      "line": "prime",
+      "price": null,
+      "sold_count": 0,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_prime_weaponizer-2012_bumblebee-weaponizer_d7e653/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_prime_weaponizer-2012_bumblebee-weaponizer_d7e653"
+    },
+    {
+      "figure_id": "fp_transformers_hasbro_g1_headmaster-1987_mindwipe_04a46d",
+      "name": "Mindwipe",
+      "line": "g1",
+      "price": 45,
+      "sold_count": 1,
+      "views": 4,
+      "flag": "",
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_headmaster-1987_mindwipe_04a46d/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_g1_headmaster-1987_mindwipe_04a46d"
+    },
+    {
       "figure_id": "fp_transformers_hasbro_g1_autobots_smokescreen_ccea91",
       "name": "Smokescreen",
       "line": "G1",
@@ -82,15 +82,15 @@
       "url": "/figure/fp_transformers_hasbro_g1_autobots_smokescreen_ccea91"
     },
     {
-      "figure_id": "fp_transformers_hasbro_g1_headmaster-1987_mindwipe_04a46d",
-      "name": "Mindwipe",
+      "figure_id": "fp_transformers_hasbro_g1_pretender-1989_stranglehold_3d9ecb",
+      "name": "Stranglehold",
       "line": "g1",
       "price": null,
       "sold_count": 0,
       "views": 4,
       "flag": "",
-      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_headmaster-1987_mindwipe_04a46d/canonical.jpg",
-      "url": "/figure/fp_transformers_hasbro_g1_headmaster-1987_mindwipe_04a46d"
+      "image": "https://figurepinner-images.bubs960.workers.dev/listing-photos/fp_transformers_hasbro_g1_pretender-1989_stranglehold_3d9ecb/canonical.jpg",
+      "url": "/figure/fp_transformers_hasbro_g1_pretender-1989_stranglehold_3d9ecb"
     }
   ]
 }
