@@ -112,9 +112,12 @@ export default function DataQualityBadge({ state, compCount, compact = true, mix
         style={{
           display: 'inline-flex',
           alignItems: 'center',
-          gap: '0.6rem',
+          // Wraps inside a narrow column (the photo rail clipped the
+          // methodology link to "How pricing w"); each child stays nowrap.
+          flexWrap: 'wrap',
+          maxWidth: '100%',
+          gap: '0.35rem 0.6rem',
           fontFamily: 'var(--fp-font-body)',
-          whiteSpace: 'nowrap',
         }}
       >
         <style>{hoverCss}</style>
