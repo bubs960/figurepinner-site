@@ -339,7 +339,13 @@ export default function SearchInterface({ initialQuery, initialGenre, totalLabel
   }
 
   return (
-    <div style={{ padding: 'clamp(1.5rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem)' }}>
+    // minHeight keeps the AdSlot + footer that follow this block below the
+    // fold. CLS fix (2026-09-20, CF RUM: /search P75 0.32, 8 samples; the
+    // shifting node went width 1266 -> 0 = the ad unit, the only main>div
+    // that unmounts). On the short idle page the ad sat in view, so its
+    // mount after the Pro check, its collapse-when-unfilled, and every
+    // results swap moved visible content. Off-screen, none of that scores.
+    <div style={{ padding: 'clamp(1.5rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem)', minHeight: '100vh' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
         {/* ── Page header ── */}
@@ -804,9 +810,13 @@ const FigureResultCard = memo(function FigureResultCard({
 
           {/* Price — shown as soon as sparkline data loads (~90% of figures).
               Gold per the S54 plan (price = the money moment); sold count only
-              above the D4 confidence floor — a thin count advertises weak data. */}
+              above the D4 confidence floor — a thin count advertises weak data.
+              The row's box is always rendered at a fixed height: sparklines
+              land a second fetch after the cards, and mounting the row then
+              grew every card and moved every grid row below it (CLS). */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: 3, height: 22 }}>
           {sparkline?.median != null && sparkline.median > 0 && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', marginBottom: 3 }}>
+            <>
               <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--gold)', letterSpacing: '0.02em', fontVariantNumeric: 'tabular-nums' }}>
                 ${sparkline.median.toFixed(0)}
               </span>
@@ -818,8 +828,9 @@ const FigureResultCard = memo(function FigureResultCard({
               {sparkline.points.length >= 2 && (
                 <Sparkline points={sparkline.points} trend={sparkline.trend} width={40} height={14} />
               )}
-            </div>
+            </>
           )}
+          </div>
 
           <div style={{ fontSize: '0.72rem', color: 'var(--muted)', lineHeight: 1.4 }}>
             {r.brand} · {r.line}{r.series ? ` · Ser. ${r.series}` : ''}{r.year ? ` · ${r.year}` : ''}
