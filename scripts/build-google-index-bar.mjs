@@ -18,9 +18,9 @@
  * build (spec 4.4/4.6 "fail-closed on missing inputs").
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
-import { createHash } from 'node:crypto'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { kbMd5 } from './lib/kb-md5.mjs'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const CANARY = resolve(ROOT, 'src/data/google-index-bar.canary.json')
@@ -45,7 +45,7 @@ if (canary.fids.length === 0) fail('canary list is empty — a canary artifact w
 
 const census = JSON.parse(readFileSync(CENSUS, 'utf8'))
 const kbText = readFileSync(KB_SLIM, 'utf8')
-const kb_md5 = createHash('md5').update(kbText).digest('hex').toUpperCase()
+const kb_md5 = kbMd5(kbText)
 
 const tiers = {}
 for (const fid of canary.fids) {

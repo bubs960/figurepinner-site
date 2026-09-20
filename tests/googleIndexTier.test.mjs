@@ -94,6 +94,7 @@ describe('googleIndexTier — canary artifact', () => {
     const dir = mkdtempSync(join(tmpdir(), 'gib-'))
     // Reproduce the script's expected layout: <root>/scripts/x.mjs + <root>/src/data/*
     cpSync(new URL('../scripts/build-google-index-bar.mjs', import.meta.url), join(dir, 'scripts', 'build-google-index-bar.mjs'))
+    cpSync(new URL('../scripts/lib/kb-md5.mjs', import.meta.url), join(dir, 'scripts', 'lib', 'kb-md5.mjs'))
     const data = join(dir, 'src', 'data')
     cpSync(new URL('../src/data/index-value-census.json', import.meta.url), join(data, 'index-value-census.json'))
     writeFileSync(join(data, 'figures-reference-v2.slim.js'), 'const X=[{"figure_id":"fp_x_above_000001"},{"figure_id":"fp_x_below_000002"}]')
