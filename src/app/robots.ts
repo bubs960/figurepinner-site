@@ -39,6 +39,19 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: ['SemrushBot', 'DotBot', 'DataForSeoBot', 'AhrefsBot', 'MJ12bot'],
         disallow: '/',
       },
+      // SeznamBot (2026-09-21, Steve's go): the Czech search engine's crawler.
+      // Unlike the SEO tools above it IS a search crawler, so this is a business
+      // decision, not a hygiene one: this site's audience is US collectors, and
+      // the crawl is not free. Measured 2026-09-21 13:00-14:05Z: 306 requests, all
+      // uncached hub/character/line renders (/wrestling/character,
+      // /star-wars/character, /star-wars/black-series), against ~0 the day before,
+      // in the hour Worker CPU/request rose from 250 to 381 ms. No referral data
+      // was checked. Seznam documents that SeznamBot honors robots.txt. Re-open if
+      // Seznam ever shows up as a referrer in FP-SearchChannelDaily.
+      {
+        userAgent: 'SeznamBot',
+        disallow: '/',
+      },
     ],
     sitemap: sitemaps,
     host: BASE,
