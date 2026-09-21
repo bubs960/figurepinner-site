@@ -53,9 +53,29 @@ import {
 // guard that fails loudly if a future edit ever drops the TTL again.
 export const PAGE_CACHE_TTL_SECONDS = 5 * 24 * 60 * 60; // 5 days
 export const FETCH_CACHE_TTL_SECONDS = 3 * 24 * 60 * 60; // 3 days
+// A cached NOT-FOUND page (meta.status 404) is the one entry whose 24h life is
+// wrong (standalone ask, STANDALONE-TO-WEB-...-HUBS-CACHED-404, 2026-09-20).
+// Observed on prod 9/20: a page whose data was missing when first rendered (D1 not
+// loaded yet) was stored `{type:'app', meta:{status:404}, revalidate:86400}` and
+// served as a fresh HIT (`s-maxage=86395`) for the rest of the day even after D1
+// healed. Every other 404 (bot-probed junk paths) is cheap to re-render. So a 404
+// page entry expires from KV after 5 minutes: the next request re-renders and,
+// if the data is there now, caches the real page. Well above KV's 60 s minimum.
+export const NOT_FOUND_CACHE_TTL_SECONDS = 5 * 60; // 5 minutes
 
 export function ttlSecondsForCacheType(cacheType: CacheEntryType | undefined): number {
   return cacheType === "fetch" ? FETCH_CACHE_TTL_SECONDS : PAGE_CACHE_TTL_SECONDS;
+}
+
+/** True for a stored page/route entry that renders a 404 (`meta.status === 404`). Fetch entries never match. */
+export function isNotFoundPageEntry(value: unknown): boolean {
+  const v = value as { type?: string; meta?: { status?: number } } | null | undefined;
+  return !!v && typeof v === "object" && v.type !== "fetch" && v.meta?.status === 404;
+}
+
+export function ttlSecondsForEntry(cacheType: CacheEntryType | undefined, value: unknown): number {
+  if (cacheType !== "fetch" && isNotFoundPageEntry(value)) return NOT_FOUND_CACHE_TTL_SECONDS;
+  return ttlSecondsForCacheType(cacheType);
 }
 
 export const NAME = "cf-kv-incremental-cache-ttl";
@@ -123,7 +143,7 @@ class KVIncrementalCacheWithTtl implements IncrementalCache {
           //       See https://developers.cloudflare.com/workers/reference/security-model/
           lastModified: Date.now(),
         }),
-        { expirationTtl: ttlSecondsForCacheType(cacheType) }
+        { expirationTtl: ttlSecondsForEntry(cacheType, value) }
       );
     } catch (e) {
       error("Failed to set to cache", e);

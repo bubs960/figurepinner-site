@@ -4,6 +4,8 @@ import kvIncrementalCacheWithTtl, {
   PAGE_CACHE_TTL_SECONDS,
   FETCH_CACHE_TTL_SECONDS,
   ttlSecondsForCacheType,
+  NOT_FOUND_CACHE_TTL_SECONDS,
+  isNotFoundPageEntry,
 } from '../src/lib/kv-incremental-cache-ttl.ts'
 
 // KV-growth fix guard (standalone work order, 2026-07-19): the vendor
@@ -17,7 +19,10 @@ import kvIncrementalCacheWithTtl, {
 
 const CLOUDFLARE_CONTEXT_SYMBOL = Symbol.for('__cloudflare-context__')
 
-function withFakeKv(kvOverrides, fn) {
+// async + await: the fake context must stay installed until the callback's own awaits finish
+// (a bare `return fn(calls)` let `finally` reset it after the first await -- invisible while every
+// test made a single set(), broken for a test that makes several).
+async function withFakeKv(kvOverrides, fn) {
   const calls = []
   const fakeKv = {
     async put(key, value, options) {
@@ -34,7 +39,7 @@ function withFakeKv(kvOverrides, fn) {
     env: { NEXT_INC_CACHE_KV: fakeKv, NEXT_INC_CACHE_KV_PREFIX: undefined },
   }
   try {
-    return fn(calls)
+    return await fn(calls)
   } finally {
     globalThis[CLOUDFLARE_CONTEXT_SYMBOL] = previous
   }
@@ -87,5 +92,51 @@ describe('kv-incremental-cache-ttl', () => {
       assert.deepEqual(parsed.value, { some: 'value' })
       assert.equal(typeof parsed.lastModified, 'number')
     })
+  })
+
+  // 9/20 (standalone ask, hubs cached 404): a page whose data was missing when first
+  // rendered was cached as a fresh 404 for 24 h after D1 healed. This is the exact entry
+  // shape read from production KV that day (`value.type app`, `meta.status 404`, revalidate 86400).
+  const PROD_404_ENTRY = {
+    type: 'app',
+    html: '<html>404</html>',
+    rsc: '',
+    meta: { status: 404, headers: { 'x-nextjs-stale-time': '300' } },
+    revalidate: 86400,
+  }
+
+  test('set() of a cached 404 page entry gets a 5-minute expirationTtl, not the 5-day page TTL -- a late data load self-heals', async () => {
+    await withFakeKv({}, async (calls) => {
+      await kvIncrementalCacheWithTtl.set('a-404-page', PROD_404_ENTRY, 'cache')
+      assert.equal(calls[0].options.expirationTtl, 300)
+    })
+  })
+
+  test('a 200 page entry, an entry with no meta, and a redirect-shaped entry keep the 5-day page TTL', async () => {
+    await withFakeKv({}, async (calls) => {
+      await kvIncrementalCacheWithTtl.set('ok-page', { ...PROD_404_ENTRY, meta: { status: 200 } }, 'cache')
+      await kvIncrementalCacheWithTtl.set('no-meta', { type: 'route', body: 'x', revalidate: 60 }, 'cache')
+      await kvIncrementalCacheWithTtl.set('redirect', { type: 'redirect', props: {} }, 'cache')
+      assert.deepEqual(calls.map((c) => c.options.expirationTtl), [PAGE_CACHE_TTL_SECONDS, PAGE_CACHE_TTL_SECONDS, PAGE_CACHE_TTL_SECONDS])
+    })
+  })
+
+  test('a "fetch" entry keeps the fetch TTL even if its payload carries a 404 (an R2 "no summary" price fetch must not shorten)', async () => {
+    await withFakeKv({}, async (calls) => {
+      await kvIncrementalCacheWithTtl.set('price-404', { ...PROD_404_ENTRY, type: 'fetch' }, 'fetch')
+      await kvIncrementalCacheWithTtl.set('price-404-nometa', { kind: 'FETCH', data: { status: 404 }, meta: { status: 404 } }, 'fetch')
+      assert.deepEqual(calls.map((c) => c.options.expirationTtl), [FETCH_CACHE_TTL_SECONDS, FETCH_CACHE_TTL_SECONDS])
+    })
+  })
+
+  test('NOT_FOUND_CACHE_TTL_SECONDS is a deliberate short TTL: >= KV minimum 60 s and far below the page revalidate window', () => {
+    assert.equal(NOT_FOUND_CACHE_TTL_SECONDS, 300)
+    assert.ok(NOT_FOUND_CACHE_TTL_SECONDS >= 60)
+    assert.ok(NOT_FOUND_CACHE_TTL_SECONDS < 86400)
+  })
+
+  test('isNotFoundPageEntry is null/garbage safe', () => {
+    for (const v of [null, undefined, 'x', 404, {}, { meta: null }, { meta: { status: 200 } }]) assert.equal(isNotFoundPageEntry(v), false)
+    assert.equal(isNotFoundPageEntry(PROD_404_ENTRY), true)
   })
 })
