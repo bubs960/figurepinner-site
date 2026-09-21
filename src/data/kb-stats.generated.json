@@ -1,13 +1,13 @@
 {
-  "totalFigures": 23280,
+  "totalFigures": 23414,
   "totalFiguresLabel": "23,000+",
   "totalFandoms": 30,
   "fandoms": {
     "wrestling": {
-      "count": 6507,
+      "count": 6645,
       "lines": {
         "deluxe-aggression": 145,
-        "elite": 820,
+        "elite": 825,
         "elite-from-the-vault": 40,
         "elite-greatest-hits": 69,
         "elite-legends": 186,
@@ -39,7 +39,7 @@
         "wwf-hasbro": 122,
         "r3-tech": 76,
         "wwe-retro": 85,
-        "aew-unrivaled": 238,
+        "aew-unrivaled": 223,
         "aew-unmatched": 128,
         "ljn-wwf": 85,
         "basic": 990,
@@ -73,7 +73,7 @@
         "ecw": 43,
         "wcw-osftm": 153,
         "back-alley-street-fight": 6,
-        "backlash": 37,
+        "backlash": 95,
         "gamestop-exclusive": 1,
         "havoc-unleashed": 6,
         "house-of-pain": 6,
@@ -100,7 +100,7 @@
         "unchained-fury": 6,
         "wrestlemania-21": 2,
         "wrestlemania-x-seven": 6,
-        "wrestlemania-xx": 7,
+        "wrestlemania-xx": 33,
         "wwf-com-exclusive": 1,
         "elite-best-of-ppv": 1,
         "elite-hall-of-fame": 13,
@@ -135,7 +135,7 @@
         "mailaway-exclusive": 1,
         "ruthless-aggression-exclusive": 4,
         "boxed-limited-edition": 53,
-        "ruthless-aggression-ppv": 19,
+        "ruthless-aggression-ppv": 20,
         "survivor-series-ppv": 1,
         "ecw-series": 13,
         "wrestlemania-ppv": 3,
@@ -175,7 +175,13 @@
         "elite-fan-takeover": 2,
         "elite-nation-of-domination": 1,
         "ultimate-edition-monday-night-war": 15,
-        "double-slam": 1
+        "double-slam": 1,
+        "fatal-four-way": 12,
+        "battle-packs": 3,
+        "treacherous-trios": 30,
+        "best-of-wcw": 6,
+        "bring-the-noise": 6,
+        "snappin-bashers": 6
       },
       "manufacturerLines": {
         "jakks-pacific-deluxe-aggression": {
@@ -183,7 +189,7 @@
           "productLine": "deluxe-aggression"
         },
         "mattel-elite": {
-          "count": 820,
+          "count": 825,
           "productLine": "elite"
         },
         "mattel-elite-from-the-vault": {
@@ -311,7 +317,7 @@
           "productLine": "wwe-retro"
         },
         "jazwares-aew-unrivaled": {
-          "count": 238,
+          "count": 223,
           "productLine": "aew-unrivaled"
         },
         "jazwares-aew-unmatched": {
@@ -447,7 +453,7 @@
           "productLine": "back-alley-street-fight"
         },
         "jakks-pacific-backlash": {
-          "count": 37,
+          "count": 95,
           "productLine": "backlash"
         },
         "jakks-pacific-gamestop-exclusive": {
@@ -559,7 +565,7 @@
           "productLine": "wrestlemania-x-seven"
         },
         "jakks-pacific-wrestlemania-xx": {
-          "count": 7,
+          "count": 33,
           "productLine": "wrestlemania-xx"
         },
         "jakks-pacific-wwf-com-exclusive": {
@@ -699,7 +705,7 @@
           "productLine": "boxed-limited-edition"
         },
         "jakks-pacific-ruthless-aggression-ppv": {
-          "count": 19,
+          "count": 20,
           "productLine": "ruthless-aggression-ppv"
         },
         "jakks-pacific-survivor-series-ppv": {
@@ -869,11 +875,35 @@
         "jakks-pacific-double-slam": {
           "count": 1,
           "productLine": "double-slam"
+        },
+        "jakks-pacific-fatal-four-way": {
+          "count": 12,
+          "productLine": "fatal-four-way"
+        },
+        "mattel-battle-packs": {
+          "count": 3,
+          "productLine": "battle-packs"
+        },
+        "jakks-pacific-treacherous-trios": {
+          "count": 30,
+          "productLine": "treacherous-trios"
+        },
+        "jakks-pacific-best-of-wcw": {
+          "count": 6,
+          "productLine": "best-of-wcw"
+        },
+        "jakks-pacific-bring-the-noise": {
+          "count": 6,
+          "productLine": "bring-the-noise"
+        },
+        "jakks-pacific-snappin-bashers": {
+          "count": 6,
+          "productLine": "snappin-bashers"
         }
       }
     },
     "star-wars": {
-      "count": 4007,
+      "count": 4003,
       "lines": {
         "black-series": 795,
         "3-75-walmart": 30,
@@ -896,7 +926,7 @@
         "mafex": 70,
         "gentle-giant-diamond-select": 90,
         "power-of-the-force": 222,
-        "hot-toys-star-wars": 6,
+        "hot-toys-star-wars": 2,
         "disney-elite-series": 1
       },
       "manufacturerLines": {
@@ -989,7 +1019,7 @@
           "productLine": "mafex"
         },
         "hot-toys-hot-toys-star-wars": {
-          "count": 6,
+          "count": 2,
           "productLine": "hot-toys-star-wars"
         },
         "hasbro-disney-elite-series": {
