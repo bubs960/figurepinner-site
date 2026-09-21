@@ -1,5 +1,5 @@
 import { getFigureById, prettyFigureUrl } from '@/data/kbDb'
-import { PRETTY_PATH_REDIRECTS } from '@/data/pretty-path-redirects'
+import { PRETTY_PATH_REDIRECTS, HARVESTED_PRETTY_PATH_REDIRECTS } from '@/data/pretty-path-redirects'
 
 /**
  * Resolves a (genre, line, slug) triple that matches no live figure to its
@@ -21,7 +21,8 @@ import { PRETTY_PATH_REDIRECTS } from '@/data/pretty-path-redirects'
  */
 export async function resolveLegacyPrettyPath(genre: string, line: string, slug: string): Promise<string | null> {
   const oldPath = `/${genre}/${line}/${slug}`
-  const successorFid = PRETTY_PATH_REDIRECTS[oldPath]
+  // Hand ledger first; the harvested map (2026-09-18) covers paths proven from git history.
+  const successorFid = PRETTY_PATH_REDIRECTS[oldPath] ?? HARVESTED_PRETTY_PATH_REDIRECTS[oldPath]
   if (!successorFid) return null
   const successor = await getFigureById(successorFid)
   // Ledger entry points at a fid no longer in the KB -- fail safe to 404
