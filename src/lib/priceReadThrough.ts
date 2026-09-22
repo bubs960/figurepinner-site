@@ -11,8 +11,8 @@
  * Shape: read-through. KV first; on a miss, read R2 (or the proxy fallback),
  * return it, and write it to KV in the background. Nothing bulk-writes KV
  * and no nightly job changes. Missing objects are cached as a NEGATIVE
- * sentinel for a shorter TTL so a figure with no snapshot does not pay the
- * R2 floor on every render.
+ * sentinel (PRICE_KV_NEG_TTL_S) so a figure with no snapshot does not pay the
+ * R2 floor on every render. A transient origin failure is NOT cached.
  *
  * Freshness: entries live 24 h — the SAME bound every consumer already
  * accepted (`revalidate = 86400` on the figure page and its price fetches;
@@ -35,7 +35,8 @@ export type KvLike = {
 
 export type ReadThroughDeps = {
   kv: KvLike | null
-  /** The slow source: R2 binding read or proxy fetch. Resolves null when absent. */
+  /** The slow source: R2 binding read or proxy fetch. Resolves null when the
+   *  object is absent or invalid; THROWS on a transient failure. */
   origin: (kind: string, figure_id: string) => Promise<unknown | null>
   /** Background scheduler (ctx.waitUntil). Absent → the put is awaited inline. */
   waitUntil?: (p: Promise<unknown>) => void
@@ -95,9 +96,13 @@ export async function readThroughPrice<T>(deps: ReadThroughDeps, kind: string, f
   }
 
   let obj: unknown | null = null
-  try { obj = await origin(kind, figure_id) } catch { obj = null }
+  // Only a resolved null means "no snapshot". A throw is transient (R2 error,
+  // proxy 5xx/429); mirroring it as NEG_SENTINEL used to show "no price" for
+  // the full 24 h negative TTL after a single blip.
+  let transient = false
+  try { obj = await origin(kind, figure_id) } catch { obj = null; transient = true }
 
-  if (kv && key) {
+  if (kv && key && !transient) {
     const value = obj === null ? NEG_SENTINEL : JSON.stringify(obj)
     const ttl = obj === null ? PRICE_KV_NEG_TTL_S : PRICE_KV_TTL_S
     // Train #4 diagnostic (2026-09-06): start + ok lines bracket the write so the tail
