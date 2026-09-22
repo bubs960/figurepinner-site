@@ -407,3 +407,58 @@ export function priceCompTier(compCount: number): PriceCompTier {
   return 'suppress'
 }
 
+/**
+ * Pricing-confidence gate, web's slice (2026-09-22, Steve's go 9/21 ~21:15 ET
+ * on matcher's rec — MATCHER-TO-STANDALONE-WEB-PRICING-GATE-GO-SEQUENCED-
+ * WEB-NOW-AGGREGATOR-9-25-2026-09-21.md). The external Codex growth review
+ * requires distinguishing fresh evidence from stale before any paid pricing
+ * product (Bet 2) can ship. This is the STALE half — deliberately additive,
+ * NOT a change to priceCompTier/priceContract's count-based suppression:
+ * a stale comp still renders its number (the count says how many sales
+ * back it; this says how OLD the newest one is), it just gets a visible
+ * caveat and a softened badge color. Changing suppression itself would be
+ * a second FPPS-01-sized product call this ticket doesn't make.
+ *
+ * 90 days is a provisional, empirically-picked threshold (not handed down
+ * by Steve/matcher — the go relay left the exact number to web), chosen
+ * because it's roughly 3x PRICE_FETCH_REVALIDATE_SECONDS's daily cadence
+ * and a common "this price may be dated" convention elsewhere. Easy to
+ * retune: one constant, read by isStaleComp only.
+ */
+export const STALE_COMP_DAYS = 90
+
+/**
+ * True when the newest comp behind a figure's price is older than
+ * STALE_COMP_DAYS (or there's no dated comp at all — no date is the same
+ * "can't vouch for freshness" case as an old date, not a different one).
+ * `latestIso` is `latestSoldDate(...).iso` from FigureDetailContent — pass
+ * null when there's no comp so callers don't need their own null-check.
+ * `now` defaults to the real clock; tests pin it so the suite doesn't
+ * silently start failing as calendar time passes.
+ */
+export function isStaleComp(latestIso: string | null | undefined, now: Date = new Date()): boolean {
+  if (!latestIso) return false // no dated comp at all is dataQualityState 'none' already -- nothing to soften further
+  const latestMs = new Date(latestIso).getTime()
+  if (Number.isNaN(latestMs)) return false
+  const ageDays = (now.getTime() - latestMs) / 86_400_000
+  return ageDays > STALE_COMP_DAYS
+}
+
+/**
+ * Per-comp listing format, plain-English. `listing_format` reaches the site
+ * already (aggregator's `recent`/soldHistory rows) but was never rendered —
+ * one of the two review-required per-comp facts (the other, dates, was
+ * already shown). "Unknown" is a real, common state, not a fallback for a
+ * bug: matcher's 2026-09-22 D1 distribution found 39% of the 90-day sold
+ * window -- every `surgical`-match-type row -- carries no listing_format.
+ * A blank cell there would read as broken; naming it honestly does not.
+ */
+export function formatListingFormat(raw: string | null | undefined): string {
+  switch (raw) {
+    case 'buy_it_now': return 'Buy It Now'
+    case 'auction': return 'Auction'
+    case 'best_offer': return 'Best Offer'
+    default: return 'Format unknown'
+  }
+}
+

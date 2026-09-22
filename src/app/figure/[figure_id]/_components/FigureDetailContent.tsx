@@ -22,7 +22,7 @@ import RelatedRow from './RelatedRow'
 import SellerCard from './SellerCard'
 import MobileActionBar from './MobileActionBar'
 import LiquidBackground from './LiquidBackground'
-import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier, MIN_COMPS_TO_QUOTE } from '../_lib/figureFormatters'
+import { buildEbaySearchUrl, EBAY_CAMPAIGN_ID, formatCurrency, computeTrend, compCountToConfidence, prettifySlug, dataQualityState, priceCompTier, MIN_COMPS_TO_QUOTE, isStaleComp } from '../_lib/figureFormatters'
 import DataQualityBadge from './DataQualityBadge'
 import type { LoreInput } from '../_lib/loreRenderer'
 import { enrichedDescription, gatedLoreText, gatedKeyFeatures } from '../_lib/enrichedCopy'
@@ -985,6 +985,7 @@ export default async function FigureDetailContent({ figureId }: { figureId: stri
           compCount={price?.soldCount ?? 0}
           compact
           mixedConditions={sealedPresent && loosePresent}
+          stale={isStaleComp(latestCompDate?.iso ?? null)}
         />
         {latestCompDate && (
           <div style={{ fontSize: '12px', color: 'rgba(242,232,213,.65)' }}>
