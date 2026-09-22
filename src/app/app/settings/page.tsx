@@ -86,7 +86,7 @@ export default function SettingsPage() {
             <div style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>
               {IS_PRO
                 ? 'Unlimited vault, alerts, and price history · Cancel anytime in billing settings'
-                : '25 vault slots · 3 alerts · 30-day price data · Upgrade for unlimited'
+                : 'Vault, wantlist and price alerts — free, no caps'
               }
             </div>
           </div>

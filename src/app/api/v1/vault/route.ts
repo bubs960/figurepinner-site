@@ -6,7 +6,7 @@ import { isUserPro, FREE_LIMITS } from '@/lib/proStatus'
 
 /**
  * GET  /api/v1/vault         — list active vault items for the authenticated user
- * POST /api/v1/vault         — add a figure to the vault (free: 25 limit, Pro: unlimited)
+ * POST /api/v1/vault         — add a figure to the vault (free is uncapped since the 2026-06-06 unlock; FREE_LIMITS.VAULT is a 1,000,000 backstop)
  *
  * Auth: Clerk session cookie OR Bearer JWT (mobile app uses JWT from Clerk JWT template).
  * Returns only rows with status='active' (soft-deleted rows are hidden).
