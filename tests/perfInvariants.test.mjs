@@ -67,7 +67,8 @@ test('DepthHallHero: the Phase 9 deferral is intact', () => {
   const src = code(HERO)
   assert.match(heroImg(), /loading="eager"/, "hero card imgs must stay loading=\"eager\": native lazy never fires on the 3D-transformed cards (live incident 2026-07-24)")
   assert.match(src, /const showImg = c\.eager \|\| heroInView/, 'only eager cards render src before the hero is in view (Phase 9, 2026-08-24): without this every card fetches on first paint')
-  assert.equal((src.match(/eager: i === 0/g) ?? []).length, 2, 'exactly one eager card PER SIDE (left and right); the 2026-08-25 bug gave the right side none, and priority=high must not spread to more than the two eager cards')
+  assert.match(src, /eager: i === leftEager/, 'exactly one eager card on the LEFT side')
+  assert.match(src, /eager: i === rightEager/, 'exactly one eager card on the RIGHT side; the 2026-08-25 bug gave the right side none, and priority=high must not spread to more than the two eager cards')
 })
 
 // ---- PR #27: /search layout stability -------------------------------------------------------------
@@ -105,4 +106,17 @@ test('/search: the ad slot stays after the search block', () => {
   const ad = src.indexOf('<AdSlot')
   assert.ok(search > 0 && ad > 0, 'page.tsx must render both <SearchInterface> and <AdSlot>')
   assert.ok(ad > search, 'the ad must follow SearchInterface: the minHeight fix keeps it below the fold only in that order')
+})
+
+test('DepthHallHero: the eager cards start near the camera, not at the back of the hall', () => {
+  // 2026-09-22: eager used to be the delay-0 card = keyframe 0% = translateZ(-4400px), opacity 0,
+  // so the two `high` images were invisible while the big front cards loaded `low` (CF RUM `/`).
+  const src = code(HERO)
+  const m = src.match(/const EAGER_PROGRESS = ([\d.]+)/)
+  assert.ok(m, 'DepthHallHero.tsx: EAGER_PROGRESS constant missing')
+  const p = Number(m[1])
+  const css = code('src/app/components/DepthHallHero.module.css')
+  assert.match(css, /10% \{ opacity: 1; \}/, 'fpHall keyframes changed: re-check EAGER_PROGRESS against the new opacity window')
+  assert.match(css, /85% \{ opacity: 1; \}/, 'fpHall keyframes changed: re-check EAGER_PROGRESS against the new opacity window')
+  assert.ok(p >= 0.4 && p <= 0.75, `EAGER_PROGRESS ${p} must sit in the large, fully-opaque part of the flight (0.4..0.75), with time left before the 85% fade`)
 })
