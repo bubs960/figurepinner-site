@@ -24,6 +24,14 @@ compatibility_flags = ["nodejs_compat"]
 [triggers]
 crons = ["0 8 * * *", "*/15 * * * *"]
 
+# Service binding: the site sentinel calls the site Worker directly instead of
+# through figurepinner.com's edge, where Bot Fight Mode 403s every non-browser
+# client (Free plan, no WAF skip possible). Measured 2026-09-22: 480/480 daily
+# sentinel probes 403'd, so every run reported 5 false failures.
+[[services]]
+binding = "SITE"
+service = "figurepinner-site"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "figurepinner-userdata"
