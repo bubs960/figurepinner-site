@@ -109,6 +109,9 @@ const ACRONYM_TOKENS = new Set([
   // titleCaseValue lowercases every token before re-casing, and 'kb' wasn't
   // here, so it rendered as "Kb Toys." Same gap class as ftc/sdcc/nycc/mlb.
   'kb',
+  // 2026-09-20, live read of the slug-fallback fids ("Ufc Series", "Galactus
+  // Baf", "Bj Penn" in titles/og/JSON-LD/breadcrumbs). Same gap class as above.
+  'ufc', 'baf', 'bj',
 ])
 
 /**

@@ -125,6 +125,23 @@ function isTokenSubset(inner: string, outer: string): boolean {
   return true
 }
 
+/**
+ * Display form of a raw `character_variant` for the slug-fallback name.
+ * A slug ("balor-club", "chase") is title-cased. A value that is already
+ * display-cased (space, capital, or parens: "The Fiend (SummerSlam)") keeps its
+ * words, but inner parens are flattened to " · " so it cannot nest inside the
+ * "(…)" the caller wraps it in.
+ */
+function fallbackVariant(raw: string): string {
+  const v = raw.trim()
+  if (!/[\sA-Z()]/.test(v)) return titleCaseValue(v)
+  return v
+    .replace(/\s*\(([^)]*)\)/g, ' · $1')
+    .replace(/[()]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 function isGarbageName(s: string): boolean {
   if (/Series\s+Series/i.test(s)) return true
   return /\bSeries\s+([a-z]+-[a-z-]+|[a-z]{2,})\b/.test(s)
@@ -173,14 +190,20 @@ export function deriveName(f: KBFigure): string {
     return `${name}${variant}`
   }
 
+  // 2026-09-20 (live read of the 581 fids with no v1_name AND no name,
+  // WEB-TO-MATCHER-BLANK-V1-NAME-LIVE-READ): this branch printed the variant
+  // raw ("(balor-club)", nested "(The Fiend (SummerSlam))") and title-cased
+  // every word by hand ("Baf", "Bj"). Words now go through prettifySlug (the
+  // acronym/override map the v1 branch already uses) and the variant through
+  // fallbackVariant().
   const char = f.character_canonical
     .split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .map(w => prettifySlug(w))
     .join(' ')
   const line = prettifySlug(f.product_line)
   const variant =
     f.character_variant && f.character_variant !== 'None'
-      ? ` (${f.character_variant})`
+      ? ` (${fallbackVariant(f.character_variant)})`
       : ''
   const wave = isNumericWave(f.release_wave) ? ` Series ${f.release_wave}` : ''
   return `${char}${variant} (${line}${wave})`
