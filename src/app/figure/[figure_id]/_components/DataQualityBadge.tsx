@@ -10,6 +10,7 @@
 
 import type { CSSProperties } from 'react'
 import type { DataQualityState } from '../_lib/figureFormatters'
+import { STALE_COMP_DAYS } from '../_lib/figureFormatters'
 
 interface Props {
   state: DataQualityState
@@ -25,6 +26,13 @@ interface Props {
    *  same figure, two scopes. Naming the scope directly removes the apparent
    *  contradiction without changing the number itself. */
   mixedConditions?: boolean
+  /** Pricing-confidence gate, web's slice (2026-09-22): true when the newest
+   *  comp is older than figureFormatters.STALE_COMP_DAYS (compute with
+   *  isStaleComp). Additive to `state`, not a replacement for it — a stale
+   *  'reliable' figure still says Reliable Pricing (the count claim is still
+   *  true) but gets a softened dot + a dated caveat, same pattern as
+   *  `mixedConditions` naming a scope rather than changing the number. */
+  stale?: boolean
 }
 
 const COPY: Record<DataQualityState, {
@@ -99,16 +107,28 @@ const hoverCss = `
   }
 `
 
-export default function DataQualityBadge({ state, compCount, compact = true, mixedConditions = false }: Props) {
+export default function DataQualityBadge({ state, compCount, compact = true, mixedConditions = false, stale = false }: Props) {
   const c = COPY[state]
   const compLabel = (compCount === 1 ? '1 comp' : `${compCount} comps`) + (mixedConditions ? ' across conditions' : '')
+
+  // Pricing-confidence gate (2026-09-22): staleness is additive to `state`,
+  // never a replacement (see the `stale` prop doc) -- 'none' already says
+  // "no recent comps", so a stale flag on top of it would be redundant, not
+  // more honest. The dot caps at limited's amber: never worse than the
+  // count-tier's own read (sparse orange still reads as the graver signal),
+  // never green when the newest comp is this old.
+  const showStale = stale && state !== 'none'
+  const dot = showStale ? COPY.limited.dot : c.dot
+  const caveat = showStale
+    ? `${c.caveat} Newest comp is over ${STALE_COMP_DAYS} days old — check current listings before bidding.`
+    : c.caveat
 
   if (compact) {
     return (
       <div
         role="status"
-        aria-label={`Data quality: ${c.label}, ${compLabel}`}
-        title={c.caveat}
+        aria-label={`Data quality: ${c.label}, ${compLabel}${showStale ? ', stale' : ''}`}
+        title={caveat}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -121,7 +141,7 @@ export default function DataQualityBadge({ state, compCount, compact = true, mix
         }}
       >
         <style>{hoverCss}</style>
-        <span aria-hidden style={dotStyle(c.dot)} />
+        <span aria-hidden style={dotStyle(dot)} />
         <span style={labelStyle}>{c.label}</span>
         <span style={compsStyle}>· {compLabel}</span>
         <a href="/methodology" className="fp-dq-link" style={linkStyle}>
@@ -135,7 +155,7 @@ export default function DataQualityBadge({ state, compCount, compact = true, mix
   return (
     <div
       role="status"
-      aria-label={`Data quality: ${c.label}`}
+      aria-label={`Data quality: ${c.label}${showStale ? ', stale' : ''}`}
       style={{ fontFamily: 'var(--fp-font-body)' }}
     >
       <style>{hoverCss}</style>
@@ -145,7 +165,7 @@ export default function DataQualityBadge({ state, compCount, compact = true, mix
         gap: '0.6rem',
         flexWrap: 'wrap',
       }}>
-        <span aria-hidden style={dotStyle(c.dot)} />
+        <span aria-hidden style={dotStyle(dot)} />
         <span style={labelStyle}>{c.label}</span>
         <span style={compsStyle}>· {compLabel}</span>
       </div>
@@ -156,7 +176,7 @@ export default function DataQualityBadge({ state, compCount, compact = true, mix
         lineHeight: 1.6,
         color: 'var(--shelf-cream-dim, rgba(242,232,213,.60))',
       }}>
-        {c.caveat}{' '}
+        {caveat}{' '}
         <a href="/methodology" className="fp-dq-link" style={linkStyle}>
           How pricing works &rarr;
         </a>

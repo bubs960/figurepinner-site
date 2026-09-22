@@ -16,7 +16,7 @@
 //   2026-05-12: Chart removed, eBay exit CTA removed, conditions collapsed to MOC/Loose.
 
 import { useState } from 'react'
-import { formatCurrency, formatDate } from '../_lib/figureFormatters'
+import { formatCurrency, formatDate, formatListingFormat } from '../_lib/figureFormatters'
 import { formatShortDate } from '@/lib/safeDate'
 import { trackFunnel } from '@/app/_lib/funnelClient'
 import LiquidSparkline from './LiquidSparkline'
@@ -142,6 +142,10 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
           color:var(--shelf-cream-dim,rgba(242,232,213,.60));flex:1 1 auto;
           text-transform:capitalize;
         }
+        .fp-comp-format{
+          color:var(--shelf-cream-mut,rgba(242,232,213,.38));font-size:10px;
+          letter-spacing:0.04em;white-space:nowrap;
+        }
         .fp-comp-price{
           font-family:var(--fp-font-display);color:var(--shelf-cream,#f2e8d5);
           font-variant-numeric:tabular-nums;
@@ -215,6 +219,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
           <div className="fp-comp-row" key={`${c.sold_date}-${i}`}>
             <span className="fp-comp-date">{formatDate(c.sold_date)}</span>
             <span className="fp-comp-condition">{c.condition}</span>
+            <span className="fp-comp-format">{formatListingFormat(c.listing_format)}</span>
             <span className="fp-comp-price">{formatCurrency(c.price)}</span>
           </div>
         ))}
@@ -234,6 +239,7 @@ export default function MarketPanel({ pricing, ebaySearchUrl: _ebaySearchUrl, fi
               <div className="fp-comp-row" key={`${c.sold_date}-${VISIBLE_ROWS + i}`}>
                 <span className="fp-comp-date">{formatDate(c.sold_date)}</span>
                 <span className="fp-comp-condition">{c.condition}</span>
+                <span className="fp-comp-format">{formatListingFormat(c.listing_format)}</span>
                 <span className="fp-comp-price">{formatCurrency(c.price)}</span>
               </div>
             ))}
