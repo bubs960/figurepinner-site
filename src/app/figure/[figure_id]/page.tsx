@@ -6,7 +6,8 @@ import { permanentRedirect } from 'next/navigation'
 // transient D1 blip cache a wrong 404/redirect for a live figure for 24h.
 import { getFigureById, getFigureByStableSuffix, prettyFigureUrl } from '@/data/kbDb'
 import { deriveName, deriveEmbeddedLine, figurePageTitle } from '@/data/kbHelpers'
-import { fitFigureTitle } from '@/lib/fitTitle'
+import { fitFigureTitle, fitFigureTitleWithPrice } from '@/lib/fitTitle'
+import { priceInTitleEnabled, titlePriceFragment } from '@/lib/titlePriceTest'
 import { FIGURE_ID_REDIRECTS } from '@/data/figure-id-redirects'
 import FigureDetailContent, { fetchFigurePageData } from './_components/FigureDetailContent'
 import { prettifySlug } from './_lib/figureFormatters'
@@ -110,7 +111,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     // No '| FigurePinner' here — the root layout title template appends it;
     // hard-coding it too rendered 'Price & Value | FigurePinner | FigurePinner'
     // on every figure SERP title (S52 fix).
-    title: fitFigureTitle(figurePageTitle(displayName, line, deriveEmbeddedLine(local))),
+    // Price-in-title test: one fandom, trustworthy-tier prices only (titlePriceTest.ts).
+    title: priceInTitleEnabled(local.fandom)
+      ? fitFigureTitleWithPrice(figurePageTitle(displayName, line, deriveEmbeddedLine(local)), titlePriceFragment(contract))
+      : fitFigureTitle(figurePageTitle(displayName, line, deriveEmbeddedLine(local))),
     description: enriched
       ? `${enriched} ${priceTail}`
       : priceFragment

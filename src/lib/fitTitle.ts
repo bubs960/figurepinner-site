@@ -24,6 +24,8 @@ function dropWave(title: string): string {
   return title.replace(/ · [^()]*\)( Price(?: & Value)?)$/, ')$1')
 }
 
+const shortTail = (t: string) => t.replace(/ Price & Value$/, ' Price')
+
 /**
  * For figure-page titles that flow through the root layout's
  * '%s | FigurePinner' template. Shortening ladder, stopping at the first fit:
@@ -36,7 +38,23 @@ function dropWave(title: string): string {
  */
 export function fitFigureTitle(base: string): NonNullable<Metadata['title']> {
   if (base.length + BRAND_SUFFIX.length <= TITLE_MAX) return base
-  const shortTail = (t: string) => t.replace(/ Price & Value$/, ' Price')
   const candidates = [base, shortTail(base), dropWave(base), shortTail(dropWave(base))]
   return { absolute: candidates.find((t) => t.length <= TITLE_MAX) ?? base }
+}
+
+/**
+ * Price-in-title variant (src/lib/titlePriceTest.ts decides who gets it and
+ * what the number is). Same ladder, each rung carrying ": <price>" — the colon
+ * reads as the answer to the title ("… Price & Value: $42 Sealed / $18 Loose").
+ * The price never survives at the expense of a mid-word cut: if no rung fits
+ * with the number, the page gets the ordinary fitted title instead.
+ */
+export function fitFigureTitleWithPrice(base: string, priceFragment: string | null): NonNullable<Metadata['title']> {
+  if (!priceFragment) return fitFigureTitle(base)
+  const withPrice = (t: string) => `${t}: ${priceFragment}`
+  const full = withPrice(base)
+  if (full.length + BRAND_SUFFIX.length <= TITLE_MAX) return full
+  const candidates = [full, withPrice(shortTail(base)), withPrice(dropWave(base)), withPrice(shortTail(dropWave(base)))]
+  const fit = candidates.find((t) => t.length <= TITLE_MAX)
+  return fit ? { absolute: fit } : fitFigureTitle(base)
 }
