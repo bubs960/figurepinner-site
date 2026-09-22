@@ -17,7 +17,16 @@ import type { Env as AlertsEnv } from './alert-checker'
 
 export interface SentinelEnv extends AlertsEnv {
   SENTINEL_EMAIL: string // where failure emails go
+  // Service binding to the figurepinner-site Worker (wrangler.alerts.toml
+  // [[services]]). Probing through the public zone hits Bot Fight Mode, which
+  // 403s non-browser clients on the Free plan and can't be skipped by a WAF
+  // rule — measured 2026-09-22: 480/480 daily probes returned 403, so every
+  // run "failed" and emailed a false alarm. Optional so a missing binding
+  // degrades to the old public-fetch path instead of crashing the cron.
+  SITE?: Fetcher
 }
+
+type FetchFn = (input: string, init?: RequestInit) => Promise<Response>
 
 const SITE = 'https://figurepinner.com'
 const CAMPID = 'campid=5339147406'
@@ -31,13 +40,14 @@ interface ProbeResult {
 }
 
 async function probe(
+  fetcher: FetchFn,
   name: string,
   url: string,
   check: (res: Response, body: string) => string | null, // null = pass, string = failure detail
 ): Promise<ProbeResult> {
   const t0 = Date.now()
   try {
-    const res = await fetch(url, {
+    const res = await fetcher(url, {
       signal: AbortSignal.timeout(10000),
       headers: { 'user-agent': 'fp-sentinel/1.0' },
     })
@@ -59,37 +69,40 @@ function searchCount(body: string): number {
 }
 
 export async function runSentinel(env: SentinelEnv): Promise<void> {
+  const site = env.SITE
+  const fetcher: FetchFn = site ? (input, init) => site.fetch(input, init) : (input, init) => fetch(input, init)
+  const via = site ? 'service-binding' : 'public zone (SITE binding missing — Bot Fight Mode will 403 these)'
   const results = await Promise.all([
-    probe('homepage 200 + branded', `${SITE}/`, (res, body) =>
+    probe(fetcher, 'homepage 200 + branded', `${SITE}/`, (res, body) =>
       res.status !== 200 ? `status ${res.status}`
       : !body.includes('FigurePinner') ? 'body missing brand string'
       : null),
 
-    probe('figure page + affiliate campid', `${SITE}/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22`, (res, body) =>
+    probe(fetcher, 'figure page + affiliate campid', `${SITE}/figure/fp_wrestling_mattel_elite-legends_30_michelle-mccool_51ea22`, (res, body) =>
       res.status !== 200 ? `status ${res.status}`
       : !body.includes(CAMPID) ? 'eBay affiliate campid MISSING — revenue leak'
       : !body.includes('_nkw=') ? 'eBay search link missing'
       : null),
 
-    probe('search sentinel: "wwe elite 11" > 0', `${SITE}/api/v1/search?q=wwe%20elite%2011`, (res, body) => {
+    probe(fetcher, 'search sentinel: "wwe elite 11" > 0', `${SITE}/api/v1/search?q=wwe%20elite%2011`, (res, body) => {
       if (res.status !== 200) return `status ${res.status}`
       const n = searchCount(body)
       return n > 0 ? null : `returned ${n} results — forgiveness ladder broken`
     }),
 
-    probe('search typo ladder: "hulk hogen" > 0', `${SITE}/api/v1/search?q=hulk%20hogen`, (res, body) => {
+    probe(fetcher, 'search typo ladder: "hulk hogen" > 0', `${SITE}/api/v1/search?q=hulk%20hogen`, (res, body) => {
       if (res.status !== 200) return `status ${res.status}`
       const n = searchCount(body)
       return n > 0 ? null : `returned ${n} results — typo correction broken`
     }),
 
-    probe('guides index 200', `${SITE}/guides`, res =>
+    probe(fetcher, 'guides index 200', `${SITE}/guides`, res =>
       res.status !== 200 ? `status ${res.status}` : null),
   ])
 
   const failures = results.filter(r => !r.ok)
   const summary = results.map(r => `${r.ok ? 'PASS' : 'FAIL'} ${r.name} (${r.ms}ms) ${r.ok ? '' : '— ' + r.detail}`).join('\n')
-  console.log(`[sentinel] ${failures.length ? 'FAILURES' : 'all pass'}\n${summary}`)
+  console.log(`[sentinel] ${failures.length ? 'FAILURES' : 'all pass'} (via ${via})\n${summary}`)
 
   if (!failures.length) return
 
