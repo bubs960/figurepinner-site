@@ -8,9 +8,11 @@ import figureIdToPrettyPath from '@/data/figureIdToPrettyPath.generated.json'
 // token / coming-soon rewrite) has been removed entirely so it can never gate
 // the site again. Auth-protection for /app and /admin remains below.
 
-// Authenticated dashboard routes
-// '/admin(.*)' doesn't cover '/api/admin/*' — add it so new admin API routes
-// are gated by default instead of relying on each route to self-guard.
+// Authenticated dashboard routes. auth.protect() below only requires a
+// SIGNED-IN user; it does not check admin. '/api/admin(.*)' is listed so admin
+// API routes reject anonymous callers by default, but each admin route must
+// still check the FP_ADMIN_USER_IDS allowlist itself (admin/health is the
+// pattern), or any signed-in user can call it.
 const isProtectedRoute = createRouteMatcher(['/app(.*)', '/admin(.*)', '/api/admin(.*)'])
 
 // ──────────────────────────────────────────────────────────────────────────────

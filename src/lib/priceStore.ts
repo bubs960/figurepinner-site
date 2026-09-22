@@ -62,23 +62,19 @@ async function bindings(): Promise<Bindings> {
   }
 }
 
+// null = the object is absent or not valid JSON, safe to mirror as "no price".
+// A throw = transient (R2 error, network error, proxy non-404 failure such as
+// its 120/min rate limit), which readThroughPrice deliberately does not cache.
 async function readOrigin<T>(r2: R2Like | null, kind: string, figure_id: string, revalidate: number): Promise<T | null> {
   if (r2) {
-    try {
-      const obj = await r2.get(`${kind}/${figure_id}.json`)
-      if (!obj) return null
-      return await obj.json<T>()
-    } catch {
-      return null
-    }
+    const obj = await r2.get(`${kind}/${figure_id}.json`)
+    if (!obj) return null
+    try { return await obj.json<T>() } catch { return null }
   }
-  try {
-    const res = await fetch(`${R2_PROXY_BASE}/${kind}/${encodeURIComponent(figure_id)}.json`, { next: { revalidate } })
-    if (!res.ok) return null
-    return (await res.json()) as T
-  } catch {
-    return null
-  }
+  const res = await fetch(`${R2_PROXY_BASE}/${kind}/${encodeURIComponent(figure_id)}.json`, { next: { revalidate } })
+  if (res.status === 404) return null
+  if (!res.ok) throw new Error(`price proxy ${res.status}`)
+  try { return (await res.json()) as T } catch { return null }
 }
 
 /**

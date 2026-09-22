@@ -65,6 +65,20 @@ describe('price read-through', () => {
     assert.equal(o.calls.length, 1)
   })
 
+  test('a transient origin failure (throw) is NOT cached as "no price"; the next read retries', async () => {
+    const kv = fakeKv()
+    let calls = 0
+    const flaky = async () => { calls++; if (calls === 1) throw new Error('R2 blip'); return { median_sold: 12 } }
+    assert.equal(await readThroughPrice({ kv, origin: flaky, waitUntil }, 'price-summaries', 't1'), null)
+    await drain()
+    assert.equal(kv.puts.length, 0)
+    assert.deepEqual(await readThroughPrice({ kv, origin: flaky, waitUntil }, 'price-summaries', 't1'), { median_sold: 12 })
+    await drain()
+    assert.equal(calls, 2)
+    assert.equal(kv.puts.length, 1)
+    assert.equal(kv.puts[0].v, JSON.stringify({ median_sold: 12 }))
+  })
+
   test('the price-gen key selects the key space; a bump misses old entries', async () => {
     const kv = fakeKv({ 'price-gen': 'g7', [priceKey('g0', 'price-summaries', 'f3')]: JSON.stringify({ median_sold: 1 }) })
     const o = fakeOrigin({ 'price-summaries/f3': { median_sold: 2 } })

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
+import { timingSafeEqual } from '@/lib/timingSafeEqual'
 
 /**
  * GET /api/daily-uniques
@@ -71,7 +72,7 @@ export async function GET(request: Request) {
   if (!expectedKey) {
     return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
   }
-  if (request.headers.get('x-cache-stats-key') !== expectedKey) {
+  if (!timingSafeEqual(request.headers.get('x-cache-stats-key') ?? '', expectedKey)) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
   }
 
@@ -106,7 +107,7 @@ export async function GET(request: Request) {
     if (!debugKey) {
       return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
     }
-    if (request.headers.get('x-daily-uniques-key') !== debugKey) {
+    if (!timingSafeEqual(request.headers.get('x-daily-uniques-key') ?? '', debugKey)) {
       return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
     }
   }
