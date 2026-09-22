@@ -72,7 +72,7 @@ const same = (a, b) => a.length === b.length && a.every((x, i) => x === b[i])
 const waveDesc = (a, b) => ((parseInt(b.release_wave) || 0) - (parseInt(a.release_wave) || 0))
 
 const total = db.prepare('SELECT COUNT(*) AS c FROM kb_figures').get().c
-const fandoms = db.prepare(SQL.allFandoms).all().map(r => r.fandom)
+const fandoms = db.prepare('SELECT DISTINCT fandom FROM kb_figures').all().map(r => r.fandom)
 console.log(`[parity] kb_figures: ${total} rows, ${fandoms.length} fandoms`)
 
 // Prepared NEW statements (exactly the builders kbDb.ts executes)
