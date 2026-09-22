@@ -255,6 +255,8 @@ function maxRowid(name) {
 // emitter writes one INSERT per figure). Schema files contribute 0.
 function rowsInSqlFile(path) {
   const sql = readFileSync(path, 'utf8')
+  const declared = sql.match(/^-- rows: (\d+)\n/)
+  if (declared) return Number(declared[1])
   return (sql.match(/^INSERT INTO /gm) ?? []).length
 }
 

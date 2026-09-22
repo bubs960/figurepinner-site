@@ -17,6 +17,12 @@ const require = createRequire(import.meta.url)
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DEFAULT_OUT = join(ROOT, '.tmp', 'kb-d1')
 const DEFAULT_CHUNK_SIZE = 250
+// D1 rejects a statement over 100 KB; emitted rows average ~960 B (max ~2.4 KB,
+// 9/22), so multi-row statements are packed by bytes with headroom, N is a cap.
+const D1_MAX_STATEMENT_BYTES = 100_000
+const DEFAULT_STATEMENT_BYTES = 90_000
+// SQLite's default SQLITE_MAX_COMPOUND_SELECT; a multi-row VALUES counts against it.
+const MAX_MULTIROW = 500
 let normalizedPackSizeCount = 0
 
 const COLUMNS = [
@@ -56,6 +62,8 @@ function parseArgs(argv) {
     table: 'kb_figures',
     limit: null,
     slim: null,
+    multirow: null,
+    statementBytes: DEFAULT_STATEMENT_BYTES,
   }
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -88,6 +96,19 @@ function parseArgs(argv) {
       // the verifier read the same bytes even if the live slim moves mid-load.
       if (!argv[i + 1]) fail('--slim needs a path')
       opts.slim = resolve(ROOT, argv[i + 1])
+      i += 1
+    } else if (arg === '--multirow') {
+      // Layer 2 pre-flight (Steve ruling 2026-09-19): up to N rows per INSERT,
+      // for batched /query loads that avoid import mode. Off = one INSERT per
+      // row, byte-identical to the nightly loader's input.
+      const next = Number(argv[i + 1])
+      if (!Number.isInteger(next) || next < 2 || next > MAX_MULTIROW) fail(`--multirow needs an integer 2..${MAX_MULTIROW}`)
+      opts.multirow = next
+      i += 1
+    } else if (arg === '--statement-bytes') {
+      const next = Number(argv[i + 1])
+      if (!Number.isInteger(next) || next < 4096 || next > D1_MAX_STATEMENT_BYTES) fail(`--statement-bytes needs an integer 4096..${D1_MAX_STATEMENT_BYTES}`)
+      opts.statementBytes = next
       i += 1
     }
   }
@@ -196,6 +217,29 @@ function insertSql(rows, table) {
     .join('\n') + '\n'
 }
 
+// `-- rows: N` header: kb-d1-swap.mjs reads it instead of counting INSERT lines.
+function multirowInsertSql(rows, table, maxRows, maxBytes) {
+  const head = `INSERT INTO ${table} (${COLUMNS.join(', ')}) VALUES\n`
+  const statements = []
+  let tuples = []
+  let bytes = Buffer.byteLength(head)
+  for (const row of rows) {
+    const tuple = `(${COLUMNS.map((col) => sqlValue(row[col])).join(', ')})`
+    const size = Buffer.byteLength(tuple) + 2
+    if (tuples.length && (tuples.length >= maxRows || bytes + size > maxBytes)) {
+      statements.push(head + tuples.join(',\n') + ';')
+      tuples = []
+      bytes = Buffer.byteLength(head)
+    }
+    tuples.push(tuple)
+    bytes += size
+  }
+  if (tuples.length) statements.push(head + tuples.join(',\n') + ';')
+  multirowStatementCount += statements.length
+  return `-- rows: ${rows.length}\n${statements.join('\n')}\n`
+}
+let multirowStatementCount = 0
+
 /**
  * Rewrite the canonical DDL for a staging table: every `kb_figures` occurrence
  * (table name AND index names — `idx_kb_figures_fandom` → `idx_<staging>_fandom`)
@@ -264,7 +308,9 @@ for (let start = 0, index = 1; start < rows.length; start += opts.chunkSize, ind
   const chunk = rows.slice(start, start + opts.chunkSize)
   const name = `001_load_${String(index).padStart(4, '0')}.sql`
   const path = join(opts.out, name)
-  writeFileSync(path, insertSql(chunk, opts.table))
+  writeFileSync(path, opts.multirow
+    ? multirowInsertSql(chunk, opts.table, opts.multirow, opts.statementBytes)
+    : insertSql(chunk, opts.table))
   chunkFiles.push(path)
 }
 
@@ -284,7 +330,10 @@ const manifestLines = [
   '',
 ]
 writeFileSync(join(opts.out, 'apply-remote-commands.txt'), manifestLines.join('\n'))
-writeFileSync(join(opts.out, 'stats.json'), `${JSON.stringify({ table: opts.table, head, ...report }, null, 2)}\n`)
+const multirowStats = opts.multirow
+  ? { multirow: opts.multirow, statementBytes: opts.statementBytes, statements: multirowStatementCount }
+  : {}
+writeFileSync(join(opts.out, 'stats.json'), `${JSON.stringify({ table: opts.table, head, ...report, ...multirowStats }, null, 2)}\n`)
 
 console.log(`[kb:d1] wrote schema + ${chunkFiles.length} load chunks to ${rel(opts.out)}`)
 console.log(`[kb:d1] next: review ${rel(join(opts.out, 'apply-remote-commands.txt'))}`)
