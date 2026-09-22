@@ -71,9 +71,12 @@ export async function GET() {
 }
 
 function csvEscape(value: string): string {
-  // Wrap in quotes if value contains comma, quote, or newline
-  if (value.includes(',') || value.includes('"') || value.includes('\n')) {
-    return `"${value.replace(/"/g, '""')}"`
+  // Spreadsheet formula injection (OWASP): Excel/Sheets evaluate a cell that
+  // starts with = + - @ tab or CR, so prefix those with a single quote.
+  const v = /^[=+\-@\t\r]/.test(value) ? `'${value}` : value
+  // Wrap in quotes if value contains comma, quote, CR or newline
+  if (/[",\r\n]/.test(v)) {
+    return `"${v.replace(/"/g, '""')}"`
   }
-  return value
+  return v
 }
