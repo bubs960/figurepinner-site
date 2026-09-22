@@ -23,18 +23,22 @@
  *
  * Safety: the target table must end in `_probe` (never kb_figures / _new / _old),
  * every statement is checked to target only that table, remote needs
- * --authorized (CLAUDE.md rule 5) plus CLOUDFLARE_API_TOKEN in the environment
- * (never read from a file, never printed). The probe table is dropped at the end
+ * --authorized (CLAUDE.md rule 5) plus a D1 token (CLOUDFLARE_API_TOKEN, else
+ * CF_API_TOKEN from ~/.figurepinner-secrets.env; never printed). The probe table is dropped at the end
  * unless --keep. The live kb_figures is never touched.
  *
  * Output: OBSERVED VALUES (R10) on stdout and in <dir>/probe-receipt.json.
  */
 
-import { spawnSync } from 'node:child_process'
+import { execFile, spawnSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { homedir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { promisify } from 'node:util'
+
+const execFileAsync = promisify(execFile)
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const CF_API = 'https://api.cloudflare.com/client/v4'
@@ -162,12 +166,21 @@ function kbDatabaseIds() {
   return { account, db }
 }
 
+// Same source + key the nightly D1 writers use (run-matcher-window.ps1; D1 write
+// scope verified 2026-09-10). Read in-process, never printed.
+const SECRETS_FILE = join(homedir(), '.figurepinner-secrets.env')
+function secretsFileToken() {
+  if (!existsSync(SECRETS_FILE)) return null
+  const line = readFileSync(SECRETS_FILE, 'utf8').split(/\r?\n/).find((l) => l.startsWith('CF_API_TOKEN='))
+  return line ? line.slice('CF_API_TOKEN='.length).trim().replace(/^["']|["']$/g, '') : null
+}
+
 function makeClient(opts) {
   if (opts.apiBase) {
     return { url: `${opts.apiBase.replace(/\/$/, '')}/query`, headers: { 'content-type': 'application/json' }, mock: true }
   }
-  const token = process.env.CLOUDFLARE_API_TOKEN
-  if (!token) die('CLOUDFLARE_API_TOKEN is not set (needs D1:Edit on the account). Set it in this shell only; it is never read from a file or printed.')
+  const token = process.env.CLOUDFLARE_API_TOKEN || secretsFileToken()
+  if (!token) die(`no D1 token: set CLOUDFLARE_API_TOKEN, or CF_API_TOKEN in ${SECRETS_FILE}`)
   const { account, db } = kbDatabaseIds()
   return {
     url: `${CF_API}/accounts/${account}/d1/database/${db}/query`,
@@ -205,18 +218,22 @@ function p95(values) {
   return sorted[Math.min(sorted.length - 1, Math.ceil(sorted.length * 0.95) - 1)]
 }
 
+// curl.exe with a browser UA (Steve, 9/22 decision A): Bot Fight 403s Node's
+// fetch even with a browser UA (TLS fingerprint), while curl.exe + this UA is the
+// queue's standing read path. If Bot Fight starts 403ing curl too, the baseline
+// fails and the probe refuses to start. ms = curl's time_total.
+const WATCH_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+const CURL = process.platform === 'win32' ? 'curl.exe' : 'curl'
 async function sample(url) {
-  const t0 = performance.now()
+  // Cache-busting query so the edge cache can't hide D1 read latency.
+  const target = `${url}${url.includes('?') ? '&' : '?'}_probe=${Date.now()}`
   try {
-    // Cache-busting query so the edge cache can't hide D1 read latency.
-    const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}_probe=${Date.now()}`, {
-      headers: { 'user-agent': 'FigurePinner-Layer2-Probe/1.0' },
-      redirect: 'manual',
-    })
-    await res.arrayBuffer()
-    return { status: res.status, ms: performance.now() - t0 }
+    const { stdout } = await execFileAsync(CURL, ['-s', '-o', process.platform === 'win32' ? 'NUL' : '/dev/null',
+      '-A', WATCH_UA, '--max-time', '15', '-w', '%{http_code} %{time_total}', target])
+    const [code, secs] = stdout.trim().split(' ')
+    return { status: Number(code), ms: Number(secs) * 1000 }
   } catch (err) {
-    return { status: 0, ms: performance.now() - t0, error: err.message }
+    return { status: 0, ms: 15_000, error: err.message }
   }
 }
 
