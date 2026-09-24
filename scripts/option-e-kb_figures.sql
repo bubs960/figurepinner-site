@@ -24,7 +24,11 @@ CREATE TABLE kb_figures (
   v1_line TEXT,
   v1_series TEXT,
   match_represented TEXT,
-  key_features TEXT
+  key_features TEXT,
+  -- passport: v4.2 evidence-locked claims block (matcher pour schema 2026-08-13), stored as the
+  -- JSON text of the slim KB object; NULL when the figure has none. Added 2026-09-23 (standalone
+  -- ruling STANDALONE-TO-MATCHER-WEB-SCALE-PASSPORT-DECISION-2026-09-21, option a).
+  passport TEXT
 );
 
 CREATE INDEX idx_kb_figures_fandom

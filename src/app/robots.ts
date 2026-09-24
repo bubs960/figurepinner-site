@@ -34,7 +34,8 @@ export default function robots(): MetadataRoute.Robots {
       // in 24 h, ~27% of all renders, while Workers CPU ran ~10x the plan's
       // included 30M cpu-ms/month. AhrefsBot and MJ12bot are the same class.
       // All five honor robots.txt. Search engines (Google, Bing, Applebot,
-      // Baidu, PetalBot) and AI crawlers are deliberately NOT listed here.
+      // Baidu) and AI crawlers are deliberately NOT listed here; SeznamBot and
+      // PetalBot have their own rules below.
       {
         userAgent: ['SemrushBot', 'DotBot', 'DataForSeoBot', 'AhrefsBot', 'MJ12bot'],
         disallow: '/',
@@ -50,6 +51,17 @@ export default function robots(): MetadataRoute.Robots {
       // Seznam ever shows up as a referrer in FP-SearchChannelDaily.
       {
         userAgent: 'SeznamBot',
+        disallow: '/',
+      },
+      // PetalBot (2026-09-22, awaiting Steve's go): Huawei's Petal Search crawler.
+      // Excluded from the 9/18 SEO-tool block as a search engine; this reverses
+      // that on the same business ground as SeznamBot above. Measured 2026-09-15
+      // to 09-21 (CF zone analytics, status 200 only): 7,049 renders, ~1,000/day,
+      // steady rather than bursty. Referral side: FP-SearchChannelDaily has no
+      // Petal bucket, and the whole other-referral bucket was 4 visits in the
+      // same 7 days. Re-open if Petal ever shows up as a referrer.
+      {
+        userAgent: 'PetalBot',
         disallow: '/',
       },
     ],

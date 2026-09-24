@@ -104,8 +104,10 @@ export async function GET(req: NextRequest) {
   // TIGHTEST cacheUntil among its fids -- one stale quote in a 40-id batch
   // would otherwise ride the whole response's cache lifetime.
   const now = Date.now()
-  const tightestS = cacheUntils.length
-    ? Math.max(0, Math.floor((Math.min(...cacheUntils.map(d => Date.parse(d))) - now) / 1000))
+  // An unparseable cacheUntil would make Math.min NaN and ship "max-age=NaN".
+  const untilMs = cacheUntils.map(d => Date.parse(d)).filter(ms => Number.isFinite(ms))
+  const tightestS = untilMs.length
+    ? Math.max(0, Math.floor((Math.min(...untilMs) - now) / 1000))
     : 300
   const maxAge = Math.min(300, tightestS)
   return NextResponse.json(results, {

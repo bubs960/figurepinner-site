@@ -44,6 +44,7 @@ const COLUMNS = [
   'v1_series',
   'match_represented',
   'key_features',
+  'passport',
 ]
 
 const REQUIRED_COLUMNS = [
@@ -127,6 +128,14 @@ function asText(value) {
   return text.length ? text : null
 }
 
+// passport is an object in the slim KB; D1 stores its canonical JSON text (key order as
+// emitted by the slim, no whitespace). Mirrored byte-for-byte in check-kb-d1-remote.mjs.
+function jsonText(value) {
+  if (value == null) return null
+  if (typeof value === 'string') return value.length ? value : null
+  return JSON.stringify(value)
+}
+
 function sqlValue(value) {
   if (value == null) return 'NULL'
   return `'${String(value).replaceAll("'", "''")}'`
@@ -159,6 +168,7 @@ function rowFromFigure(f) {
     v1_series: asText(f.v1_series),
     match_represented: asText(f.match_represented),
     key_features: asText(f.key_features),
+    passport: jsonText(f.passport),
   }
 }
 

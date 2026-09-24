@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { timingSafeEqual } from '@/lib/timingSafeEqual'
 
 /**
  * GET /api/cache-stats
@@ -62,7 +63,7 @@ export async function GET(request: Request) {
   if (!expectedKey) {
     return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
   }
-  if (authHeader !== expectedKey) {
+  if (!timingSafeEqual(authHeader ?? '', expectedKey)) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
   }
 

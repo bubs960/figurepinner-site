@@ -129,7 +129,11 @@ export async function isUserPro(): Promise<boolean> {
   }
 }
 
-/** Free-tier limits — single source of truth */
+/** Free-tier limits — single source of truth. VAULT/ALERTS are deliberately
+ *  1,000,000 (a backstop, not a paywall): the free tier was uncapped on
+ *  2026-06-06 (commit 1b29441, "...unlock"), matching the site's "free, no
+ *  caps" copy. Don't "restore" 25/3 without a product decision.
+ *  LIST_IT_MONTHLY / SEARCHES_MONTHLY are declared but not enforced anywhere. */
 export const FREE_LIMITS = {
   VAULT: 1_000_000,
   ALERTS: 1_000_000,
