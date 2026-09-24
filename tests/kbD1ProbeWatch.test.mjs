@@ -121,7 +121,7 @@ describe('kb-d1-probe-http site watch', { concurrency: true }, () => {
   test('the watch going blind mid-load stops the load, and the probe table is still dropped', async () => {
     const r = await scenario({
       watch: (n) => (n <= 5 ? 200 : 403), // 5 clean baseline samples, then Bot Fight closes the door
-      statements: 40, queryDelayMs: 100, extra: ['--blind-trip', '3'],
+      statements: 80, queryDelayMs: 100, extra: ['--blind-trip', '3'], // ~8 s of load vs ~1.5 s to trip: wide margin on a slow box
     })
     try {
       assert.equal(r.code, 2, r.out)
