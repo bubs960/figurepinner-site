@@ -170,12 +170,12 @@ describe('SQL contracts', () => {
     assert.deepEqual(chunk([1, 2, 3, 4, 5], 2), [[1, 2], [3, 4], [5]])
   })
 
-  test('projections nest: ROUTE ⊂ CARD = FULL minus exactly the two prose columns', () => {
+  test('projections nest: ROUTE ⊂ CARD = FULL minus exactly the two prose columns and the passport', () => {
     const cols = s => s.split(',').map(x => x.trim())
     const full = cols(FULL_COLS)
     const card = cols(CARD_COLS)
     const route = cols(ROUTE_COLS)
-    assert.deepEqual(full.filter(c => !card.includes(c)), ['match_represented', 'key_features'])
+    assert.deepEqual(full.filter(c => !card.includes(c)), ['match_represented', 'key_features', 'passport'])
     for (const c of route) assert.ok(card.includes(c), `${c} missing from CARD_COLS`)
     assert.ok(route.includes('manufacturer'), 'router-key counting needs manufacturer (2026-07-27 predicate)')
   })

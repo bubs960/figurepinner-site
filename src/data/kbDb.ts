@@ -34,7 +34,7 @@ import { cache } from 'react'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import {
   deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey,
-  genreSlugForFandom, type KBFigure,
+  genreSlugForFandom, parsePassportText, type KBFigure,
 } from './kbTypes'
 import { SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
 import { getFigureByStableSuffix as liteFigureByStableSuffix, getAllFandoms as liteAllFandoms } from './kbLite'
@@ -46,9 +46,10 @@ export type { KBFigure }
 
 /**
  * Raw D1 row shape. kb_figures is all-TEXT (D1 = SQLite): every column comes
- * back as string | null. The 18 columns are the slim KEEP set minus v1_figure_id
- * (dropped from the slim whitelist 2026-06-14, zero readers). mapRow() coerces
- * these into the KBFigure contract the rest of the app already expects.
+ * back as string | null. The 18 original columns are the slim KEEP set minus
+ * v1_figure_id (dropped from the slim whitelist 2026-06-14, zero readers); the
+ * 19th, `passport` (2026-09-24), is the slim KB's passport object as JSON text.
+ * mapRow() coerces these into the KBFigure contract the rest of the app already expects.
  */
 interface KBRow {
   figure_id: string
@@ -69,11 +70,13 @@ interface KBRow {
   v1_series: string | null
   match_represented: string | null
   key_features: string | null
+  /** JSON text of the slim passport object; NULL for figures without one. */
+  passport: string | null
 }
 
-/** CARD_COLS row: the two prose columns are simply absent. */
-type KBCardRow = Omit<KBRow, 'match_represented' | 'key_features'> &
-  Partial<Pick<KBRow, 'match_represented' | 'key_features'>>
+/** CARD_COLS row: the two prose columns and the passport are simply absent. */
+type KBCardRow = Omit<KBRow, 'match_represented' | 'key_features' | 'passport'> &
+  Partial<Pick<KBRow, 'match_represented' | 'key_features' | 'passport'>>
 
 /** ROUTE_COLS row — exactly what prettyUrlRouterCountKeys needs. */
 interface KBRouteRow {
@@ -186,8 +189,12 @@ async function getKbDb(): Promise<KbDb> {
  *    to satisfy the `field?: string` (not `| null`) contract in KBFigure. A
  *    CARD_COLS row never carries the two prose fields — they stay undefined.
  *  - v1_figure_id: dropped from the slim/D1 set, no readers; '' satisfies the type.
+ *  - passport: JSON text → PassportBlock via parsePassportText (bad or absent
+ *    text = no passport, never a throw); set only when present, so figures
+ *    without one keep the exact object shape they had before the column existed.
  */
 function mapRow(r: KBCardRow): KBFigure {
+  const passport = parsePassportText(r.passport)
   return {
     figure_id: r.figure_id,
     v1_figure_id: '',
@@ -208,6 +215,7 @@ function mapRow(r: KBCardRow): KBFigure {
     v1_series: r.v1_series ?? undefined,
     match_represented: r.match_represented ?? undefined,
     key_features: r.key_features ?? undefined,
+    ...(passport ? { passport } : {}),
   }
 }
 

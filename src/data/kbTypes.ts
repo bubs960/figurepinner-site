@@ -25,6 +25,22 @@ export function passportValue(fig: KBFigure, key: string): string | null {
   return fig.passport?.fields[key]?.value ?? null
 }
 
+/**
+ * D1 stores the slim KB's `passport` object as JSON text (kb_figures.passport,
+ * matcher PR #38); the page wants the object. Anything that is not a JSON object
+ * degrades to "no passport" (undefined): a bad row must never throw inside a
+ * figure-page render.
+ */
+export function parsePassportText(text: string | null | undefined): PassportBlock | undefined {
+  if (!text) return undefined
+  try {
+    const v: unknown = JSON.parse(text)
+    return v && typeof v === 'object' && !Array.isArray(v) ? (v as PassportBlock) : undefined
+  } catch {
+    return undefined
+  }
+}
+
 export type KBFigure = {
   figure_id: string
   v1_figure_id: string

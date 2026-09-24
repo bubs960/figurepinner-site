@@ -28,17 +28,24 @@
 
 export const KB_TABLE = 'kb_figures'
 
-/** Full detail record — figure page, route resolution (the page renders it). */
+/**
+ * Full detail record — figure page, route resolution (the page renders it).
+ * `passport` (2026-09-24, matcher PR #38 + web step 3): the slim KB's passport
+ * object as JSON text, NULL for ~95% of rows (1,066 of 23,774 carry one); kbDb.mapRow
+ * parses it. It only exists once a nightly load has run on the 19-column loader,
+ * so this projection must never ship before that load has finalized (a missing
+ * column fails every figure-page SELECT).
+ */
 export const FULL_COLS =
   'figure_id, fandom, character_canonical, manufacturer, product_line, ' +
   'sub_fandom, character_variant, release_wave, scale, pack_size, exclusive_to, ' +
-  'canonical_image_url, name, v1_name, v1_line, v1_series, match_represented, key_features'
+  'canonical_image_url, name, v1_name, v1_line, v1_series, match_represented, key_features, passport'
 
 /**
- * Compact card record — hubs, related rows, variants. FULL_COLS minus the two
- * prose columns (match_represented, key_features), which are the bulk of every
- * row's bytes and which no card/list surface reads. KBFigure declares both as
- * optional, so a card row is a valid KBFigure with them undefined.
+ * Compact card record — hubs, related rows, variants. FULL_COLS minus the three
+ * heavy columns (match_represented, key_features, passport), which are the bulk
+ * of every row's bytes and which no card/list surface reads. KBFigure declares
+ * all three as optional, so a card row is a valid KBFigure with them undefined.
  */
 export const CARD_COLS =
   'figure_id, fandom, character_canonical, manufacturer, product_line, ' +
