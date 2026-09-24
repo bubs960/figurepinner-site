@@ -197,8 +197,9 @@ function runSql(command, { allowFail = false, retry = true } = {}) {
 // empty kb_figures_new. Same class as the bin-ingest "wrangler can exit
 // nonzero after a successful import" note in task-health-check.ps1.
 // Fix: never trust the exit code alone in either direction. Accept that
-// exact signature ONLY, then prove the rows landed with a COUNT(*) against
-// the expected running total; anything else is still fatal.
+// exact signature ONLY, then prove the rows landed by counting them
+// (rowsAddedSince) against the expected running total; anything else is
+// still fatal.
 // Synchronous sleep for the pacing option (the script is execSync-driven end to end).
 function sleepMs(ms) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms)
@@ -207,7 +208,7 @@ function sleepMs(ms) {
 const WRANGLER_POLL_BUG = /Not currently importing anything/i
 const WRANGLER_IMPORT_DONE = /Processed \d+ quer/i
 
-function runSqlFile(path, { table = null, expectRowsAfter = null } = {}) {
+function runSqlFile(path, { table = null, cursor = null, expectAdded = null } = {}) {
   if (opts.dryRun) {
     console.log(`[kb:d1:swap] (dry-run) would execute file: ${path}`)
     return
@@ -221,13 +222,33 @@ function runSqlFile(path, { table = null, expectRowsAfter = null } = {}) {
     }
     console.log(`[kb:d1:swap]     wrangler post-import poll failed AFTER "Processed N queries" (known 4.x quirk) -- verifying rows landed instead of trusting the exit code`)
   }
-  if (table && expectRowsAfter !== null) {
-    const have = rowCount(table)
-    if (have !== expectRowsAfter) {
-      die(`row count after ${basename(path)}: expected ${expectRowsAfter}, got ${have} -- that file did NOT land. Re-run load from the top (000_schema.sql is DROP TABLE IF EXISTS, a restart is safe).`)
+  if (table && cursor && expectAdded !== null) {
+    const expected = cursor.rows + expectAdded
+    const { added, maxRowid } = rowsAddedSince(table, cursor.maxRowid)
+    const have = cursor.rows + added
+    if (added !== expectAdded) {
+      die(`row count after ${basename(path)}: expected ${expected}, got ${have} -- that file did NOT land. Re-run load from the top (000_schema.sql is DROP TABLE IF EXISTS, a restart is safe).`)
     }
-    console.log(`[kb:d1:swap]     ${table} = ${have} rows (expected ${expectRowsAfter}) OK`)
+    cursor.rows = have
+    cursor.maxRowid = maxRowid
+    console.log(`[kb:d1:swap]     ${table} = ${have} rows (expected ${expected}) OK`)
   }
+}
+
+// Staging is append-only during a load (one INSERT per row, no deletes), so
+// the rows a file added are exactly the rows above the previous max rowid.
+// Counting only those proves the file landed while reading ~one chunk, where
+// a full COUNT(*) per file re-read the whole growing table: ~1.6M rows per
+// load, a quarter of the KB DB's daily reads (wrangler d1 insights, 9/22).
+function rowsAddedSince(name, afterRowid) {
+  const { results } = runSql(`SELECT COUNT(*) AS c, MAX(rowid) AS m FROM ${name} WHERE rowid > ${Number(afterRowid)}`)
+  const m = results[0]?.m
+  return { added: Number(results[0]?.c ?? 0), maxRowid: m == null ? afterRowid : Number(m) }
+}
+
+function maxRowid(name) {
+  const { results } = runSql(`SELECT MAX(rowid) AS m FROM ${name}`)
+  return Number(results[0]?.m ?? 0)
 }
 
 // Rows a load chunk will insert = its single-row INSERT statements (the
@@ -366,6 +387,7 @@ function phaseLoad() {
   if (opts.resume && !skipping) console.log(`[kb:d1:swap] --resume requested but ${STAGING} is absent/empty -- doing a normal full load`)
   if (skipping) console.log(`[kb:d1:swap] --resume: ${STAGING} already has ${existing} rows -- skipping files whose rows are present (boundary-checked)`)
   let expected = 0
+  const cursor = { rows: 0, maxRowid: 0 }
   for (const file of files) {
     const path = join(opts.dir, file)
     const n = rowsInSqlFile(path)
@@ -379,11 +401,13 @@ function phaseLoad() {
         die(`--resume: ${STAGING} has ${existing} rows, which is not on a file boundary (previous boundary ${expected}, next ${expected + n}) -- a chunk half-landed. Restart WITHOUT --resume.`)
       }
       skipping = false
+      cursor.rows = existing
+      cursor.maxRowid = maxRowid(STAGING)
       console.log(`[kb:d1:swap] --resume: boundary ${expected} confirmed, continuing with ${file}`)
     }
     expected += n
     console.log(`[kb:d1:swap]   ${file} (+${n} -> ${expected})`)
-    runSqlFile(path, { table: STAGING, expectRowsAfter: expected })
+    runSqlFile(path, { table: STAGING, cursor, expectAdded: n })
     if (opts.pace > 0 && !opts.dryRun) sleepMs(opts.pace)
   }
   if (expected !== stats.rowCount) {

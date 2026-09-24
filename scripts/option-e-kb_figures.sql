@@ -38,3 +38,10 @@ CREATE INDEX idx_kb_figures_pretty_url
 
 CREATE INDEX idx_kb_figures_character
   ON kb_figures (character_canonical);
+
+-- release_wave LEADS on purpose: only a query that constrains release_wave can
+-- use this index, so no fandom/line read changes plan. waveCompanions (every
+-- figure page) otherwise range-scans the whole line: measured 2026-09-22
+-- (wrangler d1 insights) 405 rows/call, 43% of all D1 rows read.
+CREATE INDEX idx_kb_figures_line_wave
+  ON kb_figures (release_wave, fandom, product_line);
