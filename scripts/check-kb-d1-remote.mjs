@@ -66,15 +66,21 @@ function asText(value) {
   return text.length ? text : null
 }
 
-// ALL 18 columns, transforms byte-matched to build-kb-d1-sql.mjs rowFromFigure.
+// ALL 19 columns (passport added 2026-09-23), transforms byte-matched to build-kb-d1-sql.mjs rowFromFigure.
 // The 8/25 audit found the previous 7-column version never checked the fields
 // most likely to carry real bugs (release_wave, scale, exclusive_to).
 const ALL_COLUMNS = [
   'figure_id', 'fandom', 'character_canonical', 'manufacturer', 'product_line',
   'sub_fandom', 'character_variant', 'release_wave', 'scale', 'pack_size',
   'exclusive_to', 'canonical_image_url', 'name', 'v1_name', 'v1_line',
-  'v1_series', 'match_represented', 'key_features',
+  'v1_series', 'match_represented', 'key_features', 'passport',
 ]
+
+function jsonText(value) {
+  if (value == null) return null
+  if (typeof value === 'string') return value.length ? value : null
+  return JSON.stringify(value)
+}
 
 function expectedRow(f) {
   return {
@@ -96,6 +102,7 @@ function expectedRow(f) {
     v1_series: asText(f.v1_series),
     match_represented: asText(f.match_represented),
     key_features: asText(f.key_features),
+    passport: jsonText(f.passport),
   }
 }
 
@@ -184,7 +191,7 @@ for (const key of Object.keys(expectedStats)) {
   }
 }
 
-// ── Per-column filled counts, ALL 18 columns (2026-08-26) ────────────────────
+// ── Per-column filled counts, ALL 19 columns (2026-08-26) ────────────────────
 // Whole-table coverage for every column: counts rows where the column is
 // non-null AND non-empty, compared against the same predicate over the slim KB.
 // A wholesale column-shift/drop bug (the class a 7-column check misses) cannot

@@ -8,7 +8,7 @@
  *
  *   build   (build-kb-d1-sql.mjs --table kb_figures_new)   [not this script]
  *   load            schema + chunks into kb_figures_new; live table untouched
- *   verify-staging  ALL-18-column parity vs the slim KB, BY NAME, pre-rename
+ *   verify-staging  ALL-19-column parity vs the slim KB, BY NAME, pre-rename
  *   swap            single batched command:
  *                     ALTER TABLE kb_figures     RENAME TO kb_figures_old;
  *                     ALTER TABLE kb_figures_new RENAME TO kb_figures;
@@ -303,7 +303,7 @@ function canonicalIndexes() {
   return out
 }
 
-// ── verification (delegates to the 18-column checker) ────────────────────────
+// ── verification (delegates to the 19-column checker) ────────────────────────
 
 function runVerify(table) {
   const args = ['node', 'scripts/check-kb-d1-remote.mjs', '--db', opts.db, '--table', table]
