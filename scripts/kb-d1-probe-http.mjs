@@ -19,7 +19,12 @@
  *    over max(baseline p95 x --p95-factor, baseline p95 + --p95-floor-ms), or any 5xx
  * The watch FAILS CLOSED: if the baseline sampling can't get 200s (Bot Fight 403s
  * scripted clients, the reason PR #31 exists) the load never starts, since the
- * third stop rule could not be enforced.
+ * third stop rule could not be enforced. A lone 403 is noise (CLAUDE.md truth #3),
+ * so a non-200 baseline sample is retried --baseline-retries times, --retry-pause-ms
+ * apart, before it counts (a 5xx is a real reading and is never retried; the
+ * receipt records what was retried). Mid-load the same rule holds: --blind-trip
+ * consecutive non-200 samples, or one curl timeout, stops the load ("watch went
+ * blind"). --baseline-only runs just the watch check (site GETs, no D1 access).
  *
  * Safety: the target table must end in `_probe` (never kb_figures / _new / _old),
  * every statement is checked to target only that table, remote needs
@@ -59,6 +64,10 @@ function parseArgs(argv) {
     watchUrl: 'https://figurepinner.com/wrestling/wwf-hasbro',
     watchIntervalMs: 2000,
     baselineSamples: 15,
+    baselineRetries: 3,
+    retryPauseMs: 5000,
+    blindTrip: 6,
+    baselineOnly: false,
     p95Factor: 1.5,
     p95FloorMs: 150,
     maxWallMin: 20,
@@ -81,6 +90,10 @@ function parseArgs(argv) {
     else if (a === '--watch-url') { opts.watchUrl = argv[++i] ?? die('--watch-url needs a URL') }
     else if (a === '--watch-interval-ms') { opts.watchIntervalMs = num(i, a, 250, 60_000); i += 1 }
     else if (a === '--baseline-samples') { opts.baselineSamples = num(i, a, 5, 200); i += 1 }
+    else if (a === '--baseline-retries') { opts.baselineRetries = num(i, a, 0, 10); i += 1 }
+    else if (a === '--retry-pause-ms') { opts.retryPauseMs = num(i, a, 0, 60_000); i += 1 }
+    else if (a === '--blind-trip') { opts.blindTrip = num(i, a, 2, 100); i += 1 }
+    else if (a === '--baseline-only') opts.baselineOnly = true
     else if (a === '--p95-factor') { opts.p95Factor = num(i, a, 1.05, 10); i += 1 }
     else if (a === '--p95-floor-ms') { opts.p95FloorMs = num(i, a, 0, 10_000); i += 1 }
     else if (a === '--max-wall-min') { opts.maxWallMin = num(i, a, 0.1, 20); i += 1 }
@@ -92,7 +105,7 @@ function parseArgs(argv) {
     else if (a === '--keep') opts.keep = true
     else if (a === '--skip-parity') opts.skipParity = true
     else if (a === '--help' || a === '-h') {
-      console.log('Usage: node scripts/kb-d1-probe-http.mjs --dir <multirow emit> [--per-request K] [--watch-url URL] [--dry-run] [--authorized] [--keep]')
+      console.log('Usage: node scripts/kb-d1-probe-http.mjs --dir <multirow emit> [--per-request K] [--watch-url URL] [--dry-run] [--baseline-only] [--authorized] [--keep]')
       process.exit(0)
     } else die(`unknown argument ${a}`)
   }
@@ -233,30 +246,57 @@ async function sample(url) {
     const [code, secs] = stdout.trim().split(' ')
     return { status: Number(code), ms: Number(secs) * 1000 }
   } catch (err) {
-    return { status: 0, ms: 15_000, error: err.message }
+    // curl exit 28 = --max-time hit: the page hung, which is a reading, not noise.
+    return { status: 0, ms: 15_000, error: err.message, timeout: err.code === 28 }
   }
+}
+
+// Baseline noise filter. A 403 (Bot Fight), 429 or curl failure is retried `retries` times,
+// `pauseMs` apart, before it counts (CLAUDE.md truth #3: a shell 403 is a non-signal; the
+// 9/24 live run refused on ONE 403 in 15). A 5xx is a real reading and is never retried.
+// ms is the final attempt's time_total; `noise` lists the statuses that were retried.
+async function sampleRetry(url, { retries, pauseMs }) {
+  let s = await sample(url)
+  const noise = []
+  while (s.status !== 200 && s.status < 500 && noise.length < retries) {
+    noise.push(s.status)
+    await new Promise((r) => setTimeout(r, pauseMs))
+    s = await sample(url)
+  }
+  return { ...s, noise }
 }
 
 async function baseline(opts) {
   const samples = []
   for (let i = 0; i < opts.baselineSamples; i += 1) {
-    samples.push(await sample(opts.watchUrl))
+    samples.push(await sampleRetry(opts.watchUrl, { retries: opts.baselineRetries, pauseMs: opts.retryPauseMs }))
     await new Promise((r) => setTimeout(r, opts.watchIntervalMs))
   }
   const statuses = [...new Set(samples.map((s) => s.status))]
   const bad = samples.filter((s) => s.status !== 200)
-  return { samples, statuses, bad: bad.length, p95: p95(samples.filter((s) => s.status === 200).map((s) => s.ms)) }
+  const noise = samples.flatMap((s) => s.noise)
+  return {
+    samples, statuses, bad: bad.length, retried: noise.length, noise: [...new Set(noise)],
+    p95: p95(samples.filter((s) => s.status === 200).map((s) => s.ms)),
+  }
 }
 
 function startWatch(opts, base, onTrip) {
   const during = []
   const threshold = Math.max(base.p95 * opts.p95Factor, base.p95 + opts.p95FloorMs)
   let stopped = false
+  let run = 0
+  let maxRun = 0
   const loop = (async () => {
     while (!stopped) {
       const s = await sample(opts.watchUrl)
       during.push(s)
       if (s.status >= 500) onTrip(`site returned ${s.status} during the load`)
+      if (s.timeout) onTrip('site timed out (curl 15 s) during the load')
+      // A lone 403 is noise, but a run of non-200s means the watch went blind mid-load.
+      run = s.status === 200 ? 0 : run + 1
+      maxRun = Math.max(maxRun, run)
+      if (run >= opts.blindTrip) onTrip(`watch went blind: ${run} consecutive non-200 samples (last ${s.status}) mid-load`)
       const window = during.slice(-10).filter((x) => x.status === 200).map((x) => x.ms)
       const rolling = window.length >= 5 ? p95(window) : null
       if (rolling != null && rolling > threshold) onTrip(`site p95 moved: rolling ${Math.round(rolling)} ms > threshold ${Math.round(threshold)} ms`)
@@ -265,6 +305,7 @@ function startWatch(opts, base, onTrip) {
   })()
   return {
     threshold,
+    maxNon200Run: () => maxRun,
     async stop() { stopped = true; await loop; return during },
   }
 }
@@ -301,6 +342,26 @@ if (opts.dryRun) {
   console.log('[kb:d1:probe] DRY RUN: no network. Plan validated.')
   process.exit(0)
 }
+
+// Baseline + verdict, shared by the live run and --baseline-only.
+async function checkedBaseline() {
+  console.log(`[kb:d1:probe] baseline: ${opts.baselineSamples} samples of ${opts.watchUrl} (a non-200 is retried up to ${opts.baselineRetries}x, ${opts.retryPauseMs} ms apart) ...`)
+  const base = await baseline(opts)
+  const summary = { statuses: base.statuses, non200: base.bad, retried: base.retried, noise: base.noise, p95Ms: base.p95 && Math.round(base.p95) }
+  const blind = base.bad || base.p95 == null
+    ? `watch blind: baseline statuses ${base.statuses.join(',')} (${base.bad}/${base.samples.length} non-200 after ${opts.baselineRetries} retries each${base.noise.length ? `; retried noise ${base.noise.join(',')}` : ''})`
+    : null
+  return { base, summary, blind }
+}
+
+if (opts.baselineOnly) {
+  // Watch check only: GETs on the site, no D1 token read, no D1 write, so no --authorized.
+  const { base, summary, blind } = await checkedBaseline()
+  console.log('[kb:d1:probe] ── OBSERVED VALUES (baseline only, no D1 access) ──')
+  console.log(`[kb:d1:probe] statuses ${summary.statuses.join(',')} | non-200 ${summary.non200}/${base.samples.length} | retried ${summary.retried}${summary.noise.length ? ` (${summary.noise.join(',')})` : ''} | p95 ${summary.p95Ms ?? 'n/a'} ms`)
+  console.log(`[kb:d1:probe] watch: ${blind ? `BLIND (${blind})` : 'OK, the p95 stop rule can be enforced'}`)
+  process.exit(blind ? 2 : 0)
+}
 if (!opts.apiBase && !opts.authorized) die('remote D1 writes require --authorized (CLAUDE.md rule 5): run only in a trough window, with a go, in a live session')
 if (headMatches === false && !opts.skipParity) die('slim head does not match the emit; parity would fail. Rebuild the emit or pass --slim <snapshot>.')
 
@@ -313,15 +374,14 @@ const receipt = {
 }
 const writeReceipt = () => writeFileSync(join(opts.dir, 'probe-receipt.json'), `${JSON.stringify(receipt, null, 2)}\n`)
 
-console.log(`[kb:d1:probe] baseline: ${opts.baselineSamples} samples of ${opts.watchUrl} ...`)
-const base = await baseline(opts)
-receipt.baseline = { statuses: base.statuses, non200: base.bad, p95Ms: base.p95 && Math.round(base.p95) }
-if (base.bad || base.p95 == null) {
-  receipt.stop = `watch blind: baseline statuses ${base.statuses.join(',')} (${base.bad}/${base.samples.length} non-200). The p95 stop rule can't be enforced, so the load did not start.`
+const { base, summary, blind } = await checkedBaseline()
+receipt.baseline = summary
+if (blind) {
+  receipt.stop = `${blind}. The p95 stop rule can't be enforced, so the load did not start.`
   writeReceipt()
   die(receipt.stop)
 }
-console.log(`[kb:d1:probe] baseline p95 ${Math.round(base.p95)} ms (all 200)`)
+console.log(`[kb:d1:probe] baseline p95 ${Math.round(base.p95)} ms (all 200${base.retried ? `, ${base.retried} retried after ${base.noise.join(',')}` : ''})`)
 
 let trip = null
 const watch = startWatch(opts, base, (why) => { trip ??= why })
@@ -349,7 +409,7 @@ const duringOk = during.filter((s) => s.status === 200).map((s) => s.ms)
 Object.assign(receipt, {
   wallMs: Math.round(wallMs), rowsChanged: changes, d1DurationMs: Math.round(d1Ms),
   requestMs: { p50: timings.length ? Math.round(timings.sort((a, b) => a - b)[Math.floor(timings.length / 2)]) : null, p95: timings.length ? Math.round(p95(timings)) : null, max: timings.length ? Math.round(Math.max(...timings)) : null },
-  watch: { samples: during.length, non200: during.length - duringOk.length, p95Ms: duringOk.length ? Math.round(p95(duringOk)) : null, thresholdMs: Math.round(watch.threshold) },
+  watch: { samples: during.length, non200: during.length - duringOk.length, maxNon200Run: watch.maxNon200Run(), p95Ms: duringOk.length ? Math.round(p95(duringOk)) : null, thresholdMs: Math.round(watch.threshold) },
   stop: trip,
 })
 
@@ -373,7 +433,7 @@ console.log('[kb:d1:probe] ── OBSERVED VALUES ──')
 console.log(`[kb:d1:probe] result: ${receipt.pass ? 'PASS' : `STOP (${receipt.stop})`}`)
 console.log(`[kb:d1:probe] wall ${(receipt.wallMs / 1000).toFixed(1)} s | rows changed ${changes}/${emit.rows} | COUNT(*) ${receipt.countStar ?? 'n/a'} | D1 duration ${receipt.d1DurationMs} ms`)
 console.log(`[kb:d1:probe] requests ${timings.length}/${requests.length} x ${opts.perRequest} stmts | request ms p50 ${receipt.requestMs.p50} p95 ${receipt.requestMs.p95} max ${receipt.requestMs.max}`)
-console.log(`[kb:d1:probe] site: baseline p95 ${receipt.baseline.p95Ms} ms -> during p95 ${receipt.watch.p95Ms} ms (threshold ${receipt.watch.thresholdMs}), ${receipt.watch.non200} non-200 of ${receipt.watch.samples}`)
+console.log(`[kb:d1:probe] site: baseline p95 ${receipt.baseline.p95Ms} ms (${receipt.baseline.retried} retried) -> during p95 ${receipt.watch.p95Ms} ms (threshold ${receipt.watch.thresholdMs}), ${receipt.watch.non200} non-200 of ${receipt.watch.samples}, longest non-200 run ${receipt.watch.maxNon200Run}`)
 if (receipt.parity) console.log(`[kb:d1:probe] parity: ${receipt.parity.pass ? 'PASS' : 'FAIL'}\n${receipt.parity.tail}`)
 console.log(`[kb:d1:probe] probe table ${opts.keep ? 'KEPT' : receipt.dropped === true ? 'dropped' : receipt.dropped}; receipt ${join(opts.dir, 'probe-receipt.json')}`)
 process.exit(receipt.pass ? 0 : 2)
