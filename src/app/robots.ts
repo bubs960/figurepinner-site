@@ -64,6 +64,18 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'PetalBot',
         disallow: '/',
       },
+      // ClaudeBot (2026-09-24, Steve's go): Anthropic's model-TRAINING crawler.
+      // Measured 2026-09-15 to 09-21 (CF zone analytics): 8,800 rendered pages,
+      // the largest AI crawler by volume, 12,805 requests on 9/19 alone, with no
+      // referral path at all. Same business ground as SeznamBot/PetalBot above.
+      // Deliberately narrow: `Claude-SearchBot` (citations in Claude answers,
+      // ~1,083 requests/week) and `Claude-User` (a person asking Claude about a
+      // page) are NOT listed and stay allowed. Anthropic documents that all
+      // three honor robots.txt and are distinguished by exact UA token.
+      {
+        userAgent: 'ClaudeBot',
+        disallow: '/',
+      },
     ],
     sitemap: sitemaps,
     host: BASE,
