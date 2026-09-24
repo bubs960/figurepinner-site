@@ -95,6 +95,8 @@ function seedMotes(rand: () => number, n: number): Mote[] {
 }
 
 const HALL_DURATION_S = 17
+// Loop position (0..1) of the card that loads first on each side; see laidOut.
+const EAGER_PROGRESS = 0.65
 
 export default function DepthHallHero({
   cards,
@@ -277,8 +279,26 @@ export default function DepthHallHero({
     // only -- the right side got zero eager cards, contradicting both this
     // code's own comment and the R16 no-JS trade-off claim it was shipped
     // under).
-    left.forEach((c, i) => out.push({ ...c, side: 'L', delay: (-i * step).toFixed(2), eager: i === 0 }))
-    right.forEach((c, i) => out.push({ ...c, side: 'R', delay: (-(i * step + step / 2)).toFixed(2), eager: i === 0 }))
+    //
+    // LCP fix (2026-09-22): the eager card per side is now the one NEAREST THE
+    // CAMERA at first paint, not the delay-0 one. A negative delay starts a
+    // card that far into fpHallL/R, and delay 0 is keyframe 0% =
+    // translateZ(-4400px) at opacity 0, so the two `high` images were
+    // invisible specks while the big front cards loaded deferred at `low`
+    // (CF RUM `/`, 9/8-9/22: 5 of 7 LCP elements = a cardImg at
+    // fetchpriority=low). Target EAGER_PROGRESS: large and fully opaque,
+    // with ~3 s left before the 85% fade-out, so the image lands while the
+    // card is still big.
+    const progressOf = (delay: number) => (((-delay / HALL_DURATION_S) % 1) + 1) % 1
+    const nearestFront = (delays: number[]) =>
+      delays.reduce((best, d, i) =>
+        Math.abs(progressOf(d) - EAGER_PROGRESS) < Math.abs(progressOf(delays[best]) - EAGER_PROGRESS) ? i : best, 0)
+    const leftDelays = left.map((_, i) => -i * step)
+    const rightDelays = right.map((_, i) => -(i * step + step / 2))
+    const leftEager = nearestFront(leftDelays)
+    const rightEager = nearestFront(rightDelays)
+    left.forEach((c, i) => out.push({ ...c, side: 'L', delay: leftDelays[i].toFixed(2), eager: i === leftEager }))
+    right.forEach((c, i) => out.push({ ...c, side: 'R', delay: rightDelays[i].toFixed(2), eager: i === rightEager }))
     return out
   }, [cards])
 
@@ -408,9 +428,9 @@ export default function DepthHallHero({
                 invisible. Every figure stays reachable via search and the
                 shelf below. */}
             {visibleCards.map(c => {
-              // First card of each side (c.eager, tagged in laidOut above at
-              // delay 0 -- closest to the front of the loop on mount) stays
-              // eager; the rest wait on heroInView.
+              // One card per side (c.eager, tagged in laidOut above as the
+              // one nearest the camera on mount) stays eager; the rest wait
+              // on heroInView.
               const showImg = c.eager || heroInView
               return (
               <button
@@ -446,7 +466,8 @@ export default function DepthHallHero({
                         split (2026-09-20): the two eager cards are the
                         homepage LCP candidates (CF RUM `/` LCP = a card img,
                         2,512 ms, while they were `low`), so they load
-                        `high`; the deferred ones stay `low`. */}
+                        `high`; the deferred ones stay `low`. 2026-09-22:
+                        which cards are eager changed; see laidOut. */}
                     {showImg && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
