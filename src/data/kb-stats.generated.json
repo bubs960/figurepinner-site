@@ -1,5 +1,5 @@
 {
-  "totalFigures": 23774,
+  "totalFigures": 23912,
   "totalFiguresLabel": "23,500+",
   "totalFandoms": 30,
   "fandoms": {
@@ -908,7 +908,7 @@
       }
     },
     "star-wars": {
-      "count": 4003,
+      "count": 4141,
       "lines": {
         "black-series": 795,
         "3-75-walmart": 30,
@@ -932,7 +932,8 @@
         "gentle-giant-diamond-select": 90,
         "power-of-the-force": 222,
         "hot-toys-star-wars": 2,
-        "disney-elite-series": 1
+        "disney-elite-series": 1,
+        "saga": 138
       },
       "manufacturerLines": {
         "hasbro-black-series": {
@@ -1030,6 +1031,10 @@
         "hasbro-disney-elite-series": {
           "count": 1,
           "productLine": "disney-elite-series"
+        },
+        "hasbro-saga": {
+          "count": 138,
+          "productLine": "saga"
         }
       }
     },
