@@ -24,6 +24,9 @@
  *   node scripts/indexnow-ping.mjs --fandom <name>    # rolling-fandom deploy: submit that
  *                                                     #   fandom's live child sitemap URLs
  *   node scripts/indexnow-ping.mjs --urls-file <path> # submit URLs from a file (one per line)
+ *                                                     #   (a batch IndexNow rejects falls back to
+ *                                                     #   the Bing URL Submission API when
+ *                                                     #   BWT_API_KEY is set; quota-bound)
  *
  * --fandom / --urls-file (2026-08-27, per the rolling per-fandom enrichment
  * program — WEBAUDIT-TO-WEB-SITEMAP-LASTMOD-ENRICHMENT-GAP addendum §2):
@@ -314,9 +317,12 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-async function submitBatch(urlList, idx, total) {
+// `deferred`: pass an array to collect the failure record instead of writing it now, so a caller
+// that has a fallback (--urls-file -> BWT) logs only what the fallback also failed to send.
+async function submitBatch(urlList, idx, total, deferred = null) {
   const body = { host: HOST, key: KEY, keyLocation: 'https://' + HOST + '/' + KEY + '.txt', urlList }
   const maxAttempts = RETRY_DELAYS_MS.length + 1
+  const fail = (record) => (deferred ? deferred.push(record) : logFailure(record))
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     let res
@@ -328,7 +334,7 @@ async function submitBatch(urlList, idx, total) {
       })
     } catch (err) {
       console.warn('[IndexNow] batch ' + idx + '/' + total + ' network error (non-fatal): ' + err.message)
-      logFailure({ batch: idx, of: total, urlCount: urlList.length, status: 'network-error', note: err.message, urls: urlList })
+      fail({ batch: idx, of: total, urlCount: urlList.length, status: 'network-error', note: err.message, urls: urlList })
       return 'network-error'
     }
 
@@ -347,10 +353,36 @@ async function submitBatch(urlList, idx, total) {
 
     const text = await res.text()
     console.warn('[IndexNow] batch ' + idx + '/' + total + ' response ' + res.status + ' (non-fatal, giving up after ' + (attempt + 1) + ' attempt(s)): ' + text.slice(0, 200))
-    logFailure({ batch: idx, of: total, urlCount: urlList.length, status: res.status, note: text.slice(0, 120), urls: urlList })
+    fail({ batch: idx, of: total, urlCount: urlList.length, status: res.status, note: text.slice(0, 120), urls: urlList })
     return String(res.status)
   }
   return 'exhausted'
+}
+
+// --urls-file only (2026-09-25): hand-picked lists get the BWT fallback --delta has had since 9/18.
+// IndexNow has 403'd every night since 9/12 (Bot Fight Mode blocks its key-file verification
+// fetch), so a hand-submitted list (the 9/25 guide submit) sent nothing and only left a failure
+// record. fandom / explicit / full / priority modes deliberately do NOT fall back: they are not
+// "changed/new only" sets and would spend the BWT daily quota the nightly --delta run owns
+// (9/11 ruling: cap 100 URLs/day). Never throws; whatever neither service accepted is
+// failure-logged so it can be re-submitted later via --urls-file.
+async function submitBatchWithBwtFallback(urlList, idx, total) {
+  const deferred = []
+  const status = await submitBatch(urlList, idx, total, deferred)
+  if (status === '200' || status === '202') return status
+
+  const bwt = loadBwtConfig()
+  if (!bwt) {
+    console.log('[IndexNow] urls-file: no BWT_API_KEY configured — Bing fallback skipped')
+    deferred.forEach(logFailure)
+    return status
+  }
+  const result = await submitViaBwt(urlList, bwt)
+  console.log('[IndexNow] urls-file: BWT fallback ' + result.status + ' — submitted ' + result.submitted.length + '/' + urlList.length + (result.note ? ' (' + result.note + ')' : ''))
+  if (result.skipped.length > 0) {
+    logFailure({ batch: idx, of: total, urlCount: result.skipped.length, status: 'indexnow-' + status + '+' + result.status, note: result.note ?? '', urls: result.skipped })
+  }
+  return result.status
 }
 
 // ── --delta mode helpers (2026-09-11 reinstatement) ──────────────────────────
@@ -716,9 +748,10 @@ async function ping() {
   }
   console.log('[IndexNow] Submitting ' + urls.length + ' URLs in ' + batches + ' batch(es) of up to ' + BATCH_SIZE + '...')
 
+  const submit = mode === 'urls-file' ? submitBatchWithBwtFallback : submitBatch
   for (let i = 0; i < urls.length; i += BATCH_SIZE) {
     const batch = urls.slice(i, i + BATCH_SIZE)
-    await submitBatch(batch, Math.floor(i / BATCH_SIZE) + 1, batches)
+    await submit(batch, Math.floor(i / BATCH_SIZE) + 1, batches)
   }
 
   const sitemapPingUrl = ENDPOINT + '?url=' + encodeURIComponent(SITEMAP) + '&key=' + KEY
