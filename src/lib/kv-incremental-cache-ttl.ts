@@ -173,4 +173,5 @@ class KVIncrementalCacheWithTtl implements IncrementalCache {
   }
 }
 
-export default new KVIncrementalCacheWithTtl();
+const kvIncrementalCacheWithTtl = new KVIncrementalCacheWithTtl();
+export default kvIncrementalCacheWithTtl;

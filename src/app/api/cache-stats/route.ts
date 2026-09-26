@@ -131,7 +131,6 @@ FORMAT JSON`
   }
 
   // SQL API JSON format: { meta: [...], data: [{label, traffic_class, count}, ...], rows: N, rows_before_limit_at_least: N }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const data: { label: string; traffic_class?: string; count: number }[] = Array.isArray(parsed?.data) ? parsed.data : []
 
   const counts: Record<string, number> = { HIT: 0, MISS: 0, BYPASS: 0 }
