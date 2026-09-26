@@ -22,23 +22,30 @@ export interface PassportBlock {
 
 /** Resolved passport value for a field key, or null when absent. */
 export function passportValue(fig: KBFigure, key: string): string | null {
-  return fig.passport?.fields[key]?.value ?? null
+  return fig.passport?.fields?.[key]?.value ?? null
 }
 
 /**
  * D1 stores the slim KB's `passport` object as JSON text (kb_figures.passport,
  * matcher PR #38); the page wants the object. Anything that is not a JSON object
- * degrades to "no passport" (undefined): a bad row must never throw inside a
- * figure-page render.
+ * whose `fields` is itself a (non-array) object degrades to "no passport"
+ * (undefined): a bad row must never throw inside a figure-page render, and
+ * buildScalePassportGroups / waveHasBafEvidence call Object.entries/keys on
+ * `fields`. A valid block is returned as parsed, untouched.
  */
 export function parsePassportText(text: string | null | undefined): PassportBlock | undefined {
   if (!text) return undefined
   try {
     const v: unknown = JSON.parse(text)
-    return v && typeof v === 'object' && !Array.isArray(v) ? (v as PassportBlock) : undefined
+    if (!isPlainObject(v) || !isPlainObject(v.fields)) return undefined
+    return v as unknown as PassportBlock
   } catch {
     return undefined
   }
+}
+
+function isPlainObject(v: unknown): v is Record<string, unknown> {
+  return v !== null && typeof v === 'object' && !Array.isArray(v)
 }
 
 export type KBFigure = {
