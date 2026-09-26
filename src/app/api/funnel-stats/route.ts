@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { adminRateLimit } from '@/lib/adminRateLimit'
 import { requireAdmin } from '@/lib/requireAdmin'
 
 export const dynamic = 'force-dynamic'
@@ -36,6 +37,9 @@ FORMAT JSON`
 }
 
 export async function GET(request: Request) {
+  const limited = await adminRateLimit(request, 'funnel-stats')
+  if (limited) return NextResponse.json(limited.body, { status: limited.status, headers: limited.headers })
+
   // Fails CLOSED: an unset key must never be treated as "no gate."
   const denied = requireAdmin({ kind: 'secret', request, header: 'x-funnel-stats-key', envVar: 'FUNNEL_STATS_KEY' })
   if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })

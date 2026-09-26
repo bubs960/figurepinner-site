@@ -1,6 +1,7 @@
 import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextResponse } from 'next/server'
+import { adminRateLimit } from '@/lib/adminRateLimit'
 import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
@@ -49,7 +50,10 @@ interface HealthSnapshot {
   notes: string[]
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  const limited = await adminRateLimit(request, 'health')
+  if (limited) return NextResponse.json(limited.body, { status: limited.status, headers: limited.headers })
+
   const { userId } = await auth()
   const denied = requireAdmin({
     kind: 'allowlist',

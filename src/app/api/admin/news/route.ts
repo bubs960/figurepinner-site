@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
+import { adminRateLimit } from '@/lib/adminRateLimit'
 import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
@@ -33,6 +34,9 @@ interface NewsEventBody {
 }
 
 export async function POST(req: NextRequest) {
+  const limited = await adminRateLimit(req, 'news')
+  if (limited) return NextResponse.json(limited.body, { status: limited.status, headers: limited.headers })
+
   const { userId } = await auth()
   const denied = requireAdmin({ kind: 'allowlist', userId })
   if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
