@@ -496,11 +496,15 @@ export async function prettyFigureUrls(figures: KBFigure[]): Promise<Map<string,
     if (list) list.push(f)
     else byFandom.set(f.fandom, [f])
   }
+  // Each fandom's read is independent (prettyUrlRouterCountKeys prefixes every
+  // key with fandom, so two fandoms' maps never collide) — one batch each, run
+  // concurrently instead of one await per fandom in sequence. Same statements,
+  // same rows, just not serialized when a figure list spans >1 fandom.
+  const parts = await Promise.all(
+    [...byFandom].map(([fandom, list]) => prettyUrlCountsForCharacters(fandom, list.map(f => f.character_canonical))),
+  )
   const counts = new Map<string, number>()
-  for (const [fandom, list] of byFandom) {
-    const part = await prettyUrlCountsForCharacters(fandom, list.map(f => f.character_canonical))
-    for (const [k, v] of part) counts.set(k, v)
-  }
+  for (const part of parts) for (const [k, v] of part) counts.set(k, v)
   const out = new Map<string, string>()
   for (const f of figures) out.set(f.figure_id, prettyFigureUrlFromMap(f, counts))
   return out
@@ -527,15 +531,23 @@ export async function prettyUrlCountsForLineHub(figures: KBFigure[], lineToken: 
   const rows = new Map<string, KBRouteRow>()
   for (const f of figures) rows.set(f.figure_id, f)
   const db = await getKbDb()
-  for (const [fandom, list] of byFandom) {
-    const otherLines = [...new Set(list.map(f => norm(f.product_line)))].filter(pl => pl !== token)
-    if (!otherLines.length) continue
-    const stmts = otherLines.flatMap(pl =>
-      lineQueryPlan(ROUTE_COLS, fandom, pl).map(q => db.prepare(q.sql).bind(...q.params)),
-    )
-    for (const res of await db.batch<BatchRows<KBRouteRow>>(stmts)) {
-      for (const r of res.results ?? []) if (!rows.has(r.figure_id)) rows.set(r.figure_id, r)
-    }
+  // One batch per fandom, run concurrently rather than one await per fandom
+  // in sequence — each fandom's otherLines batch reads disjoint rows (a
+  // figure_id belongs to exactly one fandom), so merge order never matters.
+  // Same statements, same rows, just not serialized when >1 fandom is present.
+  const fandomRows = await Promise.all(
+    [...byFandom].map(async ([fandom, list]) => {
+      const otherLines = [...new Set(list.map(f => norm(f.product_line)))].filter(pl => pl !== token)
+      if (!otherLines.length) return [] as KBRouteRow[]
+      const stmts = otherLines.flatMap(pl =>
+        lineQueryPlan(ROUTE_COLS, fandom, pl).map(q => db.prepare(q.sql).bind(...q.params)),
+      )
+      const batches = await db.batch<BatchRows<KBRouteRow>>(stmts)
+      return batches.flatMap(res => res.results ?? [])
+    }),
+  )
+  for (const list of fandomRows) {
+    for (const r of list) if (!rows.has(r.figure_id)) rows.set(r.figure_id, r)
   }
   return buildPrettyUrlMap([...rows.values()])
 }
