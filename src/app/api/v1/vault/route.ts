@@ -3,6 +3,9 @@ import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
 import { isUserPro, FREE_LIMITS } from '@/lib/proStatus'
+import { findOversizedField, fieldCapMessage, FIGURE_ENTRY_FIELD_CAPS, CONDITION_FIELD_CAP } from '@/lib/fieldCaps'
+
+const VAULT_CREATE_FIELD_CAPS = [...FIGURE_ENTRY_FIELD_CAPS, CONDITION_FIELD_CAP]
 
 /**
  * GET  /api/v1/vault         — list active vault items for the authenticated user
@@ -83,6 +86,11 @@ export async function POST(req: NextRequest) {
 
   if (!body.figure_id || !body.name) {
     return NextResponse.json({ error: 'figure_id and name are required' }, { status: 400 })
+  }
+
+  const oversized = findOversizedField(body, VAULT_CREATE_FIELD_CAPS)
+  if (oversized) {
+    return NextResponse.json({ error: fieldCapMessage(oversized) }, { status: 400 })
   }
 
   const db = await getDB()

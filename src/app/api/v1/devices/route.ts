@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
+import { findOversizedField, fieldCapMessage, DEVICE_TOKEN_FIELD_CAP } from '@/lib/fieldCaps'
 
 /**
  * POST /api/v1/devices — register a push notification token for a user's device.
@@ -31,6 +32,11 @@ export async function POST(req: NextRequest) {
 
   if (!body.token || typeof body.token !== 'string' || body.token.trim().length === 0) {
     return NextResponse.json({ error: 'token is required' }, { status: 400 })
+  }
+
+  const oversizedToken = findOversizedField(body, [DEVICE_TOKEN_FIELD_CAP])
+  if (oversizedToken) {
+    return NextResponse.json({ error: fieldCapMessage(oversizedToken) }, { status: 400 })
   }
 
   const platform = body.platform ?? 'ios'
