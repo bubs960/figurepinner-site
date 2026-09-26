@@ -1,6 +1,7 @@
 import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextResponse } from 'next/server'
+import { requireAdmin } from '@/lib/requireAdmin'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,15 +15,6 @@ type PrefixAudit = {
 const PREFIXES = ['isr-cache', 'pro:', '']
 const PAGE_LIMIT = 1000
 const MAX_KEYS_PER_PREFIX = 5000
-
-function isAllowedAdmin(userId: string | null) {
-  if (!userId) return false
-  const allowList = (process.env.FP_ADMIN_USER_IDS ?? '')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean)
-  return allowList.length > 0 && allowList.includes(userId)
-}
 
 async function auditPrefix(kv: any, prefix: string): Promise<PrefixAudit> {
   let cursor: string | undefined
@@ -51,9 +43,8 @@ async function auditPrefix(kv: any, prefix: string): Promise<PrefixAudit> {
 
 export async function GET() {
   const { userId } = await auth()
-  if (!isAllowedAdmin(userId)) {
-    return NextResponse.json({ error: userId ? 'Forbidden' : 'Unauthorized' }, { status: userId ? 403 : 401 })
-  }
+  const denied = requireAdmin({ kind: 'allowlist', userId, emptyAllowlist: 'forbidden' })
+  if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
 
   try {
     const { env } = await getCloudflareContext()

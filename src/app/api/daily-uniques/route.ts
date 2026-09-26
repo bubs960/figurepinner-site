@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { checkRateLimit } from '@/lib/rateLimit'
-import { timingSafeEqual } from '@/lib/timingSafeEqual'
+import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
  * GET /api/daily-uniques
@@ -68,13 +68,8 @@ type DayRow = { date: string; uniques: number; requests: number; pageViews: numb
 
 export async function GET(request: Request) {
   // S4 gate (S56): shared ops-stats secret, fails closed. See header comment.
-  const expectedKey = process.env.CACHE_STATS_KEY
-  if (!expectedKey) {
-    return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
-  }
-  if (!timingSafeEqual(request.headers.get('x-cache-stats-key') ?? '', expectedKey)) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
-  }
+  const denied = requireAdmin({ kind: 'secret', request, header: 'x-cache-stats-key', envVar: 'CACHE_STATS_KEY' })
+  if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
 
   const accountId = process.env.CF_ACCOUNT_ID
   const apiToken = process.env.CF_API_TOKEN
@@ -103,13 +98,8 @@ export async function GET(request: Request) {
         { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': String(rl.retryAfter) } },
       )
     }
-    const debugKey = process.env.DAILY_UNIQUES_DEBUG_KEY
-    if (!debugKey) {
-      return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
-    }
-    if (!timingSafeEqual(request.headers.get('x-daily-uniques-key') ?? '', debugKey)) {
-      return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
-    }
+    const debugDenied = requireAdmin({ kind: 'secret', request, header: 'x-daily-uniques-key', envVar: 'DAILY_UNIQUES_DEBUG_KEY' })
+    if (debugDenied) return NextResponse.json(debugDenied.body, { status: debugDenied.status, headers: debugDenied.headers })
   }
 
   // TEMP introspection (2026-06-27): ask CF what RUM fields exist under Zone so we

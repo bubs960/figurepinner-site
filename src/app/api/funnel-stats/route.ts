@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { timingSafeEqual } from '@/lib/timingSafeEqual'
+import { requireAdmin } from '@/lib/requireAdmin'
 
 export const dynamic = 'force-dynamic'
 
@@ -37,14 +37,8 @@ FORMAT JSON`
 
 export async function GET(request: Request) {
   // Fails CLOSED: an unset key must never be treated as "no gate."
-  const authHeader = request.headers.get('x-funnel-stats-key')
-  const expectedKey = process.env.FUNNEL_STATS_KEY
-  if (!expectedKey) {
-    return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
-  }
-  if (!timingSafeEqual(authHeader ?? '', expectedKey)) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
-  }
+  const denied = requireAdmin({ kind: 'secret', request, header: 'x-funnel-stats-key', envVar: 'FUNNEL_STATS_KEY' })
+  if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
 
   // Optional ?hours=N -- was hardcoded to 24h, too thin a sample for any
   // source/fandom behavioral comparison (2026-07-17 finding). Invalid or

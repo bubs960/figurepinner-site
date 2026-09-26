@@ -1,6 +1,7 @@
 import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextResponse } from 'next/server'
+import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
  * GET /api/admin/health
@@ -50,28 +51,12 @@ interface HealthSnapshot {
 
 export async function GET() {
   const { userId } = await auth()
-  if (!userId) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-
-  const allowList = (process.env.FP_ADMIN_USER_IDS ?? '')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean)
-
-  if (allowList.length === 0) {
-    return NextResponse.json(
-      {
-        error: 'admin_endpoint_not_configured',
-        message: 'Set FP_ADMIN_USER_IDS env var on the worker (comma-separated Clerk user IDs).',
-      },
-      { status: 503 },
-    )
-  }
-
-  if (!allowList.includes(userId)) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-  }
+  const denied = requireAdmin({
+    kind: 'allowlist',
+    userId,
+    notConfiguredMessage: 'Set FP_ADMIN_USER_IDS env var on the worker (comma-separated Clerk user IDs).',
+  })
+  if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
 
   // ─── Env / secret presence ───────────────────────────────────────────────
   const pkPub = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? ''
