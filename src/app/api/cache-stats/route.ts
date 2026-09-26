@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { adminRateLimit } from '@/lib/adminRateLimit'
 import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
@@ -56,6 +57,9 @@ import { requireAdmin } from '@/lib/requireAdmin'
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: Request) {
+  const limited = await adminRateLimit(request, 'cache-stats')
+  if (limited) return NextResponse.json(limited.body, { status: limited.status, headers: limited.headers })
+
   // Admin-only via shared secret (no public exposure). Fails CLOSED: an unset
   // key must never be treated as "no gate."
   const denied = requireAdmin({ kind: 'secret', request, header: 'x-cache-stats-key', envVar: 'CACHE_STATS_KEY' })

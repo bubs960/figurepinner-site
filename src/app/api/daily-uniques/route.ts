@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { adminRateLimit } from '@/lib/adminRateLimit'
 import { checkRateLimit } from '@/lib/rateLimit'
 import { requireAdmin } from '@/lib/requireAdmin'
 
@@ -61,6 +62,9 @@ const nyDateString = (d: Date): string =>
 type DayRow = { date: string; uniques: number; requests: number; pageViews: number }
 
 export async function GET(request: Request) {
+  const limited = await adminRateLimit(request, 'daily-uniques')
+  if (limited) return NextResponse.json(limited.body, { status: limited.status, headers: limited.headers })
+
   // S4 gate (S56): shared ops-stats secret, fails closed. See header comment.
   const denied = requireAdmin({ kind: 'secret', request, header: 'x-cache-stats-key', envVar: 'CACHE_STATS_KEY' })
   if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })

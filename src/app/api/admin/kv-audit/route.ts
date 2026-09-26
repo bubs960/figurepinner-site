@@ -1,6 +1,7 @@
 import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextResponse } from 'next/server'
+import { adminRateLimit } from '@/lib/adminRateLimit'
 import { requireAdmin } from '@/lib/requireAdmin'
 
 export const dynamic = 'force-dynamic'
@@ -52,7 +53,10 @@ async function auditPrefix(kv: KVListable, prefix: string): Promise<PrefixAudit>
   }
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  const limited = await adminRateLimit(request, 'kv-audit')
+  if (limited) return NextResponse.json(limited.body, { status: limited.status, headers: limited.headers })
+
   const { userId } = await auth()
   const denied = requireAdmin({ kind: 'allowlist', userId, emptyAllowlist: 'forbidden' })
   if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
