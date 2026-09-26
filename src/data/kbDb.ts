@@ -229,10 +229,25 @@ function mapRow(r: KBCardRow): KBFigure {
 // (identity-keyed, would never hit) and stays as is.
 // ── Point lookups ─────────────────────────────────────────────────────────────
 
+// Swap-rollback safety net (2026-09-27): FULL_COLS selects `passport`, which
+// only exists on a table from the 19-column loader. If a kb-d1-swap rollback
+// ever puts a pre-passport kb_figures live again, every FULL_COLS read fails
+// with this error and uncached figure pages 500. The single figure-page read
+// (getFigureById) retries ONCE without the column; nothing else falls back,
+// and any other error propagates exactly as before.
+const PASSPORT_COLUMN_MISSING = /no such column: passport/i
+
 /** Look up a single figure by figure_id (PK). Mirrors kb.getFigureById. */
 export const getFigureById = cache(async function getFigureById(figure_id: string): Promise<KBFigure | null> {
   const db = await getKbDb()
-  const row = await db.prepare(SQL.figureById).bind(figure_id).first<KBRow>()
+  let row: KBCardRow | null
+  try {
+    row = await db.prepare(SQL.figureById).bind(figure_id).first<KBRow>()
+  } catch (err) {
+    if (!(err instanceof Error) || !PASSPORT_COLUMN_MISSING.test(err.message)) throw err
+    console.warn('[kb-d1] kb_figures has no passport column (swap rollback?); getFigureById falling back to FULL_COLS_NO_PASSPORT for', figure_id)
+    row = await db.prepare(SQL.figureByIdNoPassport).bind(figure_id).first<KBCardRow>()
+  }
   return row ? mapRow(row) : null
 })
 

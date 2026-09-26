@@ -115,6 +115,7 @@ describe('line predicate: the batched index plan equals the old OR-expression sc
 describe('SQL contracts', () => {
   const statements = {
     figureById: SQL.figureById,
+    figureByIdNoPassport: SQL.figureByIdNoPassport,
     figuresByIds: SQL.figuresByIds(3),
     figuresByCharacter: SQL.figuresByCharacter(ROUTE_COLS),
     waveCompanionsEmpty: SQL.waveCompanions(WAVE_COMPANION_COLS, true),
