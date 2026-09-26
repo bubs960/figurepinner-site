@@ -16,7 +16,18 @@ const PREFIXES = ['isr-cache', 'pro:', '']
 const PAGE_LIMIT = 1000
 const MAX_KEYS_PER_PREFIX = 5000
 
-async function auditPrefix(kv: any, prefix: string): Promise<PrefixAudit> {
+// Minimal structural type for the KV binding's list() call — same pattern as
+// proStatus.ts's KVLike, which avoids depending on the global KVNamespace
+// type (unreliable across this build; see that file's comment for why).
+interface KVListable {
+  list(opts: { prefix: string; limit: number; cursor?: string }): Promise<{
+    keys: { name?: string }[]
+    list_complete?: boolean
+    cursor?: string
+  }>
+}
+
+async function auditPrefix(kv: KVListable, prefix: string): Promise<PrefixAudit> {
   let cursor: string | undefined
   let count = 0
   const samples: string[] = []

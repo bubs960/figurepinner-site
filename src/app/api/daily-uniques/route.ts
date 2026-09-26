@@ -50,13 +50,7 @@ import { requireAdmin } from '@/lib/requireAdmin'
 export const dynamic = 'force-dynamic'
 
 const ZONE_NAME = 'figurepinner.com'
-// Verified from the CF dashboard (Overview → API → Zone ID), 2026-06-26.
-// Needed because the Account-Analytics:Read token canNOT list zones (no Zone:Read
-// scope) — /zones?name= returns an empty result, so we can't resolve it at runtime.
-// A dashboard-verified constant is not a guess. Override via CF_ZONE_ID env if it ever changes.
-const ZONE_ID_FALLBACK = '66a98bfaa6a2992c9ed3c32f9f3c1702'
 const GRAPHQL = 'https://api.cloudflare.com/client/v4/graphql'
-const REST = 'https://api.cloudflare.com/client/v4'
 
 // Steve/the dashboard read this zone in US Eastern time — bucket day boundaries
 // to match, not UTC. Handles EDT/EST transitions automatically via Intl.
@@ -148,7 +142,7 @@ export async function GET(request: Request) {
       const sj = (await sr.json()) as any
       const sites = sj?.data?.viewer?.accounts?.[0]?.rumPageloadEventsAdaptiveGroups ?? []
       // pick the site with the most visits in window (our live site)
-      let best: any = null
+      let best: { dimensions?: { siteTag?: string }; sum?: { visits?: number } } | null = null
       for (const row of sites) { if (!best || (row?.sum?.visits ?? 0) > (best?.sum?.visits ?? 0)) best = row }
       if (best?.dimensions?.siteTag) siteTag = best.dimensions.siteTag
     } catch { /* fall through; query below will surface the error */ }
