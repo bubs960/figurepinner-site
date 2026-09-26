@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
+import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
  * POST /api/admin/news
@@ -33,16 +34,8 @@ interface NewsEventBody {
 
 export async function POST(req: NextRequest) {
   const { userId } = await auth()
-  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-
-  const allowList = (process.env.FP_ADMIN_USER_IDS ?? '')
-    .split(',').map(s => s.trim()).filter(Boolean)
-  if (allowList.length === 0) {
-    return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503 })
-  }
-  if (!allowList.includes(userId)) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-  }
+  const denied = requireAdmin({ kind: 'allowlist', userId })
+  if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
 
   let body: NewsEventBody
   try {

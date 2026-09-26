@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { timingSafeEqual } from '@/lib/timingSafeEqual'
+import { requireAdmin } from '@/lib/requireAdmin'
 
 /**
  * GET /api/cache-stats
@@ -58,14 +58,8 @@ export const dynamic = 'force-dynamic'
 export async function GET(request: Request) {
   // Admin-only via shared secret (no public exposure). Fails CLOSED: an unset
   // key must never be treated as "no gate."
-  const authHeader = request.headers.get('x-cache-stats-key')
-  const expectedKey = process.env.CACHE_STATS_KEY
-  if (!expectedKey) {
-    return NextResponse.json({ error: 'admin_endpoint_not_configured' }, { status: 503, headers: { 'Cache-Control': 'no-store' } })
-  }
-  if (!timingSafeEqual(authHeader ?? '', expectedKey)) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401, headers: { 'Cache-Control': 'no-store' } })
-  }
+  const denied = requireAdmin({ kind: 'secret', request, header: 'x-cache-stats-key', envVar: 'CACHE_STATS_KEY' })
+  if (denied) return NextResponse.json(denied.body, { status: denied.status, headers: denied.headers })
 
   const accountId = process.env.CF_ACCOUNT_ID
   const apiToken = process.env.CF_API_TOKEN
