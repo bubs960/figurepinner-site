@@ -2,7 +2,7 @@ import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { getAllFigures } from '../src/data/kb.ts'
 import {
-  SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, D1_MAX_BOUND_PARAMS,
+  SQL, FULL_COLS, CARD_COLS, WAVE_COMPANION_COLS, ROUTE_COLS, IN_CHUNK, D1_MAX_BOUND_PARAMS,
   norm, compoundSplits, rowMatchesLineToken, lineQueryPlan, chunk, sortLikeFandomScan,
 } from '../src/data/kbDbQueries.ts'
 
@@ -115,17 +115,25 @@ describe('line predicate: the batched index plan equals the old OR-expression sc
 describe('SQL contracts', () => {
   const statements = {
     figureById: SQL.figureById,
+    figureByIdNoPassport: SQL.figureByIdNoPassport,
     figuresByIds: SQL.figuresByIds(3),
     figuresByCharacter: SQL.figuresByCharacter(ROUTE_COLS),
-    waveCompanionsEmpty: SQL.waveCompanions(CARD_COLS, true),
-    waveCompanions: SQL.waveCompanions(CARD_COLS, false),
+    waveCompanionsEmpty: SQL.waveCompanions(WAVE_COMPANION_COLS, true),
+    waveCompanions: SQL.waveCompanions(WAVE_COMPANION_COLS, false),
     prettyUrlUniqueCount: SQL.prettyUrlUniqueCount,
     routeRowsForCharacters: SQL.routeRowsForCharacters(IN_CHUNK),
     cardsByFandom: SQL.cardsByFandom,
     lineWaveCounts: SQL.lineWaveCounts,
-    allFandoms: SQL.allFandoms,
+    fandomExists: SQL.fandomExists,
     linesByFandom: SQL.linesByFandom,
   }
+
+  test('every contract entry is a real statement (a removed SQL.* key must fail here, not pass vacuously)', () => {
+    for (const [name, sql] of Object.entries(statements)) {
+      assert.equal(typeof sql, 'string', `${name} is ${typeof sql} — SQL.${name} no longer exists; drop or repoint the entry`)
+      assert.ok(/^SELECT /.test(sql), `${name} is not a SELECT: ${sql}`)
+    }
+  })
 
   test('no LOWER() / LIKE on any public-route statement (stableSuffix is the documented exception)', () => {
     for (const [name, sql] of Object.entries(statements)) {
@@ -138,7 +146,7 @@ describe('SQL contracts', () => {
   test('every per-fandom statement pins fandom first so the (fandom, …) indexes apply', () => {
     for (const name of [
       'figuresByCharacter', 'waveCompanionsEmpty', 'waveCompanions', 'prettyUrlUniqueCount',
-      'cardsByFandom', 'lineWaveCounts', 'linesByFandom',
+      'cardsByFandom', 'lineWaveCounts', 'fandomExists', 'linesByFandom',
     ]) {
       assert.ok(statements[name].includes('WHERE fandom = ?'), `${name} does not start its WHERE with fandom = ?`)
     }

@@ -36,7 +36,7 @@ import {
   deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey,
   genreSlugForFandom, parsePassportText, type KBFigure,
 } from './kbTypes'
-import { SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
+import { SQL, FULL_COLS, CARD_COLS, WAVE_COMPANION_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
 import { getFigureByStableSuffix as liteFigureByStableSuffix, getAllFandoms as liteAllFandoms } from './kbLite'
 
 // Re-export the pure parts so a converted surface can import everything from
@@ -229,10 +229,25 @@ function mapRow(r: KBCardRow): KBFigure {
 // (identity-keyed, would never hit) and stays as is.
 // ── Point lookups ─────────────────────────────────────────────────────────────
 
+// Swap-rollback safety net (2026-09-27): FULL_COLS selects `passport`, which
+// only exists on a table from the 19-column loader. If a kb-d1-swap rollback
+// ever puts a pre-passport kb_figures live again, every FULL_COLS read fails
+// with this error and uncached figure pages 500. The single figure-page read
+// (getFigureById) retries ONCE without the column; nothing else falls back,
+// and any other error propagates exactly as before.
+const PASSPORT_COLUMN_MISSING = /no such column: passport/i
+
 /** Look up a single figure by figure_id (PK). Mirrors kb.getFigureById. */
 export const getFigureById = cache(async function getFigureById(figure_id: string): Promise<KBFigure | null> {
   const db = await getKbDb()
-  const row = await db.prepare(SQL.figureById).bind(figure_id).first<KBRow>()
+  let row: KBCardRow | null
+  try {
+    row = await db.prepare(SQL.figureById).bind(figure_id).first<KBRow>()
+  } catch (err) {
+    if (!(err instanceof Error) || !PASSPORT_COLUMN_MISSING.test(err.message)) throw err
+    console.warn('[kb-d1] kb_figures has no passport column (swap rollback?); getFigureById falling back to FULL_COLS_NO_PASSPORT for', figure_id)
+    row = await db.prepare(SQL.figureByIdNoPassport).bind(figure_id).first<KBCardRow>()
+  }
   return row ? mapRow(row) : null
 })
 
@@ -330,14 +345,16 @@ export const getFiguresByLine = cache(async function getFiguresByLine(fandom: st
 /**
  * Figures sharing the current figure's (fandom, product_line, release_wave) —
  * the figure page's "full wave" (includes the current figure; caller excludes
- * it). Compact cards. `releaseWave` is the mapped value ('' for a null wave).
+ * it). Compact cards plus each companion's passport (WAVE_COMPANION_COLS) —
+ * the page's BAF sublabel and waveHasBafEvidence read it. `releaseWave` is the
+ * mapped value ('' for a null wave).
  */
 export async function getWaveCompanions(fandom: string, productLine: string, releaseWave: string): Promise<KBFigure[]> {
   const db = await getKbDb()
   const empty = releaseWave === ''
   const stmt = empty
-    ? db.prepare(SQL.waveCompanions(CARD_COLS, true)).bind(fandom, productLine)
-    : db.prepare(SQL.waveCompanions(CARD_COLS, false)).bind(fandom, productLine, releaseWave)
+    ? db.prepare(SQL.waveCompanions(WAVE_COMPANION_COLS, true)).bind(fandom, productLine)
+    : db.prepare(SQL.waveCompanions(WAVE_COMPANION_COLS, false)).bind(fandom, productLine, releaseWave)
   const { results } = await stmt.all<KBCardRow & WithRid>()
   return sortLikeFandomScan(results ?? []).map(mapRow)
 }

@@ -42,6 +42,14 @@ export const FULL_COLS =
   'canonical_image_url, name, v1_name, v1_line, v1_series, match_represented, key_features, passport'
 
 /**
+ * FULL_COLS minus `passport` — the 18-column kb_figures shape from before the
+ * first 19-column load. Swap-rollback safety net ONLY: getFigureById retries
+ * with it once when the live table has no passport column (a kb-d1-swap
+ * rollback to a pre-passport kb_figures_old). No other reader uses it.
+ */
+export const FULL_COLS_NO_PASSPORT = FULL_COLS.split(', ').filter(c => c !== 'passport').join(', ')
+
+/**
  * Compact card record — hubs, related rows, variants. FULL_COLS minus the three
  * heavy columns (match_represented, key_features, passport), which are the bulk
  * of every row's bytes and which no card/list surface reads. KBFigure declares
@@ -51,6 +59,16 @@ export const CARD_COLS =
   'figure_id, fandom, character_canonical, manufacturer, product_line, ' +
   'sub_fandom, character_variant, release_wave, scale, pack_size, exclusive_to, ' +
   'canonical_image_url, name, v1_name, v1_line, v1_series'
+
+/**
+ * Wave-companion record — CARD_COLS plus `passport`, nothing else. The figure
+ * page reads each companion's passport (the BAF-piece sublabel via
+ * passportValue, and waveHasBafEvidence over the whole wave), so CARD_COLS
+ * alone made both unrenderable. Deliberately NOT FULL_COLS: the two prose
+ * columns stay out of the companion read. Same statement, same WHERE, same
+ * rows — only the projection widens by one column.
+ */
+export const WAVE_COMPANION_COLS = `${CARD_COLS}, passport`
 
 /** Route-key projection — everything prettyUrlRouterCountKeys needs, nothing else. */
 export const ROUTE_COLS = 'figure_id, fandom, manufacturer, product_line, character_canonical'
@@ -141,6 +159,9 @@ const placeholders = (n: number) => Array.from({ length: n }, () => '?').join(',
 export const SQL = {
   /** PK lookup. */
   figureById: `SELECT ${FULL_COLS} FROM ${KB_TABLE} WHERE figure_id = ?`,
+
+  /** figureById on a pre-passport table (getFigureById's rollback fallback only). */
+  figureByIdNoPassport: `SELECT ${FULL_COLS_NO_PASSPORT} FROM ${KB_TABLE} WHERE figure_id = ?`,
 
   /** PK IN-list (≤ IN_CHUNK ids per statement). */
   figuresByIds: (n: number) => `SELECT ${FULL_COLS} FROM ${KB_TABLE} WHERE figure_id IN (${placeholders(n)})`,
