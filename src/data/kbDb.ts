@@ -36,7 +36,7 @@ import {
   deriveName, figureUrl, prettyUrlRouterCountKeys, prettyUrlRouterLookupKey,
   genreSlugForFandom, parsePassportText, type KBFigure,
 } from './kbTypes'
-import { SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
+import { SQL, FULL_COLS, CARD_COLS, WAVE_COMPANION_COLS, ROUTE_COLS, IN_CHUNK, norm, chunk, lineQueryPlan, sortLikeFandomScan, type WithRid } from './kbDbQueries'
 import { getFigureByStableSuffix as liteFigureByStableSuffix, getAllFandoms as liteAllFandoms } from './kbLite'
 
 // Re-export the pure parts so a converted surface can import everything from
@@ -330,14 +330,16 @@ export const getFiguresByLine = cache(async function getFiguresByLine(fandom: st
 /**
  * Figures sharing the current figure's (fandom, product_line, release_wave) —
  * the figure page's "full wave" (includes the current figure; caller excludes
- * it). Compact cards. `releaseWave` is the mapped value ('' for a null wave).
+ * it). Compact cards plus each companion's passport (WAVE_COMPANION_COLS) —
+ * the page's BAF sublabel and waveHasBafEvidence read it. `releaseWave` is the
+ * mapped value ('' for a null wave).
  */
 export async function getWaveCompanions(fandom: string, productLine: string, releaseWave: string): Promise<KBFigure[]> {
   const db = await getKbDb()
   const empty = releaseWave === ''
   const stmt = empty
-    ? db.prepare(SQL.waveCompanions(CARD_COLS, true)).bind(fandom, productLine)
-    : db.prepare(SQL.waveCompanions(CARD_COLS, false)).bind(fandom, productLine, releaseWave)
+    ? db.prepare(SQL.waveCompanions(WAVE_COMPANION_COLS, true)).bind(fandom, productLine)
+    : db.prepare(SQL.waveCompanions(WAVE_COMPANION_COLS, false)).bind(fandom, productLine, releaseWave)
   const { results } = await stmt.all<KBCardRow & WithRid>()
   return sortLikeFandomScan(results ?? []).map(mapRow)
 }

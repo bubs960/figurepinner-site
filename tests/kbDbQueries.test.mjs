@@ -2,7 +2,7 @@ import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { getAllFigures } from '../src/data/kb.ts'
 import {
-  SQL, FULL_COLS, CARD_COLS, ROUTE_COLS, IN_CHUNK, D1_MAX_BOUND_PARAMS,
+  SQL, FULL_COLS, CARD_COLS, WAVE_COMPANION_COLS, ROUTE_COLS, IN_CHUNK, D1_MAX_BOUND_PARAMS,
   norm, compoundSplits, rowMatchesLineToken, lineQueryPlan, chunk, sortLikeFandomScan,
 } from '../src/data/kbDbQueries.ts'
 
@@ -117,8 +117,8 @@ describe('SQL contracts', () => {
     figureById: SQL.figureById,
     figuresByIds: SQL.figuresByIds(3),
     figuresByCharacter: SQL.figuresByCharacter(ROUTE_COLS),
-    waveCompanionsEmpty: SQL.waveCompanions(CARD_COLS, true),
-    waveCompanions: SQL.waveCompanions(CARD_COLS, false),
+    waveCompanionsEmpty: SQL.waveCompanions(WAVE_COMPANION_COLS, true),
+    waveCompanions: SQL.waveCompanions(WAVE_COMPANION_COLS, false),
     prettyUrlUniqueCount: SQL.prettyUrlUniqueCount,
     routeRowsForCharacters: SQL.routeRowsForCharacters(IN_CHUNK),
     cardsByFandom: SQL.cardsByFandom,

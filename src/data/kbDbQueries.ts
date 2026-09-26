@@ -52,6 +52,16 @@ export const CARD_COLS =
   'sub_fandom, character_variant, release_wave, scale, pack_size, exclusive_to, ' +
   'canonical_image_url, name, v1_name, v1_line, v1_series'
 
+/**
+ * Wave-companion record — CARD_COLS plus `passport`, nothing else. The figure
+ * page reads each companion's passport (the BAF-piece sublabel via
+ * passportValue, and waveHasBafEvidence over the whole wave), so CARD_COLS
+ * alone made both unrenderable. Deliberately NOT FULL_COLS: the two prose
+ * columns stay out of the companion read. Same statement, same WHERE, same
+ * rows — only the projection widens by one column.
+ */
+export const WAVE_COMPANION_COLS = `${CARD_COLS}, passport`
+
 /** Route-key projection — everything prettyUrlRouterCountKeys needs, nothing else. */
 export const ROUTE_COLS = 'figure_id, fandom, manufacturer, product_line, character_canonical'
 
