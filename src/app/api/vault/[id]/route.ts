@@ -1,6 +1,7 @@
 import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
+import { findOversizedField, fieldCapMessage, CONDITION_FIELD_CAP } from '@/lib/fieldCaps'
 
 async function getDB() {
   const { env } = await getCloudflareContext()
@@ -41,6 +42,12 @@ export async function PATCH(
 
   const { id } = await params
   const body = await req.json() as { paid?: number; condition?: string }
+
+  const oversized = findOversizedField(body, [CONDITION_FIELD_CAP])
+  if (oversized) {
+    return NextResponse.json({ error: fieldCapMessage(oversized) }, { status: 400 })
+  }
+
   const db = await getDB()
 
   const updates: string[] = []

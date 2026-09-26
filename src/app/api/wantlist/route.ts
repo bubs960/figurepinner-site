@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'crypto'
+import { findOversizedField, fieldCapMessage, FIGURE_ENTRY_FIELD_CAPS } from '@/lib/fieldCaps'
 
 async function getDB() {
   const { env } = await getCloudflareContext()
@@ -39,6 +40,11 @@ export async function POST(req: NextRequest) {
 
   if (!body.figure_id || !body.name) {
     return NextResponse.json({ error: 'figure_id and name are required' }, { status: 400 })
+  }
+
+  const oversized = findOversizedField(body, FIGURE_ENTRY_FIELD_CAPS)
+  if (oversized) {
+    return NextResponse.json({ error: fieldCapMessage(oversized) }, { status: 400 })
   }
 
   const db = await getDB()
