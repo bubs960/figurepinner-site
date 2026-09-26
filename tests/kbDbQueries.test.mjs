@@ -124,9 +124,16 @@ describe('SQL contracts', () => {
     routeRowsForCharacters: SQL.routeRowsForCharacters(IN_CHUNK),
     cardsByFandom: SQL.cardsByFandom,
     lineWaveCounts: SQL.lineWaveCounts,
-    allFandoms: SQL.allFandoms,
+    fandomExists: SQL.fandomExists,
     linesByFandom: SQL.linesByFandom,
   }
+
+  test('every contract entry is a real statement (a removed SQL.* key must fail here, not pass vacuously)', () => {
+    for (const [name, sql] of Object.entries(statements)) {
+      assert.equal(typeof sql, 'string', `${name} is ${typeof sql} — SQL.${name} no longer exists; drop or repoint the entry`)
+      assert.ok(/^SELECT /.test(sql), `${name} is not a SELECT: ${sql}`)
+    }
+  })
 
   test('no LOWER() / LIKE on any public-route statement (stableSuffix is the documented exception)', () => {
     for (const [name, sql] of Object.entries(statements)) {
@@ -139,7 +146,7 @@ describe('SQL contracts', () => {
   test('every per-fandom statement pins fandom first so the (fandom, …) indexes apply', () => {
     for (const name of [
       'figuresByCharacter', 'waveCompanionsEmpty', 'waveCompanions', 'prettyUrlUniqueCount',
-      'cardsByFandom', 'lineWaveCounts', 'linesByFandom',
+      'cardsByFandom', 'lineWaveCounts', 'fandomExists', 'linesByFandom',
     ]) {
       assert.ok(statements[name].includes('WHERE fandom = ?'), `${name} does not start its WHERE with fandom = ?`)
     }
